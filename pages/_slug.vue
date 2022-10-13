@@ -18,6 +18,7 @@ export default {
       ...$config,
       slug: params.slug,
     })
+    await store.dispatch('fetchLinks', $config)
     return {}
   },
   head() {

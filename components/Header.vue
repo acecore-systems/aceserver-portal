@@ -16,10 +16,7 @@
         <div class="Title_Text">{{ title }}</div>
       </NuxtLink>
       <div class="Link">
-        <a
-          href=""
-          >支援する</a
-        >
+        <a v-for="link in links" :key="link._id" :href="link.href">{{ link.text }}</a>
       </div>
     </div>
   </header>
@@ -31,6 +28,10 @@ export default {
     app: {
       type: Object,
       default: null,
+    },
+    links: {
+      type: Array,
+      default: () => [],
     },
   },
   computed: {
