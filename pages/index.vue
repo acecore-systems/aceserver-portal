@@ -14,11 +14,11 @@ import { mapGetters } from 'vuex'
 export default {
   async asyncData({ store, $config }) {
     await store.dispatch('fetchApp', $config)
+    await store.dispatch('fetchLinks', $config)
     await store.dispatch('fetchPage', {
       ...$config,
       slug: 'top',
     })
-    await store.dispatch('fetchLinks', $config)
     return {}
   },
   head() {

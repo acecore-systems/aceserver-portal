@@ -6,8 +6,8 @@ const config = {
   appUid: 'portal',
   token: 'lLlHPd32YH3KJQI7OPXKFFOsqlxmz38AARJCpa0rq5U',
   apiType: 'cdn',
-  pageModelUid: 'single-page',
   linkModelUid: 'link',
+  pageModelUid: 'single-page',
 }
 
 export default {
