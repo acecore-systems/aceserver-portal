@@ -102,6 +102,7 @@ export default {
 .Link > a {
   color: #333;
   text-decoration: none;
+  padding: 3px 12px;
 }
 .Link > a:hover {
   color: #333;
