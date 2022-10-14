@@ -36,7 +36,7 @@ export default {
 
 <style scoped>
 .Feature1 {
-  margin: 0 auto 60px auto;
+  margin: 30px auto 60px auto;
   padding: 0 24px;
   text-align: center;
   max-width: 1024px;
@@ -61,7 +61,7 @@ export default {
 }
 @media (min-width: 600px) {
   .Feature1 {
-    margin: 0 auto 100px auto;
+    margin: 50px auto 100px auto;
     padding: 0 40px;
   }
   .Feature1_Title {
