@@ -2,7 +2,7 @@
   <div class="Wrapper">
     <Header :app="app" :links="links" />
     <Nuxt />
-    <Footer :app="app" />
+    <Footer :app="app" :links="links" />
   </div>
 </template>
 
