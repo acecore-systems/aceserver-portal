@@ -52,6 +52,11 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/bootstrap
     'bootstrap-vue/nuxt',
+    ["@nuxtjs/google-adsense",
+    {
+      id: "ca-pub-3935803464310919",
+      pageLevelAds: true, // 自動広告を表示させる場合
+    }],
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
