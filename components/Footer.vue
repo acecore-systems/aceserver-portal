@@ -13,9 +13,9 @@
         >
           <img :src="icon.value" />
         </span>
-        <div class="SiteName_Text">{{ title }}</div>
+        <div class="SiteName_Text text-nowrap">{{ title }}</div>
       </NuxtLink>
-      <div class="Link">
+      <div class="Link text-nowrap">
         <a v-for="link in links" :key="link._id" :href="link.href">{{ link.text }}</a>
       </div>
     </div>
