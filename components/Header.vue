@@ -15,7 +15,7 @@
         </span>
         <div class="Title_Text">{{ title }}</div>
       </NuxtLink>
-      <div class="Link">
+      <div class="Link text-nowrap">
         <a v-for="link in links" :key="link._id" :href="link.href">{{ link.text }}</a>
       </div>
     </div>

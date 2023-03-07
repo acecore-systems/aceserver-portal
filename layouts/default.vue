@@ -1,7 +1,7 @@
 <template>
   <div class="Wrapper">
     <Header :app="app" :links="links" />
-    <Nuxt />
+    <Nuxt style="height: calc(100% - 105px);" />
     <Footer :app="app" :links="links" />
   </div>
 </template>
@@ -47,6 +47,7 @@ a:hover {
 
 <style scoped>
 .Wrapper {
+  height: 100%;
   width: 100%;
   overflow: hidden;
 }
