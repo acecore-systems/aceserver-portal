@@ -1,5 +1,5 @@
 <template>
-  <footer class="Footer-nowrap">
+  <footer class="Footer overflow-hidden text-nowrap">
     <div class="Footer_Inner">
       <NuxtLink to="/" class="SiteName">
         <span
