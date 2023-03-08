@@ -1,7 +1,8 @@
 <template>
   <iframe
     :src="data.sorce"
-    class="w-100 h-100"
+    class="w-100"
+    style="height: calc(100vh - 114px);"
   ></iframe>
 </template>
 
