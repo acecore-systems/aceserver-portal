@@ -1,8 +1,16 @@
 <template>
-  <div class="Wrapper">
-    <Header :app="app" :links="links" />
-    <Nuxt style="height: calc(100% - 105px);" />
-    <Footer :app="app" :links="links" />
+  <div class="w-100" style="height: 100%;">
+    <Header
+      :app="app"
+      :links="links"
+    />
+    <Nuxt
+      style="min-height: calc(100% - 107px);"
+    />
+    <Footer
+      :app="app"
+      :links="links"
+    />
   </div>
 </template>
 
@@ -42,13 +50,5 @@ a {
 }
 a:hover {
   text-decoration: none;
-}
-</style>
-
-<style scoped>
-.Wrapper {
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
 }
 </style>
