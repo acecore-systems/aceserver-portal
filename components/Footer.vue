@@ -1,5 +1,5 @@
 <template>
-  <footer class="Footer">
+  <footer class="Footer-nowrap">
     <div class="Footer_Inner">
       <NuxtLink to="/" class="SiteName">
         <span
@@ -13,9 +13,9 @@
         >
           <img :src="icon.value" />
         </span>
-        <div class="SiteName_Text text-nowrap">{{ title }}</div>
+        <div class="SiteName_Text">{{ title }}</div>
       </NuxtLink>
-      <div class="Link text-nowrap">
+      <div class="Link">
         <a v-for="link in links" :key="link._id" :href="link.href">{{ link.text }}</a>
       </div>
     </div>
