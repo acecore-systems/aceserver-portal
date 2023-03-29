@@ -108,4 +108,9 @@ export default {
   color: #333;
   text-decoration: underline;
 }
+@media (max-width: 600px) {
+  .Footer{
+    display: none;
+  }
+}
 </style>
