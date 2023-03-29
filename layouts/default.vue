@@ -1,6 +1,6 @@
 <template>
   <div class="w-100" style="height: 100%;">
-    <Header :app="app" :links="links" :articles="articles" :categories="categories" />
+    <Header :app="app" :links="links" />
     <Nuxt
       style="min-height: calc(100% - 107px);"
     />
@@ -40,7 +40,7 @@ body {
 #__nuxt,
 #__layout {
   height: 100%;
-  margin-top: 10vh;
+  margin-top: 50px;
 }
 a {
   color: #006cdc;
