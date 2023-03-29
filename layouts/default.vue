@@ -1,9 +1,6 @@
 <template>
   <div class="w-100" style="height: 100%;">
-    <Header
-      :app="app"
-      :links="links"
-    />
+    <Header :app="app" :links="links" :articles="articles" :categories="categories" />
     <Nuxt
       style="min-height: calc(100% - 107px);"
     />
