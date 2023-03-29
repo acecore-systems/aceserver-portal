@@ -40,6 +40,7 @@ body {
 #__nuxt,
 #__layout {
   height: 100%;
+  margin-top: 10vh;
 }
 a {
   color: #006cdc;

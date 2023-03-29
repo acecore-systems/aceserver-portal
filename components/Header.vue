@@ -148,6 +148,7 @@ export default {
   width: 100%;
   padding: 8px 8px 8px 14px;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+  height: 10vh;
 }
 .Header_Inner {
   max-width: 1024px;
@@ -310,7 +311,7 @@ export default {
 }
 .MobileMenu {
   position: fixed;
-  top: 51px;
+  top: 10vh ;
   left: 0;
   width: 100%;
   background: #f8f8f8;
