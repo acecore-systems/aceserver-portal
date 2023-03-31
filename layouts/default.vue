@@ -1,10 +1,11 @@
 <template>
-  <div class="w-100" style="height: 100%;">
-    <Header :app="app" :links="links" :articles="articles" :categories="categories" />
+  <div class="w-100" style="height:100%;">
+    <Header :app="app" :links="links" />
     <Nuxt
       style="min-height: calc(100% - 107px);"
     />
     <Footer
+    v-if="!page.isDisabledFooter"
       :app="app"
       :links="links"
     />
@@ -15,7 +16,7 @@
 import { mapGetters } from 'vuex'
 export default {
   computed: {
-    ...mapGetters(['app','links']),
+    ...mapGetters(['app','links','page']),
   },
 }
 </script>
@@ -34,12 +35,12 @@ body {
   font-family: 'Segoe UI Emoji', 'Helvetica Neue', Arial,
     'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
   -webkit-text-size-adjust: 100%;
-  height: 100%;
+  height: calc(100% - 50px);
   overflow-wrap: break-word;
 }
 #__nuxt,
 #__layout {
-  height: 100%;
+  height:100%;
 }
 a {
   color: #006cdc;
