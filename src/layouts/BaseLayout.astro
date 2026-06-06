@@ -1,0 +1,130 @@
+---
+import '@fontsource/noto-sans-jp/400.css'
+import '@fontsource/noto-sans-jp/700.css'
+import '@fontsource/noto-sans-jp/900.css'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+import { settings } from '../data/content'
+
+interface Props {
+  title?: string
+  description?: string
+  image?: string
+  hideFooter?: boolean
+  fullHeight?: boolean
+}
+
+const {
+  title = settings.title,
+  description = settings.description,
+  image = settings.logo,
+  hideFooter = false,
+  fullHeight = false,
+} = Astro.props
+const canonical = new URL(Astro.url.pathname, Astro.site ?? settings.siteUrl)
+const pageTitle =
+  title === settings.shortTitle ? title : `${title} | ${settings.shortTitle}`
+const ogImage = new URL(image, Astro.site ?? settings.siteUrl)
+---
+
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="/uploads/legacy-acico.png" />
+    <title>{pageTitle}</title>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+  </head>
+  <body class:list={[{ 'is-full-height': fullHeight }]}>
+    <Header />
+    <main>
+      <slot />
+    </main>
+    {!hideFooter && <Footer />}
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    color-scheme: light;
+    --asv-ink: #15130f;
+    --asv-wood: #2b2118;
+    --asv-parchment: #fff5dc;
+    --asv-gold: #ffd84d;
+    --asv-green: #35aa2f;
+    --asv-blue: #0aa7e2;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    margin: 0;
+    min-height: 100%;
+  }
+
+  body {
+    background:
+      linear-gradient(180deg, #87dfff 0, #f9efd0 45%, #15130f 100%), #fff5dc;
+    color: var(--asv-ink);
+    font-family:
+      'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic UI', 'Yu Gothic', Meiryo,
+      system-ui, sans-serif;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+    text-rendering: optimizeLegibility;
+  }
+
+  body.is-full-height main {
+    min-height: calc(100vh - 72px);
+  }
+
+  img,
+  iframe {
+    max-width: 100%;
+  }
+
+  img {
+    display: block;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  .pixel-border {
+    box-shadow:
+      0 0 0 2px rgba(46, 34, 22, 0.92),
+      inset 0 0 0 2px rgba(255, 255, 255, 0.18),
+      0 8px 0 rgba(34, 23, 13, 0.25);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      scroll-behavior: auto !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+</style>

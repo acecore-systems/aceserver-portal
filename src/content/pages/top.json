@@ -1,0 +1,57 @@
+{
+  "slug": "top",
+  "path": "/",
+  "pageName": "エースサーバーポータル",
+  "kind": "home",
+  "hideFooter": false,
+  "meta": {
+    "title": "エースサーバー",
+    "description": "エースサーバーは、誰でも参加可能なマインクラフト無料公開サーバーです。",
+    "ogImage": "/uploads/legacy-acico.png"
+  },
+  "sections": [
+    {
+      "type": "featureImageFull",
+      "titleCopy": "エースサーバーとは",
+      "text": "誰でも参加可能なマインクラフト無料公開サーバーです",
+      "image": "/uploads/legacy-scc.png",
+      "imageAlt": "既存サイトで使われていたエースサーバー街区のスクリーンショット"
+    },
+    {
+      "type": "featureImageRight",
+      "titleCopy": "誰とでもマルチプレイ！",
+      "text": "JAVA版・統合版どちらでも遊ぶことが可能です！",
+      "image": "/uploads/legacy-multiplayer.jpg",
+      "imageAlt": "既存サイトで使われていたマルチプレイ紹介用の写真"
+    },
+    {
+      "type": "featureImageLeft",
+      "titleCopy": "楽しい！",
+      "text": "バニラに近い、限りなく自由なサーバーです！",
+      "image": "/uploads/legacy-free-play.jpg",
+      "imageAlt": "既存サイトで使われていた自由な遊び方を示す写真"
+    },
+    {
+      "type": "cta",
+      "titleCopy": "エースサーバーに参加したいですか？",
+      "text": "まずは公式ディスコードにご参加ください！",
+      "ctaButton": {
+        "label": "ディスコードに参加",
+        "href": "https://discord.gg/vKTdU4k8ur",
+        "external": true
+      }
+    },
+    {
+      "type": "hero",
+      "shoulderCopy": "aceserver wiki",
+      "titleCopy": "エースサーバーWIKI",
+      "text": "誰でも編集可能なエースサーバーのWIKIページ",
+      "backgroundImage": "/uploads/legacy-wiki-bg.png",
+      "ctaButton": {
+        "label": "WIKIを開く",
+        "href": "https://asv-wiki.acecore.net",
+        "external": true
+      }
+    }
+  ]
+}

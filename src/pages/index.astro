@@ -1,0 +1,16 @@
+---
+import HomePage from '../components/HomePage.astro'
+import BaseLayout from '../layouts/BaseLayout.astro'
+import { getHomePage } from '../data/content'
+
+const page = getHomePage()
+---
+
+<BaseLayout
+  title={page.meta.title}
+  description={page.meta.description}
+  image={page.meta.ogImage}
+  hideFooter={page.hideFooter}
+>
+  <HomePage page={page} />
+</BaseLayout>

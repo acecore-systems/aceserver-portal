@@ -1,0 +1,38 @@
+{
+  "title": "エースサーバーポータル",
+  "shortTitle": "エースサーバー",
+  "description": "誰でも参加可能なマインクラフト無料公開サーバー、エースサーバーの公式ポータルです。",
+  "siteUrl": "https://asv.acecore.net",
+  "logo": "/uploads/legacy-acico.png",
+  "discordUrl": "https://discord.gg/vKTdU4k8ur",
+  "wikiUrl": "https://asv-wiki.acecore.net",
+  "worlds": [
+    {
+      "slug": "main",
+      "title": "メインワールド",
+      "href": "/world-map-main/",
+      "image": "/uploads/legacy-world-main.png",
+      "imageAlt": "メインワールドの既存ワールドマップスクリーンショット",
+      "icon": "castle",
+      "tone": "main"
+    },
+    {
+      "slug": "resource",
+      "title": "資源ワールド",
+      "href": "/world-map-sigen/",
+      "image": "/uploads/legacy-world-resource.png",
+      "imageAlt": "資源ワールドの既存ワールドマップスクリーンショット",
+      "icon": "pickaxe",
+      "tone": "resource"
+    },
+    {
+      "slug": "rpg",
+      "title": "RPG",
+      "href": "/world-map-rpg/",
+      "image": "/uploads/legacy-world-rpg.png",
+      "imageAlt": "RPGワールドマップの実スクリーンショット",
+      "icon": "swords",
+      "tone": "rpg"
+    }
+  ]
+}

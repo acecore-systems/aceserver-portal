@@ -1,36 +1,28 @@
 {
   "name": "aceserver-portal",
-  "version": "1.0.0",
+  "type": "module",
+  "version": "2.0.0",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate",
-    "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
-    "lint:prettier": "prettier --check .",
-    "lint": "yarn lint:js && yarn lint:prettier",
-    "lintfix": "prettier --write --list-different . && yarn lint:js --fix"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "format": "prettier . --write",
+    "format:check": "prettier . --check"
   },
   "dependencies": {
-    "@nuxtjs/google-adsense": "2.0.0",
-    "bootstrap": "^4.6.2",
-    "bootstrap-vue": "^2.22.0",
-    "core-js": "^3.25.3",
-    "newt-client-js": "^3.1.0",
-    "nuxt-edge": "latest",
-    "vue": "^2.7.10",
-    "vue-server-renderer": "^2.7.10",
-    "vue-template-compiler": "^2.7.10"
+    "@astrojs/sitemap": "^3.7.2",
+    "@fontsource/noto-sans-jp": "^5.2.9",
+    "@unocss/astro": "^66.6.7",
+    "astro": "^6.1.1",
+    "unocss": "^66.6.7"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "^7.19.1",
-    "@nuxtjs/eslint-config": "^11.0.0",
-    "@nuxtjs/eslint-module": "^3.1.0",
-    "eslint": "^8.24.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-nuxt": "^4.0.0",
-    "eslint-plugin-vue": "^9.5.1",
-    "prettier": "^2.7.1"
+    "@iconify-json/lucide": "^1.2.100",
+    "prettier": "^3.8.1",
+    "prettier-plugin-astro": "^0.14.1"
+  },
+  "overrides": {
+    "vite": "7"
   }
 }

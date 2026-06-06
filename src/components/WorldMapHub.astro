@@ -1,0 +1,234 @@
+---
+import type { PortalPage } from '../types'
+import { settings } from '../data/content'
+import Icon from './Icon.astro'
+
+interface Props {
+  page: PortalPage
+}
+
+const { page } = Astro.props
+const intro = page.sections[0]
+const introImage =
+  intro?.type === 'featureImageFull' && intro.image
+    ? intro.image
+    : '/uploads/legacy-world-map.png'
+---
+
+<section class="world-hero" aria-labelledby="world-title">
+  <div class="world-bg" style={`--world-hero-image: url('${introImage}')`}>
+  </div>
+  <div class="map-sign pixel-border">
+    <Icon name="map" />
+    <h1 id="world-title"><span>ワールド</span><span>マップ</span></h1>
+  </div>
+  <p>
+    {intro?.type === 'featureImageFull' ? intro.text : page.meta.description}
+  </p>
+</section>
+
+<section class="world-gates" aria-label="ワールドを選択">
+  {
+    settings.worlds.map((world) => (
+      <article
+        class:list={['world-gate', `world-gate--${world.tone}`, 'pixel-border']}
+      >
+        <div class="gate-top">
+          <Icon name={world.icon} />
+          <h2>{world.title}</h2>
+        </div>
+        <a
+          href={world.href}
+          class="gate-image"
+          aria-label={`${world.title}を開く`}
+        >
+          <img src={world.image} alt={world.imageAlt} />
+        </a>
+        <a class="asv-btn-primary" href={world.href}>
+          <span>開く</span>
+          <Icon name="chevron-right" />
+        </a>
+      </article>
+    ))
+  }
+</section>
+
+<style>
+  .world-hero {
+    position: relative;
+    display: grid;
+    min-height: 380px;
+    place-items: center;
+    gap: 20px;
+    overflow: hidden;
+    padding: clamp(58px, 9vw, 118px) 18px clamp(44px, 7vw, 82px);
+    text-align: center;
+    color: white;
+    isolation: isolate;
+  }
+
+  .world-bg {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background:
+      linear-gradient(180deg, rgba(22, 17, 12, 0.34), rgba(22, 17, 12, 0.62)),
+      var(--world-hero-image) center / cover;
+  }
+
+  .world-hero::after {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: radial-gradient(
+      circle at 50% 35%,
+      rgba(255, 216, 77, 0.28),
+      transparent 34%
+    );
+    content: '';
+  }
+
+  .map-sign {
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+    border-radius: 14px;
+    background: linear-gradient(
+      180deg,
+      rgba(42, 33, 24, 0.94),
+      rgba(23, 18, 13, 0.96)
+    );
+    padding: clamp(18px, 3vw, 28px) clamp(22px, 5vw, 60px);
+  }
+
+  .map-sign h1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+    font-size: clamp(3.1rem, 8vw, 7rem);
+    font-weight: 900;
+    letter-spacing: 0;
+    line-height: 1;
+    text-shadow: 0 5px 0 rgba(0, 0, 0, 0.35);
+    word-break: keep-all;
+  }
+
+  .map-sign h1 span {
+    display: inline-block;
+  }
+
+  .map-sign > :global(.asv-icon) {
+    color: #ffd84d;
+    font-size: clamp(2rem, 5vw, 4rem);
+  }
+
+  .world-hero p {
+    max-width: 720px;
+    margin: 0;
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    font-weight: 800;
+    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.55);
+  }
+
+  .world-gates {
+    display: grid;
+    gap: clamp(18px, 3vw, 30px);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    padding: clamp(34px, 5vw, 74px) clamp(18px, 5vw, 70px);
+    background: linear-gradient(180deg, #352719, #17120d);
+  }
+
+  .world-gate {
+    position: relative;
+    display: grid;
+    gap: 14px;
+    overflow: hidden;
+    border-radius: 18px;
+    background: #fff5dc;
+    padding: 14px;
+  }
+
+  .world-gate--main {
+    --gate-color: #1463b5;
+  }
+  .world-gate--resource {
+    --gate-color: #2f812e;
+  }
+  .world-gate--rpg {
+    --gate-color: #7133a6;
+  }
+
+  .gate-top {
+    display: flex;
+    min-height: 66px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: 3px solid rgba(0, 0, 0, 0.22);
+    border-radius: 12px;
+    background: linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--gate-color) 88%, white),
+      var(--gate-color)
+    );
+    color: white;
+    text-shadow: 0 3px 0 rgba(0, 0, 0, 0.28);
+  }
+
+  .gate-top h2 {
+    margin: 0;
+    font-size: clamp(1.35rem, 2.4vw, 2.2rem);
+    font-weight: 900;
+    letter-spacing: 0;
+  }
+
+  .gate-image {
+    display: block;
+    overflow: hidden;
+    border: 3px solid rgba(31, 20, 12, 0.82);
+    border-radius: 12px;
+    background: #111;
+  }
+
+  .gate-image img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    transition: transform 240ms ease;
+  }
+
+  .world-gate:hover .gate-image img {
+    transform: scale(1.045);
+  }
+
+  @media (max-width: 980px) {
+    .world-gates {
+      grid-template-columns: 1fr;
+    }
+    .world-gate {
+      max-width: 640px;
+      margin: 0 auto;
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 680px) {
+    .map-sign {
+      flex-direction: column;
+    }
+
+    .map-sign h1 {
+      flex-direction: column;
+    }
+    .preview-toolbar {
+      grid-template-columns: 1fr;
+      padding: 12px;
+      text-align: left;
+    }
+    .preview-toolbar strong,
+    .preview-toolbar span:last-child {
+      justify-self: start;
+    }
+  }
+</style>

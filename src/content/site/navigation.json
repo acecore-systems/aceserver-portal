@@ -1,0 +1,18 @@
+{
+  "items": [
+    { "text": "動画", "href": "/youtube-search-aceserver/", "icon": "play" },
+    { "text": "ワールドマップ", "href": "/world-map/", "icon": "map" },
+    {
+      "text": "Acecore",
+      "href": "https://acecore.net",
+      "external": true,
+      "icon": "box"
+    },
+    {
+      "text": "エースサーバーWIKI",
+      "href": "https://asv-wiki.acecore.net",
+      "external": true,
+      "icon": "book-open"
+    }
+  ]
+}

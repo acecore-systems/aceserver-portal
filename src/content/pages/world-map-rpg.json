@@ -1,0 +1,22 @@
+{
+  "slug": "world-map-rpg",
+  "path": "/world-map-rpg/",
+  "pageName": "RPGサーバーワールドマップ",
+  "kind": "embed",
+  "hideFooter": true,
+  "meta": {
+    "title": "RPGサーバーワールドマップ",
+    "description": "エースサーバーのRPGワールドマップです。",
+    "ogImage": "/uploads/legacy-world-rpg.png"
+  },
+  "sections": [
+    {
+      "type": "iframe",
+      "title": "RPGサーバーワールドマップ",
+      "src": "https://mc-map-rpg.acecore.net",
+      "externalUrl": "https://mc-map-rpg.acecore.net",
+      "fallbackImage": "/uploads/legacy-world-rpg.png",
+      "variant": "map"
+    }
+  ]
+}

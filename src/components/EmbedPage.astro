@@ -1,0 +1,161 @@
+---
+import type { PortalPage } from '../types'
+import { externalLinkAttrs } from '../utils/links'
+import Icon from './Icon.astro'
+
+interface Props {
+  page: PortalPage
+}
+
+const { page } = Astro.props
+const embed = page.sections.find((section) => section.type === 'iframe')
+
+if (!embed || embed.type !== 'iframe') {
+  throw new Error(`Embed page ${page.slug} is missing iframe data.`)
+}
+---
+
+<section class="embed-page" data-variant={embed.variant}>
+  <div class="embed-shell pixel-border">
+    <div class="embed-toolbar">
+      <a class="toolbar-button" href="/world-map/">
+        <Icon name="arrow-left" />
+        <span>戻る</span>
+      </a>
+      <h1>{embed.title ?? page.pageName}</h1>
+      <a
+        class="toolbar-button toolbar-button--external"
+        href={embed.externalUrl ?? embed.src}
+        {...externalLinkAttrs(embed.externalUrl ?? embed.src, true)}
+      >
+        <span>別タブで開く</span>
+        <Icon name="external-link" />
+      </a>
+    </div>
+    <div
+      class="embed-frame"
+      style={`--fallback-image: url('${embed.fallbackImage ?? '/uploads/legacy-world-map.png'}')`}
+    >
+      <iframe
+        src={embed.src}
+        title={embed.title ?? page.pageName}
+        loading="lazy"
+        allow="fullscreen; picture-in-picture"></iframe>
+    </div>
+  </div>
+</section>
+
+<style>
+  .embed-page {
+    min-height: calc(100vh - 72px);
+    background:
+      linear-gradient(180deg, rgba(15, 18, 19, 0.94), rgba(12, 10, 8, 0.98)),
+      url('/uploads/hero-world.png') center / cover;
+    padding: clamp(10px, 2vw, 22px);
+  }
+
+  .embed-shell {
+    display: grid;
+    min-height: calc(100vh - 112px);
+    overflow: hidden;
+    border-radius: 18px;
+    background: #15110c;
+  }
+
+  .embed-toolbar {
+    display: grid;
+    min-height: 68px;
+    align-items: center;
+    gap: 12px;
+    grid-template-columns: minmax(120px, 1fr) auto minmax(120px, 1fr);
+    border-bottom: 3px solid rgba(255, 216, 77, 0.64);
+    background: linear-gradient(
+      180deg,
+      rgba(48, 36, 24, 0.98),
+      rgba(24, 19, 14, 0.98)
+    );
+    color: #fff5dc;
+    padding: 10px clamp(10px, 2vw, 18px);
+  }
+
+  .embed-toolbar h1 {
+    margin: 0;
+    font-size: clamp(1.08rem, 2.2vw, 1.65rem);
+    font-weight: 900;
+    letter-spacing: 0;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  .toolbar-button {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    justify-self: start;
+    gap: 8px;
+    border: 2px solid rgba(255, 216, 77, 0.55);
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff5dc;
+    font-weight: 900;
+    padding: 0 13px;
+    text-decoration: none;
+  }
+
+  .toolbar-button:hover {
+    background: rgba(255, 216, 77, 0.14);
+    color: #ffd84d;
+  }
+
+  .toolbar-button--external {
+    justify-self: end;
+  }
+
+  .embed-frame {
+    position: relative;
+    min-height: 60vh;
+    background:
+      linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.28)),
+      var(--fallback-image) center / cover;
+  }
+
+  .embed-frame iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: calc(100vh - 180px);
+    border: 0;
+    background: transparent;
+  }
+
+  [data-variant='video'] .embed-shell {
+    min-height: auto;
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+
+  [data-variant='video'] .embed-frame {
+    aspect-ratio: 16 / 9;
+    min-height: auto;
+  }
+
+  [data-variant='video'] .embed-frame iframe {
+    height: 100%;
+    min-height: 0;
+  }
+
+  @media (max-width: 760px) {
+    .embed-toolbar {
+      grid-template-columns: 1fr;
+    }
+    .embed-toolbar h1,
+    .toolbar-button,
+    .toolbar-button--external {
+      justify-self: stretch;
+      text-align: left;
+    }
+    .toolbar-button {
+      justify-content: center;
+    }
+  }
+</style>
