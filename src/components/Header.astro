@@ -151,12 +151,12 @@ import Icon from './Icon.astro'
     font-size: 1.5rem;
   }
 
-  .menu-close,
-  [data-menu-open] .menu-open {
+  .menu-button :global(.menu-close),
+  [data-menu-open] .menu-button :global(.menu-open) {
     display: none;
   }
 
-  [data-menu-open] .menu-close {
+  [data-menu-open] .menu-button :global(.menu-close) {
     display: inline-block;
   }
 

@@ -9,10 +9,15 @@ interface Props {
 
 const { page } = Astro.props
 const intro = page.sections[0]
+const introImage =
+  intro?.type === 'featureImageFull' && intro.image
+    ? intro.image
+    : '/uploads/legacy-world-map.png'
 ---
 
 <section class="world-hero" aria-labelledby="world-title">
-  <div class="world-bg"></div>
+  <div class="world-bg" style={`--world-hero-image: url('${introImage}')`}>
+  </div>
   <div class="map-sign pixel-border">
     <Icon name="map" />
     <h1 id="world-title"><span>ワールド</span><span>マップ</span></h1>
@@ -56,10 +61,7 @@ const intro = page.sections[0]
       <span>別タブで開く <Icon name="external-link" /></span>
     </div>
     <div class="preview-map">
-      <img
-        src="/uploads/map-fallback.png"
-        alt="座標グリッド付きのワールドマップ表示イメージ"
-      />
+      <img src={introImage} alt="既存サイトで使われていたワールドマップ画像" />
       <div class="coordinate-chip">X: 420　Z: -315</div>
     </div>
   </div>
@@ -84,8 +86,8 @@ const intro = page.sections[0]
     inset: 0;
     z-index: -2;
     background:
-      linear-gradient(180deg, rgba(22, 17, 12, 0.22), rgba(22, 17, 12, 0.42)),
-      url('/uploads/hero-world.png') center 42% / cover;
+      linear-gradient(180deg, rgba(22, 17, 12, 0.34), rgba(22, 17, 12, 0.62)),
+      var(--world-hero-image) center / cover;
   }
 
   .world-hero::after {
@@ -130,7 +132,7 @@ const intro = page.sections[0]
     display: inline-block;
   }
 
-  .map-sign > span {
+  .map-sign > :global(.asv-icon) {
     color: #ffd84d;
     font-size: clamp(2rem, 5vw, 4rem);
   }

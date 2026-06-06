@@ -35,4 +35,4 @@ Sveltia CMS では `src/content/pages/*.json` と `src/content/site/*.json` を�
 
 ## 環境変数
 
-- `PUBLIC_SITE_URL`: 本番の canonical / sitemap 用 URL。未設定時は開発用の `https://aceserver-portal.local` を使います。
+- `PUBLIC_SITE_URL`: 本番の canonical / sitemap 用 URL。未設定時は `https://asv.acecore.net` を使います。

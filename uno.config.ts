@@ -1,26 +1,8 @@
 import { defineConfig, presetWind3, transformerDirectives } from 'unocss'
-import presetIcons from '@unocss/preset-icons'
 
 export default defineConfig({
-  presets: [presetWind3(), presetIcons({ scale: 1.1, warn: true })],
+  presets: [presetWind3()],
   transformers: [transformerDirectives()],
-  safelist: [
-    'i-lucide-arrow-left',
-    'i-lucide-book-open',
-    'i-lucide-box',
-    'i-lucide-castle',
-    'i-lucide-chevron-right',
-    'i-lucide-external-link',
-    'i-lucide-gamepad-2',
-    'i-lucide-globe-2',
-    'i-lucide-map',
-    'i-lucide-menu',
-    'i-lucide-message-circle',
-    'i-lucide-pickaxe',
-    'i-lucide-play',
-    'i-lucide-swords',
-    'i-lucide-x',
-  ],
   preflights: [
     {
       getCSS: () =>

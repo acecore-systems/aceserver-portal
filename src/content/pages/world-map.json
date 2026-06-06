@@ -7,15 +7,15 @@
   "meta": {
     "title": "ワールドマップ",
     "description": "エースサーバーのメインワールド、資源ワールド、RPGワールドのマップを開けます。",
-    "ogImage": "/uploads/map-fallback.png"
+    "ogImage": "/uploads/legacy-world-map.png"
   },
   "sections": [
     {
       "type": "featureImageFull",
       "titleCopy": "ワールドマップ",
       "text": "遊びたいワールドを選んで、現在地や街、冒険の行き先を確認できます。",
-      "image": "/uploads/map-fallback.png",
-      "imageAlt": "座標グリッド付きのボクセル風ワールドマップ"
+      "image": "/uploads/legacy-world-map.png",
+      "imageAlt": "既存サイトで使われていたワールドマップのイメージ画像"
     }
   ]
 }

@@ -7,7 +7,7 @@
   "meta": {
     "title": "資源サーバーワールドマップ",
     "description": "エースサーバーの資源ワールドマップです。",
-    "ogImage": "/uploads/map-fallback.png"
+    "ogImage": "/uploads/legacy-world-resource.png"
   },
   "sections": [
     {
@@ -15,7 +15,7 @@
       "title": "資源サーバーワールドマップ",
       "src": "https://mc-map-sigen.acecore.net",
       "externalUrl": "https://mc-map-sigen.acecore.net",
-      "fallbackImage": "/uploads/map-fallback.png",
+      "fallbackImage": "/uploads/legacy-world-resource.png",
       "variant": "map"
     }
   ]

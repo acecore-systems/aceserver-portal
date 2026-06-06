@@ -9,10 +9,34 @@ interface Props {
 
 const { page } = Astro.props
 const [overview, multiplayer, freePlay, joinCta, wikiCta] = page.sections
+const heroImage =
+  overview.type !== 'cta' && overview.type !== 'iframe' && overview.image
+    ? overview.image
+    : '/uploads/hero-world.png'
+const wikiBackgroundImage =
+  wikiCta.type === 'hero' && wikiCta.backgroundImage
+    ? wikiCta.backgroundImage
+    : '/uploads/legacy-wiki-bg.png'
+const heroJoinButton =
+  joinCta.type === 'cta'
+    ? joinCta.ctaButton
+    : {
+        label: 'ディスコードに参加',
+        href: 'https://discord.gg/vKTdU4k8ur',
+        external: true,
+      }
+const heroWikiButton =
+  wikiCta.type === 'hero' && wikiCta.ctaButton
+    ? wikiCta.ctaButton
+    : {
+        label: 'WIKIを開く',
+        href: 'https://aceserver-wiki.acecore.systems',
+        external: true,
+      }
 ---
 
 <section class="hero" aria-labelledby="home-title">
-  <img class="hero-bg" src="/uploads/hero-world.png" alt="" />
+  <img class="hero-bg" src={heroImage} alt="" />
   <div class="hero-shade"></div>
   <div class="hero-content">
     <h1 id="home-title"><span>エース</span><span>サーバー</span></h1>
@@ -20,19 +44,19 @@ const [overview, multiplayer, freePlay, joinCta, wikiCta] = page.sections
     <div class="hero-actions">
       <a
         class="asv-btn-blue"
-        href="https://discord.gg/vKTdU4k8ur"
-        {...externalLinkAttrs('https://discord.gg/vKTdU4k8ur', true)}
+        href={heroJoinButton.href}
+        {...externalLinkAttrs(heroJoinButton.href, heroJoinButton.external)}
       >
         <Icon name="message-circle" />
-        <span>ディスコードに参加</span>
+        <span>{heroJoinButton.label}</span>
       </a>
       <a
         class="asv-btn-green"
-        href="https://aceserver-wiki.acecore.systems"
-        {...externalLinkAttrs('https://aceserver-wiki.acecore.systems', true)}
+        href={heroWikiButton.href}
+        {...externalLinkAttrs(heroWikiButton.href, heroWikiButton.external)}
       >
         <Icon name="book-open" />
-        <span>WIKIを開く</span>
+        <span>{heroWikiButton.label}</span>
       </a>
     </div>
   </div>
@@ -145,7 +169,10 @@ const [overview, multiplayer, freePlay, joinCta, wikiCta] = page.sections
       }
     </div>
   </article>
-  <article class="wiki-card pixel-border">
+  <article
+    class="wiki-card pixel-border"
+    style={`--wiki-image: url('${wikiBackgroundImage}')`}
+  >
     <div>
       {wikiCta.type === 'hero' && <h2>{wikiCta.titleCopy}</h2>}
       {wikiCta.type === 'hero' && <p>{wikiCta.text}</p>}
@@ -426,7 +453,7 @@ const [overview, multiplayer, freePlay, joinCta, wikiCta] = page.sections
     font-size: 2.2rem;
   }
 
-  .device-arrow {
+  :global(.device-arrow) {
     font-size: 2rem;
   }
 
@@ -458,11 +485,13 @@ const [overview, multiplayer, freePlay, joinCta, wikiCta] = page.sections
 
   .wiki-card {
     grid-template-columns: 1fr auto;
-    background: linear-gradient(135deg, #1f6e25, #35aa2f);
+    background:
+      linear-gradient(135deg, rgba(20, 89, 28, 0.9), rgba(25, 129, 39, 0.78)),
+      var(--wiki-image) center / cover;
   }
 
   .cube-icon,
-  .wiki-mark {
+  :global(.wiki-mark) {
     display: grid;
     place-items: center;
     color: #fff8dd;
@@ -478,7 +507,7 @@ const [overview, multiplayer, freePlay, joinCta, wikiCta] = page.sections
     font-size: 3rem;
   }
 
-  .wiki-mark {
+  :global(.wiki-mark) {
     align-self: end;
     font-size: clamp(4rem, 10vw, 8rem);
     opacity: 0.88;
