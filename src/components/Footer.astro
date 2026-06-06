@@ -1,0 +1,79 @@
+---
+import { navigation, settings } from '../data/content'
+import { externalLinkAttrs } from '../utils/links'
+---
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <a class="footer-brand" href="/">
+      <img src={settings.logo} alt="" width="36" height="36" />
+      <span>{settings.shortTitle}</span>
+    </a>
+    <nav aria-label="フッターナビゲーション">
+      {
+        navigation.map((item) => (
+          <a href={item.href} {...externalLinkAttrs(item.href, item.external)}>
+            {item.text}
+          </a>
+        ))
+      }
+    </nav>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    border-top: 3px solid rgba(255, 216, 77, 0.62);
+    background:
+      linear-gradient(180deg, rgba(31, 24, 18, 0.98), rgba(15, 13, 10, 1)),
+      repeating-linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.04) 0 1px,
+        transparent 1px 24px
+      );
+    color: #fff7df;
+    padding: 28px clamp(18px, 5vw, 56px);
+  }
+
+  .footer-inner {
+    display: flex;
+    max-width: 1180px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    margin: 0 auto;
+  }
+
+  .footer-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: inherit;
+    font-weight: 900;
+    text-decoration: none;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 18px;
+  }
+
+  nav a {
+    color: #fff7df;
+    font-size: 0.92rem;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  nav a:hover {
+    color: #ffd84d;
+  }
+
+  @media (max-width: 720px) {
+    .footer-inner {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
+</style>

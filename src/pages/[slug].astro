@@ -1,0 +1,30 @@
+---
+import EmbedPage from '../components/EmbedPage.astro'
+import WorldMapHub from '../components/WorldMapHub.astro'
+import BaseLayout from '../layouts/BaseLayout.astro'
+import { pages } from '../data/content'
+import type { PortalPage } from '../types'
+
+export function getStaticPaths() {
+  return pages
+    .filter((page) => page.slug !== 'top')
+    .map((page) => ({ params: { slug: page.slug }, props: { page } }))
+}
+
+interface Props {
+  page: PortalPage
+}
+
+const { page } = Astro.props
+---
+
+<BaseLayout
+  title={page.meta.title}
+  description={page.meta.description}
+  image={page.meta.ogImage}
+  hideFooter={page.hideFooter}
+  fullHeight={page.kind === 'embed'}
+>
+  {page.kind === 'worldMap' && <WorldMapHub page={page} />}
+  {page.kind === 'embed' && <EmbedPage page={page} />}
+</BaseLayout>

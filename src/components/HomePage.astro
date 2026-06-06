@@ -1,0 +1,519 @@
+---
+import type { PortalPage } from '../types'
+import { externalLinkAttrs } from '../utils/links'
+import Icon from './Icon.astro'
+
+interface Props {
+  page: PortalPage
+}
+
+const { page } = Astro.props
+const [overview, multiplayer, freePlay, joinCta, wikiCta] = page.sections
+---
+
+<section class="hero" aria-labelledby="home-title">
+  <img class="hero-bg" src="/uploads/hero-world.png" alt="" />
+  <div class="hero-shade"></div>
+  <div class="hero-content">
+    <h1 id="home-title"><span>エース</span><span>サーバー</span></h1>
+    <p>{page.meta.description}</p>
+    <div class="hero-actions">
+      <a
+        class="asv-btn-blue"
+        href="https://discord.gg/vKTdU4k8ur"
+        {...externalLinkAttrs('https://discord.gg/vKTdU4k8ur', true)}
+      >
+        <Icon name="message-circle" />
+        <span>ディスコードに参加</span>
+      </a>
+      <a
+        class="asv-btn-green"
+        href="https://aceserver-wiki.acecore.systems"
+        {...externalLinkAttrs('https://aceserver-wiki.acecore.systems', true)}
+      >
+        <Icon name="book-open" />
+        <span>WIKIを開く</span>
+      </a>
+    </div>
+  </div>
+  <a class="scroll-cue" href="#overview" aria-label="次のセクションへ"
+    ><Icon name="chevron-right" /></a
+  >
+</section>
+
+<section id="overview" class="intro-section">
+  <div class="floating-island">
+    {
+      overview.type !== 'cta' && overview.type !== 'iframe' && (
+        <img src={overview.image} alt={overview.imageAlt ?? ''} />
+      )
+    }
+  </div>
+  <div class="intro-copy asv-panel pixel-border">
+    {
+      overview.type !== 'cta' && overview.type !== 'iframe' && (
+        <h2>{overview.titleCopy}</h2>
+      )
+    }
+    {
+      overview.type !== 'cta' && overview.type !== 'iframe' && (
+        <p>{overview.text}</p>
+      )
+    }
+    <p>好きなように遊び、作り、つながることができます。</p>
+  </div>
+</section>
+
+<section class="feature-band feature-band--right">
+  <div class="feature-copy">
+    {
+      multiplayer.type !== 'cta' && multiplayer.type !== 'iframe' && (
+        <h2>{multiplayer.titleCopy}</h2>
+      )
+    }
+    {
+      multiplayer.type !== 'cta' && multiplayer.type !== 'iframe' && (
+        <p>{multiplayer.text}</p>
+      )
+    }
+    <p>
+      一人でも、友達とも、世界中のプレイヤーとも一緒に冒険や建築を楽しめます。
+    </p>
+  </div>
+  <div class="feature-image pixel-border">
+    {
+      multiplayer.type !== 'cta' && multiplayer.type !== 'iframe' && (
+        <img src={multiplayer.image} alt={multiplayer.imageAlt ?? ''} />
+      )
+    }
+  </div>
+</section>
+
+<section class="crossplay-band">
+  <div class="device-scene pixel-border">
+    <div class="device device--desktop"><Icon name="gamepad-2" /></div>
+    <Icon name="chevron-right" class="device-arrow" />
+    <div class="device device--mobile"><Icon name="globe-2" /></div>
+  </div>
+  <div><h2>JAVA版・統合版<br />どちらでも遊ぶことが可能です！</h2></div>
+</section>
+
+<section class="feature-band feature-band--left">
+  <div class="feature-copy">
+    {
+      freePlay.type !== 'cta' && freePlay.type !== 'iframe' && (
+        <h2>{freePlay.titleCopy}</h2>
+      )
+    }
+    {
+      freePlay.type !== 'cta' && freePlay.type !== 'iframe' && (
+        <p>{freePlay.text}</p>
+      )
+    }
+  </div>
+  <div class="feature-image pixel-border">
+    {
+      freePlay.type !== 'cta' && freePlay.type !== 'iframe' && (
+        <img src={freePlay.image} alt={freePlay.imageAlt ?? ''} />
+      )
+    }
+  </div>
+</section>
+
+<section class="cta-grid" aria-label="参加とWIKI">
+  <article class="join-card pixel-border">
+    <div class="cube-icon"><Icon name="message-circle" /></div>
+    <div>
+      {joinCta.type === 'cta' && <h2>{joinCta.titleCopy}</h2>}
+      {joinCta.type === 'cta' && <p>{joinCta.text}</p>}
+      {
+        joinCta.type === 'cta' && (
+          <a
+            class="asv-btn-primary"
+            href={joinCta.ctaButton.href}
+            {...externalLinkAttrs(
+              joinCta.ctaButton.href,
+              joinCta.ctaButton.external,
+            )}
+          >
+            <>
+              <span>{joinCta.ctaButton.label}</span>
+              <Icon name="chevron-right" />
+            </>
+          </a>
+        )
+      }
+    </div>
+  </article>
+  <article class="wiki-card pixel-border">
+    <div>
+      {wikiCta.type === 'hero' && <h2>{wikiCta.titleCopy}</h2>}
+      {wikiCta.type === 'hero' && <p>{wikiCta.text}</p>}
+      {
+        wikiCta.type === 'hero' && wikiCta.ctaButton && (
+          <a
+            class="asv-btn-green"
+            href={wikiCta.ctaButton.href}
+            {...externalLinkAttrs(
+              wikiCta.ctaButton.href,
+              wikiCta.ctaButton.external,
+            )}
+          >
+            <>
+              <Icon name="book-open" />
+              <span>{wikiCta.ctaButton.label}</span>
+            </>
+          </a>
+        )
+      }
+    </div>
+    <Icon name="book-open" class="wiki-mark" />
+  </article>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    min-height: clamp(620px, 88vh, 880px);
+    isolation: isolate;
+    overflow: hidden;
+    border-bottom: 12px solid #1e1710;
+    background: #6bd7ff;
+  }
+
+  .hero-bg,
+  .hero-shade {
+    position: absolute;
+    inset: 0;
+  }
+
+  .hero-bg {
+    z-index: -3;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .hero-shade {
+    z-index: -2;
+    background:
+      linear-gradient(
+        90deg,
+        rgba(14, 11, 8, 0.72),
+        rgba(14, 11, 8, 0.22) 48%,
+        rgba(14, 11, 8, 0.06)
+      ),
+      linear-gradient(180deg, rgba(0, 0, 0, 0) 70%, rgba(21, 19, 15, 0.62));
+  }
+
+  .hero::after {
+    position: absolute;
+    inset: auto 0 0;
+    z-index: -1;
+    height: 120px;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 216, 77, 0.85),
+      rgba(53, 170, 47, 0.88)
+    );
+    clip-path: polygon(
+      0 58%,
+      7% 58%,
+      7% 50%,
+      15% 50%,
+      15% 62%,
+      26% 62%,
+      26% 46%,
+      36% 46%,
+      36% 58%,
+      47% 58%,
+      47% 50%,
+      56% 50%,
+      56% 62%,
+      67% 62%,
+      67% 46%,
+      78% 46%,
+      78% 58%,
+      88% 58%,
+      88% 50%,
+      100% 50%,
+      100% 100%,
+      0 100%
+    );
+    content: '';
+  }
+
+  .hero-content {
+    display: grid;
+    max-width: min(94vw, 1060px);
+    gap: 24px;
+    padding: clamp(94px, 14vh, 150px) clamp(18px, 7vw, 96px) 120px;
+    color: white;
+    text-shadow:
+      0 5px 0 rgba(0, 0, 0, 0.32),
+      0 18px 46px rgba(0, 0, 0, 0.34);
+  }
+
+  .hero h1 {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    font-size: clamp(4rem, 8vw, 7.4rem);
+    font-weight: 900;
+    letter-spacing: 0;
+    line-height: 0.96;
+    word-break: keep-all;
+  }
+
+  .hero h1 span {
+    display: inline-block;
+  }
+
+  .hero p {
+    max-width: 680px;
+    margin: 0;
+    font-size: clamp(1.12rem, 2vw, 1.55rem);
+    font-weight: 900;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .scroll-cue {
+    position: absolute;
+    bottom: 36px;
+    left: 50%;
+    display: grid;
+    width: 58px;
+    height: 58px;
+    place-items: center;
+    border: 2px solid rgba(255, 255, 255, 0.78);
+    border-radius: 12px;
+    background: rgba(53, 170, 47, 0.88);
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transform: translateX(-50%) rotate(90deg);
+  }
+
+  .intro-section,
+  .feature-band,
+  .crossplay-band,
+  .cta-grid {
+    position: relative;
+    padding: clamp(58px, 8vw, 108px) clamp(18px, 6vw, 86px);
+  }
+
+  .intro-section {
+    display: grid;
+    align-items: center;
+    gap: clamp(28px, 6vw, 84px);
+    grid-template-columns: minmax(220px, 0.92fr) minmax(280px, 1fr);
+    background: linear-gradient(
+      180deg,
+      rgba(255, 245, 220, 0.96),
+      rgba(255, 250, 237, 0.98)
+    );
+  }
+
+  .floating-island img {
+    width: min(100%, 560px);
+    margin: 0 auto;
+    filter: drop-shadow(0 20px 20px rgba(75, 47, 20, 0.24));
+  }
+
+  .intro-copy {
+    padding: clamp(24px, 4vw, 46px);
+  }
+
+  .intro-copy h2,
+  .feature-copy h2,
+  .crossplay-band h2,
+  .cta-grid h2 {
+    margin: 0 0 18px;
+    font-size: clamp(2rem, 4vw, 4rem);
+    font-weight: 900;
+    letter-spacing: 0;
+    line-height: 1.1;
+  }
+
+  .intro-copy p,
+  .feature-copy p,
+  .cta-grid p {
+    margin: 0 0 10px;
+    font-size: clamp(1.02rem, 1.5vw, 1.28rem);
+    font-weight: 800;
+  }
+
+  .feature-band {
+    display: grid;
+    align-items: center;
+    gap: clamp(28px, 5vw, 70px);
+    grid-template-columns: minmax(260px, 0.72fr) minmax(320px, 1.28fr);
+    background: #fff8e6;
+  }
+
+  .feature-band--left {
+    background: #e9f8ff;
+  }
+
+  .feature-band--left .feature-copy {
+    order: 2;
+  }
+
+  .feature-copy {
+    max-width: 520px;
+  }
+
+  .feature-image {
+    overflow: hidden;
+    border-radius: 16px;
+    background: #15130f;
+  }
+
+  .feature-image img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+
+  .crossplay-band {
+    display: grid;
+    align-items: center;
+    gap: clamp(26px, 5vw, 72px);
+    grid-template-columns: minmax(260px, 0.72fr) minmax(280px, 1fr);
+    background: linear-gradient(135deg, #baeaff, #f6fbff 58%, #fff2bf);
+  }
+
+  .device-scene {
+    display: flex;
+    min-height: 230px;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    border-radius: 18px;
+    background: linear-gradient(
+      135deg,
+      rgba(28, 21, 15, 0.92),
+      rgba(50, 38, 27, 0.92)
+    );
+    color: #ffd84d;
+  }
+
+  .device {
+    display: grid;
+    place-items: center;
+    border: 4px solid #0b141d;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #dff7ff, #63d5ff);
+    color: #15130f;
+    box-shadow: inset 0 -10px rgba(0, 0, 0, 0.12);
+  }
+
+  .device--desktop {
+    width: 148px;
+    height: 98px;
+    font-size: 3rem;
+  }
+
+  .device--mobile {
+    width: 74px;
+    height: 132px;
+    font-size: 2.2rem;
+  }
+
+  .device-arrow {
+    font-size: 2rem;
+  }
+
+  .cta-grid {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    background: linear-gradient(
+      180deg,
+      rgba(28, 21, 15, 0.98),
+      rgba(13, 17, 19, 1)
+    );
+    color: white;
+  }
+
+  .join-card,
+  .wiki-card {
+    display: grid;
+    min-height: 320px;
+    gap: 22px;
+    overflow: hidden;
+    padding: clamp(24px, 4vw, 44px);
+  }
+
+  .join-card {
+    grid-template-columns: auto 1fr;
+    background: linear-gradient(135deg, #0862c4, #0aa7e2);
+  }
+
+  .wiki-card {
+    grid-template-columns: 1fr auto;
+    background: linear-gradient(135deg, #1f6e25, #35aa2f);
+  }
+
+  .cube-icon,
+  .wiki-mark {
+    display: grid;
+    place-items: center;
+    color: #fff8dd;
+    filter: drop-shadow(0 8px 0 rgba(0, 0, 0, 0.2));
+  }
+
+  .cube-icon {
+    width: 104px;
+    height: 104px;
+    border: 3px solid rgba(255, 255, 255, 0.62);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.16);
+    font-size: 3rem;
+  }
+
+  .wiki-mark {
+    align-self: end;
+    font-size: clamp(4rem, 10vw, 8rem);
+    opacity: 0.88;
+  }
+
+  @media (max-width: 920px) {
+    .intro-section,
+    .feature-band,
+    .crossplay-band,
+    .cta-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .feature-band--left .feature-copy {
+      order: 0;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .hero {
+      min-height: 700px;
+    }
+
+    .hero-content {
+      padding-top: 90px;
+    }
+
+    .hero h1 {
+      flex-direction: column;
+      font-size: clamp(3.45rem, 16vw, 4.8rem);
+    }
+
+    .join-card,
+    .wiki-card {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

@@ -1,0 +1,22 @@
+{
+  "slug": "world-map-main",
+  "path": "/world-map-main/",
+  "pageName": "メインサーバーワールドマップ",
+  "kind": "embed",
+  "hideFooter": true,
+  "meta": {
+    "title": "メインサーバーワールドマップ",
+    "description": "エースサーバーのメインワールドマップです。",
+    "ogImage": "/uploads/map-fallback.png"
+  },
+  "sections": [
+    {
+      "type": "iframe",
+      "title": "メインサーバーワールドマップ",
+      "src": "https://mc-map-main.acecore.net",
+      "externalUrl": "https://mc-map-main.acecore.net",
+      "fallbackImage": "/uploads/map-fallback.png",
+      "variant": "map"
+    }
+  ]
+}

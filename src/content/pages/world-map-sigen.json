@@ -1,0 +1,22 @@
+{
+  "slug": "world-map-sigen",
+  "path": "/world-map-sigen/",
+  "pageName": "資源サーバーワールドマップ",
+  "kind": "embed",
+  "hideFooter": true,
+  "meta": {
+    "title": "資源サーバーワールドマップ",
+    "description": "エースサーバーの資源ワールドマップです。",
+    "ogImage": "/uploads/map-fallback.png"
+  },
+  "sections": [
+    {
+      "type": "iframe",
+      "title": "資源サーバーワールドマップ",
+      "src": "https://mc-map-sigen.acecore.net",
+      "externalUrl": "https://mc-map-sigen.acecore.net",
+      "fallbackImage": "/uploads/map-fallback.png",
+      "variant": "map"
+    }
+  ]
+}

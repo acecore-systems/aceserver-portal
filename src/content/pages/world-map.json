@@ -1,0 +1,21 @@
+{
+  "slug": "world-map",
+  "path": "/world-map/",
+  "pageName": "ワールドマップ",
+  "kind": "worldMap",
+  "hideFooter": false,
+  "meta": {
+    "title": "ワールドマップ",
+    "description": "エースサーバーのメインワールド、資源ワールド、RPGワールドのマップを開けます。",
+    "ogImage": "/uploads/map-fallback.png"
+  },
+  "sections": [
+    {
+      "type": "featureImageFull",
+      "titleCopy": "ワールドマップ",
+      "text": "遊びたいワールドを選んで、現在地や街、冒険の行き先を確認できます。",
+      "image": "/uploads/map-fallback.png",
+      "imageAlt": "座標グリッド付きのボクセル風ワールドマップ"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "slug": "top",
+  "path": "/",
+  "pageName": "エースサーバーポータル",
+  "kind": "home",
+  "hideFooter": false,
+  "meta": {
+    "title": "エースサーバー",
+    "description": "エースサーバーは、誰でも参加可能なマインクラフト無料公開サーバーです。",
+    "ogImage": "/uploads/hero-world.png"
+  },
+  "sections": [
+    {
+      "type": "featureImageFull",
+      "titleCopy": "エースサーバーとは",
+      "text": "誰でも参加可能なマインクラフト無料公開サーバーです",
+      "image": "/uploads/server-overview.png",
+      "imageAlt": "エースサーバーの拠点をイメージしたボクセル風の浮島"
+    },
+    {
+      "type": "featureImageRight",
+      "titleCopy": "誰とでもマルチプレイ！",
+      "text": "JAVA版・統合版どちらでも遊ぶことが可能です！",
+      "image": "/uploads/multiplayer.png",
+      "imageAlt": "複数のプレイヤーが一緒に冒険するボクセル風の風景"
+    },
+    {
+      "type": "featureImageLeft",
+      "titleCopy": "楽しい！",
+      "text": "バニラに近い、限りなく自由なサーバーです！",
+      "image": "/uploads/free-play.png",
+      "imageAlt": "海辺の村と洞窟が広がる自由なボクセル風ワールド"
+    },
+    {
+      "type": "cta",
+      "titleCopy": "エースサーバーに参加したいですか？",
+      "text": "まずは公式ディスコードにご参加ください！",
+      "ctaButton": {
+        "label": "ディスコードに参加",
+        "href": "https://discord.gg/vKTdU4k8ur",
+        "external": true
+      }
+    },
+    {
+      "type": "hero",
+      "shoulderCopy": "aceserver wiki",
+      "titleCopy": "エースサーバーWIKI",
+      "text": "誰でも編集可能なエースサーバーのWIKIページ",
+      "backgroundImage": "/uploads/hero-world.png",
+      "ctaButton": {
+        "label": "WIKIを開く",
+        "href": "https://aceserver-wiki.acecore.systems",
+        "external": true
+      }
+    }
+  ]
+}

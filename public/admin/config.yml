@@ -1,0 +1,279 @@
+# yaml-language-server: $schema=https://unpkg.com/@sveltia/cms@0.166.0/schema/sveltia-cms.json
+
+backend:
+  name: github
+  repo: acecore-systems/aceserver-portal
+  branch: main
+  base_url: https://sveltia-cms-auth.sparkling-tree-7cef.workers.dev
+  auth_methods: [oauth]
+  commit_messages:
+    create: 'cms: create {{collection}} "{{slug}}"'
+    update: 'cms: update {{collection}} "{{slug}}"'
+    delete: 'cms: delete {{collection}} "{{slug}}"'
+    uploadMedia: 'cms: upload "{{path}}"'
+    deleteMedia: 'cms: delete media "{{path}}"'
+
+media_folder: public/uploads
+public_folder: /uploads
+
+collections:
+  - name: portal_pages
+    label: ポータルページ
+    icon: dashboard
+    files:
+      - name: top
+        label: トップページ
+        file: src/content/pages/top.json
+        format: json
+        fields: &page_fields
+          - { name: slug, label: Slug, widget: string }
+          - { name: path, label: Path, widget: string }
+          - { name: pageName, label: ページ名, widget: string }
+          - {
+              name: kind,
+              label: 種別,
+              widget: select,
+              options: [home, worldMap, embed],
+            }
+          - {
+              name: hideFooter,
+              label: フッター非表示,
+              widget: boolean,
+              required: false,
+            }
+          - name: meta
+            label: メタ情報
+            widget: object
+            fields:
+              - { name: title, label: タイトル, widget: string }
+              - { name: description, label: 概要, widget: text }
+              - { name: ogImage, label: OG画像, widget: image, required: false }
+          - name: sections
+            label: セクション
+            widget: list
+            types:
+              - name: hero
+                label: ヒーロー/WIKI導線
+                widget: object
+                fields:
+                  - { name: type, label: Type, widget: hidden, default: hero }
+                  - {
+                      name: shoulderCopy,
+                      label: 小見出し,
+                      widget: string,
+                      required: false,
+                    }
+                  - { name: titleCopy, label: 見出し, widget: string }
+                  - { name: text, label: 本文, widget: text, required: false }
+                  - {
+                      name: backgroundImage,
+                      label: 背景画像,
+                      widget: image,
+                      required: false,
+                    }
+                  - name: ctaButton
+                    label: ボタン
+                    widget: object
+                    required: false
+                    fields:
+                      - { name: label, label: ラベル, widget: string }
+                      - { name: href, label: URL, widget: string }
+                      - {
+                          name: external,
+                          label: 外部リンク,
+                          widget: boolean,
+                          required: false,
+                        }
+              - name: featureImageFull
+                label: 画像付き説明（大）
+                widget: object
+                fields: &feature_fields
+                  - {
+                      name: type,
+                      label: Type,
+                      widget: hidden,
+                      default: featureImageFull,
+                    }
+                  - { name: titleCopy, label: 見出し, widget: string }
+                  - { name: text, label: 本文, widget: text, required: false }
+                  - { name: image, label: 画像, widget: image, required: false }
+                  - {
+                      name: imageAlt,
+                      label: 画像代替テキスト,
+                      widget: string,
+                      required: false,
+                    }
+              - name: featureImageRight
+                label: 画像付き説明（右）
+                widget: object
+                fields:
+                  - {
+                      name: type,
+                      label: Type,
+                      widget: hidden,
+                      default: featureImageRight,
+                    }
+                  - { name: titleCopy, label: 見出し, widget: string }
+                  - { name: text, label: 本文, widget: text, required: false }
+                  - { name: image, label: 画像, widget: image, required: false }
+                  - {
+                      name: imageAlt,
+                      label: 画像代替テキスト,
+                      widget: string,
+                      required: false,
+                    }
+              - name: featureImageLeft
+                label: 画像付き説明（左）
+                widget: object
+                fields:
+                  - {
+                      name: type,
+                      label: Type,
+                      widget: hidden,
+                      default: featureImageLeft,
+                    }
+                  - { name: titleCopy, label: 見出し, widget: string }
+                  - { name: text, label: 本文, widget: text, required: false }
+                  - { name: image, label: 画像, widget: image, required: false }
+                  - {
+                      name: imageAlt,
+                      label: 画像代替テキスト,
+                      widget: string,
+                      required: false,
+                    }
+              - name: cta
+                label: CTA
+                widget: object
+                fields:
+                  - { name: type, label: Type, widget: hidden, default: cta }
+                  - { name: titleCopy, label: 見出し, widget: string }
+                  - { name: text, label: 本文, widget: text, required: false }
+                  - name: ctaButton
+                    label: ボタン
+                    widget: object
+                    fields:
+                      - { name: label, label: ラベル, widget: string }
+                      - { name: href, label: URL, widget: string }
+                      - {
+                          name: external,
+                          label: 外部リンク,
+                          widget: boolean,
+                          required: false,
+                        }
+              - name: iframe
+                label: 埋め込み
+                widget: object
+                fields:
+                  - { name: type, label: Type, widget: hidden, default: iframe }
+                  - {
+                      name: title,
+                      label: タイトル,
+                      widget: string,
+                      required: false,
+                    }
+                  - { name: src, label: iframe URL, widget: string }
+                  - {
+                      name: externalUrl,
+                      label: 別タブURL,
+                      widget: string,
+                      required: false,
+                    }
+                  - {
+                      name: fallbackImage,
+                      label: 背景画像,
+                      widget: image,
+                      required: false,
+                    }
+                  - {
+                      name: variant,
+                      label: 種別,
+                      widget: select,
+                      options: [map, video],
+                      required: false,
+                    }
+      - {
+          name: world_map,
+          label: ワールドマップ,
+          file: src/content/pages/world-map.json,
+          format: json,
+          fields: *page_fields,
+        }
+      - {
+          name: world_map_main,
+          label: メインサーバーワールドマップ,
+          file: src/content/pages/world-map-main.json,
+          format: json,
+          fields: *page_fields,
+        }
+      - {
+          name: world_map_sigen,
+          label: 資源サーバーワールドマップ,
+          file: src/content/pages/world-map-sigen.json,
+          format: json,
+          fields: *page_fields,
+        }
+      - {
+          name: world_map_rpg,
+          label: RPGサーバーワールドマップ,
+          file: src/content/pages/world-map-rpg.json,
+          format: json,
+          fields: *page_fields,
+        }
+      - {
+          name: youtube,
+          label: エースサーバーの動画,
+          file: src/content/pages/youtube-search-aceserver.json,
+          format: json,
+          fields: *page_fields,
+        }
+
+  - name: site
+    label: サイト設定
+    icon: settings
+    files:
+      - name: settings
+        label: 基本設定
+        file: src/content/site/settings.json
+        format: json
+        fields:
+          - { name: title, label: サイト名, widget: string }
+          - { name: shortTitle, label: 短いサイト名, widget: string }
+          - { name: description, label: サイト説明, widget: text }
+          - { name: siteUrl, label: サイトURL, widget: string }
+          - { name: logo, label: ロゴ, widget: image }
+          - { name: discordUrl, label: Discord URL, widget: string }
+          - { name: wikiUrl, label: WIKI URL, widget: string }
+          - name: worlds
+            label: ワールド
+            widget: list
+            fields:
+              - { name: slug, label: Slug, widget: string }
+              - { name: title, label: タイトル, widget: string }
+              - { name: href, label: リンク, widget: string }
+              - { name: image, label: 画像, widget: image }
+              - { name: imageAlt, label: 画像代替テキスト, widget: string }
+              - { name: icon, label: アイコン, widget: string }
+              - {
+                  name: tone,
+                  label: 色,
+                  widget: select,
+                  options: [main, resource, rpg],
+                }
+      - name: navigation
+        label: ナビゲーション
+        file: src/content/site/navigation.json
+        format: json
+        fields:
+          - name: items
+            label: リンク
+            widget: list
+            fields:
+              - { name: text, label: 表示名, widget: string }
+              - { name: href, label: URL, widget: string }
+              - {
+                  name: external,
+                  label: 外部リンク,
+                  widget: boolean,
+                  required: false,
+                }
+              - { name: icon, label: アイコン, widget: string }

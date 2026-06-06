@@ -1,0 +1,10 @@
+---
+interface Props {
+  name: string
+  class?: string
+}
+
+const { name, class: className = '' } = Astro.props
+---
+
+<span class:list={[`i-lucide-${name}`, className]} aria-hidden="true"></span>

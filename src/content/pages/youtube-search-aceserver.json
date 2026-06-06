@@ -1,0 +1,22 @@
+{
+  "slug": "youtube-search-aceserver",
+  "path": "/youtube-search-aceserver/",
+  "pageName": "エースサーバーの動画",
+  "kind": "embed",
+  "hideFooter": true,
+  "meta": {
+    "title": "エースサーバーの動画",
+    "description": "エースサーバーの動画を表示します。",
+    "ogImage": "/uploads/video-fallback.png"
+  },
+  "sections": [
+    {
+      "type": "iframe",
+      "title": "エースサーバーの動画",
+      "src": "https://www.youtube-nocookie.com/embed/03XvopRIHCc",
+      "externalUrl": "https://youtu.be/03XvopRIHCc",
+      "fallbackImage": "/uploads/video-fallback.png",
+      "variant": "video"
+    }
+  ]
+}
