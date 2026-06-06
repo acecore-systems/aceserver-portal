@@ -49,7 +49,7 @@
       "backgroundImage": "/uploads/legacy-wiki-bg.png",
       "ctaButton": {
         "label": "WIKIを開く",
-        "href": "https://aceserver-wiki.acecore.systems",
+        "href": "https://asv-wiki.acecore.net",
         "external": true
       }
     }
