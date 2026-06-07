@@ -35,6 +35,27 @@ export type LinkItem = {
   external?: boolean
 }
 
+export type AnnouncementTone = 'brand' | 'amber' | 'emerald' | 'slate'
+
+export type AnnouncementItem = {
+  id: string
+  enabled?: boolean
+  order?: number
+  tone?: AnnouncementTone
+  icon?: string
+  title: string
+  text?: string
+  href?: string
+  linkLabel?: string
+  external?: boolean
+  startsAt?: string
+  endsAt?: string
+}
+
+export type AnnouncementSettings = {
+  items: AnnouncementItem[]
+}
+
 export type NavItem = {
   text: string
   href: string

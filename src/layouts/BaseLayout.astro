@@ -2,6 +2,7 @@
 import '@fontsource/noto-sans-jp/400.css'
 import '@fontsource/noto-sans-jp/700.css'
 import '@fontsource/noto-sans-jp/900.css'
+import AnnouncementBanner from '../components/AnnouncementBanner.astro'
 import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
 import { settings } from '../data/content'
@@ -12,6 +13,7 @@ interface Props {
   image?: string
   hideFooter?: boolean
   fullHeight?: boolean
+  robots?: string
 }
 
 const {
@@ -20,11 +22,15 @@ const {
   image = settings.logo,
   hideFooter = false,
   fullHeight = false,
+  robots = 'index, follow',
 } = Astro.props
-const canonical = new URL(Astro.url.pathname, Astro.site ?? settings.siteUrl)
+const siteBase = Astro.site ?? new URL(settings.siteUrl)
+const canonical = new URL(Astro.url.pathname, siteBase)
 const pageTitle =
   title === settings.shortTitle ? title : `${title} | ${settings.shortTitle}`
-const ogImage = new URL(image, Astro.site ?? settings.siteUrl)
+const ogImage = new URL(image, siteBase)
+const logoUrl = new URL(settings.logo, siteBase)
+const homeUrl = new URL('/', siteBase)
 ---
 
 <!doctype html>
@@ -34,19 +40,53 @@ const ogImage = new URL(image, Astro.site ?? settings.siteUrl)
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <meta name="format-detection" content="telephone=no" />
+    <meta name="robots" content={robots} />
+    <meta name="theme-color" content="#15130f" />
     <link rel="canonical" href={canonical} />
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="apple-touch-icon" href="/uploads/legacy-acico.png" />
     <title>{pageTitle}</title>
     <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ja_JP" />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content={settings.title} />
     <meta property="og:image" content={ogImage} />
+    <meta property="og:image:alt" content={title} />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:image:alt" content={title} />
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'WebSite',
+        name: settings.title,
+        alternateName: settings.shortTitle,
+        url: homeUrl.toString(),
+        description,
+      })}
+    />
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Organization',
+        name: settings.shortTitle,
+        url: homeUrl.toString(),
+        logo: logoUrl.toString(),
+        sameAs: [settings.discordUrl, settings.wikiUrl],
+      })}
+    />
   </head>
   <body class:list={[{ 'is-full-height': fullHeight }]}>
+    <a class="skip-link" href="#main">本文へ移動</a>
     <Header />
-    <main>
+    <AnnouncementBanner />
+    <main id="main" tabindex="-1">
       <slot />
     </main>
     {!hideFooter && <Footer />}
@@ -101,6 +141,29 @@ const ogImage = new URL(image, Astro.site ?? settings.siteUrl)
 
   a {
     color: inherit;
+  }
+
+  main:focus {
+    outline: none;
+  }
+
+  .skip-link {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 100;
+    border-radius: 8px;
+    background: #15130f;
+    color: #fff5dc;
+    font-weight: 900;
+    padding: 10px 14px;
+    text-decoration: none;
+    transform: translateY(-160%);
+    transition: transform 160ms ease;
+  }
+
+  .skip-link:focus {
+    transform: translateY(0);
   }
 
   button,

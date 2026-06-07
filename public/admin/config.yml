@@ -26,14 +26,19 @@ collections:
         file: src/content/pages/top.json
         format: json
         fields: &page_fields
-          - { name: slug, label: Slug, widget: string }
-          - { name: path, label: Path, widget: string }
+          - { name: slug, label: 管理ID, widget: string }
+          - { name: path, label: 公開パス, widget: string }
           - { name: pageName, label: ページ名, widget: string }
           - {
               name: kind,
               label: 種別,
               widget: select,
-              options: [home, worldMap, embed],
+              options:
+                [
+                  { label: トップページ, value: home },
+                  { label: ワールドマップ一覧, value: worldMap },
+                  { label: 埋め込みページ, value: embed },
+                ],
             }
           - {
               name: hideFooter,
@@ -56,7 +61,7 @@ collections:
                 label: ヒーロー/WIKI導線
                 widget: object
                 fields:
-                  - { name: type, label: Type, widget: hidden, default: hero }
+                  - { name: type, label: 種類, widget: hidden, default: hero }
                   - {
                       name: shoulderCopy,
                       label: 小見出し,
@@ -77,7 +82,7 @@ collections:
                     required: false
                     fields:
                       - { name: label, label: ラベル, widget: string }
-                      - { name: href, label: URL, widget: string }
+                      - { name: href, label: リンクURL, widget: string }
                       - {
                           name: external,
                           label: 外部リンク,
@@ -90,7 +95,7 @@ collections:
                 fields: &feature_fields
                   - {
                       name: type,
-                      label: Type,
+                      label: 種類,
                       widget: hidden,
                       default: featureImageFull,
                     }
@@ -109,7 +114,7 @@ collections:
                 fields:
                   - {
                       name: type,
-                      label: Type,
+                      label: 種類,
                       widget: hidden,
                       default: featureImageRight,
                     }
@@ -128,7 +133,7 @@ collections:
                 fields:
                   - {
                       name: type,
-                      label: Type,
+                      label: 種類,
                       widget: hidden,
                       default: featureImageLeft,
                     }
@@ -145,7 +150,7 @@ collections:
                 label: CTA
                 widget: object
                 fields:
-                  - { name: type, label: Type, widget: hidden, default: cta }
+                  - { name: type, label: 種類, widget: hidden, default: cta }
                   - { name: titleCopy, label: 見出し, widget: string }
                   - { name: text, label: 本文, widget: text, required: false }
                   - name: ctaButton
@@ -153,7 +158,7 @@ collections:
                     widget: object
                     fields:
                       - { name: label, label: ラベル, widget: string }
-                      - { name: href, label: URL, widget: string }
+                      - { name: href, label: リンクURL, widget: string }
                       - {
                           name: external,
                           label: 外部リンク,
@@ -164,14 +169,14 @@ collections:
                 label: 埋め込み
                 widget: object
                 fields:
-                  - { name: type, label: Type, widget: hidden, default: iframe }
+                  - { name: type, label: 種類, widget: hidden, default: iframe }
                   - {
                       name: title,
                       label: タイトル,
                       widget: string,
                       required: false,
                     }
-                  - { name: src, label: iframe URL, widget: string }
+                  - { name: src, label: 埋め込みURL, widget: string }
                   - {
                       name: externalUrl,
                       label: 別タブURL,
@@ -241,13 +246,13 @@ collections:
           - { name: description, label: サイト説明, widget: text }
           - { name: siteUrl, label: サイトURL, widget: string }
           - { name: logo, label: ロゴ, widget: image }
-          - { name: discordUrl, label: Discord URL, widget: string }
+          - { name: discordUrl, label: Discord 招待URL, widget: string }
           - { name: wikiUrl, label: WIKI URL, widget: string }
           - name: worlds
             label: ワールド
             widget: list
             fields:
-              - { name: slug, label: Slug, widget: string }
+              - { name: slug, label: 管理ID, widget: string }
               - { name: title, label: タイトル, widget: string }
               - { name: href, label: リンク, widget: string }
               - { name: image, label: 画像, widget: image }
@@ -257,7 +262,12 @@ collections:
                   name: tone,
                   label: 色,
                   widget: select,
-                  options: [main, resource, rpg],
+                  options:
+                    [
+                      { label: メインワールド, value: main },
+                      { label: 資源ワールド, value: resource },
+                      { label: RPG, value: rpg },
+                    ],
                 }
       - name: navigation
         label: ナビゲーション
@@ -269,7 +279,7 @@ collections:
             widget: list
             fields:
               - { name: text, label: 表示名, widget: string }
-              - { name: href, label: URL, widget: string }
+              - { name: href, label: リンクURL, widget: string }
               - {
                   name: external,
                   label: 外部リンク,
@@ -277,3 +287,94 @@ collections:
                   required: false,
                 }
               - { name: icon, label: アイコン, widget: string }
+
+  - name: announcements
+    label: 告知
+    icon: campaign
+    files:
+      - name: announcements
+        label: 告知一覧
+        file: src/content/site/announcements.json
+        format: json
+        fields:
+          - name: items
+            label: 告知
+            widget: list
+            summary: '{{fields.title}}'
+            fields:
+              - { name: id, label: 管理ID, widget: string }
+              - {
+                  name: enabled,
+                  label: 表示する,
+                  widget: boolean,
+                  default: true,
+                  required: false,
+                }
+              - {
+                  name: order,
+                  label: 表示順,
+                  widget: number,
+                  value_type: int,
+                  default: 100,
+                  required: false,
+                }
+              - {
+                  name: tone,
+                  label: 表示トーン,
+                  widget: select,
+                  default: brand,
+                  options:
+                    [
+                      { label: 通常, value: brand },
+                      { label: 注意・募集, value: amber },
+                      { label: 成功・受付中, value: emerald },
+                      { label: 控えめ, value: slate },
+                    ],
+                }
+              - {
+                  name: icon,
+                  label: アイコン,
+                  widget: select,
+                  default: megaphone,
+                  options:
+                    [
+                      { label: お知らせ, value: megaphone },
+                      { label: きらめき, value: sparkles },
+                      { label: カレンダー, value: calendar-days },
+                      { label: 注意, value: alert-triangle },
+                      { label: 地図, value: map },
+                      { label: Discord, value: message-circle },
+                    ],
+                }
+              - { name: title, label: タイトル, widget: string }
+              - { name: text, label: 本文, widget: text, required: false }
+              - {
+                  name: href,
+                  label: リンクURL,
+                  widget: string,
+                  required: false,
+                }
+              - {
+                  name: linkLabel,
+                  label: リンクラベル,
+                  widget: string,
+                  required: false,
+                }
+              - {
+                  name: external,
+                  label: 外部リンク,
+                  widget: boolean,
+                  required: false,
+                }
+              - {
+                  name: startsAt,
+                  label: 表示開始日時,
+                  widget: datetime,
+                  required: false,
+                }
+              - {
+                  name: endsAt,
+                  label: 表示終了日時,
+                  widget: datetime,
+                  required: false,
+                }
