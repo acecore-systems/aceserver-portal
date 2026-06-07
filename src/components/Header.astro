@@ -30,13 +30,21 @@ import Icon from './Icon.astro'
     type="button"
     aria-label="メニューを開く"
     aria-expanded="false"
+    aria-controls="mobile-menu"
+    data-label-open="メニューを開く"
+    data-label-close="メニューを閉じる"
     data-menu-button
   >
     <Icon name="menu" class="menu-open" />
     <Icon name="x" class="menu-close" />
   </button>
 
-  <nav class="mobile-nav" aria-label="モバイルナビゲーション" data-mobile-nav>
+  <nav
+    id="mobile-menu"
+    class="mobile-nav"
+    aria-label="モバイルナビゲーション"
+    data-mobile-nav
+  >
     {
       navigation.map((item) => (
         <a href={item.href} {...externalLinkAttrs(item.href, item.external)}>
@@ -49,14 +57,64 @@ import Icon from './Icon.astro'
 </header>
 
 <script>
-  const header = document.querySelector('[data-header]')
-  const button = document.querySelector('[data-menu-button]')
+  function setMenuState(expanded: boolean, focusMenu = false) {
+    const header = document.querySelector<HTMLElement>('[data-header]')
+    const button =
+      document.querySelector<HTMLButtonElement>('[data-menu-button]')
+    const menu = document.querySelector<HTMLElement>('[data-mobile-nav]')
 
-  button?.addEventListener('click', () => {
-    const expanded = button.getAttribute('aria-expanded') === 'true'
-    button.setAttribute('aria-expanded', String(!expanded))
-    header?.toggleAttribute('data-menu-open', !expanded)
-  })
+    if (!header || !button || !menu) return
+
+    header.toggleAttribute('data-menu-open', expanded)
+    button.setAttribute('aria-expanded', String(expanded))
+    button.setAttribute(
+      'aria-label',
+      expanded
+        ? button.dataset.labelClose || 'メニューを閉じる'
+        : button.dataset.labelOpen || 'メニューを開く',
+    )
+
+    if (expanded && focusMenu) {
+      menu.querySelector<HTMLElement>('a')?.focus()
+    }
+  }
+
+  function initHeaderMenu() {
+    const button =
+      document.querySelector<HTMLButtonElement>('[data-menu-button]')
+    const menu = document.querySelector<HTMLElement>('[data-mobile-nav]')
+    if (!button || !menu || button.dataset.menuBound === 'true') return
+
+    button.dataset.menuBound = 'true'
+    setMenuState(false)
+
+    button.addEventListener('click', () => {
+      const expanded = button.getAttribute('aria-expanded') === 'true'
+      setMenuState(!expanded, !expanded)
+    })
+
+    menu.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => setMenuState(false))
+    })
+  }
+
+  initHeaderMenu()
+
+  if (!(window as any).__asvHeaderKeyboardBound) {
+    ;(window as any).__asvHeaderKeyboardBound = true
+    document.addEventListener('keydown', (event) => {
+      if (event.key !== 'Escape') return
+
+      const button =
+        document.querySelector<HTMLButtonElement>('[data-menu-button]')
+      if (button?.getAttribute('aria-expanded') === 'true') {
+        setMenuState(false)
+        button.focus()
+      }
+    })
+  }
+
+  document.addEventListener('astro:after-swap', initHeaderMenu)
 </script>
 
 <style>

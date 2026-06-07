@@ -28,3 +28,4 @@ yarn-error.log*
 .playwright-cli/
 output/
 .tmp-*.log
+public/admin/runtime-config.js

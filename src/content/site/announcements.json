@@ -1,0 +1,15 @@
+{
+  "items": [
+    {
+      "id": "portal-renewal-2026",
+      "enabled": true,
+      "order": 10,
+      "tone": "brand",
+      "icon": "sparkles",
+      "title": "エースサーバーポータルをリニューアルしました",
+      "text": "動画、ワールドマップ、WIKIへの導線を見直し、スマートフォンからも使いやすくしました。",
+      "href": "/world-map/",
+      "linkLabel": "ワールドマップを見る"
+    }
+  ]
+}
