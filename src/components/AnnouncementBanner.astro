@@ -1,5 +1,6 @@
 ---
 import { announcements } from '../data/content'
+import { isWithinPublicationWindow } from '../utils/publication-window'
 import { externalLinkAttrs } from '../utils/links'
 import Icon from './Icon.astro'
 ---
@@ -13,6 +14,18 @@ import Icon from './Icon.astro'
             'announcement',
             `announcement--${announcement.tone ?? 'brand'}`,
           ]}
+          data-publication-window="true"
+          data-publication-starts-at={
+            announcement.startsAt?.trim() || undefined
+          }
+          data-publication-ends-at={announcement.endsAt?.trim() || undefined}
+          data-pagefind-ignore
+          hidden={
+            !isWithinPublicationWindow(
+              announcement.startsAt,
+              announcement.endsAt,
+            )
+          }
         >
           <div class="announcement-icon" aria-hidden="true">
             <Icon name={announcement.icon ?? 'megaphone'} />
@@ -36,6 +49,12 @@ import Icon from './Icon.astro'
     </aside>
   )
 }
+
+<script>
+  import { initPublicationWindowRuntime } from '../scripts/publication-window'
+
+  initPublicationWindowRuntime()
+</script>
 
 <style>
   .announcement-stack {
