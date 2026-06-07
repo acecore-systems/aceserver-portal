@@ -5,7 +5,10 @@ import '@fontsource/noto-sans-jp/900.css'
 import AnnouncementBanner from '../components/AnnouncementBanner.astro'
 import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
+import AdUnit from '../components/AdUnit.astro'
+import AdsRuntime from '../components/AdsRuntime.astro'
 import { settings } from '../data/content'
+import { ADSENSE } from '../data/ads'
 
 interface Props {
   title?: string
@@ -14,6 +17,7 @@ interface Props {
   hideFooter?: boolean
   fullHeight?: boolean
   robots?: string
+  showAds?: boolean
 }
 
 const {
@@ -23,6 +27,7 @@ const {
   hideFooter = false,
   fullHeight = false,
   robots = 'index, follow',
+  showAds = false,
 } = Astro.props
 const siteBase = Astro.site ?? new URL(settings.siteUrl)
 const canonical = new URL(Astro.url.pathname, siteBase)
@@ -31,6 +36,7 @@ const pageTitle =
 const ogImage = new URL(image, siteBase)
 const logoUrl = new URL(settings.logo, siteBase)
 const homeUrl = new URL('/', siteBase)
+const shouldShowAds = showAds && ADSENSE.enabled
 ---
 
 <!doctype html>
@@ -45,6 +51,23 @@ const homeUrl = new URL('/', siteBase)
     <link rel="canonical" href={canonical} />
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="apple-touch-icon" href="/uploads/legacy-acico.png" />
+    {
+      shouldShowAds && (
+        <>
+          <meta name="google-adsense-account" content={ADSENSE.clientId} />
+          <link
+            rel="dns-prefetch"
+            href="https://pagead2.googlesyndication.com"
+          />
+          <link rel="dns-prefetch" href="https://googleads.g.doubleclick.net" />
+          <link
+            rel="preconnect"
+            href="https://pagead2.googlesyndication.com"
+            crossorigin="anonymous"
+          />
+        </>
+      )
+    }
     <title>{pageTitle}</title>
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="ja_JP" />
@@ -88,8 +111,10 @@ const homeUrl = new URL('/', siteBase)
     <AnnouncementBanner />
     <main id="main" tabindex="-1">
       <slot />
+      {shouldShowAds && <AdUnit />}
     </main>
     {!hideFooter && <Footer />}
+    {shouldShowAds && <AdsRuntime />}
   </body>
 </html>
 

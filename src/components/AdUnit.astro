@@ -1,0 +1,67 @@
+---
+import { ADSENSE } from '../data/ads'
+
+interface Props {
+  slotId?: string
+  containerClass?: string
+}
+
+const { slotId = ADSENSE.slotId, containerClass } = Astro.props
+---
+
+<aside
+  class:list={['ad-unit', containerClass]}
+  aria-label="広告"
+  data-asv-ad-container
+  data-asv-ad-state="pending"
+  data-pagefind-ignore
+>
+  <span class="ad-label">広告</span>
+  <ins
+    class="adsbygoogle"
+    data-asv-ad-slot
+    style="display:block"
+    data-ad-client={ADSENSE.clientId}
+    data-ad-slot={slotId}
+    data-ad-format="auto"
+    data-full-width-responsive="true"></ins>
+</aside>
+
+<style>
+  .ad-unit {
+    width: min(calc(100% - 36px), 980px);
+    min-height: 132px;
+    margin: clamp(30px, 5vw, 56px) auto;
+    border: 2px solid rgba(43, 33, 24, 0.18);
+    border-radius: 8px;
+    background: rgba(255, 245, 220, 0.72);
+    padding: 12px;
+  }
+
+  .ad-label {
+    display: block;
+    margin-bottom: 8px;
+    color: rgba(21, 19, 15, 0.54);
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 1;
+    text-align: center;
+  }
+
+  .adsbygoogle {
+    min-height: 96px;
+  }
+
+  .ad-unit[data-asv-ad-state='empty'],
+  .ad-unit[data-asv-ad-state='error'] {
+    display: none;
+  }
+
+  @media (max-width: 640px) {
+    .ad-unit {
+      width: min(calc(100% - 24px), 980px);
+      margin-block: 24px;
+    }
+  }
+</style>

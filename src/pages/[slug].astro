@@ -24,6 +24,7 @@ const { page } = Astro.props
   image={page.meta.ogImage}
   hideFooter={page.hideFooter}
   fullHeight={page.kind === 'embed'}
+  showAds={page.kind === 'worldMap'}
 >
   {page.kind === 'worldMap' && <WorldMapHub page={page} />}
   {page.kind === 'embed' && <EmbedPage page={page} />}
