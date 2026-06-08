@@ -13,10 +13,56 @@
     {
       "type": "iframe",
       "title": "エースサーバーの動画",
-      "src": "https://www.youtube-nocookie.com/embed/03XvopRIHCc",
-      "externalUrl": "https://youtu.be/03XvopRIHCc",
+      "src": "https://www.youtube-nocookie.com/embed/videoseries?list=UURd3wlD5zemJ7Q9C1SZoEDw&rel=0",
+      "externalUrl": "https://www.youtube.com/@aceserver/videos",
+      "channelUrl": "https://www.youtube.com/@aceserver",
+      "feedApiPath": "/api/youtube-videos",
       "fallbackImage": "/uploads/video-fallback.png",
-      "variant": "video"
+      "variant": "video",
+      "videos": [
+        {
+          "id": "S0mcxOZsTsg",
+          "title": "【今年最後】2026カウントダウン配信【#マインクラフト】【#マルチサーバー】",
+          "href": "https://www.youtube.com/watch?v=S0mcxOZsTsg",
+          "thumbnail": "https://i4.ytimg.com/vi/S0mcxOZsTsg/hqdefault.jpg",
+          "publishedAt": "2026-01-01T03:16:57+00:00"
+        },
+        {
+          "id": "HFN7eY1vd1s",
+          "title": "【今年最後】革命的な初仕様導入のイベント開催だあ！！【#マインクラフト】【#マルチサーバー】",
+          "href": "https://www.youtube.com/watch?v=HFN7eY1vd1s",
+          "thumbnail": "https://i1.ytimg.com/vi/HFN7eY1vd1s/hqdefault.jpg",
+          "publishedAt": "2025-12-29T02:41:37+00:00"
+        },
+        {
+          "id": "LmYLIGC_lRQ",
+          "title": "A鯖夏祭り2025",
+          "href": "https://www.youtube.com/watch?v=LmYLIGC_lRQ",
+          "thumbnail": "https://i1.ytimg.com/vi/LmYLIGC_lRQ/hqdefault.jpg",
+          "publishedAt": "2025-12-28T12:10:21+00:00"
+        },
+        {
+          "id": "jQzpb3h4dMA",
+          "title": "A鯖夏祭り2025",
+          "href": "https://www.youtube.com/watch?v=jQzpb3h4dMA",
+          "thumbnail": "https://i3.ytimg.com/vi/jQzpb3h4dMA/hqdefault.jpg",
+          "publishedAt": "2025-08-31T03:57:21+00:00"
+        },
+        {
+          "id": "VVY_CEImZRU",
+          "title": "死の螺旋 エースサーバーの未来編",
+          "href": "https://www.youtube.com/watch?v=VVY_CEImZRU",
+          "thumbnail": "https://i3.ytimg.com/vi/VVY_CEImZRU/hqdefault.jpg",
+          "publishedAt": "2025-04-02T01:17:31+00:00"
+        },
+        {
+          "id": "lgOMPp_xmfE",
+          "title": "【公開会議】Aceserverオフ会でやることを考えたい２",
+          "href": "https://www.youtube.com/watch?v=lgOMPp_xmfE",
+          "thumbnail": "https://i1.ytimg.com/vi/lgOMPp_xmfE/hqdefault.jpg",
+          "publishedAt": "2024-12-26T23:21:09+00:00"
+        }
+      ]
     }
   ]
 }

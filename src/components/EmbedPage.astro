@@ -13,37 +13,122 @@ const embed = page.sections.find((section) => section.type === 'iframe')
 if (!embed || embed.type !== 'iframe') {
   throw new Error(`Embed page ${page.slug} is missing iframe data.`)
 }
+
+const isVideoPage = embed.variant === 'video'
+const videoFeedApiPath = embed.feedApiPath ?? '/api/youtube-videos'
+const videoChannelUrl =
+  embed.channelUrl ?? embed.externalUrl ?? 'https://www.youtube.com/@aceserver'
+const fallbackVideos = embed.videos ?? []
 ---
 
 <section class="embed-page" data-variant={embed.variant}>
-  <div class="embed-shell pixel-border">
-    <div class="embed-toolbar">
-      <a class="toolbar-button" href="/world-map/">
-        <Icon name="arrow-left" />
-        <span>戻る</span>
-      </a>
-      <h1>{embed.title ?? page.pageName}</h1>
-      <a
-        class="toolbar-button toolbar-button--external"
-        href={embed.externalUrl ?? embed.src}
-        {...externalLinkAttrs(embed.externalUrl ?? embed.src, true)}
+  <div class="embed-layout">
+    <div class="embed-shell pixel-border">
+      <div class="embed-toolbar">
+        <a class="toolbar-button" href="/world-map/">
+          <Icon name="arrow-left" />
+          <span>戻る</span>
+        </a>
+        <h1>{embed.title ?? page.pageName}</h1>
+        <a
+          class="toolbar-button toolbar-button--external"
+          href={embed.externalUrl ?? embed.src}
+          {...externalLinkAttrs(embed.externalUrl ?? embed.src, true)}
+        >
+          <span>別タブで開く</span>
+          <Icon name="external-link" />
+        </a>
+      </div>
+      <div
+        class="embed-frame"
+        style={`--fallback-image: url('${embed.fallbackImage ?? '/uploads/legacy-world-map.png'}')`}
       >
-        <span>別タブで開く</span>
-        <Icon name="external-link" />
-      </a>
+        <iframe
+          src={embed.src}
+          title={embed.title ?? page.pageName}
+          loading="lazy"
+          allow="fullscreen; picture-in-picture"></iframe>
+      </div>
     </div>
-    <div
-      class="embed-frame"
-      style={`--fallback-image: url('${embed.fallbackImage ?? '/uploads/legacy-world-map.png'}')`}
-    >
-      <iframe
-        src={embed.src}
-        title={embed.title ?? page.pageName}
-        loading="lazy"
-        allow="fullscreen; picture-in-picture"></iframe>
-    </div>
+
+    {
+      isVideoPage && (
+        <section
+          class="video-gallery"
+          data-youtube-feed
+          data-api-path={videoFeedApiPath}
+        >
+          <div class="video-gallery__header">
+            <div>
+              <p class="video-gallery__eyebrow">YouTube</p>
+              <h2>最新動画</h2>
+            </div>
+            <a
+              class="toolbar-button toolbar-button--external"
+              href={videoChannelUrl}
+              {...externalLinkAttrs(videoChannelUrl, true)}
+            >
+              <span>チャンネル</span>
+              <Icon name="external-link" />
+            </a>
+          </div>
+          <div class="video-grid" data-youtube-video-list>
+            {fallbackVideos.map((video) => (
+              <a
+                class="video-card"
+                href={
+                  video.href ?? `https://www.youtube.com/watch?v=${video.id}`
+                }
+                {...externalLinkAttrs(
+                  video.href ?? `https://www.youtube.com/watch?v=${video.id}`,
+                  true,
+                )}
+              >
+                <span class="video-card__thumbnail">
+                  <img
+                    src={
+                      video.thumbnail ??
+                      `https://i.ytimg.com/vi/${video.id}/hqdefault.jpg`
+                    }
+                    alt={`${video.title}のサムネイル`}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span class="video-card__play">▶</span>
+                </span>
+                <span class="video-card__body">
+                  <span class="video-card__title">{video.title}</span>
+                  {video.publishedAt && (
+                    <span class="video-card__meta">
+                      {new Intl.DateTimeFormat('ja-JP', {
+                        year: 'numeric',
+                        month: 'short',
+                        day: 'numeric',
+                      }).format(new Date(video.publishedAt))}
+                    </span>
+                  )}
+                </span>
+              </a>
+            ))}
+          </div>
+          <p
+            class="video-gallery__status"
+            data-youtube-video-status
+            hidden={fallbackVideos.length > 0}
+          >
+            最新動画を取得しています
+          </p>
+        </section>
+      )
+    }
   </div>
 </section>
+
+<script>
+  import { initYoutubeVideosRuntime } from '../scripts/youtube-videos'
+
+  initYoutubeVideosRuntime()
+</script>
 
 <style>
   .embed-page {
@@ -52,6 +137,11 @@ if (!embed || embed.type !== 'iframe') {
       linear-gradient(180deg, rgba(15, 18, 19, 0.94), rgba(12, 10, 8, 0.98)),
       url('/uploads/legacy-world-map.png') center / cover;
     padding: clamp(10px, 2vw, 22px);
+  }
+
+  .embed-layout {
+    display: grid;
+    gap: clamp(18px, 3vw, 28px);
   }
 
   .embed-shell {
@@ -144,6 +234,125 @@ if (!embed || embed.type !== 'iframe') {
     min-height: 0;
   }
 
+  .video-gallery {
+    width: min(1180px, 100%);
+    margin: 0 auto;
+    color: #fff5dc;
+  }
+
+  .video-gallery__header {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 14px;
+  }
+
+  .video-gallery__eyebrow,
+  .video-gallery__header h2,
+  .video-gallery__status {
+    margin: 0;
+  }
+
+  .video-gallery__eyebrow {
+    color: #ffd84d;
+    font-size: 0.78rem;
+    font-weight: 900;
+    letter-spacing: 0;
+    text-transform: uppercase;
+  }
+
+  .video-gallery__header h2 {
+    font-size: clamp(1.25rem, 2.4vw, 1.8rem);
+    line-height: 1.25;
+  }
+
+  .video-grid {
+    display: grid;
+    gap: 14px;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  }
+
+  .video-card {
+    display: grid;
+    overflow: hidden;
+    border: 2px solid rgba(255, 216, 77, 0.4);
+    border-radius: 8px;
+    background: rgba(15, 12, 8, 0.88);
+    color: #fff5dc;
+    text-decoration: none;
+    transition:
+      border-color 160ms ease,
+      transform 160ms ease,
+      background 160ms ease;
+  }
+
+  .video-card:hover {
+    border-color: rgba(255, 216, 77, 0.8);
+    background: rgba(42, 29, 18, 0.96);
+    transform: translateY(-2px);
+  }
+
+  .video-card__thumbnail {
+    position: relative;
+    display: block;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: #050403;
+  }
+
+  .video-card__thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .video-card__play {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    display: grid;
+    width: 38px;
+    height: 28px;
+    place-items: center;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.78);
+    color: #ffd84d;
+    font-size: 0.78rem;
+    line-height: 1;
+  }
+
+  .video-card__body {
+    display: grid;
+    gap: 8px;
+    padding: 12px;
+  }
+
+  .video-card__title {
+    display: -webkit-box;
+    min-height: 3.2em;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    font-size: 0.94rem;
+    font-weight: 900;
+    line-height: 1.6;
+  }
+
+  .video-card__meta {
+    color: rgba(255, 245, 220, 0.72);
+    font-size: 0.82rem;
+    font-weight: 700;
+  }
+
+  .video-gallery__status {
+    border: 2px solid rgba(255, 216, 77, 0.3);
+    border-radius: 8px;
+    background: rgba(15, 12, 8, 0.7);
+    font-weight: 900;
+    padding: 14px;
+  }
+
   @media (max-width: 760px) {
     .embed-toolbar {
       grid-template-columns: 1fr;
@@ -156,6 +365,11 @@ if (!embed || embed.type !== 'iframe') {
     }
     .toolbar-button {
       justify-content: center;
+    }
+
+    .video-gallery__header {
+      align-items: stretch;
+      flex-direction: column;
     }
   }
 </style>
