@@ -6,14 +6,14 @@
   "hideFooter": false,
   "meta": {
     "title": "ワールドマップ",
-    "description": "エースサーバーのメインワールド、資源ワールド、RPG、p-sakanaのマップを開けます。",
+    "description": "エースサーバーの公開中ワールドマップと稼働中ワールドを確認できます。",
     "ogImage": "/uploads/legacy-world-map.png"
   },
   "sections": [
     {
       "type": "featureImageFull",
       "titleCopy": "ワールドマップ",
-      "text": "遊びたいワールドを選んで、現在地や街、冒険の行き先を確認できます。",
+      "text": "公開中のマップと、現在稼働しているワールドをまとめて確認できます。",
       "image": "/uploads/legacy-world-map.png",
       "imageAlt": "既存サイトで使われていたワールドマップのイメージ画像"
     }

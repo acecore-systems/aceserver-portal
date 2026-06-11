@@ -14,7 +14,8 @@
       "image": "/uploads/legacy-world-main.png",
       "imageAlt": "メインワールドの既存ワールドマップスクリーンショット",
       "icon": "castle",
-      "tone": "main"
+      "tone": "main",
+      "statusLabel": "マップ公開中"
     },
     {
       "slug": "resource",
@@ -23,7 +24,8 @@
       "image": "/uploads/legacy-world-resource.png",
       "imageAlt": "資源ワールドの既存ワールドマップスクリーンショット",
       "icon": "pickaxe",
-      "tone": "resource"
+      "tone": "resource",
+      "statusLabel": "マップ公開中"
     },
     {
       "slug": "rpg",
@@ -32,16 +34,58 @@
       "image": "/uploads/legacy-world-rpg.png",
       "imageAlt": "RPGワールドマップの実スクリーンショット",
       "icon": "swords",
-      "tone": "rpg"
+      "tone": "rpg",
+      "statusLabel": "マップ公開中"
     },
     {
-      "slug": "p-sakana",
-      "title": "p-sakana",
-      "href": "/world-map-p-sakana/",
+      "slug": "lobby",
+      "title": "ロビー",
       "image": "/uploads/legacy-world-map.png",
-      "imageAlt": "p-sakanaワールドマップのイメージ画像",
-      "icon": "fish",
-      "tone": "sakana"
+      "imageAlt": "ロビーワールドのイメージ画像",
+      "icon": "door-open",
+      "tone": "lobby",
+      "statusLabel": "稼働中",
+      "description": "公開マップは未設定です。"
+    },
+    {
+      "slug": "rpg-sub",
+      "title": "RPGサブ",
+      "image": "/uploads/legacy-world-rpg.png",
+      "imageAlt": "RPGサブワールドのイメージ画像",
+      "icon": "shield",
+      "tone": "rpg",
+      "statusLabel": "稼働中",
+      "description": "公開マップは未設定です。"
+    },
+    {
+      "slug": "season-a",
+      "title": "Season A",
+      "image": "/uploads/legacy-world-main.png",
+      "imageAlt": "Season Aワールドのイメージ画像",
+      "icon": "trees",
+      "tone": "season",
+      "statusLabel": "稼働中",
+      "description": "公開マップは未設定です。"
+    },
+    {
+      "slug": "season-a-c",
+      "title": "Season Creative",
+      "image": "/uploads/legacy-free-play.jpg",
+      "imageAlt": "Season Creativeワールドのイメージ画像",
+      "icon": "sparkles",
+      "tone": "creative",
+      "statusLabel": "稼働中",
+      "description": "公開マップは未設定です。"
+    },
+    {
+      "slug": "event",
+      "title": "イベントマップ",
+      "image": "/uploads/legacy-multiplayer.jpg",
+      "imageAlt": "イベントマップのイメージ画像",
+      "icon": "calendar-days",
+      "tone": "event",
+      "statusLabel": "稼働中",
+      "description": "公開マップは未設定です。"
     }
   ]
 }
