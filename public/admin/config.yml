@@ -225,6 +225,13 @@ collections:
           fields: *page_fields,
         }
       - {
+          name: world_map_p_sakana,
+          label: p-sakanaワールドマップ,
+          file: src/content/pages/world-map-p-sakana.json,
+          format: json,
+          fields: *page_fields,
+        }
+      - {
           name: youtube,
           label: エースサーバーの動画,
           file: src/content/pages/youtube-search-aceserver.json,
@@ -267,6 +274,7 @@ collections:
                       { label: メインワールド, value: main },
                       { label: 資源ワールド, value: resource },
                       { label: RPG, value: rpg },
+                      { label: p-sakana, value: sakana },
                     ],
                 }
       - name: navigation

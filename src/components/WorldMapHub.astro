@@ -134,7 +134,7 @@ const introImage =
   .world-gates {
     display: grid;
     gap: clamp(18px, 3vw, 30px);
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
     padding: clamp(34px, 5vw, 74px) clamp(18px, 5vw, 70px);
     background: linear-gradient(180deg, #352719, #17120d);
   }
@@ -158,6 +158,9 @@ const introImage =
   .world-gate--rpg {
     --gate-color: #7133a6;
   }
+  .world-gate--sakana {
+    --gate-color: #0b7890;
+  }
 
   .gate-top {
     display: flex;
@@ -177,10 +180,13 @@ const introImage =
   }
 
   .gate-top h2 {
+    min-width: 0;
     margin: 0;
-    font-size: clamp(1.35rem, 2.4vw, 2.2rem);
+    font-size: clamp(1.18rem, 1.8vw, 1.7rem);
     font-weight: 900;
     letter-spacing: 0;
+    text-wrap: balance;
+    word-break: keep-all;
   }
 
   .gate-image {

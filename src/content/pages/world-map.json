@@ -6,7 +6,7 @@
   "hideFooter": false,
   "meta": {
     "title": "ワールドマップ",
-    "description": "エースサーバーのメインワールド、資源ワールド、RPGワールドのマップを開けます。",
+    "description": "エースサーバーのメインワールド、資源ワールド、RPG、p-sakanaのマップを開けます。",
     "ogImage": "/uploads/legacy-world-map.png"
   },
   "sections": [

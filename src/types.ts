@@ -84,7 +84,7 @@ export type WorldEntry = {
   image: string
   imageAlt: string
   icon: string
-  tone: 'main' | 'resource' | 'rpg'
+  tone: 'main' | 'resource' | 'rpg' | 'sakana'
 }
 
 export type SiteSettings = {

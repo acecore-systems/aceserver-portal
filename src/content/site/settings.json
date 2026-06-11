@@ -33,6 +33,15 @@
       "imageAlt": "RPGワールドマップの実スクリーンショット",
       "icon": "swords",
       "tone": "rpg"
+    },
+    {
+      "slug": "p-sakana",
+      "title": "p-sakana",
+      "href": "/world-map-p-sakana/",
+      "image": "/uploads/legacy-world-map.png",
+      "imageAlt": "p-sakanaワールドマップのイメージ画像",
+      "icon": "fish",
+      "tone": "sakana"
     }
   ]
 }
