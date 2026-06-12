@@ -225,6 +225,13 @@ collections:
           fields: *page_fields,
         }
       - {
+          name: world_map_season_a,
+          label: Season Aワールドマップ,
+          file: src/content/pages/world-map-season-a.json,
+          format: json,
+          fields: *page_fields,
+        }
+      - {
           name: youtube,
           label: エースサーバーの動画,
           file: src/content/pages/youtube-search-aceserver.json,

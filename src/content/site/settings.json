@@ -60,12 +60,12 @@
     {
       "slug": "season-a",
       "title": "Season A",
+      "href": "/world-map-season-a/",
       "image": "/uploads/legacy-world-main.png",
       "imageAlt": "Season Aワールドのイメージ画像",
       "icon": "trees",
       "tone": "season",
-      "statusLabel": "稼働中",
-      "description": "公開マップは未設定です。"
+      "statusLabel": "マップ公開中"
     },
     {
       "slug": "season-a-c",

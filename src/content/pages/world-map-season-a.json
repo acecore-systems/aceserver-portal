@@ -1,0 +1,22 @@
+{
+  "slug": "world-map-season-a",
+  "path": "/world-map-season-a/",
+  "pageName": "Season Aワールドマップ",
+  "kind": "embed",
+  "hideFooter": true,
+  "meta": {
+    "title": "Season Aワールドマップ",
+    "description": "エースサーバーのSeason Aワールドマップです。",
+    "ogImage": "/uploads/legacy-world-main.png"
+  },
+  "sections": [
+    {
+      "type": "iframe",
+      "title": "Season Aワールドマップ",
+      "src": "https://mc-map-season-a.acecore.net",
+      "externalUrl": "https://mc-map-season-a.acecore.net",
+      "fallbackImage": "/uploads/legacy-world-main.png",
+      "variant": "map"
+    }
+  ]
+}
