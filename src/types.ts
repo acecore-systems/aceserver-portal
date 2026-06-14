@@ -24,21 +24,10 @@ export type PortalSection =
       type: 'iframe'
       src: string
       externalUrl?: string
-      channelUrl?: string
-      feedApiPath?: string
       title?: string
       fallbackImage?: string
       variant?: 'map' | 'video'
-      videos?: VideoItem[]
     }
-
-export type VideoItem = {
-  id: string
-  title: string
-  href?: string
-  thumbnail?: string
-  publishedAt?: string
-}
 
 export type LinkItem = {
   label: string
@@ -91,11 +80,13 @@ export type PortalPage = {
 export type WorldEntry = {
   slug: string
   title: string
-  href: string
+  href?: string
   image: string
   imageAlt: string
   icon: string
-  tone: 'main' | 'resource' | 'rpg'
+  tone: 'main' | 'resource' | 'rpg' | 'lobby' | 'season' | 'creative' | 'event'
+  statusLabel?: string
+  description?: string
 }
 
 export type SiteSettings = {

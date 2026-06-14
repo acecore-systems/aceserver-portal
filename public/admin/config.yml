@@ -184,18 +184,6 @@ collections:
                       required: false,
                     }
                   - {
-                      name: channelUrl,
-                      label: チャンネルURL,
-                      widget: string,
-                      required: false,
-                    }
-                  - {
-                      name: feedApiPath,
-                      label: 動画APIパス,
-                      widget: string,
-                      required: false,
-                    }
-                  - {
                       name: fallbackImage,
                       label: 背景画像,
                       widget: image,
@@ -208,31 +196,6 @@ collections:
                       options: [map, video],
                       required: false,
                     }
-                  - name: videos
-                    label: 初期表示動画
-                    widget: list
-                    required: false
-                    fields:
-                      - { name: id, label: 動画ID, widget: string }
-                      - { name: title, label: タイトル, widget: string }
-                      - {
-                          name: href,
-                          label: YouTube URL,
-                          widget: string,
-                          required: false,
-                        }
-                      - {
-                          name: thumbnail,
-                          label: サムネイルURL,
-                          widget: string,
-                          required: false,
-                        }
-                      - {
-                          name: publishedAt,
-                          label: 公開日時,
-                          widget: datetime,
-                          required: false,
-                        }
       - {
           name: world_map,
           label: ワールドマップ,
@@ -258,6 +221,13 @@ collections:
           name: world_map_rpg,
           label: RPGサーバーワールドマップ,
           file: src/content/pages/world-map-rpg.json,
+          format: json,
+          fields: *page_fields,
+        }
+      - {
+          name: world_map_season_a,
+          label: Season Aワールドマップ,
+          file: src/content/pages/world-map-season-a.json,
           format: json,
           fields: *page_fields,
         }
@@ -291,10 +261,22 @@ collections:
             fields:
               - { name: slug, label: 管理ID, widget: string }
               - { name: title, label: タイトル, widget: string }
-              - { name: href, label: リンク, widget: string }
+              - { name: href, label: リンク, widget: string, required: false }
               - { name: image, label: 画像, widget: image }
               - { name: imageAlt, label: 画像代替テキスト, widget: string }
               - { name: icon, label: アイコン, widget: string }
+              - {
+                  name: statusLabel,
+                  label: ステータス表示,
+                  widget: string,
+                  required: false,
+                }
+              - {
+                  name: description,
+                  label: 補足説明,
+                  widget: text,
+                  required: false,
+                }
               - {
                   name: tone,
                   label: 色,
@@ -304,6 +286,10 @@ collections:
                       { label: メインワールド, value: main },
                       { label: 資源ワールド, value: resource },
                       { label: RPG, value: rpg },
+                      { label: ロビー, value: lobby },
+                      { label: シーズン, value: season },
+                      { label: クリエイティブ, value: creative },
+                      { label: イベント, value: event },
                     ],
                 }
       - name: navigation

@@ -36,18 +36,35 @@ const introImage =
         <div class="gate-top">
           <Icon name={world.icon} />
           <h2>{world.title}</h2>
+          {world.statusLabel && <span>{world.statusLabel}</span>}
         </div>
-        <a
-          href={world.href}
-          class="gate-image"
-          aria-label={`${world.title}を開く`}
-        >
-          <img src={world.image} alt={world.imageAlt} />
-        </a>
-        <a class="asv-btn-primary" href={world.href}>
-          <span>開く</span>
-          <Icon name="chevron-right" />
-        </a>
+        {world.href ? (
+          <a
+            href={world.href}
+            class="gate-image"
+            aria-label={`${world.title}を開く`}
+          >
+            <img src={world.image} alt={world.imageAlt} />
+          </a>
+        ) : (
+          <div class="gate-image gate-image--static">
+            <img src={world.image} alt={world.imageAlt} />
+          </div>
+        )}
+        {world.description && (
+          <p class="gate-description">{world.description}</p>
+        )}
+        {world.href ? (
+          <a class="asv-btn-primary" href={world.href}>
+            <span>マップを開く</span>
+            <Icon name="chevron-right" />
+          </a>
+        ) : (
+          <span class="gate-active">
+            <Icon name="activity" />
+            <span>稼働中</span>
+          </span>
+        )}
       </article>
     ))
   }
@@ -134,7 +151,7 @@ const introImage =
   .world-gates {
     display: grid;
     gap: clamp(18px, 3vw, 30px);
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
     padding: clamp(34px, 5vw, 74px) clamp(18px, 5vw, 70px);
     background: linear-gradient(180deg, #352719, #17120d);
   }
@@ -158,13 +175,25 @@ const introImage =
   .world-gate--rpg {
     --gate-color: #7133a6;
   }
+  .world-gate--lobby {
+    --gate-color: #b55a14;
+  }
+  .world-gate--season {
+    --gate-color: #267e6a;
+  }
+  .world-gate--creative {
+    --gate-color: #0a7896;
+  }
+  .world-gate--event {
+    --gate-color: #b33564;
+  }
 
   .gate-top {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
     min-height: 66px;
     align-items: center;
-    justify-content: center;
-    gap: 10px;
+    gap: 6px 10px;
     border: 3px solid rgba(0, 0, 0, 0.22);
     border-radius: 12px;
     background: linear-gradient(
@@ -176,11 +205,28 @@ const introImage =
     text-shadow: 0 3px 0 rgba(0, 0, 0, 0.28);
   }
 
+  .gate-top > :global(.asv-icon) {
+    grid-row: 1 / span 2;
+    font-size: 1.65rem;
+  }
+
   .gate-top h2 {
+    min-width: 0;
     margin: 0;
-    font-size: clamp(1.35rem, 2.4vw, 2.2rem);
+    font-size: clamp(1.05rem, 1.45vw, 1.45rem);
     font-weight: 900;
     letter-spacing: 0;
+    text-wrap: balance;
+    word-break: keep-all;
+  }
+
+  .gate-top span {
+    min-width: 0;
+    font-size: 0.82rem;
+    font-weight: 900;
+    line-height: 1.2;
+    opacity: 0.9;
+    text-shadow: none;
   }
 
   .gate-image {
@@ -202,7 +248,33 @@ const introImage =
     transform: scale(1.045);
   }
 
-  @media (max-width: 980px) {
+  .world-gate:hover .gate-image--static img {
+    transform: none;
+  }
+
+  .gate-description {
+    min-height: 2.8em;
+    margin: 0;
+    color: #3b2b1a;
+    font-size: 0.94rem;
+    font-weight: 800;
+    line-height: 1.4;
+  }
+
+  .gate-active {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: 3px solid rgba(31, 20, 12, 0.28);
+    border-radius: 12px;
+    background: #efe3c6;
+    color: #3b2b1a;
+    font-weight: 900;
+  }
+
+  @media (max-width: 680px) {
     .world-gates {
       grid-template-columns: 1fr;
     }
@@ -211,9 +283,7 @@ const introImage =
       margin: 0 auto;
       width: 100%;
     }
-  }
 
-  @media (max-width: 680px) {
     .map-sign {
       flex-direction: column;
     }
