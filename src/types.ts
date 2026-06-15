@@ -91,11 +91,13 @@ export type PortalPage = {
 export type WorldEntry = {
   slug: string
   title: string
-  href: string
+  href?: string
   image: string
   imageAlt: string
   icon: string
-  tone: 'main' | 'resource' | 'rpg'
+  tone: 'main' | 'resource' | 'rpg' | 'lobby' | 'season' | 'creative' | 'event'
+  statusLabel?: string
+  description?: string
 }
 
 export type SiteSettings = {

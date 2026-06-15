@@ -262,6 +262,13 @@ collections:
           fields: *page_fields,
         }
       - {
+          name: world_map_season_a,
+          label: Season Aワールドマップ,
+          file: src/content/pages/world-map-season-a.json,
+          format: json,
+          fields: *page_fields,
+        }
+      - {
           name: youtube,
           label: エースサーバーの動画,
           file: src/content/pages/youtube-search-aceserver.json,
@@ -291,10 +298,22 @@ collections:
             fields:
               - { name: slug, label: 管理ID, widget: string }
               - { name: title, label: タイトル, widget: string }
-              - { name: href, label: リンク, widget: string }
+              - { name: href, label: リンク, widget: string, required: false }
               - { name: image, label: 画像, widget: image }
               - { name: imageAlt, label: 画像代替テキスト, widget: string }
               - { name: icon, label: アイコン, widget: string }
+              - {
+                  name: statusLabel,
+                  label: ステータス表示,
+                  widget: string,
+                  required: false,
+                }
+              - {
+                  name: description,
+                  label: 補足説明,
+                  widget: text,
+                  required: false,
+                }
               - {
                   name: tone,
                   label: 色,
@@ -304,6 +323,10 @@ collections:
                       { label: メインワールド, value: main },
                       { label: 資源ワールド, value: resource },
                       { label: RPG, value: rpg },
+                      { label: ロビー, value: lobby },
+                      { label: シーズン, value: season },
+                      { label: クリエイティブ, value: creative },
+                      { label: イベント, value: event },
                     ],
                 }
       - name: navigation

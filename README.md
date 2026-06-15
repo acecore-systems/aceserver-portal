@@ -26,6 +26,7 @@ npm run preview
 | メインサーバーワールドマップ | `/world-map-main/`           |
 | 資源サーバーワールドマップ   | `/world-map-sigen/`          |
 | RPGサーバーワールドマップ    | `/world-map-rpg/`            |
+| Season Aワールドマップ       | `/world-map-season-a/`       |
 | Sveltia CMS                  | `/admin/`                    |
 
 ## CMS
