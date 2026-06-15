@@ -3,6 +3,8 @@ const TARGETS = {
   'mc-map-sigen.acecore.net': {
     bucket: 'SIGEN_BUCKET',
     defaultQuery: 'worldname=world&mapname=flat',
+    legacyWorldName: 'sigen',
+    canonicalWorldName: 'world',
   },
   'mc-map-rpg.acecore.net': { bucket: 'RPG_BUCKET' },
   'mc-map-season-a.acecore.net': { bucket: 'SEASON_A_BUCKET' },
@@ -28,14 +30,30 @@ function targetForRequest(request, env) {
   }
 }
 
-function defaultRedirect(request, target) {
+function canonicalRedirect(request, target) {
   const url = new URL(request.url)
+  const path = url.pathname || '/'
+
+  if (target.legacyWorldName && target.canonicalWorldName) {
+    const worldName = url.searchParams.get('worldname')
+
+    if (worldName === target.legacyWorldName) {
+      url.searchParams.set('worldname', target.canonicalWorldName)
+
+      return new Response(null, {
+        status: 302,
+        headers: {
+          location: url.toString(),
+          'cache-control': DYNAMIC_CACHE_CONTROL,
+          'x-dynmap-r2-cache': 'REDIRECT',
+        },
+      })
+    }
+  }
 
   if (!target.defaultQuery || url.search) {
     return null
   }
-
-  const path = url.pathname || '/'
 
   if (path !== '/' && path !== '/index.html') {
     return null
@@ -176,7 +194,7 @@ export default {
       })
     }
 
-    const redirect = defaultRedirect(request, target)
+    const redirect = canonicalRedirect(request, target)
 
     if (redirect) {
       return redirect
