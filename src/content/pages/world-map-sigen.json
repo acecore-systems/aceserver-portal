@@ -13,8 +13,8 @@
     {
       "type": "iframe",
       "title": "資源サーバーワールドマップ",
-      "src": "https://mc-map-sigen.acecore.net/?worldname=sigen&mapname=flat",
-      "externalUrl": "https://mc-map-sigen.acecore.net/?worldname=sigen&mapname=flat",
+      "src": "https://mc-map-sigen.acecore.net/?worldname=world&mapname=flat",
+      "externalUrl": "https://mc-map-sigen.acecore.net/?worldname=world&mapname=flat",
       "fallbackImage": "/uploads/legacy-world-resource.png",
       "variant": "map"
     }
