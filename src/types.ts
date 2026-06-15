@@ -24,10 +24,21 @@ export type PortalSection =
       type: 'iframe'
       src: string
       externalUrl?: string
+      channelUrl?: string
+      feedApiPath?: string
       title?: string
       fallbackImage?: string
       variant?: 'map' | 'video'
+      videos?: VideoItem[]
     }
+
+export type VideoItem = {
+  id: string
+  title: string
+  href?: string
+  thumbnail?: string
+  publishedAt?: string
+}
 
 export type LinkItem = {
   label: string
