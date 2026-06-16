@@ -1,0 +1,22 @@
+{
+  "slug": "world-map-event",
+  "path": "/world-map-event/",
+  "pageName": "イベントワールドマップ",
+  "kind": "embed",
+  "hideFooter": true,
+  "meta": {
+    "title": "イベントワールドマップ",
+    "description": "エースサーバーのイベントワールドマップです。",
+    "ogImage": "/uploads/legacy-multiplayer.jpg"
+  },
+  "sections": [
+    {
+      "type": "iframe",
+      "title": "イベントワールドマップ",
+      "src": "https://mc-map-event.acecore.net",
+      "externalUrl": "https://mc-map-event.acecore.net",
+      "fallbackImage": "/uploads/legacy-multiplayer.jpg",
+      "variant": "map"
+    }
+  ]
+}

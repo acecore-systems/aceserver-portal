@@ -7,7 +7,11 @@ const TARGETS = {
     canonicalWorldName: 'world',
   },
   'mc-map-rpg.acecore.net': { bucket: 'RPG_BUCKET' },
+  'mc-map-lobby.acecore.net': { bucket: 'LOBBY_BUCKET' },
+  'mc-map-rpg-sub.acecore.net': { bucket: 'RPG_SUB_BUCKET' },
   'mc-map-season-a.acecore.net': { bucket: 'SEASON_A_BUCKET' },
+  'mc-map-season-a-c.acecore.net': { bucket: 'SEASON_A_C_BUCKET' },
+  'mc-map-event.acecore.net': { bucket: 'EVENT_BUCKET' },
 }
 
 const TILE_PREFIX = 'tiles/'

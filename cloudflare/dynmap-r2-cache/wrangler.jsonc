@@ -17,8 +17,24 @@
       "bucket_name": "acecore-dynmap-rpg",
     },
     {
+      "binding": "LOBBY_BUCKET",
+      "bucket_name": "acecore-dynmap-lobby",
+    },
+    {
+      "binding": "RPG_SUB_BUCKET",
+      "bucket_name": "acecore-dynmap-rpg-sub",
+    },
+    {
       "binding": "SEASON_A_BUCKET",
       "bucket_name": "acecore-dynmap-season-a",
+    },
+    {
+      "binding": "SEASON_A_C_BUCKET",
+      "bucket_name": "acecore-dynmap-season-a-c",
+    },
+    {
+      "binding": "EVENT_BUCKET",
+      "bucket_name": "acecore-dynmap-event",
     },
   ],
 }
