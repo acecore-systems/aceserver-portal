@@ -27,7 +27,6 @@ collections:
         format: json
         fields: &page_fields
           - { name: slug, label: 管理ID, widget: string }
-          - { name: path, label: 公開パス, widget: string }
           - { name: pageName, label: ページ名, widget: string }
           - {
               name: kind,
