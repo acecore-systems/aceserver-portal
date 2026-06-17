@@ -76,7 +76,6 @@ export type NavItem = {
 
 export type PortalPage = {
   slug: string
-  path: string
   pageName: string
   kind: 'home' | 'worldMap' | 'embed'
   hideFooter?: boolean
