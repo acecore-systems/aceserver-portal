@@ -262,9 +262,37 @@ collections:
           fields: *page_fields,
         }
       - {
+          name: world_map_lobby,
+          label: ロビーワールドマップ,
+          file: src/content/pages/world-map-lobby.json,
+          format: json,
+          fields: *page_fields,
+        }
+      - {
+          name: world_map_rpg_sub,
+          label: RPGサブワールドマップ,
+          file: src/content/pages/world-map-rpg-sub.json,
+          format: json,
+          fields: *page_fields,
+        }
+      - {
           name: world_map_season_a,
           label: Season Aワールドマップ,
           file: src/content/pages/world-map-season-a.json,
+          format: json,
+          fields: *page_fields,
+        }
+      - {
+          name: world_map_season_a_c,
+          label: Season Creativeワールドマップ,
+          file: src/content/pages/world-map-season-a-c.json,
+          format: json,
+          fields: *page_fields,
+        }
+      - {
+          name: world_map_event,
+          label: イベントワールドマップ,
+          file: src/content/pages/world-map-event.json,
           format: json,
           fields: *page_fields,
         }

@@ -18,16 +18,20 @@ npm run preview
 
 ## 主なページ
 
-| ページ                       | パス                         |
-| ---------------------------- | ---------------------------- |
-| トップ                       | `/`                          |
-| 動画                         | `/youtube-search-aceserver/` |
-| ワールドマップ               | `/world-map/`                |
-| メインサーバーワールドマップ | `/world-map-main/`           |
-| 資源サーバーワールドマップ   | `/world-map-sigen/`          |
-| RPGサーバーワールドマップ    | `/world-map-rpg/`            |
-| Season Aワールドマップ       | `/world-map-season-a/`       |
-| Sveltia CMS                  | `/admin/`                    |
+| ページ                        | パス                         |
+| ----------------------------- | ---------------------------- |
+| トップ                        | `/`                          |
+| 動画                          | `/youtube-search-aceserver/` |
+| ワールドマップ                | `/world-map/`                |
+| メインサーバーワールドマップ  | `/world-map-main/`           |
+| 資源サーバーワールドマップ    | `/world-map-sigen/`          |
+| RPGサーバーワールドマップ     | `/world-map-rpg/`            |
+| ロビーワールドマップ          | `/world-map-lobby/`          |
+| RPGサブワールドマップ         | `/world-map-rpg-sub/`        |
+| Season Aワールドマップ        | `/world-map-season-a/`       |
+| Season Creativeワールドマップ | `/world-map-season-a-c/`     |
+| イベントワールドマップ        | `/world-map-event/`          |
+| Sveltia CMS                   | `/admin/`                    |
 
 ## CMS
 

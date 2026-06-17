@@ -1,5 +1,6 @@
 ---
 import type { PortalPage } from '../types'
+import { settings } from '../data/content'
 import { externalLinkAttrs } from '../utils/links'
 import Icon from './Icon.astro'
 
@@ -15,29 +16,62 @@ if (!embed || embed.type !== 'iframe') {
 }
 
 const isVideoPage = embed.variant === 'video'
+const isMapPage = embed.variant === 'map'
 const videoFeedApiPath = embed.feedApiPath ?? '/api/youtube-videos'
 const videoChannelUrl =
   embed.channelUrl ?? embed.externalUrl ?? 'https://www.youtube.com/@aceserver'
 const fallbackVideos = embed.videos ?? []
+const mapWorlds = settings.worlds.flatMap((world) =>
+  world.href ? [{ href: world.href, title: world.title }] : [],
+)
+const currentMapIndex = mapWorlds.findIndex((world) => world.href === page.path)
+const previousMap =
+  isMapPage && currentMapIndex >= 0
+    ? mapWorlds[(currentMapIndex - 1 + mapWorlds.length) % mapWorlds.length]
+    : undefined
+const nextMap =
+  isMapPage && currentMapIndex >= 0
+    ? mapWorlds[(currentMapIndex + 1) % mapWorlds.length]
+    : undefined
 ---
 
 <section class="embed-page" data-variant={embed.variant}>
   <div class="embed-layout">
     <div class="embed-shell pixel-border">
       <div class="embed-toolbar">
-        <a class="toolbar-button" href="/world-map/">
-          <Icon name="arrow-left" />
-          <span>戻る</span>
-        </a>
+        {
+          previousMap ? (
+            <a class="toolbar-button" href={previousMap.href}>
+              <Icon name="chevron-left" />
+              <span>前へ</span>
+              <span class="toolbar-button__label">{previousMap.title}</span>
+            </a>
+          ) : (
+            <a class="toolbar-button" href="/world-map/">
+              <Icon name="arrow-left" />
+              <span>戻る</span>
+            </a>
+          )
+        }
         <h1>{embed.title ?? page.pageName}</h1>
-        <a
-          class="toolbar-button toolbar-button--external"
-          href={embed.externalUrl ?? embed.src}
-          {...externalLinkAttrs(embed.externalUrl ?? embed.src, true)}
-        >
-          <span>別タブで開く</span>
-          <Icon name="external-link" />
-        </a>
+        {
+          nextMap ? (
+            <a class="toolbar-button toolbar-button--next" href={nextMap.href}>
+              <span>次へ</span>
+              <span class="toolbar-button__label">{nextMap.title}</span>
+              <Icon name="chevron-right" />
+            </a>
+          ) : (
+            <a
+              class="toolbar-button toolbar-button--external"
+              href={embed.externalUrl ?? embed.src}
+              {...externalLinkAttrs(embed.externalUrl ?? embed.src, true)}
+            >
+              <span>別タブで開く</span>
+              <Icon name="external-link" />
+            </a>
+          )
+        }
       </div>
       <div
         class="embed-frame"
@@ -192,12 +226,21 @@ const fallbackVideos = embed.videos ?? []
     text-decoration: none;
   }
 
+  .toolbar-button__label {
+    max-width: min(24vw, 180px);
+    overflow: hidden;
+    color: rgba(255, 245, 220, 0.72);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
   .toolbar-button:hover {
     background: rgba(255, 216, 77, 0.14);
     color: #ffd84d;
   }
 
-  .toolbar-button--external {
+  .toolbar-button--external,
+  .toolbar-button--next {
     justify-self: end;
   }
 
@@ -365,6 +408,9 @@ const fallbackVideos = embed.videos ?? []
     }
     .toolbar-button {
       justify-content: center;
+    }
+    .toolbar-button__label {
+      max-width: 100%;
     }
 
     .video-gallery__header {

@@ -1,0 +1,22 @@
+{
+  "slug": "world-map-lobby",
+  "path": "/world-map-lobby/",
+  "pageName": "ロビーワールドマップ",
+  "kind": "embed",
+  "hideFooter": true,
+  "meta": {
+    "title": "ロビーワールドマップ",
+    "description": "エースサーバーのロビーワールドマップです。",
+    "ogImage": "/uploads/legacy-world-map.png"
+  },
+  "sections": [
+    {
+      "type": "iframe",
+      "title": "ロビーワールドマップ",
+      "src": "https://mc-map-lobby.acecore.net",
+      "externalUrl": "https://mc-map-lobby.acecore.net",
+      "fallbackImage": "/uploads/legacy-world-map.png",
+      "variant": "map"
+    }
+  ]
+}

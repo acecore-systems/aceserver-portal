@@ -1,0 +1,22 @@
+{
+  "slug": "world-map-season-a-c",
+  "path": "/world-map-season-a-c/",
+  "pageName": "Season Creativeワールドマップ",
+  "kind": "embed",
+  "hideFooter": true,
+  "meta": {
+    "title": "Season Creativeワールドマップ",
+    "description": "エースサーバーのSeason Creativeワールドマップです。",
+    "ogImage": "/uploads/legacy-free-play.jpg"
+  },
+  "sections": [
+    {
+      "type": "iframe",
+      "title": "Season Creativeワールドマップ",
+      "src": "https://mc-map-season-a-c.acecore.net",
+      "externalUrl": "https://mc-map-season-a-c.acecore.net",
+      "fallbackImage": "/uploads/legacy-free-play.jpg",
+      "variant": "map"
+    }
+  ]
+}

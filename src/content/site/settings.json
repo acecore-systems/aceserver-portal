@@ -44,8 +44,8 @@
       "imageAlt": "ロビーワールドのイメージ画像",
       "icon": "door-open",
       "tone": "lobby",
-      "statusLabel": "稼働中",
-      "description": "公開マップは未設定です。"
+      "href": "/world-map-lobby/",
+      "statusLabel": "マップ公開中"
     },
     {
       "slug": "rpg-sub",
@@ -54,8 +54,8 @@
       "imageAlt": "RPGサブワールドのイメージ画像",
       "icon": "shield",
       "tone": "rpg",
-      "statusLabel": "稼働中",
-      "description": "公開マップは未設定です。"
+      "href": "/world-map-rpg-sub/",
+      "statusLabel": "マップ公開中"
     },
     {
       "slug": "season-a",
@@ -74,8 +74,8 @@
       "imageAlt": "Season Creativeワールドのイメージ画像",
       "icon": "sparkles",
       "tone": "creative",
-      "statusLabel": "稼働中",
-      "description": "公開マップは未設定です。"
+      "href": "/world-map-season-a-c/",
+      "statusLabel": "マップ公開中"
     },
     {
       "slug": "event",
@@ -84,8 +84,8 @@
       "imageAlt": "イベントマップのイメージ画像",
       "icon": "calendar-days",
       "tone": "event",
-      "statusLabel": "稼働中",
-      "description": "公開マップは未設定です。"
+      "href": "/world-map-event/",
+      "statusLabel": "マップ公開中"
     }
   ]
 }
