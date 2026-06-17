@@ -1,5 +1,5 @@
 ---
-import type { PortalPage } from '../types'
+import type { LinkItem, PortalPage, PortalSection } from '../types'
 import { externalLinkAttrs } from '../utils/links'
 import Icon from './Icon.astro'
 
@@ -8,31 +8,103 @@ interface Props {
 }
 
 const { page } = Astro.props
-const [overview, multiplayer, freePlay, joinCta, wikiCta] = page.sections
-const heroImage =
-  overview.type !== 'cta' && overview.type !== 'iframe' && overview.image
-    ? overview.image
-    : '/uploads/legacy-scc.png'
+const sections = page.sections ?? []
+
+type FeatureSection = Extract<
+  PortalSection,
+  { type: 'featureImageFull' | 'featureImageRight' | 'featureImageLeft' }
+>
+type CtaSection = Extract<PortalSection, { type: 'cta' }>
+type HeroSection = Extract<PortalSection, { type: 'hero' }>
+
+const fallbackJoinButton: LinkItem = {
+  label: 'ディスコードに参加',
+  href: 'https://discord.gg/vKTdU4k8ur',
+  external: true,
+}
+const fallbackWikiButton: LinkItem = {
+  label: 'WIKIを開く',
+  href: 'https://asv-wiki.acecore.net',
+  external: true,
+}
+const fallbackOverview: FeatureSection = {
+  type: 'featureImageFull',
+  titleCopy: 'エースサーバーとは',
+  text: '誰でも参加可能なマインクラフト無料公開サーバーです',
+  image: '/uploads/legacy-scc.png',
+  imageAlt: 'エースサーバーの街区スクリーンショット',
+}
+const fallbackMultiplayer: FeatureSection = {
+  type: 'featureImageRight',
+  titleCopy: '誰とでもマルチプレイ！',
+  text: 'JAVA版・統合版どちらでも遊ぶことが可能です！',
+  image: '/uploads/legacy-multiplayer.jpg',
+  imageAlt: 'マルチプレイ紹介用の写真',
+}
+const fallbackFreePlay: FeatureSection = {
+  type: 'featureImageLeft',
+  titleCopy: '楽しい！',
+  text: 'バニラに近い、限りなく自由なサーバーです！',
+  image: '/uploads/legacy-free-play.jpg',
+  imageAlt: '自由な遊び方を示す写真',
+}
+const fallbackJoinCta: CtaSection = {
+  type: 'cta',
+  titleCopy: 'エースサーバーに参加したいですか？',
+  text: 'まずは公式ディスコードにご参加ください！',
+  ctaButton: fallbackJoinButton,
+}
+const fallbackWikiCta: HeroSection = {
+  type: 'hero',
+  shoulderCopy: 'aceserver wiki',
+  titleCopy: 'エースサーバーWIKI',
+  text: '誰でも編集可能なエースサーバーのWIKIページ',
+  backgroundImage: '/uploads/legacy-wiki-bg.png',
+  ctaButton: fallbackWikiButton,
+}
+
+function isFeatureSection(
+  section: PortalSection | undefined,
+): section is FeatureSection {
+  return Boolean(
+    section &&
+    (section.type === 'featureImageFull' ||
+      section.type === 'featureImageRight' ||
+      section.type === 'featureImageLeft'),
+  )
+}
+
+function getFeatureSection(
+  type: FeatureSection['type'],
+  fallback: FeatureSection,
+): FeatureSection {
+  return (
+    sections.find(
+      (section): section is FeatureSection =>
+        isFeatureSection(section) && section.type === type,
+    ) ?? fallback
+  )
+}
+
+function getSection<T extends PortalSection['type']>(
+  type: T,
+): Extract<PortalSection, { type: T }> | undefined {
+  return sections.find(
+    (section): section is Extract<PortalSection, { type: T }> =>
+      section.type === type,
+  )
+}
+
+const overview = getFeatureSection('featureImageFull', fallbackOverview)
+const multiplayer = getFeatureSection('featureImageRight', fallbackMultiplayer)
+const freePlay = getFeatureSection('featureImageLeft', fallbackFreePlay)
+const joinCta = getSection('cta') ?? fallbackJoinCta
+const wikiCta = getSection('hero') ?? fallbackWikiCta
+const heroImage = overview.image ?? '/uploads/legacy-scc.png'
 const wikiBackgroundImage =
-  wikiCta.type === 'hero' && wikiCta.backgroundImage
-    ? wikiCta.backgroundImage
-    : '/uploads/legacy-wiki-bg.png'
-const heroJoinButton =
-  joinCta.type === 'cta'
-    ? joinCta.ctaButton
-    : {
-        label: 'ディスコードに参加',
-        href: 'https://discord.gg/vKTdU4k8ur',
-        external: true,
-      }
-const heroWikiButton =
-  wikiCta.type === 'hero' && wikiCta.ctaButton
-    ? wikiCta.ctaButton
-    : {
-        label: 'WIKIを開く',
-        href: 'https://asv-wiki.acecore.net',
-        external: true,
-      }
+  wikiCta.backgroundImage ?? '/uploads/legacy-wiki-bg.png'
+const heroJoinButton = joinCta.ctaButton ?? fallbackJoinButton
+const heroWikiButton = wikiCta.ctaButton ?? fallbackWikiButton
 ---
 
 <section class="hero" aria-labelledby="home-title">
@@ -68,45 +140,29 @@ const heroWikiButton =
 <section id="overview" class="intro-section">
   <div class="floating-island">
     {
-      overview.type !== 'cta' && overview.type !== 'iframe' && (
+      overview.image && (
         <img src={overview.image} alt={overview.imageAlt ?? ''} />
       )
     }
   </div>
   <div class="intro-copy asv-panel pixel-border">
-    {
-      overview.type !== 'cta' && overview.type !== 'iframe' && (
-        <h2>{overview.titleCopy}</h2>
-      )
-    }
-    {
-      overview.type !== 'cta' && overview.type !== 'iframe' && (
-        <p>{overview.text}</p>
-      )
-    }
+    <h2>{overview.titleCopy}</h2>
+    {overview.text && <p>{overview.text}</p>}
     <p>好きなように遊び、作り、つながることができます。</p>
   </div>
 </section>
 
 <section class="feature-band feature-band--right">
   <div class="feature-copy">
-    {
-      multiplayer.type !== 'cta' && multiplayer.type !== 'iframe' && (
-        <h2>{multiplayer.titleCopy}</h2>
-      )
-    }
-    {
-      multiplayer.type !== 'cta' && multiplayer.type !== 'iframe' && (
-        <p>{multiplayer.text}</p>
-      )
-    }
+    <h2>{multiplayer.titleCopy}</h2>
+    {multiplayer.text && <p>{multiplayer.text}</p>}
     <p>
       一人でも、友達とも、世界中のプレイヤーとも一緒に冒険や建築を楽しめます。
     </p>
   </div>
   <div class="feature-image pixel-border">
     {
-      multiplayer.type !== 'cta' && multiplayer.type !== 'iframe' && (
+      multiplayer.image && (
         <img src={multiplayer.image} alt={multiplayer.imageAlt ?? ''} />
       )
     }
@@ -124,20 +180,12 @@ const heroWikiButton =
 
 <section class="feature-band feature-band--left">
   <div class="feature-copy">
-    {
-      freePlay.type !== 'cta' && freePlay.type !== 'iframe' && (
-        <h2>{freePlay.titleCopy}</h2>
-      )
-    }
-    {
-      freePlay.type !== 'cta' && freePlay.type !== 'iframe' && (
-        <p>{freePlay.text}</p>
-      )
-    }
+    <h2>{freePlay.titleCopy}</h2>
+    {freePlay.text && <p>{freePlay.text}</p>}
   </div>
   <div class="feature-image pixel-border">
     {
-      freePlay.type !== 'cta' && freePlay.type !== 'iframe' && (
+      freePlay.image && (
         <img src={freePlay.image} alt={freePlay.imageAlt ?? ''} />
       )
     }
@@ -148,25 +196,16 @@ const heroWikiButton =
   <article class="join-card pixel-border">
     <div class="cube-icon"><Icon name="message-circle" /></div>
     <div>
-      {joinCta.type === 'cta' && <h2>{joinCta.titleCopy}</h2>}
-      {joinCta.type === 'cta' && <p>{joinCta.text}</p>}
-      {
-        joinCta.type === 'cta' && (
-          <a
-            class="asv-btn-primary"
-            href={joinCta.ctaButton.href}
-            {...externalLinkAttrs(
-              joinCta.ctaButton.href,
-              joinCta.ctaButton.external,
-            )}
-          >
-            <>
-              <span>{joinCta.ctaButton.label}</span>
-              <Icon name="chevron-right" />
-            </>
-          </a>
-        )
-      }
+      <h2>{joinCta.titleCopy}</h2>
+      {joinCta.text && <p>{joinCta.text}</p>}
+      <a
+        class="asv-btn-primary"
+        href={heroJoinButton.href}
+        {...externalLinkAttrs(heroJoinButton.href, heroJoinButton.external)}
+      >
+        <span>{heroJoinButton.label}</span>
+        <Icon name="chevron-right" />
+      </a>
     </div>
   </article>
   <article
@@ -174,25 +213,16 @@ const heroWikiButton =
     style={`--wiki-image: url('${wikiBackgroundImage}')`}
   >
     <div>
-      {wikiCta.type === 'hero' && <h2>{wikiCta.titleCopy}</h2>}
-      {wikiCta.type === 'hero' && <p>{wikiCta.text}</p>}
-      {
-        wikiCta.type === 'hero' && wikiCta.ctaButton && (
-          <a
-            class="asv-btn-green"
-            href={wikiCta.ctaButton.href}
-            {...externalLinkAttrs(
-              wikiCta.ctaButton.href,
-              wikiCta.ctaButton.external,
-            )}
-          >
-            <>
-              <Icon name="book-open" />
-              <span>{wikiCta.ctaButton.label}</span>
-            </>
-          </a>
-        )
-      }
+      <h2>{wikiCta.titleCopy}</h2>
+      {wikiCta.text && <p>{wikiCta.text}</p>}
+      <a
+        class="asv-btn-green"
+        href={heroWikiButton.href}
+        {...externalLinkAttrs(heroWikiButton.href, heroWikiButton.external)}
+      >
+        <Icon name="book-open" />
+        <span>{heroWikiButton.label}</span>
+      </a>
     </div>
     <Icon name="book-open" class="wiki-mark" />
   </article>
