@@ -24,7 +24,10 @@ const fallbackVideos = embed.videos ?? []
 const mapWorlds = settings.worlds.flatMap((world) =>
   world.href ? [{ href: world.href, title: world.title }] : [],
 )
-const currentMapIndex = mapWorlds.findIndex((world) => world.href === page.path)
+const currentPageHref = `/${page.slug}/`
+const currentMapIndex = mapWorlds.findIndex(
+  (world) => world.href === currentPageHref,
+)
 const previousMap =
   isMapPage && currentMapIndex >= 0
     ? mapWorlds[(currentMapIndex - 1 + mapWorlds.length) % mapWorlds.length]
