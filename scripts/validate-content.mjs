@@ -102,6 +102,10 @@ function validateSection(scope, section) {
   }
 }
 
+function hasSectionType(page, type) {
+  return page.sections.some((section) => section?.type === type)
+}
+
 async function validatePages() {
   const pagesDir = path.join(root, 'src/content/pages')
   const pageFiles = (await readdir(pagesDir))
@@ -158,11 +162,15 @@ async function validatePages() {
       validateSection(`${relativePath}.sections[${index}]`, section)
     })
 
-    if (
-      page.kind === 'embed' &&
-      !page.sections.some((section) => section?.type === 'iframe')
-    ) {
+    if (page.kind === 'embed' && !hasSectionType(page, 'iframe')) {
       fail(relativePath, 'embed pages must include an iframe section')
+    }
+
+    if (page.kind === 'worldMap' && !hasSectionType(page, 'featureImageFull')) {
+      fail(
+        relativePath,
+        'worldMap pages must include a featureImageFull intro section',
+      )
     }
   }
 
