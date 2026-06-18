@@ -1,6 +1,5 @@
 {
   "slug": "world-map",
-  "path": "/world-map/",
   "pageName": "ワールドマップ",
   "kind": "worldMap",
   "hideFooter": false,
