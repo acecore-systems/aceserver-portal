@@ -10,7 +10,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "format": "prettier . --write",
-    "format:check": "prettier . --check"
+    "format:check": "prettier . --check",
+    "validate:content": "node scripts/validate-content.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.2",
