@@ -230,9 +230,15 @@ async function validateSiteConfig(routes) {
 }
 
 async function validateCmsConfig() {
-  const config = await readFile(path.join(root, 'public/admin/config.yml'), 'utf8')
+  const config = await readFile(
+    path.join(root, 'public/admin/config.yml'),
+    'utf8',
+  )
   if (/name:\s*path\b/.test(config)) {
-    fail('public/admin/config.yml', 'page path field must not be exposed in CMS')
+    fail(
+      'public/admin/config.yml',
+      'page path field must not be exposed in CMS',
+    )
   }
 }
 
