@@ -189,6 +189,10 @@ async function validateSiteConfig(routes) {
   if (isRecord(settings) && Array.isArray(settings.worlds)) {
     settings.worlds.forEach((world, index) => {
       const scope = `src/content/site/settings.json.worlds[${index}]`
+      if (!isRecord(world)) {
+        fail(scope, 'world must be an object')
+        return
+      }
       if (!isNonEmptyString(world.slug)) {
         fail(scope, 'slug is required')
       }
@@ -207,6 +211,10 @@ async function validateSiteConfig(routes) {
   if (isRecord(navigation) && Array.isArray(navigation.items)) {
     navigation.items.forEach((item, index) => {
       const scope = `src/content/site/navigation.json.items[${index}]`
+      if (!isRecord(item)) {
+        fail(scope, 'item must be an object')
+        return
+      }
       if (!isNonEmptyString(item.text)) {
         fail(scope, 'text is required')
       }
