@@ -1,5 +1,5 @@
 ---
-import type { PortalPage } from '../types'
+import type { PortalPage, PortalSection } from '../types'
 import { settings } from '../data/content'
 import Icon from './Icon.astro'
 
@@ -8,11 +8,12 @@ interface Props {
 }
 
 const { page } = Astro.props
-const intro = page.sections[0]
-const introImage =
-  intro?.type === 'featureImageFull' && intro.image
-    ? intro.image
-    : '/uploads/legacy-world-map.png'
+type IntroSection = Extract<PortalSection, { type: 'featureImageFull' }>
+const intro = page.sections.find(
+  (section): section is IntroSection => section.type === 'featureImageFull',
+)
+const introImage = intro?.image ?? '/uploads/legacy-world-map.png'
+const introText = intro?.text ?? page.meta.description
 ---
 
 <section class="world-hero" aria-labelledby="world-title">
@@ -23,7 +24,7 @@ const introImage =
     <h1 id="world-title"><span>ワールド</span><span>マップ</span></h1>
   </div>
   <p>
-    {intro?.type === 'featureImageFull' ? intro.text : page.meta.description}
+    {introText}
   </p>
 </section>
 
