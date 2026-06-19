@@ -26,6 +26,7 @@
     "prettier-plugin-astro": "^0.14.1"
   },
   "overrides": {
+    "esbuild": "0.28.1",
     "vite": "7"
   }
 }
