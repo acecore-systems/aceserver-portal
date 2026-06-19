@@ -39,70 +39,11 @@ function routeForSlug(slug) {
   return slug === 'top' ? '/' : `/${slug}/`
 }
 
-function validateButton(scope, button, required) {
-  if (!isRecord(button)) {
-    if (required) {
-      fail(scope, 'button is required')
-    }
-    return
-  }
-
-  if (!isNonEmptyString(button.label)) {
-    fail(scope, 'button.label is required')
-  }
-  if (!isNonEmptyString(button.href)) {
-    fail(scope, 'button.href is required')
-  }
-}
-
-function validateSection(scope, section) {
-  if (!isRecord(section)) {
-    fail(scope, 'section must be an object')
-    return
-  }
-
-  const validTypes = new Set([
-    'hero',
-    'featureImageFull',
-    'featureImageRight',
-    'featureImageLeft',
-    'cta',
-    'iframe',
-  ])
-
-  if (!validTypes.has(section.type)) {
-    fail(scope, `unknown section type "${section.type}"`)
-    return
-  }
-
-  if (section.type === 'iframe') {
-    if (!isNonEmptyString(section.src)) {
-      fail(scope, 'iframe src is required')
-    }
-    if (
-      section.variant !== undefined &&
-      section.variant !== 'map' &&
-      section.variant !== 'video'
-    ) {
-      fail(scope, 'iframe variant must be map or video')
-    }
-    return
-  }
-
-  if (!isNonEmptyString(section.titleCopy)) {
-    fail(scope, 'titleCopy is required')
-  }
-
-  if (section.type === 'cta') {
-    validateButton(`${scope}.ctaButton`, section.ctaButton, true)
-  }
-
-  if (section.type === 'hero') {
-    validateButton(`${scope}.ctaButton`, section.ctaButton, false)
-  }
-}
-
 function hasSectionType(page, type) {
+  if (!Array.isArray(page.sections)) {
+    return false
+  }
+
   return page.sections.some((section) => section?.type === type)
 }
 
@@ -138,29 +79,10 @@ async function validatePages() {
     slugs.add(page.slug)
     routes.add(routeForSlug(page.slug))
 
-    if (!['home', 'worldMap', 'embed'].includes(page.kind)) {
-      fail(relativePath, 'kind must be home, worldMap, or embed')
-    }
-
-    if (!isRecord(page.meta)) {
-      fail(relativePath, 'meta is required')
-    } else {
-      if (!isNonEmptyString(page.meta.title)) {
-        fail(relativePath, 'meta.title is required')
-      }
-      if (!isNonEmptyString(page.meta.description)) {
-        fail(relativePath, 'meta.description is required')
-      }
-    }
-
     if (!Array.isArray(page.sections) || page.sections.length === 0) {
       fail(relativePath, 'sections must contain at least one section')
       continue
     }
-
-    page.sections.forEach((section, index) => {
-      validateSection(`${relativePath}.sections[${index}]`, section)
-    })
 
     if (page.kind === 'embed' && !hasSectionType(page, 'iframe')) {
       fail(relativePath, 'embed pages must include an iframe section')
@@ -234,6 +156,22 @@ async function validateSiteConfig(routes) {
     })
   } else {
     fail('src/content/site/navigation.json', 'items must be an array')
+  }
+
+  const announcements = await readJson('src/content/site/announcements.json')
+  if (isRecord(announcements) && Array.isArray(announcements.items)) {
+    announcements.items.forEach((item, index) => {
+      const scope = `src/content/site/announcements.json.items[${index}]`
+      if (!isRecord(item)) {
+        fail(scope, 'item must be an object')
+        return
+      }
+      if (item.href !== undefined) {
+        validateInternalHref(`${scope}.href`, item.href, routes)
+      }
+    })
+  } else {
+    fail('src/content/site/announcements.json', 'items must be an array')
   }
 }
 

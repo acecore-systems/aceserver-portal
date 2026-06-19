@@ -1,111 +1,20 @@
-export type PortalSection =
-  | {
-      type: 'hero'
-      shoulderCopy?: string
-      titleCopy: string
-      text?: string
-      ctaButton?: LinkItem
-      backgroundImage?: string
-    }
-  | {
-      type: 'featureImageFull' | 'featureImageRight' | 'featureImageLeft'
-      titleCopy: string
-      text?: string
-      image?: string
-      imageAlt?: string
-    }
-  | {
-      type: 'cta'
-      titleCopy: string
-      text?: string
-      ctaButton: LinkItem
-    }
-  | {
-      type: 'iframe'
-      src: string
-      externalUrl?: string
-      channelUrl?: string
-      feedApiPath?: string
-      title?: string
-      fallbackImage?: string
-      variant?: 'map' | 'video'
-      videos?: VideoItem[]
-    }
+import type { CollectionEntry } from 'astro:content'
 
-export type VideoItem = {
-  id: string
-  title: string
-  href?: string
-  thumbnail?: string
-  publishedAt?: string
-}
+export type PortalPage = CollectionEntry<'pages'>['data']
+export type PortalSection = PortalPage['sections'][number]
 
-export type LinkItem = {
-  label: string
-  href: string
-  external?: boolean
-}
+export type VideoItem = NonNullable<
+  Extract<PortalSection, { type: 'iframe' }>['videos']
+>[number]
 
-export type AnnouncementTone = 'brand' | 'amber' | 'emerald' | 'slate'
+export type LinkItem = Extract<PortalSection, { type: 'cta' }>['ctaButton']
 
-export type AnnouncementItem = {
-  id: string
-  enabled?: boolean
-  order?: number
-  tone?: AnnouncementTone
-  icon?: string
-  title: string
-  text?: string
-  href?: string
-  linkLabel?: string
-  external?: boolean
-  startsAt?: string
-  endsAt?: string
-}
+export type AnnouncementSettings = CollectionEntry<'announcements'>['data']
+export type AnnouncementItem = AnnouncementSettings['items'][number]
+export type AnnouncementTone = NonNullable<AnnouncementItem['tone']>
 
-export type AnnouncementSettings = {
-  items: AnnouncementItem[]
-}
+export type NavigationSettings = CollectionEntry<'navigation'>['data']
+export type NavItem = NavigationSettings['items'][number]
 
-export type NavItem = {
-  text: string
-  href: string
-  external?: boolean
-  icon: string
-}
-
-export type PortalPage = {
-  slug: string
-  pageName: string
-  kind: 'home' | 'worldMap' | 'embed'
-  hideFooter?: boolean
-  meta: {
-    title: string
-    description: string
-    ogImage?: string
-  }
-  sections: PortalSection[]
-}
-
-export type WorldEntry = {
-  slug: string
-  title: string
-  href?: string
-  image: string
-  imageAlt: string
-  icon: string
-  tone: 'main' | 'resource' | 'rpg' | 'lobby' | 'season' | 'creative' | 'event'
-  statusLabel?: string
-  description?: string
-}
-
-export type SiteSettings = {
-  title: string
-  shortTitle: string
-  description: string
-  siteUrl: string
-  logo: string
-  discordUrl: string
-  wikiUrl: string
-  worlds: WorldEntry[]
-}
+export type SiteSettings = CollectionEntry<'settings'>['data']
+export type WorldEntry = SiteSettings['worlds'][number]

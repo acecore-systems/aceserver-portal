@@ -1,26 +1,36 @@
-import announcementsData from '../content/site/announcements.json'
-import navigationData from '../content/site/navigation.json'
-import settingsData from '../content/site/settings.json'
-import type {
-  AnnouncementSettings,
-  NavItem,
-  PortalPage,
-  SiteSettings,
-} from '../types'
+import { getCollection } from 'astro:content'
+import type { PortalPage } from '../types'
 
-const pageModules = import.meta.glob('../content/pages/*.json', {
-  eager: true,
-  import: 'default',
-})
+const [settingsEntries, navigationEntries, announcementEntries, pageEntries] =
+  await Promise.all([
+    getCollection('settings'),
+    getCollection('navigation'),
+    getCollection('announcements'),
+    getCollection('pages'),
+  ])
 
-export const settings = settingsData as SiteSettings
-export const navigation = navigationData.items as NavItem[]
-export const pages = Object.values(pageModules) as PortalPage[]
+function getSingleEntry<T>(entries: T[], collectionName: string): T {
+  if (entries.length !== 1) {
+    throw new Error(
+      `Expected exactly one ${collectionName} content entry, found ${entries.length}.`,
+    )
+  }
 
-const announcementSettings = announcementsData as AnnouncementSettings
+  return entries[0]
+}
 
-export const announcements = announcementSettings.items
-  .filter((announcement) => announcement.enabled !== false)
+export const settings = getSingleEntry(settingsEntries, 'settings').data
+export const navigation = getSingleEntry(navigationEntries, 'navigation').data
+  .items
+export const pages = pageEntries
+  .map((entry) => entry.data)
+  .sort((a, b) => a.slug.localeCompare(b.slug))
+
+export const announcements = getSingleEntry(
+  announcementEntries,
+  'announcements',
+)
+  .data.items.filter((announcement) => announcement.enabled !== false)
   .sort((a, b) => (a.order ?? 100) - (b.order ?? 100))
 
 export function getPageBySlug(slug: string): PortalPage | undefined {
