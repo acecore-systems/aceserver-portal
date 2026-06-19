@@ -16,6 +16,17 @@ npm run build
 npm run preview
 ```
 
+## 検証
+
+```bash
+npm run format:check
+npm run validate:content
+npm run build
+```
+
+CMS content の shape は `src/content.config.ts` の Astro Content Collections schema で検証します。
+`validate:content` は slug とファイル名、内部リンク、CMS config など複数ファイルをまたぐ制約を確認します。
+
 ## 主なページ
 
 | ページ                        | パス                         |
