@@ -61,7 +61,7 @@ Cloudflare Pages の preview では、build 前に `public/admin/runtime-config.
 - 恒久的な `cms-content` 投稿受け皿 branch は使いません。
 - PR CI では `npm run format:check`、`npm run validate:content`、`npm run build` を実行します。
 - CMS PR が `main` に merge されると、Cloudflare Pages が GitHub `main` push を受けて production deploy します。
-- 既存の remote `cms-content` branch は、この変更の反映後に未反映差分がないことを確認して削除候補にします。
+- 旧 remote `cms-content` branch は未反映差分がないことを確認して削除済みです。
 
 運用判断と廃止条件は [docs/cms-write-workflow.md](docs/cms-write-workflow.md) を参照してください。
 

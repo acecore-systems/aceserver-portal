@@ -10,8 +10,8 @@
 - CMS OAuth backend: `https://sveltia-cms-auth.sparkling-tree-7cef.workers.dev`
 - CMS publication branch: `main`
 - CMS publish mode: `editorial_workflow`
-- `main`: GitHub branch API 上の `protected` は `false`、required status checks の enforcement は off
-- Branch protection / ruleset 詳細 API: private repository の plan 制限で取得不可
+- `main`: GitHub branch API 上の `protected` は `false`
+- Branch protection / ruleset 更新: private repository の plan 制限で不可
 
 Cloudflare Pages は次の状態を API で確認済みです。
 
@@ -19,7 +19,7 @@ Cloudflare Pages は次の状態を API で確認済みです。
 - Git Provider: Yes (`source.type: github`)
 - Source repository: `acecore-systems/aceserver-portal`
 - Production branch: `main`
-- Latest production deploy: `github:push`、branch `main`、commit `ca596e4e04f6b123b6ea1250b07fdfacedeb06a6`、status `success`
+- Latest production deploy: `github:push`、branch `main`、commit `6be2d02b673150ce2eacc18aff30bb53a6647e12`、status `success`
 - Custom domain: `asv.acecore.net` は `active`
 
 ## 判断
@@ -28,7 +28,7 @@ Cloudflare Pages は次の状態を API で確認済みです。
 
 CMS は `backend.branch: main` と `publish_mode: editorial_workflow` で運用します。これにより、CMS 保存は恒久的な投稿受け皿 branch ではなく、短命な `cms/...` branch と PR として扱われます。
 
-`cms-content` は恒久運用しません。既存 remote branch は、この変更が `main` に反映され、未反映差分や open PR がないことを確認してから削除候補にします。
+`cms-content` は恒久運用しません。旧 remote branch は未反映差分や open PR がないことを確認して削除済みです。
 
 ## 現行フロー
 
