@@ -8,9 +8,8 @@
 - GitHub default branch: `main`
 - CMS backend: `public/admin/config.yml` の `backend.name: github`
 - CMS OAuth backend: `https://sveltia-cms-auth.sparkling-tree-7cef.workers.dev`
-- CMS production 保存先: `cms-content`
-- `cms-content`: branch は存在し、GitHub API 上は unprotected
-- `cms-content`: `main` との差分は `ahead_by: 0`、`behind_by: 20` で、未反映 CMS commit はなし
+- CMS publication branch: `main`
+- CMS publish mode: `editorial_workflow`
 - `main`: GitHub branch API 上の `protected` は `false`、required status checks の enforcement は off
 - Branch protection / ruleset 詳細 API: private repository の plan 制限で取得不可
 
@@ -27,38 +26,28 @@ Cloudflare Pages は次の状態を API で確認済みです。
 
 `main` は本番ソースの唯一の正にします。Cloudflare Pages の production deploy 元も GitHub 連携の `main` だけにします。
 
-一方で、現在の Sveltia CMS は GitHub OAuth 経由で保存します。このまま CMS の保存先を `main` にすると、編集者個人の GitHub 権限で `main` に commit する形になり、次の条件を満たせません。
+CMS は `backend.branch: main` と `publish_mode: editorial_workflow` で運用します。これにより、CMS 保存は恒久的な投稿受け皿 branch ではなく、短命な `cms/...` branch と PR として扱われます。
 
-- 書き込み主体を専用 bot / GitHub App / backend に限定する
-- 書き込み可能 path を `src/content/**` と `public/uploads/**` などに限定する
-- schema / build / lint などの検証を通してから `main` に入れる
-- `main` protection の bypass を専用 actor だけに限定する
-
-そのため、`cms-content` は暫定の CMS 投稿受け皿として残します。ただし、`cms-content` を本番 deploy 元にはしません。
+`cms-content` は恒久運用しません。既存 remote branch は、この変更が `main` に反映され、未反映差分や open PR がないことを確認してから削除候補にします。
 
 ## 現行フロー
 
-1. Sveltia CMS が `cms-content` に保存する。
-2. `.github/workflows/cms-content-pr.yml` が `cms-content` と `main` の差分を確認する。
-3. 差分が `src/content/**` と `public/uploads/**` のみであれば、`main` 向け PR を作成する。
-4. PR CI が `npm run format:check`、`npm run validate:content`、`npm run build` を実行する。
-5. レビュー後、merge commit または rebase merge で `main` に入れる。
-6. Cloudflare Pages が GitHub `main` push を受けて production deploy する。
-7. `.github/workflows/cms-content-sync.yml` が、未反映 CMS commit がない場合だけ `cms-content` を `main` に fast-forward する。
+1. Sveltia CMS が `main` を publication branch として読み込む。
+2. CMS 保存時、editorial workflow が短命な CMS branch と PR を作る。
+3. PR CI が `npm run format:check`、`npm run validate:content`、`npm run build` を実行する。
+4. レビュー後、CMS PR を `main` に merge する。
+5. Cloudflare Pages が GitHub `main` push を受けて production deploy する。
 
-CMS PR は squash merge しません。squash merge では `cms-content` の commit が `main` から到達不能になり、自動同期が安全に fast-forward できません。
+## 残る制約
 
-## `cms-content` の扱い
+現在の Sveltia CMS は GitHub OAuth 経由で保存します。editorial workflow により `main` 直 commit は避けられますが、PR branch 作成の actor は編集者個人の GitHub 権限です。
 
-`cms-content` は恒久的な別本流ではありません。現在は CMS の投稿受け皿としてのみ使います。
+編集者個人ではなく専用 bot / GitHub App / backend actor に完全移行したい場合は、CMS 保存を受ける backend を別途実装し、その backend が content-only PR を作る形にします。
 
-`cms-content` に未反映 commit がある場合、同期 workflow は自動更新を止めます。この場合は open CMS PR を確認し、content-only であれば `main` に merge してから再同期します。content-only でない場合は PR を merge せず、差分を取り除いてから再保存します。
+## 検証方針
 
-## 廃止条件
+`npm run validate:content` は CMS config が次の条件を満たすことも確認します。
 
-次のどちらかを満たしたら `cms-content` を削除候補にします。
-
-- CMS backend を専用 GitHub App / bot / backend actor に移し、content-only PR を直接 `main` 向けに作れる。
-- `main` protection の bypass を専用 actor だけに限定し、path 制限と `format:check` / `validate:content` / `build` 相当の検証を必須にできる。
-
-廃止時は `public/admin/config.yml`、`scripts/write-cms-runtime-config.mjs`、`public/admin/init.js`、関連 GitHub Actions を同時に更新し、`cms-content` に未反映差分がないことを確認してから branch 削除します。
+- `backend.branch` が `main`
+- `publish_mode` が `editorial_workflow`
+- CMS に `path` field を露出しない

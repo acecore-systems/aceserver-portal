@@ -186,6 +186,18 @@ async function validateCmsConfig() {
       'page path field must not be exposed in CMS',
     )
   }
+  if (!/backend:\s*[\s\S]*?\n\s+branch:\s*main\b/.test(config)) {
+    fail(
+      'public/admin/config.yml',
+      'CMS backend branch must be main; do not use a permanent cms-content branch',
+    )
+  }
+  if (!/^publish_mode:\s*editorial_workflow\b/m.test(config)) {
+    fail(
+      'public/admin/config.yml',
+      'CMS must use editorial_workflow so saves create short-lived branches and PRs',
+    )
+  }
 }
 
 const routes = await validatePages()
