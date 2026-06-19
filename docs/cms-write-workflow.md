@@ -19,7 +19,7 @@ Cloudflare Pages は次の状態を API で確認済みです。
 - Git Provider: Yes (`source.type: github`)
 - Source repository: `acecore-systems/aceserver-portal`
 - Production branch: `main`
-- Latest production deploy: `github:push`、branch `main`、commit `6be2d02b673150ce2eacc18aff30bb53a6647e12`、status `success`
+- Production deploy: `wrangler pages deployment list --project-name aceserver-portal --environment production --json` で、最新 deployment が branch `main` の GitHub push 由来であることを確認する
 - Custom domain: `asv.acecore.net` は `active`
 
 ## 判断
