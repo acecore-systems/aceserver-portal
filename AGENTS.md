@@ -17,7 +17,11 @@
 - CMS content の shape は `src/content.config.ts` の Astro Content Collections schema に合わせる。
 - 複数ファイルをまたぐ制約（slug とファイル名、内部リンク、CMS config の公開フィールドなど）は `npm run validate:content` で確認する。
 - 公開 URL は `slug` ベースの route を正とし、CMS editable content に `path` を戻さない。
-- `cms-content` は CMS 保存用 branch で、`main` への反映は `.github/workflows/cms-content-pr.yml` が作る PR 経由にする。
+- `main` は本番ソースの唯一の正とし、Cloudflare Pages の production deploy 元も GitHub 連携の `main` にする。
+- `cms-content` は暫定の CMS 投稿受け皿 branch としてのみ扱い、本番 deploy 元にしない。
+- `cms-content` から `main` への反映は `.github/workflows/cms-content-pr.yml` が作る content-only PR 経由にする。
+- `main` から `cms-content` への同期は `.github/workflows/cms-content-sync.yml` の safe fast-forward に任せ、未反映 CMS commit がある場合は自動同期しない。
+- CMS を `main` へ直接書き込ませる場合は、編集者個人 OAuth ではなく専用 bot / GitHub App / backend actor を使い、書き込み path と検証を制限できる状態にしてから行う。
 
 ## 検証
 

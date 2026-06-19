@@ -55,11 +55,18 @@ Cloudflare Pages の preview では、build 前に `public/admin/runtime-config.
 
 ### 本番 CMS の保存と PR 反映
 
-- 本番 CMS の保存先は `cms-content` ブランチです。`main` は protected branch のため、CMS から直接 commit しません。
+- 本番ソースの正は `main` です。Cloudflare Pages の production deploy 元も GitHub 連携の `main` にします。
+- 現在の Sveltia CMS は GitHub OAuth 経由で保存するため、編集者個人の権限で `main` に直接 commit する構成にはしません。
+- 本番 CMS の保存先は暫定的に `cms-content` ブランチです。`cms-content` は投稿受け皿であり、本番 deploy 元ではありません。
 - `cms-content` に保存されると `.github/workflows/cms-content-pr.yml` が `main` 向けの「CMS編集内容を反映」PRを作成します。既に open PR がある場合は二重作成しません。
+- CMS PR 作成前に、差分が `src/content/**` と `public/uploads/**` のみであることを検査します。
+- PR CI では `npm run format:check`、`npm run validate:content`、`npm run build` を実行します。
+- CMS PR は通常の merge commit または rebase merge でマージします。`cms-content` を安全に fast-forward 同期するため、squash merge は避けます。
+- `main` に push されると `.github/workflows/cms-content-sync.yml` が、未反映 CMS commit がない場合だけ `cms-content` を `main` へ fast-forward します。
 - 初回セットアップやブランチ再作成が必要な場合は、`main` の最新状態から `git fetch origin main`、`git push origin origin/main:refs/heads/cms-content` で `cms-content` を用意します。
-- CMS PR は通常の merge commit または rebase merge でマージします。
 - GitHub Actions の `GITHUB_TOKEN` で PR 作成が許可されていない環境では、Repository settings の Actions 権限を見直すか、PR 作成権限を持つ `CMS_PR_TOKEN` secret を設定します。
+
+運用判断と廃止条件は [docs/cms-write-workflow.md](docs/cms-write-workflow.md) を参照してください。
 
 ## 環境変数
 

@@ -30,11 +30,21 @@ jobs:
           set -euo pipefail
 
           owner="${REPO%%/*}"
-          git fetch origin "$BASE_BRANCH"
+          git fetch origin "$BASE_BRANCH:refs/remotes/origin/$BASE_BRANCH"
 
-          if git diff --quiet "origin/$BASE_BRANCH...HEAD"; then
+          changed_files="$(git diff --name-only "origin/$BASE_BRANCH...HEAD")"
+
+          if [ -z "$changed_files" ]; then
             echo "No CMS changes to publish."
             exit 0
+          fi
+
+          disallowed_files="$(printf '%s\n' "$changed_files" | grep -Ev '^(src/content/|public/uploads/)' || true)"
+
+          if [ -n "$disallowed_files" ]; then
+            echo "::error::cms-content contains files outside allowed CMS content paths."
+            printf '%s\n' "$disallowed_files"
+            exit 1
           fi
 
           existing_pr="$(
@@ -60,19 +70,21 @@ jobs:
 
           ## 概要
 
-          Sveltia CMS から `cms-content` ブランチに保存された編集内容を `main` に反映します。
+          Sveltia CMS から `cms-content` ブランチに保存された content-only 編集内容を `main` に反映します。
 
           ## 主な変更点
 
           - CMS で保存されたページ文言、サイト設定、告知、アップロード画像など
+          - 変更ファイルは `src/content/**` と `public/uploads/**` に限定されています
 
           ## 確認したこと
 
-          - 自動作成 PR のため未実施
+          - `cms-content` と `main` の差分が CMS content/upload path のみであること
 
           ## 未確認事項・補足
 
-          - レビュー後、通常の merge commit または rebase merge でマージしてください。
+          - PR CI で `npm run format:check`、`npm run validate:content`、`npm run build` を確認してください。
+          - レビュー後、通常の merge commit または rebase merge でマージしてください。squash merge は `cms-content` 同期が安全に fast-forward できなくなるため避けてください。
           BODY
 
           gh pr create \

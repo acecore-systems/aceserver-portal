@@ -1,0 +1,47 @@
+name: CMS Content Branch Sync
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync-cms-content:
+    name: Sync cms-content from main
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Fast-forward cms-content when safe
+        env:
+          BASE_BRANCH: main
+          CMS_BRANCH: cms-content
+        run: |
+          set -euo pipefail
+
+          git fetch origin "$BASE_BRANCH:refs/remotes/origin/$BASE_BRANCH"
+
+          if ! git ls-remote --exit-code --heads origin "$CMS_BRANCH" >/dev/null 2>&1; then
+            echo "Creating ${CMS_BRANCH} from ${BASE_BRANCH}."
+            git push origin "refs/remotes/origin/$BASE_BRANCH:refs/heads/$CMS_BRANCH"
+            exit 0
+          fi
+
+          git fetch origin "$CMS_BRANCH:refs/remotes/origin/$CMS_BRANCH"
+          unmerged_count="$(git rev-list --count "origin/$BASE_BRANCH..origin/$CMS_BRANCH")"
+
+          if [ "$unmerged_count" != "0" ]; then
+            echo "::warning::${CMS_BRANCH} has ${unmerged_count} commit(s) not reachable from ${BASE_BRANCH}; skipping sync."
+            exit 0
+          fi
+
+          git push origin "refs/remotes/origin/$BASE_BRANCH:refs/heads/$CMS_BRANCH"
