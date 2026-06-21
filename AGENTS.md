@@ -18,6 +18,8 @@
 - 複数ファイルをまたぐ制約（slug とファイル名、内部リンク、CMS config の公開フィールドなど）は `npm run validate:content` で確認する。
 - 公開 URL は `slug` ベースの route を正とし、CMS editable content に `path` を戻さない。
 - `main` は本番ソースの唯一の正とし、Cloudflare Pages の production deploy 元も GitHub 連携の `main` にする。
+- このリポジトリの CMS 認証は GitHub 認証型とする。Cloudflare Access を前段に置く場合も、保存認証は GitHub OAuth Worker を使う。
+- Cherry のような Cloudflare Access 型 proxy へ寄せる場合は、別途 backend actor、書き込み path 制限、CI 経由 PR 作成まで設計してから行う。
 - CMS backend の publication branch は `main` にし、`publish_mode: editorial_workflow` で短命な CMS branch と PR を作らせる。
 - `cms-content` のような恒久的な CMS 投稿受け皿 branch は使わない。
 - CMS 変更は PR と CI を通して `main` に入れる。`main` への無検証直 push 前提の運用に戻さない。
@@ -33,6 +35,6 @@
 
 ## PR 作成
 
-- PR タイトルと本文は日本語で書き、`.github/pull_request_template.md` に沿って概要、主な変更点、確認したこと、未確認事項・補足を含める。
+- PR タイトルと本文は日本語で書き、`.github/pull_request_template.md` に沿って関連 Issue、概要、確認、補足を簡潔に書く。
 - PR は draft で作成してよい。ユーザーが ready を求めた場合、または自動化タスクが ready for review を明示している場合だけ ready にする。
 - 実行したコマンドは省略せず書く。実行していない検証は「未実施」と明記する。

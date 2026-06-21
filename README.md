@@ -49,6 +49,8 @@ CMS content の shape は `src/content.config.ts` の Astro Content Collections 
 Sveltia CMS では `src/content/pages/*.json` と `src/content/site/*.json` を編集します。
 メディアは `public/uploads/` に保存します。
 
+このリポジトリの CMS 認証は GitHub 認証型です。編集者は GitHub OAuth Worker 経由で保存し、Cloudflare Access を使う場合も前段の入口保護に限定します。
+
 告知は CMS の「告知」から編集します。表示/非表示、表示順、表示トーン、リンク、表示期間を `src/content/site/announcements.json` で管理します。表示期間は訪問者のブラウザ時刻で判定するため、デプロイ後も時刻到達時に切り替わります。
 
 Cloudflare Pages の preview では、build 前に `public/admin/runtime-config.js` を生成し、CMS が preview 対象の PR ブランチを読むようにしています。生成ファイルは Git 管理対象外です。
