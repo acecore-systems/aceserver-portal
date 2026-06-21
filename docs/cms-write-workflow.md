@@ -7,6 +7,7 @@
 - GitHub repository: `acecore-systems/aceserver-portal`
 - GitHub default branch: `main`
 - CMS backend: `public/admin/config.yml` の `backend.name: github`
+- CMS auth mode: GitHub 認証型
 - CMS OAuth backend: `https://sveltia-cms-auth.sparkling-tree-7cef.workers.dev`
 - CMS publication branch: `main`
 - CMS publish mode: `editorial_workflow`
@@ -27,6 +28,8 @@ Cloudflare Pages は次の状態を API で確認済みです。
 `main` は本番ソースの唯一の正にします。Cloudflare Pages の production deploy 元も GitHub 連携の `main` だけにします。
 
 CMS は `backend.branch: main` と `publish_mode: editorial_workflow` で運用します。これにより、CMS 保存は恒久的な投稿受け皿 branch ではなく、短命な `cms/...` branch と PR として扱われます。
+
+Cloudflare Access を `/admin/` の前段に置く場合も、保存認証は GitHub OAuth Worker が担当します。Cherry のような Cloudflare Access 型 token proxy には寄せません。
 
 `cms-content` は恒久運用しません。旧 remote branch は未反映差分や open PR がないことを確認して削除済みです。
 
