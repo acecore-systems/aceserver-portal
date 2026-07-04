@@ -5,7 +5,7 @@
   "hideFooter": true,
   "meta": {
     "title": "資源サーバーワールドマップ",
-    "description": "エースサーバーの資源ワールドマップです。",
+    "description": "エースサーバーの資源ワールドを確認できる公開マップです。採掘や素材集めで向かう場所、周辺地形、移動前の目印確認に利用できます。",
     "ogImage": "/uploads/legacy-world-resource.png"
   },
   "sections": [

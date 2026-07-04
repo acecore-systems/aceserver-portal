@@ -5,7 +5,7 @@
   "hideFooter": true,
   "meta": {
     "title": "メインサーバーワールドマップ",
-    "description": "エースサーバーのメインワールドマップです。",
+    "description": "エースサーバーのメインワールドをブラウザで確認できる公開マップです。拠点、建築、地形を見ながらサーバー内の位置関係を把握できます。",
     "ogImage": "/uploads/legacy-world-main.png"
   },
   "sections": [

@@ -5,7 +5,7 @@
   "hideFooter": true,
   "meta": {
     "title": "Season Aワールドマップ",
-    "description": "エースサーバーのSeason Aワールドマップです。",
+    "description": "エースサーバーのSeason Aワールドを確認できる公開マップです。期間限定ワールドの地形、建築、移動先の位置関係をブラウザから確認できます。",
     "ogImage": "/uploads/legacy-world-main.png"
   },
   "sections": [

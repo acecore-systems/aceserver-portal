@@ -5,7 +5,7 @@
   "hideFooter": true,
   "meta": {
     "title": "RPGサブワールドマップ",
-    "description": "エースサーバーのRPGサブワールドマップです。",
+    "description": "エースサーバーのRPGサブワールドを確認できる公開マップです。RPG関連エリアの地形、移動先、周辺の位置関係をブラウザから把握できます。",
     "ogImage": "/uploads/legacy-world-rpg.png"
   },
   "sections": [

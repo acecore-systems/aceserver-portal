@@ -32,7 +32,25 @@ export default defineConfig({
     }),
     sitemap({
       filter(page) {
-        return !new URL(page).pathname.startsWith('/admin/')
+        const pathname = new URL(page).pathname
+        return pathname !== '/404' && !pathname.startsWith('/admin/')
+      },
+      serialize(item) {
+        const pathname = new URL(item.url).pathname
+        if (pathname === '/') {
+          item.changefreq = 'weekly'
+          item.priority = 1
+        } else if (
+          pathname.startsWith('/world-map') ||
+          pathname.startsWith('/youtube-search')
+        ) {
+          item.changefreq = 'daily'
+          item.priority = 0.8
+        } else {
+          item.changefreq = 'monthly'
+          item.priority = 0.6
+        }
+        return item
       },
     }),
   ],

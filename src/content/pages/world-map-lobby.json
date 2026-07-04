@@ -5,7 +5,7 @@
   "hideFooter": true,
   "meta": {
     "title": "ロビーワールドマップ",
-    "description": "エースサーバーのロビーワールドマップです。",
+    "description": "エースサーバーのロビーワールドを確認できる公開マップです。各ワールドへの入口や案内地点の位置をブラウザから把握できます。",
     "ogImage": "/uploads/legacy-world-map.png"
   },
   "sections": [
