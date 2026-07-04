@@ -7,6 +7,7 @@ import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
 import AdUnit from '../components/AdUnit.astro'
 import AdsRuntime from '../components/AdsRuntime.astro'
+import AlphaGuide from '../components/AlphaGuide.astro'
 import { settings } from '../data/content'
 import { ADSENSE } from '../data/ads'
 
@@ -37,6 +38,17 @@ const ogImage = new URL(image, siteBase)
 const logoUrl = new URL(settings.logo, siteBase)
 const homeUrl = new URL('/', siteBase)
 const shouldShowAds = showAds && ADSENSE.enabled
+const alphaLogo = '/uploads/alpha-kun.png'
+const alphaJoinButton = {
+  label: 'ディスコードに参加',
+  href: settings.discordUrl,
+  external: true,
+}
+const alphaWikiButton = {
+  label: 'WIKIを開く',
+  href: settings.wikiUrl,
+  external: true,
+}
 ---
 
 <!doctype html>
@@ -114,6 +126,11 @@ const shouldShowAds = showAds && ADSENSE.enabled
       {shouldShowAds && <AdUnit />}
     </main>
     {!hideFooter && <Footer />}
+    <AlphaGuide
+      logo={alphaLogo}
+      joinButton={alphaJoinButton}
+      wikiButton={alphaWikiButton}
+    />
     {shouldShowAds && <AdsRuntime />}
   </body>
 </html>

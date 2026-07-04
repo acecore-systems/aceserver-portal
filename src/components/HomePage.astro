@@ -1,7 +1,6 @@
 ---
 import type { LinkItem, PortalPage, PortalSection } from '../types'
 import { externalLinkAttrs } from '../utils/links'
-import AlphaGuide from './AlphaGuide.astro'
 import Icon from './Icon.astro'
 
 interface Props {
@@ -132,7 +131,7 @@ const alphaLogo = '/uploads/alpha-kun.png'
         <Icon name="book-open" />
         <span>{heroWikiButton.label}</span>
       </a>
-      <a class="asv-btn-alpha" href="#alpha-guide">
+      <a class="asv-btn-alpha" href="#alpha-guide" data-alpha-open>
         <img
           class="hero-alpha-icon"
           src={alphaLogo}
@@ -189,12 +188,6 @@ const alphaLogo = '/uploads/alpha-kun.png'
   </div>
   <div><h2>JAVA版・統合版<br />どちらでも遊ぶことが可能です！</h2></div>
 </section>
-
-<AlphaGuide
-  logo={alphaLogo}
-  joinButton={heroJoinButton}
-  wikiButton={heroWikiButton}
-/>
 
 <section class="feature-band feature-band--left">
   <div class="feature-copy">
