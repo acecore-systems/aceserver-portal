@@ -30,6 +30,10 @@ export default defineConfig({
         },
       },
     }),
-    sitemap(),
+    sitemap({
+      filter(page) {
+        return !new URL(page).pathname.startsWith('/admin/')
+      },
+    }),
   ],
 })

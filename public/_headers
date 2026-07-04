@@ -1,7 +1,6 @@
 /*
   Cache-Control: public, max-age=0, must-revalidate
   X-Content-Type-Options: nosniff
-  X-Robots-Tag: all
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=(), usb=(), interest-cohort=()
   X-Frame-Options: SAMEORIGIN
@@ -20,6 +19,12 @@
 
 /admin/config.yml
   Content-Type: application/yaml; charset=utf-8
+
+/404
+  X-Robots-Tag: noindex, follow
+
+/404.html
+  X-Robots-Tag: noindex, follow
 
 /_astro/*
   Cache-Control: public, max-age=31536000, immutable
