@@ -1,6 +1,7 @@
 ---
 import type { LinkItem, PortalPage, PortalSection } from '../types'
 import { externalLinkAttrs } from '../utils/links'
+import AlphaGuide from './AlphaGuide.astro'
 import Icon from './Icon.astro'
 
 interface Props {
@@ -105,6 +106,7 @@ const wikiBackgroundImage =
   wikiCta.backgroundImage ?? '/uploads/legacy-wiki-bg.png'
 const heroJoinButton = joinCta.ctaButton ?? fallbackJoinButton
 const heroWikiButton = wikiCta.ctaButton ?? fallbackWikiButton
+const alphaLogo = '/uploads/alpha-kun.png'
 ---
 
 <section class="hero" aria-labelledby="home-title">
@@ -129,6 +131,16 @@ const heroWikiButton = wikiCta.ctaButton ?? fallbackWikiButton
       >
         <Icon name="book-open" />
         <span>{heroWikiButton.label}</span>
+      </a>
+      <a class="asv-btn-alpha" href="#alpha-guide">
+        <img
+          class="hero-alpha-icon"
+          src={alphaLogo}
+          alt=""
+          width="28"
+          height="28"
+        />
+        <span>アルファくんに聞く</span>
       </a>
     </div>
   </div>
@@ -177,6 +189,12 @@ const heroWikiButton = wikiCta.ctaButton ?? fallbackWikiButton
   </div>
   <div><h2>JAVA版・統合版<br />どちらでも遊ぶことが可能です！</h2></div>
 </section>
+
+<AlphaGuide
+  logo={alphaLogo}
+  joinButton={heroJoinButton}
+  wikiButton={heroWikiButton}
+/>
 
 <section class="feature-band feature-band--left">
   <div class="feature-copy">
@@ -338,6 +356,47 @@ const heroWikiButton = wikiCta.ctaButton ?? fallbackWikiButton
     display: flex;
     flex-wrap: wrap;
     gap: 14px;
+  }
+
+  .asv-btn-alpha {
+    display: inline-flex;
+    min-height: 3rem;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: 2px solid #1b24d8;
+    border-radius: 8px;
+    background: #ffd84d;
+    color: #15130f;
+    font-size: 0.875rem;
+    font-weight: 900;
+    line-height: 1.2;
+    padding: 0.75rem 1.25rem;
+    text-decoration: none;
+    text-shadow: none;
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.35);
+    transition:
+      background-color 160ms ease,
+      transform 160ms ease,
+      box-shadow 160ms ease;
+  }
+
+  .asv-btn-alpha:hover,
+  .asv-btn-alpha:focus-visible {
+    background: #fff06f;
+    transform: translateY(-1px);
+  }
+
+  .asv-btn-alpha:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.35);
+  }
+
+  .hero-alpha-icon {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 0 rgba(0, 0, 0, 0.16));
   }
 
   .scroll-cue {
