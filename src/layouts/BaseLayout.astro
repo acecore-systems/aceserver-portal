@@ -17,6 +17,7 @@ interface Props {
   hideFooter?: boolean
   fullHeight?: boolean
   robots?: string
+  canonical?: string | null
   showAds?: boolean
 }
 
@@ -27,15 +28,21 @@ const {
   hideFooter = false,
   fullHeight = false,
   robots = 'index, follow',
+  canonical: canonicalInput = Astro.url.pathname,
   showAds = false,
 } = Astro.props
 const siteBase = Astro.site ?? new URL(settings.siteUrl)
-const canonical = new URL(Astro.url.pathname, siteBase)
+const canonical =
+  canonicalInput === null ? null : new URL(canonicalInput, siteBase)
+const pageUrl = canonical ?? new URL(Astro.url.pathname, siteBase)
 const pageTitle =
   title === settings.shortTitle ? title : `${title} | ${settings.shortTitle}`
 const ogImage = new URL(image, siteBase)
 const logoUrl = new URL(settings.logo, siteBase)
 const homeUrl = new URL('/', siteBase)
+const organizationId = `${homeUrl}#organization`
+const websiteId = `${homeUrl}#website`
+const webpageId = `${pageUrl.href}#webpage`
 const shouldShowAds = showAds && ADSENSE.enabled
 ---
 
@@ -48,7 +55,7 @@ const shouldShowAds = showAds && ADSENSE.enabled
     <meta name="format-detection" content="telephone=no" />
     <meta name="robots" content={robots} />
     <meta name="theme-color" content="#15130f" />
-    <link rel="canonical" href={canonical} />
+    {canonical && <link rel="canonical" href={canonical} />}
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="apple-touch-icon" href="/uploads/legacy-acico.png" />
     {
@@ -73,7 +80,7 @@ const shouldShowAds = showAds && ADSENSE.enabled
     <meta property="og:locale" content="ja_JP" />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
-    <meta property="og:url" content={canonical} />
+    {canonical && <meta property="og:url" content={canonical} />}
     <meta property="og:site_name" content={settings.title} />
     <meta property="og:image" content={ogImage} />
     <meta property="og:image:alt" content={title} />
@@ -87,10 +94,13 @@ const shouldShowAds = showAds && ADSENSE.enabled
       set:html={JSON.stringify({
         '@context': 'https://schema.org',
         '@type': 'WebSite',
+        '@id': websiteId,
         name: settings.title,
         alternateName: settings.shortTitle,
         url: homeUrl.toString(),
         description,
+        inLanguage: 'ja',
+        publisher: { '@id': organizationId },
       })}
     />
     <script
@@ -98,10 +108,26 @@ const shouldShowAds = showAds && ADSENSE.enabled
       set:html={JSON.stringify({
         '@context': 'https://schema.org',
         '@type': 'Organization',
+        '@id': organizationId,
         name: settings.shortTitle,
         url: homeUrl.toString(),
         logo: logoUrl.toString(),
         sameAs: [settings.discordUrl, settings.wikiUrl],
+      })}
+    />
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        '@id': webpageId,
+        url: pageUrl.toString(),
+        name: pageTitle,
+        description,
+        image: ogImage.toString(),
+        inLanguage: 'ja',
+        isPartOf: { '@id': websiteId },
+        about: { '@id': organizationId },
       })}
     />
   </head>

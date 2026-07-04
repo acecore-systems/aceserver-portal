@@ -5,7 +5,7 @@
   "hideFooter": true,
   "meta": {
     "title": "イベントワールドマップ",
-    "description": "エースサーバーのイベントワールドマップです。",
+    "description": "エースサーバーのイベントワールドを確認できる公開マップです。イベント会場、開催エリア、移動先の位置関係をブラウザで確認できます。",
     "ogImage": "/uploads/legacy-multiplayer.jpg"
   },
   "sections": [
