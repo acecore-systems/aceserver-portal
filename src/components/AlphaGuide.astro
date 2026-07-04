@@ -12,56 +12,22 @@ interface Props {
 const { logo, joinButton, wikiButton } = Astro.props
 
 const worldMapButton: LinkItem = {
-  label: 'ワールドマップを見る',
+  label: 'マップ',
   href: '/world-map/',
 }
 
 const alphaPrompts = [
   {
-    label: '参加したい',
-    icon: 'message-circle',
-    question: 'どうやって参加するの？',
-    title: '参加方法',
-    answer:
-      'まずは公式ディスコードに来てね。お知らせとルールを確認したら、Java版・統合版どちらからでも遊びに行けるよ。迷ったらWIKIの案内もいっしょに見ると安心だよ。',
-    keywords: [
-      '参加',
-      '入り',
-      '入る',
-      'はじめ',
-      '始め',
-      'discord',
-      'ディスコード',
-      'java',
-      '統合版',
-    ],
+    label: '参加方法',
+    question: 'エースサーバーへの参加方法を教えて',
   },
   {
-    label: 'ストーリー',
-    icon: 'sparkles',
-    question: 'アルファくんはどんな案内をしてくれるの？',
-    title: 'アルファくんの紹介',
-    answer:
-      'ぼくはエースサーバーの入口で、はじめて来た人をワールドまで案内する係だよ。街を見たい人、資源を集めたい人、RPGで冒険したい人に、次の行き先をわかりやすく紹介するね。',
-    keywords: ['ストーリー', '物語', 'アルファ', 'キャラ', '紹介', '案内'],
+    label: 'ワールド',
+    question: 'どのワールドから見ればいい？',
   },
   {
-    label: 'ワールド案内',
-    icon: 'map',
-    question: 'どのワールドに行けばいい？',
-    title: 'ワールド案内',
-    answer:
-      '建築や生活を楽しむならメイン、素材集めなら資源、冒険気分ならRPGがおすすめ。今見られるワールドはワールドマップから確認できるよ。',
-    keywords: ['ワールド', 'マップ', '地図', 'メイン', '資源', 'rpg', 'ロビー'],
-  },
-  {
-    label: 'ルール確認',
-    icon: 'book-open',
-    question: '遊ぶ前に何を見ればいい？',
-    title: '遊ぶ前の確認',
-    answer:
-      '自由に遊べるサーバーだけど、みんなで気持ちよく過ごすためのルールは大事だよ。参加前にWIKIとディスコードのお知らせを確認してね。',
-    keywords: ['ルール', 'wiki', 'ウィキ', '注意', '禁止', '確認'],
+    label: 'ルール',
+    question: '遊ぶ前に確認するルールを教えて',
   },
 ]
 ---
@@ -70,60 +36,51 @@ const alphaPrompts = [
   id="alpha-guide"
   class="alpha-widget"
   data-alpha-widget
-  data-alpha-fallback-title="アルファくんからの案内"
-  data-alpha-fallback-answer="その内容はまだ練習中だよ。参加方法、ストーリー、ワールド、ルールのどれかを聞いてくれたら、今すぐ案内するね。"
+  data-alpha-endpoint="/api/alpha-chat"
+  data-alpha-greeting="やあ、アルファくんだよ。参加方法、ワールド、ルールを短く案内するね。"
+  data-alpha-loading="アルファくんが考え中..."
+  data-alpha-error="いまはAI応答につながらなかったよ。参加方法はディスコード、詳しい案内はWIKIを見てね。"
 >
   <section
     id="alpha-guide-panel"
-    class="alpha-panel pixel-border"
+    class="alpha-panel"
     aria-labelledby="alpha-title"
     data-alpha-panel
     hidden
   >
-    <header class="alpha-panel-header">
-      <img src={logo} alt="" width="48" height="48" />
+    <header class="alpha-header">
+      <img src={logo} alt="" width="40" height="40" />
       <div>
-        <h2 id="alpha-title">アルファくん案内所</h2>
-        <p>キャラクターとして参加方法やワールドを案内します</p>
+        <h2 id="alpha-title">アルファくん</h2>
+        <p>エースサーバー案内チャット</p>
       </div>
       <button
         type="button"
-        class="alpha-close"
-        aria-label="アルファくん案内所を閉じる"
+        class="alpha-icon-button"
+        aria-label="アルファくんチャットを閉じる"
         data-alpha-close
       >
         <Icon name="x" />
       </button>
     </header>
 
-    <div class="alpha-chat-log" aria-live="polite">
-      <p class="alpha-message alpha-message--user" data-alpha-user>
-        はじめて来たよ。何から見ればいい？
-      </p>
-      <div class="alpha-message alpha-message--alpha">
-        <img src={logo} alt="" width="40" height="40" />
-        <div>
-          <strong data-alpha-title>参加方法</strong>
-          <p data-alpha-answer>
-            まずは公式ディスコードに来てね。お知らせとルールを確認したら、Java版・統合版どちらからでも遊びに行けるよ。迷ったらWIKIの案内もいっしょに見ると安心だよ。
-          </p>
-        </div>
-      </div>
+    <div
+      class="alpha-messages"
+      aria-live="polite"
+      aria-label="アルファくんとの会話"
+      data-alpha-messages
+    >
     </div>
 
-    <div class="alpha-prompts" aria-label="アルファくんへの質問例">
+    <div class="alpha-prompt-row" aria-label="質問例">
       {
         alphaPrompts.map((prompt) => (
           <button
             type="button"
-            data-alpha-prompt
-            data-alpha-question={prompt.question}
-            data-alpha-title={prompt.title}
-            data-alpha-answer={prompt.answer}
-            data-alpha-keywords={prompt.keywords.join('|')}
+            data-alpha-prompt={prompt.question}
+            title={prompt.question}
           >
-            <Icon name={prompt.icon} />
-            <span>{prompt.label}</span>
+            {prompt.label}
           </button>
         ))
       }
@@ -133,26 +90,26 @@ const alphaPrompts = [
       <label class="alpha-sr-only" for="alpha-question">
         アルファくんに質問
       </label>
-      <input
+      <textarea
         id="alpha-question"
         name="alpha-question"
-        type="text"
+        rows="2"
+        maxlength="500"
         autocomplete="off"
-        placeholder="例: 参加方法、ワールド、ストーリー"
-      />
-      <button type="submit" aria-label="アルファくんに聞く">
+        placeholder="例: 参加方法を教えて"
+        data-alpha-input></textarea>
+      <button type="submit" aria-label="送信" data-alpha-send>
         <Icon name="send-horizontal" />
-        <span>聞く</span>
       </button>
     </form>
 
-    <div class="alpha-links" aria-label="案内リンク">
+    <nav class="alpha-links" aria-label="主要リンク">
       <a
         href={joinButton.href}
         {...externalLinkAttrs(joinButton.href, joinButton.external)}
       >
         <Icon name="message-circle" />
-        <span>{joinButton.label}</span>
+        <span>Discord</span>
       </a>
       <a
         href={worldMapButton.href}
@@ -166,9 +123,9 @@ const alphaPrompts = [
         {...externalLinkAttrs(wikiButton.href, wikiButton.external)}
       >
         <Icon name="book-open" />
-        <span>{wikiButton.label}</span>
+        <span>WIKI</span>
       </a>
-    </div>
+    </nav>
   </section>
 
   <button
@@ -185,67 +142,151 @@ const alphaPrompts = [
 </div>
 
 <script>
-  function getAlphaPromptData(button: HTMLButtonElement) {
-    return {
-      question:
-        button.dataset.alphaQuestion || button.textContent?.trim() || '',
-      title: button.dataset.alphaTitle || 'アルファくんからの案内',
-      answer: button.dataset.alphaAnswer || '',
-      keywords: (button.dataset.alphaKeywords || '')
-        .split('|')
-        .map((keyword) => keyword.trim().toLowerCase())
-        .filter(Boolean),
-    }
+  type AlphaRole = 'user' | 'assistant'
+
+  type AlphaMessage = {
+    role: AlphaRole
+    content: string
   }
 
-  function updateAlphaChat(
+  function createAlphaMessage(
     widget: HTMLElement,
-    prompt: ReturnType<typeof getAlphaPromptData>,
-    userText?: string,
+    role: AlphaRole,
+    content: string,
+    transient = false,
   ) {
-    const user = widget.querySelector<HTMLElement>('[data-alpha-user]')
-    const title = widget.querySelector<HTMLElement>('[data-alpha-title]')
-    const answer = widget.querySelector<HTMLElement>('[data-alpha-answer]')
-
-    if (user) {
-      user.textContent = userText || prompt.question
-    }
-
-    if (title) {
-      title.textContent = prompt.title
-    }
-
-    if (answer) {
-      answer.textContent = prompt.answer
-    }
-  }
-
-  function findAlphaPrompt(widget: HTMLElement, rawValue: string) {
-    const value = rawValue.trim().toLowerCase()
-    const prompts = Array.from(
-      widget.querySelectorAll<HTMLButtonElement>('[data-alpha-prompt]'),
-    ).map(getAlphaPromptData)
-
-    return (
-      prompts.find((prompt) =>
-        prompt.keywords.some((keyword) => value.includes(keyword)),
-      ) || {
-        question: rawValue,
-        title: widget.dataset.alphaFallbackTitle || 'アルファくんからの案内',
-        answer:
-          widget.dataset.alphaFallbackAnswer ||
-          'その内容はまだ練習中だよ。質問例から聞いてみてね。',
-        keywords: [],
-      }
+    const messagesContainer = widget.querySelector<HTMLElement>(
+      '[data-alpha-messages]',
     )
+    if (!messagesContainer) return null
+
+    const message = document.createElement('div')
+    message.className = `alpha-message alpha-message--${role}`
+    if (transient) {
+      message.dataset.alphaTransient = 'true'
+    }
+
+    if (role === 'assistant') {
+      const avatar = document.createElement('img')
+      const toggleImage = widget.querySelector<HTMLImageElement>(
+        '[data-alpha-toggle] img',
+      )
+      avatar.src = toggleImage?.src || ''
+      avatar.alt = ''
+      avatar.width = 32
+      avatar.height = 32
+      message.append(avatar)
+    }
+
+    const bubble = document.createElement('p')
+    bubble.textContent = content
+    message.append(bubble)
+    messagesContainer.append(message)
+    messagesContainer.scrollTop = messagesContainer.scrollHeight
+
+    return message
   }
 
-  function setAlphaWidgetOpen(widget: HTMLElement, open: boolean) {
+  function setAlphaSending(widget: HTMLElement, sending: boolean) {
+    widget.classList.toggle('is-sending', sending)
+    widget
+      .querySelectorAll<HTMLButtonElement>(
+        '[data-alpha-send], [data-alpha-prompt]',
+      )
+      .forEach((button) => {
+        button.disabled = sending
+      })
+  }
+
+  function ensureAlphaGreeting(widget: HTMLElement, messages: AlphaMessage[]) {
+    if (messages.length > 0) return
+
+    const greeting =
+      widget.dataset.alphaGreeting ||
+      'やあ、アルファくんだよ。エースサーバーの案内をするね。'
+    messages.push({ role: 'assistant', content: greeting })
+    createAlphaMessage(widget, 'assistant', greeting)
+  }
+
+  async function sendAlphaQuestion(
+    widget: HTMLElement,
+    messages: AlphaMessage[],
+    rawQuestion: string,
+  ) {
+    const question = rawQuestion.trim()
+    if (!question || widget.classList.contains('is-sending')) return
+
+    const input =
+      widget.querySelector<HTMLTextAreaElement>('[data-alpha-input]')
+    if (input) {
+      input.value = ''
+    }
+
+    messages.push({ role: 'user', content: question })
+    createAlphaMessage(widget, 'user', question)
+    setAlphaSending(widget, true)
+
+    const loadingMessage = createAlphaMessage(
+      widget,
+      'assistant',
+      widget.dataset.alphaLoading || 'アルファくんが考え中...',
+      true,
+    )
+
+    try {
+      const response = await fetch(
+        widget.dataset.alphaEndpoint || '/api/alpha-chat',
+        {
+          method: 'POST',
+          headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            question,
+            messages: messages.slice(-8),
+          }),
+        },
+      )
+
+      const payload = await response
+        .json()
+        .catch(() => ({ ok: false, answer: '' }))
+      const fallback =
+        widget.dataset.alphaError ||
+        'いまはAI応答につながらなかったよ。あとでもう一度聞いてね。'
+      const answer =
+        typeof payload?.answer === 'string' && payload.answer.trim()
+          ? payload.answer.trim()
+          : fallback
+
+      loadingMessage?.remove()
+      messages.push({ role: 'assistant', content: answer })
+      createAlphaMessage(widget, 'assistant', answer)
+    } catch {
+      const fallback =
+        widget.dataset.alphaError ||
+        'いまはAI応答につながらなかったよ。あとでもう一度聞いてね。'
+      loadingMessage?.remove()
+      messages.push({ role: 'assistant', content: fallback })
+      createAlphaMessage(widget, 'assistant', fallback)
+    } finally {
+      setAlphaSending(widget, false)
+      window.setTimeout(() => input?.focus(), 0)
+    }
+  }
+
+  function setAlphaWidgetOpen(
+    widget: HTMLElement,
+    open: boolean,
+    messages: AlphaMessage[],
+  ) {
     const panel = widget.querySelector<HTMLElement>('[data-alpha-panel]')
     const toggle = widget.querySelector<HTMLButtonElement>(
       '[data-alpha-toggle]',
     )
-    const input = widget.querySelector<HTMLInputElement>('#alpha-question')
+    const input =
+      widget.querySelector<HTMLTextAreaElement>('[data-alpha-input]')
 
     if (!panel || !toggle) return
 
@@ -254,6 +295,7 @@ const alphaPrompts = [
     toggle.setAttribute('aria-expanded', String(open))
 
     if (open) {
+      ensureAlphaGreeting(widget, messages)
       window.setTimeout(() => input?.focus(), 0)
     } else {
       toggle.focus()
@@ -266,39 +308,48 @@ const alphaPrompts = [
 
     widget.dataset.alphaBound = 'true'
 
+    const messages: AlphaMessage[] = []
     const toggle = widget.querySelector<HTMLButtonElement>(
       '[data-alpha-toggle]',
     )
     const form = widget.querySelector<HTMLFormElement>('[data-alpha-form]')
-    const input = form?.querySelector<HTMLInputElement>('input')
+    const input =
+      widget.querySelector<HTMLTextAreaElement>('[data-alpha-input]')
 
     toggle?.addEventListener('click', () => {
       const isOpen = toggle.getAttribute('aria-expanded') === 'true'
-      setAlphaWidgetOpen(widget, !isOpen)
+      setAlphaWidgetOpen(widget, !isOpen, messages)
     })
 
     widget.querySelectorAll('[data-alpha-close]').forEach((button) => {
-      button.addEventListener('click', () => setAlphaWidgetOpen(widget, false))
+      button.addEventListener('click', () =>
+        setAlphaWidgetOpen(widget, false, messages),
+      )
     })
 
     widget
       .querySelectorAll<HTMLButtonElement>('[data-alpha-prompt]')
       .forEach((button) => {
         button.addEventListener('click', () => {
-          updateAlphaChat(widget, getAlphaPromptData(button))
+          setAlphaWidgetOpen(widget, true, messages)
+          void sendAlphaQuestion(
+            widget,
+            messages,
+            button.dataset.alphaPrompt || button.textContent || '',
+          )
         })
       })
 
     form?.addEventListener('submit', (event) => {
       event.preventDefault()
+      void sendAlphaQuestion(widget, messages, input?.value || '')
+    })
 
-      const question = input?.value.trim() || ''
-      const prompt = findAlphaPrompt(widget, question)
-      updateAlphaChat(widget, prompt, question || prompt.question)
+    input?.addEventListener('keydown', (event) => {
+      if (event.key !== 'Enter' || event.shiftKey) return
 
-      if (input) {
-        input.value = ''
-      }
+      event.preventDefault()
+      void sendAlphaQuestion(widget, messages, input.value)
     })
 
     document.addEventListener('click', (event) => {
@@ -309,7 +360,7 @@ const alphaPrompts = [
       if (!opener) return
 
       event.preventDefault()
-      setAlphaWidgetOpen(widget, true)
+      setAlphaWidgetOpen(widget, true, messages)
     })
 
     document.addEventListener('keydown', (event) => {
@@ -317,7 +368,7 @@ const alphaPrompts = [
         return
       }
 
-      setAlphaWidgetOpen(widget, false)
+      setAlphaWidgetOpen(widget, false, messages)
     })
   }
 
@@ -328,8 +379,8 @@ const alphaPrompts = [
 <style>
   .alpha-widget {
     position: fixed;
-    right: max(16px, env(safe-area-inset-right));
-    bottom: max(16px, env(safe-area-inset-bottom));
+    right: max(18px, env(safe-area-inset-right));
+    bottom: max(18px, env(safe-area-inset-bottom));
     z-index: 70;
     display: grid;
     justify-items: end;
@@ -343,226 +394,230 @@ const alphaPrompts = [
 
   .alpha-panel {
     display: grid;
-    width: min(390px, calc(100vw - 32px));
-    max-height: min(620px, calc(100vh - 112px));
-    gap: 14px;
+    width: min(360px, calc(100vw - 32px));
+    max-height: min(540px, calc(100vh - 108px));
     overflow: hidden;
-    border-radius: 18px;
-    background:
-      linear-gradient(180deg, rgba(31, 24, 18, 0.98), rgba(16, 18, 19, 0.98)),
-      #15130f;
-    color: #fff7df;
-    padding: 16px;
-    box-shadow:
-      0 0 0 2px rgba(255, 216, 77, 0.42),
-      0 22px 70px rgba(0, 0, 0, 0.38);
+    border: 1px solid rgba(255, 216, 77, 0.46);
+    border-radius: 16px;
+    background: rgba(21, 19, 15, 0.96);
+    color: #fff8e6;
+    box-shadow: 0 18px 52px rgba(0, 0, 0, 0.34);
   }
 
   .alpha-panel[hidden] {
     display: none;
   }
 
-  .alpha-panel-header {
+  .alpha-header {
     display: grid;
     align-items: center;
     gap: 10px;
     grid-template-columns: auto minmax(0, 1fr) auto;
+    border-bottom: 1px solid rgba(255, 216, 77, 0.18);
+    padding: 12px;
   }
 
-  .alpha-panel-header img {
-    width: 48px;
-    height: 48px;
+  .alpha-header img,
+  .alpha-message--assistant img {
     object-fit: contain;
-    border-radius: 12px;
-    background: rgba(255, 216, 77, 0.16);
-    padding: 2px;
-    filter: drop-shadow(0 4px 0 rgba(0, 0, 0, 0.2));
+    border-radius: 10px;
+    background: rgba(255, 216, 77, 0.14);
   }
 
-  .alpha-panel-header h2,
-  .alpha-panel-header p {
+  .alpha-header img {
+    width: 40px;
+    height: 40px;
+    padding: 2px;
+  }
+
+  .alpha-header h2,
+  .alpha-header p,
+  .alpha-message p {
     margin: 0;
   }
 
-  .alpha-panel-header h2 {
-    font-size: 1rem;
+  .alpha-header h2 {
+    font-size: 0.98rem;
     font-weight: 900;
     letter-spacing: 0;
     line-height: 1.25;
   }
 
-  .alpha-panel-header p {
-    color: rgba(255, 247, 223, 0.78);
-    font-size: 0.78rem;
+  .alpha-header p {
+    color: rgba(255, 248, 230, 0.72);
+    font-size: 0.76rem;
     font-weight: 800;
-    line-height: 1.45;
+    line-height: 1.35;
   }
 
-  .alpha-close,
-  .alpha-toggle {
-    border: 2px solid rgba(255, 216, 77, 0.66);
-    color: #fff7df;
+  .alpha-icon-button,
+  .alpha-toggle,
+  .alpha-form button,
+  .alpha-prompt-row button {
     cursor: pointer;
   }
 
-  .alpha-close {
+  .alpha-icon-button {
     display: grid;
-    width: 40px;
-    height: 40px;
+    width: 34px;
+    height: 34px;
     place-items: center;
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.08);
-    font-size: 1.15rem;
+    border: 1px solid rgba(255, 216, 77, 0.34);
+    border-radius: 9px;
+    background: transparent;
+    color: #fff8e6;
   }
 
-  .alpha-chat-log {
+  .alpha-messages {
     display: grid;
-    max-height: min(36vh, 230px);
-    gap: 12px;
+    max-height: min(310px, 46vh);
+    gap: 10px;
     overflow-y: auto;
-    padding-right: 2px;
+    padding: 12px;
+    scroll-behavior: smooth;
   }
 
   .alpha-message {
+    display: grid;
     max-width: 100%;
-    margin: 0;
+    gap: 8px;
     overflow-wrap: anywhere;
+  }
+
+  .alpha-message--assistant {
+    grid-template-columns: auto minmax(0, 1fr);
+    justify-self: start;
+  }
+
+  .alpha-message--assistant img {
+    width: 32px;
+    height: 32px;
+    padding: 2px;
+  }
+
+  .alpha-message p {
+    border-radius: 14px;
+    font-size: 0.86rem;
+    font-weight: 800;
+    line-height: 1.65;
+    padding: 9px 11px;
+    white-space: pre-line;
+  }
+
+  .alpha-message--assistant p {
+    border-top-left-radius: 4px;
+    background: rgba(255, 245, 220, 0.1);
+    color: #fff8e6;
   }
 
   .alpha-message--user {
     justify-self: end;
-    border: 2px solid rgba(7, 77, 143, 0.86);
-    border-radius: 14px 14px 4px;
+  }
+
+  .alpha-message--user p {
+    border-bottom-right-radius: 4px;
     background: #1877f2;
     color: white;
-    font-size: 0.92rem;
-    font-weight: 900;
-    line-height: 1.55;
-    padding: 10px 12px;
-    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.24);
   }
 
-  .alpha-message--alpha {
-    display: grid;
-    align-items: start;
-    gap: 10px;
-    grid-template-columns: auto 1fr;
-  }
-
-  .alpha-message--alpha img {
-    width: 40px;
-    height: 40px;
-    object-fit: contain;
-    border-radius: 10px;
-    background: rgba(255, 216, 77, 0.16);
-    padding: 2px;
-  }
-
-  .alpha-message--alpha div {
-    border: 2px solid rgba(255, 216, 77, 0.78);
-    border-radius: 4px 14px 14px;
-    background: rgba(255, 245, 220, 0.1);
-    padding: 12px 13px;
-  }
-
-  .alpha-message--alpha strong {
-    display: block;
-    margin-bottom: 5px;
-    color: #ffd84d;
-    font-size: 0.95rem;
-    line-height: 1.35;
-  }
-
-  .alpha-message--alpha p {
-    margin: 0;
-    font-size: 0.9rem;
-    font-weight: 800;
-    line-height: 1.7;
-  }
-
-  .alpha-prompts {
-    display: grid;
+  .alpha-prompt-row {
+    display: flex;
     gap: 8px;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    overflow-x: auto;
+    border-top: 1px solid rgba(255, 216, 77, 0.14);
+    padding: 10px 12px 0;
   }
 
-  .alpha-prompts button,
-  .alpha-form button,
-  .alpha-links a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 7px;
-    min-height: 42px;
-    border: 2px solid rgba(255, 216, 77, 0.62);
-    border-radius: 8px;
-    font-size: 0.86rem;
+  .alpha-prompt-row button {
+    flex: 0 0 auto;
+    min-height: 34px;
+    border: 1px solid rgba(255, 216, 77, 0.38);
+    border-radius: 999px;
+    background: rgba(255, 216, 77, 0.1);
+    color: #fff8e6;
+    font-size: 0.78rem;
     font-weight: 900;
-    line-height: 1.2;
-    text-decoration: none;
-    transition:
-      background-color 160ms ease,
-      border-color 160ms ease,
-      transform 160ms ease;
-  }
-
-  .alpha-prompts button {
-    background: rgba(255, 216, 77, 0.12);
-    color: #fff7df;
-    padding: 0 10px;
-  }
-
-  .alpha-prompts button:hover,
-  .alpha-prompts button:focus-visible,
-  .alpha-links a:hover,
-  .alpha-links a:focus-visible,
-  .alpha-close:hover,
-  .alpha-close:focus-visible {
-    border-color: #ffd84d;
-    background: rgba(255, 216, 77, 0.2);
-    transform: translateY(-1px);
+    line-height: 1;
+    padding: 0 12px;
   }
 
   .alpha-form {
     display: grid;
+    align-items: end;
     gap: 8px;
     grid-template-columns: minmax(0, 1fr) auto;
+    padding: 10px 12px 8px;
   }
 
-  .alpha-form input {
+  .alpha-form textarea {
+    width: 100%;
     min-height: 44px;
-    min-width: 0;
-    border: 2px solid rgba(255, 216, 77, 0.6);
-    border-radius: 8px;
+    max-height: 104px;
+    resize: vertical;
+    border: 1px solid rgba(255, 216, 77, 0.34);
+    border-radius: 10px;
     background: rgba(255, 255, 255, 0.96);
     color: #15130f;
-    font-size: 0.9rem;
+    font-size: 0.86rem;
     font-weight: 800;
-    padding: 0 12px;
+    line-height: 1.45;
+    padding: 8px 10px;
   }
 
-  .alpha-form input:focus {
+  .alpha-form textarea:focus {
     border-color: #ffd84d;
-    outline: 3px solid rgba(255, 216, 77, 0.34);
-    outline-offset: 2px;
+    outline: 3px solid rgba(255, 216, 77, 0.24);
+    outline-offset: 1px;
   }
 
   .alpha-form button {
+    display: grid;
+    width: 44px;
+    height: 44px;
+    place-items: center;
+    border: 0;
+    border-radius: 10px;
     background: #35aa2f;
     color: white;
-    padding: 0 14px;
+    font-size: 1.1rem;
   }
 
   .alpha-links {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
+    padding: 0 12px 12px;
   }
 
   .alpha-links a {
-    min-height: 38px;
-    color: #fff7df;
-    padding: 0 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: rgba(255, 248, 230, 0.86);
+    font-size: 0.78rem;
+    font-weight: 900;
+    line-height: 1;
+    text-decoration: none;
+  }
+
+  .alpha-icon-button:hover,
+  .alpha-icon-button:focus-visible,
+  .alpha-prompt-row button:hover,
+  .alpha-prompt-row button:focus-visible,
+  .alpha-links a:hover,
+  .alpha-links a:focus-visible {
+    color: #ffd84d;
+  }
+
+  .alpha-form button:hover,
+  .alpha-form button:focus-visible {
+    background: #2f9829;
+  }
+
+  .alpha-prompt-row button:disabled,
+  .alpha-form button:disabled {
+    cursor: wait;
+    opacity: 0.55;
   }
 
   .alpha-toggle {
@@ -570,6 +625,7 @@ const alphaPrompts = [
     width: 76px;
     min-height: 76px;
     place-items: center;
+    border: 2px solid #1b24d8;
     border-radius: 18px;
     background: #ffd84d;
     color: #15130f;
@@ -577,8 +633,8 @@ const alphaPrompts = [
     font-weight: 900;
     line-height: 1;
     box-shadow:
-      0 8px 0 rgba(21, 19, 15, 0.24),
-      0 18px 42px rgba(0, 0, 0, 0.28);
+      0 8px 0 rgba(21, 19, 15, 0.22),
+      0 18px 42px rgba(0, 0, 0, 0.26);
     transition:
       background-color 160ms ease,
       transform 160ms ease,
@@ -586,7 +642,7 @@ const alphaPrompts = [
   }
 
   .alpha-panel + .alpha-toggle {
-    margin-top: 12px;
+    margin-top: 10px;
   }
 
   .alpha-toggle img {
@@ -606,8 +662,8 @@ const alphaPrompts = [
   .alpha-toggle:active {
     transform: translateY(1px);
     box-shadow:
-      0 4px 0 rgba(21, 19, 15, 0.24),
-      0 12px 32px rgba(0, 0, 0, 0.24);
+      0 4px 0 rgba(21, 19, 15, 0.22),
+      0 12px 32px rgba(0, 0, 0, 0.22);
   }
 
   .alpha-sr-only {
@@ -626,25 +682,14 @@ const alphaPrompts = [
     }
 
     .alpha-panel {
-      width: calc(100vw - 24px);
-      max-height: calc(100vh - 104px);
-      padding: 14px;
+      max-height: calc(100vh - 96px);
     }
 
-    .alpha-chat-log {
-      max-height: min(32vh, 220px);
+    .alpha-message--assistant {
+      grid-template-columns: minmax(0, 1fr);
     }
 
-    .alpha-prompts,
-    .alpha-form {
-      grid-template-columns: 1fr;
-    }
-
-    .alpha-message--alpha {
-      grid-template-columns: 1fr;
-    }
-
-    .alpha-message--alpha img {
+    .alpha-message--assistant img {
       display: none;
     }
 
