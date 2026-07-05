@@ -9,7 +9,34 @@ const RATE_LIMIT_MAX_BUCKETS = 2000
 
 const DISCORD_URL = 'https://discord.gg/vKTdU4k8ur'
 const WIKI_URL = 'https://asv-wiki.acecore.net'
+const WORLD_MAP_URL = '/world-map/'
 const ACECORE_URL = 'https://acecore.net/'
+
+const GUIDE_LINK_RESOURCES = [
+  {
+    href: DISCORD_URL,
+    label: '公式Discord',
+    terms: ['公式Discord', '公式ディスコード', 'Discord', 'ディスコード'],
+  },
+  {
+    href: WIKI_URL,
+    label: 'Aceserver WIKI',
+    terms: [
+      'Aceserver WIKI',
+      'エースサーバーWIKI',
+      'Aceserver Wiki',
+      'エースサーバーWiki',
+      'WIKI',
+      'Wiki',
+      'ウィキ',
+    ],
+  },
+  {
+    href: WORLD_MAP_URL,
+    label: 'ワールドマップ',
+    terms: ['ワールドマップ'],
+  },
+]
 
 const rateLimitBuckets = new Map()
 
@@ -21,10 +48,8 @@ const GUIDE_MESSAGES = {
     '会話が長くなってきたよ。聞きたいことを短くまとめてもう一度送ってね。',
   rateLimited:
     '短い時間にたくさん話しかけられているよ。少し待ってからまた聞いてね。',
-  unconfigured:
-    'いまはアルファくんのAI応答が準備中だよ。参加方法はディスコード、ルールはWIKI、ワールドはマップを見てね。',
-  failed:
-    'いまはアルファくんのAI応答につながらなかったよ。参加方法はディスコード、詳しい案内はWIKIを見てね。',
+  unconfigured: `いまはアルファくんのAI応答が準備中だよ。参加方法は[公式Discord](${DISCORD_URL})、ルールは[Aceserver WIKI](${WIKI_URL})、ワールドは[ワールドマップ](${WORLD_MAP_URL})を見てね。`,
+  failed: `いまはアルファくんのAI応答につながらなかったよ。参加方法は[公式Discord](${DISCORD_URL})、詳しい案内は[Aceserver WIKI](${WIKI_URL})を見てね。`,
   emptyAnswer:
     'その内容はまだうまく案内できなかったよ。参加方法、ワールド、ルールのどれかを短く聞いてみてね。',
 }
@@ -109,8 +134,10 @@ export async function onRequestPost({ request, env }) {
               'Guide first-time visitors to the next action. Use only the public Aceserver context below.',
               'Do not invent server IPs, whitelists, live status, incidents, moderation decisions, private data, pricing, or schedules.',
               'If the visitor needs live status, latest rules, ban/admin help, or private support, guide them to the official Discord or WIKI.',
-              'When a link is useful, write it as a Markdown text link like [公式Discord](https://discord.gg/vKTdU4k8ur). Use only the exact allowed URLs in the context.',
-              'Do not paste bare URLs, raw HTML, or tables.',
+              'Use simple Markdown when it improves readability: short paragraphs, bullet lists, and **bold** for important names.',
+              'When a relevant Aceserver destination exists, make the first useful mention a Markdown link using the URLs in the context. Include links in answers about participation, rules, world maps, story or next steps.',
+              'For participation guidance, include [公式Discord](https://discord.gg/vKTdU4k8ur) and [Aceserver WIKI](https://asv-wiki.acecore.net) unless the answer is only a short clarification.',
+              'Do not link every repeated mention. Do not paste bare URLs, raw HTML, or tables.',
               buildAceserverContext(),
             ].join('\n'),
           },
@@ -142,7 +169,7 @@ export async function onRequestPost({ request, env }) {
     )
   }
 
-  const answer = extractWorkersAiText(result).trim()
+  const answer = addGuideResourceLinks(extractWorkersAiText(result).trim())
   return jsonResponse(request, {
     ok: true,
     answer: answer || GUIDE_MESSAGES.emptyAnswer,
@@ -174,7 +201,7 @@ Aceserver public site context:
 - Allowed URLs:
   - Official Discord: ${DISCORD_URL}
   - Aceserver WIKI: ${WIKI_URL}
-  - World map: /world-map/
+  - World map: ${WORLD_MAP_URL}
   - Main world map: /world-map-main/
   - Resource world map: /world-map-sigen/
   - RPG world map: /world-map-rpg/
@@ -290,6 +317,121 @@ function extractChoiceText(choice) {
   }
 
   return ''
+}
+
+function addGuideResourceLinks(answer) {
+  let linkedAnswer = String(answer || '').trim()
+
+  for (const resource of GUIDE_LINK_RESOURCES) {
+    linkedAnswer = linkGuideResource(linkedAnswer, resource)
+  }
+
+  return linkedAnswer
+}
+
+function linkGuideResource(answer, resource) {
+  if (!answer || hasMarkdownLinkTo(answer, resource.href)) return answer
+
+  const markdownRanges = getMarkdownLinkRanges(answer)
+  const bareHrefIndex = findPlainTextIndex(
+    answer,
+    resource.href,
+    markdownRanges,
+  )
+
+  if (bareHrefIndex >= 0) {
+    return replaceAnswerRange(
+      answer,
+      bareHrefIndex,
+      bareHrefIndex + resource.href.length,
+      `[${resource.label}](${resource.href})`,
+    )
+  }
+
+  const protectedRanges = getProtectedTextRanges(answer)
+  for (const term of resource.terms) {
+    const termIndex = findPlainTextIndex(answer, term, protectedRanges)
+    if (termIndex < 0) continue
+
+    return replaceAnswerRange(
+      answer,
+      termIndex,
+      termIndex + term.length,
+      `[${term}](${resource.href})`,
+    )
+  }
+
+  return answer
+}
+
+function hasMarkdownLinkTo(answer, href) {
+  const escapedHref = escapeRegExp(href)
+  return new RegExp(`\\[[^\\]\\n]+\\]\\(\\s*${escapedHref}\\s*\\)`).test(answer)
+}
+
+function getMarkdownLinkRanges(answer) {
+  const ranges = []
+  const pattern = /\[[^\]\n]+\]\(\s*[^)]+?\s*\)/g
+  let match
+
+  while ((match = pattern.exec(answer))) {
+    ranges.push({
+      start: match.index,
+      end: match.index + match[0].length,
+    })
+  }
+
+  return ranges
+}
+
+function getProtectedTextRanges(answer) {
+  const markdownRanges = getMarkdownLinkRanges(answer)
+  const rawUrlRanges = []
+  const pattern = /https?:\/\/[A-Za-z0-9._~:/?#@!$&*+,;=%-]+/g
+  let match
+
+  while ((match = pattern.exec(answer))) {
+    const range = {
+      start: match.index,
+      end: match.index + match[0].length,
+    }
+    if (
+      !markdownRanges.some(
+        (markdownRange) =>
+          range.start < markdownRange.end && range.end > markdownRange.start,
+      )
+    ) {
+      rawUrlRanges.push(range)
+    }
+  }
+
+  return [...markdownRanges, ...rawUrlRanges]
+}
+
+function findPlainTextIndex(answer, needle, ranges) {
+  let searchFrom = 0
+
+  while (searchFrom < answer.length) {
+    const index = answer.indexOf(needle, searchFrom)
+    if (index < 0) return -1
+
+    const end = index + needle.length
+    if (!ranges.some((range) => index < range.end && end > range.start)) {
+      return index
+    }
+
+    searchFrom = end
+  }
+
+  return -1
+}
+
+function replaceAnswerRange(answer, start, end, replacement) {
+  return `${answer.slice(0, start)}${replacement}${answer.slice(end)}`
+}
+
+function escapeRegExp(value) {
+  return String(value).replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
 }
 
 function buildConversationInput(payload) {
