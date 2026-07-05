@@ -57,9 +57,11 @@ Cloudflare Pages の preview では、build 前に `public/admin/runtime-config.
 
 ## アルファくん AI 案内チャット
 
-サイト全体に右下固定のアルファくん案内チャットを表示します。アルファくんはエースサーバーのキャラクター案内役として、参加方法、ワールド、ルール、ストーリー導線を短く案内します。
+サイト全体に右下固定のアルファくん案内チャットを表示します。アルファくんはエースサーバーのキャラクター案内役として、参加方法、ワールド、ルール、ストーリー導線を案内します。
 
 `functions/api/alpha-chat.js` の Cloudflare Pages Function から Cloudflare Workers AI binding を呼び出します。既定では GLM 5.2 (`@cf/zai-org/glm-5.2`) を reasoning effort `low` で使います。ブラウザには AI 実行用のキーを渡しません。
+
+`functions/api/alpha-wiki-context.js` に Aceserver WIKI の公開記事から作った AI 用抜粋データを置きます。API は質問内容に合う抜粋だけを選び、Workers AI の文脈として渡すため、ルール、参加方法、ワールド、コマンドなどは WIKI に基づいて具体的に答えます。
 
 Cloudflare Pages 側では `wrangler.jsonc` を設定の正とし、acecore-net と同じ方式で以下を preview / production の両方に定義します。
 

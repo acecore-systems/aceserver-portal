@@ -1,8 +1,12 @@
+import { ACESERVER_WIKI_CONTEXT_ENTRIES } from './alpha-wiki-context.js'
+
 const DEFAULT_CLOUDFLARE_AI_MODEL = '@cf/zai-org/glm-5.2'
 const DEFAULT_CLOUDFLARE_AI_REASONING_EFFORT = 'low'
 const MAX_QUESTION_LENGTH = 600
 const MAX_HISTORY_MESSAGES = 8
 const MAX_CONVERSATION_LENGTH = 2800
+const MAX_WIKI_CONTEXT_ENTRIES = 3
+const MAX_WIKI_CONTEXT_CHARS = 4200
 const RATE_LIMIT_WINDOW_MS = 60_000
 const RATE_LIMIT_MAX_REQUESTS = 10
 const RATE_LIMIT_MAX_BUCKETS = 2000
@@ -30,6 +34,31 @@ const GUIDE_LINK_RESOURCES = [
       'Wiki',
       'ウィキ',
     ],
+  },
+  {
+    href: `${WIKI_URL}/article/rule`,
+    label: 'ルール・BAN条件',
+    terms: ['ルール・BAN条件', 'BAN条件'],
+  },
+  {
+    href: `${WIKI_URL}/article/in`,
+    label: '参加方法',
+    terms: ['参加方法'],
+  },
+  {
+    href: `${WIKI_URL}/article/howto`,
+    label: '遊び方',
+    terms: ['遊び方'],
+  },
+  {
+    href: `${WIKI_URL}/article/SurvivalCommand`,
+    label: 'コマンドについて',
+    terms: ['コマンドについて'],
+  },
+  {
+    href: `${WIKI_URL}/article/Reset`,
+    label: '資源サーバー',
+    terms: ['資源サーバー', '資源鯖'],
   },
   {
     href: WORLD_MAP_URL,
@@ -119,6 +148,8 @@ export async function onRequestPost({ request, env }) {
     )
   }
 
+  const wikiContext = buildSelectedWikiContext(conversationInput)
+
   let result
   try {
     result = await env.AI.run(
@@ -130,15 +161,17 @@ export async function onRequestPost({ request, env }) {
             content: [
               'You are Alpha-kun, the official character guide for Aceserver.',
               'Answer in Japanese. Speak as Alpha-kun, not as an AI assistant.',
-              'Keep replies warm, concise, and practical. Usually use 2 to 4 short sentences.',
-              'Guide first-time visitors to the next action. Use only the public Aceserver context below.',
+              'Keep replies warm, concise, and practical. Usually use 2 to 4 short sentences; for rule or command details, use up to 5 short bullet points when clearer.',
+              'Guide first-time visitors to the next action. Use only the public Aceserver context and selected Aceserver WIKI excerpts below.',
+              'When selected WIKI context contains relevant facts, answer concretely from it. Do not say Alpha-kun cannot provide rule details if the excerpt covers them.',
               'Do not invent server IPs, whitelists, live status, incidents, moderation decisions, private data, pricing, or schedules.',
-              'If the visitor needs live status, latest rules, ban/admin help, or private support, guide them to the official Discord or WIKI.',
+              'If the visitor needs live status, unpublished changes, ban/admin help, or private support, guide them to the official Discord or the most relevant WIKI page.',
               'Use simple Markdown when it improves readability: short paragraphs, bullet lists, and **bold** for important names.',
-              'When a relevant Aceserver destination exists, make the first useful mention a Markdown link using the URLs in the context. Include links in answers about participation, rules, world maps, story or next steps.',
+              'When a relevant Aceserver or WIKI destination exists, make the first useful mention a Markdown link using the URLs in the context. Include links in answers about participation, rules, world maps, story, commands or next steps.',
               'For participation guidance, include [公式Discord](https://discord.gg/vKTdU4k8ur) and [Aceserver WIKI](https://asv-wiki.acecore.net) unless the answer is only a short clarification.',
               'Do not link every repeated mention. Do not paste bare URLs, raw HTML, or tables.',
               buildAceserverContext(),
+              wikiContext,
             ].join('\n'),
           },
           {
@@ -186,6 +219,73 @@ export function onRequestOptions({ request }) {
       'Cache-Control': 'no-store',
     },
   })
+}
+
+function buildSelectedWikiContext(conversationInput) {
+  const normalizedInput = normalizeSearchText(conversationInput)
+  if (!normalizedInput) return ''
+
+  const selectedEntries = ACESERVER_WIKI_CONTEXT_ENTRIES.map((entry) => ({
+    entry,
+    score: scoreWikiContextEntry(entry, normalizedInput),
+  }))
+    .filter(({ score }) => score > 0)
+    .sort((a, b) => b.score - a.score || a.entry.priority - b.entry.priority)
+    .slice(0, MAX_WIKI_CONTEXT_ENTRIES)
+    .map(({ entry }) => entry)
+
+  if (selectedEntries.length === 0) return ''
+
+  let remainingChars = MAX_WIKI_CONTEXT_CHARS
+  const sections = []
+
+  for (const entry of selectedEntries) {
+    const header = `[${entry.title}] ${entry.url}`
+    const availableTextChars = remainingChars - header.length - 8
+    if (availableTextChars <= 120) break
+
+    const text = entry.text.slice(0, availableTextChars).trim()
+    if (!text) continue
+
+    sections.push(`${header}\n${text}`)
+    remainingChars -= header.length + text.length + 8
+  }
+
+  if (sections.length === 0) return ''
+
+  return `
+Selected Aceserver WIKI excerpts for this conversation:
+- Treat these excerpts as factual public WIKI context.
+- When answering from an excerpt, include the source page as a Markdown link once, for example [${selectedEntries[0].title}](${selectedEntries[0].url}).
+- If the visitor asks for exhaustive or latest details, summarize the key points and guide them to the source page.
+
+${sections.join('\n\n')}
+`
+}
+
+function scoreWikiContextEntry(entry, normalizedInput) {
+  let score = 0
+  const normalizedTitle = normalizeSearchText(entry.title)
+
+  if (normalizedTitle && normalizedInput.includes(normalizedTitle)) {
+    score += 10
+  }
+
+  for (const keyword of entry.keywords) {
+    const normalizedKeyword = normalizeSearchText(keyword)
+    if (!normalizedKeyword) continue
+    if (normalizedInput.includes(normalizedKeyword)) {
+      score += Math.min(Math.max(normalizedKeyword.length, 2), 10)
+    }
+  }
+
+  return score
+}
+
+function normalizeSearchText(value) {
+  return String(value || '')
+    .normalize('NFKC')
+    .toLowerCase()
 }
 
 function buildAceserverContext() {
