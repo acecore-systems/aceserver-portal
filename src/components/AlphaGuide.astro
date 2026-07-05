@@ -37,7 +37,7 @@ const alphaPrompts = [
   class="alpha-widget"
   data-alpha-widget
   data-alpha-endpoint="/api/alpha-chat"
-  data-alpha-greeting="やあ、アルファくんだよ。参加方法、ワールド、ルールを短く案内するね。"
+  data-alpha-greeting="やあ、アルファくんだよ。エースサーバーの案内をするね。"
   data-alpha-loading="アルファくんが考え中..."
   data-alpha-error="いまはAI応答につながらなかったよ。参加方法はディスコード、詳しい案内はWIKIを見てね。"
 >
@@ -149,6 +149,103 @@ const alphaPrompts = [
     content: string
   }
 
+  const ALPHA_ALLOWED_EXTERNAL_LINKS = [
+    'https://discord.gg/vKTdU4k8ur',
+    'https://asv-wiki.acecore.net',
+    'https://acecore.net',
+  ]
+
+  function isAllowedAlphaHref(rawHref: string) {
+    if (rawHref.startsWith('/') && !rawHref.startsWith('//')) return true
+
+    try {
+      const hrefUrl = new URL(rawHref)
+      return ALPHA_ALLOWED_EXTERNAL_LINKS.some((allowedHref) => {
+        const allowedUrl = new URL(allowedHref)
+        if (hrefUrl.origin !== allowedUrl.origin) return false
+
+        if (allowedUrl.origin === 'https://discord.gg') {
+          return hrefUrl.pathname === allowedUrl.pathname
+        }
+
+        return true
+      })
+    } catch {
+      return false
+    }
+  }
+
+  function splitAlphaTrailingPunctuation(rawHref: string) {
+    const trailingPunctuation = '。、,.!！?？'
+    let href = rawHref
+    let trailing = ''
+
+    while (
+      href.length > 0 &&
+      trailingPunctuation.includes(href[href.length - 1])
+    ) {
+      trailing = href[href.length - 1] + trailing
+      href = href.slice(0, -1)
+    }
+
+    return { href, trailing }
+  }
+
+  function appendAlphaMessageContent(
+    bubble: HTMLElement,
+    content: string,
+    renderLinks: boolean,
+  ) {
+    if (!renderLinks) {
+      bubble.textContent = content
+      return
+    }
+
+    const linkPattern =
+      /\[([^\]\n]{1,80})\]\(([^)\s]{1,240})\)|(https?:\/\/[^\s<>"']{1,240})/g
+    let lastIndex = 0
+    let match: RegExpExecArray | null
+
+    while ((match = linkPattern.exec(content))) {
+      const [matchedText, markdownLabel, markdownHref, rawHref] = match
+      const matchIndex = match.index
+
+      if (matchIndex > lastIndex) {
+        bubble.append(
+          document.createTextNode(content.slice(lastIndex, matchIndex)),
+        )
+      }
+
+      const rawLinkParts = rawHref
+        ? splitAlphaTrailingPunctuation(rawHref)
+        : null
+      const label = markdownLabel || rawLinkParts?.href || ''
+      const href = markdownHref || rawLinkParts?.href || ''
+
+      if (isAllowedAlphaHref(href)) {
+        const anchor = document.createElement('a')
+        anchor.href = href
+        anchor.textContent = label
+        if (!href.startsWith('/')) {
+          anchor.target = '_blank'
+          anchor.rel = 'noopener noreferrer'
+        }
+        bubble.append(anchor)
+        if (rawLinkParts?.trailing) {
+          bubble.append(document.createTextNode(rawLinkParts.trailing))
+        }
+      } else {
+        bubble.append(document.createTextNode(matchedText))
+      }
+
+      lastIndex = matchIndex + matchedText.length
+    }
+
+    if (lastIndex < content.length) {
+      bubble.append(document.createTextNode(content.slice(lastIndex)))
+    }
+  }
+
   function createAlphaMessage(
     widget: HTMLElement,
     role: AlphaRole,
@@ -179,7 +276,7 @@ const alphaPrompts = [
     }
 
     const bubble = document.createElement('p')
-    bubble.textContent = content
+    appendAlphaMessageContent(bubble, content, role === 'assistant')
     message.append(bubble)
     messagesContainer.append(message)
     messagesContainer.scrollTop = messagesContainer.scrollHeight
@@ -508,6 +605,19 @@ const alphaPrompts = [
     border-top-left-radius: 4px;
     background: rgba(255, 245, 220, 0.1);
     color: #fff8e6;
+  }
+
+  .alpha-message--assistant p a {
+    color: #ffd84d;
+    font-weight: 900;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+  }
+
+  .alpha-message--assistant p a:focus-visible {
+    outline: 2px solid #ffd84d;
+    outline-offset: 2px;
   }
 
   .alpha-message--user {
