@@ -55,6 +55,18 @@ Sveltia CMS では `src/content/pages/*.json` と `src/content/site/*.json` を�
 
 Cloudflare Pages の preview では、build 前に `public/admin/runtime-config.js` を生成し、CMS が preview 対象の PR ブランチを読むようにしています。生成ファイルは Git 管理対象外です。
 
+## アルファくん AI 案内チャット
+
+サイト全体に右下固定のアルファくん案内チャットを表示します。アルファくんはエースサーバーのキャラクター案内役として、参加方法、ワールド、ルール、ストーリー導線を短く案内します。
+
+`functions/api/alpha-chat.js` の Cloudflare Pages Function から Cloudflare Workers AI binding を呼び出します。既定では GLM 5.2 (`@cf/zai-org/glm-5.2`) を reasoning effort `low` で使います。ブラウザには AI 実行用のキーを渡しません。
+
+Cloudflare Pages 側では `wrangler.jsonc` を設定の正とし、acecore-net と同じ方式で以下を preview / production の両方に定義します。
+
+- Workers AI binding: `AI`
+- `CLOUDFLARE_AI_MODEL`: 使用モデル（未設定時は `@cf/zai-org/glm-5.2`）
+- `CLOUDFLARE_AI_REASONING_EFFORT`: 推論 effort（未設定時は `low`）
+
 ### 本番 CMS の保存と PR 反映
 
 - 本番ソースの正は `main` です。Cloudflare Pages の production deploy 元も GitHub 連携の `main` にします。
