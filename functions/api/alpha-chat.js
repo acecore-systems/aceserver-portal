@@ -179,7 +179,7 @@ export async function onRequestPost({ request, env }) {
             content: `Conversation:\n${conversationInput}`,
           },
         ],
-        max_completion_tokens: 320,
+        max_completion_tokens: 480,
         reasoning_effort: normalizeReasoningEffort(
           env.CLOUDFLARE_AI_REASONING_EFFORT,
         ),
@@ -202,7 +202,9 @@ export async function onRequestPost({ request, env }) {
     )
   }
 
-  const answer = addGuideResourceLinks(extractWorkersAiText(result).trim())
+  const answer = addGuideResourceLinks(
+    trimIncompleteMarkdown(extractWorkersAiText(result).trim()),
+  )
   return jsonResponse(request, {
     ok: true,
     answer: answer || GUIDE_MESSAGES.emptyAnswer,
@@ -417,6 +419,34 @@ function extractChoiceText(choice) {
   }
 
   return ''
+}
+
+function trimIncompleteMarkdown(answer) {
+  const text = String(answer || '').trim()
+  if (!text) return ''
+
+  const danglingLinkMatch = text.match(
+    /\[[^\]\n]{1,120}\]\(\s*https?:\/\/[^\s)]*$/,
+  )
+  if (!danglingLinkMatch) return text
+
+  const danglingStart = danglingLinkMatch.index || 0
+  const sentenceBoundaries = [
+    text.lastIndexOf('\n', danglingStart),
+    text.lastIndexOf('。', danglingStart),
+    text.lastIndexOf('！', danglingStart),
+    text.lastIndexOf('？', danglingStart),
+    text.lastIndexOf('.', danglingStart),
+    text.lastIndexOf('!', danglingStart),
+    text.lastIndexOf('?', danglingStart),
+  ]
+  const boundary = Math.max(...sentenceBoundaries)
+
+  if (boundary >= 0) {
+    return text.slice(0, boundary + 1).trim()
+  }
+
+  return text.slice(0, danglingStart).trim()
 }
 
 function addGuideResourceLinks(answer) {
