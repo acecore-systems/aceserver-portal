@@ -19,11 +19,12 @@
 - 公開 URL は `slug` ベースの route を正とし、CMS editable content に `path` を戻さない。
 - `main` は本番ソースの唯一の正とし、Cloudflare Pages の production deploy 元も GitHub 連携の `main` にする。
 - このリポジトリの CMS 認証は GitHub 認証型とする。Cloudflare Access を前段に置く場合も、保存認証は GitHub OAuth Worker を使う。
-- Cherry のような Cloudflare Access 型 proxy へ寄せる場合は、別途 backend actor、書き込み path 制限、CI 経由 PR 作成まで設計してから行う。
-- CMS backend の publication branch は `main` にし、`publish_mode: editorial_workflow` で短命な CMS branch と PR を作らせる。
+- CMS のpublication branchは `main` にし、同一originのREST / GraphQL proxyがGitHub user、repository権限、書き込みpath、最新HEADを検証して `cms/aceserver/*` の短命branchとPRだけを作る。
+- Sveltia CMSではEditorial Workflowが未実装のため、`publish_mode: editorial_workflow` の設定だけでPR運用を成立させたと判断しない。
+- Cherry / HattのCloudflare Access認証型とは認証情報とbackend actorを共用しない。短命branch、content-only制約、PR、CIという書き込み方針だけを揃える。
 - `cms-content` のような恒久的な CMS 投稿受け皿 branch は使わない。
 - CMS 変更は PR と CI を通して `main` に入れる。`main` への無検証直 push 前提の運用に戻さない。
-- CMS を `main` へ直接書き込ませる場合は、編集者個人 OAuth ではなく専用 bot / GitHub App / backend actor を使い、書き込み path と検証を制限できる状態にしてから行う。
+- GitHub認証型でbackend actorをGitHub Appへ分離する場合も、Appとprivate keyはrepository単位で分離する。
 
 ## 検証
 
