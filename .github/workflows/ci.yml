@@ -36,5 +36,8 @@ jobs:
       - name: Validate CMS content
         run: npm run validate:content
 
+      - name: Test Dynmap Worker
+        run: npm run test:dynmap
+
       - name: Build site
         run: npm run build

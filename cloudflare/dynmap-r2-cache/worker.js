@@ -19,6 +19,10 @@ const UPDATE_PREFIX = 'standalone/'
 const TILE_CACHE_CONTROL = 'public, max-age=31536000, immutable'
 const STATIC_CACHE_CONTROL = 'public, max-age=86400'
 const DYNAMIC_CACHE_CONTROL = 'no-cache'
+const SEARCH_ROBOTS_DIRECTIVE = 'noindex, follow'
+const ROBOTS_TXT = `User-agent: *
+Allow: /
+`
 
 function targetForRequest(request, env) {
   const url = new URL(request.url)
@@ -177,60 +181,98 @@ function missingResponse() {
   })
 }
 
-export default {
-  async fetch(request, env) {
-    const target = targetForRequest(request, env)
+function robotsResponse(request) {
+  const url = new URL(request.url)
 
-    if (!target || !target.bucket) {
-      return new Response('Dynmap R2 target is not configured for this host.', {
-        status: 404,
-        headers: { 'cache-control': DYNAMIC_CACHE_CONTROL },
-      })
-    }
+  if (url.pathname !== '/robots.txt') {
+    return null
+  }
 
-    if (request.method !== 'GET' && request.method !== 'HEAD') {
-      return new Response('Method Not Allowed', {
-        status: 405,
-        headers: {
-          allow: 'GET, HEAD',
-          'cache-control': DYNAMIC_CACHE_CONTROL,
-        },
-      })
-    }
+  return new Response(request.method === 'HEAD' ? null : ROBOTS_TXT, {
+    status: 200,
+    headers: {
+      'cache-control': STATIC_CACHE_CONTROL,
+      'content-type': 'text/plain; charset=utf-8',
+    },
+  })
+}
 
-    const redirect = canonicalRedirect(request, target)
+function withSearchRobotsDirective(response) {
+  const headers = new Headers(response.headers)
+  headers.set('x-robots-tag', SEARCH_ROBOTS_DIRECTIVE)
 
-    if (redirect) {
-      return redirect
-    }
+  return new Response(response.body, {
+    status: response.status,
+    statusText: response.statusText,
+    headers,
+  })
+}
 
-    const key = objectKeyForRequest(request)
+async function handleRequest(request, env) {
+  const target = targetForRequest(request, env)
 
-    if (request.method === 'HEAD') {
-      const object = await target.bucket.head(key)
+  if (!target || !target.bucket) {
+    return new Response('Dynmap R2 target is not configured for this host.', {
+      status: 404,
+      headers: { 'cache-control': DYNAMIC_CACHE_CONTROL },
+    })
+  }
 
-      if (!object) {
-        return missingResponse()
-      }
+  if (request.method !== 'GET' && request.method !== 'HEAD') {
+    return new Response('Method Not Allowed', {
+      status: 405,
+      headers: {
+        allow: 'GET, HEAD',
+        'cache-control': DYNAMIC_CACHE_CONTROL,
+      },
+    })
+  }
 
-      return new Response(null, {
-        status: isNotModified(request, object) ? 304 : 200,
-        headers: responseHeaders(object, key, 'HIT'),
-      })
-    }
+  const robots = robotsResponse(request)
 
-    const object = await target.bucket.get(key)
+  if (robots) {
+    return robots
+  }
+
+  const redirect = canonicalRedirect(request, target)
+
+  if (redirect) {
+    return redirect
+  }
+
+  const key = objectKeyForRequest(request)
+
+  if (request.method === 'HEAD') {
+    const object = await target.bucket.head(key)
 
     if (!object) {
       return missingResponse()
     }
 
-    const headers = responseHeaders(object, key, 'HIT')
+    return new Response(null, {
+      status: isNotModified(request, object) ? 304 : 200,
+      headers: responseHeaders(object, key, 'HIT'),
+    })
+  }
 
-    if (isNotModified(request, object)) {
-      return new Response(null, { status: 304, headers })
-    }
+  const object = await target.bucket.get(key)
 
-    return new Response(object.body, { status: 200, headers })
+  if (!object) {
+    return missingResponse()
+  }
+
+  const headers = responseHeaders(object, key, 'HIT')
+
+  if (isNotModified(request, object)) {
+    return new Response(null, { status: 304, headers })
+  }
+
+  return new Response(object.body, { status: 200, headers })
+}
+
+export default {
+  async fetch(request, env) {
+    const response = await handleRequest(request, env)
+    return withSearchRobotsDirective(response)
   },
 }
