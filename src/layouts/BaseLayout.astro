@@ -36,7 +36,9 @@ const canonical =
   canonicalInput === null ? null : new URL(canonicalInput, siteBase)
 const pageUrl = canonical ?? new URL(Astro.url.pathname, siteBase)
 const pageTitle =
-  title === settings.shortTitle ? title : `${title} | ${settings.shortTitle}`
+  title === settings.shortTitle
+    ? `${title} | Minecraft無料公開サーバーの公式ポータル`
+    : `${title} | ${settings.shortTitle}`
 const ogImage = new URL(image, siteBase)
 const logoUrl = new URL(settings.logo, siteBase)
 const homeUrl = new URL('/', siteBase)
