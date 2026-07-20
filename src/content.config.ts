@@ -28,8 +28,8 @@ const portalSectionSchema = z.discriminatedUnion('type', [
     type: z.enum(['featureImageFull', 'featureImageRight', 'featureImageLeft']),
     titleCopy: z.string(),
     text: z.string().optional(),
-    image: z.string().optional(),
-    imageAlt: z.string().optional(),
+    image: z.string(),
+    imageAlt: z.string().min(1),
   }),
   z.object({
     type: z.literal('cta'),
@@ -100,6 +100,7 @@ const settings = defineCollection({
     description: z.string(),
     siteUrl: z.string(),
     logo: z.string(),
+    logoAlt: z.string().min(1),
     discordUrl: z.string(),
     wikiUrl: z.string(),
     worlds: z.array(worldEntrySchema),

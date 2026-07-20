@@ -6,7 +6,13 @@ import Icon from './Icon.astro'
 
 <header class="site-header" data-header>
   <a class="brand" href="/" aria-label="エースサーバー ホーム">
-    <img src={settings.logo} alt="" width="44" height="44" />
+    <img
+      src={settings.logo}
+      alt={settings.logoAlt}
+      aria-hidden="true"
+      width="44"
+      height="44"
+    />
     <span>{settings.shortTitle}</span>
   </a>
 

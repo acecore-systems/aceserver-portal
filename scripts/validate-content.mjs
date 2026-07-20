@@ -94,6 +94,25 @@ async function validatePages() {
         'worldMap pages must include a featureImageFull intro section',
       )
     }
+
+    page.sections.forEach((section, index) => {
+      if (
+        !isRecord(section) ||
+        !['featureImageFull', 'featureImageRight', 'featureImageLeft'].includes(
+          section.type,
+        )
+      ) {
+        return
+      }
+
+      const scope = `${relativePath}.sections[${index}]`
+      if (!isNonEmptyString(section.image)) {
+        fail(scope, 'image is required for an image feature section')
+      }
+      if (!isNonEmptyString(section.imageAlt)) {
+        fail(scope, 'imageAlt is required when an image is rendered')
+      }
+    })
   }
 
   return routes
@@ -116,6 +135,13 @@ function validateInternalHref(scope, href, routes) {
 
 async function validateSiteConfig(routes) {
   const settings = await readJson('src/content/site/settings.json')
+  if (isRecord(settings) && !isNonEmptyString(settings.logoAlt)) {
+    fail(
+      'src/content/site/settings.json.logoAlt',
+      'logoAlt must be a non-empty string',
+    )
+  }
+
   if (isRecord(settings) && Array.isArray(settings.worlds)) {
     settings.worlds.forEach((world, index) => {
       const scope = `src/content/site/settings.json.worlds[${index}]`
@@ -128,6 +154,12 @@ async function validateSiteConfig(routes) {
       }
       if (!isNonEmptyString(world.title)) {
         fail(scope, 'title is required')
+      }
+      if (!isNonEmptyString(world.image)) {
+        fail(scope, 'image is required')
+      }
+      if (!isNonEmptyString(world.imageAlt)) {
+        fail(scope, 'imageAlt is required')
       }
       if (world.href !== undefined) {
         validateInternalHref(`${scope}.href`, world.href, routes)
