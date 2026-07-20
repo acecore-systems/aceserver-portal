@@ -4,6 +4,7 @@
   "description": "誰でも参加可能なMinecraft無料公開サーバー、エースサーバーの公式ポータルです。参加方法、ワールドマップ、Wiki、動画、最新案内をまとめています。",
   "siteUrl": "https://asv.acecore.net",
   "logo": "/uploads/legacy-acico.png",
+  "logoAlt": "青と黄色のアルファくんが描かれたエースサーバーのロゴ",
   "discordUrl": "https://discord.gg/vKTdU4k8ur",
   "wikiUrl": "https://asv-wiki.acecore.net",
   "worlds": [

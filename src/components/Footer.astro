@@ -6,7 +6,13 @@ import { externalLinkAttrs } from '../utils/links'
 <footer class="site-footer">
   <div class="footer-inner">
     <a class="footer-brand" href="/">
-      <img src={settings.logo} alt="" width="36" height="36" />
+      <img
+        src={settings.logo}
+        alt={settings.logoAlt}
+        aria-hidden="true"
+        width="36"
+        height="36"
+      />
       <span>{settings.shortTitle}</span>
     </a>
     <nav aria-label="フッターナビゲーション">
