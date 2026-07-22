@@ -5,7 +5,7 @@
   "hideFooter": false,
   "meta": {
     "title": "エースサーバー",
-    "description": "エースサーバーは、誰でも参加可能なマインクラフト無料公開サーバーです。",
+    "description": "エースサーバーは、Java版・統合版のどちらからでも参加できるMinecraft無料公開サーバーです。Discord参加、Wiki、ワールドマップへの導線をまとめています。",
     "ogImage": "/uploads/legacy-acico.png"
   },
   "sections": [
@@ -14,21 +14,21 @@
       "titleCopy": "エースサーバーとは",
       "text": "誰でも参加可能なマインクラフト無料公開サーバーです",
       "image": "/uploads/legacy-scc.png",
-      "imageAlt": "既存サイトで使われていたエースサーバー街区のスクリーンショット"
+      "imageAlt": "Minecraftで建築された街並みと白い巨大な飛行船"
     },
     {
       "type": "featureImageRight",
       "titleCopy": "誰とでもマルチプレイ！",
       "text": "JAVA版・統合版どちらでも遊ぶことが可能です！",
       "image": "/uploads/legacy-multiplayer.jpg",
-      "imageAlt": "既存サイトで使われていたマルチプレイ紹介用の写真"
+      "imageAlt": "夕焼けの海を岩場から眺める人"
     },
     {
       "type": "featureImageLeft",
       "titleCopy": "楽しい！",
       "text": "バニラに近い、限りなく自由なサーバーです！",
       "image": "/uploads/legacy-free-play.jpg",
-      "imageAlt": "既存サイトで使われていた自由な遊び方を示す写真"
+      "imageAlt": "山間の渓谷を背に両手を広げて跳ぶ人"
     },
     {
       "type": "cta",
@@ -36,7 +36,7 @@
       "text": "まずは公式ディスコードにご参加ください！",
       "ctaButton": {
         "label": "ディスコードに参加",
-        "href": "https://discord.gg/vKTdU4k8ur",
+        "href": "https://discord.gg/acsv",
         "external": true
       }
     },

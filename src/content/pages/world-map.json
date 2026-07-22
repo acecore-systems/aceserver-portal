@@ -5,7 +5,7 @@
   "hideFooter": false,
   "meta": {
     "title": "ワールドマップ",
-    "description": "エースサーバーの公開中ワールドマップと稼働中ワールドを確認できます。",
+    "description": "エースサーバーで公開中のメイン、資源、RPG、ロビー、Season、イベント各ワールドのマップと稼働状況をまとめて確認できます。",
     "ogImage": "/uploads/legacy-world-map.png"
   },
   "sections": [

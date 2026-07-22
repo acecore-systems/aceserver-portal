@@ -19,7 +19,7 @@ type HeroSection = Extract<PortalSection, { type: 'hero' }>
 
 const fallbackJoinButton: LinkItem = {
   label: 'ディスコードに参加',
-  href: 'https://discord.gg/vKTdU4k8ur',
+  href: 'https://discord.gg/acsv',
   external: true,
 }
 const fallbackWikiButton: LinkItem = {
@@ -109,7 +109,12 @@ const alphaLogo = '/uploads/alpha-kun.png'
 ---
 
 <section class="hero" aria-labelledby="home-title">
-  <img class="hero-bg" src={heroImage} alt="" />
+  <img
+    class="hero-bg"
+    src={heroImage}
+    alt={overview.imageAlt}
+    aria-hidden="true"
+  />
   <div class="hero-shade"></div>
   <div class="hero-content">
     <h1 id="home-title"><span>エース</span><span>サーバー</span></h1>
@@ -150,11 +155,7 @@ const alphaLogo = '/uploads/alpha-kun.png'
 
 <section id="overview" class="intro-section">
   <div class="floating-island">
-    {
-      overview.image && (
-        <img src={overview.image} alt={overview.imageAlt ?? ''} />
-      )
-    }
+    {overview.image && <img src={overview.image} alt={overview.imageAlt} />}
   </div>
   <div class="intro-copy asv-panel pixel-border">
     <h2>{overview.titleCopy}</h2>
@@ -174,7 +175,7 @@ const alphaLogo = '/uploads/alpha-kun.png'
   <div class="feature-image pixel-border">
     {
       multiplayer.image && (
-        <img src={multiplayer.image} alt={multiplayer.imageAlt ?? ''} />
+        <img src={multiplayer.image} alt={multiplayer.imageAlt} />
       )
     }
   </div>
@@ -195,11 +196,7 @@ const alphaLogo = '/uploads/alpha-kun.png'
     {freePlay.text && <p>{freePlay.text}</p>}
   </div>
   <div class="feature-image pixel-border">
-    {
-      freePlay.image && (
-        <img src={freePlay.image} alt={freePlay.imageAlt ?? ''} />
-      )
-    }
+    {freePlay.image && <img src={freePlay.image} alt={freePlay.imageAlt} />}
   </div>
 </section>
 

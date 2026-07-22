@@ -135,6 +135,7 @@ function toJson(data, { status = 200, cacheControl }) {
     headers: {
       'content-type': 'application/json; charset=utf-8',
       'cache-control': cacheControl,
+      'x-robots-tag': 'noindex, nofollow',
     },
   })
 }

@@ -5,6 +5,8 @@ backend:
   repo: acecore-systems/aceserver-portal
   branch: main
   base_url: https://sveltia-cms-auth.sparkling-tree-7cef.workers.dev
+  api_root: /admin/api/github
+  graphql_api_root: /admin/api/graphql
   auth_methods: [oauth]
   commit_messages:
     create: 'cms: create {{collection}} "{{slug}}"'
@@ -12,8 +14,6 @@ backend:
     delete: 'cms: delete {{collection}} "{{slug}}"'
     uploadMedia: 'cms: upload "{{path}}"'
     deleteMedia: 'cms: delete media "{{path}}"'
-
-publish_mode: editorial_workflow
 
 media_folder: /public/uploads
 public_folder: /uploads
@@ -102,13 +102,8 @@ collections:
                     }
                   - { name: titleCopy, label: 見出し, widget: string }
                   - { name: text, label: 本文, widget: text, required: false }
-                  - { name: image, label: 画像, widget: image, required: false }
-                  - {
-                      name: imageAlt,
-                      label: 画像代替テキスト,
-                      widget: string,
-                      required: false,
-                    }
+                  - { name: image, label: 画像, widget: image }
+                  - { name: imageAlt, label: 画像代替テキスト, widget: string }
               - name: featureImageRight
                 label: 画像付き説明（右）
                 widget: object
@@ -121,13 +116,8 @@ collections:
                     }
                   - { name: titleCopy, label: 見出し, widget: string }
                   - { name: text, label: 本文, widget: text, required: false }
-                  - { name: image, label: 画像, widget: image, required: false }
-                  - {
-                      name: imageAlt,
-                      label: 画像代替テキスト,
-                      widget: string,
-                      required: false,
-                    }
+                  - { name: image, label: 画像, widget: image }
+                  - { name: imageAlt, label: 画像代替テキスト, widget: string }
               - name: featureImageLeft
                 label: 画像付き説明（左）
                 widget: object
@@ -140,13 +130,8 @@ collections:
                     }
                   - { name: titleCopy, label: 見出し, widget: string }
                   - { name: text, label: 本文, widget: text, required: false }
-                  - { name: image, label: 画像, widget: image, required: false }
-                  - {
-                      name: imageAlt,
-                      label: 画像代替テキスト,
-                      widget: string,
-                      required: false,
-                    }
+                  - { name: image, label: 画像, widget: image }
+                  - { name: imageAlt, label: 画像代替テキスト, widget: string }
               - name: cta
                 label: CTA
                 widget: object
@@ -319,6 +304,7 @@ collections:
           - { name: description, label: サイト説明, widget: text }
           - { name: siteUrl, label: サイトURL, widget: string }
           - { name: logo, label: ロゴ, widget: image }
+          - { name: logoAlt, label: ロゴ代替テキスト, widget: string }
           - { name: discordUrl, label: Discord 招待URL, widget: string }
           - { name: wikiUrl, label: WIKI URL, widget: string }
           - name: worlds
