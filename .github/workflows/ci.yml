@@ -36,6 +36,9 @@ jobs:
       - name: Validate CMS content
         run: npm run validate:content
 
+      - name: Test Alpha chat API
+        run: npm run test:alpha
+
       - name: Test CMS proxy
         run: npm run test:cms
 

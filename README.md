@@ -55,6 +55,21 @@ Sveltia CMS では `src/content/pages/*.json` と `src/content/site/*.json` を�
 
 Cloudflare Pages のproduction / previewでは、build前に `public/admin/runtime-config.js` を生成してSveltia CMSを手動初期化します。CMSのpublication branchは常に `main` で、previewから保存した場合も短命branchと `main` 向けPRを作ります。生成ファイルはGit管理対象外です。
 
+## アルファくん AI 案内チャット
+
+サイト全体に右下固定のアルファくん案内チャットを表示します。アルファくんはエースサーバーのキャラクター案内役として、参加方法、ワールド、ルール、ストーリー導線を案内します。
+
+`functions/api/alpha-chat.js` の Cloudflare Pages Function から Cloudflare Workers AI binding を呼び出します。既定では対話向けの GLM 4.7 Flash (`@cf/zai-org/glm-4.7-flash`) をthinking無効で使い、短い案内本文へtokenを集中させます。ブラウザには AI 実行用のキーを渡しません。
+
+ルール、参加条件、コマンド、プラグインなど変更され得る情報はrepositoryへ複製しません。アルファくんは固定知識から詳細を断定せず、現行情報の正である Aceserver WIKI または公式Discordへ案内します。ポータルからNewt APIを直接参照しません。
+
+Cloudflare Pages 側では `wrangler.jsonc` を設定の正とし、acecore-net と同じ方式で以下を preview / production の両方に定義します。
+
+- Workers AI binding: `AI`
+- `CLOUDFLARE_AI_MODEL`: 使用モデル（未設定時は `@cf/zai-org/glm-4.7-flash`）
+
+本番custom domainの `/api/alpha-chat` は、`acecore.net` zoneのCloudflare WAF rate limiting rule `Rate limit Aceserver Alpha chat` で保護します。IP・colo単位で10秒に5 requestまでとし、超過時は10秒blockします。このruleはrepository外のCloudflare設定なので、zoneを再作成した場合は再設定してください。`pages.dev` のpreview URLはこのzone-level ruleの対象外です。
+
 ### 本番 CMS の保存と PR 反映
 
 - 本番ソースの正は `main` です。Cloudflare Pages の production deploy 元も GitHub 連携の `main` にします。
