@@ -59,15 +59,16 @@ Cloudflare Pages のproduction / previewでは、build前に `public/admin/runti
 
 サイト全体に右下固定のアルファくん案内チャットを表示します。アルファくんはエースサーバーのキャラクター案内役として、参加方法、ワールド、ルール、ストーリー導線を案内します。
 
-`functions/api/alpha-chat.js` の Cloudflare Pages Function から Cloudflare Workers AI binding を呼び出します。既定では GLM 5.2 (`@cf/zai-org/glm-5.2`) を reasoning effort `low` で使います。ブラウザには AI 実行用のキーを渡しません。
+`functions/api/alpha-chat.js` の Cloudflare Pages Function から Cloudflare Workers AI binding を呼び出します。既定では対話向けの GLM 4.7 Flash (`@cf/zai-org/glm-4.7-flash`) をthinking無効で使い、短い案内本文へtokenを集中させます。ブラウザには AI 実行用のキーを渡しません。
 
-`functions/api/alpha-wiki-context.js` に Aceserver WIKI の公開記事から作った AI 用抜粋データを置きます。API は質問内容に合う抜粋だけを選び、Workers AI の文脈として渡すため、ルール、参加方法、ワールド、コマンドなどは WIKI に基づいて具体的に答えます。
+ルール、参加条件、コマンド、プラグインなど変更され得る情報はrepositoryへ複製しません。アルファくんは固定知識から詳細を断定せず、現行情報の正である Aceserver WIKI または公式Discordへ案内します。ポータルからNewt APIを直接参照しません。
 
 Cloudflare Pages 側では `wrangler.jsonc` を設定の正とし、acecore-net と同じ方式で以下を preview / production の両方に定義します。
 
 - Workers AI binding: `AI`
-- `CLOUDFLARE_AI_MODEL`: 使用モデル（未設定時は `@cf/zai-org/glm-5.2`）
-- `CLOUDFLARE_AI_REASONING_EFFORT`: 推論 effort（未設定時は `low`）
+- `CLOUDFLARE_AI_MODEL`: 使用モデル（未設定時は `@cf/zai-org/glm-4.7-flash`）
+
+本番custom domainの `/api/alpha-chat` は、`acecore.net` zoneのCloudflare WAF rate limiting rule `Rate limit Aceserver Alpha chat` で保護します。IP・colo単位で10秒に5 requestまでとし、超過時は10秒blockします。このruleはrepository外のCloudflare設定なので、zoneを再作成した場合は再設定してください。`pages.dev` のpreview URLはこのzone-level ruleの対象外です。
 
 ### 本番 CMS の保存と PR 反映
 

@@ -12,6 +12,7 @@
     "preview": "astro preview",
     "format": "prettier . --write",
     "format:check": "prettier . --check",
+    "test:alpha": "node --test tests/alpha-chat.test.mjs",
     "test:cms": "node --test tests/cms-proxy.test.mjs",
     "test:dynmap": "node --test cloudflare/dynmap-r2-cache/worker.test.mjs",
     "typecheck:functions": "tsc --project tsconfig.functions.json",

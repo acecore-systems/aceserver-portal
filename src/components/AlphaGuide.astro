@@ -30,6 +30,8 @@ const alphaPrompts = [
     question: '遊ぶ前に確認するルールを教えて',
   },
 ]
+
+const alphaError = `いまはAI応答につながらなかったよ。[公式Discord](${joinButton.href}) と [Aceserver WIKI](${wikiButton.href}) を見てね。`
 ---
 
 <div
@@ -37,9 +39,12 @@ const alphaPrompts = [
   class="alpha-widget"
   data-alpha-widget
   data-alpha-endpoint="/api/alpha-chat"
+  data-alpha-discord-url={joinButton.href}
+  data-alpha-wiki-url={wikiButton.href}
+  data-alpha-world-map-url={worldMapButton.href}
   data-alpha-greeting="やあ、アルファくんだよ。エースサーバーの案内をするね。"
   data-alpha-loading="アルファくんが考え中..."
-  data-alpha-error="いまはAI応答につながらなかったよ。[公式Discord](https://discord.gg/vKTdU4k8ur) と [Aceserver WIKI](https://asv-wiki.acecore.net) を見てね。"
+  data-alpha-error={alphaError}
 >
   <section
     id="alpha-guide-panel"
@@ -49,7 +54,13 @@ const alphaPrompts = [
     hidden
   >
     <header class="alpha-header">
-      <img src={logo} alt="" width="40" height="40" />
+      <img
+        src={logo}
+        alt="アルファくん"
+        aria-hidden="true"
+        width="40"
+        height="40"
+      />
       <div>
         <h2 id="alpha-title">アルファくん</h2>
         <p>エースサーバー案内チャット</p>
@@ -136,7 +147,13 @@ const alphaPrompts = [
     aria-label="アルファくんに聞く"
     data-alpha-toggle
   >
-    <img src={logo} alt="" width="56" height="56" />
+    <img
+      src={logo}
+      alt="アルファくん"
+      aria-hidden="true"
+      width="56"
+      height="56"
+    />
     <span>聞く</span>
   </button>
 </div>
@@ -155,58 +172,77 @@ const alphaPrompts = [
     terms: string[]
   }
 
-  const ALPHA_ALLOWED_EXTERNAL_LINKS = [
-    'https://discord.gg/vKTdU4k8ur',
-    'https://asv-wiki.acecore.net',
-    'https://acecore.net',
-  ]
-
-  const ALPHA_LINK_RESOURCES: AlphaLinkResource[] = [
-    {
-      href: 'https://discord.gg/vKTdU4k8ur',
-      label: '公式Discord',
-      terms: ['公式Discord', '公式ディスコード', 'Discord', 'ディスコード'],
-    },
-    {
-      href: 'https://asv-wiki.acecore.net',
-      label: 'Aceserver WIKI',
-      terms: [
-        'Aceserver WIKI',
-        'エースサーバーWIKI',
-        'Aceserver Wiki',
-        'エースサーバーWiki',
-        'WIKI',
-        'Wiki',
-        'ウィキ',
-      ],
-    },
-    {
-      href: '/world-map/',
-      label: 'ワールドマップ',
-      terms: ['ワールドマップ'],
-    },
-  ]
+  type AlphaLinkContext = {
+    allowedExternalLinks: string[]
+    resources: AlphaLinkResource[]
+  }
 
   const ALPHA_INLINE_MARKDOWN_PATTERN =
     /\[([^\]\n]{1,80})\]\(\s*([^\s)]{1,240})\s*\)|(https?:\/\/[^\s<>"']{1,240})|\*\*([^*\n]{1,160})\*\*|__([^_\n]{1,160})__|`([^`\n]{1,160})`|\*([^*\n]{1,160})\*|_([^_\n]{1,160})_|(Aceserver WIKI|エースサーバーWIKI|Aceserver Wiki|エースサーバーWiki|公式Discord|公式ディスコード|ワールドマップ|ディスコード|Discord|WIKI|Wiki|ウィキ)/g
 
-  function isAllowedAlphaHref(rawHref: string) {
-    if (rawHref.startsWith('/') && !rawHref.startsWith('//')) return true
-
+  function normalizeAlphaHref(rawHref: string, context: AlphaLinkContext) {
+    if (!rawHref || rawHref.includes('\\')) return null
     try {
-      const hrefUrl = new URL(rawHref)
-      return ALPHA_ALLOWED_EXTERNAL_LINKS.some((allowedHref) => {
+      const hrefUrl = new URL(rawHref, window.location.href)
+      if (hrefUrl.origin === window.location.origin) {
+        if (!rawHref.startsWith('/') || rawHref.startsWith('//')) return null
+        return `${hrefUrl.pathname}${hrefUrl.search}${hrefUrl.hash}`
+      }
+
+      const allowed = context.allowedExternalLinks.some((allowedHref) => {
         const allowedUrl = new URL(allowedHref)
         if (hrefUrl.origin !== allowedUrl.origin) return false
 
         if (allowedUrl.origin === 'https://discord.gg') {
-          return hrefUrl.pathname === allowedUrl.pathname
+          return (
+            hrefUrl.pathname === allowedUrl.pathname &&
+            !hrefUrl.search &&
+            !hrefUrl.hash
+          )
         }
 
         return true
       })
+      return allowed ? hrefUrl.href : null
     } catch {
-      return false
+      return null
+    }
+  }
+
+  function getAlphaLinkContext(widget: HTMLElement): AlphaLinkContext {
+    const discordHref =
+      widget.dataset.alphaDiscordUrl || 'https://discord.gg/acsv'
+    const wikiHref =
+      widget.dataset.alphaWikiUrl || 'https://asv-wiki.acecore.net'
+    const worldMapHref = widget.dataset.alphaWorldMapUrl || '/world-map/'
+
+    return {
+      allowedExternalLinks: [discordHref, wikiHref, 'https://acecore.net/'],
+      resources: [
+        {
+          href: discordHref,
+          label: '公式Discord',
+          terms: ['公式Discord', '公式ディスコード', 'Discord', 'ディスコード'],
+        },
+        {
+          href: wikiHref,
+          label: 'Aceserver WIKI',
+          terms: [
+            'Aceserver WIKI',
+            'エースサーバーWIKI',
+            'Aceserver Wiki',
+            'エースサーバーWiki',
+            'WIKI',
+            'Wiki',
+            'ウィキ',
+          ],
+        },
+        {
+          href: worldMapHref,
+          label: 'ワールドマップ',
+          terms: ['ワールドマップ'],
+        },
+      ],
     }
   }
 
@@ -226,14 +262,23 @@ const alphaPrompts = [
     return { href, trailing }
   }
 
-  function getAlphaResourceByTerm(term: string) {
-    return ALPHA_LINK_RESOURCES.find((resource) =>
-      resource.terms.includes(term),
-    )
+  function getAlphaResourceByTerm(
+    term: string,
+    resources: AlphaLinkResource[],
+  ) {
+    return resources.find((resource) => resource.terms.includes(term))
   }
 
-  function getAlphaResourceLabelForHref(href: string, fallback: string) {
-    const resource = ALPHA_LINK_RESOURCES.find((item) => item.href === href)
+  function getAlphaResourceLabelForHref(
+    href: string,
+    fallback: string,
+    resources: AlphaLinkResource[],
+  ) {
+    const normalizedHref = new URL(href, window.location.href).href
+    const resource = resources.find(
+      (item) =>
+        new URL(item.href, window.location.href).href === normalizedHref,
+    )
     return resource?.label || fallback
   }
 
@@ -245,7 +290,7 @@ const alphaPrompts = [
     const anchor = document.createElement('a')
     anchor.href = href
     anchor.textContent = label
-    if (!href.startsWith('/')) {
+    if (new URL(href, window.location.href).origin !== window.location.origin) {
       anchor.target = '_blank'
       anchor.rel = 'noopener noreferrer'
     }
@@ -253,8 +298,13 @@ const alphaPrompts = [
     return anchor
   }
 
-  function renderAlphaMarkdownText(container: HTMLElement, content: string) {
+  function renderAlphaMarkdownText(
+    container: HTMLElement,
+    content: string,
+    widget: HTMLElement,
+  ) {
     container.textContent = ''
+    const linkContext = getAlphaLinkContext(widget)
     const lines = String(content || '')
       .replace(/\r\n?/g, '\n')
       .trim()
@@ -272,6 +322,7 @@ const alphaPrompts = [
         paragraph,
         paragraphLines.join('\n'),
         linkedHrefs,
+        linkContext,
       )
       container.append(paragraph)
       paragraphLines = []
@@ -304,14 +355,24 @@ const alphaPrompts = [
 
       if (unorderedMatch) {
         const item = document.createElement('li')
-        appendInlineAlphaMarkdown(item, unorderedMatch[1], linkedHrefs)
+        appendInlineAlphaMarkdown(
+          item,
+          unorderedMatch[1],
+          linkedHrefs,
+          linkContext,
+        )
         ensureList('ul').append(item)
         return
       }
 
       if (orderedMatch) {
         const item = document.createElement('li')
-        appendInlineAlphaMarkdown(item, orderedMatch[1], linkedHrefs)
+        appendInlineAlphaMarkdown(
+          item,
+          orderedMatch[1],
+          linkedHrefs,
+          linkContext,
+        )
         ensureList('ol').append(item)
         return
       }
@@ -327,6 +388,7 @@ const alphaPrompts = [
     parent: HTMLElement,
     text: string,
     linkedHrefs: Set<string>,
+    linkContext: AlphaLinkContext,
   ) {
     const pattern = new RegExp(ALPHA_INLINE_MARKDOWN_PATTERN)
     let index = 0
@@ -351,19 +413,23 @@ const alphaPrompts = [
       ] = match
 
       if (markdownLabel) {
-        const href = markdownHref.trim()
-        if (isAllowedAlphaHref(href)) {
+        const href = normalizeAlphaHref(markdownHref.trim(), linkContext)
+        if (href) {
           parent.append(createAlphaAnchor(markdownLabel, href, linkedHrefs))
         } else {
-          parent.append(document.createTextNode(matchedText))
+          parent.append(document.createTextNode(markdownLabel))
         }
       } else if (rawHref) {
         const rawLinkParts = splitAlphaTrailingPunctuation(rawHref)
-        const href = rawLinkParts.href
-        if (isAllowedAlphaHref(href)) {
+        const href = normalizeAlphaHref(rawLinkParts.href, linkContext)
+        if (href) {
           parent.append(
             createAlphaAnchor(
-              getAlphaResourceLabelForHref(href, href),
+              getAlphaResourceLabelForHref(
+                href,
+                rawLinkParts.href,
+                linkContext.resources,
+              ),
               href,
               linkedHrefs,
             ),
@@ -380,6 +446,7 @@ const alphaPrompts = [
           strong,
           strongAsterisk || strongUnderscore,
           linkedHrefs,
+          linkContext,
         )
         parent.append(strong)
       } else if (inlineCode) {
@@ -392,14 +459,19 @@ const alphaPrompts = [
           emphasis,
           emphasisAsterisk || emphasisUnderscore,
           linkedHrefs,
+          linkContext,
         )
         parent.append(emphasis)
       } else if (autoLinkTerm) {
-        const resource = getAlphaResourceByTerm(autoLinkTerm)
-        if (resource && !linkedHrefs.has(resource.href)) {
-          parent.append(
-            createAlphaAnchor(autoLinkTerm, resource.href, linkedHrefs),
-          )
+        const resource = getAlphaResourceByTerm(
+          autoLinkTerm,
+          linkContext.resources,
+        )
+        const href = resource
+          ? normalizeAlphaHref(resource.href, linkContext)
+          : null
+        if (resource && href && !linkedHrefs.has(href)) {
+          parent.append(createAlphaAnchor(autoLinkTerm, href, linkedHrefs))
         } else {
           parent.append(document.createTextNode(autoLinkTerm))
         }
@@ -438,7 +510,8 @@ const alphaPrompts = [
         '[data-alpha-toggle] img',
       )
       avatar.src = toggleImage?.src || ''
-      avatar.alt = ''
+      avatar.alt = 'アルファくん'
+      avatar.ariaHidden = 'true'
       avatar.width = 32
       avatar.height = 32
       message.append(avatar)
@@ -447,7 +520,7 @@ const alphaPrompts = [
     const bubble = document.createElement('div')
     bubble.className = 'alpha-message__bubble'
     if (role === 'assistant') {
-      renderAlphaMarkdownText(bubble, content)
+      renderAlphaMarkdownText(bubble, content, widget)
     } else {
       bubble.textContent = content
     }
@@ -460,6 +533,9 @@ const alphaPrompts = [
 
   function setAlphaSending(widget: HTMLElement, sending: boolean) {
     widget.classList.toggle('is-sending', sending)
+    widget
+      .querySelector<HTMLElement>('[data-alpha-messages]')
+      ?.setAttribute('aria-busy', String(sending))
     widget
       .querySelectorAll<HTMLButtonElement>(
         '[data-alpha-send], [data-alpha-prompt]',
@@ -504,6 +580,12 @@ const alphaPrompts = [
       true,
     )
 
+    const requestController = new AbortController()
+    const requestTimeout = window.setTimeout(
+      () => requestController.abort(),
+      25_000,
+    )
+
     try {
       const response = await fetch(
         widget.dataset.alphaEndpoint || '/api/alpha-chat',
@@ -517,6 +599,7 @@ const alphaPrompts = [
             question,
             messages: messages.slice(-8),
           }),
+          signal: requestController.signal,
         },
       )
 
@@ -542,6 +625,7 @@ const alphaPrompts = [
       messages.push({ role: 'assistant', content: fallback })
       createAlphaMessage(widget, 'assistant', fallback)
     } finally {
+      window.clearTimeout(requestTimeout)
       setAlphaSending(widget, false)
       window.setTimeout(() => input?.focus(), 0)
     }
@@ -573,10 +657,15 @@ const alphaPrompts = [
     }
   }
 
+  let alphaGuideController: AbortController | null = null
+
   function initAlphaGuide() {
     const widget = document.querySelector<HTMLElement>('[data-alpha-widget]')
     if (!widget || widget.dataset.alphaBound === 'true') return
 
+    alphaGuideController?.abort()
+    alphaGuideController = new AbortController()
+    const listenerOptions = { signal: alphaGuideController.signal }
     widget.dataset.alphaBound = 'true'
 
     const messages: AlphaMessage[] = []
@@ -587,63 +676,93 @@ const alphaPrompts = [
     const input =
       widget.querySelector<HTMLTextAreaElement>('[data-alpha-input]')
 
-    toggle?.addEventListener('click', () => {
-      const isOpen = toggle.getAttribute('aria-expanded') === 'true'
-      setAlphaWidgetOpen(widget, !isOpen, messages)
-    })
+    toggle?.addEventListener(
+      'click',
+      () => {
+        const isOpen = toggle.getAttribute('aria-expanded') === 'true'
+        setAlphaWidgetOpen(widget, !isOpen, messages)
+      },
+      listenerOptions,
+    )
 
     widget.querySelectorAll('[data-alpha-close]').forEach((button) => {
-      button.addEventListener('click', () =>
-        setAlphaWidgetOpen(widget, false, messages),
+      button.addEventListener(
+        'click',
+        () => setAlphaWidgetOpen(widget, false, messages),
+        listenerOptions,
       )
     })
 
     widget
       .querySelectorAll<HTMLButtonElement>('[data-alpha-prompt]')
       .forEach((button) => {
-        button.addEventListener('click', () => {
-          setAlphaWidgetOpen(widget, true, messages)
-          void sendAlphaQuestion(
-            widget,
-            messages,
-            button.dataset.alphaPrompt || button.textContent || '',
-          )
-        })
+        button.addEventListener(
+          'click',
+          () => {
+            setAlphaWidgetOpen(widget, true, messages)
+            void sendAlphaQuestion(
+              widget,
+              messages,
+              button.dataset.alphaPrompt || button.textContent || '',
+            )
+          },
+          listenerOptions,
+        )
       })
 
-    form?.addEventListener('submit', (event) => {
-      event.preventDefault()
-      void sendAlphaQuestion(widget, messages, input?.value || '')
-    })
+    form?.addEventListener(
+      'submit',
+      (event) => {
+        event.preventDefault()
+        void sendAlphaQuestion(widget, messages, input?.value || '')
+      },
+      listenerOptions,
+    )
 
-    input?.addEventListener('keydown', (event) => {
-      if (event.key !== 'Enter' || event.shiftKey) return
+    input?.addEventListener(
+      'keydown',
+      (event) => {
+        if (event.key !== 'Enter' || event.shiftKey) return
 
-      event.preventDefault()
-      void sendAlphaQuestion(widget, messages, input.value)
-    })
+        event.preventDefault()
+        void sendAlphaQuestion(widget, messages, input.value)
+      },
+      listenerOptions,
+    )
 
-    document.addEventListener('click', (event) => {
-      const target = event.target
-      if (!(target instanceof Element)) return
+    document.addEventListener(
+      'click',
+      (event) => {
+        const target = event.target
+        if (!(target instanceof Element)) return
 
-      const opener = target.closest('[data-alpha-open]')
-      if (!opener) return
+        const opener = target.closest('[data-alpha-open]')
+        if (!opener) return
 
-      event.preventDefault()
-      setAlphaWidgetOpen(widget, true, messages)
-    })
+        event.preventDefault()
+        setAlphaWidgetOpen(widget, true, messages)
+      },
+      listenerOptions,
+    )
 
-    document.addEventListener('keydown', (event) => {
-      if (event.key !== 'Escape' || !widget.classList.contains('is-open')) {
-        return
-      }
+    document.addEventListener(
+      'keydown',
+      (event) => {
+        if (event.key !== 'Escape' || !widget.classList.contains('is-open')) {
+          return
+        }
 
-      setAlphaWidgetOpen(widget, false, messages)
-    })
+        setAlphaWidgetOpen(widget, false, messages)
+      },
+      listenerOptions,
+    )
   }
 
   initAlphaGuide()
+  document.addEventListener('astro:before-swap', () => {
+    alphaGuideController?.abort()
+    alphaGuideController = null
+  })
   document.addEventListener('astro:after-swap', initAlphaGuide)
 </script>
 
