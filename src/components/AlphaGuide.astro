@@ -414,7 +414,7 @@ const alphaError = `いまはAI応答につながらなかったよ。[公式Dis
 
       if (markdownLabel) {
         const href = normalizeAlphaHref(markdownHref.trim(), linkContext)
-        if (href) {
+        if (href && !linkedHrefs.has(href)) {
           parent.append(createAlphaAnchor(markdownLabel, href, linkedHrefs))
         } else {
           parent.append(document.createTextNode(markdownLabel))
@@ -423,16 +423,15 @@ const alphaError = `いまはAI応答につながらなかったよ。[公式Dis
         const rawLinkParts = splitAlphaTrailingPunctuation(rawHref)
         const href = normalizeAlphaHref(rawLinkParts.href, linkContext)
         if (href) {
+          const label = getAlphaResourceLabelForHref(
+            href,
+            rawLinkParts.href,
+            linkContext.resources,
+          )
           parent.append(
-            createAlphaAnchor(
-              getAlphaResourceLabelForHref(
-                href,
-                rawLinkParts.href,
-                linkContext.resources,
-              ),
-              href,
-              linkedHrefs,
-            ),
+            linkedHrefs.has(href)
+              ? document.createTextNode(label)
+              : createAlphaAnchor(label, href, linkedHrefs),
           )
           if (rawLinkParts.trailing) {
             parent.append(document.createTextNode(rawLinkParts.trailing))

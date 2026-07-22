@@ -291,43 +291,66 @@ export function addGuideResourceLinks(answer) {
 }
 
 function linkGuideResource(answer, resource) {
-  if (!answer || hasMarkdownLinkTo(answer, resource.href)) return answer
+  if (!answer) return answer
 
-  const markdownRanges = getMarkdownLinkRanges(answer)
+  const deduplicated = deduplicateMarkdownLinksTo(answer, resource.href)
+  if (deduplicated.hasLink) return deduplicated.answer
+
+  const markdownRanges = getMarkdownLinkRanges(deduplicated.answer)
   const bareHrefIndex = findPlainTextIndex(
-    answer,
+    deduplicated.answer,
     resource.href,
     markdownRanges,
   )
 
   if (bareHrefIndex >= 0) {
     return replaceAnswerRange(
-      answer,
+      deduplicated.answer,
       bareHrefIndex,
       bareHrefIndex + resource.href.length,
       `[${resource.label}](${resource.href})`,
     )
   }
 
-  const protectedRanges = getProtectedTextRanges(answer)
+  const protectedRanges = getProtectedTextRanges(deduplicated.answer)
   for (const term of resource.terms) {
-    const termIndex = findPlainTextIndex(answer, term, protectedRanges)
+    const termIndex = findPlainTextIndex(
+      deduplicated.answer,
+      term,
+      protectedRanges,
+    )
     if (termIndex < 0) continue
 
     return replaceAnswerRange(
-      answer,
+      deduplicated.answer,
       termIndex,
       termIndex + term.length,
       `[${term}](${resource.href})`,
     )
   }
 
-  return answer
+  return deduplicated.answer
 }
 
-function hasMarkdownLinkTo(answer, href) {
+function deduplicateMarkdownLinksTo(answer, href) {
   const escapedHref = escapeRegExp(href)
-  return new RegExp(`\\[[^\\]\\n]+\\]\\(\\s*${escapedHref}\\s*\\)`).test(answer)
+  const pattern = new RegExp(
+    `\\[([^\\]\\n]+)\\]\\(\\s*${escapedHref}\\s*\\)`,
+    'g',
+  )
+  let hasLink = false
+
+  return {
+    answer: answer.replace(pattern, (match, label) => {
+      if (!hasLink) {
+        hasLink = true
+        return match
+      }
+
+      return label
+    }),
+    hasLink,
+  }
 }
 
 function getMarkdownLinkRanges(answer) {
