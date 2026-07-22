@@ -174,6 +174,12 @@ test('post-processes only canonical guide links and trims dangling Markdown', ()
     ),
     '案内はこちら。',
   )
+  assert.equal(
+    addGuideResourceLinks(
+      '[ワールドマップ](/world-map/) と [マップ](/world-map/)を見てね。',
+    ),
+    '[ワールドマップ](/world-map/) と マップを見てね。',
+  )
 })
 
 test('origin comparison includes the scheme and honors Fetch Metadata', () => {
