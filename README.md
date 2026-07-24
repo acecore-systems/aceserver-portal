@@ -1,8 +1,10 @@
 # エースサーバーポータル
 
-エースサーバーの公式ポータルサイトです。Astro + UnoCSS + Sveltia CMS で構成しています。
+エースサーバーの公式ポータルサイトです。Astro 7 + UnoCSS + Sveltia CMS で構成しています。
 
 ## 開発
+
+Node.js 24.18.0 以上を使用してください。リポジトリの固定バージョンは `.node-version` に記載しています。
 
 ```bash
 npm install
