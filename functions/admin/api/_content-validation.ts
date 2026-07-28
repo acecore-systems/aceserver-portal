@@ -1,17 +1,17 @@
-import announcements from '../../../src/content/site/announcements.json' with { type: 'json' }
-import navigation from '../../../src/content/site/navigation.json' with { type: 'json' }
-import settings from '../../../src/content/site/settings.json' with { type: 'json' }
-import top from '../../../src/content/pages/top.json' with { type: 'json' }
-import worldMap from '../../../src/content/pages/world-map.json' with { type: 'json' }
-import worldMapEvent from '../../../src/content/pages/world-map-event.json' with { type: 'json' }
-import worldMapLobby from '../../../src/content/pages/world-map-lobby.json' with { type: 'json' }
-import worldMapMain from '../../../src/content/pages/world-map-main.json' with { type: 'json' }
-import worldMapRpg from '../../../src/content/pages/world-map-rpg.json' with { type: 'json' }
-import worldMapRpgSub from '../../../src/content/pages/world-map-rpg-sub.json' with { type: 'json' }
-import worldMapSeasonA from '../../../src/content/pages/world-map-season-a.json' with { type: 'json' }
-import worldMapSeasonAC from '../../../src/content/pages/world-map-season-a-c.json' with { type: 'json' }
-import worldMapSigen from '../../../src/content/pages/world-map-sigen.json' with { type: 'json' }
-import youtubeSearch from '../../../src/content/pages/youtube-search-aceserver.json' with { type: 'json' }
+import announcements from '../../../src/content/site/announcements.json'
+import navigation from '../../../src/content/site/navigation.json'
+import settings from '../../../src/content/site/settings.json'
+import top from '../../../src/content/pages/top.json'
+import worldMap from '../../../src/content/pages/world-map.json'
+import worldMapEvent from '../../../src/content/pages/world-map-event.json'
+import worldMapLobby from '../../../src/content/pages/world-map-lobby.json'
+import worldMapMain from '../../../src/content/pages/world-map-main.json'
+import worldMapRpg from '../../../src/content/pages/world-map-rpg.json'
+import worldMapRpgSub from '../../../src/content/pages/world-map-rpg-sub.json'
+import worldMapSeasonA from '../../../src/content/pages/world-map-season-a.json'
+import worldMapSeasonAC from '../../../src/content/pages/world-map-season-a-c.json'
+import worldMapSigen from '../../../src/content/pages/world-map-sigen.json'
+import youtubeSearch from '../../../src/content/pages/youtube-search-aceserver.json'
 import { validatePortalContentFile } from '../../../src/data/content-schemas.ts'
 
 const MAX_JSON_BYTES = 1024 * 1024
