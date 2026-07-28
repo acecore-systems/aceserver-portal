@@ -1,6 +1,7 @@
 ---
 import type { PortalPage, PortalSection } from '../types'
 import { settings } from '../data/content'
+import { serializeCssUrl } from '../data/safe-json'
 import Icon from './Icon.astro'
 
 interface Props {
@@ -13,12 +14,12 @@ const intro = page.sections.find(
   (section): section is IntroSection => section.type === 'featureImageFull',
 )
 const introImage = intro?.image ?? '/uploads/legacy-world-map.png'
+const introImageCss = serializeCssUrl(introImage)
 const introText = intro?.text ?? page.meta.description
 ---
 
 <section class="world-hero" aria-labelledby="world-title">
-  <div class="world-bg" style={`--world-hero-image: url('${introImage}')`}>
-  </div>
+  <div class="world-bg" style={`--world-hero-image: ${introImageCss}`}></div>
   <div class="map-sign pixel-border">
     <Icon name="map" />
     <h1 id="world-title"><span>ワールド</span><span>マップ</span></h1>

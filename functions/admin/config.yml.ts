@@ -1,3 +1,5 @@
+import { CMS_PRODUCTION_HOSTNAME } from './api/_cms-policy.ts'
+
 type PagesContext = {
   request: Request
   next: () => Promise<Response>
@@ -7,6 +9,16 @@ export const onRequestGet = async ({
   request,
   next,
 }: PagesContext): Promise<Response> => {
+  if (new URL(request.url).hostname !== CMS_PRODUCTION_HOSTNAME) {
+    return new Response('Not Found', {
+      status: 404,
+      headers: {
+        'Cache-Control': 'no-store',
+        'X-Robots-Tag': 'noindex, nofollow',
+      },
+    })
+  }
+
   const response = await next()
 
   if (!response.ok) return response

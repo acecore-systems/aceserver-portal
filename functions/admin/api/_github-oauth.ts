@@ -1,4 +1,4 @@
-import { CMS_REPOSITORY } from './_cms-policy.ts'
+import { CMS_PRODUCTION_HOSTNAME, CMS_REPOSITORY } from './_cms-policy.ts'
 import { GitHubApiError, githubJson, isRecord } from './_github-api.ts'
 
 const AUTH_CACHE_TTL_MS = 5 * 60 * 1000
@@ -19,7 +19,14 @@ const authorizationCache = new Map<
   { expiresAt: number; user: GitHubEditor }
 >()
 
-export async function getGitHubEditor(request: Request) {
+export async function getGitHubEditor(
+  request: Request,
+  { fresh = false }: { fresh?: boolean } = {},
+) {
+  if (new URL(request.url).hostname !== CMS_PRODUCTION_HOSTNAME) {
+    throw new GitHubApiError('CMS APIは本番サイトでのみ利用できます。', 403)
+  }
+
   const token = readOAuthToken(request.headers.get('Authorization'))
 
   if (!token) {
@@ -29,7 +36,7 @@ export async function getGitHubEditor(request: Request) {
   const cacheKey = await sha256(token)
   const cached = authorizationCache.get(cacheKey)
 
-  if (cached && cached.expiresAt > Date.now()) {
+  if (!fresh && cached && cached.expiresAt > Date.now()) {
     return { token, user: cached.user }
   }
 

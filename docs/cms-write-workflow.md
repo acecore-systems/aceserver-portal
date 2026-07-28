@@ -32,7 +32,7 @@ CMS管理対象外のsource code、schema、CMS設定、workflowはdirect commit
 
 - `public/admin/config.yml` の `files` に列挙した `src/content/pages/*.json`
 - `public/admin/config.yml` の `files` に列挙した `src/content/site/*.json`
-- `public/uploads/**` の許可済み画像・PDF形式
+- `public/uploads/**` の許可済み画像形式
 
 schema、workflow、source codeなど上記以外はproxyが拒否します。固定JSONは更新だけを許可し、削除できるのは許可済みメディアだけです。1回の保存は最大100ファイル、追加データ合計25 MiBです。
 
@@ -41,6 +41,8 @@ schema、workflow、source codeなど上記以外はproxyが拒否します。�
 AcecoreとAceServerはGitHub認証型で、編集者のOAuth tokenを本人確認とGitHub上の保存actorに使います。CherryとHattはCloudflare Access認証型で、サイト専用GitHub Appを保存actorに使います。CMS管理対象だけを直接保存する境界は共通ですが、認証情報やAppは共用しません。
 
 GitHub認証型では、CMS proxy内の操作は制限されても、編集者個人のGitHub権限自体は変わりません。将来backend actorをGitHub Appへ分離する場合も、GitHubログインは維持し、Appとprivate keyはrepository単位で分離します。
+
+CMS設定と同一origin proxyは `asv.acecore.net` だけで有効です。Pages previewや別hostnameでは設定配信とAPIをGitHubへの通信前に拒否します。このrepositoryはGitHub App private keyをPagesへ配布せず、編集者本人のOAuth tokenだけをrequest単位で転送します。将来App actorを導入する場合、private keyはProduction encrypted secretだけへ登録し、Preview環境には登録しません。
 
 ## 検証
 

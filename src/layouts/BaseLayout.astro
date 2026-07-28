@@ -10,6 +10,7 @@ import AdsRuntime from '../components/AdsRuntime.astro'
 import AlphaGuide from '../components/AlphaGuide.astro'
 import { settings } from '../data/content'
 import { ADSENSE } from '../data/ads'
+import { serializeJsonForHtmlScript } from '../data/safe-json'
 
 interface Props {
   title?: string
@@ -58,6 +59,38 @@ const alphaWikiButton = {
   href: settings.wikiUrl,
   external: true,
 }
+const websiteJsonLd = serializeJsonForHtmlScript({
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': websiteId,
+  name: settings.title,
+  alternateName: settings.shortTitle,
+  url: homeUrl.toString(),
+  description,
+  inLanguage: 'ja',
+  publisher: { '@id': organizationId },
+})
+const organizationJsonLd = serializeJsonForHtmlScript({
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': organizationId,
+  name: settings.shortTitle,
+  url: homeUrl.toString(),
+  logo: logoUrl.toString(),
+  sameAs: [settings.discordUrl, settings.wikiUrl],
+})
+const webpageJsonLd = serializeJsonForHtmlScript({
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': webpageId,
+  url: pageUrl.toString(),
+  name: pageTitle,
+  description,
+  image: ogImage.toString(),
+  inLanguage: 'ja',
+  isPartOf: { '@id': websiteId },
+  about: { '@id': organizationId },
+})
 ---
 
 <!doctype html>
@@ -104,47 +137,9 @@ const alphaWikiButton = {
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
     <meta name="twitter:image:alt" content={title} />
-    <script
-      type="application/ld+json"
-      set:html={JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'WebSite',
-        '@id': websiteId,
-        name: settings.title,
-        alternateName: settings.shortTitle,
-        url: homeUrl.toString(),
-        description,
-        inLanguage: 'ja',
-        publisher: { '@id': organizationId },
-      })}
-    />
-    <script
-      type="application/ld+json"
-      set:html={JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'Organization',
-        '@id': organizationId,
-        name: settings.shortTitle,
-        url: homeUrl.toString(),
-        logo: logoUrl.toString(),
-        sameAs: [settings.discordUrl, settings.wikiUrl],
-      })}
-    />
-    <script
-      type="application/ld+json"
-      set:html={JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'WebPage',
-        '@id': webpageId,
-        url: pageUrl.toString(),
-        name: pageTitle,
-        description,
-        image: ogImage.toString(),
-        inLanguage: 'ja',
-        isPartOf: { '@id': websiteId },
-        about: { '@id': organizationId },
-      })}
-    />
+    <script type="application/ld+json" set:html={websiteJsonLd} />
+    <script type="application/ld+json" set:html={organizationJsonLd} />
+    <script type="application/ld+json" set:html={webpageJsonLd} />
   </head>
   <body class:list={[{ 'is-full-height': fullHeight }]}>
     <a class="skip-link" href="#main">本文へ移動</a>
