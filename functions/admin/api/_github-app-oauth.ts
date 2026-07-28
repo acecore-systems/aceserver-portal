@@ -380,7 +380,7 @@ export async function verifyRepositoryWriteAccess(
   installationId: number,
 ) {
   const installationResponse = await fetch(
-    `https://api.github.com/user/installations/${installationId}`,
+    'https://api.github.com/user/installations?per_page=100',
     {
       headers: {
         Accept: 'application/vnd.github+json',
@@ -390,11 +390,39 @@ export async function verifyRepositoryWriteAccess(
       },
     },
   )
-  const installation = (await installationResponse
+  const installationData = (await installationResponse
     .json()
     .catch(() => null)) as {
-    permissions?: Record<string, unknown>
+    installations?: {
+      id?: unknown
+      permissions?: Record<string, unknown>
+    }[]
+    total_count?: unknown
   } | null
+  const installations = Array.isArray(installationData?.installations)
+    ? installationData.installations
+    : []
+  const installation =
+    installationData?.total_count === 1 &&
+    installations.length === 1 &&
+    installations[0]?.id === installationId
+      ? installations[0]
+      : null
+
+  if (!installationResponse.ok) {
+    throw new CmsOAuthError(
+      'GitHub App installationを確認できませんでした。',
+      502,
+    )
+  }
+
+  if (!installation) {
+    throw new CmsOAuthError(
+      'このGitHubアカウントにはエースサーバーポータルを編集する権限がありません。',
+      403,
+    )
+  }
+
   const permissions =
     installation?.permissions &&
     typeof installation.permissions === 'object' &&
@@ -407,11 +435,7 @@ export async function verifyRepositoryWriteAccess(
       )
     : true
 
-  if (
-    !installationResponse.ok ||
-    permissions?.contents !== 'write' ||
-    unexpectedWritePermission
-  ) {
+  if (permissions?.contents !== 'write' || unexpectedWritePermission) {
     throw new CmsOAuthError(
       'CMS GitHub AppはContents write以外のwrite権限を持たない設定にしてください。',
       503,

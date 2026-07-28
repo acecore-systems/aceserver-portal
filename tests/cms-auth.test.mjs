@@ -13,8 +13,10 @@ const env = {
   CMS_GITHUB_APP_INSTALLATION_ID: '987654321',
   CMS_OAUTH_STATE_SECRET: 's'.repeat(32),
 }
-const installationUrl = `https://api.github.com/user/installations/${env.CMS_GITHUB_APP_INSTALLATION_ID}`
-const installationRepositoriesUrl = `${installationUrl}/repositories?per_page=100`
+const installationId = Number(env.CMS_GITHUB_APP_INSTALLATION_ID)
+const installationsUrl =
+  'https://api.github.com/user/installations?per_page=100'
+const installationRepositoriesUrl = `https://api.github.com/user/installations/${installationId}/repositories?per_page=100`
 
 afterEach(() => {
   globalThis.fetch = originalFetch
@@ -127,9 +129,15 @@ test('callbackはstate・PKCE・installation・repositoryを照合してtokenを
       })
     }
 
-    if (url === installationUrl) {
+    if (url === installationsUrl) {
       return jsonResponse({
-        permissions: { contents: 'write', metadata: 'read' },
+        installations: [
+          {
+            id: installationId,
+            permissions: { contents: 'write', metadata: 'read' },
+          },
+        ],
+        total_count: 1,
       })
     }
 
@@ -180,6 +188,77 @@ test('callbackはstate・PKCE・installation・repositoryを照合してtokenを
     response.headers.get('Set-Cookie'),
     /aceserver_portal_cms_oauth_state=;/,
   )
+})
+
+test('installation一覧の404をcallbackでfail closedにする', async () => {
+  const accessToken = 'ghu_installation-list-404'
+  const attempt = await callbackAttempt(async (url) => {
+    if (url === 'https://github.com/login/oauth/access_token') {
+      return jsonResponse(expiringUserToken(accessToken))
+    }
+
+    assert.equal(url, installationsUrl)
+
+    return jsonResponse({ message: 'Not Found' }, 404)
+  })
+
+  assert.equal(attempt.response.status, 400)
+  assert.doesNotMatch(attempt.html, new RegExp(accessToken))
+  assert.match(attempt.html, /installationを確認できませんでした/)
+})
+
+test('accessible installationが複数あるtokenをcallbackで拒否する', async () => {
+  const accessToken = 'ghu_multiple-installations'
+  const attempt = await callbackAttempt(async (url) => {
+    if (url === 'https://github.com/login/oauth/access_token') {
+      return jsonResponse(expiringUserToken(accessToken))
+    }
+
+    assert.equal(url, installationsUrl)
+
+    return jsonResponse({
+      installations: [
+        {
+          id: installationId,
+          permissions: { contents: 'write', metadata: 'read' },
+        },
+        {
+          id: installationId + 1,
+          permissions: { contents: 'write', metadata: 'read' },
+        },
+      ],
+      total_count: 2,
+    })
+  })
+
+  assert.equal(attempt.response.status, 400)
+  assert.doesNotMatch(attempt.html, new RegExp(accessToken))
+  assert.match(attempt.html, /編集する権限がありません/)
+})
+
+test('設定と異なるinstallation IDをcallbackで拒否する', async () => {
+  const accessToken = 'ghu_wrong-installation'
+  const attempt = await callbackAttempt(async (url) => {
+    if (url === 'https://github.com/login/oauth/access_token') {
+      return jsonResponse(expiringUserToken(accessToken))
+    }
+
+    assert.equal(url, installationsUrl)
+
+    return jsonResponse({
+      installations: [
+        {
+          id: installationId + 1,
+          permissions: { contents: 'write', metadata: 'read' },
+        },
+      ],
+      total_count: 1,
+    })
+  })
+
+  assert.equal(attempt.response.status, 400)
+  assert.doesNotMatch(attempt.html, new RegExp(accessToken))
+  assert.match(attempt.html, /編集する権限がありません/)
 })
 
 test('stateまたはPKCE cookieの改変をGitHubへの通信前に拒否する', async () => {
@@ -237,9 +316,15 @@ test('OAuth App tokenや対象外repositoryをcallbackから返さない', async
       })
     }
 
-    if (url === installationUrl) {
+    if (url === installationsUrl) {
       return jsonResponse({
-        permissions: { contents: 'write', metadata: 'read' },
+        installations: [
+          {
+            id: installationId,
+            permissions: { contents: 'write', metadata: 'read' },
+          },
+        ],
+        total_count: 1,
       })
     }
 
@@ -278,14 +363,20 @@ test('Pull requests writeを含むGitHub App権限をcallbackで拒否する', a
       })
     }
 
-    assert.equal(url, installationUrl)
+    assert.equal(url, installationsUrl)
 
     return jsonResponse({
-      permissions: {
-        contents: 'write',
-        metadata: 'read',
-        pull_requests: 'write',
-      },
+      installations: [
+        {
+          id: installationId,
+          permissions: {
+            contents: 'write',
+            metadata: 'read',
+            pull_requests: 'write',
+          },
+        },
+      ],
+      total_count: 1,
     })
   })
 
@@ -307,9 +398,15 @@ test('対象repositoryへのpush権限がないApp userをcallbackで拒否す�
       })
     }
 
-    if (url === installationUrl) {
+    if (url === installationsUrl) {
       return jsonResponse({
-        permissions: { contents: 'write', metadata: 'read' },
+        installations: [
+          {
+            id: installationId,
+            permissions: { contents: 'write', metadata: 'read' },
+          },
+        ],
+        total_count: 1,
       })
     }
 
@@ -363,6 +460,17 @@ function callbackRequest({ cookieHeader, state }) {
 
 function startAuthorization() {
   return handleAuth({ env, request: authRequest() })
+}
+
+function expiringUserToken(accessToken) {
+  return {
+    access_token: accessToken,
+    expires_in: 3600,
+    refresh_token: 'ghr_refresh-token',
+    refresh_token_expires_in: 3600 * 24,
+    scope: '',
+    token_type: 'bearer',
+  }
 }
 
 function jsonResponse(value, status = 200) {

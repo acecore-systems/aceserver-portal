@@ -23,6 +23,8 @@ const mainSha = 'a'.repeat(40)
 const topicSha = 'b'.repeat(40)
 const oauthToken = 'ghu_test-oauth-token'
 const installationId = 987654321
+const installationsUrl =
+  'https://api.github.com/user/installations?per_page=100'
 const cmsEnv = {
   CMS_GITHUB_APP_INSTALLATION_ID: String(installationId),
 }
@@ -1037,9 +1039,15 @@ function mockGitHub(
       })
     }
 
-    if (url === `https://api.github.com/user/installations/${installationId}`) {
+    if (url === installationsUrl) {
       return jsonResponse({
-        permissions: installationPermissions,
+        installations: [
+          {
+            id: installationId,
+            permissions: installationPermissions,
+          },
+        ],
+        total_count: 1,
       })
     }
 
