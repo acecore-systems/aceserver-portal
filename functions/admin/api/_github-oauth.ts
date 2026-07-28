@@ -1,4 +1,8 @@
 import { CMS_PRODUCTION_HOSTNAME, CMS_REPOSITORY } from './_cms-policy.ts'
+import {
+  CmsOAuthError,
+  verifyRepositoryWriteAccess,
+} from './_github-app-oauth.ts'
 import { GitHubApiError, githubJson, isRecord } from './_github-api.ts'
 
 const AUTH_CACHE_TTL_MS = 5 * 60 * 1000
@@ -21,7 +25,10 @@ const authorizationCache = new Map<
 
 export async function getGitHubEditor(
   request: Request,
-  { fresh = false }: { fresh?: boolean } = {},
+  {
+    fresh = false,
+    installationId,
+  }: { fresh?: boolean; installationId?: number } = {},
 ) {
   if (new URL(request.url).hostname !== CMS_PRODUCTION_HOSTNAME) {
     throw new GitHubApiError('CMS APIは本番サイトでのみ利用できます。', 403)
@@ -73,6 +80,25 @@ export async function getGitHubEditor(
     )
   }
 
+  if (fresh) {
+    if (!installationId) {
+      throw new GitHubApiError(
+        'CMS GitHub App installation設定を確認できません。',
+        503,
+      )
+    }
+
+    try {
+      await verifyRepositoryWriteAccess(token, installationId)
+    } catch (error) {
+      if (error instanceof CmsOAuthError) {
+        throw new GitHubApiError(error.message, error.status)
+      }
+
+      throw error
+    }
+  }
+
   authorizationCache.set(cacheKey, {
     expiresAt: Date.now() + AUTH_CACHE_TTL_MS,
     user,
@@ -89,7 +115,9 @@ function readOAuthToken(authorization: string | null) {
   const match = authorization?.match(/^(?:Bearer|token)\s+(\S+)$/i)
   const token = match?.[1]
 
-  if (!token || token.length > TOKEN_MAX_LENGTH) return null
+  if (!token || !token.startsWith('ghu_') || token.length > TOKEN_MAX_LENGTH) {
+    return null
+  }
 
   return token
 }

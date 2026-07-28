@@ -6,7 +6,7 @@
 - PR タイトルと本文は日本語にし、関連 Issue、概要、確認、補足を簡潔に書く。
 - 差分は目的に必要な範囲に絞り、既存の Astro、TypeScript、UnoCSS、Sveltia CMS 構成を尊重する。
 - CMS content の shape は `src/content.config.ts` を正とし、横断制約は `npm run validate:content` で確認する。
-- CMS 認証は GitHub 認証型とし、保存は同一origin proxyがCMS管理対象だけをexpected HEAD付きで `main` へ直接commitする。source code、schema、CMS設定、workflowは従来どおりPRとCIを使う。
+- CMS 認証はPortal専用GitHub Appのsame-origin OAuth（PKCE S256）とし、保存は同一origin proxyがinstallation・repository・push・Contents-only権限を再検証して、CMS管理対象だけをexpected HEAD付きで `main` へ直接commitする。source code、schema、CMS設定、workflowは従来どおりPRとCIを使う。
 - サイト出力に影響する変更では `npm run build` を実行する。
 - CMS/content/schema/route/link に関わる変更では `npm run format:check`、`npm run validate:content`、`npm run build` を確認する。
 - docs/template のみなら対象ファイルの format check と `git diff --check` を行う。

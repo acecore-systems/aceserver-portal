@@ -18,13 +18,13 @@
 - 複数ファイルをまたぐ制約（slug とファイル名、内部リンク、CMS config の公開フィールドなど）は `npm run validate:content` で確認する。
 - 公開 URL は `slug` ベースの route を正とし、CMS editable content に `path` を戻さない。
 - `main` は本番ソースの唯一の正とし、Cloudflare Pages の production deploy 元も GitHub 連携の `main` にする。
-- このリポジトリの CMS 認証は GitHub 認証型とする。Cloudflare Access を前段に置く場合も、保存認証は GitHub OAuth Worker を使う。
+- このリポジトリの CMS 認証は GitHub 認証型とする。Cloudflare Access を前段に置く場合も、保存認証はPortal専用GitHub Appのsame-origin OAuth（PKCE S256）を使う。
 - CMS のpublication branchは `main` にし、同一originのREST / GraphQL proxyがGitHub user、repository権限、書き込みpath、最新HEADを検証して、CMS管理対象だけをexpected HEAD付きの1 commitで `main` へ直接保存する。
 - Sveltia CMSではEditorial Workflowが未実装のため、`publish_mode: editorial_workflow` の設定だけで保存経路を成立させたと判断しない。
 - Cherry / HattのCloudflare Access認証型とは認証情報とbackend actorを共用しない。content-only制約とatomicなdirect commitという書き込み方針だけを揃える。
 - `cms-content` のような恒久的な CMS 投稿受け皿 branch は使わない。
 - source code、schema、CMS設定、workflowの変更はPRとCIを通して `main` に入れる。direct commitはproxy allowlist内のCMSコンテンツとメディアだけに限定する。
-- GitHub認証型でbackend actorをGitHub Appへ分離する場合も、Appとprivate keyはrepository単位で分離する。
+- GitHub Appはrepository単位で分離し、Portalでは期限付きのGitHub App user access tokenを保存actorに使う。App private keyはPagesへ配布しない。
 
 ## 検証
 

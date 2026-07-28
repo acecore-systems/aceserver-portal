@@ -227,10 +227,23 @@ async function validateCmsConfig() {
     path.join(root, 'functions/admin/api/_github-oauth.ts'),
     'utf8',
   )
+  const appOAuth = await readFile(
+    path.join(root, 'functions/admin/api/_github-app-oauth.ts'),
+    'utf8',
+  )
+  const authRoute = await readFile(
+    path.join(root, 'functions/admin/api/auth.ts'),
+    'utf8',
+  )
+  const callbackRoute = await readFile(
+    path.join(root, 'functions/admin/api/callback.ts'),
+    'utf8',
+  )
   const configFunction = await readFile(
     path.join(root, 'functions/admin/config.yml.ts'),
     'utf8',
   )
+  const headers = await readFile(path.join(root, 'public/_headers'), 'utf8')
   const adminPage = await readFile(
     path.join(root, 'src/pages/admin/index.astro'),
     'utf8',
@@ -242,6 +255,16 @@ async function validateCmsConfig() {
 
   if (/name:\s*path\b/.test(config)) {
     fail(scope, 'page path field must not be exposed in CMS')
+  }
+  if (
+    !/backend:\s*[\s\S]*?\n\s+repo:\s+acecore-systems\/aceserver-portal\b/.test(
+      config,
+    )
+  ) {
+    fail(
+      scope,
+      'CMS backend repository must be acecore-systems/aceserver-portal',
+    )
   }
   if (!/backend:\s*[\s\S]*?\n\s+branch:\s*main\b/.test(config)) {
     fail(
@@ -256,10 +279,15 @@ async function validateCmsConfig() {
     )
   }
   if (
+    !/^\s+base_url:\s+https:\/\/asv\.acecore\.net\/admin\/api$/m.test(config) ||
+    !/^\s+auth_endpoint:\s+auth$/m.test(config) ||
     !config.includes('api_root: /admin/api/github') ||
     !config.includes('graphql_api_root: /admin/api/graphql')
   ) {
-    fail(scope, 'CMS must use the same-origin GitHub REST and GraphQL proxy')
+    fail(
+      scope,
+      'CMS must use the same-origin GitHub App auth, REST, and GraphQL endpoints',
+    )
   }
   if (
     !graphql.includes('branchName: CMS_REPOSITORY.branch') ||
@@ -276,11 +304,41 @@ async function validateCmsConfig() {
   }
   if (
     !oauth.includes('repository.permissions.push !== true') ||
-    !oauth.includes("path: '/user'")
+    !oauth.includes("path: '/user'") ||
+    !oauth.includes("token.startsWith('ghu_')") ||
+    !oauth.includes('verifyRepositoryWriteAccess(token, installationId)') ||
+    !oauth.includes('CMS_PRODUCTION_HOSTNAME')
   ) {
     fail(
       scope,
-      'CMS proxy must validate the GitHub user and repository write access',
+      'CMS proxy must require a GitHub App user token and revalidate repository write access',
+    )
+  }
+  if (
+    !appOAuth.includes("data.access_token.startsWith('ghu_')") ||
+    !appOAuth.includes("data.scope === ''") ||
+    !appOAuth.includes("url.searchParams.set('code_challenge'") ||
+    !appOAuth.includes('code_verifier: codeVerifier') ||
+    !appOAuth.includes('repository_id: String(GITHUB_REPOSITORY_ID)') ||
+    !appOAuth.includes('/user/installations/${installationId}/repositories') ||
+    !appOAuth.includes('data?.total_count !== 1') ||
+    !appOAuth.includes("permissions?.contents !== 'write'") ||
+    !appOAuth.includes('event.origin !== openerOrigin') ||
+    appOAuth.includes("postMessage(probe, '*')")
+  ) {
+    fail(
+      scope,
+      'CMS auth must require PKCE, an expiring ghu_ token, and one Contents-only repository installation',
+    )
+  }
+  if (
+    !authRoute.includes('url.hostname !== CMS_PRODUCTION_HOSTNAME') ||
+    !callbackRoute.includes('url.hostname !== CMS_PRODUCTION_HOSTNAME') ||
+    headers.includes('sveltia-cms-auth.sparkling-tree-7cef.workers.dev')
+  ) {
+    fail(
+      scope,
+      'CMS auth routes must be production-only without the shared OAuth Worker',
     )
   }
   if (

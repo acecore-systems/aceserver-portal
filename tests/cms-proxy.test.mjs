@@ -15,13 +15,17 @@ import {
 import { validateCmsAddition } from '../functions/admin/api/_content-validation.ts'
 import { clearGitHubEditorCacheForTests } from '../functions/admin/api/_github-oauth.ts'
 import { onRequestGet as handleCmsConfig } from '../functions/admin/config.yml.ts'
-import { onRequestPost as handleGraphql } from '../functions/admin/api/graphql.ts'
+import { onRequestPost as handleGraphqlRequest } from '../functions/admin/api/graphql.ts'
 import { onRequest as handleGithubRest } from '../functions/admin/api/github/[[path]].ts'
 
 const originalFetch = globalThis.fetch
 const mainSha = 'a'.repeat(40)
 const topicSha = 'b'.repeat(40)
-const oauthToken = 'test-oauth-token'
+const oauthToken = 'ghu_test-oauth-token'
+const installationId = 987654321
+const cmsEnv = {
+  CMS_GITHUB_APP_INSTALLATION_ID: String(installationId),
+}
 const repositoryApi = `https://api.github.com/repos/${CMS_REPOSITORY.owner}/${CMS_REPOSITORY.name}`
 const contentPath =
   CMS_REPOSITORY.name === 'acecore-net'
@@ -63,6 +67,9 @@ const editor = {
   name: 'Editor',
   type: 'User',
 }
+
+const handleGraphql = (context) =>
+  handleGraphqlRequest({ env: cmsEnv, ...context })
 
 afterEach(() => {
   globalThis.fetch = originalFetch
@@ -279,6 +286,23 @@ test('GitHub OAuth認証がないrequestを拒否する', async () => {
   assert.equal(called, false)
 })
 
+test('GitHub App user token以外をGitHubへの通信前に拒否する', async () => {
+  let called = false
+  globalThis.fetch = async () => {
+    called = true
+    throw new Error('GitHub must not be called')
+  }
+
+  const response = await handleGraphql({
+    request: graphqlRequest({
+      authorization: 'Bearer github_pat_broad-token',
+    }),
+  })
+
+  assert.equal(response.status, 401)
+  assert.equal(called, false)
+})
+
 test('previewのCMS APIをGitHubへの通信前に拒否する', async () => {
   let called = false
   globalThis.fetch = async () => {
@@ -343,6 +367,27 @@ test('保存直前にGitHub userのpush権限を再確認する', async () => {
   assert.equal(response.status, 403)
   assert.equal(repositoryReads, 2)
   assert.match((await response.json()).message, /write権限/)
+})
+
+test('保存直前にPull requests writeを持つGitHub Appを拒否する', async () => {
+  mockGitHub(
+    async () => {
+      throw new Error('CMS mutation must not continue')
+    },
+    true,
+    {
+      contents: 'write',
+      metadata: 'read',
+      pull_requests: 'write',
+    },
+  )
+
+  const response = await handleGraphql({
+    request: graphqlRequest(),
+  })
+
+  assert.equal(response.status, 503)
+  assert.match((await response.json()).message, /Contents write以外のwrite権限/)
 })
 
 test('Sveltia CMS 0.172のlast-commit queryを許可する', async () => {
@@ -969,7 +1014,11 @@ test('REST writeを認証前に拒否する', async () => {
   assert.equal(called, false)
 })
 
-function mockGitHub(handler, push = true) {
+function mockGitHub(
+  handler,
+  push = true,
+  installationPermissions = { contents: 'write', metadata: 'read' },
+) {
   globalThis.fetch = async (input, init = {}) => {
     const url = String(input)
     const body = typeof init.body === 'string' ? JSON.parse(init.body) : null
@@ -985,6 +1034,28 @@ function mockGitHub(handler, push = true) {
     if (url === repositoryApi) {
       return jsonResponse({
         permissions: { push: typeof push === 'function' ? push() : push },
+      })
+    }
+
+    if (url === `https://api.github.com/user/installations/${installationId}`) {
+      return jsonResponse({
+        permissions: installationPermissions,
+      })
+    }
+
+    if (
+      url ===
+      `https://api.github.com/user/installations/${installationId}/repositories?per_page=100`
+    ) {
+      return jsonResponse({
+        repositories: [
+          {
+            full_name: `${CMS_REPOSITORY.owner}/${CMS_REPOSITORY.name}`,
+            id: 550360134,
+            permissions: { push: true },
+          },
+        ],
+        total_count: 1,
       })
     }
 
