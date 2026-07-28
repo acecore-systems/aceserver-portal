@@ -34,7 +34,7 @@ CMS管理対象外のsource code、schema、CMS設定、workflowはdirect commit
 - `public/admin/config.yml` の `files` に列挙した `src/content/site/*.json`
 - `public/uploads/**` の許可済み画像形式
 
-schema、workflow、source codeなど上記以外はproxyが拒否します。固定JSONは更新だけを許可し、削除できるのは許可済みメディアだけです。1回の保存は最大100ファイル、追加データ合計25 MiBです。
+schema、workflow、source codeなど上記以外はproxyが拒否します。参照中画像を誤って消さないよう、CMSからの削除はJSON・画像とも拒否します。不要画像の削除は参照確認を含む通常のPull Requestで行います。1回の保存は最大100ファイル、追加データ合計25 MiBです。
 
 ## 認証方式の境界
 

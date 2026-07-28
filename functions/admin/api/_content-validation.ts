@@ -12,6 +12,7 @@ import worldMapSeasonA from '../../../src/content/pages/world-map-season-a.json'
 import worldMapSeasonAC from '../../../src/content/pages/world-map-season-a-c.json' with { type: 'json' }
 import worldMapSigen from '../../../src/content/pages/world-map-sigen.json' with { type: 'json' }
 import youtubeSearch from '../../../src/content/pages/youtube-search-aceserver.json' with { type: 'json' }
+import { validatePortalContentFile } from '../../../src/data/content-schemas.ts'
 
 const MAX_JSON_BYTES = 1024 * 1024
 const MAX_MEDIA_BYTES = 10 * 1024 * 1024
@@ -90,7 +91,7 @@ export function validateCmsAddition(
       return { ok: false, message: 'JSON schemaが登録されていません。' }
     }
 
-    const error = validateJson(bytes, baseline)
+    const error = validateJson(path, bytes, baseline)
 
     if (error) return { ok: false, message: error }
   } else {
@@ -112,7 +113,7 @@ export function validateCmsAddition(
   }
 }
 
-function validateJson(bytes: Uint8Array, baseline: unknown) {
+function validateJson(path: string, bytes: Uint8Array, baseline: unknown) {
   let text: string
 
   try {
@@ -136,7 +137,13 @@ function validateJson(bytes: Uint8Array, baseline: unknown) {
     return 'JSONの構文が不正です。'
   }
 
-  return validateValue(value, baseline, '$', 0, { nodes: 0 })
+  const structuralError = validateValue(value, baseline, '$', 0, { nodes: 0 })
+
+  if (structuralError) return structuralError
+
+  const contentResult = validatePortalContentFile(path, value)
+
+  return contentResult.ok ? null : contentResult.message
 }
 
 function validateValue(

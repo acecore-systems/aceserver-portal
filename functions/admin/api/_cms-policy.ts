@@ -83,11 +83,8 @@ export function isAllowedCmsWritePath(path: string) {
 }
 
 export function isAllowedCmsDeletePath(path: string) {
-  return (
-    normalizeCmsPath(path) === path &&
-    path.startsWith(MEDIA_PREFIX) &&
-    MEDIA_EXTENSIONS.has(getExtension(path))
-  )
+  void path
+  return false
 }
 
 export function isAllowedCmsDirectoryPath(path: string) {

@@ -77,13 +77,22 @@ test('CMS対象pathだけを許可する', () => {
   assert.equal(isAllowedCmsWritePath('public/uploads/example.png'), true)
   assert.equal(isAllowedCmsWritePath('public/uploads/example.svg'), false)
   assert.equal(isAllowedCmsWritePath('public/uploads/example.pdf'), false)
-  assert.equal(isAllowedCmsDeletePath('public/uploads/example.png'), true)
+  assert.equal(isAllowedCmsDeletePath('public/uploads/example.png'), false)
   assert.equal(isAllowedCmsDeletePath(contentPath), false)
   assert.equal(isAllowedCmsWritePath(rejectedPath), false)
   assert.equal(isAllowedCmsWritePath(unlistedContentPath), false)
   assert.equal(isAllowedCmsWritePath('README.md'), false)
   assert.equal(isAllowedCmsWritePath('../README.md'), false)
   assert.equal(isAllowedCmsWritePath(`${contentPath}\nREADME.md`), false)
+})
+
+test('CMSの公開案内で画像削除をPull Requestへ案内する', async () => {
+  const adminInit = await readFile(
+    new URL('../public/admin/init.js', import.meta.url),
+    'utf8',
+  )
+
+  assert.match(adminInit, /画像の削除は参照確認を伴うPull Request/)
 })
 
 test('現行mainの全CMS対象ファイルを同期validatorが受理する', async () => {
@@ -177,6 +186,52 @@ test('optional fieldの省略を許可し、iframe srcはHTTPSに限定する', 
       ).ok,
       false,
       dangerousUrl,
+    )
+  }
+})
+
+test('Astroと共有するschemaで必須配列・enum・未知key・section固有shapeを拒否する', async () => {
+  const topValue = JSON.parse(
+    await readFile(new URL(`../${contentPath}`, import.meta.url), 'utf8'),
+  )
+  const invalidValues = [
+    { ...topValue, sections: [] },
+    { ...topValue, slug: 'renamed-top' },
+    { ...topValue, layout: '../../secret' },
+    {
+      ...topValue,
+      sections: [
+        {
+          type: 'iframe',
+          src: 'https://example.com/map',
+          titleCopy: 'iframeでは許可されないfield',
+        },
+      ],
+    },
+    {
+      ...topValue,
+      sections: [
+        {
+          type: 'iframe',
+          src: 'https://example.com/map',
+          variant: 'script',
+        },
+      ],
+    },
+    {
+      ...topValue,
+      sections: [{ ...topValue.sections[0], imageAlt: '' }],
+    },
+  ]
+
+  for (const value of invalidValues) {
+    assert.equal(
+      validateCmsAddition(
+        contentPath,
+        Buffer.from(JSON.stringify(value)).toString('base64'),
+      ).ok,
+      false,
+      JSON.stringify(value),
     )
   }
 })
@@ -775,6 +830,37 @@ test('必須JSONの削除をGitHubへ送らない', async () => {
             deletions: [{ path: contentPath }],
           },
           message: { headline: 'cms: delete blocked' },
+        },
+      },
+    }),
+  })
+
+  assert.equal(response.status, 403)
+  assert.equal(cmsOperationCalled, false)
+})
+
+test('参照確認できない画像削除をGitHubへ送らない', async () => {
+  let cmsOperationCalled = false
+
+  mockGitHub(async () => {
+    cmsOperationCalled = true
+    throw new Error('CMS operation must not continue')
+  })
+
+  const response = await handleGraphql({
+    request: graphqlRequest({
+      variables: {
+        input: {
+          branch: {
+            repositoryNameWithOwner: `${CMS_REPOSITORY.owner}/${CMS_REPOSITORY.name}`,
+            branchName: 'main',
+          },
+          expectedHeadOid: mainSha,
+          fileChanges: {
+            additions: [],
+            deletions: [{ path: 'public/uploads/unused.png' }],
+          },
+          message: { headline: 'cms: delete blocked image' },
         },
       },
     }),

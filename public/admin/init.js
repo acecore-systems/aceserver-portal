@@ -14,7 +14,8 @@ const noticeClose = document.createElement('button')
 notice.className = 'cms-publish-notice'
 notice.setAttribute('aria-label', 'CMSの公開方法')
 noticeTitle.textContent = '保存すると自動で公開されます'
-noticeBody.textContent = '通常は数分でサイトに反映されます。'
+noticeBody.textContent =
+  '通常は数分でサイトに反映されます。画像の削除は参照確認を伴うPull Requestで行います。'
 noticeClose.className = 'cms-publish-notice__close'
 noticeClose.type = 'button'
 noticeClose.setAttribute('aria-label', '公開方法の案内を閉じる')

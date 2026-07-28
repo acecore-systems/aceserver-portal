@@ -2,6 +2,8 @@ import { readdir, readFile } from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
+import { validatePortalContentFile } from '../src/data/content-schemas.ts'
+
 const root = path.resolve(fileURLToPath(new URL('..', import.meta.url)))
 const errors = []
 
@@ -12,7 +14,14 @@ function fail(scope, message) {
 async function readJson(relativePath) {
   const filePath = path.join(root, relativePath)
   try {
-    return JSON.parse(await readFile(filePath, 'utf8'))
+    const value = JSON.parse(await readFile(filePath, 'utf8'))
+    const validation = validatePortalContentFile(relativePath, value)
+
+    if (!validation.ok) {
+      fail(relativePath, validation.message)
+    }
+
+    return value
   } catch (error) {
     fail(relativePath, `invalid JSON (${error.message})`)
     return undefined
@@ -283,7 +292,8 @@ async function validateCmsConfig() {
   if (
     !adminPage.includes('href="/admin/cms-notice.css"') ||
     !adminInit.includes('保存すると自動で公開されます') ||
-    !adminInit.includes('通常は数分でサイトに反映されます。')
+    !adminInit.includes('通常は数分でサイトに反映されます。') ||
+    !adminInit.includes('画像の削除は参照確認を伴うPull Request')
   ) {
     fail(scope, 'CMS must explain that saving publishes automatically')
   }
