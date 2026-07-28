@@ -55,7 +55,7 @@ Sveltia CMS では `src/content/pages/*.json` と `src/content/site/*.json` を�
 
 告知は CMS の「告知」から編集します。表示/非表示、表示順、表示トーン、リンク、表示期間を `src/content/site/announcements.json` で管理します。表示期間は訪問者のブラウザ時刻で判定するため、デプロイ後も時刻到達時に切り替わります。
 
-Cloudflare Pages のproduction / previewでは、build前に `public/admin/runtime-config.js` を生成してSveltia CMSを手動初期化します。CMSのpublication branchは常に `main` で、previewから保存した場合も短命branchと `main` 向けPRを作ります。生成ファイルはGit管理対象外です。
+Cloudflare Pages のproduction / previewでは、build前に `public/admin/runtime-config.js` を生成してSveltia CMSを手動初期化します。CMSのpublication branchは常に `main` です。保存時は同一origin proxyがCMS管理対象だけを最新の `main` へ直接commitし、Cloudflare PagesのGitHub連携がproduction deployを開始します。生成ファイルはGit管理対象外です。
 
 ## アルファくん AI 案内チャット
 
@@ -72,17 +72,17 @@ Cloudflare Pages 側では `wrangler.jsonc` を設定の正とし、acecore-net 
 
 本番custom domainの `/api/alpha-chat` へのPOSTは、`acecore.net` zoneのCloudflare WAF rate limiting rule `Rate limit Aceserver Alpha chat` で保護します。IP・colo単位で10秒に5 requestまでとし、超過時は10秒blockします。このruleはrepository外のCloudflare設定なので、zoneを再作成した場合は再設定してください。`pages.dev` のpreview URLはこのzone-level ruleの対象外です。
 
-### 本番 CMS の保存と PR 反映
+### 本番 CMS の保存と公開
 
 - 本番ソースの正は `main` です。Cloudflare Pages の production deploy 元も GitHub 連携の `main` にします。
 - Sveltia CMS は `backend.branch: main` と同一originのGitHub API proxyで運用します。現行SveltiaではEditorial Workflowが未実装のため、`publish_mode` には依存しません。
-- proxyがGitHub OAuth userのwrite権限と変更pathを検証し、保存ごとに `cms/aceserver/*` の短命branchとPRを作ります。`main` へ直接commitしません。
-- 恒久的な `cms-content` 投稿受け皿 branch は使いません。
-- PR CI では `npm run format:check`、`npm run validate:content`、`npm run build` を実行します。
-- CMS PR が `main` に merge されると、Cloudflare Pages が GitHub `main` push を受けて production deploy します。
-- 旧 remote `cms-content` branch は未反映差分がないことを確認して削除済みです。
+- proxyがGitHub OAuth userのwrite権限、変更path、ファイル数、容量、最新HEADを検証し、CMS管理対象のコンテンツとメディアだけを `main` へ1 commitで直接保存します。必須JSONの削除は許可せず、削除できるのはメディアだけです。
+- `expectedHeadOid` が最新の `main` と一致しない場合は保存せず、CMSの再読み込みを求めます。
+- 通信結果が不明な場合は同じcommitを再送せず、固有のrequest IDをGitHub履歴と照合して成功を判定します。
+- `main` pushを受けてCloudflare Pagesがproduction deployします。保存後は通常数分で公開サイトへ反映されます。
+- source code、schema、CMS設定、workflowの変更はCMS proxyの許可対象外です。従来どおりbranchとPRを作り、CIの `format:check`、`validate:content`、`build` を通してからmergeします。
 
-運用判断と廃止条件は [docs/cms-write-workflow.md](docs/cms-write-workflow.md) を参照してください。
+詳しい境界と障害時の扱いは [docs/cms-write-workflow.md](docs/cms-write-workflow.md) を参照してください。
 
 ## 環境変数
 

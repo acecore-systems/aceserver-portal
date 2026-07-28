@@ -222,6 +222,14 @@ async function validateCmsConfig() {
     path.join(root, 'functions/admin/config.yml.ts'),
     'utf8',
   )
+  const adminPage = await readFile(
+    path.join(root, 'src/pages/admin/index.astro'),
+    'utf8',
+  )
+  const adminInit = await readFile(
+    path.join(root, 'public/admin/init.js'),
+    'utf8',
+  )
 
   if (/name:\s*path\b/.test(config)) {
     fail(scope, 'page path field must not be exposed in CMS')
@@ -235,7 +243,7 @@ async function validateCmsConfig() {
   if (/^publish_mode:\s*editorial_workflow\b/m.test(config)) {
     fail(
       scope,
-      'Sveltia CMS does not implement editorial_workflow; use the validated PR proxy',
+      'Sveltia CMS does not implement editorial_workflow; use the restricted same-origin proxy',
     )
   }
   if (
@@ -245,13 +253,16 @@ async function validateCmsConfig() {
     fail(scope, 'CMS must use the same-origin GitHub REST and GraphQL proxy')
   }
   if (
-    !graphql.includes('createCmsBranch') ||
-    !graphql.includes('cms/aceserver/') ||
-    !graphql.includes('/pulls')
+    !graphql.includes('branchName: CMS_REPOSITORY.branch') ||
+    !graphql.includes('expectedHeadOid: mainSha') ||
+    !graphql.includes('CMS-Request-ID:') ||
+    !graphql.includes('findCommittedRequest') ||
+    graphql.includes('createCmsBranch') ||
+    graphql.includes('/pulls')
   ) {
     fail(
       scope,
-      'CMS writes must create a short-lived cms/aceserver branch and PR',
+      'CMS writes must atomically commit allowed content directly to the expected main HEAD',
     )
   }
   if (
@@ -268,6 +279,13 @@ async function validateCmsConfig() {
     !configFunction.includes('$1${origin}/admin/api/graphql')
   ) {
     fail(scope, 'CMS runtime config must use the deployment origin proxy')
+  }
+  if (
+    !adminPage.includes('href="/admin/cms-notice.css"') ||
+    !adminInit.includes('保存すると自動で公開されます') ||
+    !adminInit.includes('通常は数分でサイトに反映されます。')
+  ) {
+    fail(scope, 'CMS must explain that saving publishes automatically')
   }
 }
 
