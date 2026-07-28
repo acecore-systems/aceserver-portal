@@ -4,6 +4,7 @@ import { afterEach, test } from 'node:test'
 
 import {
   CMS_REPOSITORY,
+  isAllowedCmsDeletePath,
   isAllowedCmsDirectoryPath,
   isAllowedCmsWritePath,
 } from '../functions/admin/api/_cms-policy.ts'
@@ -13,10 +14,9 @@ import { onRequest as handleGithubRest } from '../functions/admin/api/github/[[p
 
 const originalFetch = globalThis.fetch
 const mainSha = 'a'.repeat(40)
+const topicSha = 'b'.repeat(40)
 const oauthToken = 'test-oauth-token'
 const repositoryApi = `https://api.github.com/repos/${CMS_REPOSITORY.owner}/${CMS_REPOSITORY.name}`
-const branchPrefix =
-  CMS_REPOSITORY.name === 'acecore-net' ? 'cms/acecore/' : 'cms/aceserver/'
 const contentPath =
   CMS_REPOSITORY.name === 'acecore-net'
     ? 'src/content/blog/example.md'
@@ -60,6 +60,8 @@ test('CMS対象pathだけを許可する', () => {
     assert.equal(isAllowedCmsWritePath(path), true)
   }
   assert.equal(isAllowedCmsWritePath('public/uploads/example.png'), true)
+  assert.equal(isAllowedCmsDeletePath('public/uploads/example.png'), true)
+  assert.equal(isAllowedCmsDeletePath(contentPath), false)
   assert.equal(isAllowedCmsWritePath(rejectedPath), false)
   assert.equal(isAllowedCmsWritePath(unlistedContentPath), false)
   assert.equal(isAllowedCmsWritePath('README.md'), false)
@@ -232,9 +234,8 @@ test('Sveltia CMS 0.172のcontent queryをCMS対象blobだけ許可する', asyn
   assert.equal(response.status, 200)
 })
 
-test('画像と本文を同じ短期branchの1 commit・1 PRに保存する', async () => {
+test('画像と本文をexpected HEAD付きの1 commitでmainへ直接保存する', async () => {
   const calls = []
-  let cmsBranch = ''
 
   mockGitHub(async (url, init, body) => {
     calls.push({ url, init, body })
@@ -243,32 +244,29 @@ test('画像と本文を同じ短期branchの1 commit・1 PRに保存する', as
       return jsonResponse({ object: { sha: mainSha } })
     }
 
-    if (url.endsWith('/git/refs')) {
-      cmsBranch = body.ref.replace('refs/heads/', '')
-      assert.match(cmsBranch, new RegExp(`^${branchPrefix}`))
-      assert.equal(body.sha, mainSha)
-
-      return jsonResponse({ ref: body.ref, object: { sha: mainSha } }, 201)
-    }
-
     if (url.endsWith('/graphql')) {
       assert.match(body.query, /mutation CmsCommit/)
       assert.equal(
         body.variables.input.branch.repositoryNameWithOwner,
         `${CMS_REPOSITORY.owner}/${CMS_REPOSITORY.name}`,
       )
-      assert.equal(body.variables.input.branch.branchName, cmsBranch)
+      assert.equal(body.variables.input.branch.branchName, 'main')
       assert.equal(body.variables.input.expectedHeadOid, mainSha)
       assert.deepEqual(
         body.variables.input.fileChanges.additions.map(({ path }) => path),
         ['public/uploads/example.png', contentPath],
+      )
+      assert.match(body.variables.input.message.body, /CMS editor: @editor/)
+      assert.match(
+        body.variables.input.message.body,
+        /CMS-Request-ID: [0-9a-f-]+/,
       )
 
       return jsonResponse({
         data: {
           createCommitOnBranch: {
             commit: {
-              oid: 'b'.repeat(40),
+              oid: topicSha,
               committedDate: '2026-07-20T00:00:00Z',
               file_0: { oid: 'c'.repeat(40) },
               file_1: { oid: 'd'.repeat(40) },
@@ -276,18 +274,6 @@ test('画像と本文を同じ短期branchの1 commit・1 PRに保存する', as
           },
         },
       })
-    }
-
-    if (url.endsWith('/pulls')) {
-      assert.equal(body.head, cmsBranch)
-      assert.equal(body.base, 'main')
-      assert.match(body.body, /GitHub user: @editor/)
-      assert.match(body.body, new RegExp(contentPath.replaceAll('/', '\\/')))
-
-      return jsonResponse(
-        { number: 91, html_url: 'https://github.com/example/pull/91' },
-        201,
-      )
     }
 
     throw new Error(`Unexpected GitHub request: ${url}`)
@@ -323,9 +309,181 @@ test('画像と本文を同じ短期branchの1 commit・1 PRに保存する', as
   const result = await response.json()
 
   assert.equal(response.status, 200)
-  assert.equal(result.extensions.cms.branch, cmsBranch)
-  assert.equal(result.extensions.cms.pull_request.number, 91)
-  assert.equal(calls.length, 4)
+  assert.equal(result.data.createCommitOnBranch.commit.oid, topicSha)
+  assert.deepEqual(result.extensions.cms, {
+    branch: 'main',
+    publication: {
+      mode: 'direct',
+      published: true,
+    },
+  })
+  assert.equal(calls.length, 2)
+})
+
+test('commit応答が不明でも固有ID付きmain commitから成功応答へ復旧する', async () => {
+  const contentBlobSha = 'c'.repeat(40)
+  let requestId = ''
+  let mutationCount = 0
+
+  mockGitHub(async (url, _init, body) => {
+    if (url.endsWith('/git/ref/heads/main')) {
+      return jsonResponse({ object: { sha: mainSha } })
+    }
+
+    if (url.endsWith('/graphql')) {
+      mutationCount += 1
+      requestId = body.variables.input.message.body
+        .split('\n')
+        .find((line) => line.startsWith('CMS-Request-ID: '))
+        .slice('CMS-Request-ID: '.length)
+      throw new Error('Commit response was lost')
+    }
+
+    if (url.includes('/commits?sha=main&per_page=20')) {
+      return jsonResponse([
+        {
+          sha: topicSha,
+          commit: {
+            message: `cms: update ${contentPath}\n\nCMS editor: @editor\nCMS-Request-ID: ${requestId}`,
+            committer: { date: '2026-07-20T00:00:00Z' },
+          },
+          parents: [{ sha: mainSha }],
+        },
+      ])
+    }
+
+    if (url.includes(`/git/trees/${topicSha}?recursive=1`)) {
+      return jsonResponse({
+        sha: topicSha,
+        truncated: false,
+        tree: [
+          {
+            mode: '100644',
+            path: contentPath,
+            sha: contentBlobSha,
+            type: 'blob',
+          },
+        ],
+      })
+    }
+
+    throw new Error(`Unexpected GitHub request: ${url}`)
+  })
+
+  const response = await handleGraphql({ request: graphqlRequest() })
+  const result = await response.json()
+
+  assert.equal(response.status, 200)
+  assert.equal(mutationCount, 1)
+  assert.deepEqual(result.data.createCommitOnBranch.commit, {
+    oid: topicSha,
+    committedDate: '2026-07-20T00:00:00Z',
+    file_0: { oid: contentBlobSha },
+  })
+  assert.equal(result.extensions.cms.publication.published, true)
+})
+
+test('commit応答不明時にmainが別commitへ進んでいれば再保存を促さない', async () => {
+  let requestId = ''
+  let mutationCount = 0
+
+  mockGitHub(async (url, _init, body) => {
+    if (url.endsWith('/git/ref/heads/main')) {
+      return jsonResponse({ object: { sha: mainSha } })
+    }
+
+    if (url.endsWith('/graphql')) {
+      mutationCount += 1
+      requestId = body.variables.input.message.body
+      throw new Error('Commit response was lost')
+    }
+
+    if (url.includes('/commits?sha=main&per_page=20')) {
+      assert.match(requestId, /CMS-Request-ID:/)
+      return jsonResponse([
+        {
+          sha: topicSha,
+          commit: {
+            message: 'unrelated commit',
+            committer: { date: '2026-07-20T00:00:00Z' },
+          },
+          parents: [{ sha: mainSha }],
+        },
+      ])
+    }
+
+    throw new Error(`Unexpected GitHub request: ${url}`)
+  })
+
+  const response = await handleGraphql({ request: graphqlRequest() })
+  const result = await response.json()
+
+  assert.equal(response.status, 409)
+  assert.equal(mutationCount, 1)
+  assert.match(result.message, /保存結果は確認できない/)
+})
+
+test('GitHubがcommit失敗を返した場合もmutationを再送しない', async () => {
+  let mutationCount = 0
+  let historyLookupCount = 0
+
+  mockGitHub(async (url) => {
+    if (url.endsWith('/git/ref/heads/main')) {
+      return jsonResponse({ object: { sha: mainSha } })
+    }
+
+    if (url.endsWith('/graphql')) {
+      mutationCount += 1
+      return jsonResponse({
+        errors: [{ message: 'Expected head oid does not match' }],
+      })
+    }
+
+    if (url.includes('/commits?sha=main&per_page=20')) {
+      historyLookupCount += 1
+      return jsonResponse([
+        {
+          sha: mainSha,
+          commit: {
+            message: 'existing commit',
+            committer: { date: '2026-07-20T00:00:00Z' },
+          },
+          parents: [{ sha: '0'.repeat(40) }],
+        },
+      ])
+    }
+
+    throw new Error(`Unexpected GitHub request: ${url}`)
+  })
+
+  const response = await handleGraphql({ request: graphqlRequest() })
+  const result = await response.json()
+
+  assert.equal(response.status, 502)
+  assert.equal(mutationCount, 1)
+  assert.equal(historyLookupCount, 1)
+  assert.match(result.message, /Expected head oid does not match/)
+})
+
+test('保存直前にmain HEADが変わっていればcommitを作成しない', async () => {
+  let mutationCalled = false
+
+  mockGitHub(async (url) => {
+    if (url.endsWith('/git/ref/heads/main')) {
+      return jsonResponse({ object: { sha: topicSha } })
+    }
+
+    if (url.endsWith('/graphql')) mutationCalled = true
+
+    throw new Error(`Unexpected GitHub request: ${url}`)
+  })
+
+  const response = await handleGraphql({ request: graphqlRequest() })
+  const result = await response.json()
+
+  assert.equal(response.status, 409)
+  assert.equal(mutationCalled, false)
+  assert.match(result.message, /mainが更新されています/)
 })
 
 test('CMS管理対象外の保存をGitHubへ送らない', async () => {
@@ -355,6 +513,37 @@ test('CMS管理対象外の保存をGitHubへ送らない', async () => {
             deletions: [],
           },
           message: { headline: 'cms: update blocked' },
+        },
+      },
+    }),
+  })
+
+  assert.equal(response.status, 403)
+  assert.equal(cmsOperationCalled, false)
+})
+
+test('必須JSONの削除をGitHubへ送らない', async () => {
+  let cmsOperationCalled = false
+
+  mockGitHub(async () => {
+    cmsOperationCalled = true
+    throw new Error('CMS operation must not continue')
+  })
+
+  const response = await handleGraphql({
+    request: graphqlRequest({
+      variables: {
+        input: {
+          branch: {
+            repositoryNameWithOwner: `${CMS_REPOSITORY.owner}/${CMS_REPOSITORY.name}`,
+            branchName: 'main',
+          },
+          expectedHeadOid: mainSha,
+          fileChanges: {
+            additions: [],
+            deletions: [{ path: contentPath }],
+          },
+          message: { headline: 'cms: delete blocked' },
         },
       },
     }),
