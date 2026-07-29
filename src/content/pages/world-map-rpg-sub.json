@@ -1,10 +1,10 @@
 {
   "slug": "world-map-rpg-sub",
-  "pageName": "RPGサブワールドマップ（公開確認）",
+  "pageName": "RPGサブワールドマップ",
   "kind": "embed",
   "hideFooter": true,
   "meta": {
-    "title": "RPGサブワールドマップ",
+    "title": "RPGサブワールドマップ（公開確認）",
     "description": "エースサーバーのRPGサブワールドを確認できる公開マップです。RPG関連エリアの地形、移動先、周辺の位置関係をブラウザから把握できます。",
     "ogImage": "/uploads/legacy-world-rpg.png"
   },
