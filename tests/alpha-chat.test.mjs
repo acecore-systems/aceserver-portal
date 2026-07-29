@@ -335,10 +335,22 @@ test('routes only Acecore, operator, and article questions to Acecore search', (
     true,
   )
   assert.equal(shouldSearchAcecore('運営元の技術記事を探して'), true)
+  assert.equal(shouldSearchAcecore('World Foundationについて教えて'), true)
+  assert.equal(shouldSearchAcecore('ワールド財団について教えて'), true)
   assert.equal(shouldSearchAcecore('TNTのルールを教えて'), false)
   assert.equal(
     shouldSearchAcecore('Acecoreが運営するエースサーバーのTNTルールを教えて'),
     false,
+  )
+  assert.equal(
+    shouldSearchAcecore('エースサーバーの運営元とTNTのルールを教えて'),
+    false,
+  )
+  assert.equal(
+    shouldSearchAcecore(
+      'エースサーバーのルールに関するAcecoreの技術記事を探して',
+    ),
+    true,
   )
 })
 
@@ -435,7 +447,7 @@ test('does not query Acecore for Aceserver rule details', async () => {
 
   const response = await onRequestPost({
     request: createRequest({
-      question: 'Acecoreが運営するエースサーバーのTNTルールを教えて',
+      question: 'エースサーバーの運営元とTNTのルールを教えて',
     }),
     env: {
       AI: {
