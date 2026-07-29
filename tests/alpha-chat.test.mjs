@@ -554,7 +554,7 @@ test('allows two retrieved Acecore links for article discovery', async () => {
   )
 })
 
-test('continues with the official Acecore link when its Vectorize query fails', async () => {
+test('does not mix WIKI results when the Acecore Vectorize query fails', async () => {
   const originalConsoleError = console.error
   console.error = () => {}
   let wikiInvoked = false
@@ -593,7 +593,7 @@ test('continues with the official Acecore link when its Vectorize query fails', 
 
     assert.equal(response.status, 200)
     assert.equal(body.ok, true)
-    assert.equal(wikiInvoked, true)
+    assert.equal(wikiInvoked, false)
     assert.deepEqual(
       aiInvocations.map(({ model }) => model),
       [WIKI_EMBEDDING_MODEL, '@cf/zai-org/glm-5.2'],

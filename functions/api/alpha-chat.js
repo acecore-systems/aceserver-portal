@@ -250,13 +250,7 @@ async function retrieveAlphaEvidence(query, intentQuery, env) {
     return { wikiEntries: [], acecoreEntries }
   }
 
-  return {
-    wikiEntries: markEvidenceSource(
-      await searchAceserverWiki(query, env, undefined, embedding),
-      'wiki',
-    ),
-    acecoreEntries: [],
-  }
+  return { wikiEntries: [], acecoreEntries: [] }
 }
 
 function markEvidenceSource(entries, source) {
