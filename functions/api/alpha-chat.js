@@ -178,15 +178,22 @@ export async function onRequestPost({ request, env }) {
     )
   }
 
+  const rawAnswer = trimIncompleteMarkdown(extractWorkersAiText(result).trim())
+  const sourceLimit = hasPriorUserTurn(payload) ? 2 : 1
+  const selectedWikiSources = rankWikiSourcesForAnswer(
+    rawAnswer,
+    wikiEntries,
+  ).slice(0, sourceLimit)
   const answer = addWikiSourceLinks(
     addGuideResourceLinks(
-      sanitizeAlphaAnswerLinks(
-        trimIncompleteMarkdown(extractWorkersAiText(result).trim()),
+      removeUnsupportedWikiReferenceLines(
+        sanitizeAlphaAnswerLinks(rawAnswer, selectedWikiSources),
         wikiEntries,
+        selectedWikiSources,
       ),
     ),
-    wikiEntries,
-    hasPriorUserTurn(payload) ? 2 : 1,
+    selectedWikiSources,
+    sourceLimit,
   )
   return jsonResponse(request, {
     ok: true,
@@ -354,6 +361,35 @@ export function addWikiSourceLinks(answer, wikiEntries = [], limit = 1) {
       `[${sanitizeMarkdownLinkLabel(entry.title)}](${String(entry.url)})`,
   )
   return `${normalizedAnswer}\n\n参照: ${links.join(' / ')}`
+}
+
+export function removeUnsupportedWikiReferenceLines(
+  answer,
+  wikiEntries = [],
+  selectedWikiSources = [],
+) {
+  const selectedUrls = new Set(
+    selectedWikiSources.map((entry) => String(entry?.url || '')),
+  )
+  const excludedTitles = wikiEntries
+    .filter((entry) => entry?.title && !selectedUrls.has(String(entry?.url)))
+    .map((entry) => String(entry.title).trim())
+
+  if (excludedTitles.length === 0) return String(answer || '').trim()
+
+  return String(answer || '')
+    .split('\n')
+    .filter((line) => {
+      const normalizedLine = line.replace(/[*_`]/gu, '').trim()
+      return !excludedTitles.some((title) =>
+        new RegExp(`^(?:参照|参考)[：:]\\s*${escapeRegExp(title)}$`, 'u').test(
+          normalizedLine,
+        ),
+      )
+    })
+    .join('\n')
+    .replace(/\n{3,}/gu, '\n\n')
+    .trim()
 }
 
 function rankWikiSourcesForAnswer(answer, wikiEntries) {

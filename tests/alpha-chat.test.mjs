@@ -8,6 +8,7 @@ import {
   buildWikiSearchQuery,
   isAllowedRequestOrigin,
   onRequestPost,
+  removeUnsupportedWikiReferenceLines,
   sanitizeAlphaAnswerLinks,
   trimIncompleteMarkdown,
 } from '../functions/api/alpha-chat.js'
@@ -499,6 +500,16 @@ test('allows only retrieved WIKI article links and appends specific sources', ()
     /\[hub紹介\]\(https:\/\/asv-wiki\.acecore\.net\/article\/hub-intro\/\)/,
   )
   assert.doesNotMatch(commandSource, /article\/rule/)
+
+  const cleanedReferences = removeUnsupportedWikiReferenceLines(
+    '詳しくは [hub紹介](https://asv-wiki.acecore.net/article/hub-intro/) を見てね。\n\n参照: ルール・BAN条件',
+    wikiEntries,
+    [wikiEntries[1]],
+  )
+  assert.equal(
+    cleanedReferences,
+    '詳しくは [hub紹介](https://asv-wiki.acecore.net/article/hub-intro/) を見てね。',
+  )
 })
 
 test('origin comparison includes the scheme and honors Fetch Metadata', () => {
