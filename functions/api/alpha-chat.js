@@ -338,7 +338,7 @@ export function addWikiSourceLinks(answer, wikiEntries = [], limit = 1) {
   if (!normalizedAnswer) return ''
 
   const sourceLimit = Math.min(Math.max(Number(limit) || 1, 1), 2)
-  const missingSources = wikiEntries
+  const missingSources = rankWikiSourcesForAnswer(normalizedAnswer, wikiEntries)
     .slice(0, sourceLimit)
     .filter(
       (entry) =>
@@ -354,6 +354,69 @@ export function addWikiSourceLinks(answer, wikiEntries = [], limit = 1) {
       `[${sanitizeMarkdownLinkLabel(entry.title)}](${String(entry.url)})`,
   )
   return `${normalizedAnswer}\n\n参照: ${links.join(' / ')}`
+}
+
+function rankWikiSourcesForAnswer(answer, wikiEntries) {
+  return wikiEntries
+    .map((entry, index) => ({
+      entry,
+      index,
+      relevance: scoreWikiSourceForAnswer(answer, entry),
+    }))
+    .sort(
+      (left, right) =>
+        right.relevance - left.relevance || left.index - right.index,
+    )
+    .map(({ entry }) => entry)
+}
+
+function scoreWikiSourceForAnswer(answer, entry) {
+  const plainAnswer = String(answer || '')
+    .replace(/\[([^\]\n]+)\]\(\s*[^)]+\s*\)/g, '$1')
+    .replace(/https?:\/\/\S+/gu, ' ')
+  const answerText = normalizeSourceComparisonText(plainAnswer)
+  const contentText = normalizeSourceComparisonText(
+    entry?.content || entry?.excerpt || '',
+  )
+  if (!answerText || !contentText) return 0
+
+  const commands = new Set(plainAnswer.match(/\/[A-Za-z0-9:_-]+/g) || [])
+  let score = 0
+  for (const command of commands) {
+    if (contentText.includes(command.toLowerCase())) score += 20
+  }
+
+  const answerGrams = createCharacterGrams(answerText, 3)
+  let matchingGrams = 0
+  for (const gram of answerGrams) {
+    if (contentText.includes(gram)) matchingGrams += 1
+  }
+  if (answerGrams.size > 0) {
+    score += (matchingGrams / answerGrams.size) * 10
+  }
+
+  const title = normalizeSourceComparisonText(entry?.title || '')
+  if (title && answerText.includes(title)) score += 3
+
+  return score
+}
+
+function normalizeSourceComparisonText(value) {
+  return String(value || '')
+    .normalize('NFKC')
+    .toLowerCase()
+    .replace(/[^\p{L}\p{N}/:_-]+/gu, '')
+}
+
+function createCharacterGrams(value, size) {
+  const characters = [...value]
+  const grams = new Set()
+
+  for (let index = 0; index <= characters.length - size; index += 1) {
+    grams.add(characters.slice(index, index + size).join(''))
+  }
+
+  return grams
 }
 
 function buildAllowedAlphaAnswerLinks(wikiEntries) {

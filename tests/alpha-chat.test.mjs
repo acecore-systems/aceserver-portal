@@ -454,14 +454,18 @@ test('allows only retrieved WIKI article links and appends specific sources', ()
     {
       title: 'ルール・BAN条件',
       url: 'https://asv-wiki.acecore.net/article/rule/',
+      content: 'メインサーバーでは爆破物の使用は禁止です。',
     },
     {
       title: 'hub紹介',
       url: 'https://asv-wiki.acecore.net/article/hub-intro/',
+      content:
+        '資源サーバーはすべてのプレイヤーが利用可能です。コマンド/sigenでも入れます。',
     },
     {
       title: '宣伝',
       url: 'https://asv-wiki.acecore.net/article/promotion/',
+      content: 'エースサーバーを紹介しているサービスです。',
     },
   ]
   const sanitized = sanitizeAlphaAnswerLinks(
@@ -484,6 +488,17 @@ test('allows only retrieved WIKI article links and appends specific sources', ()
     /\[hub紹介\]\(https:\/\/asv-wiki\.acecore\.net\/article\/hub-intro\/\)/,
   )
   assert.doesNotMatch(sourced, /article\/promotion/)
+
+  const commandSource = addWikiSourceLinks(
+    '資源サーバーは `/sigen` コマンドで入れます。',
+    wikiEntries,
+    1,
+  )
+  assert.match(
+    commandSource,
+    /\[hub紹介\]\(https:\/\/asv-wiki\.acecore\.net\/article\/hub-intro\/\)/,
+  )
+  assert.doesNotMatch(commandSource, /article\/rule/)
 })
 
 test('origin comparison includes the scheme and honors Fetch Metadata', () => {
