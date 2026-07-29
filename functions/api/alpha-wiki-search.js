@@ -97,7 +97,11 @@ async function hydrateWikiEntries(entries, corpusFetcher) {
   try {
     corpus = await fetchWikiCorpus(corpusFetcher)
   } catch (error) {
-    logWikiSearchError('corpus', getErrorCode(error, 'provider_error'))
+    logWikiSearchError(
+      'corpus',
+      getErrorCode(error, 'provider_error'),
+      getErrorDetail(error),
+    )
     return entries
   }
 
@@ -279,18 +283,25 @@ function getErrorCode(error, fallback) {
   return error instanceof Error && error.name ? error.name : fallback
 }
 
+function getErrorDetail(error) {
+  return error instanceof Error
+    ? readString(error.message, 160).replace(/https?:\/\/\S+/gu, '[url]')
+    : ''
+}
+
 function namedError(name) {
   const error = new Error(name)
   error.name = name
   return error
 }
 
-function logWikiSearchError(stage, errorCode) {
+function logWikiSearchError(stage, errorCode, detail = '') {
   console.error(
     JSON.stringify({
       event: 'alpha_wiki_search_error',
       stage,
       errorCode,
+      ...(detail ? { detail } : {}),
     }),
   )
 }
