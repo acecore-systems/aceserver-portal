@@ -598,6 +598,9 @@ test('does not mix WIKI results when the Acecore Vectorize query fails', async (
       aiInvocations.map(({ model }) => model),
       [WIKI_EMBEDDING_MODEL, '@cf/zai-org/glm-5.2'],
     )
+    const systemPrompt = aiInvocations[1].input.messages[0].content
+    assert.match(systemPrompt, /Acecore公式サイト/)
+    assert.match(systemPrompt, /Do not suggest Aceserver WIKI or Discord/)
     assert.match(body.answer, /\[Acecore\]\(https:\/\/acecore\.net\/\)/)
   } finally {
     console.error = originalConsoleError
