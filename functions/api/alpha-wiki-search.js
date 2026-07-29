@@ -1,8 +1,14 @@
+import {
+  ALPHA_SEARCH_EMBEDDING_DIMENSIONS,
+  ALPHA_SEARCH_EMBEDDING_MODEL,
+  createAlphaSearchEmbedding,
+  isAlphaSearchEmbedding,
+} from './alpha-search-embedding.js'
+
 export const ACESERVER_WIKI_URL = 'https://asv-wiki.acecore.net'
 export const ACESERVER_WIKI_CORPUS_URL = `${ACESERVER_WIKI_URL}/vector-corpus.json`
-export const WIKI_EMBEDDING_MODEL = '@cf/baai/bge-m3'
+export const WIKI_EMBEDDING_MODEL = ALPHA_SEARCH_EMBEDDING_MODEL
 
-const WIKI_EMBEDDING_DIMENSIONS = 1024
 const WIKI_SEARCH_NAMESPACE = 'ja'
 const WIKI_SEARCH_TOP_K = 15
 const WIKI_GROUNDING_LIMIT = 3
@@ -21,6 +27,7 @@ export async function searchAceserverWiki(
   query,
   env,
   corpusFetcher = (...args) => globalThis.fetch(...args),
+  providedEmbedding = null,
 ) {
   if (
     !query ||
@@ -31,22 +38,9 @@ export async function searchAceserverWiki(
     return []
   }
 
-  let embeddingResult
-  try {
-    embeddingResult = await env.AI.run(WIKI_EMBEDDING_MODEL, {
-      text: [query],
-      truncate_inputs: true,
-    })
-  } catch (error) {
-    logWikiSearchError('embedding', getErrorCode(error, 'provider_error'))
-    return []
-  }
-
-  const embedding = extractEmbedding(embeddingResult)
-  if (!embedding) {
-    logWikiSearchError('embedding', 'invalid_embedding')
-    return []
-  }
+  const embedding =
+    providedEmbedding || (await createAlphaSearchEmbedding(query, env))
+  if (!isAlphaSearchEmbedding(embedding)) return []
 
   let matches
   try {
@@ -173,27 +167,10 @@ function isValidWikiCorpus(value) {
     typeof value === 'object' &&
     value.schemaVersion === 1 &&
     value.embedding?.model === WIKI_EMBEDDING_MODEL &&
-    value.embedding?.dimensions === WIKI_EMBEDDING_DIMENSIONS &&
+    value.embedding?.dimensions === ALPHA_SEARCH_EMBEDDING_DIMENSIONS &&
     Array.isArray(value.chunks) &&
     value.chunks.length <= MAX_WIKI_CORPUS_CHUNKS,
   )
-}
-
-function extractEmbedding(result) {
-  if (!result || typeof result !== 'object') return null
-
-  const data = result.data
-  if (!Array.isArray(data) || !Array.isArray(data[0])) return null
-
-  const values = data[0]
-  if (
-    values.length !== WIKI_EMBEDDING_DIMENSIONS ||
-    values.some((value) => !Number.isFinite(value))
-  ) {
-    return null
-  }
-
-  return values
 }
 
 function normalizeWikiMatches(queryResult, minScore) {

@@ -63,6 +63,8 @@ Cloudflare Pages のproduction / previewでは、build前に `public/admin/runti
 
 `functions/api/alpha-chat.js` の Cloudflare Pages Function から Cloudflare Workers AI binding を呼び出します。質問は多言語embeddingモデルのBGE-M3 (`@cf/baai/bge-m3`) でベクトル化し、Aceserver WIKIのVectorize indexから関連する公開記事を検索します。検索で得たchunk IDはWIKIの公開`vector-corpus.json`へ照合し、metadataの短い抜粋だけでなく最大1200文字の元chunkを回答根拠にします。回答生成にはGLM 5.2 (`@cf/zai-org/glm-5.2`) をthinking無効で使い、短い案内本文へtokenを集中させます。ブラウザには AI 実行用のキーを渡しません。
 
+Acecore、運営元、関連プロジェクト、サービス、技術記事に関する質問だけは、同じembeddingでacecore-netのVectorize indexも検索します。Aceserverのルール、コマンド、参加条件、ワールド、運用情報ではacecore-netを検索せず、Aceserver WIKIを情報の正として扱います。両indexの結果は別々のしきい値で判定し、scoreを直接混ぜません。
+
 Vectorizeまたはembedding取得に失敗した場合は検索なしの案内へフォールバックします。WIKI corpusの取得に失敗した場合はVectorize metadataの抜粋へフォールバックし、アルファくん自体は利用を継続します。ルール、コマンド、参加条件など変更される情報は、検索で取得したWIKI内容に根拠がある範囲だけ具体的に回答し、出典記事をMarkdownリンクで示します。
 
 ルール、参加条件、コマンド、プラグインなど変更され得る情報はrepositoryへ複製しません。アルファくんは固定知識から詳細を断定せず、現行情報の正であるAceserver WIKIからVectorize検索で取得した根拠を使います。根拠を取得できない場合はAceserver WIKIまたは公式Discordへ案内します。
@@ -71,11 +73,14 @@ Cloudflare Pages 側では `wrangler.jsonc` を設定の正とし、acecore-net 
 
 - Workers AI binding: `AI`
 - Vectorize binding: `WIKI_SEARCH_INDEX`
+- Acecore Vectorize binding: `ACECORE_SEARCH_INDEX`
 - `CLOUDFLARE_AI_MODEL`: 使用モデル（未設定時は `@cf/zai-org/glm-5.2`）
 - `WIKI_SEARCH_ENABLED`: WIKI検索のkill switch（`"false"`で無効化）
 - `WIKI_SEARCH_MIN_SCORE`: 回答根拠に採用するVectorize scoreの下限（既定`0.40`）
-- Preview index: `aceserver-wiki-search-preview`
-- Production index: `aceserver-wiki-search-production`
+- `ACECORE_SEARCH_ENABLED`: Acecore検索のkill switch（`"false"`で無効化）
+- `ACECORE_SEARCH_MIN_SCORE`: Acecore検索結果を採用するscoreの下限（既定`0.50`）
+- WIKI Preview / Production index: `aceserver-wiki-search-preview` / `aceserver-wiki-search-production`
+- Acecore Preview / Production index: `acecore-net-search-preview` / `acecore-net-search-production`
 
 本番custom domainの `/api/alpha-chat` へのPOSTは、`acecore.net` zoneのCloudflare WAF rate limiting rule `Rate limit Aceserver Alpha chat` で保護します。IP・colo単位で10秒に5 requestまでとし、超過時は10秒blockします。このruleはrepository外のCloudflare設定なので、zoneを再作成した場合は再設定してください。`pages.dev` のpreview URLはこのzone-level ruleの対象外です。
 
