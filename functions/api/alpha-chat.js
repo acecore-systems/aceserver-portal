@@ -152,6 +152,7 @@ export async function onRequestPost({ request, env }) {
               'Do not invent server IPs, whitelists, live status, incidents, moderation decisions, private data, pricing, schedules, requirements, approvals, or exceptions.',
               'Rules, commands, plugins, participation requirements, and operational details can change. State a concrete detail only when retrieved WIKI content supports it.',
               'Never infer that a specific item or action is allowed, prohibited, or covered by a general rule when the retrieved WIKI content does not name it. Say that the exact detail could not be confirmed.',
+              '取得したWIKI本文に質問対象の固有名詞がない場合、一般ルールを当てはめて「可能性がある」「かもしれない」「判断されそう」と推測してはいけません。',
               'Aceserver WIKI is authoritative for server rules, commands, participation requirements, worlds, and operations. Acecore evidence must never override it.',
               'Use Acecore evidence only for questions about Acecore, the operator, related projects, services, or article discovery.',
               'When retrieved evidence answers the question, explain the supported detail directly and include its Source Markdown link once.',
@@ -197,7 +198,9 @@ export async function onRequestPost({ request, env }) {
     )
   }
 
-  const rawAnswer = trimIncompleteMarkdown(extractWorkersAiText(result).trim())
+  const rawAnswer = removeSpeculativeRuleClaims(
+    trimIncompleteMarkdown(extractWorkersAiText(result).trim()),
+  )
   const sourceLimit =
     hasPriorUserTurn(payload) ||
     shouldAllowMultipleAcecoreArticleSources(question, acecoreEntries)
@@ -388,6 +391,18 @@ export function trimIncompleteMarkdown(answer) {
   }
 
   return text.slice(0, danglingStart).trim()
+}
+
+export function removeSpeculativeRuleClaims(answer) {
+  const speculativeRulePattern =
+    /(?:(?:使用|利用|行為|アイテム|コマンド|処罰|ban対象|禁止|許可).{0,160}(?:可能性|かもしれ|と思われ|考えられ|判断されそう|推測)|(?:可能性|かもしれ|と思われ|考えられ|判断されそう|推測).{0,160}(?:禁止|許可|対象|ルール|規定))/iu
+
+  return String(answer || '')
+    .split(/(?<=[。！？\n])/u)
+    .filter((segment) => !speculativeRulePattern.test(segment))
+    .join('')
+    .replace(/\n{3,}/gu, '\n\n')
+    .trim()
 }
 
 export function addGuideResourceLinks(answer) {

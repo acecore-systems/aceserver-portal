@@ -10,6 +10,7 @@ import {
   hasPriorUserTurn,
   isAllowedRequestOrigin,
   onRequestPost,
+  removeSpeculativeRuleClaims,
   removeUnsupportedWikiReferenceLines,
   sanitizeAlphaAnswerLinks,
   trimIncompleteMarkdown,
@@ -853,6 +854,12 @@ test('post-processes only canonical guide links and trims dangling Markdown', ()
       '[ワールドマップ](/world-map/) と [マップ](/world-map/)を見てね。',
     ),
     '[ワールドマップ](/world-map/) と マップを見てね。',
+  )
+  assert.equal(
+    removeSpeculativeRuleClaims(
+      'TNTの記載は確認できなかったよ。ただし、TNTの使用も一般規定の対象になる可能性があります。公式情報を確認してね。',
+    ),
+    'TNTの記載は確認できなかったよ。公式情報を確認してね。',
   )
 })
 
