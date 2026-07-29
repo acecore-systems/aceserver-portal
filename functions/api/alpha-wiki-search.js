@@ -20,7 +20,7 @@ const MAX_METADATA_URL_LENGTH = 500
 export async function searchAceserverWiki(
   query,
   env,
-  corpusFetcher = globalThis.fetch,
+  corpusFetcher = (...args) => globalThis.fetch(...args),
 ) {
   if (
     !query ||
@@ -194,8 +194,7 @@ function extractEmbedding(result) {
 
 function normalizeWikiMatches(queryResult, minScore) {
   const results = []
-  const seenEvidence = new Set()
-  const resultCountsByUrl = new Map()
+  const seenUrls = new Set()
 
   for (const match of queryResult?.matches || []) {
     if (!Number.isFinite(match?.score) || match.score < minScore) continue
@@ -204,12 +203,9 @@ function normalizeWikiMatches(queryResult, minScore) {
     const metadata = normalizeWikiMetadata(match.metadata)
     if (!id || !metadata) continue
 
-    const evidenceKey = `${metadata.url}\n${metadata.excerpt}`
-    const resultCount = resultCountsByUrl.get(metadata.url) || 0
-    if (seenEvidence.has(evidenceKey) || resultCount >= 2) continue
+    if (seenUrls.has(metadata.url)) continue
 
-    seenEvidence.add(evidenceKey)
-    resultCountsByUrl.set(metadata.url, resultCount + 1)
+    seenUrls.add(metadata.url)
     results.push({
       id,
       score: match.score,
