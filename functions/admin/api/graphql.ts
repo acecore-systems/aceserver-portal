@@ -14,6 +14,14 @@ import {
   isAllowedCmsWritePath,
   normalizeCmsPath,
 } from './_cms-policy.ts'
+import {
+  validateCmsAddition,
+  type ValidatedCmsAddition,
+} from './_content-validation.ts'
+import {
+  getGitHubInstallationId,
+  type CmsOAuthEnv,
+} from './_github-app-oauth.ts'
 import { getGitHubEditor, type GitHubEditor } from './_github-oauth.ts'
 import {
   GitHubApiError,
@@ -30,11 +38,7 @@ type GraphqlPayload = {
   variables: Record<string, unknown>
 }
 
-type CmsAddition = {
-  path: string
-  contents: string
-  byteSize: number
-}
+type CmsAddition = ValidatedCmsAddition
 
 type CmsDeletion = {
   path: string
@@ -55,7 +59,9 @@ const MAX_CHANGE_COUNT = 100
 const MAX_TOTAL_CONTENT_BYTES = 25 * 1024 * 1024
 const MAX_GRAPHQL_BLOB_SIZE = 10 * 1024 * 1024
 
-export const onRequestPost: PagesFunction = async ({ request }) => {
+export const onRequestPost: PagesFunction<
+  Pick<CmsOAuthEnv, 'CMS_GITHUB_APP_INSTALLATION_ID'>
+> = async ({ request, env }) => {
   try {
     const auth = await getGitHubEditor(request)
     const token = auth.token
@@ -82,7 +88,17 @@ export const onRequestPost: PagesFunction = async ({ request }) => {
     }
 
     if (operation.operation === 'mutation') {
-      return await handleCommitMutation({ auth, operation, payload, token })
+      const freshAuth = await getGitHubEditor(request, {
+        fresh: true,
+        installationId: getGitHubInstallationId(env),
+      })
+
+      return await handleCommitMutation({
+        auth: freshAuth,
+        operation,
+        payload,
+        token: freshAuth.token,
+      })
     }
 
     return json(
@@ -216,7 +232,7 @@ async function handleCommitMutation({
     })
   } catch (error) {
     githubResult = await recoverAmbiguousCommit({
-      additions: commitInput.additions,
+      commitInput,
       error,
       expectedHeadOid: mainSha,
       requestId,
@@ -228,7 +244,7 @@ async function handleCommitMutation({
     ensureCommitSucceeded(githubResult)
   } catch (error) {
     githubResult = await recoverAmbiguousCommit({
-      additions: commitInput.additions,
+      commitInput,
       error,
       expectedHeadOid: mainSha,
       requestId,
@@ -636,14 +652,16 @@ function parseCmsCommitInput(value: unknown): CmsCommitInput | null {
       return null
     }
 
-    const byteSize = getBase64ByteSize(addition.contents)
+    const validation = validateCmsAddition(path, addition.contents)
 
-    totalContentBytes += byteSize
+    if (!validation.ok) return null
+
+    totalContentBytes += validation.addition.byteSize
 
     if (totalContentBytes > MAX_TOTAL_CONTENT_BYTES) return null
 
     paths.add(path)
-    additions.push({ path, contents: addition.contents, byteSize })
+    additions.push(validation.addition)
   }
 
   for (const deletion of deletionsValue) {
@@ -678,13 +696,13 @@ function parseCmsCommitInput(value: unknown): CmsCommitInput | null {
 }
 
 async function recoverAmbiguousCommit({
-  additions,
+  commitInput,
   error,
   expectedHeadOid,
   requestId,
   token,
 }: {
-  additions: CmsAddition[]
+  commitInput: CmsCommitInput
   error: unknown
   expectedHeadOid: string
   requestId: string
@@ -692,7 +710,7 @@ async function recoverAmbiguousCommit({
 }) {
   try {
     const recovery = await findCommittedRequest({
-      additions,
+      commitInput,
       expectedHeadOid,
       requestId,
       token,
@@ -732,12 +750,12 @@ async function recoverAmbiguousCommit({
 }
 
 async function findCommittedRequest({
-  additions,
+  commitInput,
   expectedHeadOid,
   requestId,
   token,
 }: {
-  additions: CmsAddition[]
+  commitInput: CmsCommitInput
   expectedHeadOid: string
   requestId: string
   token: string
@@ -759,9 +777,9 @@ async function findCommittedRequest({
     const message = value.commit.message
     const hasExpectedParent =
       Array.isArray(value.parents) &&
-      value.parents.some(
-        (parent) => isRecord(parent) && parent.sha === expectedHeadOid,
-      )
+      value.parents.length === 1 &&
+      isRecord(value.parents[0]) &&
+      value.parents[0].sha === expectedHeadOid
 
     return (
       typeof message === 'string' &&
@@ -789,7 +807,7 @@ async function findCommittedRequest({
   return {
     headOid,
     result: await buildRecoveredCommitResult({
-      additions,
+      commitInput,
       committedDate,
       commitOid,
       token,
@@ -798,16 +816,69 @@ async function findCommittedRequest({
 }
 
 async function buildRecoveredCommitResult({
-  additions,
+  commitInput,
   committedDate,
   commitOid,
   token,
 }: {
-  additions: CmsAddition[]
+  commitInput: CmsCommitInput
   committedDate: string
   commitOid: string
   token: string
 }) {
+  const details = await githubJson<unknown>({
+    path: `/repos/${CMS_REPOSITORY.owner}/${CMS_REPOSITORY.name}/commits/${commitOid}?per_page=100`,
+    token,
+  })
+
+  if (
+    !isRecord(details) ||
+    details.sha !== commitOid ||
+    !Array.isArray(details.files)
+  ) {
+    throw new Error('Recovered GitHub commit details are invalid')
+  }
+
+  const actualPaths = new Set<string>()
+
+  for (const file of details.files) {
+    if (
+      !isRecord(file) ||
+      typeof file.filename !== 'string' ||
+      normalizeCmsPath(file.filename) !== file.filename
+    ) {
+      throw new Error('Recovered GitHub commit files are invalid')
+    }
+
+    actualPaths.add(file.filename)
+
+    if (file.status === 'renamed') {
+      if (
+        typeof file.previous_filename !== 'string' ||
+        normalizeCmsPath(file.previous_filename) !== file.previous_filename
+      ) {
+        throw new Error('Recovered GitHub renamed file is invalid')
+      }
+
+      actualPaths.add(file.previous_filename)
+    }
+  }
+
+  const expectedPaths = new Set([
+    ...commitInput.additions.map(({ path }) => path),
+    ...commitInput.deletions.map(({ path }) => path),
+  ])
+
+  if (
+    actualPaths.size !== expectedPaths.size ||
+    Array.from(expectedPaths).some((path) => !actualPaths.has(path))
+  ) {
+    throw new GitHubApiError(
+      'mainが更新されました。この保存内容と一致しないため、CMSを再読み込みしてください。',
+      409,
+    )
+  }
+
   const tree = await githubJson<unknown>({
     path: `/repos/${CMS_REPOSITORY.owner}/${CMS_REPOSITORY.name}/git/trees/${commitOid}?recursive=1`,
     token,
@@ -839,7 +910,23 @@ async function buildRecoveredCommitResult({
     committedDate,
   }
 
-  additions.forEach(({ path, byteSize }, index) => {
+  for (const addition of commitInput.additions) {
+    if (blobShas.get(addition.path) !== (await getGitBlobOid(addition))) {
+      throw new GitHubApiError(
+        'mainが更新されました。この保存内容と一致しないため、CMSを再読み込みしてください。',
+        409,
+      )
+    }
+  }
+
+  if (commitInput.deletions.some(({ path }) => blobShas.has(path))) {
+    throw new GitHubApiError(
+      'mainが更新されました。この保存内容と一致しないため、CMSを再読み込みしてください。',
+      409,
+    )
+  }
+
+  commitInput.additions.forEach(({ path, byteSize }, index) => {
     if (byteSize > MAX_GRAPHQL_BLOB_SIZE) return
 
     const oid = blobShas.get(path)
@@ -858,6 +945,66 @@ async function buildRecoveredCommitResult({
       },
     },
   }
+}
+
+async function getGitBlobOid(addition: CmsAddition) {
+  const header = new TextEncoder().encode(`blob ${addition.byteSize}\0`)
+  const object = new Uint8Array(header.byteLength + addition.byteSize)
+
+  object.set(header)
+  decodeBase64Into(addition.contents, object, header.byteLength)
+
+  const digest = await crypto.subtle.digest('SHA-1', object)
+
+  return Array.from(new Uint8Array(digest), (byte) =>
+    byte.toString(16).padStart(2, '0'),
+  ).join('')
+}
+
+function decodeBase64Into(
+  value: string,
+  destination: Uint8Array,
+  offset: number,
+) {
+  let accumulator = 0
+  let bitCount = 0
+  let outputIndex = offset
+
+  for (let index = 0; index < value.length; index += 1) {
+    const code = value.charCodeAt(index)
+
+    if (code === 61) break
+
+    const decoded = decodeBase64Char(code)
+
+    if (decoded < 0) {
+      throw new GitHubApiError('CMS base64 dataが不正です。', 400)
+    }
+
+    accumulator = (accumulator << 6) | decoded
+    bitCount += 6
+
+    if (bitCount < 8) continue
+
+    bitCount -= 8
+    destination[outputIndex] = (accumulator >> bitCount) & 0xff
+    outputIndex += 1
+    accumulator &= (1 << bitCount) - 1
+  }
+
+  if (outputIndex !== destination.byteLength) {
+    throw new GitHubApiError('CMS base64 sizeが不正です。', 400)
+  }
+}
+
+function decodeBase64Char(code: number) {
+  if (code >= 65 && code <= 90) return code - 65
+  if (code >= 97 && code <= 122) return code - 71
+  if (code >= 48 && code <= 57) return code + 4
+  if (code === 43) return 62
+  if (code === 47) return 63
+
+  return -1
 }
 
 function buildCmsCommitMutation(additions: CmsAddition[]) {

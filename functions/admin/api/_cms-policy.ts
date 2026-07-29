@@ -3,6 +3,7 @@ export const CMS_REPOSITORY = {
   name: 'aceserver-portal',
   branch: 'main',
 } as const
+export const CMS_PRODUCTION_HOSTNAME = 'asv.acecore.net'
 
 const CONTENT_RULES: readonly {
   prefix: string
@@ -34,9 +35,7 @@ const MEDIA_EXTENSIONS = new Set([
   '.gif',
   '.jpeg',
   '.jpg',
-  '.pdf',
   '.png',
-  '.svg',
   '.webp',
 ])
 
@@ -84,11 +83,8 @@ export function isAllowedCmsWritePath(path: string) {
 }
 
 export function isAllowedCmsDeletePath(path: string) {
-  return (
-    normalizeCmsPath(path) === path &&
-    path.startsWith(MEDIA_PREFIX) &&
-    MEDIA_EXTENSIONS.has(getExtension(path))
-  )
+  void path
+  return false
 }
 
 export function isAllowedCmsDirectoryPath(path: string) {
