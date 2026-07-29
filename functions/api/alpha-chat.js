@@ -491,13 +491,14 @@ function sanitizeMarkdownLinkLabel(value) {
     .slice(0, 80)
 }
 
-function hasPriorUserTurn(payload) {
+export function hasPriorUserTurn(payload) {
+  if (!Array.isArray(payload?.messages)) return false
+
   return (
-    Array.isArray(payload?.messages) &&
-    payload.messages.some(
+    payload.messages.filter(
       (message) =>
         message?.role === 'user' && String(message?.content || '').trim(),
-    )
+    ).length > 1
   )
 }
 

@@ -6,6 +6,7 @@ import {
   addWikiSourceLinks,
   buildConversationInput,
   buildWikiSearchQuery,
+  hasPriorUserTurn,
   isAllowedRequestOrigin,
   onRequestPost,
   removeUnsupportedWikiReferenceLines,
@@ -429,6 +430,25 @@ test('uses the latest two visitor turns as the semantic search query', () => {
   )
 
   assert.equal(query, 'TNTのルールを教えて\n資源サーバーでは？')
+})
+
+test('allows a second source only after a previous visitor turn', () => {
+  assert.equal(
+    hasPriorUserTurn({
+      messages: [{ role: 'user', content: '資源サーバーの使い方を教えて' }],
+    }),
+    false,
+  )
+  assert.equal(
+    hasPriorUserTurn({
+      messages: [
+        { role: 'user', content: 'TNTは使える？' },
+        { role: 'assistant', content: 'メインサーバーでは禁止だよ。' },
+        { role: 'user', content: '資源サーバーでは？' },
+      ],
+    }),
+    true,
+  )
 })
 
 test('post-processes only canonical guide links and trims dangling Markdown', () => {
