@@ -61,14 +61,21 @@ Cloudflare Pages のproduction / previewでは、build前に `public/admin/runti
 
 サイト全体に右下固定のアルファくん案内チャットを表示します。アルファくんはエースサーバーのキャラクター案内役として、参加方法、ワールド、ルール、ストーリー導線を案内します。
 
-`functions/api/alpha-chat.js` の Cloudflare Pages Function から Cloudflare Workers AI binding を呼び出します。既定では対話向けの GLM 4.7 Flash (`@cf/zai-org/glm-4.7-flash`) をthinking無効で使い、短い案内本文へtokenを集中させます。ブラウザには AI 実行用のキーを渡しません。
+`functions/api/alpha-chat.js` の Cloudflare Pages Function から Cloudflare Workers AI binding を呼び出します。質問は多言語embeddingモデルのBGE-M3 (`@cf/baai/bge-m3`) でベクトル化し、Aceserver WIKIのVectorize indexから関連する公開記事の抜粋を取得して回答根拠にします。回答生成には対話向けのGLM 4.7 Flash (`@cf/zai-org/glm-4.7-flash`) をthinking無効で使い、短い案内本文へtokenを集中させます。ブラウザには AI 実行用のキーを渡しません。
 
-ルール、参加条件、コマンド、プラグインなど変更され得る情報はrepositoryへ複製しません。アルファくんは固定知識から詳細を断定せず、現行情報の正である Aceserver WIKI または公式Discordへ案内します。ポータルからNewt APIを直接参照しません。
+Vectorizeまたはembedding取得に失敗した場合は検索なしの案内へフォールバックし、アルファくん自体は利用を継続します。ルール、コマンド、参加条件など変更される情報は、検索で取得したWIKI抜粋に根拠がある範囲だけ具体的に回答し、出典記事をMarkdownリンクで示します。
+
+ルール、参加条件、コマンド、プラグインなど変更され得る情報はrepositoryへ複製しません。アルファくんは固定知識から詳細を断定せず、現行情報の正であるAceserver WIKIからVectorize検索で取得した根拠を使います。根拠を取得できない場合はAceserver WIKIまたは公式Discordへ案内します。
 
 Cloudflare Pages 側では `wrangler.jsonc` を設定の正とし、acecore-net と同じ方式で以下を preview / production の両方に定義します。
 
 - Workers AI binding: `AI`
+- Vectorize binding: `WIKI_SEARCH_INDEX`
 - `CLOUDFLARE_AI_MODEL`: 使用モデル（未設定時は `@cf/zai-org/glm-4.7-flash`）
+- `WIKI_SEARCH_ENABLED`: WIKI検索のkill switch（`"false"`で無効化）
+- `WIKI_SEARCH_MIN_SCORE`: 回答根拠に採用するVectorize scoreの下限（既定`0.40`）
+- Preview index: `aceserver-wiki-search-preview`
+- Production index: `aceserver-wiki-search-production`
 
 本番custom domainの `/api/alpha-chat` へのPOSTは、`acecore.net` zoneのCloudflare WAF rate limiting rule `Rate limit Aceserver Alpha chat` で保護します。IP・colo単位で10秒に5 requestまでとし、超過時は10秒blockします。このruleはrepository外のCloudflare設定なので、zoneを再作成した場合は再設定してください。`pages.dev` のpreview URLはこのzone-level ruleの対象外です。
 
