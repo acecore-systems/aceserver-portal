@@ -554,7 +554,7 @@ test('allows two retrieved Acecore links for article discovery', async () => {
   )
 })
 
-test('does not mix WIKI results when the Acecore Vectorize query fails', async () => {
+test('uses a controlled Acecore fallback when its Vectorize query fails', async () => {
   const originalConsoleError = console.error
   console.error = () => {}
   let wikiInvoked = false
@@ -596,12 +596,13 @@ test('does not mix WIKI results when the Acecore Vectorize query fails', async (
     assert.equal(wikiInvoked, false)
     assert.deepEqual(
       aiInvocations.map(({ model }) => model),
-      [WIKI_EMBEDDING_MODEL, '@cf/zai-org/glm-5.2'],
+      [WIKI_EMBEDDING_MODEL],
     )
-    const systemPrompt = aiInvocations[1].input.messages[0].content
-    assert.match(systemPrompt, /Acecore公式サイト/)
-    assert.match(systemPrompt, /Do not suggest Aceserver WIKI or Discord/)
-    assert.match(body.answer, /\[Acecore\]\(https:\/\/acecore\.net\/\)/)
+    assert.equal(
+      body.answer,
+      'その内容は、いまのAcecore公式情報からは確認できなかったよ。最新情報は[Acecore公式サイト](https://acecore.net/)を見てね。',
+    )
+    assert.doesNotMatch(body.answer, /WIKI|Discord/)
   } finally {
     console.error = originalConsoleError
   }
