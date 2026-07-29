@@ -242,14 +242,20 @@ async function retrieveAlphaEvidence(query, intentQuery, env) {
   const embedding = await createAlphaSearchEmbedding(query, env)
   if (!embedding) return { wikiEntries: [], acecoreEntries: [] }
 
-  const [wikiEntries, acecoreEntries] = await Promise.all([
-    searchAceserverWiki(query, env, undefined, embedding),
-    searchAcecore(query, env, embedding),
-  ])
+  const acecoreEntries = markEvidenceSource(
+    await searchAcecore(query, env, embedding),
+    'acecore',
+  )
+  if (acecoreEntries.length > 0) {
+    return { wikiEntries: [], acecoreEntries }
+  }
 
   return {
-    wikiEntries: markEvidenceSource(wikiEntries, 'wiki'),
-    acecoreEntries: markEvidenceSource(acecoreEntries, 'acecore'),
+    wikiEntries: markEvidenceSource(
+      await searchAceserverWiki(query, env, undefined, embedding),
+      'wiki',
+    ),
+    acecoreEntries: [],
   }
 }
 

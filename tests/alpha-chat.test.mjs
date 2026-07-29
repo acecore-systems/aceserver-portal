@@ -342,7 +342,7 @@ test('routes only Acecore, operator, and article questions to Acecore search', (
   )
 })
 
-test('reuses one embedding for WIKI and Acecore evidence with its article link', async () => {
+test('uses Acecore evidence without mixing WIKI results for Acecore intent', async () => {
   const aiInvocations = []
   let wikiVectorizeInvocation
   let acecoreVectorizeInvocation
@@ -413,7 +413,7 @@ test('reuses one embedding for WIKI and Acecore evidence with its article link',
     aiInvocations.map(({ model }) => model),
     [WIKI_EMBEDDING_MODEL, '@cf/zai-org/glm-5.2'],
   )
-  assert.deepEqual(wikiVectorizeInvocation.vector, WIKI_EMBEDDING)
+  assert.equal(wikiVectorizeInvocation, undefined)
   assert.deepEqual(acecoreVectorizeInvocation.vector, WIKI_EMBEDDING)
   assert.deepEqual(acecoreVectorizeInvocation.options, {
     namespace: 'ja',
@@ -545,13 +545,16 @@ test('allows two retrieved Acecore links for article discovery', async () => {
 test('continues with the official Acecore link when its Vectorize query fails', async () => {
   const originalConsoleError = console.error
   console.error = () => {}
+  let wikiInvoked = false
+  const aiInvocations = []
 
   try {
     const response = await onRequestPost({
       request: createRequest({ question: 'Acecoreについて教えて' }),
       env: {
         AI: {
-          async run(model) {
+          async run(model, input) {
+            aiInvocations.push({ model, input })
             if (model === WIKI_EMBEDDING_MODEL) {
               return { data: [WIKI_EMBEDDING] }
             }
@@ -561,7 +564,9 @@ test('continues with the official Acecore link when its Vectorize query fails', 
           },
         },
         WIKI_SEARCH_INDEX: {
-          async query() {
+          async query(vector) {
+            wikiInvoked = true
+            assert.deepEqual(vector, WIKI_EMBEDDING)
             return { matches: [] }
           },
         },
@@ -576,6 +581,11 @@ test('continues with the official Acecore link when its Vectorize query fails', 
 
     assert.equal(response.status, 200)
     assert.equal(body.ok, true)
+    assert.equal(wikiInvoked, true)
+    assert.deepEqual(
+      aiInvocations.map(({ model }) => model),
+      [WIKI_EMBEDDING_MODEL, '@cf/zai-org/glm-5.2'],
+    )
     assert.match(body.answer, /\[Acecore\]\(https:\/\/acecore\.net\/\)/)
   } finally {
     console.error = originalConsoleError
