@@ -140,7 +140,7 @@ async function fetchWikiCorpus(corpusFetcher) {
       headers: {
         Accept: 'application/json',
       },
-      redirect: 'error',
+      redirect: 'manual',
       signal: controller.signal,
       cf: {
         cacheEverything: true,

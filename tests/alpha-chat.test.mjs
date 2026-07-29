@@ -81,8 +81,13 @@ test('grounds concrete answers with Vectorize WIKI evidence and its article link
   const aiInvocations = []
   let vectorizeInvocation
   const originalFetch = globalThis.fetch
-  globalThis.fetch = async (url) => {
+  globalThis.fetch = async (url, init) => {
     assert.equal(url, ACESERVER_WIKI_CORPUS_URL)
+    assert.equal(init.redirect, 'manual')
+    assert.deepEqual(init.cf, {
+      cacheEverything: true,
+      cacheTtl: 300,
+    })
     return Response.json({
       schemaVersion: 1,
       embedding: {
