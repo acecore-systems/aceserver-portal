@@ -3,16 +3,23 @@ import test from 'node:test'
 
 import {
   addGuideResourceLinks,
+  addRetrievedSourceLinks,
   addWikiSourceLinks,
   buildConversationInput,
   buildWikiSearchQuery,
   hasPriorUserTurn,
   isAllowedRequestOrigin,
   onRequestPost,
+  removeSpeculativeRuleClaims,
   removeUnsupportedWikiReferenceLines,
   sanitizeAlphaAnswerLinks,
   trimIncompleteMarkdown,
 } from '../functions/api/alpha-chat.js'
+import {
+  buildAcecoreGroundingContext,
+  searchAcecore,
+  shouldSearchAcecore,
+} from '../functions/api/alpha-acecore-search.js'
 import {
   ACESERVER_WIKI_CORPUS_URL,
   buildWikiGroundingContext,
@@ -322,6 +329,386 @@ test('filters low-score, duplicate, and non-WIKI Vectorize metadata', async () =
   )
 })
 
+test('routes only Acecore, operator, and article questions to Acecore search', () => {
+  assert.equal(shouldSearchAcecore('Acecoreって何？'), true)
+  assert.equal(
+    shouldSearchAcecore('エースサーバーは誰が運営しているの？'),
+    true,
+  )
+  assert.equal(shouldSearchAcecore('運営元の技術記事を探して'), true)
+  assert.equal(shouldSearchAcecore('World Foundationについて教えて'), true)
+  assert.equal(shouldSearchAcecore('ワールド財団について教えて'), true)
+  assert.equal(shouldSearchAcecore('TNTのルールを教えて'), false)
+  assert.equal(
+    shouldSearchAcecore('Acecoreが運営するエースサーバーのTNTルールを教えて'),
+    false,
+  )
+  assert.equal(
+    shouldSearchAcecore('エースサーバーの運営元とTNTのルールを教えて'),
+    false,
+  )
+  assert.equal(
+    shouldSearchAcecore(
+      'エースサーバーのルールに関するAcecoreの技術記事を探して',
+    ),
+    true,
+  )
+})
+
+test('uses Acecore evidence without mixing WIKI results for Acecore intent', async () => {
+  const aiInvocations = []
+  let wikiVectorizeInvocation
+  let acecoreVectorizeInvocation
+
+  const response = await onRequestPost({
+    request: createRequest({
+      question: 'Acecoreって何？',
+      messages: [
+        { role: 'user', content: 'TNTのルールを教えて' },
+        { role: 'assistant', content: 'WIKIを確認するね。' },
+        { role: 'user', content: 'Acecoreって何？' },
+      ],
+    }),
+    env: {
+      AI: {
+        async run(model, input) {
+          aiInvocations.push({ model, input })
+          if (model === WIKI_EMBEDDING_MODEL) {
+            return { data: [WIKI_EMBEDDING] }
+          }
+
+          return {
+            response:
+              'Acecoreは技術を通じて活動する組織だよ。[Acecoreについて](https://acecore.net/about/)で紹介しているよ。',
+          }
+        },
+      },
+      WIKI_SEARCH_INDEX: {
+        async query(vector, options) {
+          wikiVectorizeInvocation = { vector, options }
+          return { matches: [] }
+        },
+      },
+      ACECORE_SEARCH_ENABLED: 'true',
+      ACECORE_SEARCH_MIN_SCORE: '0.50',
+      ACECORE_SEARCH_INDEX: {
+        async query(vector, options) {
+          acecoreVectorizeInvocation = { vector, options }
+          return {
+            matches: [
+              {
+                id: 'acecore-about',
+                score: 0.86,
+                metadata: {
+                  locale: 'ja',
+                  title: 'Acecoreについて',
+                  section: 'Acecoreについて',
+                  excerpt: 'Acecoreの目的と活動内容を紹介しています。',
+                  contentType: 'page',
+                  url: '/about/',
+                },
+              },
+            ],
+          }
+        },
+      },
+    },
+  })
+  const body = await response.json()
+
+  assert.equal(response.status, 200)
+  assert.equal(body.ok, true)
+  assert.match(
+    body.answer,
+    /\[Acecoreについて\]\(https:\/\/acecore\.net\/about\/\)/,
+  )
+  assert.deepEqual(
+    aiInvocations.map(({ model }) => model),
+    [WIKI_EMBEDDING_MODEL, '@cf/zai-org/glm-5.2'],
+  )
+  assert.equal(wikiVectorizeInvocation, undefined)
+  assert.deepEqual(acecoreVectorizeInvocation.vector, WIKI_EMBEDDING)
+  assert.deepEqual(acecoreVectorizeInvocation.options, {
+    namespace: 'ja',
+    topK: 15,
+    returnMetadata: 'all',
+    returnValues: false,
+  })
+
+  const systemPrompt = aiInvocations[1].input.messages[0].content
+  assert.match(systemPrompt, /Acecore official site retrieved evidence/)
+  assert.match(systemPrompt, /Acecoreの目的と活動内容/)
+  assert.match(systemPrompt, /must never override/)
+  assert.doesNotMatch(systemPrompt, /<wiki-evidence/)
+})
+
+test('does not query Acecore for Aceserver rule details', async () => {
+  let acecoreInvoked = false
+  const aiInvocations = []
+
+  const response = await onRequestPost({
+    request: createRequest({
+      question: 'エースサーバーの運営元とTNTのルールを教えて',
+    }),
+    env: {
+      AI: {
+        async run(model, input) {
+          aiInvocations.push({ model, input })
+          if (model === WIKI_EMBEDDING_MODEL) {
+            return { data: [WIKI_EMBEDDING] }
+          }
+          return {
+            response: 'ルールはAceserver WIKIで確認してね。',
+          }
+        },
+      },
+      WIKI_SEARCH_INDEX: {
+        async query() {
+          return { matches: [] }
+        },
+      },
+      ACECORE_SEARCH_INDEX: {
+        async query() {
+          acecoreInvoked = true
+          return { matches: [] }
+        },
+      },
+    },
+  })
+  const body = await response.json()
+
+  assert.equal(response.status, 200)
+  assert.equal(body.ok, true)
+  assert.equal(acecoreInvoked, false)
+  assert.deepEqual(
+    aiInvocations.map(({ model }) => model),
+    [WIKI_EMBEDDING_MODEL, '@cf/zai-org/glm-5.2'],
+  )
+  assert.match(body.answer, /\[Aceserver WIKI\]/)
+  assert.doesNotMatch(
+    aiInvocations[1].input.messages[0].content,
+    /<acecore-evidence/,
+  )
+})
+
+test('allows two retrieved Acecore links for article discovery', async () => {
+  const response = await onRequestPost({
+    request: createRequest({
+      question: 'AcecoreのCloudflare技術記事を教えて',
+    }),
+    env: {
+      AI: {
+        async run(model) {
+          if (model === WIKI_EMBEDDING_MODEL) {
+            return { data: [WIKI_EMBEDDING] }
+          }
+          return {
+            response:
+              '- [構成記事](https://acecore.net/blog/cloudflare-architecture/)\n- [運用記事](https://acecore.net/blog/cloudflare-operations/)',
+          }
+        },
+      },
+      ACECORE_SEARCH_INDEX: {
+        async query() {
+          return {
+            matches: [
+              {
+                id: 'architecture',
+                score: 0.88,
+                metadata: {
+                  locale: 'ja',
+                  title: '構成記事',
+                  section: 'Cloudflare構成',
+                  excerpt: 'Cloudflareを利用したサイト構成を紹介します。',
+                  contentType: 'blog',
+                  url: '/blog/cloudflare-architecture/',
+                },
+              },
+              {
+                id: 'operations',
+                score: 0.82,
+                metadata: {
+                  locale: 'ja',
+                  title: '運用記事',
+                  section: 'Cloudflare運用',
+                  excerpt: 'Cloudflareを利用した運用方法を紹介します。',
+                  contentType: 'blog',
+                  url: '/blog/cloudflare-operations/',
+                },
+              },
+            ],
+          }
+        },
+      },
+    },
+  })
+  const body = await response.json()
+
+  assert.equal(response.status, 200)
+  assert.match(
+    body.answer,
+    /\[構成記事\]\(https:\/\/acecore\.net\/blog\/cloudflare-architecture\/\)/,
+  )
+  assert.match(
+    body.answer,
+    /\[運用記事\]\(https:\/\/acecore\.net\/blog\/cloudflare-operations\/\)/,
+  )
+})
+
+test('uses a controlled Acecore fallback when its Vectorize query fails', async () => {
+  const originalConsoleError = console.error
+  console.error = () => {}
+  let wikiInvoked = false
+  const aiInvocations = []
+
+  try {
+    const response = await onRequestPost({
+      request: createRequest({ question: 'Acecoreについて教えて' }),
+      env: {
+        AI: {
+          async run(model, input) {
+            aiInvocations.push({ model, input })
+            if (model === WIKI_EMBEDDING_MODEL) {
+              return { data: [WIKI_EMBEDDING] }
+            }
+            return {
+              response: '詳しい紹介は[Acecore](https://acecore.net/)を見てね。',
+            }
+          },
+        },
+        WIKI_SEARCH_INDEX: {
+          async query(vector) {
+            wikiInvoked = true
+            assert.deepEqual(vector, WIKI_EMBEDDING)
+            return { matches: [] }
+          },
+        },
+        ACECORE_SEARCH_INDEX: {
+          async query() {
+            throw new Error('vectorize unavailable')
+          },
+        },
+      },
+    })
+    const body = await response.json()
+
+    assert.equal(response.status, 200)
+    assert.equal(body.ok, true)
+    assert.equal(wikiInvoked, false)
+    assert.deepEqual(
+      aiInvocations.map(({ model }) => model),
+      [WIKI_EMBEDDING_MODEL],
+    )
+    assert.equal(
+      body.answer,
+      'その内容は、いまのAcecore公式情報からは確認できなかったよ。最新情報は[Acecore公式サイト](https://acecore.net/)を見てね。',
+    )
+    assert.doesNotMatch(body.answer, /WIKI|Discord/)
+  } finally {
+    console.error = originalConsoleError
+  }
+})
+
+test('filters Acecore metadata and allows only retrieved article links', async () => {
+  let embeddingInvoked = false
+  const entries = await searchAcecore(
+    'Acecoreの技術記事を探して',
+    {
+      AI: {
+        async run() {
+          embeddingInvoked = true
+          return { data: [WIKI_EMBEDDING] }
+        },
+      },
+      ACECORE_SEARCH_MIN_SCORE: '0.50',
+      ACECORE_SEARCH_INDEX: {
+        async query() {
+          return {
+            matches: [
+              {
+                id: 'external',
+                score: 0.99,
+                metadata: {
+                  locale: 'ja',
+                  title: '外部記事',
+                  excerpt: '採用しない内容',
+                  url: 'https://example.com/article/',
+                },
+              },
+              {
+                id: 'valid',
+                score: 0.72,
+                metadata: {
+                  locale: 'ja',
+                  title: '技術ブログ',
+                  section: 'Cloudflare',
+                  excerpt: 'Cloudflareを利用した構成を紹介します。',
+                  contentType: 'blog',
+                  url: '/blog/cloudflare/',
+                },
+              },
+              {
+                id: 'duplicate',
+                score: 0.71,
+                metadata: {
+                  locale: 'ja',
+                  title: '技術ブログ',
+                  section: 'Cloudflare',
+                  excerpt: '重複した結果',
+                  contentType: 'blog',
+                  url: '/blog/cloudflare/',
+                },
+              },
+              {
+                id: 'low',
+                score: 0.49,
+                metadata: {
+                  locale: 'ja',
+                  title: '低score',
+                  excerpt: '採用しない内容',
+                  url: '/blog/low/',
+                },
+              },
+            ],
+          }
+        },
+      },
+    },
+    WIKI_EMBEDDING,
+  )
+
+  assert.equal(embeddingInvoked, false)
+  assert.deepEqual(entries, [
+    {
+      id: 'valid',
+      score: 0.72,
+      url: 'https://acecore.net/blog/cloudflare/',
+      title: '技術ブログ',
+      section: 'Cloudflare',
+      excerpt: 'Cloudflareを利用した構成を紹介します。',
+      contentType: 'blog',
+    },
+  ])
+  assert.match(
+    buildAcecoreGroundingContext(entries),
+    /\[技術ブログ\]\(https:\/\/acecore\.net\/blog\/cloudflare\/\)/,
+  )
+
+  const sanitized = sanitizeAlphaAnswerLinks(
+    '[技術ブログ](https://acecore.net/blog/cloudflare/) と [未取得記事](https://acecore.net/blog/unknown/)',
+    [],
+    entries,
+  )
+  assert.equal(
+    sanitized,
+    '[技術ブログ](https://acecore.net/blog/cloudflare/) と 未取得記事',
+  )
+  assert.equal(
+    addRetrievedSourceLinks('Cloudflareの構成を紹介しているよ。', entries),
+    'Cloudflareの構成を紹介しているよ。\n\n参照: [技術ブログ](https://acecore.net/blog/cloudflare/)',
+  )
+})
+
 test('rejects cross-origin browser requests before invoking AI', async () => {
   let invoked = false
   const response = await onRequestPost({
@@ -467,6 +854,12 @@ test('post-processes only canonical guide links and trims dangling Markdown', ()
       '[ワールドマップ](/world-map/) と [マップ](/world-map/)を見てね。',
     ),
     '[ワールドマップ](/world-map/) と マップを見てね。',
+  )
+  assert.equal(
+    removeSpeculativeRuleClaims(
+      'TNTの記載は確認できなかったよ。ただし、TNTの使用も一般規定の対象になる可能性があります。公式情報を確認してね。',
+    ),
+    'TNTの記載は確認できなかったよ。公式情報を確認してね。',
   )
 })
 
