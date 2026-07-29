@@ -12,7 +12,10 @@ import {
   isAllowedCmsDirectoryPath,
   isAllowedCmsWritePath,
 } from '../functions/admin/api/_cms-policy.ts'
-import { validateCmsAddition } from '../functions/admin/api/_content-validation.ts'
+import {
+  MAX_CMS_JSON_BYTES,
+  validateCmsAddition,
+} from '../functions/admin/api/_content-validation.ts'
 import { clearGitHubEditorCacheForTests } from '../functions/admin/api/_github-oauth.ts'
 import { onRequestGet as handleCmsConfig } from '../functions/admin/config.yml.ts'
 import { onRequestPost as handleGraphqlRequest } from '../functions/admin/api/graphql.ts'
@@ -158,6 +161,50 @@ test('壊れたJSON・SVG・拡張子を偽装した画像を同期validatorが�
 
   assert.equal(validateCmsAddition('public/uploads/xss.svg', svg).ok, false)
   assert.equal(validateCmsAddition('public/uploads/xss.png', svg).ok, false)
+})
+
+test('CMS JSONは448 KiBまで受理し超過を拒否する', async () => {
+  assert.equal(MAX_CMS_JSON_BYTES, 448 * 1024)
+
+  const value = JSON.parse(
+    await readFile(new URL(`../${contentPath}`, import.meta.url), 'utf8'),
+  )
+  value.meta.description = ''
+
+  const baseBytes = Buffer.from(JSON.stringify(value))
+  const exactLimitBytes = Buffer.from(
+    JSON.stringify({
+      ...value,
+      meta: {
+        ...value.meta,
+        description: 'x'.repeat(MAX_CMS_JSON_BYTES - baseBytes.byteLength),
+      },
+    }),
+  )
+  const overLimitBytes = Buffer.from(
+    JSON.stringify({
+      ...value,
+      meta: {
+        ...value.meta,
+        description: 'x'.repeat(MAX_CMS_JSON_BYTES - baseBytes.byteLength + 1),
+      },
+    }),
+  )
+
+  assert.equal(exactLimitBytes.byteLength, MAX_CMS_JSON_BYTES)
+  assert.equal(overLimitBytes.byteLength, MAX_CMS_JSON_BYTES + 1)
+  assert.equal(
+    validateCmsAddition(contentPath, exactLimitBytes.toString('base64')).ok,
+    true,
+  )
+
+  const rejected = validateCmsAddition(
+    contentPath,
+    overLimitBytes.toString('base64'),
+  )
+
+  assert.equal(rejected.ok, false)
+  assert.match(rejected.message, /448 KiB/)
 })
 
 test('optional fieldの省略を許可し、iframe srcはHTTPSに限定する', async () => {

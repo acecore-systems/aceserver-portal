@@ -14,6 +14,7 @@
 ## CMS とコンテンツ
 
 - CMS 編集対象は `src/content/pages/*.json` と `src/content/site/*.json` を正とする。
+- CMS JSONはGitHub GraphQL readで本文が省略されない448 KiB以下に限定し、runtime validatorと回帰テストの上限を同期する。
 - CMS content の shape は `src/content.config.ts` の Astro Content Collections schema に合わせる。
 - 複数ファイルをまたぐ制約（slug とファイル名、内部リンク、CMS config の公開フィールドなど）は `npm run validate:content` で確認する。
 - 公開 URL は `slug` ベースの route を正とし、CMS editable content に `path` を戻さない。

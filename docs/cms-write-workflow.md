@@ -1,6 +1,6 @@
 # CMS 直接公開運用
 
-最終確認日: 2026-07-28
+最終確認日: 2026-07-29
 
 ## 現在の構成
 
@@ -37,7 +37,7 @@ CMS管理対象外のsource code、schema、CMS設定、workflowはdirect commit
 - `public/admin/config.yml` の `files` に列挙した `src/content/site/*.json`
 - `public/uploads/**` の許可済み画像形式
 
-schema、workflow、source codeなど上記以外はproxyが拒否します。参照中画像を誤って消さないよう、CMSからの削除はJSON・画像とも拒否します。不要画像の削除は参照確認を含む通常のPull Requestで行います。1回の保存は最大100ファイル、追加データ合計25 MiBです。
+schema、workflow、source codeなど上記以外はproxyが拒否します。参照中画像を誤って消さないよう、CMSからの削除はJSON・画像とも拒否します。不要画像の削除は参照確認を含む通常のPull Requestで行います。CMS JSONはGitHub GraphQL readで本文が省略されないよう1ファイル448 KiB以下に限定します。1回の保存は最大100ファイル、追加データ合計25 MiBです。
 
 ## GitHub AppとCloudflare Pages設定
 

@@ -14,7 +14,7 @@ import worldMapSigen from '../../../src/content/pages/world-map-sigen.json'
 import youtubeSearch from '../../../src/content/pages/youtube-search-aceserver.json'
 import { validatePortalContentFile } from '../../../src/data/content-schemas.ts'
 
-const MAX_JSON_BYTES = 1024 * 1024
+export const MAX_CMS_JSON_BYTES = 448 * 1024
 const MAX_MEDIA_BYTES = 10 * 1024 * 1024
 const MAX_DEPTH = 32
 const MAX_NODES = 50_000
@@ -78,10 +78,10 @@ export function validateCmsAddition(
   }
 
   if (path.endsWith('.json')) {
-    if (bytes.byteLength === 0 || bytes.byteLength > MAX_JSON_BYTES) {
+    if (bytes.byteLength === 0 || bytes.byteLength > MAX_CMS_JSON_BYTES) {
       return {
         ok: false,
-        message: 'JSONは1 byte以上1 MiB以下にしてください。',
+        message: 'JSONは1 byte以上448 KiB以下にしてください。',
       }
     }
 
