@@ -4,7 +4,7 @@ import {
   searchAceserverWiki,
 } from './alpha-wiki-search.js'
 
-const DEFAULT_CLOUDFLARE_AI_MODEL = '@cf/zai-org/glm-4.7-flash'
+const DEFAULT_CLOUDFLARE_AI_MODEL = '@cf/zai-org/glm-5.2'
 const MAX_REQUEST_BODY_BYTES = 12_000
 const MAX_QUESTION_LENGTH = 500
 const MAX_HISTORY_MESSAGES = 8

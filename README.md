@@ -61,7 +61,7 @@ Cloudflare Pages のproduction / previewでは、build前に `public/admin/runti
 
 サイト全体に右下固定のアルファくん案内チャットを表示します。アルファくんはエースサーバーのキャラクター案内役として、参加方法、ワールド、ルール、ストーリー導線を案内します。
 
-`functions/api/alpha-chat.js` の Cloudflare Pages Function から Cloudflare Workers AI binding を呼び出します。質問は多言語embeddingモデルのBGE-M3 (`@cf/baai/bge-m3`) でベクトル化し、Aceserver WIKIのVectorize indexから関連する公開記事を検索します。検索で得たchunk IDはWIKIの公開`vector-corpus.json`へ照合し、metadataの短い抜粋だけでなく最大1200文字の元chunkを回答根拠にします。回答生成には対話向けのGLM 4.7 Flash (`@cf/zai-org/glm-4.7-flash`) をthinking無効で使い、短い案内本文へtokenを集中させます。ブラウザには AI 実行用のキーを渡しません。
+`functions/api/alpha-chat.js` の Cloudflare Pages Function から Cloudflare Workers AI binding を呼び出します。質問は多言語embeddingモデルのBGE-M3 (`@cf/baai/bge-m3`) でベクトル化し、Aceserver WIKIのVectorize indexから関連する公開記事を検索します。検索で得たchunk IDはWIKIの公開`vector-corpus.json`へ照合し、metadataの短い抜粋だけでなく最大1200文字の元chunkを回答根拠にします。回答生成にはGLM 5.2 (`@cf/zai-org/glm-5.2`) をthinking無効で使い、短い案内本文へtokenを集中させます。ブラウザには AI 実行用のキーを渡しません。
 
 Vectorizeまたはembedding取得に失敗した場合は検索なしの案内へフォールバックします。WIKI corpusの取得に失敗した場合はVectorize metadataの抜粋へフォールバックし、アルファくん自体は利用を継続します。ルール、コマンド、参加条件など変更される情報は、検索で取得したWIKI内容に根拠がある範囲だけ具体的に回答し、出典記事をMarkdownリンクで示します。
 
@@ -71,7 +71,7 @@ Cloudflare Pages 側では `wrangler.jsonc` を設定の正とし、acecore-net 
 
 - Workers AI binding: `AI`
 - Vectorize binding: `WIKI_SEARCH_INDEX`
-- `CLOUDFLARE_AI_MODEL`: 使用モデル（未設定時は `@cf/zai-org/glm-4.7-flash`）
+- `CLOUDFLARE_AI_MODEL`: 使用モデル（未設定時は `@cf/zai-org/glm-5.2`）
 - `WIKI_SEARCH_ENABLED`: WIKI検索のkill switch（`"false"`で無効化）
 - `WIKI_SEARCH_MIN_SCORE`: 回答根拠に採用するVectorize scoreの下限（既定`0.40`）
 - Preview index: `aceserver-wiki-search-preview`

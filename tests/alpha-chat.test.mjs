@@ -69,7 +69,7 @@ test('uses the dialogue model and only stable navigation context', async () => {
     body.answer,
     /\[Aceserver WIKI\]\(https:\/\/asv-wiki\.acecore\.net\)/,
   )
-  assert.equal(invocation.model, '@cf/zai-org/glm-4.7-flash')
+  assert.equal(invocation.model, '@cf/zai-org/glm-5.2')
   assert.equal(invocation.input.max_completion_tokens, 320)
   assert.deepEqual(invocation.input.chat_template_kwargs, {
     enable_thinking: false,
@@ -167,7 +167,7 @@ test('grounds concrete answers with Vectorize WIKI evidence and its article link
     )
     assert.deepEqual(
       aiInvocations.map(({ model }) => model),
-      [WIKI_EMBEDDING_MODEL, '@cf/zai-org/glm-4.7-flash'],
+      [WIKI_EMBEDDING_MODEL, '@cf/zai-org/glm-5.2'],
     )
     assert.deepEqual(vectorizeInvocation.vector, WIKI_EMBEDDING)
     assert.deepEqual(vectorizeInvocation.options, {
@@ -228,7 +228,7 @@ test('continues with navigation guidance when WIKI retrieval fails', async () =>
     assert.equal(vectorizeInvoked, false)
     assert.deepEqual(
       aiInvocations.map(({ model }) => model),
-      [WIKI_EMBEDDING_MODEL, '@cf/zai-org/glm-4.7-flash'],
+      [WIKI_EMBEDDING_MODEL, '@cf/zai-org/glm-5.2'],
     )
     assert.match(body.answer, /\[公式Discord\]/)
     assert.doesNotMatch(
