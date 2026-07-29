@@ -191,7 +191,11 @@ export async function onRequestPost({ request, env }) {
   }
 
   const rawAnswer = trimIncompleteMarkdown(extractWorkersAiText(result).trim())
-  const sourceLimit = hasPriorUserTurn(payload) ? 2 : 1
+  const sourceLimit =
+    hasPriorUserTurn(payload) ||
+    shouldAllowMultipleAcecoreArticleSources(question, acecoreEntries)
+      ? 2
+      : 1
   const retrievedSources = [...wikiEntries, ...acecoreEntries]
   const selectedSources = rankRetrievedSourcesForAnswer(
     rawAnswer,
@@ -251,6 +255,14 @@ async function retrieveAlphaEvidence(query, intentQuery, env) {
 
 function markEvidenceSource(entries, source) {
   return entries.map((entry) => ({ ...entry, source }))
+}
+
+function shouldAllowMultipleAcecoreArticleSources(question, acecoreEntries) {
+  if (!/(?:記事|ブログ)/u.test(String(question || ''))) return false
+
+  return (
+    acecoreEntries.filter((entry) => entry.contentType === 'blog').length >= 2
+  )
 }
 
 export function onRequestOptions({ request }) {

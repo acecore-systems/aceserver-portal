@@ -478,6 +478,70 @@ test('does not query Acecore for Aceserver rule details', async () => {
   )
 })
 
+test('allows two retrieved Acecore links for article discovery', async () => {
+  const response = await onRequestPost({
+    request: createRequest({
+      question: 'AcecoreのCloudflare技術記事を教えて',
+    }),
+    env: {
+      AI: {
+        async run(model) {
+          if (model === WIKI_EMBEDDING_MODEL) {
+            return { data: [WIKI_EMBEDDING] }
+          }
+          return {
+            response:
+              '- [構成記事](https://acecore.net/blog/cloudflare-architecture/)\n- [運用記事](https://acecore.net/blog/cloudflare-operations/)',
+          }
+        },
+      },
+      ACECORE_SEARCH_INDEX: {
+        async query() {
+          return {
+            matches: [
+              {
+                id: 'architecture',
+                score: 0.88,
+                metadata: {
+                  locale: 'ja',
+                  title: '構成記事',
+                  section: 'Cloudflare構成',
+                  excerpt: 'Cloudflareを利用したサイト構成を紹介します。',
+                  contentType: 'blog',
+                  url: '/blog/cloudflare-architecture/',
+                },
+              },
+              {
+                id: 'operations',
+                score: 0.82,
+                metadata: {
+                  locale: 'ja',
+                  title: '運用記事',
+                  section: 'Cloudflare運用',
+                  excerpt: 'Cloudflareを利用した運用方法を紹介します。',
+                  contentType: 'blog',
+                  url: '/blog/cloudflare-operations/',
+                },
+              },
+            ],
+          }
+        },
+      },
+    },
+  })
+  const body = await response.json()
+
+  assert.equal(response.status, 200)
+  assert.match(
+    body.answer,
+    /\[構成記事\]\(https:\/\/acecore\.net\/blog\/cloudflare-architecture\/\)/,
+  )
+  assert.match(
+    body.answer,
+    /\[運用記事\]\(https:\/\/acecore\.net\/blog\/cloudflare-operations\/\)/,
+  )
+})
+
 test('continues with the official Acecore link when its Vectorize query fails', async () => {
   const originalConsoleError = console.error
   console.error = () => {}
