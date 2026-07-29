@@ -16,7 +16,7 @@
     "format": "prettier . --write",
     "format:check": "prettier . --check",
     "test:alpha": "node --test tests/alpha-chat.test.mjs",
-    "test:cms": "node --test tests/cms-proxy.test.mjs",
+    "test:cms": "node --import=./scripts/json-module-loader.mjs --test --test-concurrency=1 --test-isolation=none tests/cms-*.test.mjs",
     "test:dynmap": "node --test cloudflare/dynmap-r2-cache/worker.test.mjs",
     "typecheck:functions": "tsc --project tsconfig.functions.json",
     "validate:content": "node scripts/validate-content.mjs",
@@ -28,7 +28,8 @@
     "@unocss/astro": "^66.7.5",
     "astro": "^7.1.3",
     "graphql": "^17.0.2",
-    "unocss": "^66.7.5"
+    "unocss": "^66.7.5",
+    "zod": "^4.3.6"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^5.20260723.1",

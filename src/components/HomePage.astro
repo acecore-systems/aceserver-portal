@@ -1,5 +1,6 @@
 ---
 import type { LinkItem, PortalPage, PortalSection } from '../types'
+import { serializeCssUrl } from '../data/safe-json'
 import { externalLinkAttrs } from '../utils/links'
 import Icon from './Icon.astro'
 
@@ -103,6 +104,7 @@ const wikiCta = getSection('hero') ?? fallbackWikiCta
 const heroImage = overview.image ?? '/uploads/legacy-scc.png'
 const wikiBackgroundImage =
   wikiCta.backgroundImage ?? '/uploads/legacy-wiki-bg.png'
+const wikiBackgroundImageCss = serializeCssUrl(wikiBackgroundImage)
 const heroJoinButton = joinCta.ctaButton ?? fallbackJoinButton
 const heroWikiButton = wikiCta.ctaButton ?? fallbackWikiButton
 const alphaLogo = '/uploads/alpha-kun.png'
@@ -219,7 +221,7 @@ const alphaLogo = '/uploads/alpha-kun.png'
   </article>
   <article
     class="wiki-card pixel-border"
-    style={`--wiki-image: url('${wikiBackgroundImage}')`}
+    style={`--wiki-image: ${wikiBackgroundImageCss}`}
   >
     <div>
       <h2>{wikiCta.titleCopy}</h2>
