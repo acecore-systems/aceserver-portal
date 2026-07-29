@@ -3,13 +3,25 @@ import test from 'node:test'
 
 import {
   addGuideResourceLinks,
+  addWikiSourceLinks,
   buildConversationInput,
+  buildWikiSearchQuery,
+  hasPriorUserTurn,
   isAllowedRequestOrigin,
   onRequestPost,
+  removeUnsupportedWikiReferenceLines,
+  sanitizeAlphaAnswerLinks,
   trimIncompleteMarkdown,
 } from '../functions/api/alpha-chat.js'
+import {
+  ACESERVER_WIKI_CORPUS_URL,
+  buildWikiGroundingContext,
+  searchAceserverWiki,
+  WIKI_EMBEDDING_MODEL,
+} from '../functions/api/alpha-wiki-search.js'
 
 const ENDPOINT = 'https://asv.acecore.net/api/alpha-chat'
+const WIKI_EMBEDDING = Array.from({ length: 1024 }, (_, index) => index / 1024)
 
 function createRequest(payload, headers = {}) {
   return new Request(ENDPOINT, {
@@ -57,7 +69,7 @@ test('uses the dialogue model and only stable navigation context', async () => {
     body.answer,
     /\[Aceserver WIKI\]\(https:\/\/asv-wiki\.acecore\.net\)/,
   )
-  assert.equal(invocation.model, '@cf/zai-org/glm-4.7-flash')
+  assert.equal(invocation.model, '@cf/zai-org/glm-5.2')
   assert.equal(invocation.input.max_completion_tokens, 320)
   assert.deepEqual(invocation.input.chat_template_kwargs, {
     enable_thinking: false,
@@ -67,6 +79,247 @@ test('uses the dialogue model and only stable navigation context', async () => {
   assert.match(systemPrompt, /https:\/\/discord\.gg\/acsv/)
   assert.match(systemPrompt, /Rules, commands, plugins/)
   assert.doesNotMatch(systemPrompt, /vKTdU4k8ur|\/article\/Reset|32チャンク/)
+})
+
+test('grounds concrete answers with Vectorize WIKI evidence and its article link', async () => {
+  const aiInvocations = []
+  let vectorizeInvocation
+  const originalFetch = globalThis.fetch
+  globalThis.fetch = async (url, init) => {
+    assert.equal(url, ACESERVER_WIKI_CORPUS_URL)
+    assert.equal(init.redirect, 'manual')
+    assert.deepEqual(init.cf, {
+      cacheEverything: true,
+      cacheTtl: 300,
+    })
+    return Response.json({
+      schemaVersion: 1,
+      embedding: {
+        model: WIKI_EMBEDDING_MODEL,
+        dimensions: 1024,
+      },
+      chunks: [
+        {
+          id: 'rule-explosives',
+          namespace: 'ja',
+          text: 'ルール・BAN条件 爆破物の使用について メインサーバーでの爆破物（エンドクリスタル・TNTなど）の使用は禁止です。',
+          metadata: {
+            locale: 'ja',
+            title: 'ルール・BAN条件',
+            section: '爆破物',
+            excerpt: '爆破物のルールです。',
+            url: '/article/rule/',
+          },
+        },
+      ],
+    })
+  }
+
+  try {
+    const response = await onRequestPost({
+      request: createRequest({ question: 'TNTは使える？' }),
+      env: {
+        AI: {
+          async run(model, input) {
+            aiInvocations.push({ model, input })
+            if (model === WIKI_EMBEDDING_MODEL) {
+              return { data: [WIKI_EMBEDDING] }
+            }
+
+            return {
+              response:
+                'メインサーバーではTNTは禁止だよ。[ルール・BAN条件](https://asv-wiki.acecore.net/article/rule/)で確認してね。',
+            }
+          },
+        },
+        WIKI_SEARCH_ENABLED: 'true',
+        WIKI_SEARCH_MIN_SCORE: '0.40',
+        WIKI_SEARCH_INDEX: {
+          async query(vector, options) {
+            vectorizeInvocation = { vector, options }
+            return {
+              matches: [
+                {
+                  id: 'rule-explosives',
+                  score: 0.91,
+                  metadata: {
+                    locale: 'ja',
+                    title: 'ルール・BAN条件',
+                    section: '爆破物',
+                    excerpt: '爆破物のルールです。',
+                    url: '/article/rule/',
+                  },
+                },
+              ],
+            }
+          },
+        },
+      },
+    })
+    const body = await response.json()
+
+    assert.equal(response.status, 200)
+    assert.equal(body.ok, true)
+    assert.match(body.answer, /メインサーバーではTNTは禁止/)
+    assert.match(
+      body.answer,
+      /\[ルール・BAN条件\]\(https:\/\/asv-wiki\.acecore\.net\/article\/rule\/\)/,
+    )
+    assert.deepEqual(
+      aiInvocations.map(({ model }) => model),
+      [WIKI_EMBEDDING_MODEL, '@cf/zai-org/glm-5.2'],
+    )
+    assert.deepEqual(vectorizeInvocation.vector, WIKI_EMBEDDING)
+    assert.deepEqual(vectorizeInvocation.options, {
+      namespace: 'ja',
+      topK: 15,
+      returnMetadata: 'all',
+      returnValues: false,
+    })
+
+    const systemPrompt = aiInvocations[1].input.messages[0].content
+    assert.match(systemPrompt, /Aceserver WIKI retrieved evidence/)
+    assert.match(systemPrompt, /メインサーバーでの爆破物/)
+    assert.match(
+      systemPrompt,
+      /\[ルール・BAN条件\]\(https:\/\/asv-wiki\.acecore\.net\/article\/rule\/\)/,
+    )
+    assert.doesNotMatch(systemPrompt, /Content: 爆破物のルールです。/)
+    assert.match(systemPrompt, /Do not invent .*approvals/)
+  } finally {
+    globalThis.fetch = originalFetch
+  }
+})
+
+test('continues with navigation guidance when WIKI retrieval fails', async () => {
+  const aiInvocations = []
+  let vectorizeInvoked = false
+  const originalConsoleError = console.error
+  console.error = () => {}
+
+  try {
+    const response = await onRequestPost({
+      request: createRequest({ question: '参加方法を教えて' }),
+      env: {
+        AI: {
+          async run(model, input) {
+            aiInvocations.push({ model, input })
+            if (model === WIKI_EMBEDDING_MODEL) {
+              throw new Error('embedding unavailable')
+            }
+
+            return {
+              response: '参加方法は公式DiscordとAceserver WIKIを確認してね。',
+            }
+          },
+        },
+        WIKI_SEARCH_INDEX: {
+          async query() {
+            vectorizeInvoked = true
+            return { matches: [] }
+          },
+        },
+      },
+    })
+    const body = await response.json()
+
+    assert.equal(response.status, 200)
+    assert.equal(body.ok, true)
+    assert.equal(vectorizeInvoked, false)
+    assert.deepEqual(
+      aiInvocations.map(({ model }) => model),
+      [WIKI_EMBEDDING_MODEL, '@cf/zai-org/glm-5.2'],
+    )
+    assert.match(body.answer, /\[公式Discord\]/)
+    assert.doesNotMatch(
+      aiInvocations[1].input.messages[0].content,
+      /<wiki-evidence/,
+    )
+  } finally {
+    console.error = originalConsoleError
+  }
+})
+
+test('filters low-score, duplicate, and non-WIKI Vectorize metadata', async () => {
+  const entries = await searchAceserverWiki(
+    'ルールを教えて',
+    {
+      AI: {
+        async run() {
+          return { data: [WIKI_EMBEDDING] }
+        },
+      },
+      WIKI_SEARCH_MIN_SCORE: '0.40',
+      WIKI_SEARCH_INDEX: {
+        async query() {
+          return {
+            matches: [
+              {
+                id: 'external',
+                score: 0.99,
+                metadata: {
+                  locale: 'ja',
+                  title: '外部',
+                  section: '外部',
+                  excerpt: '採用してはいけない内容',
+                  url: 'https://example.com/article/rule/',
+                },
+              },
+              {
+                id: 'valid',
+                score: 0.415,
+                metadata: {
+                  locale: 'ja',
+                  title: 'ルール・BAN条件',
+                  section: '建築',
+                  excerpt: '自分の敷地には所有者を示す看板を設置します。',
+                  url: '/article/rule/',
+                },
+              },
+              {
+                id: 'duplicate',
+                score: 0.414,
+                metadata: {
+                  locale: 'ja',
+                  title: 'ルール・BAN条件',
+                  section: '建築',
+                  excerpt: '自分の敷地には所有者を示す看板を設置します。',
+                  url: '/article/rule/',
+                },
+              },
+              {
+                id: 'low-score',
+                score: 0.3,
+                metadata: {
+                  locale: 'ja',
+                  title: '参加方法',
+                  section: '参加方法',
+                  excerpt: '公式Discordを確認します。',
+                  url: '/article/in/',
+                },
+              },
+            ],
+          }
+        },
+      },
+    },
+    null,
+  )
+
+  assert.deepEqual(entries, [
+    {
+      id: 'valid',
+      score: 0.415,
+      title: 'ルール・BAN条件',
+      section: '建築',
+      excerpt: '自分の敷地には所有者を示す看板を設置します。',
+      url: 'https://asv-wiki.acecore.net/article/rule/',
+    },
+  ])
+  assert.match(
+    buildWikiGroundingContext(entries),
+    /\[ルール・BAN条件\]\(https:\/\/asv-wiki\.acecore\.net\/article\/rule\/\)/,
+  )
 })
 
 test('rejects cross-origin browser requests before invoking AI', async () => {
@@ -163,6 +416,41 @@ test('normalizes conversation roles and keeps only recent messages', () => {
   assert.match(conversation, /Visitor: message-9/)
 })
 
+test('uses the latest two visitor turns as the semantic search query', () => {
+  const query = buildWikiSearchQuery(
+    {
+      messages: [
+        { role: 'assistant', content: '何を案内しようか？' },
+        { role: 'user', content: 'TNTのルールを教えて' },
+        { role: 'assistant', content: '確認するね。' },
+        { role: 'user', content: '資源サーバーでは？' },
+      ],
+    },
+    '資源サーバーでは？',
+  )
+
+  assert.equal(query, 'TNTのルールを教えて\n資源サーバーでは？')
+})
+
+test('allows a second source only after a previous visitor turn', () => {
+  assert.equal(
+    hasPriorUserTurn({
+      messages: [{ role: 'user', content: '資源サーバーの使い方を教えて' }],
+    }),
+    false,
+  )
+  assert.equal(
+    hasPriorUserTurn({
+      messages: [
+        { role: 'user', content: 'TNTは使える？' },
+        { role: 'assistant', content: 'メインサーバーでは禁止だよ。' },
+        { role: 'user', content: '資源サーバーでは？' },
+      ],
+    }),
+    true,
+  )
+})
+
 test('post-processes only canonical guide links and trims dangling Markdown', () => {
   assert.equal(
     addGuideResourceLinks('公式DiscordとAceserver WIKIを確認してね。'),
@@ -179,6 +467,68 @@ test('post-processes only canonical guide links and trims dangling Markdown', ()
       '[ワールドマップ](/world-map/) と [マップ](/world-map/)を見てね。',
     ),
     '[ワールドマップ](/world-map/) と マップを見てね。',
+  )
+})
+
+test('allows only retrieved WIKI article links and appends specific sources', () => {
+  const wikiEntries = [
+    {
+      title: 'ルール・BAN条件',
+      url: 'https://asv-wiki.acecore.net/article/rule/',
+      content: 'メインサーバーでは爆破物の使用は禁止です。',
+    },
+    {
+      title: 'hub紹介',
+      url: 'https://asv-wiki.acecore.net/article/hub-intro/',
+      content:
+        '資源サーバーはすべてのプレイヤーが利用可能です。コマンド/sigenでも入れます。',
+    },
+    {
+      title: '宣伝',
+      url: 'https://asv-wiki.acecore.net/article/promotion/',
+      content: 'エースサーバーを紹介しているサービスです。',
+    },
+  ]
+  const sanitized = sanitizeAlphaAnswerLinks(
+    '[参加方法](https://asv-wiki.acecore.net/article/join/) と [hub紹介](https://asv-wiki.acecore.net/article/hub-intro/)',
+    wikiEntries,
+  )
+
+  assert.equal(
+    sanitized,
+    '参加方法 と [hub紹介](https://asv-wiki.acecore.net/article/hub-intro/)',
+  )
+
+  const sourced = addWikiSourceLinks(
+    'メインでは禁止です。[ルール](https://asv-wiki.acecore.net/article/rule/)',
+    wikiEntries,
+    2,
+  )
+  assert.match(
+    sourced,
+    /\[hub紹介\]\(https:\/\/asv-wiki\.acecore\.net\/article\/hub-intro\/\)/,
+  )
+  assert.doesNotMatch(sourced, /article\/promotion/)
+
+  const commandSource = addWikiSourceLinks(
+    '資源サーバーは `/sigen` コマンドで入れます。',
+    wikiEntries,
+    1,
+  )
+  assert.match(
+    commandSource,
+    /\[hub紹介\]\(https:\/\/asv-wiki\.acecore\.net\/article\/hub-intro\/\)/,
+  )
+  assert.doesNotMatch(commandSource, /article\/rule/)
+
+  const cleanedReferences = removeUnsupportedWikiReferenceLines(
+    '詳しくは [hub紹介](https://asv-wiki.acecore.net/article/hub-intro/) を見てね。\n\n参照: ルール・BAN条件',
+    wikiEntries,
+    [wikiEntries[1]],
+  )
+  assert.equal(
+    cleanedReferences,
+    '詳しくは [hub紹介](https://asv-wiki.acecore.net/article/hub-intro/) を見てね。',
   )
 })
 
