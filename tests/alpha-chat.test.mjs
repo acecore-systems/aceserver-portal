@@ -3,10 +3,12 @@ import test from 'node:test'
 
 import {
   addGuideResourceLinks,
+  addWikiSourceLinks,
   buildConversationInput,
   buildWikiSearchQuery,
   isAllowedRequestOrigin,
   onRequestPost,
+  sanitizeAlphaAnswerLinks,
   trimIncompleteMarkdown,
 } from '../functions/api/alpha-chat.js'
 import {
@@ -445,6 +447,43 @@ test('post-processes only canonical guide links and trims dangling Markdown', ()
     ),
     '[ワールドマップ](/world-map/) と マップを見てね。',
   )
+})
+
+test('allows only retrieved WIKI article links and appends specific sources', () => {
+  const wikiEntries = [
+    {
+      title: 'ルール・BAN条件',
+      url: 'https://asv-wiki.acecore.net/article/rule/',
+    },
+    {
+      title: 'hub紹介',
+      url: 'https://asv-wiki.acecore.net/article/hub-intro/',
+    },
+    {
+      title: '宣伝',
+      url: 'https://asv-wiki.acecore.net/article/promotion/',
+    },
+  ]
+  const sanitized = sanitizeAlphaAnswerLinks(
+    '[参加方法](https://asv-wiki.acecore.net/article/join/) と [hub紹介](https://asv-wiki.acecore.net/article/hub-intro/)',
+    wikiEntries,
+  )
+
+  assert.equal(
+    sanitized,
+    '参加方法 と [hub紹介](https://asv-wiki.acecore.net/article/hub-intro/)',
+  )
+
+  const sourced = addWikiSourceLinks(
+    'メインでは禁止です。[ルール](https://asv-wiki.acecore.net/article/rule/)',
+    wikiEntries,
+    2,
+  )
+  assert.match(
+    sourced,
+    /\[hub紹介\]\(https:\/\/asv-wiki\.acecore\.net\/article\/hub-intro\/\)/,
+  )
+  assert.doesNotMatch(sourced, /article\/promotion/)
 })
 
 test('origin comparison includes the scheme and honors Fetch Metadata', () => {

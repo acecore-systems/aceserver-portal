@@ -114,9 +114,11 @@ export async function onRequestPost({ request, env }) {
     )
   }
 
-  const wikiGroundingContext = buildWikiGroundingContext(
-    await searchAceserverWiki(buildWikiSearchQuery(payload, question), env),
+  const wikiEntries = await searchAceserverWiki(
+    buildWikiSearchQuery(payload, question),
+    env,
   )
+  const wikiGroundingContext = buildWikiGroundingContext(wikiEntries)
 
   let result
   try {
@@ -176,8 +178,15 @@ export async function onRequestPost({ request, env }) {
     )
   }
 
-  const answer = addGuideResourceLinks(
-    trimIncompleteMarkdown(extractWorkersAiText(result).trim()),
+  const answer = addWikiSourceLinks(
+    addGuideResourceLinks(
+      sanitizeAlphaAnswerLinks(
+        trimIncompleteMarkdown(extractWorkersAiText(result).trim()),
+        wikiEntries,
+      ),
+    ),
+    wikiEntries,
+    hasPriorUserTurn(payload) ? 2 : 1,
   )
   return jsonResponse(request, {
     ok: true,
@@ -305,6 +314,92 @@ export function addGuideResourceLinks(answer) {
   }
 
   return linkedAnswer
+}
+
+export function sanitizeAlphaAnswerLinks(answer, wikiEntries = []) {
+  const allowedLinks = buildAllowedAlphaAnswerLinks(wikiEntries)
+  const pattern = /\[([^\]\n]{1,120})\]\(\s*([^\s)]{1,500})\s*\)/g
+
+  return String(answer || '').replace(pattern, (match, label, rawHref) => {
+    if (rawHref.includes('\\') || rawHref.startsWith('//')) return label
+
+    try {
+      const normalizedHref = new URL(rawHref, 'https://asv.acecore.net/').href
+      const allowedHref = allowedLinks.get(normalizedHref)
+      return allowedHref ? `[${label}](${allowedHref})` : label
+    } catch {
+      return label
+    }
+  })
+}
+
+export function addWikiSourceLinks(answer, wikiEntries = [], limit = 1) {
+  const normalizedAnswer = String(answer || '').trim()
+  if (!normalizedAnswer) return ''
+
+  const sourceLimit = Math.min(Math.max(Number(limit) || 1, 1), 2)
+  const missingSources = wikiEntries
+    .slice(0, sourceLimit)
+    .filter(
+      (entry) =>
+        entry?.title &&
+        entry?.url &&
+        !normalizedAnswer.includes(String(entry.url)),
+    )
+
+  if (missingSources.length === 0) return normalizedAnswer
+
+  const links = missingSources.map(
+    (entry) =>
+      `[${sanitizeMarkdownLinkLabel(entry.title)}](${String(entry.url)})`,
+  )
+  return `${normalizedAnswer}\n\n参照: ${links.join(' / ')}`
+}
+
+function buildAllowedAlphaAnswerLinks(wikiEntries) {
+  const allowedLinks = new Map()
+
+  registerAllowedAlphaAnswerLink(allowedLinks, DISCORD_URL, DISCORD_URL)
+  registerAllowedAlphaAnswerLink(allowedLinks, WIKI_URL, WIKI_URL)
+  registerAllowedAlphaAnswerLink(allowedLinks, WORLD_MAP_URL, WORLD_MAP_URL)
+  registerAllowedAlphaAnswerLink(allowedLinks, ACECORE_URL, ACECORE_URL)
+
+  for (const entry of wikiEntries) {
+    if (!entry?.url) continue
+    registerAllowedAlphaAnswerLink(allowedLinks, entry.url, entry.url)
+  }
+
+  return allowedLinks
+}
+
+function registerAllowedAlphaAnswerLink(allowedLinks, href, outputHref) {
+  try {
+    const normalizedHref = new URL(href, 'https://asv.acecore.net/').href
+    allowedLinks.set(normalizedHref, outputHref)
+
+    if (normalizedHref.endsWith('/') && normalizedHref !== `${WIKI_URL}/`) {
+      allowedLinks.set(normalizedHref.slice(0, -1), outputHref)
+    }
+  } catch {
+    // Ignore invalid server-owned link configuration.
+  }
+}
+
+function sanitizeMarkdownLinkLabel(value) {
+  return String(value)
+    .replace(/[\[\]]/gu, '')
+    .trim()
+    .slice(0, 80)
+}
+
+function hasPriorUserTurn(payload) {
+  return (
+    Array.isArray(payload?.messages) &&
+    payload.messages.some(
+      (message) =>
+        message?.role === 'user' && String(message?.content || '').trim(),
+    )
+  )
 }
 
 function linkGuideResource(answer, resource) {
