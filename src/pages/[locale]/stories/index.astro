@@ -1,0 +1,37 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content'
+import StoriesIndex from '../../../components/StoriesIndex.astro'
+import { TRANSLATED_LOCALES, type TranslatedLocale } from '../../../i18n/config'
+import { getUi } from '../../../i18n/translations'
+import BaseLayout from '../../../layouts/BaseLayout.astro'
+
+export async function getStaticPaths() {
+  const allStories = await getCollection('stories')
+
+  return TRANSLATED_LOCALES.map((locale) => ({
+    params: { locale },
+    props: {
+      locale,
+      stories: allStories
+        .filter((story) => story.id.startsWith(`${locale}/`))
+        .sort((a, b) => b.data.date.getTime() - a.data.date.getTime()),
+    },
+  }))
+}
+
+interface Props {
+  locale: TranslatedLocale
+  stories: CollectionEntry<'stories'>[]
+}
+
+const { locale, stories } = Astro.props
+const ui = getUi(locale)
+---
+
+<BaseLayout
+  locale={locale}
+  title={ui.storiesTitle}
+  description={ui.storiesDescription}
+>
+  <StoriesIndex locale={locale} stories={stories} />
+</BaseLayout>

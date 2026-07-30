@@ -1,17 +1,18 @@
 ---
 import HomePage from '../components/HomePage.astro'
 import BaseLayout from '../layouts/BaseLayout.astro'
-import { getHomePage } from '../data/content'
+import { getLocalizedHomePage } from '../i18n/content'
 
-const page = getHomePage()
+const page = getLocalizedHomePage('ja')
 ---
 
 <BaseLayout
+  locale="ja"
   title={page.meta.title}
   description={page.meta.description}
   image={page.meta.ogImage}
   hideFooter={page.hideFooter}
   showAds
 >
-  <HomePage page={page} />
+  <HomePage page={page} locale="ja" />
 </BaseLayout>

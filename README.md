@@ -50,8 +50,9 @@ CMS content の shape は `src/content.config.ts` の Astro Content Collections 
 エースサーバー固有の出来事やコミュニティ記事は
 `src/content/stories/*.md` を正としてポータル内で公開します。Acecoreの
 コーポレートサイトには本文を複製せず、旧URLから各記事へ転送します。
-Storiesは日本語を正とするPR管理コンテンツです。Acecore側にあった8言語の
-旧記事URLは、対応する日本語記事のcanonical URLへ301で統合します。
+Storiesは日本語を正とするPR管理コンテンツです。日本語と8言語の翻訳を
+ポータル内の言語別URLで公開し、Acecore側の旧記事URLも対応する言語版へ
+301で転送します。翻訳は日本語正本のsource hashと構造をbuild前に検証します。
 
 ## CMS
 

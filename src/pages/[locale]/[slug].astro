@@ -1,0 +1,39 @@
+---
+import EmbedPage from '../../components/EmbedPage.astro'
+import WorldMapHub from '../../components/WorldMapHub.astro'
+import { getLocalizedPages } from '../../i18n/content'
+import { TRANSLATED_LOCALES, type TranslatedLocale } from '../../i18n/config'
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import type { PortalPage } from '../../types'
+
+export function getStaticPaths() {
+  return TRANSLATED_LOCALES.flatMap((locale) =>
+    getLocalizedPages(locale)
+      .filter((page) => page.slug !== 'top')
+      .map((page) => ({
+        params: { locale, slug: page.slug },
+        props: { locale, page },
+      })),
+  )
+}
+
+interface Props {
+  locale: TranslatedLocale
+  page: PortalPage
+}
+
+const { locale, page } = Astro.props
+---
+
+<BaseLayout
+  locale={locale}
+  title={page.meta.title}
+  description={page.meta.description}
+  image={page.meta.ogImage}
+  hideFooter={page.hideFooter}
+  fullHeight={page.kind === 'embed'}
+  showAds={page.kind === 'worldMap'}
+>
+  {page.kind === 'worldMap' && <WorldMapHub page={page} locale={locale} />}
+  {page.kind === 'embed' && <EmbedPage page={page} locale={locale} />}
+</BaseLayout>

@@ -7,6 +7,8 @@ import { extractStoryMarkdownTargets } from './markdown-targets.mjs'
 
 const root = path.resolve(fileURLToPath(new URL('..', import.meta.url)))
 const errors = []
+const LOCALES = ['ja', 'en', 'zh-cn', 'es', 'pt', 'fr', 'ko', 'de', 'ru']
+const TRANSLATED_LOCALES = LOCALES.filter((locale) => locale !== 'ja')
 const EXPECTED_STORY_SLUGS = new Set([
   'aceserver-hijacked',
   'aceserver-portal-launch',
@@ -56,6 +58,10 @@ function isExternalHref(href) {
 
 function routeForSlug(slug) {
   return slug === 'top' ? '/' : `/${slug}/`
+}
+
+function localizedRoute(locale, route) {
+  return locale === 'ja' ? route : `/${locale}${route}`
 }
 
 function frontmatterForStory(source) {
@@ -121,7 +127,7 @@ async function validatePages() {
   const pageFiles = (await readdir(pagesDir))
     .filter((file) => file.endsWith('.json'))
     .sort()
-  const routes = new Set(['/'])
+  const routes = new Set(LOCALES.map((locale) => localizedRoute(locale, '/')))
   const slugs = new Set()
 
   for (const file of pageFiles) {
@@ -146,7 +152,10 @@ async function validatePages() {
       fail(relativePath, `duplicate slug "${page.slug}"`)
     }
     slugs.add(page.slug)
-    routes.add(routeForSlug(page.slug))
+    const route = routeForSlug(page.slug)
+    for (const locale of LOCALES) {
+      routes.add(localizedRoute(locale, route))
+    }
 
     if (!Array.isArray(page.sections) || page.sections.length === 0) {
       fail(relativePath, 'sections must contain at least one section')
@@ -263,31 +272,43 @@ async function validateStories(routes) {
   }
   const storyFiles = storyEntries.filter((file) => /\.md$/i.test(file)).sort()
   const stories = []
-  const slugs = new Set()
+  const storyKeys = new Set()
+  const japaneseSlugs = new Set()
 
-  routes.add('/stories/')
+  for (const locale of LOCALES) {
+    routes.add(localizedRoute(locale, '/stories/'))
+  }
 
   for (const file of storyFiles) {
     const normalizedFile = file.replaceAll(path.sep, '/')
-    const slug = normalizedFile.replace(/\.md$/i, '')
+    const pathWithoutExtension = normalizedFile.replace(/\.md$/i, '')
     const relativePath = `src/content/stories/${normalizedFile}`
+    const segments = pathWithoutExtension.split('/')
+    const locale = segments.length === 1 ? 'ja' : segments[0]
+    const slug = segments.at(-1)
 
-    if (slug.includes('/')) {
+    if (
+      segments.length > 2 ||
+      (segments.length === 2 && !TRANSLATED_LOCALES.includes(locale))
+    ) {
       fail(
         relativePath,
-        'story files must be directly under src/content/stories for the [slug] route',
+        'translated story files must use src/content/stories/{locale}/{slug}.md',
       )
       continue
     }
 
-    if (slugs.has(slug)) {
-      fail(relativePath, `duplicate story slug "${slug}"`)
+    const storyKey = `${locale}/${slug}`
+    if (storyKeys.has(storyKey)) {
+      fail(relativePath, `duplicate story key "${storyKey}"`)
       continue
     }
 
-    slugs.add(slug)
-    routes.add(`/stories/${slug}/`)
+    storyKeys.add(storyKey)
+    if (locale === 'ja') japaneseSlugs.add(slug)
+    routes.add(localizedRoute(locale, `/stories/${slug}/`))
     stories.push({
+      locale,
       relativePath,
       slug,
       source: await readFile(path.join(storiesDir, file), 'utf8'),
@@ -295,7 +316,7 @@ async function validateStories(routes) {
   }
 
   for (const expectedSlug of EXPECTED_STORY_SLUGS) {
-    if (!slugs.has(expectedSlug)) {
+    if (!japaneseSlugs.has(expectedSlug)) {
       fail(
         'src/content/stories',
         `expected migrated story is missing (${expectedSlug})`,

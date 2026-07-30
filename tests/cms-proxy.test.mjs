@@ -93,6 +93,15 @@ test('CMS対象pathだけを許可する', () => {
   assert.equal(isAllowedCmsDeletePath(contentPath), false)
   assert.equal(isAllowedCmsWritePath(rejectedPath), false)
   assert.equal(isAllowedCmsWritePath(unlistedContentPath), false)
+  assert.equal(isAllowedCmsWritePath('src/i18n/translations.ts'), false)
+  assert.equal(
+    isAllowedCmsWritePath('src/content/stories/en/aceserver-portal-launch.md'),
+    false,
+  )
+  assert.equal(
+    isAllowedCmsWritePath('src/content/stories/aceserver-portal-launch.md'),
+    false,
+  )
   assert.equal(isAllowedCmsWritePath('README.md'), false)
   assert.equal(isAllowedCmsWritePath('../README.md'), false)
   assert.equal(isAllowedCmsWritePath(`${contentPath}\nREADME.md`), false)

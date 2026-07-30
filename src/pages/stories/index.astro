@@ -1,150 +1,20 @@
 ---
 import { getCollection } from 'astro:content'
+import StoriesIndex from '../../components/StoriesIndex.astro'
+import { getUi } from '../../i18n/translations'
 import BaseLayout from '../../layouts/BaseLayout.astro'
 
-const stories = (await getCollection('stories')).sort(
-  (a, b) => b.data.date.getTime() - a.data.date.getTime(),
-)
+const locale = 'ja'
+const ui = getUi(locale)
+const stories = (await getCollection('stories'))
+  .filter((story) => !story.id.includes('/'))
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
 ---
 
 <BaseLayout
-  title="読みもの"
-  description="エースサーバーの出来事、コミュニティ、ポータルづくりに関する記録です。"
+  locale={locale}
+  title={ui.storiesTitle}
+  description={ui.storiesDescription}
 >
-  <section class="stories-hero">
-    <div class="stories-shell">
-      <p>ACESERVER STORIES</p>
-      <h1>読みもの</h1>
-      <p class="stories-lead">
-        エースサーバーで起きたことと、コミュニティの入口を整えてきた記録です。
-      </p>
-    </div>
-  </section>
-
-  <section class="stories-list stories-shell" aria-label="記事一覧">
-    {
-      stories.map((story) => (
-        <article>
-          <p class="stories-date">
-            <time datetime={story.data.date.toISOString()}>
-              {story.data.date.toLocaleDateString('ja-JP', {
-                timeZone: 'Asia/Tokyo',
-              })}
-            </time>
-          </p>
-          <h2>
-            <a href={`/stories/${story.id}/`}>{story.data.title}</a>
-          </h2>
-          <p>{story.data.description}</p>
-          <ul aria-label="タグ">
-            {story.data.tags.map((tag) => (
-              <li>{tag}</li>
-            ))}
-          </ul>
-        </article>
-      ))
-    }
-  </section>
+  <StoriesIndex locale={locale} stories={stories} />
 </BaseLayout>
-
-<style>
-  .stories-shell {
-    width: min(1120px, calc(100% - 36px));
-    margin-inline: auto;
-  }
-
-  .stories-hero {
-    border-bottom: 8px solid #1e1710;
-    background:
-      linear-gradient(135deg, rgba(10, 167, 226, 0.92), rgba(53, 170, 47, 0.9)),
-      #0aa7e2;
-    color: white;
-    padding-block: clamp(70px, 10vw, 130px);
-  }
-
-  .stories-hero p:first-child {
-    margin: 0 0 12px;
-    font-weight: 900;
-    letter-spacing: 0.12em;
-  }
-
-  .stories-hero h1 {
-    margin: 0;
-    font-size: clamp(3rem, 8vw, 6.8rem);
-    line-height: 1;
-  }
-
-  .stories-lead {
-    max-width: 680px;
-    margin: 24px 0 0;
-    font-size: clamp(1rem, 2vw, 1.25rem);
-    font-weight: 700;
-  }
-
-  .stories-list {
-    display: grid;
-    gap: 0;
-    padding-block: clamp(54px, 8vw, 96px);
-  }
-
-  .stories-list article {
-    display: grid;
-    grid-template-columns: minmax(120px, 0.25fr) minmax(0, 0.75fr);
-    gap: 8px clamp(24px, 5vw, 72px);
-    border-top: 2px solid rgba(21, 19, 15, 0.24);
-    padding-block: clamp(28px, 5vw, 48px);
-  }
-
-  .stories-list article:last-child {
-    border-bottom: 2px solid rgba(21, 19, 15, 0.24);
-  }
-
-  .stories-date {
-    grid-row: 1 / span 3;
-    margin: 0;
-    color: #514331;
-    font-weight: 900;
-  }
-
-  .stories-list h2,
-  .stories-list article > p {
-    margin: 0;
-  }
-
-  .stories-list h2 {
-    font-size: clamp(1.45rem, 3vw, 2.35rem);
-    line-height: 1.35;
-  }
-
-  .stories-list h2 a {
-    text-decoration-thickness: 0.08em;
-    text-underline-offset: 0.16em;
-  }
-
-  .stories-list ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin: 12px 0 0;
-    padding: 0;
-    list-style: none;
-  }
-
-  .stories-list li {
-    border: 1px solid rgba(21, 19, 15, 0.28);
-    border-radius: 999px;
-    padding: 3px 10px;
-    font-size: 0.82rem;
-    font-weight: 700;
-  }
-
-  @media (max-width: 680px) {
-    .stories-list article {
-      grid-template-columns: 1fr;
-    }
-
-    .stories-date {
-      grid-row: auto;
-    }
-  }
-</style>

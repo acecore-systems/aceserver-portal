@@ -1,22 +1,26 @@
 ---
 import { ADSENSE } from '../data/ads'
+import type { Locale } from '../i18n/config'
+import { getUi } from '../i18n/translations'
 
 interface Props {
   slotId?: string
   containerClass?: string
+  locale?: Locale
 }
 
-const { slotId = ADSENSE.slotId, containerClass } = Astro.props
+const { slotId = ADSENSE.slotId, containerClass, locale = 'ja' } = Astro.props
+const ui = getUi(locale)
 ---
 
 <aside
   class:list={['ad-unit', containerClass]}
-  aria-label="広告"
+  aria-label={ui.advertisement}
   data-asv-ad-container
   data-asv-ad-state="pending"
   data-pagefind-ignore
 >
-  <span class="ad-label">広告</span>
+  <span class="ad-label">{ui.advertisement}</span>
   <ins
     class="adsbygoogle"
     data-asv-ad-slot

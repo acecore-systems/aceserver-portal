@@ -1,14 +1,19 @@
 ---
 import type { PortalPage, PortalSection } from '../types'
-import { settings } from '../data/content'
 import { serializeCssUrl } from '../data/safe-json'
+import { getLocalizedSettings } from '../i18n/content'
+import type { Locale } from '../i18n/config'
+import { getUi } from '../i18n/translations'
 import Icon from './Icon.astro'
 
 interface Props {
   page: PortalPage
+  locale?: Locale
 }
 
-const { page } = Astro.props
+const { page, locale = 'ja' } = Astro.props
+const settings = getLocalizedSettings(locale)
+const ui = getUi(locale)
 type IntroSection = Extract<PortalSection, { type: 'featureImageFull' }>
 const intro = page.sections.find(
   (section): section is IntroSection => section.type === 'featureImageFull',
@@ -22,14 +27,16 @@ const introText = intro?.text ?? page.meta.description
   <div class="world-bg" style={`--world-hero-image: ${introImageCss}`}></div>
   <div class="map-sign pixel-border">
     <Icon name="map" />
-    <h1 id="world-title"><span>ワールド</span><span>マップ</span></h1>
+    <h1 id="world-title">
+      {ui.worldMapTitleParts.map((part) => <span>{part}</span>)}
+    </h1>
   </div>
   <p>
     {introText}
   </p>
 </section>
 
-<section class="world-gates" aria-label="ワールドを選択">
+<section class="world-gates" aria-label={ui.worldSelection}>
   {
     settings.worlds.map((world) => (
       <article
@@ -44,7 +51,7 @@ const introText = intro?.text ?? page.meta.description
           <a
             href={world.href}
             class="gate-image"
-            aria-label={`${world.title}を開く`}
+            aria-label={ui.openWorld.replace('{title}', world.title)}
           >
             <img src={world.image} alt={world.imageAlt} />
           </a>
@@ -58,13 +65,13 @@ const introText = intro?.text ?? page.meta.description
         )}
         {world.href ? (
           <a class="asv-btn-primary" href={world.href}>
-            <span>マップを開く</span>
+            <span>{ui.openMap}</span>
             <Icon name="chevron-right" />
           </a>
         ) : (
           <span class="gate-active">
             <Icon name="activity" />
-            <span>稼働中</span>
+            <span>{ui.active}</span>
           </span>
         )}
       </article>

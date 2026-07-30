@@ -3,6 +3,7 @@ import sitemap from '@astrojs/sitemap'
 import UnoCSS from '@unocss/astro'
 
 const site = process.env.PUBLIC_SITE_URL || 'https://asv.acecore.net'
+const localePrefixPattern = /^\/(?:en|zh-cn|es|pt|fr|ko|de|ru)(?=\/)/
 
 export default defineConfig({
   site,
@@ -20,12 +21,34 @@ export default defineConfig({
       },
     }),
     sitemap({
+      i18n: {
+        defaultLocale: 'ja',
+        locales: {
+          ja: 'ja',
+          en: 'en',
+          'zh-cn': 'zh-CN',
+          es: 'es',
+          pt: 'pt',
+          fr: 'fr',
+          ko: 'ko',
+          de: 'de',
+          ru: 'ru',
+        },
+      },
       filter(page) {
         const pathname = new URL(page).pathname
-        return pathname !== '/404' && !pathname.startsWith('/admin/')
+        const unprefixedPathname =
+          pathname.replace(localePrefixPattern, '') || '/'
+        return (
+          unprefixedPathname !== '/404/' &&
+          unprefixedPathname !== '/404' &&
+          unprefixedPathname !== '/rss.xml' &&
+          !unprefixedPathname.startsWith('/admin/')
+        )
       },
       serialize(item) {
-        const pathname = new URL(item.url).pathname
+        const pathname =
+          new URL(item.url).pathname.replace(localePrefixPattern, '') || '/'
         if (pathname === '/') {
           item.changefreq = 'weekly'
           item.priority = 1
