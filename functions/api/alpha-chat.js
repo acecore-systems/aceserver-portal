@@ -27,6 +27,8 @@ const DISCORD_URL = 'https://discord.gg/acsv'
 const WIKI_URL = ACESERVER_WIKI_URL
 const WORLD_MAP_URL = '/world-map/'
 const ACECORE_URL = 'https://acecore.net/'
+const EXPLICIT_ACESERVER_SOURCE_PATTERN =
+  /(?:\baceserver\b|エースサーバー|このサーバー|aceserver\s*wiki|エースサーバー\s*wiki|公式(?:discord|ディスコード))/iu
 
 const GUIDE_LINK_RESOURCES = [
   {
@@ -259,7 +261,15 @@ export async function onRequestPost({ request, env }) {
 }
 
 async function retrieveAlphaEvidence(query, intentQuery, env) {
-  const worldFoundationIntent = shouldSearchWorldFoundation(intentQuery)
+  const currentAcecoreIntent = shouldSearchAcecore(intentQuery)
+  const currentAceserverIntent = EXPLICIT_ACESERVER_SOURCE_PATTERN.test(
+    String(intentQuery || ''),
+  )
+  const worldFoundationIntent =
+    shouldSearchWorldFoundation(intentQuery) ||
+    (!currentAcecoreIntent &&
+      !currentAceserverIntent &&
+      shouldSearchWorldFoundation(query))
   if (worldFoundationIntent) {
     const searchEnabled = Boolean(
       env?.WORLD_FOUNDATION_SEARCH_INDEX &&
@@ -283,7 +293,7 @@ async function retrieveAlphaEvidence(query, intentQuery, env) {
       : createAlphaEvidenceResult({ worldFoundationFallback: true })
   }
 
-  const acecoreIntent = shouldSearchAcecore(intentQuery)
+  const acecoreIntent = currentAcecoreIntent
 
   if (!acecoreIntent) {
     return createAlphaEvidenceResult({

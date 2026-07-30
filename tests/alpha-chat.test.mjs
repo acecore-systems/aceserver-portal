@@ -613,6 +613,128 @@ test('does not let the dialogue model promote a proposal to accepted', async () 
   )
 })
 
+test('keeps World Foundation grounding for a contextual status follow-up', async () => {
+  const invokedModels = []
+  let wikiInvoked = false
+  let acecoreInvoked = false
+  const response = await onRequestPost({
+    request: createRequest({
+      question: 'その提案は採択済み？',
+      messages: [
+        {
+          role: 'user',
+          content: 'World Foundationの初期ガバナンスを教えて',
+        },
+        {
+          role: 'assistant',
+          content: '初期ガバナンスの提案を案内するね。',
+        },
+        { role: 'user', content: 'その提案は採択済み？' },
+      ],
+    }),
+    env: {
+      AI: {
+        async run(model) {
+          invokedModels.push(model)
+          if (model === WIKI_EMBEDDING_MODEL) {
+            return { data: [WIKI_EMBEDDING] }
+          }
+
+          throw new Error('the dialogue model must not decide proposal status')
+        },
+      },
+      WIKI_SEARCH_INDEX: {
+        async query() {
+          wikiInvoked = true
+          return { matches: [] }
+        },
+      },
+      ACECORE_SEARCH_INDEX: {
+        async query() {
+          acecoreInvoked = true
+          return { matches: [] }
+        },
+      },
+      WORLD_FOUNDATION_SEARCH_ENABLED: 'true',
+      WORLD_FOUNDATION_SEARCH_INDEX: {
+        async query() {
+          return {
+            matches: [
+              {
+                id: 'wf-proposal-governance',
+                score: 0.91,
+                metadata: {
+                  locale: 'ja',
+                  title: '初期ガバナンスプロセス',
+                  section: '目的',
+                  excerpt: '初期段階で用いる軽量なプロセスを提案します。',
+                  url: '/proposals/0001-initial-governance-process/',
+                },
+              },
+            ],
+          }
+        },
+      },
+    },
+  })
+  const body = await response.json()
+
+  assert.equal(response.status, 200)
+  assert.equal(wikiInvoked, false)
+  assert.equal(acecoreInvoked, false)
+  assert.deepEqual(invokedModels, [WIKI_EMBEDDING_MODEL])
+  assert.match(body.answer, /採択済みとは案内できない/)
+  assert.match(
+    body.answer,
+    /\[初期ガバナンスプロセス\]\(https:\/\/world-foundation\.acecore\.net\/proposals\/0001-initial-governance-process\/\)/,
+  )
+})
+
+test('lets an explicit Aceserver question leave World Foundation context', async () => {
+  let wikiInvoked = false
+  let worldFoundationInvoked = false
+  const response = await onRequestPost({
+    request: createRequest({
+      question: 'エースサーバーについて教えて',
+      messages: [
+        { role: 'user', content: 'World Foundationについて教えて' },
+        {
+          role: 'assistant',
+          content: 'World Foundationの設計を案内するね。',
+        },
+        { role: 'user', content: 'エースサーバーについて教えて' },
+      ],
+    }),
+    env: {
+      AI: {
+        async run(model) {
+          if (model === WIKI_EMBEDDING_MODEL) {
+            return { data: [WIKI_EMBEDDING] }
+          }
+
+          return { response: 'エースサーバーを案内するよ。' }
+        },
+      },
+      WIKI_SEARCH_INDEX: {
+        async query() {
+          wikiInvoked = true
+          return { matches: [] }
+        },
+      },
+      WORLD_FOUNDATION_SEARCH_INDEX: {
+        async query() {
+          worldFoundationInvoked = true
+          return { matches: [] }
+        },
+      },
+    },
+  })
+
+  assert.equal(response.status, 200)
+  assert.equal(wikiInvoked, true)
+  assert.equal(worldFoundationInvoked, false)
+})
+
 test('filters World Foundation metadata and keeps document status context', async () => {
   let embeddingInvoked = false
   const entries = await searchWorldFoundation(
