@@ -3,6 +3,7 @@ import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 import { validatePortalContentFile } from '../src/data/content-schemas.ts'
+import { extractStoryMarkdownTargets } from './markdown-targets.mjs'
 
 const root = path.resolve(fileURLToPath(new URL('..', import.meta.url)))
 const errors = []
@@ -15,10 +16,6 @@ const REQUIRED_STORY_IMAGE_SLUGS = new Set([
   'aceserver-portal-launch',
   'metaverse-is-close',
 ])
-const MARKDOWN_IMAGE_PATTERN =
-  /!\[([^\]]*)\]\(([^)\s]+)(?:\s+["'][^"']*["'])?\)/g
-const MARKDOWN_LINK_PATTERN =
-  /(?<!!)\[([^\]]+)\]\(([^)\s]+)(?:\s+["'][^"']*["'])?\)/g
 
 function fail(scope, message) {
   errors.push(`${scope}: ${message}`)
@@ -82,6 +79,33 @@ function frontmatterString(frontmatter, key) {
   }
 
   return value
+}
+
+function markdownTargets(source, scope) {
+  let targets
+
+  try {
+    targets = extractStoryMarkdownTargets(source)
+  } catch (error) {
+    fail(scope, `Markdown could not be parsed (${error.message})`)
+    return { images: [], links: [] }
+  }
+
+  for (const reference of targets.missingReferences) {
+    const nodeScope = reference.line ? `${scope}:${reference.line}` : scope
+    fail(nodeScope, `Markdown reference target is missing (${reference.label})`)
+  }
+
+  return {
+    images: targets.images.map((image) => ({
+      ...image,
+      scope: image.line ? `${scope}:${image.line}` : scope,
+    })),
+    links: targets.links.map((link) => ({
+      ...link,
+      scope: link.line ? `${scope}:${link.line}` : scope,
+    })),
+  }
 }
 
 function hasSectionType(page, type) {
@@ -164,7 +188,12 @@ async function validatePages() {
 }
 
 function validateInternalHref(scope, href, routes) {
-  if (!isNonEmptyString(href) || isExternalHref(href)) {
+  if (!isNonEmptyString(href)) {
+    fail(scope, 'internal href must be a non-empty string')
+    return
+  }
+
+  if (isExternalHref(href)) {
     return
   }
 
@@ -225,9 +254,14 @@ async function validateLocalImage(scope, image) {
 
 async function validateStories(routes) {
   const storiesDir = path.join(root, 'src/content/stories')
-  const storyFiles = (await readdir(storiesDir, { recursive: true }))
-    .filter((file) => /\.(?:md|mdx)$/i.test(file))
-    .sort()
+  const storyEntries = await readdir(storiesDir, { recursive: true })
+  for (const file of storyEntries.filter((entry) => /\.mdx$/i.test(entry))) {
+    fail(
+      `src/content/stories/${file.replaceAll(path.sep, '/')}`,
+      'MDX stories are not supported; use a .md file',
+    )
+  }
+  const storyFiles = storyEntries.filter((file) => /\.md$/i.test(file)).sort()
   const stories = []
   const slugs = new Set()
 
@@ -235,7 +269,7 @@ async function validateStories(routes) {
 
   for (const file of storyFiles) {
     const normalizedFile = file.replaceAll(path.sep, '/')
-    const slug = normalizedFile.replace(/\.(?:md|mdx)$/i, '')
+    const slug = normalizedFile.replace(/\.md$/i, '')
     const relativePath = `src/content/stories/${normalizedFile}`
 
     if (slug.includes('/')) {
@@ -297,24 +331,16 @@ async function validateStories(routes) {
       fail(`${story.relativePath}.imageAlt`, 'imageAlt must not be empty')
     }
 
-    for (const [fullMatch, alt, target] of story.source.matchAll(
-      MARKDOWN_IMAGE_PATTERN,
-    )) {
-      const scope = `${story.relativePath} (${fullMatch})`
+    const markdown = markdownTargets(story.source, story.relativePath)
+    for (const { alt, scope, target } of markdown.images) {
       if (!isNonEmptyString(alt)) {
         fail(scope, 'Markdown image alt must not be empty')
       }
       await validateLocalImage(scope, target)
     }
 
-    for (const [fullMatch, , target] of story.source.matchAll(
-      MARKDOWN_LINK_PATTERN,
-    )) {
-      validateInternalHref(
-        `${story.relativePath} (${fullMatch})`,
-        target,
-        routes,
-      )
+    for (const { scope, target } of markdown.links) {
+      validateInternalHref(scope, target, routes)
     }
   }
 }
