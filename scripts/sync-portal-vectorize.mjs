@@ -11,7 +11,7 @@ import {
   PORTAL_MIN_VECTOR_COUNT,
   PORTAL_SEARCH_NAMESPACE,
   PORTAL_VECTOR_LIMIT,
-} from './build-portal-vector-corpus.mjs'
+} from './portal-vectorize-config.mjs'
 
 const API_BASE_URL = 'https://api.cloudflare.com/client/v4'
 const DEFAULT_CORPUS_FILE = resolve('dist/vector-corpus.json')

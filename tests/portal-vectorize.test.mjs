@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict'
-import { mkdir, mkdtemp, rm, writeFile } from 'node:fs/promises'
+import { mkdir, mkdtemp, readFile, rm, writeFile } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import test, { after } from 'node:test'
@@ -54,6 +54,16 @@ after(async () => {
       rm(directory, { force: true, recursive: true }),
     ),
   )
+})
+
+test('sync tooling does not load the HTML corpus builder', async () => {
+  const source = await readFile(
+    new URL('../scripts/sync-portal-vectorize.mjs', import.meta.url),
+    'utf8',
+  )
+
+  assert.doesNotMatch(source, /build-portal-vector-corpus/u)
+  assert.match(source, /portal-vectorize-config/u)
 })
 
 test('extracts a public story from built portal HTML', () => {
