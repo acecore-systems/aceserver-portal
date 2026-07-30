@@ -19,10 +19,6 @@ const ACECORE_OPERATOR_PATTERN =
   /(?:運営(?:元|会社|団体|組織|者)|運営.{0,12}(?:誰|どこ|会社|法人|団体|組織)|(?:誰|どこ|会社|法人|団体|組織).{0,12}運営)/u
 const ACECORE_CONTENT_PATTERN =
   /(?:会社(?:概要|情報|について)|法人(?:情報|について)|事業内容|関連プロジェクト|技術記事|運営元の記事|サービス一覧)/u
-const ACECORE_PROJECT_PATTERN =
-  /(?:world[\s_-]*foundation|ワールド(?:・|\s*)?(?:ファウンデーション|財団))/iu
-const ACESERVER_CONTEXT_PATTERN =
-  /(?:\baceserver\b|エースサーバー|このサーバー)/iu
 const ACESERVER_DETAIL_PATTERN =
   /(?:ルール|ban|禁止|コマンド|参加方法|入り方|接続方法|サーバーip|アドレス|ホワイトリスト|ワールド|マップ|プラグイン|荒らし|処罰|申請)/iu
 
@@ -36,21 +32,11 @@ export function shouldSearchAcecore(query) {
   const hasBrandIntent = ACECORE_BRAND_PATTERN.test(normalizedQuery)
   const hasOperatorIntent = ACECORE_OPERATOR_PATTERN.test(normalizedQuery)
   const hasContentIntent = ACECORE_CONTENT_PATTERN.test(normalizedQuery)
-  const hasProjectIntent = ACECORE_PROJECT_PATTERN.test(normalizedQuery)
-  if (
-    !hasBrandIntent &&
-    !hasOperatorIntent &&
-    !hasContentIntent &&
-    !hasProjectIntent
-  ) {
+  if (!hasBrandIntent && !hasOperatorIntent && !hasContentIntent) {
     return false
   }
 
   const asksForAceserverDetail = ACESERVER_DETAIL_PATTERN.test(normalizedQuery)
-  if (hasProjectIntent && !ACESERVER_CONTEXT_PATTERN.test(normalizedQuery)) {
-    return true
-  }
-
   return !asksForAceserverDetail || hasContentIntent
 }
 
