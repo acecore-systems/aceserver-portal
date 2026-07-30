@@ -34,7 +34,7 @@ export async function searchAceserverPortal(
 ) {
   if (
     !query ||
-    !env?.AI ||
+    (!providedEmbedding && !env?.OPENAI_API_KEY) ||
     !env?.PORTAL_SEARCH_INDEX ||
     env.PORTAL_SEARCH_ENABLED === 'false'
   ) {

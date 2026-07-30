@@ -31,7 +31,7 @@ export async function searchAceserverWiki(
 ) {
   if (
     !query ||
-    !env?.AI ||
+    (!providedEmbedding && !env?.OPENAI_API_KEY) ||
     !env?.WIKI_SEARCH_INDEX ||
     env.WIKI_SEARCH_ENABLED === 'false'
   ) {

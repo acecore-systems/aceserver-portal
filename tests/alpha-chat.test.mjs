@@ -10,13 +10,18 @@ import {
   buildWikiSearchQuery,
   hasPriorUserTurn,
   isAllowedRequestOrigin,
-  onRequestPost,
+  onRequestPost as onRequestPostImplementation,
   removePromptDisclosure,
   removeSpeculativeRuleClaims,
   removeUnsupportedWikiReferenceLines,
   sanitizeAlphaAnswerLinks,
   trimIncompleteMarkdown,
 } from '../functions/api/alpha-chat.js'
+import {
+  OPENAI_API_BASE_URL,
+  OPENAI_EMBEDDING_DIMENSIONS,
+  OPENAI_RESPONSE_MODEL,
+} from '../functions/api/openai-api.js'
 import {
   getGuideLinkResources,
   TARGET_LANGUAGES,
@@ -54,7 +59,11 @@ import {
 } from '../functions/api/alpha-world-foundation-search.js'
 
 const ENDPOINT = 'https://asv.acecore.net/api/alpha-chat'
-const WIKI_EMBEDDING = Array.from({ length: 1024 }, (_, index) => index / 1024)
+const TEST_OPENAI_API_KEY = 'test-openai-api-key'
+const WIKI_EMBEDDING = Array.from(
+  { length: OPENAI_EMBEDDING_DIMENSIONS },
+  (_, index) => index / OPENAI_EMBEDDING_DIMENSIONS,
+)
 
 test('allows Acecore Schools and Systems links in the chat UI', async () => {
   const source = await readFile(
@@ -95,6 +104,87 @@ function createRequest(payload, headers = {}) {
   })
 }
 
+function onRequestPost(context) {
+  const openAi = context.env?.OPENAI
+  if (!openAi) return onRequestPostImplementation(context)
+
+  const env = {
+    ...context.env,
+    OPENAI_API_KEY: TEST_OPENAI_API_KEY,
+  }
+  delete env.OPENAI
+  return onRequestPostImplementation(
+    {
+      ...context,
+      env,
+    },
+    async (url, init) => {
+      assert.equal(init.method, 'POST')
+      assert.equal(
+        new Headers(init.headers).get('Authorization'),
+        `Bearer ${TEST_OPENAI_API_KEY}`,
+      )
+      const input = JSON.parse(init.body)
+      const result = await openAi.run(input.model, input)
+
+      if (url === `${OPENAI_API_BASE_URL}/embeddings`) {
+        assert.equal(input.model, WIKI_EMBEDDING_MODEL)
+        assert.equal(input.dimensions, OPENAI_EMBEDDING_DIMENSIONS)
+        assert.equal(input.encoding_format, 'float')
+        return Response.json({
+          object: 'list',
+          data: (result?.data || []).map((embedding, index) => ({
+            object: 'embedding',
+            embedding,
+            index,
+          })),
+          model: input.model,
+          usage: { prompt_tokens: 1, total_tokens: 1 },
+        })
+      }
+
+      assert.equal(url, `${OPENAI_API_BASE_URL}/responses`)
+      if (result?.error) {
+        return Response.json({ error: result.error }, { status: 400 })
+      }
+
+      return Response.json({
+        id: 'resp_test',
+        object: 'response',
+        status: 'completed',
+        output: [
+          {
+            id: 'msg_test',
+            type: 'message',
+            role: 'assistant',
+            status: 'completed',
+            content: [
+              {
+                type: 'output_text',
+                text: extractMockResponseText(result),
+                annotations: [],
+              },
+            ],
+          },
+        ],
+      })
+    },
+  )
+}
+
+function extractMockResponseText(result) {
+  if (typeof result === 'string') return result
+  if (typeof result?.response === 'string') return result.response
+  if (typeof result?.output_text === 'string') return result.output_text
+
+  const content = result?.choices?.[0]?.message?.content
+  if (typeof content === 'string') return content
+  if (Array.isArray(content)) {
+    return content.map((part) => part?.text || '').join('\n')
+  }
+  return ''
+}
+
 test('returns locale-specific fallback guidance for all nine locales', async () => {
   for (const locale of Object.keys(TARGET_LANGUAGES)) {
     const response = await onRequestPost({
@@ -122,7 +212,7 @@ test('uses the requested response language and locale-safe map allowlist', async
     const response = await onRequestPost({
       request: createRequest({ locale, question: 'Aceserver' }),
       env: {
-        AI: {
+        OPENAI: {
           async run(model, input) {
             invocation = { model, input }
             return { response: map.label }
@@ -134,11 +224,11 @@ test('uses the requested response language and locale-safe map allowlist', async
 
     assert.equal(response.status, 200)
     assert.match(
-      invocation.input.messages[0].content,
+      invocation.input.instructions,
       new RegExp(`Answer in ${TARGET_LANGUAGES[locale]}`),
     )
     assert.match(
-      invocation.input.messages[0].content,
+      invocation.input.instructions,
       new RegExp(map.href.replaceAll('/', '\\/')),
     )
     assert.equal(body.answer, `[${map.label}](${map.href})`)
@@ -170,7 +260,7 @@ test('rejects a map link from a different locale while allowing the active local
 test('uses the dialogue model and only stable navigation context', async () => {
   let invocation
   const env = {
-    AI: {
+    OPENAI: {
       async run(model, input) {
         invocation = { model, input }
         return {
@@ -200,13 +290,12 @@ test('uses the dialogue model and only stable navigation context', async () => {
     body.answer,
     /\[Aceserver WIKI\]\(https:\/\/asv-wiki\.acecore\.net\)/,
   )
-  assert.equal(invocation.model, '@cf/zai-org/glm-5.2')
-  assert.equal(invocation.input.max_completion_tokens, 320)
-  assert.deepEqual(invocation.input.chat_template_kwargs, {
-    enable_thinking: false,
-  })
+  assert.equal(invocation.model, OPENAI_RESPONSE_MODEL)
+  assert.equal(invocation.input.max_output_tokens, 320)
+  assert.deepEqual(invocation.input.reasoning, { effort: 'low' })
+  assert.equal(invocation.input.store, false)
 
-  const systemPrompt = invocation.input.messages[0].content
+  const systemPrompt = invocation.input.instructions
   assert.match(systemPrompt, /https:\/\/discord\.gg\/acsv/)
   assert.match(systemPrompt, /Rules, commands, plugins/)
   assert.doesNotMatch(systemPrompt, /vKTdU4k8ur|\/article\/Reset|32チャンク/)
@@ -227,7 +316,7 @@ test('grounds concrete answers with Vectorize WIKI evidence and its article link
       schemaVersion: 1,
       embedding: {
         model: WIKI_EMBEDDING_MODEL,
-        dimensions: 1024,
+        dimensions: OPENAI_EMBEDDING_DIMENSIONS,
       },
       chunks: [
         {
@@ -250,7 +339,7 @@ test('grounds concrete answers with Vectorize WIKI evidence and its article link
     const response = await onRequestPost({
       request: createRequest({ question: 'TNTは使える？' }),
       env: {
-        AI: {
+        OPENAI: {
           async run(model, input) {
             aiInvocations.push({ model, input })
             if (model === WIKI_EMBEDDING_MODEL) {
@@ -298,7 +387,7 @@ test('grounds concrete answers with Vectorize WIKI evidence and its article link
     )
     assert.deepEqual(
       aiInvocations.map(({ model }) => model),
-      [WIKI_EMBEDDING_MODEL, '@cf/zai-org/glm-5.2'],
+      [WIKI_EMBEDDING_MODEL, OPENAI_RESPONSE_MODEL],
     )
     assert.deepEqual(vectorizeInvocation.vector, WIKI_EMBEDDING)
     assert.deepEqual(vectorizeInvocation.options, {
@@ -308,7 +397,7 @@ test('grounds concrete answers with Vectorize WIKI evidence and its article link
       returnValues: false,
     })
 
-    const systemPrompt = aiInvocations[1].input.messages[0].content
+    const systemPrompt = aiInvocations[1].input.instructions
     assert.match(systemPrompt, /Aceserver WIKI retrieved evidence/)
     assert.match(systemPrompt, /メインサーバーでの爆破物/)
     assert.match(
@@ -328,7 +417,7 @@ test('filters, hydrates, and localizes portal Vectorize results', async () => {
   const entries = await searchAceserverPortal(
     '乗っ取り事件の読みもの',
     {
-      AI: {},
+      OPENAI: {},
       PORTAL_SEARCH_MIN_SCORE: '0.45',
       PORTAL_SEARCH_INDEX: {
         async query(vector, options) {
@@ -431,7 +520,7 @@ test('filters, hydrates, and localizes portal Vectorize results', async () => {
         schemaVersion: 1,
         embedding: {
           model: WIKI_EMBEDDING_MODEL,
-          dimensions: 1024,
+          dimensions: OPENAI_EMBEDDING_DIMENSIONS,
         },
         chunks: [
           {
@@ -495,7 +584,7 @@ test('grounds Aceserver story discovery with the portal and WIKI in parallel', a
       schemaVersion: 1,
       embedding: {
         model: WIKI_EMBEDDING_MODEL,
-        dimensions: 1024,
+        dimensions: OPENAI_EMBEDDING_DIMENSIONS,
       },
       chunks: [
         {
@@ -534,7 +623,7 @@ test('grounds Aceserver story discovery with the portal and WIKI in parallel', a
         question: 'エースサーバーの乗っ取り事件の記事を読みたい',
       }),
       env: {
-        AI: {
+        OPENAI: {
           async run(model, input) {
             aiInvocations.push({ model, input })
             if (model === WIKI_EMBEDDING_MODEL) {
@@ -601,12 +690,12 @@ test('grounds Aceserver story discovery with the portal and WIKI in parallel', a
     assert.equal(portalCorpusUrl, 'https://asv.acecore.net/vector-corpus.json')
     assert.deepEqual(
       aiInvocations.map(({ model }) => model),
-      [WIKI_EMBEDDING_MODEL, '@cf/zai-org/glm-5.2'],
+      [WIKI_EMBEDDING_MODEL, OPENAI_RESPONSE_MODEL],
     )
     assert.deepEqual(wikiVectorizeInvocation.vector, WIKI_EMBEDDING)
     assert.deepEqual(portalVectorizeInvocation.vector, WIKI_EMBEDDING)
 
-    const systemPrompt = aiInvocations[1].input.messages[0].content
+    const systemPrompt = aiInvocations[1].input.instructions
     assert.match(systemPrompt, /Aceserver portal retrieved evidence/u)
     assert.match(systemPrompt, /その後の復旧を紹介/u)
     assert.match(systemPrompt, /WIKI remains authoritative/u)
@@ -625,7 +714,7 @@ test('keeps WIKI authoritative when portal and WIKI both match a rule query', as
         schemaVersion: 1,
         embedding: {
           model: WIKI_EMBEDDING_MODEL,
-          dimensions: 1024,
+          dimensions: OPENAI_EMBEDDING_DIMENSIONS,
         },
         chunks: [
           {
@@ -651,7 +740,7 @@ test('keeps WIKI authoritative when portal and WIKI both match a rule query', as
         schemaVersion: 1,
         embedding: {
           model: WIKI_EMBEDDING_MODEL,
-          dimensions: 1024,
+          dimensions: OPENAI_EMBEDDING_DIMENSIONS,
         },
         chunks: [
           {
@@ -678,7 +767,7 @@ test('keeps WIKI authoritative when portal and WIKI both match a rule query', as
     const response = await onRequestPost({
       request: createRequest({ question: 'メインサーバーでTNTは使える？' }),
       env: {
-        AI: {
+        OPENAI: {
           async run(model, input) {
             aiInvocations.push({ model, input })
             if (model === WIKI_EMBEDDING_MODEL) {
@@ -734,7 +823,7 @@ test('keeps WIKI authoritative when portal and WIKI both match a rule query', as
       },
     })
     const body = await response.json()
-    const systemPrompt = aiInvocations[1].input.messages[0].content
+    const systemPrompt = aiInvocations[1].input.instructions
 
     assert.equal(response.status, 200)
     assert.match(
@@ -762,7 +851,7 @@ test('continues with navigation guidance when WIKI retrieval fails', async () =>
     const response = await onRequestPost({
       request: createRequest({ question: '参加方法を教えて' }),
       env: {
-        AI: {
+        OPENAI: {
           async run(model, input) {
             aiInvocations.push({ model, input })
             if (model === WIKI_EMBEDDING_MODEL) {
@@ -789,13 +878,10 @@ test('continues with navigation guidance when WIKI retrieval fails', async () =>
     assert.equal(vectorizeInvoked, false)
     assert.deepEqual(
       aiInvocations.map(({ model }) => model),
-      [WIKI_EMBEDDING_MODEL, '@cf/zai-org/glm-5.2'],
+      [WIKI_EMBEDDING_MODEL, OPENAI_RESPONSE_MODEL],
     )
     assert.match(body.answer, /\[公式Discord\]/)
-    assert.doesNotMatch(
-      aiInvocations[1].input.messages[0].content,
-      /<wiki-evidence/,
-    )
+    assert.doesNotMatch(aiInvocations[1].input.instructions, /<wiki-evidence/)
   } finally {
     console.error = originalConsoleError
   }
@@ -805,7 +891,7 @@ test('filters low-score, duplicate, and non-WIKI Vectorize metadata', async () =
   const entries = await searchAceserverWiki(
     'ルールを教えて',
     {
-      AI: {
+      OPENAI: {
         async run() {
           return { data: [WIKI_EMBEDDING] }
         },
@@ -865,6 +951,7 @@ test('filters low-score, duplicate, and non-WIKI Vectorize metadata', async () =
       },
     },
     null,
+    WIKI_EMBEDDING,
   )
 
   assert.deepEqual(entries, [
@@ -960,7 +1047,7 @@ test('uses World Foundation evidence without mixing WIKI or Acecore results', as
       question: 'World Foundationの目的を教えて',
     }),
     env: {
-      AI: {
+      OPENAI: {
         async run(model, input) {
           aiInvocations.push({ model, input })
           if (model === WIKI_EMBEDDING_MODEL) {
@@ -1018,7 +1105,7 @@ test('uses World Foundation evidence without mixing WIKI or Acecore results', as
   assert.equal(acecoreInvoked, false)
   assert.deepEqual(
     aiInvocations.map(({ model }) => model),
-    [WIKI_EMBEDDING_MODEL, '@cf/zai-org/glm-5.2'],
+    [WIKI_EMBEDDING_MODEL, OPENAI_RESPONSE_MODEL],
   )
   assert.deepEqual(worldFoundationVectorizeInvocation.vector, WIKI_EMBEDDING)
   assert.deepEqual(worldFoundationVectorizeInvocation.options, {
@@ -1032,7 +1119,7 @@ test('uses World Foundation evidence without mixing WIKI or Acecore results', as
     /\[ビジョン\]\(https:\/\/world-foundation\.acecore\.net\/docs\/00-vision\/\)/,
   )
 
-  const systemPrompt = aiInvocations[1].input.messages[0].content
+  const systemPrompt = aiInvocations[1].input.instructions
   assert.match(
     systemPrompt,
     /World Foundation official design site retrieved evidence/,
@@ -1067,7 +1154,7 @@ test('uses a controlled World Foundation fallback when its search fails', async 
         question: 'World Foundationのモジュールを教えて',
       }),
       env: {
-        AI: {
+        OPENAI: {
           async run(model, input) {
             aiInvocations.push({ model, input })
             return { data: [WIKI_EMBEDDING] }
@@ -1134,7 +1221,7 @@ test('does not let the dialogue model promote a proposal to accepted', async () 
       question: 'World Foundationの初期ガバナンスは採択済み？',
     }),
     env: {
-      AI: {
+      OPENAI: {
         async run(model) {
           invokedModels.push(model)
           if (model === WIKI_EMBEDDING_MODEL) {
@@ -1199,7 +1286,7 @@ test('keeps World Foundation grounding for a contextual status follow-up', async
       ],
     }),
     env: {
-      AI: {
+      OPENAI: {
         async run(model) {
           invokedModels.push(model)
           if (model === WIKI_EMBEDDING_MODEL) {
@@ -1272,7 +1359,7 @@ test('lets an explicit Aceserver question leave World Foundation context', async
       ],
     }),
     env: {
-      AI: {
+      OPENAI: {
         async run(model) {
           if (model === WIKI_EMBEDDING_MODEL) {
             return { data: [WIKI_EMBEDDING] }
@@ -1306,7 +1393,7 @@ test('filters World Foundation metadata and keeps document status context', asyn
   const entries = await searchWorldFoundation(
     'World Foundationのガバナンス',
     {
-      AI: {
+      OPENAI: {
         async run() {
           embeddingInvoked = true
           return { data: [WIKI_EMBEDDING] }
@@ -1416,7 +1503,7 @@ test('uses Schools evidence without mixing other search sources', async () => {
       question: 'パソコン初心者でも相談できますか',
     }),
     env: {
-      AI: {
+      OPENAI: {
         async run(model, input) {
           aiInvocations.push({ model, input })
           if (model === WIKI_EMBEDDING_MODEL) {
@@ -1482,7 +1569,7 @@ test('uses Schools evidence without mixing other search sources', async () => {
   assert.equal(worldFoundationInvoked, false)
   assert.deepEqual(
     aiInvocations.map(({ model }) => model),
-    [WIKI_EMBEDDING_MODEL, '@cf/zai-org/glm-5.2'],
+    [WIKI_EMBEDDING_MODEL, OPENAI_RESPONSE_MODEL],
   )
   assert.deepEqual(schoolsVectorizeInvocation.vector, WIKI_EMBEDDING)
   assert.deepEqual(schoolsVectorizeInvocation.options, {
@@ -1496,7 +1583,7 @@ test('uses Schools evidence without mixing other search sources', async () => {
     /\[よくあるご質問\]\(https:\/\/schools\.acecore\.net\/faq\/\)/,
   )
 
-  const systemPrompt = aiInvocations[1].input.messages[0].content
+  const systemPrompt = aiInvocations[1].input.instructions
   assert.match(systemPrompt, /Acecore Schools official site retrieved evidence/)
   assert.match(systemPrompt, /操作の基礎から必要な順番/)
   assert.match(systemPrompt, /Do not invent current prices, schedules/)
@@ -1526,7 +1613,7 @@ test('keeps Schools grounding for a contextual follow-up', async () => {
       ],
     }),
     env: {
-      AI: {
+      OPENAI: {
         async run(model) {
           if (model === WIKI_EMBEDDING_MODEL) {
             return { data: [WIKI_EMBEDDING] }
@@ -1610,7 +1697,7 @@ test('lets current Aceserver questions leave Schools context', async () => {
         ],
       }),
       env: {
-        AI: {
+        OPENAI: {
           async run(model) {
             if (model === WIKI_EMBEDDING_MODEL) {
               return { data: [WIKI_EMBEDDING] }
@@ -1655,7 +1742,7 @@ test('resets grounding and source count when leaving Schools context', async () 
       schemaVersion: 1,
       embedding: {
         model: WIKI_EMBEDDING_MODEL,
-        dimensions: 1024,
+        dimensions: OPENAI_EMBEDDING_DIMENSIONS,
       },
       chunks: [
         {
@@ -1696,10 +1783,10 @@ test('resets grounding and source count when leaving Schools context', async () 
         ],
       }),
       env: {
-        AI: {
+        OPENAI: {
           async run(model, input) {
             if (model === WIKI_EMBEDDING_MODEL) {
-              embeddingQueries.push(input.text)
+              embeddingQueries.push(input.input)
               return { data: [WIKI_EMBEDDING] }
             }
             return {
@@ -1750,7 +1837,7 @@ test('resets grounding and source count when leaving Schools context', async () 
 
     assert.equal(response.status, 200)
     assert.equal(body.ok, true)
-    assert.deepEqual(embeddingQueries, [['Minecraftのコマンドを学びたい']])
+    assert.deepEqual(embeddingQueries, ['Minecraftのコマンドを学びたい'])
     assert.equal(schoolsInvoked, false)
     assert.match(body.answer, /article\/SurvivalCommand\//)
     assert.doesNotMatch(body.answer, /article\/promotion\//)
@@ -1772,10 +1859,10 @@ test('keeps grounding history within the same Aceserver source', async () => {
       ],
     }),
     env: {
-      AI: {
+      OPENAI: {
         async run(model, input) {
           if (model === WIKI_EMBEDDING_MODEL) {
-            embeddingQueries.push(input.text)
+            embeddingQueries.push(input.input)
             return { data: [WIKI_EMBEDDING] }
           }
           return {
@@ -1792,7 +1879,7 @@ test('keeps grounding history within the same Aceserver source', async () => {
   })
 
   assert.equal(response.status, 200)
-  assert.deepEqual(embeddingQueries, [['TNTは使える？\n別のワールドでは？']])
+  assert.deepEqual(embeddingQueries, ['TNTは使える？\n別のワールドでは？'])
 })
 
 test('uses a controlled Schools fallback when its search fails', async () => {
@@ -1807,7 +1894,7 @@ test('uses a controlled Schools fallback when its search fails', async () => {
         question: 'Acecore Schoolsの学び方を教えて',
       }),
       env: {
-        AI: {
+        OPENAI: {
           async run(model, input) {
             aiInvocations.push({ model, input })
             if (model === WIKI_EMBEDDING_MODEL) {
@@ -1852,7 +1939,7 @@ test('filters Schools metadata and allows only retrieved page links', async () =
   const entries = await searchSchools(
     'パソコン初心者でも相談できますか',
     {
-      AI: {},
+      OPENAI: {},
       SCHOOLS_SEARCH_MIN_SCORE: '0.50',
       SCHOOLS_SEARCH_INDEX: {
         async query() {
@@ -1991,7 +2078,7 @@ test('uses Systems evidence without mixing other search sources', async () => {
       question: 'システム開発を相談したい',
     }),
     env: {
-      AI: {
+      OPENAI: {
         async run(model, input) {
           aiInvocations.push({ model, input })
           if (model === WIKI_EMBEDDING_MODEL) {
@@ -2064,7 +2151,7 @@ test('uses Systems evidence without mixing other search sources', async () => {
   assert.equal(worldFoundationInvoked, false)
   assert.deepEqual(
     aiInvocations.map(({ model }) => model),
-    [WIKI_EMBEDDING_MODEL, '@cf/zai-org/glm-5.2'],
+    [WIKI_EMBEDDING_MODEL, OPENAI_RESPONSE_MODEL],
   )
   assert.deepEqual(systemsVectorizeInvocation.vector, WIKI_EMBEDDING)
   assert.deepEqual(systemsVectorizeInvocation.options, {
@@ -2078,7 +2165,7 @@ test('uses Systems evidence without mixing other search sources', async () => {
     /\[システム開発\]\(https:\/\/systems\.acecore\.net\/services\/\)/,
   )
 
-  const systemPrompt = aiInvocations[1].input.messages[0].content
+  const systemPrompt = aiInvocations[1].input.instructions
   assert.match(systemPrompt, /Acecore Systems official site retrieved evidence/)
   assert.match(systemPrompt, /要件整理から設計、開発、運用/)
   assert.match(systemPrompt, /Do not invent current prices, availability/)
@@ -2108,7 +2195,7 @@ test('keeps Systems grounding for a contextual pricing follow-up', async () => {
       ],
     }),
     env: {
-      AI: {
+      OPENAI: {
         async run(model) {
           if (model === WIKI_EMBEDDING_MODEL) {
             return { data: [WIKI_EMBEDDING] }
@@ -2189,7 +2276,7 @@ test('lets current Aceserver questions leave Systems context', async () => {
       ],
     }),
     env: {
-      AI: {
+      OPENAI: {
         async run(model) {
           if (model === WIKI_EMBEDDING_MODEL) {
             return { data: [WIKI_EMBEDDING] }
@@ -2235,7 +2322,7 @@ test('uses a controlled Systems fallback when its search fails', async () => {
         question: 'Acecore SystemsのIT顧問を教えて',
       }),
       env: {
-        AI: {
+        OPENAI: {
           async run(model, input) {
             aiInvocations.push({ model, input })
             if (model === WIKI_EMBEDDING_MODEL) {
@@ -2280,7 +2367,7 @@ test('filters Systems metadata and allows only retrieved page links', async () =
   const entries = await searchSystems(
     'システム開発を相談したい',
     {
-      AI: {},
+      OPENAI: {},
       SYSTEMS_SEARCH_MIN_SCORE: '0.50',
       SYSTEMS_SEARCH_INDEX: {
         async query() {
@@ -2386,20 +2473,54 @@ test('filters Systems metadata and allows only retrieved page links', async () =
   )
 })
 
-test('configures preview and production Systems Vectorize bindings', async () => {
+test('switches all six Vectorize bindings to the OpenAI 1536 index generation', async () => {
   const config = await readFile(
     new URL('../wrangler.jsonc', import.meta.url),
     'utf8',
   )
 
-  assert.equal(config.match(/"binding": "SYSTEMS_SEARCH_INDEX"/gu)?.length, 3)
+  const indexes = [
+    ['WIKI_SEARCH_INDEX', 'aceserver-wiki-search-openai-1536'],
+    ['PORTAL_SEARCH_INDEX', 'aceserver-portal-search-openai-1536'],
+    ['ACECORE_SEARCH_INDEX', 'acecore-net-search-openai-1536'],
+    ['SCHOOLS_SEARCH_INDEX', 'acecore-schools-search-openai-1536'],
+    ['SYSTEMS_SEARCH_INDEX', 'acecore-systems-search-openai-1536'],
+    ['WORLD_FOUNDATION_SEARCH_INDEX', 'world-foundation-search-openai-1536'],
+  ]
+
+  for (const [binding, indexPrefix] of indexes) {
+    assert.equal(
+      config.match(new RegExp(`"binding": "${binding}"`, 'gu'))?.length,
+      3,
+    )
+    assert.equal(
+      config.match(new RegExp(`"index_name": "${indexPrefix}-preview"`, 'gu'))
+        ?.length,
+      2,
+    )
+    assert.equal(
+      config.match(
+        new RegExp(`"index_name": "${indexPrefix}-production"`, 'gu'),
+      )?.length,
+      1,
+    )
+  }
+
+  assert.doesNotMatch(config, /"ai"\s*:/u)
+  assert.doesNotMatch(config, /CLOUDFLARE_AI_MODEL|@cf\//u)
   assert.equal(
-    config.match(/"index_name": "acecore-systems-search-preview"/gu)?.length,
-    2,
+    config.match(/"OPENAI_RESPONSE_MODEL": "gpt-5\.6-luna"/gu)?.length,
+    3,
+  )
+  assert.equal(config.match(/"OPENAI_REASONING_EFFORT": "low"/gu)?.length, 3)
+  assert.equal(
+    config.match(/"OPENAI_EMBEDDING_MODEL": "text-embedding-3-large"/gu)
+      ?.length,
+    3,
   )
   assert.equal(
-    config.match(/"index_name": "acecore-systems-search-production"/gu)?.length,
-    1,
+    config.match(/"OPENAI_EMBEDDING_DIMENSIONS": "1536"/gu)?.length,
+    3,
   )
   assert.equal(config.match(/"SYSTEMS_SEARCH_ENABLED": "true"/gu)?.length, 3)
   assert.equal(config.match(/"SYSTEMS_SEARCH_MIN_SCORE": "0\.50"/gu)?.length, 3)
@@ -2420,7 +2541,7 @@ test('uses Acecore evidence without mixing WIKI results for Acecore intent', asy
       ],
     }),
     env: {
-      AI: {
+      OPENAI: {
         async run(model, input) {
           aiInvocations.push({ model, input })
           if (model === WIKI_EMBEDDING_MODEL) {
@@ -2474,7 +2595,7 @@ test('uses Acecore evidence without mixing WIKI results for Acecore intent', asy
   )
   assert.deepEqual(
     aiInvocations.map(({ model }) => model),
-    [WIKI_EMBEDDING_MODEL, '@cf/zai-org/glm-5.2'],
+    [WIKI_EMBEDDING_MODEL, OPENAI_RESPONSE_MODEL],
   )
   assert.equal(wikiVectorizeInvocation, undefined)
   assert.deepEqual(acecoreVectorizeInvocation.vector, WIKI_EMBEDDING)
@@ -2485,7 +2606,7 @@ test('uses Acecore evidence without mixing WIKI results for Acecore intent', asy
     returnValues: false,
   })
 
-  const systemPrompt = aiInvocations[1].input.messages[0].content
+  const systemPrompt = aiInvocations[1].input.instructions
   assert.match(systemPrompt, /Acecore official site retrieved evidence/)
   assert.match(systemPrompt, /Acecoreの目的と活動内容/)
   assert.match(systemPrompt, /must never override/)
@@ -2501,7 +2622,7 @@ test('does not query Acecore for Aceserver rule details', async () => {
       question: 'エースサーバーの運営元とTNTのルールを教えて',
     }),
     env: {
-      AI: {
+      OPENAI: {
         async run(model, input) {
           aiInvocations.push({ model, input })
           if (model === WIKI_EMBEDDING_MODEL) {
@@ -2532,13 +2653,10 @@ test('does not query Acecore for Aceserver rule details', async () => {
   assert.equal(acecoreInvoked, false)
   assert.deepEqual(
     aiInvocations.map(({ model }) => model),
-    [WIKI_EMBEDDING_MODEL, '@cf/zai-org/glm-5.2'],
+    [WIKI_EMBEDDING_MODEL, OPENAI_RESPONSE_MODEL],
   )
   assert.match(body.answer, /\[Aceserver WIKI\]/)
-  assert.doesNotMatch(
-    aiInvocations[1].input.messages[0].content,
-    /<acecore-evidence/,
-  )
+  assert.doesNotMatch(aiInvocations[1].input.instructions, /<acecore-evidence/)
 })
 
 test('allows two retrieved Acecore links for article discovery', async () => {
@@ -2547,7 +2665,7 @@ test('allows two retrieved Acecore links for article discovery', async () => {
       question: 'AcecoreのCloudflare技術記事を教えて',
     }),
     env: {
-      AI: {
+      OPENAI: {
         async run(model) {
           if (model === WIKI_EMBEDDING_MODEL) {
             return { data: [WIKI_EMBEDDING] }
@@ -2615,7 +2733,7 @@ test('uses a controlled Acecore fallback when its Vectorize query fails', async 
     const response = await onRequestPost({
       request: createRequest({ question: 'Acecoreについて教えて' }),
       env: {
-        AI: {
+        OPENAI: {
           async run(model, input) {
             aiInvocations.push({ model, input })
             if (model === WIKI_EMBEDDING_MODEL) {
@@ -2664,7 +2782,7 @@ test('filters Acecore metadata and allows only retrieved article links', async (
   const entries = await searchAcecore(
     'Acecoreの技術記事を探して',
     {
-      AI: {
+      OPENAI: {
         async run() {
           embeddingInvoked = true
           return { data: [WIKI_EMBEDDING] }
@@ -2770,7 +2888,7 @@ test('rejects cross-origin browser requests before invoking AI', async () => {
       },
     ),
     env: {
-      AI: {
+      OPENAI: {
         async run() {
           invoked = true
           return { response: 'unexpected' }
@@ -2830,7 +2948,7 @@ test('returns controlled fallbacks when binding or inference is unavailable', as
   const failedResponse = await onRequestPost({
     request: createRequest({ question: '参加方法を教えて' }),
     env: {
-      AI: {
+      OPENAI: {
         async run() {
           throw new Error('inference failed')
         },

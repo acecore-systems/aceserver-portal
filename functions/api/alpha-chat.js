@@ -44,15 +44,22 @@ import {
   TARGET_LANGUAGES,
   WIKI_URL,
 } from './alpha-locales.js'
+import {
+  createOpenAiResponse,
+  OPENAI_REASONING_EFFORT,
+  OPENAI_RESPONSE_MODEL,
+} from './openai-api.js'
 
-const DEFAULT_CLOUDFLARE_AI_MODEL = '@cf/zai-org/glm-5.2'
 const MAX_REQUEST_BODY_BYTES = 12_000
 const MAX_QUESTION_LENGTH = 500
 const MAX_HISTORY_MESSAGES = 8
 const MAX_CONVERSATION_LENGTH = 2800
 const MAX_WIKI_SEARCH_QUERY_LENGTH = 800
 
-export async function onRequestPost({ request, env }) {
+export async function onRequestPost(
+  { request, env },
+  openAiFetch = globalThis.fetch,
+) {
   if (!isAllowedRequestOrigin(request)) {
     return jsonResponse(
       request,
@@ -105,7 +112,7 @@ export async function onRequestPost({ request, env }) {
     )
   }
 
-  if (!env?.AI) {
+  if (!env?.OPENAI_API_KEY) {
     return jsonResponse(
       request,
       { ok: false, answer: guideMessages.unconfigured },
@@ -144,6 +151,7 @@ export async function onRequestPost({ request, env }) {
     resetSearchContext,
     locale,
     new URL(ACESERVER_PORTAL_CORPUS_PATH, request.url).href,
+    openAiFetch,
   )
   if (acecoreFallback) {
     return jsonResponse(request, {
@@ -205,46 +213,34 @@ export async function onRequestPost({ request, env }) {
 
   let result
   try {
-    result = await env.AI.run(
-      env.CLOUDFLARE_AI_MODEL || DEFAULT_CLOUDFLARE_AI_MODEL,
-      {
-        messages: [
-          {
-            role: 'system',
-            content: [
-              ...alphaSystemInstructions,
-              includeAceserverContext ? buildAceserverContext(locale) : '',
-              portalGroundingContext,
-              wikiGroundingContext,
-              acecoreGroundingContext,
-              schoolsGroundingContext,
-              systemsGroundingContext,
-              worldFoundationGroundingContext,
-            ]
-              .filter(Boolean)
-              .join('\n'),
-          },
-          {
-            role: 'user',
-            content: `Conversation:\n${conversationInput}`,
-          },
-        ],
-        max_completion_tokens: 320,
-        chat_template_kwargs: {
-          enable_thinking: false,
-        },
-        temperature: 0.25,
-      },
+    result = await createOpenAiResponse({
+      apiKey: env.OPENAI_API_KEY,
+      model: env.OPENAI_RESPONSE_MODEL || OPENAI_RESPONSE_MODEL,
+      reasoningEffort: env.OPENAI_REASONING_EFFORT || OPENAI_REASONING_EFFORT,
+      instructions: [
+        ...alphaSystemInstructions,
+        includeAceserverContext ? buildAceserverContext(locale) : '',
+        portalGroundingContext,
+        wikiGroundingContext,
+        acecoreGroundingContext,
+        schoolsGroundingContext,
+        systemsGroundingContext,
+        worldFoundationGroundingContext,
+      ]
+        .filter(Boolean)
+        .join('\n'),
+      input: `Conversation:\n${conversationInput}`,
+      maxOutputTokens: 320,
+      fetchImpl: openAiFetch,
+    })
+  } catch (error) {
+    console.error(
+      JSON.stringify({
+        event: 'alpha_openai_response_error',
+        errorCode:
+          error instanceof Error && error.name ? error.name : 'provider_error',
+      }),
     )
-  } catch {
-    return jsonResponse(
-      request,
-      { ok: false, answer: guideMessages.failed },
-      502,
-    )
-  }
-
-  if (typeof result !== 'string' && result?.error) {
     return jsonResponse(
       request,
       { ok: false, answer: guideMessages.failed },
@@ -253,9 +249,7 @@ export async function onRequestPost({ request, env }) {
   }
 
   const rawAnswer = removePromptDisclosure(
-    removeSpeculativeRuleClaims(
-      trimIncompleteMarkdown(extractWorkersAiText(result).trim()),
-    ),
+    removeSpeculativeRuleClaims(trimIncompleteMarkdown(result.trim())),
   )
   const sourceLimit =
     (!resetSearchContext && hasPriorUserTurn(payload)) ||
@@ -311,6 +305,7 @@ async function retrieveAlphaEvidence(
   resetSearchContext = false,
   locale = 'ja',
   portalCorpusUrl = `https://asv.acecore.net${ACESERVER_PORTAL_CORPUS_PATH}`,
+  openAiFetch = globalThis.fetch,
 ) {
   const currentWorldFoundationIntent = currentSourceIntent === 'worldFoundation'
   const currentSchoolsIntent = currentSourceIntent === 'schools'
@@ -337,6 +332,7 @@ async function retrieveAlphaEvidence(
     const embedding = await createAlphaSearchEmbedding(
       worldFoundationQuery,
       env,
+      openAiFetch,
     )
     if (!embedding) {
       return createAlphaEvidenceResult({ worldFoundationFallback: true })
@@ -366,7 +362,11 @@ async function retrieveAlphaEvidence(
     }
 
     const schoolsQuery = resetSearchContext ? intentQuery : query
-    const embedding = await createAlphaSearchEmbedding(schoolsQuery, env)
+    const embedding = await createAlphaSearchEmbedding(
+      schoolsQuery,
+      env,
+      openAiFetch,
+    )
     if (!embedding) {
       return createAlphaEvidenceResult({ schoolsFallback: true })
     }
@@ -394,7 +394,11 @@ async function retrieveAlphaEvidence(
     }
 
     const systemsQuery = resetSearchContext ? intentQuery : query
-    const embedding = await createAlphaSearchEmbedding(systemsQuery, env)
+    const embedding = await createAlphaSearchEmbedding(
+      systemsQuery,
+      env,
+      openAiFetch,
+    )
     if (!embedding) {
       return createAlphaEvidenceResult({ systemsFallback: true })
     }
@@ -422,7 +426,11 @@ async function retrieveAlphaEvidence(
       return createAlphaEvidenceResult()
     }
 
-    const embedding = await createAlphaSearchEmbedding(wikiQuery, env)
+    const embedding = await createAlphaSearchEmbedding(
+      wikiQuery,
+      env,
+      openAiFetch,
+    )
     if (!embedding) return createAlphaEvidenceResult()
 
     const [wikiEntries, portalEntries] = await Promise.all([
@@ -450,7 +458,11 @@ async function retrieveAlphaEvidence(
   }
 
   const acecoreQuery = resetSearchContext ? intentQuery : query
-  const embedding = await createAlphaSearchEmbedding(acecoreQuery, env)
+  const embedding = await createAlphaSearchEmbedding(
+    acecoreQuery,
+    env,
+    openAiFetch,
+  )
   if (!embedding) {
     return createAlphaEvidenceResult({ acecoreFallback: true })
   }
@@ -724,42 +736,6 @@ export function isAllowedRequestOrigin(request) {
   } catch {
     return false
   }
-}
-
-function extractWorkersAiText(result) {
-  if (!result) return ''
-  if (typeof result === 'string') return result
-  if (typeof result.response === 'string') return result.response
-  if (typeof result.output_text === 'string') return result.output_text
-  if (result.result) return extractWorkersAiText(result.result)
-
-  const choicesText = (result.choices || [])
-    .map(extractChoiceText)
-    .filter(Boolean)
-    .join('\n')
-  if (choicesText) return choicesText
-
-  return (result.output || [])
-    .flatMap((item) => item.content || [])
-    .map((content) => content.text || '')
-    .filter(Boolean)
-    .join('\n')
-}
-
-function extractChoiceText(choice) {
-  if (typeof choice.text === 'string') return choice.text
-  if (typeof choice.delta?.content === 'string') return choice.delta.content
-
-  const content = choice.message?.content
-  if (typeof content === 'string') return content
-  if (Array.isArray(content)) {
-    return content
-      .map((part) => part.text || '')
-      .filter(Boolean)
-      .join('\n')
-  }
-
-  return ''
 }
 
 export function trimIncompleteMarkdown(answer) {
