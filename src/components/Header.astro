@@ -1,16 +1,31 @@
 ---
-import { navigation, settings } from '../data/content'
+import { getLocalizedNavigation, getLocalizedSettings } from '../i18n/content'
+import { getAlternatePaths, LOCALE_LABELS, type Locale } from '../i18n/config'
+import { getUi } from '../i18n/translations'
 import { externalLinkAttrs } from '../utils/links'
 import Icon from './Icon.astro'
 
+interface Props {
+  locale?: Locale
+}
+
+const { locale = 'ja' } = Astro.props
+const navigation = getLocalizedNavigation(locale)
+const settings = getLocalizedSettings(locale)
+const ui = getUi(locale)
 const currentPath = Astro.url.pathname
+const alternatePaths = getAlternatePaths(currentPath)
 const isCurrentNavigationItem = (href: string) =>
   href.startsWith('/') &&
   (currentPath === href || (href !== '/' && currentPath.startsWith(href)))
 ---
 
 <header class="site-header" data-header>
-  <a class="brand" href="/" aria-label="エースサーバー ホーム">
+  <a
+    class="brand"
+    href={alternatePaths.find((item) => item.locale === locale)?.href ?? '/'}
+    aria-label={ui.homeAriaLabel}
+  >
     <img
       src={settings.logo}
       alt={settings.logoAlt}
@@ -21,7 +36,7 @@ const isCurrentNavigationItem = (href: string) =>
     <span>{settings.shortTitle}</span>
   </a>
 
-  <nav class="desktop-nav" aria-label="メインナビゲーション">
+  <nav class="desktop-nav" aria-label={ui.mainNavigation}>
     {
       navigation.map((item) => (
         <a
@@ -37,14 +52,28 @@ const isCurrentNavigationItem = (href: string) =>
     }
   </nav>
 
+  <label class="language-switcher language-switcher--desktop">
+    <span class="sr-only">{ui.languageSelector}</span>
+    <Icon name="globe-2" />
+    <select aria-label={ui.languageSelector} data-locale-select>
+      {
+        alternatePaths.map((item) => (
+          <option value={item.href} selected={item.locale === locale}>
+            {LOCALE_LABELS[item.locale]}
+          </option>
+        ))
+      }
+    </select>
+  </label>
+
   <button
     class="menu-button"
     type="button"
-    aria-label="メニューを開く"
+    aria-label={ui.menuOpen}
     aria-expanded="false"
     aria-controls="mobile-menu"
-    data-label-open="メニューを開く"
-    data-label-close="メニューを閉じる"
+    data-label-open={ui.menuOpen}
+    data-label-close={ui.menuClose}
     data-menu-button
   >
     <Icon name="menu" class="menu-open" />
@@ -54,9 +83,22 @@ const isCurrentNavigationItem = (href: string) =>
   <nav
     id="mobile-menu"
     class="mobile-nav"
-    aria-label="モバイルナビゲーション"
+    aria-label={ui.mobileNavigation}
     data-mobile-nav
   >
+    <label class="language-switcher language-switcher--mobile">
+      <Icon name="globe-2" />
+      <span class="sr-only">{ui.languageSelector}</span>
+      <select aria-label={ui.languageSelector} data-locale-select>
+        {
+          alternatePaths.map((item) => (
+            <option value={item.href} selected={item.locale === locale}>
+              {LOCALE_LABELS[item.locale]}
+            </option>
+          ))
+        }
+      </select>
+    </label>
     {
       navigation.map((item) => (
         <a
@@ -115,7 +157,20 @@ const isCurrentNavigationItem = (href: string) =>
     })
   }
 
+  function initLocaleSelectors() {
+    document
+      .querySelectorAll<HTMLSelectElement>('[data-locale-select]')
+      .forEach((select) => {
+        if (select.dataset.localeBound === 'true') return
+        select.dataset.localeBound = 'true'
+        select.addEventListener('change', () => {
+          window.location.assign(select.value)
+        })
+      })
+  }
+
   initHeaderMenu()
+  initLocaleSelectors()
 
   if (!(window as any).__asvHeaderKeyboardBound) {
     ;(window as any).__asvHeaderKeyboardBound = true
@@ -131,7 +186,10 @@ const isCurrentNavigationItem = (href: string) =>
     })
   }
 
-  document.addEventListener('astro:after-swap', initHeaderMenu)
+  document.addEventListener('astro:after-swap', () => {
+    initHeaderMenu()
+    initLocaleSelectors()
+  })
 </script>
 
 <style>
@@ -185,6 +243,52 @@ const isCurrentNavigationItem = (href: string) =>
     display: flex;
     align-items: center;
     gap: 8px;
+  }
+
+  .language-switcher {
+    align-items: center;
+    gap: 6px;
+    border: 2px solid rgba(255, 216, 77, 0.55);
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.18);
+    color: #fffaf0;
+    padding: 0 8px;
+  }
+
+  .language-switcher--desktop {
+    display: inline-flex;
+    min-height: 42px;
+  }
+
+  .language-switcher--mobile {
+    display: none;
+  }
+
+  .language-switcher select {
+    max-width: 112px;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+    font-size: 0.82rem;
+    font-weight: 900;
+    outline: 0;
+  }
+
+  .language-switcher option {
+    background: #1c150f;
+    color: #fffaf0;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
   }
 
   .desktop-nav a,
@@ -241,7 +345,8 @@ const isCurrentNavigationItem = (href: string) =>
   }
 
   @media (max-width: 820px) {
-    .desktop-nav {
+    .desktop-nav,
+    .language-switcher--desktop {
       display: none;
     }
 
@@ -261,6 +366,16 @@ const isCurrentNavigationItem = (href: string) =>
       background: rgba(28, 21, 15, 0.98);
       padding: 10px;
       box-shadow: 0 18px 48px rgba(0, 0, 0, 0.35);
+    }
+
+    [data-menu-open] .language-switcher--mobile {
+      display: flex;
+      min-height: 48px;
+    }
+
+    .language-switcher select {
+      width: 100%;
+      max-width: none;
     }
 
     .mobile-nav a {

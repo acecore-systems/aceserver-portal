@@ -1,0 +1,62 @@
+---
+import {
+  localizePath,
+  TRANSLATED_LOCALES,
+  type TranslatedLocale,
+} from '../../i18n/config'
+import { getUi } from '../../i18n/translations'
+import BaseLayout from '../../layouts/BaseLayout.astro'
+
+export function getStaticPaths() {
+  return TRANSLATED_LOCALES.map((locale) => ({
+    params: { locale },
+    props: { locale },
+  }))
+}
+
+interface Props {
+  locale: TranslatedLocale
+}
+
+const { locale } = Astro.props
+const ui = getUi(locale)
+---
+
+<BaseLayout
+  locale={locale}
+  title={ui.notFoundTitle}
+  description={ui.notFoundDescription}
+  robots="noindex, follow"
+  canonical={null}
+>
+  <section class="not-found">
+    <h1>{ui.notFoundTitle}</h1>
+    <p>{ui.notFoundMessage}</p>
+    <a class="asv-btn-primary" href={localizePath(locale, '/')}>
+      {ui.backHome}
+    </a>
+  </section>
+</BaseLayout>
+
+<style>
+  .not-found {
+    display: grid;
+    min-height: 56vh;
+    place-items: center;
+    align-content: center;
+    gap: 18px;
+    padding: 64px 18px;
+    text-align: center;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: clamp(2.2rem, 6vw, 4.5rem);
+    font-weight: 900;
+  }
+
+  p {
+    margin: 0;
+    font-weight: 700;
+  }
+</style>

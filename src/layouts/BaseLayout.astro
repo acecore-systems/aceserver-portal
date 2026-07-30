@@ -8,11 +8,20 @@ import Footer from '../components/Footer.astro'
 import AdUnit from '../components/AdUnit.astro'
 import AdsRuntime from '../components/AdsRuntime.astro'
 import AlphaGuide from '../components/AlphaGuide.astro'
-import { settings } from '../data/content'
 import { ADSENSE } from '../data/ads'
 import { serializeJsonForHtmlScript } from '../data/safe-json'
+import { getLocalizedSettings } from '../i18n/content'
+import {
+  getAlternatePaths,
+  HTML_LANG_BY_LOCALE,
+  localizePath,
+  OGP_LOCALE_BY_LOCALE,
+  type Locale,
+} from '../i18n/config'
+import { getUi } from '../i18n/translations'
 
 interface Props {
+  locale?: Locale
   title?: string
   description?: string
   image?: string
@@ -26,9 +35,10 @@ interface Props {
 }
 
 const {
-  title = settings.title,
-  description = settings.description,
-  image = settings.logo,
+  locale = 'ja',
+  title: titleInput,
+  description: descriptionInput,
+  image: imageInput,
   imageAlt: imageAltInput,
   hideFooter = false,
   fullHeight = false,
@@ -37,31 +47,37 @@ const {
   showAds = false,
   ogType = 'website',
 } = Astro.props
+const settings = getLocalizedSettings(locale)
+const ui = getUi(locale)
+const title = titleInput ?? settings.title
+const description = descriptionInput ?? settings.description
+const image = imageInput ?? settings.logo
 const siteBase = Astro.site ?? new URL(settings.siteUrl)
 const canonical =
   canonicalInput === null ? null : new URL(canonicalInput, siteBase)
 const pageUrl = canonical ?? new URL(Astro.url.pathname, siteBase)
 const pageTitle =
   title === settings.shortTitle
-    ? `${title} | Minecraft無料公開サーバーの公式ポータル`
+    ? `${title} | ${ui.siteTitleSuffix}`
     : `${title} | ${settings.shortTitle}`
 const ogImage = new URL(image, siteBase)
 const socialImageAlt =
   imageAltInput ?? (image === settings.logo ? settings.logoAlt : title)
 const logoUrl = new URL(settings.logo, siteBase)
-const homeUrl = new URL('/', siteBase)
-const organizationId = `${homeUrl}#organization`
+const organizationHomeUrl = new URL('/', siteBase)
+const homeUrl = new URL(localizePath(locale, '/'), siteBase)
+const organizationId = `${organizationHomeUrl}#organization`
 const websiteId = `${homeUrl}#website`
 const webpageId = `${pageUrl.href}#webpage`
 const shouldShowAds = showAds && ADSENSE.enabled
 const alphaLogo = '/uploads/alpha-kun.png'
 const alphaJoinButton = {
-  label: 'ディスコードに参加',
+  label: ui.joinDiscord,
   href: settings.discordUrl,
   external: true,
 }
 const alphaWikiButton = {
-  label: 'WIKIを開く',
+  label: ui.openWiki,
   href: settings.wikiUrl,
   external: true,
 }
@@ -73,7 +89,7 @@ const websiteJsonLd = serializeJsonForHtmlScript({
   alternateName: settings.shortTitle,
   url: homeUrl.toString(),
   description,
-  inLanguage: 'ja',
+  inLanguage: HTML_LANG_BY_LOCALE[locale],
   publisher: { '@id': organizationId },
 })
 const organizationJsonLd = serializeJsonForHtmlScript({
@@ -81,7 +97,7 @@ const organizationJsonLd = serializeJsonForHtmlScript({
   '@type': 'Organization',
   '@id': organizationId,
   name: settings.shortTitle,
-  url: homeUrl.toString(),
+  url: organizationHomeUrl.toString(),
   logo: logoUrl.toString(),
   sameAs: [settings.discordUrl, settings.wikiUrl],
 })
@@ -93,14 +109,23 @@ const webpageJsonLd = serializeJsonForHtmlScript({
   name: pageTitle,
   description,
   image: ogImage.toString(),
-  inLanguage: 'ja',
+  inLanguage: HTML_LANG_BY_LOCALE[locale],
   isPartOf: { '@id': websiteId },
   about: { '@id': organizationId },
 })
+const alternatePaths = getAlternatePaths(pageUrl.pathname)
+const alternateUrls = alternatePaths.map((alternate) => ({
+  ...alternate,
+  url: new URL(alternate.href, siteBase),
+}))
+const defaultAlternateUrl =
+  alternateUrls.find((alternate) => alternate.locale === 'ja')?.url ??
+  new URL('/', siteBase)
+const rssUrl = new URL(localizePath(locale, '/rss.xml'), siteBase)
 ---
 
 <!doctype html>
-<html lang="ja">
+<html lang={HTML_LANG_BY_LOCALE[locale]}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -110,6 +135,22 @@ const webpageJsonLd = serializeJsonForHtmlScript({
     <meta name="robots" content={robots} />
     <meta name="theme-color" content="#15130f" />
     {canonical && <link rel="canonical" href={canonical} />}
+    {
+      alternateUrls.map((alternate) => (
+        <link
+          rel="alternate"
+          hreflang={HTML_LANG_BY_LOCALE[alternate.locale]}
+          href={alternate.url}
+        />
+      ))
+    }
+    <link rel="alternate" hreflang="x-default" href={defaultAlternateUrl} />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title={ui.rssTitle}
+      href={rssUrl}
+    />
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="apple-touch-icon" href="/uploads/legacy-acico.png" />
     {
@@ -131,7 +172,17 @@ const webpageJsonLd = serializeJsonForHtmlScript({
     }
     <title>{pageTitle}</title>
     <meta property="og:type" content={ogType} />
-    <meta property="og:locale" content="ja_JP" />
+    <meta property="og:locale" content={OGP_LOCALE_BY_LOCALE[locale]} />
+    {
+      alternateUrls
+        .filter((alternate) => alternate.locale !== locale)
+        .map((alternate) => (
+          <meta
+            property="og:locale:alternate"
+            content={OGP_LOCALE_BY_LOCALE[alternate.locale]}
+          />
+        ))
+    }
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
     {canonical && <meta property="og:url" content={canonical} />}
@@ -148,15 +199,16 @@ const webpageJsonLd = serializeJsonForHtmlScript({
     <script type="application/ld+json" set:html={webpageJsonLd} />
   </head>
   <body class:list={[{ 'is-full-height': fullHeight }]}>
-    <a class="skip-link" href="#main">本文へ移動</a>
-    <Header />
-    <AnnouncementBanner />
+    <a class="skip-link" href="#main">{ui.skipToContent}</a>
+    <Header locale={locale} />
+    <AnnouncementBanner locale={locale} />
     <main id="main" tabindex="-1">
       <slot />
-      {shouldShowAds && <AdUnit />}
+      {shouldShowAds && <AdUnit locale={locale} />}
     </main>
-    {!hideFooter && <Footer />}
+    {!hideFooter && <Footer locale={locale} />}
     <AlphaGuide
+      locale={locale}
       logo={alphaLogo}
       joinButton={alphaJoinButton}
       wikiButton={alphaWikiButton}

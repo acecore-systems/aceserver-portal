@@ -18,6 +18,10 @@ import {
   trimIncompleteMarkdown,
 } from '../functions/api/alpha-chat.js'
 import {
+  getGuideLinkResources,
+  TARGET_LANGUAGES,
+} from '../functions/api/alpha-locales.js'
+import {
   buildAcecoreGroundingContext,
   searchAcecore,
   shouldSearchAcecore,
@@ -48,7 +52,7 @@ test('allows Acecore Schools links in the chat UI', async () => {
     'utf8',
   )
   const allowedExternalLinks = source.match(
-    /allowedExternalLinks:\s*\[([\s\S]*?)\],\s*resources:/,
+    /allowedExternalLinks:\s*\[([\s\S]*?)\],\s*resources(?:\s*:|,)/,
   )?.[1]
 
   assert.match(source, /const schoolsUrl = 'https:\/\/schools\.acecore\.net\/'/)
@@ -73,6 +77,78 @@ function createRequest(payload, headers = {}) {
     body: typeof payload === 'string' ? payload : JSON.stringify(payload),
   })
 }
+
+test('returns locale-specific fallback guidance for all nine locales', async () => {
+  for (const locale of Object.keys(TARGET_LANGUAGES)) {
+    const response = await onRequestPost({
+      request: createRequest({ locale, question: 'Aceserver' }),
+      env: {},
+    })
+    const body = await response.json()
+    const worldMapUrl =
+      locale === 'ja' ? '/world-map/' : `/${locale}/world-map/`
+
+    assert.equal(response.status, 503)
+    assert.equal(body.ok, false)
+    assert.match(body.answer, new RegExp(worldMapUrl.replaceAll('/', '\\/')))
+    if (locale !== 'ja') {
+      assert.doesNotMatch(body.answer, /[\u3040-\u30ff]/u)
+    }
+  }
+})
+
+test('uses the requested response language and locale-safe map allowlist', async () => {
+  for (const locale of Object.keys(TARGET_LANGUAGES)) {
+    let invocation
+    const resources = getGuideLinkResources(locale)
+    const map = resources[2]
+    const response = await onRequestPost({
+      request: createRequest({ locale, question: 'Aceserver' }),
+      env: {
+        AI: {
+          async run(model, input) {
+            invocation = { model, input }
+            return { response: map.label }
+          },
+        },
+      },
+    })
+    const body = await response.json()
+
+    assert.equal(response.status, 200)
+    assert.match(
+      invocation.input.messages[0].content,
+      new RegExp(`Answer in ${TARGET_LANGUAGES[locale]}`),
+    )
+    assert.match(
+      invocation.input.messages[0].content,
+      new RegExp(map.href.replaceAll('/', '\\/')),
+    )
+    assert.equal(body.answer, `[${map.label}](${map.href})`)
+  }
+})
+
+test('rejects a map link from a different locale while allowing the active locale', () => {
+  assert.equal(
+    sanitizeAlphaAnswerLinks('[Map](/fr/world-map/)', [], [], [], [], 'fr'),
+    '[Map](/fr/world-map/)',
+  )
+  assert.equal(
+    sanitizeAlphaAnswerLinks('[Map](/world-map/)', [], [], [], [], 'fr'),
+    'Map',
+  )
+  assert.equal(
+    sanitizeAlphaAnswerLinks(
+      '[Unsafe](https://example.invalid/)',
+      [],
+      [],
+      [],
+      [],
+      'fr',
+    ),
+    'Unsafe',
+  )
+})
 
 test('uses the dialogue model and only stable navigation context', async () => {
   let invocation

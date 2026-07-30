@@ -1,11 +1,22 @@
 ---
-import { navigation, settings } from '../data/content'
+import { getLocalizedNavigation, getLocalizedSettings } from '../i18n/content'
+import { localizePath, type Locale } from '../i18n/config'
+import { getUi } from '../i18n/translations'
 import { externalLinkAttrs } from '../utils/links'
+
+interface Props {
+  locale?: Locale
+}
+
+const { locale = 'ja' } = Astro.props
+const navigation = getLocalizedNavigation(locale)
+const settings = getLocalizedSettings(locale)
+const ui = getUi(locale)
 ---
 
 <footer class="site-footer">
   <div class="footer-inner">
-    <a class="footer-brand" href="/">
+    <a class="footer-brand" href={localizePath(locale, '/')}>
       <img
         src={settings.logo}
         alt={settings.logoAlt}
@@ -15,7 +26,7 @@ import { externalLinkAttrs } from '../utils/links'
       />
       <span>{settings.shortTitle}</span>
     </a>
-    <nav aria-label="フッターナビゲーション">
+    <nav aria-label={ui.footerNavigation}>
       {
         navigation.map((item) => (
           <a href={item.href} {...externalLinkAttrs(item.href, item.external)}>

@@ -1,0 +1,31 @@
+---
+import HomePage from '../../components/HomePage.astro'
+import { getLocalizedHomePage } from '../../i18n/content'
+import { TRANSLATED_LOCALES, type TranslatedLocale } from '../../i18n/config'
+import BaseLayout from '../../layouts/BaseLayout.astro'
+
+export function getStaticPaths() {
+  return TRANSLATED_LOCALES.map((locale) => ({
+    params: { locale },
+    props: { locale },
+  }))
+}
+
+interface Props {
+  locale: TranslatedLocale
+}
+
+const { locale } = Astro.props
+const page = getLocalizedHomePage(locale)
+---
+
+<BaseLayout
+  locale={locale}
+  title={page.meta.title}
+  description={page.meta.description}
+  image={page.meta.ogImage}
+  hideFooter={page.hideFooter}
+  showAds
+>
+  <HomePage page={page} locale={locale} />
+</BaseLayout>

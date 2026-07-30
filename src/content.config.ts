@@ -45,6 +45,11 @@ const storySchema = z
   .object({
     title: z.string().trim().min(1),
     description: z.string().trim().min(1),
+    translationOf: z.string().trim().min(1).optional(),
+    sourceHash: z
+      .string()
+      .regex(/^sha256:[a-f0-9]{64}$/u)
+      .optional(),
     date: z.coerce.date(),
     author: z.string().trim().min(1),
     tags: z.array(z.string().trim().min(1)).default([]),

@@ -1,13 +1,23 @@
 ---
-import { announcements } from '../data/content'
+import { getLocalizedAnnouncements } from '../i18n/content'
+import type { Locale } from '../i18n/config'
+import { getUi } from '../i18n/translations'
 import { isWithinPublicationWindow } from '../utils/publication-window'
 import { externalLinkAttrs } from '../utils/links'
 import Icon from './Icon.astro'
+
+interface Props {
+  locale?: Locale
+}
+
+const { locale = 'ja' } = Astro.props
+const announcements = getLocalizedAnnouncements(locale)
+const ui = getUi(locale)
 ---
 
 {
   announcements.length > 0 && (
-    <aside class="announcement-stack" aria-label="お知らせ">
+    <aside class="announcement-stack" aria-label={ui.announcementLabel}>
       {announcements.map((announcement) => (
         <section
           class:list={[

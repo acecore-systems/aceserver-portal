@@ -1,14 +1,18 @@
 ---
 import type { LinkItem, PortalPage, PortalSection } from '../types'
 import { serializeCssUrl } from '../data/safe-json'
+import type { Locale } from '../i18n/config'
+import { getUi } from '../i18n/translations'
 import { externalLinkAttrs } from '../utils/links'
 import Icon from './Icon.astro'
 
 interface Props {
   page: PortalPage
+  locale?: Locale
 }
 
-const { page } = Astro.props
+const { page, locale = 'ja' } = Astro.props
+const ui = getUi(locale)
 const sections = page.sections ?? []
 
 type FeatureSection = Extract<
@@ -19,12 +23,12 @@ type CtaSection = Extract<PortalSection, { type: 'cta' }>
 type HeroSection = Extract<PortalSection, { type: 'hero' }>
 
 const fallbackJoinButton: LinkItem = {
-  label: 'ディスコードに参加',
+  label: ui.joinDiscord,
   href: 'https://discord.gg/acsv',
   external: true,
 }
 const fallbackWikiButton: LinkItem = {
-  label: 'WIKIを開く',
+  label: ui.openWiki,
   href: 'https://asv-wiki.acecore.net',
   external: true,
 }
@@ -119,7 +123,9 @@ const alphaLogo = '/uploads/alpha-kun.png'
   />
   <div class="hero-shade"></div>
   <div class="hero-content">
-    <h1 id="home-title"><span>エース</span><span>サーバー</span></h1>
+    <h1 id="home-title">
+      {ui.homeTitleParts.map((part) => <span>{part}</span>)}
+    </h1>
     <p>{page.meta.description}</p>
     <div class="hero-actions">
       <a
@@ -142,16 +148,16 @@ const alphaLogo = '/uploads/alpha-kun.png'
         <img
           class="hero-alpha-icon"
           src={alphaLogo}
-          alt="アルファくん"
+          alt={ui.alphaImageAlt}
           aria-hidden="true"
           width="28"
           height="28"
         />
-        <span>アルファくんに聞く</span>
+        <span>{ui.askAlpha}</span>
       </a>
     </div>
   </div>
-  <a class="scroll-cue" href="#overview" aria-label="次のセクションへ"
+  <a class="scroll-cue" href="#overview" aria-label={ui.nextSection}
     ><Icon name="chevron-right" /></a
   >
 </section>
@@ -163,7 +169,7 @@ const alphaLogo = '/uploads/alpha-kun.png'
   <div class="intro-copy asv-panel pixel-border">
     <h2>{overview.titleCopy}</h2>
     {overview.text && <p>{overview.text}</p>}
-    <p>好きなように遊び、作り、つながることができます。</p>
+    <p>{ui.homeFreedom}</p>
   </div>
 </section>
 
@@ -171,9 +177,7 @@ const alphaLogo = '/uploads/alpha-kun.png'
   <div class="feature-copy">
     <h2>{multiplayer.titleCopy}</h2>
     {multiplayer.text && <p>{multiplayer.text}</p>}
-    <p>
-      一人でも、友達とも、世界中のプレイヤーとも一緒に冒険や建築を楽しめます。
-    </p>
+    <p>{ui.homeMultiplayer}</p>
   </div>
   <div class="feature-image pixel-border">
     {
@@ -190,7 +194,7 @@ const alphaLogo = '/uploads/alpha-kun.png'
     <Icon name="chevron-right" class="device-arrow" />
     <div class="device device--mobile"><Icon name="globe-2" /></div>
   </div>
-  <div><h2>JAVA版・統合版<br />どちらでも遊ぶことが可能です！</h2></div>
+  <div><h2>{ui.homeCrossplay}</h2></div>
 </section>
 
 <section class="feature-band feature-band--left">
@@ -203,7 +207,7 @@ const alphaLogo = '/uploads/alpha-kun.png'
   </div>
 </section>
 
-<section class="cta-grid" aria-label="参加とWIKI">
+<section class="cta-grid" aria-label={ui.homeCtaLabel}>
   <article class="join-card pixel-border">
     <div class="cube-icon"><Icon name="message-circle" /></div>
     <div>
