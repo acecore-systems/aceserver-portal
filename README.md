@@ -36,6 +36,7 @@ CMS content の shape は `src/content.config.ts` の Astro Content Collections 
 | トップ                        | `/`                          |
 | 動画                          | `/youtube-search-aceserver/` |
 | ワールドマップ                | `/world-map/`                |
+| 読みもの                      | `/stories/`                  |
 | メインサーバーワールドマップ  | `/world-map-main/`           |
 | 資源サーバーワールドマップ    | `/world-map-sigen/`          |
 | RPGサーバーワールドマップ     | `/world-map-rpg/`            |
@@ -45,6 +46,12 @@ CMS content の shape は `src/content.config.ts` の Astro Content Collections 
 | Season Creativeワールドマップ | `/world-map-season-a-c/`     |
 | イベントワールドマップ        | `/world-map-event/`          |
 | Sveltia CMS                   | `/admin/`                    |
+
+エースサーバー固有の出来事やコミュニティ記事は
+`src/content/stories/*.md` を正としてポータル内で公開します。Acecoreの
+コーポレートサイトには本文を複製せず、旧URLから各記事へ転送します。
+Storiesは日本語を正とするPR管理コンテンツです。Acecore側にあった8言語の
+旧記事URLは、対応する日本語記事のcanonical URLへ301で統合します。
 
 ## CMS
 

@@ -2,6 +2,7 @@
   "items": [
     { "text": "動画", "href": "/youtube-search-aceserver/", "icon": "play" },
     { "text": "ワールドマップ", "href": "/world-map/", "icon": "map" },
+    { "text": "読みもの", "href": "/stories/", "icon": "book-open" },
     {
       "text": "Acecore",
       "href": "https://acecore.net",

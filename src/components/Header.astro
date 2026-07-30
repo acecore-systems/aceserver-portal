@@ -2,6 +2,11 @@
 import { navigation, settings } from '../data/content'
 import { externalLinkAttrs } from '../utils/links'
 import Icon from './Icon.astro'
+
+const currentPath = Astro.url.pathname
+const isCurrentNavigationItem = (href: string) =>
+  href.startsWith('/') &&
+  (currentPath === href || (href !== '/' && currentPath.startsWith(href)))
 ---
 
 <header class="site-header" data-header>
@@ -21,7 +26,8 @@ import Icon from './Icon.astro'
       navigation.map((item) => (
         <a
           href={item.href}
-          class:list={[{ 'is-active': Astro.url.pathname === item.href }]}
+          class:list={[{ 'is-active': isCurrentNavigationItem(item.href) }]}
+          aria-current={isCurrentNavigationItem(item.href) ? 'page' : undefined}
           {...externalLinkAttrs(item.href, item.external)}
         >
           <Icon name={item.icon} />
@@ -53,7 +59,12 @@ import Icon from './Icon.astro'
   >
     {
       navigation.map((item) => (
-        <a href={item.href} {...externalLinkAttrs(item.href, item.external)}>
+        <a
+          href={item.href}
+          class:list={[{ 'is-active': isCurrentNavigationItem(item.href) }]}
+          aria-current={isCurrentNavigationItem(item.href) ? 'page' : undefined}
+          {...externalLinkAttrs(item.href, item.external)}
+        >
           <Icon name={item.icon} />
           <span>{item.text}</span>
         </a>
@@ -197,7 +208,8 @@ import Icon from './Icon.astro'
 
   .desktop-nav a:hover,
   .desktop-nav a.is-active,
-  .mobile-nav a:hover {
+  .mobile-nav a:hover,
+  .mobile-nav a.is-active {
     border-color: rgba(255, 216, 77, 0.65);
     background: rgba(255, 216, 77, 0.12);
     color: #ffd84d;

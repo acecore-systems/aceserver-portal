@@ -178,6 +178,8 @@ const KNOWN_ROUTES = new Set(
   }),
 )
 
+KNOWN_ROUTES.add('/stories/')
+
 type PortalContentResult =
   | { ok: true }
   | {

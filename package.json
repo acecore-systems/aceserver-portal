@@ -11,16 +11,18 @@
     "dev": "astro dev",
     "prebuild": "node scripts/write-cms-runtime-config.mjs",
     "build": "astro build",
-    "postbuild": "npm run validate:image-alts",
+    "postbuild": "npm run validate:image-alts && npm run validate:story-output",
     "preview": "astro preview",
     "format": "prettier . --write",
     "format:check": "prettier . --check",
     "test:alpha": "node --test tests/alpha-chat.test.mjs",
     "test:cms": "node --import=./scripts/json-module-loader.mjs --test --test-concurrency=1 --test-isolation=none tests/cms-*.test.mjs",
+    "test:content": "node --test tests/content-validation.test.mjs",
     "test:dynmap": "node --test cloudflare/dynmap-r2-cache/worker.test.mjs",
     "typecheck:functions": "tsc --project tsconfig.functions.json",
     "validate:content": "node scripts/validate-content.mjs",
-    "validate:image-alts": "node scripts/validate-image-alts.mjs"
+    "validate:image-alts": "node scripts/validate-image-alts.mjs",
+    "validate:story-output": "node scripts/validate-story-output.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",
@@ -34,6 +36,7 @@
   "devDependencies": {
     "@cloudflare/workers-types": "^5.20260723.1",
     "@iconify-json/lucide": "^1.2.118",
+    "mdast-util-from-markdown": "^2.0.3",
     "prettier": "^3.9.6",
     "prettier-plugin-astro": "^0.14.1",
     "typescript": "^7.0.2"

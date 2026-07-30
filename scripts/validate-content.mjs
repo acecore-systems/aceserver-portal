@@ -1,11 +1,21 @@
-import { readdir, readFile } from 'node:fs/promises'
+import { readdir, readFile, stat } from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 import { validatePortalContentFile } from '../src/data/content-schemas.ts'
+import { extractStoryMarkdownTargets } from './markdown-targets.mjs'
 
 const root = path.resolve(fileURLToPath(new URL('..', import.meta.url)))
 const errors = []
+const EXPECTED_STORY_SLUGS = new Set([
+  'aceserver-hijacked',
+  'aceserver-portal-launch',
+  'metaverse-is-close',
+])
+const REQUIRED_STORY_IMAGE_SLUGS = new Set([
+  'aceserver-portal-launch',
+  'metaverse-is-close',
+])
 
 function fail(scope, message) {
   errors.push(`${scope}: ${message}`)
@@ -46,6 +56,56 @@ function isExternalHref(href) {
 
 function routeForSlug(slug) {
   return slug === 'top' ? '/' : `/${slug}/`
+}
+
+function frontmatterForStory(source) {
+  return source.match(/^---\s*\r?\n([\s\S]*?)\r?\n---(?:\r?\n|$)/)?.[1]
+}
+
+function frontmatterString(frontmatter, key) {
+  if (!frontmatter) return undefined
+
+  const match = frontmatter.match(new RegExp(`^${key}:\\s*(.*?)\\s*$`, 'm'))
+  if (!match) return undefined
+
+  const value = match[1].trim()
+  const quote = value[0]
+  if (
+    value.length >= 2 &&
+    (quote === '"' || quote === "'") &&
+    value.at(-1) === quote
+  ) {
+    return value.slice(1, -1)
+  }
+
+  return value
+}
+
+function markdownTargets(source, scope) {
+  let targets
+
+  try {
+    targets = extractStoryMarkdownTargets(source)
+  } catch (error) {
+    fail(scope, `Markdown could not be parsed (${error.message})`)
+    return { images: [], links: [] }
+  }
+
+  for (const reference of targets.missingReferences) {
+    const nodeScope = reference.line ? `${scope}:${reference.line}` : scope
+    fail(nodeScope, `Markdown reference target is missing (${reference.label})`)
+  }
+
+  return {
+    images: targets.images.map((image) => ({
+      ...image,
+      scope: image.line ? `${scope}:${image.line}` : scope,
+    })),
+    links: targets.links.map((link) => ({
+      ...link,
+      scope: link.line ? `${scope}:${link.line}` : scope,
+    })),
+  }
 }
 
 function hasSectionType(page, type) {
@@ -128,7 +188,12 @@ async function validatePages() {
 }
 
 function validateInternalHref(scope, href, routes) {
-  if (!isNonEmptyString(href) || isExternalHref(href)) {
+  if (!isNonEmptyString(href)) {
+    fail(scope, 'internal href must be a non-empty string')
+    return
+  }
+
+  if (isExternalHref(href)) {
     return
   }
 
@@ -137,8 +202,146 @@ function validateInternalHref(scope, href, routes) {
     return
   }
 
-  if (!routes.has(href)) {
+  const route = href.split(/[?#]/, 1)[0]
+  if (!routes.has(route)) {
     fail(scope, `internal href does not match a page route (${href})`)
+  }
+}
+
+async function validateLocalImage(scope, image) {
+  if (!isNonEmptyString(image)) {
+    fail(scope, 'image reference must be a non-empty string')
+    return
+  }
+
+  if (isExternalHref(image)) {
+    return
+  }
+
+  const pathname = image.split(/[?#]/, 1)[0]
+  if (!pathname.startsWith('/')) {
+    fail(scope, `local image reference must start with / (${image})`)
+    return
+  }
+
+  let decodedPathname
+  try {
+    decodedPathname = decodeURIComponent(pathname)
+  } catch {
+    fail(scope, `local image reference is not valid URL encoding (${image})`)
+    return
+  }
+
+  const publicDir = path.join(root, 'public')
+  const filePath = path.resolve(publicDir, decodedPathname.replace(/^\/+/, ''))
+  if (
+    filePath !== publicDir &&
+    !filePath.startsWith(`${publicDir}${path.sep}`)
+  ) {
+    fail(scope, `local image reference escapes public directory (${image})`)
+    return
+  }
+
+  try {
+    const fileStats = await stat(filePath)
+    if (!fileStats.isFile()) {
+      fail(scope, `local image reference is not a file (${image})`)
+    }
+  } catch {
+    fail(scope, `local image reference does not exist (${image})`)
+  }
+}
+
+async function validateStories(routes) {
+  const storiesDir = path.join(root, 'src/content/stories')
+  const storyEntries = await readdir(storiesDir, { recursive: true })
+  for (const file of storyEntries.filter((entry) => /\.mdx$/i.test(entry))) {
+    fail(
+      `src/content/stories/${file.replaceAll(path.sep, '/')}`,
+      'MDX stories are not supported; use a .md file',
+    )
+  }
+  const storyFiles = storyEntries.filter((file) => /\.md$/i.test(file)).sort()
+  const stories = []
+  const slugs = new Set()
+
+  routes.add('/stories/')
+
+  for (const file of storyFiles) {
+    const normalizedFile = file.replaceAll(path.sep, '/')
+    const slug = normalizedFile.replace(/\.md$/i, '')
+    const relativePath = `src/content/stories/${normalizedFile}`
+
+    if (slug.includes('/')) {
+      fail(
+        relativePath,
+        'story files must be directly under src/content/stories for the [slug] route',
+      )
+      continue
+    }
+
+    if (slugs.has(slug)) {
+      fail(relativePath, `duplicate story slug "${slug}"`)
+      continue
+    }
+
+    slugs.add(slug)
+    routes.add(`/stories/${slug}/`)
+    stories.push({
+      relativePath,
+      slug,
+      source: await readFile(path.join(storiesDir, file), 'utf8'),
+    })
+  }
+
+  for (const expectedSlug of EXPECTED_STORY_SLUGS) {
+    if (!slugs.has(expectedSlug)) {
+      fail(
+        'src/content/stories',
+        `expected migrated story is missing (${expectedSlug})`,
+      )
+    }
+  }
+
+  for (const story of stories) {
+    const frontmatter = frontmatterForStory(story.source)
+    if (frontmatter === undefined) {
+      fail(story.relativePath, 'story frontmatter is missing')
+      continue
+    }
+
+    const image = frontmatterString(frontmatter, 'image')
+    const imageAlt = frontmatterString(frontmatter, 'imageAlt')
+    if (
+      REQUIRED_STORY_IMAGE_SLUGS.has(story.slug) &&
+      (image === undefined || imageAlt === undefined)
+    ) {
+      fail(
+        story.relativePath,
+        'migrated story image and imageAlt must be preserved',
+      )
+    }
+    if ((image === undefined) !== (imageAlt === undefined)) {
+      fail(story.relativePath, 'image and imageAlt must be provided together')
+    }
+    if (image !== undefined) {
+      await validateLocalImage(`${story.relativePath}.image`, image)
+    }
+    if (imageAlt !== undefined && !isNonEmptyString(imageAlt)) {
+      fail(`${story.relativePath}.imageAlt`, 'imageAlt must not be empty')
+    }
+
+    const markdown = markdownTargets(story.source, story.relativePath)
+    for (const { alt, scope, target } of markdown.images) {
+      if (!isNonEmptyString(alt)) {
+        fail(scope, 'Markdown image alt must not be empty')
+      }
+      await validateLocalImage(scope, target)
+    }
+
+    for (const { scope, target } of markdown.links) {
+      validateInternalHref(scope, target, routes)
+    }
   }
 }
 
@@ -358,6 +561,7 @@ async function validateCmsConfig() {
 }
 
 const routes = await validatePages()
+await validateStories(routes)
 await validateSiteConfig(routes)
 await validateCmsConfig()
 

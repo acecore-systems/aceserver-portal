@@ -1,5 +1,6 @@
 import { defineCollection } from 'astro:content'
 import { glob } from 'astro/loaders'
+import { z } from 'astro/zod'
 
 import {
   portalAnnouncementsSchema,
@@ -40,9 +41,33 @@ const announcements = defineCollection({
   schema: portalAnnouncementsSchema,
 })
 
+const storySchema = z
+  .object({
+    title: z.string().trim().min(1),
+    description: z.string().trim().min(1),
+    date: z.coerce.date(),
+    author: z.string().trim().min(1),
+    tags: z.array(z.string().trim().min(1)).default([]),
+    image: z.string().trim().min(1).optional(),
+    imageAlt: z.string().trim().min(1).optional(),
+  })
+  .refine(({ image, imageAlt }) => Boolean(image) === Boolean(imageAlt), {
+    message: 'imageとimageAltは両方を指定してください。',
+    path: ['imageAlt'],
+  })
+
+const stories = defineCollection({
+  loader: glob({
+    base: './src/content/stories',
+    pattern: '**/*.{md,mdx}',
+  }),
+  schema: storySchema,
+})
+
 export const collections = {
   announcements,
   navigation,
   pages,
   settings,
+  stories,
 }
