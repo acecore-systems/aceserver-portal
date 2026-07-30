@@ -148,6 +148,16 @@ export async function onRequestPost({ request, env }) {
       answer: GUIDE_MESSAGES.worldFoundationNotFound,
     })
   }
+  const worldFoundationStatusAnswer = buildWorldFoundationStatusGuardAnswer(
+    question || searchQuery,
+    worldFoundationEntries,
+  )
+  if (worldFoundationStatusAnswer) {
+    return jsonResponse(request, {
+      ok: true,
+      answer: worldFoundationStatusAnswer,
+    })
+  }
 
   const wikiGroundingContext = buildWikiGroundingContext(wikiEntries)
   const acecoreGroundingContext = buildAcecoreGroundingContext(acecoreEntries)
@@ -327,6 +337,47 @@ function shouldAllowMultipleAcecoreArticleSources(question, acecoreEntries) {
 
   return (
     acecoreEntries.filter((entry) => entry.contentType === 'blog').length >= 2
+  )
+}
+
+function buildWorldFoundationStatusGuardAnswer(question, entries) {
+  if (
+    !/(?:採択|承認|可決|採用|決定)(?:済み|された|されている|なの|ですか|か)|\b(?:accepted|approved|adopted)\b/iu.test(
+      String(question || ''),
+    )
+  ) {
+    return ''
+  }
+
+  const primaryEntry = entries[0]
+  if (
+    !primaryEntry ||
+    !['proposal', 'research'].includes(primaryEntry.contentType)
+  ) {
+    return ''
+  }
+
+  const statusText = [
+    primaryEntry.title,
+    primaryEntry.section,
+    primaryEntry.excerpt,
+  ].join('\n')
+  if (
+    /status\s*[:：]\s*(?:accepted|approved|adopted)|(?:採択|承認|可決|採用|決定)済み|(?:本提案|この提案|当該提案).{0,20}(?:採択|承認|可決|正式採用)された/iu.test(
+      statusText,
+    )
+  ) {
+    return ''
+  }
+
+  const documentLabel =
+    primaryEntry.contentType === 'research'
+      ? '調査資料（research）'
+      : '提案（proposal）'
+  return addRetrievedSourceLinks(
+    `この資料は公式サイトで**${documentLabel}**として公開されているよ。取得した情報には採択済みと確認できる記載がないため、採択済みとは案内できないよ。`,
+    [primaryEntry],
+    1,
   )
 }
 

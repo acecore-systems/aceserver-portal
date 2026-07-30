@@ -561,6 +561,58 @@ test('removes disclosed prompt guidance while keeping the visitor answer', () =>
   )
 })
 
+test('does not let the dialogue model promote a proposal to accepted', async () => {
+  const invokedModels = []
+  const response = await onRequestPost({
+    request: createRequest({
+      question: 'World Foundationの初期ガバナンスは採択済み？',
+    }),
+    env: {
+      AI: {
+        async run(model) {
+          invokedModels.push(model)
+          if (model === WIKI_EMBEDDING_MODEL) {
+            return { data: [WIKI_EMBEDDING] }
+          }
+
+          throw new Error('the dialogue model must not decide proposal status')
+        },
+      },
+      WORLD_FOUNDATION_SEARCH_ENABLED: 'true',
+      WORLD_FOUNDATION_SEARCH_INDEX: {
+        async query() {
+          return {
+            matches: [
+              {
+                id: 'wf-proposal-governance',
+                score: 0.91,
+                metadata: {
+                  locale: 'ja',
+                  title: '初期ガバナンスプロセス',
+                  section: '目的',
+                  excerpt: '初期段階で用いる軽量なプロセスを提案します。',
+                  url: '/proposals/0001-initial-governance-process/',
+                },
+              },
+            ],
+          }
+        },
+      },
+    },
+  })
+  const body = await response.json()
+
+  assert.equal(response.status, 200)
+  assert.deepEqual(invokedModels, [WIKI_EMBEDDING_MODEL])
+  assert.match(body.answer, /提案（proposal）/)
+  assert.match(body.answer, /採択済みとは案内できない/)
+  assert.doesNotMatch(body.answer, /採択済みの提案/)
+  assert.match(
+    body.answer,
+    /\[初期ガバナンスプロセス\]\(https:\/\/world-foundation\.acecore\.net\/proposals\/0001-initial-governance-process\/\)/,
+  )
+})
+
 test('filters World Foundation metadata and keeps document status context', async () => {
   let embeddingInvoked = false
   const entries = await searchWorldFoundation(
