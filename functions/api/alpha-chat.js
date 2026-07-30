@@ -138,6 +138,13 @@ export async function onRequestPost({ request, env }) {
   }
 
   const searchQuery = buildWikiSearchQuery(payload, question)
+  const intentQuery = question || searchQuery
+  const currentSourceIntent = resolveCurrentAlphaSourceIntent(intentQuery)
+  const resetSearchContext = shouldResetAlphaSearchContext(
+    payload,
+    intentQuery,
+    currentSourceIntent,
+  )
   const {
     wikiEntries,
     acecoreEntries,
@@ -146,7 +153,13 @@ export async function onRequestPost({ request, env }) {
     acecoreFallback,
     schoolsFallback,
     worldFoundationFallback,
-  } = await retrieveAlphaEvidence(searchQuery, question || searchQuery, env)
+  } = await retrieveAlphaEvidence(
+    searchQuery,
+    intentQuery,
+    env,
+    currentSourceIntent,
+    resetSearchContext,
+  )
   if (acecoreFallback) {
     return jsonResponse(request, {
       ok: true,
@@ -245,7 +258,7 @@ export async function onRequestPost({ request, env }) {
     ),
   )
   const sourceLimit =
-    hasPriorUserTurn(payload) ||
+    (!resetSearchContext && hasPriorUserTurn(payload)) ||
     shouldAllowMultipleAcecoreArticleSources(question, acecoreEntries)
       ? 2
       : 1
@@ -282,17 +295,17 @@ export async function onRequestPost({ request, env }) {
   })
 }
 
-async function retrieveAlphaEvidence(query, intentQuery, env) {
-  const currentWorldFoundationIntent = shouldSearchWorldFoundation(intentQuery)
-  const currentSchoolsIntent =
-    !currentWorldFoundationIntent && shouldSearchSchools(intentQuery)
-  const currentAcecoreIntent =
-    !currentWorldFoundationIntent &&
-    !currentSchoolsIntent &&
-    shouldSearchAcecore(intentQuery)
-  const currentAceserverIntent = EXPLICIT_ACESERVER_SOURCE_PATTERN.test(
-    String(intentQuery || ''),
-  )
+async function retrieveAlphaEvidence(
+  query,
+  intentQuery,
+  env,
+  currentSourceIntent = resolveCurrentAlphaSourceIntent(intentQuery),
+  resetSearchContext = false,
+) {
+  const currentWorldFoundationIntent = currentSourceIntent === 'worldFoundation'
+  const currentSchoolsIntent = currentSourceIntent === 'schools'
+  const currentAcecoreIntent = currentSourceIntent === 'acecore'
+  const currentAceserverIntent = currentSourceIntent === 'aceserver'
   const worldFoundationIntent =
     currentWorldFoundationIntent ||
     (!currentAcecoreIntent &&
@@ -308,13 +321,17 @@ async function retrieveAlphaEvidence(query, intentQuery, env) {
       return createAlphaEvidenceResult({ worldFoundationFallback: true })
     }
 
-    const embedding = await createAlphaSearchEmbedding(query, env)
+    const worldFoundationQuery = resetSearchContext ? intentQuery : query
+    const embedding = await createAlphaSearchEmbedding(
+      worldFoundationQuery,
+      env,
+    )
     if (!embedding) {
       return createAlphaEvidenceResult({ worldFoundationFallback: true })
     }
 
     const worldFoundationEntries = markEvidenceSource(
-      await searchWorldFoundation(query, env, embedding),
+      await searchWorldFoundation(worldFoundationQuery, env, embedding),
       'worldFoundation',
     )
     return worldFoundationEntries.length > 0
@@ -335,13 +352,14 @@ async function retrieveAlphaEvidence(query, intentQuery, env) {
       return createAlphaEvidenceResult({ schoolsFallback: true })
     }
 
-    const embedding = await createAlphaSearchEmbedding(query, env)
+    const schoolsQuery = resetSearchContext ? intentQuery : query
+    const embedding = await createAlphaSearchEmbedding(schoolsQuery, env)
     if (!embedding) {
       return createAlphaEvidenceResult({ schoolsFallback: true })
     }
 
     const schoolsEntries = markEvidenceSource(
-      await searchSchools(query, env, embedding),
+      await searchSchools(schoolsQuery, env, embedding),
       'schools',
     )
     return schoolsEntries.length > 0
@@ -352,9 +370,10 @@ async function retrieveAlphaEvidence(query, intentQuery, env) {
   const acecoreIntent = currentAcecoreIntent
 
   if (!acecoreIntent) {
+    const wikiQuery = resetSearchContext ? intentQuery : query
     return createAlphaEvidenceResult({
       wikiEntries: markEvidenceSource(
-        await searchAceserverWiki(query, env),
+        await searchAceserverWiki(wikiQuery, env),
         'wiki',
       ),
     })
@@ -367,13 +386,14 @@ async function retrieveAlphaEvidence(query, intentQuery, env) {
     return createAlphaEvidenceResult({ acecoreFallback: true })
   }
 
-  const embedding = await createAlphaSearchEmbedding(query, env)
+  const acecoreQuery = resetSearchContext ? intentQuery : query
+  const embedding = await createAlphaSearchEmbedding(acecoreQuery, env)
   if (!embedding) {
     return createAlphaEvidenceResult({ acecoreFallback: true })
   }
 
   const acecoreEntries = markEvidenceSource(
-    await searchAcecore(query, env, embedding),
+    await searchAcecore(acecoreQuery, env, embedding),
     'acecore',
   )
   if (acecoreEntries.length > 0) {
@@ -381,6 +401,44 @@ async function retrieveAlphaEvidence(query, intentQuery, env) {
   }
 
   return createAlphaEvidenceResult({ acecoreFallback: true })
+}
+
+function resolveCurrentAlphaSourceIntent(query) {
+  if (shouldSearchWorldFoundation(query)) return 'worldFoundation'
+  if (shouldSearchSchools(query)) return 'schools'
+  if (shouldSearchAcecore(query)) return 'acecore'
+  if (EXPLICIT_ACESERVER_SOURCE_PATTERN.test(String(query || ''))) {
+    return 'aceserver'
+  }
+  return ''
+}
+
+function shouldResetAlphaSearchContext(
+  payload,
+  currentQuery,
+  currentSourceIntent,
+) {
+  if (!currentSourceIntent || !hasPriorUserTurn(payload)) return false
+
+  const previousQuery = getPreviousUserQuery(payload, currentQuery)
+  const previousSourceIntent =
+    resolveCurrentAlphaSourceIntent(previousQuery) || 'aceserver'
+  return previousSourceIntent !== currentSourceIntent
+}
+
+function getPreviousUserQuery(payload, currentQuery) {
+  const userQueries = Array.isArray(payload?.messages)
+    ? payload.messages
+        .filter((message) => message?.role === 'user')
+        .map((message) => String(message?.content || '').trim())
+        .filter(Boolean)
+    : []
+  const normalizedCurrentQuery = String(currentQuery || '').trim()
+
+  if (userQueries.at(-1) === normalizedCurrentQuery) {
+    userQueries.pop()
+  }
+  return userQueries.at(-1) || ''
 }
 
 function createAlphaEvidenceResult(overrides = {}) {
