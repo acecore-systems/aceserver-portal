@@ -22,6 +22,7 @@ const worldMapButton: LinkItem = {
 
 const worldFoundationUrl = 'https://world-foundation.acecore.net/'
 const schoolsUrl = 'https://schools.acecore.net/'
+const systemsUrl = 'https://systems.acecore.net/'
 
 const alphaPrompts = ui.alpha.prompts
 const alphaError = ui.alpha.error
@@ -61,6 +62,7 @@ const alphaLinkResources = [
   data-alpha-world-map-url={worldMapButton.href}
   data-alpha-world-foundation-url={worldFoundationUrl}
   data-alpha-schools-url={schoolsUrl}
+  data-alpha-systems-url={systemsUrl}
   data-alpha-link-resources={JSON.stringify(alphaLinkResources)}
   data-alpha-avatar-alt={ui.alphaImageAlt}
   data-alpha-greeting={ui.alpha.greeting}
@@ -244,6 +246,8 @@ const alphaLinkResources = [
       'https://world-foundation.acecore.net/'
     const schoolsHref =
       widget.dataset.alphaSchoolsUrl || 'https://schools.acecore.net/'
+    const systemsHref =
+      widget.dataset.alphaSystemsUrl || 'https://systems.acecore.net/'
 
     let configuredResources: AlphaLinkResource[] = []
     try {
@@ -297,6 +301,7 @@ const alphaLinkResources = [
         'https://acecore.net/',
         worldFoundationHref,
         schoolsHref,
+        systemsHref,
       ],
       resources,
     }

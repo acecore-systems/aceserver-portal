@@ -11,6 +11,12 @@ import {
   shouldSearchSchools,
 } from './alpha-schools-search.js'
 import {
+  ACECORE_SYSTEMS_URL,
+  buildSystemsGroundingContext,
+  searchSystems,
+  shouldSearchSystems,
+} from './alpha-systems-search.js'
+import {
   ACESERVER_PORTAL_CORPUS_PATH,
   buildPortalGroundingContext,
   searchAceserverPortal,
@@ -124,9 +130,11 @@ export async function onRequestPost({ request, env }) {
     portalEntries,
     acecoreEntries,
     schoolsEntries,
+    systemsEntries,
     worldFoundationEntries,
     acecoreFallback,
     schoolsFallback,
+    systemsFallback,
     worldFoundationFallback,
   } = await retrieveAlphaEvidence(
     searchQuery,
@@ -147,6 +155,12 @@ export async function onRequestPost({ request, env }) {
     return jsonResponse(request, {
       ok: true,
       answer: guideMessages.schoolsNotFound,
+    })
+  }
+  if (systemsFallback) {
+    return jsonResponse(request, {
+      ok: true,
+      answer: guideMessages.systemsNotFound,
     })
   }
   if (worldFoundationFallback) {
@@ -171,6 +185,7 @@ export async function onRequestPost({ request, env }) {
   const portalGroundingContext = buildPortalGroundingContext(portalEntries)
   const acecoreGroundingContext = buildAcecoreGroundingContext(acecoreEntries)
   const schoolsGroundingContext = buildSchoolsGroundingContext(schoolsEntries)
+  const systemsGroundingContext = buildSystemsGroundingContext(systemsEntries)
   const worldFoundationGroundingContext = buildWorldFoundationGroundingContext(
     worldFoundationEntries,
   )
@@ -178,12 +193,14 @@ export async function onRequestPost({ request, env }) {
     portalEntries,
     acecoreEntries,
     schoolsEntries,
+    systemsEntries,
     worldFoundationEntries,
     locale,
   })
   const includeAceserverContext =
     acecoreEntries.length === 0 &&
     schoolsEntries.length === 0 &&
+    systemsEntries.length === 0 &&
     worldFoundationEntries.length === 0
 
   let result
@@ -201,6 +218,7 @@ export async function onRequestPost({ request, env }) {
               wikiGroundingContext,
               acecoreGroundingContext,
               schoolsGroundingContext,
+              systemsGroundingContext,
               worldFoundationGroundingContext,
             ]
               .filter(Boolean)
@@ -241,7 +259,8 @@ export async function onRequestPost({ request, env }) {
   )
   const sourceLimit =
     (!resetSearchContext && hasPriorUserTurn(payload)) ||
-    shouldAllowMultipleAcecoreArticleSources(question, acecoreEntries)
+    shouldAllowMultipleAcecoreArticleSources(question, acecoreEntries) ||
+    shouldAllowMultipleSystemsArticleSources(question, systemsEntries)
       ? 2
       : 1
   const retrievedSources = [
@@ -249,6 +268,7 @@ export async function onRequestPost({ request, env }) {
     ...portalEntries,
     ...acecoreEntries,
     ...schoolsEntries,
+    ...systemsEntries,
     ...worldFoundationEntries,
   ]
   const selectedSources = rankRetrievedSourcesForAnswer(
@@ -266,6 +286,7 @@ export async function onRequestPost({ request, env }) {
           selectedSources.filter((entry) => entry.source === 'schools'),
           locale,
           selectedSources.filter((entry) => entry.source === 'portal'),
+          selectedSources.filter((entry) => entry.source === 'systems'),
         ),
         retrievedSources,
         selectedSources,
@@ -293,12 +314,14 @@ async function retrieveAlphaEvidence(
 ) {
   const currentWorldFoundationIntent = currentSourceIntent === 'worldFoundation'
   const currentSchoolsIntent = currentSourceIntent === 'schools'
+  const currentSystemsIntent = currentSourceIntent === 'systems'
   const currentAcecoreIntent = currentSourceIntent === 'acecore'
   const currentAceserverIntent = currentSourceIntent === 'aceserver'
   const worldFoundationIntent =
     currentWorldFoundationIntent ||
     (!currentAcecoreIntent &&
       !currentSchoolsIntent &&
+      !currentSystemsIntent &&
       !currentAceserverIntent &&
       shouldSearchWorldFoundation(query))
   if (worldFoundationIntent) {
@@ -331,6 +354,7 @@ async function retrieveAlphaEvidence(
   const schoolsIntent =
     currentSchoolsIntent ||
     (!currentAcecoreIntent &&
+      !currentSystemsIntent &&
       !currentAceserverIntent &&
       shouldSearchSchools(query))
   if (schoolsIntent) {
@@ -354,6 +378,34 @@ async function retrieveAlphaEvidence(
     return schoolsEntries.length > 0
       ? createAlphaEvidenceResult({ schoolsEntries })
       : createAlphaEvidenceResult({ schoolsFallback: true })
+  }
+
+  const systemsIntent =
+    currentSystemsIntent ||
+    (!currentAcecoreIntent &&
+      !currentAceserverIntent &&
+      shouldSearchSystems(query))
+  if (systemsIntent) {
+    const searchEnabled = Boolean(
+      env?.SYSTEMS_SEARCH_INDEX && env.SYSTEMS_SEARCH_ENABLED !== 'false',
+    )
+    if (!searchEnabled) {
+      return createAlphaEvidenceResult({ systemsFallback: true })
+    }
+
+    const systemsQuery = resetSearchContext ? intentQuery : query
+    const embedding = await createAlphaSearchEmbedding(systemsQuery, env)
+    if (!embedding) {
+      return createAlphaEvidenceResult({ systemsFallback: true })
+    }
+
+    const systemsEntries = markEvidenceSource(
+      await searchSystems(systemsQuery, env, embedding),
+      'systems',
+    )
+    return systemsEntries.length > 0
+      ? createAlphaEvidenceResult({ systemsEntries })
+      : createAlphaEvidenceResult({ systemsFallback: true })
   }
 
   const acecoreIntent = currentAcecoreIntent
@@ -417,6 +469,7 @@ async function retrieveAlphaEvidence(
 function resolveCurrentAlphaSourceIntent(query, locale = 'ja') {
   if (shouldSearchWorldFoundation(query)) return 'worldFoundation'
   if (shouldSearchSchools(query)) return 'schools'
+  if (shouldSearchSystems(query)) return 'systems'
   if (shouldSearchAcecore(query)) return 'acecore'
   if (hasExplicitAceserverIntent(query, locale)) {
     return 'aceserver'
@@ -459,9 +512,11 @@ function createAlphaEvidenceResult(overrides = {}) {
     portalEntries: [],
     acecoreEntries: [],
     schoolsEntries: [],
+    systemsEntries: [],
     worldFoundationEntries: [],
     acecoreFallback: false,
     schoolsFallback: false,
+    systemsFallback: false,
     worldFoundationFallback: false,
     ...overrides,
   }
@@ -476,6 +531,17 @@ function shouldAllowMultipleAcecoreArticleSources(question, acecoreEntries) {
 
   return (
     acecoreEntries.filter((entry) => entry.contentType === 'blog').length >= 2
+  )
+}
+
+function shouldAllowMultipleSystemsArticleSources(question, systemsEntries) {
+  if (!/(?:記事|技術解説|insights?)/iu.test(String(question || ''))) {
+    return false
+  }
+
+  return (
+    systemsEntries.filter((entry) => entry.contentType === 'insight').length >=
+    2
   )
 }
 
@@ -530,6 +596,7 @@ function buildAlphaSystemInstructions({
   portalEntries,
   acecoreEntries,
   schoolsEntries,
+  systemsEntries,
   worldFoundationEntries,
   locale = 'ja',
 }) {
@@ -565,6 +632,16 @@ function buildAlphaSystemInstructions({
       'Never use Acecore Schools evidence to answer Aceserver rules, commands, participation requirements, or live operations.',
       'Do not invent current prices, schedules, availability, eligibility, or promises that the retrieved evidence does not support.',
       'For details that may change, direct the visitor to the retrieved Acecore Schools page instead of guessing.',
+    ]
+  }
+
+  if (systemsEntries.length > 0) {
+    return [
+      ...commonInstructions,
+      'Use Acecore Systems evidence only for system and web development, IT advisory services, pricing, case studies, and technical explanations.',
+      'Never use Acecore Systems evidence to answer Aceserver rules, commands, participation requirements, or live operations.',
+      'Do not invent current prices, availability, project scope, delivery dates, or measured outcomes that the retrieved evidence does not support.',
+      'For details that may change, direct the visitor to the retrieved Acecore Systems page instead of guessing.',
     ]
   }
 
@@ -762,6 +839,7 @@ export function sanitizeAlphaAnswerLinks(
   schoolsEntries = [],
   locale = 'ja',
   portalEntries = [],
+  systemsEntries = [],
 ) {
   const allowedLinks = buildAllowedAlphaAnswerLinks(
     [
@@ -770,6 +848,7 @@ export function sanitizeAlphaAnswerLinks(
       ...acecoreEntries,
       ...worldFoundationEntries,
       ...schoolsEntries,
+      ...systemsEntries,
     ],
     locale,
   )
@@ -942,6 +1021,11 @@ function buildAllowedAlphaAnswerLinks(retrievedEntries, locale = 'ja') {
     allowedLinks,
     `${ACECORE_SCHOOLS_URL}/`,
     `${ACECORE_SCHOOLS_URL}/`,
+  )
+  registerAllowedAlphaAnswerLink(
+    allowedLinks,
+    `${ACECORE_SYSTEMS_URL}/`,
+    `${ACECORE_SYSTEMS_URL}/`,
   )
   registerAllowedAlphaAnswerLink(
     allowedLinks,

@@ -32,6 +32,11 @@ import {
   shouldSearchSchools,
 } from '../functions/api/alpha-schools-search.js'
 import {
+  buildSystemsGroundingContext,
+  searchSystems,
+  shouldSearchSystems,
+} from '../functions/api/alpha-systems-search.js'
+import {
   ACESERVER_PORTAL_CORPUS_PATH,
   buildPortalGroundingContext,
   searchAceserverPortal,
@@ -51,7 +56,7 @@ import {
 const ENDPOINT = 'https://asv.acecore.net/api/alpha-chat'
 const WIKI_EMBEDDING = Array.from({ length: 1024 }, (_, index) => index / 1024)
 
-test('allows Acecore Schools links in the chat UI', async () => {
+test('allows Acecore Schools and Systems links in the chat UI', async () => {
   const source = await readFile(
     new URL('../src/components/AlphaGuide.astro', import.meta.url),
     'utf8',
@@ -61,13 +66,20 @@ test('allows Acecore Schools links in the chat UI', async () => {
   )?.[1]
 
   assert.match(source, /const schoolsUrl = 'https:\/\/schools\.acecore\.net\/'/)
+  assert.match(source, /const systemsUrl = 'https:\/\/systems\.acecore\.net\/'/)
   assert.match(source, /data-alpha-schools-url=\{schoolsUrl\}/)
+  assert.match(source, /data-alpha-systems-url=\{systemsUrl\}/)
   assert.match(
     source,
     /widget\.dataset\.alphaSchoolsUrl \|\| 'https:\/\/schools\.acecore\.net\/'/,
   )
+  assert.match(
+    source,
+    /widget\.dataset\.alphaSystemsUrl \|\| 'https:\/\/systems\.acecore\.net\/'/,
+  )
   assert.ok(allowedExternalLinks)
   assert.match(allowedExternalLinks, /\bschoolsHref\b/)
+  assert.match(allowedExternalLinks, /\bsystemsHref\b/)
 })
 
 function createRequest(payload, headers = {}) {
@@ -1942,6 +1954,455 @@ test('filters Schools metadata and allows only retrieved page links', async () =
     sanitized,
     '[FAQ](https://schools.acecore.net/faq/) と 未取得ページ',
   )
+})
+
+test('routes only Acecore Systems service and development questions to Systems search', () => {
+  for (const question of [
+    'Acecore Systemsの料金を教えて',
+    'システム開発を相談したい',
+    'IT顧問サービスについて教えて',
+    'Webサイトの制作実績を見たい',
+    'Where can I find your system development case studies?',
+  ]) {
+    assert.equal(shouldSearchSystems(question), true, question)
+  }
+
+  for (const question of [
+    'Acecoreって何？',
+    'パソコン初心者の学習相談をしたい',
+    'エースサーバーのTNTルールを教えて',
+    'エースサーバーの参加方法を教えて',
+    'What systems does Aceserver use?',
+  ]) {
+    assert.equal(shouldSearchSystems(question), false, question)
+  }
+})
+
+test('uses Systems evidence without mixing other search sources', async () => {
+  const aiInvocations = []
+  let wikiInvoked = false
+  let acecoreInvoked = false
+  let schoolsInvoked = false
+  let worldFoundationInvoked = false
+  let systemsVectorizeInvocation
+
+  const response = await onRequestPost({
+    request: createRequest({
+      question: 'システム開発を相談したい',
+    }),
+    env: {
+      AI: {
+        async run(model, input) {
+          aiInvocations.push({ model, input })
+          if (model === WIKI_EMBEDDING_MODEL) {
+            return { data: [WIKI_EMBEDDING] }
+          }
+
+          return {
+            response:
+              '要件整理から相談できるよ。[システム開発](https://systems.acecore.net/services/)で対応内容を確認してね。',
+          }
+        },
+      },
+      WIKI_SEARCH_INDEX: {
+        async query() {
+          wikiInvoked = true
+          return { matches: [] }
+        },
+      },
+      ACECORE_SEARCH_INDEX: {
+        async query() {
+          acecoreInvoked = true
+          return { matches: [] }
+        },
+      },
+      SCHOOLS_SEARCH_INDEX: {
+        async query() {
+          schoolsInvoked = true
+          return { matches: [] }
+        },
+      },
+      WORLD_FOUNDATION_SEARCH_INDEX: {
+        async query() {
+          worldFoundationInvoked = true
+          return { matches: [] }
+        },
+      },
+      SYSTEMS_SEARCH_ENABLED: 'true',
+      SYSTEMS_SEARCH_MIN_SCORE: '0.50',
+      SYSTEMS_SEARCH_INDEX: {
+        async query(vector, options) {
+          systemsVectorizeInvocation = { vector, options }
+          return {
+            matches: [
+              {
+                id: 'systems-services',
+                score: 0.91,
+                metadata: {
+                  locale: 'ja',
+                  title: 'システム開発',
+                  section: '業務に合わせたシステム開発',
+                  excerpt:
+                    '要件整理から設計、開発、運用まで必要な範囲を相談できます。',
+                  contentType: 'service',
+                  url: '/services/',
+                },
+              },
+            ],
+          }
+        },
+      },
+    },
+  })
+  const body = await response.json()
+
+  assert.equal(response.status, 200)
+  assert.equal(body.ok, true)
+  assert.equal(wikiInvoked, false)
+  assert.equal(acecoreInvoked, false)
+  assert.equal(schoolsInvoked, false)
+  assert.equal(worldFoundationInvoked, false)
+  assert.deepEqual(
+    aiInvocations.map(({ model }) => model),
+    [WIKI_EMBEDDING_MODEL, '@cf/zai-org/glm-5.2'],
+  )
+  assert.deepEqual(systemsVectorizeInvocation.vector, WIKI_EMBEDDING)
+  assert.deepEqual(systemsVectorizeInvocation.options, {
+    namespace: 'ja',
+    topK: 15,
+    returnMetadata: 'all',
+    returnValues: false,
+  })
+  assert.match(
+    body.answer,
+    /\[システム開発\]\(https:\/\/systems\.acecore\.net\/services\/\)/,
+  )
+
+  const systemPrompt = aiInvocations[1].input.messages[0].content
+  assert.match(systemPrompt, /Acecore Systems official site retrieved evidence/)
+  assert.match(systemPrompt, /要件整理から設計、開発、運用/)
+  assert.match(systemPrompt, /Do not invent current prices, availability/)
+  assert.doesNotMatch(
+    systemPrompt,
+    /<wiki-evidence|<acecore-evidence|<schools-evidence|<world-foundation-evidence/,
+  )
+  assert.doesNotMatch(systemPrompt, /Aceserver public site context/)
+})
+
+test('keeps Systems grounding for a contextual pricing follow-up', async () => {
+  let wikiInvoked = false
+  let acecoreInvoked = false
+  let schoolsInvoked = false
+  let systemsInvoked = false
+
+  const response = await onRequestPost({
+    request: createRequest({
+      question: '料金は？',
+      messages: [
+        { role: 'user', content: 'Acecore SystemsのIT顧問を教えて' },
+        {
+          role: 'assistant',
+          content: 'IT顧問の内容を案内するね。',
+        },
+        { role: 'user', content: '料金は？' },
+      ],
+    }),
+    env: {
+      AI: {
+        async run(model) {
+          if (model === WIKI_EMBEDDING_MODEL) {
+            return { data: [WIKI_EMBEDDING] }
+          }
+          return {
+            response:
+              '料金は契約内容によって異なるよ。[料金](https://systems.acecore.net/pricing/)で現在の案内を確認してね。',
+          }
+        },
+      },
+      WIKI_SEARCH_INDEX: {
+        async query() {
+          wikiInvoked = true
+          return { matches: [] }
+        },
+      },
+      ACECORE_SEARCH_INDEX: {
+        async query() {
+          acecoreInvoked = true
+          return { matches: [] }
+        },
+      },
+      SCHOOLS_SEARCH_INDEX: {
+        async query() {
+          schoolsInvoked = true
+          return { matches: [] }
+        },
+      },
+      SYSTEMS_SEARCH_INDEX: {
+        async query() {
+          systemsInvoked = true
+          return {
+            matches: [
+              {
+                id: 'systems-pricing',
+                score: 0.9,
+                metadata: {
+                  locale: 'ja',
+                  title: '料金',
+                  section: 'IT顧問',
+                  excerpt:
+                    '料金は支援範囲や契約内容を確認したうえで案内します。',
+                  contentType: 'page',
+                  url: '/pricing/',
+                },
+              },
+            ],
+          }
+        },
+      },
+    },
+  })
+  const body = await response.json()
+
+  assert.equal(response.status, 200)
+  assert.equal(body.ok, true)
+  assert.equal(systemsInvoked, true)
+  assert.equal(wikiInvoked, false)
+  assert.equal(acecoreInvoked, false)
+  assert.equal(schoolsInvoked, false)
+  assert.match(
+    body.answer,
+    /\[料金\]\(https:\/\/systems\.acecore\.net\/pricing\/\)/,
+  )
+})
+
+test('lets current Aceserver questions leave Systems context', async () => {
+  let wikiInvoked = false
+  let systemsInvoked = false
+
+  const response = await onRequestPost({
+    request: createRequest({
+      question: 'エースサーバーの参加方法を教えて',
+      messages: [
+        { role: 'user', content: 'Acecore Systemsについて教えて' },
+        { role: 'assistant', content: '開発サービスを案内するね。' },
+        { role: 'user', content: 'エースサーバーの参加方法を教えて' },
+      ],
+    }),
+    env: {
+      AI: {
+        async run(model) {
+          if (model === WIKI_EMBEDDING_MODEL) {
+            return { data: [WIKI_EMBEDDING] }
+          }
+          return {
+            response: '参加方法は公式DiscordとAceserver WIKIで確認してね。',
+          }
+        },
+      },
+      WIKI_SEARCH_INDEX: {
+        async query() {
+          wikiInvoked = true
+          return { matches: [] }
+        },
+      },
+      SYSTEMS_SEARCH_INDEX: {
+        async query() {
+          systemsInvoked = true
+          return { matches: [] }
+        },
+      },
+    },
+  })
+  const body = await response.json()
+
+  assert.equal(response.status, 200)
+  assert.equal(body.ok, true)
+  assert.equal(wikiInvoked, true)
+  assert.equal(systemsInvoked, false)
+  assert.match(body.answer, /\[公式Discord\]/)
+  assert.match(body.answer, /\[Aceserver WIKI\]/)
+})
+
+test('uses a controlled Systems fallback when its search fails', async () => {
+  const originalConsoleError = console.error
+  console.error = () => {}
+  const aiInvocations = []
+  let wikiInvoked = false
+
+  try {
+    const response = await onRequestPost({
+      request: createRequest({
+        question: 'Acecore SystemsのIT顧問を教えて',
+      }),
+      env: {
+        AI: {
+          async run(model, input) {
+            aiInvocations.push({ model, input })
+            if (model === WIKI_EMBEDDING_MODEL) {
+              return { data: [WIKI_EMBEDDING] }
+            }
+            return { response: 'この回答は使われないよ。' }
+          },
+        },
+        WIKI_SEARCH_INDEX: {
+          async query() {
+            wikiInvoked = true
+            return { matches: [] }
+          },
+        },
+        SYSTEMS_SEARCH_INDEX: {
+          async query() {
+            throw new Error('vectorize unavailable')
+          },
+        },
+      },
+    })
+    const body = await response.json()
+
+    assert.equal(response.status, 200)
+    assert.equal(body.ok, true)
+    assert.equal(wikiInvoked, false)
+    assert.deepEqual(
+      aiInvocations.map(({ model }) => model),
+      [WIKI_EMBEDDING_MODEL],
+    )
+    assert.equal(
+      body.answer,
+      'その内容は、いまのAcecore Systems公式情報からは確認できなかったよ。最新情報は[Acecore Systems公式サイト](https://systems.acecore.net/)を見てね。',
+    )
+    assert.doesNotMatch(body.answer, /WIKI|Discord/)
+  } finally {
+    console.error = originalConsoleError
+  }
+})
+
+test('filters Systems metadata and allows only retrieved page links', async () => {
+  const entries = await searchSystems(
+    'システム開発を相談したい',
+    {
+      AI: {},
+      SYSTEMS_SEARCH_MIN_SCORE: '0.50',
+      SYSTEMS_SEARCH_INDEX: {
+        async query() {
+          return {
+            matches: [
+              {
+                id: 'valid-services',
+                score: 0.91,
+                metadata: {
+                  locale: 'ja',
+                  title: 'システム開発',
+                  section: '業務システム',
+                  excerpt: '要件に合わせた開発内容を案内します。',
+                  contentType: 'service',
+                  url: '/services/',
+                },
+              },
+              {
+                id: 'duplicate-services',
+                score: 0.9,
+                metadata: {
+                  locale: 'ja',
+                  title: '重複',
+                  section: '重複',
+                  excerpt: '同じURLは採用しません。',
+                  contentType: 'service',
+                  url: '/services/',
+                },
+              },
+              {
+                id: 'private-api',
+                score: 0.89,
+                metadata: {
+                  locale: 'ja',
+                  title: '非公開API',
+                  section: 'API',
+                  excerpt: '公開リンクには使用しません。',
+                  contentType: 'page',
+                  url: '/api/search',
+                },
+              },
+              {
+                id: 'external',
+                score: 0.88,
+                metadata: {
+                  locale: 'ja',
+                  title: '外部サイト',
+                  section: '外部',
+                  excerpt: '外部URLは採用しません。',
+                  contentType: 'page',
+                  url: 'https://example.com/',
+                },
+              },
+              {
+                id: 'low-score',
+                score: 0.49,
+                metadata: {
+                  locale: 'ja',
+                  title: '低スコア',
+                  section: '低スコア',
+                  excerpt: 'スコア不足です。',
+                  contentType: 'page',
+                  url: '/pricing/',
+                },
+              },
+            ],
+          }
+        },
+      },
+    },
+    WIKI_EMBEDDING,
+  )
+
+  assert.deepEqual(entries, [
+    {
+      id: 'valid-services',
+      score: 0.91,
+      url: 'https://systems.acecore.net/services/',
+      title: 'システム開発',
+      section: '業務システム',
+      excerpt: '要件に合わせた開発内容を案内します。',
+      contentType: 'service',
+    },
+  ])
+  assert.match(
+    buildSystemsGroundingContext(entries),
+    /\[システム開発\]\(https:\/\/systems\.acecore\.net\/services\/\)/,
+  )
+
+  const sanitized = sanitizeAlphaAnswerLinks(
+    '[システム開発](https://systems.acecore.net/services/) と [未取得ページ](https://systems.acecore.net/pricing/)',
+    [],
+    [],
+    [],
+    [],
+    'ja',
+    [],
+    entries,
+  )
+  assert.equal(
+    sanitized,
+    '[システム開発](https://systems.acecore.net/services/) と 未取得ページ',
+  )
+})
+
+test('configures preview and production Systems Vectorize bindings', async () => {
+  const config = await readFile(
+    new URL('../wrangler.jsonc', import.meta.url),
+    'utf8',
+  )
+
+  assert.equal(config.match(/"binding": "SYSTEMS_SEARCH_INDEX"/gu)?.length, 3)
+  assert.equal(
+    config.match(/"index_name": "acecore-systems-search-preview"/gu)?.length,
+    2,
+  )
+  assert.equal(
+    config.match(/"index_name": "acecore-systems-search-production"/gu)?.length,
+    1,
+  )
+  assert.equal(config.match(/"SYSTEMS_SEARCH_ENABLED": "true"/gu)?.length, 3)
+  assert.equal(config.match(/"SYSTEMS_SEARCH_MIN_SCORE": "0\.50"/gu)?.length, 3)
 })
 
 test('uses Acecore evidence without mixing WIKI results for Acecore intent', async () => {
