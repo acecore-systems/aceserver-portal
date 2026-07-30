@@ -4,6 +4,7 @@ import {
   createAlphaSearchEmbedding,
   isAlphaSearchEmbedding,
 } from './alpha-search-embedding.js'
+import { resolveGuideLocale } from './alpha-locales.js'
 
 export const ACESERVER_PORTAL_URL = 'https://asv.acecore.net'
 export const ACESERVER_PORTAL_CORPUS_PATH = '/vector-corpus.json'
@@ -29,6 +30,7 @@ export async function searchAceserverPortal(
   corpusUrl = `${ACESERVER_PORTAL_URL}${ACESERVER_PORTAL_CORPUS_PATH}`,
   corpusFetcher = (...args) => globalThis.fetch(...args),
   providedEmbedding = null,
+  locale = 'ja',
 ) {
   if (
     !query ||
@@ -60,7 +62,12 @@ export async function searchAceserverPortal(
     matches,
     normalizeMinScore(env.PORTAL_SEARCH_MIN_SCORE),
   )
-  return hydratePortalEntries(entries, corpusUrl, corpusFetcher)
+  const hydratedEntries = await hydratePortalEntries(
+    entries,
+    corpusUrl,
+    corpusFetcher,
+  )
+  return localizePortalEntries(hydratedEntries, locale)
 }
 
 export function buildPortalGroundingContext(entries) {
@@ -279,6 +286,19 @@ function normalizePortalMetadata(value) {
 function normalizePortalPath(pathname) {
   if (pathname === '/') return pathname
   return pathname.endsWith('/') ? pathname : `${pathname}/`
+}
+
+function localizePortalEntries(entries, locale) {
+  const resolvedLocale = resolveGuideLocale(locale)
+  if (resolvedLocale === 'ja') return entries
+
+  return entries.map((entry) => ({
+    ...entry,
+    url:
+      entry.url === '/'
+        ? `/${resolvedLocale}/`
+        : `/${resolvedLocale}${entry.url}`,
+  }))
 }
 
 function normalizeMinScore(value) {

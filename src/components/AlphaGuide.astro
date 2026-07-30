@@ -1,40 +1,53 @@
 ---
 import type { LinkItem } from '../types'
+import { localizePath, type Locale } from '../i18n/config'
+import { getUi } from '../i18n/translations'
 import { externalLinkAttrs } from '../utils/links'
 import Icon from './Icon.astro'
 
 interface Props {
+  locale?: Locale
   logo: string
   joinButton: LinkItem
   wikiButton: LinkItem
 }
 
-const { logo, joinButton, wikiButton } = Astro.props
+const { locale = 'ja', logo, joinButton, wikiButton } = Astro.props
+const ui = getUi(locale)
 
 const worldMapButton: LinkItem = {
-  label: 'マップ',
-  href: '/world-map/',
+  label: ui.alpha.mapLabel,
+  href: localizePath(locale, '/world-map/'),
 }
 
 const worldFoundationUrl = 'https://world-foundation.acecore.net/'
 const schoolsUrl = 'https://schools.acecore.net/'
 
-const alphaPrompts = [
+const alphaPrompts = ui.alpha.prompts
+const alphaError = ui.alpha.error
+  .replace('{discord}', joinButton.href)
+  .replace('{wiki}', wikiButton.href)
+const alphaLinkResources = [
   {
-    label: '参加方法',
-    question: 'エースサーバーへの参加方法を教えて',
+    href: joinButton.href,
+    label: joinButton.label,
+    terms: [joinButton.label, 'Discord'],
   },
   {
-    label: 'ワールド',
-    question: 'どのワールドから見ればいい？',
+    href: wikiButton.href,
+    label: 'Aceserver WIKI',
+    terms: ['Aceserver WIKI', wikiButton.label, 'WIKI', 'Wiki'],
   },
   {
-    label: 'ルール',
-    question: '遊ぶ前に確認するルールを教えて',
+    href: worldMapButton.href,
+    label: worldMapButton.label,
+    terms: [
+      worldMapButton.label,
+      ui.worldMapTitleParts.join(' '),
+      ui.worldMapTitleParts.join(''),
+    ],
   },
 ]
-
-const alphaError = `いまはAI応答につながらなかったよ。[公式Discord](${joinButton.href}) と [Aceserver WIKI](${wikiButton.href}) を見てね。`
 ---
 
 <div
@@ -42,13 +55,16 @@ const alphaError = `いまはAI応答につながらなかったよ。[公式Dis
   class="alpha-widget"
   data-alpha-widget
   data-alpha-endpoint="/api/alpha-chat"
+  data-alpha-locale={locale}
   data-alpha-discord-url={joinButton.href}
   data-alpha-wiki-url={wikiButton.href}
   data-alpha-world-map-url={worldMapButton.href}
   data-alpha-world-foundation-url={worldFoundationUrl}
   data-alpha-schools-url={schoolsUrl}
-  data-alpha-greeting="やあ、アルファくんだよ。エースサーバーの案内をするね。"
-  data-alpha-loading="アルファくんが考え中..."
+  data-alpha-link-resources={JSON.stringify(alphaLinkResources)}
+  data-alpha-avatar-alt={ui.alphaImageAlt}
+  data-alpha-greeting={ui.alpha.greeting}
+  data-alpha-loading={ui.alpha.loading}
   data-alpha-error={alphaError}
 >
   <section
@@ -61,19 +77,19 @@ const alphaError = `いまはAI応答につながらなかったよ。[公式Dis
     <header class="alpha-header">
       <img
         src={logo}
-        alt="アルファくん"
+        alt={ui.alphaImageAlt}
         aria-hidden="true"
         width="40"
         height="40"
       />
       <div>
-        <h2 id="alpha-title">アルファくん</h2>
-        <p>エースサーバー案内チャット</p>
+        <h2 id="alpha-title">{ui.alphaName}</h2>
+        <p>{ui.alpha.chatSubtitle}</p>
       </div>
       <button
         type="button"
         class="alpha-icon-button"
-        aria-label="アルファくんチャットを閉じる"
+        aria-label={ui.alpha.close}
         data-alpha-close
       >
         <Icon name="x" />
@@ -83,12 +99,12 @@ const alphaError = `いまはAI応答につながらなかったよ。[公式Dis
     <div
       class="alpha-messages"
       aria-live="polite"
-      aria-label="アルファくんとの会話"
+      aria-label={ui.alpha.conversation}
       data-alpha-messages
     >
     </div>
 
-    <div class="alpha-prompt-row" aria-label="質問例">
+    <div class="alpha-prompt-row" aria-label={ui.alpha.promptExamples}>
       {
         alphaPrompts.map((prompt) => (
           <button
@@ -104,7 +120,7 @@ const alphaError = `いまはAI応答につながらなかったよ。[公式Dis
 
     <form class="alpha-form" data-alpha-form>
       <label class="alpha-sr-only" for="alpha-question">
-        アルファくんに質問
+        {ui.alpha.questionLabel}
       </label>
       <textarea
         id="alpha-question"
@@ -112,14 +128,14 @@ const alphaError = `いまはAI応答につながらなかったよ。[公式Dis
         rows="2"
         maxlength="500"
         autocomplete="off"
-        placeholder="例: 参加方法を教えて"
+        placeholder={ui.alpha.placeholder}
         data-alpha-input></textarea>
-      <button type="submit" aria-label="送信" data-alpha-send>
+      <button type="submit" aria-label={ui.alpha.send} data-alpha-send>
         <Icon name="send-horizontal" />
       </button>
     </form>
 
-    <nav class="alpha-links" aria-label="主要リンク">
+    <nav class="alpha-links" aria-label={ui.alpha.majorLinks}>
       <a
         href={joinButton.href}
         {...externalLinkAttrs(joinButton.href, joinButton.external)}
@@ -149,21 +165,23 @@ const alphaError = `いまはAI応答につながらなかったよ。[公式Dis
     class="alpha-toggle"
     aria-controls="alpha-guide-panel"
     aria-expanded="false"
-    aria-label="アルファくんに聞く"
+    aria-label={ui.alpha.toggle}
     data-alpha-toggle
   >
     <img
       src={logo}
-      alt="アルファくん"
+      alt={ui.alphaImageAlt}
       aria-hidden="true"
       width="56"
       height="56"
     />
-    <span>聞く</span>
+    <span>{ui.alpha.toggleShort}</span>
   </button>
 </div>
 
 <script>
+  import { createAlphaInlineMarkdownPattern } from '../utils/alpha-link-pattern'
+
   type AlphaRole = 'user' | 'assistant'
 
   type AlphaMessage = {
@@ -182,8 +200,9 @@ const alphaError = `いまはAI応答につながらなかったよ。[公式Dis
     resources: AlphaLinkResource[]
   }
 
-  const ALPHA_INLINE_MARKDOWN_PATTERN =
-    /\[([^\]\n]{1,80})\]\(\s*([^\s)]{1,240})\s*\)|(https?:\/\/[^\s<>"']{1,240})|\*\*([^*\n]{1,160})\*\*|__([^_\n]{1,160})__|`([^`\n]{1,160})`|\*([^*\n]{1,160})\*|_([^_\n]{1,160})_|(Aceserver WIKI|エースサーバーWIKI|Aceserver Wiki|エースサーバーWiki|公式Discord|公式ディスコード|ワールドマップ|ディスコード|Discord|WIKI|Wiki|ウィキ)/g
+  const ALPHA_INLINE_MARKDOWN_SOURCE =
+    /\[([^\]\n]{1,80})\]\(\s*([^\s)]{1,240})\s*\)|(https?:\/\/[^\s<>"']{1,240})|\*\*([^*\n]{1,160})\*\*|__([^_\n]{1,160})__|`([^`\n]{1,160})`|\*([^*\n]{1,160})\*|_([^_\n]{1,160})_/
+      .source
 
   function normalizeAlphaHref(rawHref: string, context: AlphaLinkContext) {
     if (!rawHref || rawHref.includes('\\')) return null
@@ -226,6 +245,51 @@ const alphaError = `いまはAI応答につながらなかったよ。[公式Dis
     const schoolsHref =
       widget.dataset.alphaSchoolsUrl || 'https://schools.acecore.net/'
 
+    let configuredResources: AlphaLinkResource[] = []
+    try {
+      const parsed = JSON.parse(widget.dataset.alphaLinkResources || '[]')
+      if (Array.isArray(parsed)) {
+        configuredResources = parsed
+          .filter(
+            (resource) =>
+              resource &&
+              typeof resource.href === 'string' &&
+              typeof resource.label === 'string' &&
+              Array.isArray(resource.terms),
+          )
+          .map((resource) => ({
+            href: resource.href,
+            label: resource.label,
+            terms: resource.terms.filter(
+              (term: unknown): term is string => typeof term === 'string',
+            ),
+          }))
+      }
+    } catch {
+      configuredResources = []
+    }
+
+    const resources =
+      configuredResources.length > 0
+        ? configuredResources
+        : [
+            {
+              href: discordHref,
+              label: 'Official Discord',
+              terms: ['Official Discord', 'Discord'],
+            },
+            {
+              href: wikiHref,
+              label: 'Aceserver WIKI',
+              terms: ['Aceserver WIKI', 'WIKI', 'Wiki'],
+            },
+            {
+              href: worldMapHref,
+              label: 'World map',
+              terms: ['World map'],
+            },
+          ]
+
     return {
       allowedExternalLinks: [
         discordHref,
@@ -234,31 +298,7 @@ const alphaError = `いまはAI応答につながらなかったよ。[公式Dis
         worldFoundationHref,
         schoolsHref,
       ],
-      resources: [
-        {
-          href: discordHref,
-          label: '公式Discord',
-          terms: ['公式Discord', '公式ディスコード', 'Discord', 'ディスコード'],
-        },
-        {
-          href: wikiHref,
-          label: 'Aceserver WIKI',
-          terms: [
-            'Aceserver WIKI',
-            'エースサーバーWIKI',
-            'Aceserver Wiki',
-            'エースサーバーWiki',
-            'WIKI',
-            'Wiki',
-            'ウィキ',
-          ],
-        },
-        {
-          href: worldMapHref,
-          label: 'ワールドマップ',
-          terms: ['ワールドマップ'],
-        },
-      ],
+      resources,
     }
   }
 
@@ -406,7 +446,10 @@ const alphaError = `いまはAI応答につながらなかったよ。[公式Dis
     linkedHrefs: Set<string>,
     linkContext: AlphaLinkContext,
   ) {
-    const pattern = new RegExp(ALPHA_INLINE_MARKDOWN_PATTERN)
+    const pattern = createAlphaInlineMarkdownPattern(
+      ALPHA_INLINE_MARKDOWN_SOURCE,
+      linkContext.resources,
+    )
     let index = 0
     let match: RegExpExecArray | null
 
@@ -525,7 +568,7 @@ const alphaError = `いまはAI応答につながらなかったよ。[公式Dis
         '[data-alpha-toggle] img',
       )
       avatar.src = toggleImage?.src || ''
-      avatar.alt = 'アルファくん'
+      avatar.alt = widget.dataset.alphaAvatarAlt || 'Alpha'
       avatar.ariaHidden = 'true'
       avatar.width = 32
       avatar.height = 32
@@ -613,6 +656,7 @@ const alphaError = `いまはAI応答につながらなかったよ。[公式Dis
           body: JSON.stringify({
             question,
             messages: messages.slice(-8),
+            locale: widget.dataset.alphaLocale || 'ja',
           }),
           signal: requestController.signal,
         },

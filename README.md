@@ -50,8 +50,9 @@ CMS content の shape は `src/content.config.ts` の Astro Content Collections 
 エースサーバー固有の出来事やコミュニティ記事は
 `src/content/stories/*.md` を正としてポータル内で公開します。Acecoreの
 コーポレートサイトには本文を複製せず、旧URLから各記事へ転送します。
-Storiesは日本語を正とするPR管理コンテンツです。Acecore側にあった8言語の
-旧記事URLは、対応する日本語記事のcanonical URLへ301で統合します。
+Storiesは日本語を正とするPR管理コンテンツです。日本語と8言語の翻訳を
+ポータル内の言語別URLで公開し、Acecore側の旧記事URLも対応する言語版へ
+301で転送します。翻訳は日本語正本のsource hashと構造をbuild前に検証します。
 
 ## CMS
 
@@ -68,7 +69,7 @@ Cloudflare Pages のproduction / previewでは、build前に `public/admin/runti
 
 サイト全体に右下固定のアルファくん案内チャットを表示します。アルファくんはエースサーバーのキャラクター案内役として、参加方法、ワールド、ルール、ストーリー導線を案内します。
 
-`functions/api/alpha-chat.js` の Cloudflare Pages Function から Cloudflare Workers AI binding を呼び出します。質問は多言語embeddingモデルのBGE-M3 (`@cf/baai/bge-m3`) でベクトル化し、Aceserver portal全体とAceserver WIKIのVectorize indexを同時に検索します。portal側はbuild後の公開HTMLからホーム、固定ページ、ワールド案内、動画、読みものを抽出して`vector-corpus.json`を生成します。検索で得たchunk IDは各サイトの公開corpusへ照合し、metadataの短い抜粋だけでなく最大1200文字の元chunkを回答根拠にします。回答生成にはGLM 5.2 (`@cf/zai-org/glm-5.2`) をthinking無効で使い、短い案内本文へtokenを集中させます。ブラウザには AI 実行用のキーを渡しません。
+`functions/api/alpha-chat.js` の Cloudflare Pages Function から Cloudflare Workers AI binding を呼び出します。質問は多言語embeddingモデルのBGE-M3 (`@cf/baai/bge-m3`) でベクトル化し、Aceserver portal全体とAceserver WIKIのVectorize indexを同時に検索します。portal側はbuild後の公開HTMLからホーム、固定ページ、ワールド案内、動画、読みものの日本語正本を抽出して`vector-corpus.json`を生成し、同じ内容の翻訳routeは重複登録しません。多言語チャットでは日本語の検索根拠をGLM 5.2が回答言語へ翻訳し、portalの参照リンクは対応する言語別URLへ切り替えます。検索で得たchunk IDは各サイトの公開corpusへ照合し、metadataの短い抜粋だけでなく最大1200文字の元chunkを回答根拠にします。回答生成にはGLM 5.2 (`@cf/zai-org/glm-5.2`) をthinking無効で使い、短い案内本文へtokenを集中させます。ブラウザには AI 実行用のキーを渡しません。
 
 portal検索は公開サイトの紹介、ワールド案内、動画、読みもの、掲載ページの発見に使います。ルール、コマンド、参加条件、ワールドの詳細、運用情報ではportalよりAceserver WIKIを情報の正として扱います。Acecore、運営元、サービス、技術記事に関する質問だけは、同じembeddingでacecore-netのVectorize indexを検索します。Acecore Schoolsの学習分野、学び方、相談、料金、FAQに関する質問はSchools専用indexを検索し、取得した公開routeだけを `https://schools.acecore.net` 配下のリンクとして許可します。World Foundationについての質問は、専用のWorld Foundation Vectorize indexから日本語の公開設計資料を検索します。検索元ごとのしきい値と用途を分け、異なるサイトの根拠を誤って混ぜません。
 
@@ -103,7 +104,7 @@ Cloudflare Pages 側では `wrangler.jsonc` を設定の正とし、acecore-net 
 
 `npm run build` は `dist/vector-corpus.json` まで生成します。indexへ書き込む前に `npm run sync:portal-vectorize:dry-run` でsource数、vector数、corpus versionを確認します。実同期は `CLOUDFLARE_ACCOUNT_ID`、`CLOUDFLARE_API_TOKEN`、`VECTORIZE_INDEX_NAME` を環境変数で渡して `npm run sync:portal-vectorize` を実行します。同期先は上記2 indexだけに制限され、管理外ID、20%を超える削除、10 source未満のcorpusでは停止します。
 
-`.github/workflows/sync-portal-vectorize.yml` は、GitHub連携のPagesで公開されたcommitとcorpus versionを照合してからproduction indexを同期します。Previewはprotected `main` を手動同期し、PRごとの共有index競合を避けます。自動同期を有効にする前に、Repository Variable `ACESERVER_PORTAL_VECTORIZE_SYNC_ENABLED=true` と次のGitHub Environment secretを設定します。
+`.github/workflows/sync-portal-vectorize.yml` は、GitHub連携のPagesで公開されたcommitとcorpus versionを照合してからproduction indexを同期します。通常は`main`へのpushで同期し、取りこぼしの再照合を6時間ごとに行います。Previewはprotected `main` を手動同期し、PRごとの共有index競合を避けます。自動同期を有効にする前に、Repository Variable `ACESERVER_PORTAL_VECTORIZE_SYNC_ENABLED=true` と次のGitHub Environment secretを設定します。
 
 - `cloudflare-portal-search-preview`: `CLOUDFLARE_PORTAL_SEARCH_PREVIEW_API_TOKEN`
 - `cloudflare-portal-search-production`: `CLOUDFLARE_PORTAL_SEARCH_PRODUCTION_API_TOKEN`

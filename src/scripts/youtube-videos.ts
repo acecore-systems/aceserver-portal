@@ -10,11 +10,11 @@ type YoutubeVideosResponse = {
   videos?: YoutubeVideo[]
 }
 
-const dateFormatter = new Intl.DateTimeFormat('ja-JP', {
-  year: 'numeric',
-  month: 'short',
-  day: 'numeric',
-})
+type YoutubeUi = {
+  thumbnailAlt: string
+  errorLabel: string
+  dateLocale: string
+}
 
 export function initYoutubeVideosRuntime() {
   document
@@ -35,6 +35,12 @@ async function hydrateYoutubeVideos(container: HTMLElement) {
     '[data-youtube-video-status]',
   )
   const apiPath = container.dataset.apiPath ?? '/api/youtube-videos'
+  const ui: YoutubeUi = {
+    thumbnailAlt: container.dataset.thumbnailAlt ?? '{title}のサムネイル',
+    errorLabel:
+      container.dataset.errorLabel ?? '最新動画を取得できませんでした',
+    dateLocale: container.dataset.dateLocale ?? 'ja-JP',
+  }
 
   if (!list) {
     return
@@ -58,7 +64,7 @@ async function hydrateYoutubeVideos(container: HTMLElement) {
       throw new Error('YouTube feed did not include videos')
     }
 
-    list.replaceChildren(...videos.map(createVideoCard))
+    list.replaceChildren(...videos.map((video) => createVideoCard(video, ui)))
 
     if (status) {
       status.hidden = true
@@ -68,15 +74,13 @@ async function hydrateYoutubeVideos(container: HTMLElement) {
     if (status) {
       const hasFallbackVideos = list.querySelector('.video-card') !== null
 
-      status.textContent = hasFallbackVideos
-        ? ''
-        : '最新動画を取得できませんでした'
+      status.textContent = hasFallbackVideos ? '' : ui.errorLabel
       status.hidden = hasFallbackVideos
     }
   }
 }
 
-function createVideoCard(video: YoutubeVideo) {
+function createVideoCard(video: YoutubeVideo, ui: YoutubeUi) {
   const link = document.createElement('a')
   link.className = 'video-card'
   link.href = video.href || `https://www.youtube.com/watch?v=${video.id}`
@@ -89,7 +93,7 @@ function createVideoCard(video: YoutubeVideo) {
   const image = document.createElement('img')
   image.src =
     video.thumbnail || `https://i.ytimg.com/vi/${video.id}/hqdefault.jpg`
-  image.alt = `${video.title}のサムネイル`
+  image.alt = ui.thumbnailAlt.replace('{title}', video.title)
   image.loading = 'lazy'
   image.decoding = 'async'
   thumbnail.append(image)
@@ -107,7 +111,7 @@ function createVideoCard(video: YoutubeVideo) {
   title.textContent = video.title
   body.append(title)
 
-  const publishedAt = formatDate(video.publishedAt)
+  const publishedAt = formatDate(video.publishedAt, ui.dateLocale)
 
   if (publishedAt) {
     const meta = document.createElement('span')
@@ -124,7 +128,7 @@ function isValidVideo(video: YoutubeVideo) {
   return Boolean(video.id && video.title)
 }
 
-function formatDate(value?: string) {
+function formatDate(value: string | undefined, locale: string) {
   if (!value) {
     return ''
   }
@@ -135,5 +139,9 @@ function formatDate(value?: string) {
     return ''
   }
 
-  return dateFormatter.format(date)
+  return new Intl.DateTimeFormat(locale, {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+  }).format(date)
 }

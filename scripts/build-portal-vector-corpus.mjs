@@ -133,8 +133,15 @@ export function extractPortalSearchDocument(html, htmlFile, distDir) {
   const $ = load(html)
   const fallbackPath = htmlFileToUrl(htmlFile, distDir)
   const canonicalPath = getCanonicalPath($, fallbackPath)
+  const documentLocale = normalizeText($('html').attr('lang')).toLowerCase()
 
-  if (shouldExcludePath(canonicalPath) || isNoIndexPage($)) return null
+  if (
+    documentLocale !== PORTAL_SEARCH_NAMESPACE ||
+    shouldExcludePath(canonicalPath) ||
+    isNoIndexPage($)
+  ) {
+    return null
+  }
 
   const title = normalizeText(
     $('main h1').first().text() ||

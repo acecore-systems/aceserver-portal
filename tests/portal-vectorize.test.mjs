@@ -149,6 +149,24 @@ test('excludes admin and noindex pages from the portal corpus', () => {
   )
 })
 
+test('excludes translated mirrors from the canonical portal corpus', () => {
+  const translatedHtml = createHtml({
+    title: 'Aceserver stories',
+    description:
+      'Public stories from Aceserver are available here for international visitors.',
+    canonical: 'https://asv.acecore.net/en/stories/',
+  }).replace('<html lang="ja">', '<html lang="en">')
+
+  assert.equal(
+    extractPortalSearchDocument(
+      translatedHtml,
+      'C:/site/dist/en/stories/index.html',
+      'C:/site/dist',
+    ),
+    null,
+  )
+})
+
 test('builds a deterministic corpus for the complete public portal', async () => {
   const directory = await mkdtemp(join(tmpdir(), 'portal-vector-corpus-'))
 

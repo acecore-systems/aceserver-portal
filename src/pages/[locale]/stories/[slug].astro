@@ -1,0 +1,30 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content'
+import StoryPage from '../../../components/StoryPage.astro'
+import { TRANSLATED_LOCALES, type TranslatedLocale } from '../../../i18n/config'
+
+export async function getStaticPaths() {
+  const allStories = await getCollection('stories')
+
+  return TRANSLATED_LOCALES.flatMap((locale) =>
+    allStories
+      .filter((story) => story.id.startsWith(`${locale}/`))
+      .map((story) => ({
+        params: {
+          locale,
+          slug: story.id.split('/').at(-1),
+        },
+        props: { locale, story },
+      })),
+  )
+}
+
+interface Props {
+  locale: TranslatedLocale
+  story: CollectionEntry<'stories'>
+}
+
+const { locale, story } = Astro.props
+---
+
+<StoryPage locale={locale} story={story} />

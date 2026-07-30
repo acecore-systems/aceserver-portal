@@ -2,11 +2,11 @@
 import EmbedPage from '../components/EmbedPage.astro'
 import WorldMapHub from '../components/WorldMapHub.astro'
 import BaseLayout from '../layouts/BaseLayout.astro'
-import { pages } from '../data/content'
+import { getLocalizedPages } from '../i18n/content'
 import type { PortalPage } from '../types'
 
 export function getStaticPaths() {
-  return pages
+  return getLocalizedPages('ja')
     .filter((page) => page.slug !== 'top')
     .map((page) => ({ params: { slug: page.slug }, props: { page } }))
 }
@@ -19,6 +19,7 @@ const { page } = Astro.props
 ---
 
 <BaseLayout
+  locale="ja"
   title={page.meta.title}
   description={page.meta.description}
   image={page.meta.ogImage}
@@ -26,6 +27,6 @@ const { page } = Astro.props
   fullHeight={page.kind === 'embed'}
   showAds={page.kind === 'worldMap'}
 >
-  {page.kind === 'worldMap' && <WorldMapHub page={page} />}
-  {page.kind === 'embed' && <EmbedPage page={page} />}
+  {page.kind === 'worldMap' && <WorldMapHub page={page} locale="ja" />}
+  {page.kind === 'embed' && <EmbedPage page={page} locale="ja" />}
 </BaseLayout>

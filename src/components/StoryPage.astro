@@ -1,0 +1,269 @@
+---
+import { render, type CollectionEntry } from 'astro:content'
+import { serializeJsonForHtmlScript } from '../data/safe-json'
+import {
+  DATE_LOCALE_BY_LOCALE,
+  HTML_LANG_BY_LOCALE,
+  localizePath,
+  type Locale,
+} from '../i18n/config'
+import { getUi } from '../i18n/translations'
+import BaseLayout from '../layouts/BaseLayout.astro'
+
+interface Props {
+  locale: Locale
+  story: CollectionEntry<'stories'>
+}
+
+const { locale, story } = Astro.props
+const ui = getUi(locale)
+const { Content } = await render(story)
+const storySlug = story.id.split('/').at(-1) ?? story.id
+const siteBase = Astro.site ?? new URL('https://asv.acecore.net')
+const storyPath = localizePath(locale, `/stories/${storySlug}/`)
+const homePath = localizePath(locale, '/')
+const storiesPath = localizePath(locale, '/stories/')
+const storyUrl = new URL(storyPath, siteBase)
+const homeUrl = new URL(homePath, siteBase)
+const organizationHomeUrl = new URL('/', siteBase)
+const storiesUrl = new URL(storiesPath, siteBase)
+const storyImageUrl = story.data.image
+  ? new URL(story.data.image, storyUrl)
+  : null
+const articleJsonLd = serializeJsonForHtmlScript({
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  '@id': `${storyUrl}#article`,
+  url: storyUrl.toString(),
+  headline: story.data.title,
+  description: story.data.description,
+  datePublished: story.data.date.toISOString(),
+  inLanguage: HTML_LANG_BY_LOCALE[locale],
+  mainEntityOfPage: {
+    '@id': `${storyUrl}#webpage`,
+  },
+  author: {
+    '@type': 'Person',
+    name: story.data.author,
+  },
+  publisher: {
+    '@id': `${organizationHomeUrl}#organization`,
+  },
+  ...(storyImageUrl ? { image: storyImageUrl.toString() } : {}),
+})
+const breadcrumbJsonLd = serializeJsonForHtmlScript({
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: ui.homeLabel,
+      item: homeUrl.toString(),
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: ui.storiesTitle,
+      item: storiesUrl.toString(),
+    },
+    {
+      '@type': 'ListItem',
+      position: 3,
+      name: story.data.title,
+      item: storyUrl.toString(),
+    },
+  ],
+})
+---
+
+<BaseLayout
+  locale={locale}
+  title={story.data.title}
+  description={story.data.description}
+  image={story.data.image}
+  imageAlt={story.data.imageAlt}
+  canonical={storyPath}
+  ogType="article"
+>
+  <script type="application/ld+json" set:html={articleJsonLd} />
+  <script type="application/ld+json" set:html={breadcrumbJsonLd} />
+  <article class="story-shell">
+    <nav class="story-breadcrumb" aria-label={ui.breadcrumbLabel}>
+      <ol>
+        <li><a href={homePath}>{ui.homeLabel}</a></li>
+        <li><a href={storiesPath}>{ui.storiesTitle}</a></li>
+        <li aria-current="page">{story.data.title}</li>
+      </ol>
+    </nav>
+    <header class="story-header">
+      <p class="story-kicker">ACESERVER STORY</p>
+      <h1>{story.data.title}</h1>
+      <p class="story-description">{story.data.description}</p>
+      <div class="story-meta">
+        <time datetime={story.data.date.toISOString()}>
+          {
+            story.data.date.toLocaleDateString(DATE_LOCALE_BY_LOCALE[locale], {
+              timeZone: 'Asia/Tokyo',
+            })
+          }
+        </time>
+        <span>{ui.byAuthor.replace('{author}', story.data.author)}</span>
+      </div>
+    </header>
+    {
+      story.data.image && story.data.imageAlt && (
+        <figure class="story-hero">
+          <img
+            src={story.data.image}
+            alt={story.data.imageAlt}
+            loading="eager"
+            decoding="async"
+          />
+        </figure>
+      )
+    }
+    <div class="story-body">
+      <Content />
+    </div>
+    <footer class="story-footer">
+      <a href={storiesPath}>{ui.backToStories}</a>
+      <a href={homePath}>{ui.joinAceserver}</a>
+    </footer>
+  </article>
+</BaseLayout>
+
+<style>
+  .story-shell {
+    width: min(880px, calc(100% - 36px));
+    margin-inline: auto;
+    padding-block: clamp(56px, 8vw, 104px);
+  }
+
+  .story-breadcrumb {
+    margin-bottom: clamp(24px, 4vw, 40px);
+    color: #514331;
+    font-size: 0.88rem;
+    font-weight: 700;
+  }
+
+  .story-breadcrumb ol {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .story-breadcrumb li {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .story-breadcrumb li:not(:last-child)::after {
+    content: '/';
+    color: rgba(21, 19, 15, 0.48);
+  }
+
+  .story-breadcrumb a {
+    color: #0756a8;
+    text-underline-offset: 0.16em;
+  }
+
+  .story-header {
+    border-bottom: 4px solid #1e1710;
+    padding-bottom: clamp(30px, 5vw, 54px);
+  }
+
+  .story-kicker {
+    margin: 0 0 16px;
+    color: #0862c4;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+  }
+
+  .story-header h1 {
+    margin: 0;
+    font-size: clamp(2.3rem, 6vw, 4.9rem);
+    letter-spacing: -0.03em;
+    line-height: 1.18;
+  }
+
+  .story-description {
+    max-width: 720px;
+    margin: 24px 0 0;
+    color: #514331;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    font-weight: 700;
+  }
+
+  .story-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 24px;
+    margin-top: 24px;
+    font-size: 0.9rem;
+    font-weight: 800;
+  }
+
+  .story-hero {
+    overflow: hidden;
+    margin: clamp(30px, 5vw, 54px) 0 0;
+    border: 3px solid #1e1710;
+    border-radius: 12px;
+    background: #1e1710;
+    box-shadow: 0 8px 0 rgba(21, 19, 15, 0.22);
+  }
+
+  .story-hero img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+
+  .story-body {
+    padding-block: clamp(36px, 6vw, 68px);
+    font-size: clamp(1rem, 1.5vw, 1.08rem);
+    line-height: 2;
+  }
+
+  .story-body :global(h2) {
+    margin: 2.5em 0 0.8em;
+    border-left: 8px solid #35aa2f;
+    padding-left: 18px;
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+    line-height: 1.45;
+  }
+
+  .story-body :global(p) {
+    margin: 1.25em 0;
+  }
+
+  .story-body :global(a) {
+    color: #0756a8;
+    font-weight: 700;
+    text-underline-offset: 0.18em;
+  }
+
+  .story-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 12px;
+    border-top: 4px solid #1e1710;
+    padding-top: 28px;
+  }
+
+  .story-footer a {
+    border: 2px solid #1e1710;
+    border-radius: 8px;
+    background: #ffd84d;
+    padding: 10px 16px;
+    font-weight: 900;
+    text-decoration: none;
+    box-shadow: 0 4px 0 rgba(21, 19, 15, 0.28);
+  }
+</style>

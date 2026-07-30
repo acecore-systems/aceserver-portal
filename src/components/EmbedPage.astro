@@ -1,15 +1,24 @@
 ---
 import type { PortalPage } from '../types'
-import { settings } from '../data/content'
 import { serializeCssUrl } from '../data/safe-json'
+import { getLocalizedSettings } from '../i18n/content'
+import {
+  DATE_LOCALE_BY_LOCALE,
+  localizePath,
+  type Locale,
+} from '../i18n/config'
+import { getUi } from '../i18n/translations'
 import { externalLinkAttrs } from '../utils/links'
 import Icon from './Icon.astro'
 
 interface Props {
   page: PortalPage
+  locale?: Locale
 }
 
-const { page } = Astro.props
+const { page, locale = 'ja' } = Astro.props
+const settings = getLocalizedSettings(locale)
+const ui = getUi(locale)
 const embed = page.sections.find((section) => section.type === 'iframe')
 
 if (!embed || embed.type !== 'iframe') {
@@ -28,7 +37,7 @@ const fallbackImageCss = serializeCssUrl(
 const mapWorlds = settings.worlds.flatMap((world) =>
   world.href ? [{ href: world.href, title: world.title }] : [],
 )
-const currentPageHref = `/${page.slug}/`
+const currentPageHref = localizePath(locale, `/${page.slug}/`)
 const currentMapIndex = mapWorlds.findIndex(
   (world) => world.href === currentPageHref,
 )
@@ -50,13 +59,16 @@ const nextMap =
           previousMap ? (
             <a class="toolbar-button" href={previousMap.href}>
               <Icon name="chevron-left" />
-              <span>前へ</span>
+              <span>{ui.previous}</span>
               <span class="toolbar-button__label">{previousMap.title}</span>
             </a>
           ) : (
-            <a class="toolbar-button" href="/world-map/">
+            <a
+              class="toolbar-button"
+              href={localizePath(locale, '/world-map/')}
+            >
               <Icon name="arrow-left" />
-              <span>戻る</span>
+              <span>{ui.back}</span>
             </a>
           )
         }
@@ -64,7 +76,7 @@ const nextMap =
         {
           nextMap ? (
             <a class="toolbar-button toolbar-button--next" href={nextMap.href}>
-              <span>次へ</span>
+              <span>{ui.next}</span>
               <span class="toolbar-button__label">{nextMap.title}</span>
               <Icon name="chevron-right" />
             </a>
@@ -74,7 +86,7 @@ const nextMap =
               href={embed.externalUrl ?? embed.src}
               {...externalLinkAttrs(embed.externalUrl ?? embed.src, true)}
             >
-              <span>別タブで開く</span>
+              <span>{ui.openNewTab}</span>
               <Icon name="external-link" />
             </a>
           )
@@ -95,18 +107,22 @@ const nextMap =
           class="video-gallery"
           data-youtube-feed
           data-api-path={videoFeedApiPath}
+          data-thumbnail-alt={ui.videoThumbnail}
+          data-loading-label={ui.loadingVideos}
+          data-error-label={ui.videoLoadError}
+          data-date-locale={DATE_LOCALE_BY_LOCALE[locale]}
         >
           <div class="video-gallery__header">
             <div>
               <p class="video-gallery__eyebrow">YouTube</p>
-              <h2>最新動画</h2>
+              <h2>{ui.latestVideos}</h2>
             </div>
             <a
               class="toolbar-button toolbar-button--external"
               href={videoChannelUrl}
               {...externalLinkAttrs(videoChannelUrl, true)}
             >
-              <span>チャンネル</span>
+              <span>{ui.channel}</span>
               <Icon name="external-link" />
             </a>
           </div>
@@ -128,7 +144,7 @@ const nextMap =
                       video.thumbnail ??
                       `https://i.ytimg.com/vi/${video.id}/hqdefault.jpg`
                     }
-                    alt={`${video.title}のサムネイル`}
+                    alt={ui.videoThumbnail.replace('{title}', video.title)}
                     loading="lazy"
                     decoding="async"
                   />
@@ -138,7 +154,7 @@ const nextMap =
                   <span class="video-card__title">{video.title}</span>
                   {video.publishedAt && (
                     <span class="video-card__meta">
-                      {new Intl.DateTimeFormat('ja-JP', {
+                      {new Intl.DateTimeFormat(DATE_LOCALE_BY_LOCALE[locale], {
                         year: 'numeric',
                         month: 'short',
                         day: 'numeric',
@@ -154,7 +170,7 @@ const nextMap =
             data-youtube-video-status
             hidden={fallbackVideos.length > 0}
           >
-            最新動画を取得しています
+            {ui.loadingVideos}
           </p>
         </section>
       )

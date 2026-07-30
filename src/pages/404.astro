@@ -1,17 +1,25 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
+import { localizePath } from '../i18n/config'
+import { getUi } from '../i18n/translations'
+
+const locale = 'ja'
+const ui = getUi(locale)
 ---
 
 <BaseLayout
-  title="ページが見つかりません"
-  description="お探しのページは見つかりませんでした。"
+  locale={locale}
+  title={ui.notFoundTitle}
+  description={ui.notFoundDescription}
   robots="noindex, follow"
   canonical={null}
 >
   <section class="not-found">
-    <h1>ページが見つかりません</h1>
-    <p>URLを確認するか、トップページから入り直してください。</p>
-    <a class="asv-btn-primary" href="/">トップページへ</a>
+    <h1>{ui.notFoundTitle}</h1>
+    <p>{ui.notFoundMessage}</p>
+    <a class="asv-btn-primary" href={localizePath(locale, '/')}>
+      {ui.backHome}
+    </a>
   </section>
 </BaseLayout>
 

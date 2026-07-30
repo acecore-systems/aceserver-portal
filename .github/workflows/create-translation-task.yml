@@ -1,0 +1,62 @@
+name: Create Translation Task
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - src/content/pages/*.json
+      - src/content/site/*.json
+      - src/content/stories/*.md
+  workflow_dispatch:
+    inputs:
+      base_sha:
+        description: Optional 40-character base SHA
+        required: false
+        type: string
+      head_sha:
+        description: Optional 40-character head SHA
+        required: false
+        type: string
+      changed_files:
+        description: Optional comma-separated Japanese source paths
+        required: false
+        type: string
+      dry_run:
+        description: Print the task without calling the Copilot agent API
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  create-translation-task:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version-file: .node-version
+
+      - name: Create translation PR task
+        env:
+          COPILOT_AGENT_TOKEN: ${{ secrets.COPILOT_AGENT_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_EVENT_NAME: ${{ github.event_name }}
+          GITHUB_EVENT_BEFORE: ${{ github.event.before }}
+          GITHUB_SHA: ${{ github.sha }}
+          INPUT_BASE_SHA: ${{ inputs.base_sha }}
+          INPUT_HEAD_SHA: ${{ inputs.head_sha }}
+          INPUT_CHANGED_FILES: ${{ inputs.changed_files }}
+          INPUT_DRY_RUN: ${{ inputs.dry_run }}
+        run: node scripts/create-translation-task.mjs
