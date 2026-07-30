@@ -14,8 +14,9 @@ const MAX_METADATA_SECTION_LENGTH = 240
 const MAX_METADATA_EXCERPT_LENGTH = 500
 const MAX_METADATA_URL_LENGTH = 500
 
-const SYSTEMS_BRAND_PATTERN =
-  /(?:\bacecore[\s_-]*systems?\b|\bsystems\b|エースコア(?:・|\s*)?システムズ?)/iu
+const SYSTEMS_EXPLICIT_BRAND_PATTERN =
+  /(?:\bacecore[\s_-]*systems?\b|エースコア(?:・|\s*)?システムズ?)/iu
+const SYSTEMS_SHORT_BRAND_PATTERN = /\bsystems\b/iu
 const SYSTEMS_TOPIC_PATTERN =
   /(?:IT顧問|技術顧問|開発顧問|業務システム|システム(?:開発|構築|導入|改修|保守|運用)|Web(?:サイト|アプリ)?(?:制作|開発|運用|改善|相談)|ウェブサイト(?:制作|開発|運用|改善|相談)|ホームページ(?:制作|開発|運用|改善|相談)|アプリ(?:制作|開発)|DX(?:支援|相談)|開発(?:依頼|相談|支援)|制作実績|開発実績|導入事例|技術解説|\b(?:system|web|app|application) development\b|\bit (?:advisor|advisory|consulting)\b|\btechnical consulting\b|\bcase stud(?:y|ies)\b)/iu
 const ACESERVER_CONTEXT_PATTERN =
@@ -30,15 +31,18 @@ export function shouldSearchSystems(query) {
     .trim()
   if (!normalizedQuery) return false
 
+  const hasExplicitBrandIntent =
+    SYSTEMS_EXPLICIT_BRAND_PATTERN.test(normalizedQuery)
   if (
     ACESERVER_CONTEXT_PATTERN.test(normalizedQuery) &&
-    ACESERVER_DETAIL_PATTERN.test(normalizedQuery)
+    (ACESERVER_DETAIL_PATTERN.test(normalizedQuery) || !hasExplicitBrandIntent)
   ) {
     return false
   }
 
   return (
-    SYSTEMS_BRAND_PATTERN.test(normalizedQuery) ||
+    hasExplicitBrandIntent ||
+    SYSTEMS_SHORT_BRAND_PATTERN.test(normalizedQuery) ||
     SYSTEMS_TOPIC_PATTERN.test(normalizedQuery)
   )
 }

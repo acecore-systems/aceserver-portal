@@ -1972,6 +1972,7 @@ test('routes only Acecore Systems service and development questions to Systems s
     'パソコン初心者の学習相談をしたい',
     'エースサーバーのTNTルールを教えて',
     'エースサーバーの参加方法を教えて',
+    'What systems does Aceserver use?',
   ]) {
     assert.equal(shouldSearchSystems(question), false, question)
   }
