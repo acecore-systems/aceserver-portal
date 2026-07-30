@@ -16,6 +16,8 @@ const worldMapButton: LinkItem = {
   href: '/world-map/',
 }
 
+const worldFoundationUrl = 'https://world-foundation.acecore.net/'
+
 const alphaPrompts = [
   {
     label: '参加方法',
@@ -42,6 +44,7 @@ const alphaError = `いまはAI応答につながらなかったよ。[公式Dis
   data-alpha-discord-url={joinButton.href}
   data-alpha-wiki-url={wikiButton.href}
   data-alpha-world-map-url={worldMapButton.href}
+  data-alpha-world-foundation-url={worldFoundationUrl}
   data-alpha-greeting="やあ、アルファくんだよ。エースサーバーの案内をするね。"
   data-alpha-loading="アルファくんが考え中..."
   data-alpha-error={alphaError}
@@ -215,9 +218,17 @@ const alphaError = `いまはAI応答につながらなかったよ。[公式Dis
     const wikiHref =
       widget.dataset.alphaWikiUrl || 'https://asv-wiki.acecore.net'
     const worldMapHref = widget.dataset.alphaWorldMapUrl || '/world-map/'
+    const worldFoundationHref =
+      widget.dataset.alphaWorldFoundationUrl ||
+      'https://world-foundation.acecore.net/'
 
     return {
-      allowedExternalLinks: [discordHref, wikiHref, 'https://acecore.net/'],
+      allowedExternalLinks: [
+        discordHref,
+        wikiHref,
+        'https://acecore.net/',
+        worldFoundationHref,
+      ],
       resources: [
         {
           href: discordHref,
