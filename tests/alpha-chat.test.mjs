@@ -1122,6 +1122,156 @@ test('lets current Aceserver questions leave Schools context', async () => {
   }
 })
 
+test('resets grounding and source count when leaving Schools context', async () => {
+  const originalFetch = globalThis.fetch
+  const embeddingQueries = []
+  let schoolsInvoked = false
+
+  globalThis.fetch = async () =>
+    Response.json({
+      schemaVersion: 1,
+      embedding: {
+        model: WIKI_EMBEDDING_MODEL,
+        dimensions: 1024,
+      },
+      chunks: [
+        {
+          id: 'commands',
+          namespace: 'ja',
+          text: 'Minecraftのコマンドと使い方を案内します。',
+          metadata: {
+            locale: 'ja',
+            title: 'コマンドについて',
+            section: 'コマンド',
+            excerpt: 'Minecraftのコマンドを案内します。',
+            url: '/article/SurvivalCommand/',
+          },
+        },
+        {
+          id: 'promotion',
+          namespace: 'ja',
+          text: 'エースサーバーを宣伝しているサービスを紹介します。',
+          metadata: {
+            locale: 'ja',
+            title: '宣伝に利用しているサービス',
+            section: '宣伝',
+            excerpt: '宣伝サービスの紹介です。',
+            url: '/article/promotion/',
+          },
+        },
+      ],
+    })
+
+  try {
+    const response = await onRequestPost({
+      request: createRequest({
+        question: 'Minecraftのコマンドを学びたい',
+        messages: [
+          { role: 'user', content: 'Acecore Schoolsについて教えて' },
+          { role: 'assistant', content: '学び方を案内するね。' },
+          { role: 'user', content: 'Minecraftのコマンドを学びたい' },
+        ],
+      }),
+      env: {
+        AI: {
+          async run(model, input) {
+            if (model === WIKI_EMBEDDING_MODEL) {
+              embeddingQueries.push(input.text)
+              return { data: [WIKI_EMBEDDING] }
+            }
+            return {
+              response:
+                '[コマンドについて](https://asv-wiki.acecore.net/article/SurvivalCommand/)を見てね。',
+            }
+          },
+        },
+        WIKI_SEARCH_INDEX: {
+          async query() {
+            return {
+              matches: [
+                {
+                  id: 'commands',
+                  score: 0.91,
+                  metadata: {
+                    locale: 'ja',
+                    title: 'コマンドについて',
+                    section: 'コマンド',
+                    excerpt: 'Minecraftのコマンドを案内します。',
+                    url: '/article/SurvivalCommand/',
+                  },
+                },
+                {
+                  id: 'promotion',
+                  score: 0.82,
+                  metadata: {
+                    locale: 'ja',
+                    title: '宣伝に利用しているサービス',
+                    section: '宣伝',
+                    excerpt: '宣伝サービスの紹介です。',
+                    url: '/article/promotion/',
+                  },
+                },
+              ],
+            }
+          },
+        },
+        SCHOOLS_SEARCH_INDEX: {
+          async query() {
+            schoolsInvoked = true
+            return { matches: [] }
+          },
+        },
+      },
+    })
+    const body = await response.json()
+
+    assert.equal(response.status, 200)
+    assert.equal(body.ok, true)
+    assert.deepEqual(embeddingQueries, [['Minecraftのコマンドを学びたい']])
+    assert.equal(schoolsInvoked, false)
+    assert.match(body.answer, /article\/SurvivalCommand\//)
+    assert.doesNotMatch(body.answer, /article\/promotion\//)
+  } finally {
+    globalThis.fetch = originalFetch
+  }
+})
+
+test('keeps grounding history within the same Aceserver source', async () => {
+  const embeddingQueries = []
+
+  const response = await onRequestPost({
+    request: createRequest({
+      question: '別のワールドでは？',
+      messages: [
+        { role: 'user', content: 'TNTは使える？' },
+        { role: 'assistant', content: 'メインでは禁止だよ。' },
+        { role: 'user', content: '別のワールドでは？' },
+      ],
+    }),
+    env: {
+      AI: {
+        async run(model, input) {
+          if (model === WIKI_EMBEDDING_MODEL) {
+            embeddingQueries.push(input.text)
+            return { data: [WIKI_EMBEDDING] }
+          }
+          return {
+            response: '詳しいルールはAceserver WIKIで確認してね。',
+          }
+        },
+      },
+      WIKI_SEARCH_INDEX: {
+        async query() {
+          return { matches: [] }
+        },
+      },
+    },
+  })
+
+  assert.equal(response.status, 200)
+  assert.deepEqual(embeddingQueries, [['TNTは使える？\n別のワールドでは？']])
+})
+
 test('uses a controlled Schools fallback when its search fails', async () => {
   const originalConsoleError = console.error
   console.error = () => {}
