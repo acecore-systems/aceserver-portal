@@ -61,7 +61,7 @@ async function validatePages() {
   const pageFiles = (await readdir(pagesDir))
     .filter((file) => file.endsWith('.json'))
     .sort()
-  const routes = new Set(['/'])
+  const routes = new Set(['/', '/stories/'])
   const slugs = new Set()
 
   for (const file of pageFiles) {

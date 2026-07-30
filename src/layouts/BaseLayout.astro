@@ -21,6 +21,7 @@ interface Props {
   robots?: string
   canonical?: string | null
   showAds?: boolean
+  ogType?: 'website' | 'article'
 }
 
 const {
@@ -32,6 +33,7 @@ const {
   robots = 'index, follow',
   canonical: canonicalInput = Astro.url.pathname,
   showAds = false,
+  ogType = 'website',
 } = Astro.props
 const siteBase = Astro.site ?? new URL(settings.siteUrl)
 const canonical =
@@ -124,7 +126,7 @@ const webpageJsonLd = serializeJsonForHtmlScript({
       )
     }
     <title>{pageTitle}</title>
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={ogType} />
     <meta property="og:locale" content="ja_JP" />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
