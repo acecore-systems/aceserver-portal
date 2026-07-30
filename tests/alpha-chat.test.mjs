@@ -1069,55 +1069,57 @@ test('keeps Schools grounding for a contextual follow-up', async () => {
   )
 })
 
-test('lets an explicit Aceserver question leave Schools context', async () => {
-  let wikiInvoked = false
-  let schoolsInvoked = false
+test('lets current Aceserver questions leave Schools context', async () => {
+  for (const question of [
+    'エースサーバーの参加方法を教えて',
+    'Minecraftのコマンドを学びたい',
+  ]) {
+    let wikiInvoked = false
+    let schoolsInvoked = false
 
-  const response = await onRequestPost({
-    request: createRequest({
-      question: 'エースサーバーの参加方法を教えて',
-      messages: [
-        { role: 'user', content: 'Acecore Schoolsについて教えて' },
-        { role: 'assistant', content: '学び方を案内するね。' },
-        {
-          role: 'user',
-          content: 'エースサーバーの参加方法を教えて',
+    const response = await onRequestPost({
+      request: createRequest({
+        question,
+        messages: [
+          { role: 'user', content: 'Acecore Schoolsについて教えて' },
+          { role: 'assistant', content: '学び方を案内するね。' },
+          { role: 'user', content: question },
+        ],
+      }),
+      env: {
+        AI: {
+          async run(model) {
+            if (model === WIKI_EMBEDDING_MODEL) {
+              return { data: [WIKI_EMBEDDING] }
+            }
+            return {
+              response: '参加方法は公式DiscordとAceserver WIKIで確認してね。',
+            }
+          },
         },
-      ],
-    }),
-    env: {
-      AI: {
-        async run(model) {
-          if (model === WIKI_EMBEDDING_MODEL) {
-            return { data: [WIKI_EMBEDDING] }
-          }
-          return {
-            response: '参加方法は公式DiscordとAceserver WIKIで確認してね。',
-          }
+        WIKI_SEARCH_INDEX: {
+          async query() {
+            wikiInvoked = true
+            return { matches: [] }
+          },
         },
-      },
-      WIKI_SEARCH_INDEX: {
-        async query() {
-          wikiInvoked = true
-          return { matches: [] }
-        },
-      },
-      SCHOOLS_SEARCH_INDEX: {
-        async query() {
-          schoolsInvoked = true
-          return { matches: [] }
+        SCHOOLS_SEARCH_INDEX: {
+          async query() {
+            schoolsInvoked = true
+            return { matches: [] }
+          },
         },
       },
-    },
-  })
-  const body = await response.json()
+    })
+    const body = await response.json()
 
-  assert.equal(response.status, 200)
-  assert.equal(body.ok, true)
-  assert.equal(wikiInvoked, true)
-  assert.equal(schoolsInvoked, false)
-  assert.match(body.answer, /\[公式Discord\]/)
-  assert.match(body.answer, /\[Aceserver WIKI\]/)
+    assert.equal(response.status, 200)
+    assert.equal(body.ok, true)
+    assert.equal(wikiInvoked, true)
+    assert.equal(schoolsInvoked, false)
+    assert.match(body.answer, /\[公式Discord\]/)
+    assert.match(body.answer, /\[Aceserver WIKI\]/)
+  }
 })
 
 test('uses a controlled Schools fallback when its search fails', async () => {

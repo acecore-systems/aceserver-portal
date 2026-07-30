@@ -34,7 +34,7 @@ const WIKI_URL = ACESERVER_WIKI_URL
 const WORLD_MAP_URL = '/world-map/'
 const ACECORE_URL = 'https://acecore.net/'
 const EXPLICIT_ACESERVER_SOURCE_PATTERN =
-  /(?:\baceserver\b|エースサーバー|このサーバー|aceserver\s*wiki|エースサーバー\s*wiki|公式(?:discord|ディスコード))/iu
+  /(?:\baceserver\b|エースサーバー|このサーバー|aceserver\s*wiki|エースサーバー\s*wiki|公式(?:discord|ディスコード)|\bminecraft\b|マインクラフト|マイクラ|\btnt\b|サーバー(?:ip|アドレス)|ホワイトリスト|ワールド|プラグイン)/iu
 
 const GUIDE_LINK_RESOURCES = [
   {
