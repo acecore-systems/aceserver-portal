@@ -11,6 +11,11 @@ import {
   shouldSearchSchools,
 } from './alpha-schools-search.js'
 import {
+  ACESERVER_PORTAL_CORPUS_PATH,
+  buildPortalGroundingContext,
+  searchAceserverPortal,
+} from './alpha-portal-search.js'
+import {
   ACESERVER_WIKI_URL,
   buildWikiGroundingContext,
   searchAceserverWiki,
@@ -147,6 +152,7 @@ export async function onRequestPost({ request, env }) {
   )
   const {
     wikiEntries,
+    portalEntries,
     acecoreEntries,
     schoolsEntries,
     worldFoundationEntries,
@@ -159,6 +165,7 @@ export async function onRequestPost({ request, env }) {
     env,
     currentSourceIntent,
     resetSearchContext,
+    new URL(ACESERVER_PORTAL_CORPUS_PATH, request.url).href,
   )
   if (acecoreFallback) {
     return jsonResponse(request, {
@@ -190,12 +197,14 @@ export async function onRequestPost({ request, env }) {
   }
 
   const wikiGroundingContext = buildWikiGroundingContext(wikiEntries)
+  const portalGroundingContext = buildPortalGroundingContext(portalEntries)
   const acecoreGroundingContext = buildAcecoreGroundingContext(acecoreEntries)
   const schoolsGroundingContext = buildSchoolsGroundingContext(schoolsEntries)
   const worldFoundationGroundingContext = buildWorldFoundationGroundingContext(
     worldFoundationEntries,
   )
   const alphaSystemInstructions = buildAlphaSystemInstructions({
+    portalEntries,
     acecoreEntries,
     schoolsEntries,
     worldFoundationEntries,
@@ -216,6 +225,7 @@ export async function onRequestPost({ request, env }) {
             content: [
               ...alphaSystemInstructions,
               includeAceserverContext ? buildAceserverContext() : '',
+              portalGroundingContext,
               wikiGroundingContext,
               acecoreGroundingContext,
               schoolsGroundingContext,
@@ -264,6 +274,7 @@ export async function onRequestPost({ request, env }) {
       : 1
   const retrievedSources = [
     ...wikiEntries,
+    ...portalEntries,
     ...acecoreEntries,
     ...schoolsEntries,
     ...worldFoundationEntries,
@@ -281,6 +292,7 @@ export async function onRequestPost({ request, env }) {
           selectedSources.filter((entry) => entry.source === 'acecore'),
           selectedSources.filter((entry) => entry.source === 'worldFoundation'),
           selectedSources.filter((entry) => entry.source === 'schools'),
+          selectedSources.filter((entry) => entry.source === 'portal'),
         ),
         retrievedSources,
         selectedSources,
@@ -301,6 +313,7 @@ async function retrieveAlphaEvidence(
   env,
   currentSourceIntent = resolveCurrentAlphaSourceIntent(intentQuery),
   resetSearchContext = false,
+  portalCorpusUrl = `https://asv.acecore.net${ACESERVER_PORTAL_CORPUS_PATH}`,
 ) {
   const currentWorldFoundationIntent = currentSourceIntent === 'worldFoundation'
   const currentSchoolsIntent = currentSourceIntent === 'schools'
@@ -371,11 +384,32 @@ async function retrieveAlphaEvidence(
 
   if (!acecoreIntent) {
     const wikiQuery = resetSearchContext ? intentQuery : query
-    return createAlphaEvidenceResult({
-      wikiEntries: markEvidenceSource(
-        await searchAceserverWiki(wikiQuery, env),
-        'wiki',
+    const wikiSearchEnabled = Boolean(
+      env?.WIKI_SEARCH_INDEX && env.WIKI_SEARCH_ENABLED !== 'false',
+    )
+    const portalSearchEnabled = Boolean(
+      env?.PORTAL_SEARCH_INDEX && env.PORTAL_SEARCH_ENABLED !== 'false',
+    )
+    if (!wikiSearchEnabled && !portalSearchEnabled) {
+      return createAlphaEvidenceResult()
+    }
+
+    const embedding = await createAlphaSearchEmbedding(wikiQuery, env)
+    if (!embedding) return createAlphaEvidenceResult()
+
+    const [wikiEntries, portalEntries] = await Promise.all([
+      searchAceserverWiki(wikiQuery, env, undefined, embedding),
+      searchAceserverPortal(
+        wikiQuery,
+        env,
+        portalCorpusUrl,
+        undefined,
+        embedding,
       ),
+    ])
+    return createAlphaEvidenceResult({
+      wikiEntries: markEvidenceSource(wikiEntries, 'wiki'),
+      portalEntries: markEvidenceSource(portalEntries, 'portal'),
     })
   }
 
@@ -444,6 +478,7 @@ function getPreviousUserQuery(payload, currentQuery) {
 function createAlphaEvidenceResult(overrides = {}) {
   return {
     wikiEntries: [],
+    portalEntries: [],
     acecoreEntries: [],
     schoolsEntries: [],
     worldFoundationEntries: [],
@@ -508,6 +543,7 @@ function buildWorldFoundationStatusGuardAnswer(question, entries) {
 }
 
 function buildAlphaSystemInstructions({
+  portalEntries,
   acecoreEntries,
   schoolsEntries,
   worldFoundationEntries,
@@ -558,7 +594,14 @@ function buildAlphaSystemInstructions({
 
   return [
     ...commonInstructions,
-    'Guide first-time visitors using the stable Aceserver navigation context and retrieved WIKI evidence below.',
+    'Guide first-time visitors using the stable Aceserver navigation context and retrieved portal or WIKI evidence below.',
+    'Use Aceserver portal evidence for the public site overview, world introductions, videos, stories, and published portal pages.',
+    'Portal evidence must never override Aceserver WIKI for rules, commands, participation requirements, world access details, and operations.',
+    ...(portalEntries.length > 0
+      ? [
+          'When a portal page or story directly answers the question, explain it and cite that portal Source link once.',
+        ]
+      : []),
     'Do not invent server IPs, whitelists, incidents, moderation decisions, requirements, approvals, or exceptions.',
     'Rules, commands, plugins, participation requirements, and operational details can change. State a concrete detail only when retrieved WIKI content supports it.',
     'Never infer that a specific item or action is allowed, prohibited, or covered by a general rule when the retrieved WIKI content does not name it. Say that the exact detail could not be confirmed.',
@@ -727,9 +770,11 @@ export function sanitizeAlphaAnswerLinks(
   acecoreEntries = [],
   worldFoundationEntries = [],
   schoolsEntries = [],
+  portalEntries = [],
 ) {
   const allowedLinks = buildAllowedAlphaAnswerLinks([
     ...wikiEntries,
+    ...portalEntries,
     ...acecoreEntries,
     ...worldFoundationEntries,
     ...schoolsEntries,
