@@ -32,6 +32,11 @@ import {
   shouldSearchSchools,
 } from '../functions/api/alpha-schools-search.js'
 import {
+  ACESERVER_PORTAL_CORPUS_PATH,
+  buildPortalGroundingContext,
+  searchAceserverPortal,
+} from '../functions/api/alpha-portal-search.js'
+import {
   ACESERVER_WIKI_CORPUS_URL,
   buildWikiGroundingContext,
   searchAceserverWiki,
@@ -300,6 +305,436 @@ test('grounds concrete answers with Vectorize WIKI evidence and its article link
     )
     assert.doesNotMatch(systemPrompt, /Content: 爆破物のルールです。/)
     assert.match(systemPrompt, /Do not invent .*approvals/)
+  } finally {
+    globalThis.fetch = originalFetch
+  }
+})
+
+test('filters, hydrates, and localizes portal Vectorize results', async () => {
+  let vectorizeInvocation
+  let corpusInvocation
+  const entries = await searchAceserverPortal(
+    '乗っ取り事件の読みもの',
+    {
+      AI: {},
+      PORTAL_SEARCH_MIN_SCORE: '0.45',
+      PORTAL_SEARCH_INDEX: {
+        async query(vector, options) {
+          vectorizeInvocation = { vector, options }
+          return {
+            matches: [
+              {
+                id: 'story-hijacked',
+                score: 0.91,
+                metadata: {
+                  locale: 'ja',
+                  title: 'エースサーバー、乗っ取られる。',
+                  section: '事件の記録',
+                  excerpt: '乗っ取り事件を記録した読みものです。',
+                  contentType: 'story',
+                  url: '/stories/aceserver-hijacked/',
+                },
+              },
+              {
+                id: 'duplicate',
+                score: 0.88,
+                metadata: {
+                  locale: 'ja',
+                  title: '重複',
+                  section: '重複',
+                  excerpt: '同じURLです。',
+                  contentType: 'story',
+                  url: '/stories/aceserver-hijacked/',
+                },
+              },
+              {
+                id: 'external',
+                score: 0.99,
+                metadata: {
+                  locale: 'ja',
+                  title: '外部ページ',
+                  section: '外部',
+                  excerpt: '採用してはいけません。',
+                  contentType: 'page',
+                  url: 'https://example.com/private/',
+                },
+              },
+              {
+                id: 'admin',
+                score: 0.98,
+                metadata: {
+                  locale: 'ja',
+                  title: '管理画面',
+                  section: '管理',
+                  excerpt: '採用してはいけません。',
+                  contentType: 'page',
+                  url: '/admin/',
+                },
+              },
+              {
+                id: 'not-found',
+                score: 0.97,
+                metadata: {
+                  locale: 'ja',
+                  title: '404',
+                  section: '404',
+                  excerpt: '採用してはいけません。',
+                  contentType: 'page',
+                  url: '/404/',
+                },
+              },
+              {
+                id: 'encoded-admin',
+                score: 0.96,
+                metadata: {
+                  locale: 'ja',
+                  title: 'エンコードされた管理画面',
+                  section: '管理',
+                  excerpt: '採用してはいけません。',
+                  contentType: 'page',
+                  url: '/%2fadmin/',
+                },
+              },
+              {
+                id: 'low-score',
+                score: 0.2,
+                metadata: {
+                  locale: 'ja',
+                  title: '低スコア',
+                  section: '低スコア',
+                  excerpt: '採用してはいけません。',
+                  contentType: 'page',
+                  url: '/world-map/',
+                },
+              },
+            ],
+          }
+        },
+      },
+    },
+    `https://preview-id.aceserver-portal.pages.dev${ACESERVER_PORTAL_CORPUS_PATH}`,
+    async (url, init) => {
+      corpusInvocation = { url, init }
+      return Response.json({
+        schemaVersion: 1,
+        embedding: {
+          model: WIKI_EMBEDDING_MODEL,
+          dimensions: 1024,
+        },
+        chunks: [
+          {
+            id: 'story-hijacked',
+            namespace: 'ja',
+            text: 'エースサーバーが乗っ取られた時の経緯と復旧までを記録した公開ストーリーです。',
+            metadata: {
+              locale: 'ja',
+              title: 'エースサーバー、乗っ取られる。',
+              section: '事件の記録',
+              excerpt: '乗っ取り事件を記録した読みものです。',
+              contentType: 'story',
+              url: '/stories/aceserver-hijacked/',
+            },
+          },
+        ],
+      })
+    },
+    WIKI_EMBEDDING,
+    'en',
+  )
+
+  assert.equal(entries.length, 1)
+  assert.equal(entries[0].url, '/en/stories/aceserver-hijacked/')
+  assert.match(entries[0].content, /復旧までを記録/u)
+  assert.deepEqual(vectorizeInvocation, {
+    vector: WIKI_EMBEDDING,
+    options: {
+      namespace: 'ja',
+      topK: 15,
+      returnMetadata: 'all',
+      returnValues: false,
+    },
+  })
+  assert.equal(
+    corpusInvocation.url,
+    'https://preview-id.aceserver-portal.pages.dev/vector-corpus.json',
+  )
+  assert.equal(corpusInvocation.init.redirect, 'manual')
+  assert.deepEqual(corpusInvocation.init.cf, {
+    cacheEverything: true,
+    cacheTtl: 300,
+  })
+  assert.match(buildPortalGroundingContext(entries), /復旧までを記録/u)
+  assert.match(
+    buildPortalGroundingContext(entries),
+    /\(\/en\/stories\/aceserver-hijacked\/\)/u,
+  )
+})
+
+test('grounds Aceserver story discovery with the portal and WIKI in parallel', async () => {
+  const originalFetch = globalThis.fetch
+  const aiInvocations = []
+  let wikiVectorizeInvocation
+  let portalVectorizeInvocation
+  let portalCorpusUrl
+
+  globalThis.fetch = async (url) => {
+    portalCorpusUrl = String(url)
+    return Response.json({
+      schemaVersion: 1,
+      embedding: {
+        model: WIKI_EMBEDDING_MODEL,
+        dimensions: 1024,
+      },
+      chunks: [
+        {
+          id: 'story-hijacked',
+          namespace: 'ja',
+          text: 'エースサーバーが乗っ取られた時の経緯と、その後の復旧を紹介する公開ストーリーです。',
+          metadata: {
+            locale: 'ja',
+            title: 'エースサーバー、乗っ取られる。',
+            section: '事件の記録',
+            excerpt: '乗っ取り事件を記録した読みものです。',
+            contentType: 'story',
+            url: '/stories/aceserver-hijacked/',
+          },
+        },
+        {
+          id: 'story-index',
+          namespace: 'ja',
+          text: '読みもの一覧では、エースサーバー、乗っ取られる。を含む公開ストーリーをまとめて紹介しています。',
+          metadata: {
+            locale: 'ja',
+            title: '読みもの',
+            section: '公開ストーリー',
+            excerpt: 'エースサーバーの読みもの一覧です。',
+            contentType: 'story-index',
+            url: '/stories/',
+          },
+        },
+      ],
+    })
+  }
+
+  try {
+    const response = await onRequestPost({
+      request: createRequest({
+        question: 'エースサーバーの乗っ取り事件の記事を読みたい',
+      }),
+      env: {
+        AI: {
+          async run(model, input) {
+            aiInvocations.push({ model, input })
+            if (model === WIKI_EMBEDDING_MODEL) {
+              return { data: [WIKI_EMBEDDING] }
+            }
+            return {
+              response:
+                '「エースサーバー、乗っ取られる。」で経緯と復旧を読めるよ。読みもの一覧にはほかの記録もあるんだ。',
+            }
+          },
+        },
+        WIKI_SEARCH_INDEX: {
+          async query(vector, options) {
+            wikiVectorizeInvocation = { vector, options }
+            return { matches: [] }
+          },
+        },
+        PORTAL_SEARCH_ENABLED: 'true',
+        PORTAL_SEARCH_MIN_SCORE: '0.45',
+        PORTAL_SEARCH_INDEX: {
+          async query(vector, options) {
+            portalVectorizeInvocation = { vector, options }
+            return {
+              matches: [
+                {
+                  id: 'story-hijacked',
+                  score: 0.94,
+                  metadata: {
+                    locale: 'ja',
+                    title: 'エースサーバー、乗っ取られる。',
+                    section: '事件の記録',
+                    excerpt: '乗っ取り事件を記録した読みものです。',
+                    contentType: 'story',
+                    url: '/stories/aceserver-hijacked/',
+                  },
+                },
+                {
+                  id: 'story-index',
+                  score: 0.9,
+                  metadata: {
+                    locale: 'ja',
+                    title: '読みもの',
+                    section: '公開ストーリー',
+                    excerpt: 'エースサーバーの読みもの一覧です。',
+                    contentType: 'story-index',
+                    url: '/stories/',
+                  },
+                },
+              ],
+            }
+          },
+        },
+      },
+    })
+    const body = await response.json()
+
+    assert.equal(response.status, 200)
+    assert.equal(body.ok, true)
+    assert.match(
+      body.answer,
+      /\[エースサーバー、乗っ取られる。\]\(\/stories\/aceserver-hijacked\/\)/u,
+    )
+    assert.doesNotMatch(body.answer, /\[読みもの\]\(\/stories\/\)/u)
+    assert.equal(portalCorpusUrl, 'https://asv.acecore.net/vector-corpus.json')
+    assert.deepEqual(
+      aiInvocations.map(({ model }) => model),
+      [WIKI_EMBEDDING_MODEL, '@cf/zai-org/glm-5.2'],
+    )
+    assert.deepEqual(wikiVectorizeInvocation.vector, WIKI_EMBEDDING)
+    assert.deepEqual(portalVectorizeInvocation.vector, WIKI_EMBEDDING)
+
+    const systemPrompt = aiInvocations[1].input.messages[0].content
+    assert.match(systemPrompt, /Aceserver portal retrieved evidence/u)
+    assert.match(systemPrompt, /その後の復旧を紹介/u)
+    assert.match(systemPrompt, /WIKI remains authoritative/u)
+  } finally {
+    globalThis.fetch = originalFetch
+  }
+})
+
+test('keeps WIKI authoritative when portal and WIKI both match a rule query', async () => {
+  const originalFetch = globalThis.fetch
+  const aiInvocations = []
+
+  globalThis.fetch = async (url) => {
+    if (String(url) === ACESERVER_WIKI_CORPUS_URL) {
+      return Response.json({
+        schemaVersion: 1,
+        embedding: {
+          model: WIKI_EMBEDDING_MODEL,
+          dimensions: 1024,
+        },
+        chunks: [
+          {
+            id: 'wiki-rule',
+            namespace: 'ja',
+            text: 'メインサーバーではTNTの使用を禁止しています。最新の条件はこのルールページを確認してください。',
+            metadata: {
+              locale: 'ja',
+              title: 'ルール・BAN条件',
+              section: '爆破物',
+              excerpt: 'メインサーバーのTNTルールです。',
+              url: 'https://asv-wiki.acecore.net/article/rule/',
+            },
+          },
+        ],
+      })
+    }
+
+    if (
+      String(url) === `https://asv.acecore.net${ACESERVER_PORTAL_CORPUS_PATH}`
+    ) {
+      return Response.json({
+        schemaVersion: 1,
+        embedding: {
+          model: WIKI_EMBEDDING_MODEL,
+          dimensions: 1024,
+        },
+        chunks: [
+          {
+            id: 'portal-event',
+            namespace: 'ja',
+            text: '過去のイベントでTNTを使った建築を紹介した公開ストーリーです。',
+            metadata: {
+              locale: 'ja',
+              title: 'イベントの記録',
+              section: 'TNT建築',
+              excerpt: '過去のイベントを紹介します。',
+              contentType: 'story',
+              url: '/stories/event-record/',
+            },
+          },
+        ],
+      })
+    }
+
+    throw new Error(`Unexpected corpus URL: ${url}`)
+  }
+
+  try {
+    const response = await onRequestPost({
+      request: createRequest({ question: 'メインサーバーでTNTは使える？' }),
+      env: {
+        AI: {
+          async run(model, input) {
+            aiInvocations.push({ model, input })
+            if (model === WIKI_EMBEDDING_MODEL) {
+              return { data: [WIKI_EMBEDDING] }
+            }
+            return {
+              response:
+                'メインサーバーではTNTは禁止だよ。[ルール・BAN条件](https://asv-wiki.acecore.net/article/rule/)で最新情報を確認してね。',
+            }
+          },
+        },
+        WIKI_SEARCH_ENABLED: 'true',
+        WIKI_SEARCH_INDEX: {
+          async query() {
+            return {
+              matches: [
+                {
+                  id: 'wiki-rule',
+                  score: 0.91,
+                  metadata: {
+                    locale: 'ja',
+                    title: 'ルール・BAN条件',
+                    section: '爆破物',
+                    excerpt: 'メインサーバーのTNTルールです。',
+                    url: 'https://asv-wiki.acecore.net/article/rule/',
+                  },
+                },
+              ],
+            }
+          },
+        },
+        PORTAL_SEARCH_ENABLED: 'true',
+        PORTAL_SEARCH_INDEX: {
+          async query() {
+            return {
+              matches: [
+                {
+                  id: 'portal-event',
+                  score: 0.98,
+                  metadata: {
+                    locale: 'ja',
+                    title: 'イベントの記録',
+                    section: 'TNT建築',
+                    excerpt: '過去のイベントを紹介します。',
+                    contentType: 'story',
+                    url: '/stories/event-record/',
+                  },
+                },
+              ],
+            }
+          },
+        },
+      },
+    })
+    const body = await response.json()
+    const systemPrompt = aiInvocations[1].input.messages[0].content
+
+    assert.equal(response.status, 200)
+    assert.match(
+      body.answer,
+      /\[ルール・BAN条件\]\(https:\/\/asv-wiki\.acecore\.net\/article\/rule\/\)/u,
+    )
+    assert.doesNotMatch(body.answer, /\/stories\/event-record\//u)
+    assert.match(systemPrompt, /Aceserver portal retrieved evidence/u)
+    assert.match(systemPrompt, /Aceserver WIKI retrieved evidence/u)
+    assert.match(systemPrompt, /must never override Aceserver WIKI/u)
+    assert.match(systemPrompt, /メインサーバーではTNTの使用を禁止/u)
+    assert.match(systemPrompt, /過去のイベントでTNTを使った建築/u)
   } finally {
     globalThis.fetch = originalFetch
   }
@@ -2076,6 +2511,37 @@ test('allows only retrieved WIKI article links and appends specific sources', ()
   assert.equal(
     cleanedReferences,
     '詳しくは [hub紹介](https://asv-wiki.acecore.net/article/hub-intro/) を見てね。',
+  )
+})
+
+test('prefers an explicitly named source and replaces bare Source lines', () => {
+  const entries = [
+    {
+      title: 'ルール・BAN条件',
+      url: 'https://asv-wiki.acecore.net/article/rule/',
+      content: 'メインサーバーではTNTなどの爆破物を禁止しています。',
+    },
+    {
+      title: 'hub紹介',
+      url: 'https://asv-wiki.acecore.net/article/hub-intro/',
+      content: '資源サーバーへは/sigenコマンドで移動できます。',
+    },
+  ]
+  const answer =
+    'メインサーバーではTNTは禁止です。\n\nSource: ルール・BAN条件\n\n資源サーバーへは/sigenで移動できます。'
+
+  const ranked = addRetrievedSourceLinks(answer, entries, 1)
+  assert.match(ranked, /article\/rule\//u)
+  assert.doesNotMatch(ranked, /article\/hub-intro\//u)
+
+  const cleaned = removeUnsupportedWikiReferenceLines(answer, entries, [
+    entries[0],
+  ])
+  const sourced = addRetrievedSourceLinks(cleaned, [entries[0]], 1)
+  assert.doesNotMatch(sourced, /Source:/u)
+  assert.match(
+    sourced,
+    /\[ルール・BAN条件\]\(https:\/\/asv-wiki\.acecore\.net\/article\/rule\/\)/u,
   )
 })
 

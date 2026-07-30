@@ -26,6 +26,14 @@
 /404.html
   X-Robots-Tag: noindex, follow
 
+/vector-corpus.json
+  Cache-Control: public, max-age=300, must-revalidate
+  X-Robots-Tag: noindex
+
+/.well-known/aceserver-portal-build.json
+  Cache-Control: no-store
+  X-Robots-Tag: noindex
+
 /_astro/*
   Cache-Control: public, max-age=31536000, immutable
 
