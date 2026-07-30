@@ -11,7 +11,7 @@
     "dev": "astro dev",
     "prebuild": "node scripts/write-cms-runtime-config.mjs",
     "build": "astro build",
-    "postbuild": "npm run validate:image-alts",
+    "postbuild": "npm run validate:image-alts && npm run validate:story-output",
     "preview": "astro preview",
     "format": "prettier . --write",
     "format:check": "prettier . --check",
@@ -20,7 +20,8 @@
     "test:dynmap": "node --test cloudflare/dynmap-r2-cache/worker.test.mjs",
     "typecheck:functions": "tsc --project tsconfig.functions.json",
     "validate:content": "node scripts/validate-content.mjs",
-    "validate:image-alts": "node scripts/validate-image-alts.mjs"
+    "validate:image-alts": "node scripts/validate-image-alts.mjs",
+    "validate:story-output": "node scripts/validate-story-output.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",

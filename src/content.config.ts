@@ -41,18 +41,27 @@ const announcements = defineCollection({
   schema: portalAnnouncementsSchema,
 })
 
+const storySchema = z
+  .object({
+    title: z.string().trim().min(1),
+    description: z.string().trim().min(1),
+    date: z.coerce.date(),
+    author: z.string().trim().min(1),
+    tags: z.array(z.string().trim().min(1)).default([]),
+    image: z.string().trim().min(1).optional(),
+    imageAlt: z.string().trim().min(1).optional(),
+  })
+  .refine(({ image, imageAlt }) => Boolean(image) === Boolean(imageAlt), {
+    message: 'imageとimageAltは両方を指定してください。',
+    path: ['imageAlt'],
+  })
+
 const stories = defineCollection({
   loader: glob({
     base: './src/content/stories',
     pattern: '**/*.{md,mdx}',
   }),
-  schema: z.object({
-    title: z.string(),
-    description: z.string(),
-    date: z.coerce.date(),
-    author: z.string(),
-    tags: z.array(z.string()).default([]),
-  }),
+  schema: storySchema,
 })
 
 export const collections = {

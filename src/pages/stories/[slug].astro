@@ -23,6 +23,10 @@ const storyUrl = new URL(
   Astro.site ?? 'https://asv.acecore.net',
 )
 const homeUrl = new URL('/', storyUrl)
+const storiesUrl = new URL('/stories/', storyUrl)
+const storyImageUrl = story.data.image
+  ? new URL(story.data.image, storyUrl)
+  : null
 const articleJsonLd = serializeJsonForHtmlScript({
   '@context': 'https://schema.org',
   '@type': 'Article',
@@ -42,17 +46,52 @@ const articleJsonLd = serializeJsonForHtmlScript({
   publisher: {
     '@id': `${homeUrl}#organization`,
   },
+  ...(storyImageUrl ? { image: storyImageUrl.toString() } : {}),
+})
+const breadcrumbJsonLd = serializeJsonForHtmlScript({
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'ホーム',
+      item: homeUrl.toString(),
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: '読みもの',
+      item: storiesUrl.toString(),
+    },
+    {
+      '@type': 'ListItem',
+      position: 3,
+      name: story.data.title,
+      item: storyUrl.toString(),
+    },
+  ],
 })
 ---
 
 <BaseLayout
   title={story.data.title}
   description={story.data.description}
+  image={story.data.image}
+  imageAlt={story.data.imageAlt}
   canonical={`/stories/${story.id}/`}
   ogType="article"
 >
   <script type="application/ld+json" set:html={articleJsonLd} />
+  <script type="application/ld+json" set:html={breadcrumbJsonLd} />
   <article class="story-shell">
+    <nav class="story-breadcrumb" aria-label="パンくず">
+      <ol>
+        <li><a href="/">ホーム</a></li>
+        <li><a href="/stories/">読みもの</a></li>
+        <li aria-current="page">{story.data.title}</li>
+      </ol>
+    </nav>
     <header class="story-header">
       <p class="story-kicker">ACESERVER STORY</p>
       <h1>{story.data.title}</h1>
@@ -68,6 +107,18 @@ const articleJsonLd = serializeJsonForHtmlScript({
         <span>文：{story.data.author}</span>
       </div>
     </header>
+    {
+      story.data.image && story.data.imageAlt && (
+        <figure class="story-hero">
+          <img
+            src={story.data.image}
+            alt={story.data.imageAlt}
+            loading="eager"
+            decoding="async"
+          />
+        </figure>
+      )
+    }
     <div class="story-body">
       <Content />
     </div>
@@ -83,6 +134,38 @@ const articleJsonLd = serializeJsonForHtmlScript({
     width: min(880px, calc(100% - 36px));
     margin-inline: auto;
     padding-block: clamp(56px, 8vw, 104px);
+  }
+
+  .story-breadcrumb {
+    margin-bottom: clamp(24px, 4vw, 40px);
+    color: #514331;
+    font-size: 0.88rem;
+    font-weight: 700;
+  }
+
+  .story-breadcrumb ol {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .story-breadcrumb li {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .story-breadcrumb li:not(:last-child)::after {
+    content: '/';
+    color: rgba(21, 19, 15, 0.48);
+  }
+
+  .story-breadcrumb a {
+    color: #0756a8;
+    text-underline-offset: 0.16em;
   }
 
   .story-header {
@@ -119,6 +202,22 @@ const articleJsonLd = serializeJsonForHtmlScript({
     margin-top: 24px;
     font-size: 0.9rem;
     font-weight: 800;
+  }
+
+  .story-hero {
+    overflow: hidden;
+    margin: clamp(30px, 5vw, 54px) 0 0;
+    border: 3px solid #1e1710;
+    border-radius: 12px;
+    background: #1e1710;
+    box-shadow: 0 8px 0 rgba(21, 19, 15, 0.22);
+  }
+
+  .story-hero img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
   }
 
   .story-body {
