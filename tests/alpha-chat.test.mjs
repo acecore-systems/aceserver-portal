@@ -252,7 +252,7 @@ test('filters and hydrates portal Vectorize results from the current deployment 
                 score: 0.91,
                 metadata: {
                   locale: 'ja',
-                  title: 'エースサーバーが乗っ取られた話',
+                  title: 'エースサーバー、乗っ取られる。',
                   section: '事件の記録',
                   excerpt: '乗っ取り事件を記録した読みものです。',
                   contentType: 'story',
@@ -352,7 +352,7 @@ test('filters and hydrates portal Vectorize results from the current deployment 
             text: 'エースサーバーが乗っ取られた時の経緯と復旧までを記録した公開ストーリーです。',
             metadata: {
               locale: 'ja',
-              title: 'エースサーバーが乗っ取られた話',
+              title: 'エースサーバー、乗っ取られる。',
               section: '事件の記録',
               excerpt: '乗っ取り事件を記録した読みものです。',
               contentType: 'story',
@@ -411,11 +411,24 @@ test('grounds Aceserver story discovery with the portal and WIKI in parallel', a
           text: 'エースサーバーが乗っ取られた時の経緯と、その後の復旧を紹介する公開ストーリーです。',
           metadata: {
             locale: 'ja',
-            title: 'エースサーバーが乗っ取られた話',
+            title: 'エースサーバー、乗っ取られる。',
             section: '事件の記録',
             excerpt: '乗っ取り事件を記録した読みものです。',
             contentType: 'story',
             url: '/stories/aceserver-hijacked/',
+          },
+        },
+        {
+          id: 'story-index',
+          namespace: 'ja',
+          text: '読みもの一覧では、エースサーバー、乗っ取られる。を含む公開ストーリーをまとめて紹介しています。',
+          metadata: {
+            locale: 'ja',
+            title: '読みもの',
+            section: '公開ストーリー',
+            excerpt: 'エースサーバーの読みもの一覧です。',
+            contentType: 'story-index',
+            url: '/stories/',
           },
         },
       ],
@@ -436,7 +449,7 @@ test('grounds Aceserver story discovery with the portal and WIKI in parallel', a
             }
             return {
               response:
-                '[エースサーバーが乗っ取られた話](https://asv.acecore.net/stories/aceserver-hijacked/)で経緯と復旧を読めるよ。',
+                '「エースサーバー、乗っ取られる。」で経緯と復旧を読めるよ。読みもの一覧にはほかの記録もあるんだ。',
             }
           },
         },
@@ -458,11 +471,23 @@ test('grounds Aceserver story discovery with the portal and WIKI in parallel', a
                   score: 0.94,
                   metadata: {
                     locale: 'ja',
-                    title: 'エースサーバーが乗っ取られた話',
+                    title: 'エースサーバー、乗っ取られる。',
                     section: '事件の記録',
                     excerpt: '乗っ取り事件を記録した読みものです。',
                     contentType: 'story',
                     url: '/stories/aceserver-hijacked/',
+                  },
+                },
+                {
+                  id: 'story-index',
+                  score: 0.9,
+                  metadata: {
+                    locale: 'ja',
+                    title: '読みもの',
+                    section: '公開ストーリー',
+                    excerpt: 'エースサーバーの読みもの一覧です。',
+                    contentType: 'story-index',
+                    url: '/stories/',
                   },
                 },
               ],
@@ -477,8 +502,9 @@ test('grounds Aceserver story discovery with the portal and WIKI in parallel', a
     assert.equal(body.ok, true)
     assert.match(
       body.answer,
-      /\[エースサーバーが乗っ取られた話\]\(\/stories\/aceserver-hijacked\/\)/u,
+      /\[エースサーバー、乗っ取られる。\]\(\/stories\/aceserver-hijacked\/\)/u,
     )
+    assert.doesNotMatch(body.answer, /\[読みもの\]\(\/stories\/\)/u)
     assert.equal(portalCorpusUrl, 'https://asv.acecore.net/vector-corpus.json')
     assert.deepEqual(
       aiInvocations.map(({ model }) => model),

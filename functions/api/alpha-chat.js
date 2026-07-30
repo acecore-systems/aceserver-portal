@@ -909,7 +909,9 @@ function scoreRetrievedSourceForAnswer(answer, entry) {
   }
 
   const title = normalizeSourceComparisonText(entry?.title || '')
-  if (title && answerText.includes(title)) score += 3
+  if (title && answerText.includes(title)) {
+    score += 3 + Math.min(12, [...title].length)
+  }
 
   return score
 }
