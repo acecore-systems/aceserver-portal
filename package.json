@@ -11,7 +11,7 @@
     "dev": "astro dev",
     "prebuild": "node scripts/write-cms-runtime-config.mjs && npm run validate:content",
     "build": "astro build",
-    "postbuild": "npm run validate:image-alts && npm run validate:story-output && npm run validate:i18n-output",
+    "postbuild": "node scripts/enrich-sitemap-i18n.mjs && npm run validate:image-alts && npm run validate:story-output && npm run validate:i18n-output",
     "preview": "astro preview",
     "format": "prettier . --write",
     "format:check": "prettier . --check",
