@@ -5,6 +5,12 @@ import {
 } from './alpha-acecore-search.js'
 import { createAlphaSearchEmbedding } from './alpha-search-embedding.js'
 import {
+  ACECORE_SCHOOLS_URL,
+  buildSchoolsGroundingContext,
+  searchSchools,
+  shouldSearchSchools,
+} from './alpha-schools-search.js'
+import {
   ACESERVER_WIKI_URL,
   buildWikiGroundingContext,
   searchAceserverWiki,
@@ -28,7 +34,7 @@ const WIKI_URL = ACESERVER_WIKI_URL
 const WORLD_MAP_URL = '/world-map/'
 const ACECORE_URL = 'https://acecore.net/'
 const EXPLICIT_ACESERVER_SOURCE_PATTERN =
-  /(?:\baceserver\b|エースサーバー|このサーバー|aceserver\s*wiki|エースサーバー\s*wiki|公式(?:discord|ディスコード))/iu
+  /(?:\baceserver\b|エースサーバー|このサーバー|aceserver\s*wiki|エースサーバー\s*wiki|公式(?:discord|ディスコード)|\bminecraft\b|マインクラフト|マイクラ|\btnt\b|サーバー(?:ip|アドレス)|ホワイトリスト|ワールド|プラグイン)/iu
 
 const GUIDE_LINK_RESOURCES = [
   {
@@ -68,6 +74,7 @@ const GUIDE_MESSAGES = {
   emptyAnswer:
     'その内容はまだうまく案内できなかったよ。参加方法、ワールド、ルールのどれかを短く聞いてみてね。',
   acecoreNotFound: `その内容は、いまのAcecore公式情報からは確認できなかったよ。最新情報は[Acecore公式サイト](${ACECORE_URL})を見てね。`,
+  schoolsNotFound: `その内容は、いまのAcecore Schools公式情報からは確認できなかったよ。最新情報は[Acecore Schools公式サイト](${ACECORE_SCHOOLS_URL}/)を見てね。`,
   worldFoundationNotFound: `その内容は、いまのWorld Foundation公式設計情報からは確認できなかったよ。最新情報は[World Foundation設計サイト](${WORLD_FOUNDATION_URL}/)を見てね。`,
 }
 
@@ -134,14 +141,22 @@ export async function onRequestPost({ request, env }) {
   const {
     wikiEntries,
     acecoreEntries,
+    schoolsEntries,
     worldFoundationEntries,
     acecoreFallback,
+    schoolsFallback,
     worldFoundationFallback,
   } = await retrieveAlphaEvidence(searchQuery, question || searchQuery, env)
   if (acecoreFallback) {
     return jsonResponse(request, {
       ok: true,
       answer: GUIDE_MESSAGES.acecoreNotFound,
+    })
+  }
+  if (schoolsFallback) {
+    return jsonResponse(request, {
+      ok: true,
+      answer: GUIDE_MESSAGES.schoolsNotFound,
     })
   }
   if (worldFoundationFallback) {
@@ -163,15 +178,19 @@ export async function onRequestPost({ request, env }) {
 
   const wikiGroundingContext = buildWikiGroundingContext(wikiEntries)
   const acecoreGroundingContext = buildAcecoreGroundingContext(acecoreEntries)
+  const schoolsGroundingContext = buildSchoolsGroundingContext(schoolsEntries)
   const worldFoundationGroundingContext = buildWorldFoundationGroundingContext(
     worldFoundationEntries,
   )
   const alphaSystemInstructions = buildAlphaSystemInstructions({
     acecoreEntries,
+    schoolsEntries,
     worldFoundationEntries,
   })
   const includeAceserverContext =
-    acecoreEntries.length === 0 && worldFoundationEntries.length === 0
+    acecoreEntries.length === 0 &&
+    schoolsEntries.length === 0 &&
+    worldFoundationEntries.length === 0
 
   let result
   try {
@@ -186,6 +205,7 @@ export async function onRequestPost({ request, env }) {
               includeAceserverContext ? buildAceserverContext() : '',
               wikiGroundingContext,
               acecoreGroundingContext,
+              schoolsGroundingContext,
               worldFoundationGroundingContext,
             ]
               .filter(Boolean)
@@ -232,6 +252,7 @@ export async function onRequestPost({ request, env }) {
   const retrievedSources = [
     ...wikiEntries,
     ...acecoreEntries,
+    ...schoolsEntries,
     ...worldFoundationEntries,
   ]
   const selectedSources = rankRetrievedSourcesForAnswer(
@@ -246,6 +267,7 @@ export async function onRequestPost({ request, env }) {
           selectedSources.filter((entry) => entry.source === 'wiki'),
           selectedSources.filter((entry) => entry.source === 'acecore'),
           selectedSources.filter((entry) => entry.source === 'worldFoundation'),
+          selectedSources.filter((entry) => entry.source === 'schools'),
         ),
         retrievedSources,
         selectedSources,
@@ -261,13 +283,20 @@ export async function onRequestPost({ request, env }) {
 }
 
 async function retrieveAlphaEvidence(query, intentQuery, env) {
-  const currentAcecoreIntent = shouldSearchAcecore(intentQuery)
+  const currentWorldFoundationIntent = shouldSearchWorldFoundation(intentQuery)
+  const currentSchoolsIntent =
+    !currentWorldFoundationIntent && shouldSearchSchools(intentQuery)
+  const currentAcecoreIntent =
+    !currentWorldFoundationIntent &&
+    !currentSchoolsIntent &&
+    shouldSearchAcecore(intentQuery)
   const currentAceserverIntent = EXPLICIT_ACESERVER_SOURCE_PATTERN.test(
     String(intentQuery || ''),
   )
   const worldFoundationIntent =
-    shouldSearchWorldFoundation(intentQuery) ||
+    currentWorldFoundationIntent ||
     (!currentAcecoreIntent &&
+      !currentSchoolsIntent &&
       !currentAceserverIntent &&
       shouldSearchWorldFoundation(query))
   if (worldFoundationIntent) {
@@ -291,6 +320,33 @@ async function retrieveAlphaEvidence(query, intentQuery, env) {
     return worldFoundationEntries.length > 0
       ? createAlphaEvidenceResult({ worldFoundationEntries })
       : createAlphaEvidenceResult({ worldFoundationFallback: true })
+  }
+
+  const schoolsIntent =
+    currentSchoolsIntent ||
+    (!currentAcecoreIntent &&
+      !currentAceserverIntent &&
+      shouldSearchSchools(query))
+  if (schoolsIntent) {
+    const searchEnabled = Boolean(
+      env?.SCHOOLS_SEARCH_INDEX && env.SCHOOLS_SEARCH_ENABLED !== 'false',
+    )
+    if (!searchEnabled) {
+      return createAlphaEvidenceResult({ schoolsFallback: true })
+    }
+
+    const embedding = await createAlphaSearchEmbedding(query, env)
+    if (!embedding) {
+      return createAlphaEvidenceResult({ schoolsFallback: true })
+    }
+
+    const schoolsEntries = markEvidenceSource(
+      await searchSchools(query, env, embedding),
+      'schools',
+    )
+    return schoolsEntries.length > 0
+      ? createAlphaEvidenceResult({ schoolsEntries })
+      : createAlphaEvidenceResult({ schoolsFallback: true })
   }
 
   const acecoreIntent = currentAcecoreIntent
@@ -331,8 +387,10 @@ function createAlphaEvidenceResult(overrides = {}) {
   return {
     wikiEntries: [],
     acecoreEntries: [],
+    schoolsEntries: [],
     worldFoundationEntries: [],
     acecoreFallback: false,
+    schoolsFallback: false,
     worldFoundationFallback: false,
     ...overrides,
   }
@@ -393,6 +451,7 @@ function buildWorldFoundationStatusGuardAnswer(question, entries) {
 
 function buildAlphaSystemInstructions({
   acecoreEntries,
+  schoolsEntries,
   worldFoundationEntries,
 }) {
   const commonInstructions = [
@@ -417,6 +476,16 @@ function buildAlphaSystemInstructions({
       'Never use World Foundation evidence to answer Aceserver rules, commands, participation requirements, or live operations.',
       'Never present a World Foundation proposal or research document as an accepted decision unless the retrieved evidence explicitly supports that status.',
       'For adoption or status questions, say that adoption could not be confirmed when the evidence does not explicitly support it. Do not begin with an affirmative answer in that case.',
+    ]
+  }
+
+  if (schoolsEntries.length > 0) {
+    return [
+      ...commonInstructions,
+      'Use Acecore Schools evidence only for its learning areas, learning methods, support, consultation, pricing, and frequently asked questions.',
+      'Never use Acecore Schools evidence to answer Aceserver rules, commands, participation requirements, or live operations.',
+      'Do not invent current prices, schedules, availability, eligibility, or promises that the retrieved evidence does not support.',
+      'For details that may change, direct the visitor to the retrieved Acecore Schools page instead of guessing.',
     ]
   }
 
@@ -599,11 +668,13 @@ export function sanitizeAlphaAnswerLinks(
   wikiEntries = [],
   acecoreEntries = [],
   worldFoundationEntries = [],
+  schoolsEntries = [],
 ) {
   const allowedLinks = buildAllowedAlphaAnswerLinks([
     ...wikiEntries,
     ...acecoreEntries,
     ...worldFoundationEntries,
+    ...schoolsEntries,
   ])
   const pattern = /\[([^\]\n]{1,120})\]\(\s*([^\s)]{1,500})\s*\)/g
 
@@ -765,6 +836,11 @@ function buildAllowedAlphaAnswerLinks(retrievedEntries) {
   registerAllowedAlphaAnswerLink(allowedLinks, WIKI_URL, WIKI_URL)
   registerAllowedAlphaAnswerLink(allowedLinks, WORLD_MAP_URL, WORLD_MAP_URL)
   registerAllowedAlphaAnswerLink(allowedLinks, ACECORE_URL, ACECORE_URL)
+  registerAllowedAlphaAnswerLink(
+    allowedLinks,
+    `${ACECORE_SCHOOLS_URL}/`,
+    `${ACECORE_SCHOOLS_URL}/`,
+  )
   registerAllowedAlphaAnswerLink(
     allowedLinks,
     `${WORLD_FOUNDATION_URL}/`,

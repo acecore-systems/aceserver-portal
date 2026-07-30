@@ -70,7 +70,7 @@ Cloudflare Pages のproduction / previewでは、build前に `public/admin/runti
 
 `functions/api/alpha-chat.js` の Cloudflare Pages Function から Cloudflare Workers AI binding を呼び出します。質問は多言語embeddingモデルのBGE-M3 (`@cf/baai/bge-m3`) でベクトル化し、Aceserver WIKIのVectorize indexから関連する公開記事を検索します。検索で得たchunk IDはWIKIの公開`vector-corpus.json`へ照合し、metadataの短い抜粋だけでなく最大1200文字の元chunkを回答根拠にします。回答生成にはGLM 5.2 (`@cf/zai-org/glm-5.2`) をthinking無効で使い、短い案内本文へtokenを集中させます。ブラウザには AI 実行用のキーを渡しません。
 
-Acecore、運営元、サービス、技術記事に関する質問だけは、同じembeddingでacecore-netのVectorize indexも検索します。World Foundationについての質問は、専用のWorld Foundation Vectorize indexから日本語の公開設計資料を検索し、取得した公開routeだけを `https://world-foundation.acecore.net` 配下のリンクとして許可します。Aceserverのルール、コマンド、参加条件、ワールド、運用情報ではこれらのindexを検索せず、Aceserver WIKIを情報の正として扱います。3つのindexの結果は別々のしきい値で判定し、scoreや根拠を混ぜません。
+Acecore、運営元、サービス、技術記事に関する質問だけは、同じembeddingでacecore-netのVectorize indexも検索します。Acecore Schoolsの学習分野、学び方、相談、料金、FAQに関する質問はSchools専用indexを検索し、取得した公開routeだけを `https://schools.acecore.net` 配下のリンクとして許可します。World Foundationについての質問は、専用のWorld Foundation Vectorize indexから日本語の公開設計資料を検索します。Aceserverのルール、コマンド、参加条件、ワールド、運用情報ではこれらのindexを検索せず、Aceserver WIKIを情報の正として扱います。4つのindexの結果は別々のしきい値で判定し、scoreや根拠を混ぜません。
 
 Vectorizeまたはembedding取得に失敗した場合は検索なしの案内へフォールバックします。WIKI corpusの取得に失敗した場合はVectorize metadataの抜粋へフォールバックし、アルファくん自体は利用を継続します。ルール、コマンド、参加条件など変更される情報は、検索で取得したWIKI内容に根拠がある範囲だけ具体的に回答し、出典記事をMarkdownリンクで示します。
 
@@ -81,16 +81,20 @@ Cloudflare Pages 側では `wrangler.jsonc` を設定の正とし、acecore-net 
 - Workers AI binding: `AI`
 - Vectorize binding: `WIKI_SEARCH_INDEX`
 - Acecore Vectorize binding: `ACECORE_SEARCH_INDEX`
+- Acecore Schools Vectorize binding: `SCHOOLS_SEARCH_INDEX`
 - World Foundation Vectorize binding: `WORLD_FOUNDATION_SEARCH_INDEX`
 - `CLOUDFLARE_AI_MODEL`: 使用モデル（未設定時は `@cf/zai-org/glm-5.2`）
 - `WIKI_SEARCH_ENABLED`: WIKI検索のkill switch（`"false"`で無効化）
 - `WIKI_SEARCH_MIN_SCORE`: 回答根拠に採用するVectorize scoreの下限（既定`0.40`）
 - `ACECORE_SEARCH_ENABLED`: Acecore検索のkill switch（`"false"`で無効化）
 - `ACECORE_SEARCH_MIN_SCORE`: Acecore検索結果を採用するscoreの下限（既定`0.50`）
+- `SCHOOLS_SEARCH_ENABLED`: Acecore Schools検索のkill switch（`"false"`で無効化）
+- `SCHOOLS_SEARCH_MIN_SCORE`: Acecore Schools検索結果を採用するscoreの下限（既定`0.50`）
 - `WORLD_FOUNDATION_SEARCH_ENABLED`: World Foundation検索のkill switch（`"false"`で無効化）
 - `WORLD_FOUNDATION_SEARCH_MIN_SCORE`: World Foundation検索結果を採用するscoreの下限（既定`0.40`）
 - WIKI Preview / Production index: `aceserver-wiki-search-preview` / `aceserver-wiki-search-production`
 - Acecore Preview / Production index: `acecore-net-search-preview` / `acecore-net-search-production`
+- Acecore Schools Preview / Production index: `acecore-schools-search-preview` / `acecore-schools-search-production`
 - World Foundation Preview / Production index: `world-foundation-search-preview` / `world-foundation-search-production`
 
 本番custom domainの `/api/alpha-chat` へのPOSTは、`acecore.net` zoneのCloudflare WAF rate limiting rule `Rate limit Aceserver Alpha chat` で保護します。IP・colo単位で10秒に5 requestまでとし、超過時は10秒blockします。このruleはrepository外のCloudflare設定なので、zoneを再作成した場合は再設定してください。`pages.dev` のpreview URLはこのzone-level ruleの対象外です。

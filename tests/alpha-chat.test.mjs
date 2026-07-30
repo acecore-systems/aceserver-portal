@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict'
+import { readFile } from 'node:fs/promises'
 import test from 'node:test'
 
 import {
@@ -22,6 +23,11 @@ import {
   shouldSearchAcecore,
 } from '../functions/api/alpha-acecore-search.js'
 import {
+  buildSchoolsGroundingContext,
+  searchSchools,
+  shouldSearchSchools,
+} from '../functions/api/alpha-schools-search.js'
+import {
   ACESERVER_WIKI_CORPUS_URL,
   buildWikiGroundingContext,
   searchAceserverWiki,
@@ -35,6 +41,25 @@ import {
 
 const ENDPOINT = 'https://asv.acecore.net/api/alpha-chat'
 const WIKI_EMBEDDING = Array.from({ length: 1024 }, (_, index) => index / 1024)
+
+test('allows Acecore Schools links in the chat UI', async () => {
+  const source = await readFile(
+    new URL('../src/components/AlphaGuide.astro', import.meta.url),
+    'utf8',
+  )
+  const allowedExternalLinks = source.match(
+    /allowedExternalLinks:\s*\[([\s\S]*?)\],\s*resources:/,
+  )?.[1]
+
+  assert.match(source, /const schoolsUrl = 'https:\/\/schools\.acecore\.net\/'/)
+  assert.match(source, /data-alpha-schools-url=\{schoolsUrl\}/)
+  assert.match(
+    source,
+    /widget\.dataset\.alphaSchoolsUrl \|\| 'https:\/\/schools\.acecore\.net\/'/,
+  )
+  assert.ok(allowedExternalLinks)
+  assert.match(allowedExternalLinks, /\bschoolsHref\b/)
+})
 
 function createRequest(payload, headers = {}) {
   return new Request(ENDPOINT, {
@@ -379,6 +404,24 @@ test('routes World Foundation questions to its dedicated search', () => {
     shouldSearchWorldFoundation(
       'World FoundationとエースサーバーのTNTルールを教えて',
     ),
+    false,
+  )
+})
+
+test('routes Acecore Schools learning questions to its dedicated search', () => {
+  assert.equal(shouldSearchSchools('Acecore Schoolsについて教えて'), true)
+  assert.equal(shouldSearchSchools('Schoolsの料金を教えて'), true)
+  assert.equal(shouldSearchSchools('高卒認定について相談したい'), true)
+  assert.equal(shouldSearchSchools('パソコン初心者でも相談できますか'), true)
+  assert.equal(shouldSearchSchools('プログラミングは学べますか'), true)
+  assert.equal(shouldSearchSchools('料金は？'), false)
+  assert.equal(shouldSearchSchools('TNTのルールを教えて'), false)
+  assert.equal(shouldSearchSchools('ワールドについて学びたい'), false)
+  assert.equal(shouldSearchSchools('Minecraftのコマンドを学びたい'), false)
+  assert.equal(shouldSearchSchools('このプラグインの使い方を学びたい'), false)
+  assert.equal(shouldSearchSchools('英語を学びたい'), false)
+  assert.equal(
+    shouldSearchSchools('エースサーバーでパソコン初心者でも遊べますか'),
     false,
   )
 })
@@ -835,6 +878,408 @@ test('filters World Foundation metadata and keeps document status context', asyn
   assert.match(
     buildWorldFoundationGroundingContext(entries),
     /Document type: proposal/,
+  )
+})
+
+test('uses Schools evidence without mixing other search sources', async () => {
+  const aiInvocations = []
+  let wikiInvoked = false
+  let acecoreInvoked = false
+  let worldFoundationInvoked = false
+  let schoolsVectorizeInvocation
+
+  const response = await onRequestPost({
+    request: createRequest({
+      question: 'パソコン初心者でも相談できますか',
+    }),
+    env: {
+      AI: {
+        async run(model, input) {
+          aiInvocations.push({ model, input })
+          if (model === WIKI_EMBEDDING_MODEL) {
+            return { data: [WIKI_EMBEDDING] }
+          }
+
+          return {
+            response:
+              '大丈夫だよ。使っている機器や経験を確認して、必要な操作から進められるよ。[よくあるご質問](https://schools.acecore.net/faq/)で案内しているよ。',
+          }
+        },
+      },
+      WIKI_SEARCH_INDEX: {
+        async query() {
+          wikiInvoked = true
+          return { matches: [] }
+        },
+      },
+      ACECORE_SEARCH_INDEX: {
+        async query() {
+          acecoreInvoked = true
+          return { matches: [] }
+        },
+      },
+      WORLD_FOUNDATION_SEARCH_INDEX: {
+        async query() {
+          worldFoundationInvoked = true
+          return { matches: [] }
+        },
+      },
+      SCHOOLS_SEARCH_ENABLED: 'true',
+      SCHOOLS_SEARCH_MIN_SCORE: '0.50',
+      SCHOOLS_SEARCH_INDEX: {
+        async query(vector, options) {
+          schoolsVectorizeInvocation = { vector, options }
+          return {
+            matches: [
+              {
+                id: 'schools-v1-faq',
+                score: 0.91,
+                metadata: {
+                  locale: 'ja',
+                  title: 'よくあるご質問',
+                  section: 'パソコン初心者でも大丈夫ですか',
+                  excerpt:
+                    '大丈夫です。使っている機器や経験を確認し、操作の基礎から必要な順番で進めます。',
+                  contentType: 'page',
+                  url: '/faq/',
+                },
+              },
+            ],
+          }
+        },
+      },
+    },
+  })
+  const body = await response.json()
+
+  assert.equal(response.status, 200)
+  assert.equal(body.ok, true)
+  assert.equal(wikiInvoked, false)
+  assert.equal(acecoreInvoked, false)
+  assert.equal(worldFoundationInvoked, false)
+  assert.deepEqual(
+    aiInvocations.map(({ model }) => model),
+    [WIKI_EMBEDDING_MODEL, '@cf/zai-org/glm-5.2'],
+  )
+  assert.deepEqual(schoolsVectorizeInvocation.vector, WIKI_EMBEDDING)
+  assert.deepEqual(schoolsVectorizeInvocation.options, {
+    namespace: 'ja',
+    topK: 15,
+    returnMetadata: 'all',
+    returnValues: false,
+  })
+  assert.match(
+    body.answer,
+    /\[よくあるご質問\]\(https:\/\/schools\.acecore\.net\/faq\/\)/,
+  )
+
+  const systemPrompt = aiInvocations[1].input.messages[0].content
+  assert.match(systemPrompt, /Acecore Schools official site retrieved evidence/)
+  assert.match(systemPrompt, /操作の基礎から必要な順番/)
+  assert.match(systemPrompt, /Do not invent current prices, schedules/)
+  assert.doesNotMatch(
+    systemPrompt,
+    /<wiki-evidence|<acecore-evidence|<world-foundation-evidence/,
+  )
+  assert.doesNotMatch(systemPrompt, /Aceserver public site context/)
+})
+
+test('keeps Schools grounding for a contextual follow-up', async () => {
+  let wikiInvoked = false
+  let acecoreInvoked = false
+  let worldFoundationInvoked = false
+  let schoolsInvoked = false
+
+  const response = await onRequestPost({
+    request: createRequest({
+      question: '料金は？',
+      messages: [
+        { role: 'user', content: 'Acecore Schoolsについて教えて' },
+        {
+          role: 'assistant',
+          content: '学び方や相談について案内するね。',
+        },
+        { role: 'user', content: '料金は？' },
+      ],
+    }),
+    env: {
+      AI: {
+        async run(model) {
+          if (model === WIKI_EMBEDDING_MODEL) {
+            return { data: [WIKI_EMBEDDING] }
+          }
+          return {
+            response:
+              '料金は利用方法によって異なるため、[料金](https://schools.acecore.net/pricing/)で現在の案内を確認してね。',
+          }
+        },
+      },
+      WIKI_SEARCH_INDEX: {
+        async query() {
+          wikiInvoked = true
+          return { matches: [] }
+        },
+      },
+      ACECORE_SEARCH_INDEX: {
+        async query() {
+          acecoreInvoked = true
+          return { matches: [] }
+        },
+      },
+      WORLD_FOUNDATION_SEARCH_INDEX: {
+        async query() {
+          worldFoundationInvoked = true
+          return { matches: [] }
+        },
+      },
+      SCHOOLS_SEARCH_INDEX: {
+        async query() {
+          schoolsInvoked = true
+          return {
+            matches: [
+              {
+                id: 'schools-v1-pricing',
+                score: 0.9,
+                metadata: {
+                  locale: 'ja',
+                  title: '料金',
+                  section: '料金',
+                  excerpt: '料金と利用方法は、現在の希望を確認して案内します。',
+                  contentType: 'page',
+                  url: '/pricing/',
+                },
+              },
+            ],
+          }
+        },
+      },
+    },
+  })
+  const body = await response.json()
+
+  assert.equal(response.status, 200)
+  assert.equal(body.ok, true)
+  assert.equal(schoolsInvoked, true)
+  assert.equal(wikiInvoked, false)
+  assert.equal(acecoreInvoked, false)
+  assert.equal(worldFoundationInvoked, false)
+  assert.match(
+    body.answer,
+    /\[料金\]\(https:\/\/schools\.acecore\.net\/pricing\/\)/,
+  )
+})
+
+test('lets current Aceserver questions leave Schools context', async () => {
+  for (const question of [
+    'エースサーバーの参加方法を教えて',
+    'Minecraftのコマンドを学びたい',
+  ]) {
+    let wikiInvoked = false
+    let schoolsInvoked = false
+
+    const response = await onRequestPost({
+      request: createRequest({
+        question,
+        messages: [
+          { role: 'user', content: 'Acecore Schoolsについて教えて' },
+          { role: 'assistant', content: '学び方を案内するね。' },
+          { role: 'user', content: question },
+        ],
+      }),
+      env: {
+        AI: {
+          async run(model) {
+            if (model === WIKI_EMBEDDING_MODEL) {
+              return { data: [WIKI_EMBEDDING] }
+            }
+            return {
+              response: '参加方法は公式DiscordとAceserver WIKIで確認してね。',
+            }
+          },
+        },
+        WIKI_SEARCH_INDEX: {
+          async query() {
+            wikiInvoked = true
+            return { matches: [] }
+          },
+        },
+        SCHOOLS_SEARCH_INDEX: {
+          async query() {
+            schoolsInvoked = true
+            return { matches: [] }
+          },
+        },
+      },
+    })
+    const body = await response.json()
+
+    assert.equal(response.status, 200)
+    assert.equal(body.ok, true)
+    assert.equal(wikiInvoked, true)
+    assert.equal(schoolsInvoked, false)
+    assert.match(body.answer, /\[公式Discord\]/)
+    assert.match(body.answer, /\[Aceserver WIKI\]/)
+  }
+})
+
+test('uses a controlled Schools fallback when its search fails', async () => {
+  const originalConsoleError = console.error
+  console.error = () => {}
+  const aiInvocations = []
+  let wikiInvoked = false
+
+  try {
+    const response = await onRequestPost({
+      request: createRequest({
+        question: 'Acecore Schoolsの学び方を教えて',
+      }),
+      env: {
+        AI: {
+          async run(model, input) {
+            aiInvocations.push({ model, input })
+            if (model === WIKI_EMBEDDING_MODEL) {
+              return { data: [WIKI_EMBEDDING] }
+            }
+            return { response: 'この回答は使われないよ。' }
+          },
+        },
+        WIKI_SEARCH_INDEX: {
+          async query() {
+            wikiInvoked = true
+            return { matches: [] }
+          },
+        },
+        SCHOOLS_SEARCH_INDEX: {
+          async query() {
+            throw new Error('vectorize unavailable')
+          },
+        },
+      },
+    })
+    const body = await response.json()
+
+    assert.equal(response.status, 200)
+    assert.equal(body.ok, true)
+    assert.equal(wikiInvoked, false)
+    assert.deepEqual(
+      aiInvocations.map(({ model }) => model),
+      [WIKI_EMBEDDING_MODEL],
+    )
+    assert.equal(
+      body.answer,
+      'その内容は、いまのAcecore Schools公式情報からは確認できなかったよ。最新情報は[Acecore Schools公式サイト](https://schools.acecore.net/)を見てね。',
+    )
+    assert.doesNotMatch(body.answer, /WIKI|Discord/)
+  } finally {
+    console.error = originalConsoleError
+  }
+})
+
+test('filters Schools metadata and allows only retrieved page links', async () => {
+  const entries = await searchSchools(
+    'パソコン初心者でも相談できますか',
+    {
+      AI: {},
+      SCHOOLS_SEARCH_MIN_SCORE: '0.50',
+      SCHOOLS_SEARCH_INDEX: {
+        async query() {
+          return {
+            matches: [
+              {
+                id: 'valid-faq',
+                score: 0.91,
+                metadata: {
+                  locale: 'ja',
+                  title: 'よくあるご質問',
+                  section: 'パソコン初心者でも大丈夫ですか',
+                  excerpt:
+                    '使っている機器や経験を確認し、操作の基礎から進めます。',
+                  contentType: 'page',
+                  url: '/faq/',
+                },
+              },
+              {
+                id: 'duplicate-faq',
+                score: 0.9,
+                metadata: {
+                  locale: 'ja',
+                  title: 'FAQの複製',
+                  section: 'FAQ',
+                  excerpt: '同じURLは採用しません。',
+                  contentType: 'page',
+                  url: '/faq/',
+                },
+              },
+              {
+                id: 'private-api',
+                score: 0.89,
+                metadata: {
+                  locale: 'ja',
+                  title: '非公開API',
+                  section: 'API',
+                  excerpt: '公開リンクには使用しません。',
+                  contentType: 'page',
+                  url: '/api/search',
+                },
+              },
+              {
+                id: 'external',
+                score: 0.88,
+                metadata: {
+                  locale: 'ja',
+                  title: '外部サイト',
+                  section: '外部',
+                  excerpt: '外部URLは採用しません。',
+                  contentType: 'page',
+                  url: 'https://example.com/',
+                },
+              },
+              {
+                id: 'low-score',
+                score: 0.49,
+                metadata: {
+                  locale: 'ja',
+                  title: '低スコア',
+                  section: '低スコア',
+                  excerpt: 'スコア不足です。',
+                  contentType: 'page',
+                  url: '/learning/',
+                },
+              },
+            ],
+          }
+        },
+      },
+    },
+    WIKI_EMBEDDING,
+  )
+
+  assert.deepEqual(entries, [
+    {
+      id: 'valid-faq',
+      score: 0.91,
+      url: 'https://schools.acecore.net/faq/',
+      title: 'よくあるご質問',
+      section: 'パソコン初心者でも大丈夫ですか',
+      excerpt: '使っている機器や経験を確認し、操作の基礎から進めます。',
+      contentType: 'page',
+    },
+  ])
+  assert.match(
+    buildSchoolsGroundingContext(entries),
+    /\[よくあるご質問\]\(https:\/\/schools\.acecore\.net\/faq\/\)/,
+  )
+
+  const sanitized = sanitizeAlphaAnswerLinks(
+    '[FAQ](https://schools.acecore.net/faq/) と [未取得ページ](https://schools.acecore.net/learning/)',
+    [],
+    [],
+    [],
+    entries,
+  )
+  assert.equal(
+    sanitized,
+    '[FAQ](https://schools.acecore.net/faq/) と 未取得ページ',
   )
 })
 
