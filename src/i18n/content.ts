@@ -21,7 +21,25 @@ function clone<T>(value: T): T {
 }
 
 function localizeInternalHref(locale: Locale, href: string): string {
-  return href.startsWith('/') ? localizePath(locale, href) : href
+  if (href.startsWith('/')) return localizePath(locale, href)
+
+  let url: URL
+  try {
+    url = new URL(href)
+  } catch {
+    return href
+  }
+  if (
+    url.origin !== 'https://acecore.net' &&
+    url.origin !== 'https://systems.acecore.net'
+  ) {
+    return href
+  }
+
+  return new URL(
+    localizePath(locale, `${url.pathname}${url.search}${url.hash}`),
+    url.origin,
+  ).href
 }
 
 export function getLocalizedSettings(locale: Locale): SiteSettings {

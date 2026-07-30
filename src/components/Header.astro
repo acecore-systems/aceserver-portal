@@ -1,6 +1,11 @@
 ---
 import { getLocalizedNavigation, getLocalizedSettings } from '../i18n/content'
-import { getAlternatePaths, LOCALE_LABELS, type Locale } from '../i18n/config'
+import {
+  getAlternatePaths,
+  LOCALE_LABELS,
+  localizePath,
+  type Locale,
+} from '../i18n/config'
 import { getUi } from '../i18n/translations'
 import { externalLinkAttrs } from '../utils/links'
 import Icon from './Icon.astro'
@@ -23,7 +28,7 @@ const isCurrentNavigationItem = (href: string) =>
 <header class="site-header" data-header>
   <a
     class="brand"
-    href={alternatePaths.find((item) => item.locale === locale)?.href ?? '/'}
+    href={localizePath(locale, '/')}
     aria-label={ui.homeAriaLabel}
   >
     <img

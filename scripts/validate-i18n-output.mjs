@@ -236,13 +236,50 @@ function inspectLanguageMetadata(html, locale, pathname, scope) {
 }
 
 function inspectInternalLinks(html, locale, scope, knownRoutes) {
-  for (const { tag, href } of links(html)) {
+  const pageLinks = links(html)
+  const expectedHomeHref = localePath(locale, '/')
+  for (const className of ['brand', 'footer-brand']) {
+    const homeLink = pageLinks.find(({ tag }) =>
+      (attributeValue(tag, 'class') ?? '').split(/\s+/u).includes(className),
+    )
+    if (className === 'brand' && !homeLink) {
+      fail(scope, 'brand home link is missing')
+    } else if (homeLink && homeLink.href !== expectedHomeHref) {
+      fail(scope, `${className} must link to locale home (${expectedHomeHref})`)
+    }
+  }
+
+  for (const { tag, href } of pageLinks) {
     if (!tag.startsWith('<a') || !href || href.startsWith('#')) continue
     let url
     try {
       url = new URL(href, site)
     } catch {
       fail(scope, `invalid link (${href})`)
+      continue
+    }
+    if (
+      url.origin === 'https://acecore.net' ||
+      url.origin === 'https://systems.acecore.net'
+    ) {
+      if (
+        locale !== 'ja' &&
+        url.pathname !== `/${locale}/` &&
+        !url.pathname.startsWith(`/${locale}/`)
+      ) {
+        fail(scope, `cross-locale external link (${href})`)
+      }
+      if (
+        locale === 'ja' &&
+        LOCALES.some(
+          (candidate) =>
+            candidate !== 'ja' &&
+            (url.pathname === `/${candidate}/` ||
+              url.pathname.startsWith(`/${candidate}/`)),
+        )
+      ) {
+        fail(scope, `Japanese page links to localized external route (${href})`)
+      }
       continue
     }
     if (url.origin !== site.origin) continue
