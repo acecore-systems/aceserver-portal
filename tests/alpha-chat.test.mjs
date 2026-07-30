@@ -416,6 +416,10 @@ test('routes Acecore Schools learning questions to its dedicated search', () => 
   assert.equal(shouldSearchSchools('プログラミングは学べますか'), true)
   assert.equal(shouldSearchSchools('料金は？'), false)
   assert.equal(shouldSearchSchools('TNTのルールを教えて'), false)
+  assert.equal(shouldSearchSchools('ワールドについて学びたい'), false)
+  assert.equal(shouldSearchSchools('Minecraftのコマンドを学びたい'), false)
+  assert.equal(shouldSearchSchools('このプラグインの使い方を学びたい'), false)
+  assert.equal(shouldSearchSchools('英語を学びたい'), false)
   assert.equal(
     shouldSearchSchools('エースサーバーでパソコン初心者でも遊べますか'),
     false,

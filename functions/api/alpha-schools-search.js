@@ -17,9 +17,11 @@ const MAX_METADATA_URL_LENGTH = 500
 const SCHOOLS_BRAND_PATTERN =
   /(?:\bacecore[\s_-]*schools?\b|\bschools\b|エースコア(?:・|\s*)?(?:スクールズ?|学校)|スクールズ)/iu
 const SCHOOLS_TOPIC_PATTERN =
-  /(?:高卒認定|高認(?:試験|資格|対策)?|学習(?:相談|支援|内容|方法|計画)|学べること|学び方|受講|講座|授業|無料(?:相談|体験)|パソコン(?:初心者|学習|活用|相談|教室)|\bpc\b.{0,12}(?:初心者|学習|活用|相談)|スマホ.{0,12}(?:活用|学習|相談)|プログラミング.{0,12}(?:学|講座|相談)|ロボット.{0,12}(?:学習|メイキング)|勉強(?:相談|方法)|学びたい)/iu
+  /(?:高卒認定|高認(?:試験|資格|対策)?|学習(?:相談|支援|内容|方法|計画)|パソコン(?:初心者|学習|活用|相談|教室)|\bpc\b.{0,12}(?:初心者|学習|活用|相談)|スマホ.{0,12}(?:活用|学習|相談)|プログラミング.{0,12}(?:学|講座|相談)|ロボット.{0,12}(?:学習|メイキング)|勉強(?:相談|方法))/iu
 const ACESERVER_CONTEXT_PATTERN =
   /(?:\baceserver\b|エースサーバー|このサーバー)/iu
+const ACESERVER_DETAIL_PATTERN =
+  /(?:\bminecraft\b|マインクラフト|マイクラ|サーバー|ルール|ban|禁止|コマンド|参加方法|入り方|接続方法|サーバーip|アドレス|ホワイトリスト|ワールド|マップ|プラグイン|荒らし|処罰|申請)/iu
 
 export function shouldSearchSchools(query) {
   const normalizedQuery = String(query || '')
@@ -29,7 +31,10 @@ export function shouldSearchSchools(query) {
   if (!normalizedQuery) return false
 
   const hasBrandIntent = SCHOOLS_BRAND_PATTERN.test(normalizedQuery)
-  if (ACESERVER_CONTEXT_PATTERN.test(normalizedQuery) && !hasBrandIntent) {
+  const hasAceserverIntent =
+    ACESERVER_CONTEXT_PATTERN.test(normalizedQuery) ||
+    ACESERVER_DETAIL_PATTERN.test(normalizedQuery)
+  if (hasAceserverIntent && !hasBrandIntent) {
     return false
   }
 
