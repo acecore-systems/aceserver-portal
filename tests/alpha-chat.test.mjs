@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict'
+import { readFile } from 'node:fs/promises'
 import test from 'node:test'
 
 import {
@@ -40,6 +41,25 @@ import {
 
 const ENDPOINT = 'https://asv.acecore.net/api/alpha-chat'
 const WIKI_EMBEDDING = Array.from({ length: 1024 }, (_, index) => index / 1024)
+
+test('allows Acecore Schools links in the chat UI', async () => {
+  const source = await readFile(
+    new URL('../src/components/AlphaGuide.astro', import.meta.url),
+    'utf8',
+  )
+  const allowedExternalLinks = source.match(
+    /allowedExternalLinks:\s*\[([\s\S]*?)\],\s*resources:/,
+  )?.[1]
+
+  assert.match(source, /const schoolsUrl = 'https:\/\/schools\.acecore\.net\/'/)
+  assert.match(source, /data-alpha-schools-url=\{schoolsUrl\}/)
+  assert.match(
+    source,
+    /widget\.dataset\.alphaSchoolsUrl \|\| 'https:\/\/schools\.acecore\.net\/'/,
+  )
+  assert.ok(allowedExternalLinks)
+  assert.match(allowedExternalLinks, /\bschoolsHref\b/)
+})
 
 function createRequest(payload, headers = {}) {
   return new Request(ENDPOINT, {

@@ -17,6 +17,7 @@ const worldMapButton: LinkItem = {
 }
 
 const worldFoundationUrl = 'https://world-foundation.acecore.net/'
+const schoolsUrl = 'https://schools.acecore.net/'
 
 const alphaPrompts = [
   {
@@ -45,6 +46,7 @@ const alphaError = `いまはAI応答につながらなかったよ。[公式Dis
   data-alpha-wiki-url={wikiButton.href}
   data-alpha-world-map-url={worldMapButton.href}
   data-alpha-world-foundation-url={worldFoundationUrl}
+  data-alpha-schools-url={schoolsUrl}
   data-alpha-greeting="やあ、アルファくんだよ。エースサーバーの案内をするね。"
   data-alpha-loading="アルファくんが考え中..."
   data-alpha-error={alphaError}
@@ -221,6 +223,8 @@ const alphaError = `いまはAI応答につながらなかったよ。[公式Dis
     const worldFoundationHref =
       widget.dataset.alphaWorldFoundationUrl ||
       'https://world-foundation.acecore.net/'
+    const schoolsHref =
+      widget.dataset.alphaSchoolsUrl || 'https://schools.acecore.net/'
 
     return {
       allowedExternalLinks: [
@@ -228,6 +232,7 @@ const alphaError = `いまはAI応答につながらなかったよ。[公式Dis
         wikiHref,
         'https://acecore.net/',
         worldFoundationHref,
+        schoolsHref,
       ],
       resources: [
         {
