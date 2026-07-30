@@ -825,26 +825,27 @@ export function addWikiSourceLinks(answer, wikiEntries = [], limit = 1) {
 
 export function removeUnsupportedReferenceLines(
   answer,
-  retrievedEntries = [],
-  selectedSources = [],
+  _retrievedEntries = [],
+  _selectedSources = [],
 ) {
-  const selectedUrls = new Set(
-    selectedSources.map((entry) => String(entry?.url || '')),
+  const referenceLabels = [
+    ...new Set([...Object.values(SOURCE_LABELS), '参考', 'Reference']),
+  ]
+    .map(escapeRegExp)
+    .join('|')
+  const bareReferencePattern = new RegExp(
+    `^(?:${referenceLabels})[：:]\\s*`,
+    'iu',
   )
-  const excludedTitles = retrievedEntries
-    .filter((entry) => entry?.title && !selectedUrls.has(String(entry?.url)))
-    .map((entry) => String(entry.title).trim())
-
-  if (excludedTitles.length === 0) return String(answer || '').trim()
+  const markdownLinkPattern = /\[[^\]\n]+\]\(\s*[^)]+\)/
 
   return String(answer || '')
     .split('\n')
     .filter((line) => {
       const normalizedLine = line.replace(/[*_`]/gu, '').trim()
-      return !excludedTitles.some((title) =>
-        new RegExp(`^(?:参照|参考)[：:]\\s*${escapeRegExp(title)}$`, 'u').test(
-          normalizedLine,
-        ),
+      return (
+        !bareReferencePattern.test(normalizedLine) ||
+        markdownLinkPattern.test(line)
       )
     })
     .join('\n')
@@ -905,7 +906,7 @@ function scoreRetrievedSourceForAnswer(answer, entry) {
 
   const title = normalizeSourceComparisonText(entry?.title || '')
   if (title && answerText.includes(title)) {
-    score += 3 + Math.min(12, [...title].length)
+    score += 50 + Math.min(20, [...title].length)
   }
 
   return score

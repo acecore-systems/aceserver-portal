@@ -2514,6 +2514,37 @@ test('allows only retrieved WIKI article links and appends specific sources', ()
   )
 })
 
+test('prefers an explicitly named source and replaces bare Source lines', () => {
+  const entries = [
+    {
+      title: 'ルール・BAN条件',
+      url: 'https://asv-wiki.acecore.net/article/rule/',
+      content: 'メインサーバーではTNTなどの爆破物を禁止しています。',
+    },
+    {
+      title: 'hub紹介',
+      url: 'https://asv-wiki.acecore.net/article/hub-intro/',
+      content: '資源サーバーへは/sigenコマンドで移動できます。',
+    },
+  ]
+  const answer =
+    'メインサーバーではTNTは禁止です。\n\nSource: ルール・BAN条件\n\n資源サーバーへは/sigenで移動できます。'
+
+  const ranked = addRetrievedSourceLinks(answer, entries, 1)
+  assert.match(ranked, /article\/rule\//u)
+  assert.doesNotMatch(ranked, /article\/hub-intro\//u)
+
+  const cleaned = removeUnsupportedWikiReferenceLines(answer, entries, [
+    entries[0],
+  ])
+  const sourced = addRetrievedSourceLinks(cleaned, [entries[0]], 1)
+  assert.doesNotMatch(sourced, /Source:/u)
+  assert.match(
+    sourced,
+    /\[ルール・BAN条件\]\(https:\/\/asv-wiki\.acecore\.net\/article\/rule\/\)/u,
+  )
+})
+
 test('origin comparison includes the scheme and honors Fetch Metadata', () => {
   assert.equal(
     isAllowedRequestOrigin(
