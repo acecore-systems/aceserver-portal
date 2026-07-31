@@ -2509,11 +2509,17 @@ test('filters Systems metadata and allows only retrieved page links', async () =
   )
 })
 
-test('binds the OpenAI 1536 index generation only in production and starts disabled', async () => {
+test('binds and enables the OpenAI 1536 indexes only in production', async () => {
   const config = await readFile(
     new URL('../wrangler.jsonc', import.meta.url),
     'utf8',
   )
+  const rootConfig = config.slice(0, config.indexOf('"env":'))
+  const previewConfig = config.slice(
+    config.indexOf('"preview":'),
+    config.indexOf('"production":'),
+  )
+  const productionConfig = config.slice(config.indexOf('"production":'))
 
   const indexes = [
     ['WIKI_SEARCH_INDEX', 'aceserver-wiki-search-openai-1536'],
@@ -2566,16 +2572,15 @@ test('binds the OpenAI 1536 index generation only in production and starts disab
     'SYSTEMS_SEARCH_ENABLED',
     'WORLD_FOUNDATION_SEARCH_ENABLED',
   ]) {
-    assert.equal(
-      config.match(new RegExp(`"${searchEnabledVariable}": "false"`, 'gu'))
-        ?.length,
-      3,
+    const disabledPattern = new RegExp(
+      `"${searchEnabledVariable}": "false"`,
+      'u',
     )
-    assert.equal(
-      config.match(new RegExp(`"${searchEnabledVariable}": "true"`, 'gu'))
-        ?.length ?? 0,
-      0,
-    )
+    const enabledPattern = new RegExp(`"${searchEnabledVariable}": "true"`, 'u')
+    assert.match(rootConfig, disabledPattern)
+    assert.match(previewConfig, disabledPattern)
+    assert.doesNotMatch(productionConfig, disabledPattern)
+    assert.match(productionConfig, enabledPattern)
   }
   assert.equal(config.match(/"SYSTEMS_SEARCH_MIN_SCORE": "0\.50"/gu)?.length, 3)
 })
