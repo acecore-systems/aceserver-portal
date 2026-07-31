@@ -292,7 +292,7 @@ test('uses the dialogue model and only stable navigation context', async () => {
   )
   assert.equal(invocation.model, OPENAI_RESPONSE_MODEL)
   assert.equal(invocation.input.max_output_tokens, 320)
-  assert.deepEqual(invocation.input.reasoning, { effort: 'low' })
+  assert.deepEqual(invocation.input.reasoning, { effort: 'medium' })
   assert.equal(invocation.input.store, false)
 
   const systemPrompt = invocation.input.instructions
@@ -2512,7 +2512,7 @@ test('switches all six Vectorize bindings to the OpenAI 1536 index generation', 
     config.match(/"OPENAI_RESPONSE_MODEL": "gpt-5\.6-luna"/gu)?.length,
     3,
   )
-  assert.equal(config.match(/"OPENAI_REASONING_EFFORT": "low"/gu)?.length, 3)
+  assert.equal(config.match(/"OPENAI_REASONING_EFFORT": "medium"/gu)?.length, 3)
   assert.equal(
     config.match(/"OPENAI_EMBEDDING_MODEL": "text-embedding-3-large"/gu)
       ?.length,
