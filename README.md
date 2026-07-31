@@ -90,7 +90,7 @@ Production には次の1536次元indexをbindingします。
 
 `OPENAI_RESPONSE_MODEL`、`OPENAI_REASONING_EFFORT`、`OPENAI_EMBEDDING_MODEL`、`OPENAI_EMBEDDING_DIMENSIONS`はそれぞれ `gpt-5.6-luna`、`medium`、`text-embedding-3-large`、`1536` とします。検索元ごとの `*_SEARCH_ENABLED` がkill switch、`*_SEARCH_MIN_SCORE` が採用scoreの下限です。
 
-新indexは空の状態で本番検索へ使い始めません。移行変更は6個のProduction bindingを設定しつつ、すべての `*_SEARCH_ENABLED=false` のままデプロイします。その後、各indexの管理repositoryでProduction同期を収束させ、vector件数、corpus version、代表的な日本語query、再実行時のupsert/delete 0件を確認します。確認済みの検索元だけを別変更で `"true"` に戻します。既存1024次元indexはrollback確認が終わるまで削除しません。
+新indexは空の状態で本番検索へ使い始めません。移行変更は6個のProduction bindingを設定しつつ、すべての `*_SEARCH_ENABLED=false` のままデプロイします。その後、各indexの管理repositoryでProduction同期を収束させ、vector件数、corpus version、代表的な日本語query、再実行時のupsert/delete 0件を確認します。全6indexの確認後、別変更で6つのkill switchを一括して `"true"` に戻します。一部だけ旧indexへ向けた状態や、空indexを有効化した状態ではマージ・デプロイしません。既存1024次元indexはrollback確認が終わるまで削除しません。
 
 `npm run build` は `dist/vector-corpus.json` まで生成します。`npm run sync:portal-vectorize:dry-run` でsource数、vector数、corpus versionを確認できます。実同期先は `aceserver-portal-search-openai-1536-production` だけに制限し、`--confirm-production aceserver-portal-search-openai-1536-production` がない実行、管理外ID、20%を超える削除、10 source未満のcorpusでは停止します。
 

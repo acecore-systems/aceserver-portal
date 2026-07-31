@@ -2571,6 +2571,11 @@ test('binds the OpenAI 1536 index generation only in production and starts disab
         ?.length,
       3,
     )
+    assert.equal(
+      config.match(new RegExp(`"${searchEnabledVariable}": "true"`, 'gu'))
+        ?.length ?? 0,
+      0,
+    )
   }
   assert.equal(config.match(/"SYSTEMS_SEARCH_MIN_SCORE": "0\.50"/gu)?.length, 3)
 })
