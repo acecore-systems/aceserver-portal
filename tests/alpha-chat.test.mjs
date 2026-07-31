@@ -25,6 +25,7 @@ import {
 import {
   getGuideLinkResources,
   TARGET_LANGUAGES,
+  WIKI_URL,
 } from '../functions/api/alpha-locales.js'
 import {
   buildAcecoreGroundingContext,
@@ -202,6 +203,41 @@ test('returns locale-specific fallback guidance for all nine locales', async () 
       assert.doesNotMatch(body.answer, /[\u3040-\u30ff]/u)
     }
   }
+})
+
+test('keeps Preview chat safe without any Vectorize binding', async () => {
+  const invocations = []
+  const response = await onRequestPost({
+    request: createRequest({
+      question: 'AceserverのTNTルールを教えて',
+    }),
+    env: {
+      OPENAI: {
+        async run(model, input) {
+          invocations.push({ model, input })
+          return { response: 'ルールはAceserver WIKIで確認してね。' }
+        },
+      },
+      WIKI_SEARCH_ENABLED: 'false',
+      PORTAL_SEARCH_ENABLED: 'false',
+      ACECORE_SEARCH_ENABLED: 'false',
+      SCHOOLS_SEARCH_ENABLED: 'false',
+      SYSTEMS_SEARCH_ENABLED: 'false',
+      WORLD_FOUNDATION_SEARCH_ENABLED: 'false',
+    },
+  })
+  const body = await response.json()
+
+  assert.equal(response.status, 200)
+  assert.deepEqual(
+    invocations.map(({ model }) => model),
+    [OPENAI_RESPONSE_MODEL],
+  )
+  assert.match(
+    invocations[0].input.instructions,
+    /Aceserver WIKI is authoritative/,
+  )
+  assert.match(body.answer, new RegExp(WIKI_URL.replaceAll('/', '\\/'), 'u'))
 })
 
 test('uses the requested response language and locale-safe map allowlist', async () => {
@@ -2473,7 +2509,7 @@ test('filters Systems metadata and allows only retrieved page links', async () =
   )
 })
 
-test('switches all six Vectorize bindings to the OpenAI 1536 index generation', async () => {
+test('binds the OpenAI 1536 index generation only in production and starts disabled', async () => {
   const config = await readFile(
     new URL('../wrangler.jsonc', import.meta.url),
     'utf8',
@@ -2491,12 +2527,11 @@ test('switches all six Vectorize bindings to the OpenAI 1536 index generation', 
   for (const [binding, indexPrefix] of indexes) {
     assert.equal(
       config.match(new RegExp(`"binding": "${binding}"`, 'gu'))?.length,
-      3,
+      1,
     )
-    assert.equal(
-      config.match(new RegExp(`"index_name": "${indexPrefix}-preview"`, 'gu'))
-        ?.length,
-      2,
+    assert.doesNotMatch(
+      config,
+      new RegExp(`"index_name": "${indexPrefix}-preview"`, 'u'),
     )
     assert.equal(
       config.match(
@@ -2506,6 +2541,7 @@ test('switches all six Vectorize bindings to the OpenAI 1536 index generation', 
     )
   }
 
+  assert.equal(config.match(/"vectorize"\s*:/gu)?.length, 1)
   assert.doesNotMatch(config, /"ai"\s*:/u)
   assert.doesNotMatch(config, /CLOUDFLARE_AI_MODEL|@cf\//u)
   assert.equal(
@@ -2522,7 +2558,20 @@ test('switches all six Vectorize bindings to the OpenAI 1536 index generation', 
     config.match(/"OPENAI_EMBEDDING_DIMENSIONS": "1536"/gu)?.length,
     3,
   )
-  assert.equal(config.match(/"SYSTEMS_SEARCH_ENABLED": "true"/gu)?.length, 3)
+  for (const searchEnabledVariable of [
+    'WIKI_SEARCH_ENABLED',
+    'PORTAL_SEARCH_ENABLED',
+    'ACECORE_SEARCH_ENABLED',
+    'SCHOOLS_SEARCH_ENABLED',
+    'SYSTEMS_SEARCH_ENABLED',
+    'WORLD_FOUNDATION_SEARCH_ENABLED',
+  ]) {
+    assert.equal(
+      config.match(new RegExp(`"${searchEnabledVariable}": "false"`, 'gu'))
+        ?.length,
+      3,
+    )
+  }
   assert.equal(config.match(/"SYSTEMS_SEARCH_MIN_SCORE": "0\.50"/gu)?.length, 3)
 })
 

@@ -17,6 +17,7 @@ import {
 } from '../scripts/build-portal-vector-corpus.mjs'
 import {
   extractEmbeddingData,
+  PRODUCTION_INDEX_NAME,
   syncPortalVectorize,
   validatePortalCorpus,
   validateDeletePlan,
@@ -45,7 +46,6 @@ const createHtml = ({ title, description, canonical = '' }) => `<!doctype html>
   </body>
 </html>`
 
-const PREVIEW_INDEX = 'aceserver-portal-search-openai-1536-preview'
 const TEST_OPENAI_API_KEY = 'test-openai-api-key'
 const TEST_EMBEDDING = Array.from(
   { length: PORTAL_EMBEDDING_DIMENSIONS },
@@ -69,6 +69,25 @@ test('sync tooling does not load the HTML corpus builder', async () => {
 
   assert.doesNotMatch(source, /build-portal-vector-corpus/u)
   assert.match(source, /portal-vectorize-config/u)
+})
+
+test('keeps the sync workflow production-only with explicit safety gates', async () => {
+  const workflow = await readFile(
+    new URL('../.github/workflows/sync-portal-vectorize.yml', import.meta.url),
+    'utf8',
+  )
+
+  assert.doesNotMatch(
+    workflow,
+    /sync-preview|cloudflare-portal-search-preview|openai-1536-preview/u,
+  )
+  assert.match(workflow, /cloudflare-portal-search-production/u)
+  assert.match(workflow, /--confirm-production "\$VECTORIZE_INDEX_NAME"/u)
+  assert.doesNotMatch(workflow, /--allow-large-delete|allow_large_delete/u)
+  assert.match(
+    workflow,
+    /vars\.ACESERVER_PORTAL_VECTORIZE_SYNC_ENABLED == 'true'/u,
+  )
 })
 
 test('accepts only a completed non-refusal OpenAI response', () => {
@@ -357,6 +376,25 @@ test('limits portal Vectorize sync to managed indexes and safe deletions', async
   )
 })
 
+test('requires exact confirmation before mutating the production index', async () => {
+  const corpusFile = await writeCorpus(createPortalCorpus())
+
+  await assert.rejects(
+    syncPortalVectorize({
+      accountId: 'account',
+      apiToken: 'token',
+      openAiApiKey: TEST_OPENAI_API_KEY,
+      indexName: PRODUCTION_INDEX_NAME,
+      corpusFile,
+      fetchImpl: async () => {
+        throw new Error('Production confirmation must fail before fetch.')
+      },
+      logger: silentLogger,
+    }),
+    /--confirm-production aceserver-portal-search-openai-1536-production/u,
+  )
+})
+
 test('syncs only the portal corpus delta', async () => {
   const corpus = createPortalCorpus()
   const corpusFile = await writeCorpus(corpus)
@@ -372,9 +410,9 @@ test('syncs only the portal corpus delta', async () => {
     const url = String(input)
     calls.push({ url, method: init.method || 'GET' })
 
-    if (url.endsWith(`/vectorize/v2/indexes/${PREVIEW_INDEX}`)) {
+    if (url.endsWith(`/vectorize/v2/indexes/${PRODUCTION_INDEX_NAME}`)) {
       return cloudflareResponse({
-        name: PREVIEW_INDEX,
+        name: PRODUCTION_INDEX_NAME,
         config: {
           dimensions: PORTAL_EMBEDDING_DIMENSIONS,
           metric: 'cosine',
@@ -438,7 +476,8 @@ test('syncs only the portal corpus delta', async () => {
     accountId: 'account',
     apiToken: 'token',
     openAiApiKey: TEST_OPENAI_API_KEY,
-    indexName: PREVIEW_INDEX,
+    indexName: PRODUCTION_INDEX_NAME,
+    productionConfirmation: PRODUCTION_INDEX_NAME,
     corpusFile,
     fetchImpl,
     logger: silentLogger,
@@ -461,7 +500,7 @@ test('enumerates and verifies every Vectorize list page', async () => {
 
   const fetchImpl = async (input) => {
     const url = String(input)
-    if (url.endsWith(`/vectorize/v2/indexes/${PREVIEW_INDEX}`)) {
+    if (url.endsWith(`/vectorize/v2/indexes/${PRODUCTION_INDEX_NAME}`)) {
       return cloudflareResponse({
         config: {
           dimensions: PORTAL_EMBEDDING_DIMENSIONS,
@@ -498,7 +537,8 @@ test('enumerates and verifies every Vectorize list page', async () => {
     accountId: 'account',
     apiToken: 'token',
     openAiApiKey: TEST_OPENAI_API_KEY,
-    indexName: PREVIEW_INDEX,
+    indexName: PRODUCTION_INDEX_NAME,
+    productionConfirmation: PRODUCTION_INDEX_NAME,
     corpusFile,
     fetchImpl,
     logger: silentLogger,
@@ -516,7 +556,7 @@ test('rejects an inconsistent Vectorize list before mutation', async () => {
 
   const fetchImpl = async (input) => {
     const url = String(input)
-    if (url.endsWith(`/vectorize/v2/indexes/${PREVIEW_INDEX}`)) {
+    if (url.endsWith(`/vectorize/v2/indexes/${PRODUCTION_INDEX_NAME}`)) {
       return cloudflareResponse({
         config: {
           dimensions: PORTAL_EMBEDDING_DIMENSIONS,
@@ -541,7 +581,8 @@ test('rejects an inconsistent Vectorize list before mutation', async () => {
       accountId: 'account',
       apiToken: 'token',
       openAiApiKey: TEST_OPENAI_API_KEY,
-      indexName: PREVIEW_INDEX,
+      indexName: PRODUCTION_INDEX_NAME,
+      productionConfirmation: PRODUCTION_INDEX_NAME,
       corpusFile,
       fetchImpl,
       logger: silentLogger,

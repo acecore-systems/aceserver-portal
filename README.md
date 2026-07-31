@@ -77,46 +77,26 @@ VectorizeまたはOpenAI Embeddingsの取得に失敗した場合は検索なし
 
 ルール、参加条件、コマンド、プラグインなど変更され得る情報はrepositoryへ複製しません。アルファくんは固定知識から詳細を断定せず、現行情報の正であるAceserver WIKIからVectorize検索で取得した根拠を使います。根拠を取得できない場合はAceserver WIKIまたは公式Discordへ案内します。
 
-Cloudflare Pages 側では `wrangler.jsonc` を設定の正とし、acecore-net と同じ方式で以下を preview / production の両方に定義します。
+Cloudflare Pages 側では `wrangler.jsonc` を設定の正とし、Vectorize binding は Production にだけ定義します。通常の Pages Preview には Vectorize binding を置かず、6個の検索kill switchをすべて `"false"` にして、固定の案内とWIKI・公式Discordへの安全なフォールバックを確認します。
 
-- Pages secret: `OPENAI_API_KEY`
-- Vectorize binding: `WIKI_SEARCH_INDEX`
-- Aceserver portal Vectorize binding: `PORTAL_SEARCH_INDEX`
-- Acecore Vectorize binding: `ACECORE_SEARCH_INDEX`
-- Acecore Schools Vectorize binding: `SCHOOLS_SEARCH_INDEX`
-- Acecore Systems Vectorize binding: `SYSTEMS_SEARCH_INDEX`
-- World Foundation Vectorize binding: `WORLD_FOUNDATION_SEARCH_INDEX`
-- `OPENAI_RESPONSE_MODEL`: Responses APIモデル（既定 `gpt-5.6-luna`）
-- `OPENAI_REASONING_EFFORT`: reasoning effort（既定 `medium`）
-- `OPENAI_EMBEDDING_MODEL`: 埋め込みモデル（既定 `text-embedding-3-large`）
-- `OPENAI_EMBEDDING_DIMENSIONS`: Vectorizeと一致させる埋め込み次元数（`1536`）
-- `WIKI_SEARCH_ENABLED`: WIKI検索のkill switch（`"false"`で無効化）
-- `WIKI_SEARCH_MIN_SCORE`: 回答根拠に採用するVectorize scoreの下限（既定`0.40`）
-- `PORTAL_SEARCH_ENABLED`: portal全体検索のkill switch（`"false"`で無効化）
-- `PORTAL_SEARCH_MIN_SCORE`: portal検索結果を採用するscoreの下限（既定`0.45`）
-- `ACECORE_SEARCH_ENABLED`: Acecore検索のkill switch（`"false"`で無効化）
-- `ACECORE_SEARCH_MIN_SCORE`: Acecore検索結果を採用するscoreの下限（既定`0.50`）
-- `SCHOOLS_SEARCH_ENABLED`: Acecore Schools検索のkill switch（`"false"`で無効化）
-- `SCHOOLS_SEARCH_MIN_SCORE`: Acecore Schools検索結果を採用するscoreの下限（既定`0.50`）
-- `WORLD_FOUNDATION_SEARCH_ENABLED`: World Foundation検索のkill switch（`"false"`で無効化）
-- `WORLD_FOUNDATION_SEARCH_MIN_SCORE`: World Foundation検索結果を採用するscoreの下限（既定`0.40`）
-- WIKI Preview / Production index: `aceserver-wiki-search-openai-1536-preview` / `aceserver-wiki-search-openai-1536-production`
-- Aceserver portal Preview / Production index: `aceserver-portal-search-openai-1536-preview` / `aceserver-portal-search-openai-1536-production`
-- Acecore Preview / Production index: `acecore-net-search-openai-1536-preview` / `acecore-net-search-openai-1536-production`
-- Acecore Schools Preview / Production index: `acecore-schools-search-openai-1536-preview` / `acecore-schools-search-openai-1536-production`
-- Acecore Systems Preview / Production index: `acecore-systems-search-openai-1536-preview` / `acecore-systems-search-openai-1536-production`
-- World Foundation Preview / Production index: `world-foundation-search-openai-1536-preview` / `world-foundation-search-openai-1536-production`
+Production には次の1536次元indexをbindingします。
 
-`npm run build` は `dist/vector-corpus.json` まで生成します。indexへ書き込む前に `npm run sync:portal-vectorize:dry-run` でsource数、vector数、corpus versionを確認します。実同期は `CLOUDFLARE_ACCOUNT_ID`、`CLOUDFLARE_API_TOKEN`、`OPENAI_API_KEY`、`VECTORIZE_INDEX_NAME` を環境変数で渡して `npm run sync:portal-vectorize` を実行します。OpenAI APIは埋め込み生成だけに、Cloudflare API tokenはVectorizeの作成・一覧・upsert・削除だけに使用します。同期先は上記の新portal index 2個だけに制限され、管理外ID、20%を超える削除、10 source未満のcorpusでは停止します。
+- `WIKI_SEARCH_INDEX`: `aceserver-wiki-search-openai-1536-production`
+- `PORTAL_SEARCH_INDEX`: `aceserver-portal-search-openai-1536-production`
+- `ACECORE_SEARCH_INDEX`: `acecore-net-search-openai-1536-production`
+- `SCHOOLS_SEARCH_INDEX`: `acecore-schools-search-openai-1536-production`
+- `SYSTEMS_SEARCH_INDEX`: `acecore-systems-search-openai-1536-production`
+- `WORLD_FOUNDATION_SEARCH_INDEX`: `world-foundation-search-openai-1536-production`
 
-1536次元indexは既存indexと別名で作成し、既存indexを削除しません。Preview / Productionとも6サイトすべての新indexについて、次元数・corpus version・vector件数・代表的な日本語検索を確認してから、Portalの6 bindingを一括で切り替えます。一部だけ旧indexへ向けた状態ではマージ・デプロイしません。
+`OPENAI_RESPONSE_MODEL`、`OPENAI_REASONING_EFFORT`、`OPENAI_EMBEDDING_MODEL`、`OPENAI_EMBEDDING_DIMENSIONS`はそれぞれ `gpt-5.6-luna`、`medium`、`text-embedding-3-large`、`1536` とします。検索元ごとの `*_SEARCH_ENABLED` がkill switch、`*_SEARCH_MIN_SCORE` が採用scoreの下限です。
 
-`.github/workflows/sync-portal-vectorize.yml` は、GitHub連携のPagesで公開されたcommitとcorpus versionを照合してからproduction indexを同期します。通常は`main`へのpushで同期し、取りこぼしの再照合を6時間ごとに行います。Previewはprotected `main` を手動同期し、PRごとの共有index競合を避けます。自動同期を有効にする前に、Repository Variable `ACESERVER_PORTAL_VECTORIZE_SYNC_ENABLED=true` と次のGitHub Environment secretを設定します。
+新indexは空の状態で本番検索へ使い始めません。移行変更は6個のProduction bindingを設定しつつ、すべての `*_SEARCH_ENABLED=false` のままデプロイします。その後、各indexの管理repositoryでProduction同期を収束させ、vector件数、corpus version、代表的な日本語query、再実行時のupsert/delete 0件を確認します。確認済みの検索元だけを別変更で `"true"` に戻します。既存1024次元indexはrollback確認が終わるまで削除しません。
 
-- `cloudflare-portal-search-preview`: `CLOUDFLARE_PORTAL_SEARCH_PREVIEW_API_TOKEN`、`OPENAI_API_KEY`
-- `cloudflare-portal-search-production`: `CLOUDFLARE_PORTAL_SEARCH_PRODUCTION_API_TOKEN`、`OPENAI_API_KEY`
+`npm run build` は `dist/vector-corpus.json` まで生成します。`npm run sync:portal-vectorize:dry-run` でsource数、vector数、corpus versionを確認できます。実同期先は `aceserver-portal-search-openai-1536-production` だけに制限し、`--confirm-production aceserver-portal-search-openai-1536-production` がない実行、管理外ID、20%を超える削除、10 source未満のcorpusでは停止します。
 
-Cloudflare tokenは対象accountだけに限定し、Cloudflareの現行permission名で `Vectorize Edit` だけを付与します。PreviewとProductionは別tokenにし、repository共通の広い権限を持つtokenを流用しません。OpenAI APIキーもこのサービス専用Projectのキーを使い、PagesとGitHub Environmentのsecretとして管理します。
+`.github/workflows/sync-portal-vectorize.yml` はProduction専用です。GitHub連携のPagesで公開されたcommitとcorpus versionを照合してから同期し、通常は`main`へのpush、取りこぼしは6時間ごとのscheduleで再照合します。20%超の削除をworkflowから上書きする経路は設けず、安全ゲートで停止します。
+
+自動同期には Repository Variable `ACESERVER_PORTAL_VECTORIZE_SYNC_ENABLED=true` と、GitHub Environment `cloudflare-portal-search-production` の `CLOUDFLARE_PORTAL_SEARCH_PRODUCTION_API_TOKEN`、`OPENAI_API_KEY` を使います。Cloudflare tokenは対象accountに限定した `Vectorize Write`、OpenAI APIキーはPortal専用Projectのものを使用します。既存のPreview resource、secret、Environmentはこの変更では削除しませんが、workflowとPages runtimeからは参照しません。
 
 本番custom domainの `/api/alpha-chat` へのPOSTは、`acecore.net` zoneのCloudflare WAF rate limiting rule `Rate limit Aceserver Alpha chat` で保護します。IP・colo単位で10秒に5 requestまでとし、超過時は10秒blockします。このruleはrepository外のCloudflare設定なので、zoneを再作成した場合は再設定してください。`pages.dev` のpreview URLはこのzone-level ruleの対象外です。
 

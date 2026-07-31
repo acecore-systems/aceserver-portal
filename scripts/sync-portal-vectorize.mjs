@@ -38,10 +38,9 @@ const MAX_METADATA_EXCERPT_LENGTH = 500
 const MAX_METADATA_CONTENT_TYPE_LENGTH = 40
 const MANAGED_VECTOR_ID_PATTERN = /^v1-[0-9a-f]{48}$/u
 const CORPUS_VERSION_PATTERN = /^[0-9a-f]{20}$/u
-const ALLOWED_INDEX_NAMES = new Set([
-  'aceserver-portal-search-openai-1536-preview',
-  'aceserver-portal-search-openai-1536-production',
-])
+export const PRODUCTION_INDEX_NAME =
+  'aceserver-portal-search-openai-1536-production'
+const ALLOWED_INDEX_NAMES = new Set([PRODUCTION_INDEX_NAME])
 
 class CloudflareApiError extends Error {
   constructor(message, status) {
@@ -60,6 +59,7 @@ export async function syncPortalVectorize({
   dryRun = false,
   waitForMutations = true,
   allowLargeDelete = false,
+  productionConfirmation = null,
   fetchImpl = globalThis.fetch,
   requestTimeoutMs = REQUEST_TIMEOUT_MS,
   retryBaseDelayMs = RETRY_BASE_DELAY_MS,
@@ -70,6 +70,11 @@ export async function syncPortalVectorize({
   const corpus = JSON.parse(await readFile(corpusFile, 'utf8'))
   validatePortalCorpus(corpus)
   validateIndexName(indexName, { required: !dryRun })
+  validateProductionConfirmation({
+    indexName,
+    productionConfirmation,
+    dryRun,
+  })
 
   if (dryRun) {
     const result = {
@@ -289,6 +294,24 @@ function validateIndexName(indexName, { required }) {
       `VECTORIZE_INDEX_NAME must be one of: ${[...ALLOWED_INDEX_NAMES].join(', ')}.`,
     )
   }
+}
+
+function validateProductionConfirmation({
+  indexName,
+  productionConfirmation,
+  dryRun,
+}) {
+  if (
+    dryRun ||
+    indexName !== PRODUCTION_INDEX_NAME ||
+    productionConfirmation === PRODUCTION_INDEX_NAME
+  ) {
+    return
+  }
+
+  throw new Error(
+    `Refusing to sync the production index; pass --confirm-production ${PRODUCTION_INDEX_NAME}.`,
+  )
 }
 
 function validateIndexConfiguration(index, indexName) {
@@ -774,6 +797,7 @@ function parseArguments(argv) {
     dryRun: false,
     waitForMutations: true,
     allowLargeDelete: false,
+    productionConfirmation: null,
     indexName: process.env.VECTORIZE_INDEX_NAME,
     corpusFile: DEFAULT_CORPUS_FILE,
   }
@@ -788,6 +812,8 @@ function parseArguments(argv) {
       options.indexName = argv[++index]
     } else if (argument === '--corpus') {
       options.corpusFile = resolve(argv[++index])
+    } else if (argument === '--confirm-production') {
+      options.productionConfirmation = argv[++index]
     } else {
       throw new Error(`Unknown argument: ${argument}`)
     }
