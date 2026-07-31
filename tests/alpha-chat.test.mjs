@@ -2522,7 +2522,23 @@ test('switches all six Vectorize bindings to the OpenAI 1536 index generation', 
     config.match(/"OPENAI_EMBEDDING_DIMENSIONS": "1536"/gu)?.length,
     3,
   )
-  assert.equal(config.match(/"SYSTEMS_SEARCH_ENABLED": "true"/gu)?.length, 3)
+  for (const flag of [
+    'WIKI_SEARCH_ENABLED',
+    'PORTAL_SEARCH_ENABLED',
+    'ACECORE_SEARCH_ENABLED',
+    'SCHOOLS_SEARCH_ENABLED',
+    'SYSTEMS_SEARCH_ENABLED',
+    'WORLD_FOUNDATION_SEARCH_ENABLED',
+  ]) {
+    assert.equal(
+      config.match(new RegExp(`"${flag}": "false"`, 'gu'))?.length,
+      3,
+    )
+    assert.equal(
+      config.match(new RegExp(`"${flag}": "true"`, 'gu'))?.length ?? 0,
+      0,
+    )
+  }
   assert.equal(config.match(/"SYSTEMS_SEARCH_MIN_SCORE": "0\.50"/gu)?.length, 3)
 })
 

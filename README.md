@@ -109,7 +109,7 @@ Cloudflare Pages 側では `wrangler.jsonc` を設定の正とし、acecore-net 
 
 `npm run build` は `dist/vector-corpus.json` まで生成します。indexへ書き込む前に `npm run sync:portal-vectorize:dry-run` でsource数、vector数、corpus versionを確認します。実同期は `CLOUDFLARE_ACCOUNT_ID`、`CLOUDFLARE_API_TOKEN`、`OPENAI_API_KEY`、`VECTORIZE_INDEX_NAME` を環境変数で渡して `npm run sync:portal-vectorize` を実行します。OpenAI APIは埋め込み生成だけに、Cloudflare API tokenはVectorizeの作成・一覧・upsert・削除だけに使用します。同期先は上記の新portal index 2個だけに制限され、管理外ID、20%を超える削除、10 source未満のcorpusでは停止します。
 
-1536次元indexは既存indexと別名で作成し、既存indexを削除しません。Preview / Productionとも6サイトすべての新indexについて、次元数・corpus version・vector件数・代表的な日本語検索を確認してから、Portalの6 bindingを一括で切り替えます。一部だけ旧indexへ向けた状態ではマージ・デプロイしません。
+1536次元indexは既存indexと別名で作成し、既存indexを削除しません。初回のコード移行ではPreview / Productionとも6つの検索kill switchを`false`に保ちます。各owner repositoryの同期、次元数・corpus version・vector件数・代表的な日本語検索を確認した後、別PRで6つを一括して`true`へ切り替えます。一部だけ旧indexへ向けた状態や、空indexを有効化した状態ではマージ・デプロイしません。
 
 `.github/workflows/sync-portal-vectorize.yml` は、GitHub連携のPagesで公開されたcommitとcorpus versionを照合してからproduction indexを同期します。通常は`main`へのpushで同期し、取りこぼしの再照合を6時間ごとに行います。Previewはprotected `main` を手動同期し、PRごとの共有index競合を避けます。自動同期を有効にする前に、Repository Variable `ACESERVER_PORTAL_VECTORIZE_SYNC_ENABLED=true` と次のGitHub Environment secretを設定します。
 
