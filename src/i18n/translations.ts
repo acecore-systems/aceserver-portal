@@ -52,6 +52,16 @@ export type UiCopy = {
   notFoundMessage: string
   backHome: string
   rssTitle: string
+  search: {
+    link: string
+    title: string
+    placeholder: string
+    localResults: string
+    relatedSites: string
+    loading: string
+    noResults: string
+    privacy: string
+  }
   alpha: {
     chatSubtitle: string
     close: string
@@ -199,6 +209,16 @@ export const JA_UI: UiCopy = {
   notFoundMessage: 'URLを確認するか、トップページから入り直してください。',
   backHome: 'トップページへ',
   rssTitle: 'エースサーバー 読みもの',
+  search: {
+    link: '検索',
+    title: 'サイト内検索',
+    placeholder: '例: ワールドマップ',
+    localResults: 'このサイトの検索結果',
+    relatedSites: 'Acecore関連サイト',
+    loading: '意味が近いページを検索しています…',
+    noResults: '一致する公開ページは見つかりませんでした。',
+    privacy: '検索語は公開情報との照合のためOpenAIに送信されます。',
+  },
   alpha: {
     chatSubtitle: 'エースサーバー案内チャット',
     close: 'アルファくんチャットを閉じる',
@@ -284,6 +304,17 @@ const en: LocaleTranslation = {
     notFoundMessage: 'Check the URL or return to the home page.',
     backHome: 'Go to the home page',
     rssTitle: 'Aceserver Stories',
+    search: {
+      link: 'Search',
+      title: 'Search this site',
+      placeholder: 'Example: world map',
+      localResults: 'Results from this site',
+      relatedSites: 'Related Acecore sites',
+      loading: 'Looking for semantically related pages…',
+      noResults: 'No matching public pages were found.',
+      privacy:
+        'Your query is sent to OpenAI to compare it with public information.',
+    },
     alpha: {
       chatSubtitle: 'Aceserver guide chat',
       close: 'Close the Alpha-kun chat',
@@ -511,6 +542,16 @@ const zhCn: LocaleTranslation = {
     notFoundMessage: '请检查网址，或返回首页重新开始。',
     backHome: '返回首页',
     rssTitle: 'Aceserver 故事',
+    search: {
+      link: '搜索',
+      title: '站内搜索',
+      placeholder: '例如：世界地图',
+      localResults: '本网站的搜索结果',
+      relatedSites: 'Acecore 相关网站',
+      loading: '正在查找语义相近的页面…',
+      noResults: '未找到匹配的公开页面。',
+      privacy: '搜索词会发送到 OpenAI，用于与公开信息进行比对。',
+    },
     alpha: {
       chatSubtitle: 'Aceserver 导航聊天',
       close: '关闭 Alpha-kun 聊天',
@@ -735,6 +776,17 @@ const es: LocaleTranslation = {
     notFoundMessage: 'Comprueba la URL o vuelve a la página de inicio.',
     backHome: 'Ir al inicio',
     rssTitle: 'Historias de Aceserver',
+    search: {
+      link: 'Buscar',
+      title: 'Buscar en este sitio',
+      placeholder: 'Ejemplo: mapa del mundo',
+      localResults: 'Resultados de este sitio',
+      relatedSites: 'Sitios relacionados de Acecore',
+      loading: 'Buscando páginas relacionadas por significado…',
+      noResults: 'No se encontraron páginas públicas coincidentes.',
+      privacy:
+        'La consulta se envía a OpenAI para compararla con información pública.',
+    },
     alpha: {
       chatSubtitle: 'Chat guía de Aceserver',
       close: 'Cerrar el chat de Alpha-kun',
@@ -960,6 +1012,17 @@ const pt: LocaleTranslation = {
     notFoundMessage: 'Verifique o endereço ou volte à página inicial.',
     backHome: 'Ir para o início',
     rssTitle: 'Histórias do Aceserver',
+    search: {
+      link: 'Pesquisar',
+      title: 'Pesquisar neste site',
+      placeholder: 'Exemplo: mapa do mundo',
+      localResults: 'Resultados deste site',
+      relatedSites: 'Sites Acecore relacionados',
+      loading: 'Procurando páginas semanticamente relacionadas…',
+      noResults: 'Nenhuma página pública correspondente foi encontrada.',
+      privacy:
+        'A consulta é enviada à OpenAI para comparação com informações públicas.',
+    },
     alpha: {
       chatSubtitle: 'Chat de orientação do Aceserver',
       close: 'Fechar o chat do Alpha-kun',
@@ -1186,6 +1249,17 @@ const fr: LocaleTranslation = {
     notFoundMessage: 'Vérifiez l’adresse ou revenez à la page d’accueil.',
     backHome: 'Retour à l’accueil',
     rssTitle: 'Récits Aceserver',
+    search: {
+      link: 'Rechercher',
+      title: 'Rechercher sur ce site',
+      placeholder: 'Exemple : carte du monde',
+      localResults: 'Résultats de ce site',
+      relatedSites: 'Sites Acecore associés',
+      loading: 'Recherche de pages proches par le sens…',
+      noResults: 'Aucune page publique correspondante n’a été trouvée.',
+      privacy:
+        'La recherche est envoyée à OpenAI pour comparaison avec des informations publiques.',
+    },
     alpha: {
       chatSubtitle: 'Chat d’orientation Aceserver',
       close: 'Fermer le chat Alpha-kun',
@@ -1414,6 +1488,16 @@ const ko: LocaleTranslation = {
     notFoundMessage: '주소를 확인하거나 홈으로 돌아가 주세요.',
     backHome: '홈으로',
     rssTitle: 'Aceserver 이야기',
+    search: {
+      link: '검색',
+      title: '사이트 내 검색',
+      placeholder: '예: 월드 맵',
+      localResults: '이 사이트의 검색 결과',
+      relatedSites: '관련 Acecore 사이트',
+      loading: '의미가 가까운 페이지를 찾고 있어요…',
+      noResults: '일치하는 공개 페이지를 찾지 못했어요.',
+      privacy: '검색어는 공개 정보와 비교하기 위해 OpenAI로 전송됩니다.',
+    },
     alpha: {
       chatSubtitle: 'Aceserver 안내 채팅',
       close: 'Alpha-kun 채팅 닫기',
@@ -1638,6 +1722,17 @@ const de: LocaleTranslation = {
     notFoundMessage: 'Prüfe die Adresse oder kehre zur Startseite zurück.',
     backHome: 'Zur Startseite',
     rssTitle: 'Aceserver Geschichten',
+    search: {
+      link: 'Suche',
+      title: 'Diese Website durchsuchen',
+      placeholder: 'Beispiel: Weltkarte',
+      localResults: 'Ergebnisse dieser Website',
+      relatedSites: 'Verwandte Acecore-Websites',
+      loading: 'Suche nach semantisch verwandten Seiten…',
+      noResults: 'Keine passenden öffentlichen Seiten gefunden.',
+      privacy:
+        'Die Suchanfrage wird zur Prüfung mit öffentlichen Informationen an OpenAI gesendet.',
+    },
     alpha: {
       chatSubtitle: 'Aceserver Wegweiser-Chat',
       close: 'Alpha-kun-Chat schließen',
@@ -1868,6 +1963,17 @@ const ru: LocaleTranslation = {
     notFoundMessage: 'Проверьте адрес или вернитесь на главную страницу.',
     backHome: 'На главную',
     rssTitle: 'Истории Aceserver',
+    search: {
+      link: 'Поиск',
+      title: 'Поиск по сайту',
+      placeholder: 'Например: карта мира',
+      localResults: 'Результаты этого сайта',
+      relatedSites: 'Связанные сайты Acecore',
+      loading: 'Ищем страницы, близкие по смыслу…',
+      noResults: 'Подходящие публичные страницы не найдены.',
+      privacy:
+        'Поисковый запрос отправляется в OpenAI для сравнения с публичной информацией.',
+    },
     alpha: {
       chatSubtitle: 'Чат-помощник Aceserver',
       close: 'Закрыть чат Alpha-kun',

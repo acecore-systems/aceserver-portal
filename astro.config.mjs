@@ -42,6 +42,8 @@ export default defineConfig({
         return (
           unprefixedPathname !== '/404/' &&
           unprefixedPathname !== '/404' &&
+          unprefixedPathname !== '/search/' &&
+          unprefixedPathname !== '/search' &&
           unprefixedPathname !== '/rss.xml' &&
           !unprefixedPathname.startsWith('/admin/')
         )

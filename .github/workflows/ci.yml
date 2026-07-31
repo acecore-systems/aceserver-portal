@@ -45,6 +45,9 @@ jobs:
       - name: Test portal Vectorize corpus
         run: npm run test:portal-vectorize
 
+      - name: Test site search API
+        run: npm run test:search
+
       - name: Test CMS proxy
         run: npm run test:cms
 

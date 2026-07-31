@@ -42,6 +42,22 @@ const isCurrentNavigationItem = (href: string) =>
   </a>
 
   <nav class="desktop-nav" aria-label={ui.mainNavigation}>
+    <a
+      href={localizePath(locale, '/search/')}
+      class:list={[
+        {
+          'is-active': isCurrentNavigationItem(
+            localizePath(locale, '/search/'),
+          ),
+        },
+      ]}
+      aria-current={isCurrentNavigationItem(localizePath(locale, '/search/'))
+        ? 'page'
+        : undefined}
+    >
+      <Icon name="search" />
+      <span>{ui.search.link}</span>
+    </a>
     {
       navigation.map((item) => (
         <a
@@ -104,6 +120,22 @@ const isCurrentNavigationItem = (href: string) =>
         }
       </select>
     </label>
+    <a
+      href={localizePath(locale, '/search/')}
+      class:list={[
+        {
+          'is-active': isCurrentNavigationItem(
+            localizePath(locale, '/search/'),
+          ),
+        },
+      ]}
+      aria-current={isCurrentNavigationItem(localizePath(locale, '/search/'))
+        ? 'page'
+        : undefined}
+    >
+      <Icon name="search" />
+      <span>{ui.search.link}</span>
+    </a>
     {
       navigation.map((item) => (
         <a
