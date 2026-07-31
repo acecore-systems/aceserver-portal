@@ -3,6 +3,10 @@ import { resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 import {
+  createOpenAiEmbeddings,
+  extractOpenAiEmbeddingData,
+} from '../functions/api/openai-api.js'
+import {
   PORTAL_CORPUS_SCHEMA_VERSION,
   PORTAL_DISTANCE_METRIC,
   PORTAL_EMBEDDING_DIMENSIONS,
@@ -20,6 +24,7 @@ const UPSERT_BATCH_SIZE = 200
 const DELETE_BATCH_SIZE = 100
 const LIST_BATCH_SIZE = 1000
 const REQUEST_TIMEOUT_MS = 30_000
+const MAX_CLOUDFLARE_RESPONSE_BYTES = 4_000_000
 const MAX_REQUEST_RETRIES = 5
 const RETRY_BASE_DELAY_MS = 500
 const MAX_LIST_CURSOR_RESTARTS = 3
@@ -33,10 +38,9 @@ const MAX_METADATA_EXCERPT_LENGTH = 500
 const MAX_METADATA_CONTENT_TYPE_LENGTH = 40
 const MANAGED_VECTOR_ID_PATTERN = /^v1-[0-9a-f]{48}$/u
 const CORPUS_VERSION_PATTERN = /^[0-9a-f]{20}$/u
-const ALLOWED_INDEX_NAMES = new Set([
-  'aceserver-portal-search-preview',
-  'aceserver-portal-search-production',
-])
+export const PRODUCTION_INDEX_NAME =
+  'aceserver-portal-search-openai-1536-production'
+const ALLOWED_INDEX_NAMES = new Set([PRODUCTION_INDEX_NAME])
 
 class CloudflareApiError extends Error {
   constructor(message, status) {
@@ -49,11 +53,13 @@ class CloudflareApiError extends Error {
 export async function syncPortalVectorize({
   accountId = process.env.CLOUDFLARE_ACCOUNT_ID,
   apiToken = process.env.CLOUDFLARE_API_TOKEN,
+  openAiApiKey = process.env.OPENAI_API_KEY,
   indexName = process.env.VECTORIZE_INDEX_NAME,
   corpusFile = DEFAULT_CORPUS_FILE,
   dryRun = false,
   waitForMutations = true,
   allowLargeDelete = false,
+  productionConfirmation = null,
   fetchImpl = globalThis.fetch,
   requestTimeoutMs = REQUEST_TIMEOUT_MS,
   retryBaseDelayMs = RETRY_BASE_DELAY_MS,
@@ -64,6 +70,11 @@ export async function syncPortalVectorize({
   const corpus = JSON.parse(await readFile(corpusFile, 'utf8'))
   validatePortalCorpus(corpus)
   validateIndexName(indexName, { required: !dryRun })
+  validateProductionConfirmation({
+    indexName,
+    productionConfirmation,
+    dryRun,
+  })
 
   if (dryRun) {
     const result = {
@@ -77,9 +88,9 @@ export async function syncPortalVectorize({
     return result
   }
 
-  if (!accountId || !apiToken || !indexName) {
+  if (!accountId || !apiToken || !openAiApiKey || !indexName) {
     throw new Error(
-      'CLOUDFLARE_ACCOUNT_ID, CLOUDFLARE_API_TOKEN, and VECTORIZE_INDEX_NAME are required.',
+      'CLOUDFLARE_ACCOUNT_ID, CLOUDFLARE_API_TOKEN, OPENAI_API_KEY, and VECTORIZE_INDEX_NAME are required.',
     )
   }
 
@@ -125,7 +136,17 @@ export async function syncPortalVectorize({
 
   const mutationIds = []
   for (const chunkBatch of batches(chunksToUpsert, EMBEDDING_BATCH_SIZE)) {
-    const embeddings = await createEmbeddings(client, chunkBatch)
+    const embeddings = await createEmbeddings(
+      {
+        apiKey: openAiApiKey,
+        fetchImpl,
+        requestTimeoutMs,
+        retryBaseDelayMs,
+        sleepImpl,
+        randomImpl,
+      },
+      chunkBatch,
+    )
     const vectors = chunkBatch.map((chunk, index) => ({
       id: chunk.id,
       values: embeddings[index],
@@ -227,28 +248,11 @@ export function validatePortalCorpus(corpus) {
 }
 
 export function extractEmbeddingData(payload, expectedCount) {
-  const result = payload?.result ?? payload
-  const data = result?.data
-
-  if (!Array.isArray(data) || data.length !== expectedCount) {
-    throw new Error(
-      `Workers AI returned ${Array.isArray(data) ? data.length : 0} embeddings; expected ${expectedCount}.`,
-    )
-  }
-
-  for (const values of data) {
-    if (
-      !Array.isArray(values) ||
-      values.length !== PORTAL_EMBEDDING_DIMENSIONS ||
-      values.some((value) => !Number.isFinite(value))
-    ) {
-      throw new Error(
-        `Workers AI embedding must contain ${PORTAL_EMBEDDING_DIMENSIONS} finite values.`,
-      )
-    }
-  }
-
-  return data
+  return extractOpenAiEmbeddingData(
+    payload,
+    expectedCount,
+    PORTAL_EMBEDDING_DIMENSIONS,
+  )
 }
 
 function isValidPortalMetadata(metadata) {
@@ -290,6 +294,24 @@ function validateIndexName(indexName, { required }) {
       `VECTORIZE_INDEX_NAME must be one of: ${[...ALLOWED_INDEX_NAMES].join(', ')}.`,
     )
   }
+}
+
+function validateProductionConfirmation({
+  indexName,
+  productionConfirmation,
+  dryRun,
+}) {
+  if (
+    dryRun ||
+    indexName !== PRODUCTION_INDEX_NAME ||
+    productionConfirmation === PRODUCTION_INDEX_NAME
+  ) {
+    return
+  }
+
+  throw new Error(
+    `Refusing to sync the production index; pass --confirm-production ${PRODUCTION_INDEX_NAME}.`,
+  )
 }
 
 function validateIndexConfiguration(index, indexName) {
@@ -433,7 +455,8 @@ async function ensureIndex(client, indexName) {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       name: indexName,
-      description: 'Aceserver portal semantic grounding (BGE-M3)',
+      description:
+        'Aceserver portal semantic grounding (OpenAI text-embedding-3-large, 1536 dimensions)',
       config: {
         dimensions: PORTAL_EMBEDDING_DIMENSIONS,
         metric: PORTAL_DISTANCE_METRIC,
@@ -589,15 +612,31 @@ function invalidVectorListResponse(indexName, reason) {
 }
 
 async function createEmbeddings(client, chunks) {
-  const payload = await client.request(`/ai/run/${PORTAL_EMBEDDING_MODEL}`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      text: chunks.map(({ text }) => text),
-      truncate_inputs: true,
-    }),
-  })
-  return extractEmbeddingData(payload, chunks.length)
+  for (let attempt = 0; attempt <= MAX_REQUEST_RETRIES; attempt += 1) {
+    try {
+      return await createOpenAiEmbeddings({
+        apiKey: client.apiKey,
+        input: chunks.map(({ text }) => text),
+        model: PORTAL_EMBEDDING_MODEL,
+        dimensions: PORTAL_EMBEDDING_DIMENSIONS,
+        fetchImpl: client.fetchImpl,
+        requestTimeoutMs: client.requestTimeoutMs,
+      })
+    } catch (error) {
+      if (attempt >= MAX_REQUEST_RETRIES || !isRetryableOpenAiError(error)) {
+        throw error
+      }
+      await client.sleepImpl(
+        getRetryDelay({
+          attempt,
+          retryBaseDelayMs: client.retryBaseDelayMs,
+          randomImpl: client.randomImpl,
+        }),
+      )
+    }
+  }
+
+  throw new Error('OpenAI embeddings request exhausted all retries.')
 }
 
 async function upsertVectors(client, indexName, vectors) {
@@ -653,7 +692,42 @@ async function waitForMutation(client, indexName, mutationId, { sleepImpl }) {
 }
 
 async function readJsonResponse(response) {
-  const text = await response.text()
+  const contentLength = response.headers.get('Content-Length')
+  if (contentLength !== null) {
+    const normalizedLength = contentLength.trim()
+    const parsedLength = Number(normalizedLength)
+    if (
+      !/^\d+$/u.test(normalizedLength) ||
+      !Number.isSafeInteger(parsedLength) ||
+      parsedLength > MAX_CLOUDFLARE_RESPONSE_BYTES
+    ) {
+      await response.body?.cancel().catch(() => {})
+      throw new Error('Cloudflare API returned an invalid response size.')
+    }
+  }
+
+  const reader = response.body?.getReader()
+  if (!reader) return null
+
+  const decoder = new TextDecoder()
+  let byteLength = 0
+  let text = ''
+  try {
+    while (true) {
+      const { done, value } = await reader.read()
+      if (done) break
+      byteLength += value.byteLength
+      if (byteLength > MAX_CLOUDFLARE_RESPONSE_BYTES) {
+        await reader.cancel().catch(() => {})
+        throw new Error('Cloudflare API returned an invalid response size.')
+      }
+      text += decoder.decode(value, { stream: true })
+    }
+    text += decoder.decode()
+  } finally {
+    reader.releaseLock()
+  }
+
   if (!text) return null
 
   try {
@@ -675,6 +749,16 @@ function isRetryableNetworkError(error, timedOut) {
     error instanceof TypeError ||
     error?.name === 'AbortError' ||
     error?.name === 'TimeoutError'
+  )
+}
+
+function isRetryableOpenAiError(error) {
+  return (
+    error?.name === 'OpenAIRequestTimeoutError' ||
+    error?.name === 'AbortError' ||
+    error instanceof TypeError ||
+    (error?.name === 'OpenAIHttpError' &&
+      (error.status === 429 || error.status >= 500))
   )
 }
 
@@ -713,6 +797,7 @@ function parseArguments(argv) {
     dryRun: false,
     waitForMutations: true,
     allowLargeDelete: false,
+    productionConfirmation: null,
     indexName: process.env.VECTORIZE_INDEX_NAME,
     corpusFile: DEFAULT_CORPUS_FILE,
   }
@@ -727,6 +812,8 @@ function parseArguments(argv) {
       options.indexName = argv[++index]
     } else if (argument === '--corpus') {
       options.corpusFile = resolve(argv[++index])
+    } else if (argument === '--confirm-production') {
+      options.productionConfirmation = argv[++index]
     } else {
       throw new Error(`Unknown argument: ${argument}`)
     }

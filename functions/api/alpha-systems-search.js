@@ -50,7 +50,7 @@ export function shouldSearchSystems(query) {
 export async function searchSystems(query, env, providedEmbedding = null) {
   if (
     !query ||
-    !env?.AI ||
+    (!providedEmbedding && !env?.OPENAI_API_KEY) ||
     !env?.SYSTEMS_SEARCH_INDEX ||
     env.SYSTEMS_SEARCH_ENABLED === 'false'
   ) {

@@ -1,27 +1,44 @@
-export const ALPHA_SEARCH_EMBEDDING_MODEL = '@cf/baai/bge-m3'
-export const ALPHA_SEARCH_EMBEDDING_DIMENSIONS = 1024
+import {
+  createOpenAiEmbeddings,
+  OPENAI_EMBEDDING_DIMENSIONS,
+  OPENAI_EMBEDDING_MODEL,
+} from './openai-api.js'
 
-export async function createAlphaSearchEmbedding(query, env) {
-  if (!query || !env?.AI) return null
+export const ALPHA_SEARCH_EMBEDDING_MODEL = OPENAI_EMBEDDING_MODEL
+export const ALPHA_SEARCH_EMBEDDING_DIMENSIONS = OPENAI_EMBEDDING_DIMENSIONS
 
-  let result
+export async function createAlphaSearchEmbedding(
+  query,
+  env,
+  fetchImpl = globalThis.fetch,
+) {
+  if (!query || !env?.OPENAI_API_KEY) return null
+  const configuredModel =
+    env.OPENAI_EMBEDDING_MODEL || ALPHA_SEARCH_EMBEDDING_MODEL
+  const configuredDimensions = Number(
+    env.OPENAI_EMBEDDING_DIMENSIONS || ALPHA_SEARCH_EMBEDDING_DIMENSIONS,
+  )
+  if (
+    configuredModel !== ALPHA_SEARCH_EMBEDDING_MODEL ||
+    configuredDimensions !== ALPHA_SEARCH_EMBEDDING_DIMENSIONS
+  ) {
+    logEmbeddingError('invalid_configuration')
+    return null
+  }
+
   try {
-    result = await env.AI.run(ALPHA_SEARCH_EMBEDDING_MODEL, {
-      text: [query],
-      truncate_inputs: true,
+    const [embedding] = await createOpenAiEmbeddings({
+      apiKey: env.OPENAI_API_KEY,
+      input: query,
+      model: configuredModel,
+      dimensions: configuredDimensions,
+      fetchImpl,
     })
+    return embedding
   } catch (error) {
     logEmbeddingError(getErrorCode(error, 'provider_error'))
     return null
   }
-
-  const embedding = result?.data?.[0]
-  if (!isAlphaSearchEmbedding(embedding)) {
-    logEmbeddingError('invalid_embedding')
-    return null
-  }
-
-  return embedding
 }
 
 export function isAlphaSearchEmbedding(value) {

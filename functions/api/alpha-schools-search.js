@@ -44,7 +44,7 @@ export function shouldSearchSchools(query) {
 export async function searchSchools(query, env, providedEmbedding = null) {
   if (
     !query ||
-    !env?.AI ||
+    (!providedEmbedding && !env?.OPENAI_API_KEY) ||
     !env?.SCHOOLS_SEARCH_INDEX ||
     env.SCHOOLS_SEARCH_ENABLED === 'false'
   ) {
