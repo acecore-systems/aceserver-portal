@@ -345,6 +345,7 @@ for (const locale of LOCALES) {
     knownRoutes.add(localePath(locale, slug === 'top' ? '/' : `/${slug}/`))
   }
   knownRoutes.add(localePath(locale, '/stories/'))
+  knownRoutes.add(localePath(locale, '/search/'))
   knownRoutes.add(localePath(locale, '/404/'))
   for (const slug of storySlugs) {
     knownRoutes.add(localePath(locale, `/stories/${slug}/`))
@@ -357,6 +358,7 @@ for (const locale of LOCALES) {
       localePath(locale, slug === 'top' ? '/' : `/${slug}/`),
     ),
     localePath(locale, '/stories/'),
+    localePath(locale, '/search/'),
     ...storySlugs.map((slug) => localePath(locale, `/stories/${slug}/`)),
   ]
 
@@ -406,7 +408,7 @@ const sitemapXml = (
   await Promise.all(sitemapFiles.map((file) => readFile(file, 'utf8')))
 ).join('\n')
 for (const route of knownRoutes) {
-  if (route === '/admin/' || /\/404\/$/u.test(route)) continue
+  if (route === '/admin/' || /\/(?:404|search)\/$/u.test(route)) continue
   const expectedUrl = new URL(route, site).toString()
   if (!sitemapXml.includes(`<loc>${expectedUrl}</loc>`)) {
     fail('sitemap', `public route is missing (${expectedUrl})`)

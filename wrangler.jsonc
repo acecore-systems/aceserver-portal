@@ -21,8 +21,22 @@
     "WORLD_FOUNDATION_SEARCH_ENABLED": "false",
     "WORLD_FOUNDATION_SEARCH_MIN_SCORE": "0.40",
   },
+  "d1_databases": [
+    {
+      "binding": "SEARCH_RATE_LIMIT_DB",
+      "database_name": "acecore-net-search-preview",
+      "database_id": "e249ebf7-218d-4baf-b732-c0c2580141f5",
+    },
+  ],
   "env": {
     "preview": {
+      "d1_databases": [
+        {
+          "binding": "SEARCH_RATE_LIMIT_DB",
+          "database_name": "acecore-net-search-preview",
+          "database_id": "e249ebf7-218d-4baf-b732-c0c2580141f5",
+        },
+      ],
       "vars": {
         "OPENAI_RESPONSE_MODEL": "gpt-5.6-luna",
         "OPENAI_REASONING_EFFORT": "medium",
@@ -43,6 +57,13 @@
       },
     },
     "production": {
+      "d1_databases": [
+        {
+          "binding": "SEARCH_RATE_LIMIT_DB",
+          "database_name": "acecore-net-search-production",
+          "database_id": "3d26157c-b052-498c-af9b-82bad65b8421",
+        },
+      ],
       "vectorize": [
         {
           "binding": "WIKI_SEARCH_INDEX",

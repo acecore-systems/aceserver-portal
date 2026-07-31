@@ -1,0 +1,17 @@
+---
+import SiteSearch from '../../components/SiteSearch.astro'
+import { getUi } from '../../i18n/translations'
+import BaseLayout from '../../layouts/BaseLayout.astro'
+
+const locale = 'ja'
+const ui = getUi(locale)
+---
+
+<BaseLayout
+  locale={locale}
+  title={ui.search.title}
+  description={ui.search.title}
+  robots="noindex, follow"
+>
+  <SiteSearch locale={locale} />
+</BaseLayout>

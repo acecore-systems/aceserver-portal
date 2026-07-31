@@ -1,0 +1,29 @@
+---
+import SiteSearch from '../../../components/SiteSearch.astro'
+import { TRANSLATED_LOCALES, type TranslatedLocale } from '../../../i18n/config'
+import { getUi } from '../../../i18n/translations'
+import BaseLayout from '../../../layouts/BaseLayout.astro'
+
+export function getStaticPaths() {
+  return TRANSLATED_LOCALES.map((locale) => ({
+    params: { locale },
+    props: { locale },
+  }))
+}
+
+interface Props {
+  locale: TranslatedLocale
+}
+
+const { locale } = Astro.props
+const ui = getUi(locale)
+---
+
+<BaseLayout
+  locale={locale}
+  title={ui.search.title}
+  description={ui.search.title}
+  robots="noindex, follow"
+>
+  <SiteSearch locale={locale} />
+</BaseLayout>
