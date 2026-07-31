@@ -83,7 +83,7 @@ Production には次の1536次元indexをbindingします。
 
 - `WIKI_SEARCH_INDEX`: `aceserver-wiki-search-openai-1536-production`
 - `PORTAL_SEARCH_INDEX`: `aceserver-portal-search-openai-1536-production`
-- `ACECORE_SEARCH_INDEX`: `acecore-net-search-openai-1536-production`
+- `ACECORE_SEARCH_INDEX`: `acecore-net-search-openai-1536-production-v2`
 - `SCHOOLS_SEARCH_INDEX`: `acecore-schools-search-openai-1536-production`
 - `SYSTEMS_SEARCH_INDEX`: `acecore-systems-search-openai-1536-production`
 - `WORLD_FOUNDATION_SEARCH_INDEX`: `world-foundation-search-openai-1536-production`
