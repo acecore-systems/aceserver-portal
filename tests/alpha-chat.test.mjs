@@ -2535,7 +2535,7 @@ test('binds and enables the OpenAI 1536 indexes only in production', async () =>
     [
       'ACECORE_SEARCH_INDEX',
       'acecore-net-search-openai-1536-preview',
-      'acecore-net-search-openai-1536-production-v2',
+      'acecore-net-search-openai-1536-production',
     ],
     [
       'SCHOOLS_SEARCH_INDEX',

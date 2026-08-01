@@ -83,14 +83,14 @@ Production には次の1536次元indexをbindingします。
 
 - `WIKI_SEARCH_INDEX`: `aceserver-wiki-search-openai-1536-production`
 - `PORTAL_SEARCH_INDEX`: `aceserver-portal-search-openai-1536-production`
-- `ACECORE_SEARCH_INDEX`: `acecore-net-search-openai-1536-production-v2`
+- `ACECORE_SEARCH_INDEX`: `acecore-net-search-openai-1536-production`
 - `SCHOOLS_SEARCH_INDEX`: `acecore-schools-search-openai-1536-production`
 - `SYSTEMS_SEARCH_INDEX`: `acecore-systems-search-openai-1536-production`
 - `WORLD_FOUNDATION_SEARCH_INDEX`: `world-foundation-search-openai-1536-production`
 
 `OPENAI_RESPONSE_MODEL`、`OPENAI_REASONING_EFFORT`、`OPENAI_EMBEDDING_MODEL`、`OPENAI_EMBEDDING_DIMENSIONS`はそれぞれ `gpt-5.6-luna`、`medium`、`text-embedding-3-large`、`1536` とします。検索元ごとの `*_SEARCH_ENABLED` がkill switch、`*_SEARCH_MIN_SCORE` が採用scoreの下限です。
 
-新indexは空の状態で本番検索へ使い始めません。6個のProduction indexは、WIKI 26件、Portal 15件、Acecore 164件、Schools 7件、Systems 256件、World Foundation 135件について、1536次元・cosine、mutation反映、`ja` namespaceの代表query、再同期の収束を確認済みです。そのためProductionの6つの `*_SEARCH_ENABLED` は一括して `"true"` にしています。設定の既定値とPreviewは引き続きすべて `"false"` で、PreviewにはVectorize bindingも置きません。一部だけ旧indexへ向けた状態や、空indexを有効化した状態ではマージ・デプロイしません。旧1024次元のProduction indexは削除済みで、Productionには1536次元indexだけを残します。
+新indexは空の状態で本番検索へ使い始めません。6個のProduction indexは、WIKI 26件、Portal 15件、Acecore 305件、Schools 7件、Systems 256件、World Foundation 135件について、1536次元・cosine、mutation反映、`ja` namespaceの代表query、再同期の収束を確認済みです。そのためProductionの6つの `*_SEARCH_ENABLED` は一括して `"true"` にしています。設定の既定値とPreviewは引き続きすべて `"false"` で、PreviewにはVectorize bindingも置きません。一部だけ旧indexへ向けた状態や、空indexを有効化した状態ではマージ・デプロイしません。旧1024次元のProduction indexは削除済みで、Productionには1536次元indexだけを残します。
 
 `npm run build` は `dist/vector-corpus.json` まで生成します。`npm run sync:portal-vectorize:dry-run` でsource数、vector数、corpus versionを確認できます。実同期先は `aceserver-portal-search-openai-1536-production` だけに制限し、`--confirm-production aceserver-portal-search-openai-1536-production` がない実行、管理外ID、20%を超える削除、10 source未満のcorpusでは停止します。
 
