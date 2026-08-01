@@ -6,3 +6,5 @@ public/uploads/
 .playwright-cli/
 output/
 .tmp-*.log
+functions/worker-configuration.d.ts
+cloudflare/dynmap-r2-cache/worker-configuration.d.ts

@@ -3,8 +3,8 @@ import {
   ALPHA_SEARCH_EMBEDDING_MODEL,
   createAlphaSearchEmbedding,
   isAlphaSearchEmbedding,
-} from './alpha-search-embedding.js'
-import { resolveGuideLocale } from './alpha-locales.js'
+} from './alpha-search-embedding.ts'
+import { resolveGuideLocale } from './alpha-locales.ts'
 
 export const ACESERVER_PORTAL_URL = 'https://asv.acecore.net'
 export const ACESERVER_PORTAL_CORPUS_PATH = '/vector-corpus.json'
@@ -24,11 +24,43 @@ const MAX_METADATA_EXCERPT_LENGTH = 500
 const MAX_METADATA_CONTENT_TYPE_LENGTH = 40
 const MAX_METADATA_URL_LENGTH = 500
 
+type CorpusFetcher = (
+  input: RequestInfo | URL,
+  init?: RequestInit,
+) => Promise<Response>
+
+type PortalCorpusChunk = {
+  id?: unknown
+  metadata?: unknown
+  namespace?: unknown
+  text?: unknown
+}
+
+type PortalCorpus = {
+  chunks: PortalCorpusChunk[]
+  embedding: { dimensions: number; model: string }
+  schemaVersion: number
+}
+
+type PortalMetadata = {
+  contentType: string
+  excerpt: string
+  section: string
+  title: string
+  url: string
+}
+
+type PortalEntry = PortalMetadata & {
+  content?: string
+  id: string
+  score: number
+}
+
 export async function searchAceserverPortal(
   query,
   env,
   corpusUrl = `${ACESERVER_PORTAL_URL}${ACESERVER_PORTAL_CORPUS_PATH}`,
-  corpusFetcher = (...args) => globalThis.fetch(...args),
+  corpusFetcher: CorpusFetcher = globalThis.fetch,
   providedEmbedding = null,
   locale = 'ja',
 ) {
@@ -93,7 +125,11 @@ export function buildPortalGroundingContext(entries) {
   ].join('\n')
 }
 
-async function hydratePortalEntries(entries, corpusUrl, corpusFetcher) {
+async function hydratePortalEntries(
+  entries: PortalEntry[],
+  corpusUrl: string,
+  corpusFetcher: CorpusFetcher,
+) {
   if (entries.length === 0 || typeof corpusFetcher !== 'function') {
     return entries
   }
@@ -115,8 +151,10 @@ async function hydratePortalEntries(entries, corpusUrl, corpusFetcher) {
     return entries
   }
 
-  const entriesById = new Map(entries.map((entry) => [entry.id, entry]))
-  const contentById = new Map()
+  const entriesById = new Map<string, PortalEntry>(
+    entries.map((entry) => [entry.id, entry]),
+  )
+  const contentById = new Map<string, string>()
 
   for (const chunk of corpus.chunks) {
     const id = readString(chunk?.id, 128)
@@ -136,7 +174,10 @@ async function hydratePortalEntries(entries, corpusUrl, corpusFetcher) {
   }))
 }
 
-async function fetchPortalCorpus(corpusUrl, corpusFetcher) {
+async function fetchPortalCorpus(
+  corpusUrl: string,
+  corpusFetcher: CorpusFetcher,
+) {
   const normalizedCorpusUrl = normalizePortalCorpusUrl(corpusUrl)
   const controller = new AbortController()
   const timeout = setTimeout(() => controller.abort(), PORTAL_CORPUS_TIMEOUT_MS)
@@ -195,20 +236,20 @@ function normalizePortalCorpusUrl(value) {
   return url.href
 }
 
-function isValidPortalCorpus(value) {
-  return Boolean(
-    value &&
-    typeof value === 'object' &&
+function isValidPortalCorpus(value: unknown): value is PortalCorpus {
+  if (!isRecord(value) || !isRecord(value.embedding)) return false
+
+  return (
     value.schemaVersion === 1 &&
-    value.embedding?.model === ALPHA_SEARCH_EMBEDDING_MODEL &&
-    value.embedding?.dimensions === ALPHA_SEARCH_EMBEDDING_DIMENSIONS &&
+    value.embedding.model === ALPHA_SEARCH_EMBEDDING_MODEL &&
+    value.embedding.dimensions === ALPHA_SEARCH_EMBEDDING_DIMENSIONS &&
     Array.isArray(value.chunks) &&
-    value.chunks.length <= MAX_PORTAL_CORPUS_CHUNKS,
+    value.chunks.length <= MAX_PORTAL_CORPUS_CHUNKS
   )
 }
 
-function normalizePortalMatches(queryResult, minScore) {
-  const results = []
+function normalizePortalMatches(queryResult, minScore): PortalEntry[] {
+  const results: PortalEntry[] = []
   const seenUrls = new Set()
 
   for (const match of queryResult?.matches || []) {
@@ -231,8 +272,8 @@ function normalizePortalMatches(queryResult, minScore) {
   return results
 }
 
-function normalizePortalMetadata(value) {
-  if (!value || typeof value !== 'object' || Array.isArray(value)) return null
+function normalizePortalMetadata(value: unknown): PortalMetadata | null {
+  if (!isRecord(value)) return null
 
   const locale = readString(value.locale, 16)
   const title = readString(value.title, MAX_METADATA_TITLE_LENGTH)
@@ -316,6 +357,10 @@ function readString(value, maximumLength) {
         .trim()
         .slice(0, maximumLength)
     : ''
+}
+
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return Boolean(value) && typeof value === 'object' && !Array.isArray(value)
 }
 
 function escapeMarkdownLabel(value) {

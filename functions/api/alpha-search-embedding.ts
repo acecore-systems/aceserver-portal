@@ -2,7 +2,7 @@ import {
   createOpenAiEmbeddings,
   OPENAI_EMBEDDING_DIMENSIONS,
   OPENAI_EMBEDDING_MODEL,
-} from './openai-api.js'
+} from './openai-api.ts'
 
 export const ALPHA_SEARCH_EMBEDDING_MODEL = OPENAI_EMBEDDING_MODEL
 export const ALPHA_SEARCH_EMBEDDING_DIMENSIONS = OPENAI_EMBEDDING_DIMENSIONS

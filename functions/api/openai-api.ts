@@ -97,7 +97,7 @@ export function extractOpenAiResponseText(payload) {
     throw namedError('OpenAIResponsePayloadError')
   }
 
-  const texts = []
+  const texts: string[] = []
   for (const item of payload.output) {
     if (item?.type !== 'message') continue
     if (!Array.isArray(item.content)) {
@@ -246,8 +246,11 @@ async function requestOpenAiJson({
   }
 }
 
-function namedError(name, status) {
-  const error = new Error(name)
+function namedError(
+  name: string,
+  status?: number,
+): Error & { status?: number } {
+  const error = new Error(name) as Error & { status?: number }
   error.name = name
   if (Number.isInteger(status)) error.status = status
   return error

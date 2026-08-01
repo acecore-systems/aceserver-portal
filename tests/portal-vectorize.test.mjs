@@ -7,7 +7,7 @@ import test, { after } from 'node:test'
 import {
   extractOpenAiResponseText,
   OPENAI_API_BASE_URL,
-} from '../functions/api/openai-api.js'
+} from '../functions/api/openai-api.ts'
 import {
   buildPortalVectorCorpus,
   chunkPortalSearchDocument,

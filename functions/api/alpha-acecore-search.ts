@@ -1,7 +1,7 @@
 import {
   createAlphaSearchEmbedding,
   isAlphaSearchEmbedding,
-} from './alpha-search-embedding.js'
+} from './alpha-search-embedding.ts'
 
 export const ACECORE_URL = 'https://acecore.net'
 
@@ -13,6 +13,16 @@ const MAX_METADATA_TITLE_LENGTH = 240
 const MAX_METADATA_SECTION_LENGTH = 240
 const MAX_METADATA_EXCERPT_LENGTH = 500
 const MAX_METADATA_URL_LENGTH = 500
+
+type AcecoreEntry = {
+  contentType: string
+  excerpt: string
+  id: string
+  score: number
+  section: string
+  title: string
+  url: string
+}
 
 const ACECORE_BRAND_PATTERN = /(?:\bacecore\b|エースコア)/iu
 const ACECORE_OPERATOR_PATTERN =
@@ -96,7 +106,7 @@ export function buildAcecoreGroundingContext(entries) {
 }
 
 function normalizeAcecoreMatches(queryResult, minScore) {
-  const results = []
+  const results: AcecoreEntry[] = []
   const seenUrls = new Set()
 
   for (const match of queryResult?.matches || []) {

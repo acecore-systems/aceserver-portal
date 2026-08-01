@@ -3,7 +3,7 @@ import {
   ALPHA_SEARCH_EMBEDDING_MODEL,
   createAlphaSearchEmbedding,
   isAlphaSearchEmbedding,
-} from './alpha-search-embedding.js'
+} from './alpha-search-embedding.ts'
 
 export const ACESERVER_WIKI_URL = 'https://asv-wiki.acecore.net'
 export const ACESERVER_WIKI_CORPUS_URL = `${ACESERVER_WIKI_URL}/vector-corpus.json`
@@ -23,10 +23,41 @@ const MAX_METADATA_SECTION_LENGTH = 240
 const MAX_METADATA_EXCERPT_LENGTH = 500
 const MAX_METADATA_URL_LENGTH = 500
 
+type CorpusFetcher = (
+  input: RequestInfo | URL,
+  init?: RequestInit,
+) => Promise<Response>
+
+type WikiCorpusChunk = {
+  id?: unknown
+  metadata?: unknown
+  namespace?: unknown
+  text?: unknown
+}
+
+type WikiCorpus = {
+  chunks: WikiCorpusChunk[]
+  embedding: { dimensions: number; model: string }
+  schemaVersion: number
+}
+
+type WikiMetadata = {
+  excerpt: string
+  section: string
+  title: string
+  url: string
+}
+
+type WikiEntry = WikiMetadata & {
+  content?: string
+  id: string
+  score: number
+}
+
 export async function searchAceserverWiki(
   query,
   env,
-  corpusFetcher = (...args) => globalThis.fetch(...args),
+  corpusFetcher: CorpusFetcher = globalThis.fetch,
   providedEmbedding = null,
 ) {
   if (
@@ -82,7 +113,10 @@ export function buildWikiGroundingContext(entries) {
   ].join('\n')
 }
 
-async function hydrateWikiEntries(entries, corpusFetcher) {
+async function hydrateWikiEntries(
+  entries: WikiEntry[],
+  corpusFetcher: CorpusFetcher,
+) {
   if (entries.length === 0 || typeof corpusFetcher !== 'function') {
     return entries
   }
@@ -104,8 +138,10 @@ async function hydrateWikiEntries(entries, corpusFetcher) {
     return entries
   }
 
-  const entriesById = new Map(entries.map((entry) => [entry.id, entry]))
-  const contentById = new Map()
+  const entriesById = new Map<string, WikiEntry>(
+    entries.map((entry) => [entry.id, entry]),
+  )
+  const contentById = new Map<string, string>()
 
   for (const chunk of corpus.chunks) {
     const id = readString(chunk?.id, 128)
@@ -125,7 +161,7 @@ async function hydrateWikiEntries(entries, corpusFetcher) {
   }))
 }
 
-async function fetchWikiCorpus(corpusFetcher) {
+async function fetchWikiCorpus(corpusFetcher: CorpusFetcher) {
   const controller = new AbortController()
   const timeout = setTimeout(() => controller.abort(), WIKI_CORPUS_TIMEOUT_MS)
 
@@ -161,20 +197,20 @@ async function fetchWikiCorpus(corpusFetcher) {
   }
 }
 
-function isValidWikiCorpus(value) {
-  return Boolean(
-    value &&
-    typeof value === 'object' &&
+function isValidWikiCorpus(value: unknown): value is WikiCorpus {
+  if (!isRecord(value) || !isRecord(value.embedding)) return false
+
+  return (
     value.schemaVersion === 1 &&
-    value.embedding?.model === WIKI_EMBEDDING_MODEL &&
-    value.embedding?.dimensions === ALPHA_SEARCH_EMBEDDING_DIMENSIONS &&
+    value.embedding.model === WIKI_EMBEDDING_MODEL &&
+    value.embedding.dimensions === ALPHA_SEARCH_EMBEDDING_DIMENSIONS &&
     Array.isArray(value.chunks) &&
-    value.chunks.length <= MAX_WIKI_CORPUS_CHUNKS,
+    value.chunks.length <= MAX_WIKI_CORPUS_CHUNKS
   )
 }
 
-function normalizeWikiMatches(queryResult, minScore) {
-  const results = []
+function normalizeWikiMatches(queryResult, minScore): WikiEntry[] {
+  const results: WikiEntry[] = []
   const seenUrls = new Set()
 
   for (const match of queryResult?.matches || []) {
@@ -199,8 +235,8 @@ function normalizeWikiMatches(queryResult, minScore) {
   return results
 }
 
-function normalizeWikiMetadata(value) {
-  if (!value || typeof value !== 'object' || Array.isArray(value)) return null
+function normalizeWikiMetadata(value: unknown): WikiMetadata | null {
+  if (!isRecord(value)) return null
 
   const locale = readString(value.locale, 16)
   const title = readString(value.title, MAX_METADATA_TITLE_LENGTH)
@@ -250,6 +286,10 @@ function readString(value, maximumLength) {
         .trim()
         .slice(0, maximumLength)
     : ''
+}
+
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return Boolean(value) && typeof value === 'object' && !Array.isArray(value)
 }
 
 function escapeMarkdownLabel(value) {

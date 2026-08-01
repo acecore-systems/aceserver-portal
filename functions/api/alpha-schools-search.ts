@@ -1,7 +1,7 @@
 import {
   createAlphaSearchEmbedding,
   isAlphaSearchEmbedding,
-} from './alpha-search-embedding.js'
+} from './alpha-search-embedding.ts'
 
 export const ACECORE_SCHOOLS_URL = 'https://schools.acecore.net'
 
@@ -13,6 +13,16 @@ const MAX_METADATA_TITLE_LENGTH = 240
 const MAX_METADATA_SECTION_LENGTH = 240
 const MAX_METADATA_EXCERPT_LENGTH = 500
 const MAX_METADATA_URL_LENGTH = 500
+
+type SchoolsEntry = {
+  contentType: string
+  excerpt: string
+  id: string
+  score: number
+  section: string
+  title: string
+  url: string
+}
 
 const SCHOOLS_BRAND_PATTERN =
   /(?:\bacecore[\s_-]*schools?\b|\bschools\b|エースコア(?:・|\s*)?(?:スクールズ?|学校)|スクールズ)/iu
@@ -98,7 +108,7 @@ export function buildSchoolsGroundingContext(entries) {
 }
 
 function normalizeSchoolsMatches(queryResult, minScore) {
-  const results = []
+  const results: SchoolsEntry[] = []
   const seenUrls = new Set()
 
   for (const match of queryResult?.matches || []) {

@@ -16,48 +16,48 @@ import {
   removeUnsupportedWikiReferenceLines,
   sanitizeAlphaAnswerLinks,
   trimIncompleteMarkdown,
-} from '../functions/api/alpha-chat.js'
+} from '../functions/api/alpha-chat.ts'
 import {
   OPENAI_API_BASE_URL,
   OPENAI_EMBEDDING_DIMENSIONS,
   OPENAI_RESPONSE_MODEL,
-} from '../functions/api/openai-api.js'
+} from '../functions/api/openai-api.ts'
 import {
   getGuideLinkResources,
   TARGET_LANGUAGES,
   WIKI_URL,
-} from '../functions/api/alpha-locales.js'
+} from '../functions/api/alpha-locales.ts'
 import {
   buildAcecoreGroundingContext,
   searchAcecore,
   shouldSearchAcecore,
-} from '../functions/api/alpha-acecore-search.js'
+} from '../functions/api/alpha-acecore-search.ts'
 import {
   buildSchoolsGroundingContext,
   searchSchools,
   shouldSearchSchools,
-} from '../functions/api/alpha-schools-search.js'
+} from '../functions/api/alpha-schools-search.ts'
 import {
   buildSystemsGroundingContext,
   searchSystems,
   shouldSearchSystems,
-} from '../functions/api/alpha-systems-search.js'
+} from '../functions/api/alpha-systems-search.ts'
 import {
   ACESERVER_PORTAL_CORPUS_PATH,
   buildPortalGroundingContext,
   searchAceserverPortal,
-} from '../functions/api/alpha-portal-search.js'
+} from '../functions/api/alpha-portal-search.ts'
 import {
   ACESERVER_WIKI_CORPUS_URL,
   buildWikiGroundingContext,
   searchAceserverWiki,
   WIKI_EMBEDDING_MODEL,
-} from '../functions/api/alpha-wiki-search.js'
+} from '../functions/api/alpha-wiki-search.ts'
 import {
   buildWorldFoundationGroundingContext,
   searchWorldFoundation,
   shouldSearchWorldFoundation,
-} from '../functions/api/alpha-world-foundation-search.js'
+} from '../functions/api/alpha-world-foundation-search.ts'
 
 const ENDPOINT = 'https://asv.acecore.net/api/alpha-chat'
 const TEST_OPENAI_API_KEY = 'test-openai-api-key'
