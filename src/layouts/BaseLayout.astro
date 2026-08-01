@@ -29,6 +29,7 @@ interface Props {
   imageAlt?: string
   hideFooter?: boolean
   fullHeight?: boolean
+  plainBackground?: boolean
   robots?: string
   canonical?: string | null
   showAds?: boolean
@@ -43,6 +44,7 @@ const {
   imageAlt: imageAltInput,
   hideFooter = false,
   fullHeight = false,
+  plainBackground = false,
   robots = 'index, follow',
   canonical: canonicalInput = Astro.url.pathname,
   showAds = false,
@@ -207,7 +209,15 @@ const rssUrl = new URL(localizePath(locale, '/rss.xml'), siteBase)
     <script type="application/ld+json" set:html={organizationJsonLd} />
     <script type="application/ld+json" set:html={webpageJsonLd} />
   </head>
-  <body class:list={[{ 'is-full-height': fullHeight }]}>
+  <body
+    class:list={[
+      {
+        'has-plain-background': plainBackground,
+        'is-article': ogType === 'article',
+        'is-full-height': fullHeight,
+      },
+    ]}
+  >
     <a class="skip-link" href="#main">{ui.skipToContent}</a>
     <Header locale={locale} />
     <AnnouncementBanner locale={locale} />
@@ -257,6 +267,11 @@ const rssUrl = new URL(localizePath(locale, '/rss.xml'), siteBase)
     line-height: 1.7;
     overflow-wrap: anywhere;
     text-rendering: optimizeLegibility;
+  }
+
+  body.is-article,
+  body.has-plain-background {
+    background: #fff5dc;
   }
 
   body.is-full-height main {
