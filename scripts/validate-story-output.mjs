@@ -33,11 +33,12 @@ const stories = [
   },
   {
     slug: 'minecraft-server-osusume',
-    title: 'おすすめのマイクラサーバーを探す前に。自分に合う選び方',
+    title:
+      '【2026年8月更新】おすすめのマイクラサーバー6選｜Java・統合版対応や遊び方で比較',
     description:
-      '「おすすめ」をそのまま選ぶ前に、遊び方・参加しやすさ・ルールを確認するための6つのポイントと、エースサーバーが合う人の目安を紹介します。',
+      '日本の公開Minecraftサーバーを、公式サイトで確認できた対応エディション・遊び方・参加案内から紹介。最後にエースサーバーの参加方法も案内します。',
     author: 'Gui',
-    datePublished: '2026-07-31T01:00:00.000Z',
+    datePublished: '2026-08-01T01:00:00.000Z',
     image: '/uploads/legacy-multiplayer.jpg',
     imageAlt: '夕焼けの海を岩場から眺めるMinecraftのプレイヤー',
   },

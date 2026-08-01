@@ -1,9 +1,9 @@
 ---
-title: 'Antes de escolher um servidor de Minecraft recomendado: como encontrar o ideal para você'
-description: Seis pontos para verificar antes de seguir uma recomendação, além de um guia sobre para quem o Aceserver pode servir e como participar.
+title: 'Servidores de Minecraft recomendados no Japão: 6 opções por Java/Bedrock e estilo de jogo'
+description: Um guia de servidores públicos de Minecraft no Japão com base nas edições, estilos de jogo e informações de participação confirmados nos sites oficiais. O Aceserver aparece no final.
 translationOf: minecraft-server-osusume
-sourceHash: sha256:271dbf465365030667950c4199d009eebe0169a9c54c3812d021987a8cc9512c
-date: 2026-07-31T10:00:00+09:00
+sourceHash: sha256:50b9c51812ccdab7b7732e1fc3eebbcbe164436951ca63a40599490daea08c9c
+date: 2026-08-01T10:00:00+09:00
 tags:
   - Minecraft
   - Servidor de Minecraft
@@ -13,35 +13,50 @@ image: /uploads/legacy-multiplayer.jpg
 imageAlt: Um jogador de Minecraft observa o oceano ao pôr do sol de um rochedo
 ---
 
-Ao procurar um “servidor de Minecraft recomendado”, um ranking ou uma breve apresentação pode parecer suficiente. Mas continuar se divertindo depende do que você quer jogar, de o processo de entrada ser claro e de as regras e a atmosfera combinarem com você.
+Os servidores públicos de Minecraft vão de lugares para construção e sobrevivência tranquilas a comunidades centradas em economia, missões e eventos. Comparar a edição que você usa, o que quer jogar e as orientações disponíveis antes de entrar facilita encontrar um servidor para aproveitar por muito tempo.
 
-Este artigo é publicado pelo portal oficial do Aceserver para quem procura um servidor público. Em vez de criar um ranking, ele apresenta pontos para verificar ao escolher um servidor e uma indicação de para quem o Aceserver pode ser adequado.
+Este artigo é editado pelo portal oficial do Aceserver. Primeiro ele apresenta outros servidores públicos com base em suas informações oficiais e, ao final, mostra o Aceserver como uma das opções.
 
-## Por que um ranking não é suficiente
+## Critérios editoriais
 
-Ser popular ou ter muitos jogadores pode ajudar a reduzir as primeiras opções. Ainda assim, pode ser difícil continuar se a edição que você usa ou o estilo de jogo não combinar. Verifique estes seis pontos antes de participar.
+A ordem não é um ranking de popularidade, tamanho, segurança ou qualidade. Em 1 de agosto de 2026, foram selecionados servidores cujos sites oficiais mostravam um caminho de participação ou dados de conexão, edições compatíveis, estilo de jogo e uma entrada para regras ou guias. A disposição facilita comparar estilos diferentes.
 
-1. **Edições compatíveis**: Confira se você joga Java Edition ou Bedrock Edition e se consegue entrar no mesmo servidor que seus amigos.
-2. **Estilo de jogo**: Veja se a direção do servidor combina com o que você gosta, como construir, explorar, economia ou minijogos.
-3. **Um caminho claro para entrar**: É mais fácil começar pela primeira vez quando as etapas, as configurações necessárias e a primeira orientação estão organizadas.
-4. **Regras e comunidade**: Poder consultar ações proibidas e o que a comunidade valoriza na [WIKI oficial](https://asv-wiki.acecore.net) antes de entrar traz mais segurança.
-5. **Encontrar as informações necessárias**: Veja se é fácil chegar a informações sobre mundos, eventos e formas de jogar.
-6. **Um primeiro passo acessível**: Saber onde fazer perguntas e onde a orientação começa pode reduzir a insegurança antes de participar.
+Disponibilidade, versões compatíveis, requisitos de idade, regras e eventos podem mudar. Antes de participar, abra sempre as orientações oficiais mais recentes de cada servidor.
 
-## Para quem o Aceserver pode ser adequado
+## Três pontos antes de comparar
 
-O Aceserver é um servidor público gratuito de Minecraft ao qual qualquer pessoa pode entrar tanto pela Java Edition quanto pela Bedrock Edition. Ele pode combinar com quem quer jogar de forma próxima ao vanilla e bastante livre, ou com quem prefere conferir as orientações no Discord antes de participar.
+1. **Java ou Bedrock**: Se você vai jogar com amigos, confirme que todas as pessoas conseguem entrar.
+2. **Se o estilo combina**: Decida se busca uma vida próxima ao vanilla, construção, economia, missões, eventos ou outra experiência.
+3. **Regras e guia de participação**: Um servidor com passos claros, comportamentos proibidos e um local para dúvidas é mais fácil na primeira visita.
 
-Esta página é uma orientação do portal oficial. Ela não compara o Aceserver com outros servidores; escolha com base nos pontos acima e no seu estilo de jogo preferido.
+## Seis servidores de Minecraft recomendados
 
-## Três etapas para participar
+### 1. [Nishisaba](https://nishisaba.jp/)
 
-1. [Confira a visão geral do servidor no portal](/pt/)
-2. [Entre no Discord oficial](https://discord.gg/acsv)
-3. [Leia a WIKI para conhecer as regras e o que verificar antes de participar](https://asv-wiki.acecore.net)
+Nishisaba é um servidor público com jogo cruzado para Java e Bedrock que apresenta três mundos: principal, sobrevivência e lobby. Pode combinar com quem quer construir e explorar livremente, além de usar elementos como mcMMO e configurações de lar. O site oficial reúne regras, participação, Discord e wiki.
 
-Os requisitos e as regras podem mudar, então confira as orientações mais recentes no Discord oficial e na WIKI antes de participar.
+### 2. [Manmamiya](https://www.manmamiya.work/)
 
-## Se ainda tiver dúvidas, comece pelo guia de participação
+Manmamiya aceita jogadores de Java e Bedrock e mantém uma sensação vanilla enquanto oferece recursos para multijogador, como proteção de terrenos, mundo de recursos e teletransportes. Quem gosta de turismo, construção, eventos e sobrevivência de longo prazo pode entender melhor o servidor lendo primeiro o site oficial e a wiki. Confira também as orientações oficiais de idade antes de entrar.
 
-A maneira mais segura de decidir se o servidor combina com você é ver as orientações reais e a entrada da comunidade. Depois de confirmar se joga Java Edition ou Bedrock Edition, comece por [conferir o guia de participação do Aceserver](/pt/).
+### 3. [Tsubusaba](https://tsubu-server.github.io/)
+
+Tsubusaba aceita Java e Bedrock e é apresentado como um servidor de vida. Além de um mundo principal com biomas diferentes, há um mundo de recursos e um servidor voltado à construção de mecanismos. É uma opção para quem gosta de desenvolver a própria vida aos poucos com proteção de terrenos, trabalhos e lojas de jogadores.
+
+### 4. [Munika Server](https://munikasvr.net/)
+
+Munika Server aceita Java e Bedrock e acrescenta elementos de economia, habilidades e missões à sobrevivência. Pode combinar com quem procura objetivos e eventos além da sobrevivência comum. O site oficial oferece entradas para participação, regras, suporte e Discord.
+
+### 5. [Noasaba](https://noasaba.com/)
+
+Noasaba é um servidor independente para Java e Bedrock que se apresenta como sobrevivência vanilla. Considere-o se quiser ficar próximo ao Minecraft cotidiano e, ainda assim, sentir a presença de outros jogadores. O site oficial liga para informações de conexão, regras, notas de uso, mapa e Discord.
+
+### 6. Aceserver
+
+O Aceserver é um servidor público gratuito de Minecraft ao qual qualquer pessoa pode entrar por Java ou Bedrock. Pode combinar com quem quer jogar de forma próxima ao vanilla e bastante livre, usando o Discord como entrada para as orientações de participação e para informações da comunidade.
+
+Antes de participar, veja o [portal do Aceserver](/pt/), o [Discord oficial](https://discord.gg/acsv) e a [WIKI oficial](https://asv-wiki.acecore.net) nessa ordem. Assim você pode decidir se o servidor combina com sua forma de jogar antes de entrar.
+
+## Se ainda tiver dúvidas, compare os guias oficiais
+
+Não escolha apenas porque um servidor é popular ou conhecido. Compare os passos de participação, as regras e as descrições dos mundos. Depois de verificar o suporte a Java/Bedrock, se seus amigos podem entrar e se o estilo combina com você, experimente o servidor que mais lhe interessa.

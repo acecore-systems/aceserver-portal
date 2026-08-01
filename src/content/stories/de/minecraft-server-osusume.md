@@ -1,9 +1,9 @@
 ---
-title: 'Bevor du einen empfohlenen Minecraft-Server auswählst: So findest du den passenden'
-description: Sechs Punkte, die du vor einer Empfehlung prüfen solltest, sowie ein Leitfaden dazu, für wen Aceserver passen kann und wie du beitrittst.
+title: 'Empfohlene Minecraft-Server in Japan: 6 Optionen nach Java/Bedrock und Spielstil'
+description: Ein Überblick über öffentliche Minecraft-Server in Japan anhand der auf ihren offiziellen Seiten bestätigten Editionen, Spielweisen und Beitrittsinformationen. Aceserver folgt am Schluss.
 translationOf: minecraft-server-osusume
-sourceHash: sha256:271dbf465365030667950c4199d009eebe0169a9c54c3812d021987a8cc9512c
-date: 2026-07-31T10:00:00+09:00
+sourceHash: sha256:50b9c51812ccdab7b7732e1fc3eebbcbe164436951ca63a40599490daea08c9c
+date: 2026-08-01T10:00:00+09:00
 tags:
   - Minecraft
   - Minecraft-Server
@@ -13,35 +13,50 @@ image: /uploads/legacy-multiplayer.jpg
 imageAlt: Ein Minecraft-Spieler blickt von einem Felsvorsprung auf das Meer bei Sonnenuntergang
 ---
 
-Wenn du nach einem „empfohlenen Minecraft-Server“ suchst, kann eine Rangliste oder eine kurze Beschreibung ausreichend wirken. Ob du langfristig Freude daran hast, hängt jedoch davon ab, was du spielen möchtest, ob der Beitritt verständlich erklärt ist und ob Regeln und Atmosphäre zu dir passen.
+Öffentliche Minecraft-Server reichen von Orten für entspanntes Bauen und Überleben bis zu Communities mit Wirtschaft, Quests und Events. Wenn du deine Edition, die gewünschte Spielweise und die Hinweise vor dem Beitritt vergleichst, findest du leichter einen Server, der langfristig zu dir passt.
 
-Dieser Artikel wird vom offiziellen Aceserver-Portal für Menschen veröffentlicht, die einen öffentlichen Server suchen. Statt eine Rangliste zu erstellen, zeigt er Punkte, die du bei der Wahl eines Servers prüfen kannst, und für wen Aceserver passen könnte.
+Dieser Artikel wird vom offiziellen Aceserver-Portal bearbeitet. Er stellt zuerst andere öffentliche Server anhand ihrer offiziellen Informationen vor und nennt Aceserver am Ende als eine der Optionen.
 
-## Warum eine Rangliste allein nicht reicht
+## Redaktionelle Kriterien
 
-Beliebtheit oder viele Spieler können helfen, die ersten Kandidaten einzugrenzen. Wenn aber die gespielte Edition oder die gewünschte Spielweise nicht passt, wird es schwer, dabeizubleiben. Prüfe vor dem Beitritt diese sechs Punkte.
+Die Reihenfolge ist keine Rangliste für Beliebtheit, Größe, Sicherheit oder Qualität. Am 1. August 2026 wurden Server ausgewählt, deren offizielle Seiten einen Beitrittsweg oder Verbindungsdaten, unterstützte Editionen, die Spielweise sowie einen Einstieg zu Regeln oder Anleitungen zeigten. Die Anordnung soll die unterschiedlichen Spielweisen vergleichbar machen.
 
-1. **Unterstützte Editionen**: Prüfe, ob du Java Edition oder Bedrock Edition spielst und ob du mit deinen Freunden demselben Server beitreten kannst.
-2. **Spielweise**: Schau, ob die Ausrichtung des Servers zu dem passt, was dir Spaß macht, etwa Bauen, Abenteuer, Wirtschaft oder Minispiele.
-3. **Ein klarer Weg zum Beitritt**: Der Einstieg fällt leichter, wenn die Schritte, nötige Einstellungen und die ersten Hinweise gut geordnet sind.
-4. **Regeln und Community**: Es ist beruhigend, wenn du verbotene Handlungen und die Werte der Community vor dem Beitritt im [offiziellen WIKI](https://asv-wiki.acecore.net) nachlesen kannst.
-5. **Die benötigten Informationen finden**: Achte darauf, ob Informationen zu Welten, Events und Spielweisen leicht zu erreichen sind.
-6. **Ein zugänglicher erster Schritt**: Wenn klar ist, wo du Fragen stellen kannst und wo die Anleitung beginnt, nimmt das Unsicherheit vor dem Beitritt.
+Verfügbarkeit, unterstützte Versionen, Altersvorgaben, Regeln und Events können sich ändern. Öffne vor dem Beitritt immer die aktuellen offiziellen Hinweise des jeweiligen Servers.
 
-## Für wen Aceserver passen kann
+## Drei Punkte vor dem Vergleich
 
-Aceserver ist ein kostenloser öffentlicher Minecraft-Server, dem jeder über Java Edition oder Bedrock Edition beitreten kann. Er kann zu Menschen passen, die nahe am Vanilla-Spiel und sehr frei spielen möchten, oder die zunächst die Hinweise auf Discord prüfen möchten.
+1. **Java oder Bedrock**: Wenn du mit Freunden spielst, prüfe, ob alle beitreten können.
+2. **Passende Spielweise**: Entscheide, ob du vor allem Vanilla-nahes Leben, Bauen, Wirtschaft, Quests, Events oder etwas anderes möchtest.
+3. **Regeln und Beitrittsanleitung**: Ein Server mit klaren Schritten, Verboten und einer Anlaufstelle für Fragen ist beim ersten Besuch leichter zugänglich.
 
-Diese Seite ist eine Anleitung des offiziellen Portals. Sie vergleicht Aceserver nicht mit anderen Servern; entscheide anhand der obigen Punkte und deiner bevorzugten Spielweise.
+## Sechs empfohlene Minecraft-Server
 
-## Drei Schritte zum Beitritt
+### 1. [Nishisaba](https://nishisaba.jp/)
 
-1. [Sieh dir die Serverübersicht im Portal an](/de/)
-2. [Tritt dem offiziellen Discord bei](https://discord.gg/acsv)
-3. [Lies im WIKI die Regeln und Informationen, die du vor dem Beitritt prüfen solltest](https://asv-wiki.acecore.net)
+Nishisaba ist ein öffentlicher Crossplay-Server für Java und Bedrock mit drei Welten: Main, Survival und Lobby. Er kann passen, wenn du frei bauen und Abenteuer erleben, aber auch Ergänzungen wie mcMMO und Home-Einstellungen nutzen möchtest. Die offizielle Seite bündelt Regeln, Beitritt, Discord und Wiki.
 
-Teilnahmebedingungen und Regeln können sich ändern. Prüfe deshalb vor deinem Beitritt die aktuellen Hinweise im offiziellen Discord und WIKI.
+### 2. [Manmamiya](https://www.manmamiya.work/)
 
-## Wenn du unsicher bist, beginne mit der Beitrittsanleitung
+Manmamiya nimmt Java- und Bedrock-Spieler auf und bewahrt ein Vanilla-Gefühl, ergänzt es aber um Funktionen für Multiplayer wie Landschutz, Ressourcenwelt und Warps. Wer Besichtigungen, Bauen, Events und langfristiges Survival mag, bekommt durch die offizielle Seite und das Wiki einen guten Eindruck. Prüfe vor dem Beitritt auch die offiziellen Altersvorgaben.
 
-Am zuverlässigsten findest du heraus, ob der Server zu dir passt, indem du die tatsächlichen Hinweise und den Einstieg zur Community ansiehst. Nachdem du geprüft hast, ob du Java Edition oder Bedrock Edition spielst, beginne mit [der Beitrittsanleitung von Aceserver](/de/).
+### 3. [Tsubusaba](https://tsubu-server.github.io/)
+
+Tsubusaba unterstützt Java und Bedrock und ist als Lebens-Server gestaltet. Neben einer Hauptwelt mit besonderen Biomen gibt es eine Ressourcenwelt und einen auf Maschinen spezialisierten Server. Er ist eine Option für Menschen, die ihr Leben mit Landschutz, Berufen und Spieler-Shops nach und nach aufbauen möchten.
+
+### 4. [Munika Server](https://munikasvr.net/)
+
+Munika Server lässt Java- und Bedrock-Spieler zu und ergänzt Survival um Wirtschaft, Skills und Quests. Er kann passen, wenn du zusätzlich zum gewöhnlichen Überleben Ziele und Events suchst. Die offizielle Seite bietet Einstiegspunkte für Beitritt, Regeln, Support und Discord.
+
+### 5. [Noasaba](https://noasaba.com/)
+
+Noasaba ist ein unabhängig betriebener Server für Java und Bedrock, der Vanilla-Survival anbietet. Er ist eine Überlegung wert, wenn du nahe am normalen Minecraft bleiben und trotzdem Multiplayer erleben möchtest. Die offizielle Seite verlinkt Verbindungsdaten, Regeln, Nutzungshinweise, Karte und Discord.
+
+### 6. Aceserver
+
+Aceserver ist ein kostenloser öffentlicher Minecraft-Server, dem alle über Java oder Bedrock beitreten können. Er kann zu Menschen passen, die Vanilla-nah und sehr frei spielen und Discord als Einstieg für Hinweise und Community-Informationen nutzen möchten.
+
+Sieh dir vor dem Beitritt das [Aceserver-Portal](/de/), den [offiziellen Discord](https://discord.gg/acsv) und das [offizielle WIKI](https://asv-wiki.acecore.net) in dieser Reihenfolge an. So kannst du vor dem Beitritt einschätzen, ob der Server zu deiner Spielweise passt.
+
+## Wenn du unsicher bist, vergleiche die offiziellen Anleitungen
+
+Entscheide nicht nur, weil ein Server beliebt oder bekannt ist. Vergleiche Beitrittsschritte, Regeln und Weltbeschreibungen. Prüfe Java-/Bedrock-Unterstützung, ob deine Freunde beitreten können und ob der Spielstil passt, und probiere dann den Server aus, der dich am meisten interessiert.
