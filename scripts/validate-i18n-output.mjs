@@ -26,6 +26,7 @@ const pageSlugs = await Promise.all(
 const storySlugs = [
   'aceserver-hijacked',
   'aceserver-portal-launch',
+  'aceserver-portal-wiki-renewal',
   'metaverse-is-close',
 ]
 

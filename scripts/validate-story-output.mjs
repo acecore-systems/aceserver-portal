@@ -32,6 +32,14 @@ const stories = [
       'Minecraftの街並みを背景にしたエースサーバーポータルのトップページ',
   },
   {
+    slug: 'aceserver-portal-wiki-renewal',
+    title: 'エースサーバーポータルとWIKIをリニューアルしました',
+    description:
+      'ポータルとWIKIの役割を整理し、初めて参加する人もプレイ中の人も必要な情報へ進みやすい構成に見直しました。',
+    author: 'Gui',
+    datePublished: '2026-08-01T01:00:00.000Z',
+  },
+  {
     slug: 'metaverse-is-close',
     title: 'メタバースは案外身近にあるよね',
     description:
