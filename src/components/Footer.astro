@@ -2,6 +2,7 @@
 import { getLocalizedNavigation, getLocalizedSettings } from '../i18n/content'
 import { localizePath, type Locale } from '../i18n/config'
 import { getUi } from '../i18n/translations'
+import { ACECORE_ORGANIZATION } from '../data/organization'
 import { externalLinkAttrs } from '../utils/links'
 
 interface Props {
@@ -12,6 +13,10 @@ const { locale = 'ja' } = Astro.props
 const navigation = getLocalizedNavigation(locale)
 const settings = getLocalizedSettings(locale)
 const ui = getUi(locale)
+const acecoreHomeUrl = new URL(
+  localizePath(locale, '/'),
+  ACECORE_ORGANIZATION.url,
+).toString()
 ---
 
 <footer class="site-footer">
@@ -35,6 +40,12 @@ const ui = getUi(locale)
         ))
       }
     </nav>
+    <div class="footer-meta">
+      <a href={acecoreHomeUrl} {...externalLinkAttrs(acecoreHomeUrl, true)}>
+        {ACECORE_ORGANIZATION.name} ({ACECORE_ORGANIZATION.legalName})
+      </a>
+      <span>© {new Date().getFullYear()} {ACECORE_ORGANIZATION.legalName}</span>
+    </div>
   </div>
 </footer>
 
@@ -70,6 +81,27 @@ const ui = getUi(locale)
     text-decoration: none;
   }
 
+  .footer-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+    color: rgba(255, 247, 223, 0.82);
+    font-size: 0.82rem;
+    line-height: 1.45;
+    text-align: right;
+  }
+
+  .footer-meta a {
+    color: inherit;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .footer-meta a:hover {
+    color: #ffd84d;
+  }
+
   nav {
     display: flex;
     flex-wrap: wrap;
@@ -91,6 +123,11 @@ const ui = getUi(locale)
     .footer-inner {
       align-items: flex-start;
       flex-direction: column;
+    }
+
+    .footer-meta {
+      align-items: flex-start;
+      text-align: left;
     }
   }
 </style>

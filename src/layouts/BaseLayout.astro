@@ -9,6 +9,7 @@ import AdUnit from '../components/AdUnit.astro'
 import AdsRuntime from '../components/AdsRuntime.astro'
 import AlphaGuide from '../components/AlphaGuide.astro'
 import { ADSENSE } from '../data/ads'
+import { ACECORE_ORGANIZATION } from '../data/organization'
 import { serializeJsonForHtmlScript } from '../data/safe-json'
 import { getLocalizedSettings } from '../i18n/content'
 import {
@@ -67,6 +68,7 @@ const logoUrl = new URL(settings.logo, siteBase)
 const organizationHomeUrl = new URL('/', siteBase)
 const homeUrl = new URL(localizePath(locale, '/'), siteBase)
 const organizationId = `${organizationHomeUrl}#organization`
+const acecoreOrganizationId = `${ACECORE_ORGANIZATION.url}#organization`
 const websiteId = `${homeUrl}#website`
 const webpageId = `${pageUrl.href}#webpage`
 const shouldShowAds = showAds && ADSENSE.enabled
@@ -99,6 +101,13 @@ const organizationJsonLd = serializeJsonForHtmlScript({
   name: settings.shortTitle,
   url: organizationHomeUrl.toString(),
   logo: logoUrl.toString(),
+  parentOrganization: {
+    '@type': 'Organization',
+    '@id': acecoreOrganizationId,
+    name: ACECORE_ORGANIZATION.name,
+    legalName: ACECORE_ORGANIZATION.legalName,
+    url: ACECORE_ORGANIZATION.url,
+  },
   sameAs: [settings.discordUrl, settings.wikiUrl],
 })
 const webpageJsonLd = serializeJsonForHtmlScript({
