@@ -15,6 +15,7 @@ const stories = (await getCollection('stories'))
   locale={locale}
   title={ui.storiesTitle}
   description={ui.storiesDescription}
+  plainBackground
 >
   <StoriesIndex locale={locale} stories={stories} />
 </BaseLayout>

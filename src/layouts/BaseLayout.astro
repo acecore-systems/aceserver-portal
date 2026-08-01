@@ -28,6 +28,7 @@ interface Props {
   imageAlt?: string
   hideFooter?: boolean
   fullHeight?: boolean
+  plainBackground?: boolean
   robots?: string
   canonical?: string | null
   showAds?: boolean
@@ -42,6 +43,7 @@ const {
   imageAlt: imageAltInput,
   hideFooter = false,
   fullHeight = false,
+  plainBackground = false,
   robots = 'index, follow',
   canonical: canonicalInput = Astro.url.pathname,
   showAds = false,
@@ -200,7 +202,11 @@ const rssUrl = new URL(localizePath(locale, '/rss.xml'), siteBase)
   </head>
   <body
     class:list={[
-      { 'is-article': ogType === 'article', 'is-full-height': fullHeight },
+      {
+        'has-plain-background': plainBackground,
+        'is-article': ogType === 'article',
+        'is-full-height': fullHeight,
+      },
     ]}
   >
     <a class="skip-link" href="#main">{ui.skipToContent}</a>
@@ -254,7 +260,8 @@ const rssUrl = new URL(localizePath(locale, '/rss.xml'), siteBase)
     text-rendering: optimizeLegibility;
   }
 
-  body.is-article {
+  body.is-article,
+  body.has-plain-background {
     background: #fff5dc;
   }
 
