@@ -1,7 +1,7 @@
-import { ACESERVER_WIKI_URL } from './alpha-wiki-search.js'
-import { ACECORE_SCHOOLS_URL } from './alpha-schools-search.js'
-import { ACECORE_SYSTEMS_URL } from './alpha-systems-search.js'
-import { WORLD_FOUNDATION_URL } from './alpha-world-foundation-search.js'
+import { ACESERVER_WIKI_URL } from './alpha-wiki-search.ts'
+import { ACECORE_SCHOOLS_URL } from './alpha-schools-search.ts'
+import { ACECORE_SYSTEMS_URL } from './alpha-systems-search.ts'
+import { WORLD_FOUNDATION_URL } from './alpha-world-foundation-search.ts'
 
 export const DISCORD_URL = 'https://discord.gg/acsv'
 export const WIKI_URL = ACESERVER_WIKI_URL

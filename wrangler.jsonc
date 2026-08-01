@@ -3,6 +3,15 @@
   "pages_build_output_dir": "./dist",
   "compatibility_date": "2026-07-22",
   "compatibility_flags": ["nodejs_compat"],
+  "secrets": {
+    "required": [
+      "CMS_GITHUB_APP_CLIENT_ID",
+      "CMS_GITHUB_APP_CLIENT_SECRET",
+      "CMS_GITHUB_APP_INSTALLATION_ID",
+      "CMS_OAUTH_STATE_SECRET",
+      "OPENAI_API_KEY",
+    ],
+  },
   "vars": {
     "OPENAI_RESPONSE_MODEL": "gpt-5.6-luna",
     "OPENAI_REASONING_EFFORT": "medium",
@@ -24,17 +33,26 @@
   "d1_databases": [
     {
       "binding": "SEARCH_RATE_LIMIT_DB",
-      "database_name": "acecore-net-search-preview",
-      "database_id": "e249ebf7-218d-4baf-b732-c0c2580141f5",
+      "database_name": "acecore-net-search-production",
+      "database_id": "3d26157c-b052-498c-af9b-82bad65b8421",
     },
   ],
   "env": {
     "preview": {
+      "secrets": {
+        "required": [
+          "CMS_GITHUB_APP_CLIENT_ID",
+          "CMS_GITHUB_APP_CLIENT_SECRET",
+          "CMS_GITHUB_APP_INSTALLATION_ID",
+          "CMS_OAUTH_STATE_SECRET",
+          "OPENAI_API_KEY",
+        ],
+      },
       "d1_databases": [
         {
           "binding": "SEARCH_RATE_LIMIT_DB",
-          "database_name": "acecore-net-search-preview",
-          "database_id": "e249ebf7-218d-4baf-b732-c0c2580141f5",
+          "database_name": "acecore-net-search-production",
+          "database_id": "3d26157c-b052-498c-af9b-82bad65b8421",
         },
       ],
       "vars": {
@@ -57,6 +75,15 @@
       },
     },
     "production": {
+      "secrets": {
+        "required": [
+          "CMS_GITHUB_APP_CLIENT_ID",
+          "CMS_GITHUB_APP_CLIENT_SECRET",
+          "CMS_GITHUB_APP_INSTALLATION_ID",
+          "CMS_OAUTH_STATE_SECRET",
+          "OPENAI_API_KEY",
+        ],
+      },
       "d1_databases": [
         {
           "binding": "SEARCH_RATE_LIMIT_DB",

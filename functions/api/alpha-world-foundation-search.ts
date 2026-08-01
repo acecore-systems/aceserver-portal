@@ -1,58 +1,63 @@
 import {
   createAlphaSearchEmbedding,
   isAlphaSearchEmbedding,
-} from './alpha-search-embedding.js'
+} from './alpha-search-embedding.ts'
 
-export const ACECORE_SYSTEMS_URL = 'https://systems.acecore.net'
+export const WORLD_FOUNDATION_URL = 'https://world-foundation.acecore.net'
 
-const SYSTEMS_SEARCH_NAMESPACE = 'ja'
-const SYSTEMS_SEARCH_TOP_K = 15
-const SYSTEMS_GROUNDING_LIMIT = 3
-const DEFAULT_SYSTEMS_SEARCH_MIN_SCORE = 0.5
+const WORLD_FOUNDATION_SEARCH_NAMESPACE = 'ja'
+const WORLD_FOUNDATION_SEARCH_TOP_K = 15
+const WORLD_FOUNDATION_GROUNDING_LIMIT = 3
+const DEFAULT_WORLD_FOUNDATION_SEARCH_MIN_SCORE = 0.4
 const MAX_METADATA_TITLE_LENGTH = 240
 const MAX_METADATA_SECTION_LENGTH = 240
 const MAX_METADATA_EXCERPT_LENGTH = 500
 const MAX_METADATA_URL_LENGTH = 500
 
-const SYSTEMS_EXPLICIT_BRAND_PATTERN =
-  /(?:\bacecore[\s_-]*systems?\b|エースコア(?:・|\s*)?システムズ?)/iu
-const SYSTEMS_SHORT_BRAND_PATTERN = /\bsystems\b/iu
-const SYSTEMS_TOPIC_PATTERN =
-  /(?:IT顧問|技術顧問|開発顧問|業務システム|システム(?:開発|構築|導入|改修|保守|運用)|Web(?:サイト|アプリ)?(?:制作|開発|運用|改善|相談)|ウェブサイト(?:制作|開発|運用|改善|相談)|ホームページ(?:制作|開発|運用|改善|相談)|アプリ(?:制作|開発)|DX(?:支援|相談)|開発(?:依頼|相談|支援)|制作実績|開発実績|導入事例|技術解説|\b(?:system|web|app|application) development\b|\bit (?:advisor|advisory|consulting)\b|\btechnical consulting\b|\bcase stud(?:y|ies)\b)/iu
+type WorldFoundationEntry = {
+  contentType: string
+  excerpt: string
+  id: string
+  score: number
+  section: string
+  title: string
+  url: string
+}
+
+const WORLD_FOUNDATION_PATTERN =
+  /(?:world[\s_-]*foundation|ワールド(?:・|\s*)?(?:ファウンデーション|財団))/iu
 const ACESERVER_CONTEXT_PATTERN =
   /(?:\baceserver\b|エースサーバー|このサーバー)/iu
 const ACESERVER_DETAIL_PATTERN =
   /(?:ルール|ban|禁止|コマンド|参加方法|入り方|接続方法|サーバーip|アドレス|ホワイトリスト|ワールド|マップ|プラグイン|荒らし|処罰|申請)/iu
 
-export function shouldSearchSystems(query) {
+export function shouldSearchWorldFoundation(query) {
   const normalizedQuery = String(query || '')
     .normalize('NFKC')
     .replace(/\s+/gu, ' ')
     .trim()
-  if (!normalizedQuery) return false
+  if (!WORLD_FOUNDATION_PATTERN.test(normalizedQuery)) return false
 
-  const hasExplicitBrandIntent =
-    SYSTEMS_EXPLICIT_BRAND_PATTERN.test(normalizedQuery)
-  if (
+  const queryWithoutProjectName = normalizedQuery.replace(
+    WORLD_FOUNDATION_PATTERN,
+    ' ',
+  )
+  return !(
     ACESERVER_CONTEXT_PATTERN.test(normalizedQuery) &&
-    (ACESERVER_DETAIL_PATTERN.test(normalizedQuery) || !hasExplicitBrandIntent)
-  ) {
-    return false
-  }
-
-  return (
-    hasExplicitBrandIntent ||
-    SYSTEMS_SHORT_BRAND_PATTERN.test(normalizedQuery) ||
-    SYSTEMS_TOPIC_PATTERN.test(normalizedQuery)
+    ACESERVER_DETAIL_PATTERN.test(queryWithoutProjectName)
   )
 }
 
-export async function searchSystems(query, env, providedEmbedding = null) {
+export async function searchWorldFoundation(
+  query,
+  env,
+  providedEmbedding = null,
+) {
   if (
     !query ||
     (!providedEmbedding && !env?.OPENAI_API_KEY) ||
-    !env?.SYSTEMS_SEARCH_INDEX ||
-    env.SYSTEMS_SEARCH_ENABLED === 'false'
+    !env?.WORLD_FOUNDATION_SEARCH_INDEX ||
+    env.WORLD_FOUNDATION_SEARCH_ENABLED === 'false'
   ) {
     return []
   }
@@ -63,56 +68,60 @@ export async function searchSystems(query, env, providedEmbedding = null) {
 
   let matches
   try {
-    matches = await env.SYSTEMS_SEARCH_INDEX.query(embedding, {
-      namespace: SYSTEMS_SEARCH_NAMESPACE,
-      topK: SYSTEMS_SEARCH_TOP_K,
+    matches = await env.WORLD_FOUNDATION_SEARCH_INDEX.query(embedding, {
+      namespace: WORLD_FOUNDATION_SEARCH_NAMESPACE,
+      topK: WORLD_FOUNDATION_SEARCH_TOP_K,
       returnMetadata: 'all',
       returnValues: false,
     })
   } catch (error) {
-    logSystemsSearchError('vectorize', getErrorCode(error, 'provider_error'))
+    logWorldFoundationSearchError(
+      'vectorize',
+      getErrorCode(error, 'provider_error'),
+    )
     return []
   }
 
-  return normalizeSystemsMatches(
+  return normalizeWorldFoundationMatches(
     matches,
-    normalizeMinScore(env.SYSTEMS_SEARCH_MIN_SCORE),
+    normalizeMinScore(env.WORLD_FOUNDATION_SEARCH_MIN_SCORE),
   )
 }
 
-export function buildSystemsGroundingContext(entries) {
+export function buildWorldFoundationGroundingContext(entries) {
   if (!Array.isArray(entries) || entries.length === 0) return ''
 
   const evidence = entries.map((entry, index) => {
     return [
-      `<systems-evidence index="${index + 1}">`,
+      `<world-foundation-evidence index="${index + 1}">`,
       `Source: [${escapeMarkdownLabel(entry.title)}](${entry.url})`,
-      `Content type: ${entry.contentType}`,
+      `Document type: ${entry.contentType}`,
       `Section: ${entry.section}`,
       `Excerpt: ${entry.excerpt}`,
-      '</systems-evidence>',
+      '</world-foundation-evidence>',
     ].join('\n')
   })
 
   return [
-    'Acecore Systems official site retrieved evidence:',
-    'Use this evidence only for system and web development, IT advisory services, pricing, case studies, and technical explanations.',
+    'World Foundation official design site retrieved evidence:',
+    'Use this evidence only for World Foundation purpose, principles, architecture, modules, governance, policies, proposals, decisions, and research.',
     'Never use it to answer Aceserver rules, commands, participation requirements, or live operations.',
-    'Do not invent current prices, availability, project scope, delivery dates, or measured outcomes that the excerpts do not support.',
+    'Do not present a proposal or research document as an accepted decision unless the excerpt explicitly supports that status.',
+    'The excerpts are short. Do not add details that the excerpt does not support.',
     'When it answers the question, cite the relevant Source Markdown link once.',
     ...evidence,
   ].join('\n')
 }
 
-function normalizeSystemsMatches(queryResult, minScore) {
-  const results = []
+function normalizeWorldFoundationMatches(queryResult, minScore) {
+  const results: WorldFoundationEntry[] = []
   const seenUrls = new Set()
 
   for (const match of queryResult?.matches || []) {
     if (!Number.isFinite(match?.score) || match.score < minScore) continue
 
     const id = readString(match.id, 128)
-    const metadata = normalizeSystemsMetadata(match.metadata)
+    const metadata = normalizeWorldFoundationMetadata(match.metadata)
     if (!id || !metadata || seenUrls.has(metadata.url)) continue
 
     seenUrls.add(metadata.url)
@@ -122,13 +131,13 @@ function normalizeSystemsMatches(queryResult, minScore) {
       ...metadata,
     })
 
-    if (results.length >= SYSTEMS_GROUNDING_LIMIT) break
+    if (results.length >= WORLD_FOUNDATION_GROUNDING_LIMIT) break
   }
 
   return results
 }
 
-function normalizeSystemsMetadata(value) {
+function normalizeWorldFoundationMetadata(value) {
   if (!value || typeof value !== 'object' || Array.isArray(value)) return null
 
   const locale = readString(value.locale, 16)
@@ -136,11 +145,10 @@ function normalizeSystemsMetadata(value) {
   const section =
     readString(value.section, MAX_METADATA_SECTION_LENGTH) || title
   const excerpt = readString(value.excerpt, MAX_METADATA_EXCERPT_LENGTH)
-  const contentType = readString(value.contentType, 40) || 'page'
   const rawUrl = readString(value.url, MAX_METADATA_URL_LENGTH)
 
   if (
-    locale !== SYSTEMS_SEARCH_NAMESPACE ||
+    locale !== WORLD_FOUNDATION_SEARCH_NAMESPACE ||
     !title ||
     !excerpt ||
     !rawUrl.startsWith('/') ||
@@ -151,13 +159,13 @@ function normalizeSystemsMetadata(value) {
   }
 
   try {
-    const url = new URL(rawUrl, `${ACECORE_SYSTEMS_URL}/`)
+    const url = new URL(rawUrl, `${WORLD_FOUNDATION_URL}/`)
     const firstPathSegment = url.pathname.split('/')[1]?.toLowerCase()
     if (
-      url.origin !== ACECORE_SYSTEMS_URL ||
+      url.origin !== WORLD_FOUNDATION_URL ||
       url.search ||
       url.hash ||
-      ['admin', 'api'].includes(firstPathSegment)
+      firstPathSegment === 'api'
     ) {
       return null
     }
@@ -167,18 +175,35 @@ function normalizeSystemsMetadata(value) {
       title,
       section,
       excerpt,
-      contentType,
+      contentType: inferDocumentType(url.pathname),
     }
   } catch {
     return null
   }
 }
 
+function inferDocumentType(pathname) {
+  const segment = String(pathname || '')
+    .split('/')
+    .filter(Boolean)[0]
+
+  return (
+    {
+      decisions: 'decision',
+      docs: 'design',
+      modules: 'module',
+      policies: 'policy',
+      proposals: 'proposal',
+      research: 'research',
+    }[segment] || 'page'
+  )
+}
+
 function normalizeMinScore(value) {
   const score = Number(value)
   return Number.isFinite(score) && score >= 0 && score <= 1
     ? score
-    : DEFAULT_SYSTEMS_SEARCH_MIN_SCORE
+    : DEFAULT_WORLD_FOUNDATION_SEARCH_MIN_SCORE
 }
 
 function readString(value, maximumLength) {
@@ -199,10 +224,10 @@ function getErrorCode(error, fallback) {
   return error instanceof Error && error.name ? error.name : fallback
 }
 
-function logSystemsSearchError(stage, errorCode) {
+function logWorldFoundationSearchError(stage, errorCode) {
   console.error(
     JSON.stringify({
-      event: 'alpha_systems_search_error',
+      event: 'alpha_world_foundation_search_error',
       stage,
       errorCode,
     }),

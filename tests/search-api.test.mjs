@@ -5,7 +5,7 @@ import test from 'node:test'
 import {
   isAllowedRequestOrigin,
   onRequestPost,
-} from '../functions/api/search.js'
+} from '../functions/api/search.ts'
 
 const ENDPOINT = 'https://asv.acecore.net/api/search'
 

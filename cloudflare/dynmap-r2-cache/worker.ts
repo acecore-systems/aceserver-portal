@@ -1,4 +1,23 @@
-const TARGETS = {
+type BucketBinding =
+  | 'MAIN_BUCKET'
+  | 'SIGEN_BUCKET'
+  | 'RPG_BUCKET'
+  | 'LOBBY_BUCKET'
+  | 'RPG_SUB_BUCKET'
+  | 'SEASON_A_BUCKET'
+  | 'SEASON_A_C_BUCKET'
+  | 'EVENT_BUCKET'
+
+type Target = {
+  bucket: BucketBinding
+  canonicalWorldName?: string
+  defaultQuery?: string
+  legacyWorldName?: string
+}
+
+type ResolvedTarget = Omit<Target, 'bucket'> & { bucket: R2Bucket }
+
+const TARGETS: Record<string, Target> = {
   'mc-map-main.acecore.net': { bucket: 'MAIN_BUCKET' },
   'mc-map-sigen.acecore.net': {
     bucket: 'SIGEN_BUCKET',
@@ -24,7 +43,7 @@ const ROBOTS_TXT = `User-agent: *
 Allow: /
 `
 
-function targetForRequest(request, env) {
+function targetForRequest(request: Request, env: Env): ResolvedTarget | null {
   const url = new URL(request.url)
   const target = TARGETS[url.hostname.toLowerCase()]
 
@@ -38,7 +57,13 @@ function targetForRequest(request, env) {
   }
 }
 
-function canonicalRedirect(request, target) {
+function canonicalRedirect(
+  request: Request,
+  target: Pick<
+    Target,
+    'canonicalWorldName' | 'defaultQuery' | 'legacyWorldName'
+  >,
+): Response | null {
   const url = new URL(request.url)
   const path = url.pathname || '/'
 
@@ -79,7 +104,7 @@ function canonicalRedirect(request, target) {
   })
 }
 
-function decodePathSegment(value) {
+function decodePathSegment(value: string): string {
   try {
     return decodeURIComponent(value)
   } catch {
@@ -87,7 +112,7 @@ function decodePathSegment(value) {
   }
 }
 
-function objectKeyForRequest(request) {
+function objectKeyForRequest(request: Request): string {
   const url = new URL(request.url)
   let key = decodePathSegment(
     url.pathname.startsWith('/') ? url.pathname.slice(1) : url.pathname,
@@ -100,7 +125,7 @@ function objectKeyForRequest(request) {
   return key
 }
 
-function cacheControlForKey(key) {
+function cacheControlForKey(key: string): string {
   if (key.startsWith(TILE_PREFIX)) {
     return TILE_CACHE_CONTROL
   }
@@ -112,7 +137,7 @@ function cacheControlForKey(key) {
   return STATIC_CACHE_CONTROL
 }
 
-function contentTypeForKey(key) {
+function contentTypeForKey(key: string): string {
   if (key.endsWith('.html')) return 'text/html; charset=utf-8'
   if (key.endsWith('.js')) return 'application/javascript; charset=utf-8'
   if (key.endsWith('.css')) return 'text/css; charset=utf-8'
@@ -124,7 +149,7 @@ function contentTypeForKey(key) {
   return 'application/octet-stream'
 }
 
-function responseHeaders(object, key, state) {
+function responseHeaders(object: R2Object, key: string, state: 'HIT'): Headers {
   const headers = new Headers()
   object.writeHttpMetadata?.(headers)
 
@@ -142,7 +167,7 @@ function responseHeaders(object, key, state) {
   return headers
 }
 
-function isNotModified(request, object) {
+function isNotModified(request: Request, object: R2Object): boolean {
   const ifNoneMatch = request.headers.get('if-none-match')
 
   if (ifNoneMatch && object.httpEtag) {
@@ -170,7 +195,7 @@ function isNotModified(request, object) {
   return false
 }
 
-function missingResponse() {
+function missingResponse(): Response {
   return new Response(null, {
     status: 404,
     headers: {
@@ -181,7 +206,7 @@ function missingResponse() {
   })
 }
 
-function robotsResponse(request) {
+function robotsResponse(request: Request): Response | null {
   const url = new URL(request.url)
 
   if (url.pathname !== '/robots.txt') {
@@ -197,7 +222,7 @@ function robotsResponse(request) {
   })
 }
 
-function withSearchRobotsDirective(response) {
+function withSearchRobotsDirective(response: Response): Response {
   const headers = new Headers(response.headers)
   headers.set('x-robots-tag', SEARCH_ROBOTS_DIRECTIVE)
 
@@ -208,7 +233,7 @@ function withSearchRobotsDirective(response) {
   })
 }
 
-async function handleRequest(request, env) {
+async function handleRequest(request: Request, env: Env): Promise<Response> {
   const target = targetForRequest(request, env)
 
   if (!target || !target.bucket) {
@@ -270,9 +295,11 @@ async function handleRequest(request, env) {
   return new Response(object.body, { status: 200, headers })
 }
 
-export default {
-  async fetch(request, env) {
+const worker: ExportedHandler<Env> = {
+  async fetch(request, env): Promise<Response> {
     const response = await handleRequest(request, env)
     return withSearchRobotsDirective(response)
   },
 }
+
+export default worker

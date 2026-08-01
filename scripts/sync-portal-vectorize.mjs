@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url'
 import {
   createOpenAiEmbeddings,
   extractOpenAiEmbeddingData,
-} from '../functions/api/openai-api.js'
+} from '../functions/api/openai-api.ts'
 import {
   PORTAL_CORPUS_SCHEMA_VERSION,
   PORTAL_DISTANCE_METRIC,
