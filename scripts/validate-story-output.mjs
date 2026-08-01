@@ -39,8 +39,9 @@ const stories = [
       '日本の公開Minecraftサーバーを、公式サイトで確認できた対応エディション・遊び方・参加案内から紹介。最後にエースサーバーの参加方法も案内します。',
     author: 'Gui',
     datePublished: '2026-08-01T01:00:00.000Z',
-    image: '/uploads/legacy-multiplayer.jpg',
-    imageAlt: '夕焼けの海を岩場から眺めるMinecraftのプレイヤー',
+    image: '/uploads/stories/minecraft-server-osusume-hero.webp',
+    imageAlt:
+      '夕暮れのブロック調の広場で地図を囲み、さまざまな世界へ続く道を見渡す3人の旅人',
   },
   {
     slug: 'metaverse-is-close',

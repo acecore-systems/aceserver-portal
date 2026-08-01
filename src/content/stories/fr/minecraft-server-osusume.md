@@ -2,15 +2,15 @@
 title: 'Serveurs Minecraft recommandés au Japon : 6 choix selon Java/Bedrock et le style de jeu'
 description: Un guide des serveurs Minecraft publics au Japon, fondé sur les éditions, styles de jeu et informations de participation confirmés sur leurs sites officiels. Aceserver est présenté en dernier.
 translationOf: minecraft-server-osusume
-sourceHash: sha256:50b9c51812ccdab7b7732e1fc3eebbcbe164436951ca63a40599490daea08c9c
+sourceHash: sha256:74179731ebdee061b3da5d885ee10830fb5dd4392887d1f4f06e5f4774e7aa5f
 date: 2026-08-01T10:00:00+09:00
 tags:
   - Minecraft
   - Serveur Minecraft
   - Premiers pas
 author: Gui
-image: /uploads/legacy-multiplayer.jpg
-imageAlt: Un joueur de Minecraft regarde l'océan au coucher du soleil depuis un promontoire rocheux
+image: /uploads/stories/minecraft-server-osusume-hero.webp
+imageAlt: Trois voyageurs autour d'une table avec une carte, à un carrefour de blocs donnant sur différents mondes au coucher du soleil
 ---
 
 Les serveurs Minecraft publics vont des lieux de construction et de survie tranquilles aux communautés centrées sur l'économie, les quêtes et les événements. Comparer votre édition, ce que vous souhaitez jouer et les informations disponibles avant de rejoindre facilite le choix d'un serveur agréable sur la durée.

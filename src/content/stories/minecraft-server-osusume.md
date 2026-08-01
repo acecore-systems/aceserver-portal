@@ -7,8 +7,8 @@ tags:
   - マイクラサーバー
   - はじめ方
 author: Gui
-image: /uploads/legacy-multiplayer.jpg
-imageAlt: 夕焼けの海を岩場から眺めるMinecraftのプレイヤー
+image: /uploads/stories/minecraft-server-osusume-hero.webp
+imageAlt: 夕暮れのブロック調の広場で地図を囲み、さまざまな世界へ続く道を見渡す3人の旅人
 ---
 
 マイクラの公開サーバーは、建築やサバイバルをじっくり楽しめる場所から、経済・クエスト・イベントを中心に遊べる場所までさまざまです。自分のエディション、遊びたいこと、参加前に確認できる案内を比べると、長く遊べる候補を選びやすくなります。

@@ -2,15 +2,15 @@
 title: 'Рекомендуемые серверы Minecraft в Японии: 6 вариантов по Java/Bedrock и стилю игры'
 description: Обзор публичных серверов Minecraft в Японии на основе изданий, стилей игры и сведений о входе, подтверждённых на официальных сайтах. Aceserver представлен последним.
 translationOf: minecraft-server-osusume
-sourceHash: sha256:50b9c51812ccdab7b7732e1fc3eebbcbe164436951ca63a40599490daea08c9c
+sourceHash: sha256:74179731ebdee061b3da5d885ee10830fb5dd4392887d1f4f06e5f4774e7aa5f
 date: 2026-08-01T10:00:00+09:00
 tags:
   - Minecraft
   - Сервер Minecraft
   - Первые шаги
 author: Gui
-image: /uploads/legacy-multiplayer.jpg
-imageAlt: Игрок Minecraft смотрит на океан на закате с каменного выступа
+image: /uploads/stories/minecraft-server-osusume-hero.webp
+imageAlt: Три путешественника у стола с картой на блочном перекрёстке, смотрящие на разные миры на закате
 ---
 
 Публичные серверы Minecraft бывают очень разными: от мест для спокойного строительства и выживания до сообществ с экономикой, квестами и событиями. Сравнение используемого издания, желаемой игры и доступных до входа инструкций помогает найти сервер, который будет интересен долго.

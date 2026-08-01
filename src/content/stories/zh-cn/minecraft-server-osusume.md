@@ -2,15 +2,15 @@
 title: '日本推荐 Minecraft 服务器 6 选：按 Java/Bedrock 支持与玩法比较'
 description: 根据各官方站点确认的版本支持、玩法和加入说明，介绍日本的公开 Minecraft 服务器；最后介绍 Aceserver。
 translationOf: minecraft-server-osusume
-sourceHash: sha256:50b9c51812ccdab7b7732e1fc3eebbcbe164436951ca63a40599490daea08c9c
+sourceHash: sha256:74179731ebdee061b3da5d885ee10830fb5dd4392887d1f4f06e5f4774e7aa5f
 date: 2026-08-01T10:00:00+09:00
 tags:
   - Minecraft
   - Minecraft 服务器
   - 入门指南
 author: Gui
-image: /uploads/legacy-multiplayer.jpg
-imageAlt: 一名 Minecraft 玩家从岩石高处眺望夕阳下的海面
+image: /uploads/stories/minecraft-server-osusume-hero.webp
+imageAlt: 三位旅人围在方块风格岔路口的地图桌旁，眺望夕阳下通往不同世界的道路
 ---
 
 公开 Minecraft 服务器的类型很多：有适合轻松建筑和生存的地方，也有以经济、任务和活动为中心的社区。比较自己使用的版本、想玩的内容以及加入前可以阅读的说明，更容易找到能长期游玩的服务器。
