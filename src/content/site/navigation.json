@@ -10,6 +10,12 @@
       "icon": "box"
     },
     {
+      "text": "Acecore Store",
+      "href": "https://shop.acecore.net",
+      "external": true,
+      "icon": "shopping-bag"
+    },
+    {
       "text": "エースサーバーWIKI",
       "href": "https://asv-wiki.acecore.net",
       "external": true,
