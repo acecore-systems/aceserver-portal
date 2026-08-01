@@ -7,7 +7,7 @@ import {
   resolveGuideLocale,
   SOURCE_LABELS,
   TARGET_LANGUAGES,
-} from '../functions/api/alpha-locales.js'
+} from '../functions/api/alpha-locales.ts'
 import {
   buildTranslationProblemStatement,
   classifyCmsCommitSet,

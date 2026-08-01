@@ -1,4 +1,4 @@
-import { searchAceserverPortal } from './alpha-portal-search.js'
+import { searchAceserverPortal } from './alpha-portal-search.ts'
 
 const MAX_REQUEST_BODY_BYTES = 2_048
 const MIN_QUERY_LENGTH = 2
@@ -23,6 +23,15 @@ const SEARCH_LOCALES = new Set([
   'de',
   'ru',
 ])
+
+type SearchResult = {
+  contentType: string
+  excerpt: string
+  rank: number
+  section: string
+  title: string
+  url: string
+}
 
 export async function onRequestPost(
   { request, env, waitUntil },
@@ -205,7 +214,7 @@ async function deleteExpiredRateLimits(database) {
 function normalizeResults(entries) {
   if (!Array.isArray(entries)) return []
 
-  const results = []
+  const results: SearchResult[] = []
   const seenUrls = new Set()
 
   for (const entry of entries) {
@@ -346,7 +355,7 @@ async function readJsonPayload(request) {
   if (!request.body) return { ok: false, tooLarge: false }
 
   const reader = request.body.getReader()
-  const chunks = []
+  const chunks: Uint8Array[] = []
   let totalBytes = 0
 
   try {

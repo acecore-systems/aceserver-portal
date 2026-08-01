@@ -8,12 +8,13 @@ const OAUTH_CALLBACK_URL = `${OAUTH_OPENER_ORIGIN}/admin/api/callback`
 const STATE_COOKIE = 'aceserver_portal_cms_oauth_state'
 const STATE_TTL_SECONDS = 10 * 60
 
-export type CmsOAuthEnv = {
-  CMS_GITHUB_APP_CLIENT_ID?: string
-  CMS_GITHUB_APP_CLIENT_SECRET?: string
-  CMS_GITHUB_APP_INSTALLATION_ID?: string
-  CMS_OAUTH_STATE_SECRET?: string
-}
+export type CmsOAuthEnv = Pick<
+  Cloudflare.Env,
+  | 'CMS_GITHUB_APP_CLIENT_ID'
+  | 'CMS_GITHUB_APP_CLIENT_SECRET'
+  | 'CMS_GITHUB_APP_INSTALLATION_ID'
+  | 'CMS_OAUTH_STATE_SECRET'
+>
 
 type OAuthStatePayload = {
   codeChallenge: string

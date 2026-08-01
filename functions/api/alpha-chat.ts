@@ -2,35 +2,35 @@ import {
   buildAcecoreGroundingContext,
   searchAcecore,
   shouldSearchAcecore,
-} from './alpha-acecore-search.js'
-import { createAlphaSearchEmbedding } from './alpha-search-embedding.js'
+} from './alpha-acecore-search.ts'
+import { createAlphaSearchEmbedding } from './alpha-search-embedding.ts'
 import {
   ACECORE_SCHOOLS_URL,
   buildSchoolsGroundingContext,
   searchSchools,
   shouldSearchSchools,
-} from './alpha-schools-search.js'
+} from './alpha-schools-search.ts'
 import {
   ACECORE_SYSTEMS_URL,
   buildSystemsGroundingContext,
   searchSystems,
   shouldSearchSystems,
-} from './alpha-systems-search.js'
+} from './alpha-systems-search.ts'
 import {
   ACESERVER_PORTAL_CORPUS_PATH,
   buildPortalGroundingContext,
   searchAceserverPortal,
-} from './alpha-portal-search.js'
+} from './alpha-portal-search.ts'
 import {
   buildWikiGroundingContext,
   searchAceserverWiki,
-} from './alpha-wiki-search.js'
+} from './alpha-wiki-search.ts'
 import {
   buildWorldFoundationGroundingContext,
   searchWorldFoundation,
   shouldSearchWorldFoundation,
   WORLD_FOUNDATION_URL,
-} from './alpha-world-foundation-search.js'
+} from './alpha-world-foundation-search.ts'
 import {
   ACECORE_URL,
   DISCORD_URL,
@@ -43,18 +43,20 @@ import {
   SOURCE_LABELS,
   TARGET_LANGUAGES,
   WIKI_URL,
-} from './alpha-locales.js'
+} from './alpha-locales.ts'
 import {
   createOpenAiResponse,
   OPENAI_REASONING_EFFORT,
   OPENAI_RESPONSE_MODEL,
-} from './openai-api.js'
+} from './openai-api.ts'
 
 const MAX_REQUEST_BODY_BYTES = 12_000
 const MAX_QUESTION_LENGTH = 500
 const MAX_HISTORY_MESSAGES = 8
 const MAX_CONVERSATION_LENGTH = 2800
 const MAX_WIKI_SEARCH_QUERY_LENGTH = 800
+
+type TextRange = { end: number; start: number }
 
 export async function onRequestPost(
   { request, env },
@@ -845,7 +847,7 @@ export function sanitizeAlphaAnswerLinks(
 
 export function addRetrievedSourceLinks(
   answer,
-  retrievedEntries = [],
+  retrievedEntries: any[] = [],
   limit = 1,
   locale = 'ja',
 ) {
@@ -944,7 +946,9 @@ function scoreRetrievedSourceForAnswer(answer, entry) {
   )
   if (!answerText || !contentText) return 0
 
-  const commands = new Set(plainAnswer.match(/\/[A-Za-z0-9:_-]+/g) || [])
+  const commands = new Set<string>(
+    plainAnswer.match(/\/[A-Za-z0-9:_-]+/g) || [],
+  )
   let score = 0
   for (const command of commands) {
     if (contentText.includes(command.toLowerCase())) score += 20
@@ -974,9 +978,9 @@ function normalizeSourceComparisonText(value) {
     .replace(/[^\p{L}\p{N}/:_-]+/gu, '')
 }
 
-function createCharacterGrams(value, size) {
+function createCharacterGrams(value: string, size: number): Set<string> {
   const characters = [...value]
-  const grams = new Set()
+  const grams = new Set<string>()
 
   for (let index = 0; index <= characters.length - size; index += 1) {
     grams.add(characters.slice(index, index + size).join(''))
@@ -1112,7 +1116,7 @@ function deduplicateMarkdownLinksTo(answer, href) {
 }
 
 function getMarkdownLinkRanges(answer) {
-  const ranges = []
+  const ranges: TextRange[] = []
   const pattern = /\[[^\]\n]+\]\(\s*[^)]+?\s*\)/g
   let match
 
@@ -1128,7 +1132,7 @@ function getMarkdownLinkRanges(answer) {
 
 function getProtectedTextRanges(answer) {
   const markdownRanges = getMarkdownLinkRanges(answer)
-  const rawUrlRanges = []
+  const rawUrlRanges: TextRange[] = []
   const pattern = /https?:\/\/[A-Za-z0-9._~:/?#@!$&*+,;=%-]+/g
   let match
 
@@ -1205,7 +1209,7 @@ export function buildWikiSearchQuery(payload, question) {
   const normalizedQuestion = String(question || '').trim()
   if (normalizedQuestion) candidates.push(normalizedQuestion)
 
-  const unique = []
+  const unique: string[] = []
   for (const candidate of candidates) {
     if (unique[unique.length - 1] !== candidate) unique.push(candidate)
   }
@@ -1234,7 +1238,7 @@ async function readJsonPayload(request) {
   if (!request.body) return { ok: false, tooLarge: false }
 
   const reader = request.body.getReader()
-  const chunks = []
+  const chunks: Uint8Array[] = []
   let totalBytes = 0
 
   try {
@@ -1271,7 +1275,12 @@ async function readJsonPayload(request) {
   }
 }
 
-function jsonResponse(request, body, status = 200, headers = {}) {
+function jsonResponse(
+  request: Request,
+  body,
+  status = 200,
+  headers: Record<string, string> = {},
+) {
   return Response.json(body, {
     status,
     headers: {
@@ -1283,7 +1292,7 @@ function jsonResponse(request, body, status = 200, headers = {}) {
   })
 }
 
-function corsHeaders(request) {
+function corsHeaders(request: Request): Record<string, string> {
   const origin = request.headers.get('Origin')
   if (!origin || !isAllowedRequestOrigin(request)) return {}
 

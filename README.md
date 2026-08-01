@@ -69,7 +69,7 @@ Cloudflare Pages のproduction / previewでは、build前に `public/admin/runti
 
 サイト全体に右下固定のアルファくん案内チャットを表示します。アルファくんはエースサーバーのキャラクター案内役として、参加方法、ワールド、ルール、ストーリー導線を案内します。
 
-`functions/api/alpha-chat.js` の Cloudflare Pages Function からOpenAI APIへ直接接続します。質問は `text-embedding-3-large` を `dimensions: 1536` で呼び出してベクトル化し、Aceserver portal全体とAceserver WIKIのVectorize indexを同時に検索します。portal側はbuild後の公開HTMLからホーム、固定ページ、ワールド案内、動画、読みものの日本語正本を抽出して`vector-corpus.json`を生成し、同じ内容の翻訳routeは重複登録しません。多言語チャットでは日本語の検索根拠を `gpt-5.6-luna` が回答言語へ翻訳し、portalの参照リンクは対応する言語別URLへ切り替えます。検索で得たchunk IDは各サイトの公開corpusへ照合し、metadataの短い抜粋だけでなく最大1200文字の元chunkを回答根拠にします。回答生成はResponses APIを `reasoning.effort: medium`、`store: false` で呼び出します。ブラウザにはOpenAI APIキーを渡しません。
+`functions/api/alpha-chat.ts` の Cloudflare Pages Function からOpenAI APIへ直接接続します。質問は `text-embedding-3-large` を `dimensions: 1536` で呼び出してベクトル化し、Aceserver portal全体とAceserver WIKIのVectorize indexを同時に検索します。portal側はbuild後の公開HTMLからホーム、固定ページ、ワールド案内、動画、読みものの日本語正本を抽出して`vector-corpus.json`を生成し、同じ内容の翻訳routeは重複登録しません。多言語チャットでは日本語の検索根拠を `gpt-5.6-luna` が回答言語へ翻訳し、portalの参照リンクは対応する言語別URLへ切り替えます。検索で得たchunk IDは各サイトの公開corpusへ照合し、metadataの短い抜粋だけでなく最大1200文字の元chunkを回答根拠にします。回答生成はResponses APIを `reasoning.effort: medium`、`store: false` で呼び出します。ブラウザにはOpenAI APIキーを渡しません。
 
 portal検索は公開サイトの紹介、ワールド案内、動画、読みもの、掲載ページの発見に使います。ルール、コマンド、参加条件、ワールドの詳細、運用情報ではportalよりAceserver WIKIを情報の正として扱います。Acecore、運営元、サービス、技術記事に関する質問だけは、同じembeddingでacecore-netのVectorize indexを検索します。Acecore Schoolsの学習分野、学び方、相談、料金、FAQに関する質問はSchools専用indexを検索し、取得した公開routeだけを `https://schools.acecore.net` 配下のリンクとして許可します。World Foundationについての質問は、専用のWorld Foundation Vectorize indexから日本語の公開設計資料を検索します。検索元ごとのしきい値と用途を分け、異なるサイトの根拠を誤って混ぜません。
 

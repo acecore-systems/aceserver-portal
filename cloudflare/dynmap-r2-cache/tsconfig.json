@@ -1,5 +1,5 @@
 {
-  "extends": "./tsconfig.json",
+  "extends": "../../tsconfig.json",
   "compilerOptions": {
     "allowImportingTsExtensions": true,
     "lib": ["ES2023"],
@@ -7,6 +7,5 @@
     "skipLibCheck": true,
     "types": ["@cloudflare/workers-types"]
   },
-  "exclude": ["functions/api/**/*.ts"],
-  "include": ["functions/**/*.ts", "functions/worker-configuration.d.ts"]
+  "include": ["worker.ts", "worker-configuration.d.ts"]
 }

@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.functions.json",
+  "compilerOptions": {
+    "noImplicitAny": false,
+    "strict": true
+  },
+  "exclude": [],
+  "include": ["functions/api/**/*.ts", "functions/worker-configuration.d.ts"]
+}
