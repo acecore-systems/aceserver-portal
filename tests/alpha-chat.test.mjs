@@ -2522,27 +2522,50 @@ test('binds and enables the OpenAI 1536 indexes only in production', async () =>
   const productionConfig = config.slice(config.indexOf('"production":'))
 
   const indexes = [
-    ['WIKI_SEARCH_INDEX', 'aceserver-wiki-search-openai-1536'],
-    ['PORTAL_SEARCH_INDEX', 'aceserver-portal-search-openai-1536'],
-    ['ACECORE_SEARCH_INDEX', 'acecore-net-search-openai-1536'],
-    ['SCHOOLS_SEARCH_INDEX', 'acecore-schools-search-openai-1536'],
-    ['SYSTEMS_SEARCH_INDEX', 'acecore-systems-search-openai-1536'],
-    ['WORLD_FOUNDATION_SEARCH_INDEX', 'world-foundation-search-openai-1536'],
+    [
+      'WIKI_SEARCH_INDEX',
+      'aceserver-wiki-search-openai-1536-preview',
+      'aceserver-wiki-search-openai-1536-production',
+    ],
+    [
+      'PORTAL_SEARCH_INDEX',
+      'aceserver-portal-search-openai-1536-preview',
+      'aceserver-portal-search-openai-1536-production',
+    ],
+    [
+      'ACECORE_SEARCH_INDEX',
+      'acecore-net-search-openai-1536-preview',
+      'acecore-net-search-openai-1536-production-v2',
+    ],
+    [
+      'SCHOOLS_SEARCH_INDEX',
+      'acecore-schools-search-openai-1536-preview',
+      'acecore-schools-search-openai-1536-production',
+    ],
+    [
+      'SYSTEMS_SEARCH_INDEX',
+      'acecore-systems-search-openai-1536-preview',
+      'acecore-systems-search-openai-1536-production',
+    ],
+    [
+      'WORLD_FOUNDATION_SEARCH_INDEX',
+      'world-foundation-search-openai-1536-preview',
+      'world-foundation-search-openai-1536-production',
+    ],
   ]
 
-  for (const [binding, indexPrefix] of indexes) {
+  for (const [binding, previewIndexName, productionIndexName] of indexes) {
     assert.equal(
       config.match(new RegExp(`"binding": "${binding}"`, 'gu'))?.length,
       1,
     )
     assert.doesNotMatch(
       config,
-      new RegExp(`"index_name": "${indexPrefix}-preview"`, 'u'),
+      new RegExp(`"index_name": "${previewIndexName}"`, 'u'),
     )
     assert.equal(
-      config.match(
-        new RegExp(`"index_name": "${indexPrefix}-production"`, 'gu'),
-      )?.length,
+      config.match(new RegExp(`"index_name": "${productionIndexName}"`, 'gu'))
+        ?.length,
       1,
     )
   }
