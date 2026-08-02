@@ -17,6 +17,8 @@ const ui = getUi(locale)
 const dateLocale = DATE_LOCALE_BY_LOCALE[locale]
 const getStorySlug = (story: CollectionEntry<'stories'>) =>
   story.id.split('/').at(-1) ?? story.id
+const getStoryPath = (story: CollectionEntry<'stories'>) =>
+  localizePath(locale, `/stories/${getStorySlug(story)}/`)
 ---
 
 <section class="stories-hero">
@@ -29,26 +31,42 @@ const getStorySlug = (story: CollectionEntry<'stories'>) =>
 
 <section class="stories-list stories-shell" aria-label={ui.storyListLabel}>
   {
-    stories.map((story) => (
+    stories.map((story, index) => (
       <article>
-        <p class="stories-date">
-          <time datetime={story.data.date.toISOString()}>
-            {story.data.date.toLocaleDateString(dateLocale, {
-              timeZone: 'Asia/Tokyo',
-            })}
-          </time>
-        </p>
-        <h2>
-          <a href={localizePath(locale, `/stories/${getStorySlug(story)}/`)}>
-            {story.data.title}
-          </a>
-        </h2>
-        <p>{story.data.description}</p>
-        <ul aria-label={ui.tagsLabel}>
-          {story.data.tags.map((tag) => (
-            <li>{tag}</li>
-          ))}
-        </ul>
+        <a
+          class={`story-thumbnail${story.data.image ? '' : ' story-thumbnail--placeholder'}`}
+          href={getStoryPath(story)}
+          aria-label={story.data.title}
+        >
+          {story.data.image ? (
+            <img
+              src={story.data.image}
+              alt={story.data.imageAlt}
+              loading={index === 0 ? 'eager' : 'lazy'}
+              decoding="async"
+            />
+          ) : (
+            <span aria-hidden="true">ACESERVER STORY</span>
+          )}
+        </a>
+        <div class="story-content">
+          <p class="stories-date">
+            <time datetime={story.data.date.toISOString()}>
+              {story.data.date.toLocaleDateString(dateLocale, {
+                timeZone: 'Asia/Tokyo',
+              })}
+            </time>
+          </p>
+          <h2>
+            <a href={getStoryPath(story)}>{story.data.title}</a>
+          </h2>
+          <p>{story.data.description}</p>
+          <ul aria-label={ui.tagsLabel}>
+            {story.data.tags.map((tag) => (
+              <li>{tag}</li>
+            ))}
+          </ul>
+        </div>
       </article>
     ))
   }
@@ -96,8 +114,9 @@ const getStorySlug = (story: CollectionEntry<'stories'>) =>
 
   .stories-list article {
     display: grid;
-    grid-template-columns: minmax(120px, 0.25fr) minmax(0, 0.75fr);
-    gap: 8px clamp(24px, 5vw, 72px);
+    grid-template-columns: minmax(210px, 0.42fr) minmax(0, 0.58fr);
+    align-items: start;
+    gap: clamp(18px, 3vw, 40px);
     border-top: 2px solid rgba(21, 19, 15, 0.24);
     padding-block: clamp(28px, 5vw, 48px);
   }
@@ -107,14 +126,60 @@ const getStorySlug = (story: CollectionEntry<'stories'>) =>
   }
 
   .stories-date {
-    grid-row: 1 / span 3;
     margin: 0;
     color: #514331;
     font-weight: 900;
   }
 
+  .story-thumbnail {
+    display: grid;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+    place-items: center;
+    border: 3px solid #1e1710;
+    border-radius: 10px;
+    background: #1e1710;
+    box-shadow: 0 5px 0 rgba(21, 19, 15, 0.22);
+  }
+
+  .story-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 180ms ease;
+  }
+
+  .story-thumbnail:hover img {
+    transform: scale(1.035);
+  }
+
+  .story-thumbnail:focus-visible {
+    outline: 4px solid #0862c4;
+    outline-offset: 4px;
+  }
+
+  .story-thumbnail--placeholder {
+    background:
+      linear-gradient(
+        135deg,
+        rgba(10, 167, 226, 0.94),
+        rgba(53, 170, 47, 0.92)
+      ),
+      #0aa7e2;
+    color: white;
+    font-size: clamp(0.95rem, 2vw, 1.25rem);
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    text-align: center;
+  }
+
+  .story-content {
+    display: grid;
+    gap: 10px;
+  }
+
   .stories-list h2,
-  .stories-list article > p {
+  .story-content > p {
     margin: 0;
   }
 
@@ -148,10 +213,17 @@ const getStorySlug = (story: CollectionEntry<'stories'>) =>
   @media (max-width: 680px) {
     .stories-list article {
       grid-template-columns: 1fr;
+      gap: 16px;
     }
 
-    .stories-date {
-      grid-row: auto;
+    .story-thumbnail {
+      max-width: 540px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .story-thumbnail img {
+      transition: none;
     }
   }
 </style>

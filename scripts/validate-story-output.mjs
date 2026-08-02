@@ -19,6 +19,9 @@ const stories = [
       'エースサーバーで起きた「乗っ取り」イベントの記録。メンバーたちの理性が次々と侵食されていく、衝撃のドキュメント。',
     author: 'ハット',
     datePublished: '2022-10-11T15:00:00.000Z',
+    image: '/uploads/stories/aceserver-hijacked.webp',
+    imageAlt:
+      '夜のブロックで作られた街を、紫と緑の光を放つ異常なサーバー装置が侵食しているイメージ',
   },
   {
     slug: 'aceserver-portal-launch',
@@ -258,13 +261,22 @@ async function inspectStoryIndex() {
 
   for (const story of stories) {
     const href = `/stories/${story.slug}/`
-    const occurrences = [...html.matchAll(/<a\b[^>]*>/gi)].filter(
-      (match) => attributeValue(match[0], 'href') === href,
-    ).length
-    if (occurrences !== 1) {
+    const detailLinks = [...html.matchAll(/<a\b[^>]*>/gi)]
+      .map((match) => match[0])
+      .filter((tag) => attributeValue(tag, 'href') === href)
+    const thumbnailLink = detailLinks.find((tag) =>
+      (attributeValue(tag, 'class') ?? '')
+        .split(/\s+/)
+        .includes('story-thumbnail'),
+    )
+
+    if (detailLinks.length !== 2) {
       errors.push(
-        `${scope}: expected one detail link for ${story.slug}, found ${occurrences}`,
+        `${scope}: expected thumbnail and title links for ${story.slug}, found ${detailLinks.length}`,
       )
+    }
+    if (attributeValue(thumbnailLink ?? '', 'aria-label') !== story.title) {
+      errors.push(`${scope}: thumbnail link is missing for ${story.slug}`)
     }
   }
 }

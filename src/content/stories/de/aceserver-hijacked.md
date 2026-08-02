@@ -2,11 +2,13 @@
 title: Aceserver wurde übernommen.
 description: Ein Bericht über die „Übernahme“ von Aceserver – ein erschütterndes Dokument darüber, wie der Verstand der Mitglieder einer nach dem anderen zerfällt.
 translationOf: aceserver-hijacked
-sourceHash: sha256:b9c4fc622b0c155460f2b8834590846b228b3832f6e5793c47ee63193f64ad86
+sourceHash: sha256:103ac3842af3abbe7c8245c6d47879926718b08e886718c678c9236d896d4f03
 date: 2022-10-12T00:00:00+09:00
 tags:
   - Event
 author: ハット
+image: /uploads/stories/aceserver-hijacked.webp
+imageAlt: Ein ungewöhnliches Servergerät mit violettem und grünem Leuchten breitet sich durch eine Blockstadt bei Nacht aus
 ---
 
 ## Aceserver wurde übernommen
