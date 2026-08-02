@@ -2,7 +2,7 @@
 title: 'Servidores de Minecraft recomendados no Japão: 6 opções por Java/Bedrock e estilo de jogo'
 description: Um guia de servidores públicos de Minecraft no Japão com base nas edições, estilos de jogo e informações de participação confirmados nos sites oficiais.
 translationOf: minecraft-server-osusume
-sourceHash: sha256:4a9f13498d6183c150d7c80dfc0eb1cf4f1aab2af15b09f48df528ccd25cc22f
+sourceHash: sha256:40a109cd0a0cddd64a10843cd181d695b70802c6cab486b4c375c61f0da9578c
 date: 2026-08-01T10:00:00+09:00
 tags:
   - Minecraft
@@ -39,7 +39,7 @@ Proteção de terrenos, um mundo de recursos renovado periodicamente, teletransp
 
 ![Ilustração original de um bioma especial ao lado de uma área de engenharia de redstone e armadilhas](/uploads/stories/minecraft-server-osusume-tsubusaba.webp)
 
-Tsubusaba aceita Java e Bedrock e é voltado a uma vida de sobrevivência. Você pode construir e cultivar no mundo principal, coletar materiais e explorar masmorras no mundo de recursos, e criar grandes fazendas automáticas ou mecanismos de redstone em um servidor de armadilhas dedicado. O site também apresenta biomas com uma atmosfera diferente da do mundo principal.
+Tsubusaba aceita Java e Bedrock e é voltado a uma vida de sobrevivência. Você pode construir e cultivar no mundo principal, coletar materiais e explorar masmorras no mundo de recursos, e criar grandes fazendas automáticas ou mecanismos de redstone em um servidor de armadilhas dedicado. O site oficial também apresenta biomas diferentes do Minecraft vanilla.
 
 Quem entra pela primeira vez pode receber um kit inicial e escolher um trabalho para ganhar dinheiro e obter itens especiais. Com proteção de terrenos, lojas da equipe e dos jogadores, e ferramentas como um gancho, é uma opção para quem quer desenvolver a própria vida aos poucos enquanto aproveita mecanismos e comércio.
 

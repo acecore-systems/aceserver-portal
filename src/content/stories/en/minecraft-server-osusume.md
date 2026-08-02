@@ -2,7 +2,7 @@
 title: 'Recommended Minecraft servers in Japan: 6 picks by Java/Bedrock support and play style'
 description: A guide to public Minecraft servers in Japan, based on the editions, play styles, and joining information confirmed on their official sites.
 translationOf: minecraft-server-osusume
-sourceHash: sha256:4a9f13498d6183c150d7c80dfc0eb1cf4f1aab2af15b09f48df528ccd25cc22f
+sourceHash: sha256:40a109cd0a0cddd64a10843cd181d695b70802c6cab486b4c375c61f0da9578c
 date: 2026-08-01T10:00:00+09:00
 tags:
   - Minecraft
@@ -39,7 +39,7 @@ Land protection, a periodically refreshed resource world, warps, and a live map 
 
 ![Original voxel illustration combining a special biome with a redstone engineering and trap-building area](/uploads/stories/minecraft-server-osusume-tsubusaba.webp)
 
-Tsubusaba supports Java and Bedrock as a lifestyle-oriented server. You can build and farm in the main world, gather materials and explore dungeons in the resource world, and create large automated farms or redstone contraptions on a dedicated trap server. It also introduces biomes with a different feel from the main world.
+Tsubusaba supports Java and Bedrock as a lifestyle-oriented server. You can build and farm in the main world, gather materials and explore dungeons in the resource world, and create large automated farms or redstone contraptions on a dedicated trap server. Its official site also describes biomes that differ from vanilla Minecraft.
 
 New players can collect a starter kit and choose a job to earn money and make special items. With land protection, staff and player shops, and tools such as a grappler, it suits people who want to grow a life gradually while enjoying contraptions and trading.
 

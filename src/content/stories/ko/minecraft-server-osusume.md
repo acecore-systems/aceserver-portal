@@ -2,7 +2,7 @@
 title: '일본 추천 마인크래프트 서버 6선: Java/Bedrock 지원과 플레이 방식 비교'
 description: 공식 사이트에서 확인한 지원 에디션, 플레이 방식, 참여 안내를 바탕으로 일본의 공개 Minecraft 서버를 소개합니다.
 translationOf: minecraft-server-osusume
-sourceHash: sha256:4a9f13498d6183c150d7c80dfc0eb1cf4f1aab2af15b09f48df528ccd25cc22f
+sourceHash: sha256:40a109cd0a0cddd64a10843cd181d695b70802c6cab486b4c375c61f0da9578c
 date: 2026-08-01T10:00:00+09:00
 tags:
   - Minecraft
@@ -39,7 +39,7 @@ Manmamiya는 Java와 Bedrock 플레이어 모두 참여할 수 있으며, 바닐
 
 ![특수 바이옴과 레드스톤 장치·트랩 제작 구역을 나란히 표현한 블록 스타일 오리지널 일러스트](/uploads/stories/minecraft-server-osusume-tsubusaba.webp)
 
-Tsubusaba는 Java와 Bedrock을 지원하는 생활형 서버입니다. 메인 월드에서는 건축과 농사를 하고, 자원 월드에서는 채집과 던전 탐험을 하며, 대형 자동 농장이나 레드스톤 장치는 전용 트랩 서버에서 만들 수 있도록 역할이 나뉘어 있습니다. 메인과 다른 분위기의 바이옴도 안내하고 있습니다.
+Tsubusaba는 Java와 Bedrock을 지원하는 생활형 서버입니다. 메인 월드에서는 건축과 농사를 하고, 자원 월드에서는 채집과 던전 탐험을 하며, 대형 자동 농장이나 레드스톤 장치는 전용 트랩 서버에서 만들 수 있도록 역할이 나뉘어 있습니다. 공식 사이트에서는 바닐라 마인크래프트와 다른 바이옴도 안내하고 있습니다.
 
 처음 참가하면 초보자 키트를 받고 직업을 골라 돈과 특별한 아이템을 얻는 것부터 시작할 수 있습니다. 토지 보호, 운영·플레이어 상점, 그래플러 같은 기능도 있어 생활을 조금씩 키우면서 장치 제작과 거래까지 즐기고 싶은 사람에게 맞습니다.
 

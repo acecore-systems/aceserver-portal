@@ -2,7 +2,7 @@
 title: '日本推荐 Minecraft 服务器 6 选：按 Java/Bedrock 支持与玩法比较'
 description: 根据各官方站点确认的版本支持、玩法和加入说明，介绍日本的公开 Minecraft 服务器。
 translationOf: minecraft-server-osusume
-sourceHash: sha256:4a9f13498d6183c150d7c80dfc0eb1cf4f1aab2af15b09f48df528ccd25cc22f
+sourceHash: sha256:40a109cd0a0cddd64a10843cd181d695b70802c6cab486b4c375c61f0da9578c
 date: 2026-08-01T10:00:00+09:00
 tags:
   - Minecraft
@@ -39,7 +39,7 @@ Manmamiya 接受 Java 和 Bedrock 玩家，是一台在保留原版感受的同�
 
 ![原创插图：特殊生物群系与红石工程和陷阱建造区域并列](/uploads/stories/minecraft-server-osusume-tsubusaba.webp)
 
-Tsubusaba 支持 Java 和 Bedrock，是一台生活型服务器。你可以在主世界建筑和耕种，在资源世界采集并探索地牢，而大型自动农场和红石装置则可在专门的陷阱服务器建造；站点也介绍了与主世界气氛不同的生物群系。
+Tsubusaba 支持 Java 和 Bedrock，是一台生活型服务器。你可以在主世界建筑和耕种，在资源世界采集并探索地牢，而大型自动农场和红石装置则可在专门的陷阱服务器建造；官网还介绍了不同于原版 Minecraft 的生物群系。
 
 新玩家可领取新手套装并选择职业，通过职业获得金钱和特殊物品。领地保护、运营和玩家商店、抓钩等功能齐备，适合想逐步经营生活，同时享受装置制作和交易的玩家。
 
