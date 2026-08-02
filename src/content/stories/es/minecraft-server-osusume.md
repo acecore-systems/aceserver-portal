@@ -1,8 +1,8 @@
 ---
 title: 'Servidores de Minecraft recomendados en Japón: 6 opciones por Java/Bedrock y estilo de juego'
-description: Una guía de servidores públicos de Minecraft en Japón según las ediciones, formas de jugar e información de acceso confirmadas en sus sitios oficiales. Aceserver se presenta al final.
+description: Una guía de servidores públicos de Minecraft en Japón según las ediciones, formas de jugar e información de acceso confirmadas en sus sitios oficiales.
 translationOf: minecraft-server-osusume
-sourceHash: sha256:c924840ca407e160a7c2502b387711ccf4b31d95661f558bad357a6a4d0078f4
+sourceHash: sha256:4a9f13498d6183c150d7c80dfc0eb1cf4f1aab2af15b09f48df528ccd25cc22f
 date: 2026-08-01T10:00:00+09:00
 tags:
   - Minecraft
@@ -13,7 +13,7 @@ image: /uploads/stories/minecraft-server-osusume-hero.webp
 imageAlt: Tres viajeros alrededor de una mesa con mapa en una encrucijada de bloques, mirando distintos mundos al atardecer
 ---
 
-Este artículo está editado por el portal oficial de Aceserver. Presenta servidores públicos cuyas guías oficiales explican cómo jugar y unirse; el orden no es un ranking. Antes de entrar, revisa siempre la guía oficial actual de cada servidor.
+Esta guía presenta servidores públicos cuyas guías oficiales explican cómo jugar y unirse; el orden no es un ranking. Antes de entrar, revisa siempre la guía oficial actual de cada servidor.
 
 ## Seis servidores de Minecraft recomendados
 
@@ -23,37 +23,49 @@ _Las imágenes son ilustraciones originales de guía, no material oficial de los
 
 ![Ilustración original de un lobby de bloques con rutas hacia una ciudad consolidada y un nuevo mundo de supervivencia](/uploads/stories/minecraft-server-osusume-nishisaba.webp)
 
-Nishisaba es un servidor público con juego cruzado para Java y Bedrock que presenta tres mundos: principal, supervivencia y lobby. Puede encajar si quieres construir y explorar libremente, además de usar elementos como mcMMO y ajustes de hogar. Su sitio oficial reúne reglas, acceso, Discord y wiki.
+Nishisaba es un servidor con juego cruzado para Java y Bedrock donde puedes moverte entre tres mundos: principal, supervivencia y lobby. El mundo principal conserva una ciudad ya establecida, el de supervivencia permite empezar desde cero y el lobby ayuda a elegir el siguiente destino. El lobby también tiene parkour.
+
+Puede encajar si quieres alternar entre construir, reunir recursos y explorar según el día, usando además funciones como el progreso de habilidades de mcMMO y los ajustes de hogar. Para una primera visita, lee las reglas y los pasos de acceso, entra por el lobby y elige después el mundo en el que quieras jugar.
 
 ### 2. [Manmamiya](https://www.manmamiya.work/)
 
 ![Ilustración original de un ferrocarril de vagonetas rápido sobre una gran ciudad de supervivencia para recorrer](/uploads/stories/minecraft-server-osusume-manmamiya.webp)
 
-Manmamiya acepta jugadores de Java y Bedrock y conserva una sensación vanilla mientras ofrece funciones multijugador como protección de terrenos, mundo de recursos y teletransportes. Quienes disfrutan del turismo, la construcción, los eventos y la supervivencia a largo plazo pueden hacerse una idea clara leyendo antes su sitio oficial y wiki. Revisa también su orientación oficial sobre edad.
+Manmamiya acepta jugadores de Java y Bedrock y es un servidor de supervivencia pensado para mantener una vida a largo plazo sin perder la sensación vanilla. Además de recorrer grandes construcciones, ofrece un ferrocarril de vagonetas rápido, una galería de 360° y una búsqueda de sellos turísticos: formas de disfrutar una ciudad consolidada como lugar para visitar.
+
+La protección de terrenos, un mundo de recursos que se renueva periódicamente, teletransportes y un mapa en tiempo real ayudan a quienes quieren construir, hacer turismo y participar en eventos durante mucho tiempo. Consulta antes las indicaciones oficiales de edad, las reglas y el acceso para decidir si su estilo encaja contigo.
 
 ### 3. [Tsubusaba](https://tsubu-server.github.io/)
 
 ![Ilustración original de un bioma especial junto a una zona de ingeniería de redstone y trampas](/uploads/stories/minecraft-server-osusume-tsubusaba.webp)
 
-Tsubusaba es un servidor de vida que admite Java y Bedrock. Además de un mundo principal con biomas poco comunes, presenta un mundo de recursos y un servidor para construir mecanismos. Es una opción para quienes quieren desarrollar poco a poco su vida con protección de terrenos, trabajos y tiendas de jugadores.
+Tsubusaba admite Java y Bedrock y está orientado a una vida de supervivencia. Puedes construir y cultivar en el mundo principal, reunir materiales y explorar mazmorras en el mundo de recursos, y crear granjas automáticas o mecanismos de redstone grandes en un servidor de trampas dedicado. También presenta biomas con un ambiente diferente al del mundo principal.
+
+Al comenzar puedes recoger un kit inicial y elegir un trabajo para ganar dinero y obtener objetos especiales. Con protección de terrenos, tiendas del servidor y de jugadores, y herramientas como un gancho, puede encajar si quieres desarrollar tu vida poco a poco mientras disfrutas de mecanismos y comercio.
 
 ### 4. [Munika Server](https://munikasvr.net/)
 
 ![Ilustración original de un distrito nocturno con cervecería, sala estilo casino, tablón de misiones y mercado](/uploads/stories/minecraft-server-osusume-munika.webp)
 
-Munika Server acepta Java y Bedrock y añade economía, habilidades y misiones a la supervivencia. Puede encajar si buscas objetivos y eventos además de la supervivencia normal. Su sitio oficial ofrece accesos a participación, reglas, soporte y Discord.
+Munika Server acepta Java y Bedrock y construye su supervivencia alrededor de economía, habilidades y misiones. Además de minar y construir, incluye elaboración de bebidas, tiendas, casino y servidores temporales con temática de desastres o apocalipsis zombi, por lo que hay muchas formas de encontrar objetivos.
+
+Hay un tutorial para quienes entran por primera vez, y Discord sirve para revisar los eventos y pedir ayuda. Es una buena opción si quieres progresión, economía, misiones y eventos temporales junto a la supervivencia normal.
 
 ### 5. [Noasaba](https://noasaba.com/)
 
 ![Ilustración original de exploradores y una pequeña base en un valle natural de cerezos con una cueva](/uploads/stories/minecraft-server-osusume-noasaba.webp)
 
-Noasaba es un servidor independiente para Java y Bedrock que se presenta como supervivencia vanilla. Considera esta opción si quieres mantenerte cerca de Minecraft cotidiano y a la vez sentir la presencia multijugador. Su sitio oficial enlaza información de conexión, reglas, notas de uso, mapa y Discord.
+Noasaba es un servidor independiente de supervivencia vanilla para Java y Bedrock. Puede encajar si quieres construir una base y explorar con una sensación cercana al Minecraft cotidiano, compartiendo a la vez un mundo con otros jugadores.
+
+Su sitio oficial ofrece datos de conexión para ambas ediciones, reglas, guías de comandos y funciones de protección, mapa del mundo y Discord. Funciona bien para quien prefiere empezar una vida cercana a vanilla y consultar las guías solo cuando las necesite, en vez de aprender primero una lista larga de añadidos.
 
 ### 6. Aceserver
 
 ![Ilustración original de una ciudad de construcción libre bajo un dirigible blanco y azul](/uploads/stories/minecraft-server-osusume-aceserver.webp)
 
-Aceserver es un servidor público gratuito de Minecraft al que cualquiera puede entrar desde Java o Bedrock. Puede encajar con quienes quieren una forma de jugar cercana a vanilla y muy libre, usando Discord como entrada a la guía de acceso y a la información de la comunidad.
+Aceserver es un servidor público gratuito de Minecraft al que cualquiera puede entrar desde Java o Bedrock. Su portal reúne mapas de los mundos principal, de recursos, RPG y lobby, además de vídeos y la WIKI, para que puedas mirar los distintos mundos antes de decidir por dónde empezar.
+
+Es una opción para quienes quieren construir y vivir con libertad, a su propio ritmo y cerca de vanilla, mientras consultan en la WIKI las reglas y la guía de acceso detalladas. Empieza revisando el portal y Discord para ver la información actual y prueba el mundo que más te interese.
 
 Antes de entrar, revisa el [portal de Aceserver](/es/), el [Discord oficial](https://discord.gg/acsv) y la [WIKI oficial](https://asv-wiki.acecore.net) en ese orden. Así puedes decidir si encaja con tu forma de jugar antes de participar.
 
