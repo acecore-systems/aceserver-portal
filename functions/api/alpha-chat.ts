@@ -56,6 +56,12 @@ const MAX_HISTORY_MESSAGES = 8
 const MAX_CONVERSATION_LENGTH = 2800
 const MAX_WIKI_SEARCH_QUERY_LENGTH = 800
 const ALPHA_CHAT_SERVICE_CONTRACT_VERSION = 1
+const ALPHA_RATE_LIMIT_WINDOW_SECONDS = 60
+const ALPHA_RATE_LIMIT_RETENTION_SECONDS = 600
+const ALPHA_CLIENT_RATE_LIMIT = 5
+const ALPHA_GLOBAL_RATE_LIMIT = 60
+const ALPHA_CLIENT_ID_PATTERN =
+  /^[0-9a-f]{8}-[0-9a-f]{4}-[1-8][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/iu
 
 type TextRange = { end: number; start: number }
 
@@ -307,7 +313,8 @@ async function legacyOnRequestPost(
   })
 }
 
-async function proxySharedAlphaChat({ request, env }) {
+async function proxySharedAlphaChat(context) {
+  const { request, env } = context
   if (!isAllowedRequestOrigin(request)) {
     return jsonResponse(
       request,
@@ -333,11 +340,59 @@ async function proxySharedAlphaChat({ request, env }) {
   const locale = resolveGuideLocale(payloadResult.value?.locale)
   const guideMessages = GUIDE_MESSAGES_BY_LOCALE[locale]
   const service = getAlphaChatService(env)
-  if (!service) {
+  const rateLimitDatabase = getAlphaChatRateLimitDatabase(env)
+  if (!service || !rateLimitDatabase) {
     return jsonResponse(
       request,
       { ok: false, answer: guideMessages.unconfigured },
       503,
+    )
+  }
+
+  let globalRateLimit
+  try {
+    const clientKey = await createAlphaRateLimitKey(request)
+    const clientRateLimit = await consumeAlphaRateLimit(
+      rateLimitDatabase,
+      `portal-alpha:client:${clientKey}`,
+      ALPHA_CLIENT_RATE_LIMIT,
+    )
+    if (!clientRateLimit.allowed) {
+      return jsonResponse(
+        request,
+        { ok: false, answer: guideMessages.failed },
+        429,
+        { 'Retry-After': String(ALPHA_RATE_LIMIT_WINDOW_SECONDS) },
+      )
+    }
+
+    globalRateLimit = await consumeAlphaRateLimit(
+      rateLimitDatabase,
+      'portal-alpha:global',
+      ALPHA_GLOBAL_RATE_LIMIT,
+    )
+    if (!globalRateLimit.allowed) {
+      return jsonResponse(
+        request,
+        { ok: false, answer: guideMessages.failed },
+        429,
+        { 'Retry-After': String(ALPHA_RATE_LIMIT_WINDOW_SECONDS) },
+      )
+    }
+  } catch (error) {
+    logAlphaRateLimitError(error)
+    return jsonResponse(
+      request,
+      { ok: false, answer: guideMessages.failed },
+      503,
+    )
+  }
+
+  if (globalRateLimit.count === 1 && typeof context.waitUntil === 'function') {
+    context.waitUntil(
+      deleteExpiredAlphaRateLimits(rateLimitDatabase).catch((error) => {
+        logAlphaRateLimitError(error)
+      }),
     )
   }
 
@@ -379,6 +434,79 @@ async function proxySharedAlphaChat({ request, env }) {
       503,
     )
   }
+}
+
+function getAlphaChatRateLimitDatabase(env) {
+  const database = env?.SEARCH_RATE_LIMIT_DB
+  return database && typeof database.prepare === 'function' ? database : null
+}
+
+async function createAlphaRateLimitKey(request) {
+  const connectingIp = String(
+    request.headers.get('CF-Connecting-IP') || '',
+  ).trim()
+  const clientId = String(
+    request.headers.get('X-Acecore-Alpha-Client') || '',
+  ).trim()
+  const source =
+    connectingIp && connectingIp.length <= 64
+      ? `ip:${connectingIp}`
+      : `session:${ALPHA_CLIENT_ID_PATTERN.test(clientId) ? clientId : 'anonymous'}`
+  const digest = await crypto.subtle.digest(
+    'SHA-256',
+    new TextEncoder().encode(source),
+  )
+  return Array.from(new Uint8Array(digest), (value) =>
+    value.toString(16).padStart(2, '0'),
+  ).join('')
+}
+
+async function consumeAlphaRateLimit(database, limiterKey, limit) {
+  const now = Math.floor(Date.now() / 1_000)
+  const windowStart =
+    Math.floor(now / ALPHA_RATE_LIMIT_WINDOW_SECONDS) *
+    ALPHA_RATE_LIMIT_WINDOW_SECONDS
+  const result = await database
+    .prepare(
+      `INSERT INTO semantic_search_rate_limits
+        (limiter_key, window_start, request_count, expires_at)
+       VALUES (?, ?, 1, ?)
+       ON CONFLICT (limiter_key, window_start) DO UPDATE SET
+         request_count = semantic_search_rate_limits.request_count + 1,
+         expires_at = excluded.expires_at
+       WHERE semantic_search_rate_limits.request_count < ?
+       RETURNING request_count`,
+    )
+    .bind(
+      limiterKey,
+      windowStart,
+      now + ALPHA_RATE_LIMIT_RETENTION_SECONDS,
+      limit,
+    )
+    .first()
+  const count = Number(result?.request_count)
+  return {
+    allowed: Number.isInteger(count) && count >= 1 && count <= limit,
+    count: Number.isInteger(count) ? count : 0,
+  }
+}
+
+async function deleteExpiredAlphaRateLimits(database) {
+  const now = Math.floor(Date.now() / 1_000)
+  await database
+    .prepare('DELETE FROM semantic_search_rate_limits WHERE expires_at < ?')
+    .bind(now)
+    .run()
+}
+
+function logAlphaRateLimitError(error) {
+  console.error(
+    JSON.stringify({
+      event: 'alpha_chat_rate_limit_error',
+      errorCode:
+        error instanceof Error && error.name ? error.name : 'storage_error',
+    }),
+  )
 }
 
 function getAlphaChatService(env) {
