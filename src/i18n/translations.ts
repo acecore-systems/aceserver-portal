@@ -22,6 +22,9 @@ export type UiCopy = {
   homeMultiplayer: string
   homeCrossplay: string
   homeCtaLabel: string
+  homeShopTitle: string
+  homeShopText: string
+  openShop: string
   worldMapTitleParts: [string, string]
   worldSelection: string
   openWorld: string
@@ -176,7 +179,11 @@ export const JA_UI: UiCopy = {
   homeMultiplayer:
     '一人でも、友達とも、世界中のプレイヤーとも一緒に冒険や建築を楽しめます。',
   homeCrossplay: 'JAVA版・統合版どちらでも遊ぶことが可能です！',
-  homeCtaLabel: '参加とWIKI',
+  homeCtaLabel: '参加・WIKI・公式グッズ',
+  homeShopTitle: 'Aceserverを、日常にも。',
+  homeShopText:
+    'アルファくんやAceserverの世界観を、公式グッズとしてお届けしています。',
+  openShop: '公式グッズを見る',
   worldMapTitleParts: ['ワールド', 'マップ'],
   worldSelection: 'ワールドを選択',
   openWorld: '{title}を開く',
@@ -271,7 +278,11 @@ const en: LocaleTranslation = {
     homeMultiplayer:
       'Enjoy adventures and building alone, with friends, or with players from around the world.',
     homeCrossplay: 'Play from both Java Edition and Bedrock Edition!',
-    homeCtaLabel: 'Join and WIKI',
+    homeCtaLabel: 'Join, WIKI, and official goods',
+    homeShopTitle: 'Bring Aceserver into everyday life.',
+    homeShopText:
+      'Explore official goods inspired by Alpha-kun and the world of Aceserver.',
+    openShop: 'View official goods',
     worldMapTitleParts: ['World', 'Maps'],
     worldSelection: 'Choose a world',
     openWorld: 'Open {title}',
@@ -512,7 +523,10 @@ const zhCn: LocaleTranslation = {
     homeMultiplayer:
       '无论独自、与朋友，还是和世界各地的玩家，都能一起冒险和建造。',
     homeCrossplay: 'Java 版与基岩版均可游玩！',
-    homeCtaLabel: '参与方式与 WIKI',
+    homeCtaLabel: '参与方式、WIKI 与官方周边',
+    homeShopTitle: '把 Aceserver 带入日常生活。',
+    homeShopText: '探索以 Alpha-kun 和 Aceserver 世界观为灵感的官方周边。',
+    openShop: '查看官方周边',
     worldMapTitleParts: ['世界', '地图'],
     worldSelection: '选择世界',
     openWorld: '打开{title}',
@@ -745,7 +759,11 @@ const es: LocaleTranslation = {
     homeMultiplayer:
       'Disfruta de aventuras y construcciones a solas, con amigos o con jugadores de todo el mundo.',
     homeCrossplay: '¡Puedes jugar con Java Edition y Bedrock Edition!',
-    homeCtaLabel: 'Participación y WIKI',
+    homeCtaLabel: 'Participación, WIKI y artículos oficiales',
+    homeShopTitle: 'Lleva Aceserver a tu día a día.',
+    homeShopText:
+      'Descubre artículos oficiales inspirados en Alpha-kun y el mundo de Aceserver.',
+    openShop: 'Ver artículos oficiales',
     worldMapTitleParts: ['Mapas', 'de mundos'],
     worldSelection: 'Seleccionar un mundo',
     openWorld: 'Abrir {title}',
@@ -982,7 +1000,11 @@ const pt: LocaleTranslation = {
     homeMultiplayer:
       'Aventure-se e construa sozinho, com amigos ou com jogadores do mundo todo.',
     homeCrossplay: 'Jogue com Java Edition e Bedrock Edition!',
-    homeCtaLabel: 'Participação e WIKI',
+    homeCtaLabel: 'Participação, WIKI e produtos oficiais',
+    homeShopTitle: 'Leve o Aceserver para o seu dia a dia.',
+    homeShopText:
+      'Conheça produtos oficiais inspirados no Alpha-kun e no mundo do Aceserver.',
+    openShop: 'Ver produtos oficiais',
     worldMapTitleParts: ['Mapas', 'dos mundos'],
     worldSelection: 'Escolher um mundo',
     openWorld: 'Abrir {title}',
@@ -1220,7 +1242,11 @@ const fr: LocaleTranslation = {
     homeMultiplayer:
       'Partez à l’aventure et construisez seul, avec vos amis ou avec des joueurs du monde entier.',
     homeCrossplay: 'Jouez avec Java Edition et Bedrock Edition !',
-    homeCtaLabel: 'Participation et WIKI',
+    homeCtaLabel: 'Participation, WIKI et produits officiels',
+    homeShopTitle: 'Emportez Aceserver dans votre quotidien.',
+    homeShopText:
+      'Découvrez des produits officiels inspirés d’Alpha-kun et de l’univers d’Aceserver.',
+    openShop: 'Voir les produits officiels',
     worldMapTitleParts: ['Cartes', 'des mondes'],
     worldSelection: 'Choisir un monde',
     openWorld: 'Ouvrir {title}',
@@ -1460,7 +1486,11 @@ const ko: LocaleTranslation = {
     homeMultiplayer:
       '혼자서도, 친구와도, 전 세계 플레이어와도 모험과 건축을 즐길 수 있습니다.',
     homeCrossplay: 'Java Edition과 Bedrock Edition 모두 플레이할 수 있습니다!',
-    homeCtaLabel: '참여와 WIKI',
+    homeCtaLabel: '참여, WIKI 및 공식 굿즈',
+    homeShopTitle: 'Aceserver를 일상으로.',
+    homeShopText:
+      'Alpha-kun과 Aceserver의 세계관에서 영감을 받은 공식 굿즈를 만나보세요.',
+    openShop: '공식 굿즈 보기',
     worldMapTitleParts: ['월드', '지도'],
     worldSelection: '월드 선택',
     openWorld: '{title} 열기',
@@ -1695,7 +1725,11 @@ const de: LocaleTranslation = {
     homeMultiplayer:
       'Erlebe Abenteuer und Bauprojekte allein, mit Freunden oder mit Spielern aus aller Welt.',
     homeCrossplay: 'Spiele mit Java Edition und Bedrock Edition!',
-    homeCtaLabel: 'Teilnahme und WIKI',
+    homeCtaLabel: 'Teilnahme, WIKI und offizielle Artikel',
+    homeShopTitle: 'Hol dir Aceserver in den Alltag.',
+    homeShopText:
+      'Entdecke offizielle Artikel, inspiriert von Alpha-kun und der Welt von Aceserver.',
+    openShop: 'Offizielle Artikel ansehen',
     worldMapTitleParts: ['Welt', 'karten'],
     worldSelection: 'Welt auswählen',
     openWorld: '{title} öffnen',
@@ -1938,7 +1972,11 @@ const ru: LocaleTranslation = {
     homeMultiplayer:
       'Исследуйте мир и стройте в одиночку, с друзьями или с игроками со всего света.',
     homeCrossplay: 'Играйте с Java Edition и Bedrock Edition!',
-    homeCtaLabel: 'Участие и WIKI',
+    homeCtaLabel: 'Участие, WIKI и официальные товары',
+    homeShopTitle: 'Добавьте Aceserver в повседневную жизнь.',
+    homeShopText:
+      'Откройте официальные товары, вдохновлённые Alpha-kun и миром Aceserver.',
+    openShop: 'Посмотреть официальные товары',
     worldMapTitleParts: ['Карты', 'миров'],
     worldSelection: 'Выбрать мир',
     openWorld: 'Открыть {title}',
