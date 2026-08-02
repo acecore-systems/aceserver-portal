@@ -32,6 +32,18 @@ const stories = [
       'Minecraftの街並みを背景にしたエースサーバーポータルのトップページ',
   },
   {
+    slug: 'minecraft-server-osusume',
+    title:
+      '【2026年8月更新】おすすめのマイクラサーバー6選｜Java・統合版対応や遊び方で比較',
+    description:
+      '日本の公開Minecraftサーバーを、公式サイトで確認できた対応エディション・遊び方・参加案内から紹介します。',
+    author: 'Gui',
+    datePublished: '2026-08-01T01:00:00.000Z',
+    image: '/uploads/stories/minecraft-server-osusume-hero.webp',
+    imageAlt:
+      '夕暮れのブロック調の広場で地図を囲み、さまざまな世界へ続く道を見渡す3人の旅人',
+  },
+  {
     slug: 'metaverse-is-close',
     title: 'メタバースは案外身近にあるよね',
     description:
