@@ -187,8 +187,9 @@ const alphaLinkResources = [
   type AlphaRole = 'user' | 'assistant'
 
   type AlphaMessage = {
-    role: AlphaRole
     content: string
+    loreRevisionId?: string
+    role: AlphaRole
   }
 
   type AlphaLinkResource = {
@@ -679,7 +680,16 @@ const alphaLinkResources = [
           : fallback
 
       loadingMessage?.remove()
-      messages.push({ role: 'assistant', content: answer })
+      const loreRevisionId =
+        typeof payload?.loreRevisionId === 'string' &&
+        payload.loreRevisionId.length <= 128
+          ? payload.loreRevisionId
+          : undefined
+      messages.push({
+        role: 'assistant',
+        content: answer,
+        ...(loreRevisionId ? { loreRevisionId } : {}),
+      })
       createAlphaMessage(widget, 'assistant', answer)
     } catch {
       const fallback =
