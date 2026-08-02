@@ -18,7 +18,7 @@
     "preview": "astro preview",
     "format": "prettier . --write",
     "format:check": "prettier . --check",
-    "test:alpha": "node --experimental-strip-types --test tests/alpha-chat.test.mjs",
+    "test:alpha": "node --experimental-strip-types --test tests/alpha-chat.test.mjs tests/alpha-chat-service-adapter.test.mjs",
     "test:portal-vectorize": "node --experimental-strip-types --test tests/portal-vectorize.test.mjs",
     "test:search": "node --experimental-strip-types --test tests/search-api.test.mjs tests/network-search-contract.test.mjs",
     "test:cms": "node --experimental-strip-types --import=./scripts/json-module-loader.mjs --test --test-concurrency=1 --test-isolation=none tests/cms-*.test.mjs",

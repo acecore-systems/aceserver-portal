@@ -55,10 +55,18 @@ const MAX_QUESTION_LENGTH = 500
 const MAX_HISTORY_MESSAGES = 8
 const MAX_CONVERSATION_LENGTH = 2800
 const MAX_WIKI_SEARCH_QUERY_LENGTH = 800
+const ALPHA_CHAT_SERVICE_CONTRACT_VERSION = 1
 
 type TextRange = { end: number; start: number }
 
-export async function onRequestPost(
+export async function onRequestPost(context, openAiFetch = globalThis.fetch) {
+  if (context?.env?.ALPHA_CHAT_SHARED_ENABLED === 'true') {
+    return proxySharedAlphaChat(context)
+  }
+  return legacyOnRequestPost(context, openAiFetch)
+}
+
+async function legacyOnRequestPost(
   { request, env },
   openAiFetch = globalThis.fetch,
 ) {
@@ -297,6 +305,89 @@ export async function onRequestPost(
     ok: true,
     answer: answer || guideMessages.emptyAnswer,
   })
+}
+
+async function proxySharedAlphaChat({ request, env }) {
+  if (!isAllowedRequestOrigin(request)) {
+    return jsonResponse(
+      request,
+      { ok: false, answer: GUIDE_MESSAGES.invalidRequest },
+      403,
+    )
+  }
+
+  const payloadResult = await readJsonPayload(request)
+  if (!payloadResult.ok) {
+    return jsonResponse(
+      request,
+      {
+        ok: false,
+        answer: payloadResult.tooLarge
+          ? GUIDE_MESSAGES.requestTooLarge
+          : GUIDE_MESSAGES.invalidRequest,
+      },
+      payloadResult.tooLarge ? 413 : 400,
+    )
+  }
+
+  const locale = resolveGuideLocale(payloadResult.value?.locale)
+  const guideMessages = GUIDE_MESSAGES_BY_LOCALE[locale]
+  const service = getAlphaChatService(env)
+  if (!service) {
+    return jsonResponse(
+      request,
+      { ok: false, answer: guideMessages.unconfigured },
+      503,
+    )
+  }
+
+  try {
+    const serviceResponse = await service.fetch(
+      new Request('https://aceserver-alpha-chat.internal/v1/chat', {
+        body: JSON.stringify({
+          payload: payloadResult.value,
+          surface: 'portal',
+          version: ALPHA_CHAT_SERVICE_CONTRACT_VERSION,
+        }),
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+        method: 'POST',
+      }),
+    )
+    const body = await serviceResponse.json()
+    if (!body || typeof body !== 'object' || Array.isArray(body)) {
+      throw new Error('AlphaChatServicePayloadError')
+    }
+    return jsonResponse(
+      request,
+      body,
+      normalizeServiceStatus(serviceResponse.status),
+    )
+  } catch (error) {
+    console.error(
+      JSON.stringify({
+        event: 'alpha_chat_service_error',
+        errorCode:
+          error instanceof Error && error.name ? error.name : 'service_error',
+      }),
+    )
+    return jsonResponse(
+      request,
+      { ok: false, answer: guideMessages.failed },
+      503,
+    )
+  }
+}
+
+function getAlphaChatService(env) {
+  const service = env?.ALPHA_CHAT_SERVICE
+  return service && typeof service.fetch === 'function' ? service : null
+}
+
+function normalizeServiceStatus(value) {
+  return Number.isInteger(value) && value >= 200 && value <= 599 ? value : 502
 }
 
 async function retrieveAlphaEvidence(
