@@ -2,11 +2,13 @@
 title: Aceserver 被“劫持”了。
 description: 记录 Aceserver 上发生的“劫持”事件。成员们的理智接连被侵蚀，这是一份令人震惊的记录。
 translationOf: aceserver-hijacked
-sourceHash: sha256:b9c4fc622b0c155460f2b8834590846b228b3832f6e5793c47ee63193f64ad86
+sourceHash: sha256:103ac3842af3abbe7c8245c6d47879926718b08e886718c678c9236d896d4f03
 date: 2022-10-12T00:00:00+09:00
 tags:
   - 活动
 author: ハット
+image: /uploads/stories/aceserver-hijacked.webp
+imageAlt: 夜晚的方块城市中，一台散发紫绿光芒的异常服务器装置正在蔓延
 ---
 
 ## Aceserver 被“劫持”了

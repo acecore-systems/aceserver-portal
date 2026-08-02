@@ -2,11 +2,13 @@
 title: Aceserver Has Been Hijacked.
 description: A record of the “hijacking” event on Aceserver—a shocking document of the members’ sanity being consumed one after another.
 translationOf: aceserver-hijacked
-sourceHash: sha256:b9c4fc622b0c155460f2b8834590846b228b3832f6e5793c47ee63193f64ad86
+sourceHash: sha256:103ac3842af3abbe7c8245c6d47879926718b08e886718c678c9236d896d4f03
 date: 2022-10-12T00:00:00+09:00
 tags:
   - Event
 author: ハット
+image: /uploads/stories/aceserver-hijacked.webp
+imageAlt: A strange server device glowing purple and green spreads through a block-built city at night
 ---
 
 ## Aceserver Has Been Hijacked

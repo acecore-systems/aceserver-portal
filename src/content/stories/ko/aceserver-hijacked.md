@@ -2,11 +2,13 @@
 title: Aceserver가 장악당했다.
 description: Aceserver에서 벌어진 ‘장악’ 사건의 기록. 멤버들의 이성이 차례로 잠식되어 가는 충격적인 문서다.
 translationOf: aceserver-hijacked
-sourceHash: sha256:b9c4fc622b0c155460f2b8834590846b228b3832f6e5793c47ee63193f64ad86
+sourceHash: sha256:103ac3842af3abbe7c8245c6d47879926718b08e886718c678c9236d896d4f03
 date: 2022-10-12T00:00:00+09:00
 tags:
   - 이벤트
 author: ハット
+image: /uploads/stories/aceserver-hijacked.webp
+imageAlt: 밤의 블록 도시에서 보라색과 초록색으로 빛나는 이상한 서버 장치가 퍼져 나가는 모습
 ---
 
 ## Aceserver가 장악당했다

@@ -5,6 +5,8 @@ date: 2022-10-12T00:00:00+09:00
 tags:
   - イベント
 author: ハット
+image: /uploads/stories/aceserver-hijacked.webp
+imageAlt: 夜のブロックで作られた街を、紫と緑の光を放つ異常なサーバー装置が侵食しているイメージ
 ---
 
 ## エースサーバーが乗っ取られた

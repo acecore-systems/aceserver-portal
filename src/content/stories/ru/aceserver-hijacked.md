@@ -2,11 +2,13 @@
 title: Aceserver захвачен.
 description: Запись о «захвате», произошедшем на Aceserver. Потрясающий документ о том, как рассудок участников поглощается один за другим.
 translationOf: aceserver-hijacked
-sourceHash: sha256:b9c4fc622b0c155460f2b8834590846b228b3832f6e5793c47ee63193f64ad86
+sourceHash: sha256:103ac3842af3abbe7c8245c6d47879926718b08e886718c678c9236d896d4f03
 date: 2022-10-12T00:00:00+09:00
 tags:
   - Событие
 author: ハット
+image: /uploads/stories/aceserver-hijacked.webp
+imageAlt: Странное серверное устройство, сияющее фиолетовым и зелёным, распространяется по ночному городу из блоков
 ---
 
 ## Aceserver захвачен
