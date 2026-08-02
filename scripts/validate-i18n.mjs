@@ -12,7 +12,10 @@ const errors = []
 const expectedStorySlugs = [
   'aceserver-hijacked',
   'aceserver-portal-launch',
+  'minecraft-bedrock-beginner-builds',
+  'minecraft-bedrock-commands',
   'minecraft-server-osusume',
+  'minecraft-server-setup',
   'metaverse-is-close',
 ]
 const fixedSourceFiles = [

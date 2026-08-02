@@ -12,7 +12,10 @@ const TRANSLATED_LOCALES = LOCALES.filter((locale) => locale !== 'ja')
 const EXPECTED_STORY_SLUGS = new Set([
   'aceserver-hijacked',
   'aceserver-portal-launch',
+  'minecraft-bedrock-beginner-builds',
+  'minecraft-bedrock-commands',
   'minecraft-server-osusume',
+  'minecraft-server-setup',
   'metaverse-is-close',
 ])
 const REQUIRED_STORY_IMAGE_SLUGS = new Set([

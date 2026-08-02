@@ -35,6 +35,23 @@ const stories = [
       'Minecraftの街並みを背景にしたエースサーバーポータルのトップページ',
   },
   {
+    slug: 'minecraft-bedrock-beginner-builds',
+    title: '【統合版】マイクラで最初に作った方がいいもの12選｜序盤の優先順位',
+    description:
+      'Minecraft統合版を始めたばかりの人向けに、作業台・ベッド・拠点・食料・畑など、序盤に作るものを優先順位で紹介します。',
+    author: 'Gui',
+    datePublished: '2026-08-02T05:20:00.000Z',
+  },
+  {
+    slug: 'minecraft-bedrock-commands',
+    title:
+      '【統合版】マイクラのコマンド一覧｜暗視・テレポート・時間変更を入力例で解説',
+    description:
+      'Minecraft統合版でよく使うコマンドを、暗視・テレポート・時間・天気・アイテム付与の入力例と注意点で整理します。',
+    author: 'Gui',
+    datePublished: '2026-08-02T05:00:00.000Z',
+  },
+  {
     slug: 'minecraft-server-osusume',
     title:
       '【2026年8月更新】おすすめのマイクラサーバー6選｜Java・統合版対応や遊び方で比較',
@@ -45,6 +62,14 @@ const stories = [
     image: '/uploads/stories/minecraft-server-osusume-hero.webp',
     imageAlt:
       '夕暮れのブロック調の広場で地図を囲み、さまざまな世界へ続く道を見渡す3人の旅人',
+  },
+  {
+    slug: 'minecraft-server-setup',
+    title: 'マイクラの無料サーバーの立て方｜Java版・統合版・Realmsの選び方',
+    description:
+      'Minecraftを友達と遊ぶための無料サーバー、自宅PCの専用サーバー、Realmsを、エディション・運用の手間・公開範囲から選ぶための入門ガイドです。',
+    author: 'Gui',
+    datePublished: '2026-08-02T05:10:00.000Z',
   },
   {
     slug: 'metaverse-is-close',
