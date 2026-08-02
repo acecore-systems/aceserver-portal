@@ -241,6 +241,21 @@ const alphaLogo = '/uploads/alpha-kun.png'
     </div>
     <Icon name="book-open" class="wiki-mark" />
   </article>
+  <article class="shop-card pixel-border">
+    <div>
+      <h2>{ui.homeShopTitle}</h2>
+      <p>{ui.homeShopText}</p>
+      <a
+        class="asv-btn-shop"
+        href="https://shop.acecore.net/"
+        {...externalLinkAttrs('https://shop.acecore.net/', true)}
+      >
+        <Icon name="shopping-bag" />
+        <span>{ui.openShop}</span>
+      </a>
+    </div>
+    <Icon name="shopping-bag" class="shop-mark" />
+  </article>
 </section>
 
 <style>
@@ -556,7 +571,8 @@ const alphaLogo = '/uploads/alpha-kun.png'
   }
 
   .join-card,
-  .wiki-card {
+  .wiki-card,
+  .shop-card {
     display: grid;
     min-height: 320px;
     gap: 22px;
@@ -576,8 +592,49 @@ const alphaLogo = '/uploads/alpha-kun.png'
       var(--wiki-image) center / cover;
   }
 
+  .shop-card {
+    grid-column: 1 / -1;
+    grid-template-columns: 1fr auto;
+    background:
+      linear-gradient(135deg, rgba(39, 30, 121, 0.96), rgba(18, 76, 154, 0.94)),
+      #211f4c;
+  }
+
+  .asv-btn-shop {
+    display: inline-flex;
+    min-height: 3rem;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 12px;
+    border: 2px solid #1b24d8;
+    border-radius: 8px;
+    background: #ffd84d;
+    color: #15130f;
+    font-weight: 900;
+    padding: 0.75rem 1.25rem;
+    text-decoration: none;
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.35);
+    transition:
+      background-color 160ms ease,
+      transform 160ms ease,
+      box-shadow 160ms ease;
+  }
+
+  .asv-btn-shop:hover,
+  .asv-btn-shop:focus-visible {
+    background: #fff06f;
+    transform: translateY(-1px);
+  }
+
+  .asv-btn-shop:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.35);
+  }
+
   .cube-icon,
-  :global(.wiki-mark) {
+  :global(.wiki-mark),
+  :global(.shop-mark) {
     display: grid;
     place-items: center;
     color: #fff8dd;
@@ -594,6 +651,12 @@ const alphaLogo = '/uploads/alpha-kun.png'
   }
 
   :global(.wiki-mark) {
+    align-self: end;
+    font-size: clamp(4rem, 10vw, 8rem);
+    opacity: 0.88;
+  }
+
+  :global(.shop-mark) {
     align-self: end;
     font-size: clamp(4rem, 10vw, 8rem);
     opacity: 0.88;
@@ -627,7 +690,8 @@ const alphaLogo = '/uploads/alpha-kun.png'
     }
 
     .join-card,
-    .wiki-card {
+    .wiki-card,
+    .shop-card {
       grid-template-columns: 1fr;
     }
   }
