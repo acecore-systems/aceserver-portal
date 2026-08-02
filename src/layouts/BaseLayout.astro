@@ -20,6 +20,7 @@ import {
   type Locale,
 } from '../i18n/config'
 import { getUi } from '../i18n/translations'
+import { buildSeoDescription, buildSeoTitle } from '../utils/seo-meta'
 
 interface Props {
   locale?: Locale
@@ -53,16 +54,23 @@ const {
 const settings = getLocalizedSettings(locale)
 const ui = getUi(locale)
 const title = titleInput ?? settings.title
-const description = descriptionInput ?? settings.description
+const description = buildSeoDescription({
+  description: descriptionInput ?? settings.description,
+  shortDescriptionContext: settings.description,
+})
 const image = imageInput ?? settings.logo
 const siteBase = Astro.site ?? new URL(settings.siteUrl)
 const canonical =
   canonicalInput === null ? null : new URL(canonicalInput, siteBase)
 const pageUrl = canonical ?? new URL(Astro.url.pathname, siteBase)
-const pageTitle =
-  title === settings.shortTitle
-    ? `${title} | ${ui.siteTitleSuffix}`
-    : `${title} | ${settings.shortTitle}`
+const pageTitle = buildSeoTitle({
+  title,
+  siteTitle: settings.shortTitle,
+  titleContext: ui.siteTitleSuffix,
+  isHome: title === settings.title,
+})
+const socialTitle =
+  title === settings.title ? pageTitle : `${title} | ${settings.shortTitle}`
 const ogImage = new URL(image, siteBase)
 const socialImageAlt =
   imageAltInput ?? (image === settings.logo ? settings.logoAlt : title)
@@ -194,14 +202,14 @@ const rssUrl = new URL(localizePath(locale, '/rss.xml'), siteBase)
           />
         ))
     }
-    <meta property="og:title" content={pageTitle} />
+    <meta property="og:title" content={socialTitle} />
     <meta property="og:description" content={description} />
     {canonical && <meta property="og:url" content={canonical} />}
     <meta property="og:site_name" content={settings.title} />
     <meta property="og:image" content={ogImage} />
     <meta property="og:image:alt" content={socialImageAlt} />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:title" content={socialTitle} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
     <meta name="twitter:image:alt" content={socialImageAlt} />

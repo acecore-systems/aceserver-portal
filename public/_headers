@@ -40,5 +40,17 @@
 /_astro/*
   Cache-Control: public, max-age=31536000, immutable
 
+/_astro/*.js
+  X-Robots-Tag: noindex
+
+/_astro/*.css
+  X-Robots-Tag: noindex
+
+/_astro/*.map
+  X-Robots-Tag: noindex
+
 /uploads/*
   Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+/favicon.ico
+  X-Robots-Tag: noindex
