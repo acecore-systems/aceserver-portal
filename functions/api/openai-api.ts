@@ -1,11 +1,14 @@
 export const OPENAI_API_BASE_URL = 'https://api.openai.com/v1'
 export const OPENAI_RESPONSE_MODEL = 'gpt-5.6-luna'
 export const OPENAI_REASONING_EFFORT = 'medium'
+export const OPENAI_LORE_REASONING_EFFORT = 'max'
 export const OPENAI_EMBEDDING_MODEL = 'text-embedding-3-large'
 export const OPENAI_EMBEDDING_DIMENSIONS = 1536
 
 const DEFAULT_REQUEST_TIMEOUT_MS = 30_000
+const DEFAULT_STRUCTURED_REQUEST_TIMEOUT_MS = 60_000
 const MAX_RESPONSE_BYTES = 4_000_000
+const STRUCTURED_RESPONSE_NAME_PATTERN = /^[a-z][a-z0-9_]{0,63}$/u
 
 export async function createOpenAiResponse({
   apiKey,
@@ -42,6 +45,65 @@ export async function createOpenAiResponse({
   })
 
   return extractOpenAiResponseText(payload)
+}
+
+export async function createOpenAiLoreStructuredResponse({
+  apiKey,
+  instructions,
+  input,
+  jsonSchema,
+  maxOutputTokens,
+  model = OPENAI_RESPONSE_MODEL,
+  reasoningEffort,
+  schemaName,
+  fetchImpl = globalThis.fetch,
+  requestTimeoutMs = DEFAULT_STRUCTURED_REQUEST_TIMEOUT_MS,
+}) {
+  if (
+    model !== OPENAI_RESPONSE_MODEL ||
+    ![OPENAI_REASONING_EFFORT, OPENAI_LORE_REASONING_EFFORT].includes(
+      reasoningEffort,
+    ) ||
+    !STRUCTURED_RESPONSE_NAME_PATTERN.test(schemaName || '') ||
+    !jsonSchema ||
+    typeof jsonSchema !== 'object' ||
+    !Number.isInteger(maxOutputTokens) ||
+    maxOutputTokens <= 0
+  ) {
+    throw namedError('OpenAILoreConfigurationError')
+  }
+
+  const payload = await requestOpenAiJson({
+    apiKey,
+    endpoint: '/responses',
+    body: {
+      model,
+      instructions,
+      input,
+      reasoning: {
+        effort: reasoningEffort,
+      },
+      max_output_tokens: maxOutputTokens,
+      text: {
+        format: {
+          type: 'json_schema',
+          name: schemaName,
+          strict: true,
+          schema: jsonSchema,
+        },
+      },
+      store: false,
+    },
+    fetchImpl,
+    requestTimeoutMs,
+  })
+
+  const text = extractOpenAiResponseText(payload)
+  try {
+    return JSON.parse(text)
+  } catch {
+    throw namedError('OpenAILoreStructuredJsonError')
+  }
 }
 
 export async function createOpenAiEmbeddings({

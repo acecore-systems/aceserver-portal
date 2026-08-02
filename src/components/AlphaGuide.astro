@@ -189,6 +189,7 @@ const alphaLinkResources = [
   type AlphaMessage = {
     role: AlphaRole
     content: string
+    loreRevisionId?: string
   }
 
   type AlphaLinkResource = {
@@ -646,7 +647,7 @@ const alphaLinkResources = [
     const requestController = new AbortController()
     const requestTimeout = window.setTimeout(
       () => requestController.abort(),
-      25_000,
+      240_000,
     )
 
     try {
@@ -677,9 +678,20 @@ const alphaLinkResources = [
         typeof payload?.answer === 'string' && payload.answer.trim()
           ? payload.answer.trim()
           : fallback
+      const loreRevisionId =
+        typeof payload?.loreRevisionId === 'string' &&
+        /^[0-9a-f]{8}-(?:[0-9a-f]{4}-){3}[0-9a-f]{12}$/i.test(
+          payload.loreRevisionId,
+        )
+          ? payload.loreRevisionId
+          : undefined
 
       loadingMessage?.remove()
-      messages.push({ role: 'assistant', content: answer })
+      messages.push({
+        role: 'assistant',
+        content: answer,
+        ...(loreRevisionId ? { loreRevisionId } : {}),
+      })
       createAlphaMessage(widget, 'assistant', answer)
     } catch {
       const fallback =

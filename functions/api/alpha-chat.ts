@@ -44,6 +44,7 @@ import {
   TARGET_LANGUAGES,
   WIKI_URL,
 } from './alpha-locales.ts'
+import { handleAlphaLoreRequest } from './alpha-lore-service.ts'
 import {
   createOpenAiResponse,
   OPENAI_REASONING_EFFORT,
@@ -59,7 +60,7 @@ const MAX_WIKI_SEARCH_QUERY_LENGTH = 800
 type TextRange = { end: number; start: number }
 
 export async function onRequestPost(
-  { request, env },
+  { request, env, waitUntil },
   openAiFetch = globalThis.fetch,
 ) {
   if (!isAllowedRequestOrigin(request)) {
@@ -119,6 +120,28 @@ export async function onRequestPost(
       request,
       { ok: false, answer: guideMessages.unconfigured },
       503,
+    )
+  }
+
+  const loreResult = await handleAlphaLoreRequest({
+    env,
+    fetchImpl: openAiFetch,
+    locale,
+    messages: Array.isArray(payload?.messages) ? payload.messages : [],
+    question,
+    waitUntil,
+  })
+  if (loreResult) {
+    return jsonResponse(
+      request,
+      {
+        ok: loreResult.ok,
+        answer: loreResult.answer,
+        ...(loreResult.revisionId
+          ? { loreRevisionId: loreResult.revisionId }
+          : {}),
+      },
+      loreResult.status,
     )
   }
 

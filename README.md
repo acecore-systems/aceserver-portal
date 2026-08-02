@@ -71,6 +71,8 @@ Cloudflare Pages のproduction / previewでは、build前に `public/admin/runti
 
 `functions/api/alpha-chat.ts` の Cloudflare Pages Function からOpenAI APIへ直接接続します。質問は `text-embedding-3-large` を `dimensions: 1536` で呼び出してベクトル化し、Aceserver portal全体とAceserver WIKIのVectorize indexを同時に検索します。portal側はbuild後の公開HTMLからホーム、固定ページ、ワールド案内、動画、読みものの日本語正本を抽出して`vector-corpus.json`を生成し、同じ内容の翻訳routeは重複登録しません。多言語チャットでは日本語の検索根拠を `gpt-5.6-luna` が回答言語へ翻訳し、portalの参照リンクは対応する言語別URLへ切り替えます。検索で得たchunk IDは各サイトの公開corpusへ照合し、metadataの短い抜粋だけでなく最大1200文字の元chunkを回答根拠にします。回答生成はResponses APIを `reasoning.effort: medium`、`store: false` で呼び出します。ブラウザにはOpenAI APIキーを渡しません。
 
+アルファくん個人の過去を尋ねる質問には、通常の公式情報案内と分離した正史経路を使えます。正史の正本は専用D1、Vectorizeはrevision IDを探すための派生索引とし、質問文自体は保存しません。一度に作るのは160〜320文字の記憶断片1件、新しい事実1〜2件だけです。通常会話と既存正史の再利用は `medium`、正史の執筆と独立した整合性審査は `max` に固定します。現在の `wrangler.jsonc` では外部リソース未作成のためkill switchを `"false"` にしてあり、専用D1・Vectorizeを作成してmigrationとbindingを確認するまで有効になりません。設計、データ境界、段階的な有効化手順は [docs/alpha-lore-canon.md](docs/alpha-lore-canon.md) を参照してください。
+
 portal検索は公開サイトの紹介、ワールド案内、動画、読みもの、掲載ページの発見に使います。ルール、コマンド、参加条件、ワールドの詳細、運用情報ではportalよりAceserver WIKIを情報の正として扱います。Acecore、運営元、サービス、技術記事に関する質問だけは、同じembeddingでacecore-netのVectorize indexを検索します。Acecore Schoolsの学習分野、学び方、相談、料金、FAQに関する質問はSchools専用indexを検索し、取得した公開routeだけを `https://schools.acecore.net` 配下のリンクとして許可します。World Foundationについての質問は、専用のWorld Foundation Vectorize indexから日本語の公開設計資料を検索します。検索元ごとのしきい値と用途を分け、異なるサイトの根拠を誤って混ぜません。
 
 VectorizeまたはOpenAI Embeddingsの取得に失敗した場合は検索なしの案内へフォールバックします。portalまたはWIKIのcorpus取得に失敗した場合はVectorize metadataの抜粋へフォールバックし、アルファくん自体は利用を継続します。ルール、コマンド、参加条件など変更される情報は、検索で取得したWIKI内容に根拠がある範囲だけ具体的に回答し、出典記事をMarkdownリンクで示します。
@@ -88,7 +90,7 @@ Production には次の1536次元indexをbindingします。
 - `SYSTEMS_SEARCH_INDEX`: `acecore-systems-search-openai-1536-production`
 - `WORLD_FOUNDATION_SEARCH_INDEX`: `world-foundation-search-openai-1536-production`
 
-`OPENAI_RESPONSE_MODEL`、`OPENAI_REASONING_EFFORT`、`OPENAI_EMBEDDING_MODEL`、`OPENAI_EMBEDDING_DIMENSIONS`はそれぞれ `gpt-5.6-luna`、`medium`、`text-embedding-3-large`、`1536` とします。検索元ごとの `*_SEARCH_ENABLED` がkill switch、`*_SEARCH_MIN_SCORE` が採用scoreの下限です。
+`OPENAI_RESPONSE_MODEL`、`OPENAI_REASONING_EFFORT`、`ALPHA_LORE_REASONING_EFFORT`、`OPENAI_EMBEDDING_MODEL`、`OPENAI_EMBEDDING_DIMENSIONS`はそれぞれ `gpt-5.6-luna`、`medium`、`max`、`text-embedding-3-large`、`1536` とします。検索元ごとの `*_SEARCH_ENABLED` がkill switch、`*_SEARCH_MIN_SCORE` が採用scoreの下限です。正史は `ALPHA_LORE_ENABLED`、正史Vectorize検索は `ALPHA_LORE_VECTOR_SEARCH_ENABLED` を別々に有効化します。
 
 新indexは空の状態で本番検索へ使い始めません。6個のProduction indexは、WIKI 26件、Portal 15件、Acecore 308件、Schools 7件、Systems 256件、World Foundation 135件について、1536次元・cosine、mutation反映、`ja` namespaceの代表query、再同期の収束を確認済みです。そのためProductionの6つの `*_SEARCH_ENABLED` は一括して `"true"` にしています。設定の既定値とPreviewは引き続きすべて `"false"` で、PreviewにはVectorize bindingも置きません。一部だけ旧indexへ向けた状態や、空indexを有効化した状態ではマージ・デプロイしません。旧1024次元のProduction indexは削除済みで、Productionには1536次元indexだけを残します。
 
