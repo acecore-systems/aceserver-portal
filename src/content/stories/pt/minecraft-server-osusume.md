@@ -2,7 +2,7 @@
 title: 'Servidores de Minecraft recomendados no Japão: 6 opções por Java/Bedrock e estilo de jogo'
 description: Um guia de servidores públicos de Minecraft no Japão com base nas edições, estilos de jogo e informações de participação confirmados nos sites oficiais. O Aceserver aparece no final.
 translationOf: minecraft-server-osusume
-sourceHash: sha256:74179731ebdee061b3da5d885ee10830fb5dd4392887d1f4f06e5f4774e7aa5f
+sourceHash: sha256:a703cdd45b4c7fdd9030e524c4db1bc85624083e700a9f677e7dbcc5f5feeabe
 date: 2026-08-01T10:00:00+09:00
 tags:
   - Minecraft
@@ -31,27 +31,43 @@ Disponibilidade, versões compatíveis, requisitos de idade, regras e eventos po
 
 ## Seis servidores de Minecraft recomendados
 
+> **Sobre as imagens**
+>
+> Cada imagem é uma ilustração original criada para facilitar a compreensão do estilo de jogo descrito abaixo. Não é uma captura do servidor real nem uma imagem oficial distribuída por ele.
+
 ### 1. [Nishisaba](https://nishisaba.jp/)
+
+![Ilustração original de viajantes com um mapa numa cidade ribeirinha de blocos com casas, plantações e uma ponte](/uploads/stories/minecraft-server-osusume-nishisaba.webp)
 
 Nishisaba é um servidor público com jogo cruzado para Java e Bedrock que apresenta três mundos: principal, sobrevivência e lobby. Pode combinar com quem quer construir e explorar livremente, além de usar elementos como mcMMO e configurações de lar. O site oficial reúne regras, participação, Discord e wiki.
 
 ### 2. [Manmamiya](https://www.manmamiya.work/)
 
+![Ilustração original de uma comunidade de blocos com casas, jardins e um pequeno barco com suprimentos](/uploads/stories/minecraft-server-osusume-manmamiya.webp)
+
 Manmamiya aceita jogadores de Java e Bedrock e mantém uma sensação vanilla enquanto oferece recursos para multijogador, como proteção de terrenos, mundo de recursos e teletransportes. Quem gosta de turismo, construção, eventos e sobrevivência de longo prazo pode entender melhor o servidor lendo primeiro o site oficial e a wiki. Confira também as orientações oficiais de idade antes de entrar.
 
 ### 3. [Tsubusaba](https://tsubu-server.github.io/)
+
+![Ilustração original de jogadores em estilo de blocos construindo mecanismos e negociando num bioma colorido](/uploads/stories/minecraft-server-osusume-tsubusaba.webp)
 
 Tsubusaba aceita Java e Bedrock e é apresentado como um servidor de vida. Além de um mundo principal com biomas diferentes, há um mundo de recursos e um servidor voltado à construção de mecanismos. É uma opção para quem gosta de desenvolver a própria vida aos poucos com proteção de terrenos, trabalhos e lojas de jogadores.
 
 ### 4. [Munika Server](https://munikasvr.net/)
 
+![Ilustração original de aventureiros em estilo de blocos num centro de missões e mercado ao pôr do sol](/uploads/stories/minecraft-server-osusume-munika.webp)
+
 Munika Server aceita Java e Bedrock e acrescenta elementos de economia, habilidades e missões à sobrevivência. Pode combinar com quem procura objetivos e eventos além da sobrevivência comum. O site oficial oferece entradas para participação, regras, suporte e Discord.
 
 ### 5. [Noasaba](https://noasaba.com/)
 
+![Ilustração original de jogadores em estilo de blocos pescando e cuidando de uma pequena base de sobrevivência à beira do rio](/uploads/stories/minecraft-server-osusume-noasaba.webp)
+
 Noasaba é um servidor independente para Java e Bedrock que se apresenta como sobrevivência vanilla. Considere-o se quiser ficar próximo ao Minecraft cotidiano e, ainda assim, sentir a presença de outros jogadores. O site oficial liga para informações de conexão, regras, notas de uso, mapa e Discord.
 
 ### 6. Aceserver
+
+![Ilustração original de jogadores em estilo de blocos em torno de um mapa numa área de construção livre ao pôr do sol](/uploads/stories/minecraft-server-osusume-aceserver.webp)
 
 O Aceserver é um servidor público gratuito de Minecraft ao qual qualquer pessoa pode entrar por Java ou Bedrock. Pode combinar com quem quer jogar de forma próxima ao vanilla e bastante livre, usando o Discord como entrada para as orientações de participação e para informações da comunidade.
 

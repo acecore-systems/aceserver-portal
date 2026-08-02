@@ -2,7 +2,7 @@
 title: 'Empfohlene Minecraft-Server in Japan: 6 Optionen nach Java/Bedrock und Spielstil'
 description: Ein Überblick über öffentliche Minecraft-Server in Japan anhand der auf ihren offiziellen Seiten bestätigten Editionen, Spielweisen und Beitrittsinformationen. Aceserver folgt am Schluss.
 translationOf: minecraft-server-osusume
-sourceHash: sha256:74179731ebdee061b3da5d885ee10830fb5dd4392887d1f4f06e5f4774e7aa5f
+sourceHash: sha256:a703cdd45b4c7fdd9030e524c4db1bc85624083e700a9f677e7dbcc5f5feeabe
 date: 2026-08-01T10:00:00+09:00
 tags:
   - Minecraft
@@ -31,27 +31,43 @@ Verfügbarkeit, unterstützte Versionen, Altersvorgaben, Regeln und Events könn
 
 ## Sechs empfohlene Minecraft-Server
 
+> **Hinweis zu den Bildern**
+>
+> Jedes Bild ist eine eigens erstellte Illustration, die die unten beschriebene Spielweise verständlicher machen soll. Es ist weder ein Screenshot des tatsächlichen Servers noch ein offizielles bereitgestelltes Bild.
+
 ### 1. [Nishisaba](https://nishisaba.jp/)
+
+![Originalillustration einer Blockstadt am Fluss mit Häusern, Feldern, einer Brücke und Reisenden mit Karte](/uploads/stories/minecraft-server-osusume-nishisaba.webp)
 
 Nishisaba ist ein öffentlicher Crossplay-Server für Java und Bedrock mit drei Welten: Main, Survival und Lobby. Er kann passen, wenn du frei bauen und Abenteuer erleben, aber auch Ergänzungen wie mcMMO und Home-Einstellungen nutzen möchtest. Die offizielle Seite bündelt Regeln, Beitritt, Discord und Wiki.
 
 ### 2. [Manmamiya](https://www.manmamiya.work/)
 
+![Originalillustration einer Blockbau-Gemeinschaft mit Häusern, Gärten und einem kleinen Boot mit Vorräten](/uploads/stories/minecraft-server-osusume-manmamiya.webp)
+
 Manmamiya nimmt Java- und Bedrock-Spieler auf und bewahrt ein Vanilla-Gefühl, ergänzt es aber um Funktionen für Multiplayer wie Landschutz, Ressourcenwelt und Warps. Wer Besichtigungen, Bauen, Events und langfristiges Survival mag, bekommt durch die offizielle Seite und das Wiki einen guten Eindruck. Prüfe vor dem Beitritt auch die offiziellen Altersvorgaben.
 
 ### 3. [Tsubusaba](https://tsubu-server.github.io/)
+
+![Originalillustration von Blockfiguren, die in einem farbenreichen Biom Maschinen bauen und handeln](/uploads/stories/minecraft-server-osusume-tsubusaba.webp)
 
 Tsubusaba unterstützt Java und Bedrock und ist als Lebens-Server gestaltet. Neben einer Hauptwelt mit besonderen Biomen gibt es eine Ressourcenwelt und einen auf Maschinen spezialisierten Server. Er ist eine Option für Menschen, die ihr Leben mit Landschutz, Berufen und Spieler-Shops nach und nach aufbauen möchten.
 
 ### 4. [Munika Server](https://munikasvr.net/)
 
+![Originalillustration von Block-Abenteurern an einem Questplatz und Markt bei Sonnenuntergang](/uploads/stories/minecraft-server-osusume-munika.webp)
+
 Munika Server lässt Java- und Bedrock-Spieler zu und ergänzt Survival um Wirtschaft, Skills und Quests. Er kann passen, wenn du zusätzlich zum gewöhnlichen Überleben Ziele und Events suchst. Die offizielle Seite bietet Einstiegspunkte für Beitritt, Regeln, Support und Discord.
 
 ### 5. [Noasaba](https://noasaba.com/)
 
+![Originalillustration von Blockfiguren beim Angeln und Bewirtschaften eines kleinen Basislagers am Fluss](/uploads/stories/minecraft-server-osusume-noasaba.webp)
+
 Noasaba ist ein unabhängig betriebener Server für Java und Bedrock, der Vanilla-Survival anbietet. Er ist eine Überlegung wert, wenn du nahe am normalen Minecraft bleiben und trotzdem Multiplayer erleben möchtest. Die offizielle Seite verlinkt Verbindungsdaten, Regeln, Nutzungshinweise, Karte und Discord.
 
 ### 6. Aceserver
+
+![Originalillustration von Blockfiguren um eine Karte in einem freien Baugebiet bei Sonnenuntergang](/uploads/stories/minecraft-server-osusume-aceserver.webp)
 
 Aceserver ist ein kostenloser öffentlicher Minecraft-Server, dem alle über Java oder Bedrock beitreten können. Er kann zu Menschen passen, die Vanilla-nah und sehr frei spielen und Discord als Einstieg für Hinweise und Community-Informationen nutzen möchten.
 
