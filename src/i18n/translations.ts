@@ -255,7 +255,7 @@ export const JA_UI: UiCopy = {
 
 const en: LocaleTranslation = {
   sourceHash:
-    'sha256:918180b6139823c9f5cf078cbd403c2b9d83f4976aca99f3c6e9fbe725c0b64c',
+    'sha256:05153314c69d6e6f99cb7538cd49d8670212cbf41157c64891f549512e88e4c1',
   ui: {
     siteTitleSuffix: 'Official portal for the free public Minecraft server',
     homeTitleParts: ['Ace', 'server'],
@@ -404,11 +404,11 @@ const en: LocaleTranslation = {
   },
   navigation: {
     '/youtube-search-aceserver/': 'Videos',
-    '/world-map/': 'World maps',
+    '/world-map/': 'Map',
     '/stories/': 'Stories',
     'https://acecore.net': 'Acecore',
-    'https://shop.acecore.net': 'Acecore Store',
-    'https://asv-wiki.acecore.net': 'Aceserver WIKI',
+    'https://shop.acecore.net': 'Store',
+    'https://asv-wiki.acecore.net': 'WIKI',
   },
   announcements: {
     'portal-renewal-2026': {
@@ -500,7 +500,7 @@ const en: LocaleTranslation = {
 
 const zhCn: LocaleTranslation = {
   sourceHash:
-    'sha256:918180b6139823c9f5cf078cbd403c2b9d83f4976aca99f3c6e9fbe725c0b64c',
+    'sha256:05153314c69d6e6f99cb7538cd49d8670212cbf41157c64891f549512e88e4c1',
   ui: {
     siteTitleSuffix: '免费公开 Minecraft 服务器官方门户',
     homeTitleParts: ['Ace', 'server'],
@@ -641,11 +641,11 @@ const zhCn: LocaleTranslation = {
   },
   navigation: {
     '/youtube-search-aceserver/': '视频',
-    '/world-map/': '世界地图',
+    '/world-map/': '地图',
     '/stories/': '故事',
     'https://acecore.net': 'Acecore',
-    'https://shop.acecore.net': 'Acecore Store',
-    'https://asv-wiki.acecore.net': 'Aceserver WIKI',
+    'https://shop.acecore.net': '商店',
+    'https://asv-wiki.acecore.net': 'WIKI',
   },
   announcements: {
     'portal-renewal-2026': {
@@ -735,7 +735,7 @@ const zhCn: LocaleTranslation = {
 
 const es: LocaleTranslation = {
   sourceHash:
-    'sha256:918180b6139823c9f5cf078cbd403c2b9d83f4976aca99f3c6e9fbe725c0b64c',
+    'sha256:05153314c69d6e6f99cb7538cd49d8670212cbf41157c64891f549512e88e4c1',
   ui: {
     siteTitleSuffix:
       'Portal oficial del servidor público gratuito de Minecraft',
@@ -884,8 +884,8 @@ const es: LocaleTranslation = {
     '/world-map/': 'Mapas',
     '/stories/': 'Historias',
     'https://acecore.net': 'Acecore',
-    'https://shop.acecore.net': 'Acecore Store',
-    'https://asv-wiki.acecore.net': 'WIKI de Aceserver',
+    'https://shop.acecore.net': 'Tienda',
+    'https://asv-wiki.acecore.net': 'WIKI',
   },
   announcements: {
     'portal-renewal-2026': {
@@ -977,7 +977,7 @@ const es: LocaleTranslation = {
 
 const pt: LocaleTranslation = {
   sourceHash:
-    'sha256:918180b6139823c9f5cf078cbd403c2b9d83f4976aca99f3c6e9fbe725c0b64c',
+    'sha256:05153314c69d6e6f99cb7538cd49d8670212cbf41157c64891f549512e88e4c1',
   ui: {
     siteTitleSuffix: 'Portal oficial do servidor público gratuito de Minecraft',
     homeTitleParts: ['Ace', 'server'],
@@ -1126,8 +1126,8 @@ const pt: LocaleTranslation = {
     '/world-map/': 'Mapas',
     '/stories/': 'Histórias',
     'https://acecore.net': 'Acecore',
-    'https://shop.acecore.net': 'Acecore Store',
-    'https://asv-wiki.acecore.net': 'WIKI do Aceserver',
+    'https://shop.acecore.net': 'Loja',
+    'https://asv-wiki.acecore.net': 'WIKI',
   },
   announcements: {
     'portal-renewal-2026': {
@@ -1219,7 +1219,7 @@ const pt: LocaleTranslation = {
 
 const fr: LocaleTranslation = {
   sourceHash:
-    'sha256:918180b6139823c9f5cf078cbd403c2b9d83f4976aca99f3c6e9fbe725c0b64c',
+    'sha256:05153314c69d6e6f99cb7538cd49d8670212cbf41157c64891f549512e88e4c1',
   ui: {
     siteTitleSuffix: 'Portail officiel du serveur Minecraft public et gratuit',
     homeTitleParts: ['Ace', 'server'],
@@ -1368,8 +1368,8 @@ const fr: LocaleTranslation = {
     '/world-map/': 'Cartes',
     '/stories/': 'Récits',
     'https://acecore.net': 'Acecore',
-    'https://shop.acecore.net': 'Acecore Store',
-    'https://asv-wiki.acecore.net': 'WIKI Aceserver',
+    'https://shop.acecore.net': 'Boutique',
+    'https://asv-wiki.acecore.net': 'WIKI',
   },
   announcements: {
     'portal-renewal-2026': {
@@ -1462,7 +1462,7 @@ const fr: LocaleTranslation = {
 
 const ko: LocaleTranslation = {
   sourceHash:
-    'sha256:918180b6139823c9f5cf078cbd403c2b9d83f4976aca99f3c6e9fbe725c0b64c',
+    'sha256:05153314c69d6e6f99cb7538cd49d8670212cbf41157c64891f549512e88e4c1',
   ui: {
     siteTitleSuffix: '무료 공개 Minecraft 서버 공식 포털',
     homeTitleParts: ['Ace', 'server'],
@@ -1607,11 +1607,11 @@ const ko: LocaleTranslation = {
   },
   navigation: {
     '/youtube-search-aceserver/': '동영상',
-    '/world-map/': '월드 지도',
+    '/world-map/': '지도',
     '/stories/': '이야기',
     'https://acecore.net': 'Acecore',
-    'https://shop.acecore.net': 'Acecore Store',
-    'https://asv-wiki.acecore.net': 'Aceserver WIKI',
+    'https://shop.acecore.net': '스토어',
+    'https://asv-wiki.acecore.net': 'WIKI',
   },
   announcements: {
     'portal-renewal-2026': {
@@ -1701,7 +1701,7 @@ const ko: LocaleTranslation = {
 
 const de: LocaleTranslation = {
   sourceHash:
-    'sha256:918180b6139823c9f5cf078cbd403c2b9d83f4976aca99f3c6e9fbe725c0b64c',
+    'sha256:05153314c69d6e6f99cb7538cd49d8670212cbf41157c64891f549512e88e4c1',
   ui: {
     siteTitleSuffix:
       'Offizielles Portal des kostenlosen öffentlichen Minecraft-Servers',
@@ -1851,11 +1851,11 @@ const de: LocaleTranslation = {
   },
   navigation: {
     '/youtube-search-aceserver/': 'Videos',
-    '/world-map/': 'Weltkarten',
+    '/world-map/': 'Karten',
     '/stories/': 'Geschichten',
     'https://acecore.net': 'Acecore',
-    'https://shop.acecore.net': 'Acecore Store',
-    'https://asv-wiki.acecore.net': 'Aceserver WIKI',
+    'https://shop.acecore.net': 'Shop',
+    'https://asv-wiki.acecore.net': 'WIKI',
   },
   announcements: {
     'portal-renewal-2026': {
@@ -1948,7 +1948,7 @@ const de: LocaleTranslation = {
 
 const ru: LocaleTranslation = {
   sourceHash:
-    'sha256:918180b6139823c9f5cf078cbd403c2b9d83f4976aca99f3c6e9fbe725c0b64c',
+    'sha256:05153314c69d6e6f99cb7538cd49d8670212cbf41157c64891f549512e88e4c1',
   ui: {
     siteTitleSuffix:
       'Официальный портал бесплатного публичного сервера Minecraft',
@@ -2093,11 +2093,11 @@ const ru: LocaleTranslation = {
   },
   navigation: {
     '/youtube-search-aceserver/': 'Видео',
-    '/world-map/': 'Карты миров',
+    '/world-map/': 'Карты',
     '/stories/': 'Истории',
     'https://acecore.net': 'Acecore',
-    'https://shop.acecore.net': 'Acecore Store',
-    'https://asv-wiki.acecore.net': 'Aceserver WIKI',
+    'https://shop.acecore.net': 'Магазин',
+    'https://asv-wiki.acecore.net': 'WIKI',
   },
   announcements: {
     'portal-renewal-2026': {

@@ -45,18 +45,20 @@ const isCurrentNavigationItem = (href: string) =>
     <a
       href={localizePath(locale, '/search/')}
       class:list={[
+        'desktop-search-link',
         {
           'is-active': isCurrentNavigationItem(
             localizePath(locale, '/search/'),
           ),
         },
       ]}
+      aria-label={ui.search.link}
       aria-current={isCurrentNavigationItem(localizePath(locale, '/search/'))
         ? 'page'
         : undefined}
+      title={ui.search.link}
     >
       <Icon name="search" />
-      <span>{ui.search.link}</span>
     </a>
     {
       navigation.map((item) => (
@@ -279,7 +281,8 @@ const isCurrentNavigationItem = (href: string) =>
   .desktop-nav {
     display: flex;
     align-items: center;
-    gap: 8px;
+    flex-wrap: nowrap;
+    gap: clamp(4px, 0.6vw, 8px);
   }
 
   .language-switcher {
@@ -344,7 +347,14 @@ const isCurrentNavigationItem = (href: string) =>
 
   .desktop-nav a {
     min-height: 46px;
-    padding: 0 14px;
+    padding: 0 clamp(8px, 1vw, 14px);
+    white-space: nowrap;
+  }
+
+  .desktop-nav a.desktop-search-link {
+    width: 46px;
+    padding: 0;
+    justify-content: center;
   }
 
   .desktop-nav a:hover,
@@ -381,43 +391,44 @@ const isCurrentNavigationItem = (href: string) =>
     display: none;
   }
 
-  /*
-   * Keep global destinations visible on desktop.  At compact desktop widths,
-   * the brand and locale control take the first row and the navigation uses a
-   * second row, rather than hiding every destination behind a hamburger.
-   */
-  @media (min-width: 768px) and (max-width: 1536px) {
+  @media (min-width: 900px) and (max-width: 1199px) {
     .site-header {
-      display: grid;
-      grid-template-areas:
-        'brand language'
-        'navigation navigation';
-      grid-template-columns: minmax(0, 1fr) auto;
-      row-gap: 10px;
+      gap: 10px;
+      padding-inline: clamp(12px, 2vw, 24px);
     }
 
     .brand {
-      grid-area: brand;
+      gap: 8px;
+      font-size: 1.25rem;
     }
 
     .desktop-nav {
-      grid-area: navigation;
-      min-width: 0;
-      flex-wrap: wrap;
-      justify-content: center;
+      gap: 2px;
     }
 
     .desktop-nav a {
-      white-space: nowrap;
+      min-height: 42px;
+      gap: 6px;
+      padding: 0 7px;
+      font-size: 0.9rem;
     }
 
-    .language-switcher--desktop {
-      grid-area: language;
-      justify-self: end;
+    .desktop-nav a.desktop-search-link {
+      width: 42px;
+      padding: 0;
+    }
+
+    .language-switcher {
+      padding: 0 6px;
+    }
+
+    .language-switcher select {
+      max-width: 78px;
+      font-size: 0.78rem;
     }
   }
 
-  @media (max-width: 767px) {
+  @media (max-width: 899px) {
     .desktop-nav,
     .language-switcher--desktop {
       display: none;
