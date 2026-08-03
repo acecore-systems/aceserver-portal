@@ -92,6 +92,19 @@ test('allows Acecore Schools and Systems links in the chat UI', async () => {
   assert.match(allowedExternalLinks, /\bsystemsHref\b/)
 })
 
+test('waits for a lore continuation before aborting the browser request', async () => {
+  const source = await readFile(
+    new URL('../src/components/AlphaGuide.astro', import.meta.url),
+    'utf8',
+  )
+
+  assert.match(source, /const ALPHA_RESPONSE_TIMEOUT_MS = 240_000/)
+  assert.match(
+    source,
+    /window\.setTimeout\(\s*\(\) => requestController\.abort\(\),\s*ALPHA_RESPONSE_TIMEOUT_MS,\s*\)/,
+  )
+})
+
 function createRequest(payload, headers = {}) {
   return new Request(ENDPOINT, {
     method: 'POST',

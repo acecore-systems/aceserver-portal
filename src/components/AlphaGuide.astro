@@ -192,6 +192,9 @@ const alphaLinkResources = [
     role: AlphaRole
   }
 
+  // A lore continuation can require planning, writing, and review calls.
+  const ALPHA_RESPONSE_TIMEOUT_MS = 240_000
+
   type AlphaLinkResource = {
     href: string
     label: string
@@ -647,7 +650,7 @@ const alphaLinkResources = [
     const requestController = new AbortController()
     const requestTimeout = window.setTimeout(
       () => requestController.abort(),
-      25_000,
+      ALPHA_RESPONSE_TIMEOUT_MS,
     )
 
     try {
