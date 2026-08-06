@@ -47,6 +47,15 @@ const stories = [
       '夕暮れのブロック調の広場で地図を囲み、さまざまな世界へ続く道を見渡す3人の旅人',
   },
   {
+    slug: 'minecraft-bedrockconnect-switch',
+    title:
+      'SwitchからMinecraft統合版の外部サーバーへ接続する方法｜BedrockConnectの使い方',
+    description:
+      'Nintendo Switch版Minecraftから、BedrockConnectを使って外部のBedrockサーバーへ接続する手順を解説します。DNS設定、接続先情報の入力、Aceserver参加時の確認事項をまとめました。',
+    author: 'Gui',
+    datePublished: '2026-08-06T01:00:00.000Z',
+  },
+  {
     slug: 'metaverse-is-close',
     title: 'メタバースは案外身近にあるよね',
     description:
