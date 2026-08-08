@@ -2,7 +2,7 @@
 title: Aceserver Portal 正式上线
 description: 将原本分散在 Discord、Wiki、视频和世界地图中的加入前信息，整理到一个统一入口。
 translationOf: aceserver-portal-launch
-sourceHash: sha256:ce0e98ae52cd519a4c3cbb7c87fd6950090432524909ad059c80573562c765a8
+sourceHash: sha256:4bc196677df5822669e61cb69a7781e15129a0860cde91c603755cb560702d77
 date: 2026-06-07T10:00:00+09:00
 tags:
   - 公告

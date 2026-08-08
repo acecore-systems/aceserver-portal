@@ -2,7 +2,7 @@
 title: 如何搭建免费的 Minecraft 服务器：Java、基岩版与 Realms 的区别
 description: 介绍如何搭建免费的 Minecraft 服务器，并比较 Java 版、基岩版和 Realms，包括准备工作与开放服务器前的安全检查。
 translationOf: minecraft-server-setup
-sourceHash: sha256:0dcea0b86790d9dc2e5e923a5cd0dd2366dd614b67457bde953f8504bec00a01
+sourceHash: sha256:afa899b3869f47a601fe078603ce00dec388e0a974bb6c2a1bb61b2c6659f1a4
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft

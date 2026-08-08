@@ -2,7 +2,7 @@
 title: 'So richtest du einen kostenlosen Minecraft-Server ein: Java, Bedrock und Realms'
 description: Erfahre, wie du einen kostenlosen Minecraft-Server einrichtest und Java Edition, Bedrock Edition und Realms vergleichst, einschließlich Vorbereitung und Sicherheitsprüfungen vor der Freigabe.
 translationOf: minecraft-server-setup
-sourceHash: sha256:0dcea0b86790d9dc2e5e923a5cd0dd2366dd614b67457bde953f8504bec00a01
+sourceHash: sha256:afa899b3869f47a601fe078603ce00dec388e0a974bb6c2a1bb61b2c6659f1a4
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft

@@ -55,6 +55,8 @@ const storySchema = z
     tags: z.array(z.string().trim().min(1)).default([]),
     image: z.string().trim().min(1).optional(),
     imageAlt: z.string().trim().min(1).optional(),
+    relatedStories: z.array(z.string().trim().min(1)).max(4).default([]),
+    relatedPages: z.array(z.string().trim().min(1)).max(3).default([]),
   })
   .refine(({ image, imageAlt }) => Boolean(image) === Boolean(imageAlt), {
     message: 'imageとimageAltは両方を指定してください。',

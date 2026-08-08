@@ -2,7 +2,7 @@
 title: 'Comment configurer un serveur Minecraft gratuit : Java, Bedrock et Realms'
 description: Découvrez comment configurer un serveur Minecraft gratuit et comparez Java Edition, Bedrock Edition et Realms, avec les préparatifs et les vérifications de sécurité à effectuer avant de l'ouvrir.
 translationOf: minecraft-server-setup
-sourceHash: sha256:0dcea0b86790d9dc2e5e923a5cd0dd2366dd614b67457bde953f8504bec00a01
+sourceHash: sha256:afa899b3869f47a601fe078603ce00dec388e0a974bb6c2a1bb61b2c6659f1a4
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft

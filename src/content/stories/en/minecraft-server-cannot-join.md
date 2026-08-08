@@ -2,7 +2,7 @@
 title: 'Can’t join a Minecraft server? Checks for Java, Bedrock, and Switch'
 description: Learn how to check your edition, game version, account, and network when you cannot join a Minecraft server, then continue playing with confidence after you connect.
 translationOf: minecraft-server-cannot-join
-sourceHash: sha256:c8607909fcc215225028c8e15ed74994bcb057cf3571cdd5795ad25949d0ce6f
+sourceHash: sha256:cbba5d57ab5418390645eec248d789d8feaf5ad0565a6f3e667553185bf7e011
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft

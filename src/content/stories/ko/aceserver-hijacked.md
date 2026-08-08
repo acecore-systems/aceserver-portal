@@ -2,7 +2,7 @@
 title: Aceserver가 장악당했다.
 description: Aceserver에서 벌어진 ‘장악’ 사건의 기록. 멤버들의 이성이 차례로 잠식되어 가는 충격적인 문서다.
 translationOf: aceserver-hijacked
-sourceHash: sha256:103ac3842af3abbe7c8245c6d47879926718b08e886718c678c9236d896d4f03
+sourceHash: sha256:d4ed78f447d9c7d8b80f00e170eaebd2f24a8faf1285b827b6499d2029541950
 date: 2022-10-12T00:00:00+09:00
 tags:
   - 이벤트
