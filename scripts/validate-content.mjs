@@ -13,6 +13,7 @@ const EXPECTED_STORY_SLUGS = new Set([
   'aceserver-hijacked',
   'aceserver-portal-launch',
   'minecraft-java-bedrock-crossplay',
+  'minecraft-java-bedrock-shared-server',
   'minecraft-server-cannot-join',
   'minecraft-server-osusume',
   'minecraft-server-setup',
@@ -20,6 +21,7 @@ const EXPECTED_STORY_SLUGS = new Set([
 ])
 const REQUIRED_STORY_IMAGE_SLUGS = new Set([
   'aceserver-portal-launch',
+  'minecraft-java-bedrock-shared-server',
   'minecraft-server-cannot-join',
   'metaverse-is-close',
 ])
