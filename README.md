@@ -111,7 +111,9 @@ Production には次の1536次元indexをbindingします。
 - `main` pushを受けてCloudflare Pagesがproduction deployします。保存後は通常数分で公開サイトへ反映されます。
 - source code、schema、CMS設定、workflowの変更はCMS proxyの許可対象外です。従来どおりbranchとPRを作り、CIの `format:check`、`validate:content`、`build` を通してからmergeします。
 
-詳しい境界と障害時の扱いは [docs/cms-write-workflow.md](docs/cms-write-workflow.md) を参照してください。
+詳しい境界と障害時の扱いは [CMS直接公開運用](docs/04_運用設計/01_CMS直接公開運用.md) を参照してください。
+
+設計文書の入口は [docs/README.md](docs/README.md) です。
 
 ## 環境変数
 
