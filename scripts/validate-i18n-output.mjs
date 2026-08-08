@@ -28,6 +28,7 @@ const storySlugs = [
   'aceserver-portal-launch',
   'minecraft-java-bedrock-crossplay',
   'minecraft-server-osusume',
+  'minecraft-server-setup',
   'metaverse-is-close',
 ]
 
