@@ -1,4 +1,4 @@
-# 共有Alpha Chatへの切替
+# 共有Alpha Chat切替
 
 Portalの `/api/alpha-chat` はブラウザの入口として、同一origin検証と既存のWAFレート制限を維持します。共有モードではブラウザから共有Workerへ直接通信させません。
 
