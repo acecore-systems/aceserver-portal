@@ -389,12 +389,44 @@ const isCurrentNavigationItem = (href: string) =>
     display: none;
   }
 
-  /*
-   * Keep global destinations visible on desktop. At compact desktop widths,
-   * the brand and locale control take the first row and the navigation uses a
-   * second row, rather than hiding every destination behind a hamburger.
-   */
-  @media (min-width: 768px) and (max-width: 1536px) {
+  @media (min-width: 768px) and (max-width: 1199px) {
+    .site-header {
+      gap: 10px;
+      padding-inline: clamp(12px, 2vw, 24px);
+    }
+
+    .brand {
+      gap: 8px;
+      font-size: 1.25rem;
+    }
+
+    .desktop-nav {
+      gap: 2px;
+    }
+
+    .desktop-nav a {
+      min-height: 42px;
+      gap: 6px;
+      padding: 0 7px;
+      font-size: 0.9rem;
+    }
+
+    .desktop-nav a.desktop-search-link {
+      width: 42px;
+      padding: 0;
+    }
+
+    .language-switcher {
+      padding: 0 6px;
+    }
+
+    .language-switcher select {
+      max-width: 78px;
+      font-size: 0.78rem;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 899px) {
     .site-header {
       display: grid;
       grid-template-areas:
