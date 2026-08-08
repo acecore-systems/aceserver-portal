@@ -12,6 +12,7 @@ const errors = []
 const expectedStorySlugs = [
   'aceserver-hijacked',
   'aceserver-portal-launch',
+  'minecraft-play-with-friends',
   'minecraft-server-osusume',
   'metaverse-is-close',
 ]
