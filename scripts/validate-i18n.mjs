@@ -13,6 +13,7 @@ const expectedStorySlugs = [
   'aceserver-hijacked',
   'aceserver-portal-launch',
   'minecraft-java-bedrock-crossplay',
+  'minecraft-server-cannot-join',
   'minecraft-play-with-friends',
   'minecraft-server-osusume',
   'minecraft-server-setup',

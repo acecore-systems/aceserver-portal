@@ -2,7 +2,7 @@
 title: 'Jouer à Minecraft entre amis : choisir Java, Bedrock, Switch ou mobile'
 description: Faites la différence entre Java et Bedrock, comparez votre monde, Realms et les serveurs publics, puis choisissez comment jouer entre amis selon chaque appareil.
 translationOf: minecraft-play-with-friends
-sourceHash: sha256:ea3f2cd75c5eea379414d9b100114e8753c66ad4bffdf8c04ad433f16a46b0f1
+sourceHash: sha256:426d801f43d6d0047128b0b18056ef7abce52ada4b9ba8453cd6317cac5f28cc
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -40,6 +40,8 @@ _La première vérification consiste à mettre tout le monde sur Java ou sur Bed
 
 _Vérifier ensemble l'édition, la mise à jour, le compte et les réglages de compte enfant avant de jouer évite beaucoup de problèmes de connexion._
 
+Si ces points sont déjà vérifiés et que vous ne pouvez toujours pas rejoindre, consultez [les vérifications à faire lorsqu'on ne peut pas rejoindre un serveur Minecraft](/fr/stories/minecraft-server-cannot-join/) pour procéder étape par étape.
+
 ## Choisir entre votre monde, Realms et un serveur public
 
 | Option             | Idéal pour                                                       | État de l'hôte                                                                   | À vérifier avant de jouer                                  |
@@ -70,6 +72,8 @@ Un serveur public est un monde en ligne administré par un opérateur. Il peut c
 
 Les joueurs Switch doivent surtout lire les indications du serveur sur les appareils compatibles et la méthode d'accès. Ne supposez pas une solution de connexion non officielle. Même lorsqu'un serveur annonce Java et Bedrock, ses conditions et versions prises en charge lui sont propres.
 
+Pour savoir comment reconnaître un serveur qui accepte les deux éditions, consultez [Java et Bedrock peuvent-ils jouer ensemble ?](/fr/stories/minecraft-java-bedrock-crossplay/).
+
 ## Commencer selon Java, Bedrock, Switch ou mobile
 
 ### Jouer à Java Edition sur PC
@@ -96,6 +100,8 @@ Minecraft mobile est aussi Bedrock Edition. Sur Android, vérifiez le compte Goo
 - **Vous voulez rencontrer de nouveaux joueurs :** choisissez un serveur public après lecture des règles et de l'édition prise en charge.
 
 Certains serveurs fournissent leur propre système supplémentaire de jeu croisé Java-Bedrock. Ce n'est pas une promesse automatique liée aux appareils ; vérifiez la prise en charge actuelle dans la documentation officielle de la destination.
+
+Si le groupe veut gérer un monde qui reste disponible, lisez [comment créer un serveur Minecraft gratuit](/fr/stories/minecraft-server-setup/) avant de choisir entre LAN, serveur dédié et Realms.
 
 ## Jouer avec des amis sur Aceserver
 

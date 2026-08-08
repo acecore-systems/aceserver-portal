@@ -2,7 +2,7 @@
 title: 'Cómo jugar Minecraft con amigos: elegir Java, Bedrock, Switch o móvil'
 description: Aclara la diferencia entre Java y Bedrock, compara tu propio mundo, Realms y servidores públicos, y elige cómo jugar con amigos según el dispositivo.
 translationOf: minecraft-play-with-friends
-sourceHash: sha256:ea3f2cd75c5eea379414d9b100114e8753c66ad4bffdf8c04ad433f16a46b0f1
+sourceHash: sha256:426d801f43d6d0047128b0b18056ef7abce52ada4b9ba8453cd6317cac5f28cc
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -40,6 +40,8 @@ _El primer paso es que todos usen Java o todos Bedrock; los dos grupos están se
 
 _Comprobar juntos edición, actualización, cuenta y ajustes de cuentas infantiles antes de jugar evita muchos problemas al entrar._
 
+Si ya comprobaste estos puntos y aún no puedes entrar, consulta [qué revisar cuando no puedes entrar a un servidor de Minecraft](/es/stories/minecraft-server-cannot-join/) para avanzar paso a paso.
+
 ## Elegir entre tu mundo, Realms y un servidor público
 
 | Opción           | Mejor para                                             | Estado del anfitrión                                                               | Revisar antes de jugar                                              |
@@ -70,6 +72,8 @@ Un servidor público es un mundo en línea administrado por un operador. Puede s
 
 Los jugadores de Switch deben leer especialmente la guía del propio servidor sobre dispositivos compatibles y método de entrada. No des por supuesto un método no oficial. Aunque un servidor anuncie soporte para Java y Bedrock, sus requisitos y versiones admitidas dependen de ese servidor.
 
+Para saber cómo reconocer un servidor que admite ambas ediciones, consulta [si Java y Bedrock pueden jugar juntos](/es/stories/minecraft-java-bedrock-crossplay/).
+
 ## Empezar según Java, Bedrock, Switch o móvil
 
 ### Jugar Java Edition en un PC
@@ -96,6 +100,8 @@ Minecraft móvil también es Bedrock Edition. En Android revisa la cuenta Google
 - **Quieren conocer nuevos jugadores:** elijan un servidor público tras leer sus reglas y edición compatible.
 
 Algunos servidores ofrecen su propio sistema adicional de juego cruzado entre Java y Bedrock. No es una promesa predeterminada por el dispositivo, así que confirma el soporte real y actual en la guía oficial del destino.
+
+Si el grupo quiere administrar un mundo que siga disponible, lee [cómo crear un servidor de Minecraft gratuito](/es/stories/minecraft-server-setup/) antes de elegir entre LAN, servidor dedicado y Realms.
 
 ## Jugar con amigos en Aceserver
 

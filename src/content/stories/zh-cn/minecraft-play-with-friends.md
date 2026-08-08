@@ -2,7 +2,7 @@
 title: 如何与朋友一起玩 Minecraft：Java版、基岩版、Switch 和手机的选择指南
 description: 先厘清 Java 版与基岩版的差异，再从自己的世界、Realms 和公开服务器中，按设备选择与朋友一起游玩的方式。
 translationOf: minecraft-play-with-friends
-sourceHash: sha256:ea3f2cd75c5eea379414d9b100114e8753c66ad4bffdf8c04ad433f16a46b0f1
+sourceHash: sha256:426d801f43d6d0047128b0b18056ef7abce52ada4b9ba8453cd6317cac5f28cc
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -40,6 +40,8 @@ _与朋友一起玩时，第一步是让所有人统一为 Java 版或基岩版�
 
 _开始前一起检查版本、更新、账户和儿童账户设置，可减少无法加入的问题。_
 
+如果已经确认这些项目仍无法加入，可参阅[无法加入 Minecraft 服务器时的检查方法](/zh-cn/stories/minecraft-server-cannot-join/)，按步骤排查。
+
 ## 如何选择自己的世界、Realms 和公开服务器
 
 | 方式       | 适合的情况                   | 主机状态                                       | 开始前要确认                                 |
@@ -70,6 +72,8 @@ Realms 是 Minecraft 官方提供的付费托管。订阅有效期间，即使�
 
 Switch 玩家尤其应阅读服务器自己的设备支持和加入说明，不要假设非官方的连接办法。即使服务器宣传 Java 与基岩均可加入，实际条件和支持版本也由该服务器决定。
 
+想进一步判断同时支持两个版本的服务器时，可参阅[Java 版与基岩版能否一起玩](/zh-cn/stories/minecraft-java-bedrock-crossplay/)。
+
 ## 按 Java、基岩、Switch 与手机开始
 
 ### 在 PC 上玩 Java 版
@@ -96,6 +100,8 @@ Switch 上的 Minecraft 是基岩版。在线多人游戏前，请确认 Nintend
 - **希望认识新玩家：** 阅读规则并确认支持版本后选择公开服务器。
 
 有些服务器自行提供 Java 与基岩跨平台的额外机制。这不是仅凭设备就能保证的默认条件，应在目的地的官方说明中确认当前实际支持情况。
+
+如果小组希望自己管理一个可以持续开放的世界，可先阅读[免费搭建 Minecraft 服务器的方法](/zh-cn/stories/minecraft-server-setup/)，再在局域网、专用服务器与 Realms 之间选择。
 
 ## 在 Aceserver 与朋友一起玩
 

@@ -2,7 +2,7 @@
 title: 'Minecraft mit Freunden spielen: Java, Bedrock, Switch und Handy richtig wählen'
 description: Kläre den Unterschied zwischen Java und Bedrock, vergleiche eigene Welten, Realms und öffentliche Server und wähle für jedes Gerät den passenden Weg zum Spielen mit Freunden.
 translationOf: minecraft-play-with-friends
-sourceHash: sha256:ea3f2cd75c5eea379414d9b100114e8753c66ad4bffdf8c04ad433f16a46b0f1
+sourceHash: sha256:426d801f43d6d0047128b0b18056ef7abce52ada4b9ba8453cd6317cac5f28cc
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -40,6 +40,8 @@ _Als Erstes müssen alle Java oder alle Bedrock nutzen; die beiden Gruppen sind 
 
 _Wer Edition, Update, Konto und Kinderkonto-Einstellungen vor dem Spielen gemeinsam prüft, vermeidet viele Beitrittsprobleme._
 
+Wenn ihr diese Punkte bereits geprüft habt und noch immer nicht beitreten könnt, lest [was zu prüfen ist, wenn ihr einem Minecraft-Server nicht beitreten könnt](/de/stories/minecraft-server-cannot-join/), und grenzt die Ursache Schritt für Schritt ein.
+
 ## Zwischen eigener Welt, Realms und öffentlichem Server wählen
 
 | Option              | Gut geeignet für                                                | Zustand des Hosts                                               | Vor dem Spielen prüfen                                                 |
@@ -70,6 +72,8 @@ Ein öffentlicher Server ist eine Online-Welt, die von einem Betreiber verwaltet
 
 Switch-Spieler sollten besonders die Hinweise des Servers zu unterstützten Geräten und dem Beitrittsweg lesen. Setzt keine inoffizielle Verbindungslösung voraus. Auch wenn ein Server Java und Bedrock bewirbt, hängen die tatsächlichen Anforderungen und unterstützten Versionen von diesem Server ab.
 
+Wie ihr einen Server erkennt, der beide Editionen akzeptiert, erklärt [ob Java und Bedrock zusammen spielen können](/de/stories/minecraft-java-bedrock-crossplay/).
+
 ## Start nach Java, Bedrock, Switch oder Mobilgerät
 
 ### Java Edition auf dem PC spielen
@@ -96,6 +100,8 @@ Minecraft auf Mobilgeräten ist ebenfalls Bedrock Edition. Prüft unter Android 
 - **Ihr möchtet neue Spieler treffen:** Wählt nach dem Lesen der Regeln und der unterstützten Edition einen öffentlichen Server.
 
 Einige Server bieten ihr eigenes zusätzliches System für Java-Bedrock-Crossplay an. Das ist kein Standardversprechen allein aufgrund der Geräte; bestätigt den aktuellen Support in der offiziellen Anleitung des Ziels.
+
+Wenn eure Gruppe eine dauerhaft verfügbare Welt selbst verwalten möchte, lest [wie ihr einen kostenlosen Minecraft-Server einrichtet](/de/stories/minecraft-server-setup/), bevor ihr zwischen LAN, eigenem Server und Realms wählt.
 
 ## Mit Freunden auf Aceserver spielen
 

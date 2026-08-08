@@ -2,7 +2,7 @@
 title: 'How to play Minecraft with friends: choosing Java, Bedrock, Switch, and mobile'
 description: Compare your own world, Realms, and public servers after sorting out Java and Bedrock, then choose a way to play with friends for each device.
 translationOf: minecraft-play-with-friends
-sourceHash: sha256:ea3f2cd75c5eea379414d9b100114e8753c66ad4bffdf8c04ad433f16a46b0f1
+sourceHash: sha256:426d801f43d6d0047128b0b18056ef7abce52ada4b9ba8453cd6317cac5f28cc
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -40,6 +40,8 @@ _Start by matching everyone to Java or to Bedrock; the two groups are separate b
 
 _Checking the edition, update, account, and child-account settings together before playing avoids many joining problems._
 
+If you have already checked these items and still cannot join, see [what to check when you cannot join a Minecraft server](/en/stories/minecraft-server-cannot-join/) for a step-by-step troubleshooting path.
+
 ## Choosing between your own world, Realms, and a public server
 
 | Option         | Best for                                          | Host status                                                                            | Check before playing                                                         |
@@ -70,6 +72,8 @@ A public server is an online world run by an operator. It can suit people who wa
 
 For Switch players especially, read the server's own guidance about supported devices and its joining method. Do not assume an unofficial connection workaround. Even when a server advertises Java-and-Bedrock support, its actual requirements and supported versions are specific to that server.
 
+For a closer look at how to recognize a server that accepts both editions, see [whether Java and Bedrock can play together](/en/stories/minecraft-java-bedrock-crossplay/).
+
 ## Starting by Java, Bedrock, Switch, or mobile
 
 ### Playing Java Edition on a PC
@@ -96,6 +100,8 @@ Mobile Minecraft is also Bedrock Edition. On Android, check the Google account; 
 - **You want to meet new players:** choose a public server after reading its rules and supported edition.
 
 Some servers provide their own extra system for Java-and-Bedrock cross-play. That is not a default promise based on devices alone, so confirm the actual current support in the destination's official guidance.
+
+If your group wants to manage a world that stays available, read [how to set up a free Minecraft server](/en/stories/minecraft-server-setup/) before choosing between a LAN world, dedicated server, and Realms.
 
 ## Playing with friends on Aceserver
 
