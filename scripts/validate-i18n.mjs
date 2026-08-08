@@ -13,6 +13,7 @@ const expectedStorySlugs = [
   'aceserver-hijacked',
   'aceserver-portal-launch',
   'minecraft-server-osusume',
+  'minecraft-server-setup',
   'metaverse-is-close',
 ]
 const fixedSourceFiles = [
