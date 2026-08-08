@@ -45,18 +45,20 @@ const isCurrentNavigationItem = (href: string) =>
     <a
       href={localizePath(locale, '/search/')}
       class:list={[
+        'desktop-search-link',
         {
           'is-active': isCurrentNavigationItem(
             localizePath(locale, '/search/'),
           ),
         },
       ]}
+      aria-label={ui.search.link}
       aria-current={isCurrentNavigationItem(localizePath(locale, '/search/'))
         ? 'page'
         : undefined}
+      title={ui.search.link}
     >
       <Icon name="search" />
-      <span>{ui.search.link}</span>
     </a>
     {
       navigation.map((item) => (
@@ -345,6 +347,12 @@ const isCurrentNavigationItem = (href: string) =>
   .desktop-nav a {
     min-height: 46px;
     padding: 0 14px;
+  }
+
+  .desktop-nav a.desktop-search-link {
+    width: 46px;
+    padding: 0;
+    justify-content: center;
   }
 
   .desktop-nav a:hover,

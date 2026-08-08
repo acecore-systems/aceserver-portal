@@ -1,8 +1,8 @@
 {
   "items": [
     { "text": "動画", "href": "/youtube-search-aceserver/", "icon": "play" },
-    { "text": "ワールドマップ", "href": "/world-map/", "icon": "map" },
-    { "text": "読みもの", "href": "/stories/", "icon": "book-open" },
+    { "text": "マップ", "href": "/world-map/", "icon": "map" },
+    { "text": "記事", "href": "/stories/", "icon": "book-open" },
     {
       "text": "Acecore",
       "href": "https://acecore.net",
@@ -10,13 +10,13 @@
       "icon": "box"
     },
     {
-      "text": "Acecore Store",
+      "text": "ストア",
       "href": "https://store.acecore.net",
       "external": true,
       "icon": "shopping-bag"
     },
     {
-      "text": "エースサーバーWIKI",
+      "text": "WIKI",
       "href": "https://asv-wiki.acecore.net",
       "external": true,
       "icon": "book-open"
