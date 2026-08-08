@@ -2,7 +2,7 @@
 title: Aceserver Portal을 공개했습니다
 description: Discord, Wiki, 동영상, 월드 맵에 나뉘어 있던 참가 전 정보를 하나의 입구로 정리했습니다.
 translationOf: aceserver-portal-launch
-sourceHash: sha256:ce0e98ae52cd519a4c3cbb7c87fd6950090432524909ad059c80573562c765a8
+sourceHash: sha256:4bc196677df5822669e61cb69a7781e15129a0860cde91c603755cb560702d77
 date: 2026-06-07T10:00:00+09:00
 tags:
   - 공지

@@ -9,6 +9,14 @@ tags:
 author: Gui
 image: /uploads/stories/minecraft-server-osusume-hero.webp
 imageAlt: 夕暮れのブロック調の広場で地図を囲み、さまざまな世界へ続く道を見渡す3人の旅人
+relatedStories:
+  - minecraft-play-with-friends
+  - minecraft-java-bedrock-crossplay
+  - minecraft-server-cannot-join
+  - minecraft-server-setup
+relatedPages:
+  - world-map
+  - youtube-search-aceserver
 ---
 
 公式案内で遊び方と参加方法を確認できる公開サーバーを紹介します。掲載順はランキングではありません。参加前は各サーバーの最新案内を確認してください。
@@ -66,12 +74,6 @@ imageAlt: 夕暮れのブロック調の広場で地図を囲み、さまざま�
 バニラに近い自由な建築や生活を自分のペースで楽しみつつ、ゲーム内の詳しいルールや参加案内はWIKIで確認したい人の選択肢です。まずはポータルとDiscordで最新情報を確認し、気になるワールドから入ってみてください。
 
 参加前には、[エースサーバーのポータル](/)、[公式Discord](https://discord.gg/acsv)、[公式WIKI](https://asv-wiki.acecore.net)を順に確認してください。自分の遊び方と合うかを判断してから、気軽に参加できます。
-
-## 関連するガイド
-
-- 公開サーバーだけでなく、自分のワールドやRealmsも含めて遊び方を決めたい場合は、[マイクラで友達と遊ぶ方法](/stories/minecraft-play-with-friends/)を確認してください。
-- 友達にJava版と統合版の人が混ざる場合は、[Java版と統合版は一緒に遊べる？](/stories/minecraft-java-bedrock-crossplay/)で、両対応サーバーの見分け方を先に確認します。
-- 選んだサーバーへ入れない場合は、[マイクラサーバーに入れない時の確認](/stories/minecraft-server-cannot-join/)で、エディション・バージョン・アカウント・通信を順に切り分けましょう。
 
 ## 迷ったら、公式案内を読み比べよう
 

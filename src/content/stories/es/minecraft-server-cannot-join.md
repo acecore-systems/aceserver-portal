@@ -2,7 +2,7 @@
 title: 'No puedo entrar a un servidor de Minecraft: comprobaciones para Java, Bedrock y Switch'
 description: Comprueba edición, versión del juego, cuenta y red cuando no puedas entrar a un servidor de Minecraft, y sigue jugando con tranquilidad después de conectarte.
 translationOf: minecraft-server-cannot-join
-sourceHash: sha256:62da69e1628983f487c6c0121bc2829918a311ece5d328785acd990e82e2c241
+sourceHash: sha256:cbba5d57ab5418390645eec248d789d8feaf5ad0565a6f3e667553185bf7e011
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -94,12 +94,6 @@ Si el error tiene nombre o código, guárdalo también. Dispositivo, edición, v
 Estas acciones ayudan tanto a quienes llegan por primera vez como a quienes vuelven después de tiempo. No trates la conexión como la meta final: crea una entrada segura para seguir jugando.
 
 ![Una persona viajera de estilo bloques lee un panel de guía antes de ir a conseguir recursos, visitar una ciudad y preparar una base](/uploads/stories/minecraft-server-cannot-join-after-join.webp)
-
-## Guías relacionadas
-
-- Si aún no has decidido cómo jugarán juntos tus amistades, lee [cómo jugar Minecraft con amigos](/es/stories/minecraft-play-with-friends/) para elegir entre tu mundo, Realms y un servidor público.
-- Cuando un grupo con jugadores de Java y Bedrock entra a un servidor público, consulta [si Java y Bedrock pueden jugar juntos](/es/stories/minecraft-java-bedrock-crossplay/) para reconocer uno que admita ambas.
-- Si los amigos no pueden entrar al mundo que administra el grupo, lee [cómo crear un servidor de Minecraft gratuito](/es/stories/minecraft-server-setup/) para revisar la preparación del host y las comprobaciones previas.
 
 ## Comprobaciones solo para Aceserver
 

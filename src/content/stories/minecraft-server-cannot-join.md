@@ -9,6 +9,11 @@ tags:
 author: Gui
 image: /uploads/stories/minecraft-server-cannot-join-hero.webp
 imageAlt: パソコン・スマートフォン・ゲームコントローラーへ分かれる道を前に、地図を持つ旅人が接続先を選ぶブロック調の風景
+relatedStories:
+  - minecraft-play-with-friends
+  - minecraft-java-bedrock-crossplay
+  - minecraft-server-setup
+  - minecraft-server-osusume
 ---
 
 マイクラサーバーに入れないときは、何度も接続を試す前に、原因を「ゲームの種類」「サーバーの案内」「アカウント」「通信」の順で分けると解決しやすくなります。この記事の前半は、どのサーバーにも共通する確認手順です。エースサーバー固有の案内は、後半で分けて扱います。
@@ -92,12 +97,6 @@ Switchでは、ゲームの更新状況、サインインしているMicrosoft�
 この三つは、初参加者だけでなく、久しぶりに戻る人にも役立ちます。接続できたことをゴールにせず、安心して遊び続けられる入口をつくりましょう。
 
 ![案内板を読んだ旅人が、資源集め、町の見学、拠点づくりへ向かうブロック調の風景](/uploads/stories/minecraft-server-cannot-join-after-join.webp)
-
-## 関連するガイド
-
-- まだ友達と遊ぶ方法そのものを決めていない場合は、[マイクラで友達と遊ぶ方法](/stories/minecraft-play-with-friends/)で、自分のワールド・Realms・公開サーバーから選びましょう。
-- Java版と統合版が混ざるグループで公開サーバーへ入る場合は、[Java版と統合版は一緒に遊べる？](/stories/minecraft-java-bedrock-crossplay/)で、両対応サーバーの見分け方を確認してください。
-- 自分たちで管理するワールドへ友達が入れない場合は、[マイクラの無料サーバーの立て方](/stories/minecraft-server-setup/)で、ホスト側の準備と公開前の確認点も見直せます。
 
 ## Aceserverを利用する場合だけの確認
 

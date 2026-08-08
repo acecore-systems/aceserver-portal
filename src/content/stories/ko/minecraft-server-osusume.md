@@ -2,7 +2,7 @@
 title: '일본 추천 마인크래프트 서버 6선: Java/Bedrock 지원과 플레이 방식 비교'
 description: 공식 사이트에서 확인한 지원 에디션, 플레이 방식, 참여 안내를 바탕으로 일본의 공개 Minecraft 서버를 소개합니다.
 translationOf: minecraft-server-osusume
-sourceHash: sha256:667a46426a427171af22b948043e0a50f8384c4becc3a257b754156dab20617b
+sourceHash: sha256:4de817016dff8fbd0767c2581d4f06664db09846322e367e1a4aa5619c3a732e
 date: 2026-08-01T10:00:00+09:00
 tags:
   - Minecraft
@@ -68,12 +68,6 @@ Aceserver는 Java와 Bedrock 어느 쪽에서나 누구나 참여할 수 있는 
 바닐라에 가까운 자유로운 건축과 생활을 자기 속도로 즐기면서 게임 안의 자세한 규칙과 참여 안내는 WIKI에서 확인하고 싶은 사람의 선택지입니다. 먼저 포털과 Discord에서 최신 정보를 확인하고, 관심 가는 월드부터 들어가 보세요.
 
 참여 전 [Aceserver 포털](/ko/), [공식 Discord](https://discord.gg/acsv), [공식 WIKI](https://asv-wiki.acecore.net)를 순서대로 확인해 주세요. 그 뒤 자신의 플레이 방식과 맞는지 판단하고 가볍게 참여할 수 있습니다.
-
-## 함께 읽을 가이드
-
-- 공개 서버만 보지 않고 내 월드, Realms, 공개 서버 중에서 고르고 싶다면 [친구와 마인크래프트 하는 법](/ko/stories/minecraft-play-with-friends/)을 읽어 보세요.
-- 친구 그룹에 Java와 베드락이 섞여 있다면 [Java와 베드락을 함께 플레이할 수 있는지](/ko/stories/minecraft-java-bedrock-crossplay/)를 먼저 읽고 두 에디션을 모두 받는 서버를 구분하세요.
-- 고른 서버에 들어갈 수 없다면 [마인크래프트 서버에 들어갈 수 없을 때 확인할 점](/ko/stories/minecraft-server-cannot-join/)으로 에디션, 버전, 계정, 네트워크를 순서대로 확인하세요.
 
 ## 망설인다면 공식 안내를 비교하세요
 

@@ -2,7 +2,7 @@
 title: 'Como configurar um servidor gratuito de Minecraft: Java, Bedrock e Realms'
 description: Aprenda a configurar um servidor gratuito de Minecraft e compare Java Edition, Bedrock Edition e Realms, incluindo os preparativos e as verificações de segurança antes de abri-lo.
 translationOf: minecraft-server-setup
-sourceHash: sha256:9eaa80125eb59a16522825e0b1d143164c770eb9fc326800990adedfd0044cb1
+sourceHash: sha256:afa899b3869f47a601fe078603ce00dec388e0a974bb6c2a1bb61b2c6659f1a4
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -102,12 +102,6 @@ Realms também é separado por edição: jogadores Java entram em um Realm Java,
 - Se o acesso permanente for mais importante que o custo e você quiser menos manutenção, Realms é mais simples, mas não é gratuito.
 
 Se escolher um servidor doméstico para evitar taxas de hospedagem, decida quem irá reiniciá-lo quando parar e onde o mundo será salvo. Planejar isso evita muitos problemas depois do início.
-
-## Guias relacionados
-
-- Antes de configurar um servidor, leia [como jogar Minecraft com amigos](/pt/stories/minecraft-play-with-friends/) para escolher entre seu mundo, Realms e servidor público.
-- Se o grupo mistura Java e Bedrock e quer um servidor público que aceite ambos, consulte [Java e Bedrock podem jogar juntos?](/pt/stories/minecraft-java-bedrock-crossplay/).
-- Se um jogador não consegue entrar depois da configuração, use [o que verificar quando não dá para entrar em um servidor de Minecraft](/pt/stories/minecraft-server-cannot-join/) para separar as condições do jogador e do servidor.
 
 ## Confira estes pontos antes de abrir o servidor
 

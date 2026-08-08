@@ -2,7 +2,7 @@
 title: 'How to set up a free Minecraft server: Java, Bedrock, and Realms'
 description: Learn how to set up a free Minecraft server and compare Java Edition, Bedrock Edition, and Realms, including preparation and safety checks before opening it.
 translationOf: minecraft-server-setup
-sourceHash: sha256:9eaa80125eb59a16522825e0b1d143164c770eb9fc326800990adedfd0044cb1
+sourceHash: sha256:afa899b3869f47a601fe078603ce00dec388e0a974bb6c2a1bb61b2c6659f1a4
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -102,12 +102,6 @@ Realms is also separated by edition: Java players join a Java Realm, and Bedrock
 - If always-on access matters more than cost and you want less maintenance, Realms is easier to understand, but it is not free.
 
 If you choose a home server to avoid hosting fees, decide who will restart it when it stops and where the world will be backed up. That planning prevents many problems after you begin.
-
-## Related guides
-
-- Before you run a server, read [how to play Minecraft with friends](/en/stories/minecraft-play-with-friends/) to choose between your own world, Realms, and a public server.
-- If your group mixes Java and Bedrock and wants a public server that accepts both, see [whether Java and Bedrock can play together](/en/stories/minecraft-java-bedrock-crossplay/).
-- If a player cannot join after setup, use [what to check when you cannot join a Minecraft server](/en/stories/minecraft-server-cannot-join/) to separate player-side and server-side conditions.
 
 ## Check these points before opening the server
 

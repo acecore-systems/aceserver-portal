@@ -2,7 +2,7 @@
 title: 'Impossible de rejoindre un serveur Minecraft ? Vérifications pour Java, Bedrock et Switch'
 description: Vérifiez l’édition, la version du jeu, le compte et le réseau lorsque vous ne pouvez pas rejoindre un serveur Minecraft, puis jouez sereinement après la connexion.
 translationOf: minecraft-server-cannot-join
-sourceHash: sha256:62da69e1628983f487c6c0121bc2829918a311ece5d328785acd990e82e2c241
+sourceHash: sha256:cbba5d57ab5418390645eec248d789d8feaf5ad0565a6f3e667553185bf7e011
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -94,12 +94,6 @@ Si l’erreur a un nom ou un code, conservez-le aussi. L’appareil, l’éditio
 Ces gestes aident autant les nouveaux visiteurs que les personnes qui reviennent après une absence. Ne considérez pas la connexion comme la ligne d’arrivée : créez une entrée sûre pour continuer à jouer.
 
 ![Un voyageur en style blocs lit un panneau d’orientation avant de partir vers des ressources, une visite de ville et la construction d’une base](/uploads/stories/minecraft-server-cannot-join-after-join.webp)
-
-## Guides associés
-
-- Si vous n'avez pas encore choisi comment jouer avec des amis, lisez [comment jouer à Minecraft avec des amis](/fr/stories/minecraft-play-with-friends/) pour choisir entre votre monde, Realms et un serveur public.
-- Lorsqu'un groupe de joueurs Java et Bedrock rejoint un serveur public, consultez [Java et Bedrock peuvent-ils jouer ensemble ?](/fr/stories/minecraft-java-bedrock-crossplay/) pour reconnaître un serveur qui accepte les deux.
-- Si des amis ne peuvent pas rejoindre le monde géré par le groupe, lisez [comment créer un serveur Minecraft gratuit](/fr/stories/minecraft-server-setup/) pour revoir la préparation de l'hôte et les vérifications avant l'ouverture.
 
 ## Vérifications réservées à Aceserver
 

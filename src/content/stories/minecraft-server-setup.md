@@ -9,6 +9,11 @@ tags:
 author: Gui
 image: /uploads/stories/minecraft-server-setup-hero.webp
 imageAlt: サーバーの選択肢を見渡す3人のブロック調の冒険者と、村・サーバー・クラウドへ続く3つの道
+relatedStories:
+  - minecraft-play-with-friends
+  - minecraft-java-bedrock-crossplay
+  - minecraft-server-cannot-join
+  - minecraft-server-osusume
 ---
 
 マイクラを友達と遊ぶ方法は、同じ家のネットワークで遊ぶ方法、自宅のPCで専用サーバーを動かす方法、Realmsを使う方法に分けられます。参加する人のエディションと、どのくらい管理の手間をかけられるかで選択肢が変わります。
@@ -100,12 +105,6 @@ RealmsもJava版と統合版で分かれており、Java版のRealmにはJava版
 - いつでも遊べる状態を優先し、保守作業を減らしたいなら、無料ではありませんがRealmsが分かりやすい選択です。
 
 「無料」にこだわって自宅サーバーを選ぶ場合は、止まったときに誰が再起動するのか、ワールドをどこへバックアップするのかまで決めておくと、始めてから困りにくくなります。
-
-## 関連するガイド
-
-- サーバーを立てる前に、友達と遊ぶ方法そのものを選びたい場合は、[マイクラで友達と遊ぶ方法](/stories/minecraft-play-with-friends/)で自分のワールド・Realms・公開サーバーの違いを確認します。
-- Java版と統合版が混ざるグループで、両方が入れる公開サーバーを選ぶ場合は、[Java版と統合版は一緒に遊べる？](/stories/minecraft-java-bedrock-crossplay/)を確認してください。
-- 立てたあとに参加者が入れない場合は、[マイクラサーバーに入れない時の確認](/stories/minecraft-server-cannot-join/)で、参加側とサーバー側の条件を順に切り分けます。
 
 ## 公開前に確認したいこと
 

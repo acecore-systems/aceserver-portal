@@ -2,7 +2,7 @@
 title: 메타버스는 생각보다 가까이에 있다
 description: VR 헤드셋뿐 아니라 사람들이 모여 교류하는 Minecraft 같은 가상 공간도 메타버스라고 볼 수 있다는 이야기입니다.
 translationOf: metaverse-is-close
-sourceHash: sha256:99ab60acbee3e67a933c8b36ea5c54ba199eebe99f7e2967f8929a904c8bffca
+sourceHash: sha256:14531152050ca4f10b2e7f6961d2f2d34d7cdc802d07ceac87945f13b9d02486
 date: 2023-03-23T00:00:00+09:00
 tags:
   - 커뮤니티

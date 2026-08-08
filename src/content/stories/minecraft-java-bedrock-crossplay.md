@@ -10,6 +10,11 @@ tags:
 author: Gui
 image: /uploads/stories/minecraft-java-bedrock-crossplay-hero.webp
 imageAlt: ノートPCと携帯端末を使う3人が、同じワールドへ続く門を地図越しに見つめるブロック調の風景
+relatedStories:
+  - minecraft-play-with-friends
+  - minecraft-server-cannot-join
+  - minecraft-server-osusume
+  - minecraft-server-setup
 ---
 
 Java版と統合版は、対応サーバーなら一緒に遊べます。友達のPCがJava版、スマホやゲーム機が統合版という組み合わせでも、サーバーが両方の接続を受け入れていれば、同じサーバーで建築や冒険を楽しめます。
@@ -61,12 +66,6 @@ Java版と統合版は別のクライアントで、接続の仕組みも異な�
 ![公開サーバーのロビーで、仲間が地図を囲んで合流するブロック調のイメージ](/uploads/stories/minecraft-java-bedrock-crossplay-hub.webp)
 
 まずは[エースサーバーのポータル](/)でワールドマップや動画を見て、[公式Discord](https://discord.gg/acsv)で参加前の最新案内を確認してください。詳しいルールや遊び方は[Aceserver WIKI](https://asv-wiki.acecore.net)にまとまっています。
-
-## 関連するガイド
-
-- 友達の端末や遊ぶ時間から、自分のワールド・Realms・公開サーバーを選ぶなら、[マイクラで友達と遊ぶ方法](/stories/minecraft-play-with-friends/)を読んで、グループに合う入口を決めましょう。
-- 参加しようとしても入れないときは、[マイクラサーバーに入れない時の確認](/stories/minecraft-server-cannot-join/)で、エディション・バージョン・アカウント・通信を順に切り分けます。
-- 複数の公開サーバーを比較して選びたいときは、[マイクラサーバーの選び方](/stories/minecraft-server-osusume/)も参考にしてください。
 
 ## まとめ
 

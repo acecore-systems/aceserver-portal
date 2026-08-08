@@ -2,7 +2,7 @@
 title: Java 版和基岩版能一起玩吗？如何识别兼容服务器
 description: 只要服务器在官方说明中明确支持两个版本，Minecraft Java 版和基岩版就能一起游玩。本文介绍识别方法与加入前的确认要点。
 translationOf: minecraft-java-bedrock-crossplay
-sourceHash: sha256:110578eba08c093d8ce0fed19295769a2c2391f899d746a180b30d710bafc63e
+sourceHash: sha256:401e1294ef834bef13e435291469f689e567f2882612364634fbfe5cf349b841
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -63,12 +63,6 @@ Java 版和基岩版使用不同客户端，连接方式也不同。要接纳基
 Aceserver 是一台可从 Java 版或基岩版加入的免费公开 Minecraft 服务器。如果你正在寻找能让使用不同版本的朋友一起游玩的服务器，它会是一个有力的选择。
 
 先在 [Aceserver Portal](/zh-cn/) 查看世界地图和视频，再到[官方 Discord](https://discord.gg/acsv)确认最新的加入说明。详细规则和玩法信息汇总在 [Aceserver WIKI](https://asv-wiki.acecore.net)。
-
-## 相关指南
-
-- 想根据朋友的设备和时间，在自己的世界、Realms 与公开服务器之间选择时，可阅读[如何与朋友一起玩 Minecraft](/zh-cn/stories/minecraft-play-with-friends/)。
-- 如果仍有人无法加入，请阅读[无法加入 Minecraft 服务器时的检查方法](/zh-cn/stories/minecraft-server-cannot-join/)，按顺序排查原因。
-- 想在选择前比较公开服务器，可参考[如何选择 Minecraft 服务器](/zh-cn/stories/minecraft-server-osusume/)。
 
 ## 总结
 

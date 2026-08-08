@@ -2,7 +2,7 @@
 title: Java et Bedrock peuvent-ils jouer ensemble ? Comment reconnaître un serveur compatible
 description: Minecraft Java Edition et Bedrock Edition peuvent jouer ensemble sur les serveurs qui annoncent officiellement la prise en charge des deux éditions. Voici comment les reconnaître et quoi vérifier avant de rejoindre.
 translationOf: minecraft-java-bedrock-crossplay
-sourceHash: sha256:110578eba08c093d8ce0fed19295769a2c2391f899d746a180b30d710bafc63e
+sourceHash: sha256:401e1294ef834bef13e435291469f689e567f2882612364634fbfe5cf349b841
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -63,12 +63,6 @@ Ces trois vérifications limitent les problèmes, par exemple lorsqu'une seule p
 Aceserver est un serveur Minecraft public et gratuit que l'on peut rejoindre depuis Java Edition ou Bedrock Edition. C'est une option solide si vous cherchez un serveur où des amis utilisant des éditions différentes peuvent jouer ensemble.
 
 Commencez par le [portail Aceserver](/fr/) pour explorer les cartes des mondes et les vidéos, puis consultez les dernières informations de participation sur le [Discord officiel](https://discord.gg/acsv). Les règles détaillées et les informations de jeu sont réunies dans le [WIKI Aceserver](https://asv-wiki.acecore.net).
-
-## Guides associés
-
-- Pour choisir entre votre monde, Realms et un serveur public selon les appareils et les horaires des amis, lisez [comment jouer à Minecraft avec des amis](/fr/stories/minecraft-play-with-friends/).
-- Si quelqu'un ne peut toujours pas rejoindre, utilisez [les vérifications à faire lorsqu'on ne peut pas rejoindre un serveur Minecraft](/fr/stories/minecraft-server-cannot-join/) pour trouver la cause.
-- Pour comparer les serveurs publics avant de choisir, consultez [comment choisir un serveur Minecraft](/fr/stories/minecraft-server-osusume/).
 
 ## Résumé
 

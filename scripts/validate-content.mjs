@@ -24,48 +24,12 @@ const REQUIRED_STORY_IMAGE_SLUGS = new Set([
   'minecraft-server-cannot-join',
   'metaverse-is-close',
 ])
-const REQUIRED_RELATED_GUIDE_LINKS = new Map([
-  [
-    'minecraft-java-bedrock-crossplay',
-    [
-      '/stories/minecraft-play-with-friends/',
-      '/stories/minecraft-server-cannot-join/',
-      '/stories/minecraft-server-osusume/',
-    ],
-  ],
-  [
-    'minecraft-play-with-friends',
-    [
-      '/stories/minecraft-server-cannot-join/',
-      '/stories/minecraft-java-bedrock-crossplay/',
-      '/stories/minecraft-server-setup/',
-      '/stories/minecraft-server-osusume/',
-    ],
-  ],
-  [
-    'minecraft-server-cannot-join',
-    [
-      '/stories/minecraft-play-with-friends/',
-      '/stories/minecraft-java-bedrock-crossplay/',
-      '/stories/minecraft-server-setup/',
-    ],
-  ],
-  [
-    'minecraft-server-osusume',
-    [
-      '/stories/minecraft-play-with-friends/',
-      '/stories/minecraft-java-bedrock-crossplay/',
-      '/stories/minecraft-server-cannot-join/',
-    ],
-  ],
-  [
-    'minecraft-server-setup',
-    [
-      '/stories/minecraft-play-with-friends/',
-      '/stories/minecraft-java-bedrock-crossplay/',
-      '/stories/minecraft-server-cannot-join/',
-    ],
-  ],
+const RELATED_GUIDE_STORY_SLUGS = new Set([
+  'minecraft-java-bedrock-crossplay',
+  'minecraft-play-with-friends',
+  'minecraft-server-cannot-join',
+  'minecraft-server-osusume',
+  'minecraft-server-setup',
 ])
 
 function fail(scope, message) {
@@ -134,6 +98,84 @@ function frontmatterString(frontmatter, key) {
   }
 
   return value
+}
+
+function frontmatterList(frontmatter, key) {
+  if (!frontmatter) return []
+
+  const match = frontmatter.match(
+    new RegExp(`^${key}:\\s*\\r?\\n((?:[ \\t]+-.*(?:\\r?\\n|$))+)`, 'm'),
+  )
+  if (!match) return []
+
+  return [...match[1].matchAll(/^[ \t]+-\s*(.*?)\s*$/gmu)].map((item) => {
+    const value = item[1].trim()
+    const quote = value[0]
+    return value.length >= 2 &&
+      (quote === '"' || quote === "'") &&
+      value.at(-1) === quote
+      ? value.slice(1, -1)
+      : value
+  })
+}
+
+function validateRelatedItems(story, frontmatter, japaneseSlugs, routes) {
+  const relatedStories = frontmatterList(frontmatter, 'relatedStories')
+  const relatedPages = frontmatterList(frontmatter, 'relatedPages')
+
+  if (story.locale !== 'ja') {
+    if (relatedStories.length > 0 || relatedPages.length > 0) {
+      fail(
+        story.relativePath,
+        'related content must be declared only on the Japanese source story',
+      )
+    }
+    return
+  }
+
+  for (const [kind, values] of [
+    ['relatedStories', relatedStories],
+    ['relatedPages', relatedPages],
+  ]) {
+    if (values.length > (kind === 'relatedStories' ? 4 : 3)) {
+      fail(story.relativePath, `${kind} has too many entries`)
+    }
+    const seen = new Set()
+    for (const value of values) {
+      if (!isNonEmptyString(value)) {
+        fail(story.relativePath, `${kind} must contain non-empty slugs`)
+        continue
+      }
+      if (seen.has(value)) {
+        fail(story.relativePath, `${kind} contains a duplicate (${value})`)
+      }
+      seen.add(value)
+    }
+  }
+
+  if (
+    RELATED_GUIDE_STORY_SLUGS.has(story.slug) &&
+    relatedStories.length === 0
+  ) {
+    fail(story.relativePath, 'guide stories must declare relatedStories')
+  }
+
+  for (const slug of relatedStories) {
+    if (slug === story.slug) {
+      fail(
+        story.relativePath,
+        'relatedStories must not include the story itself',
+      )
+    } else if (!japaneseSlugs.has(slug)) {
+      fail(story.relativePath, `related story does not exist (${slug})`)
+    }
+  }
+
+  for (const slug of relatedPages) {
+    if (!routes.has(routeForSlug(slug))) {
+      fail(story.relativePath, `related page does not exist (${slug})`)
+    }
+  }
 }
 
 function markdownTargets(source, scope) {
@@ -413,18 +455,7 @@ async function validateStories(routes) {
       validateInternalHref(scope, target, routes)
     }
 
-    if (story.locale === 'ja') {
-      const requiredTargets = REQUIRED_RELATED_GUIDE_LINKS.get(story.slug)
-      const actualTargets = new Set(markdown.links.map((link) => link.target))
-      for (const target of requiredTargets ?? []) {
-        if (!actualTargets.has(target)) {
-          fail(
-            story.relativePath,
-            'related guide link is missing (' + target + ')',
-          )
-        }
-      }
-    }
+    validateRelatedItems(story, frontmatter, japaneseSlugs, routes)
   }
 }
 

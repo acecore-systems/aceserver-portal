@@ -9,6 +9,14 @@ tags:
 author: Gui
 image: /uploads/stories/minecraft-play-with-friends-hero.webp
 imageAlt: ブロック調の夕暮れの広場で、PC、携帯ゲーム機、スマホをそばに置き、地図を囲んで遊び方を相談する4人の友達
+relatedStories:
+  - minecraft-server-cannot-join
+  - minecraft-java-bedrock-crossplay
+  - minecraft-server-setup
+  - minecraft-server-osusume
+relatedPages:
+  - world-map
+  - youtube-search-aceserver
 ---
 
 友達とマイクラを始めるときは、先に「どのワールドで遊ぶか」を決めるより、全員が **Java版か統合版か** をそろえられるかを確認するのが近道です。ここでは自分のワールド、Realms、公開サーバーの違いを比べ、PC・Switch・スマホごとの選び方を整理します。

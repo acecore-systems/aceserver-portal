@@ -2,7 +2,7 @@
 title: 如何搭建免费的 Minecraft 服务器：Java、基岩版与 Realms 的区别
 description: 介绍如何搭建免费的 Minecraft 服务器，并比较 Java 版、基岩版和 Realms，包括准备工作与开放服务器前的安全检查。
 translationOf: minecraft-server-setup
-sourceHash: sha256:9eaa80125eb59a16522825e0b1d143164c770eb9fc326800990adedfd0044cb1
+sourceHash: sha256:afa899b3869f47a601fe078603ce00dec388e0a974bb6c2a1bb61b2c6659f1a4
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -102,12 +102,6 @@ Realms 也按版本区分：Java 玩家加入 Java Realm，基岩版玩家加入
 - 如果更重视随时可用而不是费用，并希望减少维护工作，Realms 更容易上手，但它不是免费的。
 
 如果为了避免托管费用而选择家用服务器，请决定服务器停止后由谁重启，以及世界备份到哪里。提前安排好这些事项，开始游玩后会少遇到很多问题。
-
-## 相关指南
-
-- 搭建前想先选择和朋友一起玩的方式时，可阅读[如何与朋友一起玩 Minecraft](/zh-cn/stories/minecraft-play-with-friends/)，比较自己的世界、Realms 和公开服务器。
-- 小组同时有 Java 与基岩版玩家，并想选择同时支持两个版本的公开服务器时，可参考[Java 版与基岩版能否一起玩](/zh-cn/stories/minecraft-java-bedrock-crossplay/)。
-- 搭建后有人无法加入时，请阅读[无法加入 Minecraft 服务器时的检查方法](/zh-cn/stories/minecraft-server-cannot-join/)，依次区分玩家端与服务器端条件。
 
 ## 开放服务器前请检查
 
