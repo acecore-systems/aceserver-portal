@@ -2,13 +2,15 @@
 title: 'How to set up a free Minecraft server: Java, Bedrock, and Realms'
 description: Learn how to set up a free Minecraft server and compare Java Edition, Bedrock Edition, and Realms, including preparation and safety checks before opening it.
 translationOf: minecraft-server-setup
-sourceHash: sha256:30b94a023a3c9ff5ae3649658ba90041f0cde631114a7f6d34f52fcf8e90249c
+sourceHash: sha256:0dcea0b86790d9dc2e5e923a5cd0dd2366dd614b67457bde953f8504bec00a01
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
   - Minecraft server
   - Getting started
 author: Gui
+image: /uploads/stories/minecraft-server-setup-hero.webp
+imageAlt: Three blocky adventurers looking over three paths leading to a village, a server, and a cloud gateway
 ---
 
 There are several ways to play Minecraft with friends: use the same local network, run a dedicated server on your own PC, or use Realms. The right choice depends on everyone's edition and how much maintenance you are willing to handle.
@@ -26,6 +28,8 @@ The first thing to understand is that a free server means the server software it
 
 Java Edition and Bedrock Edition are separate editions, and players normally cannot join the same server directly. Check not only whether everyone uses a PC, phone, or console, but also whether everyone is using Java or Bedrock.
 
+![A block-style comparison of Java Edition, Bedrock Edition, and Realms shown as a PC, mobile and console devices, and a cloud world](/uploads/stories/minecraft-server-setup-comparison.webp)
+
 ## Prepare before you set up the server
 
 ### 1. Check everyone's edition
@@ -39,6 +43,8 @@ The PC running the dedicated server moves the world forward. If it sleeps or the
 ### 3. Decide who can connect
 
 If everyone is on the same LAN, you do not need to expose the server to the internet. Inviting friends from elsewhere may require router port forwarding and firewall changes. For safety, test on your own PC and local network before widening access.
+
+![A home PC preparing server files while friends connect to a shared block-built world](/uploads/stories/minecraft-server-setup-guide.webp)
 
 ## How to set up a free Java Edition server
 
@@ -98,6 +104,8 @@ Realms is also separated by edition: Java players join a Java Realm, and Bedrock
 If you choose a home server to avoid hosting fees, decide who will restart it when it stops and where the world will be backed up. That planning prevents many problems after you begin.
 
 ## Check these points before opening the server
+
+![A block-style image of backups, access control, and invited friends preparing a private server](/uploads/stories/minecraft-server-setup-safety.webp)
 
 - Back up the world regularly and confirm that you can restore it.
 - Give operator or administrator permissions only to people who need them.

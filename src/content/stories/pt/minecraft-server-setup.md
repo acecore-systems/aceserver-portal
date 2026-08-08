@@ -2,13 +2,15 @@
 title: 'Como configurar um servidor gratuito de Minecraft: Java, Bedrock e Realms'
 description: Aprenda a configurar um servidor gratuito de Minecraft e compare Java Edition, Bedrock Edition e Realms, incluindo os preparativos e as verificações de segurança antes de abri-lo.
 translationOf: minecraft-server-setup
-sourceHash: sha256:30b94a023a3c9ff5ae3649658ba90041f0cde631114a7f6d34f52fcf8e90249c
+sourceHash: sha256:0dcea0b86790d9dc2e5e923a5cd0dd2366dd614b67457bde953f8504bec00a01
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
   - Servidor de Minecraft
   - Primeiros passos
 author: Gui
+image: /uploads/stories/minecraft-server-setup-hero.webp
+imageAlt: Três aventureiros em estilo de blocos observam três caminhos que levam a uma vila, a um servidor e a uma entrada na nuvem
 ---
 
 Há várias formas de jogar Minecraft com amigos: usar a mesma rede local, executar um servidor dedicado no seu próprio PC ou usar Realms. A escolha certa depende da edição de todos os jogadores e do quanto de manutenção você aceita fazer.
@@ -26,6 +28,8 @@ A primeira coisa a entender é que servidor gratuito significa que o software do
 
 Java Edition e Bedrock Edition são edições diferentes, e normalmente os jogadores não podem entrar diretamente no mesmo servidor. Verifique não apenas se todos usam PC, celular ou console, mas também se todos estão usando Java ou Bedrock.
 
+![Comparação em estilo de blocos entre Java Edition, Bedrock Edition e Realms, representados por um PC, dispositivos móveis e consoles, e um mundo na nuvem](/uploads/stories/minecraft-server-setup-comparison.webp)
+
 ## Prepare-se antes de configurar o servidor
 
 ### 1. Confira a edição de todos
@@ -39,6 +43,8 @@ O PC que executa o servidor dedicado mantém o mundo funcionando. Se ele entrar 
 ### 3. Decida quem pode se conectar
 
 Se todos estiverem na mesma LAN, não será necessário expor o servidor à internet. Convidar amigos de outro local pode exigir o redirecionamento de portas do roteador e alterações no firewall. Por segurança, teste primeiro no seu PC e na rede local antes de ampliar o acesso.
+
+![Um PC doméstico prepara os arquivos do servidor enquanto amigos se conectam a um mundo de blocos compartilhado](/uploads/stories/minecraft-server-setup-guide.webp)
 
 ## Como configurar um servidor gratuito da Java Edition
 
@@ -98,6 +104,8 @@ Realms também é separado por edição: jogadores Java entram em um Realm Java,
 Se escolher um servidor doméstico para evitar taxas de hospedagem, decida quem irá reiniciá-lo quando parar e onde o mundo será salvo. Planejar isso evita muitos problemas depois do início.
 
 ## Confira estes pontos antes de abrir o servidor
+
+![Imagem em estilo de blocos sobre backups, controle de acesso e amigos convidados preparando um servidor privado](/uploads/stories/minecraft-server-setup-safety.webp)
 
 - Faça backups regulares do mundo e confirme que é possível restaurá-lo.
 - Dê permissões de operador ou administrador apenas a quem precisa delas.

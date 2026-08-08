@@ -2,13 +2,15 @@
 title: '무료 마인크래프트 서버 만드는 방법: Java, 베드락, Realms의 차이'
 description: 무료 마인크래프트 서버를 만드는 방법을 소개하고, Java Edition·Bedrock Edition·Realms의 차이와 준비 사항, 공개 전 보안 점검을 설명합니다.
 translationOf: minecraft-server-setup
-sourceHash: sha256:30b94a023a3c9ff5ae3649658ba90041f0cde631114a7f6d34f52fcf8e90249c
+sourceHash: sha256:0dcea0b86790d9dc2e5e923a5cd0dd2366dd614b67457bde953f8504bec00a01
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
   - 마인크래프트 서버
   - 시작하기
 author: Gui
+image: /uploads/stories/minecraft-server-setup-hero.webp
+imageAlt: 마을·서버·클라우드 게이트웨이로 이어지는 세 갈래 길을 바라보는 블록 스타일 모험가 세 명
 ---
 
 친구와 마인크래프트를 플레이하는 방법은 여러 가지입니다. 같은 로컬 네트워크를 사용하거나, 자신의 PC에서 전용 서버를 실행하거나, Realms를 사용할 수 있습니다. 적합한 방법은 모두가 사용하는 에디션과 감당할 수 있는 관리 작업의 양에 따라 달라집니다.
@@ -26,6 +28,8 @@ author: Gui
 
 Java Edition과 Bedrock Edition은 서로 다른 에디션이므로, 일반적으로 같은 서버에 직접 접속할 수 없습니다. 모두가 PC·휴대폰·콘솔 중 무엇을 사용하는지만이 아니라 Java인지 Bedrock인지도 확인해야 합니다.
 
+![PC, 모바일과 콘솔 기기, 클라우드 세계로 표현한 Java Edition·Bedrock Edition·Realms의 블록 스타일 비교 이미지](/uploads/stories/minecraft-server-setup-comparison.webp)
+
 ## 서버를 설정하기 전 준비
 
 ### 1. 모두의 에디션 확인
@@ -39,6 +43,8 @@ Java Edition은 Windows·macOS·Linux PC에서 사용할 수 있습니다. Bedro
 ### 3. 접속할 사람 결정
 
 모두 같은 LAN에 있다면 서버를 인터넷에 공개할 필요가 없습니다. 다른 장소의 친구를 초대하려면 라우터의 포트 포워딩과 방화벽 변경이 필요할 수 있습니다. 안전을 위해 먼저 자신의 PC와 로컬 네트워크에서 테스트한 후 접속 범위를 넓히세요.
+
+![집의 PC에서 서버 파일을 준비하고 친구들이 공유 블록 세계에 접속하는 과정을 보여 주는 이미지](/uploads/stories/minecraft-server-setup-guide.webp)
 
 ## 무료 Java Edition 서버 만드는 방법
 
@@ -98,6 +104,8 @@ Realms도 에디션별로 나뉩니다. Java 플레이어는 Java Realm에, Bedr
 호스팅 비용을 아끼기 위해 집의 서버를 선택한다면 서버가 멈췄을 때 누가 다시 시작할지, 월드를 어디에 백업할지 정하세요. 시작하기 전에 계획하면 플레이를 시작한 뒤의 문제를 많이 줄일 수 있습니다.
 
 ## 서버를 공개하기 전에 확인할 항목
+
+![백업, 접근 제어, 초대한 친구만 참여하는 안전한 개인 서버 준비를 보여 주는 블록 스타일 이미지](/uploads/stories/minecraft-server-setup-safety.webp)
 
 - 월드를 정기적으로 백업하고 복원할 수 있는지 확인합니다.
 - 운영자 또는 관리자 권한은 필요한 사람에게만 줍니다.

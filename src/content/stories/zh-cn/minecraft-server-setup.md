@@ -2,13 +2,15 @@
 title: 如何搭建免费的 Minecraft 服务器：Java、基岩版与 Realms 的区别
 description: 介绍如何搭建免费的 Minecraft 服务器，并比较 Java 版、基岩版和 Realms，包括准备工作与开放服务器前的安全检查。
 translationOf: minecraft-server-setup
-sourceHash: sha256:30b94a023a3c9ff5ae3649658ba90041f0cde631114a7f6d34f52fcf8e90249c
+sourceHash: sha256:0dcea0b86790d9dc2e5e923a5cd0dd2366dd614b67457bde953f8504bec00a01
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
   - Minecraft服务器
   - 入门
 author: Gui
+image: /uploads/stories/minecraft-server-setup-hero.webp
+imageAlt: 三名方块风格的冒险者眺望通往村庄、服务器和云端入口的三条道路
 ---
 
 和朋友一起玩 Minecraft 有几种方式：使用同一个局域网、在自己的电脑上运行专用服务器，或者使用 Realms。选择哪种方式，取决于所有人的版本，以及你愿意承担多少维护工作。
@@ -26,6 +28,8 @@ author: Gui
 
 Java 版和基岩版是不同的版本，玩家通常不能直接加入同一个服务器。除了确认大家使用电脑、手机还是主机，也要确认所有人使用的是 Java 版还是基岩版。
 
+![用电脑、手机和主机设备以及云端世界表现 Java 版、基岩版和 Realms 区别的方块风格比较图](/uploads/stories/minecraft-server-setup-comparison.webp)
+
 ## 搭建服务器前的准备
 
 ### 1. 确认所有人的版本
@@ -39,6 +43,8 @@ Java 版适用于 Windows、macOS 和 Linux 电脑。基岩版则可用于 Windo
 ### 3. 决定谁可以连接
 
 如果所有人都在同一个局域网中，就不需要把服务器开放到互联网。邀请其他地方的朋友时，可能需要设置路由器端口转发和防火墙。为了安全，先在自己的电脑和局域网中测试，再扩大访问范围。
+
+![在家用电脑准备服务器文件、朋友连接到共享方块世界的步骤示意图](/uploads/stories/minecraft-server-setup-guide.webp)
 
 ## 如何搭建免费的 Java 版服务器
 
@@ -98,6 +104,8 @@ Realms 也按版本区分：Java 玩家加入 Java Realm，基岩版玩家加入
 如果为了避免托管费用而选择家用服务器，请决定服务器停止后由谁重启，以及世界备份到哪里。提前安排好这些事项，开始游玩后会少遇到很多问题。
 
 ## 开放服务器前请检查
+
+![表现备份、访问控制和仅限受邀朋友加入的安全方块风格示意图](/uploads/stories/minecraft-server-setup-safety.webp)
 
 - 定期备份世界，并确认可以恢复。
 - 只给需要的人授予管理员或运营者权限。

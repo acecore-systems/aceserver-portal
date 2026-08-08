@@ -53,6 +53,9 @@ const stories = [
       'Minecraftの無料サーバーの立て方を、Java版・統合版・Realmsの違い、必要な準備、公開前の注意点とともに解説します。',
     author: 'Gui',
     datePublished: '2026-08-08T01:00:00.000Z',
+    image: '/uploads/stories/minecraft-server-setup-hero.webp',
+    imageAlt:
+      'サーバーの選択肢を見渡す3人のブロック調の冒険者と、村・サーバー・クラウドへ続く3つの道',
   },
   {
     slug: 'metaverse-is-close',
