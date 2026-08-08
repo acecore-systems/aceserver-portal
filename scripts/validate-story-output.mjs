@@ -41,6 +41,9 @@ const stories = [
       'MinecraftのJava版と統合版は、両方からの参加を公式に案内する対応サーバーなら一緒に遊べます。見分け方と参加前の確認点を紹介します。',
     author: 'Gui',
     datePublished: '2026-08-08T01:00:00.000Z',
+    image: '/uploads/stories/minecraft-java-bedrock-crossplay-hero.webp',
+    imageAlt:
+      'ノートPCと携帯端末を使う3人が、同じワールドへ続く門を地図越しに見つめるブロック調の風景',
   },
   {
     slug: 'minecraft-server-osusume',

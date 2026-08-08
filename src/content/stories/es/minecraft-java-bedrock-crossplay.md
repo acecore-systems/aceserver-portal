@@ -2,7 +2,7 @@
 title: ¿Pueden jugar juntos Java y Bedrock? Cómo identificar un servidor compatible
 description: Minecraft Java Edition y Bedrock Edition pueden jugar juntos en servidores que anuncian oficialmente soporte para ambas ediciones. Aprende a reconocerlos y qué revisar antes de entrar.
 translationOf: minecraft-java-bedrock-crossplay
-sourceHash: sha256:a40b93fc23ecade24feea1f1f11b98ad2ffd81ab8bfb6cc0c85efc32199078fe
+sourceHash: sha256:2139fe22ec1c92f8edcaf5afa1b8cbd8f11858c1a0d85c904d78a9415718a123
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -10,6 +10,8 @@ tags:
   - Edición Java
   - Edición Bedrock
 author: Gui
+image: /uploads/stories/minecraft-java-bedrock-crossplay-hero.webp
+imageAlt: Tres jugadores con un portátil y un dispositivo portátil miran, sobre un mapa, una puerta hacia el mismo mundo de bloques
 ---
 
 Los jugadores de Java y Bedrock pueden jugar juntos en un servidor compatible. Si el servidor acepta conexiones de ambas ediciones, amistades que usan Java en PC y otras que usan Bedrock en móviles o consolas pueden construir y vivir aventuras en el mismo servidor.
@@ -17,6 +19,8 @@ Los jugadores de Java y Bedrock pueden jugar juntos en un servidor compatible. S
 Sin embargo, **no todos los servidores de Java Edition son compatibles con Bedrock Edition.** Java y Bedrock usan métodos de conexión distintos, por lo que la administración debe preparar una forma de aceptar jugadores de Bedrock. No decidas solo porque diga “servidor Java”; confirma en la guía oficial de acceso que se indique soporte para ambas ediciones.
 
 ## Java y Bedrock pueden jugar juntos en un servidor compatible
+
+![Un portátil y un dispositivo portátil siguen caminos luminosos hasta el mismo mundo de servidor de bloques](/uploads/stories/minecraft-java-bedrock-crossplay-devices.webp)
 
 En un servidor con juego cruzado entre Java y Bedrock, jugadores de distintas ediciones pueden entrar al mismo servidor. No hace falta separarse solo porque tus amistades usen ediciones diferentes.
 
@@ -29,6 +33,8 @@ Java y Bedrock usan clientes separados y métodos de conexión diferentes. Para 
 Si un servidor solo dice “compatible con Java Edition”, no supongas que también pueden entrar jugadores de Bedrock. Si alguien de tu grupo usa Bedrock, elige un servidor que indique de forma explícita soporte para ambas ediciones o consulta a la administración antes de entrar.
 
 ## Tres puntos para identificar un servidor compatible
+
+![Una aventurera de bloques revisa un mapa y letreros antes de elegir una entrada compatible](/uploads/stories/minecraft-java-bedrock-crossplay-check.webp)
 
 ### 1. ¿La guía oficial nombra ambas ediciones?
 
@@ -51,6 +57,8 @@ Las ediciones compatibles, las versiones recomendadas y los requisitos de acceso
 Hacer estas tres comprobaciones primero ayuda a evitar problemas como que solo una persona no pueda entrar o que se usen destinos de conexión distintos por error.
 
 ## Juega con amistades de Java y Bedrock en Aceserver
+
+![Amistades se reúnen alrededor de un mapa en el vestíbulo de un servidor público de bloques](/uploads/stories/minecraft-java-bedrock-crossplay-hub.webp)
 
 Aceserver es un servidor público gratuito de Minecraft al que se puede entrar desde Java Edition o Bedrock Edition. Es una opción sólida si buscas un servidor donde amistades que usan ediciones distintas puedan jugar juntas.
 

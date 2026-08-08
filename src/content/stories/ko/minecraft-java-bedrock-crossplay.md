@@ -2,7 +2,7 @@
 title: 자바판과 베드락 에디션은 함께 플레이할 수 있나요? 지원 서버를 구분하는 방법
 description: Minecraft Java Edition과 Bedrock Edition은 양쪽 접속을 공식적으로 안내하는 서버라면 함께 플레이할 수 있습니다. 지원 서버를 확인하는 법과 참가 전 점검할 항목을 소개합니다.
 translationOf: minecraft-java-bedrock-crossplay
-sourceHash: sha256:a40b93fc23ecade24feea1f1f11b98ad2ffd81ab8bfb6cc0c85efc32199078fe
+sourceHash: sha256:2139fe22ec1c92f8edcaf5afa1b8cbd8f11858c1a0d85c904d78a9415718a123
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -10,6 +10,8 @@ tags:
   - Java Edition
   - Bedrock Edition
 author: Gui
+image: /uploads/stories/minecraft-java-bedrock-crossplay-hero.webp
+imageAlt: 노트북과 휴대용 기기를 쓰는 세 명의 플레이어가 지도를 사이에 두고 같은 블록 세계로 이어지는 관문을 바라보는 모습
 ---
 
 자바판과 베드락 에디션 플레이어는 호환되는 서버에서 함께 플레이할 수 있습니다. 서버가 두 에디션의 접속을 모두 받는다면, PC의 Java를 사용하는 친구와 모바일 또는 콘솔의 Bedrock을 사용하는 친구가 같은 서버에서 건축과 모험을 즐길 수 있습니다.
@@ -17,6 +19,8 @@ author: Gui
 하지만 **모든 Java Edition 서버가 Bedrock Edition을 지원하는 것은 아닙니다.** Java와 Bedrock은 접속 방식이 다르므로 서버 운영진이 Bedrock 플레이어를 받기 위한 방법을 마련해야 합니다. 단순히 “Java 서버”라고 쓰여 있다고 판단하지 말고, 공식 참가 안내에 두 에디션 지원이 명시되어 있는지 확인하세요.
 
 ## 자바판과 베드락 에디션은 호환 서버에서 함께 플레이할 수 있습니다
+
+![노트북과 휴대용 기기가 빛나는 길을 따라 같은 블록 세계 서버로 이어지는 모습](/uploads/stories/minecraft-java-bedrock-crossplay-devices.webp)
 
 Java와 Bedrock 크로스플레이를 지원하는 서버에서는 서로 다른 에디션의 플레이어가 같은 서버에 참가할 수 있습니다. 친구들이 다른 에디션을 사용한다는 이유만으로 따로 플레이할 필요는 없습니다.
 
@@ -29,6 +33,8 @@ Java와 Bedrock은 별도의 클라이언트와 다른 접속 방식을 사용�
 서버에 “Java Edition 지원”만 적혀 있다면 Bedrock 플레이어도 참가할 수 있다고 가정하지 마세요. 그룹에 Bedrock 사용자가 있다면 두 에디션 지원을 분명히 밝힌 서버를 고르거나, 참가 전에 운영진에게 문의하는 편이 좋습니다.
 
 ## 지원 서버를 구분하는 세 가지 확인 사항
+
+![블록 세계의 모험가가 지도와 안내판을 확인하고 호환되는 입구를 고르는 모습](/uploads/stories/minecraft-java-bedrock-crossplay-check.webp)
 
 ### 1. 공식 안내에 두 에디션이 모두 적혀 있나요?
 
@@ -51,6 +57,8 @@ Java와 Bedrock은 별도의 클라이언트와 다른 접속 방식을 사용�
 이 세 가지를 먼저 확인하면 한 사람만 접속하지 못하거나, 같은 서버라고 생각했는데 서로 다른 접속 대상을 쓰는 문제를 줄일 수 있습니다.
 
 ## Java와 Bedrock 친구와 함께라면 Aceserver
+
+![블록 세계의 공개 서버 로비에서 친구들이 지도를 둘러싸고 만나는 모습](/uploads/stories/minecraft-java-bedrock-crossplay-hub.webp)
 
 Aceserver는 Java Edition 또는 Bedrock Edition에서 참가할 수 있는 무료 공개 Minecraft 서버입니다. 다른 에디션을 쓰는 친구들과 함께 플레이할 서버를 찾고 있다면 좋은 선택지가 될 수 있습니다.
 
