@@ -252,48 +252,6 @@ const breadcrumbJsonLd = serializeJsonForHtmlScript({
     box-shadow: 0 7px 0 rgba(21, 19, 15, 0.18);
   }
 
-  .story-body :global(table) {
-    width: 100%;
-    margin: clamp(24px, 4vw, 36px) 0;
-    border: 2px solid #1e1710;
-    border-spacing: 0;
-    border-radius: 12px;
-    background: #fffdf5;
-    color: #1e1710;
-    font-size: 0.92em;
-    line-height: 1.65;
-    overflow: hidden;
-    box-shadow: 0 6px 0 rgba(21, 19, 15, 0.18);
-  }
-
-  .story-body :global(th),
-  .story-body :global(td) {
-    text-align: left;
-    vertical-align: top;
-  }
-
-  .story-body :global(th) {
-    border-right: 1px solid rgba(255, 248, 230, 0.32);
-    background: #1e1710;
-    padding: 14px 16px;
-    color: #fff8e6;
-    font-weight: 900;
-  }
-
-  .story-body :global(th:last-child) {
-    border-right: 0;
-  }
-
-  .story-body :global(td) {
-    border-top: 1px solid #d7c9ae;
-    border-right: 1px solid #d7c9ae;
-    padding: 15px 16px;
-  }
-
-  .story-body :global(td:last-child) {
-    border-right: 0;
-  }
-
   .story-body :global(a) {
     color: #0756a8;
     font-weight: 700;
@@ -317,73 +275,5 @@ const breadcrumbJsonLd = serializeJsonForHtmlScript({
     font-weight: 900;
     text-decoration: none;
     box-shadow: 0 4px 0 rgba(21, 19, 15, 0.28);
-  }
-
-  @media (max-width: 700px) {
-    .story-body :global(table[data-responsive-table]) {
-      display: block;
-      border: 0;
-      border-radius: 0;
-      background: transparent;
-      font-size: 0.96em;
-      overflow: visible;
-      box-shadow: none;
-    }
-
-    .story-body :global(table[data-responsive-table] thead) {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      overflow: hidden;
-      clip: rect(0 0 0 0);
-      clip-path: inset(50%);
-      white-space: nowrap;
-    }
-
-    .story-body :global(table[data-responsive-table] tbody) {
-      display: grid;
-      gap: 14px;
-    }
-
-    .story-body :global(table[data-responsive-table] tbody tr) {
-      display: block;
-      overflow: hidden;
-      border: 2px solid #1e1710;
-      border-radius: 12px;
-      background: #fffdf5;
-      box-shadow: 0 5px 0 rgba(21, 19, 15, 0.16);
-    }
-
-    .story-body :global(table[data-responsive-table] tbody td) {
-      display: grid;
-      grid-template-columns: minmax(86px, 0.7fr) minmax(0, 1.3fr);
-      gap: 8px 14px;
-      border: 0;
-      border-top: 1px solid #d7c9ae;
-      padding: 11px 13px;
-    }
-
-    .story-body :global(table[data-responsive-table] tbody td:first-child) {
-      border-top: 0;
-    }
-
-    .story-body :global(table[data-responsive-table] tbody td::before) {
-      content: attr(data-label);
-      color: #514331;
-      font-size: 0.82em;
-      font-weight: 900;
-      line-height: 1.45;
-    }
-
-    .story-body :global(table:not([data-responsive-table])) {
-      display: block;
-      max-width: 100%;
-      overflow-x: auto;
-    }
-
-    .story-body :global(table:not([data-responsive-table]) th),
-    .story-body :global(table:not([data-responsive-table]) td) {
-      min-width: 9rem;
-    }
   }
 </style>
