@@ -46,6 +46,17 @@ const stories = [
       'パソコン・スマートフォン・ゲームコントローラーへ分かれる道を前に、地図を持つ旅人が接続先を選ぶブロック調の風景',
   },
   {
+    slug: 'minecraft-java-bedrock-crossplay',
+    title: 'Java版と統合版は一緒に遊べる？｜対応サーバーの見分け方',
+    description:
+      'MinecraftのJava版と統合版は、両方からの参加を公式に案内する対応サーバーなら一緒に遊べます。見分け方と参加前の確認点を紹介します。',
+    author: 'Gui',
+    datePublished: '2026-08-08T01:00:00.000Z',
+    image: '/uploads/stories/minecraft-java-bedrock-crossplay-hero.webp',
+    imageAlt:
+      'ノートPCと携帯端末を使う3人が、同じワールドへ続く門を地図越しに見つめるブロック調の風景',
+  },
+  {
     slug: 'minecraft-server-osusume',
     title:
       '【2026年8月更新】おすすめのマイクラサーバー6選｜Java・統合版対応や遊び方で比較',
@@ -56,6 +67,17 @@ const stories = [
     image: '/uploads/stories/minecraft-server-osusume-hero.webp',
     imageAlt:
       '夕暮れのブロック調の広場で地図を囲み、さまざまな世界へ続く道を見渡す3人の旅人',
+  },
+  {
+    slug: 'minecraft-server-setup',
+    title: 'マイクラの無料サーバーの立て方｜Java・統合版・Realmsの違い',
+    description:
+      'Minecraftの無料サーバーの立て方を、Java版・統合版・Realmsの違い、必要な準備、公開前の注意点とともに解説します。',
+    author: 'Gui',
+    datePublished: '2026-08-08T01:00:00.000Z',
+    image: '/uploads/stories/minecraft-server-setup-hero.webp',
+    imageAlt:
+      'サーバーの選択肢を見渡す3人のブロック調の冒険者と、村・サーバー・クラウドへ続く3つの道',
   },
   {
     slug: 'metaverse-is-close',
