@@ -2,7 +2,7 @@
 title: 'How to play Minecraft with friends: choosing Java, Bedrock, Switch, and mobile'
 description: Compare your own world, Realms, and public servers after sorting out Java and Bedrock, then choose a way to play with friends for each device.
 translationOf: minecraft-play-with-friends
-sourceHash: sha256:ad96ebc65f402126753dcb26d69cef1efa89c68b2510ddd1d93d2d77822cb646
+sourceHash: sha256:ea3f2cd75c5eea379414d9b100114e8753c66ad4bffdf8c04ad433f16a46b0f1
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -25,12 +25,20 @@ Java Edition is mainly the PC edition for Windows, macOS, and Linux. Java worlds
 
 Bedrock Edition is used on Windows PCs, Switch, phones, and game consoles. If your group includes a Switch or phone player, first confirm that everyone is using Bedrock. Minecraft's official [multiplayer requirements](https://help.minecraft.net/hc/en-us/articles/35930809028749-Requirements-to-Play-Minecraft-Multiplayer-Games) say that the installed edition must match the destination.
 
+![A Java-PC group and a Bedrock group using a PC, handheld game device, and phone gathering in separate block worlds](/uploads/stories/minecraft-play-with-friends-editions.webp)
+
+_Start by matching everyone to Java or to Bedrock; the two groups are separate by default._
+
 ## Four checks before joining
 
 1. **Match the edition for everyone.** Decide whether the group is playing Java or Bedrock first. Do not treat Java-to-Bedrock joining as the default.
 2. **Update the game.** A version mismatch can prevent worlds from appearing or players from joining, even within the same edition.
 3. **Check accounts and online requirements.** Switch, mobile, and other platforms need a Microsoft account sign-in or link for multiplayer. Use Minecraft's official [account and edition table](https://help.minecraft.net/hc/en-us/articles/19615552270221-Accounts-Required-to-Play-Minecraft) to check each device. Console online multiplayer also needs the platform's online subscription.
 4. **Review child-account settings.** A parent-controlled multiplayer permission can block invitations and joining. Never share passwords; review privacy settings with a parent or guardian instead.
+
+![Friends around a PC, handheld game device, and phone checking a shared block-world view, an update symbol, an account card, and a safety shield](/uploads/stories/minecraft-play-with-friends-checklist.webp)
+
+_Checking the edition, update, account, and child-account settings together before playing avoids many joining problems._
 
 ## Choosing between your own world, Realms, and a public server
 
@@ -39,6 +47,10 @@ Bedrock Edition is used on Windows PCs, Switch, phones, and game consoles. If yo
 | Your own world | A small group playing tonight                     | Others join while the world owner keeps it open                                        | Same edition, and the LAN or invite conditions                               |
 | Realms         | Friends joining the same world at different times | Invited players can join while the subscription is active, even when the owner is away | Java or Bedrock Realm, invitation, subscription details                      |
 | Public server  | A longer-running community with other players     | The operator manages the world                                                         | Supported edition, joining method, rules, age conditions, and current status |
+
+![From left: a small group in its own world, a shared world that can be joined at any time, and a public-server plaza where players gather](/uploads/stories/minecraft-play-with-friends-modes.webp)
+
+_From left to right: your own world, Realms, and a public server. Choose by group size, schedule, and how much community interaction you want._
 
 ### 1. Your own world: start with a small group
 

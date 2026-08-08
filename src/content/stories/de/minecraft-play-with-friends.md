@@ -2,7 +2,7 @@
 title: 'Minecraft mit Freunden spielen: Java, Bedrock, Switch und Handy richtig wählen'
 description: Kläre den Unterschied zwischen Java und Bedrock, vergleiche eigene Welten, Realms und öffentliche Server und wähle für jedes Gerät den passenden Weg zum Spielen mit Freunden.
 translationOf: minecraft-play-with-friends
-sourceHash: sha256:ad96ebc65f402126753dcb26d69cef1efa89c68b2510ddd1d93d2d77822cb646
+sourceHash: sha256:ea3f2cd75c5eea379414d9b100114e8753c66ad4bffdf8c04ad433f16a46b0f1
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -25,12 +25,20 @@ Die Java Edition ist vor allem die PC-Edition für Windows, macOS und Linux. Jav
 
 Die Bedrock Edition wird auf Windows-PCs, Switch, Telefonen und Konsolen verwendet. Wenn die Gruppe einen Switch- oder Handyspieler enthält, bestätigt zuerst, dass alle Bedrock nutzen. Die offiziellen [Mehrspieler-Anforderungen](https://help.minecraft.net/hc/en-us/articles/35930809028749-Requirements-to-Play-Minecraft-Multiplayer-Games) sagen, dass die installierte Edition zum Ziel passen muss.
 
+![Eine Java-PC-Gruppe und eine Bedrock-Gruppe mit PC, Handheld und Handy in getrennten Blockwelten](/uploads/stories/minecraft-play-with-friends-editions.webp)
+
+_Als Erstes müssen alle Java oder alle Bedrock nutzen; die beiden Gruppen sind standardmäßig getrennt._
+
 ## Vier Prüfungen vor dem Beitreten
 
 1. **Nutzt dieselbe Edition.** Entscheidet zuerst, ob die Gruppe Java oder Bedrock spielt. Behandelt Java-zu-Bedrock-Beitritte nicht als Standardfall.
 2. **Aktualisiert das Spiel.** Ein Versionsunterschied kann verhindern, dass eine Welt erscheint oder ein Spieler beitritt, selbst innerhalb derselben Edition.
 3. **Prüft Konten und Online-Bedingungen.** Switch, Mobilgeräte und andere Plattformen benötigen für Mehrspieler eine Microsoft-Konto-Anmeldung oder -Verknüpfung. Prüft jedes Gerät in der offiziellen [Konto- und Editionstabelle](https://help.minecraft.net/hc/en-us/articles/19615552270221-Accounts-Required-to-Play-Minecraft). Konsolen-Mehrspieler online benötigt außerdem das Online-Abo der Plattform.
 4. **Prüft Kinderkonten.** Eine von Eltern verwaltete Mehrspieler-Berechtigung kann Einladungen und Beitritte blockieren. Teilt niemals Passwörter; prüft die Privatsphäre mit einem Elternteil oder Erziehungsberechtigten.
+
+![Freunde an PC, Handheld und Handy prüfen dieselbe Blockwelt, Aktualisierung, Konto und Sicherheitsstatus](/uploads/stories/minecraft-play-with-friends-checklist.webp)
+
+_Wer Edition, Update, Konto und Kinderkonto-Einstellungen vor dem Spielen gemeinsam prüft, vermeidet viele Beitrittsprobleme._
 
 ## Zwischen eigener Welt, Realms und öffentlichem Server wählen
 
@@ -39,6 +47,10 @@ Die Bedrock Edition wird auf Windows-PCs, Switch, Telefonen und Konsolen verwend
 | Eigene Welt         | Eine kleine Gruppe für heute Abend                              | Andere treten bei, solange der Besitzer die Welt geöffnet hält  | Gleiche Edition sowie LAN- oder Einladungsbedingungen                  |
 | Realms              | Freunde, die zu unterschiedlichen Zeiten dieselbe Welt betreten | Eingeladene können mit aktivem Abo auch ohne Besitzer beitreten | Java- oder Bedrock-Realm, Einladung und Abo                            |
 | Öffentlicher Server | Eine dauerhafte Gemeinschaft mit weiteren Spielern              | Der Betreiber verwaltet die Welt                                | Unterstützte Edition, Beitrittsweg, Regeln, Alter und aktueller Status |
+
+![Von links nach rechts: eine kleine Gruppe in der eigenen Welt, eine jederzeit betretbare gemeinsame Welt und ein öffentlicher Serverplatz mit Spielern](/uploads/stories/minecraft-play-with-friends-modes.webp)
+
+_Von links nach rechts: eigene Welt, Realms und öffentlicher Server. Wählt nach Gruppengröße, Zeitplan und gewünschtem Austausch mit der Community._
 
 ### 1. Eigene Welt: zuerst in kleiner Runde starten
 

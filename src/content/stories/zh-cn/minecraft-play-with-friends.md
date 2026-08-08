@@ -2,7 +2,7 @@
 title: 如何与朋友一起玩 Minecraft：Java版、基岩版、Switch 和手机的选择指南
 description: 先厘清 Java 版与基岩版的差异，再从自己的世界、Realms 和公开服务器中，按设备选择与朋友一起游玩的方式。
 translationOf: minecraft-play-with-friends
-sourceHash: sha256:ad96ebc65f402126753dcb26d69cef1efa89c68b2510ddd1d93d2d77822cb646
+sourceHash: sha256:ea3f2cd75c5eea379414d9b100114e8753c66ad4bffdf8c04ad433f16a46b0f1
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -25,12 +25,20 @@ Java 版主要用于 Windows、macOS 和 Linux 的 PC。Java 世界、Realms 和
 
 基岩版用于 Windows PC、Switch、手机和游戏主机。小组中有 Switch 或手机玩家时，先确认所有人都在使用基岩版。Minecraft 官方的[多人游戏要求](https://help.minecraft.net/hc/en-us/articles/35930809028749-Requirements-to-Play-Minecraft-Multiplayer-Games)说明，安装的版本必须与要加入的目的地一致。
 
+![Java版PC玩家小组与使用PC、掌机和手机的基岩版玩家小组分别聚集在两个积木世界中的画面](/uploads/stories/minecraft-play-with-friends-editions.webp)
+
+_与朋友一起玩时，第一步是让所有人统一为 Java 版或基岩版；两者默认是分开的。_
+
 ## 加入前的四项检查
 
 1. **所有人统一版本。** 先决定小组玩 Java 版还是基岩版，不要把 Java 与基岩互通当作默认条件。
 2. **更新游戏。** 即使版本相同，游戏版本差异也可能让世界不显示或无法加入。
 3. **确认账户与在线条件。** Switch、手机等平台的多人游戏需要登录或关联 Microsoft 账户。可在官方[账户与版本对照表](https://help.minecraft.net/hc/en-us/articles/19615552270221-Accounts-Required-to-Play-Minecraft)查看每种设备。主机在线多人游戏还需要平台的在线订阅。
 4. **检查儿童账户设置。** 家长控制的多人游戏权限可能会阻止邀请和加入。不要共享密码，应与家长或监护人一起检查隐私设置。
+
+![朋友围着PC、掌机和手机，一起确认相同的积木景色、更新、账户和安全设置](/uploads/stories/minecraft-play-with-friends-checklist.webp)
+
+_开始前一起检查版本、更新、账户和儿童账户设置，可减少无法加入的问题。_
 
 ## 如何选择自己的世界、Realms 和公开服务器
 
@@ -39,6 +47,10 @@ Java 版主要用于 Windows、macOS 和 Linux 的 PC。Java 世界、Realms 和
 | 自己的世界 | 今晚和少量朋友一起玩         | 其他人只能在世界拥有者保持开放时加入           | 相同版本，以及局域网或邀请条件               |
 | Realms     | 朋友在不同时间进入同一个世界 | 订阅有效时，即使拥有者不在线，受邀玩家也能加入 | Java 或基岩 Realm、邀请方式、订阅内容        |
 | 公开服务器 | 希望长期与更多玩家交流       | 服务器运营者管理世界                           | 支持版本、加入方法、规则、年龄条件与最新状态 |
+
+![从左到右：小组游玩的自己的世界、随时可进入的共享世界，以及玩家聚集的公开服务器广场](/uploads/stories/minecraft-play-with-friends-modes.webp)
+
+_从左到右分别是自己的世界、Realms 和公开服务器。可按人数、时间安排以及想要多少社区交流来选择。_
 
 ### 1. 自己的世界：先从小组开始
 

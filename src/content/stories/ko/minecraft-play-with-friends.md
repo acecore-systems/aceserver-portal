@@ -2,7 +2,7 @@
 title: '친구와 마인크래프트 하는 법: Java, 베드락, Switch, 모바일별 선택 가이드'
 description: Java 에디션과 베드락 에디션의 차이를 정리하고, 내 월드·Realms·공개 서버 중에서 기기별로 친구와 함께할 방법을 고르는 안내서입니다.
 translationOf: minecraft-play-with-friends
-sourceHash: sha256:ad96ebc65f402126753dcb26d69cef1efa89c68b2510ddd1d93d2d77822cb646
+sourceHash: sha256:ea3f2cd75c5eea379414d9b100114e8753c66ad4bffdf8c04ad433f16a46b0f1
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -25,12 +25,20 @@ Java 에디션은 주로 Windows, macOS, Linux PC용 에디션입니다. Java �
 
 베드락 에디션은 Windows PC, Switch, 스마트폰, 게임 콘솔에서 사용됩니다. 그룹에 Switch 또는 스마트폰 플레이어가 있다면 먼저 모두 베드락을 쓰는지 확인하세요. 공식 [멀티플레이 요구 사항](https://help.minecraft.net/hc/en-us/articles/35930809028749-Requirements-to-Play-Minecraft-Multiplayer-Games)에서도 설치한 에디션이 참가할 곳과 일치해야 한다고 안내합니다.
 
+![PC로 Java 에디션을 사용하는 그룹과 PC·휴대용 게임기·스마트폰으로 베드락 에디션을 사용하는 그룹이 서로 다른 블록 세계에 모인 모습](/uploads/stories/minecraft-play-with-friends-editions.webp)
+
+_친구와 시작할 때는 모두 Java 또는 모두 베드락으로 맞추는 것이 첫 확인이며, 두 그룹은 기본적으로 분리됩니다._
+
 ## 참가 전 네 가지 확인
 
 1. **모두 같은 에디션을 맞춥니다.** 그룹이 Java를 할지 베드락을 할지 먼저 정합니다. Java와 베드락 사이의 참가를 기본 조건으로 생각하지 마세요.
 2. **게임을 업데이트합니다.** 같은 에디션이라도 버전 차이 때문에 월드가 보이지 않거나 참가하지 못할 수 있습니다.
 3. **계정과 온라인 조건을 확인합니다.** Switch, 모바일 등은 멀티플레이에 Microsoft 계정 로그인 또는 연결이 필요합니다. 기기별 필요 계정은 공식 [계정 및 에디션 표](https://help.minecraft.net/hc/en-us/articles/19615552270221-Accounts-Required-to-Play-Minecraft)에서 확인할 수 있습니다. 콘솔 온라인 멀티플레이에는 해당 플랫폼의 온라인 구독도 필요합니다.
 4. **아동 계정 설정을 봅니다.** 보호자가 관리하는 멀티플레이 권한이 초대와 참가를 막을 수 있습니다. 비밀번호를 공유하지 말고 보호자와 함께 개인정보 설정을 확인하세요.
+
+![PC, 휴대용 게임기, 스마트폰을 둘러싼 친구들이 같은 블록 세계, 업데이트, 계정, 보안 설정을 확인하는 모습](/uploads/stories/minecraft-play-with-friends-checklist.webp)
+
+_플레이 전에 에디션, 업데이트, 계정, 아동 계정 설정을 함께 확인하면 참가 문제를 많이 줄일 수 있습니다._
 
 ## 내 월드, Realms, 공개 서버 고르기
 
@@ -39,6 +47,10 @@ Java 에디션은 주로 Windows, macOS, Linux PC용 에디션입니다. Java �
 | 내 월드   | 오늘 밤 소규모로 플레이할 때                       | 월드 주인이 열어 둔 동안 다른 사람이 참가          | 같은 에디션, LAN 또는 초대 조건                    |
 | Realms    | 친구들이 서로 다른 시간에 같은 월드에 들어올 때    | 구독이 유효하면 주인이 없어도 초대받은 사람이 참가 | Java 또는 베드락 Realm, 초대, 구독 내용            |
 | 공개 서버 | 다른 플레이어와 오래가는 커뮤니티를 만들고 싶을 때 | 운영자가 월드를 관리                               | 지원 에디션, 참가 방법, 규칙, 연령 조건, 최신 상태 |
+
+![왼쪽부터 소규모로 즐기는 내 월드, 언제든 입장할 수 있는 공유 월드, 플레이어가 모인 공개 서버 광장을 나란히 보여 주는 모습](/uploads/stories/minecraft-play-with-friends-modes.webp)
+
+_왼쪽부터 내 월드, Realms, 공개 서버의 모습입니다. 인원, 시간, 커뮤니티 교류를 원하는 정도에 따라 고르세요._
 
 ### 1. 내 월드: 작은 그룹으로 먼저 시작하기
 

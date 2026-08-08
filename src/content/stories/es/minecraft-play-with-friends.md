@@ -2,7 +2,7 @@
 title: 'Cómo jugar Minecraft con amigos: elegir Java, Bedrock, Switch o móvil'
 description: Aclara la diferencia entre Java y Bedrock, compara tu propio mundo, Realms y servidores públicos, y elige cómo jugar con amigos según el dispositivo.
 translationOf: minecraft-play-with-friends
-sourceHash: sha256:ad96ebc65f402126753dcb26d69cef1efa89c68b2510ddd1d93d2d77822cb646
+sourceHash: sha256:ea3f2cd75c5eea379414d9b100114e8753c66ad4bffdf8c04ad433f16a46b0f1
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -25,12 +25,20 @@ Java Edition es principalmente la edición para PC con Windows, macOS y Linux. L
 
 Bedrock Edition se usa en PC con Windows, Switch, teléfonos y consolas. Si el grupo incluye a alguien con Switch o móvil, confirma primero que todos usan Bedrock. Los [requisitos oficiales de multijugador](https://help.minecraft.net/hc/en-us/articles/35930809028749-Requirements-to-Play-Minecraft-Multiplayer-Games) indican que la edición instalada debe coincidir con el destino.
 
+![Un grupo de Java en PC y un grupo de Bedrock con PC, consola portátil y teléfono reunidos en mundos de bloques separados](/uploads/stories/minecraft-play-with-friends-editions.webp)
+
+_El primer paso es que todos usen Java o todos Bedrock; los dos grupos están separados de forma predeterminada._
+
 ## Cuatro comprobaciones antes de unirse
 
 1. **Usen la misma edición.** Decidan primero si el grupo jugará Java o Bedrock. No traten la unión entre Java y Bedrock como una condición normal.
 2. **Actualicen el juego.** Una diferencia de versión puede impedir que aparezca un mundo o que un jugador entre, incluso dentro de la misma edición.
 3. **Comprueben cuentas y requisitos en línea.** Switch, móvil y otras plataformas necesitan iniciar sesión o vincular una cuenta Microsoft para el multijugador. Consulta la [tabla oficial de cuentas y ediciones](https://help.minecraft.net/hc/en-us/articles/19615552270221-Accounts-Required-to-Play-Minecraft) para cada dispositivo. El multijugador en línea de consola también necesita la suscripción en línea de la plataforma.
 4. **Revisen las cuentas infantiles.** El permiso de multijugador controlado por un adulto puede bloquear invitaciones y entradas. Nunca compartan contraseñas; revisen la privacidad con un padre, madre o tutor.
+
+![Amigos alrededor de un PC, consola portátil y teléfono comprobando el mismo mundo de bloques, la actualización, la cuenta y la seguridad](/uploads/stories/minecraft-play-with-friends-checklist.webp)
+
+_Comprobar juntos edición, actualización, cuenta y ajustes de cuentas infantiles antes de jugar evita muchos problemas al entrar._
 
 ## Elegir entre tu mundo, Realms y un servidor público
 
@@ -39,6 +47,10 @@ Bedrock Edition se usa en PC con Windows, Switch, teléfonos y consolas. Si el g
 | Tu propio mundo  | Un grupo pequeño que juega esta noche                  | Los demás entran mientras el dueño mantiene abierto el mundo                       | Misma edición y condiciones de LAN o invitación                     |
 | Realms           | Amigos que entran al mismo mundo en distintos horarios | Los invitados pueden entrar con la suscripción activa, incluso si el dueño no está | Realm de Java o Bedrock, invitación y suscripción                   |
 | Servidor público | Una comunidad duradera con más jugadores               | El operador administra el mundo                                                    | Edición compatible, método de entrada, reglas, edad y estado actual |
+
+![De izquierda a derecha: un grupo pequeño en su propio mundo, un mundo compartido al que se puede entrar en cualquier momento y una plaza de servidor público con jugadores](/uploads/stories/minecraft-play-with-friends-modes.webp)
+
+_De izquierda a derecha: tu mundo, Realms y un servidor público. Elige según el tamaño del grupo, los horarios y el grado de convivencia con la comunidad que buscas._
 
 ### 1. Tu propio mundo: empezar en grupo pequeño
 
