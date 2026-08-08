@@ -35,6 +35,14 @@ const stories = [
       'Minecraftの街並みを背景にしたエースサーバーポータルのトップページ',
   },
   {
+    slug: 'minecraft-server-cannot-join',
+    title: 'マイクラサーバーに入れない時の確認｜Java・統合版・Switch対応',
+    description:
+      'マイクラサーバーに入れないとき、エディション・バージョン・アカウント・通信を順に確認し、参加後も安心して遊び続けるための案内です。',
+    author: 'Gui',
+    datePublished: '2026-08-08T01:00:00.000Z',
+  },
+  {
     slug: 'minecraft-server-osusume',
     title:
       '【2026年8月更新】おすすめのマイクラサーバー6選｜Java・統合版対応や遊び方で比較',
