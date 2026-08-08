@@ -26,6 +26,7 @@ const pageSlugs = await Promise.all(
 const storySlugs = [
   'aceserver-hijacked',
   'aceserver-portal-launch',
+  'minecraft-java-bedrock-crossplay',
   'minecraft-server-osusume',
   'minecraft-server-setup',
   'metaverse-is-close',
