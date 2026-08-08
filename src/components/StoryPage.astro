@@ -19,7 +19,6 @@ const { locale, story } = Astro.props
 const ui = getUi(locale)
 const { Content } = await render(story)
 const storySlug = story.id.split('/').at(-1) ?? story.id
-const isMinecraftServerSetupStory = storySlug === 'minecraft-server-setup'
 const siteBase = Astro.site ?? new URL('https://asv.acecore.net')
 const storyPath = localizePath(locale, `/stories/${storySlug}/`)
 const homePath = localizePath(locale, '/')
@@ -89,12 +88,7 @@ const breadcrumbJsonLd = serializeJsonForHtmlScript({
 >
   <script type="application/ld+json" set:html={articleJsonLd} />
   <script type="application/ld+json" set:html={breadcrumbJsonLd} />
-  <article
-    class:list={[
-      'story-shell',
-      { 'story-shell--minecraft-server-setup': isMinecraftServerSetupStory },
-    ]}
-  >
+  <article class="story-shell">
     <nav class="story-breadcrumb" aria-label={ui.breadcrumbLabel}>
       <ol>
         <li><a href={homePath}>{ui.homeLabel}</a></li>
@@ -258,70 +252,7 @@ const breadcrumbJsonLd = serializeJsonForHtmlScript({
     box-shadow: 0 7px 0 rgba(21, 19, 15, 0.18);
   }
 
-  .story-shell--minecraft-server-setup {
-    --minecraft-table-method-label: '方法';
-    --minecraft-table-cost-label: '費用の考え方';
-    --minecraft-table-join-label: '参加できる範囲';
-    --minecraft-table-best-for-label: '向いているケース';
-  }
-
-  :global(html[lang='en']) .story-shell--minecraft-server-setup {
-    --minecraft-table-method-label: 'Method';
-    --minecraft-table-cost-label: 'Cost';
-    --minecraft-table-join-label: 'Who can join';
-    --minecraft-table-best-for-label: 'Best for';
-  }
-
-  :global(html[lang='zh-CN']) .story-shell--minecraft-server-setup {
-    --minecraft-table-method-label: '方法';
-    --minecraft-table-cost-label: '费用';
-    --minecraft-table-join-label: '参与范围';
-    --minecraft-table-best-for-label: '适合对象';
-  }
-
-  :global(html[lang='es']) .story-shell--minecraft-server-setup {
-    --minecraft-table-method-label: 'Método';
-    --minecraft-table-cost-label: 'Coste';
-    --minecraft-table-join-label: 'Quién puede jugar';
-    --minecraft-table-best-for-label: 'Recomendado para';
-  }
-
-  :global(html[lang='pt']) .story-shell--minecraft-server-setup {
-    --minecraft-table-method-label: 'Método';
-    --minecraft-table-cost-label: 'Custo';
-    --minecraft-table-join-label: 'Quem pode entrar';
-    --minecraft-table-best-for-label: 'Indicado para';
-  }
-
-  :global(html[lang='fr']) .story-shell--minecraft-server-setup {
-    --minecraft-table-method-label: 'Méthode';
-    --minecraft-table-cost-label: 'Coût';
-    --minecraft-table-join-label: 'Participants';
-    --minecraft-table-best-for-label: 'Idéal pour';
-  }
-
-  :global(html[lang='ko']) .story-shell--minecraft-server-setup {
-    --minecraft-table-method-label: '방법';
-    --minecraft-table-cost-label: '비용';
-    --minecraft-table-join-label: '참여 범위';
-    --minecraft-table-best-for-label: '추천 대상';
-  }
-
-  :global(html[lang='de']) .story-shell--minecraft-server-setup {
-    --minecraft-table-method-label: 'Methode';
-    --minecraft-table-cost-label: 'Kosten';
-    --minecraft-table-join-label: 'Teilnahme';
-    --minecraft-table-best-for-label: 'Geeignet für';
-  }
-
-  :global(html[lang='ru']) .story-shell--minecraft-server-setup {
-    --minecraft-table-method-label: 'Способ';
-    --minecraft-table-cost-label: 'Стоимость';
-    --minecraft-table-join-label: 'Участники';
-    --minecraft-table-best-for-label: 'Подходит для';
-  }
-
-  .story-shell--minecraft-server-setup .story-body :global(table) {
+  .story-body :global(table) {
     width: 100%;
     margin: clamp(24px, 4vw, 36px) 0;
     border: 2px solid #1e1710;
@@ -335,13 +266,13 @@ const breadcrumbJsonLd = serializeJsonForHtmlScript({
     box-shadow: 0 6px 0 rgba(21, 19, 15, 0.18);
   }
 
-  .story-shell--minecraft-server-setup .story-body :global(th),
-  .story-shell--minecraft-server-setup .story-body :global(td) {
+  .story-body :global(th),
+  .story-body :global(td) {
     text-align: left;
     vertical-align: top;
   }
 
-  .story-shell--minecraft-server-setup .story-body :global(th) {
+  .story-body :global(th) {
     border-right: 1px solid rgba(255, 248, 230, 0.32);
     background: #1e1710;
     padding: 14px 16px;
@@ -349,31 +280,18 @@ const breadcrumbJsonLd = serializeJsonForHtmlScript({
     font-weight: 900;
   }
 
-  .story-shell--minecraft-server-setup .story-body :global(th:last-child) {
+  .story-body :global(th:last-child) {
     border-right: 0;
   }
 
-  .story-shell--minecraft-server-setup .story-body :global(td) {
+  .story-body :global(td) {
     border-top: 1px solid #d7c9ae;
     border-right: 1px solid #d7c9ae;
     padding: 15px 16px;
   }
 
-  .story-shell--minecraft-server-setup .story-body :global(td:last-child) {
+  .story-body :global(td:last-child) {
     border-right: 0;
-  }
-
-  .story-shell--minecraft-server-setup
-    .story-body
-    :global(tbody tr:nth-child(even) td) {
-    background: #fff4d9;
-  }
-
-  .story-shell--minecraft-server-setup
-    .story-body
-    :global(tbody td:first-child) {
-    color: #0756a8;
-    font-weight: 900;
   }
 
   .story-body :global(a) {
@@ -402,7 +320,7 @@ const breadcrumbJsonLd = serializeJsonForHtmlScript({
   }
 
   @media (max-width: 700px) {
-    .story-shell--minecraft-server-setup .story-body :global(table) {
+    .story-body :global(table[data-responsive-table]) {
       display: block;
       border: 0;
       border-radius: 0;
@@ -412,16 +330,22 @@ const breadcrumbJsonLd = serializeJsonForHtmlScript({
       box-shadow: none;
     }
 
-    .story-shell--minecraft-server-setup .story-body :global(thead) {
-      display: none;
+    .story-body :global(table[data-responsive-table] thead) {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      clip-path: inset(50%);
+      white-space: nowrap;
     }
 
-    .story-shell--minecraft-server-setup .story-body :global(tbody) {
+    .story-body :global(table[data-responsive-table] tbody) {
       display: grid;
       gap: 14px;
     }
 
-    .story-shell--minecraft-server-setup .story-body :global(tbody tr) {
+    .story-body :global(table[data-responsive-table] tbody tr) {
       display: block;
       overflow: hidden;
       border: 2px solid #1e1710;
@@ -430,7 +354,7 @@ const breadcrumbJsonLd = serializeJsonForHtmlScript({
       box-shadow: 0 5px 0 rgba(21, 19, 15, 0.16);
     }
 
-    .story-shell--minecraft-server-setup .story-body :global(tbody td) {
+    .story-body :global(table[data-responsive-table] tbody td) {
       display: grid;
       grid-template-columns: minmax(86px, 0.7fr) minmax(0, 1.3fr);
       gap: 8px 14px;
@@ -439,48 +363,27 @@ const breadcrumbJsonLd = serializeJsonForHtmlScript({
       padding: 11px 13px;
     }
 
-    .story-shell--minecraft-server-setup
-      .story-body
-      :global(tbody tr:nth-child(even) td) {
-      background: transparent;
-    }
-
-    .story-shell--minecraft-server-setup
-      .story-body
-      :global(tbody td:first-child) {
+    .story-body :global(table[data-responsive-table] tbody td:first-child) {
       border-top: 0;
-      background: #e7f2dc;
     }
 
-    .story-shell--minecraft-server-setup .story-body :global(tbody td::before) {
+    .story-body :global(table[data-responsive-table] tbody td::before) {
+      content: attr(data-label);
       color: #514331;
       font-size: 0.82em;
       font-weight: 900;
       line-height: 1.45;
     }
 
-    .story-shell--minecraft-server-setup
-      .story-body
-      :global(tbody td:nth-child(1)::before) {
-      content: var(--minecraft-table-method-label);
+    .story-body :global(table:not([data-responsive-table])) {
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
     }
 
-    .story-shell--minecraft-server-setup
-      .story-body
-      :global(tbody td:nth-child(2)::before) {
-      content: var(--minecraft-table-cost-label);
-    }
-
-    .story-shell--minecraft-server-setup
-      .story-body
-      :global(tbody td:nth-child(3)::before) {
-      content: var(--minecraft-table-join-label);
-    }
-
-    .story-shell--minecraft-server-setup
-      .story-body
-      :global(tbody td:nth-child(4)::before) {
-      content: var(--minecraft-table-best-for-label);
+    .story-body :global(table:not([data-responsive-table]) th),
+    .story-body :global(table:not([data-responsive-table]) td) {
+      min-width: 9rem;
     }
   }
 </style>
