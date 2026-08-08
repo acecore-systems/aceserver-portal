@@ -35,6 +35,17 @@ const stories = [
       'Minecraftの街並みを背景にしたエースサーバーポータルのトップページ',
   },
   {
+    slug: 'minecraft-server-cannot-join',
+    title: 'マイクラサーバーに入れない時の確認｜Java・統合版・Switch対応',
+    description:
+      'マイクラサーバーに入れないとき、エディション・バージョン・アカウント・通信を順に確認し、参加後も安心して遊び続けるための案内です。',
+    author: 'Gui',
+    datePublished: '2026-08-08T01:00:00.000Z',
+    image: '/uploads/stories/minecraft-server-cannot-join-hero.webp',
+    imageAlt:
+      'パソコン・スマートフォン・ゲームコントローラーへ分かれる道を前に、地図を持つ旅人が接続先を選ぶブロック調の風景',
+  },
+  {
     slug: 'minecraft-java-bedrock-crossplay',
     title: 'Java版と統合版は一緒に遊べる？｜対応サーバーの見分け方',
     description:
