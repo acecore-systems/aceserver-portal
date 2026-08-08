@@ -31,8 +31,8 @@ _Java版はJava版、統合版は統合版にそろえることが、友達と�
 
 1. **エディションを全員でそろえる**：Java版のグループか、統合版のグループかを先に決めます。Java版と統合版をまたぐ参加を標準の前提にしません。
 2. **ゲームを更新する**：同じエディションでも、バージョン差で見つからない・参加できないことがあります。遊ぶ前に全員が更新を確認します。
-3. **アカウントとオンライン条件を確認する**：Switchやスマホなどでは、Microsoft アカウントのサインイン・連携がマルチプレイに必要です。端末ごとの必要アカウントは、公式の[アカウントと対応エディション一覧](https://help.minecraft.net/hc/en-us/articles/19615552270221-Accounts-Required-to-Play-Minecraft)で確認できます。コンソールのオンラインマルチプレイには、各プラットフォームのオンライン加入も必要です。
-4. **子ども用アカウントの設定を見る**：保護者によるマルチプレイ許可がオフだと、招待や参加ができません。パスワードを共有せず、保護者と一緒にアカウントのプライバシー設定を確認してください。
+3. **アカウントとオンライン条件を確認する**：Switch・スマホを含む統合版でオンラインやクロスプレイを使う場合、各自がMinecraft内でMicrosoft アカウントにサインインします。SwitchではさらにNintendo AccountとNintendo Switch Online、AndroidではGoogle アカウント、iPhone・iPadではApple IDが関わります。端末ごとの役割は、公式の[アカウントと対応エディション一覧](https://help.minecraft.net/hc/en-us/articles/19615552270221-Accounts-Required-to-Play-Minecraft)で確認できます。
+4. **子ども用アカウントの設定を見る**：保護者によるマルチプレイ許可がオフだと、招待や参加ができません。Microsoft/Xboxのプライバシー設定はSwitchやスマホで遊ぶ場合にも適用されます。パスワードを共有せず、保護者と一緒にアカウントのプライバシー設定を確認してください。
 
 ![PC、携帯ゲーム機、スマホを囲んだ友達が、同じブロックの景色、更新、アカウント、保護者設定を確認するイメージ](/uploads/stories/minecraft-play-with-friends-checklist.webp)
 
@@ -84,11 +84,56 @@ Windows PCで統合版を使う友達は、Switchやスマホの統合版プレ�
 
 ### Switchで遊ぶ場合
 
-SwitchのMinecraftは統合版です。オンラインで友達と遊ぶ前に、Nintendo Account、Microsoft アカウントの連携、Nintendo Switch Online、ゲームの更新を確認します。Switchの友達がいるグループは、Java版ではなく統合版にそろえるのが基本です。
+SwitchのMinecraftは統合版です。インターネット経由で友達と遊ぶには、Switchのユーザーに連携したNintendo Accountと、有効なNintendo Switch Onlineが必要です。クロスプレイ、Minecraftのフレンド、Realms、オンラインのマルチプレイを使うには、Minecraft内でMicrosoft アカウントにもサインインして連携します。Nintendo Account／Nintendo Switch OnlineとMicrosoft アカウントは別の役割なので、どちらか一方だけでは置き換えられません。
+
+近くのSwitch同士で遊ぶローカル通信はNintendo Switch Onlineの対象外ですが、インターネット経由の参加とは別の方式です。離れたスマホ・PCの友達と遊ぶ場合は、全員を統合版にそろえ、各自のMicrosoft アカウントとSwitch側のオンライン加入を確認しましょう。
 
 ### スマホで遊ぶ場合
 
-スマホ版も統合版です。AndroidではGoogle アカウント、iPhone・iPadではApple IDに加え、マルチプレイにはMicrosoft アカウントのサインイン・連携を確認します。まず家のWi-Fiで短時間のLAN参加を試し、続けて遊びたければRealmsや公開サーバーを検討すると、問題の切り分けがしやすくなります。
+スマホ版も統合版です。AndroidではGoogle アカウント、iPhone・iPadではApple IDを使います。さらに、クロスプレイ、Minecraftのフレンド、Realms、オンラインのマルチプレイには、Minecraft内でMicrosoft アカウントにサインインします。スマホにはNintendo Switch Onlineなどのコンソール向けオンライン加入は必要ありません。ただし、アプリ本体の購入費用と通信料は別です。まず家のWi-Fiで短時間のLAN参加を試し、続けて遊びたければRealmsや公開サーバーを検討すると、問題の切り分けがしやすくなります。
+
+## Switch・スマホのアカウントとオンライン加入
+
+Switchとスマホ版はどちらも統合版です。全員が同じ通常版の統合版に更新し、Microsoft アカウントにサインインすれば、Switch、Android、iPhone・iPad、Windows PCの統合版どうしでクロスプレイできます。Java版の友達とは、標準の機能だけでは同じワールドに入れません。
+
+| 端末                      | プラットフォーム側のアカウント | クロスプレイ・オンラインのためにMinecraft内で使うアカウント | 追加のオンライン加入                                                                                   |
+| ------------------------- | ------------------------------ | ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| Nintendo Switch           | Nintendo Account               | Microsoft アカウントにサインイン・連携                      | インターネット経由のオンラインにはNintendo Switch Onlineが必要。近くのSwitch同士のローカル通信には不要 |
+| Androidスマホ・タブレット | Google アカウント              | Microsoft アカウントにサインイン                            | コンソール向けオンライン加入は不要                                                                     |
+| iPhone・iPad              | Apple ID                       | Microsoft アカウントにサインイン                            | コンソール向けオンライン加入は不要                                                                     |
+
+Microsoft アカウントは、Switch・スマホではゲームを入手するためのアカウントとは別に、フレンド、クロスプレイ、Realms、オンラインのマルチプレイを使うためのものです。詳しくはMinecraft公式の[アカウント一覧](https://help.minecraft.net/hc/en-us/articles/19615552270221-Accounts-Required-to-Play-Minecraft)、[Switchでの連携手順](https://help.minecraft.net/hc/en-us/articles/4408894129933-Sign-in-to-Minecraft-with-a-Microsoft-Account-on-Nintendo-Switch)、[スマホでのサインイン手順](https://help.minecraft.net/hc/en-us/articles/31514831369869)、任天堂の[オンラインプレイの説明](https://support.nintendo.com/jp/nso/services/onlineplay/index.html)を確認してください。
+
+### 統合版の友達を招待する手順
+
+1. 全員が最新の通常版の統合版を起動し、Minecraft内でMicrosoft アカウントにサインインします。フレンドを探すときは、表示名ではなくXboxゲーマータグを確認します。
+2. ホストは遊ぶワールドの設定で「マルチプレイゲーム」をオンにし、参加できる相手を「フレンド」または「フレンドのフレンド」に設定してからワールドを開きます。
+3. ホストはゲーム内の「ソーシャル」から「プレイに招待」を選び、参加者は届いた招待を受け取ります。離れた場所からSwitchで参加する人は、この時点でNintendo Switch Onlineも有効であることを確認します。
+
+画面名や通知の出方は機種や更新で変わることがあります。困った場合は、Minecraft公式の[統合版ワールドへの招待手順](https://help.minecraft.net/hc/en-us/articles/32899440702477)を正としてください。
+
+### 子どもアカウントの保護者設定
+
+Microsoft/Xboxの保護者設定は、Xbox本体を持っていなくてもSwitch・スマホでのMinecraftに適用されます。保護者のMicrosoft アカウントで子どものアカウントを選び、少なくとも次を確認します。
+
+- **マルチプレイゲームへの参加**：オンにすると、マルチプレイ、Realms、ほかのサーバーへの参加を許可できます。
+- **クロスネットワークプレイへの参加**：オンにすると、Switch・スマホなど別のゲームプラットフォームの相手と遊べます。
+- **フレンドの追加・フォロー**：オンにすると、Minecraftのフレンド一覧から相手を見つけて招待できます。
+- **音声・テキスト・招待での連絡**：家庭の方針に合わせて範囲を決めます。
+
+変更後はMinecraftをサインアウト・終了してから起動し直します。Switchやスマホ本体側の保護者・利用制限も別にあるため、Microsoftの設定だけで解決しない場合は端末側も保護者と確認します。項目名は更新されることがあるため、Minecraft公式の[子どもアカウントのマルチプレイ設定](https://help.minecraft.net/hc/en-us/articles/24302916594701-Managing-Multiplayer-Game-Access-for-a-Child-Account-in-Minecraft)を優先してください。
+
+## Switch・スマホで接続できないとき
+
+次の順で確認すると、アカウントの問題と通信の問題を混同しにくくなります。
+
+1. **版と更新状況**：全員が統合版で、同じ最新の通常版を使っているかを確認します。プレビュー版や古い版が混ざっている場合は、まず通常版を更新してそろえます。
+2. **ホストのワールド設定**：ホストの「マルチプレイゲーム」と参加範囲がオンか、個人ワールドならホストがオンラインかを確認します。Realmsならオーナーの契約とRealmの公開状態も確認します。
+3. **Microsoft アカウントと保護者設定**：全員が正しいMicrosoft アカウントでサインインしているか、子どもアカウントでマルチプレイ・クロスネットワーク・フレンド追加が許可されているかを確認します。
+4. **Switchだけの加入条件**：インターネット経由で遊ぶSwitchの参加者は、Nintendo AccountとNintendo Switch Onlineが有効かを確認します。スマホにはこの加入は不要です。
+5. **通信**：Minecraftと端末を再起動し、普段のインターネット接続で試します。参加する側がルーターのポートを無作為に開ける必要はありません。VPNや独自DNSを変更している場合は元の状態に戻してから試します。
+
+「マルチプレイが無効です」と表示される場合は、先にMicrosoft/Xboxの保護者・プライバシー設定を確認します。招待が届かない、またはワールドが見つからない場合は、版・ホストの設定・Microsoft アカウントを確認します。それでも接続できない場合は、Minecraft公式の[統合版マルチプレイ接続トラブル](https://help.minecraft.net/hc/en-us/articles/4409236107789-Minecraft-Bedrock-Edition-Multiplayer-Connectivity-Issues)と、上で案内した[マイクラサーバーに入れない時の確認](/stories/minecraft-server-cannot-join/)を参照してください。問い合わせるときは、エディション、端末、ゲームのバージョン、表示されたエラー、試した時刻を伝え、パスワードや認証コードは共有しません。
 
 ## 迷ったときの決め方
 

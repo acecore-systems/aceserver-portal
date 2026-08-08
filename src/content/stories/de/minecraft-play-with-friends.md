@@ -2,7 +2,7 @@
 title: 'Minecraft mit Freunden spielen: Java, Bedrock, Switch und Handy richtig wählen'
 description: Kläre den Unterschied zwischen Java und Bedrock, vergleiche eigene Welten, Realms und öffentliche Server und wähle für jedes Gerät den passenden Weg zum Spielen mit Freunden.
 translationOf: minecraft-play-with-friends
-sourceHash: sha256:426d801f43d6d0047128b0b18056ef7abce52ada4b9ba8453cd6317cac5f28cc
+sourceHash: sha256:649ea26618c0eb16f2b02374bfdfa83d576ef0d2ac7fed3cfa3061bf52b5b14e
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -33,8 +33,8 @@ _Als Erstes müssen alle Java oder alle Bedrock nutzen; die beiden Gruppen sind 
 
 1. **Nutzt dieselbe Edition.** Entscheidet zuerst, ob die Gruppe Java oder Bedrock spielt. Behandelt Java-zu-Bedrock-Beitritte nicht als Standardfall.
 2. **Aktualisiert das Spiel.** Ein Versionsunterschied kann verhindern, dass eine Welt erscheint oder ein Spieler beitritt, selbst innerhalb derselben Edition.
-3. **Prüft Konten und Online-Bedingungen.** Switch, Mobilgeräte und andere Plattformen benötigen für Mehrspieler eine Microsoft-Konto-Anmeldung oder -Verknüpfung. Prüft jedes Gerät in der offiziellen [Konto- und Editionstabelle](https://help.minecraft.net/hc/en-us/articles/19615552270221-Accounts-Required-to-Play-Minecraft). Konsolen-Mehrspieler online benötigt außerdem das Online-Abo der Plattform.
-4. **Prüft Kinderkonten.** Eine von Eltern verwaltete Mehrspieler-Berechtigung kann Einladungen und Beitritte blockieren. Teilt niemals Passwörter; prüft die Privatsphäre mit einem Elternteil oder Erziehungsberechtigten.
+3. **Prüft Konten und Online-Bedingungen.** Für Bedrock-Online-Spiel oder Crossplay mit Switch oder Mobilgerät meldet sich jede Person in Minecraft mit einem Microsoft-Konto an. Switch nutzt zusätzlich Nintendo Account und Nintendo Switch Online; Android nutzt ein Google-Konto; iPhone und iPad nutzen eine Apple-ID. Die Rolle jedes Kontos findet ihr in der offiziellen [Konto- und Editionstabelle](https://help.minecraft.net/hc/en-us/articles/19615552270221-Accounts-Required-to-Play-Minecraft) von Minecraft.
+4. **Prüft Kinderkonten.** Eine von Eltern verwaltete Mehrspieler-Berechtigung kann Einladungen und Beitritte blockieren. Die Microsoft/Xbox-Privatsphäre-Einstellungen gelten auch beim Spielen auf Switch oder Mobilgerät. Teilt niemals Passwörter; prüft die Privatsphäre mit einem Elternteil oder Erziehungsberechtigten.
 
 ![Freunde an PC, Handheld und Handy prüfen dieselbe Blockwelt, Aktualisierung, Konto und Sicherheitsstatus](/uploads/stories/minecraft-play-with-friends-checklist.webp)
 
@@ -86,11 +86,56 @@ Windows-PC-Spieler mit Bedrock können mit Bedrock-Spielern auf Switch und Handy
 
 ### Auf Nintendo Switch spielen
 
-Minecraft auf Switch ist Bedrock Edition. Prüft vor Online-Mehrspieler Nintendo Account, Microsoft-Kontoverknüpfung, Nintendo Switch Online und das Spiel-Update. Eine Gruppe mit Switch-Spieler sollte normalerweise Bedrock statt Java nutzen.
+Minecraft auf Switch ist Bedrock Edition. Für das Spielen mit Freunden über das Internet braucht ihr ein mit dem Switch-Benutzer verknüpftes Nintendo Account und eine aktive Nintendo-Switch-Online-Mitgliedschaft. Für Crossplay, Minecraft-Freunde, Realms und Online-Mehrspieler meldet ihr euch außerdem in Minecraft mit einem Microsoft-Konto an und verknüpft es. Nintendo Account/Nintendo Switch Online und Microsoft-Konto haben verschiedene Aufgaben; keines ersetzt das andere.
+
+Lokale Kommunikation zwischen nahe beieinander befindlichen Switch-Konsolen nutzt Nintendo Switch Online nicht, unterscheidet sich aber vom Beitritt über das Internet. Für das Spielen mit entfernten Freunden auf Handy oder PC nutzt ihr alle Bedrock und prüft das Microsoft-Konto jeder Person sowie das Switch-Online-Abo.
 
 ### Auf Telefon oder Tablet spielen
 
-Minecraft auf Mobilgeräten ist ebenfalls Bedrock Edition. Prüft unter Android das Google-Konto, auf iPhone und iPad die Apple-ID und meldet euch dann für Mehrspieler am Microsoft-Konto an oder verknüpft es. Eine kurze LAN-Sitzung im heimischen WLAN erleichtert die Fehlersuche, bevor ihr zu Realms oder einem öffentlichen Server wechselt.
+Minecraft auf Mobilgeräten ist ebenfalls Bedrock Edition. Android nutzt ein Google-Konto, iPhone und iPad nutzen eine Apple-ID. Meldet euch zusätzlich in Minecraft mit einem Microsoft-Konto für Crossplay, Minecraft-Freunde, Realms und Online-Mehrspieler an. Telefone und Tablets benötigen kein Konsolen-Online-Abo wie Nintendo Switch Online; App-Kauf und Datenkosten sind davon getrennt. Eine kurze LAN-Sitzung im heimischen WLAN erleichtert die Fehlersuche, bevor ihr zu Realms oder einem öffentlichen Server wechselt.
+
+## Konten und Online-Abos für Switch und Mobilgeräte
+
+Switch und Mobilgeräte nutzen beide Bedrock Edition. Wenn alle dieselbe aktuelle reguläre Bedrock-Version verwenden und sich mit einem Microsoft-Konto anmelden, können Bedrock-Spieler auf Switch, Android, iPhone/iPad und Windows-PC Crossplay nutzen. Ein Freund mit Java Edition kann nicht allein mit den Standardfunktionen dem gleichen Welt beitreten.
+
+| Gerät                        | Plattformkonto   | In Minecraft genutztes Konto für Crossplay und Online-Spiel | Zusätzliches Online-Abo                                                                                                   |
+| ---------------------------- | ---------------- | ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| Nintendo Switch              | Nintendo Account | Mit Microsoft-Konto anmelden und verknüpfen                 | Online-Spiel über das Internet benötigt Nintendo Switch Online. Lokale Kommunikation zwischen nahen Switch-Konsolen nicht |
+| Android-Telefon oder -Tablet | Google-Konto     | Mit Microsoft-Konto anmelden                                | Kein Konsolen-Online-Abo erforderlich                                                                                     |
+| iPhone oder iPad             | Apple-ID         | Mit Microsoft-Konto anmelden                                | Kein Konsolen-Online-Abo erforderlich                                                                                     |
+
+Auf Switch und Mobilgeräten ist das Microsoft-Konto von dem Konto zum Beziehen des Spiels getrennt; es aktiviert Freunde, Crossplay, Realms und Online-Mehrspieler. Details stehen in der offiziellen [Kontotabelle](https://help.minecraft.net/hc/en-us/articles/19615552270221-Accounts-Required-to-Play-Minecraft), den [Schritten zum Verknüpfen auf Switch](https://help.minecraft.net/hc/en-us/articles/4408894129933-Sign-in-to-Minecraft-with-a-Microsoft-Account-on-Nintendo-Switch), den [Anmeldeschritten für Mobilgeräte](https://help.minecraft.net/hc/en-us/articles/31514831369869) und der Nintendo-[Erklärung zum Online-Spiel](https://support.nintendo.com/jp/nso/services/onlineplay/index.html).
+
+### Einen Bedrock-Freund einladen
+
+1. Alle starten die neueste reguläre Bedrock-Version und melden sich in Minecraft mit einem Microsoft-Konto an. Prüft beim Suchen nach Freunden den Xbox-Gamertag statt nur des Anzeigenamens.
+2. Der Host aktiviert Mehrspieler-Spiel in den Einstellungen der gewünschten Welt, wählt Freunde oder Freunde von Freunden als Spielerzugang und öffnet die Welt.
+3. Der Host öffnet im Spiel Sozial und wählt Zum Spielen einladen; der eingeladene Gast nimmt die erhaltene Einladung an. Wer von einem anderen Ort mit Switch beitritt, prüft zusätzlich, dass Nintendo Switch Online aktiv ist.
+
+Bildschirmnamen und Benachrichtigungen können sich je nach Gerät und Update unterscheiden. Im Zweifel folgt der offiziellen Minecraft-[Anleitung zum Einladen in eine Bedrock-Welt](https://help.minecraft.net/hc/en-us/articles/32899440702477).
+
+### Eltern-Einstellungen für ein Kinderkonto
+
+Microsoft/Xbox-Eltern-Einstellungen gelten für Minecraft auf Switch und Mobilgeräten auch ohne Xbox-Konsole. Ein Elternteil wählt das Microsoft-Konto des Kindes und prüft mindestens Folgendes.
+
+- **Mehrspieler-Spielen beitreten / Mehrspieler auf Xbox beitreten:** Erlauben, um Mehrspieler, Realms und anderen Servern beizutreten.
+- **Cross-Network-Play beitreten:** Erlauben, um mit Personen auf anderen Spieleplattformen einschließlich Switch und Mobilgeräten zu spielen.
+- **Freunde hinzufügen und anderen folgen:** Erlauben, um einen Freund in der Minecraft-Freundesliste zu finden und einzuladen.
+- **Sprach-, Text- und Einladungs-Kommunikation:** Legt den zulässigen Umfang für den Haushalt fest.
+
+Meldet euch nach einer Änderung ab, schließt Minecraft und startet es dann neu. Die Eltern- oder Nutzungsbeschränkungen von Switch und Telefon sind getrennt; wenn die Microsoft-Einstellung nicht genügt, prüft das Gerät mit einem Elternteil. Namen von Optionen können sich ändern; maßgeblich sind die offiziellen [Mehrspieler-Einstellungen für Kinderkonten](https://help.minecraft.net/hc/en-us/articles/24302916594701-Managing-Multiplayer-Game-Access-for-a-Child-Account-in-Minecraft) von Minecraft.
+
+## Wenn Switch oder Mobilgerät keine Verbindung herstellt
+
+Diese Reihenfolge hilft, Konto- von Netzwerkproblemen zu trennen.
+
+1. **Edition und Update:** Bestätigt, dass alle Bedrock und dieselbe neueste reguläre Version nutzen. Wenn eine Vorschau- oder alte Version beteiligt ist, aktualisiert und verwendet zuerst die reguläre Version.
+2. **Host-Welt-Einstellungen:** Bestätigt, dass Mehrspieler-Spiel und Spielerzugang aktiviert sind und der Host für eine persönliche Welt online ist. Bei Realms prüft auch das Abo des Besitzers und ob das Realm geöffnet ist.
+3. **Microsoft-Konto und Eltern-Einstellungen:** Bestätigt, dass jede Person mit dem richtigen Microsoft-Konto angemeldet ist und ein Kinderkonto Mehrspieler, Cross-Network-Play und Freunde hinzufügen darf.
+4. **Nur für Switch geltendes Abo:** Ein Switch-Teilnehmer, der über das Internet spielt, braucht ein aktives Nintendo Account und Nintendo Switch Online. Ein Telefon braucht dieses Abo nicht.
+5. **Verbindung:** Startet Minecraft und das Gerät neu und testet mit der üblichen Internetverbindung. Ein beitretender Spieler muss Router-Ports nicht willkürlich öffnen. Wenn ihr VPN oder eigenen DNS geändert habt, stellt vor dem Test die normale Konfiguration wieder her.
+
+Bei der Meldung „Mehrspieler ist deaktiviert“ prüft zuerst die Microsoft/Xbox-Privatsphäre oder Eltern-Einstellungen. Kommt keine Einladung an oder erscheint die Welt nicht, prüft Edition, Host-Einstellungen und Microsoft-Konto. Wenn die Verbindung weiter nicht gelingt, verwendet die offizielle [Bedrock-Mehrspieler-Verbindungsfehlerhilfe](https://help.minecraft.net/hc/en-us/articles/4409236107789-Minecraft-Bedrock-Edition-Multiplayer-Connectivity-Issues) und [was zu prüfen ist, wenn ihr einem Minecraft-Server nicht beitreten könnt](/de/stories/minecraft-server-cannot-join/). Nennt bei einer Hilfeanfrage Edition, Gerät, Spielversion, angezeigten Fehler und Zeitpunkt des Versuchs; teilt niemals Passwort oder Authentifizierungscode.
 
 ## Schnell entscheiden
 

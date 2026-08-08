@@ -2,7 +2,7 @@
 title: 'Cómo jugar Minecraft con amigos: elegir Java, Bedrock, Switch o móvil'
 description: Aclara la diferencia entre Java y Bedrock, compara tu propio mundo, Realms y servidores públicos, y elige cómo jugar con amigos según el dispositivo.
 translationOf: minecraft-play-with-friends
-sourceHash: sha256:426d801f43d6d0047128b0b18056ef7abce52ada4b9ba8453cd6317cac5f28cc
+sourceHash: sha256:649ea26618c0eb16f2b02374bfdfa83d576ef0d2ac7fed3cfa3061bf52b5b14e
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -33,8 +33,8 @@ _El primer paso es que todos usen Java o todos Bedrock; los dos grupos están se
 
 1. **Usen la misma edición.** Decidan primero si el grupo jugará Java o Bedrock. No traten la unión entre Java y Bedrock como una condición normal.
 2. **Actualicen el juego.** Una diferencia de versión puede impedir que aparezca un mundo o que un jugador entre, incluso dentro de la misma edición.
-3. **Comprueben cuentas y requisitos en línea.** Switch, móvil y otras plataformas necesitan iniciar sesión o vincular una cuenta Microsoft para el multijugador. Consulta la [tabla oficial de cuentas y ediciones](https://help.minecraft.net/hc/en-us/articles/19615552270221-Accounts-Required-to-Play-Minecraft) para cada dispositivo. El multijugador en línea de consola también necesita la suscripción en línea de la plataforma.
-4. **Revisen las cuentas infantiles.** El permiso de multijugador controlado por un adulto puede bloquear invitaciones y entradas. Nunca compartan contraseñas; revisen la privacidad con un padre, madre o tutor.
+3. **Comprueben cuentas y requisitos en línea.** Para jugar en línea o con juego cruzado de Bedrock que incluya Switch o móvil, cada jugador inicia sesión con una cuenta Microsoft dentro de Minecraft. Switch también usa una Nintendo Account y Nintendo Switch Online; Android usa una cuenta Google; iPhone y iPad usan un Apple ID. Consulta el papel de cada cuenta en la [tabla oficial de cuentas y ediciones](https://help.minecraft.net/hc/en-us/articles/19615552270221-Accounts-Required-to-Play-Minecraft) de Minecraft.
+4. **Revisen las cuentas infantiles.** El permiso de multijugador controlado por un adulto puede bloquear invitaciones y entradas. Los ajustes de privacidad de Microsoft/Xbox también se aplican al jugar en Switch o móvil. Nunca compartan contraseñas; revisen la privacidad con un padre, madre o tutor.
 
 ![Amigos alrededor de un PC, consola portátil y teléfono comprobando el mismo mundo de bloques, la actualización, la cuenta y la seguridad](/uploads/stories/minecraft-play-with-friends-checklist.webp)
 
@@ -86,11 +86,56 @@ Los jugadores de Windows PC con Bedrock pueden estar en el mismo grupo que jugad
 
 ### Jugar en Nintendo Switch
 
-Minecraft en Switch es Bedrock Edition. Antes del multijugador en línea, comprueba la Nintendo Account, el vínculo con la cuenta Microsoft, Nintendo Switch Online y la actualización del juego. Un grupo con jugador de Switch normalmente debe usar Bedrock y no Java.
+Minecraft en Switch es Bedrock Edition. Para jugar con amistades por internet se necesita una Nintendo Account vinculada al usuario de Switch y una membresía activa de Nintendo Switch Online. Para usar juego cruzado, amistades de Minecraft, Realms y multijugador en línea, también inicia sesión y vincula una cuenta Microsoft dentro de Minecraft. Nintendo Account/Nintendo Switch Online y la cuenta Microsoft tienen funciones distintas; una no sustituye a la otra.
+
+La comunicación local entre consolas Switch cercanas no usa Nintendo Switch Online, pero es distinta de unirse por internet. Para jugar a distancia con una amistad en móvil o PC, usen Bedrock todos y revisen la cuenta Microsoft de cada persona y la membresía en Switch.
 
 ### Jugar en teléfono o tableta
 
-Minecraft móvil también es Bedrock Edition. En Android revisa la cuenta Google; en iPhone y iPad, el Apple ID; después inicia sesión o vincula la cuenta Microsoft para multijugador. Probar primero una sesión LAN corta con el Wi-Fi de casa facilita diagnosticar problemas antes de pasar a Realms o a un servidor público.
+Minecraft móvil también es Bedrock Edition. Android usa una cuenta Google y iPhone/iPad usan un Apple ID. Además, inicia sesión con una cuenta Microsoft dentro de Minecraft para juego cruzado, amistades de Minecraft, Realms y multijugador en línea. Los teléfonos y tabletas no necesitan una membresía de consola como Nintendo Switch Online; la compra de la aplicación y los costes de datos son independientes. Probar primero una sesión LAN corta con el Wi-Fi de casa facilita diagnosticar problemas antes de pasar a Realms o a un servidor público.
+
+## Cuentas y membresías en línea para Switch y móvil
+
+Switch y móvil son ambos Bedrock Edition. Si todos usan la misma versión normal actual de Bedrock e inician sesión con una cuenta Microsoft, los jugadores de Bedrock en Switch, Android, iPhone/iPad y Windows PC pueden usar juego cruzado. Una amistad con Java Edition no puede entrar en el mismo mundo solo con las funciones estándar del juego.
+
+| Dispositivo                | Cuenta de plataforma | Cuenta usada dentro de Minecraft para juego cruzado y juego en línea | Membresía en línea adicional                                                                                               |
+| -------------------------- | -------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| Nintendo Switch            | Nintendo Account     | Iniciar sesión y vincular una cuenta Microsoft                       | El juego en línea por internet necesita Nintendo Switch Online. La comunicación local entre Switch cercanas no lo necesita |
+| Teléfono o tableta Android | Cuenta Google        | Iniciar sesión con una cuenta Microsoft                              | No se necesita una membresía de consola                                                                                    |
+| iPhone o iPad              | Apple ID             | Iniciar sesión con una cuenta Microsoft                              | No se necesita una membresía de consola                                                                                    |
+
+En Switch y móvil, la cuenta Microsoft es distinta de la cuenta usada para obtener el juego; permite amistades, juego cruzado, Realms y multijugador en línea. Para los detalles, consulta la [tabla oficial de cuentas](https://help.minecraft.net/hc/en-us/articles/19615552270221-Accounts-Required-to-Play-Minecraft), los [pasos para vincular Switch](https://help.minecraft.net/hc/en-us/articles/4408894129933-Sign-in-to-Minecraft-with-a-Microsoft-Account-on-Nintendo-Switch), los [pasos para iniciar sesión en móvil](https://help.minecraft.net/hc/en-us/articles/31514831369869) y la [explicación de juego en línea de Nintendo](https://support.nintendo.com/jp/nso/services/onlineplay/index.html).
+
+### Invitar a una amistad de Bedrock
+
+1. Todos inician la última versión normal de Bedrock e inician sesión con una cuenta Microsoft dentro de Minecraft. Para buscar amistades, confirma el gamertag de Xbox y no solo el nombre mostrado.
+2. El anfitrión activa Juego multijugador en los ajustes del mundo elegido, selecciona Amigos o Amigos de amigos como acceso de jugadores y abre el mundo.
+3. El anfitrión abre Social dentro del juego y elige Invitar a jugar; la persona invitada acepta la invitación recibida. Quien se una desde otro lugar con Switch también debe confirmar que Nintendo Switch Online esté activo.
+
+Los nombres de pantallas y las notificaciones pueden diferir por dispositivo y actualización. En caso de duda, sigue los [pasos oficiales para invitar a un mundo Bedrock](https://help.minecraft.net/hc/en-us/articles/32899440702477) de Minecraft.
+
+### Ajustes parentales para una cuenta infantil
+
+Los ajustes parentales de Microsoft/Xbox se aplican a Minecraft en Switch y móvil incluso sin una consola Xbox. Un adulto selecciona la cuenta Microsoft del menor y revisa al menos lo siguiente.
+
+- **Unirse a juegos multijugador / Unirse a multijugador en Xbox:** Permítelo para entrar en multijugador, Realms y otros servidores.
+- **Unirse a juego entre redes:** Permítelo para jugar con personas de otras plataformas, incluidos Switch y móvil.
+- **Agregar amistades y seguir a otras personas:** Permítelo para encontrar a una amistad e invitarla desde la lista de amistades de Minecraft.
+- **Comunicación por voz, texto e invitaciones:** Elijan el alcance permitido para el hogar.
+
+Después de cambiar algo, cierra sesión y cierra Minecraft, y luego vuelve a iniciarlo. Los controles parentales o límites de uso de Switch y del teléfono son independientes; si el ajuste de Microsoft no basta, revisen también el dispositivo con un adulto. Los nombres pueden cambiar, así que da prioridad a los [ajustes oficiales de multijugador para cuentas infantiles](https://help.minecraft.net/hc/en-us/articles/24302916594701-Managing-Multiplayer-Game-Access-for-a-Child-Account-in-Minecraft) de Minecraft.
+
+## Cuando Switch o móvil no pueden conectarse
+
+Revisar en este orden ayuda a separar un problema de cuenta de uno de red.
+
+1. **Edición y actualización:** Confirma que todos usan Bedrock y la misma versión normal más reciente. Si alguien usa una versión de prueba o antigua, actualicen y prueben primero la versión normal.
+2. **Ajustes del mundo anfitrión:** Confirma que Juego multijugador y el acceso de jugadores están activados, y que el anfitrión está en línea para un mundo personal. En Realms, revisa también la suscripción del propietario y que el Realm esté abierto.
+3. **Cuenta Microsoft y ajustes parentales:** Confirma que cada persona inició sesión con la cuenta Microsoft correcta y que una cuenta infantil puede unirse a multijugador, juego entre redes y agregar amistades.
+4. **Membresía solo de Switch:** Una persona en Switch que juega por internet necesita una Nintendo Account activa y Nintendo Switch Online. Un teléfono no necesita esta membresía.
+5. **Conexión:** Reinicia Minecraft y el dispositivo, y prueba con la conexión habitual. Quien se une no necesita abrir puertos del router al azar. Si cambiaste una VPN o DNS personalizado, restaura la configuración normal antes de probar.
+
+Si aparece “El multijugador está desactivado”, revisa primero la privacidad o los ajustes parentales de Microsoft/Xbox. Si no llega una invitación o no aparece el mundo, revisa la edición, los ajustes del anfitrión y la cuenta Microsoft. Si aún no puedes conectarte, usa la [solución oficial de problemas de conexión multijugador Bedrock](https://help.minecraft.net/hc/en-us/articles/4409236107789-Minecraft-Bedrock-Edition-Multiplayer-Connectivity-Issues) y [qué revisar cuando no puedes entrar a un servidor de Minecraft](/es/stories/minecraft-server-cannot-join/). Al pedir ayuda, indica edición, dispositivo, versión del juego, error mostrado y hora del intento; nunca compartas una contraseña o código de autenticación.
 
 ## Una forma rápida de decidir
 

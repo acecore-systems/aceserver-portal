@@ -2,7 +2,7 @@
 title: 'How to play Minecraft with friends: choosing Java, Bedrock, Switch, and mobile'
 description: Compare your own world, Realms, and public servers after sorting out Java and Bedrock, then choose a way to play with friends for each device.
 translationOf: minecraft-play-with-friends
-sourceHash: sha256:426d801f43d6d0047128b0b18056ef7abce52ada4b9ba8453cd6317cac5f28cc
+sourceHash: sha256:649ea26618c0eb16f2b02374bfdfa83d576ef0d2ac7fed3cfa3061bf52b5b14e
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -33,8 +33,8 @@ _Start by matching everyone to Java or to Bedrock; the two groups are separate b
 
 1. **Match the edition for everyone.** Decide whether the group is playing Java or Bedrock first. Do not treat Java-to-Bedrock joining as the default.
 2. **Update the game.** A version mismatch can prevent worlds from appearing or players from joining, even within the same edition.
-3. **Check accounts and online requirements.** Switch, mobile, and other platforms need a Microsoft account sign-in or link for multiplayer. Use Minecraft's official [account and edition table](https://help.minecraft.net/hc/en-us/articles/19615552270221-Accounts-Required-to-Play-Minecraft) to check each device. Console online multiplayer also needs the platform's online subscription.
-4. **Review child-account settings.** A parent-controlled multiplayer permission can block invitations and joining. Never share passwords; review privacy settings with a parent or guardian instead.
+3. **Check accounts and online requirements.** For Bedrock online play or cross-play that includes Switch or mobile, every player signs in to a Microsoft account in Minecraft. Switch also uses a Nintendo Account and Nintendo Switch Online; Android uses a Google account; iPhone and iPad use an Apple ID. Check the role of each account in Minecraft's official [account and edition table](https://help.minecraft.net/hc/en-us/articles/19615552270221-Accounts-Required-to-Play-Minecraft).
+4. **Review child-account settings.** A parent-controlled multiplayer permission can block invitations and joining. Microsoft/Xbox privacy settings apply when playing on Switch or mobile too. Never share passwords; review privacy settings with a parent or guardian instead.
 
 ![Friends around a PC, handheld game device, and phone checking a shared block-world view, an update symbol, an account card, and a safety shield](/uploads/stories/minecraft-play-with-friends-checklist.webp)
 
@@ -86,11 +86,56 @@ Windows PC players using Bedrock can be in the same group as Switch and phone pl
 
 ### Playing on Nintendo Switch
 
-Minecraft on Switch is Bedrock Edition. Before online multiplayer, check the Nintendo Account, Microsoft account link, Nintendo Switch Online, and game update. A group that includes a Switch player should normally use Bedrock rather than Java.
+Minecraft on Switch is Bedrock Edition. Playing with friends over the internet requires a Nintendo Account linked to the Switch user and an active Nintendo Switch Online membership. To use cross-play, Minecraft friends, Realms, and online multiplayer, also sign in to and link a Microsoft account in Minecraft. Nintendo Account/Nintendo Switch Online and the Microsoft account have different roles, so neither replaces the other.
+
+Local wireless play between nearby Switch systems does not use Nintendo Switch Online, but it is different from joining through the internet. To play with a phone or PC friend at a distance, use Bedrock for everyone and check each person's Microsoft account plus the Switch online membership.
 
 ### Playing on a phone or tablet
 
-Mobile Minecraft is also Bedrock Edition. On Android, check the Google account; on iPhone and iPad, check the Apple ID; then sign in to or link the Microsoft account for multiplayer. Testing a short LAN session on home Wi-Fi first can make it easier to diagnose problems before moving to Realms or a public server.
+Mobile Minecraft is also Bedrock Edition. Android uses a Google account, and iPhone and iPad use an Apple ID. In addition, sign in to a Microsoft account in Minecraft for cross-play, Minecraft friends, Realms, and online multiplayer. Phones and tablets do not need a console online membership such as Nintendo Switch Online. The app purchase and mobile-data charges are separate. Testing a short LAN session on home Wi-Fi first can make it easier to diagnose problems before moving to Realms or a public server.
+
+## Switch and mobile accounts and online memberships
+
+Switch and mobile are both Bedrock Edition. If everyone uses the same current regular release of Bedrock and signs in with a Microsoft account, Bedrock players on Switch, Android, iPhone/iPad, and Windows PC can cross-play. A Java Edition friend cannot join the same world through the standard game features.
+
+| Device                  | Platform account | Account used in Minecraft for cross-play and online play | Extra online membership                                                                                       |
+| ----------------------- | ---------------- | -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| Nintendo Switch         | Nintendo Account | Sign in to and link a Microsoft account                  | Internet online play needs Nintendo Switch Online. Local wireless play between nearby Switch systems does not |
+| Android phone or tablet | Google account   | Sign in to a Microsoft account                           | No console online membership is needed                                                                        |
+| iPhone or iPad          | Apple ID         | Sign in to a Microsoft account                           | No console online membership is needed                                                                        |
+
+On Switch and mobile, the Microsoft account is separate from the account used to get the game; it enables friends, cross-play, Realms, and online multiplayer. For details, use Minecraft's official [account table](https://help.minecraft.net/hc/en-us/articles/19615552270221-Accounts-Required-to-Play-Minecraft), the [Switch linking steps](https://help.minecraft.net/hc/en-us/articles/4408894129933-Sign-in-to-Minecraft-with-a-Microsoft-Account-on-Nintendo-Switch), the [mobile sign-in steps](https://help.minecraft.net/hc/en-us/articles/31514831369869), and Nintendo's [online-play explanation](https://support.nintendo.com/jp/nso/services/onlineplay/index.html).
+
+### Invite a Bedrock friend
+
+1. Everyone starts the latest regular release of Bedrock and signs in to a Microsoft account in Minecraft. When looking for a friend, check the Xbox gamertag rather than a display name.
+2. The host turns on Multiplayer Game in the target world's settings, chooses Friends or Friends of Friends as the player-access setting, and opens the world.
+3. The host opens Social in the game and selects Invite to Play; the guest accepts the invitation they receive. A Switch player joining from another location should also confirm that Nintendo Switch Online is active.
+
+Screen names and notifications can differ by device and update. When in doubt, follow Minecraft's official [Bedrock world invitation steps](https://help.minecraft.net/hc/en-us/articles/32899440702477).
+
+### Parental settings for a child account
+
+Microsoft/Xbox parental settings apply to Minecraft on Switch and mobile even without an Xbox console. A parent selects the child's Microsoft account and checks at least the following.
+
+- **Join multiplayer games / Join multiplayer on Xbox:** Allow this to join multiplayer games, Realms, and other servers.
+- **Join cross-network play:** Allow this to play with people on other game platforms, including Switch and mobile.
+- **Add friends and follow others:** Allow this to find a friend and invite them from Minecraft's Friends list.
+- **Voice, text, and invitation communication:** Choose the permitted range for the household.
+
+After a change, sign out of and close Minecraft, then start it again. Switch and phone parental or usage restrictions are separate, so check the device with a parent if the Microsoft setting alone does not solve the issue. Names of settings can change; prioritize Minecraft's official [child-account multiplayer settings](https://help.minecraft.net/hc/en-us/articles/24302916594701-Managing-Multiplayer-Game-Access-for-a-Child-Account-in-Minecraft).
+
+## When Switch or mobile cannot connect
+
+Checking in this order makes it easier to separate account issues from network issues.
+
+1. **Edition and update:** Confirm everyone is on Bedrock and the same latest regular release. If a preview or old version is involved, update and use the regular release first.
+2. **Host-world settings:** Confirm Multiplayer Game and the player-access setting are on, and that the host is online for a personal world. For Realms, also check the owner's subscription and that the Realm is open.
+3. **Microsoft account and parental settings:** Confirm each person is signed in to the right Microsoft account and that a child account is allowed to join multiplayer, cross-network play, and add friends.
+4. **Switch-only membership:** A Switch participant playing through the internet needs an active Nintendo Account and Nintendo Switch Online. A phone does not need this membership.
+5. **Connection:** Restart Minecraft and the device, then test on the usual internet connection. A joining player does not need to open router ports at random. If you changed a VPN or custom DNS, restore the normal configuration before testing.
+
+If you see “Multiplayer is disabled,” check the Microsoft/Xbox privacy or parental settings first. If an invitation does not arrive or a world cannot be found, check the edition, host settings, and Microsoft account. If you still cannot connect, use Minecraft's official [Bedrock multiplayer connection troubleshooting](https://help.minecraft.net/hc/en-us/articles/4409236107789-Minecraft-Bedrock-Edition-Multiplayer-Connectivity-Issues) and [what to check when you cannot join a Minecraft server](/en/stories/minecraft-server-cannot-join/). When asking for help, include the edition, device, game version, displayed error, and time of the attempt; never share a password or authentication code.
 
 ## A quick way to decide
 

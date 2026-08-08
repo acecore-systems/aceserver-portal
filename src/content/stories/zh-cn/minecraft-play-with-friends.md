@@ -2,7 +2,7 @@
 title: 如何与朋友一起玩 Minecraft：Java版、基岩版、Switch 和手机的选择指南
 description: 先厘清 Java 版与基岩版的差异，再从自己的世界、Realms 和公开服务器中，按设备选择与朋友一起游玩的方式。
 translationOf: minecraft-play-with-friends
-sourceHash: sha256:426d801f43d6d0047128b0b18056ef7abce52ada4b9ba8453cd6317cac5f28cc
+sourceHash: sha256:649ea26618c0eb16f2b02374bfdfa83d576ef0d2ac7fed3cfa3061bf52b5b14e
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -33,8 +33,8 @@ _与朋友一起玩时，第一步是让所有人统一为 Java 版或基岩版�
 
 1. **所有人统一版本。** 先决定小组玩 Java 版还是基岩版，不要把 Java 与基岩互通当作默认条件。
 2. **更新游戏。** 即使版本相同，游戏版本差异也可能让世界不显示或无法加入。
-3. **确认账户与在线条件。** Switch、手机等平台的多人游戏需要登录或关联 Microsoft 账户。可在官方[账户与版本对照表](https://help.minecraft.net/hc/en-us/articles/19615552270221-Accounts-Required-to-Play-Minecraft)查看每种设备。主机在线多人游戏还需要平台的在线订阅。
-4. **检查儿童账户设置。** 家长控制的多人游戏权限可能会阻止邀请和加入。不要共享密码，应与家长或监护人一起检查隐私设置。
+3. **确认账户与在线条件。** 在包含 Switch 或手机的基岩版在线游戏或跨平台游戏中，每位玩家都要在 Minecraft 内登录 Microsoft 账户。Switch 还涉及 Nintendo Account 与 Nintendo Switch Online；Android 使用 Google 账户；iPhone 与 iPad 使用 Apple ID。可在官方[账户与版本对照表](https://help.minecraft.net/hc/en-us/articles/19615552270221-Accounts-Required-to-Play-Minecraft)确认各账户的作用。
+4. **检查儿童账户设置。** 家长控制的多人游戏权限可能会阻止邀请和加入。Microsoft/Xbox 的隐私设置也适用于在 Switch 或手机上游玩的情况。不要共享密码，应与家长或监护人一起检查隐私设置。
 
 ![朋友围着PC、掌机和手机，一起确认相同的积木景色、更新、账户和安全设置](/uploads/stories/minecraft-play-with-friends-checklist.webp)
 
@@ -86,11 +86,56 @@ Windows PC 的基岩版玩家可以和 Switch、手机上的基岩版玩家组�
 
 ### 在 Nintendo Switch 上玩
 
-Switch 上的 Minecraft 是基岩版。在线多人游戏前，请确认 Nintendo Account、Microsoft 账户关联、Nintendo Switch Online 与游戏更新。小组中有 Switch 玩家时，通常应选择基岩版而不是 Java 版。
+Switch 上的 Minecraft 是基岩版。通过互联网与朋友游玩时，需要为 Switch 用户关联 Nintendo Account，并拥有有效的 Nintendo Switch Online。要使用跨平台游戏、Minecraft 好友、Realms 与在线多人游戏，还要在 Minecraft 内登录并关联 Microsoft 账户。Nintendo Account／Nintendo Switch Online 与 Microsoft 账户的作用不同，不能只用其中一个替代另一个。
+
+附近 Switch 主机之间的本地通信不需要 Nintendo Switch Online，但它与通过互联网加入不同。要与远处使用手机或 PC 的朋友游玩，请让所有人使用基岩版，并确认各自的 Microsoft 账户以及 Switch 侧的在线订阅。
 
 ### 在手机或平板上玩
 
-手机 Minecraft 也是基岩版。Android 请确认 Google 账户，iPhone 与 iPad 请确认 Apple ID，然后为多人游戏登录或关联 Microsoft 账户。先在家中 Wi-Fi 测试短时间 LAN，再考虑 Realms 或公开服务器，更容易定位问题。
+手机 Minecraft 也是基岩版。Android 使用 Google 账户，iPhone 与 iPad 使用 Apple ID。此外，要使用跨平台游戏、Minecraft 好友、Realms 与在线多人游戏，需在 Minecraft 内登录 Microsoft 账户。手机和平板不需要 Nintendo Switch Online 等主机在线订阅；应用购买费用和通信费用另计。先在家中 Wi-Fi 测试短时间 LAN，再考虑 Realms 或公开服务器，更容易定位问题。
+
+## Switch 与手机的账户和在线订阅
+
+Switch 与手机版都是基岩版。只要所有人使用相同的最新版普通基岩版，并登录 Microsoft 账户，Switch、Android、iPhone/iPad 与 Windows PC 的基岩版玩家就可以跨平台游戏。Java 版朋友不能只靠标准游戏功能加入同一个世界。
+
+| 设备               | 平台账户         | 在 Minecraft 内用于跨平台和在线游玩的账户 | 额外在线订阅                                                                        |
+| ------------------ | ---------------- | ----------------------------------------- | ----------------------------------------------------------------------------------- |
+| Nintendo Switch    | Nintendo Account | 登录并关联 Microsoft 账户                 | 通过互联网在线游玩需要 Nintendo Switch Online；附近 Switch 主机之间的本地通信不需要 |
+| Android 手机或平板 | Google 账户      | 登录 Microsoft 账户                       | 不需要主机在线订阅                                                                  |
+| iPhone 或 iPad     | Apple ID         | 登录 Microsoft 账户                       | 不需要主机在线订阅                                                                  |
+
+在 Switch 和手机上，Microsoft 账户与获取游戏所用账户不同；它用于好友、跨平台游戏、Realms 与在线多人游戏。详细信息请查看 Minecraft 官方的[账户对照表](https://help.minecraft.net/hc/en-us/articles/19615552270221-Accounts-Required-to-Play-Minecraft)、[Switch 关联步骤](https://help.minecraft.net/hc/en-us/articles/4408894129933-Sign-in-to-Minecraft-with-a-Microsoft-Account-on-Nintendo-Switch)、[手机登录步骤](https://help.minecraft.net/hc/en-us/articles/31514831369869)，以及任天堂的[在线游玩说明](https://support.nintendo.com/jp/nso/services/onlineplay/index.html)。
+
+### 邀请基岩版好友
+
+1. 所有人启动最新的普通基岩版，并在 Minecraft 内登录 Microsoft 账户。寻找朋友时，请确认 Xbox 玩家代号，而不是显示名称。
+2. 主机在目标世界的设置中开启“多人游戏”，把可加入者设为“好友”或“好友的好友”，然后打开世界。
+3. 主机在游戏内打开“社交”并选择“邀请加入游戏”，受邀者接受收到的邀请。从其他地点使用 Switch 加入的人还应确认 Nintendo Switch Online 有效。
+
+画面名称和通知会因设备和更新而不同。遇到疑问时，以 Minecraft 官方的[基岩版世界邀请步骤](https://help.minecraft.net/hc/en-us/articles/32899440702477)为准。
+
+### 儿童账户的家长设置
+
+即使没有 Xbox 主机，Microsoft/Xbox 的家长设置也适用于 Switch 与手机上的 Minecraft。家长选择孩子的 Microsoft 账户后，至少确认下列项目。
+
+- **加入多人游戏／在 Xbox 上加入多人游戏：** 允许后可加入多人游戏、Realms 和其他服务器。
+- **加入跨网络游戏：** 允许后可与 Switch、手机等其他游戏平台的玩家游玩。
+- **添加好友和关注他人：** 允许后可从 Minecraft 好友列表找到对方并发送邀请。
+- **语音、文字与邀请通信：** 按家庭规则决定允许的范围。
+
+修改后请退出并关闭 Minecraft，再重新启动。Switch 或手机本身的家长控制、使用限制是另一套设置；如果只修改 Microsoft 设置没有解决问题，请与家长一同确认设备侧。项目名称可能会更新，应优先参考 Minecraft 官方的[儿童账户多人游戏设置](https://help.minecraft.net/hc/en-us/articles/24302916594701-Managing-Multiplayer-Game-Access-for-a-Child-Account-in-Minecraft)。
+
+## Switch 或手机无法连接时
+
+按以下顺序确认，更容易区分账户问题与网络问题。
+
+1. **版本与更新：** 确认所有人都在使用基岩版和相同的最新版普通版本。若混有预览版或旧版，先更新并使用普通版本。
+2. **主机世界设置：** 确认“多人游戏”和可加入者设置已开启；个人世界还要确认主机在线。使用 Realms 时，也确认拥有者订阅有效且 Realm 处于开放状态。
+3. **Microsoft 账户与家长设置：** 确认所有人登录的是正确的 Microsoft 账户；儿童账户已被允许加入多人游戏、跨网络游戏和添加好友。
+4. **仅限 Switch 的订阅：** 通过互联网游玩的 Switch 参加者需要有效的 Nintendo Account 与 Nintendo Switch Online。手机不需要此订阅。
+5. **连接：** 重启 Minecraft 和设备，然后用平常的网络测试。加入者不需要随意打开路由器端口；若修改过 VPN 或自定义 DNS，请先恢复正常设置。
+
+若显示“多人游戏已禁用”，先检查 Microsoft/Xbox 的隐私或家长设置。若收不到邀请或找不到世界，请检查版本、主机设置和 Microsoft 账户。仍无法连接时，请参考 Minecraft 官方的[基岩版多人连接故障排查](https://help.minecraft.net/hc/en-us/articles/4409236107789-Minecraft-Bedrock-Edition-Multiplayer-Connectivity-Issues)以及[无法加入 Minecraft 服务器时的检查方法](/zh-cn/stories/minecraft-server-cannot-join/)。求助时请说明版本、设备、游戏版本、显示的错误和尝试时间；绝不要共享密码或认证代码。
 
 ## 迷路时的快速选择
 
