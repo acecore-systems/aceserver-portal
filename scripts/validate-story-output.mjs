@@ -35,6 +35,14 @@ const stories = [
       'Minecraftの街並みを背景にしたエースサーバーポータルのトップページ',
   },
   {
+    slug: 'minecraft-java-bedrock-crossplay',
+    title: 'Java版と統合版は一緒に遊べる？｜対応サーバーの見分け方',
+    description:
+      'MinecraftのJava版と統合版は、両方からの参加を公式に案内する対応サーバーなら一緒に遊べます。見分け方と参加前の確認点を紹介します。',
+    author: 'Gui',
+    datePublished: '2026-08-08T01:00:00.000Z',
+  },
+  {
     slug: 'minecraft-server-osusume',
     title:
       '【2026年8月更新】おすすめのマイクラサーバー6選｜Java・統合版対応や遊び方で比較',
