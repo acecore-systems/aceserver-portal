@@ -101,6 +101,65 @@ test('shared mode forwards the normalized Portal envelope to the private service
   })
 })
 
+test('shared mode preserves the opaque conversation context without selecting transcript messages', async () => {
+  const conversationContext = {
+    items: [
+      {
+        encrypted_content: 'opaque-state',
+        id: 'cmp_1',
+        type: 'compaction',
+      },
+    ],
+    scope: {
+      locale: 'ja',
+      personaVersion: '2026-08-02.2',
+      surface: 'portal',
+    },
+  }
+  let forwarded
+  const response = await onRequestPost({
+    env: {
+      ALPHA_CHAT_SERVICE: {
+        async fetch(request) {
+          forwarded = await request.json()
+          return Response.json({
+            answer: '続きの案内だよ。',
+            conversationContextReset: false,
+            nextConversationContext: conversationContext,
+            ok: true,
+            sources: [],
+          })
+        },
+      },
+      ALPHA_CHAT_SHARED_ENABLED: 'true',
+      SEARCH_RATE_LIMIT_DB: createRateLimitDatabase(),
+    },
+    request: createRequest({
+      conversationContext,
+      loreRevisionId: 'revision-1',
+      question: '続きは？',
+    }),
+  })
+
+  assert.equal(response.status, 200)
+  assert.deepEqual(forwarded, {
+    payload: {
+      conversationContext,
+      loreRevisionId: 'revision-1',
+      question: '続きは？',
+    },
+    surface: 'portal',
+    version: 1,
+  })
+  assert.deepEqual(await response.json(), {
+    answer: '続きの案内だよ。',
+    conversationContextReset: false,
+    nextConversationContext: conversationContext,
+    ok: true,
+    sources: [],
+  })
+})
+
 test('shared mode fails closed instead of using the local LLM when the service errors', async () => {
   const response = await onRequestPost(
     {
