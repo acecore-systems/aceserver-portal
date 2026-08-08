@@ -51,6 +51,7 @@ import {
 } from './openai-api.ts'
 
 const MAX_REQUEST_BODY_BYTES = 12_000
+const MAX_SHARED_REQUEST_BODY_BYTES = 96 * 1024
 const MAX_QUESTION_LENGTH = 500
 const MAX_HISTORY_MESSAGES = 8
 const MAX_CONVERSATION_LENGTH = 2800
@@ -323,7 +324,10 @@ async function proxySharedAlphaChat(context) {
     )
   }
 
-  const payloadResult = await readJsonPayload(request)
+  const payloadResult = await readJsonPayload(
+    request,
+    MAX_SHARED_REQUEST_BODY_BYTES,
+  )
   if (!payloadResult.ok) {
     return jsonResponse(
       request,
@@ -1436,7 +1440,7 @@ export function buildWikiSearchQuery(payload, question) {
   return unique.slice(-2).join('\n').slice(0, MAX_WIKI_SEARCH_QUERY_LENGTH)
 }
 
-async function readJsonPayload(request) {
+async function readJsonPayload(request, maximumBytes = MAX_REQUEST_BODY_BYTES) {
   const contentType = request.headers
     .get('Content-Type')
     ?.split(';', 1)[0]
@@ -1447,10 +1451,7 @@ async function readJsonPayload(request) {
   }
 
   const declaredLength = Number(request.headers.get('Content-Length'))
-  if (
-    Number.isFinite(declaredLength) &&
-    declaredLength > MAX_REQUEST_BODY_BYTES
-  ) {
+  if (Number.isFinite(declaredLength) && declaredLength > maximumBytes) {
     return { ok: false, tooLarge: true }
   }
 
@@ -1467,7 +1468,7 @@ async function readJsonPayload(request) {
       if (!value) continue
 
       totalBytes += value.byteLength
-      if (totalBytes > MAX_REQUEST_BODY_BYTES) {
+      if (totalBytes > maximumBytes) {
         await reader.cancel()
         return { ok: false, tooLarge: true }
       }

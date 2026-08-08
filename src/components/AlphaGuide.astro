@@ -188,12 +188,19 @@ const alphaLinkResources = [
 
   type AlphaMessage = {
     content: string
-    loreRevisionId?: string
     role: AlphaRole
+  }
+
+  type AlphaConversationContext = Record<string, unknown>
+
+  type AlphaConversationState = {
+    context: AlphaConversationContext | null
+    loreRevisionId?: string
   }
 
   // A lore continuation can require planning, writing, and review calls.
   const ALPHA_RESPONSE_TIMEOUT_MS = 240_000
+  const ALPHA_CONVERSATION_CONTEXT_MAX_BYTES = 64 * 1024
 
   type AlphaLinkResource = {
     href: string
@@ -622,9 +629,122 @@ const alphaLinkResources = [
     createAlphaMessage(widget, 'assistant', greeting)
   }
 
+  function showAlphaStatusNotice(
+    widget: HTMLElement,
+    message: string,
+    transient = false,
+  ) {
+    const messagesContainer = widget.querySelector<HTMLElement>(
+      '[data-alpha-messages]',
+    )
+    if (!messagesContainer || !message) return
+
+    const notice = document.createElement('p')
+    notice.className = 'alpha-context-notice'
+    notice.setAttribute('role', 'status')
+    notice.textContent = message
+    messagesContainer.append(notice)
+    messagesContainer.scrollTop = messagesContainer.scrollHeight
+    if (transient) window.setTimeout(() => notice.remove(), 8_000)
+  }
+
+  function readAlphaConversationContext(
+    value: unknown,
+  ): AlphaConversationContext | null {
+    if (!value || typeof value !== 'object' || Array.isArray(value)) return null
+
+    try {
+      return new TextEncoder().encode(JSON.stringify(value)).byteLength <=
+        ALPHA_CONVERSATION_CONTEXT_MAX_BYTES
+        ? (value as AlphaConversationContext)
+        : null
+    } catch {
+      return null
+    }
+  }
+
+  function isAlphaResponsePayload(
+    value: unknown,
+  ): value is Record<string, unknown> {
+    return Boolean(value && typeof value === 'object' && !Array.isArray(value))
+  }
+
+  function isResettableConversationResponse(
+    response: Response,
+    payload: unknown,
+  ) {
+    return (
+      response.status === 400 ||
+      response.status === 413 ||
+      response.status === 422 ||
+      (isAlphaResponsePayload(payload) &&
+        payload.conversationContextReset === true)
+    )
+  }
+
+  async function requestAlphaResponse(
+    widget: HTMLElement,
+    conversation: AlphaConversationState,
+    question: string,
+    signal: AbortSignal,
+    allowContextResetRetry = true,
+  ) {
+    const response = await fetch(
+      widget.dataset.alphaEndpoint || '/api/alpha-chat',
+      {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          question,
+          locale: widget.dataset.alphaLocale || 'ja',
+          ...(conversation.context
+            ? { conversationContext: conversation.context }
+            : {}),
+          ...(conversation.loreRevisionId
+            ? { loreRevisionId: conversation.loreRevisionId }
+            : {}),
+        }),
+        signal,
+      },
+    )
+    const payload: unknown = await response.json().catch(() => null)
+    const answer =
+      isAlphaResponsePayload(payload) && typeof payload.answer === 'string'
+        ? payload.answer.trim()
+        : ''
+
+    if (
+      response.ok &&
+      isAlphaResponsePayload(payload) &&
+      payload.ok === true &&
+      answer
+    ) {
+      return { answer, payload }
+    }
+
+    if (
+      allowContextResetRetry &&
+      conversation.context &&
+      isResettableConversationResponse(response, payload)
+    ) {
+      conversation.context = null
+      showAlphaStatusNotice(
+        widget,
+        '会話の継続情報を更新しました。表示中のメッセージはそのままです。',
+      )
+      return requestAlphaResponse(widget, conversation, question, signal, false)
+    }
+
+    throw new Error('AlphaChatRequestFailed')
+  }
+
   async function sendAlphaQuestion(
     widget: HTMLElement,
     messages: AlphaMessage[],
+    conversation: AlphaConversationState,
     rawQuestion: string,
   ) {
     const question = rawQuestion.trim()
@@ -654,53 +774,43 @@ const alphaLinkResources = [
     )
 
     try {
-      const response = await fetch(
-        widget.dataset.alphaEndpoint || '/api/alpha-chat',
-        {
-          method: 'POST',
-          headers: {
-            Accept: 'application/json',
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            question,
-            messages: messages.slice(-8),
-            locale: widget.dataset.alphaLocale || 'ja',
-          }),
-          signal: requestController.signal,
-        },
+      const { answer, payload } = await requestAlphaResponse(
+        widget,
+        conversation,
+        question,
+        requestController.signal,
       )
-
-      const payload = await response
-        .json()
-        .catch(() => ({ ok: false, answer: '' }))
-      const fallback =
-        widget.dataset.alphaError ||
-        'いまはAI応答につながらなかったよ。あとでもう一度聞いてね。'
-      const answer =
-        typeof payload?.answer === 'string' && payload.answer.trim()
-          ? payload.answer.trim()
-          : fallback
 
       loadingMessage?.remove()
       const loreRevisionId =
-        typeof payload?.loreRevisionId === 'string' &&
+        typeof payload.loreRevisionId === 'string' &&
         payload.loreRevisionId.length <= 128
           ? payload.loreRevisionId
           : undefined
-      messages.push({
-        role: 'assistant',
-        content: answer,
-        ...(loreRevisionId ? { loreRevisionId } : {}),
-      })
+      conversation.loreRevisionId = loreRevisionId
+
+      const nextContext = readAlphaConversationContext(
+        payload.nextConversationContext,
+      )
+      const contextReset =
+        payload.conversationContextReset === true ||
+        (conversation.context !== null && nextContext === null)
+      conversation.context = nextContext
+      if (contextReset) {
+        showAlphaStatusNotice(
+          widget,
+          '会話の継続情報を更新しました。表示中のメッセージはそのままです。',
+        )
+      }
+
+      messages.push({ role: 'assistant', content: answer })
       createAlphaMessage(widget, 'assistant', answer)
     } catch {
-      const fallback =
+      const errorNotice =
         widget.dataset.alphaError ||
         'いまはAI応答につながらなかったよ。あとでもう一度聞いてね。'
       loadingMessage?.remove()
-      messages.push({ role: 'assistant', content: fallback })
-      createAlphaMessage(widget, 'assistant', fallback)
+      showAlphaStatusNotice(widget, errorNotice, true)
     } finally {
       window.clearTimeout(requestTimeout)
       setAlphaSending(widget, false)
@@ -746,6 +856,7 @@ const alphaLinkResources = [
     widget.dataset.alphaBound = 'true'
 
     const messages: AlphaMessage[] = []
+    const conversation: AlphaConversationState = { context: null }
     const toggle = widget.querySelector<HTMLButtonElement>(
       '[data-alpha-toggle]',
     )
@@ -780,6 +891,7 @@ const alphaLinkResources = [
             void sendAlphaQuestion(
               widget,
               messages,
+              conversation,
               button.dataset.alphaPrompt || button.textContent || '',
             )
           },
@@ -791,7 +903,12 @@ const alphaLinkResources = [
       'submit',
       (event) => {
         event.preventDefault()
-        void sendAlphaQuestion(widget, messages, input?.value || '')
+        void sendAlphaQuestion(
+          widget,
+          messages,
+          conversation,
+          input?.value || '',
+        )
       },
       listenerOptions,
     )
@@ -802,7 +919,7 @@ const alphaLinkResources = [
         if (event.key !== 'Enter' || event.shiftKey) return
 
         event.preventDefault()
-        void sendAlphaQuestion(widget, messages, input.value)
+        void sendAlphaQuestion(widget, messages, conversation, input.value)
       },
       listenerOptions,
     )
@@ -941,6 +1058,14 @@ const alphaLinkResources = [
     overflow-y: auto;
     padding: 12px;
     scroll-behavior: smooth;
+  }
+
+  .alpha-messages :global(.alpha-context-notice) {
+    margin: 0;
+    color: rgba(255, 248, 230, 0.66);
+    font-size: 0.72rem;
+    line-height: 1.45;
+    text-align: center;
   }
 
   .alpha-messages :global(.alpha-message) {
