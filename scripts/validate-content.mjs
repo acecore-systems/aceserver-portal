@@ -18,6 +18,7 @@ const EXPECTED_STORY_SLUGS = new Set([
 ])
 const REQUIRED_STORY_IMAGE_SLUGS = new Set([
   'aceserver-portal-launch',
+  'minecraft-server-cannot-join',
   'metaverse-is-close',
 ])
 

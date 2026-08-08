@@ -2,13 +2,15 @@
 title: 无法加入 Minecraft 服务器时的检查｜Java、基岩版与 Switch
 description: 无法加入 Minecraft 服务器时，依次检查版本、游戏版本、账户和网络，并在成功加入后安心继续游玩的指南。
 translationOf: minecraft-server-cannot-join
-sourceHash: sha256:fa14f43dfc163c33a33dca033c59f83582c46269e16eeb8257174efcf98bfd3e
+sourceHash: sha256:c8607909fcc215225028c8e15ed74994bcb057cf3571cdd5795ad25949d0ce6f
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
   - Minecraft 服务器
   - 故障排除
 author: Gui
+image: /uploads/stories/minecraft-server-cannot-join-hero.webp
+imageAlt: 手持地图的方块风旅行者在通往电脑、智能手机和游戏手柄的道路前选择接入方式
 ---
 
 无法加入 Minecraft 服务器时，不要反复尝试连接。先将可能原因分为游戏版本、服务器自己的说明、账户设置和网络。本文前半部分适用于所有服务器；Aceserver 专用说明会在后半部分单独列出。
@@ -48,6 +50,8 @@ Nintendo Switch 上的 Minecraft 是基岩版，因此 Java 专用说明无法�
 
 在 Switch 上，请依次确认游戏更新、当前登录的 Microsoft 账户、Nintendo Switch Online，以及家长控制中的多人游戏限制。不同设备的添加服务器界面和流程并不相同，因此只能使用目标服务器正式公布的 Switch 加入方法。为连接而尝试不熟悉的 DNS 修改或端口转发并非必要。
 
+![将电脑、智能手机和掌上游戏设备分别对应到兼容接入方式的方块风示意图](/uploads/stories/minecraft-server-cannot-join-edition-device.webp)
+
 ## 与服务器自己的说明保持一致
 
 以下信息必须以想加入的服务器官方说明为准。不要直接套用其他服务器上可用的设置。
@@ -68,6 +72,8 @@ Nintendo Switch 上的 Minecraft 是基岩版，因此 Java 专用说明无法�
 
 出现网络错误或超时时，先重启 Minecraft 和设备，再确认日常网络连接是否稳定。学校、设施、公司网络、VPN 或自定义 DNS 可能限制在线游戏。加入服务器的一方不需要随意打开路由器端口。自定义 DNS 和端口设置可能干扰 Minecraft；若曾修改，请先恢复原状再测试。
 
+![依次检查账户密钥、权限、网络设备和放大镜的方块风示意图](/uploads/stories/minecraft-server-cannot-join-account-network.webp)
+
 ## 根据显示的错误决定下一步
 
 | 提示或情况         | 先确认什么                       | 不要先做什么                         |
@@ -87,6 +93,8 @@ Nintendo Switch 上的 Minecraft 是基岩版，因此 Java 专用说明无法�
 
 这些行动既适合初次加入者，也适合久未回归的玩家。不要把“成功连接”当作终点，而要为继续游玩建立安全的入口。
 
+![旅行者阅读指引牌后前往采集资源、参观城镇和建设据点的方块风景](/uploads/stories/minecraft-server-cannot-join-after-join.webp)
+
 ## 仅适用于 Aceserver 的检查
 
 本节是 Aceserver 的说明，而不是通用加入方法。Aceserver 门户说明 Java 和基岩版玩家都可以加入，但实际连接地址、端口、Switch 步骤、服务器状态和规则可能变化。请以以下官方来源为准，而不是以本文前半的通用说明为准。
@@ -96,6 +104,8 @@ Nintendo Switch 上的 Minecraft 是基岩版，因此 Java 专用说明无法�
 3. 在[官方 WIKI](https://asv-wiki.acecore.net)确认游戏内规则和各世界说明。
 
 若仍无法加入，请说明自己使用 Java 还是基岩版、设备类型（如为 Switch 请注明）、游戏版本、显示的错误和尝试时间。不需要分享账户密码或验证码。
+
+![沿着传送门、官方公告板和指南书依次确认 Aceserver 参加信息的方块风示意图](/uploads/stories/minecraft-server-cannot-join-official-guidance.webp)
 
 ## 优先使用官方信息并安全排查
 

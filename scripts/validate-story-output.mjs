@@ -41,6 +41,9 @@ const stories = [
       'マイクラサーバーに入れないとき、エディション・バージョン・アカウント・通信を順に確認し、参加後も安心して遊び続けるための案内です。',
     author: 'Gui',
     datePublished: '2026-08-08T01:00:00.000Z',
+    image: '/uploads/stories/minecraft-server-cannot-join-hero.webp',
+    imageAlt:
+      'パソコン・スマートフォン・ゲームコントローラーへ分かれる道を前に、地図を持つ旅人が接続先を選ぶブロック調の風景',
   },
   {
     slug: 'minecraft-server-osusume',

@@ -2,13 +2,15 @@
 title: 'Kein Beitritt zu einem Minecraft-Server? Prüfungen für Java, Bedrock und Switch'
 description: Prüfen Sie Edition, Spielversion, Konto und Netzwerk, wenn Sie keinem Minecraft-Server beitreten können, und spielen Sie nach der Verbindung sicher weiter.
 translationOf: minecraft-server-cannot-join
-sourceHash: sha256:fa14f43dfc163c33a33dca033c59f83582c46269e16eeb8257174efcf98bfd3e
+sourceHash: sha256:c8607909fcc215225028c8e15ed74994bcb057cf3571cdd5795ad25949d0ce6f
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
   - Minecraft-Server
   - Fehlerbehebung
 author: Gui
+image: /uploads/stories/minecraft-server-cannot-join-hero.webp
+imageAlt: Ein Reisender im Blockstil mit Karte wählt zwischen Wegen zu Computer, Smartphone und Gamecontroller
 ---
 
 Wenn Sie keinem Minecraft-Server beitreten können, sollten Sie nicht einfach immer wieder die Verbindung versuchen. Trennen Sie mögliche Ursachen nach Spiele-Edition, den Hinweisen des Servers, Konto und Netzwerk. Die erste Hälfte dieses Artikels gilt für jeden Server; Aceserver-spezifische Hinweise stehen getrennt am Ende.
@@ -48,6 +50,8 @@ Minecraft auf Nintendo Switch ist Bedrock Edition; Java-exklusive Hinweise funkt
 
 Prüfen Sie auf Switch der Reihe nach Spielupdate, angemeldetes Microsoft-Konto, Nintendo Switch Online und mögliche elterliche Mehrspielerbeschränkungen. Bildschirme und Verfahren zum Serverbeitritt unterscheiden sich je nach Gerät. Nutzen Sie deshalb nur die Methode, die der Zielserver offiziell für Switch veröffentlicht. Unbekannte DNS-Änderungen oder Portfreigaben sind für die Verbindung nicht nötig.
 
+![Eine Blockstil-Grafik ordnet Computer, Smartphone und Handheld-Konsole ihrem kompatiblen Beitrittsweg zu](/uploads/stories/minecraft-server-cannot-join-edition-device.webp)
+
 ## Die eigenen Serverhinweise abgleichen
 
 Bestätigen Sie die folgenden Punkte immer in den offiziellen Hinweisen des Servers, dem Sie beitreten möchten. Übernehmen Sie keine Einstellungen, die bei einem anderen Server funktioniert haben.
@@ -68,6 +72,8 @@ Erscheint eine Meldung über deaktivierten Mehrspieler oder fehlende Berechtigun
 
 Bei Netzwerkfehlern oder Zeitüberschreitungen starten Sie Minecraft und das Gerät neu und prüfen die Stabilität Ihrer üblichen Internetverbindung. Ein Schul-, Einrichtungs- oder Arbeitsnetz, VPN oder eigener DNS kann Online-Spiele einschränken. Wer einem Server beitritt, muss Router-Ports nicht willkürlich öffnen. Eigene DNS- und Porteinstellungen können Minecraft stören; kehren Sie vor dem Testen zum vorherigen Zustand zurück.
 
+![Eine Blockstil-Grafik zum Prüfen von Kontoschlüssel, Berechtigung, Netzwerkgerät und Lupe in dieser Reihenfolge](/uploads/stories/minecraft-server-cannot-join-account-network.webp)
+
 ## Mit der angezeigten Fehlermeldung den nächsten Schritt wählen
 
 | Meldung oder Situation                   | Zuerst prüfen                                                | Nicht zuerst tun                                                   |
@@ -87,6 +93,8 @@ Hat der Fehler einen Namen oder Code, notieren Sie ihn ebenfalls. Gerät, Editio
 
 Diese Schritte helfen neuen Besucherinnen und Besuchern ebenso wie Rückkehrenden. Behandeln Sie die Verbindung nicht als Ziellinie, sondern schaffen Sie einen sicheren Einstieg zum Weiterspielen.
 
+![Ein Reisender im Blockstil liest eine Orientierungstafel, bevor er zu Ressourcen, Stadtbesuch und einem künftigen Zuhause aufbricht](/uploads/stories/minecraft-server-cannot-join-after-join.webp)
+
 ## Prüfungen nur für Aceserver
 
 Dieser Abschnitt enthält Aceserver-Hinweise und keine allgemeine Beitrittsmethode. Das Aceserver-Portal erklärt, dass Java- und Bedrock-Spieler beitreten können. Tatsächliche Ziele, Ports, Switch-Schritte, Serverstatus und Regeln können sich jedoch ändern. Verwenden Sie die folgenden offiziellen Quellen und nicht die allgemeinen Hinweise zuvor als maßgebliche Grundlage.
@@ -96,6 +104,8 @@ Dieser Abschnitt enthält Aceserver-Hinweise und keine allgemeine Beitrittsmetho
 3. Prüfen Sie das [offizielle WIKI](https://asv-wiki.acecore.net) auf Spielregeln und Hinweise für jede Welt.
 
 Falls Sie weiterhin nicht beitreten können, nennen Sie Java oder Bedrock, Ihr Gerät (gegebenenfalls Switch), die Spielversion, die angezeigte Fehlermeldung und die Uhrzeit des Versuchs. Sie müssen niemals ein Kontopasswort oder einen Authentifizierungscode teilen.
+
+![Ein Weg im Blockstil führt von einem Portal über eine offizielle Tafel zu einem Handbuch für Aceserver-Beitrittsinformationen](/uploads/stories/minecraft-server-cannot-join-official-guidance.webp)
 
 ## Offizielle Informationen bevorzugen und sicher prüfen
 

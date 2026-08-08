@@ -2,13 +2,15 @@
 title: 'Can’t join a Minecraft server? Checks for Java, Bedrock, and Switch'
 description: Learn how to check your edition, game version, account, and network when you cannot join a Minecraft server, then continue playing with confidence after you connect.
 translationOf: minecraft-server-cannot-join
-sourceHash: sha256:fa14f43dfc163c33a33dca033c59f83582c46269e16eeb8257174efcf98bfd3e
+sourceHash: sha256:c8607909fcc215225028c8e15ed74994bcb057cf3571cdd5795ad25949d0ce6f
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
   - Minecraft server
   - Troubleshooting
 author: Gui
+image: /uploads/stories/minecraft-server-cannot-join-hero.webp
+imageAlt: A block-style traveler holding a map chooses among paths to a computer, smartphone, and game controller
 ---
 
 When you cannot join a Minecraft server, separate the possible causes before repeatedly trying to connect: game edition, the server’s own guidance, account settings, and your network. The first half of this article is a general checklist for any server. Aceserver-specific guidance is kept separate near the end.
@@ -48,6 +50,8 @@ Minecraft on Nintendo Switch is Bedrock Edition, so Java-only guidance will not 
 
 On Switch, check the game update, the Microsoft account currently signed in, Nintendo Switch Online, and any parental multiplayer restriction in that order. Server-entry screens and procedures differ by device, so use only the joining method that the target server officially publishes for Switch. You do not need to try unfamiliar DNS changes or port forwarding just to connect.
 
+![A block-style diagram that routes a computer, smartphone, and handheld game device to their compatible joining destinations](/uploads/stories/minecraft-server-cannot-join-edition-device.webp)
+
 ## Match the server’s own guidance
 
 Always confirm the following with the official guidance for the server you want to join. Do not reuse settings that worked on another server.
@@ -68,6 +72,8 @@ If you see a message such as multiplayer being disabled or a permission error, t
 
 For a network error or timeout, restart Minecraft and your device, then check that your usual internet connection is stable. A school, facility, work network, VPN, or custom DNS may restrict online games. A joining player does not need to open router ports at random. Custom DNS and port settings can interfere with Minecraft, so return them to their previous state before testing.
 
+![A block-style diagram for checking an account key, permission, network device, and magnifying glass in order](/uploads/stories/minecraft-server-cannot-join-account-network.webp)
+
 ## Use the displayed error to choose the next step
 
 | Message or situation                  | Check first                                                    | Do not do first                                      |
@@ -87,6 +93,8 @@ If an error has a name or code, save it too. Device, edition, game version, time
 
 These actions help both first-time visitors and returning players. Do not treat connecting as the finish line; make a safe entrance for continued play.
 
+![A block-style traveler reads a guideboard before heading toward resources, a town visit, and a future home](/uploads/stories/minecraft-server-cannot-join-after-join.webp)
+
 ## Checks only for Aceserver
 
 This section is Aceserver guidance, not a general joining method. The Aceserver portal states that both Java and Bedrock players can join, but actual endpoints, ports, Switch steps, server status, and rules can change. Treat the following official sources—not the generic notes above—as the source of truth.
@@ -94,6 +102,8 @@ This section is Aceserver guidance, not a general joining method. The Aceserver 
 1. Check the current joining entry and notices on the [Aceserver portal](/en/).
 2. Check the [official Discord](https://discord.gg/acsv) for current maintenance and joining notices.
 3. Check the [official WIKI](https://asv-wiki.acecore.net) for in-game rules and guidance for each world.
+
+![A block-style route from a portal to an official guideboard and guidebook for checking Aceserver joining information](/uploads/stories/minecraft-server-cannot-join-official-guidance.webp)
 
 If you still cannot join, include whether you use Java or Bedrock, your device (including Switch if applicable), your game version, the displayed error, and the time you tried. You never need to share an account password or authentication code.
 

@@ -2,13 +2,15 @@
 title: '마인크래프트 서버에 접속할 수 없을 때 확인할 점 | Java·베드락·Switch'
 description: 마인크래프트 서버에 접속할 수 없을 때 에디션, 게임 버전, 계정, 네트워크를 순서대로 확인하고 접속 후에도 안심하고 플레이를 이어 가기 위한 안내입니다.
 translationOf: minecraft-server-cannot-join
-sourceHash: sha256:fa14f43dfc163c33a33dca033c59f83582c46269e16eeb8257174efcf98bfd3e
+sourceHash: sha256:c8607909fcc215225028c8e15ed74994bcb057cf3571cdd5795ad25949d0ce6f
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
   - 마인크래프트 서버
   - 문제 해결
 author: Gui
+image: /uploads/stories/minecraft-server-cannot-join-hero.webp
+imageAlt: 지도를 든 블록풍 여행자가 컴퓨터, 스마트폰, 게임 컨트롤러로 이어지는 길 가운데 접속 경로를 고르는 모습
 ---
 
 마인크래프트 서버에 접속할 수 없을 때는 무작정 여러 번 재접속하기보다 게임 에디션, 서버 자체의 안내, 계정, 네트워크로 원인을 나누어 보는 편이 좋습니다. 이 글의 앞부분은 어느 서버에나 적용되는 공통 확인 절차입니다. Aceserver 전용 안내는 뒤에서 따로 다룹니다.
@@ -48,6 +50,8 @@ Nintendo Switch의 Minecraft는 Bedrock Edition이므로 Java 전용 안내는 �
 
 Switch에서는 게임 업데이트, 로그인한 Microsoft 계정, Nintendo Switch Online, 보호자 멀티플레이 제한을 차례로 확인합니다. 서버 추가 화면과 접속 절차는 기기에 따라 다를 수 있으므로, 대상 서버가 Switch용으로 공식 안내한 방법만 사용하세요. 접속을 위해 익숙하지 않은 DNS 변경이나 포트 개방을 시도할 필요는 없습니다.
 
+![컴퓨터, 스마트폰, 휴대용 게임기를 호환되는 접속 경로에 맞춰 구분하는 블록풍 안내 그림](/uploads/stories/minecraft-server-cannot-join-edition-device.webp)
+
 ## 서버 자체의 안내와 일치시키기
 
 아래 항목은 반드시 접속하려는 서버의 공식 안내에서 확인합니다. 다른 서버에서 작동했던 설정을 그대로 사용하지 마세요.
@@ -68,6 +72,8 @@ Switch에서는 게임 업데이트, 로그인한 Microsoft 계정, Nintendo Swi
 
 네트워크 오류나 시간 초과가 나면 먼저 Minecraft와 기기를 다시 시작하고 평소 인터넷 연결이 안정적인지 확인합니다. 학교·시설·회사 네트워크, VPN, 사용자 DNS는 온라인 게임을 제한할 수 있습니다. 서버에 참여하는 사람은 라우터 포트를 무작정 열 필요가 없습니다. 사용자 DNS와 포트 설정은 Minecraft 접속에 간섭할 수 있으므로 변경했다면 원래 상태로 되돌린 뒤 확인하세요.
 
+![계정 키, 권한, 네트워크 장비, 돋보기를 차례로 확인하는 블록풍 안내 그림](/uploads/stories/minecraft-server-cannot-join-account-network.webp)
+
 ## 표시된 오류로 다음 단계를 정하기
 
 | 메시지 또는 상황         | 먼저 확인할 것                        | 먼저 하지 말 것                                 |
@@ -87,6 +93,8 @@ Switch에서는 게임 업데이트, 로그인한 Microsoft 계정, Nintendo Swi
 
 이 세 가지는 처음 참여하는 사람뿐 아니라 오랜만에 돌아오는 사람에게도 도움이 됩니다. 접속 성공을 끝으로 보지 말고, 계속 플레이할 수 있는 안전한 입구를 만드세요.
 
+![여행자가 안내판을 읽고 자원 수집, 마을 구경, 거점 만들기로 향하는 블록풍 풍경](/uploads/stories/minecraft-server-cannot-join-after-join.webp)
+
 ## Aceserver를 이용하는 경우에만 확인할 점
 
 여기부터는 일반적인 접속 방법이 아니라 Aceserver 안내입니다. Aceserver 포털은 Java와 베드락 모두 참여할 수 있다고 안내하지만, 실제 접속 대상, 포트, Switch 절차, 서버 상태, 규칙은 바뀔 수 있습니다. 앞의 일반적인 설명이 아니라 아래 공식 안내를 기준으로 확인하세요.
@@ -96,6 +104,8 @@ Switch에서는 게임 업데이트, 로그인한 Microsoft 계정, Nintendo Swi
 3. [공식 WIKI](https://asv-wiki.acecore.net)에서 게임 내 규칙과 각 월드 안내를 확인합니다.
 
 그래도 접속할 수 없다면 Java인지 베드락인지, 사용 기기(Switch라면 그 사실), 게임 버전, 표시된 오류, 시도한 시각을 함께 알려 주세요. 계정 비밀번호나 인증 코드를 공유할 필요는 없습니다.
+
+![포털, 공식 안내판, 가이드북을 차례로 따라 Aceserver 참가 정보를 확인하는 블록풍 그림](/uploads/stories/minecraft-server-cannot-join-official-guidance.webp)
 
 ## 공식 정보를 우선하고 안전하게 문제를 나누기
 
