@@ -2,7 +2,7 @@
 title: '무료 마인크래프트 서버 만드는 방법: Java, 베드락, Realms의 차이'
 description: 무료 마인크래프트 서버를 만드는 방법을 소개하고, Java Edition·Bedrock Edition·Realms의 차이와 준비 사항, 공개 전 보안 점검을 설명합니다.
 translationOf: minecraft-server-setup
-sourceHash: sha256:0dcea0b86790d9dc2e5e923a5cd0dd2366dd614b67457bde953f8504bec00a01
+sourceHash: sha256:9eaa80125eb59a16522825e0b1d143164c770eb9fc326800990adedfd0044cb1
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -102,6 +102,12 @@ Realms도 에디션별로 나뉩니다. Java 플레이어는 Java Realm에, Bedr
 - 비용보다 항상 접속 가능한 상태와 적은 관리 작업이 중요하다면 Realms가 쉽지만 무료는 아닙니다.
 
 호스팅 비용을 아끼기 위해 집의 서버를 선택한다면 서버가 멈췄을 때 누가 다시 시작할지, 월드를 어디에 백업할지 정하세요. 시작하기 전에 계획하면 플레이를 시작한 뒤의 문제를 많이 줄일 수 있습니다.
+
+## 함께 읽을 가이드
+
+- 서버를 설정하기 전에 친구와 플레이할 방법을 고르고 싶다면 [친구와 마인크래프트 하는 법](/ko/stories/minecraft-play-with-friends/)에서 내 월드, Realms, 공개 서버를 비교해 보세요.
+- 그룹에 Java와 베드락이 섞여 있고 둘 다 받는 공개 서버를 찾는다면 [Java와 베드락을 함께 플레이할 수 있는지](/ko/stories/minecraft-java-bedrock-crossplay/)를 확인하세요.
+- 설정 후 플레이어가 참가할 수 없다면 [마인크래프트 서버에 들어갈 수 없을 때 확인할 점](/ko/stories/minecraft-server-cannot-join/)으로 플레이어 쪽과 서버 쪽 조건을 나누어 살펴보세요.
 
 ## 서버를 공개하기 전에 확인할 항목
 

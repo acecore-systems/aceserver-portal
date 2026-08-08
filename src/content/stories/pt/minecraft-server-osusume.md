@@ -2,7 +2,7 @@
 title: 'Servidores de Minecraft recomendados no Japão: 6 opções por Java/Bedrock e estilo de jogo'
 description: Um guia de servidores públicos de Minecraft no Japão com base nas edições, estilos de jogo e informações de participação confirmados nos sites oficiais.
 translationOf: minecraft-server-osusume
-sourceHash: sha256:40a109cd0a0cddd64a10843cd181d695b70802c6cab486b4c375c61f0da9578c
+sourceHash: sha256:667a46426a427171af22b948043e0a50f8384c4becc3a257b754156dab20617b
 date: 2026-08-01T10:00:00+09:00
 tags:
   - Minecraft
@@ -68,6 +68,12 @@ O Aceserver é um servidor público gratuito de Minecraft ao qual qualquer pesso
 É uma opção para quem quer construir e viver livremente, no próprio ritmo e de forma próxima ao vanilla, consultando na WIKI as regras detalhadas e as orientações de participação. Comece verificando o portal e o Discord para ver as informações atuais e experimente o mundo que mais despertar seu interesse.
 
 Antes de participar, veja o [portal do Aceserver](/pt/), o [Discord oficial](https://discord.gg/acsv) e a [WIKI oficial](https://asv-wiki.acecore.net) nessa ordem. Assim você pode decidir se o servidor combina com sua forma de jogar antes de entrar.
+
+## Guias relacionados
+
+- Se quiser escolher entre seu mundo, Realms e servidores públicos, em vez de olhar apenas servidores públicos, leia [como jogar Minecraft com amigos](/pt/stories/minecraft-play-with-friends/).
+- Se os amigos misturam Java e Bedrock, consulte primeiro [Java e Bedrock podem jogar juntos?](/pt/stories/minecraft-java-bedrock-crossplay/) para reconhecer um servidor que aceite ambos.
+- Se não consegue entrar no servidor escolhido, use [o que verificar quando não dá para entrar em um servidor de Minecraft](/pt/stories/minecraft-server-cannot-join/) para revisar edição, versão, conta e rede.
 
 ## Se ainda tiver dúvidas, compare os guias oficiais
 

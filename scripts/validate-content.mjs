@@ -24,6 +24,49 @@ const REQUIRED_STORY_IMAGE_SLUGS = new Set([
   'minecraft-server-cannot-join',
   'metaverse-is-close',
 ])
+const REQUIRED_RELATED_GUIDE_LINKS = new Map([
+  [
+    'minecraft-java-bedrock-crossplay',
+    [
+      '/stories/minecraft-play-with-friends/',
+      '/stories/minecraft-server-cannot-join/',
+      '/stories/minecraft-server-osusume/',
+    ],
+  ],
+  [
+    'minecraft-play-with-friends',
+    [
+      '/stories/minecraft-server-cannot-join/',
+      '/stories/minecraft-java-bedrock-crossplay/',
+      '/stories/minecraft-server-setup/',
+      '/stories/minecraft-server-osusume/',
+    ],
+  ],
+  [
+    'minecraft-server-cannot-join',
+    [
+      '/stories/minecraft-play-with-friends/',
+      '/stories/minecraft-java-bedrock-crossplay/',
+      '/stories/minecraft-server-setup/',
+    ],
+  ],
+  [
+    'minecraft-server-osusume',
+    [
+      '/stories/minecraft-play-with-friends/',
+      '/stories/minecraft-java-bedrock-crossplay/',
+      '/stories/minecraft-server-cannot-join/',
+    ],
+  ],
+  [
+    'minecraft-server-setup',
+    [
+      '/stories/minecraft-play-with-friends/',
+      '/stories/minecraft-java-bedrock-crossplay/',
+      '/stories/minecraft-server-cannot-join/',
+    ],
+  ],
+])
 
 function fail(scope, message) {
   errors.push(`${scope}: ${message}`)
@@ -368,6 +411,19 @@ async function validateStories(routes) {
 
     for (const { scope, target } of markdown.links) {
       validateInternalHref(scope, target, routes)
+    }
+
+    if (story.locale === 'ja') {
+      const requiredTargets = REQUIRED_RELATED_GUIDE_LINKS.get(story.slug)
+      const actualTargets = new Set(markdown.links.map((link) => link.target))
+      for (const target of requiredTargets ?? []) {
+        if (!actualTargets.has(target)) {
+          fail(
+            story.relativePath,
+            'related guide link is missing (' + target + ')',
+          )
+        }
+      }
     }
   }
 }

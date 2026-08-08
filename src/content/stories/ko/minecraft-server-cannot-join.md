@@ -2,7 +2,7 @@
 title: '마인크래프트 서버에 접속할 수 없을 때 확인할 점 | Java·베드락·Switch'
 description: 마인크래프트 서버에 접속할 수 없을 때 에디션, 게임 버전, 계정, 네트워크를 순서대로 확인하고 접속 후에도 안심하고 플레이를 이어 가기 위한 안내입니다.
 translationOf: minecraft-server-cannot-join
-sourceHash: sha256:c8607909fcc215225028c8e15ed74994bcb057cf3571cdd5795ad25949d0ce6f
+sourceHash: sha256:62da69e1628983f487c6c0121bc2829918a311ece5d328785acd990e82e2c241
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -94,6 +94,12 @@ Switch에서는 게임 업데이트, 로그인한 Microsoft 계정, Nintendo Swi
 이 세 가지는 처음 참여하는 사람뿐 아니라 오랜만에 돌아오는 사람에게도 도움이 됩니다. 접속 성공을 끝으로 보지 말고, 계속 플레이할 수 있는 안전한 입구를 만드세요.
 
 ![여행자가 안내판을 읽고 자원 수집, 마을 구경, 거점 만들기로 향하는 블록풍 풍경](/uploads/stories/minecraft-server-cannot-join-after-join.webp)
+
+## 함께 읽을 가이드
+
+- 아직 친구와 어떻게 함께 플레이할지 정하지 않았다면 [친구와 마인크래프트 하는 법](/ko/stories/minecraft-play-with-friends/)에서 내 월드, Realms, 공개 서버 중에서 고르세요.
+- Java와 베드락 플레이어가 섞인 그룹이 공개 서버에 들어간다면 [Java와 베드락을 함께 플레이할 수 있는지](/ko/stories/minecraft-java-bedrock-crossplay/)에서 두 에디션을 모두 받는 서버를 구분하는 방법을 확인하세요.
+- 그룹이 관리하는 월드에 친구가 들어갈 수 없다면 [무료 마인크래프트 서버를 만드는 방법](/ko/stories/minecraft-server-setup/)으로 호스트 준비와 공개 전 확인 항목을 다시 살펴보세요.
 
 ## Aceserver를 이용하는 경우에만 확인할 점
 

@@ -2,7 +2,7 @@
 title: 'So richtest du einen kostenlosen Minecraft-Server ein: Java, Bedrock und Realms'
 description: Erfahre, wie du einen kostenlosen Minecraft-Server einrichtest und Java Edition, Bedrock Edition und Realms vergleichst, einschließlich Vorbereitung und Sicherheitsprüfungen vor der Freigabe.
 translationOf: minecraft-server-setup
-sourceHash: sha256:0dcea0b86790d9dc2e5e923a5cd0dd2366dd614b67457bde953f8504bec00a01
+sourceHash: sha256:9eaa80125eb59a16522825e0b1d143164c770eb9fc326800990adedfd0044cb1
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -102,6 +102,12 @@ Realms ist ebenfalls nach Edition getrennt: Java-Spieler treten einem Java-Realm
 - Wenn ständige Verfügbarkeit wichtiger ist als der Preis und du weniger Wartung möchtest, ist Realms einfacher, aber nicht kostenlos.
 
 Wenn du einen Heimserver wählst, um Hostinggebühren zu vermeiden, lege fest, wer ihn nach einem Ausfall neu startet und wo die Welt gesichert wird. Diese Planung verhindert viele Probleme nach dem Start.
+
+## Weiterführende Guides
+
+- Bevor ihr einen Server einrichtet, lest [wie man Minecraft mit Freunden spielt](/de/stories/minecraft-play-with-friends/), um zwischen eigener Welt, Realms und öffentlichem Server zu wählen.
+- Wenn eure Gruppe Java und Bedrock mischt und einen öffentlichen Server sucht, der beide akzeptiert, lest [ob Java und Bedrock zusammen spielen können](/de/stories/minecraft-java-bedrock-crossplay/).
+- Wenn ein Spieler nach der Einrichtung nicht beitreten kann, hilft [was zu prüfen ist, wenn ihr einem Minecraft-Server nicht beitreten könnt](/de/stories/minecraft-server-cannot-join/) beim Trennen von Spieler- und Serverbedingungen.
 
 ## Diese Punkte vor dem Öffnen des Servers prüfen
 

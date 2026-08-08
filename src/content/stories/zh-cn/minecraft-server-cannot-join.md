@@ -2,7 +2,7 @@
 title: 无法加入 Minecraft 服务器时的检查｜Java、基岩版与 Switch
 description: 无法加入 Minecraft 服务器时，依次检查版本、游戏版本、账户和网络，并在成功加入后安心继续游玩的指南。
 translationOf: minecraft-server-cannot-join
-sourceHash: sha256:c8607909fcc215225028c8e15ed74994bcb057cf3571cdd5795ad25949d0ce6f
+sourceHash: sha256:62da69e1628983f487c6c0121bc2829918a311ece5d328785acd990e82e2c241
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -94,6 +94,12 @@ Nintendo Switch 上的 Minecraft 是基岩版，因此 Java 专用说明无法�
 这些行动既适合初次加入者，也适合久未回归的玩家。不要把“成功连接”当作终点，而要为继续游玩建立安全的入口。
 
 ![旅行者阅读指引牌后前往采集资源、参观城镇和建设据点的方块风景](/uploads/stories/minecraft-server-cannot-join-after-join.webp)
+
+## 相关指南
+
+- 如果还没有决定朋友一起游玩的方式，可阅读[如何与朋友一起玩 Minecraft](/zh-cn/stories/minecraft-play-with-friends/)，从自己的世界、Realms 和公开服务器中选择。
+- Java 与基岩版玩家混合的小组要加入公开服务器时，可参考[Java 版与基岩版能否一起玩](/zh-cn/stories/minecraft-java-bedrock-crossplay/)，判断服务器是否同时支持两个版本。
+- 如果朋友无法加入小组自己管理的世界，可阅读[免费搭建 Minecraft 服务器的方法](/zh-cn/stories/minecraft-server-setup/)，复查主机准备与开放前的检查项。
 
 ## 仅适用于 Aceserver 的检查
 

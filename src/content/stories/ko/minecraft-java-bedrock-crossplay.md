@@ -2,7 +2,7 @@
 title: 자바판과 베드락 에디션은 함께 플레이할 수 있나요? 지원 서버를 구분하는 방법
 description: Minecraft Java Edition과 Bedrock Edition은 양쪽 접속을 공식적으로 안내하는 서버라면 함께 플레이할 수 있습니다. 지원 서버를 확인하는 법과 참가 전 점검할 항목을 소개합니다.
 translationOf: minecraft-java-bedrock-crossplay
-sourceHash: sha256:2139fe22ec1c92f8edcaf5afa1b8cbd8f11858c1a0d85c904d78a9415718a123
+sourceHash: sha256:110578eba08c093d8ce0fed19295769a2c2391f899d746a180b30d710bafc63e
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -63,6 +63,12 @@ Java와 Bedrock은 별도의 클라이언트와 다른 접속 방식을 사용�
 Aceserver는 Java Edition 또는 Bedrock Edition에서 참가할 수 있는 무료 공개 Minecraft 서버입니다. 다른 에디션을 쓰는 친구들과 함께 플레이할 서버를 찾고 있다면 좋은 선택지가 될 수 있습니다.
 
 [Aceserver 포털](/ko/)에서 월드 맵과 영상을 먼저 살펴보고, [공식 Discord](https://discord.gg/acsv)에서 최신 참가 안내를 확인하세요. 자세한 규칙과 플레이 정보는 [Aceserver WIKI](https://asv-wiki.acecore.net)에 모여 있습니다.
+
+## 함께 읽을 가이드
+
+- 친구의 기기와 플레이 시간에 따라 내 월드, Realms, 공개 서버 중에서 고르고 싶다면 [친구와 마인크래프트 하는 법](/ko/stories/minecraft-play-with-friends/)을 읽어 보세요.
+- 누군가 아직 참가할 수 없다면 [마인크래프트 서버에 들어갈 수 없을 때 확인할 점](/ko/stories/minecraft-server-cannot-join/)으로 원인을 순서대로 살펴보세요.
+- 선택하기 전에 공개 서버를 비교하고 싶다면 [Minecraft 서버 선택 방법](/ko/stories/minecraft-server-osusume/)을 참고하세요.
 
 ## 정리
 
