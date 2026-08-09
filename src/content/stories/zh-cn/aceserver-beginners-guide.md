@@ -2,7 +2,7 @@
 title: 'Aceserver 新手指南：Portal、世界地图、视频、WIKI 与连接问题'
 description: 第一次来到 Aceserver？了解何时使用官方 Portal、世界地图、视频和 WIKI，以及无法加入时应查看哪里。
 translationOf: aceserver-beginners-guide
-sourceHash: sha256:0631d3bde197d8d11a999ae7149e7008fe8e3b59a3c97e76831e3a50c41f2fe6
+sourceHash: sha256:c060bf5e37c3810e9bcc45d231dd8f0c85db7d0eace48d79a5c12f09def05a0e
 date: 2026-08-09T10:00:00+09:00
 tags:
   - Minecraft
@@ -32,6 +32,8 @@ imageAlt: 一位拿着地图的旅行者在方块风景中前往传送门、世�
 ## 用 Portal 找到下一步该去哪里
 
 Portal 是第一次认识 Aceserver 时的指示牌。它汇总了 Java 版和基岩版都能参加的信息，以及官方 Discord、WIKI、世界地图和视频的入口。
+
+想了解 Java 版与基岩版一起游玩的条件，以及如何识别支持两种版本的服务器，请参阅[Java 版和基岩版可以一起玩吗？](/zh-cn/stories/minecraft-java-bedrock-crossplay/)。
 
 先从首页了解整体内容，再根据目的打开对应页面。
 
@@ -79,6 +81,8 @@ Portal 是最新信息的入口，并不是记住连接细节的地方。连接�
 5. 进入后先阅读附近的说明，再设定一个小目标。
 
 不要只根据旧截图或视频决定地址、端口、DNS 修改或 Switch 步骤。不要强行尝试非官方绕过方法；官方信息不清楚时请先询问。
+
+如果想先整理 Java 版、基岩版、Switch 和手机的多人游戏选择，可以参考[如何与朋友一起玩 Minecraft](/zh-cn/stories/minecraft-play-with-friends/)。实际参加 Aceserver 时，应优先遵循本文所示的官方 Discord 和 WIKI。
 
 ## 将通用连接问题与 Aceserver 说明分开确认
 

@@ -2,7 +2,7 @@
 title: 'Guía para principiantes de Aceserver: portal, mapas, vídeos, WIKI y conexión'
 description: ¿Es tu primera vez en Aceserver? Aprende cuándo usar el portal oficial, los mapas, los vídeos y la WIKI, y dónde comprobar si no puedes entrar.
 translationOf: aceserver-beginners-guide
-sourceHash: sha256:0631d3bde197d8d11a999ae7149e7008fe8e3b59a3c97e76831e3a50c41f2fe6
+sourceHash: sha256:c060bf5e37c3810e9bcc45d231dd8f0c85db7d0eace48d79a5c12f09def05a0e
 date: 2026-08-09T10:00:00+09:00
 tags:
   - Minecraft
@@ -32,6 +32,8 @@ Este orden te lleva a la información del Aceserver actual, en vez de depender d
 ## Usa el portal para saber a dónde ir después
 
 El portal es la señal de orientación para quien conoce Aceserver por primera vez. Reúne la información de que se puede participar desde Java Edition y Bedrock Edition, además de los accesos al Discord oficial, la WIKI, los mapas de mundos y los vídeos.
+
+Para conocer las condiciones que permiten jugar juntos con Java y Bedrock y cómo reconocer un servidor compatible, consulta [¿Pueden jugar juntos Java y Bedrock?](/es/stories/minecraft-java-bedrock-crossplay/).
 
 Empieza en la página de inicio y abre la página que corresponda a tu objetivo.
 
@@ -79,6 +81,8 @@ Esto no sustituye las reglas detalladas. Las condiciones y el alcance pueden cam
 5. Cuando entres, lee las indicaciones cercanas y empieza con un objetivo pequeño.
 
 No elijas una dirección, puerto, cambio de DNS o procedimiento de Switch basándote solo en una captura o vídeo antiguo. No fuerces soluciones no oficiales; pregunta cuando la información oficial no sea clara.
+
+Si primero quieres ordenar las opciones multijugador para Java, Bedrock, Switch y móvil, consulta [Cómo jugar Minecraft con amigos](/es/stories/minecraft-play-with-friends/). Para entrar realmente a Aceserver, prioriza el Discord oficial y la WIKI indicados en este artículo.
 
 ## Separa los problemas generales de conexión de la guía de Aceserver
 

@@ -10,6 +10,10 @@ tags:
 author: Gui
 image: /uploads/stories/aceserver-beginners-guide-hero.png
 imageAlt: 地図を持つ旅人が、ポータル、ワールドマップ、動画画面、ガイドブック、案内所をたどるブロック調の風景
+relatedStories:
+  - minecraft-java-bedrock-crossplay
+  - minecraft-play-with-friends
+  - minecraft-server-cannot-join
 ---
 
 初めてAceserverに来たときは、情報がたくさんあって「まず何を見ればよいのか」と迷うかもしれません。このガイドでは、公式ポータルを起点に、ワールドマップ、動画、WIKI、接続トラブルの案内を使い分ける順序を紹介します。
@@ -30,6 +34,8 @@ imageAlt: 地図を持つ旅人が、ポータル、ワールドマップ、動�
 ## ポータルは「どこへ行けばよいか」を見つける場所
 
 ポータルは、Aceserverに初めて触れる人のための案内板です。Java版・統合版のどちらからでも参加できること、公式Discord、WIKI、ワールドマップ、動画への入口をまとめています。
+
+Java版と統合版で一緒に遊べる条件や、対応サーバーを見分けるポイントは、[Java版と統合版は一緒に遊べる？](/stories/minecraft-java-bedrock-crossplay/)で確認できます。
 
 初めてなら、ポータルのホームで全体像を見てから、次の目的に合うページを開くと迷いにくくなります。
 
@@ -77,6 +83,8 @@ imageAlt: 地図を持つ旅人が、ポータル、ワールドマップ、動�
 5. 入れたら、最初は周囲の案内を読み、小さな目標を一つ決めて行動します。
 
 誰かの古いスクリーンショットや動画だけで、アドレス、ポート、DNS変更、Switch向けの手順を決めないことが大切です。公式に案内されていない方法で無理に接続しようとせず、不明な点は質問してください。
+
+Java版・統合版・Switch・スマホでのマルチプレイの選び方を先に整理したいときは、[マイクラで友達と遊ぶ方法](/stories/minecraft-play-with-friends/)も参考にしてください。Aceserverへ実際に参加する手順は、本文で案内している公式DiscordとWIKIを優先します。
 
 ## 接続できないときは、一般的な原因とAceserverの案内を分ける
 

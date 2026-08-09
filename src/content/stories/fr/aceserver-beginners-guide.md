@@ -2,7 +2,7 @@
 title: 'Guide du débutant Aceserver : portail, cartes, vidéos, WIKI et connexion'
 description: Vous découvrez Aceserver ? Apprenez quand utiliser le portail officiel, les cartes, les vidéos et le WIKI, et où vérifier si vous ne pouvez pas rejoindre le serveur.
 translationOf: aceserver-beginners-guide
-sourceHash: sha256:0631d3bde197d8d11a999ae7149e7008fe8e3b59a3c97e76831e3a50c41f2fe6
+sourceHash: sha256:c060bf5e37c3810e9bcc45d231dd8f0c85db7d0eace48d79a5c12f09def05a0e
 date: 2026-08-09T10:00:00+09:00
 tags:
   - Minecraft
@@ -32,6 +32,8 @@ Cet ordre vous mène aux informations de l'Aceserver actuel au lieu de dépendre
 ## Utilisez le portail pour savoir où aller ensuite
 
 Le portail est le panneau d'orientation des personnes qui découvrent Aceserver. Il rassemble l'information sur l'accès depuis Java Edition et Bedrock Edition, ainsi que les accès au Discord officiel, au WIKI, aux cartes de mondes et aux vidéos.
+
+Pour connaître les conditions permettant de jouer ensemble avec Java et Bedrock et reconnaître un serveur compatible, consultez [Java et Bedrock peuvent-ils jouer ensemble ?](/fr/stories/minecraft-java-bedrock-crossplay/).
 
 Commencez par la page d'accueil, puis ouvrez la page qui correspond à votre objectif.
 
@@ -79,6 +81,8 @@ Ceci ne remplace pas les règles détaillées. Les conditions et le périmètre 
 5. Une fois en jeu, lisez les indications proches et commencez par un petit objectif.
 
 Ne choisissez pas une adresse, un port, un changement DNS ou une procédure Switch à partir d'une ancienne capture ou vidéo seulement. Ne forcez pas de solution non officielle ; demandez lorsque l'information officielle n'est pas claire.
+
+Si vous souhaitez d'abord organiser les choix multijoueurs pour Java, Bedrock, Switch et mobile, consultez [Comment jouer à Minecraft avec des amis](/fr/stories/minecraft-play-with-friends/). Pour rejoindre réellement Aceserver, donnez priorité au Discord officiel et au WIKI indiqués dans cet article.
 
 ## Distinguez les problèmes de connexion généraux de l'aide Aceserver
 

@@ -2,7 +2,7 @@
 title: 'Aceserver 초보자 가이드: 포털, 월드 맵, 동영상, WIKI, 접속 문제'
 description: Aceserver가 처음이신가요? 공식 포털, 월드 맵, 동영상, WIKI를 언제 이용하는지와 접속할 수 없을 때 확인할 곳을 안내합니다.
 translationOf: aceserver-beginners-guide
-sourceHash: sha256:0631d3bde197d8d11a999ae7149e7008fe8e3b59a3c97e76831e3a50c41f2fe6
+sourceHash: sha256:c060bf5e37c3810e9bcc45d231dd8f0c85db7d0eace48d79a5c12f09def05a0e
 date: 2026-08-09T10:00:00+09:00
 tags:
   - Minecraft
@@ -32,6 +32,8 @@ Aceserver를 처음 방문하면 무엇부터 확인해야 할지 막막할 수 
 ## 포털에서 다음에 갈 곳 찾기
 
 포털은 Aceserver를 처음 만나는 사람을 위한 안내판입니다. Java Edition과 Bedrock Edition 모두 참가할 수 있다는 정보와 함께 공식 Discord, WIKI, 월드 맵, 동영상으로 가는 입구를 모아 둡니다.
+
+Java와 Bedrock이 함께 플레이할 수 있는 조건과 지원 서버를 구별하는 방법은 [Java와 Bedrock은 함께 플레이할 수 있나요?](/ko/stories/minecraft-java-bedrock-crossplay/)에서 확인할 수 있습니다.
 
 먼저 홈에서 전체 모습을 보고, 목적에 맞는 페이지를 열면 덜 헤맬 수 있습니다.
 
@@ -79,6 +81,8 @@ Aceserver를 처음 방문하면 무엇부터 확인해야 할지 막막할 수 
 5. 들어간 뒤에는 주변 안내를 읽고 작은 목표 하나부터 시작합니다.
 
 오래된 스크린샷이나 동영상만 보고 주소, 포트, DNS 변경, Switch 절차를 정하지 마세요. 비공식 우회 방법을 억지로 시도하지 말고 공식 정보가 불명확하면 먼저 질문하세요.
+
+Java, Bedrock, Switch, 모바일의 멀티플레이 선택지를 먼저 정리하고 싶다면 [친구와 마인크래프트 하는 법](/ko/stories/minecraft-play-with-friends/)도 참고하세요. 실제로 Aceserver에 참가할 때는 이 글에서 안내한 공식 Discord와 WIKI를 우선합니다.
 
 ## 일반적인 접속 문제와 Aceserver 안내를 나누어 확인하기
 
