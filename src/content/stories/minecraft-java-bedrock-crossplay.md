@@ -10,6 +10,11 @@ tags:
 author: Gui
 image: /uploads/stories/minecraft-java-bedrock-crossplay-hero.webp
 imageAlt: ノートPCと携帯端末を使う3人が、同じワールドへ続く門を地図越しに見つめるブロック調の風景
+relatedStories:
+  - minecraft-play-with-friends
+  - minecraft-server-cannot-join
+  - minecraft-server-osusume
+  - minecraft-server-setup
 ---
 
 Java版と統合版は、対応サーバーなら一緒に遊べます。友達のPCがJava版、スマホやゲーム機が統合版という組み合わせでも、サーバーが両方の接続を受け入れていれば、同じサーバーで建築や冒険を楽しめます。

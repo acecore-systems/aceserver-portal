@@ -2,7 +2,7 @@
 title: '마인크래프트 서버에 접속할 수 없을 때 확인할 점 | Java·베드락·Switch'
 description: 마인크래프트 서버에 접속할 수 없을 때 에디션, 게임 버전, 계정, 네트워크를 순서대로 확인하고 접속 후에도 안심하고 플레이를 이어 가기 위한 안내입니다.
 translationOf: minecraft-server-cannot-join
-sourceHash: sha256:c8607909fcc215225028c8e15ed74994bcb057cf3571cdd5795ad25949d0ce6f
+sourceHash: sha256:cbba5d57ab5418390645eec248d789d8feaf5ad0565a6f3e667553185bf7e011
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft

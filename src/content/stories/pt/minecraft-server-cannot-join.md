@@ -2,7 +2,7 @@
 title: 'Não consegue entrar em um servidor de Minecraft? Verificações para Java, Bedrock e Switch'
 description: Veja como conferir edição, versão do jogo, conta e rede quando não conseguir entrar em um servidor de Minecraft e como continuar jogando com segurança depois de conectar.
 translationOf: minecraft-server-cannot-join
-sourceHash: sha256:c8607909fcc215225028c8e15ed74994bcb057cf3571cdd5795ad25949d0ce6f
+sourceHash: sha256:cbba5d57ab5418390645eec248d789d8feaf5ad0565a6f3e667553185bf7e011
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft

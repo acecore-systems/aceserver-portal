@@ -9,6 +9,11 @@ tags:
 author: Gui
 image: /uploads/stories/minecraft-server-cannot-join-hero.webp
 imageAlt: パソコン・スマートフォン・ゲームコントローラーへ分かれる道を前に、地図を持つ旅人が接続先を選ぶブロック調の風景
+relatedStories:
+  - minecraft-play-with-friends
+  - minecraft-java-bedrock-crossplay
+  - minecraft-server-setup
+  - minecraft-server-osusume
 ---
 
 マイクラサーバーに入れないときは、何度も接続を試す前に、原因を「ゲームの種類」「サーバーの案内」「アカウント」「通信」の順で分けると解決しやすくなります。この記事の前半は、どのサーバーにも共通する確認手順です。エースサーバー固有の案内は、後半で分けて扱います。

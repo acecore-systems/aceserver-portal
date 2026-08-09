@@ -9,6 +9,11 @@ tags:
 author: Gui
 image: /uploads/stories/minecraft-server-setup-hero.webp
 imageAlt: サーバーの選択肢を見渡す3人のブロック調の冒険者と、村・サーバー・クラウドへ続く3つの道
+relatedStories:
+  - minecraft-play-with-friends
+  - minecraft-java-bedrock-crossplay
+  - minecraft-server-cannot-join
+  - minecraft-server-osusume
 ---
 
 マイクラを友達と遊ぶ方法は、同じ家のネットワークで遊ぶ方法、自宅のPCで専用サーバーを動かす方法、Realmsを使う方法に分けられます。参加する人のエディションと、どのくらい管理の手間をかけられるかで選択肢が変わります。

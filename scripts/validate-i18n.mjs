@@ -15,6 +15,7 @@ const expectedStorySlugs = [
   'minecraft-java-bedrock-crossplay',
   'minecraft-java-bedrock-shared-server',
   'minecraft-server-cannot-join',
+  'minecraft-play-with-friends',
   'minecraft-server-osusume',
   'minecraft-server-setup',
   'metaverse-is-close',

@@ -1,6 +1,7 @@
 ---
-import { render, type CollectionEntry } from 'astro:content'
+import { getCollection, render, type CollectionEntry } from 'astro:content'
 import { serializeJsonForHtmlScript } from '../data/safe-json'
+import { getLocalizedPages } from '../i18n/content'
 import {
   DATE_LOCALE_BY_LOCALE,
   HTML_LANG_BY_LOCALE,
@@ -15,10 +16,71 @@ interface Props {
   story: CollectionEntry<'stories'>
 }
 
+type RelatedContent = {
+  kind: 'page' | 'story'
+  href: string
+  title: string
+  description: string
+  image?: string
+  imageAlt?: string
+}
+
 const { locale, story } = Astro.props
 const ui = getUi(locale)
 const { Content } = await render(story)
 const storySlug = story.id.split('/').at(-1) ?? story.id
+const allStories = await getCollection('stories')
+const relationSource =
+  allStories.find((candidate) => candidate.id === storySlug) ?? story
+const sameLocaleStories = allStories.filter((candidate) =>
+  locale === 'ja'
+    ? !candidate.id.includes('/')
+    : candidate.id.startsWith(`${locale}/`),
+)
+const localizedStoriesBySlug = new Map(
+  sameLocaleStories.map((candidate) => [
+    candidate.id.split('/').at(-1) ?? candidate.id,
+    candidate,
+  ]),
+)
+const relatedStories: RelatedContent[] =
+  relationSource.data.relatedStories.flatMap((slug) => {
+    const relatedStory = localizedStoriesBySlug.get(slug)
+    if (!relatedStory) return []
+
+    return [
+      {
+        kind: 'story',
+        href: localizePath(locale, `/stories/${slug}/`),
+        title: relatedStory.data.title,
+        description: relatedStory.data.description,
+        image: relatedStory.data.image,
+        imageAlt: relatedStory.data.imageAlt,
+      },
+    ]
+  })
+const localizedPagesBySlug = new Map(
+  getLocalizedPages(locale).map((page) => [page.slug, page]),
+)
+const relatedPages: RelatedContent[] = relationSource.data.relatedPages.flatMap(
+  (slug) => {
+    const relatedPage = localizedPagesBySlug.get(slug)
+    if (!relatedPage) return []
+
+    return [
+      {
+        kind: 'page',
+        href: localizePath(
+          locale,
+          relatedPage.slug === 'top' ? '/' : `/${relatedPage.slug}/`,
+        ),
+        title: relatedPage.meta.title,
+        description: relatedPage.meta.description,
+      },
+    ]
+  },
+)
+const relatedContent = [...relatedStories, ...relatedPages]
 const siteBase = Astro.site ?? new URL('https://asv.acecore.net')
 const storyPath = localizePath(locale, `/stories/${storySlug}/`)
 const homePath = localizePath(locale, '/')
@@ -126,6 +188,44 @@ const breadcrumbJsonLd = serializeJsonForHtmlScript({
     <div class="story-body">
       <Content />
     </div>
+    {
+      relatedContent.length > 0 && (
+        <section class="story-related" aria-labelledby="story-related-title">
+          <h2 id="story-related-title">{ui.relatedContentTitle}</h2>
+          <div class="story-related-grid">
+            {relatedContent.map((item) => (
+              <a
+                class:list={{
+                  'story-related-card': true,
+                  'story-related-card--page': item.kind === 'page',
+                  'story-related-card--story': item.kind === 'story',
+                }}
+                href={item.href}
+              >
+                {item.image && item.imageAlt && (
+                  <img
+                    class="story-related-image"
+                    src={item.image}
+                    alt={item.imageAlt}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                )}
+                <span class="story-related-copy">
+                  {item.kind === 'page' && (
+                    <span class="story-related-label">
+                      {ui.relatedPageLabel}
+                    </span>
+                  )}
+                  <strong>{item.title}</strong>
+                  <span>{item.description}</span>
+                </span>
+              </a>
+            ))}
+          </div>
+        </section>
+      )
+    }
     <footer class="story-footer">
       <a href={storiesPath}>{ui.backToStories}</a>
       <a href={homePath}>{ui.joinAceserver}</a>
@@ -256,6 +356,89 @@ const breadcrumbJsonLd = serializeJsonForHtmlScript({
     color: #0756a8;
     font-weight: 700;
     text-underline-offset: 0.18em;
+  }
+
+  .story-related {
+    border-top: 4px solid #1e1710;
+    padding-block: clamp(34px, 5vw, 54px);
+  }
+
+  .story-related h2 {
+    margin: 0 0 22px;
+    font-size: clamp(1.55rem, 3vw, 2.2rem);
+    line-height: 1.35;
+  }
+
+  .story-related-grid {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+  }
+
+  .story-related-card {
+    display: grid;
+    min-height: 100%;
+    overflow: hidden;
+    border: 2px solid #1e1710;
+    border-radius: 10px;
+    background: #fff8e6;
+    color: #15130f;
+    text-decoration: none;
+    box-shadow: 0 4px 0 rgba(21, 19, 15, 0.22);
+    transition:
+      background-color 160ms ease,
+      transform 160ms ease,
+      box-shadow 160ms ease;
+  }
+
+  .story-related-card:hover,
+  .story-related-card:focus-visible {
+    background: #fff1b5;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 0 rgba(21, 19, 15, 0.26);
+  }
+
+  .story-related-card:focus-visible {
+    outline: 4px solid #0862c4;
+    outline-offset: 3px;
+  }
+
+  .story-related-card--page {
+    border-left: 8px solid #35aa2f;
+    background: #e9f8ff;
+  }
+
+  .story-related-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+
+  .story-related-copy {
+    display: grid;
+    align-content: start;
+    gap: 8px;
+    padding: 18px;
+  }
+
+  .story-related-label {
+    color: #0862c4;
+    font-size: 0.76rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .story-related-copy strong {
+    font-size: 1.08rem;
+    line-height: 1.45;
+  }
+
+  .story-related-copy > span:last-child {
+    color: #514331;
+    font-size: 0.88rem;
+    font-weight: 700;
+    line-height: 1.65;
   }
 
   .story-footer {

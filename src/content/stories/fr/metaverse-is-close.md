@@ -2,7 +2,7 @@
 title: Le métavers est plus proche qu’on ne le pense
 description: 'Le métavers ne se limite pas aux casques de réalité virtuelle : des espaces comme Minecraft, où les personnes se retrouvent et échangent, peuvent aussi en être.'
 translationOf: metaverse-is-close
-sourceHash: sha256:99ab60acbee3e67a933c8b36ea5c54ba199eebe99f7e2967f8929a904c8bffca
+sourceHash: sha256:14531152050ca4f10b2e7f6961d2f2d34d7cdc802d07ceac87945f13b9d02486
 date: 2023-03-23T00:00:00+09:00
 tags:
   - Communauté

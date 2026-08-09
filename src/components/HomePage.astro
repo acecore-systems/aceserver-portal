@@ -1,7 +1,7 @@
 ---
 import type { LinkItem, PortalPage, PortalSection } from '../types'
 import { serializeCssUrl } from '../data/safe-json'
-import type { Locale } from '../i18n/config'
+import { localizePath, type Locale } from '../i18n/config'
 import { getUi } from '../i18n/translations'
 import { externalLinkAttrs } from '../utils/links'
 import Icon from './Icon.astro'
@@ -112,6 +112,10 @@ const wikiBackgroundImageCss = serializeCssUrl(wikiBackgroundImage)
 const heroJoinButton = joinCta.ctaButton ?? fallbackJoinButton
 const heroWikiButton = wikiCta.ctaButton ?? fallbackWikiButton
 const alphaLogo = '/uploads/alpha-kun.png'
+const multiplayerGuidePath = localizePath(
+  locale,
+  '/stories/minecraft-play-with-friends/',
+)
 ---
 
 <section class="hero" aria-labelledby="home-title">
@@ -194,7 +198,13 @@ const alphaLogo = '/uploads/alpha-kun.png'
     <Icon name="chevron-right" class="device-arrow" />
     <div class="device device--mobile"><Icon name="globe-2" /></div>
   </div>
-  <div><h2>{ui.homeCrossplay}</h2></div>
+  <div class="crossplay-copy">
+    <h2>{ui.homeCrossplay}</h2>
+    <a class="crossplay-guide" href={multiplayerGuidePath}>
+      {ui.homeMultiplayerGuide}
+      <Icon name="chevron-right" />
+    </a>
+  </div>
 </section>
 
 <section class="feature-band feature-band--left">
@@ -515,6 +525,37 @@ const alphaLogo = '/uploads/alpha-kun.png'
     gap: clamp(26px, 5vw, 72px);
     grid-template-columns: minmax(260px, 0.72fr) minmax(280px, 1fr);
     background: linear-gradient(135deg, #baeaff, #f6fbff 58%, #fff2bf);
+  }
+
+  .crossplay-copy {
+    display: grid;
+    justify-items: start;
+    gap: 18px;
+  }
+
+  .crossplay-guide {
+    display: inline-flex;
+    min-height: 3rem;
+    align-items: center;
+    gap: 8px;
+    border: 2px solid #1e1710;
+    border-radius: 8px;
+    background: #ffd84d;
+    color: #15130f;
+    font-weight: 900;
+    padding: 0.72rem 1rem;
+    text-decoration: none;
+    box-shadow: 0 4px 0 rgba(21, 19, 15, 0.28);
+  }
+
+  .crossplay-guide:hover,
+  .crossplay-guide:focus-visible {
+    background: #fff06f;
+  }
+
+  .crossplay-guide:focus-visible {
+    outline: 4px solid #0862c4;
+    outline-offset: 3px;
   }
 
   .device-scene {

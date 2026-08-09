@@ -9,6 +9,14 @@ tags:
 author: Gui
 image: /uploads/stories/minecraft-server-osusume-hero.webp
 imageAlt: 夕暮れのブロック調の広場で地図を囲み、さまざまな世界へ続く道を見渡す3人の旅人
+relatedStories:
+  - minecraft-play-with-friends
+  - minecraft-java-bedrock-crossplay
+  - minecraft-server-cannot-join
+  - minecraft-server-setup
+relatedPages:
+  - world-map
+  - youtube-search-aceserver
 ---
 
 公式案内で遊び方と参加方法を確認できる公開サーバーを紹介します。掲載順はランキングではありません。参加前は各サーバーの最新案内を確認してください。

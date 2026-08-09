@@ -2,7 +2,7 @@
 title: 'Kein Beitritt zu einem Minecraft-Server? Prüfungen für Java, Bedrock und Switch'
 description: Prüfen Sie Edition, Spielversion, Konto und Netzwerk, wenn Sie keinem Minecraft-Server beitreten können, und spielen Sie nach der Verbindung sicher weiter.
 translationOf: minecraft-server-cannot-join
-sourceHash: sha256:c8607909fcc215225028c8e15ed74994bcb057cf3571cdd5795ad25949d0ce6f
+sourceHash: sha256:cbba5d57ab5418390645eec248d789d8feaf5ad0565a6f3e667553185bf7e011
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft

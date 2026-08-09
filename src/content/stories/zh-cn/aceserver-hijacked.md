@@ -2,7 +2,7 @@
 title: Aceserver 被“劫持”了。
 description: 记录 Aceserver 上发生的“劫持”事件。成员们的理智接连被侵蚀，这是一份令人震惊的记录。
 translationOf: aceserver-hijacked
-sourceHash: sha256:103ac3842af3abbe7c8245c6d47879926718b08e886718c678c9236d896d4f03
+sourceHash: sha256:d4ed78f447d9c7d8b80f00e170eaebd2f24a8faf1285b827b6499d2029541950
 date: 2022-10-12T00:00:00+09:00
 tags:
   - 活动
