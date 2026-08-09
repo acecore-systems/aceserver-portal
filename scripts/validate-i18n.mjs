@@ -12,6 +12,7 @@ const errors = []
 const expectedStorySlugs = [
   'aceserver-hijacked',
   'aceserver-portal-launch',
+  'aceserver-beginners-guide',
   'minecraft-java-bedrock-crossplay',
   'minecraft-server-cannot-join',
   'minecraft-play-with-friends',

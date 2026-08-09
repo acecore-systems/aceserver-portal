@@ -35,6 +35,18 @@ const stories = [
       'Minecraftの街並みを背景にしたエースサーバーポータルのトップページ',
   },
   {
+    slug: 'aceserver-beginners-guide',
+    title:
+      'Aceserver初心者ガイド｜ポータル・ワールドマップ・動画・WIKI・接続トラブルの見方',
+    description:
+      '初めてAceserverに参加する人へ。公式ポータル、ワールドマップ、動画、WIKIの使い分けと、入れないときの確認先をまとめます。',
+    author: 'Gui',
+    datePublished: '2026-08-09T01:00:00.000Z',
+    image: '/uploads/stories/aceserver-beginners-guide-hero.png',
+    imageAlt:
+      '地図を持つ旅人が、ポータル、ワールドマップ、動画画面、ガイドブック、案内所をたどるブロック調の風景',
+  },
+  {
     slug: 'minecraft-server-cannot-join',
     title: 'マイクラサーバーに入れない時の確認｜Java・統合版・Switch対応',
     description:
