@@ -69,6 +69,18 @@ const stories = [
       'ノートPCと携帯端末を使う3人が、同じワールドへ続く門を地図越しに見つめるブロック調の風景',
   },
   {
+    slug: 'minecraft-java-bedrock-shared-server',
+    title:
+      'Java版・統合版で自分のサーバーを共用する方法｜安全なクロスプレイ設定',
+    description:
+      'Java版の自分のサーバーへ統合版の友達を安全に招待するための、GeyserとFloodgateの構成、無料ホストの選び方、公開前の確認を解説します。',
+    author: 'Gui',
+    datePublished: '2026-08-09T01:00:00.000Z',
+    image: '/uploads/stories/minecraft-java-bedrock-shared-server-hero.webp',
+    imageAlt:
+      'PC・タブレット・携帯ゲーム機を持つ3人が、青い接続線と盾の印が灯る同じ小さなサーバーの家を見つめるブロック調の風景',
+  },
+  {
     slug: 'minecraft-play-with-friends',
     title: 'マイクラで友達と遊ぶ方法｜Java・統合版・Switch・スマホ別の選び方',
     description:

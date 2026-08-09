@@ -28,6 +28,7 @@ const storySlugs = [
   'aceserver-portal-launch',
   'aceserver-beginners-guide',
   'minecraft-java-bedrock-crossplay',
+  'minecraft-java-bedrock-shared-server',
   'minecraft-server-cannot-join',
   'minecraft-play-with-friends',
   'minecraft-server-osusume',

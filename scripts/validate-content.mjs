@@ -14,6 +14,7 @@ const EXPECTED_STORY_SLUGS = new Set([
   'aceserver-portal-launch',
   'aceserver-beginners-guide',
   'minecraft-java-bedrock-crossplay',
+  'minecraft-java-bedrock-shared-server',
   'minecraft-server-cannot-join',
   'minecraft-play-with-friends',
   'minecraft-server-osusume',
@@ -23,11 +24,13 @@ const EXPECTED_STORY_SLUGS = new Set([
 const REQUIRED_STORY_IMAGE_SLUGS = new Set([
   'aceserver-portal-launch',
   'aceserver-beginners-guide',
+  'minecraft-java-bedrock-shared-server',
   'minecraft-server-cannot-join',
   'metaverse-is-close',
 ])
 const RELATED_GUIDE_STORY_SLUGS = new Set([
   'minecraft-java-bedrock-crossplay',
+  'minecraft-java-bedrock-shared-server',
   'minecraft-play-with-friends',
   'minecraft-server-cannot-join',
   'minecraft-server-osusume',
