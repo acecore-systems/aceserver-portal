@@ -12,6 +12,7 @@ const TRANSLATED_LOCALES = LOCALES.filter((locale) => locale !== 'ja')
 const EXPECTED_STORY_SLUGS = new Set([
   'aceserver-hijacked',
   'aceserver-portal-launch',
+  'aceserver-beginners-guide',
   'minecraft-java-bedrock-crossplay',
   'minecraft-java-bedrock-shared-server',
   'minecraft-server-cannot-join',
@@ -22,6 +23,7 @@ const EXPECTED_STORY_SLUGS = new Set([
 ])
 const REQUIRED_STORY_IMAGE_SLUGS = new Set([
   'aceserver-portal-launch',
+  'aceserver-beginners-guide',
   'minecraft-java-bedrock-shared-server',
   'minecraft-server-cannot-join',
   'metaverse-is-close',
