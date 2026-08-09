@@ -2,7 +2,7 @@
 title: '일본 추천 마인크래프트 서버 6선: Java/Bedrock 지원과 플레이 방식 비교'
 description: 공식 사이트에서 확인한 지원 에디션, 플레이 방식, 참여 안내를 바탕으로 일본의 공개 Minecraft 서버를 소개합니다.
 translationOf: minecraft-server-osusume
-sourceHash: sha256:4de817016dff8fbd0767c2581d4f06664db09846322e367e1a4aa5619c3a732e
+sourceHash: sha256:906e7d7b33dd0a9cec37c5b27d79d4c7a2bd2951f933d1faa39e4d68a3dd41bf
 date: 2026-08-01T10:00:00+09:00
 tags:
   - Minecraft
@@ -14,6 +14,8 @@ imageAlt: 해 질 녘 블록 풍경의 갈림길에서 지도를 둘러보고 �
 ---
 
 이 글은 공식 안내에서 플레이 방식과 참여 방법을 확인할 수 있는 공개 서버를 소개하며, 순서는 순위가 아닙니다. 참여 전에는 각 서버의 최신 공식 안내를 확인해 주세요.
+
+그룹에 Switch나 스마트폰 플레이어가 있다면 참여 방법을 정하기 전에 [친구와 마인크래프트를 함께 플레이하는 방법](/ko/stories/minecraft-play-with-friends/)에서 에디션과 계정 조건을 확인하세요.
 
 ## 추천 마인크래프트 서버 6선
 

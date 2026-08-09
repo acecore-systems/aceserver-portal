@@ -2,7 +2,7 @@
 title: 'How to set up a free Minecraft server: Java, Bedrock, and Realms'
 description: Learn how to set up a free Minecraft server and compare Java Edition, Bedrock Edition, and Realms, including preparation and safety checks before opening it.
 translationOf: minecraft-server-setup
-sourceHash: sha256:afa899b3869f47a601fe078603ce00dec388e0a974bb6c2a1bb61b2c6659f1a4
+sourceHash: sha256:1d0155c2bfc03563a83d164bde21d3becb20f0f64d2ba85763512ad9c025b903
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -16,6 +16,8 @@ imageAlt: Three blocky adventurers looking over three paths leading to a village
 There are several ways to play Minecraft with friends: use the same local network, run a dedicated server on your own PC, or use Realms. The right choice depends on everyone's edition and how much maintenance you are willing to handle.
 
 The first thing to understand is that a free server means the server software itself is free. It does not make the Minecraft game, computer, electricity, internet connection, backups, or updates free. This guide focuses on hosting the official software on your own PC.
+
+If your group includes Switch or smartphone players, check [how to play Minecraft with friends](/en/stories/minecraft-play-with-friends/) for the edition and account conditions before choosing how to join.
 
 ## The short answer: choose by players and edition
 

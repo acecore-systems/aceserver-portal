@@ -2,7 +2,7 @@
 title: '日本推荐 Minecraft 服务器 6 选：按 Java/Bedrock 支持与玩法比较'
 description: 根据各官方站点确认的版本支持、玩法和加入说明，介绍日本的公开 Minecraft 服务器。
 translationOf: minecraft-server-osusume
-sourceHash: sha256:4de817016dff8fbd0767c2581d4f06664db09846322e367e1a4aa5619c3a732e
+sourceHash: sha256:906e7d7b33dd0a9cec37c5b27d79d4c7a2bd2951f933d1faa39e4d68a3dd41bf
 date: 2026-08-01T10:00:00+09:00
 tags:
   - Minecraft
@@ -14,6 +14,8 @@ imageAlt: 三位旅人围在方块风格岔路口的地图桌旁，眺望夕阳�
 ---
 
 本文介绍官方说明中可确认玩法和加入方式的公开服务器；以下顺序不是排名。实际加入前，请务必查看各服务器的最新官方说明。
+
+如果队伍中有 Switch 或手机玩家，在决定参加方式前，可先阅读[如何与朋友一起玩 Minecraft](/zh-cn/stories/minecraft-play-with-friends/)，确认版本和账户条件。
 
 ## 推荐 Minecraft 服务器 6 选
 

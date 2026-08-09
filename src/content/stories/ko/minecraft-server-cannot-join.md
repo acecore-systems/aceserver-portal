@@ -2,7 +2,7 @@
 title: '마인크래프트 서버에 접속할 수 없을 때 확인할 점 | Java·베드락·Switch'
 description: 마인크래프트 서버에 접속할 수 없을 때 에디션, 게임 버전, 계정, 네트워크를 순서대로 확인하고 접속 후에도 안심하고 플레이를 이어 가기 위한 안내입니다.
 translationOf: minecraft-server-cannot-join
-sourceHash: sha256:cbba5d57ab5418390645eec248d789d8feaf5ad0565a6f3e667553185bf7e011
+sourceHash: sha256:014fe443391942d389ae8c13f0259af504df8fb7df2d4f38effea66213930476
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -14,6 +14,8 @@ imageAlt: 지도를 든 블록풍 여행자가 컴퓨터, 스마트폰, 게임 �
 ---
 
 마인크래프트 서버에 접속할 수 없을 때는 무작정 여러 번 재접속하기보다 게임 에디션, 서버 자체의 안내, 계정, 네트워크로 원인을 나누어 보는 편이 좋습니다. 이 글의 앞부분은 어느 서버에나 적용되는 공통 확인 절차입니다. Aceserver 전용 안내는 뒤에서 따로 다룹니다.
+
+그룹에 Switch나 스마트폰 플레이어가 있다면 참여 방법을 정하기 전에 [친구와 마인크래프트를 함께 플레이하는 방법](/ko/stories/minecraft-play-with-friends/)에서 에디션과 계정 조건을 확인하세요.
 
 ## 먼저 접속 문제와 접속 후의 불안을 나누기
 

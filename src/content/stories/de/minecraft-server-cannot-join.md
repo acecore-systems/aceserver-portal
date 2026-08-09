@@ -2,7 +2,7 @@
 title: 'Kein Beitritt zu einem Minecraft-Server? Prüfungen für Java, Bedrock und Switch'
 description: Prüfen Sie Edition, Spielversion, Konto und Netzwerk, wenn Sie keinem Minecraft-Server beitreten können, und spielen Sie nach der Verbindung sicher weiter.
 translationOf: minecraft-server-cannot-join
-sourceHash: sha256:cbba5d57ab5418390645eec248d789d8feaf5ad0565a6f3e667553185bf7e011
+sourceHash: sha256:014fe443391942d389ae8c13f0259af504df8fb7df2d4f38effea66213930476
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -14,6 +14,8 @@ imageAlt: Ein Reisender im Blockstil mit Karte wählt zwischen Wegen zu Computer
 ---
 
 Wenn Sie keinem Minecraft-Server beitreten können, sollten Sie nicht einfach immer wieder die Verbindung versuchen. Trennen Sie mögliche Ursachen nach Spiele-Edition, den Hinweisen des Servers, Konto und Netzwerk. Die erste Hälfte dieses Artikels gilt für jeden Server; Aceserver-spezifische Hinweise stehen getrennt am Ende.
+
+Wenn zu eurer Gruppe Switch- oder Smartphone-Spieler gehören, lest vor der Wahl des Beitrittswegs [wie ihr Minecraft mit Freunden spielt](/de/stories/minecraft-play-with-friends/), um Edition und Kontobedingungen zu prüfen.
 
 ## Zuerst Verbindungsproblem und Unsicherheit nach dem Beitritt trennen
 

@@ -2,7 +2,7 @@
 title: 'Empfohlene Minecraft-Server in Japan: 6 Optionen nach Java/Bedrock und Spielstil'
 description: Ein Überblick über öffentliche Minecraft-Server in Japan anhand der auf ihren offiziellen Seiten bestätigten Editionen, Spielweisen und Beitrittsinformationen.
 translationOf: minecraft-server-osusume
-sourceHash: sha256:4de817016dff8fbd0767c2581d4f06664db09846322e367e1a4aa5619c3a732e
+sourceHash: sha256:906e7d7b33dd0a9cec37c5b27d79d4c7a2bd2951f933d1faa39e4d68a3dd41bf
 date: 2026-08-01T10:00:00+09:00
 tags:
   - Minecraft
@@ -14,6 +14,8 @@ imageAlt: Drei Reisende an einem Kartentisch auf einem Blockbau-Scheideweg mit B
 ---
 
 Dieser Guide stellt öffentliche Server vor, deren offizielle Hinweise Spielweise und Beitritt erklären; die Reihenfolge ist keine Rangliste. Prüfe vor dem Beitritt die aktuellen offiziellen Hinweise jedes Servers.
+
+Wenn zu eurer Gruppe Switch- oder Smartphone-Spieler gehören, lest vor der Wahl des Beitrittswegs [wie ihr Minecraft mit Freunden spielt](/de/stories/minecraft-play-with-friends/), um Edition und Kontobedingungen zu prüfen.
 
 ## Sechs empfohlene Minecraft-Server
 

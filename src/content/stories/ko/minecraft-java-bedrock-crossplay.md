@@ -2,7 +2,7 @@
 title: 자바판과 베드락 에디션은 함께 플레이할 수 있나요? 지원 서버를 구분하는 방법
 description: Minecraft Java Edition과 Bedrock Edition은 양쪽 접속을 공식적으로 안내하는 서버라면 함께 플레이할 수 있습니다. 지원 서버를 확인하는 법과 참가 전 점검할 항목을 소개합니다.
 translationOf: minecraft-java-bedrock-crossplay
-sourceHash: sha256:401e1294ef834bef13e435291469f689e567f2882612364634fbfe5cf349b841
+sourceHash: sha256:e34b9fbed14f5809549af229a9299b68cee79d8096537207f2c52d5498756461
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -17,6 +17,8 @@ imageAlt: 노트북과 휴대용 기기를 쓰는 세 명의 플레이어가 지
 자바판과 베드락 에디션 플레이어는 호환되는 서버에서 함께 플레이할 수 있습니다. 서버가 두 에디션의 접속을 모두 받는다면, PC의 Java를 사용하는 친구와 모바일 또는 콘솔의 Bedrock을 사용하는 친구가 같은 서버에서 건축과 모험을 즐길 수 있습니다.
 
 하지만 **모든 Java Edition 서버가 Bedrock Edition을 지원하는 것은 아닙니다.** Java와 Bedrock은 접속 방식이 다르므로 서버 운영진이 Bedrock 플레이어를 받기 위한 방법을 마련해야 합니다. 단순히 “Java 서버”라고 쓰여 있다고 판단하지 말고, 공식 참가 안내에 두 에디션 지원이 명시되어 있는지 확인하세요.
+
+그룹에 Switch나 스마트폰 플레이어가 있다면 참여 방법을 정하기 전에 [친구와 마인크래프트를 함께 플레이하는 방법](/ko/stories/minecraft-play-with-friends/)에서 에디션과 계정 조건을 확인하세요.
 
 ## 자바판과 베드락 에디션은 호환 서버에서 함께 플레이할 수 있습니다
 

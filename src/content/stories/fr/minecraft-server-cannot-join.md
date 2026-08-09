@@ -2,7 +2,7 @@
 title: 'Impossible de rejoindre un serveur Minecraft ? Vérifications pour Java, Bedrock et Switch'
 description: Vérifiez l’édition, la version du jeu, le compte et le réseau lorsque vous ne pouvez pas rejoindre un serveur Minecraft, puis jouez sereinement après la connexion.
 translationOf: minecraft-server-cannot-join
-sourceHash: sha256:cbba5d57ab5418390645eec248d789d8feaf5ad0565a6f3e667553185bf7e011
+sourceHash: sha256:014fe443391942d389ae8c13f0259af504df8fb7df2d4f38effea66213930476
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -14,6 +14,8 @@ imageAlt: Un voyageur en style blocs tenant une carte choisit entre des chemins 
 ---
 
 Lorsque vous ne pouvez pas rejoindre un serveur Minecraft, évitez de réessayer sans cesse avant d’avoir séparé les causes possibles : édition du jeu, consignes du serveur, compte et réseau. La première moitié de cet article s’applique à tous les serveurs ; les indications propres à Aceserver sont séparées à la fin.
+
+Si votre groupe comprend des joueurs sur Switch ou mobile, consultez [comment jouer à Minecraft avec des amis](/fr/stories/minecraft-play-with-friends/) avant de choisir la façon de rejoindre, afin de vérifier l’édition et les comptes.
 
 ## Distinguez d’abord un problème de connexion d’une hésitation après l’arrivée
 

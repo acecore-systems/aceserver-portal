@@ -2,7 +2,7 @@
 title: 'Can’t join a Minecraft server? Checks for Java, Bedrock, and Switch'
 description: Learn how to check your edition, game version, account, and network when you cannot join a Minecraft server, then continue playing with confidence after you connect.
 translationOf: minecraft-server-cannot-join
-sourceHash: sha256:cbba5d57ab5418390645eec248d789d8feaf5ad0565a6f3e667553185bf7e011
+sourceHash: sha256:014fe443391942d389ae8c13f0259af504df8fb7df2d4f38effea66213930476
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -14,6 +14,8 @@ imageAlt: A block-style traveler holding a map chooses among paths to a computer
 ---
 
 When you cannot join a Minecraft server, separate the possible causes before repeatedly trying to connect: game edition, the server’s own guidance, account settings, and your network. The first half of this article is a general checklist for any server. Aceserver-specific guidance is kept separate near the end.
+
+If your group includes Switch or smartphone players, check [how to play Minecraft with friends](/en/stories/minecraft-play-with-friends/) for the edition and account conditions before choosing how to join.
 
 ## First, separate a connection problem from uncertainty after joining
 
