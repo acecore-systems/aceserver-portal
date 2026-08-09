@@ -2,7 +2,7 @@
 title: 'Comment partager son serveur Java avec Bedrock : configuration de cross-play sûre'
 description: Découvrez comment inviter en sécurité des amis sur Bedrock sur votre propre serveur Java avec Geyser et Floodgate, choisir un hébergement gratuit et vérifier les réglages avant l'ouverture.
 translationOf: minecraft-java-bedrock-shared-server
-sourceHash: sha256:3833220449e5e234dbc90a3d476f482020cd41a53cfa88b5bb377f3c11a807b5
+sourceHash: sha256:61f4cc5be0d88b01fdab4917b333d828a9483f4f9e34ec5ffb2b35a5eda2dd9c
 date: 2026-08-09T10:00:00+09:00
 tags:
   - Minecraft
@@ -96,7 +96,7 @@ Activez d'abord l'authentification Java et la liste d'autorisation dans server.p
 | enable-rcon       | false              | N'expose pas une console distante inutilisée                   |
 | enable-query      | false              | N'ajoute pas d'écoute Query inutilisée                         |
 
-Ajoutez les amis Java à la liste d'autorisation habituelle. Pour les amis Bedrock, utilisez la commande de liste Floodgate avec le gamertag réel de la personne. Par exemple, exécutez **/fwhitelist add gamertag** depuis la console d'administration. Ne devinez pas un préfixe de nom pour utiliser la liste habituelle et ne laissez pas la liste désactivée pendant les tests.
+Ajoutez les amis Java à la liste d'autorisation habituelle. Pour les amis Bedrock, utilisez la commande de liste Floodgate avec le gamertag réel de la personne. Dans le chat en jeu avec des droits d'administration, exécutez **/fwhitelist add gamertag** ; depuis la console du serveur hôte, retirez le `/` initial et utilisez **fwhitelist add gamertag**. Ne devinez pas un préfixe de nom pour utiliser la liste habituelle et ne laissez pas la liste désactivée pendant les tests.
 
 Ne donnez des privilèges d'administration qu'aux personnes qui en ont réellement besoin. Ne distribuez pas la configuration complète du serveur, les fichiers de clé Floodgate ou les identifiants de l'hébergeur à vos amis. Sauvegardez avant de modifier les réglages ou de mettre à jour les plugins et le jeu, et vérifiez que la restauration fonctionne.
 

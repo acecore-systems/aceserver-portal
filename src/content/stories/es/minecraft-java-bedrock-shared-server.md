@@ -2,7 +2,7 @@
 title: 'Cómo compartir tu servidor Java con Bedrock: configuración segura de juego cruzado'
 description: Aprende a invitar de forma segura a amistades de Bedrock a tu propio servidor Java con Geyser y Floodgate, elegir un host gratuito y revisar la configuración antes de abrirlo.
 translationOf: minecraft-java-bedrock-shared-server
-sourceHash: sha256:3833220449e5e234dbc90a3d476f482020cd41a53cfa88b5bb377f3c11a807b5
+sourceHash: sha256:61f4cc5be0d88b01fdab4917b333d828a9483f4f9e34ec5ffb2b35a5eda2dd9c
 date: 2026-08-09T10:00:00+09:00
 tags:
   - Minecraft
@@ -96,7 +96,7 @@ Primero activa la autenticación Java y la lista de acceso en server.properties 
 | enable-rcon       | false             | No expone una consola remota sin usar              |
 | enable-query      | false             | No añade un listener de consulta sin usar          |
 
-Añade a las amistades de Java a la lista de acceso normal. Para Bedrock, usa el comando de lista de Floodgate con el gamertag real de la persona. Por ejemplo, ejecuta **/fwhitelist add gamertag** desde la consola de administración. No adivines un prefijo de usuario para usar la lista normal, ni dejes la lista desactivada durante las pruebas.
+Añade a las amistades de Java a la lista de acceso normal. Para Bedrock, usa el comando de lista de Floodgate con el gamertag real de la persona. En el chat del juego con permisos de administración, ejecuta **/fwhitelist add gamertag**; desde la consola del servidor del host, omite la `/` inicial y usa **fwhitelist add gamertag**. No adivines un prefijo de usuario para usar la lista normal, ni dejes la lista desactivada durante las pruebas.
 
 Da privilegios administrativos solo a quien realmente los necesite. No distribuyas a amistades la configuración completa, los archivos de clave de Floodgate ni los datos de acceso del host. Haz una copia antes de cambiar ajustes o actualizar complementos y el juego, y comprueba que puedes restaurarla.
 

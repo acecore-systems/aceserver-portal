@@ -2,7 +2,7 @@
 title: 'Java 서버를 베드락과 함께 쓰는 방법: 안전한 크로스플레이 설정'
 description: Geyser와 Floodgate로 베드락 친구를 자신의 Java 서버에 안전하게 초대하고, 무료 호스트를 고르는 방법과 공개 전 점검 항목을 안내합니다.
 translationOf: minecraft-java-bedrock-shared-server
-sourceHash: sha256:3833220449e5e234dbc90a3d476f482020cd41a53cfa88b5bb377f3c11a807b5
+sourceHash: sha256:61f4cc5be0d88b01fdab4917b333d828a9483f4f9e34ec5ffb2b35a5eda2dd9c
 date: 2026-08-09T10:00:00+09:00
 tags:
   - Minecraft
@@ -96,7 +96,7 @@ _Java는 Paper에 직접 연결되고, Bedrock은 먼저 Geyser에 도착한 뒤
 | enable-rcon       | false  | 사용하지 않는 원격 콘솔을 공개하지 않음 |
 | enable-query      | false  | 사용하지 않는 Query 대기를 늘리지 않음  |
 
-Java 친구는 일반 허용 목록에 추가합니다. 베드락 친구는 본인의 실제 게이머태그로 Floodgate 허용 목록 명령을 사용합니다. 예를 들어 관리자 콘솔에서 **/fwhitelist add gamertag**를 실행합니다. 이름 접두사를 추측해 일반 허용 목록을 사용하거나, 시험 중 허용 목록을 꺼 둔 채로 두지 마세요.
+Java 친구는 일반 허용 목록에 추가합니다. 베드락 친구는 본인의 실제 게이머태그로 Floodgate 허용 목록 명령을 사용합니다. 게임 안에서 관리자 권한이 있는 채팅에서는 **/fwhitelist add gamertag**를 실행하고, 호스트의 서버 콘솔에서는 앞의 `/`를 뺀 **fwhitelist add gamertag**를 사용합니다. 이름 접두사를 추측해 일반 허용 목록을 사용하거나, 시험 중 허용 목록을 꺼 둔 채로 두지 마세요.
 
 관리자 권한은 정말 필요한 사람에게만 줍니다. 서버 전체 설정, Floodgate 키 파일, 호스트 로그인 정보를 친구에게 배포하지 마세요. 설정 변경, 플러그인 업데이트, 게임 업데이트 전에 백업하고 복원할 수 있는지도 확인합니다.
 

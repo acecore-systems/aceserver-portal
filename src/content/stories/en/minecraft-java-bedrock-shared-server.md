@@ -2,7 +2,7 @@
 title: 'How to Share Your Own Java Server with Bedrock: Safe Cross-Play Setup'
 description: Learn how to safely invite Bedrock friends to your own Java server with Geyser and Floodgate, choose a free host, and check settings before opening access.
 translationOf: minecraft-java-bedrock-shared-server
-sourceHash: sha256:3833220449e5e234dbc90a3d476f482020cd41a53cfa88b5bb377f3c11a807b5
+sourceHash: sha256:61f4cc5be0d88b01fdab4917b333d828a9483f4f9e34ec5ffb2b35a5eda2dd9c
 date: 2026-08-09T10:00:00+09:00
 tags:
   - Minecraft
@@ -96,7 +96,7 @@ First enable Java authentication and the allow-list in Paper's server.properties
 | enable-rcon       | false             | Does not expose an unused remote console               |
 | enable-query      | false             | Does not add an unused query listener                  |
 
-Add Java friends to the usual allow-list. For Bedrock friends, use Floodgate's allow-list command with the person's actual gamertag. For example, run **/fwhitelist add gamertag** from the administrator console. Do not guess a username prefix and use the ordinary allow-list, and do not leave the allow-list off while testing.
+Add Java friends to the usual allow-list. For Bedrock friends, use Floodgate's allow-list command with the person's actual gamertag. In an in-game administrator chat, run **/fwhitelist add gamertag**; from the host's server console, omit the leading `/` and use **fwhitelist add gamertag**. Do not guess a username prefix and use the ordinary allow-list, and do not leave the allow-list off while testing.
 
 Give administrator privileges only to people who truly need them. Do not distribute the complete server configuration, Floodgate key files, or host sign-in details to friends. Back up before changing settings or updating plugins and the game, and verify that you can restore the backup.
 

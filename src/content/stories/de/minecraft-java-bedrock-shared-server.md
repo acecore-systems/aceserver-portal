@@ -2,7 +2,7 @@
 title: 'Eigenen Java-Server mit Bedrock teilen: sichere Crossplay-Konfiguration'
 description: Erfahre, wie du Bedrock-Freunde mit Geyser und Floodgate sicher auf deinen Java-Server einlädst, einen kostenlosen Hoster auswählst und die Einstellungen vor der Freigabe prüfst.
 translationOf: minecraft-java-bedrock-shared-server
-sourceHash: sha256:3833220449e5e234dbc90a3d476f482020cd41a53cfa88b5bb377f3c11a807b5
+sourceHash: sha256:61f4cc5be0d88b01fdab4917b333d828a9483f4f9e34ec5ffb2b35a5eda2dd9c
 date: 2026-08-09T10:00:00+09:00
 tags:
   - Minecraft
@@ -96,7 +96,7 @@ Aktiviere zuerst Java-Authentifizierung und Allowlist in Paper server.properties
 | enable-rcon       | false            | Legt keine ungenutzte Fernkonsole offen                |
 | enable-query      | false            | Fügt keinen ungenutzten Query-Listener hinzu           |
 
-Füge Java-Freunde der normalen Allowlist hinzu. Für Bedrock-Freunde verwendest du den Floodgate-Allowlist-Befehl mit dem tatsächlichen Gamertag der Person. Führe zum Beispiel **/fwhitelist add gamertag** in der Administrationskonsole aus. Rate keinen Namenspräfix, um die gewöhnliche Allowlist zu verwenden, und lasse die Allowlist beim Test nicht ausgeschaltet.
+Füge Java-Freunde der normalen Allowlist hinzu. Für Bedrock-Freunde verwendest du den Floodgate-Allowlist-Befehl mit dem tatsächlichen Gamertag der Person. Im Spielchat mit Administratorrechten führst du **/fwhitelist add gamertag** aus; in der Serverkonsole des Hosts lässt du den führenden `/` weg und verwendest **fwhitelist add gamertag**. Rate keinen Namenspräfix, um die gewöhnliche Allowlist zu verwenden, und lasse die Allowlist beim Test nicht ausgeschaltet.
 
 Gib Administratorrechte nur Menschen, die sie wirklich benötigen. Verteile weder die vollständige Serverkonfiguration noch Floodgate-Schlüsseldateien oder Anmeldedaten des Hosters an Freunde. Erstelle vor Einstellungs-, Plugin- und Spielupdates eine Sicherung und prüfe die Wiederherstellung.
 

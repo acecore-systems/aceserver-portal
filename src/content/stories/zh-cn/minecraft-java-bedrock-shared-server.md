@@ -2,7 +2,7 @@
 title: 如何让 Java 版与基岩版共用自己的服务器：安全跨平台设置
 description: 介绍如何通过 Geyser 与 Floodgate 安全地邀请基岩版朋友加入自己的 Java 版服务器，并说明免费主机的选择和公开前检查。
 translationOf: minecraft-java-bedrock-shared-server
-sourceHash: sha256:3833220449e5e234dbc90a3d476f482020cd41a53cfa88b5bb377f3c11a807b5
+sourceHash: sha256:61f4cc5be0d88b01fdab4917b333d828a9483f4f9e34ec5ffb2b35a5eda2dd9c
 date: 2026-08-09T10:00:00+09:00
 tags:
   - Minecraft
@@ -96,7 +96,7 @@ _Java 版直接到达 Paper；基岩版先到达 Geyser，再被转交给同一�
 | enable-rcon       | false  | 不公开未使用的远程控制台          |
 | enable-query      | false  | 不增加未使用的查询监听            |
 
-将 Java 版朋友添加到普通白名单。对于基岩版朋友，应使用 Floodgate 的白名单命令并填写本人实际的游戏标签。例如在管理员控制台运行 **/fwhitelist add gamertag**。不要猜测用户名的前缀后改用普通白名单，也不要在测试时让白名单保持关闭。
+将 Java 版朋友添加到普通白名单。对于基岩版朋友，应使用 Floodgate 的白名单命令并填写本人实际的游戏标签。在游戏内具有管理员权限的聊天中运行 **/fwhitelist add gamertag**；在主机的服务器控制台中，省略开头的 `/`，运行 **fwhitelist add gamertag**。不要猜测用户名的前缀后改用普通白名单，也不要在测试时让白名单保持关闭。
 
 只向真正需要的人授予管理员权限。不要把完整服务器配置、Floodgate 密钥文件或主机登录信息发给朋友。更改设置、更新插件或游戏前应备份，并确认能够恢复。
 
