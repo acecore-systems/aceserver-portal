@@ -69,6 +69,17 @@ const stories = [
       'ノートPCと携帯端末を使う3人が、同じワールドへ続く門を地図越しに見つめるブロック調の風景',
   },
   {
+    slug: 'minecraft-play-with-friends',
+    title: 'マイクラで友達と遊ぶ方法｜Java・統合版・Switch・スマホ別の選び方',
+    description:
+      'Java版と統合版の違いを整理し、自分のワールド・Realms・公開サーバーから、友達と遊ぶ方法を端末別に選べるガイドです。',
+    author: 'Gui',
+    datePublished: '2026-08-08T01:00:00.000Z',
+    image: '/uploads/stories/minecraft-play-with-friends-hero.webp',
+    imageAlt:
+      'ブロック調の夕暮れの広場で、PC、携帯ゲーム機、スマホをそばに置き、地図を囲んで遊び方を相談する4人の友達',
+  },
+  {
     slug: 'minecraft-server-osusume',
     title:
       '【2026年8月更新】おすすめのマイクラサーバー6選｜Java・統合版対応や遊び方で比較',

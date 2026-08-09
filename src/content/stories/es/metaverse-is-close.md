@@ -2,7 +2,7 @@
 title: El metaverso está más cerca de lo que parece
 description: El metaverso no se limita a las gafas de realidad virtual; espacios como Minecraft, donde las personas se reúnen e interactúan, también pueden serlo.
 translationOf: metaverse-is-close
-sourceHash: sha256:99ab60acbee3e67a933c8b36ea5c54ba199eebe99f7e2967f8929a904c8bffca
+sourceHash: sha256:14531152050ca4f10b2e7f6961d2f2d34d7cdc802d07ceac87945f13b9d02486
 date: 2023-03-23T00:00:00+09:00
 tags:
   - Comunidad

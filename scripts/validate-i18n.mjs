@@ -15,6 +15,7 @@ const expectedStorySlugs = [
   'aceserver-beginners-guide',
   'minecraft-java-bedrock-crossplay',
   'minecraft-server-cannot-join',
+  'minecraft-play-with-friends',
   'minecraft-server-osusume',
   'minecraft-server-setup',
   'metaverse-is-close',

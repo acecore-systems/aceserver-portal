@@ -8,6 +8,9 @@ tags:
 author: Gui
 image: /uploads/stories/aceserver-portal-launch.webp
 imageAlt: Minecraftの街並みを背景にしたエースサーバーポータルのトップページ
+relatedPages:
+  - world-map
+  - youtube-search-aceserver
 ---
 
 誰でも参加できるMinecraft無料公開サーバー「エースサーバー」の公式ポータルを公開しました。

@@ -8,6 +8,8 @@ tags:
 author: Gui
 image: /uploads/stories/metaverse-is-close.webp
 imageAlt: 仮想空間でつながる人々とVRヘッドセットを表したイメージ
+relatedPages:
+  - world-map
 ---
 
 「メタバース」と聞くと、VRゴーグルをつけて仮想空間に入る――そんなイメージが強いかもしれません。FacebookがMetaに社名を変え、Horizon Worldsに力を入れていますが、正直なところあまりピンときていない人も多いのではないでしょうか。

@@ -7,6 +7,9 @@ tags:
 author: ハット
 image: /uploads/stories/aceserver-hijacked.webp
 imageAlt: 夜のブロックで作られた街を、紫と緑の光を放つ異常なサーバー装置が侵食しているイメージ
+relatedPages:
+  - world-map
+  - youtube-search-aceserver
 ---
 
 ## エースサーバーが乗っ取られた

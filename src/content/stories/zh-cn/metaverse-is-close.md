@@ -2,7 +2,7 @@
 title: 元宇宙其实就在身边
 description: 元宇宙不只存在于 VR 头显中；像 Minecraft 这样让人们相聚和交流的虚拟空间，也可以被视为元宇宙。
 translationOf: metaverse-is-close
-sourceHash: sha256:99ab60acbee3e67a933c8b36ea5c54ba199eebe99f7e2967f8929a904c8bffca
+sourceHash: sha256:14531152050ca4f10b2e7f6961d2f2d34d7cdc802d07ceac87945f13b9d02486
 date: 2023-03-23T00:00:00+09:00
 tags:
   - 社区

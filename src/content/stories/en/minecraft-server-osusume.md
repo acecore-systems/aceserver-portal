@@ -2,7 +2,7 @@
 title: 'Recommended Minecraft servers in Japan: 6 picks by Java/Bedrock support and play style'
 description: A guide to public Minecraft servers in Japan, based on the editions, play styles, and joining information confirmed on their official sites.
 translationOf: minecraft-server-osusume
-sourceHash: sha256:40a109cd0a0cddd64a10843cd181d695b70802c6cab486b4c375c61f0da9578c
+sourceHash: sha256:4de817016dff8fbd0767c2581d4f06664db09846322e367e1a4aa5619c3a732e
 date: 2026-08-01T10:00:00+09:00
 tags:
   - Minecraft

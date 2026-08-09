@@ -2,7 +2,7 @@
 title: O Aceserver foi sequestrado.
 description: Um registro do “sequestro” ocorrido no Aceserver. Um documento chocante sobre a sanidade dos membros sendo consumida um após outro.
 translationOf: aceserver-hijacked
-sourceHash: sha256:103ac3842af3abbe7c8245c6d47879926718b08e886718c678c9236d896d4f03
+sourceHash: sha256:d4ed78f447d9c7d8b80f00e170eaebd2f24a8faf1285b827b6499d2029541950
 date: 2022-10-12T00:00:00+09:00
 tags:
   - Evento

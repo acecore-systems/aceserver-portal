@@ -2,7 +2,7 @@
 title: '무료 마인크래프트 서버 만드는 방법: Java, 베드락, Realms의 차이'
 description: 무료 마인크래프트 서버를 만드는 방법을 소개하고, Java Edition·Bedrock Edition·Realms의 차이와 준비 사항, 공개 전 보안 점검을 설명합니다.
 translationOf: minecraft-server-setup
-sourceHash: sha256:0dcea0b86790d9dc2e5e923a5cd0dd2366dd614b67457bde953f8504bec00a01
+sourceHash: sha256:afa899b3869f47a601fe078603ce00dec388e0a974bb6c2a1bb61b2c6659f1a4
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
