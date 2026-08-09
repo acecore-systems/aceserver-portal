@@ -28,6 +28,7 @@ const REQUIRED_STORY_IMAGE_SLUGS = new Set([
 ])
 const RELATED_GUIDE_STORY_SLUGS = new Set([
   'minecraft-java-bedrock-crossplay',
+  'minecraft-java-bedrock-shared-server',
   'minecraft-play-with-friends',
   'minecraft-server-cannot-join',
   'minecraft-server-osusume',

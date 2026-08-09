@@ -2,7 +2,7 @@
 title: 如何让 Java 版与基岩版共用自己的服务器：安全跨平台设置
 description: 介绍如何通过 Geyser 与 Floodgate 安全地邀请基岩版朋友加入自己的 Java 版服务器，并说明免费主机的选择和公开前检查。
 translationOf: minecraft-java-bedrock-shared-server
-sourceHash: sha256:35250c41cb4dcc95e1ffec68e5830d5c959c37619e0e7c6ef021568eecfdffb8
+sourceHash: sha256:3833220449e5e234dbc90a3d476f482020cd41a53cfa88b5bb377f3c11a807b5
 date: 2026-08-09T10:00:00+09:00
 tags:
   - Minecraft
@@ -20,6 +20,8 @@ imageAlt: 三名使用电脑、平板和掌机的人望向同一座小型方块�
 
 关键是不应为了让基岩版朋友加入而关闭 Java 版的账号认证。本文从保留 Java 版认证、只允许受邀者加入的状态开始说明。Java 版与基岩版的操作和部分功能并不完全相同，公开前必须用两种设备实际测试。
 
+如果还在决定不同设备的朋友怎样一起玩，也可先阅读[如何和朋友一起玩 Minecraft](/zh-cn/stories/minecraft-play-with-friends/)。
+
 ## 结论：Java 服务器 + Geyser + Floodgate 可以共用
 
 对于自行管理的 Java 版服务器，较清楚的方案是在支持插件的 Paper 中同时安装 Geyser 与 Floodgate。
@@ -30,6 +32,8 @@ imageAlt: 三名使用电脑、平板和掌机的人望向同一座小型方块�
 - Java 服务器的 online-mode 应保持为 true。
 
 这种方法是在 Java 服务器中增加基岩版连接路径。它不能让 Java 客户端直接进入仅基岩版服务器，也不能把 Java 版与基岩版 Realms 互相连接。
+
+如果要判断已经存在的服务器是否同时接受两种版本，可参阅[Java 版和基岩版能一起玩吗？](/zh-cn/stories/minecraft-java-bedrock-crossplay/)了解判断方法。
 
 ### 开始前的确认事项
 
@@ -50,6 +54,8 @@ imageAlt: 三名使用电脑、平板和掌机的人望向同一座小型方块�
 | Realms                 | 订阅服务                             | 使用邀请功能                           | 使用官方邀请和账号控制                                    | 不用于 Java 与基岩版跨平台游玩   |
 
 若不确定如何安全地在家中开放端口，先在 LAN 内验证，或从由主机管理外部地址和端口的免费主机开始会更稳妥。本文撰写时，Aternos 的官方指南推荐 Paper，并说明安装 Geyser 时会自动安装和设置 Floodgate。若其面板或政策已经改变，应以当时的官方指南为准。
+
+如需比较 Java、基岩版与 Realms 的免费开服基本选择，也可阅读[如何搭建免费的 Minecraft 服务器](/zh-cn/stories/minecraft-server-setup/)。
 
 ## 理解连接结构
 
@@ -113,6 +119,8 @@ _只允许测试后确认的 Java 与 Geyser 两条路径；管理路径不对�
 ![左侧的电脑和平板玩家在受保护服务器小屋附近测试，管理员在大门旁确认盾牌后，右侧一名远程朋友连接](/uploads/stories/minecraft-java-bedrock-shared-server-staged-test.webp)
 
 _先在 LAN 中测试两个版本，再让另一网络中的一名已在白名单中的朋友确认。_
+
+如果按此顺序测试后仍无法连接，请不要扩大公开范围；可用[无法加入 Minecraft 服务器时的确认](/zh-cn/stories/minecraft-server-cannot-join/)依次排查版本、游戏版本、账号和网络。
 
 ## 使用免费主机时的检查
 

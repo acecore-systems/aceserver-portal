@@ -12,11 +12,18 @@ tags:
 author: Gui
 image: /uploads/stories/minecraft-java-bedrock-shared-server-hero.webp
 imageAlt: PC・タブレット・携帯ゲーム機を持つ3人が、青い接続線と盾の印が灯る同じ小さなサーバーの家を見つめるブロック調の風景
+relatedStories:
+  - minecraft-play-with-friends
+  - minecraft-java-bedrock-crossplay
+  - minecraft-server-setup
+  - minecraft-server-cannot-join
 ---
 
 Java版の自分のサーバーへ、統合版のスマホ・タブレット・Windows・ゲーム機の友達を招待したいときは、Javaサーバーに Geyser と Floodgate を導入する構成が候補になります。Geyser が統合版の接続を Java サーバーへ橋渡しし、Floodgate が統合版アカウントを安全に識別できるようにします。
 
 大切なのは、統合版の友達を入れるために Java サーバーのアカウント認証を無効にしないことです。この記事では、Java 側の認証を維持し、招待した人だけが入れる状態から始める手順を紹介します。Java版と統合版で操作や一部の機能が完全に同じになるわけではないため、公開前に両方の端末で試します。
+
+Java版・統合版・Switch・スマホを含めて友達と遊ぶ方法から整理したい場合は、[マイクラで友達と遊ぶ方法](/stories/minecraft-play-with-friends/)も先に確認してください。
 
 ## 先に結論：Javaサーバー + Geyser + Floodgate で共用できる
 
@@ -28,6 +35,8 @@ Java版の自分のサーバーへ、統合版のスマホ・タブレット・W
 - Java サーバーの online-mode は true のままにします。
 
 これは Java サーバーへ統合版の接続経路を足す方法です。統合版専用サーバーへ Java版クライアントを直接入れる方法でも、Java版・統合版の Realms を相互に接続する方法でもありません。
+
+すでにあるサーバーがJava版と統合版の両方を受け入れるか確認したい場合は、[Java版と統合版は一緒に遊べる？](/stories/minecraft-java-bedrock-crossplay/)で見分け方を確認できます。
 
 ### 最初に確認すること
 
@@ -48,6 +57,8 @@ Java版の自分のサーバーへ、統合版のスマホ・タブレット・W
 | Realms                  | サブスクリプション                       | 招待機能                                                       | 公式の招待とアカウント管理を使う                                       | Java版と統合版のクロスプレイ用ではない     |
 
 自宅の公開設定に不安がある場合は、まず LAN 限定で動作を確かめるか、外部向けのアドレスとポートをホスト側が管理する無料ホストから始めるほうが安全です。Aternos は、記事作成時点の公式ガイドで Paper を推奨し、Geyser の導入時に Floodgate を自動導入・設定する方法を案内しています。管理画面や仕様が変わっていた場合は、必ずその時点の公式案内を優先してください。
+
+Java版・統合版・Realmsを含めた無料サーバーの基本的な選び方は、[マイクラの無料サーバーの立て方](/stories/minecraft-server-setup/)も参考にしてください。
 
 ## 接続の構成を理解する
 
@@ -111,6 +122,8 @@ DMZ、全ポート公開、ファイアウォールの無効化、管理画面�
 ![左でPCとタブレットの利用者が保護されたサーバーをLAN内で試し、中央の管理者が盾を確認した後、右側の1人の遠隔の友達が接続する段階的な確認のイメージ](/uploads/stories/minecraft-java-bedrock-shared-server-staged-test.webp)
 
 _先にLANで両エディションを試し、その後に別ネットワークの許可リスト済みの友達1人で外部接続を確認します。_
+
+この順で試しても接続できない場合は、設定を広く公開せず、[マイクラサーバーに入れない時の確認](/stories/minecraft-server-cannot-join/)でエディション・バージョン・アカウント・通信を順に切り分けます。
 
 ## 無料ホストで始める場合の確認手順
 

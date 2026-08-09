@@ -2,7 +2,7 @@
 title: 'Comment partager son serveur Java avec Bedrock : configuration de cross-play sûre'
 description: Découvrez comment inviter en sécurité des amis sur Bedrock sur votre propre serveur Java avec Geyser et Floodgate, choisir un hébergement gratuit et vérifier les réglages avant l'ouverture.
 translationOf: minecraft-java-bedrock-shared-server
-sourceHash: sha256:35250c41cb4dcc95e1ffec68e5830d5c959c37619e0e7c6ef021568eecfdffb8
+sourceHash: sha256:3833220449e5e234dbc90a3d476f482020cd41a53cfa88b5bb377f3c11a807b5
 date: 2026-08-09T10:00:00+09:00
 tags:
   - Minecraft
@@ -20,6 +20,8 @@ Pour inviter sur votre serveur Java des amis qui utilisent Bedrock sur télépho
 
 L'important est de ne pas désactiver l'authentification des comptes Java simplement pour accepter des amis Bedrock. Ce guide part d'un serveur qui conserve l'authentification Java et l'accès sur invitation. Les commandes et certaines fonctions ne sont pas identiques entre Java et Bedrock : testez donc les deux types d'appareils avant d'ouvrir le serveur.
 
+Si vous décidez encore comment des amis sur différents appareils peuvent jouer ensemble, consultez aussi [comment jouer à Minecraft avec des amis](/fr/stories/minecraft-play-with-friends/).
+
 ## En bref : partagez un serveur avec Java + Geyser + Floodgate
 
 Pour un serveur Java que vous gérez, une configuration simple consiste à utiliser Paper, qui prend en charge les plugins, avec Geyser et Floodgate installés sur le même serveur.
@@ -30,6 +32,8 @@ Pour un serveur Java que vous gérez, une configuration simple consiste à utili
 - Conservez online-mode du serveur Java à true.
 
 Cette méthode ajoute un chemin de connexion Bedrock à un serveur Java. Elle ne permet pas aux clients Java de rejoindre directement un serveur réservé à Bedrock et elle ne relie pas les Realms Java et Bedrock entre eux.
+
+Si vous devez déterminer si un serveur existant accepte les deux éditions, consultez [Java et Bedrock peuvent-ils jouer ensemble ?](/fr/stories/minecraft-java-bedrock-crossplay/).
 
 ### Vérifiez ces points d'abord
 
@@ -50,6 +54,8 @@ Un serveur gratuit signifie que le logiciel serveur ou une offre d'hébergement 
 | Realms                                | Abonnement                                                         | Utilisez les invitations                                                                  | Utilisez les contrôles officiels d'invitation et de compte                                                                  | Ce n'est pas destiné au cross-play Java vers Bedrock                            |
 
 Si vous n'êtes pas sûr d'ouvrir des ports chez vous, validez d'abord la configuration sur un LAN ou commencez avec un hébergeur gratuit qui gère l'adresse et le port externes. Au moment de la rédaction, la documentation officielle d'Aternos recommande Paper et décrit l'installation et la configuration automatiques de Floodgate lors de l'installation de Geyser. Si son panneau ou ses règles ont changé, suivez les indications officielles actuelles.
+
+Pour une comparaison de base des options gratuites Java, Bedrock et Realms, consultez aussi [comment créer un serveur Minecraft gratuit](/fr/stories/minecraft-server-setup/).
 
 ## Comprendre l'architecture de connexion
 
@@ -113,6 +119,8 @@ Vous n'avez pas besoin d'une DMZ, du transfert de tous les ports, d'un pare-feu 
 ![À gauche, des joueurs avec PC et tablette testent près d'une maison-serveur protégée, puis une personne qui administre vérifie un bouclier à une porte avant qu'un ami distant se connecte à droite](/uploads/stories/minecraft-java-bedrock-shared-server-staged-test.webp)
 
 _Testez d'abord les deux éditions sur le LAN, puis vérifiez l'accès avec un ami déjà autorisé sur un autre réseau._
+
+Si la connexion échoue encore après ces tests, n'élargissez pas l'exposition publique. Utilisez [ce qu'il faut vérifier quand il est impossible de rejoindre un serveur Minecraft](/fr/stories/minecraft-server-cannot-join/) pour isoler dans l'ordre l'édition, la version, le compte et le réseau.
 
 ## Vérifications avec un hébergeur gratuit
 

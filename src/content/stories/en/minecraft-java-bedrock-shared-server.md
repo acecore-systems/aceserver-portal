@@ -2,7 +2,7 @@
 title: 'How to Share Your Own Java Server with Bedrock: Safe Cross-Play Setup'
 description: Learn how to safely invite Bedrock friends to your own Java server with Geyser and Floodgate, choose a free host, and check settings before opening access.
 translationOf: minecraft-java-bedrock-shared-server
-sourceHash: sha256:35250c41cb4dcc95e1ffec68e5830d5c959c37619e0e7c6ef021568eecfdffb8
+sourceHash: sha256:3833220449e5e234dbc90a3d476f482020cd41a53cfa88b5bb377f3c11a807b5
 date: 2026-08-09T10:00:00+09:00
 tags:
   - Minecraft
@@ -20,6 +20,8 @@ To invite friends using Bedrock on phones, tablets, Windows, or consoles to your
 
 The important part is not disabling Java account authentication just to admit Bedrock friends. This guide starts with Java authentication and an invitation-only server kept in place. Java and Bedrock controls and some features are not identical, so test with both kinds of device before opening the server.
 
+If you are still deciding how friends on different devices should play together, also see [how to play Minecraft with friends](/en/stories/minecraft-play-with-friends/).
+
 ## The short answer: share one server with Java + Geyser + Floodgate
 
 For a Java server you manage yourself, a clear setup is Paper, which supports plugins, with Geyser and Floodgate installed on the same server.
@@ -30,6 +32,8 @@ For a Java server you manage yourself, a clear setup is Paper, which supports pl
 - Keep the Java server online-mode set to true.
 
 This adds a Bedrock connection path to a Java server. It does not let Java clients directly join a Bedrock-only server, and it does not connect Java and Bedrock Realms to one another.
+
+If you need to tell whether an existing server accepts both editions, see [can Java and Bedrock play together?](/en/stories/minecraft-java-bedrock-crossplay/).
 
 ### Check these things first
 
@@ -50,6 +54,8 @@ A free server means that the server software or a free hosting plan has no usage
 | Realms                       | Subscription                                                        | Use invitations                                                        | Use the official invitation and account controls                                                    | It is not for Java-to-Bedrock cross-play                      |
 
 If you are unsure about opening ports at home, first confirm the setup on a LAN, or begin with a free host that manages the external address and port. At the time this article was written, Aternos documents Paper as its recommended option and describes automatic Floodgate installation and configuration when Geyser is installed. If its panel or policy has changed, follow the current official guidance instead.
+
+For a basic comparison of free Java, Bedrock, and Realms choices, also see [how to set up a free Minecraft server](/en/stories/minecraft-server-setup/).
 
 ## Understand the connection layout
 
@@ -113,6 +119,8 @@ You do not need a DMZ, all-port forwarding, a disabled firewall, or internet exp
 ![Desktop and tablet players test near a protected server house on the left, then an administrator checks a shield at a gate before one remote friend connects on the right](/uploads/stories/minecraft-java-bedrock-shared-server-staged-test.webp)
 
 _Test both editions on the LAN first, then verify access with one allow-listed friend on another network._
+
+If you still cannot connect after these tests, do not widen the public exposure. Use [what to check when you cannot join a Minecraft server](/en/stories/minecraft-server-cannot-join/) to isolate the edition, version, account, and network in order.
 
 ## Checks when starting with a free host
 

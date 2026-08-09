@@ -2,7 +2,7 @@
 title: 'Java 서버를 베드락과 함께 쓰는 방법: 안전한 크로스플레이 설정'
 description: Geyser와 Floodgate로 베드락 친구를 자신의 Java 서버에 안전하게 초대하고, 무료 호스트를 고르는 방법과 공개 전 점검 항목을 안내합니다.
 translationOf: minecraft-java-bedrock-shared-server
-sourceHash: sha256:35250c41cb4dcc95e1ffec68e5830d5c959c37619e0e7c6ef021568eecfdffb8
+sourceHash: sha256:3833220449e5e234dbc90a3d476f482020cd41a53cfa88b5bb377f3c11a807b5
 date: 2026-08-09T10:00:00+09:00
 tags:
   - Minecraft
@@ -20,6 +20,8 @@ imageAlt: PC, 태블릿, 휴대용 게임기를 든 세 사람이 파란 연결�
 
 중요한 점은 베드락 친구를 받기 위해 Java 계정 인증을 꺼서는 안 된다는 것입니다. 이 안내는 Java 인증과 초대 전용 상태를 유지하는 것에서 시작합니다. Java와 베드락은 조작과 일부 기능이 완전히 같지 않으므로, 공개 전에 두 종류의 기기에서 실제로 시험해야 합니다.
 
+서로 다른 기기의 친구와 어떻게 함께 플레이할지 아직 정하는 중이라면 [친구와 Minecraft를 함께 하는 방법](/ko/stories/minecraft-play-with-friends/)도 확인하세요.
+
 ## 요약: Java + Geyser + Floodgate로 하나의 서버를 함께 쓸 수 있다
 
 직접 관리하는 Java 서버라면 서버 측 플러그인을 지원하는 Paper에 Geyser와 Floodgate를 함께 설치하는 구성이 알기 쉽습니다.
@@ -30,6 +32,8 @@ imageAlt: PC, 태블릿, 휴대용 게임기를 든 세 사람이 파란 연결�
 - Java 서버의 online-mode는 true로 유지합니다.
 
 이 방법은 Java 서버에 베드락 연결 경로를 추가하는 것입니다. Java 클라이언트가 베드락 전용 서버에 직접 들어가게 하거나 Java와 베드락 Realms를 서로 연결하는 방법은 아닙니다.
+
+기존 서버가 두 에디션을 모두 받는지 확인해야 한다면 [Java와 Bedrock을 함께 플레이할 수 있나요?](/ko/stories/minecraft-java-bedrock-crossplay/)를 확인하세요.
 
 ### 먼저 확인할 사항
 
@@ -50,6 +54,8 @@ imageAlt: PC, 태블릿, 휴대용 게임기를 든 세 사람이 파란 연결�
 | Realms                  | 구독                                          | 초대 기능 사용                                                | 공식 초대와 계정 제어 사용                                            | Java와 베드락 크로스플레이용이 아님           |
 
 집에서 포트를 여는 것이 불안하다면 먼저 LAN에서 구성을 확인하거나, 외부 주소와 포트를 호스트가 관리하는 무료 호스트로 시작하는 편이 안전합니다. 이 글을 작성할 때 Aternos의 공식 안내는 Paper를 권장하고 Geyser를 설치할 때 Floodgate를 자동 설치·설정하는 방법을 설명합니다. 패널이나 정책이 바뀌었다면 현재의 공식 안내를 우선합니다.
+
+Java, Bedrock, Realms의 무료 선택지를 기본부터 비교하려면 [무료 Minecraft 서버를 만드는 방법](/ko/stories/minecraft-server-setup/)도 참고하세요.
 
 ## 접속 구성을 이해하기
 
@@ -113,6 +119,8 @@ DMZ, 모든 포트 공개, 방화벽 해제, 관리 패널이나 RCON의 인터�
 ![왼쪽에서 PC와 태블릿 플레이어가 보호된 서버 집 근처에서 시험하고, 중앙의 관리자가 문에서 방패를 확인한 뒤 오른쪽의 원격 친구 한 명이 연결되는 모습](/uploads/stories/minecraft-java-bedrock-shared-server-staged-test.webp)
 
 _먼저 LAN에서 두 에디션을 시험한 뒤, 다른 네트워크에 있는 허용 목록의 친구 한 명으로 외부 접속을 확인합니다._
+
+이 순서로 시험해도 연결되지 않으면 공개 범위를 넓히지 마세요. [Minecraft 서버에 들어갈 수 없을 때 확인할 사항](/ko/stories/minecraft-server-cannot-join/)으로 에디션, 버전, 계정, 네트워크를 순서대로 구분합니다.
 
 ## 무료 호스트로 시작할 때의 확인
 
