@@ -2,7 +2,7 @@
 title: 'Guide du débutant Aceserver : portail, cartes, vidéos, WIKI et connexion'
 description: Vous découvrez Aceserver ? Apprenez quand utiliser le portail officiel, les cartes, les vidéos et le WIKI, et où vérifier si vous ne pouvez pas rejoindre le serveur.
 translationOf: aceserver-beginners-guide
-sourceHash: sha256:da7648abe6d4bcdf8cc95924de93ab3204dcaa8e712685ca9ec4c10f9f756fc1
+sourceHash: sha256:0631d3bde197d8d11a999ae7149e7008fe8e3b59a3c97e76831e3a50c41f2fe6
 date: 2026-08-09T10:00:00+09:00
 tags:
   - Minecraft
@@ -26,6 +26,8 @@ Les destinations de connexion, ports, étapes selon l'appareil — y compris Swi
 4. Lisez les [règles et conditions de bannissement du WIKI Aceserver](https://asv-wiki.acecore.net/article/rule/) avant d'entrer en jeu.
 
 Cet ordre vous mène aux informations de l'Aceserver actuel au lieu de dépendre d'un ancien article ou d'une méthode de connexion non officielle. Si un point n'est pas clair, ne le devinez pas : posez la question sur le Discord officiel.
+
+![Guide visuel en style blocs qui suit dans l'ordre le portail, le Discord officiel, le guide de participation du WIKI et les règles du WIKI](/uploads/stories/aceserver-beginners-guide-official-route.png)
 
 ## Utilisez le portail pour savoir où aller ensuite
 
@@ -54,6 +56,8 @@ La [page officielle des vidéos](/fr/youtube-search-aceserver/) présente des vi
 
 Les vidéos sont une porte pour découvrir la communauté. Ne supposez pas qu'une destination, une fonction ou une règle montrée dans une ancienne vidéo est toujours actuelle ; confirmez les étapes de participation et les règles sur les pages actuelles du Discord officiel et du WIKI.
 
+![Guide visuel en style blocs montrant une carte du monde, un écran vidéo et un guide du WIKI pour trouver où jouer et les informations nécessaires](/uploads/stories/aceserver-beginners-guide-explore-tools.png)
+
 ## Utilisez le WIKI pour confirmer participation et règles
 
 Le [guide de participation du WIKI Aceserver](https://asv-wiki.acecore.net/article/in/) fait autorité pour entrer, et les [règles et conditions de bannissement du WIKI Aceserver](https://asv-wiki.acecore.net/article/rule/) font autorité pour la conduite. Avant votre première visite, vérifiez comment ces points s'appliquent à votre façon de jouer.
@@ -81,6 +85,8 @@ Ne choisissez pas une adresse, un port, un changement DNS ou une procédure Swit
 L'impossibilité de rejoindre peut avoir plusieurs causes : édition du jeu, version, compte Microsoft, réseau ou informations actuelles du serveur. Commencez par [Ce qu'il faut vérifier lorsqu'on ne peut pas rejoindre un serveur Minecraft](/fr/stories/minecraft-server-cannot-join/) pour effectuer les vérifications générales valables sur tous les appareils.
 
 Vérifiez ensuite les informations actuelles du Discord officiel et du WIKI pour Aceserver. Destinations de connexion, ports, étapes Switch, maintenance et conditions doivent provenir des informations officielles, pas d'une explication générale.
+
+![Vérification de connexion en style blocs qui examine l'édition du jeu, la version, le compte et le réseau avant de revenir aux informations officielles](/uploads/stories/aceserver-beginners-guide-connection-check.png)
 
 Lorsque vous demandez de l'aide, préparez :
 

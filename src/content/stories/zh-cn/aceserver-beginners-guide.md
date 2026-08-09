@@ -2,7 +2,7 @@
 title: 'Aceserver 新手指南：Portal、世界地图、视频、WIKI 与连接问题'
 description: 第一次来到 Aceserver？了解何时使用官方 Portal、世界地图、视频和 WIKI，以及无法加入时应查看哪里。
 translationOf: aceserver-beginners-guide
-sourceHash: sha256:da7648abe6d4bcdf8cc95924de93ab3204dcaa8e712685ca9ec4c10f9f756fc1
+sourceHash: sha256:0631d3bde197d8d11a999ae7149e7008fe8e3b59a3c97e76831e3a50c41f2fe6
 date: 2026-08-09T10:00:00+09:00
 tags:
   - Minecraft
@@ -26,6 +26,8 @@ imageAlt: 一位拿着地图的旅行者在方块风景中前往传送门、世�
 4. 进入游戏前阅读 [Aceserver WIKI 的规则与封禁条件](https://asv-wiki.acecore.net/article/rule/)。
 
 按照这个顺序，可以找到适用于当前 Aceserver 的信息，而不是依赖过时文章或非官方连接方法。如果有不清楚的地方，请不要猜测，直接通过官方 Discord 询问。
+
+![按顺序经过 Portal、官方 Discord、WIKI 参加指南和 WIKI 规则的方块风格新手导览图](/uploads/stories/aceserver-beginners-guide-official-route.png)
 
 ## 用 Portal 找到下一步该去哪里
 
@@ -54,6 +56,8 @@ Portal 是最新信息的入口，并不是记住连接细节的地方。连接�
 
 视频是认识社区的入口。不要把旧视频中的连接地址、功能或规则当作当前内容；参加方法和规则请以官方 Discord 和 WIKI 当前页面为准。
 
+![使用世界地图、视频画面和 WIKI 指南书寻找想玩的地点及所需信息的方块风格导览图](/uploads/stories/aceserver-beginners-guide-explore-tools.png)
+
 ## 用 WIKI 确认参加方法和规则
 
 [Aceserver WIKI 的参加方法](https://asv-wiki.acecore.net/article/in/)是参加步骤的依据，[Aceserver WIKI 的规则与封禁条件](https://asv-wiki.acecore.net/article/rule/)是行为标准的依据。第一次参加前，请确认这些内容与你想进行的玩法是否有关。
@@ -81,6 +85,8 @@ Portal 是最新信息的入口，并不是记住连接细节的地方。连接�
 无法加入可能由游戏版本、版本号、Microsoft 帐户、网络或服务器当前说明等多种原因造成。请先阅读[无法加入 Minecraft 服务器时的检查方法](/zh-cn/stories/minecraft-server-cannot-join/)，进行适用于各种设备的基本排查。
 
 之后再确认 Aceserver 的官方 Discord 和 WIKI 最新说明。连接地址、端口、Switch 加入步骤、维护和参加条件必须以官方说明为准，而不是通用文章。
+
+![依次确认游戏版本类型、客户端版本、帐户和网络后再查看官方说明的方块风格连接检查图](/uploads/stories/aceserver-beginners-guide-connection-check.png)
 
 咨询时，准备以下信息会更容易说明情况：
 

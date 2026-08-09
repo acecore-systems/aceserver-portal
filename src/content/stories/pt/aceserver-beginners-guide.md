@@ -2,7 +2,7 @@
 title: 'Guia para iniciantes no Aceserver: portal, mapas, vídeos, WIKI e conexão'
 description: Chegando agora ao Aceserver? Saiba quando usar o portal oficial, mapas, vídeos e a WIKI, e onde verificar se não conseguir entrar.
 translationOf: aceserver-beginners-guide
-sourceHash: sha256:da7648abe6d4bcdf8cc95924de93ab3204dcaa8e712685ca9ec4c10f9f756fc1
+sourceHash: sha256:0631d3bde197d8d11a999ae7149e7008fe8e3b59a3c97e76831e3a50c41f2fe6
 date: 2026-08-09T10:00:00+09:00
 tags:
   - Minecraft
@@ -26,6 +26,8 @@ Destinos de conexão, portas, instruções por dispositivo — inclusive Switch 
 4. Leia as [regras e condições de banimento da WIKI do Aceserver](https://asv-wiki.acecore.net/article/rule/) antes de entrar no jogo.
 
 Essa ordem leva você às informações do Aceserver atual, em vez de depender de um artigo antigo ou de um método de conexão não oficial. Se algo não estiver claro, não suponha: pergunte pelo Discord oficial.
+
+![Guia visual em estilo de blocos que segue, em ordem, o portal, o Discord oficial, o guia de participação da WIKI e as regras da WIKI](/uploads/stories/aceserver-beginners-guide-official-route.png)
 
 ## Use o portal para descobrir para onde ir depois
 
@@ -54,6 +56,8 @@ A [página oficial de vídeos](/pt/youtube-search-aceserver/) mostra vídeos rec
 
 Os vídeos são uma porta para conhecer a comunidade. Não considere como atuais um destino de conexão, recurso ou regra mostrado em vídeo antigo; confirme os passos de participação e as regras nas páginas atuais do Discord oficial e da WIKI.
 
+![Guia visual em estilo de blocos que usa mapa do mundo, tela de vídeo e guia da WIKI para encontrar onde jogar e as informações necessárias](/uploads/stories/aceserver-beginners-guide-explore-tools.png)
+
 ## Use a WIKI para confirmar participação e regras
 
 O [guia de participação da WIKI do Aceserver](https://asv-wiki.acecore.net/article/in/) é a referência para entrar, e as [regras e condições de banimento da WIKI do Aceserver](https://asv-wiki.acecore.net/article/rule/) são a referência para a conduta. Antes da primeira visita, confira como esses pontos se aplicam à forma como você quer jogar.
@@ -81,6 +85,8 @@ Não escolha endereço, porta, alteração de DNS ou procedimento de Switch apen
 Não conseguir entrar pode ter várias causas: edição do jogo, versão, conta Microsoft, rede ou a orientação atual do servidor. Primeiro leia [O que verificar quando você não consegue entrar em um servidor de Minecraft](/pt/stories/minecraft-server-cannot-join/) para fazer a triagem básica que vale para qualquer dispositivo.
 
 Depois consulte as informações atuais do Discord oficial e da WIKI para o Aceserver. Destinos de conexão, portas, passos para Switch, manutenção e requisitos devem vir da orientação oficial, não de uma explicação geral.
+
+![Verificação de conexão em estilo de blocos que revisa edição do jogo, versão, conta e rede antes de voltar à orientação oficial](/uploads/stories/aceserver-beginners-guide-connection-check.png)
 
 Ao pedir ajuda, é útil informar:
 

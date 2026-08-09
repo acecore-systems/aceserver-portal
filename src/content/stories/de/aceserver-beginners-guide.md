@@ -2,7 +2,7 @@
 title: 'Aceserver-Einsteigerleitfaden: Portal, Weltkarten, Videos, WIKI und Verbindung'
 description: Neu bei Aceserver? Erfahre, wann du das offizielle Portal, Weltkarten, Videos und das WIKI nutzt und wo du nachsiehst, wenn du nicht beitreten kannst.
 translationOf: aceserver-beginners-guide
-sourceHash: sha256:da7648abe6d4bcdf8cc95924de93ab3204dcaa8e712685ca9ec4c10f9f756fc1
+sourceHash: sha256:0631d3bde197d8d11a999ae7149e7008fe8e3b59a3c97e76831e3a50c41f2fe6
 date: 2026-08-09T10:00:00+09:00
 tags:
   - Minecraft
@@ -26,6 +26,8 @@ Verbindungsziele, Ports, gerätespezifische Schritte einschließlich Switch, Tei
 4. Lies vor dem Spiel die [Regeln und Ban-Bedingungen im Aceserver-WIKI](https://asv-wiki.acecore.net/article/rule/).
 
 Mit dieser Reihenfolge erreichst du Informationen für das aktuelle Aceserver statt eines alten Artikels oder einer inoffiziellen Verbindungsmethode. Wenn etwas unklar ist, rate nicht, sondern frage im offiziellen Discord nach.
+
+![Blockstil-Übersicht, die nacheinander Portal, offiziellen Discord, WIKI-Teilnahmeanleitung und WIKI-Regeln zeigt](/uploads/stories/aceserver-beginners-guide-official-route.png)
 
 ## Nutze das Portal, um den nächsten Ort zu finden
 
@@ -54,6 +56,8 @@ Die [offizielle Videoseite](/de/youtube-search-aceserver/) zeigt neue Videos wie
 
 Videos sind ein Einstieg in die Community. Nimm nicht an, dass ein in einem alten Video gezeigtes Verbindungsziel, eine Funktion oder Regel noch aktuell ist; bestätige Teilnahmewege und Regeln auf den aktuellen Seiten von offiziellem Discord und WIKI.
 
+![Blockstil-Übersicht mit Weltkarte, Videobildschirm und WIKI-Leitfaden zum Finden eines Spielorts und der nötigen Informationen](/uploads/stories/aceserver-beginners-guide-explore-tools.png)
+
 ## Nutze das WIKI, um Teilnahme und Regeln zu bestätigen
 
 Das [Aceserver-WIKI zur Teilnahme](https://asv-wiki.acecore.net/article/in/) ist die Quelle für den Beitritt, und die [Regeln und Ban-Bedingungen im Aceserver-WIKI](https://asv-wiki.acecore.net/article/rule/) sind die Quelle für das Verhalten. Prüfe vor deinem ersten Besuch, wie diese Punkte zu deiner Spielweise passen.
@@ -81,6 +85,8 @@ Wähle Adresse, Port, DNS-Änderung oder Switch-Verfahren nicht nur nach einem a
 Dass du nicht beitreten kannst, kann viele Ursachen haben: Spiele-Edition, Version, Microsoft-Konto, Netzwerk oder aktuelle Serverhinweise. Lies zuerst [Was du prüfen solltest, wenn du einem Minecraft-Server nicht beitreten kannst](/de/stories/minecraft-server-cannot-join/), um die grundlegende, geräteunabhängige Fehlersuche durchzuführen.
 
 Prüfe danach die aktuellen Informationen von offiziellem Discord und WIKI für Aceserver. Verbindungsziele, Ports, Switch-Schritte, Wartung und Bedingungen müssen aus der offiziellen Anleitung stammen, nicht aus einer allgemeinen Erklärung.
+
+![Blockstil-Verbindungscheck, der Spiele-Edition, Version, Konto und Netzwerk prüft, bevor er zu offiziellen Hinweisen zurückführt](/uploads/stories/aceserver-beginners-guide-connection-check.png)
 
 Wenn du um Hilfe bittest, helfen diese Angaben:
 

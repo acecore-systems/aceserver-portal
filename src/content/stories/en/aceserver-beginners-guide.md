@@ -2,7 +2,7 @@
 title: 'Aceserver Beginner Guide: Portal, World Maps, Videos, WIKI, and Connection Help'
 description: New to Aceserver? Learn when to use the official portal, world maps, videos, and WIKI, and where to check if you cannot join.
 translationOf: aceserver-beginners-guide
-sourceHash: sha256:da7648abe6d4bcdf8cc95924de93ab3204dcaa8e712685ca9ec4c10f9f756fc1
+sourceHash: sha256:0631d3bde197d8d11a999ae7149e7008fe8e3b59a3c97e76831e3a50c41f2fe6
 date: 2026-08-09T10:00:00+09:00
 tags:
   - Minecraft
@@ -26,6 +26,8 @@ Connection destinations, ports, device-specific steps including Switch, joining 
 4. Read the [Aceserver WIKI rules and ban conditions](https://asv-wiki.acecore.net/article/rule/) before entering the game.
 
 Following this order takes you to information for the current Aceserver instead of relying on an old article or an unofficial connection method. If anything is unclear, do not guess; ask through the official Discord.
+
+![A block-style visual guide that follows the portal, official Discord, WIKI joining guide, and WIKI rules in order](/uploads/stories/aceserver-beginners-guide-official-route.png)
 
 ## Use the portal to find where to go next
 
@@ -54,6 +56,8 @@ The [official video page](/en/youtube-search-aceserver/) shows recent videos suc
 
 Videos are a doorway to understanding the community. Do not assume that a connection destination, feature, or rule shown in an older video is current. Confirm joining steps and rules on the current official Discord and WIKI pages.
 
+![A block-style visual guide showing a world map, video screen, and WIKI guidebook used to find a place to play and the information needed](/uploads/stories/aceserver-beginners-guide-explore-tools.png)
+
 ## Use the WIKI to confirm joining steps and rules
 
 The [Aceserver WIKI joining guide](https://asv-wiki.acecore.net/article/in/) is the authority for joining steps, and the [Aceserver WIKI rules and ban conditions](https://asv-wiki.acecore.net/article/rule/) are the authority for conduct. Before your first visit, check how these points affect the way you want to play.
@@ -81,6 +85,8 @@ Do not choose an address, port, DNS change, or Switch procedure from an old scre
 Unable to join can have many causes: your game edition, version, Microsoft account, network, or the server's current guidance. First use [What to Check When You Cannot Join a Minecraft Server](/en/stories/minecraft-server-cannot-join/) for general troubleshooting that applies across devices.
 
 Then check the latest official Discord and WIKI information for Aceserver. Connection destinations, ports, Switch joining steps, maintenance, and requirements must come from official guidance, not a general explanation.
+
+![A block-style connection check that reviews game edition, version, account, and network before returning to official guidance](/uploads/stories/aceserver-beginners-guide-connection-check.png)
 
 When asking for help, it is useful to include:
 
