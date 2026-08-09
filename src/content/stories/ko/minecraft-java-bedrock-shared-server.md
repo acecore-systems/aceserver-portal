@@ -2,7 +2,7 @@
 title: 'Java 서버를 베드락과 함께 쓰는 방법: 안전한 크로스플레이 설정'
 description: Geyser와 Floodgate로 베드락 친구를 자신의 Java 서버에 안전하게 초대하고, 무료 호스트를 고르는 방법과 공개 전 점검 항목을 안내합니다.
 translationOf: minecraft-java-bedrock-shared-server
-sourceHash: sha256:be5e56c5292dcd3c8237abf288858e53f9b89961567c14c10c2b91c316a152f1
+sourceHash: sha256:35250c41cb4dcc95e1ffec68e5830d5c959c37619e0e7c6ef021568eecfdffb8
 date: 2026-08-09T10:00:00+09:00
 tags:
   - Minecraft
@@ -65,6 +65,10 @@ Java와 베드락은 서로 다른 네트워크 형식으로 서버에 도착합
 
 Geyser의 UDP 포트는 음성 채팅, Query, 다른 UDP 서비스와 함께 쓸 수 없습니다. 나중에 기능을 추가할 때도 같은 포트를 억지로 재사용하지 말고 공식 문서와 호스트의 포트 할당을 확인합니다.
 
+![왼쪽의 PC Java 플레이어가 보호된 서버 집에 직접 연결되고, 오른쪽의 태블릿·휴대폰·휴대용 게임기의 Bedrock 플레이어가 파란 다리를 지나 같은 집으로 연결되는 모습](/uploads/stories/minecraft-java-bedrock-shared-server-topology.webp)
+
+_Java는 Paper에 직접 연결되고, Bedrock은 먼저 Geyser에 도착한 뒤 같은 Paper 서버로 전달됩니다._
+
 ## 단계1: Paper, Geyser, Floodgate 설치
 
 1. Paper처럼 서버 측 플러그인을 지원하는 Java 서버 소프트웨어를 선택합니다. 바닐라 Java 서버만으로는 Bukkit 계열 플러그인을 불러올 수 없습니다.
@@ -90,6 +94,10 @@ Java 친구는 일반 허용 목록에 추가합니다. 베드락 친구는 본�
 
 관리자 권한은 정말 필요한 사람에게만 줍니다. 서버 전체 설정, Floodgate 키 파일, 호스트 로그인 정보를 친구에게 배포하지 마세요. 설정 변경, 플러그인 업데이트, 게임 업데이트 전에 백업하고 복원할 수 있는지도 확인합니다.
 
+![관리자가 방패 옆에서 허용 목록을 확인하고, 두 개의 좁은 파란 경로가 벽을 지나 서버 집으로 이어지며, 별도의 관리용 문은 잠겨 있는 모습](/uploads/stories/minecraft-java-bedrock-shared-server-safe-settings.webp)
+
+_테스트 후 확인한 Java와 Geyser 경로만 허용하고, 관리 경로는 인터넷에 공개하지 않습니다._
+
 ## 단계3: 필요한 통신만 단계적으로 공개
 
 외부 접속을 열기 전에 먼저 연결을 시험합니다.
@@ -101,6 +109,10 @@ Java 친구는 일반 허용 목록에 추가합니다. 베드락 친구는 본�
 5. 다른 네트워크의 허용 목록 친구 한 명으로 접속을 시험합니다. Geyser의 connectiontest도 접속 대상을 확인하는 데 도움이 됩니다.
 
 DMZ, 모든 포트 공개, 방화벽 해제, 관리 패널이나 RCON의 인터넷 공개는 필요하지 않습니다. 호스트가 IPv6으로 외부에서 닿는 환경이라면 IPv4 포트 전달만 보고 안전하다고 생각하지 말고, OS 방화벽 규칙이 IPv6에도 적용되는지 확인합니다.
+
+![왼쪽에서 PC와 태블릿 플레이어가 보호된 서버 집 근처에서 시험하고, 중앙의 관리자가 문에서 방패를 확인한 뒤 오른쪽의 원격 친구 한 명이 연결되는 모습](/uploads/stories/minecraft-java-bedrock-shared-server-staged-test.webp)
+
+_먼저 LAN에서 두 에디션을 시험한 뒤, 다른 네트워크에 있는 허용 목록의 친구 한 명으로 외부 접속을 확인합니다._
 
 ## 무료 호스트로 시작할 때의 확인
 

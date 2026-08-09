@@ -2,7 +2,7 @@
 title: 'Comment partager son serveur Java avec Bedrock : configuration de cross-play sûre'
 description: Découvrez comment inviter en sécurité des amis sur Bedrock sur votre propre serveur Java avec Geyser et Floodgate, choisir un hébergement gratuit et vérifier les réglages avant l'ouverture.
 translationOf: minecraft-java-bedrock-shared-server
-sourceHash: sha256:be5e56c5292dcd3c8237abf288858e53f9b89961567c14c10c2b91c316a152f1
+sourceHash: sha256:35250c41cb4dcc95e1ffec68e5830d5c959c37619e0e7c6ef021568eecfdffb8
 date: 2026-08-09T10:00:00+09:00
 tags:
   - Minecraft
@@ -65,6 +65,10 @@ Sur un serveur à domicile, les ports usuels sont TCP 25565 pour Java et UDP 191
 
 Le port UDP de Geyser ne peut pas être partagé avec un chat vocal, Query ou un autre service UDP. Lorsque vous ajoutez une fonction plus tard, ne forcez pas la réutilisation du même port : vérifiez la documentation officielle et l'attribution de l'hébergeur.
 
+![Un joueur Java sur PC se relie directement à une maison-serveur protégée, tandis que des joueurs Bedrock sur tablette, téléphone et console portable traversent un pont bleu vers cette même maison](/uploads/stories/minecraft-java-bedrock-shared-server-topology.webp)
+
+_Java arrive directement à Paper ; Bedrock arrive d'abord à Geyser, qui le transmet au même serveur Paper._
+
 ## Étape 1 : installer Paper, Geyser et Floodgate
 
 1. Choisissez Paper ou un autre logiciel de serveur Java qui prend en charge les plugins côté serveur. Un serveur Java vanilla seul ne peut pas charger les plugins de la famille Bukkit.
@@ -90,6 +94,10 @@ Ajoutez les amis Java à la liste d'autorisation habituelle. Pour les amis Bedro
 
 Ne donnez des privilèges d'administration qu'aux personnes qui en ont réellement besoin. Ne distribuez pas la configuration complète du serveur, les fichiers de clé Floodgate ou les identifiants de l'hébergeur à vos amis. Sauvegardez avant de modifier les réglages ou de mettre à jour les plugins et le jeu, et vérifiez que la restauration fonctionne.
 
+![Une personne qui administre vérifie une liste d'autorisation près d'un bouclier, deux routes bleues étroites traversent un mur vers une maison-serveur et une porte d'administration séparée reste verrouillée](/uploads/stories/minecraft-java-bedrock-shared-server-safe-settings.webp)
+
+_Seuls les chemins Java et Geyser confirmés après les tests sont autorisés ; le chemin d'administration reste fermé à internet._
+
 ## Étape 3 : n'exposer que le trafic nécessaire, progressivement
 
 Effectuez les tests de connexion avant d'ouvrir un accès externe.
@@ -101,6 +109,10 @@ Effectuez les tests de connexion avant d'ouvrir un accès externe.
 5. Testez avec un ami inscrit sur la liste, depuis un autre réseau. Le connectiontest de Geyser peut aussi confirmer la destination.
 
 Vous n'avez pas besoin d'une DMZ, du transfert de tous les ports, d'un pare-feu désactivé ou d'une exposition internet du panneau de contrôle ou de RCON. Si l'hôte est joignable en IPv6, ne supposez pas que les règles de transfert IPv4 le protègent : vérifiez que la règle du pare-feu système s'applique aussi à IPv6.
+
+![À gauche, des joueurs avec PC et tablette testent près d'une maison-serveur protégée, puis une personne qui administre vérifie un bouclier à une porte avant qu'un ami distant se connecte à droite](/uploads/stories/minecraft-java-bedrock-shared-server-staged-test.webp)
+
+_Testez d'abord les deux éditions sur le LAN, puis vérifiez l'accès avec un ami déjà autorisé sur un autre réseau._
 
 ## Vérifications avec un hébergeur gratuit
 

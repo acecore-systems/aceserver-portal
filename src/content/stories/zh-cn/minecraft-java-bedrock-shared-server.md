@@ -2,7 +2,7 @@
 title: 如何让 Java 版与基岩版共用自己的服务器：安全跨平台设置
 description: 介绍如何通过 Geyser 与 Floodgate 安全地邀请基岩版朋友加入自己的 Java 版服务器，并说明免费主机的选择和公开前检查。
 translationOf: minecraft-java-bedrock-shared-server
-sourceHash: sha256:be5e56c5292dcd3c8237abf288858e53f9b89961567c14c10c2b91c316a152f1
+sourceHash: sha256:35250c41cb4dcc95e1ffec68e5830d5c959c37619e0e7c6ef021568eecfdffb8
 date: 2026-08-09T10:00:00+09:00
 tags:
   - Minecraft
@@ -65,6 +65,10 @@ Java 版和基岩版通过不同的网络格式到达服务器。在同一台 Pa
 
 Geyser 的 UDP 端口不能与语音聊天、Query 或其他 UDP 服务共用。之后增加功能时，不要强行复用同一端口；应确认官方文档和主机的端口分配。
 
+![左侧的 Java 版电脑玩家直接连接受保护的服务器小屋，右侧的手机、平板和掌机基岩版玩家通过蓝色桥梁连接同一小屋](/uploads/stories/minecraft-java-bedrock-shared-server-topology.webp)
+
+_Java 版直接到达 Paper；基岩版先到达 Geyser，再被转交给同一台 Paper 服务器。_
+
 ## 步骤1：安装 Paper、Geyser 和 Floodgate
 
 1. 选择 Paper 或其他支持服务器端插件的 Java 服务器软件。仅使用原版 Java 服务器无法加载 Bukkit 系列插件。
@@ -90,6 +94,10 @@ Geyser 的 UDP 端口不能与语音聊天、Query 或其他 UDP 服务共用。
 
 只向真正需要的人授予管理员权限。不要把完整服务器配置、Floodgate 密钥文件或主机登录信息发给朋友。更改设置、更新插件或游戏前应备份，并确认能够恢复。
 
+![管理员在盾牌旁检查白名单，两条狭窄的蓝色路线穿过围墙通向服务器小屋，独立的管理门保持上锁](/uploads/stories/minecraft-java-bedrock-shared-server-safe-settings.webp)
+
+_只允许测试后确认的 Java 与 Geyser 两条路径；管理路径不对互联网开放。_
+
 ## 步骤3：分阶段只公开必要通信
 
 在开放任何外部访问之前先完成连接测试。
@@ -101,6 +109,10 @@ Geyser 的 UDP 端口不能与语音聊天、Query 或其他 UDP 服务共用。
 5. 使用另一网络中的一名已在白名单中的朋友测试。Geyser 的 connectiontest 也可帮助确认连接目标。
 
 不需要 DMZ、全部端口转发、关闭防火墙，也不需要把控制面板或 RCON 暴露到互联网。若主机可通过 IPv6 访问，不要以为 IPv4 的端口转发规则已足够；还要确认系统防火墙规则同样适用于 IPv6。
+
+![左侧的电脑和平板玩家在受保护服务器小屋附近测试，管理员在大门旁确认盾牌后，右侧一名远程朋友连接](/uploads/stories/minecraft-java-bedrock-shared-server-staged-test.webp)
+
+_先在 LAN 中测试两个版本，再让另一网络中的一名已在白名单中的朋友确认。_
 
 ## 使用免费主机时的检查
 
