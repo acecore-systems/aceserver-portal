@@ -2,7 +2,7 @@
 title: 'So richtest du einen kostenlosen Minecraft-Server ein: Java, Bedrock und Realms'
 description: Erfahre, wie du einen kostenlosen Minecraft-Server einrichtest und Java Edition, Bedrock Edition und Realms vergleichst, einschließlich Vorbereitung und Sicherheitsprüfungen vor der Freigabe.
 translationOf: minecraft-server-setup
-sourceHash: sha256:afa899b3869f47a601fe078603ce00dec388e0a974bb6c2a1bb61b2c6659f1a4
+sourceHash: sha256:1d0155c2bfc03563a83d164bde21d3becb20f0f64d2ba85763512ad9c025b903
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -16,6 +16,8 @@ imageAlt: Drei blockartige Abenteurer blicken auf drei Wege zu einem Dorf, einem
 Es gibt mehrere Möglichkeiten, mit Freunden Minecraft zu spielen: Ihr könnt dasselbe lokale Netzwerk verwenden, einen eigenen dedizierten Server auf eurem PC betreiben oder Realms nutzen. Die passende Wahl hängt von der Edition aller Spieler und davon ab, wie viel Wartung du übernehmen möchtest.
 
 Wichtig ist zuerst: Ein kostenloser Server bedeutet, dass die Serversoftware kostenlos ist. Das Minecraft-Spiel, der Computer, Strom, Internetverbindung, Backups und Updates werden dadurch nicht kostenlos. Dieser Leitfaden konzentriert sich darauf, die offizielle Software auf dem eigenen PC zu hosten.
+
+Wenn zu eurer Gruppe Switch- oder Smartphone-Spieler gehören, lest vor der Wahl des Beitrittswegs [wie ihr Minecraft mit Freunden spielt](/de/stories/minecraft-play-with-friends/), um Edition und Kontobedingungen zu prüfen.
 
 ## Kurz gesagt: Nach Spielern und Edition auswählen
 

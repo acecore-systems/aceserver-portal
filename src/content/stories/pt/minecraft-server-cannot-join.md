@@ -2,7 +2,7 @@
 title: 'Não consegue entrar em um servidor de Minecraft? Verificações para Java, Bedrock e Switch'
 description: Veja como conferir edição, versão do jogo, conta e rede quando não conseguir entrar em um servidor de Minecraft e como continuar jogando com segurança depois de conectar.
 translationOf: minecraft-server-cannot-join
-sourceHash: sha256:cbba5d57ab5418390645eec248d789d8feaf5ad0565a6f3e667553185bf7e011
+sourceHash: sha256:014fe443391942d389ae8c13f0259af504df8fb7df2d4f38effea66213930476
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -14,6 +14,8 @@ imageAlt: Um viajante em estilo de blocos com um mapa escolhe entre caminhos par
 ---
 
 Quando não conseguir entrar em um servidor de Minecraft, não tente reconectar repetidamente sem antes separar as possíveis causas: edição do jogo, orientações do próprio servidor, conta e rede. A primeira metade deste artigo vale para qualquer servidor; as orientações específicas do Aceserver ficam separadas no fim.
+
+Se o grupo inclui jogadores de Switch ou celular, antes de decidir como participar, consulte [como jogar Minecraft com amigos](/pt/stories/minecraft-play-with-friends/) para conferir a edição e as contas.
 
 ## Primeiro, separe uma falha de conexão da insegurança depois de entrar
 
