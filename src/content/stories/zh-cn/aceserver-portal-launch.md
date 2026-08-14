@@ -2,7 +2,7 @@
 title: Aceserver Portal 正式上线
 description: 将原本分散在 Discord、Wiki、视频和世界地图中的加入前信息，整理到一个统一入口。
 translationOf: aceserver-portal-launch
-sourceHash: sha256:4bc196677df5822669e61cb69a7781e15129a0860cde91c603755cb560702d77
+sourceHash: sha256:8928266b63395c3af0fbe52abff591003c8c4a0a6ad259740be5052f605e031e
 date: 2026-06-07T10:00:00+09:00
 tags:
   - 公告
@@ -28,7 +28,7 @@ Aceserver 支持 Java 版和基岩版玩家。此次 Portal 将服务器简介�
 
 ## 可以持续更新的结构
 
-Portal 是使用 Astro 和 UnoCSS 构建的静态网站。页面正文与网站设置可通过 Sveltia CMS 更新，因此无需修改代码也能调整公告和访问路径。
+Portal 是使用 Astro 和 Tailwind CSS v4 构建的静态网站。页面正文与网站设置可通过 Sveltia CMS 更新，因此无需修改代码也能调整公告和访问路径。
 
 制作与运维方面的详情收录在 [Acecore Systems 案例](https://systems.acecore.net/zh-cn/works/#case-aceserver-portal)中。
 

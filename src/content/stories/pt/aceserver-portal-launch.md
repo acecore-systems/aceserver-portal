@@ -2,7 +2,7 @@
 title: Lançamos o Portal do Aceserver
 description: Reunimos em uma única entrada as informações anteriores à participação que estavam separadas entre Discord, Wiki, vídeos e mapas.
 translationOf: aceserver-portal-launch
-sourceHash: sha256:4bc196677df5822669e61cb69a7781e15129a0860cde91c603755cb560702d77
+sourceHash: sha256:8928266b63395c3af0fbe52abff591003c8c4a0a6ad259740be5052f605e031e
 date: 2026-06-07T10:00:00+09:00
 tags:
   - Anúncio
@@ -28,7 +28,7 @@ A página inicial apresenta brevemente o servidor e como entrar, depois direcion
 
 ## Uma estrutura que pode continuar sendo atualizada
 
-O portal é um site estático criado com Astro e UnoCSS. Os textos das páginas e as configurações do site podem ser atualizados pelo Sveltia CMS, permitindo revisar avisos e caminhos sem alterar o código.
+O portal é um site estático criado com Astro e Tailwind CSS v4. Os textos das páginas e as configurações do site podem ser atualizados pelo Sveltia CMS, permitindo revisar avisos e caminhos sem alterar o código.
 
 Os detalhes de produção e operação estão no [caso da Acecore Systems](https://systems.acecore.net/pt/works/#case-aceserver-portal).
 

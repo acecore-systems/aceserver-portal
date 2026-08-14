@@ -29,7 +29,7 @@ relatedPages:
 
 ## 更新し続けられる構成
 
-ポータルはAstroとUnoCSSを使った静的サイトです。ページ本文やサイト設定はSveltia CMSから更新でき、コードを触らずに告知や導線を見直せます。
+ポータルはAstroとTailwind CSS v4を使った静的サイトです。ページ本文やサイト設定はSveltia CMSから更新でき、コードを触らずに告知や導線を見直せます。
 
 制作・運用面の詳細は、[Acecore Systemsの実績](https://systems.acecore.net/works/#case-aceserver-portal)に掲載しています。
 

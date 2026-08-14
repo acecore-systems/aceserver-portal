@@ -1,0 +1,278 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-skyforge-50: #eefcff;
+  --color-skyforge-100: #d7f7ff;
+  --color-skyforge-300: #67d9ff;
+  --color-skyforge-500: #0aa7e2;
+  --color-skyforge-700: #066b9b;
+  --color-grass-50: #f0fee7;
+  --color-grass-100: #ddfacb;
+  --color-grass-300: #8ee35c;
+  --color-grass-500: #35aa2f;
+  --color-grass-700: #1f6e25;
+  --color-gold-100: #fff0b8;
+  --color-gold-300: #ffd84d;
+  --color-gold-500: #f5a900;
+  --color-gold-700: #b86500;
+  --color-ember-400: #ff7a1a;
+  --color-ember-600: #d94b00;
+  --color-ink-900: #15130f;
+  --color-ink-800: #201c16;
+  --color-ink-700: #332a1f;
+  --color-parchment: #fff5dc;
+  --color-wood: #2b2118;
+  --font-sans:
+    'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic UI', 'Yu Gothic', Meiryo,
+    system-ui, sans-serif;
+  --font-display:
+    'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic UI', 'Yu Gothic', Meiryo,
+    system-ui, sans-serif;
+  --font-weight-900: 900;
+  --duration-180: 180ms;
+}
+
+@utility asv-container {
+  @apply mx-auto max-w-7xl px-5 sm:px-6 lg:px-8;
+}
+
+@utility asv-btn {
+  @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-md px-5 py-3 text-sm font-900 no-underline shadow-[0_4px_0_rgba(0,0,0,.35)] transition duration-180 focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-gold-300 focus-visible:ring-offset-2 focus-visible:ring-offset-ink-900 active:translate-y-0.5 active:shadow-[0_2px_0_rgba(0,0,0,.35)];
+}
+
+@utility asv-btn-primary {
+  @apply asv-btn border-2 border-[#9f6b00] bg-gold-300 text-ink-900 hover:bg-[#ffe279];
+}
+
+@utility asv-btn-blue {
+  @apply asv-btn border-2 border-[#074d8f] bg-[#1877f2] text-white hover:bg-[#2d8bff];
+}
+
+@utility asv-btn-green {
+  @apply asv-btn border-2 border-[#246c1d] bg-grass-500 text-white hover:bg-[#42bd39];
+}
+
+@utility asv-panel {
+  @apply rounded-xl border-2 border-[#5a4228] bg-[rgba(255,245,220,.94)] shadow-[0_10px_0_rgba(41,29,16,.18),0_24px_70px_rgba(24,18,12,.18)];
+}
+
+@layer base {
+  :root {
+    color-scheme: light;
+    --asv-ink: var(--color-ink-900);
+    --asv-wood: var(--color-wood);
+    --asv-parchment: var(--color-parchment);
+    --asv-gold: var(--color-gold-300);
+    --asv-green: var(--color-grass-500);
+    --asv-blue: var(--color-skyforge-500);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    margin: 0;
+    min-height: 100%;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    min-width: 320px;
+    background:
+      linear-gradient(180deg, #87dfff 0, #f9efd0 45%, #15130f 100%), #fff5dc;
+    color: var(--asv-ink);
+    font-family: var(--font-sans);
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+    text-rendering: optimizeLegibility;
+  }
+
+  [id] {
+    scroll-margin-top: 5rem;
+  }
+
+  body.is-article,
+  body.has-plain-background {
+    background: #fff5dc;
+  }
+
+  body.is-full-height main {
+    min-height: calc(100vh - 72px);
+  }
+
+  img,
+  iframe {
+    max-width: 100%;
+  }
+
+  img {
+    display: block;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  main:focus {
+    outline: none;
+  }
+
+  main table {
+    width: 100%;
+    margin: clamp(24px, 4vw, 36px) 0;
+    border: 2px solid #1e1710;
+    border-spacing: 0;
+    border-radius: 12px;
+    background: #fffdf5;
+    color: #1e1710;
+    font-size: 0.92em;
+    line-height: 1.65;
+    overflow: hidden;
+    box-shadow: 0 6px 0 rgba(21, 19, 15, 0.18);
+  }
+
+  main th,
+  main td {
+    text-align: left;
+    vertical-align: top;
+  }
+
+  main th {
+    border-right: 1px solid rgba(255, 248, 230, 0.32);
+    background: #1e1710;
+    padding: 14px 16px;
+    color: #fff8e6;
+    font-weight: 900;
+  }
+
+  main th:last-child {
+    border-right: 0;
+  }
+
+  main td {
+    border-top: 1px solid #d7c9ae;
+    border-right: 1px solid #d7c9ae;
+    padding: 15px 16px;
+  }
+
+  main td:last-child {
+    border-right: 0;
+  }
+
+  .skip-link {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 100;
+    border-radius: 8px;
+    background: #15130f;
+    color: #fff5dc;
+    font-weight: 900;
+    padding: 10px 14px;
+    text-decoration: none;
+    transform: translateY(-160%);
+    transition: transform 160ms ease;
+  }
+
+  .skip-link:focus {
+    transform: translateY(0);
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  .pixel-border {
+    box-shadow:
+      0 0 0 2px rgba(46, 34, 22, 0.92),
+      inset 0 0 0 2px rgba(255, 255, 255, 0.18),
+      0 8px 0 rgba(34, 23, 13, 0.25);
+  }
+
+  @media (max-width: 700px) {
+    main table[data-responsive-table] {
+      display: block;
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+      font-size: 0.96em;
+      overflow: visible;
+      box-shadow: none;
+    }
+
+    main table[data-responsive-table] thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      clip-path: inset(50%);
+      white-space: nowrap;
+    }
+
+    main table[data-responsive-table] tbody {
+      display: grid;
+      gap: 14px;
+    }
+
+    main table[data-responsive-table] tbody tr {
+      display: block;
+      overflow: hidden;
+      border: 2px solid #1e1710;
+      border-radius: 12px;
+      background: #fffdf5;
+      box-shadow: 0 5px 0 rgba(21, 19, 15, 0.16);
+    }
+
+    main table[data-responsive-table] tbody td {
+      display: grid;
+      grid-template-columns: minmax(86px, 0.7fr) minmax(0, 1.3fr);
+      gap: 8px 14px;
+      border: 0;
+      border-top: 1px solid #d7c9ae;
+      padding: 11px 13px;
+    }
+
+    main table[data-responsive-table] tbody td:first-child {
+      border-top: 0;
+    }
+
+    main table[data-responsive-table] tbody td::before {
+      content: attr(data-label);
+      color: #514331;
+      font-size: 0.82em;
+      font-weight: 900;
+      line-height: 1.45;
+    }
+
+    main table:not([data-responsive-table]) {
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+
+    main table:not([data-responsive-table]) th,
+    main table:not([data-responsive-table]) td {
+      min-width: 9rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      scroll-behavior: auto !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+}
