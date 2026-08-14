@@ -13,9 +13,6 @@
     ],
   },
   "vars": {
-    "OPENAI_RESPONSE_MODEL": "gpt-5.6-luna",
-    "OPENAI_REASONING_EFFORT": "medium",
-    "ALPHA_CHAT_SHARED_ENABLED": "true",
     "OPENAI_EMBEDDING_MODEL": "text-embedding-3-large",
     "OPENAI_EMBEDDING_DIMENSIONS": "1536",
     "WIKI_SEARCH_ENABLED": "false",
@@ -64,9 +61,6 @@
         },
       ],
       "vars": {
-        "OPENAI_RESPONSE_MODEL": "gpt-5.6-luna",
-        "OPENAI_REASONING_EFFORT": "medium",
-        "ALPHA_CHAT_SHARED_ENABLED": "false",
         "OPENAI_EMBEDDING_MODEL": "text-embedding-3-large",
         "OPENAI_EMBEDDING_DIMENSIONS": "1536",
         "WIKI_SEARCH_ENABLED": "false",
@@ -134,9 +128,6 @@
         },
       ],
       "vars": {
-        "OPENAI_RESPONSE_MODEL": "gpt-5.6-luna",
-        "OPENAI_REASONING_EFFORT": "medium",
-        "ALPHA_CHAT_SHARED_ENABLED": "true",
         "OPENAI_EMBEDDING_MODEL": "text-embedding-3-large",
         "OPENAI_EMBEDDING_DIMENSIONS": "1536",
         "WIKI_SEARCH_ENABLED": "true",
