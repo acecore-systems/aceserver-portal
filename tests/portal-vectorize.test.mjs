@@ -18,9 +18,11 @@ import {
 import {
   extractEmbeddingData,
   PRODUCTION_INDEX_NAME,
+  REPLACEMENT_INDEX_NAME,
   syncPortalVectorize,
   validatePortalCorpus,
   validateDeletePlan,
+  validateReconciliation,
 } from '../scripts/sync-portal-vectorize.mjs'
 import {
   assertDeployedPortalBuild,
@@ -76,18 +78,25 @@ test('keeps the sync workflow production-only with explicit safety gates', async
     new URL('../.github/workflows/sync-portal-vectorize.yml', import.meta.url),
     'utf8',
   )
+  const wrangler = await readFile(
+    new URL('../wrangler.jsonc', import.meta.url),
+    'utf8',
+  )
 
   assert.doesNotMatch(
     workflow,
     /sync-preview|cloudflare-portal-search-preview|openai-1536-preview/u,
   )
   assert.match(workflow, /cloudflare-portal-search-production/u)
+  assert.match(workflow, new RegExp(REPLACEMENT_INDEX_NAME, 'u'))
   assert.match(workflow, /--confirm-production "\$VECTORIZE_INDEX_NAME"/u)
   assert.doesNotMatch(workflow, /--allow-large-delete|allow_large_delete/u)
   assert.match(
     workflow,
     /vars\.ACESERVER_PORTAL_VECTORIZE_SYNC_ENABLED == 'true'/u,
   )
+  assert.match(wrangler, new RegExp(PRODUCTION_INDEX_NAME, 'u'))
+  assert.doesNotMatch(wrangler, new RegExp(REPLACEMENT_INDEX_NAME, 'u'))
 })
 
 test('accepts only a completed non-refusal OpenAI response', () => {
@@ -379,6 +388,15 @@ test('validates OpenAI embedding dimensions and ordering', () => {
 test('limits portal Vectorize sync to managed indexes and safe deletions', async () => {
   const corpusFile = await writeCorpus(createPortalCorpus())
 
+  await assert.doesNotReject(
+    syncPortalVectorize({
+      corpusFile,
+      dryRun: true,
+      indexName: REPLACEMENT_INDEX_NAME,
+      logger: silentLogger,
+    }),
+  )
+
   await assert.rejects(
     syncPortalVectorize({
       corpusFile,
@@ -409,19 +427,42 @@ test('limits portal Vectorize sync to managed indexes and safe deletions', async
 test('requires exact confirmation before mutating the production index', async () => {
   const corpusFile = await writeCorpus(createPortalCorpus())
 
-  await assert.rejects(
-    syncPortalVectorize({
-      accountId: 'account',
-      apiToken: 'token',
-      openAiApiKey: TEST_OPENAI_API_KEY,
-      indexName: PRODUCTION_INDEX_NAME,
-      corpusFile,
-      fetchImpl: async () => {
-        throw new Error('Production confirmation must fail before fetch.')
-      },
-      logger: silentLogger,
-    }),
-    /--confirm-production aceserver-portal-search-openai-1536-production/u,
+  for (const indexName of [PRODUCTION_INDEX_NAME, REPLACEMENT_INDEX_NAME]) {
+    await assert.rejects(
+      syncPortalVectorize({
+        accountId: 'account',
+        apiToken: 'token',
+        openAiApiKey: TEST_OPENAI_API_KEY,
+        indexName,
+        corpusFile,
+        fetchImpl: async () => {
+          throw new Error('Production confirmation must fail before fetch.')
+        },
+        logger: silentLogger,
+      }),
+      new RegExp(`--confirm-production ${indexName}`, 'u'),
+    )
+  }
+})
+
+test('requires exact Vectorize ID convergence', () => {
+  const expectedIds = new Set([managedId(1), managedId(2)])
+
+  assert.doesNotThrow(() =>
+    validateReconciliation(
+      expectedIds,
+      new Set(expectedIds),
+      REPLACEMENT_INDEX_NAME,
+    ),
+  )
+  assert.throws(
+    () =>
+      validateReconciliation(
+        expectedIds,
+        new Set([managedId(1), managedId(3)]),
+        REPLACEMENT_INDEX_NAME,
+      ),
+    /1 missing and 1 unexpected/u,
   )
 })
 
@@ -435,6 +476,7 @@ test('syncs only the portal corpus delta', async () => {
     staleId,
   ]
   const calls = []
+  let listCalls = 0
 
   const fetchImpl = async (input, init = {}) => {
     const url = String(input)
@@ -450,10 +492,13 @@ test('syncs only the portal corpus delta', async () => {
       })
     }
     if (url.includes('/list?')) {
+      listCalls += 1
+      const listedIds =
+        listCalls === 1 ? existingIds : corpus.chunks.map(({ id }) => id)
       return cloudflareResponse({
-        vectors: existingIds.map((id) => ({ id })),
-        count: existingIds.length,
-        totalCount: existingIds.length,
+        vectors: listedIds.map((id) => ({ id })),
+        count: listedIds.length,
+        totalCount: listedIds.length,
         isTruncated: false,
       })
     }
@@ -498,6 +543,19 @@ test('syncs only the portal corpus delta', async () => {
         processedUpToMutation: 'mutation-delete',
       })
     }
+    if (url.endsWith('/query')) {
+      assert.deepEqual(JSON.parse(init.body), {
+        vector: TEST_EMBEDDING,
+        namespace: 'ja',
+        topK: 10,
+        returnMetadata: 'none',
+        returnValues: false,
+      })
+      return cloudflareResponse({
+        matches: [{ id: newChunk.id, score: 1 }],
+        count: 1,
+      })
+    }
 
     throw new Error(`Unexpected request: ${url}`)
   }
@@ -516,6 +574,9 @@ test('syncs only the portal corpus delta', async () => {
   assert.equal(result.upserted, 1)
   assert.equal(result.deleted, 1)
   assert.equal(result.mutationId, 'mutation-delete')
+  assert.equal(result.verified, true)
+  assert.equal(result.queryVerified, true)
+  assert.equal(listCalls, 2)
   assert.equal(
     calls.filter(({ url }) => url === `${OPENAI_API_BASE_URL}/embeddings`)
       .length,
@@ -578,6 +639,8 @@ test('enumerates and verifies every Vectorize list page', async () => {
   assert.equal(result.existing, corpus.vectorCount)
   assert.equal(result.upserted, 0)
   assert.equal(result.deleted, 0)
+  assert.equal(result.verified, true)
+  assert.equal(result.queryVerified, false)
 })
 
 test('rejects an inconsistent Vectorize list before mutation', async () => {

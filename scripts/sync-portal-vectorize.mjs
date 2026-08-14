@@ -30,6 +30,10 @@ const RETRY_BASE_DELAY_MS = 500
 const MAX_LIST_CURSOR_RESTARTS = 3
 const MUTATION_WAIT_TIMEOUT_MS = 180_000
 const MUTATION_POLL_INTERVAL_MS = 5_000
+const RECONCILIATION_MAX_ATTEMPTS = 12
+const RECONCILIATION_POLL_INTERVAL_MS = 5_000
+const QUERY_CANARY_MAX_ATTEMPTS = 12
+const QUERY_CANARY_POLL_INTERVAL_MS = 5_000
 const MAX_DELETE_RATIO = 0.2
 const MAX_METADATA_URL_LENGTH = 500
 const MAX_METADATA_TITLE_LENGTH = 240
@@ -40,7 +44,12 @@ const MANAGED_VECTOR_ID_PATTERN = /^v1-[0-9a-f]{48}$/u
 const CORPUS_VERSION_PATTERN = /^[0-9a-f]{20}$/u
 export const PRODUCTION_INDEX_NAME =
   'aceserver-portal-search-openai-1536-production'
-const ALLOWED_INDEX_NAMES = new Set([PRODUCTION_INDEX_NAME])
+export const REPLACEMENT_INDEX_NAME =
+  'aceserver-portal-search-openai-1536-production-v2'
+const ALLOWED_INDEX_NAMES = new Set([
+  PRODUCTION_INDEX_NAME,
+  REPLACEMENT_INDEX_NAME,
+])
 
 class CloudflareApiError extends Error {
   constructor(message, status) {
@@ -135,6 +144,7 @@ export async function syncPortalVectorize({
   )
 
   const mutationIds = []
+  let queryCanary = null
   for (const chunkBatch of batches(chunksToUpsert, EMBEDDING_BATCH_SIZE)) {
     const embeddings = await createEmbeddings(
       {
@@ -147,6 +157,11 @@ export async function syncPortalVectorize({
       },
       chunkBatch,
     )
+    queryCanary ??= {
+      id: chunkBatch[0].id,
+      namespace: chunkBatch[0].namespace,
+      values: embeddings[0],
+    }
     const vectors = chunkBatch.map((chunk, index) => ({
       id: chunk.id,
       values: embeddings[index],
@@ -164,10 +179,26 @@ export async function syncPortalVectorize({
   }
 
   const lastMutationId = mutationIds.at(-1)
+  let verified = mutationIds.length === 0
+  let queryVerified = false
   if (waitForMutations && lastMutationId) {
     await waitForMutation(client, indexName, lastMutationId, {
       sleepImpl,
     })
+    await waitForReconciliation(client, indexName, expectedIds, {
+      logger,
+      sleepImpl,
+      retryBaseDelayMs,
+    })
+    verified = true
+
+    if (queryCanary) {
+      await waitForQueryCanary(client, indexName, queryCanary, {
+        logger,
+        sleepImpl,
+      })
+      queryVerified = true
+    }
   }
 
   const result = {
@@ -178,6 +209,8 @@ export async function syncPortalVectorize({
     upserted: chunksToUpsert.length,
     deleted: idsToDelete.length,
     mutationId: lastMutationId || null,
+    verified,
+    queryVerified,
   }
   logger.log(JSON.stringify({ event: 'portal_vectorize_complete', ...result }))
   return result
@@ -301,16 +334,12 @@ function validateProductionConfirmation({
   productionConfirmation,
   dryRun,
 }) {
-  if (
-    dryRun ||
-    indexName !== PRODUCTION_INDEX_NAME ||
-    productionConfirmation === PRODUCTION_INDEX_NAME
-  ) {
+  if (dryRun || productionConfirmation === indexName) {
     return
   }
 
   throw new Error(
-    `Refusing to sync the production index; pass --confirm-production ${PRODUCTION_INDEX_NAME}.`,
+    `Refusing to sync the production index; pass --confirm-production ${indexName}.`,
   )
 }
 
@@ -354,6 +383,16 @@ export function validateDeletePlan({
   const percentage = ((deleteCount / currentCount) * 100).toFixed(1)
   throw new Error(
     `Refusing to delete ${deleteCount}/${currentCount} vectors (${percentage}%); pass --allow-large-delete to override.`,
+  )
+}
+
+export function validateReconciliation(expectedIds, actualIds, indexName) {
+  const missingIds = [...expectedIds].filter((id) => !actualIds.has(id))
+  const unexpectedIds = [...actualIds].filter((id) => !expectedIds.has(id))
+  if (missingIds.length === 0 && unexpectedIds.length === 0) return
+
+  throw new Error(
+    `Vectorize index ${indexName} did not converge: ${missingIds.length} missing and ${unexpectedIds.length} unexpected vector id(s).`,
   )
 }
 
@@ -689,6 +728,84 @@ async function waitForMutation(client, indexName, mutationId, { sleepImpl }) {
   }
 
   throw new Error(`Vectorize mutation ${mutationId} was not queryable in time.`)
+}
+
+async function waitForReconciliation(
+  client,
+  indexName,
+  expectedIds,
+  { logger, sleepImpl, retryBaseDelayMs },
+) {
+  let lastError = null
+
+  for (let attempt = 1; attempt <= RECONCILIATION_MAX_ATTEMPTS; attempt += 1) {
+    const actualIds = await listVectorIds(client, indexName, {
+      logger,
+      sleepImpl,
+      retryBaseDelayMs,
+    })
+    try {
+      validateReconciliation(expectedIds, actualIds, indexName)
+      return
+    } catch (error) {
+      lastError = error
+      if (attempt === RECONCILIATION_MAX_ATTEMPTS) break
+      logger.log(
+        JSON.stringify({
+          event: 'portal_vectorize_reconciliation_retry',
+          indexName,
+          attempt,
+        }),
+      )
+      await sleepImpl(RECONCILIATION_POLL_INTERVAL_MS)
+    }
+  }
+
+  throw lastError
+}
+
+async function waitForQueryCanary(
+  client,
+  indexName,
+  canary,
+  { logger, sleepImpl },
+) {
+  for (let attempt = 1; attempt <= QUERY_CANARY_MAX_ATTEMPTS; attempt += 1) {
+    const payload = await client.request(
+      `/vectorize/v2/indexes/${encodeURIComponent(indexName)}/query`,
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          vector: canary.values,
+          namespace: canary.namespace,
+          topK: 10,
+          returnMetadata: 'none',
+          returnValues: false,
+        }),
+      },
+    )
+    const matches = payload?.result?.matches
+    if (
+      Array.isArray(matches) &&
+      matches.some((match) => match?.id === canary.id)
+    ) {
+      return
+    }
+    if (attempt === QUERY_CANARY_MAX_ATTEMPTS) break
+    logger.log(
+      JSON.stringify({
+        event: 'portal_vectorize_query_canary_retry',
+        indexName,
+        attempt,
+      }),
+    )
+    await sleepImpl(QUERY_CANARY_POLL_INTERVAL_MS)
+  }
+
+  throw new Error(
+    `Vectorize index ${indexName} did not return query canary ${canary.id}.`,
+  )
 }
 
 async function readJsonResponse(response) {
