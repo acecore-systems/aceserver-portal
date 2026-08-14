@@ -3,7 +3,7 @@ import { readFile, readdir, writeFile } from 'node:fs/promises'
 import { relative, resolve, sep } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
-import { load } from 'cheerio'
+import { parse } from 'parse5'
 import {
   PORTAL_CORPUS_SCHEMA_VERSION,
   PORTAL_DISTANCE_METRIC,
@@ -36,7 +36,7 @@ const MAX_CHUNK_LENGTH = 1200
 const OVERLAP_LENGTH = 120
 const MIN_BLOCK_LENGTH = 12
 
-const CONTENT_SELECTORS = [
+const CONTENT_TAGS = new Set([
   'h1',
   'h2',
   'h3',
@@ -46,11 +46,9 @@ const CONTENT_SELECTORS = [
   'pre',
   'dt',
   'dd',
-].join(',')
+])
 
-const REMOVE_SELECTORS = [
-  '[data-pagefind-ignore]',
-  '[aria-hidden="true"]',
+const REMOVED_TAGS = new Set([
   'script',
   'style',
   'noscript',
@@ -62,7 +60,7 @@ const REMOVE_SELECTORS = [
   'nav',
   'aside',
   'footer',
-].join(',')
+])
 
 export async function buildPortalVectorCorpus({
   distDir = DEFAULT_DIST_DIR,
@@ -143,35 +141,65 @@ export async function buildPortalVectorCorpus({
 }
 
 export function extractPortalSearchDocument(html, htmlFile, distDir) {
-  const $ = load(html)
+  const htmlDocument = parse(html)
   const fallbackPath = htmlFileToUrl(htmlFile, distDir)
-  const canonicalPath = getCanonicalPath($, fallbackPath)
-  const documentLocale = normalizeText($('html').attr('lang')).toLowerCase()
+  const canonicalPath = getCanonicalPath(htmlDocument, fallbackPath)
+  const documentLocale = normalizeText(
+    getAttribute(
+      findFirstElement(htmlDocument, (element) => element.tagName === 'html'),
+      'lang',
+    ),
+  ).toLowerCase()
 
   if (
     documentLocale !== PORTAL_SEARCH_NAMESPACE ||
     shouldExcludePath(canonicalPath) ||
-    isNoIndexPage($)
+    isNoIndexPage(htmlDocument)
   ) {
     return null
   }
 
   const title = normalizeText(
-    $('main h1').first().text() ||
-      $('meta[property="og:title"]').attr('content') ||
-      $('title').text(),
+    textContent(
+      findFirstElement(
+        htmlDocument,
+        (element) =>
+          element.tagName === 'h1' && hasAncestorTag(element, 'main'),
+      ),
+    ) ||
+      getAttribute(
+        findFirstElement(
+          htmlDocument,
+          (element) =>
+            element.tagName === 'meta' &&
+            getAttribute(element, 'property') === 'og:title',
+        ),
+        'content',
+      ) ||
+      textContentOfElements(
+        htmlDocument,
+        (element) => element.tagName === 'title',
+      ),
   ).replace(/\s+[|｜]\s+エースサーバー$/u, '')
   if (!title) return null
 
   const description = normalizeText(
-    $('meta[name="description"]').attr('content') || '',
+    getAttribute(
+      findFirstElement(
+        htmlDocument,
+        (element) =>
+          element.tagName === 'meta' &&
+          getAttribute(element, 'name') === 'description',
+      ),
+      'content',
+    ) || '',
   )
-  const contentRoot = $('main').first().length
-    ? $('main').first().clone()
-    : $('body').first().clone()
-  contentRoot.find(REMOVE_SELECTORS).remove()
+  const contentRoot =
+    findFirstElement(htmlDocument, (element) => element.tagName === 'main') ||
+    findFirstElement(htmlDocument, (element) => element.tagName === 'body')
+  if (!contentRoot) return null
 
-  const blocks = collectContentBlocks($, contentRoot, title)
+  const blocks = collectContentBlocks(contentRoot, title)
   if (
     description.length >= MIN_BLOCK_LENGTH &&
     !blocks.some(({ text }) => text === description)
@@ -290,25 +318,31 @@ function composeChunkText(document, group) {
   )
 }
 
-function collectContentBlocks($, root, title) {
+function collectContentBlocks(root, title) {
   const blocks = []
   let currentHeading = title
   let previousText = ''
 
-  root.find(CONTENT_SELECTORS).each((_index, element) => {
-    const tagName = String(element.tagName || '').toLowerCase()
-    const text = normalizeText($(element).text())
-    if (!text || text === previousText) return
+  visitElementDescendants(
+    root,
+    (element) => {
+      if (!CONTENT_TAGS.has(element.tagName)) return
+      const text = normalizeText(
+        textContent(element, { skip: shouldRemoveElement }),
+      )
+      if (!text || text === previousText) return
 
-    previousText = text
-    if (/^h[1-3]$/u.test(tagName)) {
-      currentHeading = text
-      return
-    }
+      previousText = text
+      if (/^h[1-3]$/u.test(element.tagName)) {
+        currentHeading = text
+        return
+      }
 
-    if (text.length < MIN_BLOCK_LENGTH) return
-    blocks.push({ heading: currentHeading, text })
-  })
+      if (text.length < MIN_BLOCK_LENGTH) return
+      blocks.push({ heading: currentHeading, text })
+    },
+    { skip: shouldRemoveElement },
+  )
 
   return blocks
 }
@@ -365,8 +399,16 @@ function createExcerpt(text) {
   return `${normalized.slice(0, 219).trimEnd()}…`
 }
 
-function getCanonicalPath($, fallbackPath) {
-  const canonical = $('link[rel="canonical"]').attr('href')
+function getCanonicalPath(htmlDocument, fallbackPath) {
+  const canonical = getAttribute(
+    findFirstElement(
+      htmlDocument,
+      (element) =>
+        element.tagName === 'link' &&
+        getAttribute(element, 'rel') === 'canonical',
+    ),
+    'href',
+  )
   if (!canonical) return fallbackPath
 
   try {
@@ -398,15 +440,97 @@ function shouldExcludePath(path) {
   )
 }
 
-function isNoIndexPage($) {
-  return $('meta[name="robots"]')
-    .toArray()
-    .some((element) =>
-      String($(element).attr('content') || '')
-        .toLowerCase()
-        .split(',')
-        .some((value) => value.trim() === 'noindex'),
-    )
+function isNoIndexPage(htmlDocument) {
+  return findElements(
+    htmlDocument,
+    (element) =>
+      element.tagName === 'meta' && getAttribute(element, 'name') === 'robots',
+  ).some((element) =>
+    String(getAttribute(element, 'content') || '')
+      .toLowerCase()
+      .split(',')
+      .some((value) => value.trim() === 'noindex'),
+  )
+}
+
+function findFirstElement(root, predicate) {
+  let found = null
+  visitElementDescendants(root, (element) => {
+    if (!found && predicate(element)) found = element
+  })
+  return found
+}
+
+function findElements(root, predicate) {
+  const elements = []
+  visitElementDescendants(root, (element) => {
+    if (predicate(element)) elements.push(element)
+  })
+  return elements
+}
+
+function textContentOfElements(root, predicate) {
+  let text = ''
+  visitElementDescendants(root, (element) => {
+    if (predicate(element)) text += textContent(element)
+  })
+  return text
+}
+
+function visitElementDescendants(root, visitor, { skip } = {}) {
+  for (const child of root?.childNodes || []) {
+    visitElementTree(child, visitor, skip)
+  }
+}
+
+function visitElementTree(node, visitor, skip) {
+  if (isElement(node)) {
+    if (skip?.(node)) return
+    visitor(node)
+  }
+
+  for (const child of node?.childNodes || []) {
+    visitElementTree(child, visitor, skip)
+  }
+}
+
+function textContent(node, { skip } = {}) {
+  if (!node) return ''
+  if (node.nodeName === '#text') return node.value || ''
+  if (isElement(node) && skip?.(node)) return ''
+
+  return (node.childNodes || [])
+    .map((child) => textContent(child, { skip }))
+    .join('')
+}
+
+function isElement(node) {
+  return typeof node?.tagName === 'string'
+}
+
+function hasAncestorTag(node, tagName) {
+  let ancestor = node.parentNode
+  while (ancestor) {
+    if (ancestor.tagName === tagName) return true
+    ancestor = ancestor.parentNode
+  }
+  return false
+}
+
+function getAttribute(element, name) {
+  return element?.attrs?.find((attribute) => attribute.name === name)?.value
+}
+
+function hasAttribute(element, name) {
+  return Boolean(element?.attrs?.some((attribute) => attribute.name === name))
+}
+
+function shouldRemoveElement(element) {
+  return (
+    REMOVED_TAGS.has(element.tagName) ||
+    hasAttribute(element, 'data-pagefind-ignore') ||
+    getAttribute(element, 'aria-hidden') === 'true'
+  )
 }
 
 async function findHtmlFiles(directory) {

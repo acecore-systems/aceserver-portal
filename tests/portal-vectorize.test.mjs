@@ -156,6 +156,36 @@ test('extracts a public story from built portal HTML', () => {
   assert.ok(chunks[0].text.length <= 1200)
 })
 
+test('excludes ignored and hidden descendants from portal content blocks', () => {
+  const description =
+    'エースサーバーの公開情報を案内するために十分な長さを持つページ本文です。'
+  const html = `<!doctype html>
+    <html lang="ja">
+      <head>
+        <title>公開ページ | エースサーバー</title>
+        <meta name="description" content="${description}">
+      </head>
+      <body>
+        <main>
+          <h1>公開ページ</h1>
+          <p>検索に使う公開本文です。<span aria-hidden="true">隠す語句</span><span data-pagefind-ignore>除外語句</span>利用者に必要な情報を十分な長さで案内します。</p>
+          <p data-pagefind-ignore>この本文は検索対象に含めません。</p>
+          <button>この操作文言は検索対象に含めません。</button>
+        </main>
+      </body>
+    </html>`
+
+  const document = extractPortalSearchDocument(
+    html,
+    'C:/site/dist/public/index.html',
+    'C:/site/dist',
+  )
+  const texts = document.blocks.map(({ text }) => text).join(' ')
+
+  assert.match(texts, /検索に使う公開本文/u)
+  assert.doesNotMatch(texts, /隠す語句|除外語句|検索対象に含めません/u)
+})
+
 test('uses metadata copy for public iframe pages with sparse body text', () => {
   const description =
     'エースサーバーのメインワールドをブラウザで確認できる公開マップです。拠点、建築、地形を見ながら位置関係を把握できます。'
