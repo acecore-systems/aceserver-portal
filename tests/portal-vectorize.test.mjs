@@ -95,8 +95,17 @@ test('keeps the sync workflow production-only with explicit safety gates', async
     workflow,
     /vars\.ACESERVER_PORTAL_VECTORIZE_SYNC_ENABLED == 'true'/u,
   )
-  assert.match(wrangler, new RegExp(PRODUCTION_INDEX_NAME, 'u'))
-  assert.doesNotMatch(wrangler, new RegExp(REPLACEMENT_INDEX_NAME, 'u'))
+  assert.match(
+    wrangler,
+    new RegExp(
+      `"binding": "PORTAL_SEARCH_INDEX",[^}]*"index_name": "${REPLACEMENT_INDEX_NAME}"`,
+      'u',
+    ),
+  )
+  assert.doesNotMatch(
+    wrangler,
+    new RegExp(`"index_name": "${PRODUCTION_INDEX_NAME}"`, 'u'),
+  )
 })
 
 test('accepts only a completed non-refusal OpenAI response', () => {
