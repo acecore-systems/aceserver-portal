@@ -69,28 +69,11 @@ Cloudflare Pages のproduction / previewでは、build前に `public/admin/runti
 
 サイト全体に右下固定のアルファくん案内チャットを表示します。アルファくんはエースサーバーのキャラクター案内役として、参加方法、ワールド、ルール、ストーリー導線を案内します。
 
-通常運用では `functions/api/alpha-chat.ts` が同一origin検証を行った後、Private Service Binding `ALPHA_CHAT_SERVICE` を通じて共有Worker `aceserver-alpha-chat` を呼びます。共有Workerが人格、質問分類、RAG、引用検証、OpenAI Responses API、正史作成を一元管理します。通常会話は `reasoning.effort: medium`、正史の執筆・レビューだけは `max` です。`ALPHA_CHAT_SHARED_ENABLED` は移行中は `"false"` のまま既存実装を維持し、Service Bindingと共有Workerの検証完了後だけ `"true"` にします。共有モードでは障害時にローカルLLMへフォールバックしません。
+`functions/api/alpha-chat.ts` は同一origin検証とD1レート制限を行った後、Private Service Binding `ALPHA_CHAT_SERVICE` を通じて共有Worker `aceserver-alpha-chat` だけを呼びます。共有Workerが人格、口調、質問分類、RAG、引用検証、OpenAI Responses API、正史作成を一元管理します。Portalに切替flagやローカルLLM生成はなく、Service Bindingがない場合や共有Workerの応答が壊れている場合は、選択localeの固定案内を返してfail closedします。
 
-portal検索は公開サイトの紹介、ワールド案内、動画、読みもの、掲載ページの発見に使います。ルール、コマンド、参加条件、ワールドの詳細、運用情報ではportalよりAceserver WIKIを情報の正として扱います。Acecore、運営元、サービス、技術記事に関する質問だけは、同じembeddingでacecore-netのVectorize indexを検索します。Acecore Schoolsの学習分野、学び方、相談、料金、FAQに関する質問はSchools専用indexを検索し、取得した公開routeだけを `https://schools.acecore.net` 配下のリンクとして許可します。World Foundationについての質問は、専用のWorld Foundation Vectorize indexから日本語の公開設計資料を検索します。検索元ごとのしきい値と用途を分け、異なるサイトの根拠を誤って混ぜません。
+チャットで使う検索index、しきい値、根拠選択は共有Worker側の設定です。Portal repositoryは公開corpusの生成と同期を所有しますが、ブラウザ入口では検索や回答生成を行いません。Aceserver WIKIは引き続きルール、コマンド、参加条件、ワールド詳細、運用情報の正です。
 
-VectorizeまたはOpenAI Embeddingsの取得に失敗した場合は検索なしの案内へフォールバックします。portalまたはWIKIのcorpus取得に失敗した場合はVectorize metadataの抜粋へフォールバックし、アルファくん自体は利用を継続します。ルール、コマンド、参加条件など変更される情報は、検索で取得したWIKI内容に根拠がある範囲だけ具体的に回答し、出典記事をMarkdownリンクで示します。
-
-ルール、参加条件、コマンド、プラグインなど変更され得る情報はrepositoryへ複製しません。アルファくんは固定知識から詳細を断定せず、現行情報の正であるAceserver WIKIからVectorize検索で取得した根拠を使います。根拠を取得できない場合はAceserver WIKIまたは公式Discordへ案内します。
-
-Cloudflare Pages 側では `wrangler.jsonc` を設定の正とし、Vectorize binding は Production にだけ定義します。通常の Pages Preview には Vectorize binding を置かず、6個の検索kill switchをすべて `"false"` にして、固定の案内とWIKI・公式Discordへの安全なフォールバックを確認します。
-
-Production には次の1536次元indexをbindingします。
-
-- `WIKI_SEARCH_INDEX`: `aceserver-wiki-search-openai-1536-production`
-- `PORTAL_SEARCH_INDEX`: `aceserver-portal-search-openai-1536-production`
-- `ACECORE_SEARCH_INDEX`: `acecore-net-search-openai-1536-production`
-- `SCHOOLS_SEARCH_INDEX`: `acecore-schools-search-openai-1536-production`
-- `SYSTEMS_SEARCH_INDEX`: `acecore-systems-search-openai-1536-production`
-- `WORLD_FOUNDATION_SEARCH_INDEX`: `world-foundation-search-openai-1536-production`
-
-`OPENAI_RESPONSE_MODEL`、`OPENAI_REASONING_EFFORT`、`OPENAI_EMBEDDING_MODEL`、`OPENAI_EMBEDDING_DIMENSIONS`はそれぞれ `gpt-5.6-luna`、`medium`、`text-embedding-3-large`、`1536` とします。検索元ごとの `*_SEARCH_ENABLED` がkill switch、`*_SEARCH_MIN_SCORE` が採用scoreの下限です。
-
-新indexは空の状態で本番検索へ使い始めません。6個のProduction indexは、WIKI 26件、Portal 15件、Acecore 308件、Schools 7件、Systems 256件、World Foundation 135件について、1536次元・cosine、mutation反映、`ja` namespaceの代表query、再同期の収束を確認済みです。そのためProductionの6つの `*_SEARCH_ENABLED` は一括して `"true"` にしています。設定の既定値とPreviewは引き続きすべて `"false"` で、PreviewにはVectorize bindingも置きません。一部だけ旧indexへ向けた状態や、空indexを有効化した状態ではマージ・デプロイしません。旧1024次元のProduction indexは削除済みで、Productionには1536次元indexだけを残します。
+Portal固有の `/api/search` はチャットとは別機能で、`PORTAL_SEARCH_INDEX` とOpenAI Embeddingsを使ってこのサイト内の公開ページだけを検索します。`OPENAI_EMBEDDING_MODEL` と `OPENAI_EMBEDDING_DIMENSIONS` はそれぞれ `text-embedding-3-large` と `1536` に固定し、Previewでは検索を無効化します。
 
 `npm run build` は `dist/vector-corpus.json` まで生成します。`npm run sync:portal-vectorize:dry-run` でsource数、vector数、corpus versionを確認できます。実同期先は `aceserver-portal-search-openai-1536-production` だけに制限し、`--confirm-production aceserver-portal-search-openai-1536-production` がない実行、管理外ID、20%を超える削除、10 source未満のcorpusでは停止します。
 

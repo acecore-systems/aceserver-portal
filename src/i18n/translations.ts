@@ -244,10 +244,10 @@ export const JA_UI: UiCopy = {
     toggle: 'アルファくんに聞く',
     toggleShort: '聞く',
     mapLabel: 'マップ',
-    greeting: 'やあ、アルファくんだよ。エースサーバーの案内をするね。',
-    loading: 'アルファくんが考え中...',
+    greeting: 'やあ、ぼくはアルファくんだよ。エースサーバーを案内するね。',
+    loading: 'ちょっと考えているよ...',
     error:
-      'いまはAI応答につながらなかったよ。[公式Discord]({discord}) と [Aceserver WIKI]({wiki}) を見てね。',
+      'いまはうまく答えを届けられなかったよ。[公式Discord]({discord}) と [Aceserver WIKI]({wiki}) を見てね。',
     prompts: [
       {
         label: '参加方法',
@@ -349,9 +349,9 @@ const en: LocaleTranslation = {
       mapLabel: 'Maps',
       greeting:
         "Hi, I'm Alpha-kun. I'll help you find your way around Aceserver.",
-      loading: 'Alpha-kun is thinking...',
+      loading: "I'm thinking...",
       error:
-        'I cannot reach the AI response right now. Please check [official Discord]({discord}) and the [Aceserver WIKI]({wiki}).',
+        "I couldn't deliver an answer this time. Check [official Discord]({discord}) and the [Aceserver WIKI]({wiki}).",
       prompts: [
         { label: 'Join', question: 'How can I join Aceserver?' },
         { label: 'Worlds', question: 'Which world should I look at first?' },
@@ -591,10 +591,10 @@ const zhCn: LocaleTranslation = {
       toggle: '询问 Alpha-kun',
       toggleShort: '询问',
       mapLabel: '地图',
-      greeting: '你好，我是 Alpha-kun。我来为你介绍 Aceserver。',
-      loading: 'Alpha-kun 正在思考……',
+      greeting: '你好，我是 Alpha-kun。我来带你了解 Aceserver。',
+      loading: '我正在想……',
       error:
-        '目前无法连接 AI 回复。请查看[官方 Discord]({discord})和 [Aceserver WIKI]({wiki})。',
+        '这次我没能把答案送过来。去看[官方 Discord]({discord})和 [Aceserver WIKI]({wiki})吧。',
       prompts: [
         { label: '加入方式', question: '如何加入 Aceserver？' },
         { label: '世界', question: '我应该先看哪个世界？' },
@@ -834,10 +834,10 @@ const es: LocaleTranslation = {
       toggle: 'Preguntar a Alpha-kun',
       toggleShort: 'Preguntar',
       mapLabel: 'Mapas',
-      greeting: 'Hola, soy Alpha-kun. Te ayudaré a orientarte en Aceserver.',
-      loading: 'Alpha-kun está pensando...',
+      greeting: 'Hola, soy Alpha-kun. Te ayudo a orientarte en Aceserver.',
+      loading: 'Estoy pensando...',
       error:
-        'Ahora no puedo conectar con la respuesta de IA. Consulta el [Discord oficial]({discord}) y la [WIKI de Aceserver]({wiki}).',
+        'Esta vez no pude enviarte una respuesta. Mira el [Discord oficial]({discord}) y la [WIKI de Aceserver]({wiki}).',
       prompts: [
         { label: 'Entrar', question: '¿Cómo puedo unirme a Aceserver?' },
         { label: 'Mundos', question: '¿Qué mundo debería mirar primero?' },
@@ -1080,9 +1080,9 @@ const pt: LocaleTranslation = {
       mapLabel: 'Mapas',
       greeting:
         'Olá, eu sou o Alpha-kun. Vou ajudar você a conhecer o Aceserver.',
-      loading: 'Alpha-kun está pensando...',
+      loading: 'Tô pensando...',
       error:
-        'Não consigo acessar a resposta de IA agora. Veja o [Discord oficial]({discord}) e a [WIKI do Aceserver]({wiki}).',
+        'Dessa vez eu não consegui entregar uma resposta. Olha o [Discord oficial]({discord}) e a [WIKI do Aceserver]({wiki}).',
       prompts: [
         { label: 'Entrar', question: 'Como posso entrar no Aceserver?' },
         { label: 'Mundos', question: 'Qual mundo devo ver primeiro?' },
@@ -1323,11 +1323,10 @@ const fr: LocaleTranslation = {
       toggle: 'Demander à Alpha-kun',
       toggleShort: 'Demander',
       mapLabel: 'Cartes',
-      greeting:
-        'Bonjour, je suis Alpha-kun. Je vais vous guider dans Aceserver.',
-      loading: 'Alpha-kun réfléchit...',
+      greeting: 'Salut, je suis Alpha-kun. Je vais te guider dans Aceserver.',
+      loading: 'Je réfléchis...',
       error:
-        'Je ne peux pas joindre la réponse IA pour le moment. Consultez le [Discord officiel]({discord}) et le [WIKI Aceserver]({wiki}).',
+        'Je n’ai pas réussi à t’envoyer une réponse cette fois. Regarde le [Discord officiel]({discord}) et le [WIKI Aceserver]({wiki}).',
       prompts: [
         { label: 'Rejoindre', question: 'Comment rejoindre Aceserver ?' },
         { label: 'Mondes', question: 'Quel monde regarder en premier ?' },
@@ -1569,10 +1568,10 @@ const ko: LocaleTranslation = {
       toggle: 'Alpha-kun에게 묻기',
       toggleShort: '묻기',
       mapLabel: '지도',
-      greeting: '안녕, Alpha-kun이야. Aceserver를 안내해 줄게.',
-      loading: 'Alpha-kun이 생각 중...',
+      greeting: '안녕, 나는 Alpha-kun이야. Aceserver를 안내해 줄게.',
+      loading: '지금 생각하고 있어...',
       error:
-        '지금은 AI 응답에 연결할 수 없어. [공식 Discord]({discord})와 [Aceserver WIKI]({wiki})를 확인해 줘.',
+        '이번에는 답을 전해 주지 못했어. [공식 Discord]({discord})와 [Aceserver WIKI]({wiki})를 확인해 봐.',
       prompts: [
         { label: '참여', question: 'Aceserver에 어떻게 참여하나요?' },
         { label: '월드', question: '어떤 월드를 먼저 보면 좋나요?' },
@@ -1814,9 +1813,9 @@ const de: LocaleTranslation = {
       mapLabel: 'Karten',
       greeting:
         'Hallo, ich bin Alpha-kun. Ich helfe dir, dich bei Aceserver zurechtzufinden.',
-      loading: 'Alpha-kun denkt nach...',
+      loading: 'Ich denke nach...',
       error:
-        'Die KI-Antwort ist gerade nicht erreichbar. Sieh im [offiziellen Discord]({discord}) und im [Aceserver WIKI]({wiki}) nach.',
+        'Diesmal konnte ich dir keine Antwort schicken. Sieh im [offiziellen Discord]({discord}) und im [Aceserver WIKI]({wiki}) nach.',
       prompts: [
         { label: 'Beitreten', question: 'Wie kann ich Aceserver beitreten?' },
         { label: 'Welten', question: 'Welche Welt sollte ich zuerst ansehen?' },
@@ -2061,10 +2060,10 @@ const ru: LocaleTranslation = {
       toggle: 'Спросить Alpha-kun',
       toggleShort: 'Спросить',
       mapLabel: 'Карты',
-      greeting: 'Привет, я Alpha-kun. Я помогу вам разобраться в Aceserver.',
-      loading: 'Alpha-kun думает...',
+      greeting: 'Привет, я Alpha-kun. Я помогу тебе разобраться в Aceserver.',
+      loading: 'Я думаю...',
       error:
-        'Сейчас ответ ИИ недоступен. Загляните в [официальный Discord]({discord}) и [Aceserver WIKI]({wiki}).',
+        'В этот раз я не смог передать ответ. Загляни в [официальный Discord]({discord}) и [Aceserver WIKI]({wiki}).',
       prompts: [
         { label: 'Участие', question: 'Как присоединиться к Aceserver?' },
         { label: 'Миры', question: 'Какой мир посмотреть первым?' },

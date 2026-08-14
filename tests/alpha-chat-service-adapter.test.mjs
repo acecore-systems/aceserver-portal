@@ -44,7 +44,7 @@ function createRateLimitDatabase({
   }
 }
 
-test('shared mode forwards the normalized Portal envelope to the private service', async () => {
+test('the Portal adapter forwards the envelope to the private service', async () => {
   let forwarded
   const response = await onRequestPost({
     env: {
@@ -52,6 +52,7 @@ test('shared mode forwards the normalized Portal envelope to the private service
         async fetch(request) {
           forwarded = {
             body: await request.json(),
+            locale: request.headers.get('Accept-Language'),
             url: request.url,
           }
           return Response.json({
@@ -61,7 +62,6 @@ test('shared mode forwards the normalized Portal envelope to the private service
           })
         },
       },
-      ALPHA_CHAT_SHARED_ENABLED: 'true',
       SEARCH_RATE_LIMIT_DB: createRateLimitDatabase(),
     },
     request: createRequest({
@@ -79,6 +79,7 @@ test('shared mode forwards the normalized Portal envelope to the private service
 
   assert.equal(response.status, 200)
   assert.equal(forwarded.url, 'https://aceserver-alpha-chat.internal/v1/chat')
+  assert.equal(forwarded.locale, 'ja')
   assert.deepEqual(forwarded.body, {
     payload: {
       locale: 'ja',
@@ -101,7 +102,7 @@ test('shared mode forwards the normalized Portal envelope to the private service
   })
 })
 
-test('shared mode preserves the opaque conversation context without selecting transcript messages', async () => {
+test('the Portal adapter preserves opaque conversation context without selecting transcript messages', async () => {
   const conversationContext = {
     items: [
       {
@@ -112,7 +113,7 @@ test('shared mode preserves the opaque conversation context without selecting tr
     ],
     scope: {
       locale: 'ja',
-      personaVersion: '2026-08-02.2',
+      personaVersion: '2026-08-14.1',
       surface: 'portal',
     },
   }
@@ -131,7 +132,6 @@ test('shared mode preserves the opaque conversation context without selecting tr
           })
         },
       },
-      ALPHA_CHAT_SHARED_ENABLED: 'true',
       SEARCH_RATE_LIMIT_DB: createRateLimitDatabase(),
     },
     request: createRequest({
@@ -160,31 +160,25 @@ test('shared mode preserves the opaque conversation context without selecting tr
   })
 })
 
-test('shared mode fails closed instead of using the local LLM when the service errors', async () => {
-  const response = await onRequestPost(
-    {
-      env: {
-        ALPHA_CHAT_SERVICE: {
-          async fetch() {
-            throw new Error('ServiceUnavailable')
-          },
+test('the Portal adapter fails closed when the shared service errors', async () => {
+  const response = await onRequestPost({
+    env: {
+      ALPHA_CHAT_SERVICE: {
+        async fetch() {
+          throw new Error('ServiceUnavailable')
         },
-        ALPHA_CHAT_SHARED_ENABLED: 'true',
-        OPENAI_API_KEY: 'must-not-be-used',
-        SEARCH_RATE_LIMIT_DB: createRateLimitDatabase(),
       },
-      request: createRequest({ question: 'こんにちは' }),
+      OPENAI_API_KEY: 'must-not-be-used',
+      SEARCH_RATE_LIMIT_DB: createRateLimitDatabase(),
     },
-    async () => {
-      throw new Error('The local model must not run in shared mode')
-    },
-  )
+    request: createRequest({ question: 'こんにちは' }),
+  })
 
   assert.equal(response.status, 503)
   assert.equal((await response.json()).ok, false)
 })
 
-test('shared mode keeps same-origin validation at the Portal entry point', async () => {
+test('the Portal adapter keeps same-origin validation at its entry point', async () => {
   let calls = 0
   const response = await onRequestPost({
     env: {
@@ -194,7 +188,6 @@ test('shared mode keeps same-origin validation at the Portal entry point', async
           return Response.json({ ok: true, answer: 'unexpected' })
         },
       },
-      ALPHA_CHAT_SHARED_ENABLED: 'true',
       SEARCH_RATE_LIMIT_DB: createRateLimitDatabase(),
     },
     request: createRequest(
@@ -207,7 +200,7 @@ test('shared mode keeps same-origin validation at the Portal entry point', async
   assert.equal(calls, 0)
 })
 
-test('shared mode rate limits before invoking the private service', async () => {
+test('the Portal adapter rate limits before invoking the private service', async () => {
   let calls = 0
   const response = await onRequestPost({
     env: {
@@ -217,7 +210,6 @@ test('shared mode rate limits before invoking the private service', async () => 
           return Response.json({ ok: true, answer: 'unexpected' })
         },
       },
-      ALPHA_CHAT_SHARED_ENABLED: 'true',
       SEARCH_RATE_LIMIT_DB: createRateLimitDatabase({
         clientAllowed: false,
       }),
@@ -228,4 +220,56 @@ test('shared mode rate limits before invoking the private service', async () => 
   assert.equal(response.status, 429)
   assert.equal(response.headers.get('Retry-After'), '60')
   assert.equal(calls, 0)
+})
+
+test('the Portal adapter localizes a missing binding without attempting local generation', async () => {
+  const response = await onRequestPost({
+    env: {
+      OPENAI_API_KEY: 'must-not-be-used',
+      SEARCH_RATE_LIMIT_DB: createRateLimitDatabase(),
+    },
+    request: createRequest({ locale: 'fr', question: 'Bonjour' }),
+  })
+
+  assert.equal(response.status, 503)
+  assert.match((await response.json()).answer, /Je n’arrive pas/u)
+})
+
+test('the Portal adapter rejects a malformed shared response', async () => {
+  const response = await onRequestPost({
+    env: {
+      ALPHA_CHAT_SERVICE: {
+        async fetch() {
+          return Response.json({ ok: true, answer: 42 })
+        },
+      },
+      SEARCH_RATE_LIMIT_DB: createRateLimitDatabase(),
+    },
+    request: createRequest({ locale: 'en', question: 'Hello' }),
+  })
+
+  assert.equal(response.status, 503)
+  assert.match((await response.json()).answer, /I couldn't deliver/u)
+})
+
+test('the Portal adapter rejects an oversized shared response', async () => {
+  const response = await onRequestPost({
+    env: {
+      ALPHA_CHAT_SERVICE: {
+        async fetch() {
+          return new Response('{}', {
+            headers: {
+              'Content-Length': String(96 * 1024 + 1),
+              'Content-Type': 'application/json',
+            },
+          })
+        },
+      },
+      SEARCH_RATE_LIMIT_DB: createRateLimitDatabase(),
+    },
+    request: createRequest({ locale: 'en', question: 'Hello' }),
+  })
+
+  assert.equal(response.status, 503)
+  assert.match((await response.json()).answer, /I couldn't deliver/u)
 })
