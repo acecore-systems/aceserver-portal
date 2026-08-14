@@ -2,7 +2,7 @@
 title: Aceserver Portal을 공개했습니다
 description: Discord, Wiki, 동영상, 월드 맵에 나뉘어 있던 참가 전 정보를 하나의 입구로 정리했습니다.
 translationOf: aceserver-portal-launch
-sourceHash: sha256:4bc196677df5822669e61cb69a7781e15129a0860cde91c603755cb560702d77
+sourceHash: sha256:8928266b63395c3af0fbe52abff591003c8c4a0a6ad259740be5052f605e031e
 date: 2026-06-07T10:00:00+09:00
 tags:
   - 공지
@@ -28,7 +28,7 @@ Aceserver에 참가하기 전에는 확인하고 싶은 정보가 여러 가지 
 
 ## 계속 갱신할 수 있는 구성
 
-Portal은 Astro와 UnoCSS로 만든 정적 사이트입니다. 페이지 본문과 사이트 설정은 Sveltia CMS에서 갱신할 수 있어 코드를 수정하지 않고도 공지와 이동 경로를 조정할 수 있습니다.
+Portal은 Astro와 Tailwind CSS v4로 만든 정적 사이트입니다. 페이지 본문과 사이트 설정은 Sveltia CMS에서 갱신할 수 있어 코드를 수정하지 않고도 공지와 이동 경로를 조정할 수 있습니다.
 
 제작과 운영에 관한 자세한 내용은 [Acecore Systems 사례](https://systems.acecore.net/ko/works/#case-aceserver-portal)에 실었습니다.
 

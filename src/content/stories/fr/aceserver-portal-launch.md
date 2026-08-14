@@ -2,7 +2,7 @@
 title: Le portail Aceserver est en ligne
 description: Nous avons réuni en un seul point d’entrée les informations préalables qui étaient réparties entre Discord, le Wiki, les vidéos et les cartes.
 translationOf: aceserver-portal-launch
-sourceHash: sha256:4bc196677df5822669e61cb69a7781e15129a0860cde91c603755cb560702d77
+sourceHash: sha256:8928266b63395c3af0fbe52abff591003c8c4a0a6ad259740be5052f605e031e
 date: 2026-06-07T10:00:00+09:00
 tags:
   - Annonce
@@ -28,7 +28,7 @@ La page d’accueil présente brièvement le serveur et la façon de participer,
 
 ## Une structure qui peut continuer à évoluer
 
-Le portail est un site statique construit avec Astro et UnoCSS. Les textes des pages et les réglages du site peuvent être mis à jour depuis Sveltia CMS, ce qui permet de revoir les annonces et les parcours sans modifier le code.
+Le portail est un site statique construit avec Astro et Tailwind CSS v4. Les textes des pages et les réglages du site peuvent être mis à jour depuis Sveltia CMS, ce qui permet de revoir les annonces et les parcours sans modifier le code.
 
 Les détails de production et d’exploitation figurent dans l’[étude de cas Acecore Systems](https://systems.acecore.net/fr/works/#case-aceserver-portal).
 

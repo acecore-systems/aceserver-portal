@@ -2,7 +2,7 @@
 title: We Launched the Aceserver Portal
 description: We brought the pre-join information that had been split across Discord, the Wiki, videos, and world maps together into one clear entry point.
 translationOf: aceserver-portal-launch
-sourceHash: sha256:4bc196677df5822669e61cb69a7781e15129a0860cde91c603755cb560702d77
+sourceHash: sha256:8928266b63395c3af0fbe52abff591003c8c4a0a6ad259740be5052f605e031e
 date: 2026-06-07T10:00:00+09:00
 tags:
   - Announcement
@@ -28,7 +28,7 @@ The homepage gives a short introduction to the server and how to join, then guid
 
 ## A Structure That Can Keep Being Updated
 
-The portal is a static site built with Astro and UnoCSS. Page copy and site settings can be updated through Sveltia CMS, so announcements and navigation can be reviewed without editing code.
+The portal is a static site built with Astro and Tailwind CSS v4. Page copy and site settings can be updated through Sveltia CMS, so announcements and navigation can be reviewed without editing code.
 
 Production and operational details are available in the [Acecore Systems case study](https://systems.acecore.net/en/works/#case-aceserver-portal).
 

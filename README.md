@@ -1,6 +1,14 @@
 # エースサーバーポータル
 
-エースサーバーの公式ポータルサイトです。Astro 7 + UnoCSS + Sveltia CMS で構成しています。
+エースサーバーの公式ポータルサイトです。Astro 7 + Tailwind CSS v4 + Sveltia CMS で構成しています。
+
+## UI スタイル
+
+Tailwind CSS v4 は Astro の Vite プラグインで統合しています。共通の色、書体、
+重み、遷移時間は `src/styles/global.css` の `@theme` に定義し、既存の共通ボタン・
+パネル規約は同ファイルの `@utility` に集約しています。`@import "tailwindcss"` による
+Preflight を採用し、サイト固有のグローバル基準・キーボードフォーカス・reduced motion
+のルールも同ファイルで維持します。
 
 ## 開発
 

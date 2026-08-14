@@ -2,7 +2,7 @@
 title: Das Aceserver-Portal ist online
 description: Wir haben die zuvor auf Discord, Wiki, Videos und Weltkarten verteilten Informationen vor dem Beitritt in einem gemeinsamen Einstieg gebündelt.
 translationOf: aceserver-portal-launch
-sourceHash: sha256:4bc196677df5822669e61cb69a7781e15129a0860cde91c603755cb560702d77
+sourceHash: sha256:8928266b63395c3af0fbe52abff591003c8c4a0a6ad259740be5052f605e031e
 date: 2026-06-07T10:00:00+09:00
 tags:
   - Ankündigung
@@ -28,7 +28,7 @@ Die Startseite erklärt den Server und den Beitritt kurz und führt anschließen
 
 ## Eine dauerhaft aktualisierbare Struktur
 
-Das Portal ist eine statische Website auf Basis von Astro und UnoCSS. Seitentexte und Website-Einstellungen lassen sich über Sveltia CMS aktualisieren, sodass Hinweise und Wege auch ohne Codeänderung überarbeitet werden können.
+Das Portal ist eine statische Website auf Basis von Astro und Tailwind CSS v4. Seitentexte und Website-Einstellungen lassen sich über Sveltia CMS aktualisieren, sodass Hinweise und Wege auch ohne Codeänderung überarbeitet werden können.
 
 Einzelheiten zu Umsetzung und Betrieb stehen in der [Fallstudie von Acecore Systems](https://systems.acecore.net/de/works/#case-aceserver-portal).
 

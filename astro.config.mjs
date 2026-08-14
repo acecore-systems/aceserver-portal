@@ -1,7 +1,7 @@
 import { defineConfig } from 'astro/config'
 import sitemap from '@astrojs/sitemap'
 import { satteri } from '@astrojs/markdown-satteri'
-import UnoCSS from '@unocss/astro'
+import tailwindcss from '@tailwindcss/vite'
 
 const site = process.env.PUBLIC_SITE_URL || 'https://asv.acecore.net'
 const localePrefixPattern = /^\/(?:en|zh-cn|es|pt|fr|ko|de|ru)(?=\/)/
@@ -59,6 +59,9 @@ const responsiveTableLabelsPlugin = {
 export default defineConfig({
   site,
   compressHTML: true,
+  vite: {
+    plugins: [tailwindcss()],
+  },
   markdown: {
     processor: satteri({
       hastPlugins: [responsiveTableLabelsPlugin],
@@ -68,14 +71,6 @@ export default defineConfig({
     inlineStylesheets: 'auto',
   },
   integrations: [
-    UnoCSS({
-      injectReset: true,
-      content: {
-        pipeline: {
-          exclude: [/\.(css|postcss|sass|scss|less|stylus|styl)($|\?)/],
-        },
-      },
-    }),
     sitemap({
       i18n: {
         defaultLocale: 'ja',

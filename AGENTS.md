@@ -6,7 +6,7 @@
 
 - ユーザー指示、issue/PR 本文、チェックリストを受け入れ条件として扱い、このファイルより具体的な現在の指示を優先する。
 - GitHub 上のユーザー向け文章（issue、pull request、コメント、レビュー返信、作業報告）は、明示がない限り日本語で書く。
-- 既存の Astro、TypeScript、UnoCSS、Sveltia CMS、Cloudflare Pages 構成に合わせ、差分は目的に必要な範囲に絞る。
+- 既存の Astro、TypeScript、Tailwind CSS v4、Sveltia CMS、Cloudflare Pages 構成に合わせ、差分は目的に必要な範囲に絞る。
 - 関連のない整形、リファクタリング、生成物更新を混ぜない。
 - 既存の未コミット変更や別 branch の作業を戻さない。
 - 失敗した検証、未実施の確認、外部要因による制約は隠さず報告する。
