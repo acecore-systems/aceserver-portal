@@ -90,6 +90,7 @@ jobs:
           GITHUB_READ_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
           GITHUB_REPOSITORY: ${{ github.repository }}
+          PORTAL_TRANSLATION_CONTRACT_SECRET: ${{ secrets.PORTAL_TRANSLATION_CONTRACT_SECRET }}
           PR_NUMBERS: ${{ steps.pr.outputs.numbers }}
         run: |
           for pr_number in $PR_NUMBERS; do

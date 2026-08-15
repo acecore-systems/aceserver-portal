@@ -6,6 +6,7 @@ import test from 'node:test'
 import {
   enablePullRequestAutoMerge,
   hasExactlyExpectedTranslationFiles,
+  hasMatchingSourceShaMarker,
   hasSuccessfulPortalCi,
   isEligibleTranslationPullRequest,
   parseArguments,
@@ -19,6 +20,10 @@ import {
   hashSourceText,
   parseTranslationSourceMarker,
 } from '../scripts/translation-source-contract.mjs'
+import {
+  hasOnlyTranslationStringChanges,
+  isSafeTranslatedStoryContent,
+} from '../scripts/translation-change-policy.mjs'
 
 const REPOSITORY = {
   owner: 'acecore-systems',
@@ -26,6 +31,7 @@ const REPOSITORY = {
   repository: 'acecore-systems/aceserver-portal',
 }
 const HEAD_SHA = 'a'.repeat(40)
+const TEST_CONTRACT_SECRET = 'portal-translation-test-secret-32-bytes'
 
 function createPullRequest(overrides = {}) {
   return {
@@ -102,9 +108,16 @@ test('source contractはLF正規化hashと完全な翻訳対象集合を固定�
       return path.endsWith('.json') ? '{"title":"例"}\r\n' : '# 例\r\n'
     },
   })
-  const marker = formatTranslationSourceMarker(contract)
+  const marker = formatTranslationSourceMarker(contract, {
+    secret: TEST_CONTRACT_SECRET,
+  })
 
-  assert.deepEqual(parseTranslationSourceMarker(`task\n${marker}`), contract)
+  assert.deepEqual(
+    parseTranslationSourceMarker(`task\n${marker}`, {
+      secret: TEST_CONTRACT_SECRET,
+    }),
+    contract,
+  )
   assert.deepEqual(getExpectedTranslationFiles(contract), [
     'src/content/stories/de/example.md',
     'src/content/stories/en/example.md',
@@ -133,10 +146,22 @@ test('source markerの重複、改ざん、未許可pathはfail closedにする'
     changedFiles: ['src/content/pages/top.json'],
     readSourceFile: () => '{}',
   })
-  const marker = formatTranslationSourceMarker(contract)
+  const marker = formatTranslationSourceMarker(contract, {
+    secret: TEST_CONTRACT_SECRET,
+  })
   assert.throws(
-    () => parseTranslationSourceMarker(`${marker}\n${marker}`),
+    () =>
+      parseTranslationSourceMarker(`${marker}\n${marker}`, {
+        secret: TEST_CONTRACT_SECRET,
+      }),
     /exactly one source marker/u,
+  )
+  assert.throws(
+    () =>
+      parseTranslationSourceMarker(marker, {
+        secret: 'different-portal-translation-secret',
+      }),
+    /signature is invalid/u,
   )
   assert.throws(
     () =>
@@ -147,6 +172,40 @@ test('source markerの重複、改ざん、未許可pathはfail closedにする'
       }),
     /Unsupported Japanese translation source path/u,
   )
+})
+
+test('translations.tsは翻訳blockの文字列値以外を変更できない', async () => {
+  const base = await readFile('src/i18n/translations.ts', 'utf8')
+  const translated = base.replace(
+    'Official portal for the free public Minecraft server',
+    'Official Aceserver community portal',
+  )
+  const japanese = base.replace(
+    'Minecraft無料公開サーバーの公式ポータル',
+    '変更された日本語正本',
+  )
+  const structural = base.replace(
+    'const en: LocaleTranslation = {',
+    'const en: LocaleTranslation = {\n  unexpectedCode: process.env.SECRET,',
+  )
+
+  assert.notEqual(translated, base)
+  assert.equal(hasOnlyTranslationStringChanges(base, translated), true)
+  assert.equal(hasOnlyTranslationStringChanges(base, japanese), false)
+  assert.equal(hasOnlyTranslationStringChanges(base, structural), false)
+})
+
+test('翻訳Storyはraw HTML、active URL scheme、bidi制御文字を拒否する', () => {
+  assert.equal(
+    isSafeTranslatedStoryContent('---\ntitle: Example\n---\n\n# Safe story\n'),
+    true,
+  )
+  assert.equal(isSafeTranslatedStoryContent('<script>alert(1)</script>'), false)
+  assert.equal(
+    isSafeTranslatedStoryContent('[open](javascript:alert(1))'),
+    false,
+  )
+  assert.equal(isSafeTranslatedStoryContent(`safe\u202etxt`), false)
 })
 
 test('PR番号とCopilot PR provenanceを厳密に検証する', () => {
@@ -183,6 +242,27 @@ test('PR番号とCopilot PR provenanceを厳密に検証する', () => {
     isEligibleTranslationPullRequest(
       createPullRequest({ title: '[翻訳] 任意の変更' }),
       REPOSITORY,
+    ),
+    false,
+  )
+})
+
+test('source SHA markerは署名contractのcommitと1回だけ一致させる', () => {
+  assert.equal(
+    hasMatchingSourceShaMarker(`translation-source-sha:${HEAD_SHA}`, HEAD_SHA),
+    true,
+  )
+  assert.equal(
+    hasMatchingSourceShaMarker(
+      `translation-source-sha:${HEAD_SHA}\ntranslation-source-sha:${HEAD_SHA}`,
+      HEAD_SHA,
+    ),
+    false,
+  )
+  assert.equal(
+    hasMatchingSourceShaMarker(
+      `translation-source-sha:${'b'.repeat(40)}`,
+      HEAD_SHA,
     ),
     false,
   )
@@ -242,11 +322,14 @@ test('sourceHashが古いCopilot翻訳PRは再読後にApp tokenで閉じる', a
     version: 1,
     repository: REPOSITORY.repository,
     sourceCommit: currentHead,
+    nonce: 'a'.repeat(22),
     sources: [{ path: 'src/content/pages/top.json', hash: '0'.repeat(64) }],
   }
   const pullRequest = createPullRequest({
     headSha: 'b'.repeat(40),
-    body: formatTranslationSourceMarker(contract),
+    body: `${formatTranslationSourceMarker(contract, {
+      secret: TEST_CONTRACT_SECRET,
+    })}\ntranslation-source-sha:${currentHead}`,
   })
   const readCalls = []
   const writeCalls = []
@@ -283,6 +366,9 @@ test('sourceHashが古いCopilot翻訳PRは再読後にApp tokenで閉じる', a
     writeClient,
     logger,
     repository: REPOSITORY,
+    environment: {
+      PORTAL_TRANSLATION_CONTRACT_SECRET: TEST_CONTRACT_SECRET,
+    },
   })
 
   assert.equal(pullReads, 2)
@@ -306,8 +392,11 @@ test('read tokenでCIを確認し、App tokenでready化とexpected HEAD auto-me
   })
   const pullRequest = createPullRequest({
     headSha: 'c'.repeat(40),
-    body: formatTranslationSourceMarker(contract),
+    body: `${formatTranslationSourceMarker(contract, {
+      secret: TEST_CONTRACT_SECRET,
+    })}\ntranslation-source-sha:${currentHead}`,
   })
+  const translationsContent = await readFile('src/i18n/translations.ts', 'utf8')
   const readClient = {
     async request(path) {
       if (path.endsWith('/pulls/42')) return rawPullRequest(pullRequest)
@@ -316,6 +405,12 @@ test('read tokenでCIを確認し、App tokenでready化とexpected HEAD auto-me
       }
       if (path.includes('/pulls/42/files?')) {
         return [{ filename: 'src/i18n/translations.ts' }]
+      }
+      if (path.includes('/contents/src/i18n/translations.ts?ref=')) {
+        return {
+          encoding: 'base64',
+          content: Buffer.from(translationsContent, 'utf8').toString('base64'),
+        }
       }
       if (path.includes(`/commits/${pullRequest.headSha}/check-runs`)) {
         return {
@@ -367,6 +462,9 @@ test('read tokenでCIを確認し、App tokenでready化とexpected HEAD auto-me
     writeClient,
     logger,
     repository: REPOSITORY,
+    environment: {
+      PORTAL_TRANSLATION_CONTRACT_SECRET: TEST_CONTRACT_SECRET,
+    },
   })
 
   assert.equal(graphqlCalls.length, 2)
@@ -405,10 +503,10 @@ test('auto-mergeはsquashと検証済みHEAD SHAを固定する', async () => {
 })
 
 test('workflowはCI成功・main更新の双方で再評価しread/write tokenを分離する', async () => {
-  const workflow = await readFile(
-    '.github/workflows/merge-translation-pr.yml',
-    'utf8',
-  )
+  const [workflow, taskWorkflow] = await Promise.all([
+    readFile('.github/workflows/merge-translation-pr.yml', 'utf8'),
+    readFile('.github/workflows/create-translation-task.yml', 'utf8'),
+  ])
   assert.match(workflow, /workflow_run:/u)
   assert.match(workflow, /workflows:\s+- CI/u)
   assert.match(workflow, /push:\s+branches:\s+- main/u)
@@ -425,5 +523,13 @@ test('workflowはCI成功・main更新の双方で再評価しread/write token�
     workflow,
     /GITHUB_TOKEN: \$\{\{ steps\.app-token\.outputs\.token \}\}/u,
   )
+  assert.match(
+    workflow,
+    /PORTAL_TRANSLATION_CONTRACT_SECRET: \$\{\{ secrets\.PORTAL_TRANSLATION_CONTRACT_SECRET \}\}/u,
+  )
   assert.doesNotMatch(workflow, /TRANSLATION_BOT_APP_ID/u)
+  assert.match(
+    taskWorkflow,
+    /PORTAL_TRANSLATION_CONTRACT_SECRET: \$\{\{ secrets\.PORTAL_TRANSLATION_CONTRACT_SECRET \}\}/u,
+  )
 })

@@ -13,6 +13,7 @@ import {
   classifyCmsCommitSet,
   normalizeSha,
   parseChangedFiles,
+  resolveChangedFiles,
 } from '../scripts/create-translation-task.mjs'
 import {
   createTranslationSourceContract,
@@ -30,6 +31,8 @@ import {
   createAlphaInlineMarkdownPattern,
   escapeRegExpLiteral,
 } from '../src/utils/alpha-link-pattern.ts'
+
+const TEST_CONTRACT_SECRET = 'portal-translation-test-secret-32-bytes'
 
 test('公開localeは日本語を既定とする9言語で固定する', () => {
   assert.deepEqual(LOCALES, [
@@ -139,6 +142,21 @@ test('翻訳task入力はshellへ渡さず、許可した日本語正本pathだ�
     () => normalizeSha('main && curl example.invalid'),
     /Invalid Git SHA/u,
   )
+  assert.deepEqual(
+    resolveChangedFiles(
+      ['src/content/pages/top.json'],
+      ['src/content/pages/top.json'],
+    ),
+    ['src/content/pages/top.json'],
+  )
+  assert.throws(
+    () =>
+      resolveChangedFiles(
+        ['src/content/pages/top.json'],
+        ['src/content/site/navigation.json'],
+      ),
+    /must exactly match/u,
+  )
 
   assert.equal(
     classifyCmsCommitSet([
@@ -167,6 +185,7 @@ test('翻訳task入力はshellへ渡さず、許可した日本語正本pathだ�
       changedFiles: ['src/content/pages/top.json'],
       readSourceFile: () => '{}',
     }),
+    { secret: TEST_CONTRACT_SECRET },
   )
   const problemStatement = buildTranslationProblemStatement({
     repository: 'acecore-systems/aceserver-portal',

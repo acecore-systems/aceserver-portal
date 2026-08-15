@@ -7,6 +7,10 @@ import {
   getExpectedTranslationFiles,
   parseTranslationSourceMarker,
 } from './translation-source-contract.mjs'
+import {
+  hasOnlyTranslationStringChanges,
+  isSafeTranslatedStoryContent,
+} from './translation-change-policy.mjs'
 
 const GITHUB_API_URL = 'https://api.github.com'
 const FULL_SHA_PATTERN = /^[0-9a-f]{40}$/iu
@@ -311,6 +315,86 @@ async function getMainHead(repository, client) {
   return sha
 }
 
+async function getRepositoryFileContent(repository, relativePath, ref, client) {
+  const encodedPath = relativePath
+    .split('/')
+    .map((segment) => encodeURIComponent(segment))
+    .join('/')
+  const response = await client.request(
+    repositoryPath(
+      repository,
+      `/contents/${encodedPath}?ref=${encodeURIComponent(ref)}`,
+    ),
+  )
+  if (response === null) return null
+  const file = requiredRecord(response, 'GitHub repository content')
+  if (file.encoding !== 'base64' || typeof file.content !== 'string') {
+    throw new Error(
+      `GitHub did not return base64 file content: ${relativePath}`,
+    )
+  }
+  return Buffer.from(file.content.replaceAll(/\s/gu, ''), 'base64').toString(
+    'utf8',
+  )
+}
+
+async function hasSafeTranslationContentChanges(
+  contract,
+  pullRequest,
+  mainSha,
+  repository,
+  readClient,
+) {
+  const expectedFiles = getExpectedTranslationFiles(contract)
+  if (expectedFiles.includes('src/i18n/translations.ts')) {
+    const [baseContent, headContent] = await Promise.all([
+      getRepositoryFileContent(
+        repository,
+        'src/i18n/translations.ts',
+        mainSha,
+        readClient,
+      ),
+      getRepositoryFileContent(
+        repository,
+        'src/i18n/translations.ts',
+        pullRequest.headSha,
+        readClient,
+      ),
+    ])
+    if (!hasOnlyTranslationStringChanges(baseContent, headContent)) return false
+  }
+
+  const storySources = new Map(
+    contract.sources
+      .filter((source) => source.path.startsWith('src/content/stories/'))
+      .map((source) => [
+        source.path.slice('src/content/stories/'.length),
+        source,
+      ]),
+  )
+  for (const relativePath of expectedFiles) {
+    const match = relativePath.match(
+      /^src\/content\/stories\/(?:en|zh-cn|es|pt|fr|ko|de|ru)\/(.+\.md)$/u,
+    )
+    if (!match?.[1]) continue
+    const source = storySources.get(match[1])
+    if (!source) return false
+    const headContent = await getRepositoryFileContent(
+      repository,
+      relativePath,
+      pullRequest.headSha,
+      readClient,
+    )
+    if (source.hash === null) {
+      if (headContent !== null) return false
+      continue
+    }
+    if (!isSafeTranslatedStoryContent(headContent)) return false
+  }
+
+  return true
+}
+
 export function isEligibleTranslationPullRequest(pullRequest, repository) {
   return (
     pullRequest.state === 'open' &&
@@ -321,6 +405,12 @@ export function isEligibleTranslationPullRequest(pullRequest, repository) {
     pullRequest.headRef?.startsWith('copilot/') === true &&
     pullRequest.title === TRANSLATION_TITLE
   )
+}
+
+export function hasMatchingSourceShaMarker(body, sourceCommit) {
+  if (typeof body !== 'string') return false
+  const matches = [...body.matchAll(/translation-source-sha:([a-f0-9]{40})/gu)]
+  return matches.length === 1 && matches[0]?.[1] === sourceCommit
 }
 
 export function hasExactlyExpectedTranslationFiles(filenames, contract) {
@@ -557,7 +647,9 @@ export async function runMergeAutomation(
 
   let contract
   try {
-    contract = parseTranslationSourceMarker(pullRequest.body)
+    contract = parseTranslationSourceMarker(pullRequest.body, {
+      secret: environment.PORTAL_TRANSLATION_CONTRACT_SECRET,
+    })
   } catch (error) {
     throw new Error(
       `Translation PR #${prNumber} has an invalid source contract: ${error instanceof Error ? error.message : String(error)}`,
@@ -572,6 +664,11 @@ export async function runMergeAutomation(
     currentRepository.repository.toLowerCase()
   ) {
     throw new Error(`Translation PR #${prNumber} targets another repository.`)
+  }
+  if (!hasMatchingSourceShaMarker(pullRequest.body, contract.sourceCommit)) {
+    throw new Error(
+      `Translation PR #${prNumber} has an invalid source SHA marker.`,
+    )
   }
 
   const remoteMainSha = await getMainHead(currentRepository, currentReadClient)
@@ -605,6 +702,31 @@ export async function runMergeAutomation(
       `Translation PR #${prNumber} changed files outside its exact source contract: ${changedFiles.join(', ') || '(none)'}`,
     )
   }
+  if (pullRequest.mergeableState === 'behind') {
+    if (
+      !(await updatePullRequestBranch(pullRequest, {
+        writeClient: currentWriteClient,
+        logger,
+        repository: currentRepository,
+      }))
+    ) {
+      throw new Error(`Could not update translation PR #${prNumber}.`)
+    }
+    return
+  }
+  if (
+    !(await hasSafeTranslationContentChanges(
+      contract,
+      pullRequest,
+      remoteMainSha,
+      currentRepository,
+      currentReadClient,
+    ))
+  ) {
+    throw new Error(
+      `Translation PR #${prNumber} contains structural code changes or unsafe Story content.`,
+    )
+  }
 
   const checkRuns = await getCheckRuns(
     pullRequest.headSha,
@@ -618,18 +740,6 @@ export async function runMergeAutomation(
     return
   }
 
-  if (pullRequest.mergeableState === 'behind') {
-    if (
-      !(await updatePullRequestBranch(pullRequest, {
-        writeClient: currentWriteClient,
-        logger,
-        repository: currentRepository,
-      }))
-    ) {
-      throw new Error(`Could not update translation PR #${prNumber}.`)
-    }
-    return
-  }
   if (!SAFE_MERGEABLE_STATES.has(pullRequest.mergeableState)) {
     logger.log(
       `Translation PR #${prNumber} mergeable state is ${pullRequest.mergeableState}; skipping.`,

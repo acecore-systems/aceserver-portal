@@ -36,6 +36,22 @@ export function parseChangedFiles(value) {
   return files
 }
 
+export function resolveChangedFiles(manualFiles, detectedFiles) {
+  const detected = [...new Set(detectedFiles)].sort()
+  if (manualFiles === null) return detected
+
+  const manual = [...new Set(manualFiles)].sort()
+  if (
+    manual.length !== detected.length ||
+    manual.some((file, index) => file !== detected[index])
+  ) {
+    throw new Error(
+      'Manually supplied Japanese source paths must exactly match the selected commit range.',
+    )
+  }
+  return detected
+}
+
 export function normalizeSha(value) {
   const normalized = value?.trim().toLowerCase()
   if (!normalized || normalized === ZERO_SHA) return null
@@ -170,6 +186,7 @@ export function buildTranslationProblemStatement({
     '必須条件:',
     '- 日本語正本は変更しない。',
     '- PR titleは「[翻訳] Aceserver Portalの日本語正本へ追従」と完全一致させる。',
+    `- PR bodyへ「${marker}」を1回だけ含める。`,
     '- PR bodyへ上記のPR source contractを1文字も変えず、1回だけ含める。',
     '- Copilotが作成した同一repositoryのcopilot/ branchだけを使い、workflow、script、設定、依存関係は変更しない。',
     '- 固定ページ変更がある場合は src/i18n/translations.ts の対応する8言語だけを更新し、各localeのsourceHashを日本語固定コンテンツ全体のLF正規化SHA-256へ更新する。',
@@ -217,7 +234,7 @@ async function requestJson(url, { token, method = 'GET', body, headers = {} }) {
   return responseText ? JSON.parse(responseText) : {}
 }
 
-async function hasOpenTranslationPullRequest(owner, repo, marker) {
+async function hasOpenTranslationPullRequest(owner, repo, sourceShaMarker) {
   const token = process.env.GITHUB_TOKEN?.trim()
   if (!token) throw new Error('GITHUB_TOKEN is required')
 
@@ -227,7 +244,9 @@ async function hasOpenTranslationPullRequest(owner, repo, marker) {
       { token },
     )
     if (
-      pullRequests.some((pullRequest) => pullRequest.body?.includes(marker))
+      pullRequests.some((pullRequest) =>
+        pullRequest.body?.includes(sourceShaMarker),
+      )
     ) {
       return true
     }
@@ -246,7 +265,10 @@ async function main() {
     normalizeSha(runGit(['rev-parse', 'HEAD']))
   assertSourceCommitIsCurrentHistory(headSha)
   const manualFiles = parseChangedFiles(process.env.INPUT_CHANGED_FILES)
-  const changedFiles = manualFiles ?? listChangedFiles(baseSha, headSha)
+  const changedFiles = resolveChangedFiles(
+    manualFiles,
+    listChangedFiles(baseSha, headSha),
+  )
 
   if (changedFiles.length === 0) {
     console.log('No Japanese translation sources changed.')
@@ -276,7 +298,10 @@ async function main() {
     readSourceFile: (relativePath) =>
       readSourceFileAtCommit(headSha, relativePath),
   })
-  const sourceMarker = formatTranslationSourceMarker(sourceContract)
+  const sourceMarker = formatTranslationSourceMarker(sourceContract, {
+    secret: process.env.PORTAL_TRANSLATION_CONTRACT_SECRET,
+  })
+  const sourceShaMarker = `translation-source-sha:${headSha}`
   const problemStatement = buildTranslationProblemStatement({
     repository,
     headSha,
@@ -288,7 +313,7 @@ async function main() {
     return
   }
 
-  if (await hasOpenTranslationPullRequest(owner, repo, sourceMarker)) {
+  if (await hasOpenTranslationPullRequest(owner, repo, sourceShaMarker)) {
     console.log('An open translation PR already covers this source commit.')
     return
   }
