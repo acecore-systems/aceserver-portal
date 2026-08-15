@@ -25,6 +25,7 @@
     "test:content": "node --test tests/content-validation.test.mjs",
     "test:dynmap": "node --experimental-strip-types --test cloudflare/dynmap-r2-cache/worker.test.mjs",
     "test:i18n": "node --experimental-strip-types --test tests/i18n.test.mjs",
+    "test:translation-merge": "node --test tests/translation-merge.test.mjs",
     "typecheck:functions": "tsc --project tsconfig.functions.json && npm run typecheck:api",
     "typecheck:api": "tsc --project tsconfig.api.json",
     "types:functions": "wrangler types functions/worker-configuration.d.ts --config wrangler.jsonc --include-runtime false",

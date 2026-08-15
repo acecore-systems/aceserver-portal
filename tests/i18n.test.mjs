@@ -15,6 +15,10 @@ import {
   parseChangedFiles,
 } from '../scripts/create-translation-task.mjs'
 import {
+  createTranslationSourceContract,
+  formatTranslationSourceMarker,
+} from '../scripts/translation-source-contract.mjs'
+import {
   getAlternatePaths,
   localizePath,
   LOCALES,
@@ -156,12 +160,23 @@ test('翻訳task入力はshellへ渡さず、許可した日本語正本pathだ�
     'mixed',
   )
 
+  const sourceMarker = formatTranslationSourceMarker(
+    createTranslationSourceContract({
+      repository: 'acecore-systems/aceserver-portal',
+      sourceCommit: 'a'.repeat(40),
+      changedFiles: ['src/content/pages/top.json'],
+      readSourceFile: () => '{}',
+    }),
+  )
   const problemStatement = buildTranslationProblemStatement({
     repository: 'acecore-systems/aceserver-portal',
     headSha: 'a'.repeat(40),
     changedFiles: ['src/content/pages/top.json'],
+    sourceMarker,
   })
   assert.match(problemStatement, /日本語正本は変更しない/u)
   assert.match(problemStatement, /placeholder、URL、route/u)
   assert.match(problemStatement, /translation-source-sha:a{40}/u)
+  assert.match(problemStatement, /portal-translation-source:/u)
+  assert.equal(problemStatement.includes(sourceMarker), true)
 })
