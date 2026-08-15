@@ -62,6 +62,24 @@ Storiesは日本語を正とするPR管理コンテンツです。日本語と8�
 ポータル内の言語別URLで公開し、Acecore側の旧記事URLも対応する言語版へ
 301で転送します。翻訳は日本語正本のsource hashと構造をbuild前に検証します。
 
+### 翻訳PRの自動検証とマージ
+
+CMSが日本語正本を`main`へ直接保存すると、`Create Translation Task`がCopilotへ
+8言語の追従PRを依頼します。`Merge Translation PR`は、Copilotの署名済みactor、
+同一repositoryの`copilot/` branch、固定タイトル、タスク生成時に記録した日本語正本の
+LF正規化SHA-256とHMAC署名、変更可能な翻訳ファイルの完全一致、`translations.ts`の
+翻訳文字列以外にコード差分がないこと、GitHub Actions由来の`Build and Format`成功を
+すべて確認した場合だけsquash auto-mergeを予約します。
+対象の日本語正本が後から変わったPRはstaleとして閉じ、判定不能・余分な変更・CI失敗は
+fail closedでマージしません。翻訳データのキーや配列構造を変える追加・削除は自動化せず、
+通常の人手レビューで扱います。
+
+タスク生成には`COPILOT_AGENT_TOKEN`、マージ操作にはrepositoryへinstallした
+`Acecore Translation Bot`とRepository Secretsの`TRANSLATION_BOT_CLIENT_ID`、
+`TRANSLATION_BOT_APP_PRIVATE_KEY`を使います。source contractの署名・検証には32 byte以上の
+`PORTAL_TRANSLATION_CONTRACT_SECRET`を使います。CIやPR内容のreadは権限を分離したActionsの
+`GITHUB_TOKEN`で行うため、Translation BotへChecks権限は付与しません。
+
 ## CMS
 
 Sveltia CMS では `src/content/pages/*.json` と `src/content/site/*.json` を編集します。

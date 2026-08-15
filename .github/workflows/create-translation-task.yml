@@ -50,6 +50,7 @@ jobs:
       - name: Create translation PR task
         env:
           COPILOT_AGENT_TOKEN: ${{ secrets.COPILOT_AGENT_TOKEN }}
+          PORTAL_TRANSLATION_CONTRACT_SECRET: ${{ secrets.PORTAL_TRANSLATION_CONTRACT_SECRET }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: ${{ github.repository }}
           GITHUB_EVENT_NAME: ${{ github.event_name }}

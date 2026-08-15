@@ -39,6 +39,12 @@ jobs:
       - name: Test content validation
         run: npm run test:content
 
+      - name: Test i18n
+        run: npm run test:i18n
+
+      - name: Test translation merge automation
+        run: npm run test:translation-merge
+
       - name: Test Alpha chat API
         run: npm run test:alpha
 

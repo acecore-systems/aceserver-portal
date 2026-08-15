@@ -1,23 +1,19 @@
 import { execFileSync } from 'node:child_process'
 import { pathToFileURL } from 'node:url'
 
+import {
+  createTranslationSourceContract,
+  formatTranslationSourceMarker,
+  isJapaneseTranslationSource,
+  TRANSLATED_LOCALES,
+} from './translation-source-contract.mjs'
+
 const ZERO_SHA = '0000000000000000000000000000000000000000'
 const COPILOT_API_BASE = 'https://api.githubcopilot.com'
 const COPILOT_API_VERSION = '2026-01-09'
 const COPILOT_INTEGRATION_ID = 'aceserver-portal-translation-task'
-const TRANSLATED_LOCALES = ['en', 'zh-cn', 'es', 'pt', 'fr', 'ko', 'de', 'ru']
 const SAFE_PATH_PATTERN = /^[A-Za-z0-9._/-]+$/u
 const SHA_PATTERN = /^[a-f0-9]{40}$/u
-
-export function isJapaneseTranslationSource(relativePath) {
-  return (
-    /^src\/content\/pages\/[A-Za-z0-9._-]+\.json$/u.test(relativePath) ||
-    /^src\/content\/site\/(?:settings|navigation|announcements)\.json$/u.test(
-      relativePath,
-    ) ||
-    /^src\/content\/stories\/[A-Za-z0-9._-]+\.md$/u.test(relativePath)
-  )
-}
 
 export function parseChangedFiles(value) {
   if (!value?.trim()) return null
@@ -38,6 +34,22 @@ export function parseChangedFiles(value) {
   }
 
   return files
+}
+
+export function resolveChangedFiles(manualFiles, detectedFiles) {
+  const detected = [...new Set(detectedFiles)].sort()
+  if (manualFiles === null) return detected
+
+  const manual = [...new Set(manualFiles)].sort()
+  if (
+    manual.length !== detected.length ||
+    manual.some((file, index) => file !== detected[index])
+  ) {
+    throw new Error(
+      'Manually supplied Japanese source paths must exactly match the selected commit range.',
+    )
+  }
+  return detected
 }
 
 export function normalizeSha(value) {
@@ -71,6 +83,36 @@ function runGit(args) {
     encoding: 'utf8',
     stdio: ['ignore', 'pipe', 'pipe'],
   }).trim()
+}
+
+function readSourceFileAtCommit(sourceCommit, relativePath) {
+  try {
+    execFileSync('git', ['cat-file', '-e', `${sourceCommit}:${relativePath}`], {
+      stdio: 'ignore',
+    })
+  } catch {
+    return null
+  }
+
+  return execFileSync('git', ['show', `${sourceCommit}:${relativePath}`], {
+    encoding: 'utf8',
+    stdio: ['ignore', 'pipe', 'pipe'],
+  })
+}
+
+function assertSourceCommitIsCurrentHistory(sourceCommit) {
+  try {
+    execFileSync('git', ['cat-file', '-e', `${sourceCommit}^{commit}`], {
+      stdio: 'ignore',
+    })
+    execFileSync('git', ['merge-base', '--is-ancestor', sourceCommit, 'HEAD'], {
+      stdio: 'ignore',
+    })
+  } catch {
+    throw new Error(
+      `Translation source commit is unavailable or not in current history: ${sourceCommit}`,
+    )
+  }
 }
 
 function listChangedFiles(baseSha, headSha) {
@@ -113,7 +155,14 @@ export function buildTranslationProblemStatement({
   repository,
   headSha,
   changedFiles,
+  sourceMarker,
 }) {
+  if (
+    typeof sourceMarker !== 'string' ||
+    !sourceMarker.startsWith('<!-- portal-translation-source:')
+  ) {
+    throw new Error('A Portal translation source marker is required.')
+  }
   const fixedSources = changedFiles.filter(
     (file) => !file.startsWith('src/content/stories/'),
   )
@@ -129,11 +178,17 @@ export function buildTranslationProblemStatement({
     `Repository: ${repository}`,
     `Source commit: ${headSha}`,
     `Target locales: ${TRANSLATED_LOCALES.join(', ')}`,
+    'PR source contract (copy this exact line into the PR body):',
+    sourceMarker,
     'Changed Japanese source files:',
     ...changedFiles.map((file) => `- ${file}`),
     '',
     '必須条件:',
     '- 日本語正本は変更しない。',
+    '- PR titleは「[翻訳] Aceserver Portalの日本語正本へ追従」と完全一致させる。',
+    `- PR bodyへ「${marker}」を1回だけ含める。`,
+    '- PR bodyへ上記のPR source contractを1文字も変えず、1回だけ含める。',
+    '- Copilotが作成した同一repositoryのcopilot/ branchだけを使い、workflow、script、設定、依存関係は変更しない。',
     '- 固定ページ変更がある場合は src/i18n/translations.ts の対応する8言語だけを更新し、各localeのsourceHashを日本語固定コンテンツ全体のLF正規化SHA-256へ更新する。',
     '- Story変更がある場合は src/content/stories/{locale}/{slug}.md の対応ファイルだけを更新し、translationOfと日本語Story全体のLF正規化sourceHashを更新する。',
     '- 見出し構造、リンクの役割、画像、date、author、placeholder、URL、route、製品名、Minecraftコマンド、コード風tokenを壊さない。',
@@ -179,7 +234,7 @@ async function requestJson(url, { token, method = 'GET', body, headers = {} }) {
   return responseText ? JSON.parse(responseText) : {}
 }
 
-async function hasOpenTranslationPullRequest(owner, repo, marker) {
+async function hasOpenTranslationPullRequest(owner, repo, sourceShaMarker) {
   const token = process.env.GITHUB_TOKEN?.trim()
   if (!token) throw new Error('GITHUB_TOKEN is required')
 
@@ -189,10 +244,8 @@ async function hasOpenTranslationPullRequest(owner, repo, marker) {
       { token },
     )
     if (
-      pullRequests.some(
-        (pullRequest) =>
-          pullRequest.title === '[翻訳] Aceserver Portalの日本語正本へ追従' ||
-          pullRequest.body?.includes(marker),
+      pullRequests.some((pullRequest) =>
+        pullRequest.body?.includes(sourceShaMarker),
       )
     ) {
       return true
@@ -210,8 +263,12 @@ async function main() {
     normalizeSha(process.env.INPUT_HEAD_SHA) ??
     normalizeSha(process.env.GITHUB_SHA) ??
     normalizeSha(runGit(['rev-parse', 'HEAD']))
+  assertSourceCommitIsCurrentHistory(headSha)
   const manualFiles = parseChangedFiles(process.env.INPUT_CHANGED_FILES)
-  const changedFiles = manualFiles ?? listChangedFiles(baseSha, headSha)
+  const changedFiles = resolveChangedFiles(
+    manualFiles,
+    listChangedFiles(baseSha, headSha),
+  )
 
   if (changedFiles.length === 0) {
     console.log('No Japanese translation sources changed.')
@@ -234,19 +291,29 @@ async function main() {
   }
 
   const title = '[翻訳] Aceserver Portalの日本語正本へ追従'
+  const sourceContract = createTranslationSourceContract({
+    repository,
+    sourceCommit: headSha,
+    changedFiles,
+    readSourceFile: (relativePath) =>
+      readSourceFileAtCommit(headSha, relativePath),
+  })
+  const sourceMarker = formatTranslationSourceMarker(sourceContract, {
+    secret: process.env.PORTAL_TRANSLATION_CONTRACT_SECRET,
+  })
+  const sourceShaMarker = `translation-source-sha:${headSha}`
   const problemStatement = buildTranslationProblemStatement({
     repository,
     headSha,
     changedFiles,
+    sourceMarker,
   })
-  const marker = `translation-source-sha:${headSha}`
-
   if (process.env.INPUT_DRY_RUN === 'true') {
     console.log(JSON.stringify({ title, problemStatement }, null, 2))
     return
   }
 
-  if (await hasOpenTranslationPullRequest(owner, repo, marker)) {
+  if (await hasOpenTranslationPullRequest(owner, repo, sourceShaMarker)) {
     console.log('An open translation PR already covers this source commit.')
     return
   }

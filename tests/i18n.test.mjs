@@ -13,7 +13,12 @@ import {
   classifyCmsCommitSet,
   normalizeSha,
   parseChangedFiles,
+  resolveChangedFiles,
 } from '../scripts/create-translation-task.mjs'
+import {
+  createTranslationSourceContract,
+  formatTranslationSourceMarker,
+} from '../scripts/translation-source-contract.mjs'
 import {
   getAlternatePaths,
   localizePath,
@@ -26,6 +31,8 @@ import {
   createAlphaInlineMarkdownPattern,
   escapeRegExpLiteral,
 } from '../src/utils/alpha-link-pattern.ts'
+
+const TEST_CONTRACT_SECRET = 'portal-translation-test-secret-32-bytes'
 
 test('公開localeは日本語を既定とする9言語で固定する', () => {
   assert.deepEqual(LOCALES, [
@@ -135,6 +142,21 @@ test('翻訳task入力はshellへ渡さず、許可した日本語正本pathだ�
     () => normalizeSha('main && curl example.invalid'),
     /Invalid Git SHA/u,
   )
+  assert.deepEqual(
+    resolveChangedFiles(
+      ['src/content/pages/top.json'],
+      ['src/content/pages/top.json'],
+    ),
+    ['src/content/pages/top.json'],
+  )
+  assert.throws(
+    () =>
+      resolveChangedFiles(
+        ['src/content/pages/top.json'],
+        ['src/content/site/navigation.json'],
+      ),
+    /must exactly match/u,
+  )
 
   assert.equal(
     classifyCmsCommitSet([
@@ -156,12 +178,24 @@ test('翻訳task入力はshellへ渡さず、許可した日本語正本pathだ�
     'mixed',
   )
 
+  const sourceMarker = formatTranslationSourceMarker(
+    createTranslationSourceContract({
+      repository: 'acecore-systems/aceserver-portal',
+      sourceCommit: 'a'.repeat(40),
+      changedFiles: ['src/content/pages/top.json'],
+      readSourceFile: () => '{}',
+    }),
+    { secret: TEST_CONTRACT_SECRET },
+  )
   const problemStatement = buildTranslationProblemStatement({
     repository: 'acecore-systems/aceserver-portal',
     headSha: 'a'.repeat(40),
     changedFiles: ['src/content/pages/top.json'],
+    sourceMarker,
   })
   assert.match(problemStatement, /日本語正本は変更しない/u)
   assert.match(problemStatement, /placeholder、URL、route/u)
   assert.match(problemStatement, /translation-source-sha:a{40}/u)
+  assert.match(problemStatement, /portal-translation-source:/u)
+  assert.equal(problemStatement.includes(sourceMarker), true)
 })
