@@ -4,11 +4,11 @@ import { readFile } from 'node:fs/promises'
 import test from 'node:test'
 
 import {
-  enablePullRequestAutoMerge,
   hasExactlyExpectedTranslationFiles,
   hasMatchingSourceShaMarker,
   hasSuccessfulPortalCi,
   isEligibleTranslationPullRequest,
+  mergePullRequest,
   parseArguments,
   runMergeAutomation,
 } from '../scripts/merge-translation-pr.mjs'
@@ -381,7 +381,7 @@ test('sourceHashが古いCopilot翻訳PRは再読後にApp tokenで閉じる', a
   assert.match(logs.at(-1) ?? '', /Closed stale Portal translation PR/u)
 })
 
-test('read tokenでCIを確認し、App tokenでready化とexpected HEAD auto-mergeを行う', async () => {
+test('read tokenでCIを確認し、App tokenでready化とexpected HEAD squash mergeを行う', async () => {
   const currentHead = execFileSync('git', ['rev-parse', 'HEAD'], {
     encoding: 'utf8',
   }).trim()
@@ -431,9 +431,15 @@ test('read tokenでCIを確認し、App tokenでready化とexpected HEAD auto-me
     },
   }
   const graphqlCalls = []
+  const writeCalls = []
   const writeClient = {
-    async request() {
-      throw new Error('Write REST must not be called for a clean PR.')
+    async request(path, options) {
+      writeCalls.push({ path, options })
+      return {
+        sha: 'd'.repeat(40),
+        merged: true,
+        message: 'Pull Request successfully merged',
+      }
     },
     async graphql(query, variables) {
       graphqlCalls.push({ query, variables })
@@ -444,15 +450,7 @@ test('read tokenでCIを確認し、App tokenでready化とexpected HEAD auto-me
           },
         }
       }
-      return {
-        enablePullRequestAutoMerge: {
-          pullRequest: {
-            number: 42,
-            merged: false,
-            autoMergeRequest: { mergeMethod: 'SQUASH' },
-          },
-        },
-      }
+      throw new Error('Unexpected GraphQL mutation.')
     },
   }
   const { logger } = createLogger()
@@ -467,39 +465,55 @@ test('read tokenでCIを確認し、App tokenでready化とexpected HEAD auto-me
     },
   })
 
-  assert.equal(graphqlCalls.length, 2)
-  assert.deepEqual(graphqlCalls[1].variables, {
-    pullRequestId: 'PR_kwDOExample',
-    expectedHeadOid: pullRequest.headSha,
-    commitHeadline: pullRequest.title,
-  })
+  assert.equal(graphqlCalls.length, 1)
+  assert.deepEqual(writeCalls, [
+    {
+      path: '/repos/acecore-systems/aceserver-portal/pulls/42/merge',
+      options: {
+        method: 'PUT',
+        body: {
+          sha: pullRequest.headSha,
+          merge_method: 'squash',
+          commit_title: pullRequest.title,
+        },
+      },
+    },
+  ])
 })
 
-test('auto-mergeはsquashと検証済みHEAD SHAを固定する', async () => {
-  const graphqlCalls = []
+test('mergeはsquashと検証済みHEAD SHAを固定する', async () => {
+  const requestCalls = []
   const writeClient = {
-    async request() {
-      throw new Error('REST must not be called.')
-    },
-    async graphql(query, variables) {
-      graphqlCalls.push({ query, variables })
+    async request(path, options) {
+      requestCalls.push({ path, options })
       return {
-        enablePullRequestAutoMerge: {
-          pullRequest: {
-            number: 42,
-            merged: false,
-            autoMergeRequest: { mergeMethod: 'SQUASH' },
-          },
-        },
+        sha: 'd'.repeat(40),
+        merged: true,
+        message: 'Pull Request successfully merged',
       }
+    },
+    async graphql() {
+      throw new Error('GraphQL must not be called.')
     },
   }
   assert.equal(
-    await enablePullRequestAutoMerge(createPullRequest(), { writeClient }),
+    await mergePullRequest(createPullRequest(), {
+      writeClient,
+      repository: REPOSITORY,
+    }),
     true,
   )
-  assert.match(graphqlCalls[0].query, /mergeMethod: SQUASH/u)
-  assert.equal(graphqlCalls[0].variables.expectedHeadOid, HEAD_SHA)
+  assert.deepEqual(requestCalls[0], {
+    path: '/repos/acecore-systems/aceserver-portal/pulls/42/merge',
+    options: {
+      method: 'PUT',
+      body: {
+        sha: HEAD_SHA,
+        merge_method: 'squash',
+        commit_title: '[翻訳] Aceserver Portalの日本語正本へ追従',
+      },
+    },
+  })
 })
 
 test('workflowはCI成功・main更新の双方で再評価しread/write tokenを分離する', async () => {
