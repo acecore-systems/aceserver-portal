@@ -527,6 +527,11 @@ test('workflowはCI成功・main更新の双方で再評価しread/write token�
     workflow,
     /PORTAL_TRANSLATION_CONTRACT_SECRET: \$\{\{ secrets\.PORTAL_TRANSLATION_CONTRACT_SECRET \}\}/u,
   )
+  assert.match(workflow, /Validate translation automation secrets/u)
+  assert.match(
+    workflow,
+    /Buffer\.byteLength\(process\.env\.PORTAL_TRANSLATION_CONTRACT_SECRET/u,
+  )
   assert.doesNotMatch(workflow, /TRANSLATION_BOT_APP_ID/u)
   assert.match(
     taskWorkflow,
