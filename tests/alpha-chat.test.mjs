@@ -142,3 +142,16 @@ test('チャットUIは既存のリンクallowlistと長い正史応答timeout�
   assert.match(allowedExternalLinks, /\bsystemsHref\b/u)
   assert.match(source, /const ALPHA_RESPONSE_TIMEOUT_MS = 240_000/u)
 })
+
+test('チャット入力欄はiOSのフォーカス時自動拡大を避ける文字サイズを保つ', async () => {
+  const source = await readFile(
+    new URL('../src/components/AlphaGuide.astro', import.meta.url),
+    'utf8',
+  )
+  const inputStyles = source.match(
+    /\.alpha-form textarea\s*\{([\s\S]*?)\}/u,
+  )?.[1]
+
+  assert.ok(inputStyles)
+  assert.match(inputStyles, /font-size:\s*16px;/u)
+})
