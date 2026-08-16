@@ -575,6 +575,23 @@ async function validateCmsConfig() {
     'utf8',
   )
 
+  if (
+    !adminPage.includes(
+      'src="https://unpkg.com/@sveltia/cms@0.191.1/dist/sveltia-cms.js"',
+    ) ||
+    !adminPage.includes(
+      'integrity="sha384-1e+sEYxphmj/Z7BnuanO53c4BveZJ5fdJIkHSuHRO2T7jmC7Ih0BeJPK6x5XHxx6"',
+    )
+  ) {
+    fail(scope, 'CMS script must use the reviewed 0.191.1 bundle and SRI')
+  }
+  if (
+    !/font-src[^;]*https:\/\/cdn\.jsdelivr\.net/u.test(headers) ||
+    !/connect-src[^;]*https:\/\/unpkg\.com/u.test(headers)
+  ) {
+    fail(scope, 'CMS CSP must allow the pinned bundle fonts and locale data')
+  }
+
   if (/name:\s*path\b/.test(config)) {
     fail(scope, 'page path field must not be exposed in CMS')
   }
