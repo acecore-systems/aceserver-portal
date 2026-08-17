@@ -39,6 +39,9 @@ jobs:
       - name: Test content validation
         run: npm run test:content
 
+      - name: Test YouTube Atom snapshot
+        run: npm run test:youtube-atom
+
       - name: Test i18n
         run: npm run test:i18n
 
