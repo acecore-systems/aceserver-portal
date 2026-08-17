@@ -18,9 +18,8 @@ export const MAX_CMS_JSON_BYTES = 448 * 1024
 const MAX_MEDIA_BYTES = 10 * 1024 * 1024
 const MAX_DEPTH = 32
 const MAX_NODES = 50_000
-const URL_KEY_PATTERN =
-  /(?:action|href|url|src|image|logo|thumbnail|feedApiPath)$/iu
-const RESOURCE_KEY_PATTERN = /(?:src|image|logo|thumbnail|feedApiPath)$/iu
+const URL_KEY_PATTERN = /(?:action|href|url|src|image|logo|thumbnail)$/iu
+const RESOURCE_KEY_PATTERN = /(?:src|image|logo|thumbnail)$/iu
 const ENUM_VALUES = new Map<string, ReadonlySet<string>>([
   ['variant', new Set(['map', 'video'])],
   [
@@ -312,11 +311,9 @@ function getOptionalKeys(value: Record<string, unknown>) {
       for (const key of [
         'externalUrl',
         'channelUrl',
-        'feedApiPath',
         'title',
         'fallbackImage',
         'variant',
-        'videos',
       ]) {
         keys.add(key)
       }
@@ -324,10 +321,6 @@ function getOptionalKeys(value: Record<string, unknown>) {
   }
 
   if ('label' in value && 'href' in value) keys.add('external')
-
-  if ('id' in value && 'title' in value && 'publishedAt' in value) {
-    for (const key of ['href', 'thumbnail', 'publishedAt']) keys.add(key)
-  }
 
   if ('slug' in value && 'tone' in value && 'imageAlt' in value) {
     for (const key of ['href', 'statusLabel', 'description']) keys.add(key)

@@ -8,16 +8,6 @@ const linkItemSchema = z
   })
   .strict()
 
-const videoItemSchema = z
-  .object({
-    id: z.string(),
-    title: z.string(),
-    href: z.string().optional(),
-    thumbnail: z.string().optional(),
-    publishedAt: z.string().optional(),
-  })
-  .strict()
-
 export const portalSectionSchema = z.discriminatedUnion('type', [
   z
     .object({
@@ -56,11 +46,9 @@ export const portalSectionSchema = z.discriminatedUnion('type', [
       src: z.string(),
       externalUrl: z.string().optional(),
       channelUrl: z.string().optional(),
-      feedApiPath: z.string().optional(),
       title: z.string().optional(),
       fallbackImage: z.string().optional(),
       variant: z.enum(['map', 'video']).optional(),
-      videos: z.array(videoItemSchema).optional(),
     })
     .strict(),
 ])

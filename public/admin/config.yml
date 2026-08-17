@@ -177,12 +177,6 @@ collections:
                       required: false,
                     }
                   - {
-                      name: feedApiPath,
-                      label: 動画APIパス,
-                      widget: string,
-                      required: false,
-                    }
-                  - {
                       name: fallbackImage,
                       label: 背景画像,
                       widget: image,
@@ -195,31 +189,6 @@ collections:
                       options: [map, video],
                       required: false,
                     }
-                  - name: videos
-                    label: 初期表示動画
-                    widget: list
-                    required: false
-                    fields:
-                      - { name: id, label: 動画ID, widget: string }
-                      - { name: title, label: タイトル, widget: string }
-                      - {
-                          name: href,
-                          label: YouTube URL,
-                          widget: string,
-                          required: false,
-                        }
-                      - {
-                          name: thumbnail,
-                          label: サムネイルURL,
-                          widget: string,
-                          required: false,
-                        }
-                      - {
-                          name: publishedAt,
-                          label: 公開日時,
-                          widget: datetime,
-                          required: false,
-                        }
       - {
           name: world_map,
           label: ワールドマップ,

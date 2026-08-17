@@ -1,6 +1,7 @@
 ---
 import type { PortalPage } from '../types'
 import { serializeCssUrl } from '../data/safe-json'
+import youtubeAtomSnapshot from '../data/external/youtube-videos.json'
 import { getLocalizedSettings } from '../i18n/content'
 import {
   DATE_LOCALE_BY_LOCALE,
@@ -27,10 +28,9 @@ if (!embed || embed.type !== 'iframe') {
 
 const isVideoPage = embed.variant === 'video'
 const isMapPage = embed.variant === 'map'
-const videoFeedApiPath = embed.feedApiPath ?? '/api/youtube-videos'
 const videoChannelUrl =
   embed.channelUrl ?? embed.externalUrl ?? 'https://www.youtube.com/@aceserver'
-const fallbackVideos = embed.videos ?? []
+const videos = isVideoPage ? youtubeAtomSnapshot.videos : []
 const fallbackImageCss = serializeCssUrl(
   embed.fallbackImage ?? '/uploads/legacy-world-map.png',
 )
@@ -103,15 +103,7 @@ const nextMap =
 
     {
       isVideoPage && (
-        <section
-          class="video-gallery"
-          data-youtube-feed
-          data-api-path={videoFeedApiPath}
-          data-thumbnail-alt={ui.videoThumbnail}
-          data-loading-label={ui.loadingVideos}
-          data-error-label={ui.videoLoadError}
-          data-date-locale={DATE_LOCALE_BY_LOCALE[locale]}
-        >
+        <section class="video-gallery">
           <div class="video-gallery__header">
             <div>
               <p class="video-gallery__eyebrow">YouTube</p>
@@ -126,24 +118,16 @@ const nextMap =
               <Icon name="external-link" />
             </a>
           </div>
-          <div class="video-grid" data-youtube-video-list>
-            {fallbackVideos.map((video) => (
+          <div class="video-grid">
+            {videos.map((video) => (
               <a
                 class="video-card"
-                href={
-                  video.href ?? `https://www.youtube.com/watch?v=${video.id}`
-                }
-                {...externalLinkAttrs(
-                  video.href ?? `https://www.youtube.com/watch?v=${video.id}`,
-                  true,
-                )}
+                href={video.url}
+                {...externalLinkAttrs(video.url, true)}
               >
                 <span class="video-card__thumbnail">
                   <img
-                    src={
-                      video.thumbnail ??
-                      `https://i.ytimg.com/vi/${video.id}/hqdefault.jpg`
-                    }
+                    src={video.thumbnailUrl}
                     alt={ui.videoThumbnail.replace('{title}', video.title)}
                     loading="lazy"
                     decoding="async"
@@ -165,24 +149,14 @@ const nextMap =
               </a>
             ))}
           </div>
-          <p
-            class="video-gallery__status"
-            data-youtube-video-status
-            hidden={fallbackVideos.length > 0}
-          >
-            {ui.loadingVideos}
+          <p class="video-gallery__status" hidden={videos.length > 0}>
+            {ui.videoLoadError}
           </p>
         </section>
       )
     }
   </div>
 </section>
-
-<script>
-  import { initYoutubeVideosRuntime } from '../scripts/youtube-videos'
-
-  initYoutubeVideosRuntime()
-</script>
 
 <style>
   .embed-page {
