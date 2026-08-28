@@ -95,7 +95,7 @@ Cloudflare Pages のproduction / previewでは、build前に `public/admin/runti
 
 サイト全体に右下固定のアルファくん案内チャットを表示します。アルファくんはエースサーバーのキャラクター案内役として、参加方法、ワールド、ルール、ストーリー導線を案内します。
 
-`functions/api/alpha-chat.ts` は同一origin検証とD1レート制限を行った後、Private Service Binding `ALPHA_CHAT_SERVICE` を通じて共有Worker `aceserver-alpha-chat` だけを呼びます。共有Workerが人格、口調、質問分類、RAG、引用検証、OpenAI Responses API、正史作成を一元管理します。Portalに切替flagやローカルLLM生成はなく、Service Bindingがない場合や共有Workerの応答が壊れている場合は、選択localeの固定案内を返してfail closedします。
+`functions/api/alpha-chat.ts` は同一origin検証とD1レート制限を行った後、Private Service Binding `ALPHA_CHAT_SERVICE` を通じて共有Worker `aceserver-alpha-chat` だけを呼びます。共有Workerが人格、口調、質問分類、RAG、引用検証、Workers AI `@cf/zai-org/glm-5.3-flash`による生成、正史作成を一元管理します。Portalに切替flagやローカルLLM生成はなく、Service Bindingがない場合や共有Workerの応答が壊れている場合は、選択localeの固定案内を返してfail closedします。
 
 チャットで使う検索index、しきい値、根拠選択は共有Worker側の設定です。Portal repositoryは公開corpusの生成と同期を所有しますが、ブラウザ入口では検索や回答生成を行いません。Aceserver WIKIは引き続きルール、コマンド、参加条件、ワールド詳細、運用情報の正です。
 

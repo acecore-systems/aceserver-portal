@@ -1,48 +1,9 @@
 export const OPENAI_API_BASE_URL = 'https://api.openai.com/v1'
-export const OPENAI_RESPONSE_MODEL = 'gpt-5.6-luna'
-export const OPENAI_REASONING_EFFORT = 'medium'
 export const OPENAI_EMBEDDING_MODEL = 'text-embedding-3-large'
 export const OPENAI_EMBEDDING_DIMENSIONS = 1536
 
 const DEFAULT_REQUEST_TIMEOUT_MS = 30_000
 const MAX_RESPONSE_BYTES = 4_000_000
-
-export async function createOpenAiResponse({
-  apiKey,
-  instructions,
-  input,
-  model = OPENAI_RESPONSE_MODEL,
-  reasoningEffort = OPENAI_REASONING_EFFORT,
-  maxOutputTokens,
-  fetchImpl = globalThis.fetch,
-  requestTimeoutMs = DEFAULT_REQUEST_TIMEOUT_MS,
-}) {
-  if (
-    model !== OPENAI_RESPONSE_MODEL ||
-    reasoningEffort !== OPENAI_REASONING_EFFORT
-  ) {
-    throw namedError('OpenAIResponseConfigurationError')
-  }
-
-  const payload = await requestOpenAiJson({
-    apiKey,
-    endpoint: '/responses',
-    body: {
-      model,
-      instructions,
-      input,
-      reasoning: {
-        effort: reasoningEffort,
-      },
-      max_output_tokens: maxOutputTokens,
-      store: false,
-    },
-    fetchImpl,
-    requestTimeoutMs,
-  })
-
-  return extractOpenAiResponseText(payload)
-}
 
 export async function createOpenAiEmbeddings({
   apiKey,
@@ -84,42 +45,6 @@ export async function createOpenAiEmbeddings({
     throw namedError('OpenAIEmbeddingModelError')
   }
   return extractOpenAiEmbeddingData(payload, inputs.length, dimensions)
-}
-
-export function extractOpenAiResponseText(payload) {
-  if (
-    !payload ||
-    typeof payload !== 'object' ||
-    payload.status !== 'completed' ||
-    payload.error ||
-    !Array.isArray(payload.output)
-  ) {
-    throw namedError('OpenAIResponsePayloadError')
-  }
-
-  const texts: string[] = []
-  for (const item of payload.output) {
-    if (item?.type !== 'message') continue
-    if (!Array.isArray(item.content)) {
-      throw namedError('OpenAIResponsePayloadError')
-    }
-    for (const content of item.content) {
-      if (content?.type === 'refusal') {
-        throw namedError('OpenAIResponseRefusalError')
-      }
-      if (
-        content?.type === 'output_text' &&
-        typeof content.text === 'string' &&
-        content.text
-      ) {
-        texts.push(content.text)
-      }
-    }
-  }
-
-  const text = texts.join('\n')
-  if (!text.trim()) throw namedError('OpenAIResponseEmptyError')
-  return text
 }
 
 export function extractOpenAiEmbeddingData(
