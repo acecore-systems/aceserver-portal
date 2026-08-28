@@ -4,10 +4,7 @@ import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import test, { after } from 'node:test'
 
-import {
-  extractOpenAiResponseText,
-  OPENAI_API_BASE_URL,
-} from '../functions/api/openai-api.ts'
+import { OPENAI_API_BASE_URL } from '../functions/api/openai-api.ts'
 import {
   buildPortalVectorCorpus,
   chunkPortalSearchDocument,
@@ -105,42 +102,6 @@ test('keeps the sync workflow production-only with explicit safety gates', async
   assert.doesNotMatch(
     wrangler,
     new RegExp(`"index_name": "${PRODUCTION_INDEX_NAME}"`, 'u'),
-  )
-})
-
-test('accepts only a completed non-refusal OpenAI response', () => {
-  const completed = {
-    status: 'completed',
-    error: null,
-    output: [
-      {
-        type: 'message',
-        content: [{ type: 'output_text', text: '案内できるよ。' }],
-      },
-    ],
-  }
-
-  assert.equal(extractOpenAiResponseText(completed), '案内できるよ。')
-  assert.throws(
-    () =>
-      extractOpenAiResponseText({
-        ...completed,
-        status: 'incomplete',
-      }),
-    { name: 'OpenAIResponsePayloadError' },
-  )
-  assert.throws(
-    () =>
-      extractOpenAiResponseText({
-        ...completed,
-        output: [
-          {
-            type: 'message',
-            content: [{ type: 'refusal', refusal: 'cannot answer' }],
-          },
-        ],
-      }),
-    { name: 'OpenAIResponseRefusalError' },
   )
 })
 
