@@ -43,6 +43,25 @@ test('the diary handoff pre-fills Alpha Chat without automatically submitting', 
   assert.match(source, /alpha-diary:progress/u)
 })
 
+test('future dates reach the custom tomorrow message instead of native form blocking', async () => {
+  const [component, script] = await Promise.all([
+    readFile(
+      new URL('../src/components/AlphaDiaryPage.astro', import.meta.url),
+      'utf8',
+    ),
+    readFile(new URL('../src/scripts/alpha-diary.ts', import.meta.url), 'utf8'),
+  ])
+
+  assert.match(component, /data-diary-date-form novalidate/u)
+  const futureGuardStart = script.indexOf('if (date && date > serverToday)')
+  const requestStart = script.indexOf('await requestDiary(', futureGuardStart)
+  const futureGuard = script.slice(futureGuardStart, requestStart)
+
+  assert.ok(futureGuardStart >= 0 && requestStart > futureGuardStart)
+  assert.match(futureGuard, /renderFuture\(\)/u)
+  assert.match(futureGuard, /return false/u)
+})
+
 test('journey and goal mechanics stay internal instead of being rendered or serialized as copy', async () => {
   const [component, copySource, script] = await Promise.all([
     readFile(
