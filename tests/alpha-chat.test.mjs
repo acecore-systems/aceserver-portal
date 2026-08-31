@@ -141,6 +141,11 @@ test('チャットUIは既存のリンクallowlistと長い正史応答timeout�
   assert.match(allowedExternalLinks, /\bschoolsHref\b/u)
   assert.match(allowedExternalLinks, /\bsystemsHref\b/u)
   assert.match(source, /const ALPHA_RESPONSE_TIMEOUT_MS = 240_000/u)
+  assert.match(source, /Accept:\s*'text\/event-stream'/u)
+  assert.match(source, /response\.body\.getReader\(\)/u)
+  assert.match(source, /event === 'delta'/u)
+  assert.match(source, /event === 'complete' \|\| event === 'error'/u)
+  assert.match(source, /bubble\.textContent = text/u)
 })
 
 test('チャット入力欄はiOSのフォーカス時自動拡大を避ける文字サイズを保つ', async () => {

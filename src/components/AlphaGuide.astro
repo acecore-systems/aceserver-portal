@@ -669,6 +669,109 @@ const alphaLinkResources = [
     return Boolean(value && typeof value === 'object' && !Array.isArray(value))
   }
 
+  function updateAlphaStreamingMessage(
+    message: HTMLElement | null,
+    text: string,
+    complete = false,
+  ) {
+    const bubble = message?.querySelector<HTMLElement>('.alpha-message__bubble')
+    if (!bubble) return
+    if (complete) {
+      renderAlphaMarkdownText(
+        bubble,
+        text,
+        message.closest('[data-alpha-widget]') as HTMLElement,
+      )
+    } else {
+      bubble.textContent = text
+    }
+    const messagesContainer = message.closest<HTMLElement>(
+      '[data-alpha-messages]',
+    )
+    if (messagesContainer) {
+      messagesContainer.scrollTop = messagesContainer.scrollHeight
+    }
+  }
+
+  async function readAlphaResponsePayload(
+    response: Response,
+    onDelta: (text: string) => void,
+  ): Promise<unknown> {
+    const contentType = String(response.headers.get('Content-Type') || '')
+      .split(';', 1)[0]
+      .trim()
+      .toLowerCase()
+    if (contentType !== 'text/event-stream') {
+      return response.json().catch(() => null)
+    }
+    if (!response.body) throw new Error('AlphaChatStreamMissing')
+
+    const reader = response.body.getReader()
+    const decoder = new TextDecoder()
+    let buffer = ''
+    let finalPayload: unknown = null
+
+    const consumeEvent = (block: string) => {
+      let event = 'message'
+      const data: string[] = []
+      block.split(/\r?\n/u).forEach((line) => {
+        if (line.startsWith('event:')) {
+          event = line.slice(6).trim()
+        } else if (line.startsWith('data:')) {
+          data.push(line.slice(5).trimStart())
+        }
+      })
+      if (data.length === 0) return
+
+      let payload: unknown
+      try {
+        payload = JSON.parse(data.join('\n'))
+      } catch {
+        throw new Error('AlphaChatStreamPayloadError')
+      }
+      if (event === 'delta') {
+        if (
+          !isAlphaResponsePayload(payload) ||
+          typeof payload.text !== 'string'
+        ) {
+          throw new Error('AlphaChatStreamPayloadError')
+        }
+        onDelta(payload.text)
+      } else if (event === 'complete' || event === 'error') {
+        finalPayload = payload
+      }
+    }
+
+    const consumeBufferedEvents = (flush = false) => {
+      while (true) {
+        const boundary = /\r?\n\r?\n/u.exec(buffer)
+        if (!boundary) break
+        consumeEvent(buffer.slice(0, boundary.index))
+        buffer = buffer.slice(boundary.index + boundary[0].length)
+      }
+      if (flush && buffer.trim()) {
+        consumeEvent(buffer)
+        buffer = ''
+      }
+    }
+
+    try {
+      while (true) {
+        const { done, value } = await reader.read()
+        if (done) break
+        buffer += decoder.decode(value, { stream: true })
+        consumeBufferedEvents()
+      }
+      buffer += decoder.decode()
+      consumeBufferedEvents(true)
+    } finally {
+      reader.releaseLock()
+    }
+
+    if (!finalPayload) throw new Error('AlphaChatStreamIncomplete')
+    return finalPayload
+  }
+
   function isResettableConversationResponse(
     response: Response,
     payload: unknown,
@@ -687,6 +790,7 @@ const alphaLinkResources = [
     conversation: AlphaConversationState,
     question: string,
     signal: AbortSignal,
+    onDelta: (text: string) => void,
     allowContextResetRetry = true,
   ) {
     const response = await fetch(
@@ -694,7 +798,7 @@ const alphaLinkResources = [
       {
         method: 'POST',
         headers: {
-          Accept: 'application/json',
+          Accept: 'text/event-stream',
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
@@ -710,7 +814,7 @@ const alphaLinkResources = [
         signal,
       },
     )
-    const payload: unknown = await response.json().catch(() => null)
+    const payload = await readAlphaResponsePayload(response, onDelta)
     const answer =
       isAlphaResponsePayload(payload) && typeof payload.answer === 'string'
         ? payload.answer.trim()
@@ -735,7 +839,14 @@ const alphaLinkResources = [
         widget,
         '会話の継続情報を更新しました。表示中のメッセージはそのままです。',
       )
-      return requestAlphaResponse(widget, conversation, question, signal, false)
+      return requestAlphaResponse(
+        widget,
+        conversation,
+        question,
+        signal,
+        onDelta,
+        false,
+      )
     }
 
     throw new Error('AlphaChatRequestFailed')
@@ -774,14 +885,18 @@ const alphaLinkResources = [
     )
 
     try {
+      let streamedAnswer = ''
       const { answer, payload } = await requestAlphaResponse(
         widget,
         conversation,
         question,
         requestController.signal,
+        (delta) => {
+          streamedAnswer += delta
+          updateAlphaStreamingMessage(loadingMessage, streamedAnswer)
+        },
       )
 
-      loadingMessage?.remove()
       const loreRevisionId =
         typeof payload.loreRevisionId === 'string' &&
         payload.loreRevisionId.length <= 128
@@ -804,7 +919,7 @@ const alphaLinkResources = [
       }
 
       messages.push({ role: 'assistant', content: answer })
-      createAlphaMessage(widget, 'assistant', answer)
+      updateAlphaStreamingMessage(loadingMessage, answer, true)
     } catch {
       const errorNotice =
         widget.dataset.alphaError ||
