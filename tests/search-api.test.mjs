@@ -228,7 +228,7 @@ test('fails closed without the D1 limiter and never invokes Vectorize retrieval'
     {
       request: createRequest({ query: 'ワールド', locale: 'ja' }),
       env: {
-        OPENAI_API_KEY: 'test-key',
+        AI: {},
         PORTAL_SEARCH_ENABLED: 'true',
         PORTAL_SEARCH_INDEX: {},
       },
@@ -278,7 +278,7 @@ function createConfiguredEnv({
   onRateLimit = () => undefined,
 } = {}) {
   return {
-    OPENAI_API_KEY: 'test-key',
+    AI: {},
     PORTAL_SEARCH_ENABLED: 'true',
     PORTAL_SEARCH_INDEX: {},
     SEARCH_RATE_LIMIT_DB: createRateLimitDatabase({

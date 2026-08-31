@@ -101,13 +101,13 @@ Cloudflare Pages のproduction / previewでは、build前に `public/admin/runti
 
 チャットで使う検索index、しきい値、根拠選択は共有Worker側の設定です。Portal repositoryは公開corpusの生成と同期を所有しますが、ブラウザ入口では検索や回答生成を行いません。Aceserver WIKIは引き続きルール、コマンド、参加条件、ワールド詳細、運用情報の正です。
 
-Portal固有の `/api/search` はチャットとは別機能で、`PORTAL_SEARCH_INDEX` とOpenAI Embeddingsを使ってこのサイト内の公開ページだけを検索します。`OPENAI_EMBEDDING_MODEL` と `OPENAI_EMBEDDING_DIMENSIONS` はそれぞれ `text-embedding-3-large` と `1536` に固定し、Previewでは検索を無効化します。
+Portal固有の `/api/search` はチャットとは別機能で、`PORTAL_SEARCH_INDEX` とCloudflare Workers AI BGE-M3を使ってこのサイト内の公開ページだけを検索します。`SEARCH_EMBEDDING_MODEL` と `SEARCH_EMBEDDING_DIMENSIONS` はそれぞれ `@cf/baai/bge-m3` と `1024` に固定し、Previewでは検索を無効化します。実行時フォールバックは設けません。
 
-`npm run build` は `dist/vector-corpus.json` まで生成します。`npm run sync:portal-vectorize:dry-run` でsource数、vector数、corpus versionを確認できます。実同期先は運用中の `aceserver-portal-search-openai-1536-production-v2` とロールバック用の `aceserver-portal-search-openai-1536-production` だけに制限し、対象index名と完全一致する `--confirm-production` がない実行、管理外ID、20%を超える削除、10 source未満のcorpusでは停止します。
+`npm run build` は `dist/vector-corpus.json` まで生成します。`npm run sync:portal-vectorize:dry-run` でsource数、vector数、corpus versionを確認できます。実同期先は `aceserver-portal-search-bge-m3-1024-production-v1` だけに制限し、対象index名と完全一致する `--confirm-production` がない実行、管理外ID、20%を超える削除、10 source未満のcorpusでは停止します。旧OpenAI indexはロールバック用に保持し、新しい同期先からは更新しません。
 
 `.github/workflows/sync-portal-vectorize.yml` はProduction専用です。GitHub連携のPagesで公開されたcommitとcorpus versionを照合してから運用indexへ同期し、全vector IDの一致と実query canaryを確認します。`PORTAL_SEARCH_INDEX` bindingは検証済みのv2を参照します。通常は`main`へのpush、取りこぼしは6時間ごとのscheduleで再照合し、20%超の削除をworkflowから上書きする経路は設けません。旧indexは切替直後のロールバック用に削除せず保持します。
 
-自動同期には Repository Variable `ACESERVER_PORTAL_VECTORIZE_SYNC_ENABLED=true` と、GitHub Environment `cloudflare-portal-search-production` の `CLOUDFLARE_PORTAL_SEARCH_PRODUCTION_API_TOKEN`、`OPENAI_API_KEY` を使います。Cloudflare tokenは対象accountに限定した `Vectorize Write`、OpenAI APIキーはPortal専用Projectのものを使用します。この構成はProduction専用であり、PreviewにはVectorize binding、Vectorize用のCloudflare/OpenAI secret、GitHub Environmentを置きません。Cloudflare Pages PreviewとPreview用D1は維持し、Previewは検索kill switchをすべて `"false"` にした安全なフォールバックで動作します。
+自動同期には Repository Variable `ACESERVER_PORTAL_VECTORIZE_SYNC_ENABLED=true` と、GitHub Environment `cloudflare-portal-search-production` の `CLOUDFLARE_PORTAL_SEARCH_PRODUCTION_API_TOKEN` を使います。Cloudflare tokenは対象accountに限定し、Vectorize更新とWorkers AI実行に必要な最小権限を付与します。この構成はProduction専用であり、PreviewにはVectorize bindingや同期用secret、GitHub Environmentを置きません。Cloudflare Pages PreviewとPreview用D1は維持し、Previewは検索kill switchをすべて `"false"` にした安全なフォールバックで動作します。
 
 本番custom domainの `/api/alpha-chat` へのPOSTは、`acecore.net` zoneのCloudflare WAF rate limiting rule `Rate limit Aceserver Alpha chat` で保護します。IP・colo単位で10秒に5 requestまでとし、超過時は10秒blockします。このruleはrepository外のCloudflare設定なので、zoneを再作成した場合は再設定してください。`pages.dev` のpreview URLはこのzone-level ruleの対象外です。
 

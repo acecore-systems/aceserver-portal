@@ -55,7 +55,7 @@ export async function searchWorldFoundation(
 ) {
   if (
     !query ||
-    (!providedEmbedding && !env?.OPENAI_API_KEY) ||
+    (!providedEmbedding && !env?.AI) ||
     !env?.WORLD_FOUNDATION_SEARCH_INDEX ||
     env.WORLD_FOUNDATION_SEARCH_ENABLED === 'false'
   ) {
