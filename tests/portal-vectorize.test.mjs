@@ -4,7 +4,6 @@ import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import test, { after } from 'node:test'
 
-import { OPENAI_API_BASE_URL } from '../functions/api/openai-api.ts'
 import {
   buildPortalVectorCorpus,
   chunkPortalSearchDocument,
@@ -15,7 +14,6 @@ import {
 import {
   extractEmbeddingData,
   PRODUCTION_INDEX_NAME,
-  REPLACEMENT_INDEX_NAME,
   syncPortalVectorize,
   validatePortalCorpus,
   validateDeletePlan,
@@ -45,7 +43,6 @@ const createHtml = ({ title, description, canonical = '' }) => `<!doctype html>
   </body>
 </html>`
 
-const TEST_OPENAI_API_KEY = 'test-openai-api-key'
 const TEST_EMBEDDING = Array.from(
   { length: PORTAL_EMBEDDING_DIMENSIONS },
   () => 0.01,
@@ -82,10 +79,10 @@ test('keeps the sync workflow production-only with explicit safety gates', async
 
   assert.doesNotMatch(
     workflow,
-    /sync-preview|cloudflare-portal-search-preview|openai-1536-preview/u,
+    /sync-preview|cloudflare-portal-search-preview|bge-m3-1024-preview/u,
   )
   assert.match(workflow, /cloudflare-portal-search-production/u)
-  assert.match(workflow, new RegExp(REPLACEMENT_INDEX_NAME, 'u'))
+  assert.match(workflow, new RegExp(PRODUCTION_INDEX_NAME, 'u'))
   assert.match(workflow, /--confirm-production "\$VECTORIZE_INDEX_NAME"/u)
   assert.doesNotMatch(workflow, /--allow-large-delete|allow_large_delete/u)
   assert.match(
@@ -95,13 +92,13 @@ test('keeps the sync workflow production-only with explicit safety gates', async
   assert.match(
     wrangler,
     new RegExp(
-      `"binding": "PORTAL_SEARCH_INDEX",[^}]*"index_name": "${REPLACEMENT_INDEX_NAME}"`,
+      `"binding": "PORTAL_SEARCH_INDEX",[^}]*"index_name": "${PRODUCTION_INDEX_NAME}"`,
       'u',
     ),
   )
-  assert.doesNotMatch(
-    wrangler,
-    new RegExp(`"index_name": "${PRODUCTION_INDEX_NAME}"`, 'u'),
+  assert.equal(
+    wrangler.split(`"index_name": "${PRODUCTION_INDEX_NAME}"`).length - 1,
+    1,
   )
 })
 
@@ -133,6 +130,25 @@ test('extracts a public story from built portal HTML', () => {
   assert.equal(chunks[0].metadata.url, '/stories/server-story/')
   assert.equal(chunks[0].metadata.contentType, 'story')
   assert.ok(chunks[0].text.length <= 1200)
+})
+
+test('adds the Japanese Aceserver alias only to embedding text', () => {
+  const [chunk] = chunkPortalSearchDocument({
+    url: '/about/',
+    locale: 'ja',
+    title: 'Aceserver guide',
+    description: 'Aceserver community overview',
+    contentType: 'page',
+    blocks: [
+      {
+        heading: 'Aceserver guide',
+        text: 'Aceserver community overview for new players.',
+      },
+    ],
+  })
+
+  assert.match(chunk.text, /Aceserver エースサーバー guide/u)
+  assert.equal(chunk.metadata.title, 'Aceserver guide')
 })
 
 test('excludes ignored and hidden descendants from portal content blocks', () => {
@@ -328,7 +344,7 @@ test('rejects unsafe portal metadata before an index mutation', async () => {
   }
 })
 
-test('validates OpenAI embedding dimensions and ordering', () => {
+test('validates Workers AI embedding dimensions and shape', () => {
   const embedding = Array.from(
     { length: PORTAL_EMBEDDING_DIMENSIONS },
     () => 0.25,
@@ -337,7 +353,9 @@ test('validates OpenAI embedding dimensions and ordering', () => {
   assert.deepEqual(
     extractEmbeddingData(
       {
-        data: [{ object: 'embedding', index: 0, embedding }],
+        data: [embedding],
+        shape: [1, PORTAL_EMBEDDING_DIMENSIONS],
+        pooling: 'cls',
       },
       1,
     ),
@@ -347,11 +365,11 @@ test('validates OpenAI embedding dimensions and ordering', () => {
     () =>
       extractEmbeddingData(
         {
-          data: [{ object: 'embedding', index: 0, embedding: [0.25] }],
+          data: [[0.25]],
         },
         1,
       ),
-    /OpenAIEmbeddingDimensionsError/u,
+    /WorkersAiEmbeddingDimensionsError/u,
   )
 })
 
@@ -362,7 +380,7 @@ test('limits portal Vectorize sync to managed indexes and safe deletions', async
     syncPortalVectorize({
       corpusFile,
       dryRun: true,
-      indexName: REPLACEMENT_INDEX_NAME,
+      indexName: PRODUCTION_INDEX_NAME,
       logger: silentLogger,
     }),
   )
@@ -397,12 +415,11 @@ test('limits portal Vectorize sync to managed indexes and safe deletions', async
 test('requires exact confirmation before mutating the production index', async () => {
   const corpusFile = await writeCorpus(createPortalCorpus())
 
-  for (const indexName of [PRODUCTION_INDEX_NAME, REPLACEMENT_INDEX_NAME]) {
+  for (const indexName of [PRODUCTION_INDEX_NAME]) {
     await assert.rejects(
       syncPortalVectorize({
         accountId: 'account',
         apiToken: 'token',
-        openAiApiKey: TEST_OPENAI_API_KEY,
         indexName,
         corpusFile,
         fetchImpl: async () => {
@@ -422,7 +439,7 @@ test('requires exact Vectorize ID convergence', () => {
     validateReconciliation(
       expectedIds,
       new Set(expectedIds),
-      REPLACEMENT_INDEX_NAME,
+      PRODUCTION_INDEX_NAME,
     ),
   )
   assert.throws(
@@ -430,7 +447,7 @@ test('requires exact Vectorize ID convergence', () => {
       validateReconciliation(
         expectedIds,
         new Set([managedId(1), managedId(3)]),
-        REPLACEMENT_INDEX_NAME,
+        PRODUCTION_INDEX_NAME,
       ),
     /1 missing and 1 unexpected/u,
   )
@@ -472,29 +489,20 @@ test('syncs only the portal corpus delta', async () => {
         isTruncated: false,
       })
     }
-    if (url === `${OPENAI_API_BASE_URL}/embeddings`) {
+    if (url.endsWith('/ai/run/@cf/baai/bge-m3')) {
       const requestBody = JSON.parse(init.body)
       assert.equal(
         new Headers(init.headers).get('Authorization'),
-        `Bearer ${TEST_OPENAI_API_KEY}`,
+        'Bearer token',
       )
       assert.deepEqual(requestBody, {
-        model: PORTAL_EMBEDDING_MODEL,
-        input: [newChunk.text],
-        dimensions: PORTAL_EMBEDDING_DIMENSIONS,
-        encoding_format: 'float',
+        text: [newChunk.text],
+        truncate_inputs: false,
       })
-      return Response.json({
-        object: 'list',
-        data: [
-          {
-            object: 'embedding',
-            index: 0,
-            embedding: TEST_EMBEDDING,
-          },
-        ],
-        model: PORTAL_EMBEDDING_MODEL,
-        usage: { prompt_tokens: 1, total_tokens: 1 },
+      return cloudflareResponse({
+        data: [TEST_EMBEDDING],
+        shape: [1, PORTAL_EMBEDDING_DIMENSIONS],
+        pooling: 'cls',
       })
     }
     if (url.endsWith('/upsert')) {
@@ -533,7 +541,6 @@ test('syncs only the portal corpus delta', async () => {
   const result = await syncPortalVectorize({
     accountId: 'account',
     apiToken: 'token',
-    openAiApiKey: TEST_OPENAI_API_KEY,
     indexName: PRODUCTION_INDEX_NAME,
     productionConfirmation: PRODUCTION_INDEX_NAME,
     corpusFile,
@@ -548,8 +555,7 @@ test('syncs only the portal corpus delta', async () => {
   assert.equal(result.queryVerified, true)
   assert.equal(listCalls, 2)
   assert.equal(
-    calls.filter(({ url }) => url === `${OPENAI_API_BASE_URL}/embeddings`)
-      .length,
+    calls.filter(({ url }) => url.endsWith('/ai/run/@cf/baai/bge-m3')).length,
     1,
   )
 })
@@ -597,7 +603,6 @@ test('enumerates and verifies every Vectorize list page', async () => {
   const result = await syncPortalVectorize({
     accountId: 'account',
     apiToken: 'token',
-    openAiApiKey: TEST_OPENAI_API_KEY,
     indexName: PRODUCTION_INDEX_NAME,
     productionConfirmation: PRODUCTION_INDEX_NAME,
     corpusFile,
@@ -643,7 +648,6 @@ test('rejects an inconsistent Vectorize list before mutation', async () => {
     syncPortalVectorize({
       accountId: 'account',
       apiToken: 'token',
-      openAiApiKey: TEST_OPENAI_API_KEY,
       indexName: PRODUCTION_INDEX_NAME,
       productionConfirmation: PRODUCTION_INDEX_NAME,
       corpusFile,

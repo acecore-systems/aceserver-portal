@@ -2,10 +2,7 @@ import { readFile } from 'node:fs/promises'
 import { resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
-import {
-  createOpenAiEmbeddings,
-  extractOpenAiEmbeddingData,
-} from '../functions/api/openai-api.ts'
+import { extractWorkersAiEmbeddingData } from '../functions/api/alpha-search-embedding.ts'
 import {
   PORTAL_CORPUS_SCHEMA_VERSION,
   PORTAL_DISTANCE_METRIC,
@@ -19,7 +16,7 @@ import {
 
 const API_BASE_URL = 'https://api.cloudflare.com/client/v4'
 const DEFAULT_CORPUS_FILE = resolve('dist/vector-corpus.json')
-const EMBEDDING_BATCH_SIZE = 32
+const EMBEDDING_BATCH_SIZE = 16
 const UPSERT_BATCH_SIZE = 200
 const DELETE_BATCH_SIZE = 100
 const LIST_BATCH_SIZE = 1000
@@ -43,13 +40,8 @@ const MAX_METADATA_CONTENT_TYPE_LENGTH = 40
 const MANAGED_VECTOR_ID_PATTERN = /^v1-[0-9a-f]{48}$/u
 const CORPUS_VERSION_PATTERN = /^[0-9a-f]{20}$/u
 export const PRODUCTION_INDEX_NAME =
-  'aceserver-portal-search-openai-1536-production'
-export const REPLACEMENT_INDEX_NAME =
-  'aceserver-portal-search-openai-1536-production-v2'
-const ALLOWED_INDEX_NAMES = new Set([
-  PRODUCTION_INDEX_NAME,
-  REPLACEMENT_INDEX_NAME,
-])
+  'aceserver-portal-search-bge-m3-1024-production-v1'
+const ALLOWED_INDEX_NAMES = new Set([PRODUCTION_INDEX_NAME])
 
 class CloudflareApiError extends Error {
   constructor(message, status) {
@@ -62,7 +54,6 @@ class CloudflareApiError extends Error {
 export async function syncPortalVectorize({
   accountId = process.env.CLOUDFLARE_ACCOUNT_ID,
   apiToken = process.env.CLOUDFLARE_API_TOKEN,
-  openAiApiKey = process.env.OPENAI_API_KEY,
   indexName = process.env.VECTORIZE_INDEX_NAME,
   corpusFile = DEFAULT_CORPUS_FILE,
   dryRun = false,
@@ -97,9 +88,9 @@ export async function syncPortalVectorize({
     return result
   }
 
-  if (!accountId || !apiToken || !openAiApiKey || !indexName) {
+  if (!accountId || !apiToken || !indexName) {
     throw new Error(
-      'CLOUDFLARE_ACCOUNT_ID, CLOUDFLARE_API_TOKEN, OPENAI_API_KEY, and VECTORIZE_INDEX_NAME are required.',
+      'CLOUDFLARE_ACCOUNT_ID, CLOUDFLARE_API_TOKEN, and VECTORIZE_INDEX_NAME are required.',
     )
   }
 
@@ -146,17 +137,7 @@ export async function syncPortalVectorize({
   const mutationIds = []
   let queryCanary = null
   for (const chunkBatch of batches(chunksToUpsert, EMBEDDING_BATCH_SIZE)) {
-    const embeddings = await createEmbeddings(
-      {
-        apiKey: openAiApiKey,
-        fetchImpl,
-        requestTimeoutMs,
-        retryBaseDelayMs,
-        sleepImpl,
-        randomImpl,
-      },
-      chunkBatch,
-    )
+    const embeddings = await createEmbeddings(client, chunkBatch)
     queryCanary ??= {
       id: chunkBatch[0].id,
       namespace: chunkBatch[0].namespace,
@@ -281,7 +262,7 @@ export function validatePortalCorpus(corpus) {
 }
 
 export function extractEmbeddingData(payload, expectedCount) {
-  return extractOpenAiEmbeddingData(
+  return extractWorkersAiEmbeddingData(
     payload,
     expectedCount,
     PORTAL_EMBEDDING_DIMENSIONS,
@@ -495,7 +476,7 @@ async function ensureIndex(client, indexName) {
     body: JSON.stringify({
       name: indexName,
       description:
-        'Aceserver portal semantic grounding (OpenAI text-embedding-3-large, 1536 dimensions)',
+        'Aceserver portal semantic grounding (Cloudflare Workers AI BGE-M3, 1024 dimensions)',
       config: {
         dimensions: PORTAL_EMBEDDING_DIMENSIONS,
         metric: PORTAL_DISTANCE_METRIC,
@@ -651,31 +632,15 @@ function invalidVectorListResponse(indexName, reason) {
 }
 
 async function createEmbeddings(client, chunks) {
-  for (let attempt = 0; attempt <= MAX_REQUEST_RETRIES; attempt += 1) {
-    try {
-      return await createOpenAiEmbeddings({
-        apiKey: client.apiKey,
-        input: chunks.map(({ text }) => text),
-        model: PORTAL_EMBEDDING_MODEL,
-        dimensions: PORTAL_EMBEDDING_DIMENSIONS,
-        fetchImpl: client.fetchImpl,
-        requestTimeoutMs: client.requestTimeoutMs,
-      })
-    } catch (error) {
-      if (attempt >= MAX_REQUEST_RETRIES || !isRetryableOpenAiError(error)) {
-        throw error
-      }
-      await client.sleepImpl(
-        getRetryDelay({
-          attempt,
-          retryBaseDelayMs: client.retryBaseDelayMs,
-          randomImpl: client.randomImpl,
-        }),
-      )
-    }
-  }
-
-  throw new Error('OpenAI embeddings request exhausted all retries.')
+  const payload = await client.request(`/ai/run/${PORTAL_EMBEDDING_MODEL}`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      text: chunks.map(({ text }) => text),
+      truncate_inputs: false,
+    }),
+  })
+  return extractEmbeddingData(payload?.result, chunks.length)
 }
 
 async function upsertVectors(client, indexName, vectors) {
@@ -866,16 +831,6 @@ function isRetryableNetworkError(error, timedOut) {
     error instanceof TypeError ||
     error?.name === 'AbortError' ||
     error?.name === 'TimeoutError'
-  )
-}
-
-function isRetryableOpenAiError(error) {
-  return (
-    error?.name === 'OpenAIRequestTimeoutError' ||
-    error?.name === 'AbortError' ||
-    error instanceof TypeError ||
-    (error?.name === 'OpenAIHttpError' &&
-      (error.status === 429 || error.status >= 500))
   )
 }
 

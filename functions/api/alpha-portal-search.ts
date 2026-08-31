@@ -12,7 +12,7 @@ export const ACESERVER_PORTAL_CORPUS_PATH = '/vector-corpus.json'
 const PORTAL_SEARCH_NAMESPACE = 'ja'
 const PORTAL_SEARCH_TOP_K = 15
 const PORTAL_GROUNDING_LIMIT = 3
-const DEFAULT_PORTAL_SEARCH_MIN_SCORE = 0.45
+const DEFAULT_PORTAL_SEARCH_MIN_SCORE = 0.5
 const PORTAL_CORPUS_TIMEOUT_MS = 2_000
 const PORTAL_CORPUS_CACHE_TTL_SECONDS = 300
 const MAX_PORTAL_CORPUS_BYTES = 256_000
@@ -66,7 +66,7 @@ export async function searchAceserverPortal(
 ) {
   if (
     !query ||
-    (!providedEmbedding && !env?.OPENAI_API_KEY) ||
+    (!providedEmbedding && !env?.AI) ||
     !env?.PORTAL_SEARCH_INDEX ||
     env.PORTAL_SEARCH_ENABLED === 'false'
   ) {

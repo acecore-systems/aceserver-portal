@@ -148,7 +148,7 @@ export function isAllowedRequestOrigin(request) {
 function isSearchAvailable(env) {
   return Boolean(
     env?.PORTAL_SEARCH_ENABLED === 'true' &&
-    env.OPENAI_API_KEY?.trim() &&
+    env.AI &&
     env.PORTAL_SEARCH_INDEX &&
     env.SEARCH_RATE_LIMIT_DB,
   )

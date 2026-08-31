@@ -53,7 +53,7 @@ export function shouldSearchAcecore(query) {
 export async function searchAcecore(query, env, providedEmbedding = null) {
   if (
     !query ||
-    (!providedEmbedding && !env?.OPENAI_API_KEY) ||
+    (!providedEmbedding && !env?.AI) ||
     !env?.ACECORE_SEARCH_INDEX ||
     env.ACECORE_SEARCH_ENABLED === 'false'
   ) {

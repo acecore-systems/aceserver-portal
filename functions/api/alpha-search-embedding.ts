@@ -1,22 +1,12 @@
-import {
-  createOpenAiEmbeddings,
-  OPENAI_EMBEDDING_DIMENSIONS,
-  OPENAI_EMBEDDING_MODEL,
-} from './openai-api.ts'
+export const ALPHA_SEARCH_EMBEDDING_MODEL = '@cf/baai/bge-m3'
+export const ALPHA_SEARCH_EMBEDDING_DIMENSIONS = 1024
 
-export const ALPHA_SEARCH_EMBEDDING_MODEL = OPENAI_EMBEDDING_MODEL
-export const ALPHA_SEARCH_EMBEDDING_DIMENSIONS = OPENAI_EMBEDDING_DIMENSIONS
-
-export async function createAlphaSearchEmbedding(
-  query,
-  env,
-  fetchImpl = globalThis.fetch,
-) {
-  if (!query || !env?.OPENAI_API_KEY) return null
+export async function createAlphaSearchEmbedding(query, env, ai = env?.AI) {
+  if (!query || !ai) return null
   const configuredModel =
-    env.OPENAI_EMBEDDING_MODEL || ALPHA_SEARCH_EMBEDDING_MODEL
+    env.SEARCH_EMBEDDING_MODEL || ALPHA_SEARCH_EMBEDDING_MODEL
   const configuredDimensions = Number(
-    env.OPENAI_EMBEDDING_DIMENSIONS || ALPHA_SEARCH_EMBEDDING_DIMENSIONS,
+    env.SEARCH_EMBEDDING_DIMENSIONS || ALPHA_SEARCH_EMBEDDING_DIMENSIONS,
   )
   if (
     configuredModel !== ALPHA_SEARCH_EMBEDDING_MODEL ||
@@ -27,18 +17,51 @@ export async function createAlphaSearchEmbedding(
   }
 
   try {
-    const [embedding] = await createOpenAiEmbeddings({
-      apiKey: env.OPENAI_API_KEY,
-      input: query,
-      model: configuredModel,
-      dimensions: configuredDimensions,
-      fetchImpl,
+    const payload = await ai.run(ALPHA_SEARCH_EMBEDDING_MODEL, {
+      text: [query],
+      truncate_inputs: false,
     })
-    return embedding
+    return extractWorkersAiEmbeddingData(payload, 1)[0]
   } catch (error) {
     logEmbeddingError(getErrorCode(error, 'provider_error'))
     return null
   }
+}
+
+export function extractWorkersAiEmbeddingData(
+  payload,
+  expectedCount,
+  dimensions = ALPHA_SEARCH_EMBEDDING_DIMENSIONS,
+) {
+  const data = payload?.data
+  if (!Array.isArray(data) || data.length !== expectedCount) {
+    throw namedError('WorkersAiEmbeddingCountError')
+  }
+  if (payload.pooling !== undefined && payload.pooling !== 'cls') {
+    throw namedError('WorkersAiEmbeddingPoolingError')
+  }
+  if (
+    payload.shape !== undefined &&
+    (!Array.isArray(payload.shape) ||
+      payload.shape.length !== 2 ||
+      payload.shape[0] !== expectedCount ||
+      payload.shape[1] !== dimensions)
+  ) {
+    throw namedError('WorkersAiEmbeddingShapeError')
+  }
+
+  return data.map((embedding) => {
+    if (
+      !Array.isArray(embedding) ||
+      embedding.length !== dimensions ||
+      embedding.some(
+        (value) => typeof value !== 'number' || !Number.isFinite(value),
+      )
+    ) {
+      throw namedError('WorkersAiEmbeddingDimensionsError')
+    }
+    return embedding
+  })
 }
 
 export function isAlphaSearchEmbedding(value) {
@@ -51,6 +74,12 @@ export function isAlphaSearchEmbedding(value) {
 
 function getErrorCode(error, fallback) {
   return error instanceof Error && error.name ? error.name : fallback
+}
+
+function namedError(name) {
+  const error = new Error(name)
+  error.name = name
+  return error
 }
 
 function logEmbeddingError(errorCode) {

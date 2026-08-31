@@ -311,10 +311,19 @@ function composeChunkText(document, group) {
     document.title
   const body = group.map(({ text }) => text).join('\n')
 
-  return normalizeText(
-    [document.title, section !== document.title ? section : '', body]
-      .filter(Boolean)
-      .join('\n'),
+  return enrichPortalEmbeddingText(
+    normalizeText(
+      [document.title, section !== document.title ? section : '', body]
+        .filter(Boolean)
+        .join('\n'),
+    ),
+  )
+}
+
+export function enrichPortalEmbeddingText(value) {
+  return value.replace(
+    /Aceserver(?!\s+エースサーバー)/giu,
+    (match) => `${match} エースサーバー`,
   )
 }
 
