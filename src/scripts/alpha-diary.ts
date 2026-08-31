@@ -39,6 +39,15 @@ type DiaryPayload = Record<string, unknown> & {
 }
 
 type FinaleMode = 'horror' | 'reduced' | 'text'
+type FinaleStage =
+  | 'ordinary'
+  | 'drift'
+  | 'correction'
+  | 'logs'
+  | 'invasion'
+  | 'reverse'
+  | 'message'
+  | 'hope'
 
 const BIRTH_BOUNDARY = '2020-10-01'
 const MINIMUM_DATE = '0001-01-01'
@@ -96,7 +105,9 @@ export function initAlphaDiary() {
   let requestController: AbortController | null = null
   let pendingTimer = 0
   let finaleTimers: number[] = []
+  let finaleAnimationFrame = 0
   let finaleActive = false
+  let finaleMotionEnabled = false
   let fullscreenEntered = false
   let focusBeforeFinale: HTMLElement | null = null
   let invalidJourneyRetried = false
@@ -230,41 +241,6 @@ export function initAlphaDiary() {
   }
 
   function updateJourney(journey: DiaryJourney) {
-    const viewed = requiredElement<HTMLElement>(root, '[data-journey-viewed]')
-    const confirmed = requiredElement<HTMLElement>(
-      root,
-      '[data-journey-confirmed]',
-    )
-    const total = Math.max(1, journey.totalCount)
-    viewed.textContent = `${Math.min(journey.viewedCount, total)} / ${total}`
-    confirmed.textContent = `${Math.min(journey.confirmedCount, total)} / ${total}`
-    requiredElement<HTMLElement>(
-      root,
-      '[data-journey-viewed-bar]',
-    ).style.width = `${Math.min(100, (journey.viewedCount / total) * 100)}%`
-    requiredElement<HTMLElement>(
-      root,
-      '[data-journey-confirmed-bar]',
-    ).style.width = `${Math.min(100, (journey.confirmedCount / total) * 100)}%`
-
-    const suggestions = requiredElement<HTMLElement>(
-      root,
-      '[data-diary-suggestions]',
-    )
-    suggestions.replaceChildren()
-    const uniqueDates = [...new Set(journey.suggestedRecordDates)]
-      .filter(isValidDate)
-      .sort()
-      .reverse()
-    for (const date of uniqueDates) {
-      const button = document.createElement('button')
-      button.type = 'button'
-      button.dataset.diarySuggestedDate = date
-      button.textContent = formatRecordDate(date, locale)
-      button.setAttribute('aria-current', String(date === currentDate))
-      suggestions.append(button)
-    }
-
     const unlockedPanel = requiredElement<HTMLElement>(
       root,
       '[data-diary-unlocked]',
@@ -445,18 +421,17 @@ export function initAlphaDiary() {
     finaleOverlay.hidden = false
     finaleOverlay.dataset.mode = mode
     finaleOverlay.dataset.stage = mode === 'text' ? 'hope' : 'ordinary'
+    finaleOverlay.style.setProperty('--finale-shift-x', '0px')
+    finaleOverlay.style.setProperty('--finale-shift-y', '0px')
     document.body.classList.add('alpha-diary-finale-active')
 
-    const openedList = requiredElement<HTMLElement>(
-      finaleOverlay,
-      '[data-finale-opened-list]',
-    )
-    openedList.replaceChildren()
-    for (const date of openedDates) {
-      const item = document.createElement('li')
-      item.textContent = formatRecordDate(date, locale)
-      openedList.append(item)
-    }
+    const prefersReducedMotion = window.matchMedia(
+      '(prefers-reduced-motion: reduce)',
+    ).matches
+    const reduced = mode === 'reduced' || prefersReducedMotion
+    finaleMotionEnabled = mode === 'horror' && !prefersReducedMotion
+    prepareFinaleScene(mode)
+
     const finaleImage = requiredElement<HTMLImageElement>(
       finaleOverlay,
       '[data-finale-image]',
@@ -471,10 +446,16 @@ export function initAlphaDiary() {
     finaleImage.alt = asset.alt
     finaleImage.width = asset.width
     finaleImage.height = asset.height
-    requiredElement<HTMLElement>(
+    const accessibleMessage = requiredElement<HTMLElement>(
       finaleOverlay,
       '[data-finale-message]',
-    ).textContent = currentFinale.message
+    )
+    accessibleMessage.textContent = currentFinale.message
+    const visualMessage = requiredElement<HTMLElement>(
+      finaleOverlay,
+      '[data-finale-message-visual]',
+    )
+    visualMessage.textContent = mode === 'text' ? currentFinale.message : ''
 
     history.pushState(
       { ...(history.state || {}), alphaDiaryFinale: true },
@@ -501,35 +482,232 @@ export function initAlphaDiary() {
         })
     }
 
-    if (mode === 'text') return
-    const reduced =
-      mode === 'reduced' ||
-      window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    const schedule = reduced
-      ? [250, 600, 950, 1_300, 1_700]
-      : [1_200, 3_000, 5_200, 7_200, 9_400]
-    const stages = ['glitch', 'logs', 'invasion', 'message', 'hope']
-    stages.forEach((stage, index) => {
+    if (mode === 'text') {
+      requiredElement<HTMLButtonElement>(
+        finaleOverlay,
+        '[data-finale-return]',
+      ).focus()
+      return
+    }
+
+    const sequence: Array<{ at: number; stage: FinaleStage }> = reduced
+      ? [
+          { at: 150, stage: 'drift' },
+          { at: 350, stage: 'correction' },
+          { at: 650, stage: 'logs' },
+          { at: 950, stage: 'invasion' },
+          { at: 1_250, stage: 'reverse' },
+          { at: 1_600, stage: 'message' },
+          { at: 2_200, stage: 'hope' },
+        ]
+      : [
+          { at: 1_100, stage: 'drift' },
+          { at: 2_600, stage: 'correction' },
+          { at: 4_500, stage: 'logs' },
+          { at: 7_200, stage: 'invasion' },
+          { at: 10_300, stage: 'reverse' },
+          { at: 13_700, stage: 'message' },
+          { at: 18_100, stage: 'hope' },
+        ]
+    sequence.forEach(({ at, stage }) => {
       finaleTimers.push(
         window.setTimeout(() => {
-          finaleOverlay.dataset.stage = stage
-          if (stage === 'hope') {
-            requiredElement<HTMLButtonElement>(
-              finaleOverlay,
-              '[data-finale-return]',
-            ).focus()
-          }
-        }, schedule[index]),
+          enterFinaleStage(stage, reduced)
+        }, at),
       )
     })
+  }
+
+  function prepareFinaleScene(mode: FinaleMode) {
+    const openedList = requiredElement<HTMLElement>(
+      finaleOverlay,
+      '[data-finale-opened-list]',
+    )
+    openedList.replaceChildren()
+
+    const dateElement = requiredElement<HTMLElement>(
+      finaleOverlay,
+      '[data-finale-date]',
+    )
+    dateElement.textContent = toFinaleDate(currentEntry?.date || serverToday)
+    requiredElement<HTMLElement>(
+      finaleOverlay,
+      '[data-finale-correction]',
+    ).textContent = mode === 'text' ? 'ALPHA-KUN / TODAY' : 'DATE ACCEPTED'
+
+    const shardContainer = requiredElement<HTMLElement>(
+      finaleOverlay,
+      '[data-finale-shards]',
+    )
+    shardContainer.replaceChildren()
+    const dates = getFinaleOpenedDates()
+    const shardCount = Math.min(18, Math.max(10, dates.length * 2))
+    for (let index = 0; index < shardCount; index += 1) {
+      const date = dates[index % dates.length]
+      const seed = hashFinaleSeed(`${date}:${index}`)
+      const shard = document.createElement('span')
+      shard.className = 'finale-shard'
+      shard.textContent =
+        index % 3 === 0 ? 'OBSERVATION' : date.replaceAll('-', '.')
+      shard.style.setProperty('--shard-left', `${4 + (seed % 88)}%`)
+      shard.style.setProperty(
+        '--shard-top',
+        `${4 + (Math.floor(seed / 89) % 86)}%`,
+      )
+      shard.style.setProperty(
+        '--shard-rotate',
+        `${(Math.floor(seed / 7) % 35) - 17}deg`,
+      )
+      shard.style.setProperty(
+        '--shard-from-x',
+        `${(Math.floor(seed / 13) % 2 === 0 ? -1 : 1) * (90 + (seed % 190))}px`,
+      )
+      shard.style.setProperty(
+        '--shard-from-y',
+        `${(Math.floor(seed / 17) % 2 === 0 ? -1 : 1) * (80 + (seed % 160))}px`,
+      )
+      shard.style.setProperty('--shard-delay', `${(index % 7) * 70}ms`)
+      shardContainer.append(shard)
+    }
+  }
+
+  function enterFinaleStage(stage: FinaleStage, reduced: boolean) {
+    if (!finaleActive || !currentFinale) return
+    finaleOverlay.dataset.stage = stage
+    const dateElement = requiredElement<HTMLElement>(
+      finaleOverlay,
+      '[data-finale-date]',
+    )
+    const correction = requiredElement<HTMLElement>(
+      finaleOverlay,
+      '[data-finale-correction]',
+    )
+    const glitch = requiredElement<HTMLElement>(
+      finaleOverlay,
+      '[data-finale-glitch]',
+    )
+    const dates = getFinaleOpenedDates()
+    const oldestDate = dates[0]
+
+    if (stage === 'drift') {
+      dateElement.textContent = `${toFinaleDate(currentEntry?.date || serverToday)} / 0000.00.00`
+      correction.textContent = 'CORRECTION 01'
+      glitch.innerHTML = 'RECORD DATE MISMATCH<br>SUBJECT / ALPHA'
+      return
+    }
+    if (stage === 'correction') {
+      dateElement.textContent = `0000.00.00 / ${toFinaleDate(oldestDate)}`
+      correction.textContent = 'ORIGINAL ENTRY MISSING'
+      glitch.innerHTML = 'ENTRY WAS NOT WRITTEN HERE<br>HANDWRITING / UNKNOWN'
+      return
+    }
+    if (stage === 'logs') {
+      dateElement.textContent = `${toFinaleDate(oldestDate)} / DATE REMOVED`
+      correction.textContent = 'OPENED RECORDS REPEATING'
+      glitch.innerHTML = 'ONLY OPENED DATES RETURN<br>UNOPENED / SILENT'
+      revealFinaleLogs(reduced)
+      return
+    }
+    if (stage === 'invasion') {
+      dateElement.textContent = 'NO ORIGINAL DATE'
+      correction.textContent = 'PAPER EDGE NOT FOUND'
+      glitch.innerHTML = 'PAPER EDGE NOT FOUND<br>ROOM / OUTSIDE RECORD'
+      return
+    }
+    if (stage === 'reverse') {
+      dateElement.textContent = 'OBSERVATION CONTINUES'
+      correction.textContent = 'VIEWPOINT REVERSED'
+      glitch.innerHTML = 'THE RECORD IS LOOKING BACK<br>SUBJECT / ALPHA-KUN'
+      return
+    }
+    if (stage === 'message') {
+      dateElement.textContent = 'ALPHA-KUN / PRESENT'
+      correction.textContent = 'SUBJECT NAME RESTORED'
+      glitch.innerHTML = 'NAME RESTORED<br>STATUS / PRESENT'
+      animateFinaleMessage(currentFinale.message, reduced ? 0 : 3_400)
+      return
+    }
+    if (stage === 'hope') {
+      finaleMotionEnabled = false
+      finaleOverlay.style.setProperty('--finale-shift-x', '0px')
+      finaleOverlay.style.setProperty('--finale-shift-y', '0px')
+      dateElement.textContent = toFinaleDate(serverToday)
+      correction.textContent = 'ALPHA-KUN / TODAY'
+      requiredElement<HTMLElement>(
+        finaleOverlay,
+        '[data-finale-message-visual]',
+      ).textContent = currentFinale.message
+      requiredElement<HTMLButtonElement>(
+        finaleOverlay,
+        '[data-finale-return]',
+      ).focus()
+    }
+  }
+
+  function revealFinaleLogs(reduced: boolean) {
+    const openedList = requiredElement<HTMLElement>(
+      finaleOverlay,
+      '[data-finale-opened-list]',
+    )
+    openedList.replaceChildren()
+    const dates = getFinaleOpenedDates()
+    const interval = Math.max(45, Math.floor(2_100 / dates.length))
+    dates.forEach((date, index) => {
+      const appendItem = () => {
+        if (!finaleActive) return
+        const item = document.createElement('li')
+        const time = document.createElement('time')
+        time.dateTime = date
+        time.textContent = formatRecordDate(date, locale)
+        const code = document.createElement('span')
+        code.textContent = `OBS-${hashFinaleSeed(date).toString(16).slice(-6).toUpperCase()}`
+        item.append(time, code)
+        openedList.append(item)
+      }
+      if (reduced) appendItem()
+      else finaleTimers.push(window.setTimeout(appendItem, index * interval))
+    })
+  }
+
+  function animateFinaleMessage(message: string, duration: number) {
+    if (finaleAnimationFrame) window.cancelAnimationFrame(finaleAnimationFrame)
+    const visualMessage = requiredElement<HTMLElement>(
+      finaleOverlay,
+      '[data-finale-message-visual]',
+    )
+    if (duration <= 0) {
+      visualMessage.textContent = message
+      return
+    }
+    visualMessage.textContent = ''
+    const startedAt = performance.now()
+    const reveal = (now: number) => {
+      if (!finaleActive) return
+      const progress = Math.min(1, (now - startedAt) / duration)
+      const visibleLength = Math.max(1, Math.ceil(message.length * progress))
+      visualMessage.textContent = message.slice(0, visibleLength)
+      if (progress < 1)
+        finaleAnimationFrame = window.requestAnimationFrame(reveal)
+      else finaleAnimationFrame = 0
+    }
+    finaleAnimationFrame = window.requestAnimationFrame(reveal)
+  }
+
+  function getFinaleOpenedDates(): string[] {
+    const dates = [...new Set(openedDates.filter(isValidDate))].sort()
+    if (dates.length > 0) return dates
+    return [isValidDate(currentDate) ? currentDate : serverToday]
   }
 
   function stopFinale(options: { fromHistory?: boolean } = {}) {
     if (!finaleActive) return
     finaleActive = false
+    finaleMotionEnabled = false
     clearFinaleTimers()
     finaleOverlay.hidden = true
     finaleOverlay.dataset.stage = 'ordinary'
+    finaleOverlay.style.setProperty('--finale-shift-x', '0px')
+    finaleOverlay.style.setProperty('--finale-shift-y', '0px')
     document.body.classList.remove('alpha-diary-finale-active')
     if (document.fullscreenElement === finaleOverlay) {
       void document.exitFullscreen().catch(() => {})
@@ -571,6 +749,8 @@ export function initAlphaDiary() {
   function clearFinaleTimers() {
     finaleTimers.forEach((timer) => window.clearTimeout(timer))
     finaleTimers = []
+    if (finaleAnimationFrame) window.cancelAnimationFrame(finaleAnimationFrame)
+    finaleAnimationFrame = 0
   }
 
   function updateDateHistory(date: string, mode: 'push' | 'replace' | 'none') {
@@ -626,15 +806,6 @@ export function initAlphaDiary() {
     (event) => {
       const target = event.target
       if (!(target instanceof Element)) return
-      const suggested = target.closest<HTMLElement>(
-        '[data-diary-suggested-date]',
-      )
-      if (suggested?.dataset.diarySuggestedDate) {
-        void loadEntry(suggested.dataset.diarySuggestedDate, {
-          history: 'push',
-        })
-        return
-      }
       if (target.closest('[data-diary-retry]')) {
         void loadEntry(currentDate || dateInput.value, {
           history: 'none',
@@ -712,6 +883,33 @@ export function initAlphaDiary() {
       if (target.closest('[data-finale-ask-today]')) {
         void returnToToday(true)
       }
+    },
+    { signal },
+  )
+
+  finaleOverlay.addEventListener(
+    'pointermove',
+    (event) => {
+      if (!finaleActive || !finaleMotionEnabled) return
+      const horizontal = event.clientX / Math.max(1, window.innerWidth) - 0.5
+      const vertical = event.clientY / Math.max(1, window.innerHeight) - 0.5
+      finaleOverlay.style.setProperty(
+        '--finale-shift-x',
+        `${(horizontal * 28).toFixed(2)}px`,
+      )
+      finaleOverlay.style.setProperty(
+        '--finale-shift-y',
+        `${(vertical * 20).toFixed(2)}px`,
+      )
+    },
+    { signal },
+  )
+
+  finaleOverlay.addEventListener(
+    'pointerleave',
+    () => {
+      finaleOverlay.style.setProperty('--finale-shift-x', '0px')
+      finaleOverlay.style.setProperty('--finale-shift-y', '0px')
     },
     { signal },
   )
@@ -1130,6 +1328,19 @@ function formatRecordDate(value: string, locale: string): string {
   } catch {
     return value
   }
+}
+
+function toFinaleDate(value: string): string {
+  return isValidDate(value) ? value.replaceAll('-', '.') : '0000.00.00'
+}
+
+function hashFinaleSeed(value: string): number {
+  let hash = 2_166_136_261
+  for (const character of value) {
+    hash ^= character.codePointAt(0) || 0
+    hash = Math.imul(hash, 16_777_619)
+  }
+  return hash >>> 0
 }
 
 function readRetryAfter(value: unknown): number {

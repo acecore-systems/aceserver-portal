@@ -43,6 +43,31 @@ test('the diary handoff pre-fills Alpha Chat without automatically submitting', 
   assert.match(source, /alpha-diary:progress/u)
 })
 
+test('journey and goal mechanics stay internal instead of being rendered or serialized as copy', async () => {
+  const [component, copySource, script] = await Promise.all([
+    readFile(
+      new URL('../src/components/AlphaDiaryPage.astro', import.meta.url),
+      'utf8',
+    ),
+    readFile(new URL('../src/data/alpha-diary-ui.ts', import.meta.url), 'utf8'),
+    readFile(new URL('../src/scripts/alpha-diary.ts', import.meta.url), 'utf8'),
+  ])
+
+  assert.doesNotMatch(component, /Journey \/ Goal/u)
+  assert.doesNotMatch(component, /data-journey-(?:viewed|confirmed)/u)
+  assert.doesNotMatch(component, /data-diary-suggestions/u)
+  assert.doesNotMatch(
+    `${component}\n${copySource}`,
+    /新しいページは明るく、古いページほど言葉が足りません/u,
+  )
+  assert.doesNotMatch(
+    copySource,
+    /confirmedLabel|goalHint|subtitle|viewedLabel/u,
+  )
+  assert.match(script, /function updateJourney\(journey: DiaryJourney\)/u)
+  assert.match(script, /unlockedPanel\.hidden = !journey\.unlocked/u)
+})
+
 test('the final sequence keeps explicit choices, escape, reduced motion, and no audio', async () => {
   const [component, script] = await Promise.all([
     readFile(
@@ -60,6 +85,18 @@ test('the final sequence keeps explicit choices, escape, reduced motion, and no 
   assert.match(script, /event\.key === 'Escape'/u)
   assert.match(script, /document\.exitFullscreen/u)
   assert.match(script, /searchParams\.set\('fixture', 'current'\)/u)
+  assert.match(script, /stage: 'drift'/u)
+  assert.match(script, /stage: 'correction'/u)
+  assert.match(script, /stage: 'logs'/u)
+  assert.match(script, /stage: 'invasion'/u)
+  assert.match(script, /stage: 'reverse'/u)
+  assert.match(script, /stage: 'message'/u)
+  assert.match(script, /stage: 'hope'/u)
+  assert.match(script, /revealFinaleLogs/u)
+  assert.match(script, /requestAnimationFrame/u)
+  assert.match(script, /'pointermove'/u)
+  assert.match(component, /data-finale-shards/u)
+  assert.match(component, /data-finale-message-visual/u)
   assert.doesNotMatch(`${component}\n${script}`, /<audio|new Audio\(/u)
 })
 
