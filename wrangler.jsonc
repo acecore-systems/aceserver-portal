@@ -39,6 +39,10 @@
   ],
   "services": [
     {
+      "binding": "CMS_AI",
+      "service": "cms-ai",
+    },
+    {
       "binding": "ALPHA_CHAT_SERVICE",
       "service": "aceserver-alpha-chat-production",
       "remote": false,
@@ -59,6 +63,12 @@
           "binding": "SEARCH_RATE_LIMIT_DB",
           "database_name": "acecore-net-search-production",
           "database_id": "3d26157c-b052-498c-af9b-82bad65b8421",
+        },
+      ],
+      "services": [
+        {
+          "binding": "CMS_AI",
+          "service": "cms-ai",
         },
       ],
       "vars": {
@@ -127,6 +137,10 @@
         "binding": "AI",
       },
       "services": [
+        {
+          "binding": "CMS_AI",
+          "service": "cms-ai",
+        },
         {
           "binding": "ALPHA_CHAT_SERVICE",
           "service": "aceserver-alpha-chat-production",
