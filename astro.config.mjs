@@ -106,6 +106,7 @@ export default defineConfig({
           item.changefreq = 'weekly'
           item.priority = 1
         } else if (
+          pathname.startsWith('/alpha-diary') ||
           pathname.startsWith('/world-map') ||
           pathname.startsWith('/youtube-search')
         ) {

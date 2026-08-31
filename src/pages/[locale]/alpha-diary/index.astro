@@ -1,0 +1,31 @@
+---
+import AlphaDiaryPage from '../../../components/AlphaDiaryPage.astro'
+import { getAlphaDiaryUi } from '../../../data/alpha-diary-ui'
+import { TRANSLATED_LOCALES, type TranslatedLocale } from '../../../i18n/config'
+import BaseLayout from '../../../layouts/BaseLayout.astro'
+
+export function getStaticPaths() {
+  return TRANSLATED_LOCALES.map((locale) => ({
+    params: { locale },
+    props: { locale },
+  }))
+}
+
+interface Props {
+  locale: TranslatedLocale
+}
+
+const { locale } = Astro.props
+const copy = getAlphaDiaryUi(locale)
+---
+
+<BaseLayout
+  locale={locale}
+  title={copy.metaTitle}
+  description={copy.metaDescription}
+  image="/uploads/alpha-kun.png"
+  imageAlt={copy.title}
+  plainBackground
+>
+  <AlphaDiaryPage locale={locale} />
+</BaseLayout>
