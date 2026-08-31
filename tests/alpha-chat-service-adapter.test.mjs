@@ -102,6 +102,40 @@ test('the Portal adapter forwards the envelope to the private service', async ()
   })
 })
 
+test('the Portal adapter forwards SSE without buffering the private service body', async () => {
+  const source = [
+    'event: delta\ndata: {"text":"やあ、"}\n\n',
+    'event: complete\ndata: {"ok":true,"answer":"やあ、案内するよ。","sources":[]}\n\n',
+  ].join('')
+  let forwardedAccept
+  const response = await onRequestPost({
+    env: {
+      ALPHA_CHAT_SERVICE: {
+        async fetch(request) {
+          forwardedAccept = request.headers.get('Accept')
+          return new Response(source, {
+            headers: { 'Content-Type': 'text/event-stream; charset=utf-8' },
+          })
+        },
+      },
+      SEARCH_RATE_LIMIT_DB: createRateLimitDatabase(),
+    },
+    request: createRequest(
+      { locale: 'ja', question: 'こんにちは' },
+      { Accept: 'text/event-stream' },
+    ),
+  })
+
+  assert.equal(forwardedAccept, 'text/event-stream')
+  assert.equal(response.status, 200)
+  assert.equal(
+    response.headers.get('Content-Type'),
+    'text/event-stream; charset=utf-8',
+  )
+  assert.match(response.headers.get('Cache-Control'), /no-transform/u)
+  assert.equal(await response.text(), source)
+})
+
 test('the Portal adapter preserves opaque conversation context without selecting transcript messages', async () => {
   const conversationContext = {
     items: [

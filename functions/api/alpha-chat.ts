@@ -15,6 +15,7 @@ const ALPHA_CLIENT_ID_PATTERN =
 
 export async function onRequestPost(context) {
   const { request, env } = context
+  const streamRequested = acceptsEventStream(request)
   const requestLocale = resolveRequestLocale(
     request.headers.get('Accept-Language'),
   )
@@ -106,13 +107,16 @@ export async function onRequestPost(context) {
           version: ALPHA_CHAT_SERVICE_CONTRACT_VERSION,
         }),
         headers: {
-          Accept: 'application/json',
+          Accept: streamRequested ? 'text/event-stream' : 'application/json',
           'Accept-Language': locale,
           'Content-Type': 'application/json',
         },
         method: 'POST',
       }),
     )
+    if (streamRequested && isEventStreamResponse(serviceResponse)) {
+      return eventStreamResponse(request, serviceResponse)
+    }
     const bodyResult = await readJsonPayload(
       serviceResponse,
       MAX_SHARED_RESPONSE_BODY_BYTES,
@@ -252,6 +256,59 @@ function getAlphaChatService(env) {
 
 function normalizeServiceStatus(value) {
   return Number.isInteger(value) && value >= 200 && value <= 599 ? value : 502
+}
+
+function acceptsEventStream(request) {
+  return String(request.headers.get('Accept') || '')
+    .split(',')
+    .some((entry) => {
+      const [mediaType, ...parameters] = entry.split(';')
+      if (mediaType.trim().toLowerCase() !== 'text/event-stream') return false
+      return !parameters.some((parameter) =>
+        /^\s*q\s*=\s*0(?:\.0*)?\s*$/iu.test(parameter),
+      )
+    })
+}
+
+function isEventStreamResponse(response) {
+  return Boolean(
+    response.body &&
+    response.ok &&
+    response.headers
+      .get('Content-Type')
+      ?.toLowerCase()
+      .startsWith('text/event-stream'),
+  )
+}
+
+function eventStreamResponse(request, serviceResponse) {
+  let totalBytes = 0
+  const boundedBody = serviceResponse.body.pipeThrough(
+    new TransformStream({
+      transform(chunk, controller) {
+        if (!(chunk instanceof Uint8Array)) {
+          controller.error(new Error('AlphaChatServicePayloadError'))
+          return
+        }
+        totalBytes += chunk.byteLength
+        if (totalBytes > MAX_SHARED_RESPONSE_BODY_BYTES) {
+          controller.error(new Error('AlphaChatServicePayloadError'))
+          return
+        }
+        controller.enqueue(chunk)
+      },
+    }),
+  )
+
+  return new Response(boundedBody, {
+    status: normalizeServiceStatus(serviceResponse.status),
+    headers: {
+      'Cache-Control': 'no-store, no-transform',
+      'Content-Type': 'text/event-stream; charset=utf-8',
+      'X-Content-Type-Options': 'nosniff',
+      ...corsHeaders(request),
+    },
+  })
 }
 
 function isAlphaChatServiceResponse(value) {
