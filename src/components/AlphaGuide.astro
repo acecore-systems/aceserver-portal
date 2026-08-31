@@ -1,5 +1,6 @@
 ---
 import type { LinkItem } from '../types'
+import { getAlphaDiaryUi } from '../data/alpha-diary-ui'
 import { localizePath, type Locale } from '../i18n/config'
 import { getUi } from '../i18n/translations'
 import { externalLinkAttrs } from '../utils/links'
@@ -14,10 +15,16 @@ interface Props {
 
 const { locale = 'ja', logo, joinButton, wikiButton } = Astro.props
 const ui = getUi(locale)
+const diaryUi = getAlphaDiaryUi(locale)
 
 const worldMapButton: LinkItem = {
   label: ui.alpha.mapLabel,
   href: localizePath(locale, '/world-map/'),
+}
+
+const diaryButton: LinkItem = {
+  label: diaryUi.navLabel,
+  href: localizePath(locale, '/alpha-diary/'),
 }
 
 const worldFoundationUrl = 'https://world-foundation.acecore.net/'
@@ -47,6 +54,11 @@ const alphaLinkResources = [
       ui.worldMapTitleParts.join(' '),
       ui.worldMapTitleParts.join(''),
     ],
+  },
+  {
+    href: diaryButton.href,
+    label: diaryButton.label,
+    terms: [diaryButton.label, diaryUi.title, 'Alpha diary'],
   },
 ]
 ---
@@ -159,6 +171,10 @@ const alphaLinkResources = [
         <Icon name="book-open" />
         <span>WIKI</span>
       </a>
+      <a href={diaryButton.href}>
+        <Icon name="notebook-pen" />
+        <span>{diaryButton.label}</span>
+      </a>
     </nav>
   </section>
 
@@ -195,6 +211,8 @@ const alphaLinkResources = [
 
   type AlphaConversationState = {
     context: AlphaConversationContext | null
+    diaryEntryId?: string
+    journeyToken?: string
     loreRevisionId?: string
   }
 
@@ -810,6 +828,12 @@ const alphaLinkResources = [
           ...(conversation.loreRevisionId
             ? { loreRevisionId: conversation.loreRevisionId }
             : {}),
+          ...(conversation.diaryEntryId && conversation.journeyToken
+            ? {
+                diaryEntryId: conversation.diaryEntryId,
+                journeyToken: conversation.journeyToken,
+              }
+            : {}),
         }),
         signal,
       },
@@ -915,6 +939,40 @@ const alphaLinkResources = [
         showAlphaStatusNotice(
           widget,
           '会話の継続情報を更新しました。表示中のメッセージはそのままです。',
+        )
+      }
+
+      const nextJourneyToken =
+        typeof payload.journeyToken === 'string' &&
+        payload.journeyToken.length <= 4096
+          ? payload.journeyToken
+          : undefined
+      const experienceEvent =
+        typeof payload.experienceEvent === 'string' &&
+        [
+          'alpha_diary_memory_confirmed',
+          'alpha_diary_memory_expanded',
+          'alpha_diary_goal_unlocked',
+        ].includes(payload.experienceEvent)
+          ? payload.experienceEvent
+          : undefined
+      if (nextJourneyToken && experienceEvent) {
+        conversation.journeyToken = nextJourneyToken
+        try {
+          window.localStorage.setItem(
+            'alpha-diary.journey.v1',
+            nextJourneyToken,
+          )
+        } catch {
+          // The chat remains usable when local progress cannot be stored.
+        }
+        document.dispatchEvent(
+          new CustomEvent('alpha-diary:progress', {
+            detail: {
+              experienceEvent,
+              journeyToken: nextJourneyToken,
+            },
+          }),
         )
       }
 
@@ -1049,6 +1107,26 @@ const alphaLinkResources = [
         if (!opener) return
 
         event.preventDefault()
+        const question = opener.getAttribute('data-alpha-question') || ''
+        const diaryEntryId =
+          opener.getAttribute('data-alpha-diary-entry-id') || ''
+        const journeyToken =
+          opener.getAttribute('data-alpha-journey-token') || ''
+        if (
+          /^entry_[a-z0-9]{24,64}$/u.test(diaryEntryId) &&
+          journeyToken.length >= 1 &&
+          journeyToken.length <= 4096
+        ) {
+          if (conversation.diaryEntryId !== diaryEntryId) {
+            conversation.context = null
+            conversation.loreRevisionId = undefined
+          }
+          conversation.diaryEntryId = diaryEntryId
+          conversation.journeyToken = journeyToken
+        }
+        if (question && question.length <= 500 && input) {
+          input.value = question
+        }
         setAlphaWidgetOpen(widget, true, messages)
       },
       listenerOptions,

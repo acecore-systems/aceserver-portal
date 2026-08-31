@@ -1,0 +1,19 @@
+---
+import AlphaDiaryPage from '../../components/AlphaDiaryPage.astro'
+import { getAlphaDiaryUi } from '../../data/alpha-diary-ui'
+import BaseLayout from '../../layouts/BaseLayout.astro'
+
+const locale = 'ja'
+const copy = getAlphaDiaryUi(locale)
+---
+
+<BaseLayout
+  locale={locale}
+  title={copy.metaTitle}
+  description={copy.metaDescription}
+  image="/uploads/alpha-kun.png"
+  imageAlt={copy.title}
+  plainBackground
+>
+  <AlphaDiaryPage locale={locale} />
+</BaseLayout>

@@ -35,6 +35,7 @@ const storySlugs = [
   'minecraft-server-setup',
   'metaverse-is-close',
 ]
+const fixedPagePaths = ['/stories/', '/search/', '/alpha-diary/']
 
 function fail(scope, message) {
   errors.push(`${scope}: ${message}`)
@@ -351,8 +352,9 @@ for (const locale of LOCALES) {
   for (const slug of pageSlugs) {
     knownRoutes.add(localePath(locale, slug === 'top' ? '/' : `/${slug}/`))
   }
-  knownRoutes.add(localePath(locale, '/stories/'))
-  knownRoutes.add(localePath(locale, '/search/'))
+  for (const pathname of fixedPagePaths) {
+    knownRoutes.add(localePath(locale, pathname))
+  }
   knownRoutes.add(localePath(locale, '/404/'))
   for (const slug of storySlugs) {
     knownRoutes.add(localePath(locale, `/stories/${slug}/`))
@@ -364,8 +366,7 @@ for (const locale of LOCALES) {
     ...pageSlugs.map((slug) =>
       localePath(locale, slug === 'top' ? '/' : `/${slug}/`),
     ),
-    localePath(locale, '/stories/'),
-    localePath(locale, '/search/'),
+    ...fixedPagePaths.map((pathname) => localePath(locale, pathname)),
     ...storySlugs.map((slug) => localePath(locale, `/stories/${slug}/`)),
   ]
 
