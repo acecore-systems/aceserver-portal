@@ -18,15 +18,28 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Check bundle readiness
+        id: bundle
+        shell: bash
+        run: |
+          if [[ -f .mcskin-ready ]]; then
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Materialize implementation
+        if: steps.bundle.outputs.ready == 'true'
         shell: bash
         run: |
           set -euo pipefail
-          base64 --decode .mcskin-bundle.b64 > /tmp/mcskin-files.tar.gz
+          cat .mcskin-part-* | base64 --decode > /tmp/mcskin-files.tar.gz
+          gzip --test /tmp/mcskin-files.tar.gz
           tar --extract --gzip --file /tmp/mcskin-files.tar.gz
-          rm .mcskin-bundle.b64
+          rm -f .mcskin-bundle.b64 .mcskin-part-* .mcskin-ready
 
       - name: Commit implementation
+        if: steps.bundle.outputs.ready == 'true'
         shell: bash
         run: |
           set -euo pipefail
