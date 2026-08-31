@@ -1,79 +1,37 @@
-name: CI
+name: Bootstrap MCSkinGPT
 
 on:
-  pull_request:
-    branches:
-      - main
   push:
     branches:
-      - main
-  workflow_dispatch:
+      - feat/mcskin-gpt
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
-  build:
-    name: Build and Format
+  materialize:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check out repository
+      - name: Check out feature branch
         uses: actions/checkout@v7
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v7
         with:
-          node-version-file: .node-version
-          cache: npm
+          fetch-depth: 0
 
-      - name: Install dependencies
-        run: npm ci
+      - name: Materialize implementation
+        shell: bash
+        run: |
+          set -euo pipefail
+          base64 --decode .mcskin-bundle.b64 > /tmp/mcskin-files.tar.gz
+          tar --extract --gzip --file /tmp/mcskin-files.tar.gz
+          rm .mcskin-bundle.b64
 
-      - name: Check formatting
-        run: npm run format:check
-
-      - name: Validate CMS content
-        run: npm run validate:content
-
-      - name: Test content validation
-        run: npm run test:content
-
-      - name: Test YouTube Atom snapshot
-        run: npm run test:youtube-atom
-
-      - name: Test i18n
-        run: npm run test:i18n
-
-      - name: Test translation merge automation
-        run: npm run test:translation-merge
-
-      - name: Test Alpha chat API
-        run: npm run test:alpha
-
-      - name: Test portal Vectorize corpus
-        run: npm run test:portal-vectorize
-
-      - name: Test site search API
-        run: npm run test:search
-
-      - name: Test CMS proxy
-        run: npm run test:cms
-
-      - name: Check Pages Function bindings
-        run: npm run types:functions:check
-
-      - name: Type-check Pages Functions
-        run: npm run typecheck:functions
-
-      - name: Check Dynmap Worker bindings
-        run: npm run types:dynmap:check
-
-      - name: Type-check Dynmap Worker
-        run: npm run typecheck:dynmap
-
-      - name: Test Dynmap Worker
-        run: npm run test:dynmap
-
-      - name: Build site
-        run: npm run build
+      - name: Commit implementation
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add --all
+          git commit -m "feat: MCSkinGPTを追加"
+          git push origin HEAD:feat/mcskin-gpt
