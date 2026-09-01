@@ -182,7 +182,7 @@ export const JA_UI: UiCopy = {
   homeMultiplayer:
     '一人でも、友達とも、世界中のプレイヤーとも一緒に冒険や建築を楽しめます。',
   homeCrossplay: 'JAVA版・統合版どちらでも遊ぶことが可能です！',
-  homeCtaLabel: '参加・WIKI・公式グッズ',
+  homeCtaLabel: '参加・WIKI・絵日記・公式グッズ',
   homeShopTitle: 'Aceserverを、日常にも。',
   homeShopText:
     'アルファくんやAceserverの世界観を、公式グッズとしてお届けしています。',
@@ -262,7 +262,7 @@ export const JA_UI: UiCopy = {
 
 const en: LocaleTranslation = {
   sourceHash:
-    'sha256:9e11a1adcb3d92e9d5c00281d8b7c8b199b6bb5d66a4fc0fe11f9466fec8621e',
+    'sha256:c6fcfc184301b3707bbd29e4e78b85243ff6bda84a6950974ae52bb9e5ab6138',
   ui: {
     siteTitleSuffix: 'Official portal for the free public Minecraft server',
     homeTitleParts: ['Ace', 'server'],
@@ -285,7 +285,7 @@ const en: LocaleTranslation = {
     homeMultiplayer:
       'Enjoy adventures and building alone, with friends, or with players from around the world.',
     homeCrossplay: 'Play from both Java Edition and Bedrock Edition!',
-    homeCtaLabel: 'Join, WIKI, and official goods',
+    homeCtaLabel: 'Join, WIKI, picture diary, and official goods',
     homeShopTitle: 'Bring Aceserver into everyday life.',
     homeShopText:
       'Explore official goods inspired by Alpha-kun and the world of Aceserver.',
@@ -416,6 +416,7 @@ const en: LocaleTranslation = {
     '/youtube-search-aceserver/': 'Videos',
     '/world-map/': 'Map',
     '/stories/': 'Articles',
+    '/alpha-diary/': 'Picture diary',
     'https://acecore.net': 'Acecore',
     'https://store.acecore.net': 'Store',
     'https://asv-wiki.acecore.net': 'WIKI',
@@ -510,7 +511,7 @@ const en: LocaleTranslation = {
 
 const zhCn: LocaleTranslation = {
   sourceHash:
-    'sha256:9e11a1adcb3d92e9d5c00281d8b7c8b199b6bb5d66a4fc0fe11f9466fec8621e',
+    'sha256:c6fcfc184301b3707bbd29e4e78b85243ff6bda84a6950974ae52bb9e5ab6138',
   ui: {
     siteTitleSuffix: '免费公开 Minecraft 服务器官方门户',
     homeTitleParts: ['Ace', 'server'],
@@ -533,7 +534,7 @@ const zhCn: LocaleTranslation = {
     homeMultiplayer:
       '无论独自、与朋友，还是和世界各地的玩家，都能一起冒险和建造。',
     homeCrossplay: 'Java 版与基岩版均可游玩！',
-    homeCtaLabel: '参与方式、WIKI 与官方周边',
+    homeCtaLabel: '参与方式、WIKI、图画日记与官方周边',
     homeShopTitle: '把 Aceserver 带入日常生活。',
     homeShopText: '探索以 Alpha-kun 和 Aceserver 世界观为灵感的官方周边。',
     openShop: '查看官方周边',
@@ -656,6 +657,7 @@ const zhCn: LocaleTranslation = {
     '/youtube-search-aceserver/': '视频',
     '/world-map/': '地图',
     '/stories/': '文章',
+    '/alpha-diary/': '图画日记',
     'https://acecore.net': 'Acecore',
     'https://store.acecore.net': '商店',
     'https://asv-wiki.acecore.net': 'WIKI',
@@ -748,7 +750,7 @@ const zhCn: LocaleTranslation = {
 
 const es: LocaleTranslation = {
   sourceHash:
-    'sha256:9e11a1adcb3d92e9d5c00281d8b7c8b199b6bb5d66a4fc0fe11f9466fec8621e',
+    'sha256:c6fcfc184301b3707bbd29e4e78b85243ff6bda84a6950974ae52bb9e5ab6138',
   ui: {
     siteTitleSuffix:
       'Portal oficial del servidor público gratuito de Minecraft',
@@ -772,7 +774,7 @@ const es: LocaleTranslation = {
     homeMultiplayer:
       'Disfruta de aventuras y construcciones a solas, con amigos o con jugadores de todo el mundo.',
     homeCrossplay: '¡Puedes jugar con Java Edition y Bedrock Edition!',
-    homeCtaLabel: 'Participación, WIKI y artículos oficiales',
+    homeCtaLabel: 'Participación, WIKI, diario ilustrado y artículos oficiales',
     homeShopTitle: 'Lleva Aceserver a tu día a día.',
     homeShopText:
       'Descubre artículos oficiales inspirados en Alpha-kun y el mundo de Aceserver.',
@@ -899,6 +901,7 @@ const es: LocaleTranslation = {
     '/youtube-search-aceserver/': 'Vídeos',
     '/world-map/': 'Mapa',
     '/stories/': 'Artículos',
+    '/alpha-diary/': 'Diario ilustrado',
     'https://acecore.net': 'Acecore',
     'https://store.acecore.net': 'Tienda',
     'https://asv-wiki.acecore.net': 'WIKI',
@@ -993,7 +996,7 @@ const es: LocaleTranslation = {
 
 const pt: LocaleTranslation = {
   sourceHash:
-    'sha256:9e11a1adcb3d92e9d5c00281d8b7c8b199b6bb5d66a4fc0fe11f9466fec8621e',
+    'sha256:c6fcfc184301b3707bbd29e4e78b85243ff6bda84a6950974ae52bb9e5ab6138',
   ui: {
     siteTitleSuffix: 'Portal oficial do servidor público gratuito de Minecraft',
     homeTitleParts: ['Ace', 'server'],
@@ -1016,7 +1019,7 @@ const pt: LocaleTranslation = {
     homeMultiplayer:
       'Aventure-se e construa sozinho, com amigos ou com jogadores do mundo todo.',
     homeCrossplay: 'Jogue com Java Edition e Bedrock Edition!',
-    homeCtaLabel: 'Participação, WIKI e produtos oficiais',
+    homeCtaLabel: 'Participação, WIKI, diário ilustrado e produtos oficiais',
     homeShopTitle: 'Leve o Aceserver para o seu dia a dia.',
     homeShopText:
       'Conheça produtos oficiais inspirados no Alpha-kun e no mundo do Aceserver.',
@@ -1144,6 +1147,7 @@ const pt: LocaleTranslation = {
     '/youtube-search-aceserver/': 'Vídeos',
     '/world-map/': 'Mapa',
     '/stories/': 'Artigos',
+    '/alpha-diary/': 'Diário ilustrado',
     'https://acecore.net': 'Acecore',
     'https://store.acecore.net': 'Loja',
     'https://asv-wiki.acecore.net': 'WIKI',
@@ -1238,7 +1242,7 @@ const pt: LocaleTranslation = {
 
 const fr: LocaleTranslation = {
   sourceHash:
-    'sha256:9e11a1adcb3d92e9d5c00281d8b7c8b199b6bb5d66a4fc0fe11f9466fec8621e',
+    'sha256:c6fcfc184301b3707bbd29e4e78b85243ff6bda84a6950974ae52bb9e5ab6138',
   ui: {
     siteTitleSuffix: 'Portail officiel du serveur Minecraft public et gratuit',
     homeTitleParts: ['Ace', 'server'],
@@ -1261,7 +1265,7 @@ const fr: LocaleTranslation = {
     homeMultiplayer:
       'Partez à l’aventure et construisez seul, avec vos amis ou avec des joueurs du monde entier.',
     homeCrossplay: 'Jouez avec Java Edition et Bedrock Edition !',
-    homeCtaLabel: 'Participation, WIKI et produits officiels',
+    homeCtaLabel: 'Participation, WIKI, journal illustré et produits officiels',
     homeShopTitle: 'Emportez Aceserver dans votre quotidien.',
     homeShopText:
       'Découvrez des produits officiels inspirés d’Alpha-kun et de l’univers d’Aceserver.',
@@ -1388,6 +1392,7 @@ const fr: LocaleTranslation = {
     '/youtube-search-aceserver/': 'Vidéos',
     '/world-map/': 'Carte',
     '/stories/': 'Articles',
+    '/alpha-diary/': 'Journal illustré',
     'https://acecore.net': 'Acecore',
     'https://store.acecore.net': 'Boutique',
     'https://asv-wiki.acecore.net': 'WIKI',
@@ -1483,7 +1488,7 @@ const fr: LocaleTranslation = {
 
 const ko: LocaleTranslation = {
   sourceHash:
-    'sha256:9e11a1adcb3d92e9d5c00281d8b7c8b199b6bb5d66a4fc0fe11f9466fec8621e',
+    'sha256:c6fcfc184301b3707bbd29e4e78b85243ff6bda84a6950974ae52bb9e5ab6138',
   ui: {
     siteTitleSuffix: '무료 공개 Minecraft 서버 공식 포털',
     homeTitleParts: ['Ace', 'server'],
@@ -1507,7 +1512,7 @@ const ko: LocaleTranslation = {
     homeMultiplayer:
       '혼자서도, 친구와도, 전 세계 플레이어와도 모험과 건축을 즐길 수 있습니다.',
     homeCrossplay: 'Java Edition과 Bedrock Edition 모두 플레이할 수 있습니다!',
-    homeCtaLabel: '참여, WIKI 및 공식 굿즈',
+    homeCtaLabel: '참여, WIKI, 그림일기 및 공식 굿즈',
     homeShopTitle: 'Aceserver를 일상으로.',
     homeShopText:
       'Alpha-kun과 Aceserver의 세계관에서 영감을 받은 공식 굿즈를 만나보세요.',
@@ -1634,6 +1639,7 @@ const ko: LocaleTranslation = {
     '/youtube-search-aceserver/': '동영상',
     '/world-map/': '지도',
     '/stories/': '기사',
+    '/alpha-diary/': '그림일기',
     'https://acecore.net': 'Acecore',
     'https://store.acecore.net': '스토어',
     'https://asv-wiki.acecore.net': 'WIKI',
@@ -1726,7 +1732,7 @@ const ko: LocaleTranslation = {
 
 const de: LocaleTranslation = {
   sourceHash:
-    'sha256:9e11a1adcb3d92e9d5c00281d8b7c8b199b6bb5d66a4fc0fe11f9466fec8621e',
+    'sha256:c6fcfc184301b3707bbd29e4e78b85243ff6bda84a6950974ae52bb9e5ab6138',
   ui: {
     siteTitleSuffix:
       'Offizielles Portal des kostenlosen öffentlichen Minecraft-Servers',
@@ -1750,7 +1756,7 @@ const de: LocaleTranslation = {
     homeMultiplayer:
       'Erlebe Abenteuer und Bauprojekte allein, mit Freunden oder mit Spielern aus aller Welt.',
     homeCrossplay: 'Spiele mit Java Edition und Bedrock Edition!',
-    homeCtaLabel: 'Teilnahme, WIKI und offizielle Artikel',
+    homeCtaLabel: 'Teilnahme, WIKI, Bildertagebuch und offizielle Artikel',
     homeShopTitle: 'Hol dir Aceserver in den Alltag.',
     homeShopText:
       'Entdecke offizielle Artikel, inspiriert von Alpha-kun und der Welt von Aceserver.',
@@ -1881,6 +1887,7 @@ const de: LocaleTranslation = {
     '/youtube-search-aceserver/': 'Videos',
     '/world-map/': 'Karte',
     '/stories/': 'Artikel',
+    '/alpha-diary/': 'Bildertagebuch',
     'https://acecore.net': 'Acecore',
     'https://store.acecore.net': 'Shop',
     'https://asv-wiki.acecore.net': 'WIKI',
@@ -1976,7 +1983,7 @@ const de: LocaleTranslation = {
 
 const ru: LocaleTranslation = {
   sourceHash:
-    'sha256:9e11a1adcb3d92e9d5c00281d8b7c8b199b6bb5d66a4fc0fe11f9466fec8621e',
+    'sha256:c6fcfc184301b3707bbd29e4e78b85243ff6bda84a6950974ae52bb9e5ab6138',
   ui: {
     siteTitleSuffix:
       'Официальный портал бесплатного публичного сервера Minecraft',
@@ -2000,7 +2007,7 @@ const ru: LocaleTranslation = {
     homeMultiplayer:
       'Исследуйте мир и стройте в одиночку, с друзьями или с игроками со всего света.',
     homeCrossplay: 'Играйте с Java Edition и Bedrock Edition!',
-    homeCtaLabel: 'Участие, WIKI и официальные товары',
+    homeCtaLabel: 'Участие, WIKI, дневник и официальные товары',
     homeShopTitle: 'Добавьте Aceserver в повседневную жизнь.',
     homeShopText:
       'Откройте официальные товары, вдохновлённые Alpha-kun и миром Aceserver.',
@@ -2126,6 +2133,7 @@ const ru: LocaleTranslation = {
     '/youtube-search-aceserver/': 'Видео',
     '/world-map/': 'Карта',
     '/stories/': 'Статьи',
+    '/alpha-diary/': 'Дневник',
     'https://acecore.net': 'Acecore',
     'https://store.acecore.net': 'Магазин',
     'https://asv-wiki.acecore.net': 'WIKI',

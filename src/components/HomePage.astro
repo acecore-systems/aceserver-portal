@@ -1,5 +1,6 @@
 ---
 import type { LinkItem, PortalPage, PortalSection } from '../types'
+import { getAlphaDiaryUi } from '../data/alpha-diary-ui'
 import { serializeCssUrl } from '../data/safe-json'
 import { localizePath, type Locale } from '../i18n/config'
 import { getUi } from '../i18n/translations'
@@ -13,6 +14,7 @@ interface Props {
 
 const { page, locale = 'ja' } = Astro.props
 const ui = getUi(locale)
+const diaryUi = getAlphaDiaryUi(locale)
 const sections = page.sections ?? []
 
 type FeatureSection = Extract<
@@ -116,6 +118,7 @@ const multiplayerGuidePath = localizePath(
   locale,
   '/stories/minecraft-play-with-friends/',
 )
+const diaryPath = localizePath(locale, '/alpha-diary/')
 ---
 
 <section class="hero" aria-labelledby="home-title">
@@ -158,6 +161,10 @@ const multiplayerGuidePath = localizePath(
           height="28"
         />
         <span>{ui.askAlpha}</span>
+      </a>
+      <a class="asv-btn-diary" href={diaryPath}>
+        <Icon name="notebook-pen" />
+        <span>{diaryUi.navLabel}</span>
       </a>
     </div>
   </div>
@@ -250,6 +257,23 @@ const multiplayerGuidePath = localizePath(
       </a>
     </div>
     <Icon name="book-open" class="wiki-mark" />
+  </article>
+  <article class="diary-card pixel-border">
+    <div>
+      <h2>{diaryUi.title}</h2>
+      <p>{diaryUi.eyebrow}</p>
+      <a class="asv-btn-diary" href={diaryPath}>
+        <Icon name="notebook-pen" />
+        <span>{diaryUi.openDate}</span>
+      </a>
+    </div>
+    <img
+      class="diary-mark"
+      src={alphaLogo}
+      alt={ui.alphaImageAlt}
+      width="168"
+      height="168"
+    />
   </article>
   <article class="shop-card pixel-border">
     <div>
@@ -412,6 +436,45 @@ const multiplayerGuidePath = localizePath(
   .asv-btn-alpha:active {
     transform: translateY(1px);
     box-shadow: 0 2px 0 rgba(0, 0, 0, 0.35);
+  }
+
+  .asv-btn-diary {
+    display: inline-flex;
+    min-height: 3rem;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: 2px solid #6a4d2f;
+    border-radius: 8px;
+    background: #fff3bd;
+    color: #211910;
+    font-size: 0.875rem;
+    font-weight: 900;
+    line-height: 1.2;
+    padding: 0.75rem 1.25rem;
+    text-decoration: none;
+    text-shadow: none;
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.3);
+    transition:
+      background-color 160ms ease,
+      transform 160ms ease,
+      box-shadow 160ms ease;
+  }
+
+  .asv-btn-diary:hover,
+  .asv-btn-diary:focus-visible {
+    background: #fff9df;
+    transform: translateY(-1px);
+  }
+
+  .asv-btn-diary:focus-visible {
+    outline: 4px solid #0862c4;
+    outline-offset: 3px;
+  }
+
+  .asv-btn-diary:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.3);
   }
 
   .hero-alpha-icon {
@@ -613,7 +676,8 @@ const multiplayerGuidePath = localizePath(
 
   .join-card,
   .wiki-card,
-  .shop-card {
+  .shop-card,
+  .diary-card {
     display: grid;
     min-height: 320px;
     gap: 22px;
@@ -634,11 +698,43 @@ const multiplayerGuidePath = localizePath(
   }
 
   .shop-card {
-    grid-column: 1 / -1;
     grid-template-columns: 1fr auto;
     background:
       linear-gradient(135deg, rgba(39, 30, 121, 0.96), rgba(18, 76, 154, 0.94)),
       #211f4c;
+  }
+
+  .diary-card {
+    grid-template-columns: 1fr auto;
+    background:
+      linear-gradient(
+        90deg,
+        transparent 0 38px,
+        rgba(205, 85, 75, 0.2) 38px 41px,
+        transparent 41px
+      ),
+      repeating-linear-gradient(
+        0deg,
+        rgba(55, 150, 190, 0.18) 0 2px,
+        transparent 2px 34px
+      ),
+      linear-gradient(135deg, #fffdf0, #dff7ff);
+    color: #211910;
+  }
+
+  .diary-card p {
+    color: #4b3a28;
+  }
+
+  .diary-card .asv-btn-diary {
+    margin-top: 12px;
+  }
+
+  .diary-mark {
+    width: clamp(112px, 14vw, 168px);
+    height: auto;
+    align-self: end;
+    filter: drop-shadow(0 9px 0 rgba(73, 50, 21, 0.16));
   }
 
   .asv-btn-shop {
@@ -732,8 +828,17 @@ const multiplayerGuidePath = localizePath(
 
     .join-card,
     .wiki-card,
-    .shop-card {
+    .shop-card,
+    .diary-card {
       grid-template-columns: 1fr;
+    }
+
+    .diary-mark {
+      justify-self: end;
+    }
+
+    .diary-card h2 {
+      font-size: 1.65rem;
     }
   }
 </style>
