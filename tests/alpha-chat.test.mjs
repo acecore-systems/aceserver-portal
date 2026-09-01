@@ -148,6 +148,33 @@ test('チャットUIは既存のリンクallowlistと長い正史応答timeout�
   assert.match(source, /bubble\.textContent = text/u)
 })
 
+test('チャット障害時は案内を会話内へ残し、空の入力欄へ質問を戻す', async () => {
+  const source = await readFile(
+    new URL('../src/components/AlphaGuide.astro', import.meta.url),
+    'utf8',
+  )
+  const failureHandler = source.match(
+    /\}\s*catch\s*\{\s*const errorNotice =[\s\S]*?\n\s*\}\s*finally\s*\{/u,
+  )?.[0]
+
+  assert.ok(failureHandler)
+  assert.match(failureHandler, /delete errorMessage\.dataset\.alphaTransient/u)
+  assert.match(failureHandler, /errorMessage\.setAttribute\('role', 'alert'\)/u)
+  assert.match(
+    failureHandler,
+    /updateAlphaStreamingMessage\(errorMessage, errorNotice, true\)/u,
+  )
+  assert.match(
+    failureHandler,
+    /if \(input && !input\.value\.trim\(\)\) \{[\s\S]*?input\.value = question/u,
+  )
+  assert.doesNotMatch(failureHandler, /loadingMessage\?\.remove\(\)/u)
+  assert.doesNotMatch(
+    failureHandler,
+    /showAlphaStatusNotice\(widget, errorNotice, true\)/u,
+  )
+})
+
 test('チャット入力欄はiOSのフォーカス時自動拡大を避ける文字サイズを保つ', async () => {
   const source = await readFile(
     new URL('../src/components/AlphaGuide.astro', import.meta.url),

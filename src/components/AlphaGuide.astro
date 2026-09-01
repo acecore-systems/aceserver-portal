@@ -982,8 +982,16 @@ const alphaLinkResources = [
       const errorNotice =
         widget.dataset.alphaError ||
         'いまはAI応答につながらなかったよ。あとでもう一度聞いてね。'
-      loadingMessage?.remove()
-      showAlphaStatusNotice(widget, errorNotice, true)
+      const errorMessage =
+        loadingMessage || createAlphaMessage(widget, 'assistant', errorNotice)
+      if (errorMessage) {
+        delete errorMessage.dataset.alphaTransient
+        errorMessage.setAttribute('role', 'alert')
+        updateAlphaStreamingMessage(errorMessage, errorNotice, true)
+      }
+      if (input && !input.value.trim()) {
+        input.value = question
+      }
     } finally {
       window.clearTimeout(requestTimeout)
       setAlphaSending(widget, false)
