@@ -167,6 +167,7 @@ const KNOWN_ROUTES = new Set(
 )
 
 KNOWN_ROUTES.add('/stories/')
+KNOWN_ROUTES.add('/alpha-diary/')
 
 type PortalContentResult =
   | { ok: true }

@@ -224,6 +224,9 @@ async function validatePages() {
     .filter((file) => file.endsWith('.json'))
     .sort()
   const routes = new Set(LOCALES.map((locale) => localizedRoute(locale, '/')))
+  for (const locale of LOCALES) {
+    routes.add(localizedRoute(locale, '/alpha-diary/'))
+  }
   const slugs = new Set()
 
   for (const file of pageFiles) {
