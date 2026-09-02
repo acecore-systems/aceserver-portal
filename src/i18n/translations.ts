@@ -262,7 +262,7 @@ export const JA_UI: UiCopy = {
 
 const en: LocaleTranslation = {
   sourceHash:
-    'sha256:c6fcfc184301b3707bbd29e4e78b85243ff6bda84a6950974ae52bb9e5ab6138',
+    'sha256:ee3625fe16796cc04b410fa3dbeadaf3e85e65bfa197040b2864e368112f5123',
   ui: {
     siteTitleSuffix: 'Official portal for the free public Minecraft server',
     homeTitleParts: ['Ace', 'server'],
@@ -421,13 +421,7 @@ const en: LocaleTranslation = {
     'https://store.acecore.net': 'Store',
     'https://asv-wiki.acecore.net': 'WIKI',
   },
-  announcements: {
-    'portal-renewal-2026': {
-      title: 'The Aceserver Portal has been renewed',
-      text: 'We improved access to videos, world maps, and the WIKI, including on smartphones.',
-      linkLabel: 'View world maps',
-    },
-  },
+  announcements: {},
   pages: {
     top: homePage(
       'Aceserver Portal',
@@ -511,7 +505,7 @@ const en: LocaleTranslation = {
 
 const zhCn: LocaleTranslation = {
   sourceHash:
-    'sha256:c6fcfc184301b3707bbd29e4e78b85243ff6bda84a6950974ae52bb9e5ab6138',
+    'sha256:ee3625fe16796cc04b410fa3dbeadaf3e85e65bfa197040b2864e368112f5123',
   ui: {
     siteTitleSuffix: '免费公开 Minecraft 服务器官方门户',
     homeTitleParts: ['Ace', 'server'],
@@ -662,13 +656,7 @@ const zhCn: LocaleTranslation = {
     'https://store.acecore.net': '商店',
     'https://asv-wiki.acecore.net': 'WIKI',
   },
-  announcements: {
-    'portal-renewal-2026': {
-      title: 'Aceserver 门户已完成改版',
-      text: '我们重新整理了视频、世界地图和 WIKI 的入口，并提升了手机端体验。',
-      linkLabel: '查看世界地图',
-    },
-  },
+  announcements: {},
   pages: {
     top: homePage(
       'Aceserver 门户',
@@ -750,7 +738,7 @@ const zhCn: LocaleTranslation = {
 
 const es: LocaleTranslation = {
   sourceHash:
-    'sha256:c6fcfc184301b3707bbd29e4e78b85243ff6bda84a6950974ae52bb9e5ab6138',
+    'sha256:ee3625fe16796cc04b410fa3dbeadaf3e85e65bfa197040b2864e368112f5123',
   ui: {
     siteTitleSuffix:
       'Portal oficial del servidor público gratuito de Minecraft',
@@ -906,13 +894,7 @@ const es: LocaleTranslation = {
     'https://store.acecore.net': 'Tienda',
     'https://asv-wiki.acecore.net': 'WIKI',
   },
-  announcements: {
-    'portal-renewal-2026': {
-      title: 'Hemos renovado el Portal de Aceserver',
-      text: 'Mejoramos el acceso a vídeos, mapas y la WIKI, también desde teléfonos.',
-      linkLabel: 'Ver los mapas',
-    },
-  },
+  announcements: {},
   pages: {
     top: homePage(
       'Portal de Aceserver',
@@ -996,7 +978,7 @@ const es: LocaleTranslation = {
 
 const pt: LocaleTranslation = {
   sourceHash:
-    'sha256:c6fcfc184301b3707bbd29e4e78b85243ff6bda84a6950974ae52bb9e5ab6138',
+    'sha256:ee3625fe16796cc04b410fa3dbeadaf3e85e65bfa197040b2864e368112f5123',
   ui: {
     siteTitleSuffix: 'Portal oficial do servidor público gratuito de Minecraft',
     homeTitleParts: ['Ace', 'server'],
@@ -1152,13 +1134,7 @@ const pt: LocaleTranslation = {
     'https://store.acecore.net': 'Loja',
     'https://asv-wiki.acecore.net': 'WIKI',
   },
-  announcements: {
-    'portal-renewal-2026': {
-      title: 'O Portal do Aceserver foi renovado',
-      text: 'Melhoramos o acesso a vídeos, mapas e à WIKI, inclusive em celulares.',
-      linkLabel: 'Ver os mapas',
-    },
-  },
+  announcements: {},
   pages: {
     top: homePage(
       'Portal do Aceserver',
@@ -1242,7 +1218,7 @@ const pt: LocaleTranslation = {
 
 const fr: LocaleTranslation = {
   sourceHash:
-    'sha256:c6fcfc184301b3707bbd29e4e78b85243ff6bda84a6950974ae52bb9e5ab6138',
+    'sha256:ee3625fe16796cc04b410fa3dbeadaf3e85e65bfa197040b2864e368112f5123',
   ui: {
     siteTitleSuffix: 'Portail officiel du serveur Minecraft public et gratuit',
     homeTitleParts: ['Ace', 'server'],
@@ -1397,13 +1373,7 @@ const fr: LocaleTranslation = {
     'https://store.acecore.net': 'Boutique',
     'https://asv-wiki.acecore.net': 'WIKI',
   },
-  announcements: {
-    'portal-renewal-2026': {
-      title: 'Le portail Aceserver a été renouvelé',
-      text: 'Nous avons amélioré l’accès aux vidéos, aux cartes et au WIKI, y compris sur mobile.',
-      linkLabel: 'Voir les cartes',
-    },
-  },
+  announcements: {},
   pages: {
     top: homePage(
       'Portail Aceserver',
@@ -1488,7 +1458,7 @@ const fr: LocaleTranslation = {
 
 const ko: LocaleTranslation = {
   sourceHash:
-    'sha256:c6fcfc184301b3707bbd29e4e78b85243ff6bda84a6950974ae52bb9e5ab6138',
+    'sha256:ee3625fe16796cc04b410fa3dbeadaf3e85e65bfa197040b2864e368112f5123',
   ui: {
     siteTitleSuffix: '무료 공개 Minecraft 서버 공식 포털',
     homeTitleParts: ['Ace', 'server'],
@@ -1644,13 +1614,7 @@ const ko: LocaleTranslation = {
     'https://store.acecore.net': '스토어',
     'https://asv-wiki.acecore.net': 'WIKI',
   },
-  announcements: {
-    'portal-renewal-2026': {
-      title: 'Aceserver 포털을 새롭게 단장했습니다',
-      text: '동영상, 월드 지도, WIKI로 가는 길을 정리하고 모바일 사용성도 개선했습니다.',
-      linkLabel: '월드 지도 보기',
-    },
-  },
+  announcements: {},
   pages: {
     top: homePage(
       'Aceserver 포털',
@@ -1732,7 +1696,7 @@ const ko: LocaleTranslation = {
 
 const de: LocaleTranslation = {
   sourceHash:
-    'sha256:c6fcfc184301b3707bbd29e4e78b85243ff6bda84a6950974ae52bb9e5ab6138',
+    'sha256:ee3625fe16796cc04b410fa3dbeadaf3e85e65bfa197040b2864e368112f5123',
   ui: {
     siteTitleSuffix:
       'Offizielles Portal des kostenlosen öffentlichen Minecraft-Servers',
@@ -1892,13 +1856,7 @@ const de: LocaleTranslation = {
     'https://store.acecore.net': 'Shop',
     'https://asv-wiki.acecore.net': 'WIKI',
   },
-  announcements: {
-    'portal-renewal-2026': {
-      title: 'Das Aceserver Portal wurde erneuert',
-      text: 'Wir haben den Zugang zu Videos, Weltkarten und WIKI auch auf Smartphones verbessert.',
-      linkLabel: 'Weltkarten ansehen',
-    },
-  },
+  announcements: {},
   pages: {
     top: homePage(
       'Aceserver Portal',
@@ -1983,7 +1941,7 @@ const de: LocaleTranslation = {
 
 const ru: LocaleTranslation = {
   sourceHash:
-    'sha256:c6fcfc184301b3707bbd29e4e78b85243ff6bda84a6950974ae52bb9e5ab6138',
+    'sha256:ee3625fe16796cc04b410fa3dbeadaf3e85e65bfa197040b2864e368112f5123',
   ui: {
     siteTitleSuffix:
       'Официальный портал бесплатного публичного сервера Minecraft',
@@ -2138,13 +2096,7 @@ const ru: LocaleTranslation = {
     'https://store.acecore.net': 'Магазин',
     'https://asv-wiki.acecore.net': 'WIKI',
   },
-  announcements: {
-    'portal-renewal-2026': {
-      title: 'Портал Aceserver обновлён',
-      text: 'Мы улучшили доступ к видео, картам миров и WIKI, в том числе на смартфонах.',
-      linkLabel: 'Смотреть карты миров',
-    },
-  },
+  announcements: {},
   pages: {
     top: homePage(
       'Портал Aceserver',
