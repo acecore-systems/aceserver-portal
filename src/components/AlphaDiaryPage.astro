@@ -19,6 +19,7 @@ const fixturesEnabled = import.meta.env.DEV
   data-endpoint="/api/alpha-diary"
   data-fixtures={String(fixturesEnabled)}
   data-locale={locale}
+  data-record-kind="loading"
 >
   <script
     type="application/json"
@@ -32,8 +33,14 @@ const fixturesEnabled = import.meta.env.DEV
     </div>
     <div class="diary-hero__inner">
       <div class="diary-hero__copy">
-        <p class="diary-eyebrow">{copy.eyebrow}</p>
-        <h1>{copy.title}</h1>
+        <p class="diary-eyebrow">
+          <span class="diary-mode-copy">{copy.eyebrow}</span>
+          <span class="observation-mode-copy">{copy.dateLabel}</span>
+        </p>
+        <h1>
+          <span class="diary-mode-copy">{copy.title}</span>
+          <span class="observation-mode-copy">{copy.observationKind}</span>
+        </h1>
       </div>
       <div class="diary-hero__portrait" aria-hidden="true">
         <span class="diary-hero__sun"></span>
@@ -43,6 +50,9 @@ const fixturesEnabled = import.meta.env.DEV
           width="256"
           height="256"
         />
+        <span class="diary-hero__archive-mark">
+          <Icon name="notebook-pen" />
+        </span>
       </div>
     </div>
   </header>
@@ -155,7 +165,12 @@ const fixturesEnabled = import.meta.env.DEV
             <div class="diary-questions__heading">
               <span aria-hidden="true">?</span>
               <div>
-                <h3 id="diary-question-title">{copy.questionsTitle}</h3>
+                <h3 id="diary-question-title">
+                  <span class="diary-mode-copy">{copy.questionsTitle}</span>
+                  <span class="observation-mode-copy"
+                    >{copy.observationQuestionsTitle}</span
+                  >
+                </h3>
                 <p>{copy.questionsLead}</p>
               </div>
             </div>
@@ -365,6 +380,11 @@ const fixturesEnabled = import.meta.env.DEV
       );
     color: var(--diary-ink);
     overflow: clip;
+  }
+
+  .observation-mode-copy,
+  .diary-hero__archive-mark {
+    display: none;
   }
 
   .diary-hero {
@@ -678,6 +698,293 @@ const fixturesEnabled = import.meta.env.DEV
       ),
       #e6d8b3;
     filter: saturate(0.72) contrast(1.04);
+  }
+
+  .alpha-diary[data-record-kind='observation'] {
+    --diary-ink: #20282d;
+    --diary-brown: #3d4b54;
+    --diary-paper: #f0eee7;
+    background: #26333c;
+    color: #20282d;
+  }
+
+  .alpha-diary[data-record-kind='observation'] .diary-mode-copy,
+  .alpha-diary[data-record-kind='observation'] .diary-hero__sky,
+  .alpha-diary[data-record-kind='observation'] .diary-hero__sun,
+  .alpha-diary[data-record-kind='observation'] .diary-hero__portrait img,
+  .alpha-diary[data-record-kind='observation'] .diary-paper__rings,
+  .alpha-diary[data-record-kind='observation'] .diary-paper__rule,
+  .alpha-diary[data-record-kind='observation'] .diary-tape,
+  .alpha-diary[data-record-kind='observation']
+    .diary-questions__heading
+    > span {
+    display: none;
+  }
+
+  .alpha-diary[data-record-kind='observation'] .observation-mode-copy,
+  .alpha-diary[data-record-kind='observation'] .diary-hero__archive-mark {
+    display: inline-flex;
+  }
+
+  .alpha-diary[data-record-kind='observation'] .diary-hero {
+    border-bottom: 1px solid #66747d;
+    background: #1f2b33;
+  }
+
+  .alpha-diary[data-record-kind='observation'] .diary-hero::after {
+    display: none;
+  }
+
+  .alpha-diary[data-record-kind='observation'] .diary-hero__inner {
+    grid-template-columns: minmax(0, 1fr) auto;
+    min-height: 148px;
+    padding: 28px 0 25px;
+  }
+
+  .alpha-diary[data-record-kind='observation'] .diary-eyebrow {
+    margin-bottom: 8px;
+    border: 0;
+    background: transparent;
+    padding: 0;
+    color: #aebbc2;
+    font-family: ui-monospace, 'Noto Sans JP', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.16em;
+    box-shadow: none;
+    transform: none;
+  }
+
+  .alpha-diary[data-record-kind='observation'] .diary-hero h1 {
+    color: #f1efe8;
+    font-family: 'Yu Mincho', 'Hiragino Mincho ProN', serif;
+    font-size: clamp(2.15rem, 4.5vw, 3.65rem);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-shadow: none;
+  }
+
+  .alpha-diary[data-record-kind='observation'] .diary-hero__portrait {
+    display: grid;
+    width: 88px;
+    height: 88px;
+    place-items: center;
+    border: 1px solid #697982;
+    color: #c7d0d4;
+  }
+
+  .alpha-diary[data-record-kind='observation'] .diary-hero__archive-mark {
+    align-items: center;
+    justify-content: center;
+    font-size: 2.65rem;
+  }
+
+  .alpha-diary[data-record-kind='observation'] .diary-shell {
+    grid-template-columns: 270px minmax(0, 900px);
+    gap: 18px;
+    width: min(1220px, calc(100% - 32px));
+    margin-top: 24px;
+  }
+
+  .alpha-diary[data-record-kind='observation'] .diary-sidebar {
+    gap: 14px;
+  }
+
+  .alpha-diary[data-record-kind='observation'] .diary-control-card,
+  .alpha-diary[data-record-kind='observation'] .diary-latest {
+    border: 1px solid #9ba3a4;
+    border-radius: 0;
+    background: #e8e9e5;
+    box-shadow: none;
+  }
+
+  .alpha-diary[data-record-kind='observation'] .diary-control-card__label {
+    border-bottom: 1px solid #7c878c;
+    padding-bottom: 10px;
+  }
+
+  .alpha-diary[data-record-kind='observation']
+    .diary-control-card__label
+    :global(svg) {
+    color: #44555e;
+  }
+
+  .alpha-diary[data-record-kind='observation'] .diary-date-form input,
+  .alpha-diary[data-record-kind='observation'] .diary-button,
+  .alpha-diary[data-record-kind='observation'] .diary-day-nav button,
+  .alpha-diary[data-record-kind='observation'] .diary-latest button {
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .alpha-diary[data-record-kind='observation'] .diary-date-form input {
+    border: 1px solid #66747a;
+    background: #f8f8f4;
+    font-family: ui-monospace, 'Noto Sans JP', monospace;
+  }
+
+  .alpha-diary[data-record-kind='observation'] .diary-button--gold {
+    border-color: #25343c;
+    background: #25343c;
+    color: #f7f6f0;
+  }
+
+  .alpha-diary[data-record-kind='observation'] .diary-day-nav {
+    gap: 1px;
+    border: 1px solid #829095;
+    background: #829095;
+  }
+
+  .alpha-diary[data-record-kind='observation'] .diary-day-nav button {
+    background: #eef0ed;
+    color: #34444c;
+  }
+
+  .alpha-diary[data-record-kind='observation'] .diary-day-nav button:hover,
+  .alpha-diary[data-record-kind='observation']
+    .diary-day-nav
+    button:focus-visible {
+    background: #d9e0e1;
+  }
+
+  .alpha-diary[data-record-kind='observation'] .diary-reset {
+    color: #d4dade;
+  }
+
+  .alpha-diary[data-record-kind='observation'] .diary-paper {
+    min-height: 640px;
+    border: 1px solid #999d9a;
+    border-radius: 0;
+    background:
+      linear-gradient(rgba(58, 72, 79, 0.04) 1px, transparent 1px) 0 0 / 100%
+        31px,
+      #f0eee7;
+    padding: clamp(28px, 4vw, 46px);
+    box-shadow: 0 18px 50px rgba(10, 18, 23, 0.32);
+    filter: none;
+  }
+
+  .alpha-diary[data-record-kind='observation'] .diary-entry {
+    display: grid;
+    grid-template-columns: minmax(0, 1.55fr) minmax(230px, 0.85fr);
+    gap: 24px 26px;
+  }
+
+  .alpha-diary[data-record-kind='observation'] .diary-entry__header,
+  .alpha-diary[data-record-kind='observation'] .diary-entry > h2,
+  .alpha-diary[data-record-kind='observation'] .diary-questions {
+    grid-column: 1 / -1;
+  }
+
+  .alpha-diary[data-record-kind='observation'] .diary-entry__header {
+    align-items: end;
+    border-bottom: 1px solid #66747a;
+    padding-bottom: 12px;
+  }
+
+  .alpha-diary[data-record-kind='observation'] .diary-kind {
+    border: 0;
+    background: transparent;
+    padding: 0;
+    color: #3f5159;
+    font-family: ui-monospace, 'Noto Sans JP', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.16em;
+    transform: none;
+  }
+
+  .alpha-diary[data-record-kind='observation'] .diary-entry time {
+    color: #1e292e;
+    font-family: 'Yu Mincho', 'Hiragino Mincho ProN', serif;
+    font-size: 1.35rem;
+    font-weight: 600;
+  }
+
+  .alpha-diary[data-record-kind='observation'] .diary-record-id {
+    border: 1px solid #7d3f3b;
+    padding: 6px 9px;
+    color: #713d39;
+    transform: none;
+  }
+
+  .alpha-diary[data-record-kind='observation'] .diary-entry > h2 {
+    margin: 0;
+    color: #202b30;
+    font-family: 'Yu Mincho', 'Hiragino Mincho ProN', serif;
+    font-size: clamp(1.55rem, 3vw, 2.25rem);
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-align: left;
+    text-decoration: none;
+  }
+
+  .alpha-diary[data-record-kind='observation'] .diary-drawing {
+    max-width: none;
+    margin: 0;
+  }
+
+  .alpha-diary[data-record-kind='observation'] .diary-drawing__mat {
+    border: 1px solid #6f7878;
+    background: #d9d8d1;
+    padding: 8px;
+    box-shadow: none;
+  }
+
+  .alpha-diary[data-record-kind='observation'] .diary-drawing img {
+    background: #ece9df;
+    filter: sepia(0.12) saturate(0.82) contrast(1.06);
+  }
+
+  .alpha-diary[data-record-kind='observation'] .diary-entry__body {
+    align-self: stretch;
+    max-width: none;
+    margin: 0;
+    border-left: 1px solid #879093;
+    padding-left: 24px;
+    color: #29363c;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    line-height: 1.9;
+  }
+
+  .alpha-diary[data-record-kind='observation'] .diary-questions {
+    margin-top: 10px;
+    border-top: 1px solid #637178;
+    padding-top: 20px;
+  }
+
+  .alpha-diary[data-record-kind='observation'] .diary-questions__heading {
+    display: block;
+  }
+
+  .alpha-diary[data-record-kind='observation'] .diary-questions h3 {
+    color: #253239;
+    font-family: 'Yu Mincho', 'Hiragino Mincho ProN', serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.05em;
+  }
+
+  .alpha-diary[data-record-kind='observation'] .diary-questions p {
+    color: #536168;
+  }
+
+  .alpha-diary[data-record-kind='observation'] :global(.diary-question) {
+    border: 1px solid #77858a;
+    border-radius: 0;
+    background: #e3e7e5;
+    color: #26343a;
+  }
+
+  .alpha-diary[data-record-kind='observation'] :global(.diary-question:hover),
+  .alpha-diary[data-record-kind='observation']
+    :global(.diary-question:focus-visible) {
+    border-color: #304a56;
+    background: #d4dddf;
+  }
+
+  .alpha-diary[data-record-kind='observation'] :global(.diary-question strong) {
+    color: #394f59;
   }
   .diary-paper[data-record-kind='future'] {
     background: #fffdf4;
@@ -1708,6 +2015,34 @@ const fixturesEnabled = import.meta.env.DEV
     .diary-reset {
       grid-column: 2;
     }
+    .alpha-diary[data-record-kind='observation'] .diary-hero__inner {
+      grid-template-columns: minmax(0, 1fr) 76px;
+      min-height: 132px;
+    }
+    .alpha-diary[data-record-kind='observation'] .diary-hero__portrait {
+      width: 72px;
+      height: 72px;
+    }
+    .alpha-diary[data-record-kind='observation'] .diary-shell {
+      grid-template-columns: 1fr;
+    }
+    .alpha-diary[data-record-kind='observation'] .diary-sidebar {
+      grid-template-columns: 1fr 1fr;
+    }
+    .alpha-diary[data-record-kind='observation'] .diary-entry {
+      grid-template-columns: 1fr;
+    }
+    .alpha-diary[data-record-kind='observation'] .diary-entry__header,
+    .alpha-diary[data-record-kind='observation'] .diary-entry > h2,
+    .alpha-diary[data-record-kind='observation'] .diary-questions {
+      grid-column: 1;
+    }
+    .alpha-diary[data-record-kind='observation'] .diary-entry__body {
+      border-top: 1px solid #879093;
+      border-left: 0;
+      padding-top: 20px;
+      padding-left: 0;
+    }
   }
 
   @media (max-width: 600px) {
@@ -1719,11 +2054,27 @@ const fixturesEnabled = import.meta.env.DEV
         #f3e4bd 16rem 100%
       );
     }
+    .alpha-diary[data-record-kind='observation'] {
+      background: #26333c;
+    }
     .diary-hero__inner {
       grid-template-columns: 1fr 96px;
       width: min(100% - 28px, 1180px);
       min-height: 205px;
       padding: 30px 0 28px;
+    }
+    .alpha-diary[data-record-kind='observation'] .diary-hero__inner {
+      grid-template-columns: minmax(0, 1fr) 58px;
+      min-height: 112px;
+      padding: 20px 0;
+    }
+    .alpha-diary[data-record-kind='observation'] .diary-hero h1 {
+      font-size: clamp(1.8rem, 10vw, 2.7rem);
+    }
+    .alpha-diary[data-record-kind='observation'] .diary-hero__portrait {
+      width: 54px;
+      height: 54px;
+      font-size: 0.8rem;
     }
     .diary-hero h1 {
       font-size: clamp(2rem, 12vw, 3.2rem);
@@ -1777,6 +2128,17 @@ const fixturesEnabled = import.meta.env.DEV
           rgba(85, 75, 58, 0.13) 35px 36px
         ),
         #e6d8b3;
+    }
+    .alpha-diary[data-record-kind='observation'] .diary-paper {
+      border-width: 1px;
+      background:
+        linear-gradient(rgba(58, 72, 79, 0.04) 1px, transparent 1px) 0 0 / 100%
+          29px,
+        #f0eee7;
+      padding: 24px 18px 34px;
+    }
+    .alpha-diary[data-record-kind='observation'] .diary-sidebar {
+      grid-template-columns: 1fr;
     }
     .diary-paper__rings {
       left: 10px;

@@ -32,6 +32,7 @@ export type AlphaDiaryUi = {
   openedRecords: string
   previousDay: string
   questionsLead: string
+  observationQuestionsTitle: string
   questionsTitle: string
   reducedMotion: string
   replay: string
@@ -92,6 +93,7 @@ const alphaDiaryUi = {
     previousDay: '前の日',
     questionsLead:
       'まだ書かれていないことは、アルファ君に聞けます。選んだ言葉は入力欄に置かれるだけで、送るのはあなたです。',
+    observationQuestionsTitle: 'この記録について聞く',
     questionsTitle: 'この日のことを聞く',
     reducedMotion: '動きを抑えて開く',
     replay: '最後の記録をもう一度開く',
@@ -152,6 +154,7 @@ const alphaDiaryUi = {
     previousDay: 'Previous day',
     questionsLead:
       'You can ask Alpha-kun about what is still unwritten. The chosen words are only placed in the box; you decide whether to send them.',
+    observationQuestionsTitle: 'Ask about this record',
     questionsTitle: 'Ask about this day',
     reducedMotion: 'Open with reduced motion',
     replay: 'Open the last record again',
@@ -208,6 +211,7 @@ const alphaDiaryUi = {
     previousDay: '前一天',
     questionsLead:
       '还没有写下来的事，可以去问阿尔法君。选中的话只会放进输入框，是否发送由你决定。',
+    observationQuestionsTitle: '询问这份记录',
     questionsTitle: '询问这一天',
     reducedMotion: '减少动态后打开',
     replay: '再次打开最后的记录',
@@ -267,6 +271,7 @@ const alphaDiaryUi = {
     previousDay: 'Día anterior',
     questionsLead:
       'Puedes preguntar a Alpha-kun por lo que aún no está escrito. Las palabras elegidas solo se colocan en el campo; tú decides si enviarlas.',
+    observationQuestionsTitle: 'Preguntar por este registro',
     questionsTitle: 'Preguntar por este día',
     reducedMotion: 'Abrir con movimiento reducido',
     replay: 'Abrir de nuevo el último registro',
@@ -328,6 +333,7 @@ const alphaDiaryUi = {
     previousDay: 'Dia anterior',
     questionsLead:
       'Você pode perguntar ao Alpha-kun sobre o que ainda não foi escrito. As palavras escolhidas só vão para o campo; você decide se quer enviá-las.',
+    observationQuestionsTitle: 'Perguntar sobre este registro',
     questionsTitle: 'Perguntar sobre este dia',
     reducedMotion: 'Abrir com menos movimento',
     replay: 'Abrir o último registro novamente',
@@ -389,6 +395,7 @@ const alphaDiaryUi = {
     previousDay: 'Jour précédent',
     questionsLead:
       'Vous pouvez demander à Alpha-kun ce qui n’est pas encore écrit. Les mots choisis sont seulement placés dans le champ ; vous décidez de les envoyer.',
+    observationQuestionsTitle: 'Demander au sujet de cette observation',
     questionsTitle: 'Demander ce qui s’est passé ce jour-là',
     reducedMotion: 'Ouvrir avec moins de mouvements',
     replay: 'Ouvrir de nouveau la dernière archive',
@@ -450,6 +457,7 @@ const alphaDiaryUi = {
     previousDay: '이전 날',
     questionsLead:
       '아직 적히지 않은 것은 알파군에게 물어볼 수 있습니다. 고른 말은 입력칸에 놓일 뿐이며, 보낼지는 당신이 정합니다.',
+    observationQuestionsTitle: '이 기록에 대해 묻기',
     questionsTitle: '이날의 일을 묻기',
     reducedMotion: '움직임을 줄여서 열기',
     replay: '마지막 기록 다시 열기',
@@ -511,6 +519,7 @@ const alphaDiaryUi = {
     previousDay: 'Vorheriger Tag',
     questionsLead:
       'Du kannst Alpha-kun nach dem fragen, was noch nicht geschrieben ist. Die gewählten Worte werden nur ins Feld gelegt; du entscheidest, ob du sie sendest.',
+    observationQuestionsTitle: 'Nach dieser Aufzeichnung fragen',
     questionsTitle: 'Nach diesem Tag fragen',
     reducedMotion: 'Mit weniger Bewegung öffnen',
     replay: 'Die letzte Aufzeichnung erneut öffnen',
@@ -572,6 +581,7 @@ const alphaDiaryUi = {
     previousDay: 'Предыдущий день',
     questionsLead:
       'О том, что ещё не записано, можно спросить Альфа-куна. Выбранные слова лишь появятся в поле; отправлять их или нет — решаете вы.',
+    observationQuestionsTitle: 'Спросить об этой записи',
     questionsTitle: 'Спросить об этом дне',
     reducedMotion: 'Открыть с уменьшенным движением',
     replay: 'Снова открыть последнюю запись',
