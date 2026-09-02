@@ -112,6 +112,29 @@ test('journey and goal mechanics stay internal instead of being rendered or seri
   assert.match(script, /unlockedPanel\.hidden = !journey\.unlocked/u)
 })
 
+test('visible diary copy does not explain generation, sharing, or internal versions', async () => {
+  const component = await readFile(
+    new URL('../src/components/AlphaDiaryPage.astro', import.meta.url),
+    'utf8',
+  )
+  const allCopy = LOCALES.flatMap((locale) =>
+    Object.values(getAlphaDiaryUi(locale)),
+  ).join('\n')
+
+  assert.doesNotMatch(
+    allCopy,
+    /初めて開かれる|全員に同じ|opened for the first time|same page will remain for everyone|首次打开|所有人都会看到同一页|abierta por primera vez|quedará para todos|aberta pela primeira vez|ficará para todos|ouverte pour la première fois|pour tout le monde|처음 열리는|모두에게 같은|erstmals geöffnet|für alle erhalten|открытой впервые|останется для всех/iu,
+  )
+  assert.doesNotMatch(
+    allCopy,
+    /共有された|shared diary|entradas compartidas|páginas compartilhadas|pages partagées|공유된 일기|gemeinsam genutzten|общие страницы/iu,
+  )
+  assert.doesNotMatch(component, /CONTENT NOTICE \/ v\d+/u)
+  assert.match(getAlphaDiaryUi('ja').loadingBody, /鉛筆を走らせる音/u)
+  assert.match(getAlphaDiaryUi('ja').questionsLead, /送るのはあなた/u)
+  assert.match(getAlphaDiaryUi('ja').finaleBody, /心理的ホラー/u)
+})
+
 test('the final sequence keeps explicit choices, escape, reduced motion, and no audio', async () => {
   const [component, script] = await Promise.all([
     readFile(
