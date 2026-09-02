@@ -87,6 +87,23 @@ test('future dates reach the custom tomorrow message instead of native form bloc
   assert.match(futureGuard, /return false/u)
 })
 
+test('the arbitrary older-record jump is absent while calendar date selection remains', async () => {
+  const [component, copySource, script] = await Promise.all([
+    readFile(
+      new URL('../src/components/AlphaDiaryPage.astro', import.meta.url),
+      'utf8',
+    ),
+    readFile(new URL('../src/data/alpha-diary-ui.ts', import.meta.url), 'utf8'),
+    readFile(new URL('../src/scripts/alpha-diary.ts', import.meta.url), 'utf8'),
+  ])
+
+  assert.doesNotMatch(component, /data-diary-deeper/u)
+  assert.doesNotMatch(copySource, /\bdeeper:/u)
+  assert.doesNotMatch(script, /getDeeperDate/u)
+  assert.match(component, /data-diary-date-form novalidate/u)
+  assert.match(script, /loadEntry\(dateInput\.value, \{ history: 'push' \}\)/u)
+})
+
 test('journey and goal mechanics stay internal instead of being rendered or serialized as copy', async () => {
   const [component, copySource, script] = await Promise.all([
     readFile(

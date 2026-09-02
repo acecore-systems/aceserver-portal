@@ -831,13 +831,6 @@ export function initAlphaDiary() {
         )
         return
       }
-      if (target.closest('[data-diary-deeper]')) {
-        void loadEntry(
-          getDeeperDate(currentDate || dateInput.value || serverToday),
-          { history: 'push' },
-        )
-        return
-      }
       if (target.closest('[data-diary-reset]')) {
         if (!window.confirm(copy.resetConfirm)) return
         removeStorage(JOURNEY_STORAGE_KEY)
@@ -1302,14 +1295,6 @@ function shiftDate(value: string, days: number): string {
     String(date.getUTCMonth() + 1).padStart(2, '0'),
     String(date.getUTCDate()).padStart(2, '0'),
   ].join('-')
-}
-
-function getDeeperDate(value: string): string {
-  if (value >= BIRTH_BOUNDARY) return '2019-11-13'
-  const [year, month, day] = value.split('-').map(Number)
-  const nextYear = Math.max(1, year - Math.max(1, Math.ceil((2020 - year) / 4)))
-  const nextDay = month === 2 && day === 29 && !isLeapYear(nextYear) ? 28 : day
-  return `${String(nextYear).padStart(4, '0')}-${String(month).padStart(2, '0')}-${String(nextDay).padStart(2, '0')}`
 }
 
 function formatRecordDate(value: string, locale: string): string {
