@@ -118,8 +118,17 @@ export function initAlphaDiary() {
     statusRegion.textContent = message
   }
 
-  function setLoading() {
-    paper.dataset.recordKind = 'loading'
+  function setRecordKind(
+    surfaceKind: 'diary' | 'observation' | 'loading' | 'future' | 'failed',
+    paperKind = surfaceKind,
+  ) {
+    root.dataset.recordKind = surfaceKind
+    paper.dataset.recordKind = paperKind
+    paper.classList.toggle('is-old-record', surfaceKind === 'observation')
+  }
+
+  function setLoading(surfaceKind: 'loading' | 'observation' = 'loading') {
+    setRecordKind(surfaceKind, 'loading')
     statePanel.hidden = false
     entryPanel.hidden = true
     setStateContent(copy.loadingTitle, copy.loadingBody, true)
@@ -144,7 +153,7 @@ export function initAlphaDiary() {
 
   function renderFuture() {
     clearPending()
-    paper.dataset.recordKind = 'future'
+    setRecordKind('future')
     statePanel.hidden = false
     entryPanel.hidden = true
     setStateContent(copy.futureTitle, copy.futureBody)
@@ -153,7 +162,10 @@ export function initAlphaDiary() {
 
   function renderFailure() {
     clearPending()
-    paper.dataset.recordKind = 'failed'
+    setRecordKind(
+      currentDate < BIRTH_BOUNDARY ? 'observation' : 'failed',
+      'failed',
+    )
     statePanel.hidden = false
     entryPanel.hidden = true
     setStateContent(copy.failureTitle, copy.failureBody)
@@ -170,8 +182,7 @@ export function initAlphaDiary() {
     openedDates = addOpenedDate(openedDates, entry.date)
     writeStorage(OPENED_DATES_STORAGE_KEY, JSON.stringify(openedDates))
 
-    paper.dataset.recordKind = entry.kind
-    paper.classList.toggle('is-old-record', entry.kind === 'observation')
+    setRecordKind(entry.kind)
     statePanel.hidden = true
     entryPanel.hidden = false
     requiredElement<HTMLElement>(entryPanel, '[data-diary-kind]').textContent =
@@ -281,7 +292,7 @@ export function initAlphaDiary() {
     clearPending()
     requestController?.abort()
     requestController = new AbortController()
-    setLoading()
+    setLoading(date && date < BIRTH_BOUNDARY ? 'observation' : 'loading')
 
     try {
       const fixture = getFixturePayload(root, copy, date || serverToday)

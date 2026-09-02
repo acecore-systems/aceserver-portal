@@ -104,6 +104,34 @@ test('the arbitrary older-record jump is absent while calendar date selection re
   assert.match(script, /loadEntry\(dateInput\.value, \{ history: 'push' \}\)/u)
 })
 
+test('observation records switch from the picture diary to a staff archive surface', async () => {
+  const [component, script] = await Promise.all([
+    readFile(
+      new URL('../src/components/AlphaDiaryPage.astro', import.meta.url),
+      'utf8',
+    ),
+    readFile(new URL('../src/scripts/alpha-diary.ts', import.meta.url), 'utf8'),
+  ])
+
+  for (const locale of LOCALES) {
+    assert.ok(getAlphaDiaryUi(locale).observationQuestionsTitle.length > 0)
+  }
+  assert.match(component, /data-record-kind="loading"/u)
+  assert.match(component, /class="diary-hero__archive-mark"/u)
+  assert.match(
+    component,
+    /\.alpha-diary\[data-record-kind='observation'\] \.diary-entry/u,
+  )
+  assert.match(component, /grid-template-columns: minmax\(0, 1\.55fr\)/u)
+  assert.match(component, /\.diary-paper__rings,/u)
+  assert.match(component, /\.diary-tape,/u)
+  assert.match(script, /root\.dataset\.recordKind = surfaceKind/u)
+  assert.match(
+    script,
+    /setLoading\(date && date < BIRTH_BOUNDARY \? 'observation' : 'loading'\)/u,
+  )
+})
+
 test('journey and goal mechanics stay internal instead of being rendered or serialized as copy', async () => {
   const [component, copySource, script] = await Promise.all([
     readFile(
