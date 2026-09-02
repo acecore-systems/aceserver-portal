@@ -80,10 +80,6 @@ const fixturesEnabled = import.meta.env.DEV
             <Icon name="chevron-right" />
           </button>
         </div>
-        <button type="button" class="diary-deeper" data-diary-deeper>
-          <Icon name="archive-restore" />
-          <span>{copy.deeper}</span>
-        </button>
       </section>
 
       <section class="diary-latest" data-diary-latest hidden>
@@ -587,7 +583,6 @@ const fixturesEnabled = import.meta.env.DEV
     margin-top: 12px;
   }
   .diary-day-nav button,
-  .diary-deeper,
   .diary-reset,
   .diary-latest button {
     border: 0;
@@ -609,17 +604,6 @@ const fixturesEnabled = import.meta.env.DEV
   .diary-day-nav button:focus-visible {
     background: #d6edca;
   }
-  .diary-deeper {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    margin-top: 10px;
-    border-top: 1px dashed #9a7b56;
-    padding: 13px 4px 0;
-  }
-
   .diary-latest {
     padding: 15px;
     background: #ecf9e6;

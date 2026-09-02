@@ -6,7 +6,6 @@ export type AlphaDiaryUi = {
   cancelGate: string
   confirmAdult: string
   dateLabel: string
-  deeper: string
   diaryKind: string
   eyebrow: string
   failureBody: string
@@ -57,7 +56,6 @@ const alphaDiaryUi = {
     cancelGate: '今は見ない',
     confirmAdult: '18歳以上です。記録を開く',
     dateLabel: '記録の日付',
-    deeper: 'もっと古い記録へ',
     diaryKind: 'アルファ君の絵日記',
     eyebrow: 'ある一冊の、まだ続いている記録',
     failureBody:
@@ -119,7 +117,6 @@ const alphaDiaryUi = {
     cancelGate: 'Not now',
     confirmAdult: 'I am 18 or older. Open the record',
     dateLabel: 'Record date',
-    deeper: 'Go to an older record',
     diaryKind: "Alpha-kun's picture diary",
     eyebrow: 'One record that is still being written',
     failureBody: 'The record could not be opened. Wait a moment and try again.',
@@ -180,7 +177,6 @@ const alphaDiaryUi = {
     cancelGate: '暂时不看',
     confirmAdult: '我已满18岁，打开记录',
     dateLabel: '记录日期',
-    deeper: '前往更早的记录',
     diaryKind: '阿尔法君的图画日记',
     eyebrow: '一本仍在继续书写的记录',
     failureBody: '暂时无法打开记录。请稍等片刻后重试。',
@@ -235,7 +231,6 @@ const alphaDiaryUi = {
     cancelGate: 'Ahora no',
     confirmAdult: 'Tengo 18 años o más. Abrir el registro',
     dateLabel: 'Fecha del registro',
-    deeper: 'Ir a un registro más antiguo',
     diaryKind: 'Diario ilustrado de Alpha-kun',
     eyebrow: 'Un registro que todavía se está escribiendo',
     failureBody:
@@ -297,7 +292,6 @@ const alphaDiaryUi = {
     cancelGate: 'Agora não',
     confirmAdult: 'Tenho 18 anos ou mais. Abrir o registro',
     dateLabel: 'Data do registro',
-    deeper: 'Ir para um registro mais antigo',
     diaryKind: 'Diário ilustrado do Alpha-kun',
     eyebrow: 'Um registro que ainda está sendo escrito',
     failureBody:
@@ -359,7 +353,6 @@ const alphaDiaryUi = {
     cancelGate: 'Pas maintenant',
     confirmAdult: 'J’ai 18 ans ou plus. Ouvrir l’archive',
     dateLabel: 'Date de l’archive',
-    deeper: 'Aller vers une archive plus ancienne',
     diaryKind: 'Journal illustré d’Alpha-kun',
     eyebrow: 'Un registre qui continue de s’écrire',
     failureBody:
@@ -422,7 +415,6 @@ const alphaDiaryUi = {
     cancelGate: '지금은 보지 않기',
     confirmAdult: '만 18세 이상입니다. 기록 열기',
     dateLabel: '기록 날짜',
-    deeper: '더 오래된 기록으로',
     diaryKind: '알파군의 그림일기',
     eyebrow: '아직도 이어지고 있는 한 권의 기록',
     failureBody: '기록을 열지 못했습니다. 잠시 뒤 다시 시도해 주세요.',
@@ -483,7 +475,6 @@ const alphaDiaryUi = {
     cancelGate: 'Jetzt nicht',
     confirmAdult: 'Ich bin mindestens 18. Aufzeichnung öffnen',
     dateLabel: 'Datum der Aufzeichnung',
-    deeper: 'Zu einer älteren Aufzeichnung',
     diaryKind: 'Alpha-kuns Bildertagebuch',
     eyebrow: 'Eine Aufzeichnung, die noch immer weitergeschrieben wird',
     failureBody:
@@ -545,7 +536,6 @@ const alphaDiaryUi = {
     cancelGate: 'Не сейчас',
     confirmAdult: 'Мне есть 18 лет. Открыть запись',
     dateLabel: 'Дата записи',
-    deeper: 'Перейти к более старой записи',
     diaryKind: 'Дневник с рисунками Альфа-куна',
     eyebrow: 'Одна запись, которая всё ещё продолжается',
     failureBody:
