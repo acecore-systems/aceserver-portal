@@ -132,6 +132,29 @@ test('observation records switch from the picture diary to a staff archive surfa
   )
 })
 
+test('past observation records load as existing archive pages instead of being written now', async () => {
+  const script = await readFile(
+    new URL('../src/scripts/alpha-diary.ts', import.meta.url),
+    'utf8',
+  )
+  const japaneseCopy = getAlphaDiaryUi('ja')
+
+  for (const locale of LOCALES) {
+    const copy = getAlphaDiaryUi(locale)
+    assert.notEqual(copy.observationLoadingTitle, copy.loadingTitle, locale)
+    assert.notEqual(copy.observationLoadingBody, copy.loadingBody, locale)
+  }
+  assert.match(japaneseCopy.observationLoadingTitle, /保管された記録/u)
+  assert.match(japaneseCopy.observationLoadingBody, /記録庫から/u)
+  assert.doesNotMatch(
+    japaneseCopy.observationLoadingBody,
+    /鉛筆を走らせる|文字と絵が浮かぶ|書いて/u,
+  )
+  assert.match(script, /surfaceKind === 'observation'/u)
+  assert.match(script, /copy\.observationLoadingTitle/u)
+  assert.match(script, /copy\.observationLoadingBody/u)
+})
+
 test('journey and goal mechanics stay internal instead of being rendered or serialized as copy', async () => {
   const [component, copySource, script] = await Promise.all([
     readFile(
