@@ -18,8 +18,10 @@ type DiaryFinale = {
 
 type DiaryPayload = Record<string, unknown> & {
   entry?: DiaryEntry
-  finaleAvailable?: boolean
+  errorCode?: string
+  finaleChallengeAvailable?: boolean
   finale?: DiaryFinale
+  keywordClue?: string
   retryAfter?: number
   serverToday?: string
   status?: string
@@ -61,6 +63,15 @@ export function initAlphaDiary() {
   const paper = requiredElement<HTMLElement>(root, '[data-diary-paper]')
   const statePanel = requiredElement<HTMLElement>(root, '[data-diary-state]')
   const entryPanel = requiredElement<HTMLElement>(root, '[data-diary-entry]')
+  const cluePanel = requiredElement<HTMLElement>(root, '[data-diary-clue]')
+  const finaleKeywordInput = requiredElement<HTMLInputElement>(
+    root,
+    '[data-diary-finale-keyword]',
+  )
+  const finaleKeywordError = requiredElement<HTMLElement>(
+    root,
+    '[data-diary-finale-error]',
+  )
   const statusRegion = requiredElement<HTMLElement>(root, '[data-diary-live]')
   const gateDialog = requiredElement<HTMLDialogElement>(
     root,
@@ -104,7 +115,8 @@ export function initAlphaDiary() {
   }
 
   function setLoading(surfaceKind: 'loading' | 'observation' = 'loading') {
-    setFinaleAvailable(false)
+    setFinaleChallengeAvailable(false)
+    cluePanel.hidden = true
     setRecordKind(surfaceKind, 'loading')
     statePanel.hidden = false
     entryPanel.hidden = true
@@ -138,7 +150,8 @@ export function initAlphaDiary() {
 
   function renderFuture() {
     clearPending()
-    setFinaleAvailable(false)
+    setFinaleChallengeAvailable(false)
+    cluePanel.hidden = true
     setRecordKind('future')
     statePanel.hidden = false
     entryPanel.hidden = true
@@ -148,7 +161,8 @@ export function initAlphaDiary() {
 
   function renderFailure() {
     clearPending()
-    setFinaleAvailable(false)
+    setFinaleChallengeAvailable(false)
+    cluePanel.hidden = true
     setRecordKind(
       currentDate < BIRTH_BOUNDARY ? 'observation' : 'failed',
       'failed',
@@ -159,7 +173,11 @@ export function initAlphaDiary() {
     setStatus(copy.failureTitle)
   }
 
-  function renderEntry(entry: DiaryEntry, finaleAvailable: boolean) {
+  function renderEntry(
+    entry: DiaryEntry,
+    finaleChallengeAvailable: boolean,
+    keywordClue?: string,
+  ) {
     currentEntry = entry
     currentDate = entry.date
     dateInput.value = entry.date
@@ -228,16 +246,31 @@ export function initAlphaDiary() {
       questions.append(button)
     }
 
-    setFinaleAvailable(finaleAvailable)
+    const clueText = requiredElement<HTMLElement>(
+      cluePanel,
+      '[data-diary-clue-text]',
+    )
+    clueText.textContent = keywordClue || ''
+    cluePanel.hidden = !keywordClue
+    finaleKeywordInput.value = ''
+    finaleKeywordError.hidden = true
+    setFinaleChallengeAvailable(finaleChallengeAvailable)
     setStatus(`${formatRecordDate(entry.date, locale)} — ${entry.title}`)
   }
 
-  function setFinaleAvailable(available: boolean) {
+  function setFinaleChallengeAvailable(available: boolean) {
     const unlockedPanel = requiredElement<HTMLElement>(
       root,
       '[data-diary-unlocked]',
     )
     unlockedPanel.hidden = !available
+  }
+
+  function showFinaleKeywordError() {
+    finaleKeywordError.hidden = false
+    setStatus(copy.finaleKeywordIncorrect)
+    finaleKeywordInput.focus()
+    finaleKeywordInput.select()
   }
 
   async function loadEntry(
@@ -296,9 +329,18 @@ export function initAlphaDiary() {
       if (
         payload.status === 'ready' &&
         isDiaryEntry(payload.entry) &&
-        typeof payload.finaleAvailable === 'boolean'
+        typeof payload.finaleChallengeAvailable === 'boolean' &&
+        (payload.keywordClue === undefined ||
+          (!payload.finaleChallengeAvailable &&
+            typeof payload.keywordClue === 'string' &&
+            payload.keywordClue.length >= 1 &&
+            payload.keywordClue.length <= 80))
       ) {
-        renderEntry(payload.entry, payload.finaleAvailable)
+        renderEntry(
+          payload.entry,
+          payload.finaleChallengeAvailable,
+          payload.keywordClue,
+        )
         return true
       }
       if (payload.status === 'pending') {
@@ -330,12 +372,18 @@ export function initAlphaDiary() {
     }
   }
 
-  async function requestFinale() {
+  async function requestFinale(finaleKeyword: string) {
     if (!isValidDate(currentDate)) return
+    const keyword = finaleKeyword.trim()
+    if (!keyword || keyword.length > 80) {
+      showFinaleKeywordError()
+      return
+    }
     if (!hasAdultConsent() && !(await requestAdultConsent())) return
+    finaleKeywordError.hidden = true
     setStatus(copy.loadingTitle)
     try {
-      const fixture = getFixtureFinale(root, copy)
+      const fixture = getFixtureFinale(root, copy, keyword)
       const payload =
         fixture ||
         (await requestDiary(
@@ -344,6 +392,7 @@ export function initAlphaDiary() {
             action: 'finale',
             adultConsentVersion: 1,
             entryDate: currentDate,
+            finaleKeyword: keyword,
             locale,
             version: 2,
           },
@@ -356,9 +405,13 @@ export function initAlphaDiary() {
       }
       if (payload.status === 'pending') {
         pendingTimer = window.setTimeout(
-          () => void requestFinale(),
+          () => void requestFinale(keyword),
           readRetryAfter(payload.retryAfter) * 1000,
         )
+        return
+      }
+      if (payload.errorCode === 'keyword_incorrect') {
+        showFinaleKeywordError()
         return
       }
       renderFailure()
@@ -791,10 +844,6 @@ export function initAlphaDiary() {
         )
         return
       }
-      if (target.closest('[data-diary-open-finale]')) {
-        void requestFinale()
-        return
-      }
       const modeButton = target.closest<HTMLElement>('[data-finale-mode]')
       const mode = modeButton?.dataset.finaleMode
       if (mode === 'horror' || mode === 'reduced' || mode === 'text') {
@@ -859,6 +908,18 @@ export function initAlphaDiary() {
         return
       }
       void loadEntry(dateInput.value, { history: 'push' })
+    },
+    { signal },
+  )
+
+  requiredElement<HTMLFormElement>(
+    root,
+    '[data-diary-finale-form]',
+  ).addEventListener(
+    'submit',
+    (event) => {
+      event.preventDefault()
+      void requestFinale(finaleKeywordInput.value)
     },
     { signal },
   )
@@ -1009,39 +1070,43 @@ function getFixturePayload(
   const fixture = new URL(window.location.href).searchParams.get('fixture')
   if (!fixture) return null
   const today = getJstToday()
-  const archive = fixture === 'archive' || fixture === 'finale'
-  const date = archive
-    ? '2016-12-07'
-    : fixture === 'birth'
-      ? '2020-10-03'
-      : requestedDate || today
+  const archive = fixture === 'archive'
+  const finale = fixture === 'finale'
+  const historical = archive || finale
+  const date = finale
+    ? '2014-03-18'
+    : archive
+      ? '2016-12-07'
+      : fixture === 'birth'
+        ? '2020-10-03'
+        : requestedDate || today
   const entry: DiaryEntry = {
     date,
-    id: `entry_fixture_${archive ? 'observation' : 'diary'}000000000000`,
+    id: `entry_fixture_${historical ? 'observation' : 'diary'}000000000000`,
     image: {
-      alt: archive
+      alt: historical
         ? '退色した観察記録の紙面に、青いボタンと小さな鈴が描かれている。'
         : '青空の下で草の芽を見つけ、笑っているアルファ君の色鉛筆画。',
       assetId: 'fixture',
       height: 768,
       width: 1024,
     },
-    kind: archive ? 'observation' : 'diary',
-    questions: archive
+    kind: historical ? 'observation' : 'diary',
+    questions: historical
       ? [
           '青いボタンを覚えている？',
           'この記録で「音がしない」と書かれたのはなぜ？',
         ]
       : ['今日いちばん嬉しかったことは？', '明日は何をしてみたい？'],
-    text: archive
+    text: historical
       ? '観察対象は、鈴が鳴る前から扉の方を見ていた。\n\n記録者は「偶然」と訂正した。青いボタンだけが、何度消しても同じ場所に描かれている。'
       : 'きょう、スポーン広場のすみで小さな草の芽を見つけたよ。だれかが置いてくれた灯りのそばで、ゆっくり揺れていた。\n\n明日もここにあるかな。見にいく約束を、ぼく自身としてみた。',
-    title: archive ? '音のない鈴' : '小さな芽を見つけた日',
+    title: historical ? '音のない鈴' : '小さな芽を見つけた日',
   }
-  const unlocked = fixture === 'finale'
   return {
     entry,
-    finaleAvailable: unlocked,
+    finaleChallengeAvailable: finale,
+    ...(archive ? { keywordClue: '実験台アルファ' } : {}),
     ok: true,
     serverToday: today,
     status: 'ready',
@@ -1051,10 +1116,21 @@ function getFixturePayload(
 function getFixtureFinale(
   root: HTMLElement,
   copy: AlphaDiaryUi,
+  finaleKeyword: string,
 ): DiaryPayload | null {
   if (root.dataset.fixtures !== 'true') return null
   if (new URL(window.location.href).searchParams.get('fixture') !== 'finale')
     return null
+  if (
+    normalizeFinaleKeyword(finaleKeyword) !==
+    normalizeFinaleKeyword('実験台アルファ')
+  ) {
+    return {
+      errorCode: 'keyword_incorrect',
+      ok: false,
+      status: 'failed',
+    }
+  }
   return {
     finale: {
       landscape: {
@@ -1075,6 +1151,13 @@ function getFixtureFinale(
     serverToday: getJstToday(),
     status: 'ready',
   }
+}
+
+function normalizeFinaleKeyword(value: string) {
+  return value
+    .normalize('NFKC')
+    .toLocaleLowerCase()
+    .replace(/[\p{P}\p{S}\s]/gu, '')
 }
 
 function getClientId(): string {

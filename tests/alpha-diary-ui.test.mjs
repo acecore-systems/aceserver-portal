@@ -155,7 +155,7 @@ test('past observation records load as existing archive pages instead of being w
   assert.match(script, /copy\.observationLoadingBody/u)
 })
 
-test('exploration is user-led without bookmarks, progress counters, or automatic newer-record jumps', async () => {
+test('exploration is user-led from a clue date to a passphrase on the key date', async () => {
   const [component, copySource, script] = await Promise.all([
     readFile(
       new URL('../src/components/AlphaDiaryPage.astro', import.meta.url),
@@ -181,11 +181,23 @@ test('exploration is user-led without bookmarks, progress counters, or automatic
     `${component}\n${copySource}\n${script}`,
     /しおりを外す|journeyToken|OPENED_DATES_STORAGE_KEY|followLatest/u,
   )
+  assert.match(component, /data-diary-clue/u)
+  assert.match(component, /data-diary-finale-form/u)
+  assert.match(component, /data-diary-finale-keyword/u)
+  assert.doesNotMatch(component, /data-diary-open-finale/u)
   assert.match(script, /version: 2/u)
-  assert.match(script, /function setFinaleAvailable\(available: boolean\)/u)
+  assert.match(script, /finaleKeyword: keyword/u)
+  assert.match(script, /payload\.keywordClue/u)
+  assert.match(
+    script,
+    /function setFinaleChallengeAvailable\(available: boolean\)/u,
+  )
   assert.match(script, /unlockedPanel\.hidden = !available/u)
   assert.match(getAlphaDiaryUi('ja').questionsLead, /言葉や日付/u)
   assert.match(getAlphaDiaryUi('ja').questionsLead, /自分で覚えて/u)
+  assert.match(getAlphaDiaryUi('ja').clueLead, /鍵の日付/u)
+  assert.match(getAlphaDiaryUi('ja').unlockedBody, /合言葉/u)
+  assert.match(getAlphaDiaryUi('ja').finaleKeywordIncorrect, /ほかの記録/u)
 })
 
 test('visible diary copy does not explain generation, sharing, or internal versions', async () => {

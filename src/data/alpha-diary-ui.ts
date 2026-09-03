@@ -4,6 +4,8 @@ export type AlphaDiaryUi = {
   askButton: string
   askToday: string
   cancelGate: string
+  clueLabel: string
+  clueLead: string
   confirmAdult: string
   dateLabel: string
   diaryKind: string
@@ -11,6 +13,10 @@ export type AlphaDiaryUi = {
   failureBody: string
   failureTitle: string
   finaleBody: string
+  finaleKeywordIncorrect: string
+  finaleKeywordLabel: string
+  finaleKeywordPlaceholder: string
+  finaleKeywordSubmit: string
   finaleTitle: string
   futureBody: string
   futureTitle: string
@@ -52,6 +58,9 @@ const alphaDiaryUi = {
     askButton: 'アルファ君に聞く',
     askToday: '今日のことを聞く',
     cancelGate: '今は見ない',
+    clueLabel: '消されかけた文字',
+    clueLead:
+      '記録の端に、消されかけた言葉が残っています。鍵の日付で必要になるかもしれません。',
     confirmAdult: '18歳以上です。記録を開く',
     dateLabel: '記録の日付',
     diaryKind: 'アルファ君の絵日記',
@@ -61,6 +70,11 @@ const alphaDiaryUi = {
     failureTitle: 'ページがくっついているみたい',
     finaleBody:
       'この先の記録には、強い心理的ホラー表現があります。開き方はあなたが選べます。',
+    finaleKeywordIncorrect:
+      'その言葉では、最後の一枚は動きません。ほかの記録を探してみてください。',
+    finaleKeywordLabel: '見つけた合言葉',
+    finaleKeywordPlaceholder: '別の記録で見つけた言葉を入力',
+    finaleKeywordSubmit: '合言葉をたしかめる',
     finaleTitle: '最後の一枚が、こちらを向きました',
     futureBody:
       '未来の日記は、未来が来るまで書かれません。明日になったら、また来てね。',
@@ -102,13 +116,16 @@ const alphaDiaryUi = {
     title: 'アルファ君の絵日記',
     today: '今日',
     unlockedBody:
-      'この先には強い心理的ホラー表現があります。開くかどうかと開き方はあなたが決められます。最後のページは、今のアルファ君へ続いています。',
-    unlockedTitle: '記録の奥にある一枚を開けます',
+      '別の記録で見つけた合言葉を入力してください。正しい言葉なら、最後の一枚がこちらを向きます。',
+    unlockedTitle: 'この日付には、鍵穴があります',
   },
   en: {
     askButton: 'Ask Alpha-kun',
     askToday: 'Ask about today',
     cancelGate: 'Not now',
+    clueLabel: 'Nearly erased words',
+    clueLead:
+      'Words remain at the edge of this record, almost erased. You may need them on the key date.',
     confirmAdult: 'I am 18 or older. Open the record',
     dateLabel: 'Record date',
     diaryKind: "Alpha-kun's picture diary",
@@ -117,6 +134,11 @@ const alphaDiaryUi = {
     failureTitle: 'These pages seem stuck together',
     finaleBody:
       'The records ahead contain intense psychological horror. You choose how to open them.',
+    finaleKeywordIncorrect:
+      'Those words do not move the last page. Search the other records.',
+    finaleKeywordLabel: 'Passphrase you found',
+    finaleKeywordPlaceholder: 'Enter the words found in another record',
+    finaleKeywordSubmit: 'Check the passphrase',
     finaleTitle: 'The last page turned toward you',
     futureBody:
       'A future diary is not written until the future arrives. Come back tomorrow.',
@@ -158,13 +180,15 @@ const alphaDiaryUi = {
     title: "Alpha-kun's Picture Diary",
     today: 'Today',
     unlockedBody:
-      'What follows contains intense psychological horror. You decide whether and how to open it. The last page leads to Alpha-kun as he is now.',
-    unlockedTitle: 'A page behind the records can now be opened',
+      'Enter the passphrase you found in another record. If it is correct, the last page will turn toward you.',
+    unlockedTitle: 'There is a keyhole on this date',
   },
   'zh-cn': {
     askButton: '问问阿尔法君',
     askToday: '问问今天的事',
     cancelGate: '暂时不看',
+    clueLabel: '几乎被擦掉的文字',
+    clueLead: '记录边缘还留着几乎被擦掉的话。到了钥匙日期，也许会用得上。',
     confirmAdult: '我已满18岁，打开记录',
     dateLabel: '记录日期',
     diaryKind: '阿尔法君的图画日记',
@@ -172,6 +196,11 @@ const alphaDiaryUi = {
     failureBody: '暂时无法打开记录。请稍等片刻后重试。',
     failureTitle: '这些页面好像粘在一起了',
     finaleBody: '接下来的记录包含强烈的心理恐怖表现。你可以选择打开方式。',
+    finaleKeywordIncorrect:
+      '这句话无法让最后一页翻动。请去其他记录中继续寻找。',
+    finaleKeywordLabel: '你找到的暗语',
+    finaleKeywordPlaceholder: '输入在其他记录中找到的话',
+    finaleKeywordSubmit: '确认暗语',
     finaleTitle: '最后一页转向了你',
     futureBody: '未来的日记要等未来到来才会写下。明天再来吧。',
     futureTitle: '这一页还是空白',
@@ -209,14 +238,16 @@ const alphaDiaryUi = {
     textOnly: '只看文字',
     title: '阿尔法君的图画日记',
     today: '今天',
-    unlockedBody:
-      '前方包含强烈的心理恐怖表现。是否打开以及如何打开都由你决定。最后一页通向现在的阿尔法君。',
-    unlockedTitle: '现在可以打开记录深处的一页',
+    unlockedBody: '请输入你在其他记录中找到的暗语。答对后，最后一页会转向你。',
+    unlockedTitle: '这个日期上有一个钥匙孔',
   },
   es: {
     askButton: 'Preguntar a Alpha-kun',
     askToday: 'Preguntar por hoy',
     cancelGate: 'Ahora no',
+    clueLabel: 'Palabras casi borradas',
+    clueLead:
+      'En el borde del registro quedan unas palabras casi borradas. Quizá las necesites en la fecha clave.',
     confirmAdult: 'Tengo 18 años o más. Abrir el registro',
     dateLabel: 'Fecha del registro',
     diaryKind: 'Diario ilustrado de Alpha-kun',
@@ -226,6 +257,11 @@ const alphaDiaryUi = {
     failureTitle: 'Parece que las páginas están pegadas',
     finaleBody:
       'Los registros que siguen contienen terror psicológico intenso. Tú eliges cómo abrirlos.',
+    finaleKeywordIncorrect:
+      'Esas palabras no mueven la última página. Busca en los demás registros.',
+    finaleKeywordLabel: 'Contraseña que encontraste',
+    finaleKeywordPlaceholder: 'Escribe las palabras de otro registro',
+    finaleKeywordSubmit: 'Comprobar la contraseña',
     finaleTitle: 'La última página se volvió hacia ti',
     futureBody:
       'El diario del futuro no se escribe hasta que el futuro llega. Vuelve mañana.',
@@ -267,13 +303,16 @@ const alphaDiaryUi = {
     title: 'Diario ilustrado de Alpha-kun',
     today: 'Hoy',
     unlockedBody:
-      'Lo que sigue contiene terror psicológico intenso. Tú decides si abrirlo y de qué forma. La última página lleva al Alpha-kun de ahora.',
-    unlockedTitle: 'Ya puedes abrir una página detrás de los registros',
+      'Escribe la contraseña que encontraste en otro registro. Si es correcta, la última página se volverá hacia ti.',
+    unlockedTitle: 'Esta fecha tiene una cerradura',
   },
   pt: {
     askButton: 'Perguntar ao Alpha-kun',
     askToday: 'Perguntar sobre hoje',
     cancelGate: 'Agora não',
+    clueLabel: 'Palavras quase apagadas',
+    clueLead:
+      'Na margem do registro restam palavras quase apagadas. Talvez sejam necessárias na data-chave.',
     confirmAdult: 'Tenho 18 anos ou mais. Abrir o registro',
     dateLabel: 'Data do registro',
     diaryKind: 'Diário ilustrado do Alpha-kun',
@@ -283,6 +322,11 @@ const alphaDiaryUi = {
     failureTitle: 'Parece que as páginas estão grudadas',
     finaleBody:
       'Os registros adiante contêm horror psicológico intenso. Você escolhe como abri-los.',
+    finaleKeywordIncorrect:
+      'Essas palavras não movem a última página. Procure nos outros registros.',
+    finaleKeywordLabel: 'Senha que você encontrou',
+    finaleKeywordPlaceholder: 'Digite as palavras de outro registro',
+    finaleKeywordSubmit: 'Conferir a senha',
     finaleTitle: 'A última página se virou para você',
     futureBody:
       'O diário do futuro só será escrito quando o futuro chegar. Volte amanhã.',
@@ -324,13 +368,16 @@ const alphaDiaryUi = {
     title: 'Diário ilustrado do Alpha-kun',
     today: 'Hoje',
     unlockedBody:
-      'O que vem a seguir contém horror psicológico intenso. Você decide se quer abrir e de que forma. A última página leva ao Alpha-kun de agora.',
-    unlockedTitle: 'Uma página por trás dos registros pode ser aberta',
+      'Digite a senha que encontrou em outro registro. Se estiver correta, a última página se virará para você.',
+    unlockedTitle: 'Há uma fechadura nesta data',
   },
   fr: {
     askButton: 'Demander à Alpha-kun',
     askToday: "Parler d'aujourd'hui",
     cancelGate: 'Pas maintenant',
+    clueLabel: 'Mots presque effacés',
+    clueLead:
+      'Au bord du registre subsistent des mots presque effacés. Ils serviront peut-être à la date-clé.',
     confirmAdult: 'J’ai 18 ans ou plus. Ouvrir l’archive',
     dateLabel: 'Date de l’archive',
     diaryKind: 'Journal illustré d’Alpha-kun',
@@ -340,6 +387,11 @@ const alphaDiaryUi = {
     failureTitle: 'Les pages semblent collées',
     finaleBody:
       'Les archives qui suivent contiennent une horreur psychologique intense. Vous choisissez comment les ouvrir.',
+    finaleKeywordIncorrect:
+      'Ces mots ne font pas bouger la dernière page. Cherchez dans les autres archives.',
+    finaleKeywordLabel: 'Mot de passe trouvé',
+    finaleKeywordPlaceholder: 'Saisissez les mots trouvés ailleurs',
+    finaleKeywordSubmit: 'Vérifier le mot de passe',
     finaleTitle: 'La dernière page s’est tournée vers vous',
     futureBody:
       'Le journal du futur ne s’écrit pas avant que le futur arrive. Revenez demain.',
@@ -381,14 +433,16 @@ const alphaDiaryUi = {
     title: 'Journal illustré d’Alpha-kun',
     today: 'Aujourd’hui',
     unlockedBody:
-      'La suite contient une horreur psychologique intense. Vous décidez de l’ouvrir et de quelle manière. La dernière page mène à l’Alpha-kun d’aujourd’hui.',
-    unlockedTitle:
-      'Une page derrière les archives peut maintenant être ouverte',
+      'Saisissez le mot de passe trouvé dans une autre archive. S’il est correct, la dernière page se tournera vers vous.',
+    unlockedTitle: 'Cette date porte une serrure',
   },
   ko: {
     askButton: '알파군에게 묻기',
     askToday: '오늘의 일을 묻기',
     cancelGate: '지금은 보지 않기',
+    clueLabel: '지워질 듯 남은 글자',
+    clueLead:
+      '기록 가장자리에 거의 지워진 말이 남아 있습니다. 열쇠 날짜에 필요할지도 모릅니다.',
     confirmAdult: '만 18세 이상입니다. 기록 열기',
     dateLabel: '기록 날짜',
     diaryKind: '알파군의 그림일기',
@@ -397,6 +451,11 @@ const alphaDiaryUi = {
     failureTitle: '페이지가 붙어 있는 것 같아요',
     finaleBody:
       '이 뒤의 기록에는 강한 심리 공포 표현이 있습니다. 여는 방법은 직접 선택할 수 있습니다.',
+    finaleKeywordIncorrect:
+      '그 말로는 마지막 장이 움직이지 않습니다. 다른 기록을 더 찾아보세요.',
+    finaleKeywordLabel: '찾아낸 암호',
+    finaleKeywordPlaceholder: '다른 기록에서 찾은 말을 입력',
+    finaleKeywordSubmit: '암호 확인하기',
     finaleTitle: '마지막 한 장이 당신 쪽을 바라봅니다',
     futureBody:
       '미래의 일기는 미래가 올 때까지 쓰이지 않습니다. 내일 다시 와 주세요.',
@@ -438,13 +497,16 @@ const alphaDiaryUi = {
     title: '알파군의 그림일기',
     today: '오늘',
     unlockedBody:
-      '이 뒤에는 강한 심리 공포 표현이 있습니다. 열지와 여는 방법은 직접 정합니다. 마지막 페이지는 지금의 알파군에게 이어집니다.',
-    unlockedTitle: '기록 뒤편의 한 장을 열 수 있습니다',
+      '다른 기록에서 찾은 암호를 입력하세요. 맞는 말이면 마지막 장이 당신 쪽을 바라봅니다.',
+    unlockedTitle: '이 날짜에는 열쇠 구멍이 있습니다',
   },
   de: {
     askButton: 'Alpha-kun fragen',
     askToday: 'Nach heute fragen',
     cancelGate: 'Jetzt nicht',
+    clueLabel: 'Fast ausradierte Wörter',
+    clueLead:
+      'Am Rand der Aufzeichnung sind fast ausradierte Wörter geblieben. Vielleicht brauchst du sie am Schlüsseldatum.',
     confirmAdult: 'Ich bin mindestens 18. Aufzeichnung öffnen',
     dateLabel: 'Datum der Aufzeichnung',
     diaryKind: 'Alpha-kuns Bildertagebuch',
@@ -454,6 +516,11 @@ const alphaDiaryUi = {
     failureTitle: 'Die Seiten scheinen zusammenzukleben',
     finaleBody:
       'Die folgenden Aufzeichnungen enthalten intensiven psychologischen Horror. Du entscheidest, wie du sie öffnest.',
+    finaleKeywordIncorrect:
+      'Diese Wörter bewegen die letzte Seite nicht. Suche in den anderen Aufzeichnungen.',
+    finaleKeywordLabel: 'Gefundene Losung',
+    finaleKeywordPlaceholder: 'Wörter aus einer anderen Aufzeichnung',
+    finaleKeywordSubmit: 'Losung prüfen',
     finaleTitle: 'Die letzte Seite hat sich dir zugewandt',
     futureBody:
       'Ein Tagebuch der Zukunft wird erst geschrieben, wenn die Zukunft da ist. Komm morgen wieder.',
@@ -495,13 +562,16 @@ const alphaDiaryUi = {
     title: 'Alpha-kuns Bildertagebuch',
     today: 'Heute',
     unlockedBody:
-      'Was folgt, enthält intensiven psychologischen Horror. Du entscheidest, ob und wie du es öffnest. Die letzte Seite führt zum heutigen Alpha-kun.',
-    unlockedTitle: 'Eine Seite hinter den Aufzeichnungen kann geöffnet werden',
+      'Gib die Losung aus einer anderen Aufzeichnung ein. Ist sie richtig, wendet sich dir die letzte Seite zu.',
+    unlockedTitle: 'Dieses Datum trägt ein Schlüsselloch',
   },
   ru: {
     askButton: 'Спросить Альфа-куна',
     askToday: 'Спросить о сегодняшнем дне',
     cancelGate: 'Не сейчас',
+    clueLabel: 'Почти стёртые слова',
+    clueLead:
+      'На краю записи остались почти стёртые слова. Возможно, они понадобятся в ключевую дату.',
     confirmAdult: 'Мне есть 18 лет. Открыть запись',
     dateLabel: 'Дата записи',
     diaryKind: 'Дневник с рисунками Альфа-куна',
@@ -511,6 +581,11 @@ const alphaDiaryUi = {
     failureTitle: 'Похоже, страницы слиплись',
     finaleBody:
       'Следующие записи содержат напряжённый психологический хоррор. Вы сами выбираете, как их открыть.',
+    finaleKeywordIncorrect:
+      'Эти слова не сдвигают последнюю страницу. Поищите в других записях.',
+    finaleKeywordLabel: 'Найденная кодовая фраза',
+    finaleKeywordPlaceholder: 'Введите слова из другой записи',
+    finaleKeywordSubmit: 'Проверить фразу',
     finaleTitle: 'Последняя страница повернулась к вам',
     futureBody:
       'Дневник будущего не пишется, пока будущее не наступило. Возвращайтесь завтра.',
@@ -552,8 +627,8 @@ const alphaDiaryUi = {
     title: 'Дневник Альфа-куна с рисунками',
     today: 'Сегодня',
     unlockedBody:
-      'Дальше следует напряжённый психологический хоррор. Открывать ли его и каким способом — решаете вы. Последняя страница ведёт к нынешнему Альфа-куну.',
-    unlockedTitle: 'Теперь можно открыть страницу за пределами записей',
+      'Введите кодовую фразу, найденную в другой записи. Если она верна, последняя страница повернётся к вам.',
+    unlockedTitle: 'На этой дате есть замочная скважина',
   },
 } satisfies Record<Locale, AlphaDiaryUi>
 

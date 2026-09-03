@@ -4,6 +4,7 @@ import { isAllowedRequestOrigin } from './alpha-chat.ts'
 const CONTRACT_VERSION = 2
 const MAX_REQUEST_BODY_BYTES = 16 * 1024
 const MAX_RESPONSE_BODY_BYTES = 128 * 1024
+const MAX_FINALE_KEYWORD_LENGTH = 80
 const CONSENT_VERSION = 1
 const BIRTH_BOUNDARY = '2020-10-01'
 const CLIENT_ID_PATTERN =
@@ -125,6 +126,8 @@ export function onRequestOptions({ request }) {
 function normalizeRequest(value) {
   const action = value.action === undefined ? 'entry' : value.action
   const locale = resolveGuideLocale(value.locale)
+  const finaleKeyword =
+    typeof value.finaleKeyword === 'string' ? value.finaleKeyword.trim() : ''
   if (
     value.version !== CONTRACT_VERSION ||
     (action !== 'entry' && action !== 'finale') ||
@@ -132,9 +135,15 @@ function normalizeRequest(value) {
     (value.entryDate !== undefined && !isValidDate(value.entryDate)) ||
     value.journeyToken !== undefined ||
     value.followLatest !== undefined ||
+    (value.finaleKeyword !== undefined &&
+      (typeof value.finaleKeyword !== 'string' ||
+        finaleKeyword.length < 1 ||
+        finaleKeyword.length > MAX_FINALE_KEYWORD_LENGTH)) ||
     (value.adultConsentVersion !== undefined &&
       value.adultConsentVersion !== CONSENT_VERSION) ||
-    (action === 'finale' && value.entryDate === undefined)
+    (action === 'entry' && value.finaleKeyword !== undefined) ||
+    (action === 'finale' &&
+      (value.entryDate === undefined || finaleKeyword.length < 1))
   ) {
     return null
   }
@@ -142,6 +151,7 @@ function normalizeRequest(value) {
     action,
     locale,
     ...(value.entryDate === undefined ? {} : { entryDate: value.entryDate }),
+    ...(action === 'finale' ? { finaleKeyword } : {}),
     ...(value.adultConsentVersion === CONSENT_VERSION
       ? { adultConsentVersion: CONSENT_VERSION }
       : {}),
@@ -177,7 +187,11 @@ function isValidDiaryResponse(value) {
   if (value.entry !== undefined) {
     return (
       isValidReadyEntry(value.entry) &&
-      typeof value.finaleAvailable === 'boolean'
+      typeof value.finaleChallengeAvailable === 'boolean' &&
+      value.finaleAvailable === undefined &&
+      (value.keywordClue === undefined ||
+        (!value.finaleChallengeAvailable &&
+          boundedString(value.keywordClue, 80)))
     )
   }
   return isValidReadyFinale(value.finale)
