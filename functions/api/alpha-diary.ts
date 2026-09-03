@@ -189,12 +189,23 @@ function isValidDiaryResponse(value) {
       isValidReadyEntry(value.entry) &&
       typeof value.finaleChallengeAvailable === 'boolean' &&
       value.finaleAvailable === undefined &&
-      (value.keywordClue === undefined ||
+      (value.puzzleClue === undefined ||
         (!value.finaleChallengeAvailable &&
-          boundedString(value.keywordClue, 80)))
+          isValidPuzzleClue(value.puzzleClue)))
     )
   }
   return isValidReadyFinale(value.finale)
+}
+
+function isValidPuzzleClue(value) {
+  return (
+    isRecord(value) &&
+    Number.isInteger(value.step) &&
+    value.step >= 1 &&
+    value.step <= 4 &&
+    value.total === 4 &&
+    boundedString(value.text, 500)
+  )
 }
 
 function isValidReadyEntry(value) {

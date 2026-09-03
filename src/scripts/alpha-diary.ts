@@ -16,12 +16,18 @@ type DiaryFinale = {
   portrait: { alt: string; assetId: string; height: number; width: number }
 }
 
+type DiaryPuzzleClue = {
+  step: 1 | 2 | 3 | 4
+  text: string
+  total: 4
+}
+
 type DiaryPayload = Record<string, unknown> & {
   entry?: DiaryEntry
   errorCode?: string
   finaleChallengeAvailable?: boolean
   finale?: DiaryFinale
-  keywordClue?: string
+  puzzleClue?: DiaryPuzzleClue
   retryAfter?: number
   serverToday?: string
   status?: string
@@ -176,7 +182,7 @@ export function initAlphaDiary() {
   function renderEntry(
     entry: DiaryEntry,
     finaleChallengeAvailable: boolean,
-    keywordClue?: string,
+    puzzleClue?: DiaryPuzzleClue,
   ) {
     currentEntry = entry
     currentDate = entry.date
@@ -250,8 +256,15 @@ export function initAlphaDiary() {
       cluePanel,
       '[data-diary-clue-text]',
     )
-    clueText.textContent = keywordClue || ''
-    cluePanel.hidden = !keywordClue
+    const clueStep = requiredElement<HTMLElement>(
+      cluePanel,
+      '[data-diary-clue-step]',
+    )
+    clueText.textContent = puzzleClue?.text || ''
+    clueStep.textContent = puzzleClue
+      ? `${puzzleClue.step} / ${puzzleClue.total}`
+      : ''
+    cluePanel.hidden = !puzzleClue
     finaleKeywordInput.value = ''
     finaleKeywordError.hidden = true
     setFinaleChallengeAvailable(finaleChallengeAvailable)
@@ -330,16 +343,14 @@ export function initAlphaDiary() {
         payload.status === 'ready' &&
         isDiaryEntry(payload.entry) &&
         typeof payload.finaleChallengeAvailable === 'boolean' &&
-        (payload.keywordClue === undefined ||
+        (payload.puzzleClue === undefined ||
           (!payload.finaleChallengeAvailable &&
-            typeof payload.keywordClue === 'string' &&
-            payload.keywordClue.length >= 1 &&
-            payload.keywordClue.length <= 80))
+            isDiaryPuzzleClue(payload.puzzleClue)))
       ) {
         renderEntry(
           payload.entry,
           payload.finaleChallengeAvailable,
-          payload.keywordClue,
+          payload.puzzleClue,
         )
         return true
       }
@@ -1048,6 +1059,19 @@ function isDiaryFinale(value: unknown): value is DiaryFinale {
   )
 }
 
+function isDiaryPuzzleClue(value: unknown): value is DiaryPuzzleClue {
+  return (
+    isRecord(value) &&
+    Number.isInteger(value.step) &&
+    Number(value.step) >= 1 &&
+    Number(value.step) <= 4 &&
+    value.total === 4 &&
+    typeof value.text === 'string' &&
+    value.text.length >= 1 &&
+    value.text.length <= 500
+  )
+}
+
 function isDiaryImage(value: unknown): value is DiaryEntry['image'] {
   return (
     isRecord(value) &&
@@ -1070,13 +1094,17 @@ function getFixturePayload(
   const fixture = new URL(window.location.href).searchParams.get('fixture')
   if (!fixture) return null
   const today = getJstToday()
-  const archive = fixture === 'archive'
+  const clueStep = /^clue-([123])$/u.exec(fixture)?.[1]
+  const trailhead = fixture === 'current'
+  const archive = fixture === 'archive' || Boolean(clueStep)
   const finale = fixture === 'finale'
   const historical = archive || finale
+  const clueDates = ['2019-11-13', '2018-04-22', '2016-12-07']
+  const clueIndex = clueStep ? Number(clueStep) - 1 : 2
   const date = finale
     ? '2014-03-18'
     : archive
-      ? '2016-12-07'
+      ? clueDates[clueIndex]
       : fixture === 'birth'
         ? '2020-10-03'
         : requestedDate || today
@@ -1106,7 +1134,27 @@ function getFixturePayload(
   return {
     entry,
     finaleChallengeAvailable: finale,
-    ...(archive ? { keywordClue: '実験台アルファ' } : {}),
+    ...(trailhead
+      ? {
+          puzzleClue: {
+            step: 1 as const,
+            text: '入口 I / IV：「2020」の年から1年戻り、「11 / 13」を開く。',
+            total: 4 as const,
+          },
+        }
+      : archive
+        ? {
+            puzzleClue: {
+              step: (clueIndex + 2) as DiaryPuzzleClue['step'],
+              text: [
+                '分類欄 II / IV：最初は、確かめるために何かを試すことを表す二字の熟語。次の紙は「2018 / 04 / 22」。',
+                '役割欄 III / IV：その熟語の後ろには、物を載せるものを表す一字が続く。次の紙は「2016 / 12 / 07」。',
+                '対象欄 IV / IV：末尾はギリシャ文字の最初で、今の名前にも残る読み。三つを順につなぐ。鍵は、この紙の年から2年戻った年の「03 / 18」。',
+              ][clueIndex],
+              total: 4,
+            },
+          }
+        : {}),
     ok: true,
     serverToday: today,
     status: 'ready',

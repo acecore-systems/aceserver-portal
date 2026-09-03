@@ -225,13 +225,49 @@ test('ready entries fail closed when the key-date challenge flag is missing', as
   assert.equal((await response.json()).errorCode, 'generation_unavailable')
 })
 
+test('a bounded four-step clue passes through on a non-key date', async () => {
+  const response = await onRequestPost({
+    env: {
+      ALPHA_CHAT_SERVICE: {
+        async fetch() {
+          return Response.json(
+            readyEntryPayload({
+              finaleChallengeAvailable: false,
+              puzzleClue: {
+                step: 2,
+                text: '最初の手掛かり。次の紙は「2018 / 04 / 22」。',
+                total: 4,
+              },
+            }),
+          )
+        },
+      },
+    },
+    request: createRequest({
+      adultConsentVersion: 1,
+      entryDate: '2019-11-13',
+      locale: 'ja',
+      version: 2,
+    }),
+  })
+
+  assert.equal(response.status, 200)
+  assert.equal((await response.json()).puzzleClue.step, 2)
+})
+
 test('a clue and the key-date challenge cannot appear on the same entry', async () => {
   const response = await onRequestPost({
     env: {
       ALPHA_CHAT_SERVICE: {
         async fetch() {
           return Response.json(
-            readyEntryPayload({ keywordClue: '実験台アルファ' }),
+            readyEntryPayload({
+              puzzleClue: {
+                step: 4,
+                text: '最後の手掛かり。',
+                total: 4,
+              },
+            }),
           )
         },
       },

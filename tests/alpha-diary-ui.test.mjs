@@ -155,7 +155,7 @@ test('past observation records load as existing archive pages instead of being w
   assert.match(script, /copy\.observationLoadingBody/u)
 })
 
-test('exploration is user-led from a clue date to a passphrase on the key date', async () => {
+test('exploration is user-led from today’s trailhead to a passphrase on the key date', async () => {
   const [component, copySource, script] = await Promise.all([
     readFile(
       new URL('../src/components/AlphaDiaryPage.astro', import.meta.url),
@@ -187,7 +187,7 @@ test('exploration is user-led from a clue date to a passphrase on the key date',
   assert.doesNotMatch(component, /data-diary-open-finale/u)
   assert.match(script, /version: 2/u)
   assert.match(script, /finaleKeyword: keyword/u)
-  assert.match(script, /payload\.keywordClue/u)
+  assert.match(script, /payload\.puzzleClue/u)
   assert.match(
     script,
     /function setFinaleChallengeAvailable\(available: boolean\)/u,
@@ -195,9 +195,11 @@ test('exploration is user-led from a clue date to a passphrase on the key date',
   assert.match(script, /unlockedPanel\.hidden = !available/u)
   assert.match(getAlphaDiaryUi('ja').questionsLead, /言葉や日付/u)
   assert.match(getAlphaDiaryUi('ja').questionsLead, /自分で覚えて/u)
-  assert.match(getAlphaDiaryUi('ja').clueLead, /鍵の日付/u)
+  assert.match(getAlphaDiaryUi('ja').clueLead, /入口.*日付/u)
+  assert.match(getAlphaDiaryUi('ja').clueLead, /三つの手掛かり/u)
   assert.match(getAlphaDiaryUi('ja').unlockedBody, /合言葉/u)
-  assert.match(getAlphaDiaryUi('ja').finaleKeywordIncorrect, /ほかの記録/u)
+  assert.match(getAlphaDiaryUi('ja').finaleKeywordIncorrect, /三つの手掛かり/u)
+  assert.doesNotMatch(script, /puzzleClue:\s*['"]実験台アルファ/u)
 })
 
 test('visible diary copy does not explain generation, sharing, or internal versions', async () => {

@@ -146,7 +146,10 @@ const fixturesEnabled = import.meta.env.DEV
           </figure>
           <div class="diary-entry__body" data-diary-body></div>
           <aside class="diary-clue" data-diary-clue hidden>
-            <p>{copy.clueLabel}</p>
+            <p>
+              {copy.clueLabel}
+              <span data-diary-clue-step></span>
+            </p>
             <strong data-diary-clue-text></strong>
             <span>{copy.clueLead}</span>
           </aside>
