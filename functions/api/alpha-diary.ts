@@ -1,7 +1,7 @@
 import { resolveGuideLocale } from './alpha-locales.ts'
 import { isAllowedRequestOrigin } from './alpha-chat.ts'
 
-const CONTRACT_VERSION = 1
+const CONTRACT_VERSION = 2
 const MAX_REQUEST_BODY_BYTES = 16 * 1024
 const MAX_RESPONSE_BODY_BYTES = 128 * 1024
 const CONSENT_VERSION = 1
@@ -130,14 +130,11 @@ function normalizeRequest(value) {
     (action !== 'entry' && action !== 'finale') ||
     (value.locale !== undefined && locale !== value.locale) ||
     (value.entryDate !== undefined && !isValidDate(value.entryDate)) ||
-    (value.journeyToken !== undefined &&
-      (typeof value.journeyToken !== 'string' ||
-        value.journeyToken.length > 4096)) ||
-    (value.followLatest !== undefined &&
-      typeof value.followLatest !== 'boolean') ||
+    value.journeyToken !== undefined ||
+    value.followLatest !== undefined ||
     (value.adultConsentVersion !== undefined &&
       value.adultConsentVersion !== CONSENT_VERSION) ||
-    (action === 'finale' && value.entryDate !== undefined)
+    (action === 'finale' && value.entryDate === undefined)
   ) {
     return null
   }
@@ -145,10 +142,6 @@ function normalizeRequest(value) {
     action,
     locale,
     ...(value.entryDate === undefined ? {} : { entryDate: value.entryDate }),
-    ...(value.journeyToken === undefined
-      ? {}
-      : { journeyToken: value.journeyToken }),
-    ...(value.followLatest === true ? { followLatest: true } : {}),
     ...(value.adultConsentVersion === CONSENT_VERSION
       ? { adultConsentVersion: CONSENT_VERSION }
       : {}),
@@ -182,11 +175,12 @@ function isValidDiaryResponse(value) {
   }
   if (value.status !== 'ready') return true
   if (value.entry !== undefined) {
-    return isValidReadyEntry(value.entry) && isValidJourney(value.journey)
+    return (
+      isValidReadyEntry(value.entry) &&
+      typeof value.finaleAvailable === 'boolean'
+    )
   }
-  return (
-    isValidReadyFinale(value.finale) && boundedString(value.journeyToken, 4096)
-  )
+  return isValidReadyFinale(value.finale)
 }
 
 function isValidReadyEntry(value) {
@@ -211,31 +205,6 @@ function isValidReadyFinale(value) {
     boundedString(value.message, 1800) &&
     isValidImage(value.landscape) &&
     isValidImage(value.portrait)
-  )
-}
-
-function isValidJourney(value) {
-  return (
-    isRecord(value) &&
-    Number.isInteger(value.confirmedCount) &&
-    value.confirmedCount >= 0 &&
-    Number.isInteger(value.viewedCount) &&
-    value.viewedCount >= 0 &&
-    Number.isInteger(value.totalCount) &&
-    value.totalCount >= 1 &&
-    value.confirmedCount <= value.totalCount &&
-    value.viewedCount <= value.totalCount &&
-    Number.isInteger(value.goalVersion) &&
-    value.goalVersion >= 1 &&
-    Number.isInteger(value.latestGoalVersion) &&
-    value.latestGoalVersion >= value.goalVersion &&
-    typeof value.latestRecordsAvailable === 'boolean' &&
-    typeof value.unlocked === 'boolean' &&
-    boundedString(value.token, 4096) &&
-    Array.isArray(value.suggestedRecordDates) &&
-    value.suggestedRecordDates.length >= 1 &&
-    value.suggestedRecordDates.length <= 64 &&
-    value.suggestedRecordDates.every(isValidDate)
   )
 }
 

@@ -37,22 +37,7 @@ function readyEntryPayload(overrides = {}) {
       text: '観察記録の投影本文。',
       title: '音のない鈴',
     },
-    journey: {
-      confirmedCount: 1,
-      goalVersion: 1,
-      latestGoalVersion: 1,
-      latestRecordsAvailable: false,
-      suggestedRecordDates: [
-        '2019-11-13',
-        '2018-04-22',
-        '2016-12-07',
-        '2014-03-18',
-      ],
-      token: 'signed.journey-token',
-      totalCount: 4,
-      unlocked: false,
-      viewedCount: 2,
-    },
+    finaleAvailable: true,
     ok: true,
     serverToday: '2026-08-31',
     status: 'ready',
@@ -76,9 +61,8 @@ test('Portal diary adapter forwards only the bounded contract and a hashed clien
       adultConsentVersion: 1,
       entryDate: '2016-12-07',
       ignored: 'must-not-cross-the-boundary',
-      journeyToken: 'signed.journey-token',
       locale: 'ja',
-      version: 1,
+      version: 2,
     }),
   })
 
@@ -88,7 +72,6 @@ test('Portal diary adapter forwards only the bounded contract and a hashed clien
     'adultConsentVersion',
     'clientKey',
     'entryDate',
-    'journeyToken',
     'locale',
     'version',
   ])
@@ -111,7 +94,7 @@ test('future dates are rejected before the private Worker is invoked', async () 
     request: createRequest({
       entryDate: '9999-12-31',
       locale: 'ja',
-      version: 1,
+      version: 2,
     }),
   })
 
@@ -131,7 +114,7 @@ test('unsupported diary contract versions are rejected before forwarding', async
         },
       },
     },
-    request: createRequest({ locale: 'ja', version: 2 }),
+    request: createRequest({ locale: 'ja', version: 1 }),
   })
 
   assert.equal(response.status, 400)
@@ -153,7 +136,7 @@ test('pre-birth observation records require versioned adult consent before forwa
     request: createRequest({
       entryDate: '2014-03-18',
       locale: 'ja',
-      version: 1,
+      version: 2,
     }),
   })
 
@@ -180,21 +163,21 @@ test('pending generation preserves a bounded Retry-After header', async () => {
         },
       },
     },
-    request: createRequest({ locale: 'en', version: 1 }),
+    request: createRequest({ locale: 'en', version: 2 }),
   })
 
   assert.equal(response.status, 202)
   assert.equal(response.headers.get('Retry-After'), '4')
 })
 
-test('ready entries fail closed when the signed journey envelope is malformed', async () => {
+test('ready entries fail closed when the key-date flag is missing', async () => {
   const response = await onRequestPost({
     env: {
       ALPHA_CHAT_SERVICE: {
         async fetch() {
-          return Response.json(
-            readyEntryPayload({ journey: { token: '<script>' } }),
-          )
+          const payload = readyEntryPayload()
+          delete payload.finaleAvailable
+          return Response.json(payload)
         },
       },
     },
@@ -202,7 +185,7 @@ test('ready entries fail closed when the signed journey envelope is malformed', 
       adultConsentVersion: 1,
       entryDate: '2016-12-07',
       locale: 'ja',
-      version: 1,
+      version: 2,
     }),
   })
 

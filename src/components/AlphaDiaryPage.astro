@@ -91,19 +91,6 @@ const fixturesEnabled = import.meta.env.DEV
           </button>
         </div>
       </section>
-
-      <section class="diary-latest" data-diary-latest hidden>
-        <p>{copy.latestAvailable}</p>
-        <button type="button" data-diary-follow-latest>
-          <Icon name="refresh-cw" />
-          {copy.followLatest}
-        </button>
-      </section>
-
-      <button type="button" class="diary-reset" data-diary-reset>
-        <Icon name="eraser" />
-        {copy.resetProgress}
-      </button>
     </aside>
 
     <div class="diary-main-column">
@@ -184,7 +171,7 @@ const fixturesEnabled = import.meta.env.DEV
           <Icon name="key-round" />
         </div>
         <div>
-          <p>THE PAPER MOVED</p>
+          <p>KEY DATE FOUND</p>
           <h2>{copy.unlockedTitle}</h2>
           <span>{copy.unlockedBody}</span>
         </div>
@@ -299,7 +286,7 @@ const fixturesEnabled = import.meta.env.DEV
 
     <div class="finale-content">
       <section class="finale-logs">
-        <p>OBSERVATION LOG / OPENED BY YOU</p>
+        <p>KEY DATE / REMEMBERED BY YOU</p>
         <h2>{copy.openedRecords}</h2>
         <ol data-finale-opened-list></ol>
       </section>
@@ -530,8 +517,7 @@ const fixturesEnabled = import.meta.env.DEV
     align-content: start;
     gap: 18px;
   }
-  .diary-control-card,
-  .diary-latest {
+  .diary-control-card {
     border: 3px solid var(--diary-brown);
     border-radius: 10px;
     background: rgba(255, 248, 223, 0.96);
@@ -602,9 +588,7 @@ const fixturesEnabled = import.meta.env.DEV
     gap: 5px;
     margin-top: 12px;
   }
-  .diary-day-nav button,
-  .diary-reset,
-  .diary-latest button {
+  .diary-day-nav button {
     border: 0;
     background: transparent;
     color: #523a24;
@@ -624,34 +608,6 @@ const fixturesEnabled = import.meta.env.DEV
   .diary-day-nav button:focus-visible {
     background: #d6edca;
   }
-  .diary-latest {
-    padding: 15px;
-    background: #ecf9e6;
-  }
-  .diary-latest p {
-    margin: 0 0 10px;
-    font-size: 0.78rem;
-  }
-  .diary-latest button,
-  .diary-reset {
-    display: inline-flex;
-    align-items: center;
-    gap: 7px;
-  }
-  .diary-latest button {
-    width: 100%;
-    justify-content: center;
-    border-radius: 5px;
-    background: #bce9a9;
-    padding: 9px;
-  }
-  .diary-reset {
-    justify-self: center;
-    color: #695847;
-    text-decoration: underline;
-    text-underline-offset: 4px;
-  }
-
   .diary-main-column {
     min-width: 0;
   }
@@ -789,8 +745,7 @@ const fixturesEnabled = import.meta.env.DEV
     gap: 14px;
   }
 
-  .alpha-diary[data-record-kind='observation'] .diary-control-card,
-  .alpha-diary[data-record-kind='observation'] .diary-latest {
+  .alpha-diary[data-record-kind='observation'] .diary-control-card {
     border: 1px solid #9ba3a4;
     border-radius: 0;
     background: #e8e9e5;
@@ -810,8 +765,7 @@ const fixturesEnabled = import.meta.env.DEV
 
   .alpha-diary[data-record-kind='observation'] .diary-date-form input,
   .alpha-diary[data-record-kind='observation'] .diary-button,
-  .alpha-diary[data-record-kind='observation'] .diary-day-nav button,
-  .alpha-diary[data-record-kind='observation'] .diary-latest button {
+  .alpha-diary[data-record-kind='observation'] .diary-day-nav button {
     border-radius: 0;
     box-shadow: none;
   }
@@ -844,10 +798,6 @@ const fixturesEnabled = import.meta.env.DEV
     .diary-day-nav
     button:focus-visible {
     background: #d9e0e1;
-  }
-
-  .alpha-diary[data-record-kind='observation'] .diary-reset {
-    color: #d4dade;
   }
 
   .alpha-diary[data-record-kind='observation'] .diary-paper {
@@ -2012,9 +1962,6 @@ const fixturesEnabled = import.meta.env.DEV
     .diary-control-card {
       grid-row: span 2;
     }
-    .diary-reset {
-      grid-column: 2;
-    }
     .alpha-diary[data-record-kind='observation'] .diary-hero__inner {
       grid-template-columns: minmax(0, 1fr) 76px;
       min-height: 132px;
@@ -2104,9 +2051,6 @@ const fixturesEnabled = import.meta.env.DEV
     }
     .diary-control-card {
       grid-row: auto;
-    }
-    .diary-reset {
-      grid-column: auto;
     }
     .diary-paper {
       min-height: 620px;
