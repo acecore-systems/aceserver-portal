@@ -131,8 +131,16 @@ export function initAlphaDiary() {
     setRecordKind(surfaceKind, 'loading')
     statePanel.hidden = false
     entryPanel.hidden = true
-    setStateContent(copy.loadingTitle, copy.loadingBody, true)
-    setStatus(copy.loadingTitle)
+    const loadingTitle =
+      surfaceKind === 'observation'
+        ? copy.observationLoadingTitle
+        : copy.loadingTitle
+    const loadingBody =
+      surfaceKind === 'observation'
+        ? copy.observationLoadingBody
+        : copy.loadingBody
+    setStateContent(loadingTitle, loadingBody, true)
+    setStatus(loadingTitle)
   }
 
   function setStateContent(title: string, body: string, loading = false) {
@@ -332,7 +340,7 @@ export function initAlphaDiary() {
       }
       if (payload.status === 'pending') {
         const retryAfter = readRetryAfter(payload.retryAfter)
-        setStateContent(copy.loadingTitle, copy.loadingBody, true)
+        setLoading(date && date < BIRTH_BOUNDARY ? 'observation' : 'loading')
         pendingTimer = window.setTimeout(
           () =>
             void loadEntry(date || payload.serverToday, { history: 'none' }),

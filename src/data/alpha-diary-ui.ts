@@ -28,6 +28,8 @@ export type AlphaDiaryUi = {
   noScript: string
   notNow: string
   observationKind: string
+  observationLoadingBody: string
+  observationLoadingTitle: string
   openDate: string
   openedRecords: string
   previousDay: string
@@ -88,6 +90,9 @@ const alphaDiaryUi = {
       'この本はいま閉じたままです。ページをめくるには、ブラウザのスクリプトを有効にしてください。',
     notNow: '今は見ない',
     observationKind: '観察記録',
+    observationLoadingBody:
+      '記録庫から該当するページを取り出しています。内容を表示するまで、少しだけお待ちください。',
+    observationLoadingTitle: '保管された記録をひらいています',
     openDate: 'この日を開く',
     openedRecords: 'あなたが実際に開いた記録',
     previousDay: '前の日',
@@ -149,6 +154,9 @@ const alphaDiaryUi = {
       'This book will not open yet. Enable scripts in your browser to turn its pages.',
     notNow: 'Not now',
     observationKind: 'Observation record',
+    observationLoadingBody:
+      'Retrieving the matching page from the archive. Please wait a moment while it loads.',
+    observationLoadingTitle: 'Opening the archived record',
     openDate: 'Open this date',
     openedRecords: 'Records you actually opened',
     previousDay: 'Previous day',
@@ -206,6 +214,8 @@ const alphaDiaryUi = {
     noScript: '这本册子现在还合着。请在浏览器中启用脚本，才能翻页。',
     notNow: '暂时不看',
     observationKind: '观察记录',
+    observationLoadingBody: '正在从档案中调取对应页面。加载完成前请稍候。',
+    observationLoadingTitle: '正在打开存档记录',
     openDate: '打开这一天',
     openedRecords: '你实际打开过的记录',
     previousDay: '前一天',
@@ -266,6 +276,9 @@ const alphaDiaryUi = {
       'Este cuaderno aún no se abre. Activa los scripts del navegador para pasar sus páginas.',
     notNow: 'Ahora no',
     observationKind: 'Registro de observación',
+    observationLoadingBody:
+      'Estamos recuperando la página correspondiente del archivo. Espera un momento mientras se carga.',
+    observationLoadingTitle: 'Abriendo el registro archivado',
     openDate: 'Abrir esta fecha',
     openedRecords: 'Registros que abriste',
     previousDay: 'Día anterior',
@@ -328,6 +341,9 @@ const alphaDiaryUi = {
       'Este caderno ainda não abre. Ative os scripts no navegador para virar suas páginas.',
     notNow: 'Agora não',
     observationKind: 'Registro de observação',
+    observationLoadingBody:
+      'Estamos recuperando a página correspondente do arquivo. Aguarde um pouco enquanto ela carrega.',
+    observationLoadingTitle: 'Abrindo o registro arquivado',
     openDate: 'Abrir esta data',
     openedRecords: 'Registros que você abriu',
     previousDay: 'Dia anterior',
@@ -390,6 +406,9 @@ const alphaDiaryUi = {
       'Ce cahier reste fermé. Activez les scripts du navigateur pour tourner ses pages.',
     notNow: 'Pas maintenant',
     observationKind: 'Archive d’observation',
+    observationLoadingBody:
+      'Nous récupérons la page correspondante dans les archives. Veuillez patienter pendant son chargement.',
+    observationLoadingTitle: 'Ouverture de l’archive',
     openDate: 'Ouvrir cette date',
     openedRecords: 'Archives que vous avez ouvertes',
     previousDay: 'Jour précédent',
@@ -452,6 +471,9 @@ const alphaDiaryUi = {
       '이 책은 아직 닫혀 있습니다. 페이지를 넘기려면 브라우저 스크립트를 켜 주세요.',
     notNow: '지금은 보지 않기',
     observationKind: '관찰 기록',
+    observationLoadingBody:
+      '보관소에서 해당 페이지를 가져오고 있습니다. 불러오는 동안 잠시 기다려 주세요.',
+    observationLoadingTitle: '보관된 기록을 여는 중',
     openDate: '이 날짜 열기',
     openedRecords: '직접 열어 본 기록',
     previousDay: '이전 날',
@@ -514,6 +536,9 @@ const alphaDiaryUi = {
       'Dieses Buch bleibt noch geschlossen. Aktiviere Skripte im Browser, um seine Seiten umzublättern.',
     notNow: 'Jetzt nicht',
     observationKind: 'Beobachtungsprotokoll',
+    observationLoadingBody:
+      'Die passende Seite wird aus dem Archiv abgerufen. Bitte warte kurz, während sie geladen wird.',
+    observationLoadingTitle: 'Archivierte Aufzeichnung wird geöffnet',
     openDate: 'Dieses Datum öffnen',
     openedRecords: 'Von dir geöffnete Aufzeichnungen',
     previousDay: 'Vorheriger Tag',
@@ -576,6 +601,9 @@ const alphaDiaryUi = {
       'Эта книга пока не открывается. Включите сценарии в браузере, чтобы перелистывать страницы.',
     notNow: 'Не сейчас',
     observationKind: 'Запись наблюдения',
+    observationLoadingBody:
+      'Нужная страница извлекается из архива. Подождите немного, пока она загрузится.',
+    observationLoadingTitle: 'Открываем архивную запись',
     openDate: 'Открыть эту дату',
     openedRecords: 'Записи, которые вы открыли',
     previousDay: 'Предыдущий день',
