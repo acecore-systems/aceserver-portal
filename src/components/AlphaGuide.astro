@@ -883,6 +883,22 @@ const alphaLinkResources = [
     const question = rawQuestion.trim()
     if (!question || widget.classList.contains('is-sending')) return
 
+    // Resolve the currently displayed page at send time, including direct input
+    // and date changes made while the chat stays open.
+    const visibleEntry = document.querySelector<HTMLElement>(
+      '[data-alpha-diary] [data-diary-entry]:not([hidden])',
+    )
+    const pageEntryId = visibleEntry?.dataset.alphaDiaryEntryId
+    const diaryEntryId =
+      pageEntryId && /^entry_[a-z0-9]{24,64}$/u.test(pageEntryId)
+        ? pageEntryId
+        : undefined
+    if (conversation.diaryEntryId !== diaryEntryId) {
+      conversation.context = null
+      conversation.loreRevisionId = undefined
+      conversation.diaryEntryId = diaryEntryId
+    }
+
     const input =
       widget.querySelector<HTMLTextAreaElement>('[data-alpha-input]')
     if (input) {
