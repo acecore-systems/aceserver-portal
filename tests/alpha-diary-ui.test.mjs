@@ -199,7 +199,9 @@ test('exploration is user-led from today’s trailhead to a passphrase on the ke
   assert.match(getAlphaDiaryUi('ja').clueLead, /三つの手掛かり/u)
   assert.match(getAlphaDiaryUi('ja').unlockedBody, /合言葉/u)
   assert.match(getAlphaDiaryUi('ja').finaleKeywordIncorrect, /三つの手掛かり/u)
-  assert.doesNotMatch(script, /puzzleClue:\s*['"]実験台アルファ/u)
+  assert.doesNotMatch(script, /puzzleClue:\s*['"]実験体アルファ/u)
+  assert.match(script, /normalizeFinaleKeyword\('実験体アルファ'\)/u)
+  assert.doesNotMatch(script, /normalizeFinaleKeyword\('実験台アルファ'\)/u)
 })
 
 test('visible diary copy does not explain generation, sharing, or internal versions', async () => {

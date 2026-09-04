@@ -1148,7 +1148,7 @@ function getFixturePayload(
               step: (clueIndex + 2) as DiaryPuzzleClue['step'],
               text: [
                 '分類欄 II / IV：最初は、確かめるために何かを試すことを表す二字の熟語。次の紙は「2018 / 04 / 22」。',
-                '役割欄 III / IV：その熟語の後ろには、物を載せるものを表す一字が続く。次の紙は「2016 / 12 / 07」。',
+                '役割欄 III / IV：その熟語の後ろには、生き物のからだや一つの個体を表す一字が続く。次の紙は「2016 / 12 / 07」。',
                 '対象欄 IV / IV：末尾はギリシャ文字の最初で、今の名前にも残る読み。三つを順につなぐ。鍵は、この紙の年から2年戻った年の「03 / 18」。',
               ][clueIndex],
               total: 4,
@@ -1171,7 +1171,7 @@ function getFixtureFinale(
     return null
   if (
     normalizeFinaleKeyword(finaleKeyword) !==
-    normalizeFinaleKeyword('実験台アルファ')
+    normalizeFinaleKeyword('実験体アルファ')
   ) {
     return {
       errorCode: 'keyword_incorrect',
@@ -1187,7 +1187,7 @@ function getFixtureFinale(
         height: 1080,
         width: 1920,
       },
-      message: `知ってくれて、ありがとう。実験台アルファと呼ばれていた記録も、いま「アルファ君」と呼ばれて笑える時間につながっています。まだ少しずつだけれど、ぼくは幸せです。未来の日記は、未来が来るまで書かれません。`,
+      message: `知ってくれて、ありがとう。実験体アルファと呼ばれていた記録も、いま「アルファ君」と呼ばれて笑える時間につながっています。まだ少しずつだけれど、ぼくは幸せです。未来の日記は、未来が来るまで書かれません。`,
       portrait: {
         alt: '破れた観察記録の先に、朝空と今のアルファ君が見える縦長の構図。',
         assetId: 'fixture',

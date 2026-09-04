@@ -99,7 +99,7 @@ test('finale requests forward the bounded passphrase with the key date', async (
       action: 'finale',
       adultConsentVersion: 1,
       entryDate: '2014-03-18',
-      finaleKeyword: '  実験台アルファ  ',
+      finaleKeyword: '  実験体アルファ  ',
       locale: 'ja',
       version: 2,
     }),
@@ -108,7 +108,7 @@ test('finale requests forward the bounded passphrase with the key date', async (
   assert.equal(response.status, 200)
   assert.equal(forwarded.action, 'finale')
   assert.equal(forwarded.entryDate, '2014-03-18')
-  assert.equal(forwarded.finaleKeyword, '実験台アルファ')
+  assert.equal(forwarded.finaleKeyword, '実験体アルファ')
   assert.equal(forwarded.version, 2)
 })
 
