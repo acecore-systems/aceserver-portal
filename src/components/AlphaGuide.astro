@@ -1096,15 +1096,6 @@ const alphaLinkResources = [
 
         event.preventDefault()
         const question = opener.getAttribute('data-alpha-question') || ''
-        const diaryEntryId =
-          opener.getAttribute('data-alpha-diary-entry-id') || ''
-        if (/^entry_[a-z0-9]{24,64}$/u.test(diaryEntryId)) {
-          if (conversation.diaryEntryId !== diaryEntryId) {
-            conversation.context = null
-            conversation.loreRevisionId = undefined
-          }
-          conversation.diaryEntryId = diaryEntryId
-        }
         if (question && question.length <= 500 && input) {
           input.value = question
         }
