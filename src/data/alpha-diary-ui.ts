@@ -34,6 +34,8 @@ export type AlphaDiaryUi = {
   observationLoadingTitle: string
   openDate: string
   openedRecords: string
+  pastLoadingBody: string
+  pastLoadingTitle: string
   previousDay: string
   questionsLead: string
   observationQuestionsTitle: string
@@ -96,6 +98,9 @@ const alphaDiaryUi = {
     observationLoadingTitle: '保管された記録をひらいています',
     openDate: 'この日を開く',
     openedRecords: 'あなたが見つけた日付',
+    pastLoadingBody:
+      '綴じられた絵日記から、その日のページを探しています。見つかるまで、少しだけ待ってください。',
+    pastLoadingTitle: '過去のページをひらいています',
     previousDay: '前の日',
     questionsLead:
       '気になった言葉や日付は、自分で覚えておいてください。まだ書かれていないことはアルファ君に聞けます。選んだ言葉は入力欄に置かれるだけで、送るのはあなたです。',
@@ -157,6 +162,9 @@ const alphaDiaryUi = {
     observationLoadingTitle: 'Opening the archived record',
     openDate: 'Open this date',
     openedRecords: 'A date you discovered',
+    pastLoadingBody:
+      'Looking through the bound picture diary for that day. Please wait a moment while we find the page.',
+    pastLoadingTitle: 'Opening a page from the past',
     previousDay: 'Previous day',
     questionsLead:
       'Keep track of any words or dates that catch your attention. You can ask Alpha-kun about what is still unwritten; the chosen words are only placed in the box, and you decide whether to send them.',
@@ -213,6 +221,8 @@ const alphaDiaryUi = {
     observationLoadingTitle: '正在打开存档记录',
     openDate: '打开这一天',
     openedRecords: '你发现的日期',
+    pastLoadingBody: '正在装订好的图画日记中寻找那一天。找到这一页前请稍候。',
+    pastLoadingTitle: '正在翻开过去的一页',
     previousDay: '前一天',
     questionsLead:
       '请自己记住引起注意的词语和日期。还没有写下来的事，可以去问阿尔法君；选中的话只会放进输入框，是否发送由你决定。',
@@ -274,6 +284,9 @@ const alphaDiaryUi = {
     observationLoadingTitle: 'Abriendo el registro archivado',
     openDate: 'Abrir esta fecha',
     openedRecords: 'Una fecha que descubriste',
+    pastLoadingBody:
+      'Estamos buscando ese día en el diario ilustrado encuadernado. Espera un momento mientras encontramos la página.',
+    pastLoadingTitle: 'Abriendo una página del pasado',
     previousDay: 'Día anterior',
     questionsLead:
       'Recuerda las palabras o fechas que te llamen la atención. Puedes preguntar a Alpha-kun por lo que aún no está escrito; las palabras elegidas solo se colocan en el campo y tú decides si enviarlas.',
@@ -336,6 +349,9 @@ const alphaDiaryUi = {
     observationLoadingTitle: 'Abrindo o registro arquivado',
     openDate: 'Abrir esta data',
     openedRecords: 'Uma data que você descobriu',
+    pastLoadingBody:
+      'Estamos procurando esse dia no diário ilustrado encadernado. Aguarde um pouco enquanto encontramos a página.',
+    pastLoadingTitle: 'Abrindo uma página do passado',
     previousDay: 'Dia anterior',
     questionsLead:
       'Guarde as palavras ou datas que chamarem sua atenção. Você pode perguntar ao Alpha-kun sobre o que ainda não foi escrito; as palavras escolhidas só vão para o campo e você decide se quer enviá-las.',
@@ -398,6 +414,9 @@ const alphaDiaryUi = {
     observationLoadingTitle: 'Ouverture de l’archive',
     openDate: 'Ouvrir cette date',
     openedRecords: 'Une date que vous avez découverte',
+    pastLoadingBody:
+      'Nous cherchons ce jour dans le journal illustré relié. Veuillez patienter pendant que nous retrouvons la page.',
+    pastLoadingTitle: 'Ouverture d’une page du passé',
     previousDay: 'Jour précédent',
     questionsLead:
       'Retenez les mots ou les dates qui attirent votre attention. Vous pouvez demander à Alpha-kun ce qui n’est pas encore écrit ; les mots choisis sont seulement placés dans le champ et vous décidez de les envoyer.',
@@ -459,6 +478,9 @@ const alphaDiaryUi = {
     observationLoadingTitle: '보관된 기록을 여는 중',
     openDate: '이 날짜 열기',
     openedRecords: '직접 찾아낸 날짜',
+    pastLoadingBody:
+      '제본된 그림일기에서 그날의 페이지를 찾고 있습니다. 찾을 때까지 잠시 기다려 주세요.',
+    pastLoadingTitle: '지난 페이지를 여는 중',
     previousDay: '이전 날',
     questionsLead:
       '눈에 띄는 말이나 날짜는 직접 기억해 두세요. 아직 적히지 않은 것은 알파군에게 물어볼 수 있으며, 고른 말은 입력칸에 놓일 뿐 보낼지는 당신이 정합니다.',
@@ -521,6 +543,9 @@ const alphaDiaryUi = {
     observationLoadingTitle: 'Archivierte Aufzeichnung wird geöffnet',
     openDate: 'Dieses Datum öffnen',
     openedRecords: 'Ein von dir entdecktes Datum',
+    pastLoadingBody:
+      'Im gebundenen Bildertagebuch wird nach diesem Tag gesucht. Bitte warte kurz, bis die Seite gefunden ist.',
+    pastLoadingTitle: 'Eine Seite aus der Vergangenheit wird geöffnet',
     previousDay: 'Vorheriger Tag',
     questionsLead:
       'Merke dir Wörter oder Daten, die dir auffallen. Du kannst Alpha-kun nach dem fragen, was noch nicht geschrieben ist; die gewählten Worte werden nur ins Feld gelegt und du entscheidest, ob du sie sendest.',
@@ -583,6 +608,9 @@ const alphaDiaryUi = {
     observationLoadingTitle: 'Открываем архивную запись',
     openDate: 'Открыть эту дату',
     openedRecords: 'Дата, которую вы нашли',
+    pastLoadingBody:
+      'Ищем этот день в переплетённом дневнике с рисунками. Подождите немного, пока страница найдётся.',
+    pastLoadingTitle: 'Открываем страницу из прошлого',
     previousDay: 'Предыдущий день',
     questionsLead:
       'Запоминайте слова и даты, которые привлекли внимание. О том, что ещё не записано, можно спросить Альфа-куна; выбранные слова лишь появятся в поле, а отправлять их или нет — решаете вы.',
