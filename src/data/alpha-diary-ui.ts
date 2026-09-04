@@ -4,8 +4,6 @@ export type AlphaDiaryUi = {
   askButton: string
   askToday: string
   cancelGate: string
-  clueLabel: string
-  clueLead: string
   confirmAdult: string
   dateLabel: string
   diaryKind: string
@@ -58,9 +56,6 @@ const alphaDiaryUi = {
     askButton: 'アルファ君に聞く',
     askToday: '今日のことを聞く',
     cancelGate: '今は見ない',
-    clueLabel: '余白の手掛かり',
-    clueLead:
-      '入口が示す日付へ進み、その先の三つの手掛かりを自分でつないでください。完成した言葉と日付は、この本には記録されません。',
     confirmAdult: '18歳以上です。記録を開く',
     dateLabel: '記録の日付',
     diaryKind: 'アルファ君の絵日記',
@@ -123,9 +118,6 @@ const alphaDiaryUi = {
     askButton: 'Ask Alpha-kun',
     askToday: 'Ask about today',
     cancelGate: 'Not now',
-    clueLabel: 'Margin clue',
-    clueLead:
-      'Follow the date at the entrance, then connect the three clues beyond it yourself. This book will not remember the completed words or date for you.',
     confirmAdult: 'I am 18 or older. Open the record',
     dateLabel: 'Record date',
     diaryKind: "Alpha-kun's picture diary",
@@ -187,9 +179,6 @@ const alphaDiaryUi = {
     askButton: '问问阿尔法君',
     askToday: '问问今天的事',
     cancelGate: '暂时不看',
-    clueLabel: '页边线索',
-    clueLead:
-      '请前往入口指出的日期，再自行连接之后的三条线索。本书不会替你记住完整的暗语或日期。',
     confirmAdult: '我已满18岁，打开记录',
     dateLabel: '记录日期',
     diaryKind: '阿尔法君的图画日记',
@@ -245,9 +234,6 @@ const alphaDiaryUi = {
     askButton: 'Preguntar a Alpha-kun',
     askToday: 'Preguntar por hoy',
     cancelGate: 'Ahora no',
-    clueLabel: 'Pista al margen',
-    clueLead:
-      'Ve a la fecha indicada en la entrada y conecta por tu cuenta las tres pistas siguientes. Este libro no guardará por ti la frase ni la fecha completas.',
     confirmAdult: 'Tengo 18 años o más. Abrir el registro',
     dateLabel: 'Fecha del registro',
     diaryKind: 'Diario ilustrado de Alpha-kun',
@@ -310,9 +296,6 @@ const alphaDiaryUi = {
     askButton: 'Perguntar ao Alpha-kun',
     askToday: 'Perguntar sobre hoje',
     cancelGate: 'Agora não',
-    clueLabel: 'Pista na margem',
-    clueLead:
-      'Siga a data indicada na entrada e una as três pistas seguintes por conta própria. Este livro não guardará a frase nem a data completas para você.',
     confirmAdult: 'Tenho 18 anos ou mais. Abrir o registro',
     dateLabel: 'Data do registro',
     diaryKind: 'Diário ilustrado do Alpha-kun',
@@ -375,9 +358,6 @@ const alphaDiaryUi = {
     askButton: 'Demander à Alpha-kun',
     askToday: "Parler d'aujourd'hui",
     cancelGate: 'Pas maintenant',
-    clueLabel: 'Indice en marge',
-    clueLead:
-      'Suivez la date indiquée à l’entrée, puis reliez vous-même les trois indices suivants. Ce livre ne mémorisera ni la phrase ni la date complètes à votre place.',
     confirmAdult: 'J’ai 18 ans ou plus. Ouvrir l’archive',
     dateLabel: 'Date de l’archive',
     diaryKind: 'Journal illustré d’Alpha-kun',
@@ -440,9 +420,6 @@ const alphaDiaryUi = {
     askButton: '알파군에게 묻기',
     askToday: '오늘의 일을 묻기',
     cancelGate: '지금은 보지 않기',
-    clueLabel: '여백의 단서',
-    clueLead:
-      '입구가 가리키는 날짜로 간 뒤 이어지는 세 단서를 직접 연결하세요. 이 책은 완성된 암호나 날짜를 대신 기억하지 않습니다.',
     confirmAdult: '만 18세 이상입니다. 기록 열기',
     dateLabel: '기록 날짜',
     diaryKind: '알파군의 그림일기',
@@ -504,9 +481,6 @@ const alphaDiaryUi = {
     askButton: 'Alpha-kun fragen',
     askToday: 'Nach heute fragen',
     cancelGate: 'Jetzt nicht',
-    clueLabel: 'Hinweis am Rand',
-    clueLead:
-      'Folge dem Datum am Eingang und verbinde die drei folgenden Hinweise selbst. Dieses Buch merkt sich weder die fertige Losung noch das Datum für dich.',
     confirmAdult: 'Ich bin mindestens 18. Aufzeichnung öffnen',
     dateLabel: 'Datum der Aufzeichnung',
     diaryKind: 'Alpha-kuns Bildertagebuch',
@@ -569,9 +543,6 @@ const alphaDiaryUi = {
     askButton: 'Спросить Альфа-куна',
     askToday: 'Спросить о сегодняшнем дне',
     cancelGate: 'Не сейчас',
-    clueLabel: 'Подсказка на полях',
-    clueLead:
-      'Перейдите к дате, указанной у входа, и сами соедините следующие три подсказки. Книга не запомнит за вас готовую фразу или дату.',
     confirmAdult: 'Мне есть 18 лет. Открыть запись',
     dateLabel: 'Дата записи',
     diaryKind: 'Дневник с рисунками Альфа-куна',

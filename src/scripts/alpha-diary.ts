@@ -17,6 +17,7 @@ type DiaryFinale = {
 }
 
 type DiaryPuzzleClue = {
+  placement?: 'chat' | 'diary'
   step: 1 | 2 | 3 | 4
   text: string
   total: 4
@@ -69,7 +70,6 @@ export function initAlphaDiary() {
   const paper = requiredElement<HTMLElement>(root, '[data-diary-paper]')
   const statePanel = requiredElement<HTMLElement>(root, '[data-diary-state]')
   const entryPanel = requiredElement<HTMLElement>(root, '[data-diary-entry]')
-  const cluePanel = requiredElement<HTMLElement>(root, '[data-diary-clue]')
   const finaleKeywordInput = requiredElement<HTMLInputElement>(
     root,
     '[data-diary-finale-keyword]',
@@ -122,7 +122,6 @@ export function initAlphaDiary() {
 
   function setLoading(surfaceKind: 'loading' | 'observation' = 'loading') {
     setFinaleChallengeAvailable(false)
-    cluePanel.hidden = true
     setRecordKind(surfaceKind, 'loading')
     statePanel.hidden = false
     entryPanel.hidden = true
@@ -157,7 +156,6 @@ export function initAlphaDiary() {
   function renderFuture() {
     clearPending()
     setFinaleChallengeAvailable(false)
-    cluePanel.hidden = true
     setRecordKind('future')
     statePanel.hidden = false
     entryPanel.hidden = true
@@ -168,7 +166,6 @@ export function initAlphaDiary() {
   function renderFailure() {
     clearPending()
     setFinaleChallengeAvailable(false)
-    cluePanel.hidden = true
     setRecordKind(
       currentDate < BIRTH_BOUNDARY ? 'observation' : 'failed',
       'failed',
@@ -225,7 +222,15 @@ export function initAlphaDiary() {
       .split(/\n{2,}/u)
       .map((paragraph) => paragraph.trim())
       .filter(Boolean)
-    for (const paragraphText of paragraphs.length ? paragraphs : [entry.text]) {
+    const renderedParagraphs = paragraphs.length ? paragraphs : [entry.text]
+    if (puzzleClue && puzzleClue.placement !== 'chat') {
+      renderedParagraphs.splice(
+        getAmbientClueParagraphIndex(entry.id, renderedParagraphs.length),
+        0,
+        puzzleClue.text,
+      )
+    }
+    for (const paragraphText of renderedParagraphs) {
       const paragraph = document.createElement('p')
       paragraph.textContent = paragraphText
       body.append(paragraph)
@@ -252,19 +257,6 @@ export function initAlphaDiary() {
       questions.append(button)
     }
 
-    const clueText = requiredElement<HTMLElement>(
-      cluePanel,
-      '[data-diary-clue-text]',
-    )
-    const clueStep = requiredElement<HTMLElement>(
-      cluePanel,
-      '[data-diary-clue-step]',
-    )
-    clueText.textContent = puzzleClue?.text || ''
-    clueStep.textContent = puzzleClue
-      ? `${puzzleClue.step} / ${puzzleClue.total}`
-      : ''
-    cluePanel.hidden = !puzzleClue
     finaleKeywordInput.value = ''
     finaleKeywordError.hidden = true
     setFinaleChallengeAvailable(finaleChallengeAvailable)
@@ -1062,6 +1054,9 @@ function isDiaryFinale(value: unknown): value is DiaryFinale {
 function isDiaryPuzzleClue(value: unknown): value is DiaryPuzzleClue {
   return (
     isRecord(value) &&
+    (value.placement === undefined ||
+      value.placement === 'chat' ||
+      value.placement === 'diary') &&
     Number.isInteger(value.step) &&
     Number(value.step) >= 1 &&
     Number(value.step) <= 4 &&
@@ -1070,6 +1065,14 @@ function isDiaryPuzzleClue(value: unknown): value is DiaryPuzzleClue {
     value.text.length >= 1 &&
     value.text.length <= 500
   )
+}
+
+function getAmbientClueParagraphIndex(entryId: string, paragraphCount: number) {
+  const hash = Array.from(entryId).reduce(
+    (value, character) => (value * 31 + character.charCodeAt(0)) >>> 0,
+    0,
+  )
+  return paragraphCount < 1 ? 0 : 1 + (hash % paragraphCount)
 }
 
 function isDiaryImage(value: unknown): value is DiaryEntry['image'] {
@@ -1095,7 +1098,12 @@ function getFixturePayload(
   if (!fixture) return null
   const today = getJstToday()
   const clueStep = /^clue-([123])$/u.exec(fixture)?.[1]
-  const trailhead = fixture === 'current'
+  const cluePlacement =
+    fixture === 'current-chat' ||
+    new URL(window.location.href).searchParams.get('cluePlacement') === 'chat'
+      ? 'chat'
+      : 'diary'
+  const trailhead = fixture === 'current' || fixture === 'current-chat'
   const archive = fixture === 'archive' || Boolean(clueStep)
   const finale = fixture === 'finale'
   const historical = archive || finale
@@ -1137,19 +1145,21 @@ function getFixturePayload(
     ...(trailhead
       ? {
           puzzleClue: {
+            placement: cluePlacement,
             step: 1 as const,
-            text: '入口 I / IV：「2020」の年から1年戻り、「11 / 13」を開く。',
+            text: 'なぜか「2020」という数字を見ると、そこから1年戻った「11 / 13」のページが気になる。',
             total: 4 as const,
           },
         }
       : archive
         ? {
             puzzleClue: {
+              placement: cluePlacement,
               step: (clueIndex + 2) as DiaryPuzzleClue['step'],
               text: [
-                '分類欄 II / IV：最初は、確かめるために何かを試すことを表す二字の熟語。次の紙は「2018 / 04 / 22」。',
-                '役割欄 III / IV：その熟語の後ろには、生き物のからだや一つの個体を表す一字が続く。次の紙は「2016 / 12 / 07」。',
-                '対象欄 IV / IV：末尾はギリシャ文字の最初で、今の名前にも残る読み。三つを順につなぐ。鍵は、この紙の年から2年戻った年の「03 / 18」。',
+                '記録者が、最初は「確かめるために何かを試すこと」を表す二字の熟語だと書き残している。次の紙は「2018 / 04 / 22」らしい。',
+                '消しかけの文に、その熟語の後ろには「生き物のからだや一つの個体」を表す一字が続くとある。その下には「2016 / 12 / 07」。',
+                '紙の隅に、末尾はギリシャ文字の最初で、今の名前にも残る読みだとある。三つを順につなぐ。鍵は、この紙の年から2年戻った年の「03 / 18」らしい。',
               ][clueIndex],
               total: 4,
             },

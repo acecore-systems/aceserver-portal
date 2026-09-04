@@ -234,6 +234,7 @@ test('a bounded four-step clue passes through on a non-key date', async () => {
             readyEntryPayload({
               finaleChallengeAvailable: false,
               puzzleClue: {
+                placement: 'chat',
                 step: 2,
                 text: '最初の手掛かり。次の紙は「2018 / 04 / 22」。',
                 total: 4,
@@ -252,7 +253,9 @@ test('a bounded four-step clue passes through on a non-key date', async () => {
   })
 
   assert.equal(response.status, 200)
-  assert.equal((await response.json()).puzzleClue.step, 2)
+  const payload = await response.json()
+  assert.equal(payload.puzzleClue.step, 2)
+  assert.equal(payload.puzzleClue.placement, 'chat')
 })
 
 test('a clue and the key-date challenge cannot appear on the same entry', async () => {

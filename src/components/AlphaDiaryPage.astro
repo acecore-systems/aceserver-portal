@@ -145,14 +145,6 @@ const fixturesEnabled = import.meta.env.DEV
             </div>
           </figure>
           <div class="diary-entry__body" data-diary-body></div>
-          <aside class="diary-clue" data-diary-clue hidden>
-            <p>
-              {copy.clueLabel}
-              <span data-diary-clue-step></span>
-            </p>
-            <strong data-diary-clue-text></strong>
-            <span>{copy.clueLead}</span>
-          </aside>
           <section
             class="diary-questions"
             aria-labelledby="diary-question-title"
@@ -846,7 +838,6 @@ const fixturesEnabled = import.meta.env.DEV
 
   .alpha-diary[data-record-kind='observation'] .diary-entry__header,
   .alpha-diary[data-record-kind='observation'] .diary-entry > h2,
-  .alpha-diary[data-record-kind='observation'] .diary-clue,
   .alpha-diary[data-record-kind='observation'] .diary-questions {
     grid-column: 1 / -1;
   }
@@ -1146,48 +1137,6 @@ const fixturesEnabled = import.meta.env.DEV
     font-family: ui-monospace, 'Noto Sans JP', monospace;
     font-size: 0.98rem;
     letter-spacing: 0.02em;
-  }
-
-  .diary-clue {
-    display: grid;
-    max-width: 680px;
-    gap: 7px;
-    margin: 30px auto 0;
-    border: 2px dashed #806646;
-    background: rgba(255, 247, 211, 0.72);
-    padding: 16px 18px;
-    color: #413527;
-  }
-  .diary-clue p {
-    margin: 0;
-    color: #735732;
-    font:
-      900 0.68rem/1.2 ui-monospace,
-      monospace;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-  }
-  .diary-clue strong {
-    font-family: 'Yu Mincho', 'Hiragino Mincho ProN', serif;
-    font-size: clamp(1.35rem, 3vw, 2rem);
-    letter-spacing: 0.12em;
-  }
-  .diary-clue span {
-    color: #655744;
-    font-size: 0.78rem;
-    line-height: 1.7;
-  }
-  .alpha-diary[data-record-kind='observation'] .diary-clue {
-    width: 100%;
-    max-width: none;
-    margin-top: 4px;
-    border-color: #68767a;
-    background: #e2e3dd;
-    color: #27343a;
-  }
-  .alpha-diary[data-record-kind='observation'] .diary-clue p,
-  .alpha-diary[data-record-kind='observation'] .diary-clue span {
-    color: #4b5b62;
   }
 
   .diary-questions {

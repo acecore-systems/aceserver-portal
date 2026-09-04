@@ -200,6 +200,9 @@ function isValidDiaryResponse(value) {
 function isValidPuzzleClue(value) {
   return (
     isRecord(value) &&
+    (value.placement === undefined ||
+      value.placement === 'chat' ||
+      value.placement === 'diary') &&
     Number.isInteger(value.step) &&
     value.step >= 1 &&
     value.step <= 4 &&
