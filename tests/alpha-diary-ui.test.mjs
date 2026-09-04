@@ -64,8 +64,8 @@ test('the diary handoff pre-fills Alpha Chat without automatically submitting', 
   assert.match(openerHandler, /input\.value = question/u)
   assert.doesNotMatch(openerHandler, /sendAlphaQuestion/u)
   assert.match(source, /diaryEntryId/u)
-  assert.match(source, /journeyToken/u)
-  assert.match(source, /alpha-diary:progress/u)
+  assert.doesNotMatch(source, /journeyToken/u)
+  assert.doesNotMatch(source, /alpha-diary:progress/u)
 })
 
 test('future dates reach the custom tomorrow message instead of native form blocking', async () => {
@@ -155,7 +155,7 @@ test('past observation records load as existing archive pages instead of being w
   assert.match(script, /copy\.observationLoadingBody/u)
 })
 
-test('journey and goal mechanics stay internal instead of being rendered or serialized as copy', async () => {
+test('exploration is user-led from today’s trailhead to a passphrase on the key date', async () => {
   const [component, copySource, script] = await Promise.all([
     readFile(
       new URL('../src/components/AlphaDiaryPage.astro', import.meta.url),
@@ -168,6 +168,7 @@ test('journey and goal mechanics stay internal instead of being rendered or seri
   assert.doesNotMatch(component, /Journey \/ Goal/u)
   assert.doesNotMatch(component, /data-journey-(?:viewed|confirmed)/u)
   assert.doesNotMatch(component, /data-diary-suggestions/u)
+  assert.doesNotMatch(component, /data-diary-(?:reset|follow-latest)/u)
   assert.doesNotMatch(
     `${component}\n${copySource}`,
     /新しいページは明るく、古いページほど言葉が足りません/u,
@@ -176,8 +177,31 @@ test('journey and goal mechanics stay internal instead of being rendered or seri
     copySource,
     /confirmedLabel|goalHint|subtitle|viewedLabel/u,
   )
-  assert.match(script, /function updateJourney\(journey: DiaryJourney\)/u)
-  assert.match(script, /unlockedPanel\.hidden = !journey\.unlocked/u)
+  assert.doesNotMatch(
+    `${component}\n${copySource}\n${script}`,
+    /しおりを外す|journeyToken|OPENED_DATES_STORAGE_KEY|followLatest/u,
+  )
+  assert.match(component, /data-diary-clue/u)
+  assert.match(component, /data-diary-finale-form/u)
+  assert.match(component, /data-diary-finale-keyword/u)
+  assert.doesNotMatch(component, /data-diary-open-finale/u)
+  assert.match(script, /version: 2/u)
+  assert.match(script, /finaleKeyword: keyword/u)
+  assert.match(script, /payload\.puzzleClue/u)
+  assert.match(
+    script,
+    /function setFinaleChallengeAvailable\(available: boolean\)/u,
+  )
+  assert.match(script, /unlockedPanel\.hidden = !available/u)
+  assert.match(getAlphaDiaryUi('ja').questionsLead, /言葉や日付/u)
+  assert.match(getAlphaDiaryUi('ja').questionsLead, /自分で覚えて/u)
+  assert.match(getAlphaDiaryUi('ja').clueLead, /入口.*日付/u)
+  assert.match(getAlphaDiaryUi('ja').clueLead, /三つの手掛かり/u)
+  assert.match(getAlphaDiaryUi('ja').unlockedBody, /合言葉/u)
+  assert.match(getAlphaDiaryUi('ja').finaleKeywordIncorrect, /三つの手掛かり/u)
+  assert.doesNotMatch(script, /puzzleClue:\s*['"]実験体アルファ/u)
+  assert.match(script, /normalizeFinaleKeyword\('実験体アルファ'\)/u)
+  assert.doesNotMatch(script, /normalizeFinaleKeyword\('実験台アルファ'\)/u)
 })
 
 test('visible diary copy does not explain generation, sharing, or internal versions', async () => {
@@ -235,7 +259,7 @@ test('the final sequence keeps explicit choices, escape, reduced motion, and no 
   assert.doesNotMatch(`${component}\n${script}`, /<audio|new Audio\(/u)
 })
 
-test('local storage contains only consent, opaque journey, opened dates, and client id keys', async () => {
+test('local storage contains only consent and client id keys', async () => {
   const script = await readFile(
     new URL('../src/scripts/alpha-diary.ts', import.meta.url),
     'utf8',
@@ -247,8 +271,6 @@ test('local storage contains only consent, opaque journey, opened dates, and cli
   assert.deepEqual([...new Set(storageKeys)].sort(), [
     "'alpha-diary.client.v1'",
     "'alpha-diary.content-consent.v1'",
-    "'alpha-diary.journey.v1'",
-    "'alpha-diary.opened-dates.v1'",
   ])
   assert.doesNotMatch(
     script,

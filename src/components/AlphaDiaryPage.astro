@@ -91,19 +91,6 @@ const fixturesEnabled = import.meta.env.DEV
           </button>
         </div>
       </section>
-
-      <section class="diary-latest" data-diary-latest hidden>
-        <p>{copy.latestAvailable}</p>
-        <button type="button" data-diary-follow-latest>
-          <Icon name="refresh-cw" />
-          {copy.followLatest}
-        </button>
-      </section>
-
-      <button type="button" class="diary-reset" data-diary-reset>
-        <Icon name="eraser" />
-        {copy.resetProgress}
-      </button>
     </aside>
 
     <div class="diary-main-column">
@@ -158,6 +145,14 @@ const fixturesEnabled = import.meta.env.DEV
             </div>
           </figure>
           <div class="diary-entry__body" data-diary-body></div>
+          <aside class="diary-clue" data-diary-clue hidden>
+            <p>
+              {copy.clueLabel}
+              <span data-diary-clue-step></span>
+            </p>
+            <strong data-diary-clue-text></strong>
+            <span>{copy.clueLead}</span>
+          </aside>
           <section
             class="diary-questions"
             aria-labelledby="diary-question-title"
@@ -184,14 +179,31 @@ const fixturesEnabled = import.meta.env.DEV
           <Icon name="key-round" />
         </div>
         <div>
-          <p>THE PAPER MOVED</p>
+          <p>KEY DATE FOUND</p>
           <h2>{copy.unlockedTitle}</h2>
-          <span>{copy.unlockedBody}</span>
+          <span class="diary-unlocked__body">{copy.unlockedBody}</span>
         </div>
-        <button type="button" data-diary-open-finale>
-          <Icon name="eye" />
-          <span>{copy.showHorror}</span>
-        </button>
+        <form class="diary-unlocked__form" data-diary-finale-form novalidate>
+          <label for="diary-finale-keyword">{copy.finaleKeywordLabel}</label>
+          <div>
+            <input
+              id="diary-finale-keyword"
+              type="text"
+              maxlength="80"
+              autocomplete="off"
+              spellcheck="false"
+              placeholder={copy.finaleKeywordPlaceholder}
+              data-diary-finale-keyword
+            />
+            <button type="submit">
+              <Icon name="key-round" />
+              <span>{copy.finaleKeywordSubmit}</span>
+            </button>
+          </div>
+          <p data-diary-finale-error role="alert" hidden>
+            {copy.finaleKeywordIncorrect}
+          </p>
+        </form>
       </section>
     </div>
   </div>
@@ -299,7 +311,7 @@ const fixturesEnabled = import.meta.env.DEV
 
     <div class="finale-content">
       <section class="finale-logs">
-        <p>OBSERVATION LOG / OPENED BY YOU</p>
+        <p>KEY DATE / REMEMBERED BY YOU</p>
         <h2>{copy.openedRecords}</h2>
         <ol data-finale-opened-list></ol>
       </section>
@@ -530,8 +542,7 @@ const fixturesEnabled = import.meta.env.DEV
     align-content: start;
     gap: 18px;
   }
-  .diary-control-card,
-  .diary-latest {
+  .diary-control-card {
     border: 3px solid var(--diary-brown);
     border-radius: 10px;
     background: rgba(255, 248, 223, 0.96);
@@ -602,9 +613,7 @@ const fixturesEnabled = import.meta.env.DEV
     gap: 5px;
     margin-top: 12px;
   }
-  .diary-day-nav button,
-  .diary-reset,
-  .diary-latest button {
+  .diary-day-nav button {
     border: 0;
     background: transparent;
     color: #523a24;
@@ -624,34 +633,6 @@ const fixturesEnabled = import.meta.env.DEV
   .diary-day-nav button:focus-visible {
     background: #d6edca;
   }
-  .diary-latest {
-    padding: 15px;
-    background: #ecf9e6;
-  }
-  .diary-latest p {
-    margin: 0 0 10px;
-    font-size: 0.78rem;
-  }
-  .diary-latest button,
-  .diary-reset {
-    display: inline-flex;
-    align-items: center;
-    gap: 7px;
-  }
-  .diary-latest button {
-    width: 100%;
-    justify-content: center;
-    border-radius: 5px;
-    background: #bce9a9;
-    padding: 9px;
-  }
-  .diary-reset {
-    justify-self: center;
-    color: #695847;
-    text-decoration: underline;
-    text-underline-offset: 4px;
-  }
-
   .diary-main-column {
     min-width: 0;
   }
@@ -789,8 +770,7 @@ const fixturesEnabled = import.meta.env.DEV
     gap: 14px;
   }
 
-  .alpha-diary[data-record-kind='observation'] .diary-control-card,
-  .alpha-diary[data-record-kind='observation'] .diary-latest {
+  .alpha-diary[data-record-kind='observation'] .diary-control-card {
     border: 1px solid #9ba3a4;
     border-radius: 0;
     background: #e8e9e5;
@@ -810,8 +790,7 @@ const fixturesEnabled = import.meta.env.DEV
 
   .alpha-diary[data-record-kind='observation'] .diary-date-form input,
   .alpha-diary[data-record-kind='observation'] .diary-button,
-  .alpha-diary[data-record-kind='observation'] .diary-day-nav button,
-  .alpha-diary[data-record-kind='observation'] .diary-latest button {
+  .alpha-diary[data-record-kind='observation'] .diary-day-nav button {
     border-radius: 0;
     box-shadow: none;
   }
@@ -846,10 +825,6 @@ const fixturesEnabled = import.meta.env.DEV
     background: #d9e0e1;
   }
 
-  .alpha-diary[data-record-kind='observation'] .diary-reset {
-    color: #d4dade;
-  }
-
   .alpha-diary[data-record-kind='observation'] .diary-paper {
     min-height: 640px;
     border: 1px solid #999d9a;
@@ -871,6 +846,7 @@ const fixturesEnabled = import.meta.env.DEV
 
   .alpha-diary[data-record-kind='observation'] .diary-entry__header,
   .alpha-diary[data-record-kind='observation'] .diary-entry > h2,
+  .alpha-diary[data-record-kind='observation'] .diary-clue,
   .alpha-diary[data-record-kind='observation'] .diary-questions {
     grid-column: 1 / -1;
   }
@@ -1172,6 +1148,48 @@ const fixturesEnabled = import.meta.env.DEV
     letter-spacing: 0.02em;
   }
 
+  .diary-clue {
+    display: grid;
+    max-width: 680px;
+    gap: 7px;
+    margin: 30px auto 0;
+    border: 2px dashed #806646;
+    background: rgba(255, 247, 211, 0.72);
+    padding: 16px 18px;
+    color: #413527;
+  }
+  .diary-clue p {
+    margin: 0;
+    color: #735732;
+    font:
+      900 0.68rem/1.2 ui-monospace,
+      monospace;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .diary-clue strong {
+    font-family: 'Yu Mincho', 'Hiragino Mincho ProN', serif;
+    font-size: clamp(1.35rem, 3vw, 2rem);
+    letter-spacing: 0.12em;
+  }
+  .diary-clue span {
+    color: #655744;
+    font-size: 0.78rem;
+    line-height: 1.7;
+  }
+  .alpha-diary[data-record-kind='observation'] .diary-clue {
+    width: 100%;
+    max-width: none;
+    margin-top: 4px;
+    border-color: #68767a;
+    background: #e2e3dd;
+    color: #27343a;
+  }
+  .alpha-diary[data-record-kind='observation'] .diary-clue p,
+  .alpha-diary[data-record-kind='observation'] .diary-clue span {
+    color: #4b5b62;
+  }
+
   .diary-questions {
     max-width: 680px;
     margin: 40px auto 0;
@@ -1236,7 +1254,7 @@ const fixturesEnabled = import.meta.env.DEV
 
   .diary-unlocked {
     display: grid;
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: auto minmax(0, 1fr);
     align-items: center;
     gap: 18px;
     margin-top: 24px;
@@ -1257,7 +1275,7 @@ const fixturesEnabled = import.meta.env.DEV
     color: #ffd75b;
     font-size: 1.8rem;
   }
-  .diary-unlocked p {
+  .diary-unlocked > div > p {
     margin: 0;
     color: #e3b83c;
     font:
@@ -1269,10 +1287,38 @@ const fixturesEnabled = import.meta.env.DEV
     margin: 5px 0 4px;
     font-size: 1.25rem;
   }
-  .diary-unlocked span {
+  .diary-unlocked__body {
     font-size: 0.83rem;
   }
-  .diary-unlocked button {
+  .diary-unlocked__form {
+    display: grid;
+    grid-column: 1 / -1;
+    gap: 7px;
+  }
+  .diary-unlocked__form label {
+    color: #ffe58b;
+    font-size: 0.74rem;
+    font-weight: 900;
+  }
+  .diary-unlocked__form > div {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .diary-unlocked__form input {
+    min-width: 0;
+    border: 2px solid #9e843a;
+    border-radius: 5px;
+    background: #fffaf0;
+    padding: 10px 11px;
+    color: #211b13;
+    font: inherit;
+  }
+  .diary-unlocked__form input:focus-visible {
+    outline: 3px solid #fff0a1;
+    outline-offset: 2px;
+  }
+  .diary-unlocked__form button {
     display: inline-flex;
     min-height: 52px;
     align-items: center;
@@ -1284,6 +1330,12 @@ const fixturesEnabled = import.meta.env.DEV
     color: #201a12;
     font-weight: 900;
     cursor: pointer;
+  }
+  .diary-unlocked__form > p {
+    margin: 0;
+    color: #ffd4c9;
+    font-size: 0.75rem;
+    line-height: 1.45;
   }
 
   .diary-live {
@@ -2012,9 +2064,6 @@ const fixturesEnabled = import.meta.env.DEV
     .diary-control-card {
       grid-row: span 2;
     }
-    .diary-reset {
-      grid-column: 2;
-    }
     .alpha-diary[data-record-kind='observation'] .diary-hero__inner {
       grid-template-columns: minmax(0, 1fr) 76px;
       min-height: 132px;
@@ -2105,9 +2154,6 @@ const fixturesEnabled = import.meta.env.DEV
     .diary-control-card {
       grid-row: auto;
     }
-    .diary-reset {
-      grid-column: auto;
-    }
     .diary-paper {
       min-height: 620px;
       border-width: 2px;
@@ -2180,8 +2226,10 @@ const fixturesEnabled = import.meta.env.DEV
     .diary-unlocked {
       grid-template-columns: auto 1fr;
     }
-    .diary-unlocked button {
+    .diary-unlocked__form {
       grid-column: 1 / -1;
+    }
+    .diary-unlocked__form button {
       justify-content: center;
     }
     .diary-finale-modes {

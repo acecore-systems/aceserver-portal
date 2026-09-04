@@ -37,22 +37,7 @@ function readyEntryPayload(overrides = {}) {
       text: '観察記録の投影本文。',
       title: '音のない鈴',
     },
-    journey: {
-      confirmedCount: 1,
-      goalVersion: 1,
-      latestGoalVersion: 1,
-      latestRecordsAvailable: false,
-      suggestedRecordDates: [
-        '2019-11-13',
-        '2018-04-22',
-        '2016-12-07',
-        '2014-03-18',
-      ],
-      token: 'signed.journey-token',
-      totalCount: 4,
-      unlocked: false,
-      viewedCount: 2,
-    },
+    finaleChallengeAvailable: true,
     ok: true,
     serverToday: '2026-08-31',
     status: 'ready',
@@ -76,9 +61,8 @@ test('Portal diary adapter forwards only the bounded contract and a hashed clien
       adultConsentVersion: 1,
       entryDate: '2016-12-07',
       ignored: 'must-not-cross-the-boundary',
-      journeyToken: 'signed.journey-token',
       locale: 'ja',
-      version: 1,
+      version: 2,
     }),
   })
 
@@ -88,13 +72,44 @@ test('Portal diary adapter forwards only the bounded contract and a hashed clien
     'adultConsentVersion',
     'clientKey',
     'entryDate',
-    'journeyToken',
     'locale',
     'version',
   ])
   assert.match(forwarded.clientKey, /^[0-9a-f]{64}$/u)
   assert.equal(forwarded.entryDate, '2016-12-07')
   assert.equal(forwarded.ignored, undefined)
+})
+
+test('finale requests forward the bounded passphrase with the key date', async () => {
+  let forwarded
+  const response = await onRequestPost({
+    env: {
+      ALPHA_CHAT_SERVICE: {
+        async fetch(request) {
+          forwarded = await request.json()
+          return Response.json({
+            errorCode: 'keyword_incorrect',
+            ok: false,
+            status: 'failed',
+          })
+        },
+      },
+    },
+    request: createRequest({
+      action: 'finale',
+      adultConsentVersion: 1,
+      entryDate: '2014-03-18',
+      finaleKeyword: '  実験体アルファ  ',
+      locale: 'ja',
+      version: 2,
+    }),
+  })
+
+  assert.equal(response.status, 200)
+  assert.equal(forwarded.action, 'finale')
+  assert.equal(forwarded.entryDate, '2014-03-18')
+  assert.equal(forwarded.finaleKeyword, '実験体アルファ')
+  assert.equal(forwarded.version, 2)
 })
 
 test('future dates are rejected before the private Worker is invoked', async () => {
@@ -111,7 +126,7 @@ test('future dates are rejected before the private Worker is invoked', async () 
     request: createRequest({
       entryDate: '9999-12-31',
       locale: 'ja',
-      version: 1,
+      version: 2,
     }),
   })
 
@@ -131,7 +146,7 @@ test('unsupported diary contract versions are rejected before forwarding', async
         },
       },
     },
-    request: createRequest({ locale: 'ja', version: 2 }),
+    request: createRequest({ locale: 'ja', version: 1 }),
   })
 
   assert.equal(response.status, 400)
@@ -153,7 +168,7 @@ test('pre-birth observation records require versioned adult consent before forwa
     request: createRequest({
       entryDate: '2014-03-18',
       locale: 'ja',
-      version: 1,
+      version: 2,
     }),
   })
 
@@ -180,20 +195,79 @@ test('pending generation preserves a bounded Retry-After header', async () => {
         },
       },
     },
-    request: createRequest({ locale: 'en', version: 1 }),
+    request: createRequest({ locale: 'en', version: 2 }),
   })
 
   assert.equal(response.status, 202)
   assert.equal(response.headers.get('Retry-After'), '4')
 })
 
-test('ready entries fail closed when the signed journey envelope is malformed', async () => {
+test('ready entries fail closed when the key-date challenge flag is missing', async () => {
+  const response = await onRequestPost({
+    env: {
+      ALPHA_CHAT_SERVICE: {
+        async fetch() {
+          const payload = readyEntryPayload()
+          delete payload.finaleChallengeAvailable
+          return Response.json(payload)
+        },
+      },
+    },
+    request: createRequest({
+      adultConsentVersion: 1,
+      entryDate: '2016-12-07',
+      locale: 'ja',
+      version: 2,
+    }),
+  })
+
+  assert.equal(response.status, 503)
+  assert.equal((await response.json()).errorCode, 'generation_unavailable')
+})
+
+test('a bounded four-step clue passes through on a non-key date', async () => {
   const response = await onRequestPost({
     env: {
       ALPHA_CHAT_SERVICE: {
         async fetch() {
           return Response.json(
-            readyEntryPayload({ journey: { token: '<script>' } }),
+            readyEntryPayload({
+              finaleChallengeAvailable: false,
+              puzzleClue: {
+                step: 2,
+                text: '最初の手掛かり。次の紙は「2018 / 04 / 22」。',
+                total: 4,
+              },
+            }),
+          )
+        },
+      },
+    },
+    request: createRequest({
+      adultConsentVersion: 1,
+      entryDate: '2019-11-13',
+      locale: 'ja',
+      version: 2,
+    }),
+  })
+
+  assert.equal(response.status, 200)
+  assert.equal((await response.json()).puzzleClue.step, 2)
+})
+
+test('a clue and the key-date challenge cannot appear on the same entry', async () => {
+  const response = await onRequestPost({
+    env: {
+      ALPHA_CHAT_SERVICE: {
+        async fetch() {
+          return Response.json(
+            readyEntryPayload({
+              puzzleClue: {
+                step: 4,
+                text: '最後の手掛かり。',
+                total: 4,
+              },
+            }),
           )
         },
       },
@@ -202,7 +276,7 @@ test('ready entries fail closed when the signed journey envelope is malformed', 
       adultConsentVersion: 1,
       entryDate: '2016-12-07',
       locale: 'ja',
-      version: 1,
+      version: 2,
     }),
   })
 

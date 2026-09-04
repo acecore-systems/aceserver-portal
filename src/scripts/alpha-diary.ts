@@ -10,29 +10,24 @@ type DiaryEntry = {
   title: string
 }
 
-type DiaryJourney = {
-  confirmedCount: number
-  goalVersion: number
-  latestGoalVersion: number
-  latestRecordsAvailable: boolean
-  suggestedRecordDates: string[]
-  token: string
-  totalCount: number
-  unlocked: boolean
-  viewedCount: number
-}
-
 type DiaryFinale = {
   landscape: { alt: string; assetId: string; height: number; width: number }
   message: string
   portrait: { alt: string; assetId: string; height: number; width: number }
 }
 
+type DiaryPuzzleClue = {
+  step: 1 | 2 | 3 | 4
+  text: string
+  total: 4
+}
+
 type DiaryPayload = Record<string, unknown> & {
   entry?: DiaryEntry
+  errorCode?: string
+  finaleChallengeAvailable?: boolean
   finale?: DiaryFinale
-  journey?: DiaryJourney
-  journeyToken?: string
+  puzzleClue?: DiaryPuzzleClue
   retryAfter?: number
   serverToday?: string
   status?: string
@@ -52,15 +47,8 @@ type FinaleStage =
 const BIRTH_BOUNDARY = '2020-10-01'
 const MINIMUM_DATE = '0001-01-01'
 const CONSENT_VERSION = '1'
-const JOURNEY_STORAGE_KEY = 'alpha-diary.journey.v1'
 const CONSENT_STORAGE_KEY = 'alpha-diary.content-consent.v1'
-const OPENED_DATES_STORAGE_KEY = 'alpha-diary.opened-dates.v1'
 const CLIENT_ID_STORAGE_KEY = 'alpha-diary.client.v1'
-const EXPERIENCE_EVENTS = new Set([
-  'alpha_diary_memory_confirmed',
-  'alpha_diary_memory_expanded',
-  'alpha_diary_goal_unlocked',
-])
 
 let diaryController: AbortController | null = null
 
@@ -81,6 +69,15 @@ export function initAlphaDiary() {
   const paper = requiredElement<HTMLElement>(root, '[data-diary-paper]')
   const statePanel = requiredElement<HTMLElement>(root, '[data-diary-state]')
   const entryPanel = requiredElement<HTMLElement>(root, '[data-diary-entry]')
+  const cluePanel = requiredElement<HTMLElement>(root, '[data-diary-clue]')
+  const finaleKeywordInput = requiredElement<HTMLInputElement>(
+    root,
+    '[data-diary-finale-keyword]',
+  )
+  const finaleKeywordError = requiredElement<HTMLElement>(
+    root,
+    '[data-diary-finale-error]',
+  )
   const statusRegion = requiredElement<HTMLElement>(root, '[data-diary-live]')
   const gateDialog = requiredElement<HTMLDialogElement>(
     root,
@@ -98,10 +95,7 @@ export function initAlphaDiary() {
   let serverToday = getJstToday()
   let currentDate = ''
   let currentEntry: DiaryEntry | null = null
-  let currentJourney: DiaryJourney | null = null
   let currentFinale: DiaryFinale | null = null
-  let journeyToken = readStorage(JOURNEY_STORAGE_KEY) || ''
-  let openedDates = readOpenedDates()
   let requestController: AbortController | null = null
   let pendingTimer = 0
   let finaleTimers: number[] = []
@@ -110,7 +104,6 @@ export function initAlphaDiary() {
   let finaleMotionEnabled = false
   let fullscreenEntered = false
   let focusBeforeFinale: HTMLElement | null = null
-  let invalidJourneyRetried = false
 
   dateInput.max = serverToday
 
@@ -128,6 +121,8 @@ export function initAlphaDiary() {
   }
 
   function setLoading(surfaceKind: 'loading' | 'observation' = 'loading') {
+    setFinaleChallengeAvailable(false)
+    cluePanel.hidden = true
     setRecordKind(surfaceKind, 'loading')
     statePanel.hidden = false
     entryPanel.hidden = true
@@ -161,6 +156,8 @@ export function initAlphaDiary() {
 
   function renderFuture() {
     clearPending()
+    setFinaleChallengeAvailable(false)
+    cluePanel.hidden = true
     setRecordKind('future')
     statePanel.hidden = false
     entryPanel.hidden = true
@@ -170,6 +167,8 @@ export function initAlphaDiary() {
 
   function renderFailure() {
     clearPending()
+    setFinaleChallengeAvailable(false)
+    cluePanel.hidden = true
     setRecordKind(
       currentDate < BIRTH_BOUNDARY ? 'observation' : 'failed',
       'failed',
@@ -180,15 +179,14 @@ export function initAlphaDiary() {
     setStatus(copy.failureTitle)
   }
 
-  function renderEntry(entry: DiaryEntry, journey: DiaryJourney) {
+  function renderEntry(
+    entry: DiaryEntry,
+    finaleChallengeAvailable: boolean,
+    puzzleClue?: DiaryPuzzleClue,
+  ) {
     currentEntry = entry
-    currentJourney = journey
     currentDate = entry.date
-    journeyToken = journey.token
-    writeStorage(JOURNEY_STORAGE_KEY, journeyToken)
     dateInput.value = entry.date
-    openedDates = addOpenedDate(openedDates, entry.date)
-    writeStorage(OPENED_DATES_STORAGE_KEY, JSON.stringify(openedDates))
 
     setRecordKind(entry.kind)
     statePanel.hidden = true
@@ -246,7 +244,6 @@ export function initAlphaDiary() {
       button.dataset.alphaOpen = ''
       button.dataset.alphaQuestion = question
       button.dataset.alphaDiaryEntryId = entry.id
-      button.dataset.alphaJourneyToken = journeyToken
       const label = document.createElement('span')
       label.textContent = question
       const action = document.createElement('strong')
@@ -255,28 +252,43 @@ export function initAlphaDiary() {
       questions.append(button)
     }
 
-    updateJourney(journey)
+    const clueText = requiredElement<HTMLElement>(
+      cluePanel,
+      '[data-diary-clue-text]',
+    )
+    const clueStep = requiredElement<HTMLElement>(
+      cluePanel,
+      '[data-diary-clue-step]',
+    )
+    clueText.textContent = puzzleClue?.text || ''
+    clueStep.textContent = puzzleClue
+      ? `${puzzleClue.step} / ${puzzleClue.total}`
+      : ''
+    cluePanel.hidden = !puzzleClue
+    finaleKeywordInput.value = ''
+    finaleKeywordError.hidden = true
+    setFinaleChallengeAvailable(finaleChallengeAvailable)
     setStatus(`${formatRecordDate(entry.date, locale)} — ${entry.title}`)
   }
 
-  function updateJourney(journey: DiaryJourney) {
+  function setFinaleChallengeAvailable(available: boolean) {
     const unlockedPanel = requiredElement<HTMLElement>(
       root,
       '[data-diary-unlocked]',
     )
-    unlockedPanel.hidden = !journey.unlocked
-    const latestPanel = requiredElement<HTMLElement>(
-      root,
-      '[data-diary-latest]',
-    )
-    latestPanel.hidden = !journey.latestRecordsAvailable
+    unlockedPanel.hidden = !available
+  }
+
+  function showFinaleKeywordError() {
+    finaleKeywordError.hidden = false
+    setStatus(copy.finaleKeywordIncorrect)
+    finaleKeywordInput.focus()
+    finaleKeywordInput.select()
   }
 
   async function loadEntry(
     requestedDate: string | undefined,
     options: {
-      followLatest?: boolean
-      force?: boolean
       history?: 'push' | 'replace' | 'none'
     } = {},
   ): Promise<boolean> {
@@ -311,10 +323,8 @@ export function initAlphaDiary() {
           {
             action: 'entry',
             entryDate: date || undefined,
-            journeyToken: journeyToken || undefined,
             locale,
-            version: 1,
-            ...(options.followLatest ? { followLatest: true } : {}),
+            version: 2,
             ...(date && date < BIRTH_BOUNDARY
               ? { adultConsentVersion: 1 }
               : {}),
@@ -332,10 +342,16 @@ export function initAlphaDiary() {
       if (
         payload.status === 'ready' &&
         isDiaryEntry(payload.entry) &&
-        isDiaryJourney(payload.journey)
+        typeof payload.finaleChallengeAvailable === 'boolean' &&
+        (payload.puzzleClue === undefined ||
+          (!payload.finaleChallengeAvailable &&
+            isDiaryPuzzleClue(payload.puzzleClue)))
       ) {
-        invalidJourneyRetried = false
-        renderEntry(payload.entry, payload.journey)
+        renderEntry(
+          payload.entry,
+          payload.finaleChallengeAvailable,
+          payload.puzzleClue,
+        )
         return true
       }
       if (payload.status === 'pending') {
@@ -354,18 +370,8 @@ export function initAlphaDiary() {
       }
       if (payload.status === 'consent_required') {
         const accepted = await requestAdultConsent()
-        if (accepted) return loadEntry(date, { history: 'none', force: true })
+        if (accepted) return loadEntry(date, { history: 'none' })
         return false
-      }
-      if (
-        payload.errorCode === 'invalid_journey' &&
-        journeyToken &&
-        !invalidJourneyRetried
-      ) {
-        invalidJourneyRetried = true
-        journeyToken = ''
-        removeStorage(JOURNEY_STORAGE_KEY)
-        return loadEntry(date, { history: 'none', force: true })
       }
       renderFailure()
       return false
@@ -377,12 +383,18 @@ export function initAlphaDiary() {
     }
   }
 
-  async function requestFinale() {
-    if (!currentJourney?.unlocked) return
+  async function requestFinale(finaleKeyword: string) {
+    if (!isValidDate(currentDate)) return
+    const keyword = finaleKeyword.trim()
+    if (!keyword || keyword.length > 80) {
+      showFinaleKeywordError()
+      return
+    }
     if (!hasAdultConsent() && !(await requestAdultConsent())) return
+    finaleKeywordError.hidden = true
     setStatus(copy.loadingTitle)
     try {
-      const fixture = getFixtureFinale(root, copy)
+      const fixture = getFixtureFinale(root, copy, keyword)
       const payload =
         fixture ||
         (await requestDiary(
@@ -390,19 +402,13 @@ export function initAlphaDiary() {
           {
             action: 'finale',
             adultConsentVersion: 1,
-            journeyToken,
+            entryDate: currentDate,
+            finaleKeyword: keyword,
             locale,
-            version: 1,
+            version: 2,
           },
           signal,
         ))
-      if (
-        typeof payload.journeyToken === 'string' &&
-        payload.journeyToken.length <= 4096
-      ) {
-        journeyToken = payload.journeyToken
-        writeStorage(JOURNEY_STORAGE_KEY, journeyToken)
-      }
       if (payload.status === 'ready' && isDiaryFinale(payload.finale)) {
         currentFinale = payload.finale
         openFinaleDialog()
@@ -410,9 +416,13 @@ export function initAlphaDiary() {
       }
       if (payload.status === 'pending') {
         pendingTimer = window.setTimeout(
-          () => void requestFinale(),
+          () => void requestFinale(keyword),
           readRetryAfter(payload.retryAfter) * 1000,
         )
+        return
+      }
+      if (payload.errorCode === 'keyword_incorrect') {
+        showFinaleKeywordError()
         return
       }
       renderFailure()
@@ -559,7 +569,7 @@ export function initAlphaDiary() {
       '[data-finale-shards]',
     )
     shardContainer.replaceChildren()
-    const dates = getFinaleOpenedDates()
+    const dates = getFinaleKeyDates()
     const shardCount = Math.min(18, Math.max(10, dates.length * 2))
     for (let index = 0; index < shardCount; index += 1) {
       const date = dates[index % dates.length]
@@ -605,7 +615,7 @@ export function initAlphaDiary() {
       finaleOverlay,
       '[data-finale-glitch]',
     )
-    const dates = getFinaleOpenedDates()
+    const dates = getFinaleKeyDates()
     const oldestDate = dates[0]
 
     if (stage === 'drift') {
@@ -669,7 +679,7 @@ export function initAlphaDiary() {
       '[data-finale-opened-list]',
     )
     openedList.replaceChildren()
-    const dates = getFinaleOpenedDates()
+    const dates = getFinaleKeyDates()
     const interval = Math.max(45, Math.floor(2_100 / dates.length))
     dates.forEach((date, index) => {
       const appendItem = () => {
@@ -712,9 +722,7 @@ export function initAlphaDiary() {
     finaleAnimationFrame = window.requestAnimationFrame(reveal)
   }
 
-  function getFinaleOpenedDates(): string[] {
-    const dates = [...new Set(openedDates.filter(isValidDate))].sort()
-    if (dates.length > 0) return dates
+  function getFinaleKeyDates(): string[] {
     return [isValidDate(currentDate) ? currentDate : serverToday]
   }
 
@@ -826,10 +834,7 @@ export function initAlphaDiary() {
       const target = event.target
       if (!(target instanceof Element)) return
       if (target.closest('[data-diary-retry]')) {
-        void loadEntry(currentDate || dateInput.value, {
-          history: 'none',
-          force: true,
-        })
+        void loadEntry(currentDate || dateInput.value, { history: 'none' })
         return
       }
       if (target.closest('[data-diary-today]')) {
@@ -848,30 +853,6 @@ export function initAlphaDiary() {
           shiftDate(currentDate || dateInput.value || serverToday, 1),
           { history: 'push' },
         )
-        return
-      }
-      if (target.closest('[data-diary-reset]')) {
-        if (!window.confirm(copy.resetConfirm)) return
-        removeStorage(JOURNEY_STORAGE_KEY)
-        removeStorage(OPENED_DATES_STORAGE_KEY)
-        journeyToken = ''
-        openedDates = []
-        currentJourney = null
-        void loadEntry(serverToday, { history: 'push' })
-        return
-      }
-      if (target.closest('[data-diary-follow-latest]')) {
-        journeyToken = ''
-        removeStorage(JOURNEY_STORAGE_KEY)
-        void loadEntry(currentDate || serverToday, {
-          followLatest: true,
-          force: true,
-          history: 'none',
-        })
-        return
-      }
-      if (target.closest('[data-diary-open-finale]')) {
-        void requestFinale()
         return
       }
       const modeButton = target.closest<HTMLElement>('[data-finale-mode]')
@@ -942,6 +923,18 @@ export function initAlphaDiary() {
     { signal },
   )
 
+  requiredElement<HTMLFormElement>(
+    root,
+    '[data-diary-finale-form]',
+  ).addEventListener(
+    'submit',
+    (event) => {
+      event.preventDefault()
+      void requestFinale(finaleKeywordInput.value)
+    },
+    { signal },
+  )
+
   window.addEventListener(
     'popstate',
     () => {
@@ -949,28 +942,6 @@ export function initAlphaDiary() {
       const date = new URL(window.location.href).searchParams.get('date') || ''
       if (!date || isValidDate(date))
         void loadEntry(date || undefined, { history: 'none' })
-    },
-    { signal },
-  )
-
-  document.addEventListener(
-    'alpha-diary:progress',
-    (event) => {
-      const detail = (event as CustomEvent).detail
-      if (!detail || typeof detail !== 'object') return
-      if (
-        typeof detail.journeyToken === 'string' &&
-        detail.journeyToken.length <= 4096 &&
-        EXPERIENCE_EVENTS.has(String(detail.experienceEvent))
-      ) {
-        journeyToken = detail.journeyToken
-        writeStorage(JOURNEY_STORAGE_KEY, journeyToken)
-        setStatus(copy.statusProgressUpdated)
-        void loadEntry(currentDate || undefined, {
-          history: 'none',
-          force: true,
-        })
-      }
     },
     { signal },
   )
@@ -1078,24 +1049,6 @@ function isDiaryEntry(value: unknown): value is DiaryEntry {
   )
 }
 
-function isDiaryJourney(value: unknown): value is DiaryJourney {
-  if (!isRecord(value)) return false
-  return (
-    Number.isInteger(value.confirmedCount) &&
-    Number.isInteger(value.viewedCount) &&
-    Number.isInteger(value.totalCount) &&
-    Number(value.totalCount) > 0 &&
-    Number.isInteger(value.goalVersion) &&
-    Number.isInteger(value.latestGoalVersion) &&
-    typeof value.latestRecordsAvailable === 'boolean' &&
-    typeof value.unlocked === 'boolean' &&
-    typeof value.token === 'string' &&
-    value.token.length <= 4096 &&
-    Array.isArray(value.suggestedRecordDates) &&
-    value.suggestedRecordDates.every(isValidDate)
-  )
-}
-
 function isDiaryFinale(value: unknown): value is DiaryFinale {
   return (
     isRecord(value) &&
@@ -1103,6 +1056,19 @@ function isDiaryFinale(value: unknown): value is DiaryFinale {
     value.message.length <= 4_000 &&
     isDiaryImage(value.landscape) &&
     isDiaryImage(value.portrait)
+  )
+}
+
+function isDiaryPuzzleClue(value: unknown): value is DiaryPuzzleClue {
+  return (
+    isRecord(value) &&
+    Number.isInteger(value.step) &&
+    Number(value.step) >= 1 &&
+    Number(value.step) <= 4 &&
+    value.total === 4 &&
+    typeof value.text === 'string' &&
+    value.text.length >= 1 &&
+    value.text.length <= 500
   )
 }
 
@@ -1128,54 +1094,67 @@ function getFixturePayload(
   const fixture = new URL(window.location.href).searchParams.get('fixture')
   if (!fixture) return null
   const today = getJstToday()
-  const archive = fixture === 'archive' || fixture === 'finale'
-  const date = archive
-    ? '2016-12-07'
-    : fixture === 'birth'
-      ? '2020-10-03'
-      : requestedDate || today
+  const clueStep = /^clue-([123])$/u.exec(fixture)?.[1]
+  const trailhead = fixture === 'current'
+  const archive = fixture === 'archive' || Boolean(clueStep)
+  const finale = fixture === 'finale'
+  const historical = archive || finale
+  const clueDates = ['2019-11-13', '2018-04-22', '2016-12-07']
+  const clueIndex = clueStep ? Number(clueStep) - 1 : 2
+  const date = finale
+    ? '2014-03-18'
+    : archive
+      ? clueDates[clueIndex]
+      : fixture === 'birth'
+        ? '2020-10-03'
+        : requestedDate || today
   const entry: DiaryEntry = {
     date,
-    id: `entry_fixture_${archive ? 'observation' : 'diary'}000000000000`,
+    id: `entry_fixture_${historical ? 'observation' : 'diary'}000000000000`,
     image: {
-      alt: archive
+      alt: historical
         ? '退色した観察記録の紙面に、青いボタンと小さな鈴が描かれている。'
         : '青空の下で草の芽を見つけ、笑っているアルファ君の色鉛筆画。',
       assetId: 'fixture',
       height: 768,
       width: 1024,
     },
-    kind: archive ? 'observation' : 'diary',
-    questions: archive
+    kind: historical ? 'observation' : 'diary',
+    questions: historical
       ? [
           '青いボタンを覚えている？',
           'この記録で「音がしない」と書かれたのはなぜ？',
         ]
       : ['今日いちばん嬉しかったことは？', '明日は何をしてみたい？'],
-    text: archive
+    text: historical
       ? '観察対象は、鈴が鳴る前から扉の方を見ていた。\n\n記録者は「偶然」と訂正した。青いボタンだけが、何度消しても同じ場所に描かれている。'
       : 'きょう、スポーン広場のすみで小さな草の芽を見つけたよ。だれかが置いてくれた灯りのそばで、ゆっくり揺れていた。\n\n明日もここにあるかな。見にいく約束を、ぼく自身としてみた。',
-    title: archive ? '音のない鈴' : '小さな芽を見つけた日',
+    title: historical ? '音のない鈴' : '小さな芽を見つけた日',
   }
-  const unlocked = fixture === 'finale'
   return {
     entry,
-    journey: {
-      confirmedCount: unlocked ? 4 : archive ? 2 : 0,
-      goalVersion: 1,
-      latestGoalVersion: 1,
-      latestRecordsAvailable: false,
-      suggestedRecordDates: [
-        '2019-11-13',
-        '2018-04-22',
-        '2016-12-07',
-        '2014-03-18',
-      ],
-      token: 'fixture.journey-token',
-      totalCount: 4,
-      unlocked,
-      viewedCount: unlocked ? 4 : archive ? 3 : 1,
-    },
+    finaleChallengeAvailable: finale,
+    ...(trailhead
+      ? {
+          puzzleClue: {
+            step: 1 as const,
+            text: '入口 I / IV：「2020」の年から1年戻り、「11 / 13」を開く。',
+            total: 4 as const,
+          },
+        }
+      : archive
+        ? {
+            puzzleClue: {
+              step: (clueIndex + 2) as DiaryPuzzleClue['step'],
+              text: [
+                '分類欄 II / IV：最初は、確かめるために何かを試すことを表す二字の熟語。次の紙は「2018 / 04 / 22」。',
+                '役割欄 III / IV：その熟語の後ろには、生き物のからだや一つの個体を表す一字が続く。次の紙は「2016 / 12 / 07」。',
+                '対象欄 IV / IV：末尾はギリシャ文字の最初で、今の名前にも残る読み。三つを順につなぐ。鍵は、この紙の年から2年戻った年の「03 / 18」。',
+              ][clueIndex],
+              total: 4,
+            },
+          }
+        : {}),
     ok: true,
     serverToday: today,
     status: 'ready',
@@ -1185,10 +1164,21 @@ function getFixturePayload(
 function getFixtureFinale(
   root: HTMLElement,
   copy: AlphaDiaryUi,
+  finaleKeyword: string,
 ): DiaryPayload | null {
   if (root.dataset.fixtures !== 'true') return null
   if (new URL(window.location.href).searchParams.get('fixture') !== 'finale')
     return null
+  if (
+    normalizeFinaleKeyword(finaleKeyword) !==
+    normalizeFinaleKeyword('実験体アルファ')
+  ) {
+    return {
+      errorCode: 'keyword_incorrect',
+      ok: false,
+      status: 'failed',
+    }
+  }
   return {
     finale: {
       landscape: {
@@ -1197,7 +1187,7 @@ function getFixtureFinale(
         height: 1080,
         width: 1920,
       },
-      message: `知ってくれて、ありがとう。実験台アルファと呼ばれていた記録も、いま「アルファ君」と呼ばれて笑える時間につながっています。まだ少しずつだけれど、ぼくは幸せです。未来の日記は、未来が来るまで書かれません。`,
+      message: `知ってくれて、ありがとう。実験体アルファと呼ばれていた記録も、いま「アルファ君」と呼ばれて笑える時間につながっています。まだ少しずつだけれど、ぼくは幸せです。未来の日記は、未来が来るまで書かれません。`,
       portrait: {
         alt: '破れた観察記録の先に、朝空と今のアルファ君が見える縦長の構図。',
         assetId: 'fixture',
@@ -1205,11 +1195,17 @@ function getFixtureFinale(
         width: 1080,
       },
     },
-    journeyToken: 'fixture.journey-token',
     ok: true,
     serverToday: getJstToday(),
     status: 'ready',
   }
+}
+
+function normalizeFinaleKeyword(value: string) {
+  return value
+    .normalize('NFKC')
+    .toLocaleLowerCase()
+    .replace(/[\p{P}\p{S}\s]/gu, '')
 }
 
 function getClientId(): string {
@@ -1227,21 +1223,6 @@ function getClientId(): string {
   return value
 }
 
-function readOpenedDates(): string[] {
-  try {
-    const value = JSON.parse(readStorage(OPENED_DATES_STORAGE_KEY) || '[]')
-    return Array.isArray(value)
-      ? [...new Set(value.filter(isValidDate))].slice(-64)
-      : []
-  } catch {
-    return []
-  }
-}
-
-function addOpenedDate(dates: string[], date: string): string[] {
-  return [...new Set([...dates, date])].sort().slice(-64)
-}
-
 function readStorage(key: string): string {
   try {
     return window.localStorage.getItem(key) || ''
@@ -1254,15 +1235,7 @@ function writeStorage(key: string, value: string) {
   try {
     window.localStorage.setItem(key, value)
   } catch {
-    // The diary remains usable without local progress.
-  }
-}
-
-function removeStorage(key: string) {
-  try {
-    window.localStorage.removeItem(key)
-  } catch {
-    // The diary remains usable without local progress.
+    // The diary remains usable without local preferences.
   }
 }
 
