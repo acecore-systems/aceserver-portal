@@ -16,19 +16,11 @@ type DiaryFinale = {
   portrait: { alt: string; assetId: string; height: number; width: number }
 }
 
-type DiaryPuzzleClue = {
-  placement?: 'chat' | 'diary'
-  step: 1 | 2 | 3 | 4
-  text: string
-  total: 4
-}
-
 type DiaryPayload = Record<string, unknown> & {
   entry?: DiaryEntry
   errorCode?: string
   finaleChallengeAvailable?: boolean
   finale?: DiaryFinale
-  puzzleClue?: DiaryPuzzleClue
   retryAfter?: number
   serverToday?: string
   status?: string
@@ -176,11 +168,7 @@ export function initAlphaDiary() {
     setStatus(copy.failureTitle)
   }
 
-  function renderEntry(
-    entry: DiaryEntry,
-    finaleChallengeAvailable: boolean,
-    puzzleClue?: DiaryPuzzleClue,
-  ) {
+  function renderEntry(entry: DiaryEntry, finaleChallengeAvailable: boolean) {
     currentEntry = entry
     currentDate = entry.date
     dateInput.value = entry.date
@@ -222,15 +210,7 @@ export function initAlphaDiary() {
       .split(/\n{2,}/u)
       .map((paragraph) => paragraph.trim())
       .filter(Boolean)
-    const renderedParagraphs = paragraphs.length ? paragraphs : [entry.text]
-    if (puzzleClue && puzzleClue.placement !== 'chat') {
-      renderedParagraphs.splice(
-        getAmbientClueParagraphIndex(entry.id, renderedParagraphs.length),
-        0,
-        puzzleClue.text,
-      )
-    }
-    for (const paragraphText of renderedParagraphs) {
+    for (const paragraphText of paragraphs.length ? paragraphs : [entry.text]) {
       const paragraph = document.createElement('p')
       paragraph.textContent = paragraphText
       body.append(paragraph)
@@ -334,16 +314,9 @@ export function initAlphaDiary() {
       if (
         payload.status === 'ready' &&
         isDiaryEntry(payload.entry) &&
-        typeof payload.finaleChallengeAvailable === 'boolean' &&
-        (payload.puzzleClue === undefined ||
-          (!payload.finaleChallengeAvailable &&
-            isDiaryPuzzleClue(payload.puzzleClue)))
+        typeof payload.finaleChallengeAvailable === 'boolean'
       ) {
-        renderEntry(
-          payload.entry,
-          payload.finaleChallengeAvailable,
-          payload.puzzleClue,
-        )
+        renderEntry(payload.entry, payload.finaleChallengeAvailable)
         return true
       }
       if (payload.status === 'pending') {
@@ -1051,30 +1024,6 @@ function isDiaryFinale(value: unknown): value is DiaryFinale {
   )
 }
 
-function isDiaryPuzzleClue(value: unknown): value is DiaryPuzzleClue {
-  return (
-    isRecord(value) &&
-    (value.placement === undefined ||
-      value.placement === 'chat' ||
-      value.placement === 'diary') &&
-    Number.isInteger(value.step) &&
-    Number(value.step) >= 1 &&
-    Number(value.step) <= 4 &&
-    value.total === 4 &&
-    typeof value.text === 'string' &&
-    value.text.length >= 1 &&
-    value.text.length <= 500
-  )
-}
-
-function getAmbientClueParagraphIndex(entryId: string, paragraphCount: number) {
-  const hash = Array.from(entryId).reduce(
-    (value, character) => (value * 31 + character.charCodeAt(0)) >>> 0,
-    0,
-  )
-  return paragraphCount < 1 ? 0 : 1 + (hash % paragraphCount)
-}
-
 function isDiaryImage(value: unknown): value is DiaryEntry['image'] {
   return (
     isRecord(value) &&
@@ -1098,17 +1047,21 @@ function getFixturePayload(
   if (!fixture) return null
   const today = getJstToday()
   const clueStep = /^clue-([123])$/u.exec(fixture)?.[1]
-  const cluePlacement =
-    fixture === 'current-chat' ||
-    new URL(window.location.href).searchParams.get('cluePlacement') === 'chat'
-      ? 'chat'
-      : 'diary'
-  const trailhead = fixture === 'current' || fixture === 'current-chat'
+  const trailhead = fixture === 'current'
   const archive = fixture === 'archive' || Boolean(clueStep)
   const finale = fixture === 'finale'
   const historical = archive || finale
   const clueDates = ['2019-11-13', '2018-04-22', '2016-12-07']
   const clueIndex = clueStep ? Number(clueStep) - 1 : 2
+  const ambientClue = trailhead
+    ? '見ているうちに、「202…」から一年前、それから「11 / 13」という並びだけが、なぜか頭をよぎった。'
+    : archive && !finale
+      ? [
+          '訂正跡の下には、「確かめるために試すこと」を表す二字と「2018 / 04 / 22」が薄く残っている。',
+          '消しかけの文は、その二字の後ろに「生き物のからだや一つの個体」を表す一字を続け、「2016 / 12 / 07」と結んでいる。',
+          '紙の隅には、末尾はギリシャ文字の最初で今の名にも残る読み、とだけある。三つをつなぐ鍵は二年前の「03 / 18」らしい。',
+        ][clueIndex]
+      : ''
   const date = finale
     ? '2014-03-18'
     : archive
@@ -1135,36 +1088,13 @@ function getFixturePayload(
         ]
       : ['今日いちばん嬉しかったことは？', '明日は何をしてみたい？'],
     text: historical
-      ? '観察対象は、鈴が鳴る前から扉の方を見ていた。\n\n記録者は「偶然」と訂正した。青いボタンだけが、何度消しても同じ場所に描かれている。'
-      : 'きょう、スポーン広場のすみで小さな草の芽を見つけたよ。だれかが置いてくれた灯りのそばで、ゆっくり揺れていた。\n\n明日もここにあるかな。見にいく約束を、ぼく自身としてみた。',
+      ? `観察対象は、鈴が鳴る前から扉の方を見ていた。\n\n記録者は「偶然」と訂正した。${ambientClue ? `${ambientClue} ` : ''}青いボタンだけが、何度消しても同じ場所に描かれている。`
+      : `きょう、スポーン広場のすみで小さな草の芽を見つけたよ。だれかが置いてくれた灯りのそばで、ゆっくり揺れていた。${ambientClue ? ` ${ambientClue}` : ''}\n\n明日もここにあるかな。見にいく約束を、ぼく自身としてみた。`,
     title: historical ? '音のない鈴' : '小さな芽を見つけた日',
   }
   return {
     entry,
     finaleChallengeAvailable: finale,
-    ...(trailhead
-      ? {
-          puzzleClue: {
-            placement: cluePlacement,
-            step: 1 as const,
-            text: 'なぜか「2020」という数字を見ると、そこから1年戻った「11 / 13」のページが気になる。',
-            total: 4 as const,
-          },
-        }
-      : archive
-        ? {
-            puzzleClue: {
-              placement: cluePlacement,
-              step: (clueIndex + 2) as DiaryPuzzleClue['step'],
-              text: [
-                '記録者が、最初は「確かめるために何かを試すこと」を表す二字の熟語だと書き残している。次の紙は「2018 / 04 / 22」らしい。',
-                '消しかけの文に、その熟語の後ろには「生き物のからだや一つの個体」を表す一字が続くとある。その下には「2016 / 12 / 07」。',
-                '紙の隅に、末尾はギリシャ文字の最初で、今の名前にも残る読みだとある。三つを順につなぐ。鍵は、この紙の年から2年戻った年の「03 / 18」らしい。',
-              ][clueIndex],
-              total: 4,
-            },
-          }
-        : {}),
     ok: true,
     serverToday: today,
     status: 'ready',

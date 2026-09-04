@@ -188,9 +188,10 @@ test('exploration is user-led from today’s trailhead to a passphrase on the ke
   assert.doesNotMatch(component, /data-diary-open-finale/u)
   assert.match(script, /version: 2/u)
   assert.match(script, /finaleKeyword: keyword/u)
-  assert.match(script, /payload\.puzzleClue/u)
-  assert.match(script, /puzzleClue\.placement !== 'chat'/u)
-  assert.match(script, /getAmbientClueParagraphIndex/u)
+  assert.doesNotMatch(
+    script,
+    /DiaryPuzzleClue|payload\.puzzleClue|getAmbientClueParagraphIndex/u,
+  )
   assert.match(
     script,
     /function setFinaleChallengeAvailable\(available: boolean\)/u,
