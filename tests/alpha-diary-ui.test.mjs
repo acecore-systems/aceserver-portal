@@ -128,7 +128,34 @@ test('observation records switch from the picture diary to a staff archive surfa
   assert.match(script, /root\.dataset\.recordKind = surfaceKind/u)
   assert.match(
     script,
-    /setLoading\(date && date < BIRTH_BOUNDARY \? 'observation' : 'loading'\)/u,
+    /if \(date && date < BIRTH_BOUNDARY\) return 'observation'/u,
+  )
+})
+
+test('past picture diary pages open as bound records instead of being written now', async () => {
+  const script = await readFile(
+    new URL('../src/scripts/alpha-diary.ts', import.meta.url),
+    'utf8',
+  )
+  const japaneseCopy = getAlphaDiaryUi('ja')
+
+  for (const locale of LOCALES) {
+    const copy = getAlphaDiaryUi(locale)
+    assert.notEqual(copy.pastLoadingTitle, copy.loadingTitle, locale)
+    assert.notEqual(copy.pastLoadingBody, copy.loadingBody, locale)
+  }
+  assert.match(japaneseCopy.pastLoadingTitle, /過去のページ/u)
+  assert.match(japaneseCopy.pastLoadingBody, /綴じられた絵日記/u)
+  assert.doesNotMatch(
+    japaneseCopy.pastLoadingBody,
+    /鉛筆を走らせる|文字と絵が浮かぶ|書いて/u,
+  )
+  assert.match(script, /date && date < serverToday \? 'past' : 'current'/u)
+  assert.match(script, /copy\.pastLoadingTitle/u)
+  assert.match(script, /copy\.pastLoadingBody/u)
+  assert.equal(
+    [...script.matchAll(/setLoading\(getLoadingKind\(date\)\)/gu)].length,
+    2,
   )
 })
 
@@ -150,7 +177,7 @@ test('past observation records load as existing archive pages instead of being w
     japaneseCopy.observationLoadingBody,
     /鉛筆を走らせる|文字と絵が浮かぶ|書いて/u,
   )
-  assert.match(script, /surfaceKind === 'observation'/u)
+  assert.match(script, /loadingKind === 'observation'/u)
   assert.match(script, /copy\.observationLoadingTitle/u)
   assert.match(script, /copy\.observationLoadingBody/u)
 })

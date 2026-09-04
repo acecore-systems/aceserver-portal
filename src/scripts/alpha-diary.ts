@@ -27,6 +27,7 @@ type DiaryPayload = Record<string, unknown> & {
 }
 
 type FinaleMode = 'horror' | 'reduced' | 'text'
+type LoadingKind = 'current' | 'observation' | 'past'
 type FinaleStage =
   | 'ordinary'
   | 'drift'
@@ -112,19 +113,31 @@ export function initAlphaDiary() {
     paper.classList.toggle('is-old-record', surfaceKind === 'observation')
   }
 
-  function setLoading(surfaceKind: 'loading' | 'observation' = 'loading') {
+  function getLoadingKind(date: string): LoadingKind {
+    if (date && date < BIRTH_BOUNDARY) return 'observation'
+    return date && date < serverToday ? 'past' : 'current'
+  }
+
+  function setLoading(loadingKind: LoadingKind = 'current') {
     setFinaleChallengeAvailable(false)
-    setRecordKind(surfaceKind, 'loading')
+    setRecordKind(
+      loadingKind === 'observation' ? 'observation' : 'loading',
+      'loading',
+    )
     statePanel.hidden = false
     entryPanel.hidden = true
     const loadingTitle =
-      surfaceKind === 'observation'
+      loadingKind === 'observation'
         ? copy.observationLoadingTitle
-        : copy.loadingTitle
+        : loadingKind === 'past'
+          ? copy.pastLoadingTitle
+          : copy.loadingTitle
     const loadingBody =
-      surfaceKind === 'observation'
+      loadingKind === 'observation'
         ? copy.observationLoadingBody
-        : copy.loadingBody
+        : loadingKind === 'past'
+          ? copy.pastLoadingBody
+          : copy.loadingBody
     setStateContent(loadingTitle, loadingBody, true)
     setStatus(loadingTitle)
   }
@@ -284,7 +297,7 @@ export function initAlphaDiary() {
     clearPending()
     requestController?.abort()
     requestController = new AbortController()
-    setLoading(date && date < BIRTH_BOUNDARY ? 'observation' : 'loading')
+    setLoading(getLoadingKind(date))
 
     try {
       const fixture = getFixturePayload(root, copy, date || serverToday)
@@ -321,7 +334,7 @@ export function initAlphaDiary() {
       }
       if (payload.status === 'pending') {
         const retryAfter = readRetryAfter(payload.retryAfter)
-        setLoading(date && date < BIRTH_BOUNDARY ? 'observation' : 'loading')
+        setLoading(getLoadingKind(date))
         pendingTimer = window.setTimeout(
           () =>
             void loadEntry(date || payload.serverToday, { history: 'none' }),
