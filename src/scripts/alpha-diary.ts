@@ -16,18 +16,11 @@ type DiaryFinale = {
   portrait: { alt: string; assetId: string; height: number; width: number }
 }
 
-type DiaryPuzzleClue = {
-  step: 1 | 2 | 3 | 4
-  text: string
-  total: 4
-}
-
 type DiaryPayload = Record<string, unknown> & {
   entry?: DiaryEntry
   errorCode?: string
   finaleChallengeAvailable?: boolean
   finale?: DiaryFinale
-  puzzleClue?: DiaryPuzzleClue
   retryAfter?: number
   serverToday?: string
   status?: string
@@ -69,7 +62,6 @@ export function initAlphaDiary() {
   const paper = requiredElement<HTMLElement>(root, '[data-diary-paper]')
   const statePanel = requiredElement<HTMLElement>(root, '[data-diary-state]')
   const entryPanel = requiredElement<HTMLElement>(root, '[data-diary-entry]')
-  const cluePanel = requiredElement<HTMLElement>(root, '[data-diary-clue]')
   const finaleKeywordInput = requiredElement<HTMLInputElement>(
     root,
     '[data-diary-finale-keyword]',
@@ -122,7 +114,6 @@ export function initAlphaDiary() {
 
   function setLoading(surfaceKind: 'loading' | 'observation' = 'loading') {
     setFinaleChallengeAvailable(false)
-    cluePanel.hidden = true
     setRecordKind(surfaceKind, 'loading')
     statePanel.hidden = false
     entryPanel.hidden = true
@@ -157,7 +148,6 @@ export function initAlphaDiary() {
   function renderFuture() {
     clearPending()
     setFinaleChallengeAvailable(false)
-    cluePanel.hidden = true
     setRecordKind('future')
     statePanel.hidden = false
     entryPanel.hidden = true
@@ -168,7 +158,6 @@ export function initAlphaDiary() {
   function renderFailure() {
     clearPending()
     setFinaleChallengeAvailable(false)
-    cluePanel.hidden = true
     setRecordKind(
       currentDate < BIRTH_BOUNDARY ? 'observation' : 'failed',
       'failed',
@@ -179,11 +168,7 @@ export function initAlphaDiary() {
     setStatus(copy.failureTitle)
   }
 
-  function renderEntry(
-    entry: DiaryEntry,
-    finaleChallengeAvailable: boolean,
-    puzzleClue?: DiaryPuzzleClue,
-  ) {
+  function renderEntry(entry: DiaryEntry, finaleChallengeAvailable: boolean) {
     currentEntry = entry
     currentDate = entry.date
     dateInput.value = entry.date
@@ -252,19 +237,6 @@ export function initAlphaDiary() {
       questions.append(button)
     }
 
-    const clueText = requiredElement<HTMLElement>(
-      cluePanel,
-      '[data-diary-clue-text]',
-    )
-    const clueStep = requiredElement<HTMLElement>(
-      cluePanel,
-      '[data-diary-clue-step]',
-    )
-    clueText.textContent = puzzleClue?.text || ''
-    clueStep.textContent = puzzleClue
-      ? `${puzzleClue.step} / ${puzzleClue.total}`
-      : ''
-    cluePanel.hidden = !puzzleClue
     finaleKeywordInput.value = ''
     finaleKeywordError.hidden = true
     setFinaleChallengeAvailable(finaleChallengeAvailable)
@@ -342,16 +314,9 @@ export function initAlphaDiary() {
       if (
         payload.status === 'ready' &&
         isDiaryEntry(payload.entry) &&
-        typeof payload.finaleChallengeAvailable === 'boolean' &&
-        (payload.puzzleClue === undefined ||
-          (!payload.finaleChallengeAvailable &&
-            isDiaryPuzzleClue(payload.puzzleClue)))
+        typeof payload.finaleChallengeAvailable === 'boolean'
       ) {
-        renderEntry(
-          payload.entry,
-          payload.finaleChallengeAvailable,
-          payload.puzzleClue,
-        )
+        renderEntry(payload.entry, payload.finaleChallengeAvailable)
         return true
       }
       if (payload.status === 'pending') {
@@ -1059,19 +1024,6 @@ function isDiaryFinale(value: unknown): value is DiaryFinale {
   )
 }
 
-function isDiaryPuzzleClue(value: unknown): value is DiaryPuzzleClue {
-  return (
-    isRecord(value) &&
-    Number.isInteger(value.step) &&
-    Number(value.step) >= 1 &&
-    Number(value.step) <= 4 &&
-    value.total === 4 &&
-    typeof value.text === 'string' &&
-    value.text.length >= 1 &&
-    value.text.length <= 500
-  )
-}
-
 function isDiaryImage(value: unknown): value is DiaryEntry['image'] {
   return (
     isRecord(value) &&
@@ -1101,6 +1053,15 @@ function getFixturePayload(
   const historical = archive || finale
   const clueDates = ['2019-11-13', '2018-04-22', '2016-12-07']
   const clueIndex = clueStep ? Number(clueStep) - 1 : 2
+  const ambientClue = trailhead
+    ? '見ているうちに、「202…」から一年前、それから「11 / 13」という並びだけが、なぜか頭をよぎった。'
+    : archive && !finale
+      ? [
+          '訂正跡の下には、「確かめるために試すこと」を表す二字と「2018 / 04 / 22」が薄く残っている。',
+          '消しかけの文は、その二字の後ろに「生き物のからだや一つの個体」を表す一字を続け、「2016 / 12 / 07」と結んでいる。',
+          '紙の隅には、末尾はギリシャ文字の最初で今の名にも残る読み、とだけある。三つをつなぐ鍵は二年前の「03 / 18」らしい。',
+        ][clueIndex]
+      : ''
   const date = finale
     ? '2014-03-18'
     : archive
@@ -1127,34 +1088,13 @@ function getFixturePayload(
         ]
       : ['今日いちばん嬉しかったことは？', '明日は何をしてみたい？'],
     text: historical
-      ? '観察対象は、鈴が鳴る前から扉の方を見ていた。\n\n記録者は「偶然」と訂正した。青いボタンだけが、何度消しても同じ場所に描かれている。'
-      : 'きょう、スポーン広場のすみで小さな草の芽を見つけたよ。だれかが置いてくれた灯りのそばで、ゆっくり揺れていた。\n\n明日もここにあるかな。見にいく約束を、ぼく自身としてみた。',
+      ? `観察対象は、鈴が鳴る前から扉の方を見ていた。\n\n記録者は「偶然」と訂正した。${ambientClue ? `${ambientClue} ` : ''}青いボタンだけが、何度消しても同じ場所に描かれている。`
+      : `きょう、スポーン広場のすみで小さな草の芽を見つけたよ。だれかが置いてくれた灯りのそばで、ゆっくり揺れていた。${ambientClue ? ` ${ambientClue}` : ''}\n\n明日もここにあるかな。見にいく約束を、ぼく自身としてみた。`,
     title: historical ? '音のない鈴' : '小さな芽を見つけた日',
   }
   return {
     entry,
     finaleChallengeAvailable: finale,
-    ...(trailhead
-      ? {
-          puzzleClue: {
-            step: 1 as const,
-            text: '入口 I / IV：「2020」の年から1年戻り、「11 / 13」を開く。',
-            total: 4 as const,
-          },
-        }
-      : archive
-        ? {
-            puzzleClue: {
-              step: (clueIndex + 2) as DiaryPuzzleClue['step'],
-              text: [
-                '分類欄 II / IV：最初は、確かめるために何かを試すことを表す二字の熟語。次の紙は「2018 / 04 / 22」。',
-                '役割欄 III / IV：その熟語の後ろには、生き物のからだや一つの個体を表す一字が続く。次の紙は「2016 / 12 / 07」。',
-                '対象欄 IV / IV：末尾はギリシャ文字の最初で、今の名前にも残る読み。三つを順につなぐ。鍵は、この紙の年から2年戻った年の「03 / 18」。',
-              ][clueIndex],
-              total: 4,
-            },
-          }
-        : {}),
     ok: true,
     serverToday: today,
     status: 'ready',

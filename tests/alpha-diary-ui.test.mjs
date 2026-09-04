@@ -181,13 +181,17 @@ test('exploration is user-led from today’s trailhead to a passphrase on the ke
     `${component}\n${copySource}\n${script}`,
     /しおりを外す|journeyToken|OPENED_DATES_STORAGE_KEY|followLatest/u,
   )
-  assert.match(component, /data-diary-clue/u)
+  assert.doesNotMatch(component, /data-diary-clue|diary-clue/u)
+  assert.doesNotMatch(copySource, /clueLabel|clueLead|余白の手掛かり/u)
   assert.match(component, /data-diary-finale-form/u)
   assert.match(component, /data-diary-finale-keyword/u)
   assert.doesNotMatch(component, /data-diary-open-finale/u)
   assert.match(script, /version: 2/u)
   assert.match(script, /finaleKeyword: keyword/u)
-  assert.match(script, /payload\.puzzleClue/u)
+  assert.doesNotMatch(
+    script,
+    /DiaryPuzzleClue|payload\.puzzleClue|getAmbientClueParagraphIndex/u,
+  )
   assert.match(
     script,
     /function setFinaleChallengeAvailable\(available: boolean\)/u,
@@ -195,8 +199,6 @@ test('exploration is user-led from today’s trailhead to a passphrase on the ke
   assert.match(script, /unlockedPanel\.hidden = !available/u)
   assert.match(getAlphaDiaryUi('ja').questionsLead, /言葉や日付/u)
   assert.match(getAlphaDiaryUi('ja').questionsLead, /自分で覚えて/u)
-  assert.match(getAlphaDiaryUi('ja').clueLead, /入口.*日付/u)
-  assert.match(getAlphaDiaryUi('ja').clueLead, /三つの手掛かり/u)
   assert.match(getAlphaDiaryUi('ja').unlockedBody, /合言葉/u)
   assert.match(getAlphaDiaryUi('ja').finaleKeywordIncorrect, /三つの手掛かり/u)
   assert.doesNotMatch(script, /puzzleClue:\s*['"]実験体アルファ/u)
