@@ -189,6 +189,7 @@ export function initAlphaDiary() {
     setRecordKind(entry.kind)
     statePanel.hidden = true
     entryPanel.hidden = false
+    entryPanel.dataset.alphaDiaryEntryId = entry.id
     requiredElement<HTMLElement>(entryPanel, '[data-diary-kind]').textContent =
       entry.kind === 'observation' ? copy.observationKind : copy.diaryKind
     requiredElement<HTMLElement>(
