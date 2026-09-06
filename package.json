@@ -44,24 +44,24 @@
     "sync:portal-vectorize:dry-run": "node scripts/sync-portal-vectorize.mjs --dry-run"
   },
   "dependencies": {
-    "@astrojs/sitemap": "^3.7.3",
+    "@astrojs/sitemap": "^3.7.4",
     "@fontsource/noto-sans-jp": "^5.3.0",
-    "astro": "^7.2.0",
+    "astro": "^7.3.1",
     "graphql": "^17.0.2",
     "zod": "^4.3.6"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^5.20260804.1",
-    "@iconify-json/lucide": "^1.2.121",
+    "@cloudflare/workers-types": "^5.20260903.1",
+    "@iconify-json/lucide": "^1.2.129",
     "@tailwindcss/vite": "^4.3.3",
     "mdast-util-from-markdown": "^2.0.3",
     "pagefind": "^1.5.2",
-    "parse5": "^7.3.0",
+    "parse5": "^8.0.1",
     "prettier": "^3.9.6",
     "prettier-plugin-astro": "^0.14.1",
     "tailwindcss": "^4.3.3",
     "typescript": "^7.0.2",
-    "wrangler": "4.123.0"
+    "wrangler": "4.129.0"
   },
   "allowScripts": {
     "esbuild@0.28.1": true,
