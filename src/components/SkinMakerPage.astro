@@ -1,13 +1,33 @@
 ---
 import { getSkinMakerUi } from '../data/skin-maker-ui'
-import type { Locale } from '../i18n/config'
+import { HTML_LANG_BY_LOCALE, localizePath, type Locale } from '../i18n/config'
+import { getSkinMakerSeo } from '../data/skin-maker-seo'
+import { serializeJsonForHtmlScript } from '../data/safe-json'
 import { FACES } from '../lib/skin-maker'
 interface Props {
   locale: Locale
 }
 const { locale } = Astro.props
 const c = getSkinMakerUi(locale)
+const seo = getSkinMakerSeo(locale)
+const url = new URL(localizePath(locale, '/skin-maker/'), Astro.site).href
+const appJsonLd = serializeJsonForHtmlScript({
+  '@context': 'https://schema.org',
+  '@type': 'WebApplication',
+  '@id': `${url}#app`,
+  url,
+  name: c.title,
+  description: seo.description,
+  inLanguage: HTML_LANG_BY_LOCALE[locale],
+  applicationCategory: 'DesignApplication',
+  operatingSystem: 'Web',
+  browserRequirements: 'WebGL for 3D preview',
+  featureList: ['Minecraft Classic / Slim', '64×64 PNG', '3D'],
+  isPartOf: { '@id': `${url}#webpage` },
+})
 ---
+
+<script type="application/ld+json" set:html={appJsonLd} />
 
 <section class="skin-maker" data-skin-maker data-locale={locale}>
   <header class="maker-heading">
