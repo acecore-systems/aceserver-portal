@@ -1,0 +1,474 @@
+---
+import { getSkinMakerUi } from '../data/skin-maker-ui'
+import type { Locale } from '../i18n/config'
+import { PARTS, LAYERS, FACES } from '../lib/skin-maker'
+interface Props {
+  locale: Locale
+}
+const { locale } = Astro.props
+const c = getSkinMakerUi(locale)
+---
+
+<section class="skin-maker" data-skin-maker data-locale={locale}>
+  <header class="maker-heading">
+    <span class="eyebrow">MINECRAFT · 64 × 64</span>
+    <h1>{c.title}</h1>
+    <p>{c.intro}</p>
+  </header>
+  <div class="maker-grid">
+    <form class="editor" data-form>
+      <fieldset data-inputs>
+        <div class="mode-row">
+          <label
+            ><input type="radio" name="mode" value="create" checked />{
+              c.create
+            }</label
+          >
+          <label><input type="radio" name="mode" value="edit" />{c.edit}</label>
+        </div>
+        <label class="field"
+          >{c.model}
+          <select name="model"
+            ><option value="classic">Classic · 4px</option><option value="slim"
+              >Slim · 3px</option
+            ></select
+          >
+        </label>
+        <label class="field"
+          >{c.upload}<input name="skin" type="file" accept="image/png" /></label
+        >
+        <label class="field"
+          >{c.reference}<input
+            name="reference"
+            type="file"
+            accept="image/png,image/jpeg,image/webp"
+          /></label
+        >
+        <div class="reference" data-reference hidden>
+          <img data-reference-image alt={c.reference} width="96" height="96" />
+          <button type="button" data-remove>{c.remove}</button>
+        </div>
+        <label class="field"
+          >{c.prompt}<textarea name="prompt" rows="4" maxlength="1200" required
+          ></textarea></label
+        >
+        <details data-scope>
+          <summary>{c.scope}</summary>
+          <fieldset>
+            <legend>{c.parts}</legend><div class="checks">
+              {
+                PARTS.map((part, i) => (
+                  <label>
+                    <input type="checkbox" name="parts" value={part} checked />
+                    {c.partNames[i]}
+                  </label>
+                ))
+              }
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>{c.layers}</legend><div class="checks">
+              {
+                LAYERS.map((layer, i) => (
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="layers"
+                      value={layer}
+                      checked
+                    />
+                    {c.layerNames[i]}
+                  </label>
+                ))
+              }
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>{c.faces}</legend><div class="checks">
+              {
+                FACES.map((face, i) => (
+                  <label>
+                    <input type="checkbox" name="faces" value={face} checked />
+                    {c.faceNames[i]}
+                  </label>
+                ))
+              }
+            </div>
+          </fieldset>
+        </details>
+        <label class="consent"
+          ><input type="checkbox" name="consent" required />
+          <span>{c.consent}</span></label
+        >
+        <div data-turnstile></div>
+        <button class="primary" data-generate type="submit" disabled
+          >{c.generate}</button
+        >
+      </fieldset>
+      <p data-status role="status" aria-live="polite">{c.disabled}</p>
+    </form>
+    <section class="result" aria-label={c.preview}>
+      <div class="preview-heading">
+        <h2>{c.preview}</h2><span>PNG · 64 × 64</span>
+      </div>
+      <div class="stage" data-stage>
+        <canvas data-viewer aria-label={c.preview}></canvas>
+        <p class="empty" data-empty>{c.empty}</p>
+      </div>
+      <p data-webgl hidden>{c.webgl}</p>
+      <div class="view-controls">
+        {
+          [3, 5, 2, 4].map((i) => (
+            <button type="button" data-angle={FACES[i]}>
+              {c.faceNames[i]}
+            </button>
+          ))
+        }
+        <label><input type="checkbox" data-rotate />{c.rotate}</label>
+        <label
+          ><input type="checkbox" data-outer checked />{c.layerNames[1]}</label
+        >
+      </div>
+      <div class="atlas-row">
+        <canvas data-atlas width="64" height="64" aria-label="64×64 PNG"
+        ></canvas>
+        <div class="export-controls">
+          <a
+            class="primary"
+            data-download
+            aria-disabled="true"
+            download="minecraft-classic.png">{c.download}</a
+          >
+          <button type="button" data-undo disabled>{c.undo}</button>
+          <button type="button" data-clear>{c.clear}</button>
+        </div>
+      </div>
+      <p class="hint">{c.note}</p>
+    </section>
+  </div>
+  <aside class="privacy">
+    <p>{c.privacy}</p><a
+      href="https://developers.cloudflare.com/workers-ai/platform/data-usage/"
+      target="_blank"
+      rel="noopener noreferrer">Cloudflare · Workers AI</a
+    >
+  </aside>
+</section>
+
+<script>
+  import { initSkinMaker } from '../scripts/skin-maker'
+  document
+    .querySelectorAll<HTMLElement>('[data-skin-maker]')
+    .forEach(initSkinMaker)
+</script>
+
+<style>
+  .skin-maker {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 44px 22px 56px;
+    color: #302619;
+  }
+  .maker-heading {
+    max-width: 780px;
+    margin-bottom: 30px;
+  }
+  .eyebrow {
+    color: #846125;
+    font-size: 0.78rem;
+    letter-spacing: 0.16em;
+    font-weight: 800;
+  }
+  h1 {
+    font-size: clamp(2.1rem, 5vw, 3.5rem);
+    font-weight: 900;
+    margin: 8px 0;
+    line-height: 1.2;
+  }
+  h2 {
+    font-size: 1.15rem;
+    font-weight: 800;
+    margin: 0;
+  }
+  .maker-heading p {
+    line-height: 1.8;
+    color: #66553f;
+  }
+  .maker-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 24px;
+    align-items: start;
+  }
+  .editor,
+  .result {
+    background: #fffdf5;
+    border: 1px solid #dbcdb1;
+    border-radius: 18px;
+    padding: 24px;
+    box-shadow: 0 5px 0 #e4d7b9;
+  }
+  fieldset {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    min-width: 0;
+  }
+  fieldset:disabled {
+    opacity: 0.65;
+  }
+  .mode-row,
+  .checks {
+    display: flex;
+    gap: 10px 18px;
+    flex-wrap: wrap;
+  }
+  .mode-row {
+    padding-bottom: 18px;
+    border-bottom: 1px solid #e8ddc5;
+  }
+  .mode-row label,
+  .checks label,
+  .view-controls label {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 0.9rem;
+  }
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 18px;
+    font-size: 0.88rem;
+    font-weight: 700;
+  }
+  input[type='file'],
+  textarea,
+  select {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    border: 1px solid #c9b994;
+    border-radius: 8px;
+    padding: 10px;
+    background: #fff;
+    color: #302619;
+    font: inherit;
+  }
+  input[type='file'] {
+    font-size: 0.8rem;
+  }
+  input[type='checkbox'],
+  input[type='radio'] {
+    accent-color: #7b5422;
+    width: 17px;
+    height: 17px;
+    flex-shrink: 0;
+  }
+  textarea {
+    resize: vertical;
+    min-height: 110px;
+  }
+  details {
+    margin-top: 18px;
+    font-size: 0.85rem;
+  }
+  summary {
+    cursor: pointer;
+    font-weight: 700;
+    padding: 8px 0;
+  }
+  details fieldset {
+    margin: 10px 0;
+  }
+  legend {
+    font-weight: 700;
+    margin-bottom: 7px;
+  }
+  button,
+  .primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 14px;
+    border: 1px solid #c6b28b;
+    border-radius: 8px;
+    color: #302619;
+    background: #fff9e9;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-decoration: none;
+    cursor: pointer;
+    min-height: 42px;
+  }
+  button:hover,
+  .primary:hover {
+    background: #fbe6a8;
+  }
+  button:focus-visible,
+  a:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible,
+  summary:focus-visible {
+    outline: 3px solid #257f89;
+    outline-offset: 3px;
+  }
+  .primary {
+    background: #ffd84d;
+    border-color: #ae861e;
+    box-shadow: 0 3px 0 #c09a32;
+  }
+  button:disabled,
+  [aria-disabled='true'] {
+    opacity: 0.45;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+  [data-generate] {
+    width: 100%;
+    margin-top: 16px;
+  }
+  .consent {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-top: 20px;
+    font-size: 0.78rem;
+    line-height: 1.6;
+  }
+  [data-status] {
+    font-size: 0.85rem;
+    line-height: 1.7;
+    margin: 18px 0 0;
+    overflow-wrap: anywhere;
+  }
+  .preview-heading {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+  }
+  .preview-heading span {
+    font-size: 0.7rem;
+    color: #83673f;
+    white-space: nowrap;
+  }
+  .stage {
+    position: relative;
+    margin: 18px 0 14px;
+    height: 380px;
+    background:
+      radial-gradient(ellipse at 50% 75%, #d3c5a0, transparent 50%),
+      linear-gradient(#f8f0da, #ebe0c3);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  [data-viewer] {
+    display: block;
+    width: 100%;
+    height: 100%;
+    touch-action: none;
+  }
+  .empty {
+    position: absolute;
+    inset: 40% 25px auto;
+    text-align: center;
+    color: #776546;
+    font-size: 0.9rem;
+    pointer-events: none;
+    line-height: 1.8;
+  }
+  .view-controls {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .view-controls button {
+    padding: 8px 12px;
+  }
+  .view-controls label {
+    font-size: 0.8rem;
+  }
+  .atlas-row {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin: 22px 0;
+  }
+  .export-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .export-controls .primary {
+    width: 100%;
+  }
+  [data-atlas] {
+    width: 128px;
+    height: 128px;
+    image-rendering: pixelated;
+    flex-shrink: 0;
+    border: 1px solid #c9b994;
+    background: repeating-conic-gradient(#eee7d7 0 25%, #fffdf5 0 50%) 0/16px
+      16px;
+  }
+  .hint,
+  .privacy {
+    font-size: 0.78rem;
+    line-height: 1.8;
+    color: #715e42;
+  }
+  .privacy {
+    margin-top: 28px;
+    max-width: 850px;
+  }
+  .privacy a {
+    text-decoration: underline;
+  }
+  .reference {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 12px;
+  }
+  .reference img {
+    object-fit: contain;
+    border-radius: 8px;
+  }
+  [hidden] {
+    display: none !important;
+  }
+  [data-webgl] {
+    font-size: 0.85rem;
+    color: #8b391c;
+  }
+  @media (max-width: 760px) {
+    .skin-maker {
+      padding: 26px 14px 40px;
+    }
+    .maker-grid {
+      grid-template-columns: 1fr;
+      gap: 22px;
+    }
+    .editor,
+    .result {
+      padding: 18px;
+    }
+    .stage {
+      height: 340px;
+    }
+    .atlas-row {
+      gap: 14px;
+    }
+    [data-atlas] {
+      width: 96px;
+      height: 96px;
+    }
+    .preview-heading {
+      flex-wrap: wrap;
+    }
+  }
+</style>

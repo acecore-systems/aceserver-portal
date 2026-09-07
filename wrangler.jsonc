@@ -12,6 +12,8 @@
     ],
   },
   "vars": {
+    "SKIN_MAKER_ENABLED": "false",
+    "SKIN_TURNSTILE_SITE_KEY": "",
     "SEARCH_EMBEDDING_MODEL": "@cf/baai/bge-m3",
     "SEARCH_EMBEDDING_DIMENSIONS": "1024",
     "WIKI_SEARCH_ENABLED": "false",
@@ -72,6 +74,8 @@
         },
       ],
       "vars": {
+        "SKIN_MAKER_ENABLED": "false",
+        "SKIN_TURNSTILE_SITE_KEY": "",
         "SEARCH_EMBEDDING_MODEL": "@cf/baai/bge-m3",
         "SEARCH_EMBEDDING_DIMENSIONS": "1024",
         "WIKI_SEARCH_ENABLED": "false",
@@ -148,6 +152,8 @@
         },
       ],
       "vars": {
+        "SKIN_MAKER_ENABLED": "true",
+        "SKIN_TURNSTILE_SITE_KEY": "0x4AAAAAAErIZJD3i5QFG2LB",
         "SEARCH_EMBEDDING_MODEL": "@cf/baai/bge-m3",
         "SEARCH_EMBEDDING_DIMENSIONS": "1024",
         "WIKI_SEARCH_ENABLED": "true",

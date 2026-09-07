@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "allowImportingTsExtensions": true,
+    "lib": ["ES2023", "DOM", "DOM.Iterable"],
+    "noEmit": true,
+    "skipLibCheck": true
+  },
+  "include": [
+    "src/scripts/skin-maker.ts",
+    "src/lib/skin-*.ts",
+    "src/data/skin-maker-ui.ts"
+  ]
+}

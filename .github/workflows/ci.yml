@@ -57,6 +57,12 @@ jobs:
       - name: Test site search API
         run: npm run test:search
 
+      - name: Test skin maker
+        run: npm run test:skin-maker
+
+      - name: Type-check skin maker client
+        run: npm run typecheck:skin-maker
+
       - name: Test CMS proxy
         run: npm run test:cms
 
