@@ -4,6 +4,7 @@ import { localizePath, type Locale } from '../i18n/config'
 import { getUi } from '../i18n/translations'
 import { ACECORE_ORGANIZATION } from '../data/organization'
 import { externalLinkAttrs } from '../utils/links'
+import { getSkinMakerUi } from '../data/skin-maker-ui'
 
 interface Props {
   locale?: Locale
@@ -41,6 +42,9 @@ const acecoreHomeUrl = new URL(
       }
     </nav>
     <div class="footer-meta">
+      <a href={localizePath(locale, '/skin-maker/')}
+        >{getSkinMakerUi(locale).title}</a
+      >
       <a href={acecoreHomeUrl} {...externalLinkAttrs(acecoreHomeUrl, true)}>
         {ACECORE_ORGANIZATION.name} ({ACECORE_ORGANIZATION.legalName})
       </a>

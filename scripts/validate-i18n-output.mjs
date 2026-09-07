@@ -35,7 +35,12 @@ const storySlugs = [
   'minecraft-server-setup',
   'metaverse-is-close',
 ]
-const fixedPagePaths = ['/stories/', '/search/', '/alpha-diary/']
+const fixedPagePaths = [
+  '/stories/',
+  '/search/',
+  '/alpha-diary/',
+  '/skin-maker/',
+]
 
 function fail(scope, message) {
   errors.push(`${scope}: ${message}`)
