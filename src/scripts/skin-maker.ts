@@ -285,7 +285,7 @@ export function initSkinMaker(root: HTMLElement) {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(input),
-        signal: AbortSignal.timeout(180_000),
+        signal: AbortSignal.timeout(270_000),
       })
       if (!response.ok) {
         status.textContent =

@@ -478,3 +478,111 @@ test('all supported locales have complete nonempty controls', () => {
     assert.equal(c.layerNames.length, 2)
   }
 })
+
+test('live text generation and both-eye edit retain all unrelated RGBA bytes', () => {
+  const fixture = (name) =>
+    readFileSync(new URL(`./fixtures/skin-maker/${name}`, import.meta.url))
+  const original = readSkinPng(fixture('text-classic.png'), 'classic')
+  assert.deepEqual(
+    applyDesign(JSON.parse(fixture('text-design.json')), create()).pixels,
+    original,
+  )
+  const output = applyDesign(
+    JSON.parse(fixture('eyes-edit.json')),
+    edit(),
+    original,
+  )
+  const eyeOffsets = [((8 + 4) * 64 + 8 + 3) * 4, ((8 + 4) * 64 + 8 + 7) * 4]
+  assert.equal(output.changed, 2)
+  for (let i = 0; i < original.length; i += 4) {
+    if (eyeOffsets.includes(i)) {
+      assert.deepEqual([...original.subarray(i, i + 4)], [58, 111, 216, 255])
+      assert.deepEqual(
+        [...output.pixels.subarray(i, i + 4)],
+        [63, 174, 74, 255],
+      )
+    } else
+      assert.deepEqual(
+        output.pixels.subarray(i, i + 4),
+        original.subarray(i, i + 4),
+      )
+  }
+})
+
+test('exact recolor changes separated pixels only and rejects missing, conflicting or disallowed sources', () => {
+  const current = skin()
+  const a = (12 * 64 + 9) * 4,
+    b = (12 * 64 + 14) * 4
+  current.set([58, 111, 216, 255], a)
+  current.set([58, 111, 216, 255], b)
+  current.set([58, 111, 216, 128], (4 * 64 + 40) * 4)
+  const operation = {
+    part: 'head',
+    layer: 'base',
+    face: 'front',
+    from: '#3a6fd8',
+    to: '#3fae4a',
+  }
+  const value = { palette: {}, recolors: [operation] }
+  const result = applyDesign(value, edit(), current)
+  assert.equal(result.changed, 2)
+  for (let i = 0; i < current.length; i += 4)
+    if (i !== a && i !== b)
+      assert.deepEqual(
+        result.pixels.subarray(i, i + 4),
+        current.subarray(i, i + 4),
+      )
+  const original = current.slice()
+  assert.throws(
+    () =>
+      applyDesign(
+        { palette: {}, recolors: [operation, operation] },
+        edit(),
+        current,
+      ),
+    /overlap/,
+  )
+  assert.throws(
+    () =>
+      applyDesign(
+        { palette: {}, recolors: [{ ...operation, from: '#123456' }] },
+        edit(),
+        current,
+      ),
+    /recolor_source_missing/,
+  )
+  assert.throws(
+    () =>
+      applyDesign(
+        { palette: {}, recolors: [{ ...operation, face: 'back' }] },
+        edit(),
+        current,
+      ),
+    /outside_selection/,
+  )
+  assert.deepEqual(current, original)
+})
+
+test('live recolor fixes both two-pixel eyes without touching intervening skin', () => {
+  const fixture = (name) =>
+    JSON.parse(
+      readFileSync(new URL(`./fixtures/skin-maker/${name}`, import.meta.url)),
+    )
+  const source = applyDesign(
+    fixture('text-recolor-design.json'),
+    create(),
+  ).pixels
+  const output = applyDesign(fixture('recolor-edit.json'), edit(), source)
+  const targets = [9, 10, 13, 14].map((x) => (12 * 64 + x) * 4)
+  assert.equal(output.changed, 4)
+  for (let i = 0; i < source.length; i += 4) {
+    if (targets.includes(i)) {
+      assert.equal(output.pixels[i + 1] > output.pixels[i], true)
+      assert.equal(output.pixels[i + 1] > output.pixels[i + 2], true)
+    } else
+      assert.deepEqual(
+        output.pixels.subarray(i, i + 4),
+        source.subarray(i, i + 4),
+      )
+  }
+})

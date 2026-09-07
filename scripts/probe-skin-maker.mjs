@@ -9,6 +9,7 @@ import {
   PARTS,
   LAYERS,
   FACES,
+  regions,
   applyDesign,
   encodePixels,
 } from '../src/lib/skin-maker.ts'
@@ -41,6 +42,7 @@ const proxy = await getPlatformProxy({
   envFiles: [],
   remoteBindings: true,
 })
+let failed = false
 try {
   const reference = new Uint8Array(64 * 64 * 4)
   const rectangle = (x, y, w, h, color) => {
@@ -115,6 +117,7 @@ try {
     if (name === 'reference' && process.argv.includes('--text-edit-only'))
       continue
     if (name === 'edit' && !current) {
+      failed = true
       console.log(JSON.stringify({ name, skipped: 'text generation invalid' }))
       continue
     }
@@ -131,7 +134,7 @@ try {
       const raw = await Promise.race([
         proxy.env.AI.run(MODEL, payload),
         new Promise((_, reject) => {
-          timer = setTimeout(() => reject(new Error('probe_timeout')), 160_000)
+          timer = setTimeout(() => reject(new Error('probe_timeout')), 250_000)
         }),
       ])
       console.log(
@@ -156,6 +159,46 @@ try {
         input,
         name === 'edit' ? current : undefined,
       )
+      if (name === 'edit') {
+        const face = regions(input.model).find(
+          (r) => r.part === 'head' && r.layer === 'base' && r.face === 'front',
+        )
+        const eyes = new Set()
+        for (let y = 0; y < face.h; y++)
+          for (let x = 0; x < face.w; x++) {
+            const i = ((face.y + y) * 64 + face.x + x) * 4
+            if (
+              current[i] < 100 &&
+              current[i + 2] > 100 &&
+              current[i + 2] > current[i + 1] * 1.2
+            )
+              eyes.add(i)
+          }
+        if (eyes.size < 2)
+          throw new Error('synthetic_source_missing_two_blue_eyes')
+        for (let i = 0; i < current.length; i += 4) {
+          if (eyes.has(i)) {
+            if (!(
+              result.pixels[i + 1] > result.pixels[i] &&
+              result.pixels[i + 1] > result.pixels[i + 2]
+            ))
+              throw new Error('requested_eye_not_green')
+          } else if (
+            current
+              .subarray(i, i + 4)
+              .some((v, j) => result.pixels[i + j] !== v)
+          )
+            throw new Error('unrelated_pixel_changed')
+        }
+        console.log(
+          JSON.stringify({
+            name,
+            semantic: true,
+            eyes: eyes.size,
+            unrelatedPixelsPreserved: true,
+          }),
+        )
+      }
       await writeFile(
         path.join(out, name + '.png'),
         encode({
@@ -180,6 +223,7 @@ try {
         }),
       )
     } catch (e) {
+      failed = true
       console.log(
         JSON.stringify({
           name,
@@ -194,6 +238,7 @@ try {
     }
   }
   console.log('Synthetic artifacts: ' + out)
+  if (failed) process.exitCode = 1
 } finally {
   await proxy.dispose()
   await rm(dir, { recursive: true, force: true })

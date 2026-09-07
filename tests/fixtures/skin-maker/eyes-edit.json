@@ -1,0 +1,23 @@
+{
+  "palette": {
+    "1": "#3fae4a"
+  },
+  "patches": [
+    {
+      "part": "head",
+      "layer": "base",
+      "face": "front",
+      "x": 3,
+      "y": 4,
+      "rows": ["1"]
+    },
+    {
+      "part": "head",
+      "layer": "base",
+      "face": "front",
+      "x": 7,
+      "y": 4,
+      "rows": ["1"]
+    }
+  ]
+}

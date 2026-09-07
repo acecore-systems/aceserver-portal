@@ -267,7 +267,7 @@ const onRequestPost: PagesFunction<SkinEnv> = async ({ request, env }) => {
       .run()
     // No automatic retries: failed/refused/incomplete requests consume a reservation.
     const raw = await env.AI.run(MODEL, modelInput(input, current), {
-      signal: AbortSignal.timeout(150_000),
+      signal: AbortSignal.timeout(240_000),
     })
     const design = parseCompletion(raw)
     if (design && typeof design === 'object' && 'refused' in design)
