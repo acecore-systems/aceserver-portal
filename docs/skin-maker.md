@@ -1,6 +1,6 @@
 # スキンメーカー
 
-公開予定URLは `https://asv.acecore.net/skin-maker/`。既存の8翻訳localeにも同じルートを生成する。利用者の外部アカウント・APIキーは不要。**初期設定は全環境でAI生成無効。本番反映・DB変更・Turnstile設定はこのPRに含めない。**
+公開予定URLは `https://asv.acecore.net/skin-maker/`。既存の8翻訳localeにも同じルートを生成する。利用者の外部アカウント・APIキーは不要。**2026-09-07の公開承認に基づき、本番だけAI生成を有効化。Previewとローカルは無効。生成・Minecraft実機の公開後確認は利用者側で実施する。**
 
 ## 構成とデータ契約
 
@@ -84,7 +84,7 @@ IPv6のアドレス変更や分散したアクセスでは個別上限を回避�
 - プロンプト・画像・AI応答を`console.log`しない。AI Gatewayを利用していない。将来Gatewayを追加する場合はpayload logging・cacheを有効にしない。[Cloudflareのデータ取扱い](https://developers.cloudflare.com/workers-ai/platform/data-usage/)も確認する。
 - モデルへの安全指示は拒否を要求するが、すべての不適切な画像を検出する専用分類器ではない。広範な安全性評価は未実施。公開共有を追加するなら別途モデレーション設計が必要。
 
-## 公開前の設定手順（別途承認後）
+## 公開・再設定手順
 
 1. このPRのCIとレビューを通す。`main`へマージする前に、本番反映の承認を得る。GitHub連携Pagesの`main`を本番ソースとし、Direct Uploadや手動deployを本番完了条件にしない。
 2. Workers Paidと対象モデルの利用権限を確認する。既存の`AI` bindingを利用する。
