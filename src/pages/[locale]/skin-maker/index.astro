@@ -1,7 +1,7 @@
 ---
 import SkinMakerPage from '../../../components/SkinMakerPage.astro'
 import BaseLayout from '../../../layouts/BaseLayout.astro'
-import { getSkinMakerUi } from '../../../data/skin-maker-ui'
+import { getSkinMakerSeo } from '../../../data/skin-maker-seo'
 import { TRANSLATED_LOCALES, type TranslatedLocale } from '../../../i18n/config'
 export function getStaticPaths() {
   return TRANSLATED_LOCALES.map((locale) => ({
@@ -13,12 +13,12 @@ interface Props {
   locale: TranslatedLocale
 }
 const { locale } = Astro.props
-const c = getSkinMakerUi(locale)
+const c = getSkinMakerSeo(locale)
 ---
 
 <BaseLayout
   locale={locale}
   title={c.title}
-  description={c.intro}
+  description={c.description}
   plainBackground><SkinMakerPage locale={locale} /></BaseLayout
 >

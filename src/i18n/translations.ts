@@ -262,7 +262,7 @@ export const JA_UI: UiCopy = {
 
 const en: LocaleTranslation = {
   sourceHash:
-    'sha256:ee3625fe16796cc04b410fa3dbeadaf3e85e65bfa197040b2864e368112f5123',
+    'sha256:bb0297b8fd967ab361691529ce8f51b59b4693d6847e34cbb4c38e65a2818655',
   ui: {
     siteTitleSuffix: 'Official portal for the free public Minecraft server',
     homeTitleParts: ['Ace', 'server'],
@@ -417,6 +417,7 @@ const en: LocaleTranslation = {
     '/world-map/': 'Map',
     '/stories/': 'Articles',
     '/alpha-diary/': 'Picture diary',
+    '/skin-maker/': 'Skin Maker',
     'https://acecore.net': 'Acecore',
     'https://store.acecore.net': 'Store',
     'https://asv-wiki.acecore.net': 'WIKI',
@@ -505,7 +506,7 @@ const en: LocaleTranslation = {
 
 const zhCn: LocaleTranslation = {
   sourceHash:
-    'sha256:ee3625fe16796cc04b410fa3dbeadaf3e85e65bfa197040b2864e368112f5123',
+    'sha256:bb0297b8fd967ab361691529ce8f51b59b4693d6847e34cbb4c38e65a2818655',
   ui: {
     siteTitleSuffix: '免费公开 Minecraft 服务器官方门户',
     homeTitleParts: ['Ace', 'server'],
@@ -652,6 +653,7 @@ const zhCn: LocaleTranslation = {
     '/world-map/': '地图',
     '/stories/': '文章',
     '/alpha-diary/': '图画日记',
+    '/skin-maker/': '皮肤制作器',
     'https://acecore.net': 'Acecore',
     'https://store.acecore.net': '商店',
     'https://asv-wiki.acecore.net': 'WIKI',
@@ -738,7 +740,7 @@ const zhCn: LocaleTranslation = {
 
 const es: LocaleTranslation = {
   sourceHash:
-    'sha256:ee3625fe16796cc04b410fa3dbeadaf3e85e65bfa197040b2864e368112f5123',
+    'sha256:bb0297b8fd967ab361691529ce8f51b59b4693d6847e34cbb4c38e65a2818655',
   ui: {
     siteTitleSuffix:
       'Portal oficial del servidor público gratuito de Minecraft',
@@ -890,6 +892,7 @@ const es: LocaleTranslation = {
     '/world-map/': 'Mapa',
     '/stories/': 'Artículos',
     '/alpha-diary/': 'Diario ilustrado',
+    '/skin-maker/': 'Creador de skins',
     'https://acecore.net': 'Acecore',
     'https://store.acecore.net': 'Tienda',
     'https://asv-wiki.acecore.net': 'WIKI',
@@ -978,7 +981,7 @@ const es: LocaleTranslation = {
 
 const pt: LocaleTranslation = {
   sourceHash:
-    'sha256:ee3625fe16796cc04b410fa3dbeadaf3e85e65bfa197040b2864e368112f5123',
+    'sha256:bb0297b8fd967ab361691529ce8f51b59b4693d6847e34cbb4c38e65a2818655',
   ui: {
     siteTitleSuffix: 'Portal oficial do servidor público gratuito de Minecraft',
     homeTitleParts: ['Ace', 'server'],
@@ -1130,6 +1133,7 @@ const pt: LocaleTranslation = {
     '/world-map/': 'Mapa',
     '/stories/': 'Artigos',
     '/alpha-diary/': 'Diário ilustrado',
+    '/skin-maker/': 'Criador de skins',
     'https://acecore.net': 'Acecore',
     'https://store.acecore.net': 'Loja',
     'https://asv-wiki.acecore.net': 'WIKI',
@@ -1218,7 +1222,7 @@ const pt: LocaleTranslation = {
 
 const fr: LocaleTranslation = {
   sourceHash:
-    'sha256:ee3625fe16796cc04b410fa3dbeadaf3e85e65bfa197040b2864e368112f5123',
+    'sha256:bb0297b8fd967ab361691529ce8f51b59b4693d6847e34cbb4c38e65a2818655',
   ui: {
     siteTitleSuffix: 'Portail officiel du serveur Minecraft public et gratuit',
     homeTitleParts: ['Ace', 'server'],
@@ -1369,6 +1373,7 @@ const fr: LocaleTranslation = {
     '/world-map/': 'Carte',
     '/stories/': 'Articles',
     '/alpha-diary/': 'Journal illustré',
+    '/skin-maker/': 'Créateur de skins',
     'https://acecore.net': 'Acecore',
     'https://store.acecore.net': 'Boutique',
     'https://asv-wiki.acecore.net': 'WIKI',
@@ -1458,7 +1463,7 @@ const fr: LocaleTranslation = {
 
 const ko: LocaleTranslation = {
   sourceHash:
-    'sha256:ee3625fe16796cc04b410fa3dbeadaf3e85e65bfa197040b2864e368112f5123',
+    'sha256:bb0297b8fd967ab361691529ce8f51b59b4693d6847e34cbb4c38e65a2818655',
   ui: {
     siteTitleSuffix: '무료 공개 Minecraft 서버 공식 포털',
     homeTitleParts: ['Ace', 'server'],
@@ -1610,6 +1615,7 @@ const ko: LocaleTranslation = {
     '/world-map/': '지도',
     '/stories/': '기사',
     '/alpha-diary/': '그림일기',
+    '/skin-maker/': '스킨 메이커',
     'https://acecore.net': 'Acecore',
     'https://store.acecore.net': '스토어',
     'https://asv-wiki.acecore.net': 'WIKI',
@@ -1696,7 +1702,7 @@ const ko: LocaleTranslation = {
 
 const de: LocaleTranslation = {
   sourceHash:
-    'sha256:ee3625fe16796cc04b410fa3dbeadaf3e85e65bfa197040b2864e368112f5123',
+    'sha256:bb0297b8fd967ab361691529ce8f51b59b4693d6847e34cbb4c38e65a2818655',
   ui: {
     siteTitleSuffix:
       'Offizielles Portal des kostenlosen öffentlichen Minecraft-Servers',
@@ -1852,6 +1858,7 @@ const de: LocaleTranslation = {
     '/world-map/': 'Karte',
     '/stories/': 'Artikel',
     '/alpha-diary/': 'Bildertagebuch',
+    '/skin-maker/': 'Skin-Ersteller',
     'https://acecore.net': 'Acecore',
     'https://store.acecore.net': 'Shop',
     'https://asv-wiki.acecore.net': 'WIKI',
@@ -1941,7 +1948,7 @@ const de: LocaleTranslation = {
 
 const ru: LocaleTranslation = {
   sourceHash:
-    'sha256:ee3625fe16796cc04b410fa3dbeadaf3e85e65bfa197040b2864e368112f5123',
+    'sha256:bb0297b8fd967ab361691529ce8f51b59b4693d6847e34cbb4c38e65a2818655',
   ui: {
     siteTitleSuffix:
       'Официальный портал бесплатного публичного сервера Minecraft',
@@ -2092,6 +2099,7 @@ const ru: LocaleTranslation = {
     '/world-map/': 'Карта',
     '/stories/': 'Статьи',
     '/alpha-diary/': 'Дневник',
+    '/skin-maker/': 'Редактор скинов',
     'https://acecore.net': 'Acecore',
     'https://store.acecore.net': 'Магазин',
     'https://asv-wiki.acecore.net': 'WIKI',

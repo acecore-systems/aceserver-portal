@@ -1,5 +1,6 @@
 ---
 import type { LinkItem, PortalPage, PortalSection } from '../types'
+import { getSkinMakerUi } from '../data/skin-maker-ui'
 import { getAlphaDiaryUi } from '../data/alpha-diary-ui'
 import { serializeCssUrl } from '../data/safe-json'
 import { localizePath, type Locale } from '../i18n/config'
@@ -15,6 +16,7 @@ interface Props {
 const { page, locale = 'ja' } = Astro.props
 const ui = getUi(locale)
 const diaryUi = getAlphaDiaryUi(locale)
+const skinUi = getSkinMakerUi(locale)
 const sections = page.sections ?? []
 
 type FeatureSection = Extract<
@@ -274,6 +276,16 @@ const diaryPath = localizePath(locale, '/alpha-diary/')
       width="168"
       height="168"
     />
+  </article>
+  <article class="join-card pixel-border">
+    <div class="cube-icon"><Icon name="shirt" /></div>
+    <div>
+      <h2>{skinUi.title}</h2>
+      <p>{skinUi.intro}</p>
+      <a class="asv-btn-primary" href={localizePath(locale, '/skin-maker/')}>
+        <span>{skinUi.title}</span><Icon name="chevron-right" />
+      </a>
+    </div>
   </article>
   <article class="shop-card pixel-border">
     <div>

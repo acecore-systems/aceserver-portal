@@ -1,9 +1,30 @@
 {
   "items": [
-    { "text": "動画", "href": "/youtube-search-aceserver/", "icon": "play" },
-    { "text": "マップ", "href": "/world-map/", "icon": "map" },
-    { "text": "記事", "href": "/stories/", "icon": "book-open" },
-    { "text": "絵日記", "href": "/alpha-diary/", "icon": "notebook-pen" },
+    {
+      "text": "動画",
+      "href": "/youtube-search-aceserver/",
+      "icon": "play"
+    },
+    {
+      "text": "マップ",
+      "href": "/world-map/",
+      "icon": "map"
+    },
+    {
+      "text": "スキンメーカー",
+      "href": "/skin-maker/",
+      "icon": "shirt"
+    },
+    {
+      "text": "記事",
+      "href": "/stories/",
+      "icon": "book-open"
+    },
+    {
+      "text": "絵日記",
+      "href": "/alpha-diary/",
+      "icon": "notebook-pen"
+    },
     {
       "text": "Acecore",
       "href": "https://acecore.net",

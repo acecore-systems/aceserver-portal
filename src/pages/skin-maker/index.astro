@@ -1,10 +1,13 @@
 ---
 import SkinMakerPage from '../../components/SkinMakerPage.astro'
 import BaseLayout from '../../layouts/BaseLayout.astro'
-import { getSkinMakerUi } from '../../data/skin-maker-ui'
-const c = getSkinMakerUi('ja')
+import { getSkinMakerSeo } from '../../data/skin-maker-seo'
+const c = getSkinMakerSeo('ja')
 ---
 
-<BaseLayout locale="ja" title={c.title} description={c.intro} plainBackground
-  ><SkinMakerPage locale="ja" /></BaseLayout
+<BaseLayout
+  locale="ja"
+  title={c.title}
+  description={c.description}
+  plainBackground><SkinMakerPage locale="ja" /></BaseLayout
 >
