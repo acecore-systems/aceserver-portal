@@ -6,8 +6,6 @@ import {
   encodePixels,
   MODEL,
   requestSchema,
-  regions,
-  validateSkin,
   type SkinRequest,
 } from '../../src/lib/skin-maker.ts'
 
@@ -82,45 +80,11 @@ export function pngUrl(pixels: Uint8Array, width = 64, height = 64) {
     encodePixels(encode({ width, height, data: pixels, channels: 4, depth: 8 }))
   )
 }
-export function modelInput(request: SkinRequest, current?: Uint8Array) {
+export function modelInput(request: SkinRequest) {
   const content: (
     | { type: 'text'; text: string }
     | { type: 'image_url'; image_url: { url: string } }
   )[] = [{ type: 'text', text: buildPrompt(request) }]
-  if (current)
-    content.push(
-      {
-        type: 'text',
-        text:
-          'Current skin atlas (preserve unrequested pixels). Exact editable face pixels follow; each row is an array of RRGGBBAA colors, indexed x=0 from left, y=0 from top: ' +
-          JSON.stringify(
-            regions(request.model)
-              .filter(
-                (r) =>
-                  request.parts.includes(r.part) &&
-                  request.layers.includes(r.layer) &&
-                  request.faces.includes(r.face),
-              )
-              .map((r) => ({
-                part: r.part,
-                layer: r.layer,
-                face: r.face,
-                rows: Array.from({ length: r.h }, (_, y) =>
-                  Array.from({ length: r.w }, (_, x) =>
-                    Array.from(
-                      current.subarray(
-                        ((r.y + y) * 64 + r.x + x) * 4,
-                        ((r.y + y) * 64 + r.x + x) * 4 + 4,
-                      ),
-                      (v) => v.toString(16).padStart(2, '0'),
-                    ).join(''),
-                  ),
-                ),
-              })),
-          ),
-      },
-      { type: 'image_url', image_url: { url: pngUrl(current) } },
-    )
   if (request.reference) {
     const r = request.reference
     content.push(
@@ -187,13 +151,9 @@ const onRequestPost: PagesFunction<SkinEnv> = async ({ request, env }) => {
   )
     return json({ error: 'forbidden' }, 403)
   if (!available(env)) return json({ error: 'unavailable' }, 503)
-  let input: SkinRequest, current: Uint8Array | undefined
+  let input: SkinRequest
   try {
     input = requestSchema.parse(await readBody(request))
-    if (input.current) {
-      current = decodePixels(input.current, 64, 64)
-      validateSkin(current, input.model)
-    }
     if (input.reference)
       decodePixels(
         input.reference.pixels,
@@ -266,13 +226,13 @@ const onRequestPost: PagesFunction<SkinEnv> = async ({ request, env }) => {
       .bind(now - 172800)
       .run()
     // No automatic retries: failed/refused/incomplete requests consume a reservation.
-    const raw = await env.AI.run(MODEL, modelInput(input, current), {
+    const raw = await env.AI.run(MODEL, modelInput(input), {
       signal: AbortSignal.timeout(240_000),
     })
     const design = parseCompletion(raw)
     if (design && typeof design === 'object' && 'refused' in design)
       return json({ error: 'refused' }, 422)
-    const output = applyDesign(design, input, current)
+    const output = applyDesign(design, input)
     return json({
       pixels: encodePixels(output.pixels),
       changed: output.changed,

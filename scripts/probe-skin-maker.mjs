@@ -1,23 +1,14 @@
-// Explicit opt-in: three real, billable model requests; no deployment or user data.
-import { mkdtemp, writeFile, rm, mkdir, readFile } from 'node:fs/promises'
+// Explicit opt-in: two real, billable model requests; no deployment or user data.
+import { mkdtemp, writeFile, rm, mkdir } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import path from 'node:path'
 import { getPlatformProxy } from 'wrangler'
 import { encode } from 'fast-png'
-import {
-  MODEL,
-  PARTS,
-  LAYERS,
-  FACES,
-  regions,
-  applyDesign,
-  encodePixels,
-} from '../src/lib/skin-maker.ts'
+import { MODEL, applyDesign, encodePixels } from '../src/lib/skin-maker.ts'
 import { modelInput, parseCompletion } from '../functions/api/skin-maker.ts'
-import { readSkinPng } from '../src/lib/skin-png.ts'
 
 if (!process.argv.includes('--live'))
-  throw new Error('Use --live to authorize three billable synthetic tests.')
+  throw new Error('Use --live to authorize two billable synthetic tests.')
 const account = process.env.CLOUDFLARE_ACCOUNT_ID
 if (!account)
   throw new Error(
@@ -72,15 +63,6 @@ try {
     layers: [...LAYERS],
     faces: [...FACES],
   }
-  let current
-  let currentModel = 'classic'
-  if (process.env.SKIN_PROBE_SOURCE) {
-    currentModel = process.env.SKIN_PROBE_SOURCE_MODEL || 'slim'
-    current = readSkinPng(
-      new Uint8Array(await readFile(process.env.SKIN_PROBE_SOURCE)),
-      currentModel,
-    )
-  }
   for (const [name, input] of [
     [
       'text',
@@ -100,35 +82,14 @@ try {
         reference: { width: 64, height: 64, pixels: encodePixels(reference) },
       },
     ],
-    [
-      'edit',
-      {
-        ...base,
-        mode: 'edit',
-        parts: ['head'],
-        layers: ['base'],
-        faces: ['front'],
-        prompt:
-          '両目の青い部分だけを緑色に変更。目の形や髪、肌、服は変えない。',
-      },
-    ],
   ]) {
-    if (process.argv.includes('--edit-only') && name !== 'edit') continue
-    if (name === 'reference' && process.argv.includes('--text-edit-only'))
+    if (process.argv.includes('--text-only') && name !== 'text') continue
+    if (process.argv.includes('--reference-only') && name !== 'reference')
       continue
-    if (name === 'edit' && !current) {
-      failed = true
-      console.log(JSON.stringify({ name, skipped: 'text generation invalid' }))
-      continue
-    }
-    if (name === 'edit') {
-      input.current = encodePixels(current)
-      input.model = currentModel
-    }
     const start = Date.now()
     let timer
     try {
-      const payload = modelInput(input, name === 'edit' ? current : undefined)
+      const payload = modelInput(input)
       // AbortSignal cannot cross getPlatformProxy's serialization boundary.
       // A probe timeout ends the run; the production handler uses a native signal.
       const raw = await Promise.race([
@@ -154,51 +115,7 @@ try {
         path.join(out, name + '.json'),
         JSON.stringify(design, null, 2),
       )
-      const result = applyDesign(
-        design,
-        input,
-        name === 'edit' ? current : undefined,
-      )
-      if (name === 'edit') {
-        const face = regions(input.model).find(
-          (r) => r.part === 'head' && r.layer === 'base' && r.face === 'front',
-        )
-        const eyes = new Set()
-        for (let y = 0; y < face.h; y++)
-          for (let x = 0; x < face.w; x++) {
-            const i = ((face.y + y) * 64 + face.x + x) * 4
-            if (
-              current[i] < 100 &&
-              current[i + 2] > 100 &&
-              current[i + 2] > current[i + 1] * 1.2
-            )
-              eyes.add(i)
-          }
-        if (eyes.size < 2)
-          throw new Error('synthetic_source_missing_two_blue_eyes')
-        for (let i = 0; i < current.length; i += 4) {
-          if (eyes.has(i)) {
-            if (!(
-              result.pixels[i + 1] > result.pixels[i] &&
-              result.pixels[i + 1] > result.pixels[i + 2]
-            ))
-              throw new Error('requested_eye_not_green')
-          } else if (
-            current
-              .subarray(i, i + 4)
-              .some((v, j) => result.pixels[i + j] !== v)
-          )
-            throw new Error('unrelated_pixel_changed')
-        }
-        console.log(
-          JSON.stringify({
-            name,
-            semantic: true,
-            eyes: eyes.size,
-            unrelatedPixelsPreserved: true,
-          }),
-        )
-      }
+      const result = applyDesign(design, input)
       await writeFile(
         path.join(out, name + '.png'),
         encode({
@@ -209,10 +126,6 @@ try {
           depth: 8,
         }),
       )
-      if (name === 'text') {
-        current = result.pixels
-        currentModel = input.model
-      }
       console.log(
         JSON.stringify({
           name,

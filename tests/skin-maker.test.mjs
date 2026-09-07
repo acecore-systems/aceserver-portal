@@ -29,9 +29,6 @@ import { LOCALES } from '../src/i18n/config.ts'
 const create = (model = 'classic') => ({
   mode: 'create',
   model,
-  parts: [...PARTS],
-  layers: [...LAYERS],
-  faces: [...FACES],
   prompt: 'Original green explorer',
   token: 'token',
   consent: true,
@@ -49,20 +46,6 @@ const design = (model = 'classic') => ({
 })
 const skin = (model = 'classic') =>
   applyDesign(design(model), create(model)).pixels
-const edit = () => ({
-  ...create(),
-  mode: 'edit',
-  parts: ['head'],
-  layers: ['base'],
-  faces: ['front'],
-})
-const patch = () => ({
-  palette: { 1: '#00bb22' },
-  patches: [
-    { part: 'head', layer: 'base', face: 'front', x: 2, y: 3, rows: ['1'] },
-  ],
-})
-
 for (const model of ['classic', 'slim'])
   test(`${model}: atlas coverage, bounds, no overlapping parts/layers, PNG roundtrip`, () => {
     const atlas = regions(model),
@@ -155,79 +138,6 @@ test('live synthetic reference face grids render deterministically into valid Sl
   invalid.faces['head.base.right'][0] = 'zzzzzzzz'
   assert.throws(() => applyDesign(invalid, create('slim')))
 })
-test('one-pixel edit preserves every other byte, unused pixels and translucent outer pixels', () => {
-  const original = skin()
-  original.set([3, 5, 7, 121], (32 * 64 + 32) * 4)
-  original.set([4, 6, 8, 0], 0)
-  const snapshot = new Uint8Array(original)
-  const { pixels, changed } = applyDesign(patch(), edit(), original)
-  const offset = ((8 + 3) * 64 + 8 + 2) * 4
-  assert.equal(changed, 1)
-  for (let i = 0; i < 16384; i++)
-    assert.equal(
-      pixels[i],
-      i >= offset && i < offset + 4
-        ? [0, 187, 34, 255][i - offset]
-        : original[i],
-    )
-  assert.deepEqual(original, snapshot)
-  assert.deepEqual(
-    readSkinPng(
-      Buffer.from(skinPngUrl(pixels).split(',')[1], 'base64'),
-      'classic',
-    ),
-    pixels,
-  )
-})
-test('invalid or out-of-selection output never mutates original', () => {
-  const original = skin(),
-    snapshot = new Uint8Array(original)
-  for (const mutate of [
-    (p) => (p.patches[0].part = 'body'),
-    (p) => (p.patches[0].face = 'back'),
-    (p) => (p.patches[0].layer = 'outer'),
-    (p) => (p.patches[0].x = 8),
-    (p) => (p.patches[0].rows = ['0']),
-    (p) => (p.patches[0].rows = ['z']),
-    (p) => (p.patches[0].rows = ['11', '1']),
-    (p) => p.patches.push({ ...p.patches[0] }),
-    (p) => (p.script = 'alert(1)'),
-  ]) {
-    const value = patch()
-    mutate(value)
-    assert.throws(() => applyDesign(value, edit(), original))
-    assert.deepEqual(original, snapshot)
-  }
-  const missing = design()
-  delete missing.faces['head.base.front']
-  assert.throws(() => applyDesign(missing, create()))
-  assert.throws(() => applyDesign(patch(), edit()))
-})
-test('outer layer may clear pixels; transparent base and 64x32/HD are rejected', () => {
-  const original = skin()
-  original[(8 * 64 + 40) * 4 + 3] = 255
-  const p = patch()
-  Object.assign(p.patches[0], { layer: 'outer', x: 0, y: 0, rows: ['0'] })
-  const result = applyDesign(p, { ...edit(), layers: ['outer'] }, original)
-  assert.equal(result.pixels[(8 * 64 + 40) * 4 + 3], 0)
-  for (const [width, height] of [
-    [64, 32],
-    [128, 128],
-  ])
-    assert.throws(() =>
-      readSkinPng(
-        encode({
-          width,
-          height,
-          data: new Uint8Array(width * height * 4),
-          channels: 4,
-        }),
-        'classic',
-      ),
-    )
-  original[(8 * 64 + 8) * 4 + 3] = 0
-  assert.throws(() => validateSkin(original, 'classic'))
-})
 test('palette PNG skin imports correctly', () => {
   const image = encode({
     width: 64,
@@ -273,30 +183,6 @@ test('input schema is bounded and requires consent; RGBA length exact', () => {
     assert.equal(requestSchema.safeParse(value).success, false)
   assert.throws(() => decodePixels('AAAA', 64, 64))
   assert.deepEqual(decodePixels(encodePixels(skin()), 64, 64), skin())
-})
-test('incomplete JSON and truncated completions fail; model receives true atlas and exact editable pixels', () => {
-  assert.throws(() =>
-    parseCompletion({
-      choices: [{ finish_reason: 'length', message: { content: '{}' } }],
-    }),
-  )
-  assert.deepEqual(parseCompletion({ response: '```json\n{}\n```' }), {})
-  assert.throws(() =>
-    parseCompletion({ response: 'explanation ```json\n{}\n```' }),
-  )
-  const input = modelInput(edit(), skin())
-  assert.equal(input.max_completion_tokens, MAX_TOKENS)
-  assert.equal(input.store, false)
-  assert.ok(
-    input.messages[0].content.some(
-      (v) => v.type === 'image_url' && v.image_url.url === skinPngUrl(skin()),
-    ),
-  )
-  assert.ok(
-    input.messages[0].content.some(
-      (v) => v.type === 'text' && v.text.includes('cc9966ff'),
-    ),
-  )
 })
 test('streamed request bound works without Content-Length', async () => {
   const request = new Request('https://test.invalid', {
@@ -423,6 +309,11 @@ test('API fails closed, verifies hostname/action and does not spend on invalid o
       403,
     )
     assert.equal((await send({ ...create(), consent: false })).status, 400)
+    assert.equal(
+      (await send({ ...create(), mode: 'edit', current: encodePixels(skin()) }))
+        .status,
+      400,
+    )
     verification = { ...verification, hostname: 'elsewhere.invalid' }
     assert.equal((await send()).status, 403)
     verification = {
@@ -473,116 +364,52 @@ test('all supported locales have complete nonempty controls', () => {
         Array.isArray(v) ? v.every(Boolean) : !!v,
       ),
     )
-    assert.equal(c.partNames.length, 6)
     assert.equal(c.faceNames.length, 6)
     assert.equal(c.layerNames.length, 2)
   }
 })
 
-test('live text generation and both-eye edit retain all unrelated RGBA bytes', () => {
+test('retired edit API requests and edit payloads are rejected', () => {
+  assert.equal(requestSchema.safeParse(create()).success, true)
+  for (const extra of [
+    { mode: 'edit' },
+    { current: encodePixels(skin()) },
+    { parts: ['head'] },
+    { layers: ['base'] },
+    { faces: ['front'] },
+  ])
+    assert.equal(
+      requestSchema.safeParse({ ...create(), ...extra }).success,
+      false,
+    )
+  assert.throws(() => applyDesign({ palette: {}, recolors: [] }, create()))
+  assert.throws(() => applyDesign({ palette: {}, patches: [] }, create()))
+})
+test('completion parsing and reference input remain available', () => {
+  assert.deepEqual(parseCompletion({ response: '```json\n{}\n```' }), {})
+  assert.throws(() =>
+    parseCompletion({
+      choices: [{ finish_reason: 'length', message: { content: '{}' } }],
+    }),
+  )
+  const input = modelInput({
+    ...create(),
+    reference: { width: 64, height: 64, pixels: encodePixels(skin()) },
+  })
+  assert.equal(input.max_completion_tokens, MAX_TOKENS)
+  assert.equal(input.store, false)
+  assert.ok(
+    input.messages[0].content.some(
+      (v) => v.type === 'image_url' && v.image_url.url === skinPngUrl(skin()),
+    ),
+  )
+})
+
+test('live text generation retains the exact validated atlas', () => {
   const fixture = (name) =>
     readFileSync(new URL(`./fixtures/skin-maker/${name}`, import.meta.url))
-  const original = readSkinPng(fixture('text-classic.png'), 'classic')
   assert.deepEqual(
     applyDesign(JSON.parse(fixture('text-design.json')), create()).pixels,
-    original,
+    readSkinPng(fixture('text-classic.png'), 'classic'),
   )
-  const output = applyDesign(
-    JSON.parse(fixture('eyes-edit.json')),
-    edit(),
-    original,
-  )
-  const eyeOffsets = [((8 + 4) * 64 + 8 + 3) * 4, ((8 + 4) * 64 + 8 + 7) * 4]
-  assert.equal(output.changed, 2)
-  for (let i = 0; i < original.length; i += 4) {
-    if (eyeOffsets.includes(i)) {
-      assert.deepEqual([...original.subarray(i, i + 4)], [58, 111, 216, 255])
-      assert.deepEqual(
-        [...output.pixels.subarray(i, i + 4)],
-        [63, 174, 74, 255],
-      )
-    } else
-      assert.deepEqual(
-        output.pixels.subarray(i, i + 4),
-        original.subarray(i, i + 4),
-      )
-  }
-})
-
-test('exact recolor changes separated pixels only and rejects missing, conflicting or disallowed sources', () => {
-  const current = skin()
-  const a = (12 * 64 + 9) * 4,
-    b = (12 * 64 + 14) * 4
-  current.set([58, 111, 216, 255], a)
-  current.set([58, 111, 216, 255], b)
-  current.set([58, 111, 216, 128], (4 * 64 + 40) * 4)
-  const operation = {
-    part: 'head',
-    layer: 'base',
-    face: 'front',
-    from: '#3a6fd8',
-    to: '#3fae4a',
-  }
-  const value = { palette: {}, recolors: [operation] }
-  const result = applyDesign(value, edit(), current)
-  assert.equal(result.changed, 2)
-  for (let i = 0; i < current.length; i += 4)
-    if (i !== a && i !== b)
-      assert.deepEqual(
-        result.pixels.subarray(i, i + 4),
-        current.subarray(i, i + 4),
-      )
-  const original = current.slice()
-  assert.throws(
-    () =>
-      applyDesign(
-        { palette: {}, recolors: [operation, operation] },
-        edit(),
-        current,
-      ),
-    /overlap/,
-  )
-  assert.throws(
-    () =>
-      applyDesign(
-        { palette: {}, recolors: [{ ...operation, from: '#123456' }] },
-        edit(),
-        current,
-      ),
-    /recolor_source_missing/,
-  )
-  assert.throws(
-    () =>
-      applyDesign(
-        { palette: {}, recolors: [{ ...operation, face: 'back' }] },
-        edit(),
-        current,
-      ),
-    /outside_selection/,
-  )
-  assert.deepEqual(current, original)
-})
-
-test('live recolor fixes both two-pixel eyes without touching intervening skin', () => {
-  const fixture = (name) =>
-    JSON.parse(
-      readFileSync(new URL(`./fixtures/skin-maker/${name}`, import.meta.url)),
-    )
-  const source = applyDesign(
-    fixture('text-recolor-design.json'),
-    create(),
-  ).pixels
-  const output = applyDesign(fixture('recolor-edit.json'), edit(), source)
-  const targets = [9, 10, 13, 14].map((x) => (12 * 64 + x) * 4)
-  assert.equal(output.changed, 4)
-  for (let i = 0; i < source.length; i += 4) {
-    if (targets.includes(i)) {
-      assert.equal(output.pixels[i + 1] > output.pixels[i], true)
-      assert.equal(output.pixels[i + 1] > output.pixels[i + 2], true)
-    } else
-      assert.deepEqual(
-        output.pixels.subarray(i, i + 4),
-        source.subarray(i, i + 4),
-      )
-  }
 })

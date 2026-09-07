@@ -2,15 +2,12 @@ import { getSkinMakerUi } from '../data/skin-maker-ui'
 import { isLocale } from '../i18n/config'
 import {
   decodePixels,
-  PARTS,
-  LAYERS,
-  FACES,
   encodePixels,
   validateSkin,
   type Model,
   type SkinRequest,
 } from '../lib/skin-maker'
-import { readSkinPng, skinPngUrl } from '../lib/skin-png'
+import { skinPngUrl } from '../lib/skin-png'
 import type { SkinViewer } from 'skinview3d'
 
 type Turnstile = {
@@ -47,10 +44,8 @@ export function initSkinMaker(root: HTMLElement) {
   const atlas = el<HTMLCanvasElement>('[data-atlas]')
   const download = el<HTMLAnchorElement>('[data-download]')
   const generate = el<HTMLButtonElement>('[data-generate]')
-  const undo = el<HTMLButtonElement>('[data-undo]')
   const status = el('[data-status]')
   let current: Uint8Array | undefined
-  let history: Uint8Array[] = []
   let reference: SkinRequest['reference']
   let skinModel: Model = 'classic'
   let viewer: SkinViewer | undefined
@@ -59,19 +54,12 @@ export function initSkinMaker(root: HTMLElement) {
     token = '',
     widget: string | undefined,
     disposed = false
-  let loading = 0
   const model = () => modelSelect.value as Model
   const sync = () => {
     generate.disabled = !enabled || busy || !token
     inputs.disabled = busy
-    // Model conversion is intentionally explicit: clear/import for a different UV.
-    modelSelect.disabled = busy || !!current
-    undo.disabled = busy || history.length === 0
+    modelSelect.disabled = busy
     el<HTMLButtonElement>('[data-clear]').disabled = busy
-  }
-  const setMode = (mode: string) => {
-    el<HTMLInputElement>(`[name=mode][value=${mode}]`).checked = true
-    el<HTMLDetailsElement>('[data-scope]').open = mode === 'edit'
   }
   const render = () => {
     const ctx = atlas.getContext('2d')!
@@ -145,35 +133,6 @@ export function initSkinMaker(root: HTMLElement) {
       (e.target as HTMLInputElement).checked,
     ),
   )
-  el<HTMLInputElement>('[name=skin]').addEventListener('change', async (e) => {
-    const input = e.target as HTMLInputElement,
-      file = input.files?.[0]
-    if (!file) return
-    const revision = ++loading
-    busy = true
-    sync()
-    try {
-      if (file.size > 1_000_000) throw new Error('file')
-      const pixels = readSkinPng(
-        new Uint8Array(await file.arrayBuffer()),
-        model(),
-      )
-      if (disposed || revision !== loading) return
-      if (current) history.push(current)
-      history = history.slice(-10)
-      current = pixels
-      skinModel = model()
-      setMode('edit')
-      render()
-      status.textContent = c.loaded
-    } catch {
-      status.textContent = c.invalid
-    } finally {
-      input.value = ''
-      busy = false
-      sync()
-    }
-  })
   el<HTMLInputElement>('[name=reference]').addEventListener(
     'change',
     async (e) => {
@@ -226,19 +185,11 @@ export function initSkinMaker(root: HTMLElement) {
     el<HTMLImageElement>('[data-reference-image]').removeAttribute('src')
   }
   el('[data-remove]').addEventListener('click', removeReference)
-  undo.addEventListener('click', () => {
-    current = history.pop()
-    render()
-    status.textContent = c.ready
-  })
   el('[data-clear]').addEventListener('click', () => {
-    loading++
     current = undefined
-    history = []
     removeReference()
     form.reset()
     skinModel = model()
-    setMode('create')
     if (viewer) {
       viewer.autoRotate = false
       viewer.playerObject.skin.setOuterLayerVisible(true)
@@ -252,29 +203,13 @@ export function initSkinMaker(root: HTMLElement) {
     e.preventDefault()
     if (busy || !enabled || !token || !form.reportValidity()) return
     const data = new FormData(form)
-    const mode = data.get('mode') as 'create' | 'edit'
-    if (mode === 'edit' && !current) {
-      status.textContent = c.invalid
-      return
-    }
     const input = {
-      mode,
+      mode: 'create',
       model: model(),
       prompt: String(data.get('prompt')),
       token,
       consent: data.get('consent') === 'on',
       reference,
-      current: mode === 'edit' && current ? encodePixels(current) : undefined,
-      parts: mode === 'create' ? [...PARTS] : data.getAll('parts'),
-      layers: mode === 'create' ? [...LAYERS] : data.getAll('layers'),
-      faces: mode === 'create' ? [...FACES] : data.getAll('faces'),
-    }
-    if (
-      mode === 'edit' &&
-      [input.parts, input.layers, input.faces].some((v) => !v.length)
-    ) {
-      status.textContent = c.scope
-      return
     }
     busy = true
     sync()
@@ -301,13 +236,10 @@ export function initSkinMaker(root: HTMLElement) {
       const result = await response.json()
       const pixels = decodePixels(result.pixels, 64, 64)
       validateSkin(pixels, model())
-      if (current) history.push(current)
-      history = history.slice(-10)
       current = pixels
       skinModel = model()
-      setMode('edit')
       render()
-      status.textContent = c.changed + String(result.changed)
+      status.textContent = c.ready
     } catch {
       status.textContent = c.error
     } finally {
@@ -366,7 +298,6 @@ export function initSkinMaker(root: HTMLElement) {
       viewer?.dispose()
       if (widget) window.turnstile?.remove(widget)
       current = undefined
-      history = []
       reference = undefined
     },
     { once: true },
