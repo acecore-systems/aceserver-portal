@@ -45,6 +45,33 @@ export function initSkinMaker(root: HTMLElement) {
   const download = el<HTMLAnchorElement>('[data-download]')
   const generate = el<HTMLButtonElement>('[data-generate]')
   const status = el('[data-status]')
+  const loading = el('.loading')
+  let generationStarted: number | undefined
+  let loadingTimer: ReturnType<typeof setInterval> | undefined
+  const updateLoadingTime = () => {
+    if (generationStarted === undefined) return
+    const seconds = Math.floor((performance.now() - generationStarted) / 1000)
+    const elapsed = `${Math.floor(seconds / 60)}:${String(seconds % 60).padStart(2, '0')}`
+    root.querySelectorAll('[data-elapsed]').forEach((element) => {
+      element.textContent = elapsed
+    })
+    if (seconds >= 60 && status.textContent === c.busy) {
+      status.textContent = c.waiting
+      el('[data-loading-message]').textContent = c.waiting
+    }
+  }
+  const stopLoading = () => {
+    clearInterval(loadingTimer)
+    loadingTimer = undefined
+    generationStarted = undefined
+    loading.hidden = true
+    el('[data-elapsed-row]').hidden = true
+    el('[data-button-spinner]').hidden = true
+    el('[data-generate-label]').textContent = c.generate
+    generate.removeAttribute('data-loading')
+    el('[data-stage]').removeAttribute('aria-busy')
+    el('[data-empty]').hidden = !!current
+  }
   let current: Uint8Array | undefined
   let reference: SkinRequest['reference']
   let skinModel: Model = 'classic'
@@ -81,7 +108,7 @@ export function initSkinMaker(root: HTMLElement) {
       download.setAttribute('aria-disabled', 'true')
       viewer?.loadSkin(null)
     }
-    el('[data-empty]').hidden = !!current
+    el('[data-empty]').hidden = !!current || generationStarted !== undefined
     sync()
   }
   void (async () => {
@@ -214,7 +241,17 @@ export function initSkinMaker(root: HTMLElement) {
     busy = true
     sync()
     status.textContent = c.busy
-    root.setAttribute('aria-busy', 'true')
+    generationStarted = performance.now()
+    loading.hidden = false
+    el('[data-empty]').hidden = true
+    el('[data-elapsed-row]').hidden = false
+    el('[data-button-spinner]').hidden = false
+    el('[data-generate-label]').textContent = c.generating
+    el('[data-loading-message]').textContent = c.busy
+    generate.setAttribute('data-loading', '')
+    el('[data-stage]').setAttribute('aria-busy', 'true')
+    updateLoadingTime()
+    loadingTimer = setInterval(updateLoadingTime, 1000)
     try {
       const response = await fetch('/api/skin-maker', {
         method: 'POST',
@@ -244,10 +281,10 @@ export function initSkinMaker(root: HTMLElement) {
       status.textContent = c.error
     } finally {
       busy = false
+      stopLoading()
       token = ''
       if (widget) window.turnstile?.reset(widget)
       sync()
-      root.removeAttribute('aria-busy')
     }
   })
   void (async () => {
@@ -294,6 +331,7 @@ export function initSkinMaker(root: HTMLElement) {
     'pagehide',
     () => {
       disposed = true
+      stopLoading()
       resize.disconnect()
       viewer?.dispose()
       if (widget) window.turnstile?.remove(widget)
