@@ -4,7 +4,12 @@ import { tmpdir } from 'node:os'
 import path from 'node:path'
 import { getPlatformProxy } from 'wrangler'
 import { encode } from 'fast-png'
-import { MODEL, applyDesign, encodePixels } from '../src/lib/skin-maker.ts'
+import {
+  MODEL,
+  applyDesign,
+  encodePixels,
+  requestSchema,
+} from '../src/lib/skin-maker.ts'
 import { modelInput, parseCompletion } from '../functions/api/skin-maker.ts'
 
 if (!process.argv.includes('--live'))
@@ -59,9 +64,6 @@ try {
     model: 'classic',
     token: 'synthetic',
     consent: true,
-    parts: [...PARTS],
-    layers: [...LAYERS],
-    faces: [...FACES],
   }
   for (const [name, input] of [
     [
@@ -89,7 +91,7 @@ try {
     const start = Date.now()
     let timer
     try {
-      const payload = modelInput(input)
+      const payload = modelInput(requestSchema.parse(input))
       // AbortSignal cannot cross getPlatformProxy's serialization boundary.
       // A probe timeout ends the run; the production handler uses a native signal.
       const raw = await Promise.race([

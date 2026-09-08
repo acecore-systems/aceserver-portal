@@ -413,3 +413,109 @@ test('live text generation retains the exact validated atlas', () => {
     readSkinPng(fixture('text-classic.png'), 'classic'),
   )
 })
+
+test('live refused:false completion is a valid skin without changing its pixels', () => {
+  const fixture = (name) =>
+    readFileSync(new URL(`./fixtures/skin-maker/${name}`, import.meta.url))
+  const source = JSON.parse(fixture('non-refused-design.json'))
+  assert.equal(source.refused, false)
+  assert.deepEqual(
+    applyDesign(source, create()).pixels,
+    readSkinPng(fixture('non-refused-classic.png'), 'classic'),
+  )
+})
+
+test('API distinguishes explicit refusal from false and still rejects malformed designs', async () => {
+  const source = JSON.parse(
+    readFileSync(
+      new URL('./fixtures/skin-maker/non-refused-design.json', import.meta.url),
+    ),
+  )
+  const expected = readSkinPng(
+    readFileSync(
+      new URL('./fixtures/skin-maker/non-refused-classic.png', import.meta.url),
+    ),
+    'classic',
+  )
+  const missingFace = structuredClone(source)
+  delete missingFace.faces['head.base.front']
+  const invalidSymbol = structuredClone(source)
+  invalidSymbol.faces['head.base.front'][0] = 'zzzzzzzz'
+  const cases = [
+    [source, 200],
+    [{ palette: source.palette, faces: source.faces }, 200],
+    [{ refused: true }, 422],
+    [{ ...source, refused: true }, 422],
+    ...['false', 'true', 0, null].map((refused) => [
+      { ...source, refused },
+      502,
+    ]),
+    [missingFace, 502],
+    [invalidSymbol, 502],
+  ]
+  const originalFetch = globalThis.fetch
+  globalThis.fetch = async () =>
+    Response.json({
+      success: true,
+      hostname: 'asv.acecore.net',
+      action: 'skin-maker',
+    })
+  try {
+    for (const [completion, expectedStatus] of cases) {
+      let calls = 0
+      const response = await onRequest({
+        env: {
+          SKIN_MAKER_ENABLED: 'true',
+          SKIN_TURNSTILE_SECRET: 'synthetic',
+          SKIN_QUOTA_SALT: 'synthetic',
+          SKIN_TURNSTILE_SITE_KEY: 'synthetic',
+          SEARCH_RATE_LIMIT_DB: {
+            prepare: () => ({
+              bind: () => ({
+                first: async () => ({ id: 'reserved' }),
+                run: async () => ({}),
+              }),
+            }),
+          },
+          AI: {
+            run: async () => {
+              calls++
+              return {
+                choices: [
+                  {
+                    finish_reason: 'stop',
+                    message: { content: JSON.stringify(completion) },
+                  },
+                ],
+              }
+            },
+          },
+        },
+        request: new Request('https://asv.acecore.net/api/skin-maker', {
+          method: 'POST',
+          headers: {
+            'content-type': 'application/json',
+            origin: 'https://asv.acecore.net',
+            'cf-connecting-ip': '192.0.2.45',
+          },
+          body: JSON.stringify(create()),
+        }),
+      })
+      assert.equal(calls, 1, 'never retry a model request')
+      assert.equal(
+        response.status,
+        expectedStatus,
+        `refused=${completion.refused}`,
+      )
+      const body = await response.json()
+      if (expectedStatus === 200)
+        assert.deepEqual(decodePixels(body.pixels, 64, 64), expected)
+      else
+        assert.deepEqual(body, {
+          error: expectedStatus === 422 ? 'refused' : 'generation_failed',
+        })
+    }
+  } finally {
+    globalThis.fetch = originalFetch
+  }
+})
