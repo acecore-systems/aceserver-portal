@@ -66,11 +66,20 @@ const appJsonLd = serializeJsonForHtmlScript({
           <span>{c.consent}</span></label
         >
         <div data-turnstile></div>
-        <button class="primary" data-generate type="submit" disabled
-          >{c.generate}</button
-        >
       </fieldset>
+      <button class="primary" data-generate type="submit" disabled>
+        <span
+          class="loading-spinner"
+          data-button-spinner
+          hidden
+          aria-hidden="true"></span>
+        <span data-generate-label>{c.generate}</span>
+      </button>
       <p data-status role="status" aria-live="polite">{c.disabled}</p>
+      <p class="elapsed" data-elapsed-row hidden>
+        {c.elapsed}
+        <span data-elapsed role="timer" aria-live="off">0:00</span>
+      </p>
     </form>
     <section class="result" aria-label={c.preview}>
       <div class="preview-heading">
@@ -79,6 +88,21 @@ const appJsonLd = serializeJsonForHtmlScript({
       <div class="stage" data-stage>
         <canvas data-viewer aria-label={c.preview}></canvas>
         <p class="empty" data-empty>{c.empty}</p>
+        <div class="loading" data-loading hidden>
+          <div class="loading-pixels" aria-hidden="true">
+            {
+              Array.from({ length: 9 }, (_, i) => (
+                <span style={`--pixel: ${i}`} />
+              ))
+            }
+          </div>
+          <strong>{c.generating}</strong>
+          <p data-loading-message>{c.busy}</p>
+          <p class="elapsed">
+            {c.elapsed}
+            <span data-elapsed role="timer" aria-live="off">0:00</span>
+          </p>
+        </div>
       </div>
       <p data-webgl hidden>{c.webgl}</p>
       <div class="view-controls">
@@ -166,6 +190,7 @@ const appJsonLd = serializeJsonForHtmlScript({
   }
   .editor,
   .result {
+    min-width: 0;
     background: #fffdf5;
     border: 1px solid #dbcdb1;
     border-radius: 18px;
@@ -280,6 +305,82 @@ const appJsonLd = serializeJsonForHtmlScript({
   [data-generate] {
     width: 100%;
     margin-top: 16px;
+    gap: 10px;
+  }
+  [data-generate][data-loading] {
+    opacity: 1;
+  }
+  .loading-spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #ae861e;
+    border-top-color: #302619;
+    border-radius: 50%;
+    animation: loading-spin 1s linear infinite;
+  }
+  .loading {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 24px;
+    background: #f8f0da;
+    text-align: center;
+  }
+  .loading strong {
+    font-size: 1.2rem;
+  }
+  .loading p {
+    margin: 0;
+    max-width: 30ch;
+    font-size: 0.85rem;
+    line-height: 1.8;
+    color: #66553f;
+  }
+  .loading-pixels {
+    display: grid;
+    grid-template-columns: repeat(3, 18px);
+    gap: 5px;
+    margin-bottom: 10px;
+  }
+  .loading-pixels span {
+    width: 18px;
+    height: 18px;
+    background: #c79525;
+    border-radius: 3px;
+    animation: loading-pixel 1.8s ease-in-out infinite;
+    animation-delay: calc(var(--pixel) * -0.15s);
+  }
+  .elapsed {
+    color: #715e42;
+    font-size: 0.8rem;
+    margin: 8px 0 0;
+    font-variant-numeric: tabular-nums;
+  }
+  @keyframes loading-spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes loading-pixel {
+    0%,
+    100% {
+      opacity: 0.35;
+      transform: scale(0.8);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .loading-spinner,
+    .loading-pixels span {
+      animation: none;
+    }
   }
   .consent {
     display: flex;
