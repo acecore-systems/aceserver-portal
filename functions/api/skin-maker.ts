@@ -230,7 +230,12 @@ const onRequestPost: PagesFunction<SkinEnv> = async ({ request, env }) => {
       signal: AbortSignal.timeout(240_000),
     })
     const design = parseCompletion(raw)
-    if (design && typeof design === 'object' && 'refused' in design)
+    if (
+      design &&
+      typeof design === 'object' &&
+      'refused' in design &&
+      design.refused === true
+    )
       return json({ error: 'refused' }, 422)
     const output = applyDesign(design, input)
     return json({

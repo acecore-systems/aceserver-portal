@@ -105,6 +105,7 @@ const paletteSchema = z
   .refine((v) => Object.keys(v).length >= 1 && Object.keys(v).length <= 35)
 const creationSchema = z
   .object({
+    refused: z.literal(false).optional(),
     palette: paletteSchema,
     faces: z
       .record(
