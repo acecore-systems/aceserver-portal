@@ -207,6 +207,12 @@ function database() {
       'utf8',
     ),
   )
+  db.exec(
+    readFileSync(
+      new URL('../migrations/skin-maker/0002_diagnostics.sql', import.meta.url),
+      'utf8',
+    ),
+  )
   return db
 }
 test('SQL atomically caps per-minute, daily client and global reservations', () => {
@@ -346,7 +352,16 @@ test('API fails closed, verifies hostname/action and does not spend on invalid o
       { 'cf-connecting-ip': '192.0.2.2' },
     )
     assert.equal(failed.status, 502)
-    assert.equal((await failed.text()).includes('private'), false)
+    const failedBody = await failed.json()
+    assert.match(failedBody.requestId, /^[0-9a-f-]{36}$/)
+    const saved = db
+      .prepare('SELECT * FROM skin_maker_diagnostics WHERE id = ?')
+      .get(failedBody.requestId)
+    assert.equal(saved.stage, 'ai')
+    assert.equal(saved.code, 'ai_failed')
+    assert.equal(saved.status, 502)
+    assert.equal(JSON.stringify(saved).includes('private'), false)
+    assert.equal(JSON.stringify(failedBody).includes('private'), false)
     assert.equal(
       (await send(create(), {}, { 'cf-connecting-ip': '192.0.2.2' })).status,
       429,
@@ -513,9 +528,76 @@ test('API distinguishes explicit refusal from false and still rejects malformed 
       else
         assert.deepEqual(body, {
           error: expectedStatus === 422 ? 'refused' : 'generation_failed',
+          requestId: body.requestId,
         })
     }
   } finally {
     globalThis.fetch = originalFetch
   }
+})
+
+test('diagnostics persist safe classifications and retain the original result on storage failure', async (t) => {
+  const { skinDiagnostics, failureCode } =
+    await import('../functions/_lib/skin-diagnostics.ts')
+  const logs = []
+  t.mock.method(console, 'error', (v) => logs.push(v))
+  t.mock.method(console, 'info', (v) => logs.push(v))
+  const db = database()
+  const adapter = {
+    prepare: (sql) => ({
+      bind: (...args) => ({ run: async () => db.prepare(sql).run(...args) }),
+    }),
+  }
+  const d = skinDiagnostics(adapter, 'synthetic-id')
+  await d.record('verification', 'verification', 403)
+  assert.equal(
+    db.prepare('SELECT count(*) AS n FROM skin_maker_diagnostics').get().n,
+    0,
+  )
+  db.prepare(
+    'INSERT INTO skin_maker_diagnostics VALUES (?, ?, ?, ?, ?, ?)',
+  ).run('expired', 0, 'ai', 'started', 0, 0)
+  d.reserve()
+  await d.record('ai', 'started', 0)
+  assert.equal(
+    db.prepare('SELECT code FROM skin_maker_diagnostics').get().code,
+    'started',
+  )
+  const privateError = new Error('PRIVATE prompt image token ip provider body')
+  const cases = [
+    ['ai', privateError, 'ai_failed'],
+    ['ai', new DOMException('PRIVATE', 'TimeoutError'), 'timeout'],
+    ['completion', new SyntaxError('PRIVATE'), 'invalid_json'],
+    ['completion', new Error('incomplete'), 'incomplete'],
+    [
+      'design',
+      Object.assign(new Error('PRIVATE'), { name: 'ZodError' }),
+      'invalid_schema',
+    ],
+    ['design', new Error('palette'), 'palette'],
+    ['cleanup', privateError, 'cleanup_failed'],
+  ]
+  for (const [stage, error, expected] of cases) {
+    assert.equal(failureCode(stage, error), expected)
+    await d.record(stage, failureCode(stage, error), 502)
+    const row = db.prepare('SELECT * FROM skin_maker_diagnostics').get()
+    assert.equal(row.id, 'synthetic-id')
+    assert.equal(row.stage, stage)
+    assert.equal(row.code, expected)
+    assert.ok(row.elapsed_ms >= 0)
+    assert.equal(JSON.stringify(row).includes('PRIVATE'), false)
+  }
+  const broken = skinDiagnostics(
+    {
+      prepare() {
+        throw privateError
+      },
+    },
+    'broken-id',
+  )
+  broken.reserve()
+  await broken.record('ai', 'ai_failed', 502)
+  assert.ok(logs.some((v) => v.includes('persistence_failed')))
+  assert.equal(logs.join('').includes('PRIVATE'), false)
+  db.close()
 })

@@ -252,6 +252,7 @@ export function initSkinMaker(root: HTMLElement) {
     el('[data-stage]').setAttribute('aria-busy', 'true')
     updateLoadingTime()
     loadingTimer = setInterval(updateLoadingTime, 1000)
+    let requestId: string | null = null
     try {
       const response = await fetch('/api/skin-maker', {
         method: 'POST',
@@ -259,6 +260,14 @@ export function initSkinMaker(root: HTMLElement) {
         body: JSON.stringify(input),
         signal: AbortSignal.timeout(270_000),
       })
+      const result = await response.json().catch(() => null)
+      requestId =
+        typeof result?.requestId === 'string' &&
+        /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/.test(
+          result.requestId,
+        )
+          ? result.requestId
+          : null
       if (!response.ok) {
         status.textContent =
           response.status === 429
@@ -268,9 +277,9 @@ export function initSkinMaker(root: HTMLElement) {
               : response.status === 503
                 ? c.disabled
                 : c.error
+        if (requestId) status.textContent += ` (${c.requestId}: ${requestId})`
         return
       }
-      const result = await response.json()
       const pixels = decodePixels(result.pixels, 64, 64)
       validateSkin(pixels, model())
       current = pixels
@@ -279,6 +288,7 @@ export function initSkinMaker(root: HTMLElement) {
       status.textContent = c.ready
     } catch {
       status.textContent = c.error
+      if (requestId) status.textContent += ` (${c.requestId}: ${requestId})`
     } finally {
       busy = false
       stopLoading()
