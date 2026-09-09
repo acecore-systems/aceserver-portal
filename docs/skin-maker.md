@@ -94,3 +94,30 @@ git diff --check
 以前の新規生成の実モデル試験では文章→Classicが127秒、合成参照画像→Slimが81秒で有効なPNGを返した。UV・色検証・PNG往復・API入力制限・利用制限は自動テストで確認する。少数のケースから一般的な品質・成功率は断定しない。
 
 写真・複雑な衣装、Minecraft実機、Safari実機、実Turnstileを通した生成の確認はユーザー側で行う。
+
+## 障害診断記録
+
+Pagesの通常ログは永続化されないため、生成枠を予約した試行を既存D1の `skin_maker_diagnostics` に保存する。最大100試行/UTC日で、生成開始前の状態と最終結果を同じUUIDで更新する。保存項目はID、開始時刻、処理段階、固定のエラー分類、HTTPステータス、経過ミリ秒だけ。入力文、画像、AI返答、IP、認証トークン、例外本文・stack・Zod issueは記録しない。
+
+- エラー応答の `requestId` を全9言語の画面に表示する。通信断などAPI応答が届かなかった場合はIDを表示できない。
+- `stage=ai, code=started, status=0` が長時間残る場合は、AI待機中に処理終了・通信断等が起きた可能性がある。タイムアウトと断定しない。
+- `timeout`、`invalid_json`、`incomplete`、`invalid_schema`、`palette` 等で切り分ける。AI事業者の自由文エラーは保存せず `ai_failed` とする。
+- 予約前の拒否（入力不正・認証失敗・上限）とD1障害は構造化consoleログのみ。未認証アクセスによる無制限のD1保存を避ける。DBが停止している場合は永続化もできない。
+- 保存失敗は `persistence_failed` をconsoleへ出し、元の生成応答を保つ。公開のログ取得APIは設けない。
+- 7日より古い行は記録時に削除する。アクセス停止中は削除も停止するため、厳密な7日TTLではない。既存の日次メンテナンスにも下記DELETEを追加する。
+
+リリース前に本番DBの追加テーブルを適用してからPRをマージする。本番SQL適用は別途承認の対象。既存テーブルは変更しない。
+
+```powershell
+npx wrangler d1 execute SEARCH_RATE_LIMIT_DB --env production --remote --file migrations/skin-maker/0002_diagnostics.sql
+```
+
+管理者はDBで問い合わせIDを照合する。以下のIDは実際のUUIDに置き換える。
+
+```sql
+SELECT id, created, stage, code, status, elapsed_ms
+FROM skin_maker_diagnostics WHERE id = '問い合わせ用UUID';
+DELETE FROM skin_maker_diagnostics WHERE created < unixepoch() - 604800;
+```
+
+[Pagesログの保存制限](https://developers.cloudflare.com/pages/functions/debugging-and-logging/#limits)

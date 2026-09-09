@@ -1,3 +1,8 @@
+import {
+  failureCode,
+  skinDiagnostics,
+  type SkinStage,
+} from '../_lib/skin-diagnostics.ts'
 import { encode } from 'fast-png'
 import {
   applyDesign,
@@ -144,13 +149,20 @@ SELECT ?, ?, ?, ? WHERE
 RETURNING id`
 
 const onRequestPost: PagesFunction<SkinEnv> = async ({ request, env }) => {
+  const requestId = crypto.randomUUID()
+  const diagnostics = skinDiagnostics(env.SEARCH_RATE_LIMIT_DB, requestId)
+  let stage: SkinStage = 'request'
+  const fail = async (error: string, status: number, code = error) => {
+    await diagnostics.record(stage, code, status)
+    return json({ error, requestId }, status)
+  }
   const origin = new URL(request.url).origin
   if (
     request.headers.get('origin') !== origin ||
     request.headers.get('sec-fetch-site') === 'cross-site'
   )
-    return json({ error: 'forbidden' }, 403)
-  if (!available(env)) return json({ error: 'unavailable' }, 503)
+    return fail('forbidden', 403)
+  if (!available(env)) return fail('unavailable', 503)
   let input: SkinRequest
   try {
     input = requestSchema.parse(await readBody(request))
@@ -161,11 +173,12 @@ const onRequestPost: PagesFunction<SkinEnv> = async ({ request, env }) => {
         input.reference.height,
       )
   } catch {
-    return json({ error: 'invalid_request' }, 400)
+    return fail('invalid_request', 400)
   }
   const ip = request.headers.get('cf-connecting-ip')
-  if (!ip) return json({ error: 'unavailable' }, 503)
+  if (!ip) return fail('unavailable', 503)
   try {
+    stage = 'verification'
     const verification = await fetch(
       'https://challenges.cloudflare.com/turnstile/v0/siteverify',
       {
@@ -178,7 +191,7 @@ const onRequestPost: PagesFunction<SkinEnv> = async ({ request, env }) => {
         signal: AbortSignal.timeout(10_000),
       },
     )
-    if (!verification.ok) return json({ error: 'verification' }, 403)
+    if (!verification.ok) return fail('verification', 403)
     const result = (await verification.json()) as {
       success?: boolean
       hostname?: string
@@ -189,7 +202,8 @@ const onRequestPost: PagesFunction<SkinEnv> = async ({ request, env }) => {
       result.hostname !== new URL(origin).hostname ||
       result.action !== 'skin-maker'
     )
-      return json({ error: 'verification' }, 403)
+      return fail('verification', 403)
+    stage = 'quota'
     const day = new Date().toISOString().slice(0, 10)
     const key = await crypto.subtle.importKey(
       'raw',
@@ -219,16 +233,22 @@ const onRequestPost: PagesFunction<SkinEnv> = async ({ request, env }) => {
         now - 60,
       )
       .first()
-    if (!reservation) return json({ error: 'rate_limit' }, 429)
+    if (!reservation) return fail('rate_limit', 429)
+    diagnostics.reserve()
+    stage = 'cleanup'
+    await diagnostics.record(stage, 'started', 0)
     await env.SEARCH_RATE_LIMIT_DB.prepare(
       'DELETE FROM skin_maker_usage WHERE created < ?',
     )
       .bind(now - 172800)
       .run()
     // No automatic retries: failed/refused/incomplete requests consume a reservation.
+    stage = 'ai'
+    await diagnostics.record(stage, 'started', 0)
     const raw = await env.AI.run(MODEL, modelInput(input), {
       signal: AbortSignal.timeout(240_000),
     })
+    stage = 'completion'
     const design = parseCompletion(raw)
     if (
       design &&
@@ -236,15 +256,20 @@ const onRequestPost: PagesFunction<SkinEnv> = async ({ request, env }) => {
       'refused' in design &&
       design.refused === true
     )
-      return json({ error: 'refused' }, 422)
+      return fail('refused', 422)
+    stage = 'design'
     const output = applyDesign(design, input)
-    return json({
+    stage = 'response'
+    const response = json({
+      requestId,
       pixels: encodePixels(output.pixels),
       changed: output.changed,
       model: input.model,
     })
-  } catch {
-    return json({ error: 'generation_failed' }, 502)
+    await diagnostics.record(stage, 'success', 200)
+    return response
+  } catch (error) {
+    return fail('generation_failed', 502, failureCode(stage, error))
   }
 }
 

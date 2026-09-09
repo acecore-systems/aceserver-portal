@@ -18,8 +18,9 @@ const copy = {
     busy: '制作中です。1〜4分ほどかかることがあります。',
     ready: '準備できました。',
     disabled: 'AI生成は現在準備中です。',
+    requestId: '問い合わせ用ID',
     error:
-      '生成できませんでした。前のスキンは保持しています。内容を短くして、時間をおいてお試しください。',
+      '生成できませんでした。前のスキンは保持しています。繰り返し失敗する場合は、問い合わせ用IDをお知らせください。',
     invalid: 'PNG・JPEG・WebP形式で5 MB以下の参考画像を選んでください。',
     consent:
       '画像を使う権利があり、文章・画像をCloudflareのAI処理へ送ることに同意します。',
@@ -54,8 +55,9 @@ const copy = {
     busy: 'Creating. This may take 1–4 minutes.',
     ready: 'Ready.',
     disabled: 'AI generation is currently unavailable.',
+    requestId: 'Support ID',
     error:
-      'Generation failed. Your previous skin is safe. Try a shorter description later.',
+      'Generation failed. Your previous skin is safe. If this keeps happening, share the support ID.',
     invalid: 'Choose a PNG, JPEG or WebP reference up to 5 MB.',
     consent:
       'I have rights to use these images and agree to send the text and images to Cloudflare for AI processing.',
@@ -89,7 +91,8 @@ const copy = {
     busy: '正在制作，可能需要1–4分钟。',
     ready: '已就绪。',
     disabled: 'AI生成功能暂不可用。',
-    error: '生成失败。之前的皮肤已保留。请稍后尝试更简短的描述。',
+    requestId: '支持 ID',
+    error: '生成失败。之前的皮肤已保留。如果问题持续出现，请提供支持 ID。',
     invalid: '请选择不超过5 MB的PNG、JPEG或WebP参考图片。',
     consent:
       '我有权使用这些图片，并同意将文字和图片发送至Cloudflare进行AI处理。',
@@ -122,8 +125,9 @@ const copy = {
     busy: 'Creando. Puede tardar 1–4 minutos.',
     ready: 'Todo listo.',
     disabled: 'La generación con IA no está disponible.',
+    requestId: 'ID de soporte',
     error:
-      'No se pudo generar. Tu skin anterior se conserva. Prueba una descripción más corta más tarde.',
+      'No se pudo generar. Tu skin anterior se conserva. Si el problema persiste, indica el ID de soporte.',
     invalid: 'Elige una referencia PNG, JPEG o WebP de hasta 5 MB.',
     consent:
       'Tengo derecho a usar estas imágenes y acepto enviar el texto y las imágenes a Cloudflare para su procesamiento con IA.',
@@ -158,8 +162,9 @@ const copy = {
     busy: 'Criando. Pode levar 1–4 minutos.',
     ready: 'Tudo pronto.',
     disabled: 'A geração por IA está indisponível.',
+    requestId: 'ID de suporte',
     error:
-      'Não foi possível gerar. Sua skin anterior foi mantida. Tente uma descrição mais curta depois.',
+      'Não foi possível gerar. Sua skin anterior foi mantida. Se o problema persistir, informe o ID de suporte.',
     invalid: 'Escolha uma referência PNG, JPEG ou WebP de até 5 MB.',
     consent:
       'Tenho direito de usar estas imagens e concordo em enviar o texto e as imagens à Cloudflare para processamento por IA.',
@@ -194,8 +199,9 @@ const copy = {
     busy: 'Création en cours. Cela peut prendre 1 à 4 minutes.',
     ready: 'Prêt.',
     disabled: 'La génération IA est indisponible.',
+    requestId: 'ID de suivi',
     error:
-      'La génération a échoué. Votre skin précédent est conservé. Essayez plus tard avec une description plus courte.',
+      'La génération a échoué. Votre skin précédent est conservé. Si le problème persiste, communiquez l’ID de suivi.',
     invalid: 'Choisissez une référence PNG, JPEG ou WebP de 5 Mo maximum.',
     consent:
       'Je dispose des droits sur ces images et j’accepte d’envoyer le texte et les images à Cloudflare pour traitement par IA.',
@@ -230,8 +236,9 @@ const copy = {
     busy: '제작 중입니다. 1~4분 정도 걸릴 수 있습니다.',
     ready: '준비되었습니다.',
     disabled: '현재 AI 생성을 사용할 수 없습니다.',
+    requestId: '문의 ID',
     error:
-      '생성하지 못했습니다. 이전 스킨은 유지됩니다. 잠시 후 더 짧은 설명으로 시도하세요.',
+      '생성하지 못했습니다. 이전 스킨은 유지됩니다. 계속 실패하면 문의 ID를 알려 주세요.',
     invalid: '5 MB 이하의 PNG, JPEG 또는 WebP 참고 이미지를 선택하세요.',
     consent:
       '이 이미지를 사용할 권리가 있으며 글과 이미지를 Cloudflare의 AI 처리로 보내는 데 동의합니다.',
@@ -266,8 +273,9 @@ const copy = {
     busy: 'Wird erstellt. Das kann 1–4 Minuten dauern.',
     ready: 'Bereit.',
     disabled: 'KI-Generierung ist derzeit nicht verfügbar.',
+    requestId: 'Support-ID',
     error:
-      'Generierung fehlgeschlagen. Dein vorheriger Skin bleibt erhalten. Versuche später eine kürzere Beschreibung.',
+      'Generierung fehlgeschlagen. Dein vorheriger Skin bleibt erhalten. Teile bei wiederholten Fehlern die Support-ID mit.',
     invalid: 'Wähle ein PNG-, JPEG- oder WebP-Referenzbild bis 5 MB.',
     consent:
       'Ich darf diese Bilder verwenden und stimme zu, Text und Bilder zur KI-Verarbeitung an Cloudflare zu senden.',
@@ -302,8 +310,9 @@ const copy = {
     busy: 'Создаём. Это может занять 1–4 минуты.',
     ready: 'Готово.',
     disabled: 'Генерация ИИ сейчас недоступна.',
+    requestId: 'ID обращения',
     error:
-      'Не удалось создать скин. Предыдущий скин сохранён. Позже попробуйте более короткое описание.',
+      'Не удалось создать скин. Предыдущий скин сохранён. Если ошибка повторяется, сообщите ID обращения.',
     invalid: 'Выберите образец PNG, JPEG или WebP размером до 5 МБ.',
     consent:
       'У меня есть право использовать эти изображения, и я согласен отправить текст и изображения в Cloudflare для обработки ИИ.',
