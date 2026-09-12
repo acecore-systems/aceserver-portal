@@ -1,15 +1,20 @@
 name: Sync portal Vectorize index
 
 on:
-  push:
-    branches:
-      - main
+  check_run:
+    types: [completed]
   schedule:
     - cron: '17 */6 * * *'
   workflow_dispatch:
+    inputs:
+      force_reconcile:
+        description: Force full reconciliation, including unchanged content
+        type: boolean
+        default: true
 
 permissions:
   contents: read
+  actions: read
 
 jobs:
   sync-production:
@@ -18,7 +23,10 @@ jobs:
       vars.ACESERVER_PORTAL_VECTORIZE_SYNC_ENABLED == 'true' &&
       github.ref == 'refs/heads/main' &&
       (
-        github.event_name == 'push' ||
+        (github.event_name == 'check_run' &&
+          github.event.check_run.name == 'Cloudflare Pages' &&
+          github.event.check_run.app.id == 85455 &&
+          github.event.check_run.conclusion == 'success') ||
         github.event_name == 'schedule' ||
         github.event_name == 'workflow_dispatch'
       )
@@ -39,54 +47,16 @@ jobs:
           path: tooling
           persist-credentials: false
 
-      - name: Wait for the pushed commit to be public
-        if: github.event_name == 'push'
+      - name: Resolve public deployment and previous verified receipt
+        id: site
         working-directory: tooling
         env:
-          EXPECTED_COMMIT: ${{ github.sha }}
-        run: >-
-          node scripts/wait-for-portal-deployment.mjs
-          https://asv.acecore.net/.well-known/aceserver-portal-build.json
-          "$EXPECTED_COMMIT"
-
-      - name: Resolve deployed site commit
-        id: site
-        shell: bash
-        env:
-          EVENT_NAME: ${{ github.event_name }}
-          PUSH_COMMIT: ${{ github.sha }}
-        run: |
-          set -euo pipefail
-          protected_main_commit="$(git -C tooling rev-parse HEAD)"
-
-          if [[ "$EVENT_NAME" == "push" ]]; then
-            site_commit="$PUSH_COMMIT"
-          else
-            site_commit="$(
-              node tooling/scripts/wait-for-portal-deployment.mjs \
-                https://asv.acecore.net/.well-known/aceserver-portal-build.json \
-                --print-current
-            )"
-          fi
-          site_commit="${site_commit,,}"
-
-          if [[ ! "$site_commit" =~ ^[0-9a-f]{40}$ ]]; then
-            echo "::error::Published marker does not contain a full Git SHA."
-            exit 1
-          fi
-          if ! git -C tooling cat-file -e "${site_commit}^{commit}"; then
-            echo "::error::Published commit does not exist in this repository."
-            exit 1
-          fi
-          if ! git -C tooling merge-base --is-ancestor \
-            "$site_commit" "$protected_main_commit"; then
-            echo "::error::Published commit is not an ancestor of protected main."
-            exit 1
-          fi
-
-          echo "commit=$site_commit" >> "$GITHUB_OUTPUT"
+          GH_TOKEN: ${{ github.token }}
+          FORCE_RECONCILE: ${{ inputs.force_reconcile && 'true' || 'false' }}
+        run: node scripts/portal-sync-receipt.mjs prepare
 
       - name: Check out deployed site source
+        if: steps.site.outputs.sync == 'true'
         uses: actions/checkout@v7
         with:
           ref: ${{ steps.site.outputs.commit }}
@@ -94,6 +64,7 @@ jobs:
           persist-credentials: false
 
       - name: Set up Node.js
+        if: steps.site.outputs.sync == 'true'
         uses: actions/setup-node@v7
         with:
           node-version-file: tooling/.node-version
@@ -101,16 +72,19 @@ jobs:
           cache-dependency-path: site/package-lock.json
 
       - name: Install deployed site dependencies
+        if: steps.site.outputs.sync == 'true'
         working-directory: site
         run: npm ci
 
       - name: Build deployed site corpus
+        if: steps.site.outputs.sync == 'true'
         working-directory: site
         env:
           COMMIT_SHA: ${{ steps.site.outputs.commit }}
         run: npm run build
 
       - name: Confirm the built commit is still public
+        if: steps.site.outputs.sync == 'true'
         env:
           BUILT_COMMIT: ${{ steps.site.outputs.commit }}
         run: >-
@@ -121,6 +95,7 @@ jobs:
           site/dist/vector-corpus.json
 
       - name: Sync production Vectorize index
+        if: steps.site.outputs.sync == 'true'
         env:
           CLOUDFLARE_ACCOUNT_ID: db9b62f409f463da7acbcc374b8385d0
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_PORTAL_SEARCH_PRODUCTION_API_TOKEN }}
@@ -136,3 +111,18 @@ jobs:
           )
           node tooling/scripts/sync-portal-vectorize.mjs \
             "${args[@]}"
+
+      - name: Record successful reconciliation or unchanged receipt
+        if: steps.site.outputs.eligible == 'true'
+        working-directory: tooling
+        run: node scripts/portal-sync-receipt.mjs record
+
+      - name: Save receipt for the next main run
+        if: steps.site.outputs.eligible == 'true'
+        uses: actions/upload-artifact@v7
+        with:
+          name: portal-vectorize-receipt
+          path: tooling/.portal-sync-state/receipt.json
+          include-hidden-files: true
+          if-no-files-found: error
+          retention-days: 3
