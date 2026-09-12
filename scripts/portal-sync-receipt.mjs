@@ -68,10 +68,12 @@ async function restoreReceipt() {
     if (Number(process.env.GITHUB_RUN_ATTEMPT) > 1) return null
     const repo = process.env.GITHUB_REPOSITORY
     if (repo !== 'acecore-systems/aceserver-portal') return null
-    const { workflow_runs: runs } = JSON.parse(
+    const runs = JSON.parse(
       gh([
         'api',
         `repos/${repo}/actions/workflows/sync-portal-vectorize.yml/runs?branch=main&per_page=100`,
+        '--jq',
+        '.workflow_runs | map({id, status, conclusion})',
       ]),
     )
     const previous = previousRelevantRun(runs, process.env.GITHUB_RUN_ID)
@@ -92,8 +94,16 @@ async function restoreReceipt() {
     const text = await readFile(`${stateDir}/previous/receipt.json`, 'utf8')
     if (Buffer.byteLength(text) > 4096) return null
     return JSON.parse(text)
-  } catch {
+  } catch (error) {
     // Expired/missing artifacts, API errors and invalid receipts always run the full reconciliation.
+    // Do not log command arguments, stderr or tokens from a failed authenticated request.
+    console.log(
+      JSON.stringify({
+        event: 'portal_sync_receipt_unavailable',
+        reason:
+          error?.code === 'ENOBUFS' ? 'response_too_large' : 'restore_failed',
+      }),
+    )
     return null
   }
 }
