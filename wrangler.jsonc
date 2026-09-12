@@ -41,6 +41,10 @@
   ],
   "services": [
     {
+      "binding": "CMS_GITHUB_TOKEN_ISSUER",
+      "service": "aceserver-portal-cms-token-issuer",
+    },
+    {
       "binding": "CMS_AI",
       "service": "cms-ai",
     },
@@ -141,6 +145,10 @@
         "binding": "AI",
       },
       "services": [
+        {
+          "binding": "CMS_GITHUB_TOKEN_ISSUER",
+          "service": "aceserver-portal-cms-token-issuer",
+        },
         {
           "binding": "CMS_AI",
           "service": "cms-ai",

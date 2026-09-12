@@ -71,6 +71,12 @@ jobs:
       - name: Test CMS proxy
         run: npm run test:cms
 
+      - name: Check isolated CMS token issuer
+        run: |
+          npx wrangler types cloudflare/cms-token-issuer/worker-configuration.d.ts --config cloudflare/cms-token-issuer/wrangler.jsonc --env-interface TokenIssuerEnv --include-runtime false --check
+          npx tsc -p cloudflare/cms-token-issuer/tsconfig.json
+          npx wrangler deploy --config cloudflare/cms-token-issuer/wrangler.jsonc --dry-run
+
       - name: Check Pages Function bindings
         run: npm run types:functions:check
 

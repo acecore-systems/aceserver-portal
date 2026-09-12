@@ -1,13 +1,12 @@
-import { CMS_PRODUCTION_HOSTNAME, CMS_REPOSITORY } from './_cms-policy.ts'
-import {
-  CmsOAuthError,
-  verifyRepositoryWriteAccess,
-} from './_github-app-oauth.ts'
+import { CMS_REPOSITORY } from './_cms-policy.ts'
 import { GitHubApiError, githubJson, isRecord } from './_github-api.ts'
+import {
+  getGitHubAppToken,
+  type CmsGitHubAppEnv,
+} from './_github-token-service.ts'
+import { getAcecoreGitHubId, type CmsAccessEnv } from './_acecore-auth.ts'
 
-const AUTH_CACHE_TTL_MS = 5 * 60 * 1000
-const TOKEN_MAX_LENGTH = 512
-
+export type CmsEditorEnv = CmsGitHubAppEnv & CmsAccessEnv
 export type GitHubEditor = {
   avatar_url: string
   email: string | null
@@ -18,148 +17,56 @@ export type GitHubEditor = {
   type: string
 }
 
-const authorizationCache = new Map<
-  string,
-  { expiresAt: number; user: GitHubEditor }
->()
-
+// GitHub remains the authorization source, not a second login or bearer path.
 export async function getGitHubEditor(
   request: Request,
-  {
-    fresh = false,
-    installationId,
-  }: { fresh?: boolean; installationId?: number } = {},
+  env: CmsEditorEnv,
+  { forceRefresh = false }: { forceRefresh?: boolean } = {},
 ) {
-  if (new URL(request.url).hostname !== CMS_PRODUCTION_HOSTNAME) {
-    throw new GitHubApiError('CMS APIは本番サイトでのみ利用できます。', 403)
-  }
-
-  const token = readOAuthToken(request.headers.get('Authorization'))
-
-  if (!token) {
-    throw new GitHubApiError('GitHub OAuth認証が必要です。', 401)
-  }
-
-  const cacheKey = await sha256(token)
-  const cached = authorizationCache.get(cacheKey)
-
-  if (!fresh && cached && cached.expiresAt > Date.now()) {
-    return { token, user: cached.user }
-  }
-
-  const user = await readCurrentUser(token)
-  let repository: unknown
-
-  try {
-    repository = await githubJson<unknown>({
-      path: `/repos/${CMS_REPOSITORY.owner}/${CMS_REPOSITORY.name}`,
+  const id = await getAcecoreGitHubId(request, env)
+  const token = await getGitHubAppToken(env, { forceRefresh })
+  // This endpoint supports installation tokens and includes team/base/owner grants.
+  // Match immutable ID directly; do not use the user-token-only /permission endpoint.
+  for (let page = 1; page <= 100; page++) {
+    const rows = await githubJson<unknown>({
+      path: `/repos/${CMS_REPOSITORY.owner}/${CMS_REPOSITORY.name}/collaborators?affiliation=all&per_page=100&page=${page}`,
       token,
     })
-  } catch (error) {
-    if (
-      error instanceof GitHubApiError &&
-      (error.status === 403 || error.status === 404)
-    ) {
-      throw new GitHubApiError(
-        'このGitHubアカウントにはCMS対象repositoryへのwrite権限がありません。',
-        403,
-      )
-    }
-
-    throw error
-  }
-
-  if (
-    !isRecord(repository) ||
-    !isRecord(repository.permissions) ||
-    repository.permissions.push !== true
-  ) {
-    throw new GitHubApiError(
-      'このGitHubアカウントにはCMS対象repositoryへのwrite権限がありません。',
-      403,
+    if (!Array.isArray(rows))
+      throw new GitHubApiError('GitHub権限の応答が不正です。', 502)
+    const user = rows.find(
+      (row) =>
+        isRecord(row) && Number.isSafeInteger(row.id) && String(row.id) === id,
     )
-  }
-
-  if (fresh) {
-    if (!installationId) {
-      throw new GitHubApiError(
-        'CMS GitHub App installation設定を確認できません。',
-        503,
-      )
-    }
-
-    try {
-      await verifyRepositoryWriteAccess(token, installationId)
-    } catch (error) {
-      if (error instanceof CmsOAuthError) {
-        throw new GitHubApiError(error.message, error.status)
+    if (user) {
+      if (!isRecord(user.permissions) || user.permissions.push !== true) break
+      if (
+        typeof user.login !== 'string' ||
+        !/^[a-z0-9][a-z0-9-]{0,38}$/i.test(user.login) ||
+        user.type !== 'User'
+      ) {
+        throw new GitHubApiError('GitHub userの応答が不正です。', 502)
       }
-
-      throw error
+      return {
+        token,
+        user: {
+          id: user.id,
+          login: user.login,
+          type: user.type,
+          html_url: `https://github.com/${user.login}`,
+          avatar_url:
+            typeof user.avatar_url === 'string' ? user.avatar_url : '',
+          email: null,
+          name: null,
+        } satisfies GitHubEditor,
+      }
     }
+    if (rows.length < 100) break
+    if (page === 100)
+      throw new GitHubApiError('GitHub権限一覧を完全に確認できません。', 503)
   }
-
-  authorizationCache.set(cacheKey, {
-    expiresAt: Date.now() + AUTH_CACHE_TTL_MS,
-    user,
-  })
-
-  return { token, user }
-}
-
-export function clearGitHubEditorCacheForTests() {
-  authorizationCache.clear()
-}
-
-function readOAuthToken(authorization: string | null) {
-  const match = authorization?.match(/^(?:Bearer|token)\s+(\S+)$/i)
-  const token = match?.[1]
-
-  if (!token || !token.startsWith('ghu_') || token.length > TOKEN_MAX_LENGTH) {
-    return null
-  }
-
-  return token
-}
-
-async function readCurrentUser(token: string): Promise<GitHubEditor> {
-  let value: unknown
-
-  try {
-    value = await githubJson<unknown>({ path: '/user', token })
-  } catch (error) {
-    if (error instanceof GitHubApiError && error.status === 401) {
-      throw new GitHubApiError('GitHub OAuth tokenが無効です。', 401)
-    }
-
-    throw error
-  }
-
-  if (
-    !isRecord(value) ||
-    typeof value.id !== 'number' ||
-    typeof value.login !== 'string' ||
-    typeof value.html_url !== 'string'
-  ) {
-    throw new GitHubApiError('GitHub user responseが不正です。', 502)
-  }
-
-  return {
-    avatar_url: typeof value.avatar_url === 'string' ? value.avatar_url : '',
-    email: typeof value.email === 'string' ? value.email : null,
-    html_url: value.html_url,
-    id: value.id,
-    login: value.login,
-    name: typeof value.name === 'string' ? value.name : null,
-    type: typeof value.type === 'string' ? value.type : 'User',
-  }
-}
-
-async function sha256(value: string) {
-  const bytes = new TextEncoder().encode(value)
-  const digest = await crypto.subtle.digest('SHA-256', bytes)
-
-  return Array.from(new Uint8Array(digest), (byte) =>
-    byte.toString(16).padStart(2, '0'),
-  ).join('')
+  throw new GitHubApiError(
+    '連携GitHubアカウントにはCMS対象repositoryへのwrite権限がありません。',
+    403,
+  )
 }
