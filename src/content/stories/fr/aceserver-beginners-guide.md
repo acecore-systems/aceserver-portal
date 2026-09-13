@@ -2,7 +2,7 @@
 title: 'Guide du débutant Aceserver : portail, cartes, vidéos, WIKI et connexion'
 description: Vous découvrez Aceserver ? Apprenez quand utiliser le portail officiel, les cartes, les vidéos et le WIKI, et où vérifier si vous ne pouvez pas rejoindre le serveur.
 translationOf: aceserver-beginners-guide
-sourceHash: sha256:c060bf5e37c3810e9bcc45d231dd8f0c85db7d0eace48d79a5c12f09def05a0e
+sourceHash: sha256:beb235e56d29c1e7d3c93fdc88c4fa4d604e8db40c358cfa3ffaaaa40c2dae95
 date: 2026-08-09T10:00:00+09:00
 tags:
   - Minecraft
@@ -15,6 +15,8 @@ imageAlt: Un voyageur tenant une carte suit des chemins vers un portail, une car
 ---
 
 Lors de votre première visite sur Aceserver, il peut être difficile de savoir quoi consulter d'abord. Ce guide met dans l'ordre l'utilisation du portail officiel, des cartes de mondes, des vidéos, du WIKI et de l'aide à la connexion.
+
+Si vous ne savez pas où trouver les informations, utilisez la recherche du portail avec des termes comme « comment rejoindre le serveur » ou « carte du monde ». Ouvrez la page trouvée et consultez les conditions de participation et les règles les plus récentes.
 
 Les destinations de connexion, ports, étapes selon l'appareil — y compris Switch —, conditions de participation et règles peuvent changer. Cet article est une porte d'entrée : avant de jouer, considérez toujours les informations officielles les plus récentes comme la référence.
 

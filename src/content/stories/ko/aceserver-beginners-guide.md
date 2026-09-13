@@ -2,7 +2,7 @@
 title: 'Aceserver 초보자 가이드: 포털, 월드 맵, 동영상, WIKI, 접속 문제'
 description: Aceserver가 처음이신가요? 공식 포털, 월드 맵, 동영상, WIKI를 언제 이용하는지와 접속할 수 없을 때 확인할 곳을 안내합니다.
 translationOf: aceserver-beginners-guide
-sourceHash: sha256:c060bf5e37c3810e9bcc45d231dd8f0c85db7d0eace48d79a5c12f09def05a0e
+sourceHash: sha256:beb235e56d29c1e7d3c93fdc88c4fa4d604e8db40c358cfa3ffaaaa40c2dae95
 date: 2026-08-09T10:00:00+09:00
 tags:
   - Minecraft
@@ -15,6 +15,8 @@ imageAlt: 지도를 든 여행자가 블록 풍경 속 포털, 월드 맵, 동�
 ---
 
 Aceserver를 처음 방문하면 무엇부터 확인해야 할지 막막할 수 있습니다. 이 가이드는 공식 포털, 월드 맵, 동영상, WIKI, 접속 문제 안내를 이용하는 순서를 정리합니다.
+
+안내가 어디에 있는지 모르겠다면 포털의 사이트 내 검색에 “참가 방법”이나 “월드 맵” 같은 단어를 입력해 찾아보세요. 검색으로 찾은 페이지를 열어 최신 참가 조건과 규칙을 확인하세요.
 
 접속 주소, 포트, Switch를 포함한 기기별 절차, 참가 조건과 규칙은 바뀔 수 있습니다. 이 글은 입구 안내이므로 실제로 참가하기 전에는 항상 최신 공식 안내를 기준으로 확인해 주세요.
 
