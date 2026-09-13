@@ -2,7 +2,7 @@
 title: 'Guia para iniciantes no Aceserver: portal, mapas, vídeos, WIKI e conexão'
 description: Chegando agora ao Aceserver? Saiba quando usar o portal oficial, mapas, vídeos e a WIKI, e onde verificar se não conseguir entrar.
 translationOf: aceserver-beginners-guide
-sourceHash: sha256:c060bf5e37c3810e9bcc45d231dd8f0c85db7d0eace48d79a5c12f09def05a0e
+sourceHash: sha256:beb235e56d29c1e7d3c93fdc88c4fa4d604e8db40c358cfa3ffaaaa40c2dae95
 date: 2026-08-09T10:00:00+09:00
 tags:
   - Minecraft
@@ -15,6 +15,8 @@ imageAlt: Um viajante com um mapa segue caminhos para um portal, mapa do mundo, 
 ---
 
 Na primeira visita ao Aceserver, pode ser difícil saber o que consultar antes. Este guia organiza o uso do portal oficial, mapas de mundos, vídeos, WIKI e ajuda para conexão.
+
+Se não souber onde encontrar as orientações, use a busca do portal com termos como “como participar” ou “mapa do mundo”. Abra a página encontrada e confira as condições de participação e as regras mais recentes.
 
 Destinos de conexão, portas, instruções por dispositivo — inclusive Switch —, condições de participação e regras podem mudar. Este artigo é apenas uma porta de entrada: antes de participar, trate sempre a orientação oficial mais recente como a fonte correta.
 

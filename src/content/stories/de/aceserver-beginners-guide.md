@@ -2,7 +2,7 @@
 title: 'Aceserver-Einsteigerleitfaden: Portal, Weltkarten, Videos, WIKI und Verbindung'
 description: Neu bei Aceserver? Erfahre, wann du das offizielle Portal, Weltkarten, Videos und das WIKI nutzt und wo du nachsiehst, wenn du nicht beitreten kannst.
 translationOf: aceserver-beginners-guide
-sourceHash: sha256:c060bf5e37c3810e9bcc45d231dd8f0c85db7d0eace48d79a5c12f09def05a0e
+sourceHash: sha256:beb235e56d29c1e7d3c93fdc88c4fa4d604e8db40c358cfa3ffaaaa40c2dae95
 date: 2026-08-09T10:00:00+09:00
 tags:
   - Minecraft
@@ -15,6 +15,8 @@ imageAlt: Ein Reisender mit Karte folgt in einer Blocklandschaft Wegen zu einem 
 ---
 
 Beim ersten Besuch auf Aceserver kann es schwer sein zu wissen, was du zuerst ansehen solltest. Dieser Leitfaden ordnet die Nutzung des offiziellen Portals, der Weltkarten, Videos, des WIKI und der Verbindungshilfe.
+
+Wenn du nicht weißt, wo du die Informationen findest, nutze die Suche im Portal mit Begriffen wie „Beitreten“ oder „Weltkarte“. Öffne die gefundene Seite und prüfe die aktuellen Teilnahmebedingungen und Regeln.
 
 Verbindungsziele, Ports, gerätespezifische Schritte einschließlich Switch, Teilnahmebedingungen und Regeln können sich ändern. Dieser Artikel ist nur ein Einstieg; vor dem Beitritt gilt immer die neueste offizielle Anleitung als maßgeblich.
 
