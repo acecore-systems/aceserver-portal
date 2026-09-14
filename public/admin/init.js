@@ -6,15 +6,39 @@ void initialize().catch((error) => {
       : 'AcecoreIDのログインを確認してください。'
   document.body.append(status)
 })
+
+const INITIALIZE_FALLBACK_MESSAGE =
+  'CMSを開始できませんでした。AcecoreIDのログインと連携GitHubの編集権限を確認してください。'
+const MAX_INITIALIZATION_ERROR_BYTES = 4 * 1024
+const INITIALIZE_ERROR_MESSAGES = new Map([
+  [
+    '403:CMS_AUTH_CUSTOM_CLAIMS_MISSING',
+    'AcecoreIDの連携情報を確認してください。',
+  ],
+  [
+    '403:CMS_AUTH_TOKEN_TYPE_INVALID',
+    'AcecoreIDの認証情報を確認してください。',
+  ],
+  [
+    '403:CMS_AUTH_SUBJECT_INVALID',
+    'AcecoreIDの連携情報（利用者ID）を確認してください。',
+  ],
+  [
+    '403:CMS_AUTH_GITHUB_ID_INVALID',
+    'AcecoreIDの連携GitHubを確認してください。',
+  ],
+  [
+    '403:CMS_AUTH_REPOSITORY_WRITE_DENIED',
+    '連携GitHubアカウントのCMS編集権限を確認してください。',
+  ],
+])
+
 async function initialize() {
   const response = await fetch('/admin/api/github/user', {
     credentials: 'same-origin',
     headers: { Accept: 'application/json' },
   })
-  if (!response.ok)
-    throw new Error(
-      'AcecoreIDへのログインと連携GitHubの編集権限を確認してください。',
-    )
+  if (!response.ok) throw await getInitializationError(response)
   // UI marker only; the server never trusts this as a credential.
   const signin = btoa(
     JSON.stringify({ token: 'acecore-id-access', prefs: { language: 'ja' } }),
@@ -25,6 +49,60 @@ async function initialize() {
     `${location.pathname}${location.search}#/signin/${signin}`,
   )
   await CMS.init({ config: { backend: { branch: 'main' } } })
+}
+
+async function getInitializationError(response) {
+  const body = await readInitializationErrorBody(response)
+  const code =
+    body && typeof body === 'object' && typeof body.code === 'string'
+      ? body.code
+      : ''
+  const message =
+    INITIALIZE_ERROR_MESSAGES.get(`${response.status}:${code}`) ||
+    INITIALIZE_FALLBACK_MESSAGE
+
+  const diagnostic =
+    code && message !== INITIALIZE_FALLBACK_MESSAGE ? ` / ${code}` : ''
+
+  return new Error(`${message}（HTTP ${response.status}${diagnostic}）`)
+}
+
+async function readInitializationErrorBody(response) {
+  if (
+    response.status !== 403 ||
+    !/^application\/json(?:;|$)/i.test(
+      response.headers.get('Content-Type')?.trim() || '',
+    )
+  )
+    return null
+
+  const reader = response.body?.getReader()
+  if (!reader) return null
+
+  const decoder = new TextDecoder()
+  let bytes = 0
+  let text = ''
+
+  try {
+    while (true) {
+      const { done, value } = await reader.read()
+      if (done) break
+
+      bytes += value.byteLength
+      if (bytes > MAX_INITIALIZATION_ERROR_BYTES) {
+        await reader.cancel()
+        return null
+      }
+
+      text += decoder.decode(value, { stream: true })
+    }
+
+    return JSON.parse(text + decoder.decode())
+  } catch {
+    return null
+  } finally {
+    reader.releaseLock()
+  }
 }
 
 const notice = document.createElement('aside')

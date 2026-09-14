@@ -9,10 +9,12 @@ const GITHUB_API_VERSION = '2022-11-28'
 const USER_AGENT = 'aceserver-portal-sveltia-cms'
 
 export class GitHubApiError extends Error {
+  code?: string
   status: number
 
-  constructor(message: string, status: number) {
+  constructor(message: string, status: number, code?: string) {
     super(message)
+    this.code = code
     this.status = status
   }
 }
