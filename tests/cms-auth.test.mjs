@@ -1,32 +1,80 @@
 import assert from 'node:assert/strict'
-import { afterEach, test } from 'node:test'
+import { afterEach, beforeEach, test } from 'node:test'
 import { getAcecoreGitHubId } from '../functions/admin/api/_acecore-auth.ts'
 import { onRequest as auth } from '../functions/admin/api/auth.ts'
 import { onRequest as callback } from '../functions/admin/api/callback.ts'
 import { onRequest as githubProxy } from '../functions/admin/api/github/[[path]].ts'
 import {
+  accessIdentity,
   accessEnv,
   accessToken,
   accessCerts,
+  accessUserUuid,
   mintAccess,
+  subject,
 } from './cms-access-fixture.mjs'
 const originalFetch = globalThis.fetch
+const originalWarn = console.warn
+const identityUrl =
+  accessEnv.CMS_ACCESS_TEAM_DOMAIN + '/cdn-cgi/access/get-identity'
+const subjectClaim = 'https://acecore.net/claims/subject'
+const githubIdClaim = 'https://acecore.net/claims/github-id'
+beforeEach(() => {
+  console.warn = () => {}
+})
 afterEach(() => {
   globalThis.fetch = originalFetch
+  console.warn = originalWarn
 })
 const request = (token = accessToken, extra = {}) =>
   new Request(
     'https://' + accessEnv.CMS_ACCESS_HOSTNAMES + '/admin/api/github/user',
     { headers: { 'Cf-Access-Jwt-Assertion': token, ...extra } },
   )
+const accessFetch =
+  (token, respond = () => Response.json(accessIdentity())) =>
+  async (input, init = {}) => {
+    const certs = accessCerts(input)
+    if (certs) return certs
+
+    assert.equal(String(input), identityUrl)
+    assert.equal(init.method, 'GET')
+    assert.equal(init.redirect, 'manual')
+    assert.equal(init.cache, 'no-store')
+    assert.equal(init.signal instanceof AbortSignal, true)
+    const headers = new Headers(init.headers)
+    assert.deepEqual([...headers.keys()].sort(), ['accept', 'cookie'])
+    assert.equal(headers.get('Accept'), 'application/json')
+    assert.equal(headers.get('Cookie') === `CF_Authorization=${token}`, true)
+
+    return respond(init)
+  }
 test('valid signed AcecoreID linked immutable GitHub ID', async () => {
   globalThis.fetch = async (input) =>
     accessCerts(input) || assert.fail('Unexpected network')
   assert.equal(await getAcecoreGitHubId(request(), accessEnv), '1')
 })
+for (const custom of [
+  undefined,
+  {},
+  { 'https://acecore.net/claims/subject': subject },
+  { 'https://acecore.net/claims/github-id': '1' },
+  {
+    oidc_fields: { [subjectClaim]: subject, [githubIdClaim]: '1' },
+  },
+]) {
+  test(
+    'custom直下claim欠落時だけ同じAccess sessionのfull identityで補完する: ' +
+      JSON.stringify(custom),
+    async () => {
+      const token = await mintAccess({ custom })
+      globalThis.fetch = accessFetch(token)
+
+      assert.equal(await getAcecoreGitHubId(request(token), accessEnv), '1')
+    },
+  )
+}
 for (const { custom, code } of [
-  { custom: undefined, code: 'CMS_AUTH_CUSTOM_CLAIMS_MISSING' },
-  { custom: {}, code: 'CMS_AUTH_SUBJECT_INVALID' },
   { custom: [], code: 'CMS_AUTH_CUSTOM_CLAIMS_MISSING' },
   {
     custom: {
@@ -80,19 +128,171 @@ test('reject service token, wrong audience and forged signature', async () => {
     { status: 401 },
   )
 })
+for (const sub of ['', false, 'not-a-uuid']) {
+  test(
+    'full identity取得前に不正なAccess subを拒否する: ' + String(sub),
+    async () => {
+      globalThis.fetch = async (input) =>
+        accessCerts(input) || assert.fail('Unexpected identity request')
+
+      await assert.rejects(
+        getAcecoreGitHubId(request(await mintAccess({ sub })), accessEnv),
+        { status: 401, code: 'CMS_AUTH_ACCESS_SUBJECT_INVALID' },
+      )
+    },
+  )
+}
+for (const { name, identity, code = 'CMS_AUTH_IDENTITY_INVALID' } of [
+  {
+    name: 'different Access user',
+    identity: accessIdentity({
+      user_uuid: '33333333-3333-4333-8333-333333333333',
+    }),
+  },
+  {
+    name: 'different account',
+    identity: accessIdentity({ account_id: 'other-account' }),
+  },
+  {
+    name: 'different IdP',
+    identity: accessIdentity({ idp: { id: 'other-idp', type: 'oidc' } }),
+  },
+  {
+    name: 'different IdP type',
+    identity: accessIdentity({
+      idp: {
+        id: 'a18ae74a-a342-40db-bfb2-7cc515d26637',
+        type: 'github',
+      },
+    }),
+  },
+  {
+    name: 'missing OIDC fields',
+    identity: accessIdentity({ oidc_fields: undefined }),
+  },
+  {
+    name: 'unlinked subject',
+    identity: accessIdentity({ oidc_fields: { [githubIdClaim]: '1' } }),
+    code: 'CMS_AUTH_SUBJECT_INVALID',
+  },
+  {
+    name: 'unlinked GitHub ID',
+    identity: accessIdentity({ oidc_fields: { [subjectClaim]: subject } }),
+    code: 'CMS_AUTH_GITHUB_ID_INVALID',
+  },
+]) {
+  test('reject invalid full identity: ' + name, async () => {
+    const token = await mintAccess({ custom: undefined })
+    globalThis.fetch = accessFetch(token, () => Response.json(identity))
+
+    await assert.rejects(getAcecoreGitHubId(request(token), accessEnv), {
+      status: 403,
+      code,
+    })
+  })
+}
+for (const { name, respond, code } of [
+  {
+    name: 'redirect',
+    respond: () =>
+      new Response(null, {
+        status: 302,
+        headers: { Location: 'https://attacker.example/' },
+      }),
+    code: 'CMS_AUTH_IDENTITY_UNAVAILABLE',
+  },
+  {
+    name: 'timeout',
+    respond: () => {
+      throw new DOMException('timed out', 'TimeoutError')
+    },
+    code: 'CMS_AUTH_IDENTITY_UNAVAILABLE',
+  },
+  {
+    name: 'oversize body',
+    respond: () => new Response(new Uint8Array(64 * 1024 + 1)),
+    code: 'CMS_AUTH_IDENTITY_INVALID',
+  },
+  {
+    name: 'invalid JSON',
+    respond: () => new Response('{'),
+    code: 'CMS_AUTH_IDENTITY_INVALID',
+  },
+]) {
+  test('reject unsafe full identity response: ' + name, async () => {
+    const token = await mintAccess({ custom: undefined })
+    globalThis.fetch = accessFetch(token, respond)
+
+    await assert.rejects(getAcecoreGitHubId(request(token), accessEnv), {
+      status: 502,
+      code,
+    })
+  })
+}
+for (const { custom, identity } of [
+  {
+    custom: { 'https://acecore.net/claims/subject': subject },
+    identity: accessIdentity({
+      oidc_fields: {
+        [subjectClaim]: '33333333-3333-4333-8333-333333333333',
+        [githubIdClaim]: '1',
+      },
+    }),
+  },
+  {
+    custom: { 'https://acecore.net/claims/github-id': '1' },
+    identity: accessIdentity({
+      oidc_fields: { [subjectClaim]: subject, [githubIdClaim]: '2' },
+    }),
+  },
+]) {
+  test('reject conflict between valid JWT claim and full identity', async () => {
+    const token = await mintAccess({ custom })
+    globalThis.fetch = accessFetch(token, () => Response.json(identity))
+
+    await assert.rejects(getAcecoreGitHubId(request(token), accessEnv), {
+      status: 403,
+      code: 'CMS_AUTH_IDENTITY_SOURCE_CONFLICT',
+    })
+  })
+}
+test('full identity異常ログは固定codeだけでtokenや本人情報を含まない', async () => {
+  const token = await mintAccess({ custom: undefined })
+  const logs = []
+  console.warn = (value) => logs.push(value)
+  globalThis.fetch = accessFetch(token, () =>
+    Response.json(
+      accessIdentity({
+        user_uuid: '33333333-3333-4333-8333-333333333333',
+      }),
+    ),
+  )
+
+  await assert.rejects(getAcecoreGitHubId(request(token), accessEnv), {
+    code: 'CMS_AUTH_IDENTITY_INVALID',
+  })
+  assert.deepEqual(logs, [
+    JSON.stringify({
+      message: 'CMS Access identity rejected',
+      code: 'CMS_AUTH_IDENTITY_INVALID',
+    }),
+  ])
+  assert.equal(logs[0].includes(token), false)
+  assert.equal(logs[0].includes(accessUserUuid), false)
+})
 test('CMS初期化APIは固定の認証診断codeだけをJSONで返す', async () => {
-  globalThis.fetch = async (input) =>
-    accessCerts(input) || assert.fail('Unexpected network')
+  const token = await mintAccess({ custom: undefined })
+  globalThis.fetch = accessFetch(token, () => new Response('{'))
   const response = await githubProxy({
     env: accessEnv,
-    request: request(await mintAccess({ custom: undefined })),
+    request: request(token),
   })
 
-  assert.equal(response.status, 403)
+  assert.equal(response.status, 502)
   assert.equal(response.headers.get('Cache-Control'), 'no-store')
   assert.deepEqual(await response.json(), {
     message: 'AcecoreIDの連携GitHubを確認してください。',
-    code: 'CMS_AUTH_CUSTOM_CLAIMS_MISSING',
+    code: 'CMS_AUTH_IDENTITY_INVALID',
   })
 })
 test('reject missing configuration and bearer-only path', async () => {

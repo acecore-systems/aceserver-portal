@@ -81,26 +81,75 @@ test('CMS初期化はリポジトリ編集権限なしを固定codeで表示す�
   assert.deepEqual(cmsCalls, [])
 })
 
-test('CMS初期化は403 JSONが4 KiBを超える場合に本文を表示しない', async () => {
-  const { appended, cmsCalls } = await runAdminInit(
-    new Response(
-      JSON.stringify({
-        code: 'CMS_AUTH_SUBJECT_INVALID',
-        message: 'internal server detail',
-        padding: 'x'.repeat(4096),
-      }),
-      { headers: { 'Content-Type': 'application/json' }, status: 403 },
-    ),
-  )
-  const status = appended.find((node) => node.tagName === 'p')
+for (const { responseStatus, code, expected } of [
+  {
+    responseStatus: 401,
+    code: 'CMS_AUTH_ACCESS_SUBJECT_INVALID',
+    expected: 'AcecoreIDのAccess認証情報を確認してください。',
+  },
+  {
+    responseStatus: 403,
+    code: 'CMS_AUTH_IDENTITY_SOURCE_CONFLICT',
+    expected: 'AcecoreIDの連携情報が一致していません。',
+  },
+  {
+    responseStatus: 502,
+    code: 'CMS_AUTH_IDENTITY_UNAVAILABLE',
+    expected:
+      'AcecoreIDの本人情報を取得できませんでした。時間をおいて再度お試しください。',
+  },
+  {
+    responseStatus: 502,
+    code: 'CMS_AUTH_IDENTITY_INVALID',
+    expected: 'AcecoreIDの本人情報の応答を確認できませんでした。',
+  },
+]) {
+  test(`CMS初期化はidentity診断を安全な固定表示にする (${responseStatus}:${code})`, async () => {
+    const { appended, cmsCalls } = await runAdminInit(
+      Response.json(
+        { code, message: 'internal server detail' },
+        { status: responseStatus },
+      ),
+    )
+    const status = appended.find((node) => node.tagName === 'p')
 
-  assert.equal(
-    status.textContent,
-    'CMSを開始できませんでした。AcecoreIDのログインと連携GitHubの編集権限を確認してください。（HTTP 403）',
-  )
-  assert.equal(status.textContent.includes('CMS_AUTH_SUBJECT_INVALID'), false)
-  assert.deepEqual(cmsCalls, [])
-})
+    assert.equal(
+      status.textContent,
+      `${expected}（HTTP ${responseStatus} / ${code}）`,
+    )
+    assert.equal(status.textContent.includes('internal server detail'), false)
+    assert.deepEqual(cmsCalls, [])
+  })
+}
+
+for (const responseStatus of [403, 502]) {
+  test(`CMS初期化は${responseStatus} JSONが4 KiBを超える場合に本文を表示しない`, async () => {
+    const { appended, cmsCalls } = await runAdminInit(
+      new Response(
+        JSON.stringify({
+          code: 'CMS_AUTH_IDENTITY_INVALID',
+          message: 'internal server detail',
+          padding: 'x'.repeat(4096),
+        }),
+        {
+          headers: { 'Content-Type': 'application/json' },
+          status: responseStatus,
+        },
+      ),
+    )
+    const status = appended.find((node) => node.tagName === 'p')
+
+    assert.equal(
+      status.textContent,
+      `CMSを開始できませんでした。AcecoreIDのログインと連携GitHubの編集権限を確認してください。（HTTP ${responseStatus}）`,
+    )
+    assert.equal(
+      status.textContent.includes('CMS_AUTH_IDENTITY_INVALID'),
+      false,
+    )
+    assert.deepEqual(cmsCalls, [])
+  })
+}
 
 for (const response of [
   Response.json(
