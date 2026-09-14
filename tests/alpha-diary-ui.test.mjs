@@ -195,6 +195,7 @@ test('long diary waits expose elapsed time without repeated screen-reader announ
   for (const locale of LOCALES) {
     const copy = getAlphaDiaryUi(locale)
     assert.match(copy.waitingElapsed, /\{seconds\}/u, locale)
+    assert.match(copy.loadElapsed, /\{seconds\}/u, locale)
     assert.ok(copy.longWaitTitle.length > 0, locale)
     assert.ok(copy.longWaitBody.length > 0, locale)
     assert.ok(copy.manualCheck.length > 0, locale)
@@ -202,14 +203,17 @@ test('long diary waits expose elapsed time without repeated screen-reader announ
     assert.ok(copy.timeoutBody.length > 0, locale)
   }
   assert.match(component, /data-diary-wait-elapsed[\s\S]*aria-live="off"/u)
+  assert.match(component, /data-diary-load-summary/u)
+  assert.match(component, /data-diary-entry-load-summary/u)
   assert.match(component, /\[data-diary-state-body\]/u)
   assert.match(script, /requestJsonWithDiaryTimeout/u)
   assert.match(script, /fixture === 'pending'/u)
   assert.match(script, /document\.visibilityState === 'visible'/u)
-  assert.match(
-    script,
-    /window\.addEventListener\('online', resumePendingEntry/u,
-  )
+  assert.match(script, /finalizeLoadMeasurement\('ready'\)/u)
+  assert.match(script, /reportDiaryLoadMeasurement\(measurement/u)
+  assert.match(script, /resumePendingEntry\('recovery'\)/u)
+  assert.match(script, /bfcacheResume\.recordPageHide/u)
+  assert.match(script, /takePersistedPageShow\(event\.persisted\)/u)
 })
 
 test('exploration is user-led from today’s trailhead to a passphrase on the key date', async () => {

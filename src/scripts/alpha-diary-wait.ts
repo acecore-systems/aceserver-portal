@@ -1,4 +1,147 @@
 export const DIARY_LONG_WAIT_MS = 30_000
+export const DIARY_METRICS_ENDPOINT = '/api/alpha-diary-metrics'
+export const DIARY_METRICS_RELEASE = 'diary-wait-v2'
+
+export type DiaryLoadOutcome = 'ready' | 'timeout' | 'failed' | 'cancelled'
+
+export type DiaryLoadMeasurement = {
+  elapsedMs: number
+  hiddenMs: number
+  manualCheckCount: number
+  outcome: DiaryLoadOutcome
+  pendingCount: number
+  requestCount: number
+  startedAtWallClockMs: number
+}
+
+export type DiaryLoadMetricPayload = {
+  elapsedMs: number
+  eventId: string
+  hiddenMs: number
+  manualCheckCount: number
+  outcome: DiaryLoadOutcome
+  pendingCount: number
+  release: typeof DIARY_METRICS_RELEASE
+  requestCount: number
+  version: 1
+}
+
+export type DiaryLoadMeasurementClock = {
+  monotonicNow: () => number
+  wallClockNow: () => number
+}
+
+type DiaryLoadMeasurementLifecycleOptions = {
+  clock: DiaryLoadMeasurementClock
+}
+
+export class DiaryLoadMeasurementLifecycle {
+  #clock: DiaryLoadMeasurementClock
+  #hiddenMs = 0
+  #hiddenStartedAt: number | null = null
+  #manualCheckCount = 0
+  #pendingCount = 0
+  #requestCount = 0
+  #startedAtMonotonic: number | null = null
+  #startedAtWallClockMs: number | null = null
+
+  constructor({ clock }: DiaryLoadMeasurementLifecycleOptions) {
+    this.#clock = clock
+  }
+
+  begin(options: { hidden: boolean }) {
+    this.discard()
+    const startedAt = this.#clock.monotonicNow()
+    this.#startedAtMonotonic = startedAt
+    this.#startedAtWallClockMs = this.#clock.wallClockNow()
+    this.#hiddenStartedAt = options.hidden ? startedAt : null
+  }
+
+  recordRequest() {
+    if (!this.isActive()) return
+    this.#requestCount += 1
+  }
+
+  recordPending() {
+    if (!this.isActive()) return
+    this.#pendingCount += 1
+  }
+
+  recordManualCheck() {
+    if (!this.isActive()) return
+    this.#manualCheckCount += 1
+  }
+
+  setHidden(hidden: boolean) {
+    if (!this.isActive()) return
+    const now = this.#clock.monotonicNow()
+    if (hidden && this.#hiddenStartedAt === null) {
+      this.#hiddenStartedAt = now
+      return
+    }
+    if (!hidden && this.#hiddenStartedAt !== null) {
+      this.#hiddenMs += Math.max(0, now - this.#hiddenStartedAt)
+      this.#hiddenStartedAt = null
+    }
+  }
+
+  finalize(outcome: DiaryLoadOutcome): DiaryLoadMeasurement | null {
+    if (
+      this.#startedAtMonotonic === null ||
+      this.#startedAtWallClockMs === null
+    ) {
+      return null
+    }
+    const now = this.#clock.monotonicNow()
+    const elapsedMs = Math.max(0, now - this.#startedAtMonotonic)
+    const hiddenMs = Math.min(
+      elapsedMs,
+      this.#hiddenMs +
+        (this.#hiddenStartedAt === null
+          ? 0
+          : Math.max(0, now - this.#hiddenStartedAt)),
+    )
+    const measurement: DiaryLoadMeasurement = {
+      elapsedMs: Math.floor(elapsedMs),
+      hiddenMs: Math.floor(hiddenMs),
+      manualCheckCount: this.#manualCheckCount,
+      outcome,
+      pendingCount: this.#pendingCount,
+      requestCount: this.#requestCount,
+      startedAtWallClockMs: this.#startedAtWallClockMs,
+    }
+    this.discard()
+    return measurement
+  }
+
+  discard() {
+    this.#hiddenMs = 0
+    this.#hiddenStartedAt = null
+    this.#manualCheckCount = 0
+    this.#pendingCount = 0
+    this.#requestCount = 0
+    this.#startedAtMonotonic = null
+    this.#startedAtWallClockMs = null
+  }
+
+  isActive(): boolean {
+    return this.#startedAtMonotonic !== null
+  }
+}
+
+export class DiaryBfcacheResumeLifecycle {
+  #date: string | null = null
+
+  recordPageHide(date: string, hasIncompleteLoad: boolean) {
+    this.#date = hasIncompleteLoad && date ? date : null
+  }
+
+  takePersistedPageShow(persisted: boolean): string | null {
+    const date = persisted ? this.#date : null
+    this.#date = null
+    return date
+  }
+}
 
 export type DiaryWaitSnapshot = {
   elapsedSeconds: number
@@ -177,4 +320,96 @@ export async function requestJsonWithDiaryTimeout<T>(
 
 function isAbortError(error: unknown): boolean {
   return error instanceof DOMException && error.name === 'AbortError'
+}
+
+type DiaryMetricReporterOptions = {
+  endpoint?: string
+  eventId?: () => string | undefined
+  fetch?: (
+    input: string,
+    init: {
+      body: string
+      headers: { 'Content-Type': string }
+      keepalive: true
+      method: 'POST'
+    },
+  ) => Promise<unknown>
+  preferBeacon?: boolean
+  sendBeacon?: (url: string, data: Blob | string) => boolean
+}
+
+export function reportDiaryLoadMeasurement(
+  measurement: DiaryLoadMeasurement,
+  options: DiaryMetricReporterOptions = {},
+): boolean {
+  if (
+    !Number.isInteger(measurement.elapsedMs) ||
+    !Number.isInteger(measurement.hiddenMs) ||
+    !Number.isInteger(measurement.requestCount) ||
+    !Number.isInteger(measurement.pendingCount) ||
+    !Number.isInteger(measurement.manualCheckCount)
+  )
+    return false
+  if (
+    measurement.elapsedMs < 0 ||
+    measurement.elapsedMs > 86_400_000 ||
+    measurement.hiddenMs < 0 ||
+    measurement.hiddenMs > measurement.elapsedMs ||
+    measurement.requestCount < 1 ||
+    measurement.requestCount > 10_000 ||
+    measurement.pendingCount < 0 ||
+    measurement.pendingCount > measurement.requestCount ||
+    measurement.manualCheckCount < 0 ||
+    measurement.manualCheckCount > measurement.requestCount
+  ) {
+    return false
+  }
+  const eventId =
+    options.eventId?.() ||
+    (typeof crypto === 'undefined' ? undefined : crypto.randomUUID?.())
+  if (!eventId) return false
+  const payload: DiaryLoadMetricPayload = {
+    elapsedMs: measurement.elapsedMs,
+    eventId,
+    hiddenMs: measurement.hiddenMs,
+    manualCheckCount: measurement.manualCheckCount,
+    outcome: measurement.outcome,
+    pendingCount: measurement.pendingCount,
+    release: DIARY_METRICS_RELEASE,
+    requestCount: measurement.requestCount,
+    version: 1,
+  }
+  const endpoint = options.endpoint || DIARY_METRICS_ENDPOINT
+  const serialized = JSON.stringify(payload)
+  const sendBeacon =
+    options.sendBeacon ||
+    (typeof navigator === 'undefined' ||
+    typeof navigator.sendBeacon !== 'function'
+      ? undefined
+      : navigator.sendBeacon.bind(navigator))
+  if (options.preferBeacon && sendBeacon) {
+    try {
+      const body =
+        typeof Blob === 'undefined'
+          ? serialized
+          : new Blob([serialized], { type: 'application/json' })
+      if (sendBeacon(endpoint, body)) return true
+    } catch {
+      // Fall through to the keepalive request; metrics must not affect the diary.
+    }
+  }
+  const sendFetch =
+    options.fetch || (typeof fetch === 'function' ? fetch : null)
+  if (!sendFetch) return false
+  try {
+    void sendFetch(endpoint, {
+      body: serialized,
+      headers: { 'Content-Type': 'application/json' },
+      keepalive: true,
+      method: 'POST',
+    }).catch(() => {})
+    return true
+  } catch {
+    return false
+  }
 }

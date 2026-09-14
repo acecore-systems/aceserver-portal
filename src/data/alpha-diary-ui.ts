@@ -23,6 +23,7 @@ export type AlphaDiaryUi = {
   gateTitle: string
   loadingBody: string
   loadingTitle: string
+  loadElapsed: string
   longWaitBody: string
   longWaitTitle: string
   manualCheck: string
@@ -90,6 +91,7 @@ const alphaDiaryUi = {
     loadingBody:
       '紙の向こうで、鉛筆を走らせる音がします。文字と絵が浮かぶまで、少しだけ待ってください。',
     loadingTitle: 'ページをひらいています',
+    loadElapsed: '今回の読み込み: {seconds}秒',
     longWaitBody:
       'ページを開くまでに時間がかかっています。開ける状態になったか、引き続き確認しています。',
     longWaitTitle: 'まだページをひらいています',
@@ -162,6 +164,7 @@ const alphaDiaryUi = {
     loadingBody:
       'From beyond the paper comes the sound of a pencil moving. Please wait a little for the words and picture to appear.',
     loadingTitle: 'Opening the page',
+    loadElapsed: 'This load: {seconds}s',
     longWaitBody:
       'Opening this page is taking time. We are still checking whether it is ready to open.',
     longWaitTitle: 'Still opening the page',
@@ -231,6 +234,7 @@ const alphaDiaryUi = {
     loadingBody:
       '纸张另一侧传来铅笔划动的声音。请稍等片刻，让文字和图画浮现出来。',
     loadingTitle: '正在翻开这一页',
+    loadElapsed: '本次加载：{seconds}秒',
     longWaitBody:
       '打开这一页需要一些时间。我们仍在确认这一页是否已经可以打开。',
     longWaitTitle: '仍在打开这一页',
@@ -299,6 +303,7 @@ const alphaDiaryUi = {
     loadingBody:
       'Desde el otro lado del papel se oye un lápiz en movimiento. Espera un poco a que aparezcan las palabras y el dibujo.',
     loadingTitle: 'Abriendo la página',
+    loadElapsed: 'Esta carga: {seconds} s',
     longWaitBody:
       'Abrir esta página está tomando tiempo. Seguimos comprobando si ya se puede abrir.',
     longWaitTitle: 'La página sigue abriéndose',
@@ -372,6 +377,7 @@ const alphaDiaryUi = {
     loadingBody:
       'Do outro lado do papel vem o som de um lápis em movimento. Espere um pouco até as palavras e o desenho aparecerem.',
     loadingTitle: 'Abrindo a página',
+    loadElapsed: 'Este carregamento: {seconds} s',
     longWaitBody:
       'Abrir esta página está levando tempo. Ainda estamos verificando se ela já pode ser aberta.',
     longWaitTitle: 'A página ainda está abrindo',
@@ -445,6 +451,7 @@ const alphaDiaryUi = {
     loadingBody:
       'De l’autre côté du papier vient le bruit d’un crayon. Attendez un peu que les mots et le dessin apparaissent.',
     loadingTitle: 'Ouverture de la page',
+    loadElapsed: 'Ce chargement : {seconds} s',
     longWaitBody:
       'L’ouverture de cette page prend du temps. Nous vérifions encore si elle peut s’ouvrir.',
     longWaitTitle: 'La page est toujours en cours d’ouverture',
@@ -517,6 +524,7 @@ const alphaDiaryUi = {
     loadingBody:
       '종이 너머에서 연필이 움직이는 소리가 납니다. 글과 그림이 떠오를 때까지 잠시 기다려 주세요.',
     loadingTitle: '페이지를 여는 중',
+    loadElapsed: '이번 불러오기: {seconds}초',
     longWaitBody:
       '페이지를 여는 데 시간이 걸리고 있습니다. 페이지를 열 수 있는지 계속 확인하고 있습니다.',
     longWaitTitle: '아직 페이지를 여는 중',
@@ -590,6 +598,7 @@ const alphaDiaryUi = {
     loadingBody:
       'Hinter dem Papier ist ein Bleistift zu hören. Warte kurz, bis Wörter und Bild erscheinen.',
     loadingTitle: 'Die Seite wird geöffnet',
+    loadElapsed: 'Dieser Ladevorgang: {seconds} s',
     longWaitBody:
       'Das Öffnen dieser Seite dauert an. Wir prüfen weiterhin, ob sie geöffnet werden kann.',
     longWaitTitle: 'Die Seite wird noch geöffnet',
@@ -663,6 +672,7 @@ const alphaDiaryUi = {
     loadingBody:
       'Из-за бумаги слышно движение карандаша. Подождите немного, пока появятся слова и рисунок.',
     loadingTitle: 'Открываем страницу',
+    loadElapsed: 'Эта загрузка: {seconds} с',
     longWaitBody:
       'Открытие этой страницы требует времени. Мы всё ещё проверяем, можно ли её открыть.',
     longWaitTitle: 'Страница всё ещё открывается',

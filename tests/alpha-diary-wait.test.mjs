@@ -2,9 +2,13 @@ import assert from 'node:assert/strict'
 import test from 'node:test'
 
 import {
+  DiaryBfcacheResumeLifecycle,
+  DIARY_METRICS_ENDPOINT,
+  DiaryLoadMeasurementLifecycle,
   DiaryRequestTimeoutError,
   DiaryWaitLifecycle,
   requestJsonWithDiaryTimeout,
+  reportDiaryLoadMeasurement,
   withDiaryRequestTimeout,
 } from '../src/scripts/alpha-diary-wait.ts'
 
@@ -258,4 +262,165 @@ test('stopping the diary clears scheduled polls and elapsed-time updates', () =>
 
   assert.equal(polls, 0)
   assert.equal(scheduler.activeTimerCount(), 0)
+})
+
+test('load measurement retains monotonic elapsed time, visibility time, and pending retry counts', () => {
+  let monotonicNow = 1_000
+  let wallClockNow = 1_726_000_000_000
+  const lifecycle = new DiaryLoadMeasurementLifecycle({
+    clock: {
+      monotonicNow: () => monotonicNow,
+      wallClockNow: () => wallClockNow,
+    },
+  })
+
+  lifecycle.begin({ hidden: false })
+  lifecycle.recordRequest()
+  monotonicNow = 3_500
+  lifecycle.recordPending()
+  lifecycle.setHidden(true)
+  monotonicNow = 6_000
+  lifecycle.recordManualCheck()
+  lifecycle.recordRequest()
+  monotonicNow = 8_500
+  lifecycle.setHidden(false)
+  lifecycle.recordPending()
+  monotonicNow = 11_000
+
+  assert.deepEqual(lifecycle.finalize('ready'), {
+    elapsedMs: 10_000,
+    hiddenMs: 5_000,
+    manualCheckCount: 1,
+    outcome: 'ready',
+    pendingCount: 2,
+    requestCount: 2,
+    startedAtWallClockMs: wallClockNow,
+  })
+  assert.equal(lifecycle.finalize('cancelled'), null)
+  wallClockNow += 5_000
+  assert.equal(lifecycle.isActive(), false)
+})
+
+test('discarding a fixture, future, or consent run leaves no metric to report', () => {
+  const lifecycle = new DiaryLoadMeasurementLifecycle({
+    clock: {
+      monotonicNow: () => 1_000,
+      wallClockNow: () => 1_726_000_000_000,
+    },
+  })
+
+  lifecycle.begin({ hidden: false })
+  lifecycle.recordRequest()
+  lifecycle.discard()
+
+  assert.equal(lifecycle.finalize('cancelled'), null)
+})
+
+test('a BFCache return reloads one incomplete date and never reloads an already-ready page', () => {
+  const lifecycle = new DiaryBfcacheResumeLifecycle()
+
+  lifecycle.recordPageHide('2026-09-14', true)
+  assert.equal(lifecycle.takePersistedPageShow(true), '2026-09-14')
+  assert.equal(lifecycle.takePersistedPageShow(true), null)
+
+  lifecycle.recordPageHide('2026-09-14', false)
+  assert.equal(lifecycle.takePersistedPageShow(true), null)
+
+  lifecycle.recordPageHide('2026-09-14', true)
+  assert.equal(lifecycle.takePersistedPageShow(false), null)
+})
+
+test('measurement reports the bounded anonymous contract with a non-blocking keepalive request', () => {
+  const sent = []
+  const measurement = {
+    elapsedMs: 42_000,
+    hiddenMs: 2_000,
+    manualCheckCount: 1,
+    outcome: 'ready',
+    pendingCount: 10,
+    requestCount: 11,
+    startedAtWallClockMs: 1_726_000_000_000,
+  }
+
+  assert.equal(
+    reportDiaryLoadMeasurement(measurement, {
+      eventId: () => '00000000-0000-4000-8000-000000000001',
+      fetch: (input, init) => {
+        sent.push({ input, init })
+        return Promise.resolve(new Response(null, { status: 204 }))
+      },
+    }),
+    true,
+  )
+  assert.equal(sent.length, 1)
+  assert.equal(sent[0].input, DIARY_METRICS_ENDPOINT)
+  assert.equal(sent[0].init.keepalive, true)
+  assert.equal(sent[0].init.method, 'POST')
+  assert.deepEqual(JSON.parse(sent[0].init.body), {
+    elapsedMs: 42_000,
+    eventId: '00000000-0000-4000-8000-000000000001',
+    hiddenMs: 2_000,
+    manualCheckCount: 1,
+    outcome: 'ready',
+    pendingCount: 10,
+    release: 'diary-wait-v2',
+    requestCount: 11,
+    version: 1,
+  })
+})
+
+test('page departure prefers a beacon and invalid measurements never send', async () => {
+  let beaconBody
+  let fetchCalls = 0
+  const measurement = {
+    elapsedMs: 1_000,
+    hiddenMs: 400,
+    manualCheckCount: 0,
+    outcome: 'cancelled',
+    pendingCount: 0,
+    requestCount: 1,
+    startedAtWallClockMs: 1_726_000_000_000,
+  }
+
+  assert.equal(
+    reportDiaryLoadMeasurement(measurement, {
+      eventId: () => '00000000-0000-4000-8000-000000000002',
+      fetch: () => {
+        fetchCalls += 1
+        return Promise.resolve(new Response())
+      },
+      preferBeacon: true,
+      sendBeacon: (_endpoint, body) => {
+        beaconBody = body
+        return true
+      },
+    }),
+    true,
+  )
+  assert.equal(fetchCalls, 0)
+  const serialized =
+    typeof beaconBody === 'string' ? beaconBody : await beaconBody.text()
+  assert.equal(JSON.parse(serialized).outcome, 'cancelled')
+  assert.equal(
+    reportDiaryLoadMeasurement(measurement, {
+      eventId: () => '00000000-0000-4000-8000-000000000004',
+      fetch: () => {
+        fetchCalls += 1
+        return Promise.resolve(new Response())
+      },
+      preferBeacon: true,
+      sendBeacon: () => {
+        throw new Error('BeaconUnavailable')
+      },
+    }),
+    true,
+  )
+  assert.equal(fetchCalls, 1)
+  assert.equal(
+    reportDiaryLoadMeasurement(
+      { ...measurement, elapsedMs: 1.5 },
+      { eventId: () => '00000000-0000-4000-8000-000000000003' },
+    ),
+    false,
+  )
 })

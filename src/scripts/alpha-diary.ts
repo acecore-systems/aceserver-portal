@@ -1,8 +1,12 @@
 import type { AlphaDiaryUi } from '../data/alpha-diary-ui'
 import {
+  DiaryBfcacheResumeLifecycle,
+  DiaryLoadMeasurementLifecycle,
+  type DiaryLoadOutcome,
   DiaryRequestTimeoutError,
   DiaryWaitLifecycle,
   requestJsonWithDiaryTimeout,
+  reportDiaryLoadMeasurement,
 } from './alpha-diary-wait'
 
 type DiaryEntry = {
@@ -107,19 +111,28 @@ export function initAlphaDiary() {
 
   const waitLifecycle = new DiaryWaitLifecycle({
     onChange: renderWaitingState,
-    onPoll: () => resumePendingEntry(),
+    onPoll: () => resumePendingEntry('poll'),
     scheduler: {
       clearInterval: (timer) => window.clearInterval(timer),
       clearTimeout: (timer) => window.clearTimeout(timer),
-      now: () => Date.now(),
+      now: () => performance.now(),
       setInterval: (callback, delay) => window.setInterval(callback, delay),
       setTimeout: (callback, delay) => window.setTimeout(callback, delay),
     },
   })
 
+  const loadMeasurement = new DiaryLoadMeasurementLifecycle({
+    clock: {
+      monotonicNow: () => performance.now(),
+      wallClockNow: () => Date.now(),
+    },
+  })
+  const bfcacheResume = new DiaryBfcacheResumeLifecycle()
+
   signal.addEventListener(
     'abort',
     () => {
+      finalizeLoadMeasurement('cancelled')
       requestController?.abort()
       clearPending()
     },
@@ -130,6 +143,56 @@ export function initAlphaDiary() {
 
   function setStatus(message: string) {
     statusRegion.textContent = message
+  }
+
+  function clearLoadMeasurementSummary() {
+    for (const selector of [
+      '[data-diary-load-summary]',
+      '[data-diary-entry-load-summary]',
+    ]) {
+      const element = requiredElement<HTMLElement>(root, selector)
+      element.hidden = true
+      element.textContent = ''
+    }
+  }
+
+  function finalizeLoadMeasurement(
+    outcome: DiaryLoadOutcome,
+    options: { unloading?: boolean } = {},
+  ) {
+    const measurement = loadMeasurement.finalize(outcome)
+    if (!measurement) return
+    reportDiaryLoadMeasurement(measurement, {
+      preferBeacon: options.unloading,
+    })
+    showLoadMeasurementSummary(outcome, measurement.elapsedMs)
+  }
+
+  function showLoadMeasurementSummary(
+    outcome: DiaryLoadOutcome,
+    elapsedMs: number,
+  ) {
+    if (outcome === 'cancelled') return
+    const summary = copy.loadElapsed.replace(
+      '{seconds}',
+      formatLoadElapsed(elapsedMs),
+    )
+    const stateSummary = requiredElement<HTMLElement>(
+      root,
+      '[data-diary-load-summary]',
+    )
+    const entrySummary = requiredElement<HTMLElement>(
+      root,
+      '[data-diary-entry-load-summary]',
+    )
+    stateSummary.hidden = outcome === 'ready'
+    stateSummary.textContent = summary
+    entrySummary.hidden = outcome !== 'ready'
+    entrySummary.textContent = summary
+  }
+
+  function formatLoadElapsed(elapsedMs: number) {
+    return (elapsedMs / 1_000).toFixed(1).replace(/\.0$/u, '')
   }
 
   function setRecordKind(
@@ -148,6 +211,7 @@ export function initAlphaDiary() {
 
   function setLoading(loadingKind: LoadingKind = 'current') {
     waitingWasLong = false
+    clearLoadMeasurementSummary()
     setFinaleChallengeAvailable(false)
     setRecordKind(
       loadingKind === 'observation' ? 'observation' : 'loading',
@@ -243,6 +307,7 @@ export function initAlphaDiary() {
 
   function renderFuture() {
     clearPending()
+    clearLoadMeasurementSummary()
     setFinaleChallengeAvailable(false)
     setRecordKind('future')
     statePanel.hidden = false
@@ -251,8 +316,11 @@ export function initAlphaDiary() {
     setStatus(copy.futureTitle)
   }
 
-  function renderFailure() {
+  function renderFailure(
+    options: { keepLoadMeasurementSummary?: boolean } = {},
+  ) {
     clearPending()
+    if (!options.keepLoadMeasurementSummary) clearLoadMeasurementSummary()
     setFinaleChallengeAvailable(false)
     setRecordKind(
       currentDate < BIRTH_BOUNDARY ? 'observation' : 'failed',
@@ -264,8 +332,11 @@ export function initAlphaDiary() {
     setStatus(copy.failureTitle)
   }
 
-  function renderTimeout() {
+  function renderTimeout(
+    options: { keepLoadMeasurementSummary?: boolean } = {},
+  ) {
     clearPending()
+    if (!options.keepLoadMeasurementSummary) clearLoadMeasurementSummary()
     setFinaleChallengeAvailable(false)
     setRecordKind(
       currentDate < BIRTH_BOUNDARY ? 'observation' : 'failed',
@@ -381,6 +452,11 @@ export function initAlphaDiary() {
       const accepted = await requestAdultConsent()
       if (!accepted) return false
     }
+    if (!options.resumeWaiting) {
+      finalizeLoadMeasurement('cancelled')
+      clearPending()
+    }
+    requestController?.abort()
     if (date && date > serverToday) {
       currentDate = date
       dateInput.value = date
@@ -392,8 +468,6 @@ export function initAlphaDiary() {
     updateDateHistory(date, options.history || 'none')
     currentDate = date
     dateInput.value = date || serverToday
-    if (!options.resumeWaiting) clearPending()
-    requestController?.abort()
     const controller = new AbortController()
     requestController = controller
     if (!options.resumeWaiting) setLoading(getLoadingKind(date))
@@ -401,6 +475,10 @@ export function initAlphaDiary() {
 
     try {
       const fixture = getFixturePayload(root, copy, date || serverToday)
+      if (!fixture && !options.resumeWaiting) {
+        loadMeasurement.begin({ hidden: document.visibilityState === 'hidden' })
+      }
+      if (!fixture) loadMeasurement.recordRequest()
       const payload =
         fixture ||
         (await requestDiary(
@@ -430,33 +508,44 @@ export function initAlphaDiary() {
         typeof payload.finaleChallengeAvailable === 'boolean'
       ) {
         waitLifecycle.complete(requestId)
+        if (fixture) showLoadMeasurementSummary('ready', 0)
+        else finalizeLoadMeasurement('ready')
         renderEntry(payload.entry, payload.finaleChallengeAvailable)
         return true
       }
       if (payload.status === 'pending') {
         const retryAfter = readRetryAfter(payload.retryAfter)
+        if (!fixture) loadMeasurement.recordPending()
         waitLifecycle.markPending(requestId, retryAfter * 1_000)
         return false
       }
       if (payload.status === 'future') {
         waitLifecycle.complete(requestId)
+        loadMeasurement.discard()
         renderFuture()
         return false
       }
       if (payload.status === 'consent_required') {
         waitLifecycle.complete(requestId)
+        loadMeasurement.discard()
         const accepted = await requestAdultConsent()
         if (accepted) return loadEntry(date, { history: 'none' })
         return false
       }
       waitLifecycle.complete(requestId)
-      renderFailure()
+      finalizeLoadMeasurement('failed')
+      renderFailure({ keepLoadMeasurementSummary: true })
       return false
     } catch (error) {
       if (!isCurrentEntryRequest(requestId, controller)) return false
       waitLifecycle.complete(requestId)
-      if (error instanceof DiaryRequestTimeoutError) renderTimeout()
-      else renderFailure()
+      if (error instanceof DiaryRequestTimeoutError) {
+        finalizeLoadMeasurement('timeout')
+        renderTimeout({ keepLoadMeasurementSummary: true })
+      } else {
+        finalizeLoadMeasurement('failed')
+        renderFailure({ keepLoadMeasurementSummary: true })
+      }
       return false
     }
   }
@@ -864,8 +953,11 @@ export function initAlphaDiary() {
     )
   }
 
-  function resumePendingEntry() {
+  function resumePendingEntry(
+    source: 'manual' | 'poll' | 'recovery' = 'recovery',
+  ) {
     if (!waitLifecycle.requestManualCheck()) return
+    if (source === 'manual') loadMeasurement.recordManualCheck()
     void loadEntry(currentDate || undefined, {
       history: 'none',
       resumeWaiting: true,
@@ -933,7 +1025,7 @@ export function initAlphaDiary() {
       const target = event.target
       if (!(target instanceof Element)) return
       if (target.closest('[data-diary-retry]')) {
-        if (waitLifecycle.isWaiting()) resumePendingEntry()
+        if (waitLifecycle.isWaiting()) resumePendingEntry('manual')
         else void loadEntry(currentDate || dateInput.value, { history: 'none' })
         return
       }
@@ -1049,12 +1141,38 @@ export function initAlphaDiary() {
   document.addEventListener(
     'visibilitychange',
     () => {
+      loadMeasurement.setHidden(document.visibilityState === 'hidden')
       if (document.visibilityState === 'visible') resumePendingEntry()
     },
     { signal },
   )
 
-  window.addEventListener('online', resumePendingEntry, { signal })
+  window.addEventListener('online', () => resumePendingEntry('recovery'), {
+    signal,
+  })
+
+  window.addEventListener(
+    'pagehide',
+    () => {
+      bfcacheResume.recordPageHide(
+        currentDate || serverToday,
+        waitLifecycle.isWaiting(),
+      )
+      finalizeLoadMeasurement('cancelled', { unloading: true })
+      requestController?.abort()
+      clearPending()
+    },
+    { signal },
+  )
+
+  window.addEventListener(
+    'pageshow',
+    (event) => {
+      const date = bfcacheResume.takePersistedPageShow(event.persisted)
+      if (date) void loadEntry(date, { history: 'none' })
+    },
+    { signal },
+  )
 
   document.addEventListener(
     'keydown',
