@@ -19,9 +19,10 @@
 Portal専用 `cloudflare/cms-token-issuer/` Workerを使用する。App秘密鍵はこのWorkerだけに設定し、Pagesへ置かない。
 
 - Workerは `workers_dev: false`、`preview_urls: false`、公開routeなし。Portal本番の `CMS_GITHUB_TOKEN_ISSUER` Service Bindingだけから呼ぶ。Previewにはbindingを付けない。
-- issuerのsecretは `CMS_GITHUB_APP_CLIENT_ID`、`CMS_GITHUB_APP_INSTALLATION_ID`、`CMS_GITHUB_APP_PRIVATE_KEY`。別サイトのAppを流用しない。
-- 発行先は `acecore-systems/aceserver-portal` 固定でContents writeのみ。発行応答のrepo・scope・期限・ghs形式を確認する。呼出元の任意repoや権限指定は受け付けない。
-- 本番Workerの作成・secret設定・bindingの成立確認が必要。今回のPR作成だけでは本番準備完了ではない。
+- issuerはPortal専用GitHub Appの公開値 `CMS_GITHUB_APP_CLIENT_ID` と `CMS_GITHUB_APP_INSTALLATION_ID` をWorker設定の `vars` に固定し、秘密鍵 `CMS_GITHUB_APP_PRIVATE_KEY` だけをWorker secretにする。別サイトのAppを流用しない。鍵はGit、PR、ログ、Pagesへ載せない。`secrets.required` により、未設定のままWorkerをdeployしない。
+- Secrets Storeは1 secretあたり1,024 bytesまででGitHub App RSA PEMを単一値として格納できないため、このWorkerでは使わない。独自分割・符号化は行わず、Worker専用secretを維持する。
+- 発行先は `acecore-systems/aceserver-portal` 固定でContents writeのみ。発行応答のrepo・scope・期限・ghs形式を確認する。GitHub応答は64 KiBまで、redirect拒否・8秒timeoutで読み取り、installation tokenはrequest外へcacheしない。呼出元の任意repoや権限指定は受け付けない。
+- 本番Workerの作成・secret設定・bindingの成立確認が必要。新規Workerでは `wrangler secret put` を先に実行できないため、最初のdeployは `--secrets-file` で必須secretを渡す必要がある。鍵の作成・既存鍵の読出し・そのファイルへの入力は、このPRでは行わない。承認済みの担当者本人が未追跡のローカル入力ファイルを用意して実行し、その後に安全に取り扱う。今回のPR作成だけでは本番準備完了ではない。
 - 検証: `npm run test:cms`、`npx tsc -p cloudflare/cms-token-issuer/tsconfig.json`、`npx wrangler deploy --config cloudflare/cms-token-issuer/wrangler.jsonc --dry-run`。
 
 ## 本番切替とロールバック

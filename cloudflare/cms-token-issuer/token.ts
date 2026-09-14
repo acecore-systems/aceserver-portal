@@ -3,19 +3,15 @@ const CMS_REPOSITORY = { owner: 'acecore-systems', name: 'aceserver-portal' }
 
 const GITHUB_API_VERSION = '2022-11-28'
 const USER_AGENT = 'aceserver-portal-cms-token-issuer'
-const INSTALLATION_TOKEN_REFRESH_BUFFER_MS = 5 * 60 * 1000
 const MAX_INSTALLATION_TOKEN_LIFETIME_MS = 65 * 60 * 1000
+const MAX_GITHUB_RESPONSE_BYTES = 64 * 1024
+const GITHUB_REQUEST_TIMEOUT_MS = 8 * 1000
 const RSA_ALGORITHM_IDENTIFIER = Uint8Array.from([
   0x30, 0x0d, 0x06, 0x09, 0x2a, 0x86, 0x48, 0x86, 0xf7, 0x0d, 0x01, 0x01, 0x01,
   0x05, 0x00,
 ])
 
 export type CmsGitHubAppEnv = Partial<TokenIssuerEnv>
-
-const installationTokenCache = new Map<
-  string,
-  { token: string; expiresAt: number }
->()
 
 export class GitHubApiError extends Error {
   status: number
@@ -26,10 +22,7 @@ export class GitHubApiError extends Error {
   }
 }
 
-export async function getGitHubAppToken(
-  env: CmsGitHubAppEnv,
-  { forceRefresh = false }: { forceRefresh?: boolean } = {},
-) {
+export async function getGitHubAppToken(env: CmsGitHubAppEnv) {
   const clientId = env.CMS_GITHUB_APP_CLIENT_ID?.trim()
   const installationId = env.CMS_GITHUB_APP_INSTALLATION_ID?.trim()
   const privateKey = env.CMS_GITHUB_APP_PRIVATE_KEY?.replace(
@@ -47,17 +40,6 @@ export async function getGitHubAppToken(
       'CMS GitHub Appの認証設定がCloudflare Pagesにありません。',
       503,
     )
-  }
-
-  const cacheKey = `${clientId}:${installationId}`
-  const cached = installationTokenCache.get(cacheKey)
-
-  if (
-    !forceRefresh &&
-    cached &&
-    cached.expiresAt - INSTALLATION_TOKEN_REFRESH_BUFFER_MS > Date.now()
-  ) {
-    return cached.token
   }
 
   let appJwt: string
@@ -83,6 +65,8 @@ export async function getGitHubAppToken(
     `https://api.github.com/app/installations/${installationId}/access_tokens`,
     {
       method: 'POST',
+      redirect: 'error',
+      signal: AbortSignal.timeout(GITHUB_REQUEST_TIMEOUT_MS),
       headers: {
         Accept: 'application/vnd.github+json',
         Authorization: `Bearer ${appJwt}`,
@@ -98,7 +82,7 @@ export async function getGitHubAppToken(
       }),
     },
   )
-  const data: unknown = await response.json().catch(() => null)
+  const data = await readBoundedJson(response)
 
   if (
     !response.ok ||
@@ -108,12 +92,10 @@ export async function getGitHubAppToken(
     typeof data.expires_at !== 'string' ||
     !hasExpectedInstallationScope(data)
   ) {
-    const message =
-      isRecord(data) && typeof data.message === 'string'
-        ? data.message
-        : 'CMS GitHub Appのinstallation tokenを発行できません。'
-
-    throw new GitHubApiError(message, response.ok ? 502 : response.status)
+    throw new GitHubApiError(
+      'CMS GitHub Appのinstallation tokenを発行できません。',
+      response.ok ? 502 : response.status,
+    )
   }
 
   const expiresAt = Date.parse(data.expires_at)
@@ -128,8 +110,6 @@ export async function getGitHubAppToken(
       502,
     )
   }
-
-  installationTokenCache.set(cacheKey, { token: data.token, expiresAt })
 
   return data.token
 }
@@ -158,10 +138,6 @@ function hasExpectedInstallationScope(data: Record<string, unknown>) {
   )
 }
 
-export function clearGitHubAppTokenCacheForTests() {
-  installationTokenCache.clear()
-}
-
 function normalizeGitHubAppPrivateKey(privateKey: string) {
   if (privateKey.startsWith('-----BEGIN PRIVATE KEY-----')) return privateKey
 
@@ -188,6 +164,45 @@ function normalizeGitHubAppPrivateKey(privateKey: string) {
   if (!lines) throw new Error('Invalid private key')
 
   return `-----BEGIN PRIVATE KEY-----\n${lines.join('\n')}\n-----END PRIVATE KEY-----`
+}
+
+async function readBoundedJson(response: Response): Promise<unknown> {
+  if (!response.body) return null
+
+  const reader = response.body.getReader()
+  const chunks: Uint8Array[] = []
+  let totalBytes = 0
+
+  try {
+    while (true) {
+      const { done, value } = await reader.read()
+
+      if (done) break
+
+      totalBytes += value.byteLength
+
+      if (totalBytes > MAX_GITHUB_RESPONSE_BYTES) {
+        await reader.cancel().catch(() => undefined)
+        return null
+      }
+
+      chunks.push(value)
+    }
+
+    const bytes = new Uint8Array(totalBytes)
+    let offset = 0
+
+    for (const chunk of chunks) {
+      bytes.set(chunk, offset)
+      offset += chunk.byteLength
+    }
+
+    return JSON.parse(new TextDecoder('utf-8', { fatal: true }).decode(bytes))
+  } catch {
+    return null
+  } finally {
+    reader.releaseLock()
+  }
 }
 
 function encodeDerElement(tag: number, value: Uint8Array) {

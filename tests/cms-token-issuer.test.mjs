@@ -41,6 +41,9 @@ test('専用issuerはPortalのContents writeだけの短期tokenを発行する'
       repositories: ['aceserver-portal'],
       permissions: { contents: 'write' },
     })
+    assert.equal(init.redirect, 'error')
+    assert.equal(init.signal instanceof AbortSignal, true)
+    assert.equal(init.signal.aborted, false)
     return Response.json(tokenData())
   }
   const response = await issuer.fetch(request(), env)
@@ -50,6 +53,16 @@ test('専用issuerはPortalのContents writeだけの短期tokenを発行する'
     (await response.json()).repository,
     'acecore-systems/aceserver-portal',
   )
+})
+test('issuerはtokenをrequest外にcacheせず毎回GitHubへ発行要求する', async () => {
+  let calls = 0
+  globalThis.fetch = async () => {
+    calls += 1
+    return Response.json(tokenData())
+  }
+  assert.equal((await issuer.fetch(request(), env)).status, 200)
+  assert.equal((await issuer.fetch(request(), env)).status, 200)
+  assert.equal(calls, 2)
 })
 for (const change of [
   { repositories: [{ name: 'other', full_name: 'acecore-systems/other' }] },
@@ -92,6 +105,29 @@ test('issuerは公開URLやGETではtokenを返さず、秘密鍵なしでも拒
     ).status,
     503,
   )
+})
+test('issuerは過大・不正なGitHub応答と上流エラー詳細を公開しない', async () => {
+  const oversized = new ReadableStream({
+    start(controller) {
+      controller.enqueue(new Uint8Array(64 * 1024 + 1))
+      controller.close()
+    },
+  })
+  for (const response of [
+    new Response(oversized, {
+      headers: { 'Content-Type': 'application/json' },
+    }),
+    new Response('{', { headers: { 'Content-Type': 'application/json' } }),
+    Response.json({ message: 'upstream-secret-detail' }, { status: 401 }),
+  ]) {
+    globalThis.fetch = async () => response
+    const result = await issuer.fetch(request(), env)
+    assert.equal(result.status, 503)
+    assert.equal(
+      (await result.text()).includes('upstream-secret-detail'),
+      false,
+    )
+  }
 })
 test('Pagesはbinding欠落・誤repo・個人token・issuer障害を拒否する', async () => {
   await assert.rejects(getGitHubAppToken({}), { status: 503 })

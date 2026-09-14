@@ -5,11 +5,11 @@
   "compatibility_date": "2026-09-12",
   "workers_dev": false,
   "preview_urls": false,
+  "vars": {
+    "CMS_GITHUB_APP_CLIENT_ID": "Iv23lipbsaRsxzUGXHOP",
+    "CMS_GITHUB_APP_INSTALLATION_ID": "149706696",
+  },
   "secrets": {
-    "required": [
-      "CMS_GITHUB_APP_CLIENT_ID",
-      "CMS_GITHUB_APP_INSTALLATION_ID",
-      "CMS_GITHUB_APP_PRIVATE_KEY",
-    ],
+    "required": ["CMS_GITHUB_APP_PRIVATE_KEY"],
   },
 }

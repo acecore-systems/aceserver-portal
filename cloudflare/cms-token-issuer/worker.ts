@@ -9,7 +9,7 @@ export default {
     )
       return new Response(null, { status: 404 })
     try {
-      const token = await getGitHubAppToken(env, { forceRefresh: true })
+      const token = await getGitHubAppToken(env)
       return Response.json(
         { token, repository: 'acecore-systems/aceserver-portal' },
         { headers: { 'Cache-Control': 'no-store' } },
