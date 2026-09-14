@@ -645,8 +645,12 @@ async function validateCmsConfig() {
     )
   }
   if (
-    !oauth.includes('user.permissions.push !== true') ||
-    !oauth.includes('/collaborators?affiliation=all') ||
+    !oauth.includes('path: `/user/${id}`') ||
+    !oauth.includes('/permission`') ||
+    !oauth.includes("grant.permission !== 'admin'") ||
+    !oauth.includes("grant.permission !== 'write'") ||
+    !oauth.includes('String(grant.user.id) !== id') ||
+    oauth.includes('/collaborators?affiliation=all') ||
     !oauth.includes('getAcecoreGitHubId(request, env)') ||
     !appOAuth.includes('jwtVerify') ||
     !appOAuth.includes('CMS_PRODUCTION_HOSTNAME') ||

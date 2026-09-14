@@ -4,11 +4,18 @@
 
 サイト側の実装PR。**本番未切替**。既存編集者の本人GitHub連携、全員の権限照合、本番設定と実ログイン確認が完了するまでマージしない。
 
+### 2026-09-14 の準備・検証
+
+- 専用issuerは `d46df6f` から配信済み（version `ba38fad0-2e18-4565-b603-d355ddaea0aa`、100%）。登録鍵の指紋一致と `secret_text`、workers.dev / preview URL無効を確認した。秘密値のファイル化を避け、初回配信はCloudflare APIのメモリ内multipartで行った。
+- Pages本番に専用Service Bindingを追加した。Preview・既存環境変数・source・現在の本番deploymentは不変。Accessの公開設定3項目も本番Wrangler設定へ明記した。サイトの再配信・ログイン切替は未実施。
+- ローカルから専用Appで短期tokenを発行し、対象がPortal 1 repositoryだけであることを確認した。検証用tokenは失効済み。配信済みWorker経由の疎通試験とは区別する。
+- 実APIでは管理用認証のcollaborators一覧がpush User 15件なのに対し、専用Appの一覧は200で空だった。個別照会方式で14件の不変ID・push権限が一致した。残る1件は数値ID解決が404であり、編集者不存在や権限剥奪とは断定しない。この差と本人連携の確認が解消するまで本番切替しない。
+
 ## 認証と認可
 
 - ログインはAcecoreIDのみ。Access JWTのRS256署名・issuer・audience・期限・app種別・AcecoreID subject・GitHub数値IDを検証する。
 - メール、表示名、Hatt entitlement、共通CMS AI membershipで編集権限を追加しない。
-- GitHubの対象repository collaboratorsを全affiliationでページングし、連携済みの不変IDに現在push権限があるか毎回確認する。保存直前も再確認し、障害・連携なし・権限剥奪は拒否する。
+- 連携済みのGitHub不変IDから現在のloginを解決し、対象repositoryの個別permission応答に同じ不変IDと現在loginが含まれ、base permissionが `write` または `admin` であることを毎回確認する。途中のrename・login再割当て、異常応答、連携なし、権限剥奪はfail-closedで拒否し、保存直前も再確認する。
 - ブラウザへGitHub tokenを渡さず、旧Authorization bearerだけではアクセス不可。旧auth/callbackは410でOAuth codeを交換しない。
 - 同一origin POSTのみ許可。CMS対象path・容量・削除制限・expected main HEAD・曖昧応答の復旧検証は従来のまま。
 - `CMS_ACCESS_AUD`、`CMS_ACCESS_TEAM_DOMAIN`（HTTPSのチームorigin）、`CMS_ACCESS_HOSTNAMES`（本番host）は本番設定が必要。未設定では503。本番以外のhostは設定によらず拒否する。
@@ -33,4 +40,4 @@ Portal専用 `cloudflare/cms-token-issuer/` Workerを使用する。App秘密鍵
 4. AcecoreIDで実ログインし、読取と承認済みの保存確認を行う。保存の試験は既存コンテンツを無断変更しない。
 5. 問題時は旧ソースのGit revert PRと切替前に記録したAccess設定へ戻す。旧OAuth secretsは、全員の利用確認が完了するまで実環境から削除しない。コード上の廃止とsecretの実削除は別作業。
 
-GitHub認可の根拠: [List repository collaborators](https://docs.github.com/en/rest/collaborators/collaborators#list-repository-collaborators)。
+GitHub認可の根拠: [Get a user using their ID](https://docs.github.com/en/rest/users/users#get-a-user-using-their-id)、[Get repository permissions for a user](https://docs.github.com/en/rest/collaborators/collaborators#get-repository-permissions-for-a-user)。
