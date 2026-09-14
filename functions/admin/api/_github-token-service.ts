@@ -31,7 +31,9 @@ export async function getGitHubAppToken(
   if (
     !isRecord(value) ||
     typeof value.token !== 'string' ||
-    !/^ghs_[A-Za-z0-9_-]{1,508}$/.test(value.token) ||
+    // GitHub's stateless installation tokens contain JWT separators and may
+    // exceed the legacy length. Treat their contents as opaque credentials.
+    !/^ghs_[A-Za-z0-9_.-]{1,4092}$/.test(value.token) ||
     value.repository !== `${CMS_REPOSITORY.owner}/${CMS_REPOSITORY.name}`
   )
     throw new GitHubApiError(
