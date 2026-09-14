@@ -1,4 +1,9 @@
 import type { AlphaDiaryUi } from '../data/alpha-diary-ui'
+import {
+  DiaryRequestTimeoutError,
+  DiaryWaitLifecycle,
+  requestJsonWithDiaryTimeout,
+} from './alpha-diary-wait'
 
 type DiaryEntry = {
   date: string
@@ -43,6 +48,7 @@ const MINIMUM_DATE = '0001-01-01'
 const CONSENT_VERSION = '1'
 const CONSENT_STORAGE_KEY = 'alpha-diary.content-consent.v1'
 const CLIENT_ID_STORAGE_KEY = 'alpha-diary.client.v1'
+const DIARY_REQUEST_TIMEOUT_MS = 20_000
 
 let diaryController: AbortController | null = null
 
@@ -91,12 +97,34 @@ export function initAlphaDiary() {
   let currentFinale: DiaryFinale | null = null
   let requestController: AbortController | null = null
   let pendingTimer = 0
+  let waitingWasLong = false
   let finaleTimers: number[] = []
   let finaleAnimationFrame = 0
   let finaleActive = false
   let finaleMotionEnabled = false
   let fullscreenEntered = false
   let focusBeforeFinale: HTMLElement | null = null
+
+  const waitLifecycle = new DiaryWaitLifecycle({
+    onChange: renderWaitingState,
+    onPoll: () => resumePendingEntry(),
+    scheduler: {
+      clearInterval: (timer) => window.clearInterval(timer),
+      clearTimeout: (timer) => window.clearTimeout(timer),
+      now: () => Date.now(),
+      setInterval: (callback, delay) => window.setInterval(callback, delay),
+      setTimeout: (callback, delay) => window.setTimeout(callback, delay),
+    },
+  })
+
+  signal.addEventListener(
+    'abort',
+    () => {
+      requestController?.abort()
+      clearPending()
+    },
+    { once: true },
+  )
 
   dateInput.max = serverToday
 
@@ -119,6 +147,7 @@ export function initAlphaDiary() {
   }
 
   function setLoading(loadingKind: LoadingKind = 'current') {
+    waitingWasLong = false
     setFinaleChallengeAvailable(false)
     setRecordKind(
       loadingKind === 'observation' ? 'observation' : 'loading',
@@ -142,7 +171,52 @@ export function initAlphaDiary() {
     setStatus(loadingTitle)
   }
 
-  function setStateContent(title: string, body: string, loading = false) {
+  function renderWaitingState({
+    elapsedSeconds,
+    isLongWait,
+    isRequestActive,
+    isWaiting,
+  }: {
+    elapsedSeconds: number
+    isLongWait: boolean
+    isRequestActive: boolean
+    isWaiting: boolean
+  }) {
+    const elapsed = requiredElement<HTMLElement>(
+      statePanel,
+      '[data-diary-wait-elapsed]',
+    )
+    elapsed.hidden = !isWaiting
+    if (!isWaiting) {
+      elapsed.textContent = ''
+      requiredElement<HTMLButtonElement>(
+        statePanel,
+        '[data-diary-retry]',
+      ).disabled = false
+      waitingWasLong = false
+      return
+    }
+    elapsed.textContent = copy.waitingElapsed.replace(
+      '{seconds}',
+      String(elapsedSeconds),
+    )
+    requiredElement<HTMLButtonElement>(
+      statePanel,
+      '[data-diary-retry]',
+    ).disabled = isRequestActive
+    if (waitingWasLong === isLongWait) return
+    waitingWasLong = isLongWait
+    if (!isLongWait) return
+    setStateContent(copy.longWaitTitle, copy.longWaitBody, true, true)
+    setStatus(`${copy.longWaitTitle}. ${copy.longWaitBody}`)
+  }
+
+  function setStateContent(
+    title: string,
+    body: string,
+    loading = false,
+    showManualCheck = false,
+  ) {
     const titleElement = requiredElement<HTMLElement>(
       statePanel,
       '[data-diary-state-title]',
@@ -155,7 +229,16 @@ export function initAlphaDiary() {
     bodyElement.textContent = body
     statePanel.classList.toggle('is-loading', loading)
     requiredElement<HTMLElement>(statePanel, '[data-diary-retry]').hidden =
-      loading
+      loading && !showManualCheck
+    requiredElement<HTMLElement>(
+      statePanel,
+      '[data-diary-retry-label]',
+    ).textContent = showManualCheck ? copy.manualCheck : copy.retry
+    if (!showManualCheck)
+      requiredElement<HTMLButtonElement>(
+        statePanel,
+        '[data-diary-retry]',
+      ).disabled = false
   }
 
   function renderFuture() {
@@ -179,6 +262,19 @@ export function initAlphaDiary() {
     entryPanel.hidden = true
     setStateContent(copy.failureTitle, copy.failureBody)
     setStatus(copy.failureTitle)
+  }
+
+  function renderTimeout() {
+    clearPending()
+    setFinaleChallengeAvailable(false)
+    setRecordKind(
+      currentDate < BIRTH_BOUNDARY ? 'observation' : 'failed',
+      'failed',
+    )
+    statePanel.hidden = false
+    entryPanel.hidden = true
+    setStateContent(copy.timeoutTitle, copy.timeoutBody)
+    setStatus(copy.timeoutTitle)
   }
 
   function renderEntry(entry: DiaryEntry, finaleChallengeAvailable: boolean) {
@@ -276,6 +372,7 @@ export function initAlphaDiary() {
     requestedDate: string | undefined,
     options: {
       history?: 'push' | 'replace' | 'none'
+      resumeWaiting?: boolean
     } = {},
   ): Promise<boolean> {
     const date =
@@ -295,10 +392,12 @@ export function initAlphaDiary() {
     updateDateHistory(date, options.history || 'none')
     currentDate = date
     dateInput.value = date || serverToday
-    clearPending()
+    if (!options.resumeWaiting) clearPending()
     requestController?.abort()
-    requestController = new AbortController()
-    setLoading(getLoadingKind(date))
+    const controller = new AbortController()
+    requestController = controller
+    if (!options.resumeWaiting) setLoading(getLoadingKind(date))
+    const requestId = waitLifecycle.startRequest()
 
     try {
       const fixture = getFixturePayload(root, copy, date || serverToday)
@@ -315,9 +414,9 @@ export function initAlphaDiary() {
               ? { adultConsentVersion: 1 }
               : {}),
           },
-          requestController.signal,
+          controller.signal,
         ))
-      if (requestController.signal.aborted) return false
+      if (!isCurrentEntryRequest(requestId, controller)) return false
       if (
         typeof payload.serverToday === 'string' &&
         isValidDate(payload.serverToday)
@@ -330,34 +429,34 @@ export function initAlphaDiary() {
         isDiaryEntry(payload.entry) &&
         typeof payload.finaleChallengeAvailable === 'boolean'
       ) {
+        waitLifecycle.complete(requestId)
         renderEntry(payload.entry, payload.finaleChallengeAvailable)
         return true
       }
       if (payload.status === 'pending') {
         const retryAfter = readRetryAfter(payload.retryAfter)
-        setLoading(getLoadingKind(date))
-        pendingTimer = window.setTimeout(
-          () =>
-            void loadEntry(date || payload.serverToday, { history: 'none' }),
-          retryAfter * 1000,
-        )
+        waitLifecycle.markPending(requestId, retryAfter * 1_000)
         return false
       }
       if (payload.status === 'future') {
+        waitLifecycle.complete(requestId)
         renderFuture()
         return false
       }
       if (payload.status === 'consent_required') {
+        waitLifecycle.complete(requestId)
         const accepted = await requestAdultConsent()
         if (accepted) return loadEntry(date, { history: 'none' })
         return false
       }
+      waitLifecycle.complete(requestId)
       renderFailure()
       return false
     } catch (error) {
-      if (error instanceof DOMException && error.name === 'AbortError')
-        return false
-      renderFailure()
+      if (!isCurrentEntryRequest(requestId, controller)) return false
+      waitLifecycle.complete(requestId)
+      if (error instanceof DiaryRequestTimeoutError) renderTimeout()
+      else renderFailure()
       return false
     }
   }
@@ -750,6 +849,27 @@ export function initAlphaDiary() {
   function clearPending() {
     if (pendingTimer) window.clearTimeout(pendingTimer)
     pendingTimer = 0
+    waitLifecycle.stop()
+  }
+
+  function isCurrentEntryRequest(
+    requestId: number,
+    controller: AbortController,
+  ) {
+    return (
+      !signal.aborted &&
+      !controller.signal.aborted &&
+      requestController === controller &&
+      waitLifecycle.isCurrentRequest(requestId)
+    )
+  }
+
+  function resumePendingEntry() {
+    if (!waitLifecycle.requestManualCheck()) return
+    void loadEntry(currentDate || undefined, {
+      history: 'none',
+      resumeWaiting: true,
+    })
   }
 
   function clearFinaleTimers() {
@@ -813,7 +933,8 @@ export function initAlphaDiary() {
       const target = event.target
       if (!(target instanceof Element)) return
       if (target.closest('[data-diary-retry]')) {
-        void loadEntry(currentDate || dateInput.value, { history: 'none' })
+        if (waitLifecycle.isWaiting()) resumePendingEntry()
+        else void loadEntry(currentDate || dateInput.value, { history: 'none' })
         return
       }
       if (target.closest('[data-diary-today]')) {
@@ -926,6 +1047,16 @@ export function initAlphaDiary() {
   )
 
   document.addEventListener(
+    'visibilitychange',
+    () => {
+      if (document.visibilityState === 'visible') resumePendingEntry()
+    },
+    { signal },
+  )
+
+  window.addEventListener('online', resumePendingEntry, { signal })
+
+  document.addEventListener(
     'keydown',
     (event) => {
       if (!finaleActive) return
@@ -993,22 +1124,28 @@ async function requestDiary(
   body: Record<string, unknown>,
   signal: AbortSignal,
 ): Promise<DiaryPayload> {
-  const response = await fetch(endpoint, {
-    body: JSON.stringify(body),
-    headers: {
-      Accept: 'application/json',
-      'Content-Type': 'application/json',
-      'X-Acecore-Alpha-Diary-Client': getClientId(),
-    },
-    method: 'POST',
+  const payload = await requestJsonWithDiaryTimeout(
+    (requestSignal) =>
+      fetch(endpoint, {
+        body: JSON.stringify(body),
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+          'X-Acecore-Alpha-Diary-Client': getClientId(),
+        },
+        method: 'POST',
+        signal: requestSignal,
+      }),
     signal,
-  })
-  const payload = (await response
-    .json()
-    .catch(() => null)) as DiaryPayload | null
+    DIARY_REQUEST_TIMEOUT_MS,
+    {
+      clearTimeout: (timer) => window.clearTimeout(timer),
+      setTimeout: (callback, delay) => window.setTimeout(callback, delay),
+    },
+  )
   if (!payload || typeof payload !== 'object')
     throw new Error('AlphaDiaryPayloadError')
-  return payload
+  return payload as DiaryPayload
 }
 
 function isDiaryEntry(value: unknown): value is DiaryEntry {
@@ -1060,6 +1197,14 @@ function getFixturePayload(
   const fixture = new URL(window.location.href).searchParams.get('fixture')
   if (!fixture) return null
   const today = getJstToday()
+  if (fixture === 'pending') {
+    return {
+      ok: true,
+      retryAfter: 4,
+      serverToday: today,
+      status: 'pending',
+    }
+  }
   const clueStep = /^clue-([123])$/u.exec(fixture)?.[1]
   const trailhead = fixture === 'current'
   const archive = fixture === 'archive' || Boolean(clueStep)

@@ -23,6 +23,9 @@ export type AlphaDiaryUi = {
   gateTitle: string
   loadingBody: string
   loadingTitle: string
+  longWaitBody: string
+  longWaitTitle: string
+  manualCheck: string
   metaDescription: string
   metaTitle: string
   navLabel: string
@@ -49,8 +52,11 @@ export type AlphaDiaryUi = {
   textOnly: string
   title: string
   today: string
+  timeoutBody: string
+  timeoutTitle: string
   unlockedBody: string
   unlockedTitle: string
+  waitingElapsed: string
 }
 
 const alphaDiaryUi = {
@@ -84,6 +90,10 @@ const alphaDiaryUi = {
     loadingBody:
       '紙の向こうで、鉛筆を走らせる音がします。文字と絵が浮かぶまで、少しだけ待ってください。',
     loadingTitle: 'ページをひらいています',
+    longWaitBody:
+      'ページを開くまでに時間がかかっています。開ける状態になったか、引き続き確認しています。',
+    longWaitTitle: 'まだページをひらいています',
+    manualCheck: 'いま確認する',
     metaDescription:
       '現在へ近づくほど少しずつ幸せになるアルファ君の絵日記。古い観察記録からAlpha Chatへ問いかけ、記録の断片をたどります。',
     metaTitle: 'アルファ君の絵日記',
@@ -115,9 +125,13 @@ const alphaDiaryUi = {
     textOnly: '文字だけで開く',
     title: 'アルファ君の絵日記',
     today: '今日',
+    timeoutBody:
+      '通信が長く続いたため、いったん確認を止めました。もう一度ひらいてください。',
+    timeoutTitle: 'ページから返事がありません',
     unlockedBody:
       'たどった手掛かりから組み立てた合言葉を入力してください。正しい言葉なら、最後の一枚がこちらを向きます。',
     unlockedTitle: 'この日付には、鍵穴があります',
+    waitingElapsed: '待機時間: {seconds}秒',
   },
   en: {
     askButton: 'Ask Alpha-kun',
@@ -148,6 +162,10 @@ const alphaDiaryUi = {
     loadingBody:
       'From beyond the paper comes the sound of a pencil moving. Please wait a little for the words and picture to appear.',
     loadingTitle: 'Opening the page',
+    longWaitBody:
+      'Opening this page is taking time. We are still checking whether it is ready to open.',
+    longWaitTitle: 'Still opening the page',
+    manualCheck: 'Check now',
     metaDescription:
       "Alpha-kun's picture diary grows happier toward the present. Follow fragments from old observation records into Alpha Chat.",
     metaTitle: "Alpha-kun's Picture Diary",
@@ -179,9 +197,13 @@ const alphaDiaryUi = {
     textOnly: 'Open as text only',
     title: "Alpha-kun's Picture Diary",
     today: 'Today',
+    timeoutBody:
+      'The connection kept waiting too long, so we stopped checking for now. Try opening it again.',
+    timeoutTitle: 'The page has not answered',
     unlockedBody:
       'Enter the passphrase assembled from the clues you followed. If it is correct, the last page will turn toward you.',
     unlockedTitle: 'There is a keyhole on this date',
+    waitingElapsed: 'Waiting: {seconds}s',
   },
   'zh-cn': {
     askButton: '问问阿尔法君',
@@ -209,6 +231,10 @@ const alphaDiaryUi = {
     loadingBody:
       '纸张另一侧传来铅笔划动的声音。请稍等片刻，让文字和图画浮现出来。',
     loadingTitle: '正在翻开这一页',
+    longWaitBody:
+      '打开这一页需要一些时间。我们仍在确认这一页是否已经可以打开。',
+    longWaitTitle: '仍在打开这一页',
+    manualCheck: '立即确认',
     metaDescription:
       '越接近现在越幸福的阿尔法君图画日记。从旧观察记录进入Alpha Chat，追寻记录片段。',
     metaTitle: '阿尔法君的图画日记',
@@ -237,8 +263,11 @@ const alphaDiaryUi = {
     textOnly: '只看文字',
     title: '阿尔法君的图画日记',
     today: '今天',
+    timeoutBody: '连接等待过久，现已暂停确认。请再试着打开一次。',
+    timeoutTitle: '这一页还没有回应',
     unlockedBody: '请输入你沿着线索拼出的暗语。答对后，最后一页会转向你。',
     unlockedTitle: '这个日期上有一个钥匙孔',
+    waitingElapsed: '等待时间：{seconds}秒',
   },
   es: {
     askButton: 'Preguntar a Alpha-kun',
@@ -270,6 +299,10 @@ const alphaDiaryUi = {
     loadingBody:
       'Desde el otro lado del papel se oye un lápiz en movimiento. Espera un poco a que aparezcan las palabras y el dibujo.',
     loadingTitle: 'Abriendo la página',
+    longWaitBody:
+      'Abrir esta página está tomando tiempo. Seguimos comprobando si ya se puede abrir.',
+    longWaitTitle: 'La página sigue abriéndose',
+    manualCheck: 'Comprobar ahora',
     metaDescription:
       'El diario ilustrado de Alpha-kun se vuelve más feliz al acercarse al presente. Sigue fragmentos desde viejas observaciones hasta Alpha Chat.',
     metaTitle: 'Diario ilustrado de Alpha-kun',
@@ -301,9 +334,13 @@ const alphaDiaryUi = {
     textOnly: 'Abrir solo como texto',
     title: 'Diario ilustrado de Alpha-kun',
     today: 'Hoy',
+    timeoutBody:
+      'La conexión esperó demasiado, así que hemos detenido la comprobación por ahora. Intenta abrirla de nuevo.',
+    timeoutTitle: 'La página no ha respondido',
     unlockedBody:
       'Escribe la contraseña que formaste con las pistas. Si es correcta, la última página se volverá hacia ti.',
     unlockedTitle: 'Esta fecha tiene una cerradura',
+    waitingElapsed: 'Esperando: {seconds} s',
   },
   pt: {
     askButton: 'Perguntar ao Alpha-kun',
@@ -335,6 +372,10 @@ const alphaDiaryUi = {
     loadingBody:
       'Do outro lado do papel vem o som de um lápis em movimento. Espere um pouco até as palavras e o desenho aparecerem.',
     loadingTitle: 'Abrindo a página',
+    longWaitBody:
+      'Abrir esta página está levando tempo. Ainda estamos verificando se ela já pode ser aberta.',
+    longWaitTitle: 'A página ainda está abrindo',
+    manualCheck: 'Verificar agora',
     metaDescription:
       'O diário ilustrado do Alpha-kun fica mais feliz ao se aproximar do presente. Siga fragmentos das observações antigas até o Alpha Chat.',
     metaTitle: 'Diário ilustrado do Alpha-kun',
@@ -366,9 +407,13 @@ const alphaDiaryUi = {
     textOnly: 'Abrir somente como texto',
     title: 'Diário ilustrado do Alpha-kun',
     today: 'Hoje',
+    timeoutBody:
+      'A conexão esperou por tempo demais, então interrompemos a verificação por enquanto. Tente abrir novamente.',
+    timeoutTitle: 'A página não respondeu',
     unlockedBody:
       'Digite a senha montada com as pistas seguidas. Se estiver correta, a última página se virará para você.',
     unlockedTitle: 'Há uma fechadura nesta data',
+    waitingElapsed: 'Aguardando: {seconds} s',
   },
   fr: {
     askButton: 'Demander à Alpha-kun',
@@ -400,6 +445,10 @@ const alphaDiaryUi = {
     loadingBody:
       'De l’autre côté du papier vient le bruit d’un crayon. Attendez un peu que les mots et le dessin apparaissent.',
     loadingTitle: 'Ouverture de la page',
+    longWaitBody:
+      'L’ouverture de cette page prend du temps. Nous vérifions encore si elle peut s’ouvrir.',
+    longWaitTitle: 'La page est toujours en cours d’ouverture',
+    manualCheck: 'Vérifier maintenant',
     metaDescription:
       'Le journal illustré d’Alpha-kun devient plus heureux à mesure qu’il approche du présent. Suivez les fragments des anciennes observations jusqu’à Alpha Chat.',
     metaTitle: 'Journal illustré d’Alpha-kun',
@@ -431,9 +480,13 @@ const alphaDiaryUi = {
     textOnly: 'Ouvrir en texte seulement',
     title: 'Journal illustré d’Alpha-kun',
     today: 'Aujourd’hui',
+    timeoutBody:
+      'La connexion a attendu trop longtemps, nous avons donc arrêté la vérification pour le moment. Réessayez d’ouvrir la page.',
+    timeoutTitle: 'La page n’a pas répondu',
     unlockedBody:
       'Saisissez le mot de passe formé avec les indices suivis. S’il est correct, la dernière page se tournera vers vous.',
     unlockedTitle: 'Cette date porte une serrure',
+    waitingElapsed: 'Attente : {seconds} s',
   },
   ko: {
     askButton: '알파군에게 묻기',
@@ -464,6 +517,10 @@ const alphaDiaryUi = {
     loadingBody:
       '종이 너머에서 연필이 움직이는 소리가 납니다. 글과 그림이 떠오를 때까지 잠시 기다려 주세요.',
     loadingTitle: '페이지를 여는 중',
+    longWaitBody:
+      '페이지를 여는 데 시간이 걸리고 있습니다. 페이지를 열 수 있는지 계속 확인하고 있습니다.',
+    longWaitTitle: '아직 페이지를 여는 중',
+    manualCheck: '지금 확인',
     metaDescription:
       '현재에 가까울수록 조금씩 행복해지는 알파군의 그림일기. 오래된 관찰 기록에서 Alpha Chat으로 이어지는 기록 조각을 따라가 보세요.',
     metaTitle: '알파군의 그림일기',
@@ -495,9 +552,13 @@ const alphaDiaryUi = {
     textOnly: '글로만 열기',
     title: '알파군의 그림일기',
     today: '오늘',
+    timeoutBody:
+      '연결 대기가 너무 길어져 지금은 확인을 멈췄습니다. 다시 열어 주세요.',
+    timeoutTitle: '페이지에서 답이 없습니다',
     unlockedBody:
       '따라간 단서로 조립한 암호를 입력하세요. 맞는 말이면 마지막 장이 당신 쪽을 바라봅니다.',
     unlockedTitle: '이 날짜에는 열쇠 구멍이 있습니다',
+    waitingElapsed: '대기 시간: {seconds}초',
   },
   de: {
     askButton: 'Alpha-kun fragen',
@@ -529,6 +590,10 @@ const alphaDiaryUi = {
     loadingBody:
       'Hinter dem Papier ist ein Bleistift zu hören. Warte kurz, bis Wörter und Bild erscheinen.',
     loadingTitle: 'Die Seite wird geöffnet',
+    longWaitBody:
+      'Das Öffnen dieser Seite dauert an. Wir prüfen weiterhin, ob sie geöffnet werden kann.',
+    longWaitTitle: 'Die Seite wird noch geöffnet',
+    manualCheck: 'Jetzt prüfen',
     metaDescription:
       'Alpha-kuns Bildertagebuch wird zur Gegenwart hin immer glücklicher. Folge Fragmenten von alten Beobachtungen bis in den Alpha Chat.',
     metaTitle: 'Alpha-kuns Bildertagebuch',
@@ -560,9 +625,13 @@ const alphaDiaryUi = {
     textOnly: 'Nur als Text öffnen',
     title: 'Alpha-kuns Bildertagebuch',
     today: 'Heute',
+    timeoutBody:
+      'Die Verbindung hat zu lange gewartet, deshalb haben wir die Prüfung vorerst angehalten. Versuche, die Seite erneut zu öffnen.',
+    timeoutTitle: 'Die Seite hat nicht geantwortet',
     unlockedBody:
       'Gib die Losung ein, die du aus den Hinweisen zusammengesetzt hast. Ist sie richtig, wendet sich dir die letzte Seite zu.',
     unlockedTitle: 'Dieses Datum trägt ein Schlüsselloch',
+    waitingElapsed: 'Wartezeit: {seconds} s',
   },
   ru: {
     askButton: 'Спросить Альфа-куна',
@@ -594,6 +663,10 @@ const alphaDiaryUi = {
     loadingBody:
       'Из-за бумаги слышно движение карандаша. Подождите немного, пока появятся слова и рисунок.',
     loadingTitle: 'Открываем страницу',
+    longWaitBody:
+      'Открытие этой страницы требует времени. Мы всё ещё проверяем, можно ли её открыть.',
+    longWaitTitle: 'Страница всё ещё открывается',
+    manualCheck: 'Проверить сейчас',
     metaDescription:
       'Дневник Альфа-куна становится счастливее по мере приближения к настоящему. Следуйте за фрагментами старых наблюдений до Alpha Chat.',
     metaTitle: 'Дневник Альфа-куна с рисунками',
@@ -625,9 +698,13 @@ const alphaDiaryUi = {
     textOnly: 'Открыть только текст',
     title: 'Дневник Альфа-куна с рисунками',
     today: 'Сегодня',
+    timeoutBody:
+      'Соединение ожидало слишком долго, поэтому пока мы остановили проверку. Попробуйте открыть страницу снова.',
+    timeoutTitle: 'Страница не ответила',
     unlockedBody:
       'Введите кодовую фразу, собранную из пройденных подсказок. Если она верна, последняя страница повернётся к вам.',
     unlockedTitle: 'На этой дате есть замочная скважина',
+    waitingElapsed: 'Ожидание: {seconds} с',
   },
 } satisfies Record<Locale, AlphaDiaryUi>
 
