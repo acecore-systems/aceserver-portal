@@ -6,10 +6,11 @@ import { getGitHubAppToken } from '../functions/admin/api/_github-token-service.
 const { privateKey, publicKey } = await generateKeyPair('RS256', {
   extractable: true,
 })
+const privateKeyPem = await exportPKCS8(privateKey)
 const env = {
   CMS_GITHUB_APP_CLIENT_ID: 'Iv_test_portal',
   CMS_GITHUB_APP_INSTALLATION_ID: '123',
-  CMS_GITHUB_APP_PRIVATE_KEY: await exportPKCS8(privateKey),
+  CMS_GITHUB_APP_PRIVATE_KEY_STORE: { get: async () => privateKeyPem },
 }
 const originalFetch = globalThis.fetch
 afterEach(() => {
@@ -100,11 +101,46 @@ test('issuerは公開URLやGETではtokenを返さず、秘密鍵なしでも拒
     (
       await issuer.fetch(request(), {
         ...env,
-        CMS_GITHUB_APP_PRIVATE_KEY: undefined,
+        CMS_GITHUB_APP_PRIVATE_KEY_STORE: undefined,
       })
     ).status,
     503,
   )
+})
+test('Store欠落・空値・例外時は旧鍵へ戻らず秘密値も漏らさない', async () => {
+  globalThis.fetch = async () => assert.fail('Must not call GitHub')
+  for (const binding of [
+    undefined,
+    { get: async () => '' },
+    {
+      get: async () => {
+        throw new Error('secret-store-private-detail')
+      },
+    },
+  ]) {
+    const response = await issuer.fetch(request(), {
+      ...env,
+      CMS_GITHUB_APP_PRIVATE_KEY_STORE: binding,
+      CMS_GITHUB_APP_PRIVATE_KEY: privateKeyPem,
+    })
+    assert.equal(response.status, 503)
+    const body = await response.text()
+    assert.equal(body.includes('secret-store-private-detail'), false)
+    assert.equal(body.includes('PRIVATE KEY'), false)
+  }
+})
+test('Storeの鍵をrequest外にcacheしない', async () => {
+  let reads = 0
+  globalThis.fetch = async () => Response.json(tokenData())
+  const rotating = {
+    ...env,
+    CMS_GITHUB_APP_PRIVATE_KEY_STORE: {
+      get: async () => (++reads === 1 ? privateKeyPem : ''),
+    },
+  }
+  assert.equal((await issuer.fetch(request(), rotating)).status, 200)
+  assert.equal((await issuer.fetch(request(), rotating)).status, 503)
+  assert.equal(reads, 2)
 })
 test('issuerは過大・不正なGitHub応答と上流エラー詳細を公開しない', async () => {
   const oversized = new ReadableStream({

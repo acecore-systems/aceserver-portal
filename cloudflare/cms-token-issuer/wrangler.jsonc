@@ -9,7 +9,11 @@
     "CMS_GITHUB_APP_CLIENT_ID": "Iv23lipbsaRsxzUGXHOP",
     "CMS_GITHUB_APP_INSTALLATION_ID": "149706696",
   },
-  "secrets": {
-    "required": ["CMS_GITHUB_APP_PRIVATE_KEY"],
-  },
+  "secrets_store_secrets": [
+    {
+      "binding": "CMS_GITHUB_APP_PRIVATE_KEY_STORE",
+      "store_id": "f59c889c0fcc405794a34401fb09240c",
+      "secret_name": "aceserver-portal-production-github-app-private-key",
+    },
+  ],
 }
