@@ -41,7 +41,7 @@ test('専用issuerはPortalのContents writeだけの短期tokenを発行する'
       repositories: ['aceserver-portal'],
       permissions: { contents: 'write' },
     })
-    assert.equal(init.redirect, 'error')
+    assert.equal(init.redirect, 'manual')
     assert.equal(init.signal instanceof AbortSignal, true)
     assert.equal(init.signal.aborted, false)
     return Response.json(tokenData())
@@ -114,6 +114,10 @@ test('issuerは過大・不正なGitHub応答と上流エラー詳細を公開�
     },
   })
   for (const response of [
+    new Response(null, {
+      status: 302,
+      headers: { Location: 'https://example.invalid/' },
+    }),
     new Response(oversized, {
       headers: { 'Content-Type': 'application/json' },
     }),

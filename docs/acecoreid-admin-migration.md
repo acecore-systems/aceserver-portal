@@ -2,14 +2,15 @@
 
 ## 状態
 
-サイト側の実装PR。**本番未切替**。既存編集者の本人GitHub連携、全員の権限照合、本番設定と実ログイン確認が完了するまでマージしない。
+サイト側の実装PR。**本番未切替**。既存のrepository権限とAccess policyは維持する。編集者は本人のAcecoreIDへGitHubを連携する。下記のアカウント照会不可の1件は、ユーザー承認により権限を削除せず独立した確認事項に分離し、他の移行を妨げない。本番設定と接続検証・レビューを経て切り替える。
 
 ### 2026-09-14 の準備・検証
 
 - 専用issuerは `d46df6f` から配信済み（version `ba38fad0-2e18-4565-b603-d355ddaea0aa`、100%）。登録鍵の指紋一致と `secret_text`、workers.dev / preview URL無効を確認した。秘密値のファイル化を避け、初回配信はCloudflare APIのメモリ内multipartで行った。
 - Pages本番に専用Service Bindingを追加した。Preview・既存環境変数・source・現在の本番deploymentは不変。Accessの公開設定3項目も本番Wrangler設定へ明記した。サイトの再配信・ログイン切替は未実施。
 - ローカルから専用Appで短期tokenを発行し、対象がPortal 1 repositoryだけであることを確認した。検証用tokenは失効済み。配信済みWorker経由の疎通試験とは区別する。
-- 実APIでは管理用認証のcollaborators一覧がpush User 15件なのに対し、専用Appの一覧は200で空だった。個別照会方式で14件の不変ID・push権限が一致した。残る1件は数値ID解決が404であり、編集者不存在や権限剥奪とは断定しない。この差と本人連携の確認が解消するまで本番切替しない。
+- 実APIでは管理用認証のcollaborators一覧がpush User 15件なのに対し、専用Appの一覧は200で空だった。個別照会方式で14件の不変ID・push権限が一致した。残る1件は数値ID・ユーザー名・プロフィールが404だが権限登録は残っている。不存在や権限剥奪とは断定せず、登録権限を維持して別途確認する。
+- 配信済みWorkerへの認証済みremote Service Binding検証で、`redirect: error` によるruntime TypeErrorを検出した。`manual` と3xx拒否に変更後、POST 200・token契約・no-store・GET 404を確認し、試験tokenを失効した（version `2503eda1-7b53-47e6-a8bc-f92918f8ca9f`）。秘密値を含まない例外分類のみ内部応答ヘッダーへ追加した。
 
 ## 認証と認可
 

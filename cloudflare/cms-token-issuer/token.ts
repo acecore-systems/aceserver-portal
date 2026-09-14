@@ -65,7 +65,8 @@ export async function getGitHubAppToken(env: CmsGitHubAppEnv) {
     `https://api.github.com/app/installations/${installationId}/access_tokens`,
     {
       method: 'POST',
-      redirect: 'error',
+      // Do not follow redirects; reject 3xx via response.ok below.
+      redirect: 'manual',
       signal: AbortSignal.timeout(GITHUB_REQUEST_TIMEOUT_MS),
       headers: {
         Accept: 'application/vnd.github+json',
