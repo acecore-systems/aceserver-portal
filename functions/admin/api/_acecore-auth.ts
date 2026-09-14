@@ -126,15 +126,20 @@ export async function getAcecoreGitHubId(request: Request, env: CmsAccessEnv) {
 
   const identity = await getFullIdentity(issuer, token)
 
-  if (
-    identity.user_uuid !== payload.sub ||
-    identity.account_id !== IDENTITY_ACCOUNT_ID ||
-    !isRecord(identity.idp) ||
-    identity.idp.id !== IDENTITY_PROVIDER_ID ||
-    identity.idp.type !== 'oidc' ||
-    !isRecord(identity.oidc_fields)
-  )
-    throwIdentityError('CMS_AUTH_IDENTITY_INVALID')
+  if (typeof identity.user_uuid !== 'string')
+    throwIdentityError('CMS_AUTH_IDENTITY_USER_MISSING')
+  if (identity.user_uuid !== payload.sub)
+    throwIdentityError('CMS_AUTH_IDENTITY_USER_MISMATCH')
+  if (identity.account_id !== IDENTITY_ACCOUNT_ID)
+    throwIdentityError('CMS_AUTH_IDENTITY_ACCOUNT_MISMATCH')
+  if (!isRecord(identity.idp) || typeof identity.idp.id !== 'string')
+    throwIdentityError('CMS_AUTH_IDENTITY_PROVIDER_MISSING')
+  if (identity.idp.id !== IDENTITY_PROVIDER_ID)
+    throwIdentityError('CMS_AUTH_IDENTITY_PROVIDER_MISMATCH')
+  if (identity.idp.type !== 'oidc')
+    throwIdentityError('CMS_AUTH_IDENTITY_PROVIDER_TYPE_MISMATCH')
+  if (!isRecord(identity.oidc_fields))
+    throwIdentityError('CMS_AUTH_IDENTITY_FIELDS_MISSING')
 
   const identitySubject = requiredIdentityClaim(
     identity.oidc_fields,

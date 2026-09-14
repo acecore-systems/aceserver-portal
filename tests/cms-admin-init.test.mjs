@@ -92,6 +92,19 @@ for (const { responseStatus, code, expected } of [
     code: 'CMS_AUTH_IDENTITY_SOURCE_CONFLICT',
     expected: 'AcecoreIDの連携情報が一致していません。',
   },
+  ...[
+    'CMS_AUTH_IDENTITY_USER_MISSING',
+    'CMS_AUTH_IDENTITY_PROVIDER_MISSING',
+    'CMS_AUTH_IDENTITY_USER_MISMATCH',
+    'CMS_AUTH_IDENTITY_ACCOUNT_MISMATCH',
+    'CMS_AUTH_IDENTITY_PROVIDER_MISMATCH',
+    'CMS_AUTH_IDENTITY_PROVIDER_TYPE_MISMATCH',
+    'CMS_AUTH_IDENTITY_FIELDS_MISSING',
+  ].map((code) => ({
+    responseStatus: 403,
+    code,
+    expected: 'AcecoreIDの本人情報とログイン先を確認してください。',
+  })),
   {
     responseStatus: 502,
     code: 'CMS_AUTH_IDENTITY_UNAVAILABLE',
