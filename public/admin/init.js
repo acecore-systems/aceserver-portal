@@ -10,7 +10,12 @@ void initialize().catch((error) => {
 const INITIALIZE_FALLBACK_MESSAGE =
   'CMSを開始できませんでした。AcecoreIDのログインと連携GitHubの編集権限を確認してください。'
 const MAX_INITIALIZATION_ERROR_BYTES = 4 * 1024
+const READABLE_INITIALIZATION_ERROR_STATUSES = new Set([401, 403, 502])
 const INITIALIZE_ERROR_MESSAGES = new Map([
+  [
+    '401:CMS_AUTH_ACCESS_SUBJECT_INVALID',
+    'AcecoreIDのAccess認証情報を確認してください。',
+  ],
   [
     '403:CMS_AUTH_CUSTOM_CLAIMS_MISSING',
     'AcecoreIDの連携情報を確認してください。',
@@ -30,6 +35,22 @@ const INITIALIZE_ERROR_MESSAGES = new Map([
   [
     '403:CMS_AUTH_REPOSITORY_WRITE_DENIED',
     '連携GitHubアカウントのCMS編集権限を確認してください。',
+  ],
+  [
+    '403:CMS_AUTH_IDENTITY_INVALID',
+    'AcecoreIDの本人情報とログイン先を確認してください。',
+  ],
+  [
+    '403:CMS_AUTH_IDENTITY_SOURCE_CONFLICT',
+    'AcecoreIDの連携情報が一致していません。',
+  ],
+  [
+    '502:CMS_AUTH_IDENTITY_UNAVAILABLE',
+    'AcecoreIDの本人情報を取得できませんでした。時間をおいて再度お試しください。',
+  ],
+  [
+    '502:CMS_AUTH_IDENTITY_INVALID',
+    'AcecoreIDの本人情報の応答を確認できませんでした。',
   ],
 ])
 
@@ -69,7 +90,7 @@ async function getInitializationError(response) {
 
 async function readInitializationErrorBody(response) {
   if (
-    response.status !== 403 ||
+    !READABLE_INITIALIZATION_ERROR_STATUSES.has(response.status) ||
     !/^application\/json(?:;|$)/i.test(
       response.headers.get('Content-Type')?.trim() || '',
     )
