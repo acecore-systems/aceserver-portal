@@ -25,10 +25,15 @@ export class GitHubApiError extends Error {
 export async function getGitHubAppToken(env: CmsGitHubAppEnv) {
   const clientId = env.CMS_GITHUB_APP_CLIENT_ID?.trim()
   const installationId = env.CMS_GITHUB_APP_INSTALLATION_ID?.trim()
-  const privateKey = env.CMS_GITHUB_APP_PRIVATE_KEY?.replace(
-    /\\n/g,
-    '\n',
-  ).trim()
+  let privateKey: string | undefined
+  try {
+    // Read the canonical secret per request; never fall back to a stale key.
+    privateKey = (await env.CMS_GITHUB_APP_PRIVATE_KEY_STORE?.get())
+      ?.replace(/\\n/g, '\n')
+      .trim()
+  } catch {
+    throw new GitHubApiError('CMS GitHub Appの秘密鍵を取得できません。', 503)
+  }
 
   if (
     !clientId ||
@@ -37,7 +42,7 @@ export async function getGitHubAppToken(env: CmsGitHubAppEnv) {
     !privateKey
   ) {
     throw new GitHubApiError(
-      'CMS GitHub Appの認証設定がCloudflare Pagesにありません。',
+      'CMS GitHub Appの認証設定が専用Workerにありません。',
       503,
     )
   }
