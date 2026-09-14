@@ -16,19 +16,32 @@ import {
   MAX_CMS_JSON_BYTES,
   validateCmsAddition,
 } from '../functions/admin/api/_content-validation.ts'
-import { clearGitHubEditorCacheForTests } from '../functions/admin/api/_github-oauth.ts'
+import {
+  accessEnv,
+  accessToken,
+  accessCerts,
+  mintAccess,
+} from './cms-access-fixture.mjs'
 import { onRequestGet as handleCmsConfig } from '../functions/admin/config.yml.ts'
 import { onRequestPost as handleGraphqlRequest } from '../functions/admin/api/graphql.ts'
-import { onRequest as handleGithubRest } from '../functions/admin/api/github/[[path]].ts'
+import { onRequest as handleGithubRestRequest } from '../functions/admin/api/github/[[path]].ts'
 
 const originalFetch = globalThis.fetch
 const mainSha = 'a'.repeat(40)
 const topicSha = 'b'.repeat(40)
-const oauthToken = 'ghu_test-oauth-token'
+const appToken = 'ghs_test-installation-token'
 const installationId = 987654321
 const installationsUrl =
   'https://api.github.com/user/installations?per_page=100'
 const cmsEnv = {
+  CMS_GITHUB_TOKEN_ISSUER: {
+    fetch: async () =>
+      jsonResponse({
+        token: appToken,
+        repository: 'acecore-systems/aceserver-portal',
+      }),
+  },
+  ...accessEnv,
   CMS_GITHUB_APP_INSTALLATION_ID: String(installationId),
 }
 const repositoryApi = `https://api.github.com/repos/${CMS_REPOSITORY.owner}/${CMS_REPOSITORY.name}`
@@ -69,16 +82,18 @@ const editor = {
   html_url: 'https://github.com/editor',
   id: 1,
   login: 'editor',
-  name: 'Editor',
+  name: null,
   type: 'User',
 }
+
+const handleGithubRest = (context) =>
+  handleGithubRestRequest({ env: cmsEnv, ...context })
 
 const handleGraphql = (context) =>
   handleGraphqlRequest({ env: cmsEnv, ...context })
 
 afterEach(() => {
   globalThis.fetch = originalFetch
-  clearGitHubEditorCacheForTests()
 })
 
 test('CMS対象pathだけを許可する', () => {
@@ -329,7 +344,7 @@ test('CMS設定で公開したfolderとfileがproxyの許可範囲に収まる',
   }
 })
 
-test('GitHub OAuth認証がないrequestを拒否する', async () => {
+test('AcecoreID認証がないrequestを拒否する', async () => {
   let called = false
   globalThis.fetch = async () => {
     called = true
@@ -344,7 +359,7 @@ test('GitHub OAuth認証がないrequestを拒否する', async () => {
   assert.equal(called, false)
 })
 
-test('GitHub App user token以外をGitHubへの通信前に拒否する', async () => {
+test('旧PATだけのrequestをAccess通信前に拒否する', async () => {
   let called = false
   globalThis.fetch = async () => {
     called = true
@@ -427,25 +442,20 @@ test('保存直前にGitHub userのpush権限を再確認する', async () => {
   assert.match((await response.json()).message, /write権限/)
 })
 
-test('保存直前にPull requests writeを持つGitHub Appを拒否する', async () => {
-  mockGitHub(
-    async () => {
-      throw new Error('CMS mutation must not continue')
+test('保存用Service Bindingの失敗を拒否する', async () => {
+  mockGitHub(() => {
+    throw new Error('Must not continue')
+  })
+  const response = await handleGraphqlRequest({
+    env: {
+      ...cmsEnv,
+      CMS_GITHUB_TOKEN_ISSUER: {
+        fetch: async () => new Response(null, { status: 503 }),
+      },
     },
-    true,
-    {
-      contents: 'write',
-      metadata: 'read',
-      pull_requests: 'write',
-    },
-  )
-
-  const response = await handleGraphql({
     request: graphqlRequest(),
   })
-
   assert.equal(response.status, 503)
-  assert.match((await response.json()).message, /Contents write以外のwrite権限/)
 })
 
 test('Sveltia CMS 0.191のlast-commit queryを許可する', async () => {
@@ -1081,45 +1091,22 @@ function mockGitHub(
     const url = String(input)
     const body = typeof init.body === 'string' ? JSON.parse(init.body) : null
 
-    if (url === 'https://api.github.com/user') {
+    const certs = accessCerts(input)
+    if (certs) return certs
+    if (url === 'https://api.github.com/user/1') {
       assert.equal(
         new Headers(init.headers).get('Authorization'),
-        `Bearer ${oauthToken}`,
+        `Bearer ${appToken}`,
       )
       return jsonResponse(editor)
     }
+    if (url === repositoryApi + '/collaborators/editor/permission') {
+      const hasPush = typeof push === 'function' ? push() : push
 
-    if (url === repositoryApi) {
       return jsonResponse({
-        permissions: { push: typeof push === 'function' ? push() : push },
-      })
-    }
-
-    if (url === installationsUrl) {
-      return jsonResponse({
-        installations: [
-          {
-            id: installationId,
-            permissions: installationPermissions,
-          },
-        ],
-        total_count: 1,
-      })
-    }
-
-    if (
-      url ===
-      `https://api.github.com/user/installations/${installationId}/repositories?per_page=100`
-    ) {
-      return jsonResponse({
-        repositories: [
-          {
-            full_name: `${CMS_REPOSITORY.owner}/${CMS_REPOSITORY.name}`,
-            id: 550360134,
-            permissions: { push: true },
-          },
-        ],
-        total_count: 1,
+        permission: hasPush ? 'write' : 'read',
+        role_name: hasPush ? 'write' : 'read',
+        user: editor,
       })
     }
 
@@ -1128,7 +1115,7 @@ function mockGitHub(
 }
 
 function graphqlRequest({
-  authorization = `Bearer ${oauthToken}`,
+  authorization = accessToken,
   url = `https://${CMS_PRODUCTION_HOSTNAME}/admin/api/graphql`,
   variables = {
     input: {
@@ -1152,7 +1139,10 @@ function graphqlRequest({
 } = {}) {
   const headers = new Headers({ 'Content-Type': 'application/json' })
 
-  if (authorization) headers.set('Authorization', authorization)
+  headers.set('Origin', 'https://' + new URL(url).hostname)
+  if (authorization === accessToken)
+    headers.set('Cf-Access-Jwt-Assertion', authorization)
+  else if (authorization) headers.set('Authorization', authorization)
 
   return new Request(url, {
     method: 'POST',
@@ -1171,7 +1161,10 @@ function graphqlRequest({
 }
 
 function authorizationHeaders() {
-  return { Authorization: `Bearer ${oauthToken}` }
+  return {
+    'Cf-Access-Jwt-Assertion': accessToken,
+    Origin: `https://${CMS_PRODUCTION_HOSTNAME}`,
+  }
 }
 
 function graphqlReadRequest(query, variables) {
@@ -1200,3 +1193,191 @@ function gitBlobOid(contents) {
     .update(bytes)
     .digest('hex')
 }
+test('GitHubの表示名やメールが同じでも異なる数値IDを拒否する', async () => {
+  mockGitHub(() => assert.fail('Must not read CMS content'))
+  const upstream = globalThis.fetch
+  globalThis.fetch = async (input, init) => {
+    const url = String(input)
+
+    if (url === 'https://api.github.com/user/2') {
+      return jsonResponse({ ...editor, id: 2, login: 'other-editor' })
+    }
+    if (url === repositoryApi + '/collaborators/other-editor/permission') {
+      return jsonResponse({
+        permission: 'read',
+        role_name: 'read',
+        user: { ...editor, id: 2, login: 'other-editor' },
+      })
+    }
+
+    return upstream(input, init)
+  }
+  const request = graphqlRequest()
+  request.headers.set(
+    'Cf-Access-Jwt-Assertion',
+    await mintAccess({
+      custom: {
+        'https://acecore.net/claims/subject':
+          '11111111-1111-4111-8111-111111111111',
+        'https://acecore.net/claims/github-id': '2',
+      },
+    }),
+  )
+  assert.equal((await handleGraphql({ request })).status, 403)
+})
+
+test('不変IDから現在loginを解決し個別permissionを照合する', async () => {
+  mockGitHub(() => assert.fail('Unexpected CMS content request'))
+  const upstream = globalThis.fetch
+  const authorizationCalls = []
+  globalThis.fetch = async (input, init) => {
+    const url = String(input)
+
+    if (
+      url === 'https://api.github.com/user/1' ||
+      url === repositoryApi + '/collaborators/editor/permission'
+    ) {
+      authorizationCalls.push(url)
+    }
+
+    return upstream(input, init)
+  }
+  const response = await handleGithubRest({
+    request: new Request(
+      'https://' + accessEnv.CMS_ACCESS_HOSTNAMES + '/admin/api/github/user',
+      { headers: authorizationHeaders() },
+    ),
+  })
+  assert.equal(response.status, 200)
+  assert.deepEqual(authorizationCalls, [
+    'https://api.github.com/user/1',
+    repositoryApi + '/collaborators/editor/permission',
+  ])
+  const body = await response.text()
+  assert.equal(JSON.parse(body).id, 1)
+  assert.equal(body.includes(appToken), false)
+})
+
+test('個別permissionのadminもwrite権限として許可する', async () => {
+  mockGitHub(() => assert.fail('Unexpected CMS content request'))
+  const upstream = globalThis.fetch
+  globalThis.fetch = async (input, init) => {
+    if (String(input) === repositoryApi + '/collaborators/editor/permission') {
+      return jsonResponse({
+        permission: 'admin',
+        role_name: 'admin',
+        user: editor,
+      })
+    }
+
+    return upstream(input, init)
+  }
+
+  const response = await handleGithubRest({
+    request: new Request(
+      'https://' + accessEnv.CMS_ACCESS_HOSTNAMES + '/admin/api/github/user',
+      { headers: authorizationHeaders() },
+    ),
+  })
+
+  assert.equal(response.status, 200)
+})
+
+test('数値ID lookupの404を権限なしへ置換しない', async () => {
+  mockGitHub(() => assert.fail('Unexpected CMS content request'))
+  const upstream = globalThis.fetch
+  globalThis.fetch = async (input, init) => {
+    if (String(input) === 'https://api.github.com/user/1') {
+      return jsonResponse({ message: 'Not Found' }, 404)
+    }
+
+    return upstream(input, init)
+  }
+
+  const response = await handleGithubRest({
+    request: new Request(
+      'https://' + accessEnv.CMS_ACCESS_HOSTNAMES + '/admin/api/github/user',
+      { headers: authorizationHeaders() },
+    ),
+  })
+
+  assert.equal(response.status, 502)
+  assert.match((await response.json()).message, /数値ID/)
+})
+
+test('ID解決後のrenameまたはlogin再割当て競合を拒否する', async () => {
+  mockGitHub(() => assert.fail('Unexpected CMS content request'))
+  const upstream = globalThis.fetch
+  globalThis.fetch = async (input, init) => {
+    const url = String(input)
+
+    if (url === 'https://api.github.com/user/1') {
+      return jsonResponse({ ...editor, login: 'renamed-editor' })
+    }
+    if (url === repositoryApi + '/collaborators/renamed-editor/permission') {
+      return jsonResponse({
+        permission: 'write',
+        role_name: 'write',
+        user: { ...editor, id: 2, login: 'renamed-editor' },
+      })
+    }
+
+    return upstream(input, init)
+  }
+
+  const response = await handleGithubRest({
+    request: new Request(
+      'https://' + accessEnv.CMS_ACCESS_HOSTNAMES + '/admin/api/github/user',
+      { headers: authorizationHeaders() },
+    ),
+  })
+
+  assert.equal(response.status, 502)
+  assert.match((await response.json()).message, /権限の応答が不正/)
+})
+
+test('個別permissionの未文書化shapeをpush権限として許可しない', async () => {
+  mockGitHub(() => assert.fail('Unexpected CMS content request'))
+  const upstream = globalThis.fetch
+  globalThis.fetch = async (input, init) => {
+    if (String(input) === repositoryApi + '/collaborators/editor/permission') {
+      return jsonResponse({
+        permission: 'push',
+        role_name: 'write',
+        user: { ...editor, permissions: { push: true } },
+      })
+    }
+
+    return upstream(input, init)
+  }
+
+  const response = await handleGithubRest({
+    request: new Request(
+      'https://' + accessEnv.CMS_ACCESS_HOSTNAMES + '/admin/api/github/user',
+      { headers: authorizationHeaders() },
+    ),
+  })
+
+  assert.equal(response.status, 502)
+  assert.match((await response.json()).message, /権限の応答が不正/)
+})
+
+test('保存直前の権限剥奪を拒否してmutationを送らない', async () => {
+  mockGitHub(() => assert.fail('No mutation after revocation'))
+  const upstream = globalThis.fetch
+  let reads = 0
+  globalThis.fetch = async (input, init) => {
+    if (String(input).endsWith('/collaborators/editor/permission')) {
+      const permission = ++reads === 1 ? 'write' : 'read'
+
+      return jsonResponse({
+        permission,
+        role_name: permission,
+        user: editor,
+      })
+    }
+    return upstream(input, init)
+  }
+  assert.equal((await handleGraphql({ request: graphqlRequest() })).status, 403)
+  assert.equal(reads, 2)
+})

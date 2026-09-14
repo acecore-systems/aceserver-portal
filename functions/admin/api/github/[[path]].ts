@@ -1,5 +1,9 @@
 import { CMS_REPOSITORY } from '../_cms-policy.ts'
-import { getGitHubEditor, type GitHubEditor } from '../_github-oauth.ts'
+import {
+  getGitHubEditor,
+  type CmsEditorEnv,
+  type GitHubEditor,
+} from '../_github-oauth.ts'
 import {
   GitHubApiError,
   copyGitHubResponse,
@@ -12,7 +16,10 @@ const SHA_PATTERN = /^[a-f0-9]{40}$/i
 
 type ReadTarget = { kind: 'tree'; ref: string } | { kind: 'blob'; sha: string }
 
-export const onRequest: PagesFunction = async ({ request }) => {
+export const onRequest: PagesFunction<CmsEditorEnv> = async ({
+  request,
+  env,
+}) => {
   const method = request.method.toUpperCase()
 
   if (method !== 'GET' && method !== 'HEAD') {
@@ -24,7 +31,7 @@ export const onRequest: PagesFunction = async ({ request }) => {
   const proxyPath = getProxyPath(request)
 
   try {
-    const auth = await getGitHubEditor(request)
+    const auth = await getGitHubEditor(request, env)
     const token = auth.token
 
     if (proxyPath === 'user') {

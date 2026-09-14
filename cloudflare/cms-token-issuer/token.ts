@@ -1,0 +1,255 @@
+import { SignJWT, importPKCS8 } from 'jose'
+const CMS_REPOSITORY = { owner: 'acecore-systems', name: 'aceserver-portal' }
+
+const GITHUB_API_VERSION = '2022-11-28'
+const USER_AGENT = 'aceserver-portal-cms-token-issuer'
+const MAX_INSTALLATION_TOKEN_LIFETIME_MS = 65 * 60 * 1000
+const MAX_GITHUB_RESPONSE_BYTES = 64 * 1024
+const GITHUB_REQUEST_TIMEOUT_MS = 8 * 1000
+const RSA_ALGORITHM_IDENTIFIER = Uint8Array.from([
+  0x30, 0x0d, 0x06, 0x09, 0x2a, 0x86, 0x48, 0x86, 0xf7, 0x0d, 0x01, 0x01, 0x01,
+  0x05, 0x00,
+])
+
+export type CmsGitHubAppEnv = Partial<TokenIssuerEnv>
+
+export class GitHubApiError extends Error {
+  status: number
+
+  constructor(message: string, status: number) {
+    super(message)
+    this.status = status
+  }
+}
+
+export async function getGitHubAppToken(env: CmsGitHubAppEnv) {
+  const clientId = env.CMS_GITHUB_APP_CLIENT_ID?.trim()
+  const installationId = env.CMS_GITHUB_APP_INSTALLATION_ID?.trim()
+  const privateKey = env.CMS_GITHUB_APP_PRIVATE_KEY?.replace(
+    /\\n/g,
+    '\n',
+  ).trim()
+
+  if (
+    !clientId ||
+    !installationId ||
+    !/^\d+$/.test(installationId) ||
+    !privateKey
+  ) {
+    throw new GitHubApiError(
+      'CMS GitHub Appの認証設定がCloudflare Pagesにありません。',
+      503,
+    )
+  }
+
+  let appJwt: string
+
+  try {
+    const signingKey = await importPKCS8(
+      normalizeGitHubAppPrivateKey(privateKey),
+      'RS256',
+    )
+    const now = Math.floor(Date.now() / 1000)
+
+    appJwt = await new SignJWT({})
+      .setProtectedHeader({ alg: 'RS256' })
+      .setIssuer(clientId)
+      .setIssuedAt(now - 60)
+      .setExpirationTime(now + 9 * 60)
+      .sign(signingKey)
+  } catch {
+    throw new GitHubApiError('CMS GitHub Appの秘密鍵を読み込めません。', 503)
+  }
+
+  const response = await fetch(
+    `https://api.github.com/app/installations/${installationId}/access_tokens`,
+    {
+      method: 'POST',
+      // Do not follow redirects; reject 3xx via response.ok below.
+      redirect: 'manual',
+      signal: AbortSignal.timeout(GITHUB_REQUEST_TIMEOUT_MS),
+      headers: {
+        Accept: 'application/vnd.github+json',
+        Authorization: `Bearer ${appJwt}`,
+        'Content-Type': 'application/json',
+        'User-Agent': USER_AGENT,
+        'X-GitHub-Api-Version': GITHUB_API_VERSION,
+      },
+      body: JSON.stringify({
+        repositories: [CMS_REPOSITORY.name],
+        permissions: {
+          contents: 'write',
+        },
+      }),
+    },
+  )
+  const data = await readBoundedJson(response)
+
+  if (
+    !response.ok ||
+    !isRecord(data) ||
+    typeof data.token !== 'string' ||
+    !data.token.startsWith('ghs_') ||
+    typeof data.expires_at !== 'string' ||
+    !hasExpectedInstallationScope(data)
+  ) {
+    throw new GitHubApiError(
+      'CMS GitHub Appのinstallation tokenを発行できません。',
+      response.ok ? 502 : response.status,
+    )
+  }
+
+  const expiresAt = Date.parse(data.expires_at)
+
+  if (
+    !Number.isFinite(expiresAt) ||
+    expiresAt <= Date.now() ||
+    expiresAt > Date.now() + MAX_INSTALLATION_TOKEN_LIFETIME_MS
+  ) {
+    throw new GitHubApiError(
+      'CMS GitHub Appのinstallation token有効期限が不正です。',
+      502,
+    )
+  }
+
+  return data.token
+}
+
+function hasExpectedInstallationScope(data: Record<string, unknown>) {
+  if (
+    !isRecord(data.permissions) ||
+    data.permissions.contents !== 'write' ||
+    (data.permissions.metadata !== undefined &&
+      data.permissions.metadata !== 'read') ||
+    Object.keys(data.permissions).some(
+      (permission) => permission !== 'contents' && permission !== 'metadata',
+    ) ||
+    !Array.isArray(data.repositories) ||
+    data.repositories.length !== 1
+  ) {
+    return false
+  }
+
+  const repository = data.repositories[0]
+
+  return (
+    isRecord(repository) &&
+    repository.name === CMS_REPOSITORY.name &&
+    repository.full_name === `${CMS_REPOSITORY.owner}/${CMS_REPOSITORY.name}`
+  )
+}
+
+function normalizeGitHubAppPrivateKey(privateKey: string) {
+  if (privateKey.startsWith('-----BEGIN PRIVATE KEY-----')) return privateKey
+
+  const match = privateKey.match(
+    /^-----BEGIN RSA PRIVATE KEY-----\s*([\s\S]*?)\s*-----END RSA PRIVATE KEY-----$/,
+  )
+
+  if (!match) {
+    throw new Error('Unsupported private key format')
+  }
+
+  const pkcs1 = Uint8Array.from(atob(match[1].replace(/\s/g, '')), (value) =>
+    value.charCodeAt(0),
+  )
+  const version = Uint8Array.from([0x02, 0x01, 0x00])
+  const privateKeyOctets = encodeDerElement(0x04, pkcs1)
+  const pkcs8 = encodeDerElement(
+    0x30,
+    concatenateBytes(version, RSA_ALGORITHM_IDENTIFIER, privateKeyOctets),
+  )
+  const base64 = bytesToBase64(pkcs8)
+  const lines = base64.match(/.{1,64}/g)
+
+  if (!lines) throw new Error('Invalid private key')
+
+  return `-----BEGIN PRIVATE KEY-----\n${lines.join('\n')}\n-----END PRIVATE KEY-----`
+}
+
+async function readBoundedJson(response: Response): Promise<unknown> {
+  if (!response.body) return null
+
+  const reader = response.body.getReader()
+  const chunks: Uint8Array[] = []
+  let totalBytes = 0
+
+  try {
+    while (true) {
+      const { done, value } = await reader.read()
+
+      if (done) break
+
+      totalBytes += value.byteLength
+
+      if (totalBytes > MAX_GITHUB_RESPONSE_BYTES) {
+        await reader.cancel().catch(() => undefined)
+        return null
+      }
+
+      chunks.push(value)
+    }
+
+    const bytes = new Uint8Array(totalBytes)
+    let offset = 0
+
+    for (const chunk of chunks) {
+      bytes.set(chunk, offset)
+      offset += chunk.byteLength
+    }
+
+    return JSON.parse(new TextDecoder('utf-8', { fatal: true }).decode(bytes))
+  } catch {
+    return null
+  } finally {
+    reader.releaseLock()
+  }
+}
+
+function encodeDerElement(tag: number, value: Uint8Array) {
+  return concatenateBytes(
+    Uint8Array.from([tag]),
+    encodeDerLength(value.byteLength),
+    value,
+  )
+}
+
+function encodeDerLength(length: number) {
+  if (length < 0x80) return Uint8Array.from([length])
+
+  const bytes: number[] = []
+  let remaining = length
+
+  while (remaining > 0) {
+    bytes.unshift(remaining & 0xff)
+    remaining = Math.floor(remaining / 0x100)
+  }
+
+  return Uint8Array.from([0x80 | bytes.length, ...bytes])
+}
+
+function concatenateBytes(...values: Uint8Array[]) {
+  const result = new Uint8Array(
+    values.reduce((length, value) => length + value.byteLength, 0),
+  )
+  let offset = 0
+
+  for (const value of values) {
+    result.set(value, offset)
+    offset += value.byteLength
+  }
+
+  return result
+}
+
+function bytesToBase64(value: Uint8Array) {
+  let binary = ''
+
+  for (const byte of value) binary += String.fromCharCode(byte)
+
+  return btoa(binary)
+}
+
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return !!value && typeof value === 'object' && !Array.isArray(value)
+}

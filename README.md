@@ -85,7 +85,7 @@ fail closedでマージしません。翻訳データのキーや配列構造を
 Sveltia CMS では `src/content/pages/*.json` と `src/content/site/*.json` を編集します。
 メディアは `public/uploads/` に保存します。
 
-このリポジトリの CMS 認証は GitHub 認証型です。編集者はPortal専用GitHub Appのsame-origin OAuth（PKCE S256）でログインし、期限付きの `ghu_` user access tokenで保存します。Cloudflare Accessを使う場合も前段の入口保護に限定します。
+CMSログインはAcecoreIDに統一し、Accessの署名済み連携GitHub数値IDからrepositoryの現在push権限を照合します。保存用の短期installation tokenはPortal専用WorkerからPrivate Service Bindingで取得し、App秘密鍵をPagesやブラウザへ配布しません。
 
 告知は CMS の「告知」から編集します。表示/非表示、表示順、表示トーン、リンク、表示期間を `src/content/site/announcements.json` で管理します。表示期間は訪問者のブラウザ時刻で判定するため、デプロイ後も時刻到達時に切り替わります。
 
@@ -130,3 +130,5 @@ Portal固有の `/api/search` はチャットとは別機能で、`PORTAL_SEARCH
 
 - `PUBLIC_SITE_URL`: 本番の canonical / sitemap 用 URL。未設定時は `https://asv.acecore.net` を使います。
 - Production secrets: `CMS_GITHUB_APP_CLIENT_ID`、`CMS_GITHUB_APP_CLIENT_SECRET`、`CMS_GITHUB_APP_INSTALLATION_ID`、`CMS_OAUTH_STATE_SECRET`。Previewには設定しません。
+
+移行の本番切替条件と旧認証へのロールバックは [AcecoreID管理ログイン移行](docs/acecoreid-admin-migration.md) を参照してください。旧OAuthの説明が残る運用資料より、この移行手順を優先します。
