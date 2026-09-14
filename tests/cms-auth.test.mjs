@@ -145,20 +145,24 @@ for (const sub of ['', false, 'not-a-uuid']) {
 for (const { name, identity, code = 'CMS_AUTH_IDENTITY_INVALID' } of [
   {
     name: 'different Access user',
+    code: 'CMS_AUTH_IDENTITY_USER_MISMATCH',
     identity: accessIdentity({
       user_uuid: '33333333-3333-4333-8333-333333333333',
     }),
   },
   {
     name: 'different account',
+    code: 'CMS_AUTH_IDENTITY_ACCOUNT_MISMATCH',
     identity: accessIdentity({ account_id: 'other-account' }),
   },
   {
     name: 'different IdP',
+    code: 'CMS_AUTH_IDENTITY_PROVIDER_MISMATCH',
     identity: accessIdentity({ idp: { id: 'other-idp', type: 'oidc' } }),
   },
   {
     name: 'different IdP type',
+    code: 'CMS_AUTH_IDENTITY_PROVIDER_TYPE_MISMATCH',
     identity: accessIdentity({
       idp: {
         id: 'a18ae74a-a342-40db-bfb2-7cc515d26637',
@@ -168,6 +172,7 @@ for (const { name, identity, code = 'CMS_AUTH_IDENTITY_INVALID' } of [
   },
   {
     name: 'missing OIDC fields',
+    code: 'CMS_AUTH_IDENTITY_FIELDS_MISSING',
     identity: accessIdentity({ oidc_fields: undefined }),
   },
   {
@@ -269,12 +274,12 @@ test('full identity異常ログは固定codeだけでtokenや本人情報を含�
   )
 
   await assert.rejects(getAcecoreGitHubId(request(token), accessEnv), {
-    code: 'CMS_AUTH_IDENTITY_INVALID',
+    code: 'CMS_AUTH_IDENTITY_USER_MISMATCH',
   })
   assert.deepEqual(logs, [
     JSON.stringify({
       message: 'CMS Access identity rejected',
-      code: 'CMS_AUTH_IDENTITY_INVALID',
+      code: 'CMS_AUTH_IDENTITY_USER_MISMATCH',
     }),
   ])
   assert.equal(logs[0].includes(token), false)
