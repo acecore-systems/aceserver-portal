@@ -20,6 +20,7 @@ export type GitHubEditor = {
 const GITHUB_LOGIN_PATTERN = /^[a-z0-9][a-z0-9-]{0,38}$/i
 const NO_WRITE_PERMISSION_MESSAGE =
   '連携GitHubアカウントにはCMS対象repositoryへのwrite権限がありません。'
+const NO_WRITE_PERMISSION_CODE = 'CMS_AUTH_REPOSITORY_WRITE_DENIED'
 
 // GitHub remains the authorization source, not a second login or bearer path.
 export async function getGitHubEditor(
@@ -100,7 +101,11 @@ async function requireRepositoryWritePermission(
     })
   } catch (error) {
     if (error instanceof GitHubApiError && error.status === 404) {
-      throw new GitHubApiError(NO_WRITE_PERMISSION_MESSAGE, 403)
+      throw new GitHubApiError(
+        NO_WRITE_PERMISSION_MESSAGE,
+        403,
+        NO_WRITE_PERMISSION_CODE,
+      )
     }
 
     throw error
@@ -126,6 +131,10 @@ async function requireRepositoryWritePermission(
   }
 
   if (grant.permission !== 'admin' && grant.permission !== 'write') {
-    throw new GitHubApiError(NO_WRITE_PERMISSION_MESSAGE, 403)
+    throw new GitHubApiError(
+      NO_WRITE_PERMISSION_MESSAGE,
+      403,
+      NO_WRITE_PERMISSION_CODE,
+    )
   }
 }

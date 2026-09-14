@@ -3,6 +3,7 @@ import { afterEach, test } from 'node:test'
 import { getAcecoreGitHubId } from '../functions/admin/api/_acecore-auth.ts'
 import { onRequest as auth } from '../functions/admin/api/auth.ts'
 import { onRequest as callback } from '../functions/admin/api/callback.ts'
+import { onRequest as githubProxy } from '../functions/admin/api/github/[[path]].ts'
 import {
   accessEnv,
   accessToken,
@@ -23,18 +24,24 @@ test('valid signed AcecoreID linked immutable GitHub ID', async () => {
     accessCerts(input) || assert.fail('Unexpected network')
   assert.equal(await getAcecoreGitHubId(request(), accessEnv), '1')
 })
-for (const custom of [
-  undefined,
-  {},
-  [],
+for (const { custom, code } of [
+  { custom: undefined, code: 'CMS_AUTH_CUSTOM_CLAIMS_MISSING' },
+  { custom: {}, code: 'CMS_AUTH_SUBJECT_INVALID' },
+  { custom: [], code: 'CMS_AUTH_CUSTOM_CLAIMS_MISSING' },
   {
-    'https://acecore.net/claims/subject': 'invalid',
-    'https://acecore.net/claims/github-id': '1',
+    custom: {
+      'https://acecore.net/claims/subject': 'invalid',
+      'https://acecore.net/claims/github-id': '1',
+    },
+    code: 'CMS_AUTH_SUBJECT_INVALID',
   },
   {
-    'https://acecore.net/claims/subject':
-      '11111111-1111-4111-8111-111111111111',
-    'https://acecore.net/claims/github-id': '0',
+    custom: {
+      'https://acecore.net/claims/subject':
+        '11111111-1111-4111-8111-111111111111',
+      'https://acecore.net/claims/github-id': '0',
+    },
+    code: 'CMS_AUTH_GITHUB_ID_INVALID',
   },
 ]) {
   test(
@@ -44,7 +51,7 @@ for (const custom of [
         accessCerts(input) || assert.fail('Unexpected network')
       await assert.rejects(
         getAcecoreGitHubId(request(await mintAccess({ custom })), accessEnv),
-        { status: 403 },
+        { status: 403, code },
       )
     },
   )
@@ -57,7 +64,7 @@ test('reject service token, wrong audience and forged signature', async () => {
       request(await mintAccess({ type: 'service' })),
       accessEnv,
     ),
-    { status: 403 },
+    { status: 403, code: 'CMS_AUTH_TOKEN_TYPE_INVALID' },
   )
   await assert.rejects(
     getAcecoreGitHubId(request(), {
@@ -72,6 +79,21 @@ test('reject service token, wrong audience and forged signature', async () => {
     getAcecoreGitHubId(request(parts.join('.')), accessEnv),
     { status: 401 },
   )
+})
+test('CMS初期化APIは固定の認証診断codeだけをJSONで返す', async () => {
+  globalThis.fetch = async (input) =>
+    accessCerts(input) || assert.fail('Unexpected network')
+  const response = await githubProxy({
+    env: accessEnv,
+    request: request(await mintAccess({ custom: undefined })),
+  })
+
+  assert.equal(response.status, 403)
+  assert.equal(response.headers.get('Cache-Control'), 'no-store')
+  assert.deepEqual(await response.json(), {
+    message: 'AcecoreIDの連携GitHubを確認してください。',
+    code: 'CMS_AUTH_CUSTOM_CLAIMS_MISSING',
+  })
 })
 test('reject missing configuration and bearer-only path', async () => {
   await assert.rejects(getAcecoreGitHubId(request(), {}), { status: 503 })

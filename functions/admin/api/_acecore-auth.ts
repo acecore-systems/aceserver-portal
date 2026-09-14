@@ -82,18 +82,37 @@ export async function getAcecoreGitHubId(request: Request, env: CmsAccessEnv) {
   }
   const custom = payload.custom
   if (!custom || typeof custom !== 'object' || Array.isArray(custom))
-    throw new GitHubApiError('AcecoreIDの連携GitHubを確認してください。', 403)
+    throw new GitHubApiError(
+      'AcecoreIDの連携GitHubを確認してください。',
+      403,
+      'CMS_AUTH_CUSTOM_CLAIMS_MISSING',
+    )
   const claims = custom as Record<string, unknown>
+  if (payload.type !== 'app')
+    throw new GitHubApiError(
+      'AcecoreIDの連携GitHubを確認してください。',
+      403,
+      'CMS_AUTH_TOKEN_TYPE_INVALID',
+    )
   if (
-    payload.type !== 'app' ||
     typeof claims[SUBJECT] !== 'string' ||
     !/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(
       claims[SUBJECT],
-    ) ||
+    )
+  )
+    throw new GitHubApiError(
+      'AcecoreIDの連携GitHubを確認してください。',
+      403,
+      'CMS_AUTH_SUBJECT_INVALID',
+    )
+  if (
     typeof claims[GITHUB_ID] !== 'string' ||
     !/^[1-9][0-9]{0,19}$/.test(claims[GITHUB_ID])
-  ) {
-    throw new GitHubApiError('AcecoreIDの連携GitHubを確認してください。', 403)
-  }
+  )
+    throw new GitHubApiError(
+      'AcecoreIDの連携GitHubを確認してください。',
+      403,
+      'CMS_AUTH_GITHUB_ID_INVALID',
+    )
   return claims[GITHUB_ID]
 }
