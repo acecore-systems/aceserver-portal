@@ -5,6 +5,16 @@ void initialize().catch((error) => {
       ? error.message
       : 'AcecoreIDのログインを確認してください。'
   document.body.append(status)
+  if (error instanceof Error && error.refreshLogin === true) {
+    const form = document.createElement('form')
+    form.method = 'post'
+    form.action = '/admin/api/refresh-session'
+    const button = document.createElement('button')
+    button.type = 'submit'
+    button.textContent = 'ログイン情報を更新'
+    form.append(button)
+    document.body.append(form)
+  }
 })
 
 const INITIALIZE_FALLBACK_MESSAGE =
@@ -97,7 +107,9 @@ async function getInitializationError(response) {
   const diagnostic =
     code && message !== INITIALIZE_FALLBACK_MESSAGE ? ` / ${code}` : ''
 
-  return new Error(`${message}（HTTP ${response.status}${diagnostic}）`)
+  const error = new Error(`${message}（HTTP ${response.status}${diagnostic}）`)
+  error.refreshLogin = response.status === 401 || response.status === 403
+  return error
 }
 
 async function readInitializationErrorBody(response) {

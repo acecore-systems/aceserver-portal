@@ -59,6 +59,9 @@ test('CMS初期化は許可済みの認証診断だけをHTTP status付きで表
   )
   assert.equal(status.textContent.includes('server detail'), false)
   assert.deepEqual(cmsCalls, [])
+  const recovery = appended.find((node) => node.tagName === 'form')
+  assert.equal(recovery.method, 'post')
+  assert.equal(recovery.action, '/admin/api/refresh-session')
 })
 
 test('CMS初期化はリポジトリ編集権限なしを固定codeで表示する', async () => {

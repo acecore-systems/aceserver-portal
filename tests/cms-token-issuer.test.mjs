@@ -133,11 +133,39 @@ test('issuerは過大・不正なGitHub応答と上流エラー詳細を公開�
     )
   }
 })
+test('Pagesは旧形式とJWT形式のinstallation tokenをそのまま受け取る', async () => {
+  for (const token of [
+    'ghs_opaque_legacy',
+    `ghs_4419780_${'a'.repeat(260)}.${'b'.repeat(260)}.signature`,
+  ]) {
+    assert.equal(
+      await getGitHubAppToken({
+        CMS_GITHUB_TOKEN_ISSUER: {
+          fetch: async () =>
+            Response.json({
+              token,
+              repository: 'acecore-systems/aceserver-portal',
+            }),
+        },
+      }),
+      token,
+    )
+  }
+})
+
 test('Pagesはbinding欠落・誤repo・個人token・issuer障害を拒否する', async () => {
   await assert.rejects(getGitHubAppToken({}), { status: 503 })
   for (const value of [
     { token: 'ghs_x', repository: 'other' },
     { token: 'ghu_x', repository: 'acecore-systems/aceserver-portal' },
+    {
+      token: 'ghs_x\r\nInjected: true',
+      repository: 'acecore-systems/aceserver-portal',
+    },
+    {
+      token: `ghs_${'a'.repeat(4093)}`,
+      repository: 'acecore-systems/aceserver-portal',
+    },
   ])
     await assert.rejects(
       getGitHubAppToken({
