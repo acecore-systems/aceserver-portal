@@ -93,6 +93,8 @@ for (const { responseStatus, code, expected } of [
     expected: 'AcecoreIDの連携情報が一致していません。',
   },
   ...[
+    'CMS_AUTH_IDENTITY_USER_MISSING',
+    'CMS_AUTH_IDENTITY_PROVIDER_MISSING',
     'CMS_AUTH_IDENTITY_USER_MISMATCH',
     'CMS_AUTH_IDENTITY_ACCOUNT_MISMATCH',
     'CMS_AUTH_IDENTITY_PROVIDER_MISMATCH',

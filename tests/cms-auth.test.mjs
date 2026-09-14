@@ -144,6 +144,16 @@ for (const sub of ['', false, 'not-a-uuid']) {
 }
 for (const { name, identity, code = 'CMS_AUTH_IDENTITY_INVALID' } of [
   {
+    name: 'missing Access user',
+    identity: accessIdentity({ user_uuid: undefined }),
+    code: 'CMS_AUTH_IDENTITY_USER_MISSING',
+  },
+  {
+    name: 'missing IdP',
+    identity: accessIdentity({ idp: undefined }),
+    code: 'CMS_AUTH_IDENTITY_PROVIDER_MISSING',
+  },
+  {
     name: 'different Access user',
     code: 'CMS_AUTH_IDENTITY_USER_MISMATCH',
     identity: accessIdentity({
