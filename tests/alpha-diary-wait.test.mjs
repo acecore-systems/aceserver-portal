@@ -462,10 +462,7 @@ test('pending retries keep the first server day across the JST boundary', async 
     pendingCount: 1,
     scheduled: { id: 1, delay: 4_000 },
   })
-  assert.deepEqual(
-    applyPending(first.currentDate, '2026-09-16', false),
-    first,
-  )
+  assert.deepEqual(applyPending(first.currentDate, '2026-09-16', false), first)
   const explicit = applyPending('2026-09-11', '2026-09-16', false)
   assert.equal(explicit.currentDate, '2026-09-11')
   assert.equal(explicit.inputDate, '2026-09-11')
