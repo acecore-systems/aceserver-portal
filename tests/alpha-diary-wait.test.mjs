@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict'
+import { readFile } from 'node:fs/promises'
 import test from 'node:test'
 
 import {
@@ -217,7 +218,6 @@ test('a late response for an earlier date cannot replace the newer date', () => 
   const secondDateRequest = lifecycle.startRequest()
   if (lifecycle.complete(firstDateRequest)) renderedDates.push('2016-12-07')
   if (lifecycle.complete(secondDateRequest)) renderedDates.push('2020-10-01')
-
   assert.deepEqual(renderedDates, ['2020-10-01'])
 })
 
@@ -423,4 +423,51 @@ test('page departure prefers a beacon and invalid measurements never send', asyn
     ),
     false,
   )
+})
+
+test('pending retries keep the first server day across the JST boundary', async () => {
+  const script = await readFile(
+    new URL('../src/scripts/alpha-diary.ts', import.meta.url),
+    'utf8',
+  )
+  const start = script.indexOf("      if (payload.status === 'pending') {")
+  const end = script.indexOf("\n      if (payload.status === 'future')", start)
+  assert.ok(start >= 0 && end > start)
+  const branch = script.slice(start, end)
+  // Execute the production pending branch without a browser or network.
+  const applyPending = new Function(
+    'date',
+    'serverToday',
+    'fixture',
+    `let currentDate = date;
+     const dateInput = { value: date };
+     const payload = { status: 'pending', retryAfter: 4 };
+     const requestId = 1;
+     let pendingCount = 0;
+     let scheduled;
+     const loadMeasurement = { recordPending() { pendingCount += 1; } };
+     const waitLifecycle = {
+       markPending(id, delay) { scheduled = { id, delay }; }
+     };
+     const readRetryAfter = (value) => value;
+     (function () { ${branch} })();
+     return {
+       currentDate, inputDate: dateInput.value, pendingCount, scheduled
+     };`,
+  )
+  const first = applyPending('', '2026-09-15', false)
+  assert.deepEqual(first, {
+    currentDate: '2026-09-15',
+    inputDate: '2026-09-15',
+    pendingCount: 1,
+    scheduled: { id: 1, delay: 4_000 },
+  })
+  assert.deepEqual(
+    applyPending(first.currentDate, '2026-09-16', false),
+    first,
+  )
+  const explicit = applyPending('2026-09-11', '2026-09-16', false)
+  assert.equal(explicit.currentDate, '2026-09-11')
+  assert.equal(explicit.inputDate, '2026-09-11')
+  assert.equal(applyPending('', '2026-09-15', true).pendingCount, 0)
 })
