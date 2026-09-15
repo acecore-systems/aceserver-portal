@@ -155,8 +155,9 @@ test('past picture diary pages open as bound records instead of being written no
   assert.match(script, /copy\.pastLoadingBody/u)
   assert.equal(
     [...script.matchAll(/setLoading\(getLoadingKind\(date\)\)/gu)].length,
-    2,
+    1,
   )
+  assert.match(script, /waitLifecycle\.markPending\(requestId/u)
 })
 
 test('past observation records load as existing archive pages instead of being written now', async () => {
@@ -180,6 +181,39 @@ test('past observation records load as existing archive pages instead of being w
   assert.match(script, /loadingKind === 'observation'/u)
   assert.match(script, /copy\.observationLoadingTitle/u)
   assert.match(script, /copy\.observationLoadingBody/u)
+})
+
+test('long diary waits expose elapsed time without repeated screen-reader announcements', async () => {
+  const [component, script] = await Promise.all([
+    readFile(
+      new URL('../src/components/AlphaDiaryPage.astro', import.meta.url),
+      'utf8',
+    ),
+    readFile(new URL('../src/scripts/alpha-diary.ts', import.meta.url), 'utf8'),
+  ])
+
+  for (const locale of LOCALES) {
+    const copy = getAlphaDiaryUi(locale)
+    assert.match(copy.waitingElapsed, /\{seconds\}/u, locale)
+    assert.match(copy.loadElapsed, /\{seconds\}/u, locale)
+    assert.ok(copy.longWaitTitle.length > 0, locale)
+    assert.ok(copy.longWaitBody.length > 0, locale)
+    assert.ok(copy.manualCheck.length > 0, locale)
+    assert.ok(copy.timeoutTitle.length > 0, locale)
+    assert.ok(copy.timeoutBody.length > 0, locale)
+  }
+  assert.match(component, /data-diary-wait-elapsed[\s\S]*aria-live="off"/u)
+  assert.match(component, /data-diary-load-summary/u)
+  assert.match(component, /data-diary-entry-load-summary/u)
+  assert.match(component, /\[data-diary-state-body\]/u)
+  assert.match(script, /requestJsonWithDiaryTimeout/u)
+  assert.match(script, /fixture === 'pending'/u)
+  assert.match(script, /document\.visibilityState === 'visible'/u)
+  assert.match(script, /finalizeLoadMeasurement\('ready'\)/u)
+  assert.match(script, /reportDiaryLoadMeasurement\(measurement/u)
+  assert.match(script, /resumePendingEntry\('recovery'\)/u)
+  assert.match(script, /bfcacheResume\.recordPageHide/u)
+  assert.match(script, /takePersistedPageShow\(event\.persisted\)/u)
 })
 
 test('exploration is user-led from today’s trailhead to a passphrase on the key date', async () => {

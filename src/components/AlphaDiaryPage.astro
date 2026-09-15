@@ -112,6 +112,14 @@ const fixturesEnabled = import.meta.env.DEV
           <p class="diary-state__kicker">ALPHA'S RECORD</p>
           <h2 data-diary-state-title>{copy.loadingTitle}</h2>
           <p data-diary-state-body>{copy.loadingBody}</p>
+          <p
+            class="diary-state__elapsed"
+            data-diary-wait-elapsed
+            aria-live="off"
+            hidden
+          >
+          </p>
+          <p class="diary-state__summary" data-diary-load-summary hidden></p>
           <button
             type="button"
             class="diary-button diary-button--gold"
@@ -119,7 +127,7 @@ const fixturesEnabled = import.meta.env.DEV
             hidden
           >
             <Icon name="rotate-cw" />
-            {copy.retry}
+            <span data-diary-retry-label>{copy.retry}</span>
           </button>
         </section>
 
@@ -128,6 +136,12 @@ const fixturesEnabled = import.meta.env.DEV
             <div>
               <span class="diary-kind" data-diary-kind>{copy.diaryKind}</span>
               <time data-diary-record-date></time>
+              <p
+                class="diary-entry__load-summary"
+                data-diary-entry-load-summary
+                hidden
+              >
+              </p>
             </div>
             <span class="diary-record-id" data-diary-record-id></span>
           </header>
@@ -1013,11 +1027,26 @@ const fixturesEnabled = import.meta.env.DEV
     font-weight: 900;
     letter-spacing: 0.16em;
   }
+  .diary-state__elapsed {
+    margin: 14px 0 0;
+    color: #745133;
+    font-size: 0.84rem;
+    font-weight: 800;
+    font-variant-numeric: tabular-nums;
+  }
+  .diary-state__summary,
+  .diary-entry__load-summary {
+    margin: 12px 0 0;
+    color: #745133;
+    font-size: 0.84rem;
+    font-weight: 800;
+    font-variant-numeric: tabular-nums;
+  }
   .diary-state h2 {
     margin: 0;
     font-size: clamp(1.5rem, 3vw, 2.35rem);
   }
-  .diary-state > p:last-of-type {
+  .diary-state [data-diary-state-body] {
     max-width: 520px;
     color: #6e5b43;
   }
@@ -1033,6 +1062,9 @@ const fixturesEnabled = import.meta.env.DEV
   .diary-entry__header > div {
     display: grid;
     gap: 4px;
+  }
+  .diary-entry__load-summary {
+    margin-top: 4px;
   }
   .diary-kind {
     width: fit-content;

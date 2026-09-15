@@ -80,6 +80,41 @@ test('Portal diary adapter forwards only the bounded contract and a hashed clien
   assert.equal(forwarded.ignored, undefined)
 })
 
+test('all nine page languages reach diary generation unchanged despite browser language preferences', async () => {
+  for (const locale of [
+    'ja',
+    'en',
+    'zh-cn',
+    'es',
+    'pt',
+    'fr',
+    'ko',
+    'de',
+    'ru',
+  ]) {
+    let forwarded
+    let languageHeader
+    const response = await onRequestPost({
+      env: {
+        ALPHA_CHAT_SERVICE: {
+          async fetch(request) {
+            forwarded = await request.json()
+            languageHeader = request.headers.get('Accept-Language')
+            return Response.json(readyEntryPayload())
+          },
+        },
+      },
+      request: createRequest(
+        { action: 'entry', entryDate: '2026-09-11', locale, version: 2 },
+        { 'Accept-Language': locale === 'ja' ? 'en' : 'ja' },
+      ),
+    })
+    assert.equal(response.status, 200, locale)
+    assert.equal(forwarded.locale, locale)
+    assert.equal(languageHeader, locale)
+  }
+})
+
 test('finale requests forward the bounded passphrase with the key date', async () => {
   let forwarded
   const response = await onRequestPost({
