@@ -514,6 +514,9 @@ export function initAlphaDiary() {
         return true
       }
       if (payload.status === 'pending') {
+        // Keep polling this entry when "today" changes at the JST boundary.
+        currentDate = date || serverToday
+        dateInput.value = currentDate
         const retryAfter = readRetryAfter(payload.retryAfter)
         if (!fixture) loadMeasurement.recordPending()
         waitLifecycle.markPending(requestId, retryAfter * 1_000)
