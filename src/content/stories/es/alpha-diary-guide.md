@@ -6,7 +6,7 @@ tags:
   - Novedades
 author: Gui
 translationOf: alpha-diary-guide
-sourceHash: sha256:6593e66f0f029a05dab4ddfc5c78a4729f816d88ebcb1df6daea38b1af21ea1b
+sourceHash: sha256:acb28f856e78e203004cbe60b584ad85b037abe93134135fa53027624f5289ed
 ---
 
 El diario ilustrado de Alfa reúne dibujos y textos de Aceserver organizados por fecha. Puedes empezar en la [página del diario](/es/alpha-diary/).

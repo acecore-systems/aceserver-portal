@@ -6,7 +6,7 @@ tags:
   - 소식
 author: Gui
 translationOf: alpha-diary-guide
-sourceHash: sha256:6593e66f0f029a05dab4ddfc5c78a4729f816d88ebcb1df6daea38b1af21ea1b
+sourceHash: sha256:acb28f856e78e203004cbe60b584ad85b037abe93134135fa53027624f5289ed
 ---
 
 알파 군의 그림일기는 Aceserver의 날짜별 그림과 글을 모은 기록입니다. [그림일기 페이지](/ko/alpha-diary/)에서 시작할 수 있습니다.

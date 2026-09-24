@@ -6,7 +6,7 @@ tags:
   - News
 author: Gui
 translationOf: alpha-diary-guide
-sourceHash: sha256:6593e66f0f029a05dab4ddfc5c78a4729f816d88ebcb1df6daea38b1af21ea1b
+sourceHash: sha256:acb28f856e78e203004cbe60b584ad85b037abe93134135fa53027624f5289ed
 ---
 
 Alpha-kun's picture diary is a collection of dated drawings and writing from Aceserver. You can begin on the [picture diary page](/en/alpha-diary/).

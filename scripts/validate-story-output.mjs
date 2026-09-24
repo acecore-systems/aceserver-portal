@@ -48,7 +48,7 @@ const stories = [
   },
   {
     slug: 'alpha-diary-guide',
-    title: 'アルファ君の絵日記を読む',
+    title: '絵日記の読み方',
     description:
       'アルファ君の絵日記では、日付を選んで絵と文章の記録を開き、気になったことをアルファ君に質問できます。自分のペースでたどるための案内です。',
     author: 'Gui',
