@@ -296,8 +296,52 @@ async function handleRequest(request: Request, env: Env): Promise<Response> {
 }
 
 const worker: ExportedHandler<Env> = {
-  async fetch(request, env): Promise<Response> {
+  async fetch(request, env, ctx): Promise<Response> {
+    // Preserve the full URL, including Dynmap's tile revision query string.
+    // Never cache live player/marker JSON, conditional requests, or errors.
+    const key = objectKeyForRequest(request)
+    const eligible =
+      request.method === 'GET' &&
+      Boolean(targetForRequest(request, env)?.bucket) &&
+      key.startsWith(TILE_PREFIX) &&
+      !key.startsWith('tiles/_markers/') &&
+      /\.(png|webp|jpe?g)$/.test(key) &&
+      ![
+        'authorization',
+        'cookie',
+        'range',
+        'if-none-match',
+        'if-modified-since',
+        'cache-control',
+      ].some((header) => request.headers.has(header))
+    const cache =
+      eligible && typeof caches !== 'undefined' ? caches.default : null
+    const cacheKey = new Request(request.url)
+    if (cache) {
+      try {
+        const hit = await cache.match(cacheKey)
+        if (hit) {
+          const headers = new Headers(hit.headers)
+          headers.set('cache-control', cacheControlForKey(key))
+          headers.set('x-dynmap-edge-cache', 'HIT')
+          return withSearchRobotsDirective(new Response(hit.body, { headers }))
+        }
+      } catch {
+        // Cache availability must not prevent the authoritative R2 read.
+      }
+    }
     const response = await handleRequest(request, env)
+    if (cache && response.status === 200 && ctx) {
+      const copy = response.clone()
+      const headers = new Headers(copy.headers)
+      headers.set('cache-control', 'public, max-age=300')
+      ctx.waitUntil(
+        cache.put(cacheKey, new Response(copy.body, { headers })).catch(() => {
+          console.warn('dynmap_edge_cache_put_failed')
+        }),
+      )
+      response.headers.set('x-dynmap-edge-cache', 'MISS')
+    }
     return withSearchRobotsDirective(response)
   },
 }
