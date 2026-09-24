@@ -21,7 +21,7 @@ type SkinEnv = Env & {
   SKIN_TURNSTILE_SECRET?: string
   SKIN_QUOTA_SALT?: string
   SKIN_AI_MODEL?: string
-  OPENAI_API_KEY?: string
+  SKIN_OPENAI_SERVICE?: Fetcher
 }
 const MAX_BODY = 450_000
 export const MAX_TOKENS = 12_000
@@ -46,7 +46,7 @@ function available(env: SkinEnv) {
     !!env.SKIN_QUOTA_SALT &&
     (model === WORKERS_MODEL
       ? !!env.AI
-      : model === MODEL && !!env.OPENAI_API_KEY?.trim()) &&
+      : model === MODEL && !!env.SKIN_OPENAI_SERVICE) &&
     !!env.SEARCH_RATE_LIMIT_DB &&
     !!env.SKIN_TURNSTILE_SITE_KEY
   )
@@ -62,17 +62,19 @@ async function generateDesign(
       signal: AbortSignal.timeout(240_000),
     })
   }
-  if (model !== MODEL || !env.OPENAI_API_KEY?.trim())
+  if (model !== MODEL || !env.SKIN_OPENAI_SERVICE)
     throw new Error('ai_configuration')
-  const response = await fetch('https://api.openai.com/v1/chat/completions', {
-    method: 'POST',
-    headers: {
-      Authorization: `Bearer ${env.OPENAI_API_KEY.trim()}`,
-      'Content-Type': 'application/json',
+  const response = await env.SKIN_OPENAI_SERVICE.fetch(
+    'https://skin-openai.internal/v1/chat',
+    {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ model, ...modelInput(input) }),
+      signal: AbortSignal.timeout(240_000),
     },
-    body: JSON.stringify({ model, ...modelInput(input) }),
-    signal: AbortSignal.timeout(240_000),
-  })
+  )
   if (!response.ok) {
     await response.body?.cancel()
     throw new Error('ai_provider')

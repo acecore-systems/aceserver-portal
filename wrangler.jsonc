@@ -160,6 +160,10 @@
           "service": "aceserver-alpha-chat-production",
           "remote": false,
         },
+        {
+          "binding": "SKIN_OPENAI_SERVICE",
+          "service": "aceserver-portal-skin-openai",
+        },
       ],
       "vars": {
         "SKIN_MAKER_ENABLED": "true",

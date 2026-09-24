@@ -68,6 +68,9 @@ jobs:
       - name: Type-check skin maker client
         run: npm run typecheck:skin-maker
 
+      - name: Type-check private skin OpenAI Worker
+        run: npm run typecheck:skin-openai
+
       - name: Test CMS proxy
         run: npm run test:cms
 
