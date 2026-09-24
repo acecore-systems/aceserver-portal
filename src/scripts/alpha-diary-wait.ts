@@ -2,6 +2,61 @@ export const DIARY_LONG_WAIT_MS = 30_000
 export const DIARY_METRICS_ENDPOINT = '/api/alpha-diary-metrics'
 export const DIARY_METRICS_RELEASE = 'diary-wait-v2'
 
+export function diaryRateLimitRetryAfterSeconds(
+  httpStatus: number,
+  payload: unknown,
+  retryAfterHeader: string | null,
+): number | null {
+  const body =
+    payload && typeof payload === 'object' && !Array.isArray(payload)
+      ? (payload as Record<string, unknown>)
+      : null
+  if (httpStatus !== 429 && body?.status !== 'rate_limited') return null
+
+  const seconds = [retryAfterHeader, body?.retryAfter, body?.retry_after]
+    .map((value) => {
+      const numeric = typeof value === 'string' ? Number(value) : value
+      return Number.isInteger(numeric) && Number(numeric) > 0
+        ? Number(numeric)
+        : 0
+    })
+    .reduce((largest, value) => Math.max(largest, value), 30)
+  return Math.min(seconds, 86_400)
+}
+
+export class DiaryReadyEntryCache<T> {
+  #entries = new Map<string, { expiresAt: number; value: T }>()
+  #now: () => number
+
+  constructor(now: () => number) {
+    this.#now = now
+  }
+
+  get(date: string): T | null {
+    const cached = this.#entries.get(date)
+    if (!cached) return null
+    if (cached.expiresAt <= this.#now()) {
+      this.#entries.delete(date)
+      return null
+    }
+    this.#entries.delete(date)
+    this.#entries.set(date, cached)
+    return cached.value
+  }
+
+  set(date: string, value: T) {
+    this.#entries.delete(date)
+    this.#entries.set(date, {
+      expiresAt: this.#now() + 5 * 60_000,
+      value,
+    })
+    if (this.#entries.size > 24) {
+      const oldest = this.#entries.keys().next().value
+      if (oldest) this.#entries.delete(oldest)
+    }
+  }
+}
+
 export type DiaryLoadOutcome = 'ready' | 'timeout' | 'failed' | 'cancelled'
 
 export type DiaryLoadMeasurement = {
