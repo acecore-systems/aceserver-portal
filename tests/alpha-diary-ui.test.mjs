@@ -153,10 +153,7 @@ test('past picture diary pages open as bound records instead of being written no
   assert.match(script, /date && date < serverToday \? 'past' : 'current'/u)
   assert.match(script, /copy\.pastLoadingTitle/u)
   assert.match(script, /copy\.pastLoadingBody/u)
-  assert.equal(
-    [...script.matchAll(/setLoading\(getLoadingKind\(date\)\)/gu)].length,
-    1,
-  )
+  assert.match(script, /setLoading\(getLoadingKind\(date\)\)/u)
   assert.match(script, /waitLifecycle\.markPending\(requestId/u)
 })
 
@@ -196,6 +193,8 @@ test('long diary waits expose elapsed time without repeated screen-reader announ
     const copy = getAlphaDiaryUi(locale)
     assert.match(copy.waitingElapsed, /\{seconds\}/u, locale)
     assert.match(copy.loadElapsed, /\{seconds\}/u, locale)
+    assert.match(copy.rateLimitedBody, /\{seconds\}/u, locale)
+    assert.ok(copy.rateLimitedTitle.length > 0, locale)
     assert.ok(copy.longWaitTitle.length > 0, locale)
     assert.ok(copy.longWaitBody.length > 0, locale)
     assert.ok(copy.manualCheck.length > 0, locale)

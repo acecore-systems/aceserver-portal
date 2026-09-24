@@ -6,12 +6,48 @@ import {
   DiaryBfcacheResumeLifecycle,
   DIARY_METRICS_ENDPOINT,
   DiaryLoadMeasurementLifecycle,
+  DiaryReadyEntryCache,
   DiaryRequestTimeoutError,
   DiaryWaitLifecycle,
+  diaryRateLimitRetryAfterSeconds,
   requestJsonWithDiaryTimeout,
   reportDiaryLoadMeasurement,
   withDiaryRequestTimeout,
 } from '../src/scripts/alpha-diary-wait.ts'
+
+test('Cloudflare 1015 and diary quota responses use a safe retry delay', () => {
+  assert.equal(
+    diaryRateLimitRetryAfterSeconds(
+      429,
+      { error_code: 1015, retry_after: 30 },
+      '10',
+    ),
+    30,
+  )
+  assert.equal(
+    diaryRateLimitRetryAfterSeconds(
+      429,
+      { status: 'rate_limited', retryAfter: 2_400 },
+      '2400',
+    ),
+    2_400,
+  )
+  assert.equal(diaryRateLimitRetryAfterSeconds(429, null, null), 30)
+  assert.equal(
+    diaryRateLimitRetryAfterSeconds(200, { status: 'ready' }, null),
+    null,
+  )
+})
+
+test('ready past pages are reused briefly without persisting navigation history', () => {
+  let now = 1_000
+  const cache = new DiaryReadyEntryCache(() => now)
+  const page = { title: 'The saved page' }
+  cache.set('2026-09-06', page)
+  assert.equal(cache.get('2026-09-06'), page)
+  now += 5 * 60_000
+  assert.equal(cache.get('2026-09-06'), null)
+})
 
 function createScheduler() {
   let now = 0

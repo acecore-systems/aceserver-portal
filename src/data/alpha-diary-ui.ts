@@ -44,6 +44,8 @@ export type AlphaDiaryUi = {
   questionsLead: string
   observationQuestionsTitle: string
   questionsTitle: string
+  rateLimitedBody: string
+  rateLimitedTitle: string
   reducedMotion: string
   replay: string
   retry: string
@@ -118,6 +120,9 @@ const alphaDiaryUi = {
       '気になった言葉や日付は、自分で覚えておいてください。まだ書かれていないことはアルファ君に聞けます。選んだ言葉は入力欄に置かれるだけで、送るのはあなたです。',
     observationQuestionsTitle: 'この記録について聞く',
     questionsTitle: 'この日のことを聞く',
+    rateLimitedBody:
+      '短時間にページを開いたため、一時的に制限されています。あと{seconds}秒で、この日を自動で開き直します。',
+    rateLimitedTitle: '少し待ってから開き直します',
     reducedMotion: '動きを抑えて開く',
     replay: '最後の記録をもう一度開く',
     retry: 'もう一度ひらく',
@@ -191,6 +196,9 @@ const alphaDiaryUi = {
       'Keep track of any words or dates that catch your attention. You can ask Alpha-kun about what is still unwritten; the chosen words are only placed in the box, and you decide whether to send them.',
     observationQuestionsTitle: 'Ask about this record',
     questionsTitle: 'Ask about this day',
+    rateLimitedBody:
+      'Too many pages were opened in a short time. This page will retry automatically in {seconds}s.',
+    rateLimitedTitle: 'Waiting before trying again',
     reducedMotion: 'Open with reduced motion',
     replay: 'Open the last record again',
     retry: 'Try again',
@@ -258,6 +266,9 @@ const alphaDiaryUi = {
       '请自己记住引起注意的词语和日期。还没有写下来的事，可以去问阿尔法君；选中的话只会放进输入框，是否发送由你决定。',
     observationQuestionsTitle: '询问这份记录',
     questionsTitle: '询问这一天',
+    rateLimitedBody:
+      '短时间内打开了太多页面。将在{seconds}秒后自动重新打开这一天。',
+    rateLimitedTitle: '稍等片刻后重试',
     reducedMotion: '减少动态后打开',
     replay: '再次打开最后的记录',
     retry: '重新打开',
@@ -330,6 +341,9 @@ const alphaDiaryUi = {
       'Recuerda las palabras o fechas que te llamen la atención. Puedes preguntar a Alpha-kun por lo que aún no está escrito; las palabras elegidas solo se colocan en el campo y tú decides si enviarlas.',
     observationQuestionsTitle: 'Preguntar por este registro',
     questionsTitle: 'Preguntar por este día',
+    rateLimitedBody:
+      'Se abrieron demasiadas páginas en poco tiempo. Esta página se volverá a abrir automáticamente en {seconds} s.',
+    rateLimitedTitle: 'Esperando para volver a intentarlo',
     reducedMotion: 'Abrir con movimiento reducido',
     replay: 'Abrir de nuevo el último registro',
     retry: 'Intentar de nuevo',
@@ -404,6 +418,9 @@ const alphaDiaryUi = {
       'Guarde as palavras ou datas que chamarem sua atenção. Você pode perguntar ao Alpha-kun sobre o que ainda não foi escrito; as palavras escolhidas só vão para o campo e você decide se quer enviá-las.',
     observationQuestionsTitle: 'Perguntar sobre este registro',
     questionsTitle: 'Perguntar sobre este dia',
+    rateLimitedBody:
+      'Muitas páginas foram abertas em pouco tempo. Esta página será aberta novamente em {seconds} s.',
+    rateLimitedTitle: 'Aguardando para tentar novamente',
     reducedMotion: 'Abrir com menos movimento',
     replay: 'Abrir o último registro novamente',
     retry: 'Tentar novamente',
@@ -478,6 +495,9 @@ const alphaDiaryUi = {
       'Retenez les mots ou les dates qui attirent votre attention. Vous pouvez demander à Alpha-kun ce qui n’est pas encore écrit ; les mots choisis sont seulement placés dans le champ et vous décidez de les envoyer.',
     observationQuestionsTitle: 'Demander au sujet de cette observation',
     questionsTitle: 'Demander ce qui s’est passé ce jour-là',
+    rateLimitedBody:
+      'Trop de pages ont été ouvertes en peu de temps. Cette page sera rouverte automatiquement dans {seconds} s.',
+    rateLimitedTitle: 'Nouvel essai dans un instant',
     reducedMotion: 'Ouvrir avec moins de mouvements',
     replay: 'Ouvrir de nouveau la dernière archive',
     retry: 'Réessayer',
@@ -551,6 +571,9 @@ const alphaDiaryUi = {
       '눈에 띄는 말이나 날짜는 직접 기억해 두세요. 아직 적히지 않은 것은 알파군에게 물어볼 수 있으며, 고른 말은 입력칸에 놓일 뿐 보낼지는 당신이 정합니다.',
     observationQuestionsTitle: '이 기록에 대해 묻기',
     questionsTitle: '이날의 일을 묻기',
+    rateLimitedBody:
+      '짧은 시간에 너무 많은 페이지를 열었습니다. {seconds}초 후 이 날짜를 자동으로 다시 엽니다.',
+    rateLimitedTitle: '잠시 후 다시 열게요',
     reducedMotion: '움직임을 줄여서 열기',
     replay: '마지막 기록 다시 열기',
     retry: '다시 열기',
@@ -625,6 +648,9 @@ const alphaDiaryUi = {
       'Merke dir Wörter oder Daten, die dir auffallen. Du kannst Alpha-kun nach dem fragen, was noch nicht geschrieben ist; die gewählten Worte werden nur ins Feld gelegt und du entscheidest, ob du sie sendest.',
     observationQuestionsTitle: 'Nach dieser Aufzeichnung fragen',
     questionsTitle: 'Nach diesem Tag fragen',
+    rateLimitedBody:
+      'In kurzer Zeit wurden zu viele Seiten geöffnet. Diese Seite wird in {seconds} Sekunden automatisch erneut geöffnet.',
+    rateLimitedTitle: 'Bitte kurz warten',
     reducedMotion: 'Mit weniger Bewegung öffnen',
     replay: 'Die letzte Aufzeichnung erneut öffnen',
     retry: 'Erneut versuchen',
@@ -699,6 +725,9 @@ const alphaDiaryUi = {
       'Запоминайте слова и даты, которые привлекли внимание. О том, что ещё не записано, можно спросить Альфа-куна; выбранные слова лишь появятся в поле, а отправлять их или нет — решаете вы.',
     observationQuestionsTitle: 'Спросить об этой записи',
     questionsTitle: 'Спросить об этом дне',
+    rateLimitedBody:
+      'За короткое время открыто слишком много страниц. Эта страница откроется снова через {seconds} с.',
+    rateLimitedTitle: 'Повторим попытку чуть позже',
     reducedMotion: 'Открыть с уменьшенным движением',
     replay: 'Снова открыть последнюю запись',
     retry: 'Попробовать снова',
