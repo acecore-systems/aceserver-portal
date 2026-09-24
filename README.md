@@ -95,7 +95,7 @@ Cloudflare Pages のproduction / previewでは、build前に `public/admin/runti
 
 サイト全体に右下固定のアルファくん案内チャットを表示します。アルファくんはエースサーバーのキャラクター案内役として、参加方法、ワールド、ルール、ストーリー導線を案内します。
 
-`functions/api/alpha-chat.ts` は同一origin検証とD1レート制限を行った後、Private Service Binding `ALPHA_CHAT_SERVICE` を通じて共有Worker `aceserver-alpha-chat` だけを呼びます。共有Workerが人格、口調、質問分類、RAG、引用検証、Workers AI `@cf/zai-org/glm-5.3-flash`による生成、正史作成を一元管理します。Portalに切替flagやローカルLLM生成はなく、Service Bindingがない場合や共有Workerの応答が壊れている場合は、選択localeの固定案内を返してfail closedします。
+`functions/api/alpha-chat.ts` は同一origin検証とD1レート制限を行った後、Private Service Binding `ALPHA_CHAT_SERVICE` を通じて共有Worker `aceserver-alpha-chat` だけを呼びます。共有Workerが人格、口調、質問分類、RAG、引用検証、選択中のOpenAI API直結GPT-6 LunaまたはWorkers AI GLMによる生成、正史作成を一元管理します。Portal側の会話model切替flagやローカルLLM生成はなく、Service Bindingがない場合や共有Workerの応答が壊れている場合は、選択localeの固定案内を返してfail closedします。
 
 ブラウザは`Accept: text/event-stream`を指定し、Pages Functionは共有WorkerのSSE bodyをバッファせず転送します。生成deltaは平文で逐次表示し、共有Workerが検証を終えた`complete`イベントで最終表示と会話コンテキストを確定します。別モデルやPortal内のローカル生成への切替はありません。
 

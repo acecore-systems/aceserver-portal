@@ -1,6 +1,7 @@
 import { z } from 'zod'
 
-export const MODEL = '@cf/zai-org/glm-5.3-flash' as const
+export const MODEL = 'gpt-6-luna' as const
+export const WORKERS_MODEL = '@cf/zai-org/glm-5.3-flash' as const
 export const PARTS = [
   'head',
   'body',
