@@ -1054,21 +1054,21 @@ export function initAlphaDiary() {
     navigationTimer = 0
   }
 
-  function openAdjacentDate(date: string) {
+  function queueDateLoad(date: string, historyMode: 'push' | 'none' = 'push') {
     if (
       date < BIRTH_BOUNDARY ||
       date > serverToday ||
       readyEntryCache.get(date) ||
       performance.now() < rateLimitUntil
     ) {
-      void loadEntry(date, { history: 'push' })
+      void loadEntry(date, { history: historyMode })
       return
     }
     clearNavigationTimer()
     finalizeLoadMeasurement('cancelled')
     clearPending()
     requestController?.abort()
-    updateDateHistory(date, 'push')
+    updateDateHistory(date, historyMode)
     currentDate = date
     dateInput.value = date
     setLoading(getLoadingKind(date))
@@ -1173,13 +1173,13 @@ export function initAlphaDiary() {
         return
       }
       if (target.closest('[data-diary-previous]')) {
-        openAdjacentDate(
+        queueDateLoad(
           shiftDate(currentDate || dateInput.value || serverToday, -1),
         )
         return
       }
       if (target.closest('[data-diary-next]')) {
-        openAdjacentDate(
+        queueDateLoad(
           shiftDate(currentDate || dateInput.value || serverToday, 1),
         )
         return
@@ -1247,7 +1247,7 @@ export function initAlphaDiary() {
         renderFailure()
         return
       }
-      void loadEntry(dateInput.value, { history: 'push' })
+      queueDateLoad(dateInput.value)
     },
     { signal },
   )
@@ -1269,8 +1269,7 @@ export function initAlphaDiary() {
     () => {
       if (finaleActive) stopFinale({ fromHistory: true })
       const date = new URL(window.location.href).searchParams.get('date') || ''
-      if (!date || isValidDate(date))
-        void loadEntry(date || undefined, { history: 'none' })
+      if (!date || isValidDate(date)) queueDateLoad(date, 'none')
     },
     { signal },
   )

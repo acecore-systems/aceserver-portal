@@ -101,7 +101,7 @@ test('the arbitrary older-record jump is absent while calendar date selection re
   assert.doesNotMatch(copySource, /\bdeeper:/u)
   assert.doesNotMatch(script, /getDeeperDate/u)
   assert.match(component, /data-diary-date-form novalidate/u)
-  assert.match(script, /loadEntry\(dateInput\.value, \{ history: 'push' \}\)/u)
+  assert.match(script, /queueDateLoad\(dateInput\.value\)/u)
 })
 
 test('observation records switch from the picture diary to a staff archive surface', async () => {
