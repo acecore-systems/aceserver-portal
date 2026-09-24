@@ -9,6 +9,7 @@ import {
   DiaryReadyEntryCache,
   DiaryRequestTimeoutError,
   DiaryWaitLifecycle,
+  diaryEntryRequestTimeoutMs,
   diaryRateLimitRetryAfterSeconds,
   requestJsonWithDiaryTimeout,
   reportDiaryLoadMeasurement,
@@ -166,6 +167,37 @@ test('a finite request timeout fails independently, and a later retry can resolv
     scheduler,
   )
   assert.equal(retried, 'ready')
+  assert.equal(scheduler.activeTimerCount(), 0)
+})
+
+test('first historical preparation can return pending after the ordinary request limit', async () => {
+  const scheduler = createScheduler()
+  const historicalTimeout = diaryEntryRequestTimeoutMs(
+    '2026-09-04',
+    '2026-09-25',
+    false,
+  )
+  assert.equal(historicalTimeout, 60_000)
+  assert.equal(
+    diaryEntryRequestTimeoutMs('2026-09-04', '2026-09-25', true),
+    20_000,
+  )
+  assert.equal(
+    diaryEntryRequestTimeoutMs('2026-09-25', '2026-09-25', false),
+    20_000,
+  )
+
+  const request = withDiaryRequestTimeout(
+    () =>
+      new Promise((resolve) => {
+        scheduler.setTimeout(() => resolve('pending'), 35_000)
+      }),
+    new AbortController().signal,
+    historicalTimeout,
+    scheduler,
+  )
+  scheduler.advance(35_000)
+  assert.equal(await request, 'pending')
   assert.equal(scheduler.activeTimerCount(), 0)
 })
 
