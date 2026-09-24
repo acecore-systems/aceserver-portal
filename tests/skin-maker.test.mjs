@@ -7,7 +7,7 @@ import {
   PARTS,
   FACES,
   LAYERS,
-  MODEL,
+  WORKERS_MODEL,
   regions,
   applyDesign,
   decodePixels,
@@ -336,11 +336,8 @@ test('API fails closed, verifies hostname/action and does not spend on invalid o
     const response = await send()
     assert.equal(response.status, 200)
     assert.equal(response.headers.get('cache-control'), 'no-store')
-    assert.equal(aiCalls[0].model, MODEL)
-    assert.deepEqual(aiCalls[0].options.gateway, {
-      id: 'default',
-      collectLog: false,
-    })
+    assert.equal(aiCalls[0].model, WORKERS_MODEL)
+    assert.equal(aiCalls[0].options.gateway, undefined)
     assert.deepEqual(
       decodePixels((await response.json()).pixels, 64, 64),
       skin(),

@@ -10,6 +10,7 @@ import {
   decodePixels,
   encodePixels,
   MODEL,
+  WORKERS_MODEL,
   requestSchema,
   type SkinRequest,
 } from '../../src/lib/skin-maker.ts'
@@ -19,6 +20,8 @@ import {
 type SkinEnv = Env & {
   SKIN_TURNSTILE_SECRET?: string
   SKIN_QUOTA_SALT?: string
+  SKIN_AI_MODEL?: string
+  OPENAI_API_KEY?: string
 }
 const MAX_BODY = 450_000
 export const MAX_TOKENS = 12_000
@@ -33,14 +36,47 @@ function json(value: unknown, status = 200) {
   })
 }
 function available(env: SkinEnv) {
+  const model = env.SKIN_AI_MODEL || WORKERS_MODEL
   return (
     String(env.SKIN_MAKER_ENABLED) === 'true' &&
     !!env.SKIN_TURNSTILE_SECRET &&
     !!env.SKIN_QUOTA_SALT &&
-    !!env.AI &&
+    (model === WORKERS_MODEL
+      ? !!env.AI
+      : model === MODEL && !!env.OPENAI_API_KEY?.trim()) &&
     !!env.SEARCH_RATE_LIMIT_DB &&
     !!env.SKIN_TURNSTILE_SITE_KEY
   )
+}
+
+async function generateDesign(
+  env: SkinEnv,
+  input: SkinRequest,
+): Promise<unknown> {
+  const model = env.SKIN_AI_MODEL || WORKERS_MODEL
+  if (model === WORKERS_MODEL) {
+    return env.AI.run(model, modelInput(input), {
+      signal: AbortSignal.timeout(240_000),
+    })
+  }
+  if (model !== MODEL || !env.OPENAI_API_KEY?.trim())
+    throw new Error('ai_configuration')
+  const response = await fetch('https://api.openai.com/v1/chat/completions', {
+    method: 'POST',
+    headers: {
+      Authorization: `Bearer ${env.OPENAI_API_KEY.trim()}`,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ model, ...modelInput(input) }),
+    signal: AbortSignal.timeout(240_000),
+  })
+  if (!response.ok) {
+    await response.body?.cancel()
+    throw new Error('ai_provider')
+  }
+  const body = await response.text()
+  if (body.length > 512_000) throw new Error('ai_response_size')
+  return JSON.parse(body)
 }
 const onRequestGet: PagesFunction<SkinEnv> = async ({ env }) =>
   json({
@@ -244,10 +280,7 @@ const onRequestPost: PagesFunction<SkinEnv> = async ({ request, env }) => {
     // No automatic retries: failed/refused/incomplete requests consume a reservation.
     stage = 'ai'
     await diagnostics.record(stage, 'started', 0)
-    const raw = await env.AI.run(MODEL, modelInput(input), {
-      gateway: { id: 'default', collectLog: false },
-      signal: AbortSignal.timeout(240_000),
-    })
+    const raw = await generateDesign(env, input)
     stage = 'completion'
     const design = parseCompletion(raw)
     if (
