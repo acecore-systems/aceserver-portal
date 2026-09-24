@@ -23,9 +23,9 @@ const copy = {
       '生成できませんでした。前のスキンは保持しています。繰り返し失敗する場合は、問い合わせ用IDをお知らせください。',
     invalid: 'PNG・JPEG・WebP形式で5 MB以下の参考画像を選んでください。',
     consent:
-      '画像を使う権利があり、文章・画像をCloudflareのAI処理へ送ることに同意します。',
+      '画像を使う権利があり、文章・画像をCloudflare AI Gateway経由でOpenAI GPT-6 Lunaへ送ることに同意します。',
     privacy:
-      '送信前に参考画像を最大256×256へ縮小し、メタデータを除去します。文章・画像・スキンはこのサイトに保存しません。処理にはCloudflare Workers AIを利用します。ページを閉じると作業内容は消えます。個人情報や秘密を含む画像は使わないでください。',
+      '送信前に参考画像を最大256×256へ縮小し、メタデータを除去します。文章・画像・スキンはこのサイトに保存しません。AI処理はCloudflare AI Gateway経由でOpenAI GPT-6 Lunaに送信します。Gatewayログ収集は無効ですが、OpenAI側のデータ保持条件は別途適用されます。ページを閉じると作業内容は消えます。個人情報や秘密を含む画像は使わないでください。',
     note: 'Classicは4px、Slimは3pxの腕です。ドラッグで回転できます。ゲーム側でも同じ型を選び、カスタムスキンの読み込み機能を使ってください。',
     remove: '参考画像を外す',
     webgl:
@@ -60,9 +60,9 @@ const copy = {
       'Generation failed. Your previous skin is safe. If this keeps happening, share the support ID.',
     invalid: 'Choose a PNG, JPEG or WebP reference up to 5 MB.',
     consent:
-      'I have rights to use these images and agree to send the text and images to Cloudflare for AI processing.',
+      'I have rights to use these images and agree to send the text and images to OpenAI GPT-6 Luna through Cloudflare AI Gateway.',
     privacy:
-      'References are resized to 256×256 maximum and stripped of metadata before sending. This site does not store text, images or skins. Processing uses Cloudflare Workers AI. Closing the page clears your work. Do not upload private or sensitive information.',
+      'References are resized to 256×256 maximum and stripped of metadata before sending. This site does not store text, images or skins. Processing uses OpenAI GPT-6 Luna through Cloudflare AI Gateway. Gateway request logging is disabled, but this does not control data retention by OpenAI. Closing the page clears your work. Do not upload private or sensitive information.',
     note: 'Classic has 4px arms; Slim has 3px arms. Drag to rotate. Select the same type when importing the skin in your game.',
     remove: 'Remove reference',
     webgl:
@@ -95,9 +95,9 @@ const copy = {
     error: '生成失败。之前的皮肤已保留。如果问题持续出现，请提供支持 ID。',
     invalid: '请选择不超过5 MB的PNG、JPEG或WebP参考图片。',
     consent:
-      '我有权使用这些图片，并同意将文字和图片发送至Cloudflare进行AI处理。',
+      '我有权使用这些图片，并同意通过Cloudflare AI Gateway将文字和图片发送给OpenAI GPT-6 Luna。',
     privacy:
-      '发送前，参考图片会缩小至最大256×256并移除元数据。本站不保存文字、图片或皮肤，处理使用Cloudflare Workers AI。关闭页面后工作内容会消失。请勿上传隐私或敏感信息。',
+      '发送前，参考图片会缩小至最大256×256并移除元数据。本站不保存文字、图片或皮肤，处理通过Cloudflare AI Gateway发送给OpenAI GPT-6 Luna。Gateway日志收集已关闭，但这不会控制OpenAI的数据保留政策。关闭页面后工作内容会消失。请勿上传隐私或敏感信息。',
     note: 'Classic手臂宽4像素，Slim宽3像素。拖动可旋转。在游戏中导入皮肤时请选择相同类型。',
     remove: '移除参考图片',
     webgl: '无法显示3D。请使用支持WebGL的浏览器。仍可保存下方PNG。',
@@ -130,9 +130,9 @@ const copy = {
       'No se pudo generar. Tu skin anterior se conserva. Si el problema persiste, indica el ID de soporte.',
     invalid: 'Elige una referencia PNG, JPEG o WebP de hasta 5 MB.',
     consent:
-      'Tengo derecho a usar estas imágenes y acepto enviar el texto y las imágenes a Cloudflare para su procesamiento con IA.',
+      'Tengo derecho a usar estas imágenes y acepto enviar el texto y las imágenes a OpenAI GPT-6 Luna mediante Cloudflare AI Gateway.',
     privacy:
-      'Las referencias se reducen a un máximo de 256×256 y se eliminan sus metadatos antes del envío. Este sitio no guarda textos, imágenes ni skins. Se procesan con Cloudflare Workers AI. Al cerrar la página se pierde el trabajo. No subas información privada o sensible.',
+      'Las referencias se reducen a un máximo de 256×256 y se eliminan sus metadatos antes del envío. Este sitio no guarda textos, imágenes ni skins. Se procesan con OpenAI GPT-6 Luna mediante Cloudflare AI Gateway. El registro de Gateway está desactivado, pero esto no controla la retención de datos de OpenAI. Al cerrar la página se pierde el trabajo. No subas información privada o sensible.',
     note: 'Classic tiene brazos de 4px; Slim, de 3px. Arrastra para girar. Selecciona el mismo tipo al importar la skin en el juego.',
     remove: 'Quitar referencia',
     webgl:
@@ -167,9 +167,9 @@ const copy = {
       'Não foi possível gerar. Sua skin anterior foi mantida. Se o problema persistir, informe o ID de suporte.',
     invalid: 'Escolha uma referência PNG, JPEG ou WebP de até 5 MB.',
     consent:
-      'Tenho direito de usar estas imagens e concordo em enviar o texto e as imagens à Cloudflare para processamento por IA.',
+      'Tenho direito de usar estas imagens e concordo em enviar o texto e as imagens ao OpenAI GPT-6 Luna pelo Cloudflare AI Gateway.',
     privacy:
-      'Referências são reduzidas a no máximo 256×256 e têm os metadados removidos antes do envio. Este site não armazena textos, imagens ou skins. O processamento usa Cloudflare Workers AI. Fechar a página apaga seu trabalho. Não envie informações privadas ou sensíveis.',
+      'Referências são reduzidas a no máximo 256×256 e têm os metadados removidos antes do envio. Este site não armazena textos, imagens ou skins. O processamento usa OpenAI GPT-6 Luna por meio do Cloudflare AI Gateway. O registro de solicitações do Gateway está desativado, mas isso não controla a retenção de dados da OpenAI. Fechar a página apaga seu trabalho. Não envie informações privadas ou sensíveis.',
     note: 'Classic tem braços de 4px; Slim, de 3px. Arraste para girar. Selecione o mesmo tipo ao importar a skin no jogo.',
     remove: 'Remover referência',
     webgl:
@@ -204,9 +204,9 @@ const copy = {
       'La génération a échoué. Votre skin précédent est conservé. Si le problème persiste, communiquez l’ID de suivi.',
     invalid: 'Choisissez une référence PNG, JPEG ou WebP de 5 Mo maximum.',
     consent:
-      'Je dispose des droits sur ces images et j’accepte d’envoyer le texte et les images à Cloudflare pour traitement par IA.',
+      'Je dispose des droits sur ces images et j’accepte d’envoyer le texte et les images à OpenAI GPT-6 Luna via Cloudflare AI Gateway.',
     privacy:
-      'Les références sont réduites à 256×256 maximum et leurs métadonnées supprimées avant envoi. Ce site ne conserve ni textes, ni images, ni skins. Le traitement utilise Cloudflare Workers AI. Fermer la page efface votre travail. N’envoyez pas d’informations privées ou sensibles.',
+      'Les références sont réduites à 256×256 maximum et leurs métadonnées supprimées avant envoi. Ce site ne conserve ni textes, ni images, ni skins. Le traitement utilise OpenAI GPT-6 Luna via Cloudflare AI Gateway. La journalisation des requêtes Gateway est désactivée, mais cela ne contrôle pas la conservation des données par OpenAI. Fermer la page efface votre travail. N’envoyez pas d’informations privées ou sensibles.',
     note: 'Classic a des bras de 4px ; Slim de 3px. Faites glisser pour tourner. Choisissez le même type lors de l’importation dans le jeu.',
     remove: 'Retirer la référence',
     webgl:
@@ -241,9 +241,9 @@ const copy = {
       '생성하지 못했습니다. 이전 스킨은 유지됩니다. 계속 실패하면 문의 ID를 알려 주세요.',
     invalid: '5 MB 이하의 PNG, JPEG 또는 WebP 참고 이미지를 선택하세요.',
     consent:
-      '이 이미지를 사용할 권리가 있으며 글과 이미지를 Cloudflare의 AI 처리로 보내는 데 동의합니다.',
+      '이 이미지를 사용할 권리가 있으며 글과 이미지를 Cloudflare AI Gateway를 통해 OpenAI GPT-6 Luna로 보내는 데 동의합니다.',
     privacy:
-      '참고 이미지는 전송 전에 최대 256×256으로 축소하고 메타데이터를 제거합니다. 이 사이트는 글, 이미지, 스킨을 저장하지 않습니다. Cloudflare Workers AI로 처리합니다. 페이지를 닫으면 작업 내용이 사라집니다. 개인정보나 민감한 정보는 올리지 마세요.',
+      '참고 이미지는 전송 전에 최대 256×256으로 축소하고 메타데이터를 제거합니다. 이 사이트는 글, 이미지, 스킨을 저장하지 않습니다. Cloudflare AI Gateway를 통해 OpenAI GPT-6 Luna로 처리합니다. Gateway 요청 로그는 꺼져 있지만 OpenAI의 데이터 보관 조건은 별도로 적용됩니다. 페이지를 닫으면 작업 내용이 사라집니다. 개인정보나 민감한 정보는 올리지 마세요.',
     note: 'Classic은 4px, Slim은 3px 팔입니다. 드래그하여 회전하세요. 게임에서 스킨을 불러올 때 같은 유형을 선택하세요.',
     remove: '참고 이미지 제거',
     webgl:
@@ -278,9 +278,9 @@ const copy = {
       'Generierung fehlgeschlagen. Dein vorheriger Skin bleibt erhalten. Teile bei wiederholten Fehlern die Support-ID mit.',
     invalid: 'Wähle ein PNG-, JPEG- oder WebP-Referenzbild bis 5 MB.',
     consent:
-      'Ich darf diese Bilder verwenden und stimme zu, Text und Bilder zur KI-Verarbeitung an Cloudflare zu senden.',
+      'Ich darf diese Bilder verwenden und stimme zu, Text und Bilder über Cloudflare AI Gateway an OpenAI GPT-6 Luna zu senden.',
     privacy:
-      'Vorlagen werden vor dem Senden auf höchstens 256×256 verkleinert und Metadaten entfernt. Diese Website speichert keine Texte, Bilder oder Skins. Die Verarbeitung erfolgt mit Cloudflare Workers AI. Beim Schließen der Seite geht die Arbeit verloren. Lade keine privaten oder sensiblen Daten hoch.',
+      'Vorlagen werden vor dem Senden auf höchstens 256×256 verkleinert und Metadaten entfernt. Diese Website speichert keine Texte, Bilder oder Skins. Die Verarbeitung erfolgt über Cloudflare AI Gateway mit OpenAI GPT-6 Luna. Gateway-Anfragelogs sind deaktiviert, aber dies steuert nicht die Datenspeicherung durch OpenAI. Beim Schließen der Seite geht die Arbeit verloren. Lade keine privaten oder sensiblen Daten hoch.',
     note: 'Classic hat 4px breite Arme, Slim 3px. Ziehe zum Drehen. Wähle beim Import im Spiel denselben Typ.',
     remove: 'Vorlage entfernen',
     webgl:
@@ -315,9 +315,9 @@ const copy = {
       'Не удалось создать скин. Предыдущий скин сохранён. Если ошибка повторяется, сообщите ID обращения.',
     invalid: 'Выберите образец PNG, JPEG или WebP размером до 5 МБ.',
     consent:
-      'У меня есть право использовать эти изображения, и я согласен отправить текст и изображения в Cloudflare для обработки ИИ.',
+      'У меня есть право использовать эти изображения, и я согласен отправить текст и изображения в OpenAI GPT-6 Luna через Cloudflare AI Gateway.',
     privacy:
-      'Перед отправкой образцы уменьшаются до 256×256, метаданные удаляются. Сайт не хранит тексты, изображения и скины. Обработка выполняется в Cloudflare Workers AI. При закрытии страницы работа удаляется. Не загружайте личные или конфиденциальные данные.',
+      'Перед отправкой образцы уменьшаются до 256×256, метаданные удаляются. Сайт не хранит тексты, изображения и скины. Обработка выполняется с помощью OpenAI GPT-6 Luna через Cloudflare AI Gateway. Сбор журналов Gateway отключён, но это не регулирует сроки хранения данных OpenAI. При закрытии страницы работа удаляется. Не загружайте личные или конфиденциальные данные.',
     note: 'У Classic руки шириной 4px, у Slim — 3px. Перетаскивайте для вращения. При импорте в игру выберите тот же тип.',
     remove: 'Убрать образец',
     webgl:

@@ -120,7 +120,6 @@ export function modelInput(request: SkinRequest) {
     ],
     max_completion_tokens: MAX_TOKENS,
     reasoning_effort: 'low' as const,
-    temperature: 0.4,
     store: false,
     stream: false as const,
   }
@@ -246,6 +245,7 @@ const onRequestPost: PagesFunction<SkinEnv> = async ({ request, env }) => {
     stage = 'ai'
     await diagnostics.record(stage, 'started', 0)
     const raw = await env.AI.run(MODEL, modelInput(input), {
+      gateway: { id: 'default', collectLog: false },
       signal: AbortSignal.timeout(240_000),
     })
     stage = 'completion'
