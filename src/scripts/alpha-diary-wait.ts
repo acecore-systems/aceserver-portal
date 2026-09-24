@@ -1,6 +1,18 @@
 export const DIARY_LONG_WAIT_MS = 30_000
+export const DIARY_REQUEST_TIMEOUT_MS = 20_000
+export const DIARY_HISTORICAL_PREPARATION_TIMEOUT_MS = 60_000
 export const DIARY_METRICS_ENDPOINT = '/api/alpha-diary-metrics'
 export const DIARY_METRICS_RELEASE = 'diary-wait-v2'
+
+export function diaryEntryRequestTimeoutMs(
+  recordDate: string,
+  serverToday: string,
+  resumeWaiting: boolean,
+): number {
+  return recordDate && recordDate < serverToday && !resumeWaiting
+    ? DIARY_HISTORICAL_PREPARATION_TIMEOUT_MS
+    : DIARY_REQUEST_TIMEOUT_MS
+}
 
 export function diaryRateLimitRetryAfterSeconds(
   httpStatus: number,

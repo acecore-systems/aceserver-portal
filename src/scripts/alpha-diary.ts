@@ -5,7 +5,9 @@ import {
   DiaryReadyEntryCache,
   type DiaryLoadOutcome,
   DiaryRequestTimeoutError,
+  DIARY_REQUEST_TIMEOUT_MS,
   DiaryWaitLifecycle,
+  diaryEntryRequestTimeoutMs,
   diaryRateLimitRetryAfterSeconds,
   requestJsonWithDiaryTimeout,
   reportDiaryLoadMeasurement,
@@ -54,7 +56,6 @@ const MINIMUM_DATE = '0001-01-01'
 const CONSENT_VERSION = '1'
 const CONSENT_STORAGE_KEY = 'alpha-diary.content-consent.v1'
 const CLIENT_ID_STORAGE_KEY = 'alpha-diary.client.v1'
-const DIARY_REQUEST_TIMEOUT_MS = 20_000
 const DIARY_NAVIGATION_DEBOUNCE_MS = 400
 
 let diaryController: AbortController | null = null
@@ -584,6 +585,11 @@ export function initAlphaDiary() {
               : {}),
           },
           controller.signal,
+          diaryEntryRequestTimeoutMs(
+            date,
+            serverToday,
+            Boolean(options.resumeWaiting),
+          ),
         ))
       if (!isCurrentEntryRequest(requestId, controller)) return false
       if (
@@ -1385,6 +1391,7 @@ async function requestDiary(
   endpoint: string,
   body: Record<string, unknown>,
   signal: AbortSignal,
+  timeoutMs = DIARY_REQUEST_TIMEOUT_MS,
 ): Promise<DiaryPayload> {
   let responseStatus = 0
   let retryAfterHeader: string | null = null
@@ -1405,7 +1412,7 @@ async function requestDiary(
         return response
       }),
     signal,
-    DIARY_REQUEST_TIMEOUT_MS,
+    timeoutMs,
     {
       clearTimeout: (timer) => window.clearTimeout(timer),
       setTimeout: (callback, delay) => window.setTimeout(callback, delay),
