@@ -25,6 +25,9 @@ type SkinEnv = Env & {
 }
 const MAX_BODY = 450_000
 export const MAX_TOKENS = 12_000
+function configuredModel(value: string | undefined): string {
+  return value || WORKERS_MODEL
+}
 function json(value: unknown, status = 200) {
   return Response.json(value, {
     status,
@@ -36,7 +39,7 @@ function json(value: unknown, status = 200) {
   })
 }
 function available(env: SkinEnv) {
-  const model = env.SKIN_AI_MODEL || WORKERS_MODEL
+  const model = configuredModel(env.SKIN_AI_MODEL)
   return (
     String(env.SKIN_MAKER_ENABLED) === 'true' &&
     !!env.SKIN_TURNSTILE_SECRET &&
@@ -53,7 +56,7 @@ async function generateDesign(
   env: SkinEnv,
   input: SkinRequest,
 ): Promise<unknown> {
-  const model = env.SKIN_AI_MODEL || WORKERS_MODEL
+  const model = configuredModel(env.SKIN_AI_MODEL)
   if (model === WORKERS_MODEL) {
     return env.AI.run(model, modelInput(input), {
       signal: AbortSignal.timeout(240_000),
