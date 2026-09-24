@@ -13,6 +13,7 @@ const EXPECTED_STORY_SLUGS = new Set([
   'aceserver-hijacked',
   'aceserver-portal-launch',
   'aceserver-beginners-guide',
+  'alpha-diary-guide',
   'minecraft-java-bedrock-crossplay',
   'minecraft-java-bedrock-shared-server',
   'minecraft-server-cannot-join',
