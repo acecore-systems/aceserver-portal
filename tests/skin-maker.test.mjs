@@ -7,6 +7,7 @@ import {
   PARTS,
   FACES,
   LAYERS,
+  WORKERS_MODEL,
   regions,
   applyDesign,
   decodePixels,
@@ -247,6 +248,7 @@ test('SQL atomically caps per-minute, daily client and global reservations', () 
 
 test('API fails closed, verifies hostname/action and does not spend on invalid or over-quota requests', async () => {
   const db = database()
+  const aiCalls = []
   let calls = 0,
     verification = {
       success: true,
@@ -261,7 +263,8 @@ test('API fails closed, verifies hostname/action and does not spend on invalid o
     SKIN_QUOTA_SALT: 'synthetic-salt',
     SKIN_TURNSTILE_SITE_KEY: 'test',
     AI: {
-      run: async () => {
+      run: async (model, input, options) => {
+        aiCalls.push({ model, input, options })
         calls++
         return {
           choices: [
@@ -333,6 +336,8 @@ test('API fails closed, verifies hostname/action and does not spend on invalid o
     const response = await send()
     assert.equal(response.status, 200)
     assert.equal(response.headers.get('cache-control'), 'no-store')
+    assert.equal(aiCalls[0].model, WORKERS_MODEL)
+    assert.equal(aiCalls[0].options.gateway, undefined)
     assert.deepEqual(
       decodePixels((await response.json()).pixels, 64, 64),
       skin(),
@@ -374,6 +379,8 @@ test('API fails closed, verifies hostname/action and does not spend on invalid o
 test('all supported locales have complete nonempty controls', () => {
   for (const locale of LOCALES) {
     const c = getSkinMakerUi(locale)
+    assert.match(c.consent, /OpenAI GPT-6 Luna/)
+    assert.match(c.privacy, /OpenAI/)
     assert.ok(
       Object.values(c).every((v) =>
         Array.isArray(v) ? v.every(Boolean) : !!v,
@@ -413,6 +420,8 @@ test('completion parsing and reference input remain available', () => {
   })
   assert.equal(input.max_completion_tokens, MAX_TOKENS)
   assert.equal(input.store, false)
+  assert.equal(input.reasoning_effort, 'low')
+  assert.equal('temperature' in input, false)
   assert.ok(
     input.messages[0].content.some(
       (v) => v.type === 'image_url' && v.image_url.url === skinPngUrl(skin()),
