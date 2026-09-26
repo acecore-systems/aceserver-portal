@@ -10,7 +10,7 @@ import {
   decodePixels,
   encodePixels,
   MODEL,
-  WORKERS_MODEL,
+  isWorkersSkinModel,
   requestSchema,
   type SkinRequest,
 } from '../../src/lib/skin-maker.ts'
@@ -44,7 +44,7 @@ function available(env: SkinEnv) {
     String(env.SKIN_MAKER_ENABLED) === 'true' &&
     !!env.SKIN_TURNSTILE_SECRET &&
     !!env.SKIN_QUOTA_SALT &&
-    (model === WORKERS_MODEL
+    (isWorkersSkinModel(model)
       ? !!env.AI
       : model === MODEL && !!env.SKIN_OPENAI_SERVICE) &&
     !!env.SEARCH_RATE_LIMIT_DB &&
@@ -57,8 +57,14 @@ async function generateDesign(
   input: SkinRequest,
 ): Promise<unknown> {
   const model = configuredModel(env.SKIN_AI_MODEL)
-  if (model === WORKERS_MODEL) {
-    return env.AI.run(model, modelInput(input), {
+  if (isWorkersSkinModel(model)) {
+    return (
+      env.AI.run as (
+        model: string,
+        input: unknown,
+        options: unknown,
+      ) => Promise<unknown>
+    )(model, modelInput(input), {
       signal: AbortSignal.timeout(240_000),
     })
   }

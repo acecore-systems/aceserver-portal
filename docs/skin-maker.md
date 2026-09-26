@@ -30,7 +30,7 @@
 2. Content-Lengthを信用せず、ストリームの実バイト数を450,000 bytesで制限。文章1,200文字、参考画像最大256×256のRGBAだけを受理する。任意URLや任意モデルの指定は受け付けない。
 3. Turnstile Siteverifyの成功、hostname完全一致、`action=skin-maker`を確認する。トークンは毎回使い切り、失効・エラー時に生成ボタンを無効化する。
 4. Cloudflareの`CF-Connecting-IP`を秘密saltによるHMAC-SHA256へ変換する。D1の**単一INSERT SELECT**で、同じIPの60秒内1回・UTC日次5回・全体UTC日次100回を同時に確認し予約する。複数PoPのメモリカウンターや非atomicなread→writeに依存しない。
-5. 予約後のみ`SKIN_AI_MODEL`で選択したモデルを1回呼ぶ。`gpt-6-luna`ならPages secret `OPENAI_API_KEY`でOpenAI APIへ直接送信し、`@cf/zai-org/glm-5.3-flash`ならWorkers AI bindingを使う。出力上限12,000 tokens、`reasoning_effort=low`、`store=false`、サーバー側240秒timeout。クライアント待ちは270秒。自動retry・他モデルへのfallbackはしない。
+5. 予約後のみ`SKIN_AI_MODEL`で選択したモデルを1回呼ぶ。現在の`gpt-6-luna`は非公開Worker経由でOpenAI APIへ直接送信する。将来、検証済みのGLM以外の`@cf/`文章モデルを明示設定した場合はWorkers AI bindingを使う。出力上限12,000 tokens、`reasoning_effort=low`、`store=false`、サーバー側240秒timeout。クライアント待ちは270秒。自動retry・他モデルへのfallbackはしない。
 6. 失敗・拒否・出力不正でも予約を戻さない。応答にupstreamエラー本文や入力を含めない。危険な出力・画像埋め込み・任意コードを実行する仕組みはない。
 
 IPv6のアドレス変更や分散したアクセスでは個別上限を回避できるが、全体上限100回/日は残る。IP共有環境では上限を共有する。公開前にCloudflare WAFで当該POSTルートへの送信数を制限することも検討する。API前段の大量リクエストまでD1予約だけで無料になるわけではない。
@@ -43,7 +43,7 @@ IPv6のアドレス変更や分散したアクセスでは個別上限を回避�
 - 送信時の同意チェックで、使用権限と文章・画像を選択中のOpenAIまたはCloudflare Workers AIへ送信することを明示する。個人情報・秘密を含む画像を避ける案内を9言語で表示する。
 - 自サイトでは文章・画像・生成物をD1/R2/KV/localStorageに保存しない。参考画像を選ぶだけではAIへ送らない。永続的なギャラリー・公開共有機能はない。
 - D1には予約ID、UTC日付、IPのHMAC、時刻だけを記録する。成功した予約処理時に48時間より古い行を削除する。アクセスが止まった場合は自動で削除されないので、下記の定期メンテナンスを行う。
-- プロンプト・画像・AI応答を`console.log`しない。OpenAI選択時はOpenAIアカウントのデータ保持条件、GLM選択時はWorkers AIの条件を公開前に確認する。
+- プロンプト・画像・AI応答を`console.log`しない。OpenAI選択時はOpenAIアカウントのデータ保持条件、将来のWorkers AI選択時は該当モデルの条件を公開前に確認する。
 - モデルへの安全指示は拒否を要求するが、すべての不適切な画像を検出する専用分類器ではない。広範な安全性評価は未実施。公開共有を追加するなら別途モデレーション設計が必要。
 
 ## 公開・再設定手順
