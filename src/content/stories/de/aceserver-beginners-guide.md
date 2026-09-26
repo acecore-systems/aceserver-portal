@@ -2,7 +2,7 @@
 title: 'Aceserver-Einsteigerleitfaden: Portal, Weltkarten, Videos, WIKI und Verbindung'
 description: Neu bei Aceserver? Erfahre, wann du das offizielle Portal, Weltkarten, Videos und das WIKI nutzt und wo du nachsiehst, wenn du nicht beitreten kannst.
 translationOf: aceserver-beginners-guide
-sourceHash: sha256:beb235e56d29c1e7d3c93fdc88c4fa4d604e8db40c358cfa3ffaaaa40c2dae95
+sourceHash: sha256:0662621e2658ea3322c3c1818487357be032906fc9b34fdf44b807770880206c
 date: 2026-08-09T10:00:00+09:00
 tags:
   - Minecraft
@@ -22,10 +22,10 @@ Verbindungsziele, Ports, gerätespezifische Schritte einschließlich Switch, Tei
 
 ## Die ersten vier offiziellen Anlaufstellen
 
-1. Öffne das [offizielle Aceserver-Portal](/de/), um die Haupteinstiege und Hinweise zu sehen.
+1. Öffne das [offizielle Aceserver-Portal](/de/), um die Haupteinstiege zu sehen.
 2. Tritt dem [offiziellen Discord](https://discord.gg/acsv) bei und prüfe die neuesten Hinweise zu Teilnahme und Wartung.
 3. Lies die aktuellen Schritte im [Aceserver-WIKI zur Teilnahme](https://asv-wiki.acecore.net/article/in/).
-4. Lies vor dem Spiel die [Regeln und Ban-Bedingungen im Aceserver-WIKI](https://asv-wiki.acecore.net/article/rule/).
+4. Lies vor dem Spiel die [Regelübersicht im Aceserver-WIKI](https://asv-wiki.acecore.net/article/rules-index/).
 
 Mit dieser Reihenfolge erreichst du Informationen für das aktuelle Aceserver statt eines alten Artikels oder einer inoffiziellen Verbindungsmethode. Wenn etwas unklar ist, rate nicht, sondern frage im offiziellen Discord nach.
 
@@ -64,15 +64,7 @@ Videos sind ein Einstieg in die Community. Nimm nicht an, dass ein in einem alte
 
 ## Nutze das WIKI, um Teilnahme und Regeln zu bestätigen
 
-Das [Aceserver-WIKI zur Teilnahme](https://asv-wiki.acecore.net/article/in/) ist die Quelle für den Beitritt, und die [Regeln und Ban-Bedingungen im Aceserver-WIKI](https://asv-wiki.acecore.net/article/rule/) sind die Quelle für das Verhalten. Prüfe vor deinem ersten Besuch, wie diese Punkte zu deiner Spielweise passen.
-
-- Respektiere andere Teilnehmende, ihre Bauwerke, Feldfrüchte, Tiere und persönlichen Daten.
-- Frage die Eigentümerin oder den Eigentümer, bevor du ein fremdes Bauwerk oder Grundstück betrittst.
-- Nutze keine serverbelastenden Geräte, verbotenen Clients oder Cheats.
-- Große Bauten, Geländeänderungen, Grabungen und Geräte können eine Bestätigung oder einen Antrag erfordern.
-- Frage bei Unsicherheit das Team, statt selbst zu entscheiden.
-
-Dies ersetzt nicht die ausführlichen Regeln. Bedingungen und Geltungsbereich können sich ändern; lies das WIKI selbst für genaue Zahlen und verbotene Handlungen.
+Prüfe die Schritte im [Aceserver-WIKI zur Teilnahme](https://asv-wiki.acecore.net/article/in/) und wähle die Regeln für Community, Minecraft, den jeweiligen Server und Discord in der [Regelübersicht](https://asv-wiki.acecore.net/article/rules-index/). Die offiziellen Discord-Beiträge sind die Quelle der Regeln. Falls WIKI und Discord voneinander abweichen, prüfe Discord und frage bei Unsicherheit das Team.
 
 ## Tritt beim ersten Mal in dieser Reihenfolge bei
 

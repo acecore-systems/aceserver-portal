@@ -2,7 +2,7 @@
 title: 'Aceserver Beginner Guide: Portal, World Maps, Videos, WIKI, and Connection Help'
 description: New to Aceserver? Learn when to use the official portal, world maps, videos, and WIKI, and where to check if you cannot join.
 translationOf: aceserver-beginners-guide
-sourceHash: sha256:beb235e56d29c1e7d3c93fdc88c4fa4d604e8db40c358cfa3ffaaaa40c2dae95
+sourceHash: sha256:0662621e2658ea3322c3c1818487357be032906fc9b34fdf44b807770880206c
 date: 2026-08-09T10:00:00+09:00
 tags:
   - Minecraft
@@ -22,10 +22,10 @@ Connection destinations, ports, device-specific steps including Switch, joining 
 
 ## The first four official places to open
 
-1. Check the [official Aceserver portal](/en/) for the main entry points and notices.
+1. Check the [official Aceserver portal](/en/) for the main entry points.
 2. Join the [official Discord](https://discord.gg/acsv) and check the latest joining and maintenance notices.
 3. Read the current joining steps in the [Aceserver WIKI joining guide](https://asv-wiki.acecore.net/article/in/).
-4. Read the [Aceserver WIKI rules and ban conditions](https://asv-wiki.acecore.net/article/rule/) before entering the game.
+4. Read the [Aceserver WIKI rules index](https://asv-wiki.acecore.net/article/rules-index/) before entering the game.
 
 Following this order takes you to information for the current Aceserver instead of relying on an old article or an unofficial connection method. If anything is unclear, do not guess; ask through the official Discord.
 
@@ -64,15 +64,7 @@ Videos are a doorway to understanding the community. Do not assume that a connec
 
 ## Use the WIKI to confirm joining steps and rules
 
-The [Aceserver WIKI joining guide](https://asv-wiki.acecore.net/article/in/) is the authority for joining steps, and the [Aceserver WIKI rules and ban conditions](https://asv-wiki.acecore.net/article/rule/) are the authority for conduct. Before your first visit, check how these points affect the way you want to play.
-
-- Respect other participants, their builds, crops, animals, and personal information.
-- Ask the owner before entering another person's build or plot.
-- Do not use server-heavy devices, prohibited clients, or cheats.
-- Large builds, terraforming, excavation, and devices can require confirmation or an application.
-- When you are unsure, ask staff instead of deciding on your own.
-
-This is not a replacement for the detailed rules. Conditions and scope can change, so read the WIKI itself for exact numbers and prohibited actions.
+Use the [Aceserver WIKI joining guide](https://asv-wiki.acecore.net/article/in/) for the steps, then choose the community, Minecraft, server, and Discord rules from the [rules index](https://asv-wiki.acecore.net/article/rules-index/). The official Discord posts are the source for rules. If the WIKI and Discord differ, check Discord and ask staff when unsure.
 
 ## Join for the first time in this order
 

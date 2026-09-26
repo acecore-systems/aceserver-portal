@@ -2,7 +2,7 @@
 title: 'Aceserver 초보자 가이드: 포털, 월드 맵, 동영상, WIKI, 접속 문제'
 description: Aceserver가 처음이신가요? 공식 포털, 월드 맵, 동영상, WIKI를 언제 이용하는지와 접속할 수 없을 때 확인할 곳을 안내합니다.
 translationOf: aceserver-beginners-guide
-sourceHash: sha256:beb235e56d29c1e7d3c93fdc88c4fa4d604e8db40c358cfa3ffaaaa40c2dae95
+sourceHash: sha256:0662621e2658ea3322c3c1818487357be032906fc9b34fdf44b807770880206c
 date: 2026-08-09T10:00:00+09:00
 tags:
   - Minecraft
@@ -22,10 +22,10 @@ Aceserver를 처음 방문하면 무엇부터 확인해야 할지 막막할 수 
 
 ## 먼저 열어 볼 네 가지 공식 안내
 
-1. [Aceserver 공식 포털](/ko/)에서 주요 입구와 공지를 확인합니다.
+1. [Aceserver 공식 포털](/ko/)에서 주요 입구를 확인합니다.
 2. [공식 Discord](https://discord.gg/acsv)에 참가하여 최신 참가 및 점검 공지를 확인합니다.
 3. [Aceserver WIKI의 참가 방법](https://asv-wiki.acecore.net/article/in/)에서 현재 참가 절차를 확인합니다.
-4. 게임에 들어가기 전에 [Aceserver WIKI의 규칙 및 BAN 조건](https://asv-wiki.acecore.net/article/rule/)을 읽습니다.
+4. 게임에 들어가기 전에 [Aceserver WIKI의 규칙 목록](https://asv-wiki.acecore.net/article/rules-index/)을 읽습니다.
 
 이 순서를 따르면 오래된 소개 글이나 비공식 접속 방법이 아니라 현재 Aceserver에 맞는 정보에 도달할 수 있습니다. 모르는 항목은 추측하지 말고 공식 Discord에서 질문하세요.
 
@@ -64,15 +64,7 @@ Java와 Bedrock이 함께 플레이할 수 있는 조건과 지원 서버를 구
 
 ## WIKI에서 참가 방법과 규칙 확인하기
 
-[Aceserver WIKI의 참가 방법](https://asv-wiki.acecore.net/article/in/)은 참가 절차의 기준이며, [Aceserver WIKI의 규칙 및 BAN 조건](https://asv-wiki.acecore.net/article/rule/)은 행동 기준의 근거입니다. 처음 참가하기 전에는 다음 사항이 자신의 플레이 방식과 어떻게 관련되는지 확인하세요.
-
-- 다른 참가자, 건축물, 작물, 동물, 개인정보를 존중합니다.
-- 다른 사람의 건축물이나 부지에 들어가기 전 소유자의 허락을 받습니다.
-- 서버에 부담을 주는 장치, 금지된 클라이언트, 치트를 사용하지 않습니다.
-- 큰 건축, 지형 정리, 채굴, 장치는 확인이나 신청이 필요할 수 있습니다.
-- 확신이 없을 때는 스스로 결정하지 말고 운영진이나 스태프에게 물어봅니다.
-
-이 목록은 상세 규칙을 대신하지 않습니다. 조건과 적용 범위는 바뀔 수 있으므로 정확한 수치와 금지 행위는 반드시 WIKI 본문에서 읽어 주세요.
+[Aceserver WIKI의 참가 방법](https://asv-wiki.acecore.net/article/in/)에서 절차를 확인하고, [규칙 목록](https://asv-wiki.acecore.net/article/rules-index/)에서 커뮤니티, Minecraft, 각 서버 및 Discord에 적용되는 규칙을 선택하세요. 규칙의 원문은 공식 Discord 게시글입니다. WIKI와 Discord 내용이 다르면 Discord를 확인하고, 확실하지 않을 때는 운영진에게 문의하세요.
 
 ## 처음 참가할 때는 이 순서로 진행하세요
 

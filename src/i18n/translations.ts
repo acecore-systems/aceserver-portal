@@ -262,7 +262,7 @@ export const JA_UI: UiCopy = {
 
 const en: LocaleTranslation = {
   sourceHash:
-    'sha256:bb0297b8fd967ab361691529ce8f51b59b4693d6847e34cbb4c38e65a2818655',
+    'sha256:c0d5d0c1ca92a27bd89116e286c11dcca0f8617070e262e078cf767d83cce9d2',
   ui: {
     siteTitleSuffix: 'Official portal for the free public Minecraft server',
     homeTitleParts: ['Ace', 'server'],
@@ -454,7 +454,7 @@ const en: LocaleTranslation = {
         {
           shoulderCopy: 'aceserver wiki',
           titleCopy: 'Aceserver WIKI',
-          text: 'A community WIKI that anyone can help edit',
+          text: 'The official Aceserver WIKI for joining guides and rules',
           ctaLabel: 'Open the WIKI',
         },
       ],
@@ -506,7 +506,7 @@ const en: LocaleTranslation = {
 
 const zhCn: LocaleTranslation = {
   sourceHash:
-    'sha256:bb0297b8fd967ab361691529ce8f51b59b4693d6847e34cbb4c38e65a2818655',
+    'sha256:c0d5d0c1ca92a27bd89116e286c11dcca0f8617070e262e078cf767d83cce9d2',
   ui: {
     siteTitleSuffix: '免费公开 Minecraft 服务器官方门户',
     homeTitleParts: ['Ace', 'server'],
@@ -688,7 +688,7 @@ const zhCn: LocaleTranslation = {
         {
           shoulderCopy: 'aceserver wiki',
           titleCopy: 'Aceserver WIKI',
-          text: '任何人都可以参与编辑的社区 WIKI',
+          text: '查看加入方式和规则的 Aceserver 官方 WIKI',
           ctaLabel: '打开 WIKI',
         },
       ],
@@ -740,7 +740,7 @@ const zhCn: LocaleTranslation = {
 
 const es: LocaleTranslation = {
   sourceHash:
-    'sha256:bb0297b8fd967ab361691529ce8f51b59b4693d6847e34cbb4c38e65a2818655',
+    'sha256:c0d5d0c1ca92a27bd89116e286c11dcca0f8617070e262e078cf767d83cce9d2',
   ui: {
     siteTitleSuffix:
       'Portal oficial del servidor público gratuito de Minecraft',
@@ -929,7 +929,7 @@ const es: LocaleTranslation = {
         {
           shoulderCopy: 'aceserver wiki',
           titleCopy: 'WIKI de Aceserver',
-          text: 'Una WIKI comunitaria que cualquiera puede editar',
+          text: 'La WIKI oficial de Aceserver para consultar cómo unirse y las reglas',
           ctaLabel: 'Abrir la WIKI',
         },
       ],
@@ -981,7 +981,7 @@ const es: LocaleTranslation = {
 
 const pt: LocaleTranslation = {
   sourceHash:
-    'sha256:bb0297b8fd967ab361691529ce8f51b59b4693d6847e34cbb4c38e65a2818655',
+    'sha256:c0d5d0c1ca92a27bd89116e286c11dcca0f8617070e262e078cf767d83cce9d2',
   ui: {
     siteTitleSuffix: 'Portal oficial do servidor público gratuito de Minecraft',
     homeTitleParts: ['Ace', 'server'],
@@ -1170,7 +1170,7 @@ const pt: LocaleTranslation = {
         {
           shoulderCopy: 'aceserver wiki',
           titleCopy: 'WIKI do Aceserver',
-          text: 'Uma WIKI comunitária que qualquer pessoa pode editar',
+          text: 'A WIKI oficial do Aceserver para consultar como participar e as regras',
           ctaLabel: 'Abrir a WIKI',
         },
       ],
@@ -1222,7 +1222,7 @@ const pt: LocaleTranslation = {
 
 const fr: LocaleTranslation = {
   sourceHash:
-    'sha256:bb0297b8fd967ab361691529ce8f51b59b4693d6847e34cbb4c38e65a2818655',
+    'sha256:c0d5d0c1ca92a27bd89116e286c11dcca0f8617070e262e078cf767d83cce9d2',
   ui: {
     siteTitleSuffix: 'Portail officiel du serveur Minecraft public et gratuit',
     homeTitleParts: ['Ace', 'server'],
@@ -1411,7 +1411,7 @@ const fr: LocaleTranslation = {
         {
           shoulderCopy: 'aceserver wiki',
           titleCopy: 'WIKI Aceserver',
-          text: 'Un WIKI communautaire que chacun peut modifier',
+          text: 'Le WIKI officiel d’Aceserver pour consulter les étapes et les règles',
           ctaLabel: 'Ouvrir le WIKI',
         },
       ],
@@ -1463,7 +1463,7 @@ const fr: LocaleTranslation = {
 
 const ko: LocaleTranslation = {
   sourceHash:
-    'sha256:bb0297b8fd967ab361691529ce8f51b59b4693d6847e34cbb4c38e65a2818655',
+    'sha256:c0d5d0c1ca92a27bd89116e286c11dcca0f8617070e262e078cf767d83cce9d2',
   ui: {
     siteTitleSuffix: '무료 공개 Minecraft 서버 공식 포털',
     homeTitleParts: ['Ace', 'server'],
@@ -1650,7 +1650,7 @@ const ko: LocaleTranslation = {
         {
           shoulderCopy: 'aceserver wiki',
           titleCopy: 'Aceserver WIKI',
-          text: '누구나 편집에 참여할 수 있는 커뮤니티 WIKI',
+          text: '참가 방법과 규칙을 확인하는 Aceserver 공식 WIKI',
           ctaLabel: 'WIKI 열기',
         },
       ],
@@ -1702,7 +1702,7 @@ const ko: LocaleTranslation = {
 
 const de: LocaleTranslation = {
   sourceHash:
-    'sha256:bb0297b8fd967ab361691529ce8f51b59b4693d6847e34cbb4c38e65a2818655',
+    'sha256:c0d5d0c1ca92a27bd89116e286c11dcca0f8617070e262e078cf767d83cce9d2',
   ui: {
     siteTitleSuffix:
       'Offizielles Portal des kostenlosen öffentlichen Minecraft-Servers',
@@ -1896,7 +1896,7 @@ const de: LocaleTranslation = {
         {
           shoulderCopy: 'aceserver wiki',
           titleCopy: 'Aceserver WIKI',
-          text: 'Ein Community-WIKI, an dem alle mitarbeiten können',
+          text: 'Das offizielle Aceserver-WIKI für Teilnahme und Regeln',
           ctaLabel: 'WIKI öffnen',
         },
       ],
@@ -1948,7 +1948,7 @@ const de: LocaleTranslation = {
 
 const ru: LocaleTranslation = {
   sourceHash:
-    'sha256:bb0297b8fd967ab361691529ce8f51b59b4693d6847e34cbb4c38e65a2818655',
+    'sha256:c0d5d0c1ca92a27bd89116e286c11dcca0f8617070e262e078cf767d83cce9d2',
   ui: {
     siteTitleSuffix:
       'Официальный портал бесплатного публичного сервера Minecraft',
@@ -2135,7 +2135,7 @@ const ru: LocaleTranslation = {
         {
           shoulderCopy: 'aceserver wiki',
           titleCopy: 'Aceserver WIKI',
-          text: 'WIKI сообщества, которую может редактировать каждый',
+          text: 'Официальная WIKI Aceserver с правилами и инструкцией по входу',
           ctaLabel: 'Открыть WIKI',
         },
       ],
