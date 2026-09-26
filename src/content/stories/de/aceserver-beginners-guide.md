@@ -2,7 +2,7 @@
 title: 'Aceserver-Einsteigerleitfaden: Portal, Weltkarten, Videos, WIKI und Verbindung'
 description: Neu bei Aceserver? Erfahre, wann du das offizielle Portal, Weltkarten, Videos und das WIKI nutzt und wo du nachsiehst, wenn du nicht beitreten kannst.
 translationOf: aceserver-beginners-guide
-sourceHash: sha256:0662621e2658ea3322c3c1818487357be032906fc9b34fdf44b807770880206c
+sourceHash: sha256:cb0ce98cb1340bb61c9a04cc2327b5416da9b63a21e0b85b153c22d59acaa535
 date: 2026-08-09T10:00:00+09:00
 tags:
   - Minecraft
@@ -100,6 +100,8 @@ Du musst niemals ein Passwort, einen Authentifizierungscode oder persönliche Ko
 Nach dem Betreten musst du nicht sofort einen großen Bau oder ein Gerät beginnen. Lies die Hinweise am Spawn, wähle auf den Weltkarten einen interessanten Ort, prüfe die nötigen Regeln im WIKI und setze dir ein kleines Ziel.
 
 Du kannst zum Beispiel eine Stadt besuchen, ein paar Ressourcen sammeln, einen möglichen Basisplatz suchen oder einen Ort aus einem Video auf der Karte finden. Speichere offizielles Portal, Discord und WIKI als Lesezeichen, damit du jederzeit zu verlässlichen Informationen zurückkehren kannst.
+
+Vor oder nach dem Spielen kannst du über [Alpha-kuns Bildertagebuch](/de/stories/alpha-diary-guide/) die Einträge zu verschiedenen Tagen lesen. Wähle selbst ein Datum und erkunde die Aufzeichnungen in deinem eigenen Tempo.
 
 ## Zusammenfassung
 

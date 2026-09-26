@@ -47,6 +47,14 @@ const stories = [
       '地図を持つ旅人が、ポータル、ワールドマップ、動画画面、ガイドブック、案内所をたどるブロック調の風景',
   },
   {
+    slug: 'alpha-diary-guide',
+    title: '絵日記の読み方',
+    description:
+      'アルファ君の絵日記では、日付を選んで絵と文章の記録を開き、気になったことをアルファ君に質問できます。自分のペースでたどるための案内です。',
+    author: 'Gui',
+    datePublished: '2026-09-24T15:00:00.000Z',
+  },
+  {
     slug: 'minecraft-server-cannot-join',
     title: 'マイクラサーバーに入れない時の確認｜Java・統合版・Switch対応',
     description:

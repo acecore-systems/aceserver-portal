@@ -2,7 +2,7 @@
 title: 'Aceserver Beginner Guide: Portal, World Maps, Videos, WIKI, and Connection Help'
 description: New to Aceserver? Learn when to use the official portal, world maps, videos, and WIKI, and where to check if you cannot join.
 translationOf: aceserver-beginners-guide
-sourceHash: sha256:0662621e2658ea3322c3c1818487357be032906fc9b34fdf44b807770880206c
+sourceHash: sha256:cb0ce98cb1340bb61c9a04cc2327b5416da9b63a21e0b85b153c22d59acaa535
 date: 2026-08-09T10:00:00+09:00
 tags:
   - Minecraft
@@ -100,6 +100,8 @@ You never need to share a password, authentication code, or personal account inf
 After you get in, you do not need to start a large build or device right away. Read the spawn-area guidance, choose a place that interests you from the world maps, check the needed WIKI rules, and set one small goal.
 
 For example, tour a town, gather a few resources, look for a possible base location, or find a place you saw in a video on the map. Bookmark the official portal, Discord, and WIKI so you can return to reliable information whenever you need it.
+
+Before or after playing, you can read dated records in [Alpha-kun’s picture diary](/en/stories/alpha-diary-guide/). Choose a date that interests you and explore at your own pace.
 
 ## Summary
 
