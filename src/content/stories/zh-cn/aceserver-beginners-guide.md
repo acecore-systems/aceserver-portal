@@ -2,7 +2,7 @@
 title: 'Aceserver 新手指南：Portal、世界地图、视频、WIKI 与连接问题'
 description: 第一次来到 Aceserver？了解何时使用官方 Portal、世界地图、视频和 WIKI，以及无法加入时应查看哪里。
 translationOf: aceserver-beginners-guide
-sourceHash: sha256:4a1504285218adec3cc280c5ad96d9b38fd0857ca742c911b3e70a792a280b09
+sourceHash: sha256:cb0ce98cb1340bb61c9a04cc2327b5416da9b63a21e0b85b153c22d59acaa535
 date: 2026-08-09T10:00:00+09:00
 tags:
   - Minecraft
@@ -22,10 +22,10 @@ imageAlt: 一位拿着地图的旅行者在方块风景中前往传送门、世�
 
 ## 首先打开的四个官方页面
 
-1. 在 [Aceserver 官方 Portal](/zh-cn/) 查看总入口和公告。
+1. 在 [Aceserver 官方 Portal](/zh-cn/) 查看主要入口。
 2. 加入[官方 Discord](https://discord.gg/acsv)，查看最新的参加与维护通知。
 3. 在 [Aceserver WIKI 的参加方法](https://asv-wiki.acecore.net/article/in/)确认当前加入步骤。
-4. 进入游戏前阅读 [Aceserver WIKI 的规则与封禁条件](https://asv-wiki.acecore.net/article/rule/)。
+4. 进入游戏前阅读 [Aceserver WIKI 的规则目录](https://asv-wiki.acecore.net/article/rules-index/)。
 
 按照这个顺序，可以找到适用于当前 Aceserver 的信息，而不是依赖过时文章或非官方连接方法。如果有不清楚的地方，请不要猜测，直接通过官方 Discord 询问。
 
@@ -64,15 +64,7 @@ Portal 是最新信息的入口，并不是记住连接细节的地方。连接�
 
 ## 用 WIKI 确认参加方法和规则
 
-[Aceserver WIKI 的参加方法](https://asv-wiki.acecore.net/article/in/)是参加步骤的依据，[Aceserver WIKI 的规则与封禁条件](https://asv-wiki.acecore.net/article/rule/)是行为标准的依据。第一次参加前，请确认这些内容与你想进行的玩法是否有关。
-
-- 尊重其他参加者、他们的建筑、作物、动物和个人信息。
-- 进入其他人的建筑或领地前先取得所有者许可。
-- 不使用会给服务器造成负担的装置、被禁止的客户端或作弊工具。
-- 大型建筑、整地、挖掘和装置可能需要确认或申请。
-- 不确定时不要自行判断，应向工作人员询问。
-
-这不是详细规则的替代品。条件和适用范围可能变动，请阅读 WIKI 原文以确认准确数值和禁止事项。
+请先在 [Aceserver WIKI 的参加方法](https://asv-wiki.acecore.net/article/in/)确认步骤，再从[规则目录](https://asv-wiki.acecore.net/article/rules-index/)选择社区、Minecraft、各服务器及 Discord 的适用规则。规则以官方 Discord 帖文为准；如果 WIKI 与 Discord 不一致，请查看 Discord，并在不确定时询问工作人员。
 
 ## 第一次参加请按这个顺序进行
 

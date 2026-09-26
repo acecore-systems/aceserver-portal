@@ -24,10 +24,10 @@ relatedStories:
 
 ## 最初に開く4つの公式案内
 
-1. [Aceserver公式ポータル](/)で、全体の入口とお知らせを確認します。
+1. [Aceserver公式ポータル](/)で、全体の入口を確認します。
 2. [公式Discord](https://discord.gg/acsv)に参加し、メンテナンスや参加に関する最新案内を確認します。
 3. [Aceserver WIKIの参加方法](https://asv-wiki.acecore.net/article/in/)で、現在の参加手順を確認します。
-4. [Aceserver WIKIのルール・BAN条件](https://asv-wiki.acecore.net/article/rule/)を読んでから、ゲーム内へ入りましょう。
+4. [Aceserver WIKIのルール一覧](https://asv-wiki.acecore.net/article/rules-index/)から、自分が遊ぶ場所のルールを読んでからゲーム内へ入りましょう。
 
 この順序なら、古い紹介記事や非公式の接続方法に頼らず、今のAceserverに必要な情報へたどり着けます。分からない項目があれば推測で進めず、公式Discordで確認するのが安全です。
 
@@ -66,15 +66,7 @@ Java版と統合版で一緒に遊べる条件や、対応サーバーを見分�
 
 ## WIKIは、参加方法とルールを確かめる場所
 
-参加方法は[Aceserver WIKIの参加方法](https://asv-wiki.acecore.net/article/in/)、行動の基準は[Aceserver WIKIのルール・BAN条件](https://asv-wiki.acecore.net/article/rule/)が正です。特に初参加の前には、次のような点を自分の遊び方に照らして確認しましょう。
-
-- 他の参加者、建築物、作物、家畜、個人情報を尊重すること
-- 他の人の建築や敷地へ入る前に、所有者の許可を取ること
-- サーバーに負荷をかける装置や、禁止されたクライアント・チートを使わないこと
-- 大きな建築、整地、掘削、装置などで確認や申請が必要な場合があること
-- 迷ったときは自己判断で進めず、運営またはスタッフへ相談すること
-
-これは詳細なルールの要約ではなく、参加前に意識したい基本です。条件や対象は変わる可能性があるため、数値や禁止事項を含む正確な内容は必ずWIKI本文を読んでください。
+[Aceserver WIKIの参加方法](https://asv-wiki.acecore.net/article/in/)で手順を確認し、[ルール一覧](https://asv-wiki.acecore.net/article/rules-index/)からコミュニティ共通・Minecraft共通・各サーバー・Discordのルールを選んでください。規則の原本は公式Discordの投稿です。Wikiとの間に食い違いがあればDiscordの案内を確認し、分からない点はスタッフへ質問してください。
 
 ## 初参加は、この順序で進める
 
