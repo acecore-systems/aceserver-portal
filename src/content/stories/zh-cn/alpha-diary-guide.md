@@ -5,8 +5,11 @@ date: 2026-09-25T00:00:00+09:00
 tags:
   - 公告
 author: Gui
+lastUpdated: 2026-09-26T00:00:00+09:00
+image: /uploads/stories/alpha-diary-guide-hero.webp
+imageAlt: 方块风景中的打开的绘图日记和日期日历插图
 translationOf: alpha-diary-guide
-sourceHash: sha256:acb28f856e78e203004cbe60b584ad85b037abe93134135fa53027624f5289ed
+sourceHash: sha256:8ae454a8619a21758049202f05fb08770ad1efa90a28b0397e5d623a1b70926d
 ---
 
 阿尔法君的绘画日记收录了 Aceserver 按日期记录的画与文字。可以从[绘画日记页面](/zh-cn/alpha-diary/)进入。

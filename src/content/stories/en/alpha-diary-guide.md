@@ -5,8 +5,11 @@ date: 2026-09-25T00:00:00+09:00
 tags:
   - News
 author: Gui
+lastUpdated: 2026-09-26T00:00:00+09:00
+image: /uploads/stories/alpha-diary-guide-hero.webp
+imageAlt: Illustration of an open diary and date calendar in a block-style landscape
 translationOf: alpha-diary-guide
-sourceHash: sha256:acb28f856e78e203004cbe60b584ad85b037abe93134135fa53027624f5289ed
+sourceHash: sha256:8ae454a8619a21758049202f05fb08770ad1efa90a28b0397e5d623a1b70926d
 ---
 
 Alpha-kun's picture diary is a collection of dated drawings and writing from Aceserver. You can begin on the [picture diary page](/en/alpha-diary/).

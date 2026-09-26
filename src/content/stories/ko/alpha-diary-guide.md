@@ -5,8 +5,11 @@ date: 2026-09-25T00:00:00+09:00
 tags:
   - 소식
 author: Gui
+lastUpdated: 2026-09-26T00:00:00+09:00
+image: /uploads/stories/alpha-diary-guide-hero.webp
+imageAlt: 블록 풍경 속 펼쳐진 그림일기와 날짜 달력 안내 그림
 translationOf: alpha-diary-guide
-sourceHash: sha256:acb28f856e78e203004cbe60b584ad85b037abe93134135fa53027624f5289ed
+sourceHash: sha256:8ae454a8619a21758049202f05fb08770ad1efa90a28b0397e5d623a1b70926d
 ---
 
 알파 군의 그림일기는 Aceserver의 날짜별 그림과 글을 모은 기록입니다. [그림일기 페이지](/ko/alpha-diary/)에서 시작할 수 있습니다.

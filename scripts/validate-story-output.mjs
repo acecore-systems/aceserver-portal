@@ -53,6 +53,9 @@ const stories = [
       'アルファ君の絵日記では、日付を選んで絵と文章の記録を開き、気になったことをアルファ君に質問できます。自分のペースでたどるための案内です。',
     author: 'Gui',
     datePublished: '2026-09-24T15:00:00.000Z',
+    image: '/uploads/stories/alpha-diary-guide-hero.webp',
+    imageAlt:
+      '開いた絵日記と日付を選ぶカレンダーを、ブロック調の風景に置いた案内用イラスト',
   },
   {
     slug: 'minecraft-server-cannot-join',
