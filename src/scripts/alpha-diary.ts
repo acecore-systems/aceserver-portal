@@ -109,6 +109,8 @@ export function initAlphaDiary() {
   let rateLimitTimer = 0
   let rateLimitUntil = 0
   let rateLimitStreak = 0
+  let hasPendingEntry = false
+  let pendingRateLimitUntil = 0
   let waitingWasLong = false
   let finaleTimers: number[] = []
   let finaleAnimationFrame = 0
@@ -284,7 +286,7 @@ export function initAlphaDiary() {
     requiredElement<HTMLButtonElement>(
       statePanel,
       '[data-diary-retry]',
-    ).disabled = isRequestActive
+    ).disabled = isRequestActive || performance.now() < pendingRateLimitUntil
     if (waitingWasLong === isLongWait) return
     waitingWasLong = isLongWait
     if (!isLongWait) return
@@ -531,6 +533,8 @@ export function initAlphaDiary() {
     if (!options.resumeWaiting) {
       finalizeLoadMeasurement('cancelled')
       clearPending()
+      hasPendingEntry = false
+      pendingRateLimitUntil = 0
     }
     requestController?.abort()
     if (date && date > serverToday) {
@@ -622,15 +626,26 @@ export function initAlphaDiary() {
         // Keep polling this entry when "today" changes at the JST boundary.
         currentDate = date || serverToday
         dateInput.value = currentDate
+        hasPendingEntry = true
+        pendingRateLimitUntil = 0
+        rateLimitStreak = 0
         const retryAfter = readRetryAfter(payload.retryAfter)
         if (!fixture) loadMeasurement.recordPending()
         waitLifecycle.markPending(requestId, retryAfter * 1_000)
         return false
       }
       if (payload.status === 'rate_limited') {
-        waitLifecycle.complete(requestId)
-        finalizeLoadMeasurement('failed')
-        beginRateLimit(Number(payload.retryAfter) || 30)
+        if (hasPendingEntry) {
+          const backoff = Math.min(120, 30 * 2 ** Math.min(rateLimitStreak, 2))
+          rateLimitStreak += 1
+          const retryAfter = Math.max(Number(payload.retryAfter) || 30, backoff)
+          pendingRateLimitUntil = performance.now() + retryAfter * 1_000
+          waitLifecycle.markPending(requestId, retryAfter * 1_000)
+        } else {
+          waitLifecycle.complete(requestId)
+          finalizeLoadMeasurement('failed')
+          beginRateLimit(Number(payload.retryAfter) || 30)
+        }
         return false
       }
       if (payload.status === 'future') {
@@ -1073,6 +1088,8 @@ export function initAlphaDiary() {
     clearNavigationTimer()
     finalizeLoadMeasurement('cancelled')
     clearPending()
+    hasPendingEntry = false
+    pendingRateLimitUntil = 0
     requestController?.abort()
     updateDateHistory(date, historyMode)
     currentDate = date
@@ -1101,6 +1118,7 @@ export function initAlphaDiary() {
   function resumePendingEntry(
     source: 'manual' | 'poll' | 'recovery' = 'recovery',
   ) {
+    if (performance.now() < pendingRateLimitUntil) return
     if (!waitLifecycle.requestManualCheck()) return
     if (source === 'manual') loadMeasurement.recordManualCheck()
     void loadEntry(currentDate || undefined, {

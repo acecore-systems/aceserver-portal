@@ -10,6 +10,7 @@ import {
   DiaryRequestTimeoutError,
   DiaryWaitLifecycle,
   diaryEntryRequestTimeoutMs,
+  diaryPendingPollDelayMs,
   diaryRateLimitRetryAfterSeconds,
   requestJsonWithDiaryTimeout,
   reportDiaryLoadMeasurement,
@@ -38,6 +39,13 @@ test('Cloudflare 1015 and diary quota responses use a safe retry delay', () => {
     diaryRateLimitRetryAfterSeconds(200, { status: 'ready' }, null),
     null,
   )
+})
+
+test('pending polls ease to fifteen seconds while respecting the server retry delay', () => {
+  assert.equal(diaryPendingPollDelayMs(0, 4_000), 4_000)
+  assert.equal(diaryPendingPollDelayMs(1, 4_000), 10_000)
+  assert.equal(diaryPendingPollDelayMs(2, 4_000), 15_000)
+  assert.equal(diaryPendingPollDelayMs(10, 30_000), 30_000)
 })
 
 test('ready past pages are reused briefly without persisting navigation history', () => {
@@ -131,11 +139,61 @@ test('pending checks retain elapsed time through a four-second poll and then fin
   assert.equal(polls, 1)
   assert.equal(snapshots.at(-1).elapsedSeconds, 4)
 
+  const secondRequest = lifecycle.startRequest()
+  assert.equal(lifecycle.markPending(secondRequest, 4_000), true)
+  scheduler.advance(9_999)
+  assert.equal(polls, 1)
+  scheduler.advance(1)
+  assert.equal(polls, 2)
+
+  const thirdRequest = lifecycle.startRequest()
+  assert.equal(lifecycle.markPending(thirdRequest, 4_000), true)
+  scheduler.advance(15_000)
+  assert.equal(polls, 3)
+
   const readyRequest = lifecycle.startRequest()
-  assert.equal(snapshots.at(-1).elapsedSeconds, 4)
+  assert.equal(snapshots.at(-1).elapsedSeconds, 29)
   assert.equal(lifecycle.complete(readyRequest), true)
   assert.equal(snapshots.at(-1).isWaiting, false)
   assert.equal(scheduler.activeTimerCount(), 0)
+})
+
+test('a transient rate limit during generation preserves the wait and its measurement', async () => {
+  const script = await readFile(
+    new URL('../src/scripts/alpha-diary.ts', import.meta.url),
+    'utf8',
+  )
+  const start = script.indexOf("      if (payload.status === 'rate_limited') {")
+  const end = script.indexOf("\n      if (payload.status === 'future')", start)
+  assert.ok(start >= 0 && end > start)
+  const branch = script.slice(start, end)
+  const applyRateLimit = new Function(
+    'hasPendingEntry',
+    `const payload = { status: 'rate_limited', retryAfter: 30 };
+     const performance = { now: () => 1_000 };
+     const requestId = 1;
+     let rateLimitStreak = 0;
+     let pendingRateLimitUntil = 0;
+     const calls = [];
+     const waitLifecycle = {
+       markPending(id, delay) { calls.push(['pending', id, delay]); },
+       complete(id) { calls.push(['complete', id]); }
+     };
+     const finalizeLoadMeasurement = (outcome) => calls.push(['finalize', outcome]);
+     const beginRateLimit = (seconds) => calls.push(['rateLimit', seconds]);
+     (function () { ${branch} })();
+     return { calls, pendingRateLimitUntil, rateLimitStreak };`,
+  )
+  assert.deepEqual(applyRateLimit(true), {
+    calls: [['pending', 1, 30_000]],
+    pendingRateLimitUntil: 31_000,
+    rateLimitStreak: 1,
+  })
+  assert.deepEqual(applyRateLimit(false).calls, [
+    ['complete', 1],
+    ['finalize', 'failed'],
+    ['rateLimit', 30],
+  ])
 })
 
 test('a finite request timeout fails independently, and a later retry can resolve', async () => {

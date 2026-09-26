@@ -4,6 +4,15 @@ export const DIARY_HISTORICAL_PREPARATION_TIMEOUT_MS = 60_000
 export const DIARY_METRICS_ENDPOINT = '/api/alpha-diary-metrics'
 export const DIARY_METRICS_RELEASE = 'diary-wait-v2'
 
+export function diaryPendingPollDelayMs(
+  pendingCount: number,
+  retryAfterMs: number,
+): number {
+  const minimum =
+    pendingCount <= 0 ? 4_000 : pendingCount === 1 ? 10_000 : 15_000
+  return Math.max(retryAfterMs, minimum)
+}
+
 export function diaryEntryRequestTimeoutMs(
   recordDate: string,
   serverToday: string,
@@ -236,6 +245,7 @@ export class DiaryWaitLifecycle {
   #elapsedTimer = 0
   #onChange: (snapshot: DiaryWaitSnapshot) => void
   #onPoll: () => void
+  #pendingCount = 0
   #pollTimer = 0
   #requestActive = false
   #scheduler: DiaryWaitScheduler
@@ -270,11 +280,13 @@ export class DiaryWaitLifecycle {
     if (!this.isCurrentRequest(requestId)) return false
     this.#requestActive = false
     this.#clearPollTimer()
+    const delay = diaryPendingPollDelayMs(this.#pendingCount, retryAfterMs)
+    this.#pendingCount += 1
     this.#pollTimer = this.#scheduler.setTimeout(() => {
       this.#pollTimer = 0
       if (!this.isWaiting() || this.#requestActive) return
       this.#onPoll()
-    }, retryAfterMs)
+    }, delay)
     this.#publish()
     return true
   }
@@ -298,6 +310,7 @@ export class DiaryWaitLifecycle {
   stop() {
     this.#activeRequestId += 1
     this.#requestActive = false
+    this.#pendingCount = 0
     this.#startedAt = null
     this.#clearPollTimer()
     if (this.#elapsedTimer) this.#scheduler.clearInterval(this.#elapsedTimer)
