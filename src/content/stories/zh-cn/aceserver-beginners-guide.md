@@ -2,7 +2,7 @@
 title: 'Aceserver 新手指南：Portal、世界地图、视频、WIKI 与连接问题'
 description: 第一次来到 Aceserver？了解何时使用官方 Portal、世界地图、视频和 WIKI，以及无法加入时应查看哪里。
 translationOf: aceserver-beginners-guide
-sourceHash: sha256:cb0ce98cb1340bb61c9a04cc2327b5416da9b63a21e0b85b153c22d59acaa535
+sourceHash: sha256:7108a87eade48e3b330c2c4d9479621ac5fb39d688d79e17bd98a37f7b6c8791
 date: 2026-08-09T10:00:00+09:00
 tags:
   - Minecraft
@@ -53,6 +53,12 @@ Portal 是最新信息的入口，并不是记住连接细节的地方。连接�
 [世界地图](/zh-cn/world-map/)提供主世界、资源世界、RPG、大厅、Season 系列和活动地图等公开地图的入口。想参观建筑、收集资源或游玩 RPG 时，先从地图知道世界名称，更容易在 WIKI 或 Discord 中找到相关说明。
 
 地图正在显示，并不代表现在一定可以进入，或一定可以使用某项功能。世界状态和移动方式可能变化，行动前请确认最新公告和规则。
+
+## 根据想玩的内容选择服务器
+
+想要建造和交流，可以从生活服开始；收集材料可前往资源服，体验各版本的世界可查看赛季服。小游戏等内容请查看内容服；如果想提出长期企划，请阅读概念服的说明。[WIKI 服务器指南](https://asv-wiki.acecore.net/article/other-server/)汇总了各服务器的用途和规则入口。目前可以进入哪些服务器，请以 Discord 公告为准。
+
+如需了解商店与货币，请查看 [WIKI 的货币和个人页面指南](https://asv-wiki.acecore.net/article/currency-web/)。使用价格等可能变动的条件前，请先核对 Discord 公告板。
 
 ## 用视频了解服务器的氛围
 

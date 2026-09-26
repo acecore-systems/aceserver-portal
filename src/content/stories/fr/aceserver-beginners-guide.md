@@ -2,7 +2,7 @@
 title: 'Guide du débutant Aceserver : portail, cartes, vidéos, WIKI et connexion'
 description: Vous découvrez Aceserver ? Apprenez quand utiliser le portail officiel, les cartes, les vidéos et le WIKI, et où vérifier si vous ne pouvez pas rejoindre le serveur.
 translationOf: aceserver-beginners-guide
-sourceHash: sha256:cb0ce98cb1340bb61c9a04cc2327b5416da9b63a21e0b85b153c22d59acaa535
+sourceHash: sha256:7108a87eade48e3b330c2c4d9479621ac5fb39d688d79e17bd98a37f7b6c8791
 date: 2026-08-09T10:00:00+09:00
 tags:
   - Minecraft
@@ -53,6 +53,12 @@ Le portail est l'entrée vers l'information actuelle, pas un endroit où mémori
 Les [cartes de mondes](/fr/world-map/) donnent accès à des cartes publiées telles que Main World, Resource World, RPG, Lobby, les mondes Season et les cartes d'événements. Si vous souhaitez visiter des constructions, récolter des ressources ou jouer au RPG, connaître le nom du monde sur la carte facilite la recherche de l'aide correspondante dans le WIKI ou Discord.
 
 La présence d'une carte ne garantit pas à elle seule que vous pouvez entrer immédiatement ou utiliser une fonction particulière. L'état des mondes et les méthodes de déplacement peuvent changer ; consultez les dernières annonces et règles avant d'agir.
+
+## Choisissez un serveur selon vos envies
+
+Pour construire et échanger, commencez par le serveur Life. Le serveur Ressources permet de récolter des matériaux, tandis qu'un serveur de saison propose un monde lié à une version donnée. Pour les mini-jeux, consultez les serveurs de contenu. Si vous souhaitez proposer un projet durable, lisez la présentation des serveurs conceptuels. Le [guide des serveurs du WIKI](https://asv-wiki.acecore.net/article/other-server/) regroupe leurs objectifs et leurs règles. Vérifiez sur Discord quels serveurs sont actuellement accessibles.
+
+Pour les boutiques et les monnaies, consultez le [guide des monnaies et de Ma page sur le WIKI](https://asv-wiki.acecore.net/article/currency-web/). Vérifiez sur le tableau d'annonces Discord les prix et les autres conditions susceptibles de changer.
 
 ## Utilisez les vidéos pour comprendre l'ambiance du serveur
 
