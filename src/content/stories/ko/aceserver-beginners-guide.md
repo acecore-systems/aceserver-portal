@@ -2,7 +2,7 @@
 title: 'Aceserver 초보자 가이드: 포털, 월드 맵, 동영상, WIKI, 접속 문제'
 description: Aceserver가 처음이신가요? 공식 포털, 월드 맵, 동영상, WIKI를 언제 이용하는지와 접속할 수 없을 때 확인할 곳을 안내합니다.
 translationOf: aceserver-beginners-guide
-sourceHash: sha256:beb235e56d29c1e7d3c93fdc88c4fa4d604e8db40c358cfa3ffaaaa40c2dae95
+sourceHash: sha256:4a1504285218adec3cc280c5ad96d9b38fd0857ca742c911b3e70a792a280b09
 date: 2026-08-09T10:00:00+09:00
 tags:
   - Minecraft
@@ -108,6 +108,8 @@ Java, Bedrock, Switch, 모바일의 멀티플레이 선택지를 먼저 정리�
 들어간 직후 큰 건축이나 장치를 만들 필요는 없습니다. 스폰 주변의 안내를 읽고 월드 맵에서 관심 가는 장소를 고르고 WIKI에서 필요한 규칙을 확인한 뒤 작은 목표 하나를 정하세요.
 
 예를 들어 마을을 구경하기, 자원을 조금 모으기, 거점 후보지를 찾기, 동영상에서 본 장소를 맵에서 찾아보기 같은 시작 방법이 있습니다. 공식 포털, Discord, WIKI를 즐겨찾기에 저장하면 필요할 때 신뢰할 수 있는 정보로 돌아갈 수 있습니다.
+
+서버에서 플레이하기 전후에는 [알파군의 그림일기](/ko/stories/alpha-diary-guide/)에서 날짜별 기록을 읽을 수도 있습니다. 궁금한 날짜를 직접 고르고 자신만의 속도로 살펴보세요.
 
 ## 요약
 

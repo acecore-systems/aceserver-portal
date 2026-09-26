@@ -2,7 +2,7 @@
 title: 'Guide du débutant Aceserver : portail, cartes, vidéos, WIKI et connexion'
 description: Vous découvrez Aceserver ? Apprenez quand utiliser le portail officiel, les cartes, les vidéos et le WIKI, et où vérifier si vous ne pouvez pas rejoindre le serveur.
 translationOf: aceserver-beginners-guide
-sourceHash: sha256:beb235e56d29c1e7d3c93fdc88c4fa4d604e8db40c358cfa3ffaaaa40c2dae95
+sourceHash: sha256:4a1504285218adec3cc280c5ad96d9b38fd0857ca742c911b3e70a792a280b09
 date: 2026-08-09T10:00:00+09:00
 tags:
   - Minecraft
@@ -108,6 +108,8 @@ Vous n'avez jamais à partager un mot de passe, un code d'authentification ou de
 Une fois entré, vous n'avez pas besoin de commencer immédiatement une grande construction ou un dispositif. Lisez les indications près de l'apparition, choisissez un lieu qui vous intéresse sur les cartes, vérifiez les règles nécessaires dans le WIKI et fixez-vous un petit objectif.
 
 Par exemple, visitez une ville, récoltez quelques ressources, cherchez un emplacement de base ou trouvez sur la carte un lieu vu dans une vidéo. Enregistrez le portail officiel, Discord et le WIKI pour retrouver des informations fiables quand vous en aurez besoin.
+
+Avant ou après avoir joué, vous pouvez lire les récits datés dans le [journal illustré d’Alpha-kun](/fr/stories/alpha-diary-guide/). Choisissez une date qui vous intrigue et avancez à votre rythme.
 
 ## Résumé
 
