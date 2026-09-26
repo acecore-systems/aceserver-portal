@@ -3,6 +3,27 @@ export const DIARY_REQUEST_TIMEOUT_MS = 20_000
 export const DIARY_HISTORICAL_PREPARATION_TIMEOUT_MS = 60_000
 export const DIARY_METRICS_ENDPOINT = '/api/alpha-diary-metrics'
 export const DIARY_METRICS_RELEASE = 'diary-wait-v2'
+export const DIARY_TRANSIENT_FAILURE_RETRY_LIMIT = 2
+
+export function isRetryableDiaryFailure(
+  errorCode: unknown,
+  retries: number,
+): boolean {
+  return (
+    retries < DIARY_TRANSIENT_FAILURE_RETRY_LIMIT &&
+    (errorCode === 'canon_unavailable' ||
+      errorCode === 'generation_unavailable')
+  )
+}
+
+export function isRetryableDiaryTransportError(
+  error: unknown,
+  retries: number,
+): boolean {
+  return (
+    retries < DIARY_TRANSIENT_FAILURE_RETRY_LIMIT && error instanceof TypeError
+  )
+}
 
 export function diaryPendingPollDelayMs(
   pendingCount: number,
@@ -276,10 +297,15 @@ export class DiaryWaitLifecycle {
     return this.#startedAt !== null && requestId === this.#activeRequestId
   }
 
-  markPending(requestId: number, retryAfterMs: number): boolean {
+  markPending(
+    requestId: number,
+    retryAfterMs: number,
+    options: { resetBackoff?: boolean } = {},
+  ): boolean {
     if (!this.isCurrentRequest(requestId)) return false
     this.#requestActive = false
     this.#clearPollTimer()
+    if (options.resetBackoff) this.#pendingCount = 0
     const delay = diaryPendingPollDelayMs(this.#pendingCount, retryAfterMs)
     this.#pendingCount += 1
     this.#pollTimer = this.#scheduler.setTimeout(() => {
