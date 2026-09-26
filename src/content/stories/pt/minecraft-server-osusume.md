@@ -2,7 +2,7 @@
 title: 'Servidores de Minecraft recomendados no Japão: 6 opções por Java/Bedrock e estilo de jogo'
 description: Um guia de servidores públicos de Minecraft no Japão com base nas edições, estilos de jogo e informações de participação confirmados nos sites oficiais.
 translationOf: minecraft-server-osusume
-sourceHash: sha256:906e7d7b33dd0a9cec37c5b27d79d4c7a2bd2951f933d1faa39e4d68a3dd41bf
+sourceHash: sha256:c48e99e86f53cc69c5c0b117a8dfc8825867cf84ff89710801f1b51b3e492315
 date: 2026-08-01T10:00:00+09:00
 tags:
   - Minecraft
@@ -14,6 +14,8 @@ imageAlt: Três viajantes em torno de uma mesa com mapa numa encruzilhada de blo
 ---
 
 Este guia apresenta servidores públicos cujas orientações oficiais explicam o estilo de jogo e como participar; a ordem não é um ranking. Antes de participar, confira sempre as orientações oficiais atuais de cada servidor.
+
+**Verificado em 26 de setembro de 2026:** Conferimos novamente os seis sites oficiais e as orientações de entrada para Java e Bedrock. [Nishisaba iniciou o Survival sazonal em 1º de setembro](https://nishisaba.jp/news/20260901-notify); Home e TPA não estão disponíveis nesse mundo. [Munika passou para Re:15](https://munikasvr.net/events/re15release/) e substituiu as antigas missões de tutorial pelo Guia Munika. Mundos e recursos podem mudar; confira as orientações oficiais antes de entrar.
 
 Se o grupo inclui jogadores de Switch ou celular, antes de decidir como participar, consulte [como jogar Minecraft com amigos](/pt/stories/minecraft-play-with-friends/) para conferir a edição e as contas.
 
@@ -51,7 +53,7 @@ Quem entra pela primeira vez pode receber um kit inicial e escolher um trabalho 
 
 Munika Server aceita Java e Bedrock e constrói sua sobrevivência em torno de economia, habilidades e missões. Além de mineração e construção, há produção de bebidas, lojas, cassino e servidores temporários com temas de desastres ou apocalipse zumbi, oferecendo muitas formas de encontrar um objetivo.
 
-Há um tutorial para quem chega pela primeira vez, e o Discord permite acompanhar eventos e pedir suporte. É uma boa opção para quem quer progressão, economia, missões e eventos temporários junto da sobrevivência comum.
+Quem chega pela primeira vez pode usar o Guia Munika para descobrir atividades e objetivos; o Discord reúne informações de eventos e suporte. É uma opção para quem busca progressão, economia e eventos temporários além da sobrevivência comum.
 
 ### 5. [Noasaba](https://noasaba.com/)
 

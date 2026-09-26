@@ -2,7 +2,7 @@
 title: 'Recommended Minecraft servers in Japan: 6 picks by Java/Bedrock support and play style'
 description: A guide to public Minecraft servers in Japan, based on the editions, play styles, and joining information confirmed on their official sites.
 translationOf: minecraft-server-osusume
-sourceHash: sha256:906e7d7b33dd0a9cec37c5b27d79d4c7a2bd2951f933d1faa39e4d68a3dd41bf
+sourceHash: sha256:c48e99e86f53cc69c5c0b117a8dfc8825867cf84ff89710801f1b51b3e492315
 date: 2026-08-01T10:00:00+09:00
 tags:
   - Minecraft
@@ -14,6 +14,8 @@ imageAlt: Three travellers around a map table at a block-built crossroads, looki
 ---
 
 This guide introduces public servers whose official guidance explains their play style and how to join. The order is not a ranking. Check each server's current official guidance before joining.
+
+**Checked September 26, 2026:** We revisited all six official sites and their Java and Bedrock joining guidance. [Nishisaba launched seasonal Survival on September 1](https://nishisaba.jp/news/20260901-notify); Home and TPA are unavailable in that world. [Munika moved to Re:15](https://munikasvr.net/events/re15release/) and replaced its former tutorial quests with the Munika Guide. Worlds and features can change, so check the current official guidance before joining.
 
 If your group includes Switch or smartphone players, check [how to play Minecraft with friends](/en/stories/minecraft-play-with-friends/) for the edition and account conditions before choosing how to join.
 
@@ -51,7 +53,7 @@ New players can collect a starter kit and choose a job to earn money and make sp
 
 Munika Server accepts Java and Bedrock players and builds its survival play around an economy, skills, and quests. Beyond mining and building, it offers things such as brewing, shops, a casino, and limited-time disaster- or zombie-apocalypse-themed servers, so there are many ways to find a goal to work toward.
 
-There is a tutorial for first-time players, and Discord is the place to check event information and receive support. It is a good fit for people who want progression, an economy, quests, and limited events alongside regular survival.
+First-time players can use the Munika Guide to find activities and goals, while Discord provides event information and support. It suits players who want progression, an economy, and limited events alongside regular survival.
 
 ### 5. [Noasaba](https://noasaba.com/)
 

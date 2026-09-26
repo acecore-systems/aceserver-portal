@@ -2,7 +2,7 @@
 title: 'Empfohlene Minecraft-Server in Japan: 6 Optionen nach Java/Bedrock und Spielstil'
 description: Ein Überblick über öffentliche Minecraft-Server in Japan anhand der auf ihren offiziellen Seiten bestätigten Editionen, Spielweisen und Beitrittsinformationen.
 translationOf: minecraft-server-osusume
-sourceHash: sha256:906e7d7b33dd0a9cec37c5b27d79d4c7a2bd2951f933d1faa39e4d68a3dd41bf
+sourceHash: sha256:c48e99e86f53cc69c5c0b117a8dfc8825867cf84ff89710801f1b51b3e492315
 date: 2026-08-01T10:00:00+09:00
 tags:
   - Minecraft
@@ -14,6 +14,8 @@ imageAlt: Drei Reisende an einem Kartentisch auf einem Blockbau-Scheideweg mit B
 ---
 
 Dieser Guide stellt öffentliche Server vor, deren offizielle Hinweise Spielweise und Beitritt erklären; die Reihenfolge ist keine Rangliste. Prüfe vor dem Beitritt die aktuellen offiziellen Hinweise jedes Servers.
+
+**Geprüft am 26. September 2026:** Die offiziellen Websites und Hinweise für Java und Bedrock aller sechs Angebote wurden erneut geprüft. [Nishisaba startete am 1. September einen saisonalen Survival-Server](https://nishisaba.jp/news/20260901-notify); in dieser Welt stehen Home und TPA nicht zur Verfügung. [Munika wechselte zu Re:15](https://munikasvr.net/events/re15release/) und ersetzte die bisherigen Tutorial-Quests durch den Munika Guide. Welten und Funktionen können sich ändern; prüfe vor dem Beitritt die aktuellen offiziellen Hinweise.
 
 Wenn zu eurer Gruppe Switch- oder Smartphone-Spieler gehören, lest vor der Wahl des Beitrittswegs [wie ihr Minecraft mit Freunden spielt](/de/stories/minecraft-play-with-friends/), um Edition und Kontobedingungen zu prüfen.
 
@@ -51,7 +53,7 @@ Neue Spieler können ein Starter-Kit abholen und einen Beruf wählen, um Geld un
 
 Munika Server lässt Java- und Bedrock-Spieler zu und baut sein Survival um Wirtschaft, Skills und Quests auf. Neben Bergbau und Bauen gibt es unter anderem Brauen, Shops, ein Casino sowie zeitlich begrenzte Server zu Katastrophen- oder Zombieapokalypse-Themen – also viele Möglichkeiten, ein eigenes Ziel zu finden.
 
-Für neue Spieler gibt es ein Tutorial, und über Discord lassen sich Event-Informationen und Support finden. Er ist eine gute Option, wenn du neben normalem Survival auch Fortschritt, Wirtschaft, Quests und zeitlich begrenzte Events suchst.
+Neue Spieler können im Munika Guide die Spielmöglichkeiten und Ziele erkunden; über Discord gibt es Event-Informationen und Support. Der Server passt zu Spielern, die neben normalem Survival auch Fortschritt, Wirtschaft und zeitlich begrenzte Events suchen.
 
 ### 5. [Noasaba](https://noasaba.com/)
 

@@ -2,7 +2,7 @@
 title: '日本推荐 Minecraft 服务器 6 选：按 Java/Bedrock 支持与玩法比较'
 description: 根据各官方站点确认的版本支持、玩法和加入说明，介绍日本的公开 Minecraft 服务器。
 translationOf: minecraft-server-osusume
-sourceHash: sha256:906e7d7b33dd0a9cec37c5b27d79d4c7a2bd2951f933d1faa39e4d68a3dd41bf
+sourceHash: sha256:c48e99e86f53cc69c5c0b117a8dfc8825867cf84ff89710801f1b51b3e492315
 date: 2026-08-01T10:00:00+09:00
 tags:
   - Minecraft
@@ -14,6 +14,8 @@ imageAlt: 三位旅人围在方块风格岔路口的地图桌旁，眺望夕阳�
 ---
 
 本文介绍官方说明中可确认玩法和加入方式的公开服务器；以下顺序不是排名。实际加入前，请务必查看各服务器的最新官方说明。
+
+**2026年9月26日核查：** 已重新查看六个官方网站及其Java版、基岩版加入说明。[西鯖于9月1日推出赛季制生存服](https://nishisaba.jp/news/20260901-notify)，该世界不提供Home和TPA。[Munika进入Re:15赛季](https://munikasvr.net/events/re15release/)，以Munika指南取代原有的新手教程任务。世界和功能可能变化，加入前请查阅当时的官方说明。
 
 如果队伍中有 Switch 或手机玩家，在决定参加方式前，可先阅读[如何与朋友一起玩 Minecraft](/zh-cn/stories/minecraft-play-with-friends/)，确认版本和账户条件。
 
@@ -51,7 +53,7 @@ Tsubusaba 支持 Java 和 Bedrock，是一台生活型服务器。你可以在�
 
 Munika Server 接受 Java 和 Bedrock，以经济、技能和任务为生存玩法的核心。除采矿和建筑外，还有酿酒、商店、赌场，以及灾害或僵尸末日主题的限时服务器等内容，让玩家能找到更多游玩目标。
 
-初次加入有教程可参考，Discord 可查看活动信息并获取支持。它适合想在普通生存之外，再体验成长、经济、任务和限时活动的玩家。
+初次加入可通过Munika指南了解玩法和目标，也可在Discord查看活动信息并获得支持。它适合想在普通生存之外体验成长、经济和限时活动的玩家。
 
 ### 5. [Noasaba](https://noasaba.com/)
 
