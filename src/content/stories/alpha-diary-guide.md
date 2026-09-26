@@ -5,6 +5,9 @@ date: 2026-09-25T00:00:00+09:00
 tags:
   - お知らせ
 author: Gui
+lastUpdated: 2026-09-26T00:00:00+09:00
+image: /uploads/stories/alpha-diary-guide-hero.webp
+imageAlt: 開いた絵日記と日付を選ぶカレンダーを、ブロック調の風景に置いた案内用イラスト
 ---
 
 アルファ君の絵日記は、日付ごとの絵と文章を開いて読むことができる、Aceserverの記録です。入口は[絵日記のページ](/alpha-diary/)にあります。

@@ -5,8 +5,11 @@ date: 2026-09-25T00:00:00+09:00
 tags:
   - Actualités
 author: Gui
+lastUpdated: 2026-09-26T00:00:00+09:00
+image: /uploads/stories/alpha-diary-guide-hero.webp
+imageAlt: Illustration d'un journal ouvert et d'un calendrier dans un paysage de blocs
 translationOf: alpha-diary-guide
-sourceHash: sha256:acb28f856e78e203004cbe60b584ad85b037abe93134135fa53027624f5289ed
+sourceHash: sha256:8ae454a8619a21758049202f05fb08770ad1efa90a28b0397e5d623a1b70926d
 ---
 
 Le journal illustré d'Alpha réunit des dessins et des textes d'Aceserver classés par date. Commencez sur la [page du journal](/fr/alpha-diary/).
