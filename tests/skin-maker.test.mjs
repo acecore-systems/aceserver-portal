@@ -259,6 +259,7 @@ test('API fails closed, verifies hostname/action and does not spend on invalid o
   globalThis.fetch = async () => Response.json(verification)
   const env = {
     SKIN_MAKER_ENABLED: 'true',
+    SKIN_AI_MODEL: '@cf/zai-org/glm-5.3-flash',
     SKIN_TURNSTILE_SECRET: 'synthetic',
     SKIN_QUOTA_SALT: 'synthetic-salt',
     SKIN_TURNSTILE_SITE_KEY: 'test',
@@ -490,6 +491,7 @@ test('API distinguishes explicit refusal from false and still rejects malformed 
       const response = await onRequest({
         env: {
           SKIN_MAKER_ENABLED: 'true',
+          SKIN_AI_MODEL: '@cf/zai-org/glm-5.3-flash',
           SKIN_TURNSTILE_SECRET: 'synthetic',
           SKIN_QUOTA_SALT: 'synthetic',
           SKIN_TURNSTILE_SITE_KEY: 'synthetic',
