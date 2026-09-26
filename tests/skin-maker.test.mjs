@@ -7,7 +7,6 @@ import {
   PARTS,
   FACES,
   LAYERS,
-  WORKERS_MODEL,
   regions,
   applyDesign,
   decodePixels,
@@ -26,6 +25,8 @@ import {
 } from '../functions/api/skin-maker.ts'
 import { getSkinMakerUi } from '../src/data/skin-maker-ui.ts'
 import { LOCALES } from '../src/i18n/config.ts'
+
+const WORKERS_MODEL = '@cf/example/chat-model'
 
 const create = (model = 'classic') => ({
   mode: 'create',
@@ -259,7 +260,7 @@ test('API fails closed, verifies hostname/action and does not spend on invalid o
   globalThis.fetch = async () => Response.json(verification)
   const env = {
     SKIN_MAKER_ENABLED: 'true',
-    SKIN_AI_MODEL: '@cf/zai-org/glm-5.3-flash',
+    SKIN_AI_MODEL: WORKERS_MODEL,
     SKIN_TURNSTILE_SECRET: 'synthetic',
     SKIN_QUOTA_SALT: 'synthetic-salt',
     SKIN_TURNSTILE_SITE_KEY: 'test',
@@ -491,7 +492,7 @@ test('API distinguishes explicit refusal from false and still rejects malformed 
       const response = await onRequest({
         env: {
           SKIN_MAKER_ENABLED: 'true',
-          SKIN_AI_MODEL: '@cf/zai-org/glm-5.3-flash',
+          SKIN_AI_MODEL: WORKERS_MODEL,
           SKIN_TURNSTILE_SECRET: 'synthetic',
           SKIN_QUOTA_SALT: 'synthetic',
           SKIN_TURNSTILE_SITE_KEY: 'synthetic',

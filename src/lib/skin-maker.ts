@@ -1,7 +1,13 @@
 import { z } from 'zod'
 
 export const MODEL = 'gpt-6-luna' as const
-export const WORKERS_MODEL = '@cf/zai-org/glm-5.3-flash' as const
+export function isWorkersSkinModel(model: string): boolean {
+  return (
+    model.startsWith('@cf/') &&
+    model.length > 4 &&
+    !model.toLowerCase().includes('/glm')
+  )
+}
 export const PARTS = [
   'head',
   'body',
