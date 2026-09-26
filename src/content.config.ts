@@ -51,6 +51,7 @@ const storySchema = z
       .regex(/^sha256:[a-f0-9]{64}$/u)
       .optional(),
     date: z.coerce.date(),
+    lastUpdated: z.coerce.date().optional(),
     author: z.string().trim().min(1),
     tags: z.array(z.string().trim().min(1)).default([]),
     image: z.string().trim().min(1).optional(),

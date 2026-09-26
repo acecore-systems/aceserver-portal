@@ -27,6 +27,17 @@ type RelatedContent = {
 
 const { locale, story } = Astro.props
 const ui = getUi(locale)
+const updatedLabelByLocale: Record<Locale, string> = {
+  ja: '更新',
+  en: 'Updated',
+  'zh-cn': '更新',
+  es: 'Actualizado',
+  pt: 'Atualizado',
+  fr: 'Mis à jour',
+  ko: '업데이트',
+  de: 'Aktualisiert',
+  ru: 'Обновлено',
+}
 const { Content } = await render(story)
 const storySlug = story.id.split('/').at(-1) ?? story.id
 const allStories = await getCollection('stories')
@@ -100,6 +111,9 @@ const articleJsonLd = serializeJsonForHtmlScript({
   headline: story.data.title,
   description: story.data.description,
   datePublished: story.data.date.toISOString(),
+  ...(story.data.lastUpdated
+    ? { dateModified: story.data.lastUpdated.toISOString() }
+    : {}),
   inLanguage: HTML_LANG_BY_LOCALE[locale],
   mainEntityOfPage: {
     '@id': `${storyUrl}#webpage`,
@@ -170,6 +184,19 @@ const breadcrumbJsonLd = serializeJsonForHtmlScript({
             })
           }
         </time>
+        {
+          story.data.lastUpdated && (
+            <span>
+              {updatedLabelByLocale[locale]}{' '}
+              <time datetime={story.data.lastUpdated.toISOString()}>
+                {story.data.lastUpdated.toLocaleDateString(
+                  DATE_LOCALE_BY_LOCALE[locale],
+                  { timeZone: 'Asia/Tokyo' },
+                )}
+              </time>
+            </span>
+          )
+        }
         <span>{ui.byAuthor.replace('{author}', story.data.author)}</span>
       </div>
     </header>

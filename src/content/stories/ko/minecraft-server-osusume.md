@@ -2,8 +2,9 @@
 title: '일본 추천 마인크래프트 서버 6선: Java/Bedrock 지원과 플레이 방식 비교'
 description: 공식 사이트에서 확인한 지원 에디션, 플레이 방식, 참여 안내를 바탕으로 일본의 공개 Minecraft 서버를 소개합니다.
 translationOf: minecraft-server-osusume
-sourceHash: sha256:c48e99e86f53cc69c5c0b117a8dfc8825867cf84ff89710801f1b51b3e492315
+sourceHash: sha256:29f9c55325049c2099392fc122a01b9daa5b3c7ffc9426a9eb0c7515cad28f4c
 date: 2026-08-01T10:00:00+09:00
+lastUpdated: 2026-09-26T18:05:22+09:00
 tags:
   - Minecraft
   - 마인크래프트 서버
