@@ -2,7 +2,7 @@
 title: 'Guía para principiantes de Aceserver: portal, mapas, vídeos, WIKI y conexión'
 description: ¿Es tu primera vez en Aceserver? Aprende cuándo usar el portal oficial, los mapas, los vídeos y la WIKI, y dónde comprobar si no puedes entrar.
 translationOf: aceserver-beginners-guide
-sourceHash: sha256:beb235e56d29c1e7d3c93fdc88c4fa4d604e8db40c358cfa3ffaaaa40c2dae95
+sourceHash: sha256:4a1504285218adec3cc280c5ad96d9b38fd0857ca742c911b3e70a792a280b09
 date: 2026-08-09T10:00:00+09:00
 tags:
   - Minecraft
@@ -108,6 +108,8 @@ Nunca necesitas compartir una contraseña, código de autenticación ni informac
 Después de entrar, no necesitas comenzar de inmediato una construcción o dispositivo grande. Lee las indicaciones de la zona de aparición, elige un lugar que te interese en los mapas, consulta las reglas necesarias en la WIKI y fija un objetivo pequeño.
 
 Por ejemplo, visita una ciudad, reúne algunos recursos, busca una posible base o localiza en el mapa un sitio que viste en un vídeo. Guarda el portal oficial, Discord y la WIKI para volver a información fiable cuando la necesites.
+
+Antes o después de jugar, puedes leer los registros de cada fecha en el [diario ilustrado de Alpha-kun](/es/stories/alpha-diary-guide/). Elige la fecha que te interese y explóralos a tu ritmo.
 
 ## Resumen
 
