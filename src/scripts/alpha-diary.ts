@@ -9,6 +9,8 @@ import {
   DiaryWaitLifecycle,
   diaryEntryRequestTimeoutMs,
   diaryRateLimitRetryAfterSeconds,
+  isRetryableDiaryFailure,
+  isRetryableDiaryTransportError,
   requestJsonWithDiaryTimeout,
   reportDiaryLoadMeasurement,
 } from './alpha-diary-wait'
@@ -110,6 +112,7 @@ export function initAlphaDiary() {
   let rateLimitUntil = 0
   let rateLimitStreak = 0
   let hasPendingEntry = false
+  let transientFailureRetries = 0
   let pendingRateLimitUntil = 0
   let waitingWasLong = false
   let finaleTimers: number[] = []
@@ -534,6 +537,7 @@ export function initAlphaDiary() {
       finalizeLoadMeasurement('cancelled')
       clearPending()
       hasPendingEntry = false
+      transientFailureRetries = 0
       pendingRateLimitUntil = 0
     }
     requestController?.abort()
@@ -609,6 +613,7 @@ export function initAlphaDiary() {
         typeof payload.finaleChallengeAvailable === 'boolean'
       ) {
         waitLifecycle.complete(requestId)
+        transientFailureRetries = 0
         rateLimitStreak = 0
         rateLimitUntil = 0
         if (fixture) showLoadMeasurementSummary('ready', 0)
@@ -627,11 +632,23 @@ export function initAlphaDiary() {
         currentDate = date || serverToday
         dateInput.value = currentDate
         hasPendingEntry = true
+        const recoveredFromTransientFailure = transientFailureRetries > 0
+        transientFailureRetries = 0
         pendingRateLimitUntil = 0
         rateLimitStreak = 0
         const retryAfter = readRetryAfter(payload.retryAfter)
         if (!fixture) loadMeasurement.recordPending()
-        waitLifecycle.markPending(requestId, retryAfter * 1_000)
+        waitLifecycle.markPending(requestId, retryAfter * 1_000, {
+          resetBackoff: recoveredFromTransientFailure,
+        })
+        return false
+      }
+      if (
+        payload.status === 'failed' &&
+        isRetryableDiaryFailure(payload.errorCode, transientFailureRetries)
+      ) {
+        transientFailureRetries += 1
+        waitLifecycle.markPending(requestId, 4_000)
         return false
       }
       if (payload.status === 'rate_limited') {
@@ -667,6 +684,11 @@ export function initAlphaDiary() {
       return false
     } catch (error) {
       if (!isCurrentEntryRequest(requestId, controller)) return false
+      if (isRetryableDiaryTransportError(error, transientFailureRetries)) {
+        transientFailureRetries += 1
+        waitLifecycle.markPending(requestId, 4_000)
+        return false
+      }
       waitLifecycle.complete(requestId)
       if (error instanceof DiaryRequestTimeoutError) {
         finalizeLoadMeasurement('timeout')
@@ -1089,6 +1111,7 @@ export function initAlphaDiary() {
     finalizeLoadMeasurement('cancelled')
     clearPending()
     hasPendingEntry = false
+    transientFailureRetries = 0
     pendingRateLimitUntil = 0
     requestController?.abort()
     updateDateHistory(date, historyMode)
@@ -1442,6 +1465,8 @@ async function requestDiary(
     retryAfterHeader,
   )
   if (retryAfter !== null) return { retryAfter, status: 'rate_limited' }
+  if ((!payload || typeof payload !== 'object') && responseStatus >= 500)
+    return { errorCode: 'generation_unavailable', status: 'failed' }
   if (!payload || typeof payload !== 'object')
     throw new Error('AlphaDiaryPayloadError')
   return payload as DiaryPayload

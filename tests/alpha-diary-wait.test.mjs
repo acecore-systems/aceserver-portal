@@ -12,6 +12,8 @@ import {
   diaryEntryRequestTimeoutMs,
   diaryPendingPollDelayMs,
   diaryRateLimitRetryAfterSeconds,
+  isRetryableDiaryFailure,
+  isRetryableDiaryTransportError,
   requestJsonWithDiaryTimeout,
   reportDiaryLoadMeasurement,
   withDiaryRequestTimeout,
@@ -39,6 +41,55 @@ test('Cloudflare 1015 and diary quota responses use a safe retry delay', () => {
     diaryRateLimitRetryAfterSeconds(200, { status: 'ready' }, null),
     null,
   )
+})
+
+test('preparation and service outages retry twice, while permanent failures do not', () => {
+  for (const errorCode of ['canon_unavailable', 'generation_unavailable']) {
+    assert.equal(isRetryableDiaryFailure(errorCode, 0), true)
+    assert.equal(isRetryableDiaryFailure(errorCode, 1), true)
+    assert.equal(isRetryableDiaryFailure(errorCode, 2), false)
+  }
+  for (const errorCode of [
+    'invalid_request',
+    'unconfigured',
+    'entry_state_error',
+    null,
+  ]) {
+    assert.equal(isRetryableDiaryFailure(errorCode, 0), false)
+  }
+})
+
+test('network transport errors retry, but unrelated errors and request timeouts do not', () => {
+  assert.equal(
+    isRetryableDiaryTransportError(new TypeError('Failed to fetch'), 0),
+    true,
+  )
+  assert.equal(
+    isRetryableDiaryTransportError(new TypeError('Failed to fetch'), 2),
+    false,
+  )
+  assert.equal(
+    isRetryableDiaryTransportError(new Error('SchemaError'), 0),
+    false,
+  )
+  assert.equal(
+    isRetryableDiaryTransportError(new DiaryRequestTimeoutError(), 0),
+    false,
+  )
+})
+
+test('switching dates resets transient retries before the debounced request', async () => {
+  const script = await readFile(
+    new URL('../src/scripts/alpha-diary.ts', import.meta.url),
+    'utf8',
+  )
+  const start = script.indexOf('  function queueDateLoad(')
+  const end = script.indexOf('\n  function isCurrentEntryRequest(', start)
+  assert.ok(start >= 0 && end > start)
+  const navigation = script.slice(start, end)
+  const reset = navigation.indexOf('transientFailureRetries = 0')
+  const delayedRequest = navigation.indexOf('window.setTimeout(')
+  assert.ok(reset >= 0 && delayedRequest > reset)
 })
 
 test('pending polls ease to fifteen seconds while respecting the server retry delay', () => {
@@ -155,6 +206,37 @@ test('pending checks retain elapsed time through a four-second poll and then fin
   assert.equal(snapshots.at(-1).elapsedSeconds, 29)
   assert.equal(lifecycle.complete(readyRequest), true)
   assert.equal(snapshots.at(-1).isWaiting, false)
+  assert.equal(scheduler.activeTimerCount(), 0)
+})
+
+test('a recovered preparation failure starts normal pending polls without losing elapsed time', () => {
+  const scheduler = createScheduler()
+  const snapshots = []
+  let polls = 0
+  const lifecycle = new DiaryWaitLifecycle({
+    onChange: (snapshot) => snapshots.push(snapshot),
+    onPoll: () => {
+      polls += 1
+    },
+    scheduler,
+  })
+
+  const failedPreparation = lifecycle.startRequest()
+  scheduler.advance(16_000)
+  assert.equal(lifecycle.markPending(failedPreparation, 4_000), true)
+  scheduler.advance(4_000)
+  assert.equal(polls, 1)
+
+  const acceptedPreparation = lifecycle.startRequest()
+  assert.equal(
+    lifecycle.markPending(acceptedPreparation, 4_000, { resetBackoff: true }),
+    true,
+  )
+  scheduler.advance(4_000)
+  assert.equal(polls, 2)
+  assert.equal(snapshots.at(-1).elapsedSeconds, 24)
+  const readyRequest = lifecycle.startRequest()
+  assert.equal(lifecycle.complete(readyRequest), true)
   assert.equal(scheduler.activeTimerCount(), 0)
 })
 
@@ -557,7 +639,10 @@ test('pending retries keep the first server day across the JST boundary', async 
     'utf8',
   )
   const start = script.indexOf("      if (payload.status === 'pending') {")
-  const end = script.indexOf("\n      if (payload.status === 'future')", start)
+  const end = script.indexOf(
+    "\n      if (\n        payload.status === 'failed'",
+    start,
+  )
   assert.ok(start >= 0 && end > start)
   const branch = script.slice(start, end)
   // Execute the production pending branch without a browser or network.
@@ -569,6 +654,7 @@ test('pending retries keep the first server day across the JST boundary', async 
      const dateInput = { value: date };
      const payload = { status: 'pending', retryAfter: 4 };
      const requestId = 1;
+     let transientFailureRetries = 0;
      let pendingCount = 0;
      let scheduled;
      const loadMeasurement = { recordPending() { pendingCount += 1; } };
