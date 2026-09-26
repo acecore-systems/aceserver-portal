@@ -26,7 +26,7 @@ type SkinEnv = Env & {
 const MAX_BODY = 450_000
 export const MAX_TOKENS = 12_000
 function configuredModel(value: string | undefined): string {
-  return value || WORKERS_MODEL
+  return value?.trim() ?? ''
 }
 function json(value: unknown, status = 200) {
   return Response.json(value, {
