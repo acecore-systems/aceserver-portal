@@ -2,8 +2,9 @@
 title: 'Servidores de Minecraft recomendados en Japón: 6 opciones por Java/Bedrock y estilo de juego'
 description: Una guía de servidores públicos de Minecraft en Japón según las ediciones, formas de jugar e información de acceso confirmadas en sus sitios oficiales.
 translationOf: minecraft-server-osusume
-sourceHash: sha256:c48e99e86f53cc69c5c0b117a8dfc8825867cf84ff89710801f1b51b3e492315
+sourceHash: sha256:29f9c55325049c2099392fc122a01b9daa5b3c7ffc9426a9eb0c7515cad28f4c
 date: 2026-08-01T10:00:00+09:00
+lastUpdated: 2026-09-26T18:05:22+09:00
 tags:
   - Minecraft
   - Servidor de Minecraft

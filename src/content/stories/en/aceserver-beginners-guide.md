@@ -2,8 +2,9 @@
 title: 'Aceserver Beginner Guide: Portal, World Maps, Videos, WIKI, and Connection Help'
 description: New to Aceserver? Learn when to use the official portal, world maps, videos, and WIKI, and where to check if you cannot join.
 translationOf: aceserver-beginners-guide
-sourceHash: sha256:7108a87eade48e3b330c2c4d9479621ac5fb39d688d79e17bd98a37f7b6c8791
+sourceHash: sha256:1a269151bdc087db6a64dd3b74df7d78d88e972a0d4462ee922e15d39b2b9e31
 date: 2026-08-09T10:00:00+09:00
+lastUpdated: 2026-09-26T19:09:11+09:00
 tags:
   - Minecraft
   - Aceserver

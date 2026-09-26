@@ -2,6 +2,7 @@
 title: Aceserver初心者ガイド｜ポータル・ワールドマップ・動画・WIKI・接続トラブルの見方
 description: 初めてAceserverに参加する人へ。公式ポータル、ワールドマップ、動画、WIKIの使い分けと、入れないときの確認先をまとめます。
 date: 2026-08-09T10:00:00+09:00
+lastUpdated: 2026-09-26T19:09:11+09:00
 tags:
   - Minecraft
   - Aceserver
