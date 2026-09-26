@@ -102,7 +102,7 @@ const stories = [
   {
     slug: 'minecraft-server-osusume',
     title:
-      '【2026年8月更新】おすすめのマイクラサーバー6選｜Java・統合版対応や遊び方で比較',
+      '【2026年9月確認】おすすめのマイクラサーバー6選｜Java・統合版対応や遊び方で比較',
     description:
       '日本の公開Minecraftサーバーを、公式サイトで確認できた対応エディション・遊び方・参加案内から紹介します。',
     author: 'Gui',

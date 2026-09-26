@@ -2,7 +2,7 @@
 title: 'Servidores de Minecraft recomendados en Japón: 6 opciones por Java/Bedrock y estilo de juego'
 description: Una guía de servidores públicos de Minecraft en Japón según las ediciones, formas de jugar e información de acceso confirmadas en sus sitios oficiales.
 translationOf: minecraft-server-osusume
-sourceHash: sha256:906e7d7b33dd0a9cec37c5b27d79d4c7a2bd2951f933d1faa39e4d68a3dd41bf
+sourceHash: sha256:c48e99e86f53cc69c5c0b117a8dfc8825867cf84ff89710801f1b51b3e492315
 date: 2026-08-01T10:00:00+09:00
 tags:
   - Minecraft
@@ -14,6 +14,8 @@ imageAlt: Tres viajeros alrededor de una mesa con mapa en una encrucijada de blo
 ---
 
 Esta guía presenta servidores públicos cuyas guías oficiales explican cómo jugar y unirse; el orden no es un ranking. Antes de entrar, revisa siempre la guía oficial actual de cada servidor.
+
+**Revisado el 26 de septiembre de 2026:** Volvimos a consultar los seis sitios oficiales y sus indicaciones para Java y Bedrock. [Nishisaba estrenó supervivencia por temporadas el 1 de septiembre](https://nishisaba.jp/news/20260901-notify); Home y TPA no están disponibles en ese mundo. [Munika pasó a Re:15](https://munikasvr.net/events/re15release/) y sustituyó las antiguas misiones tutoriales por la Guía Munika. Los mundos y funciones pueden cambiar; consulta las indicaciones oficiales actuales antes de entrar.
 
 Si el grupo incluye jugadores de Switch o móvil, antes de decidir cómo entrar consulta [cómo jugar Minecraft con amigos](/es/stories/minecraft-play-with-friends/) para comprobar la edición y las cuentas.
 
@@ -51,7 +53,7 @@ Al comenzar puedes recoger un kit inicial y elegir un trabajo para ganar dinero 
 
 Munika Server acepta Java y Bedrock y construye su supervivencia alrededor de economía, habilidades y misiones. Además de minar y construir, incluye elaboración de bebidas, tiendas, casino y servidores temporales con temática de desastres o apocalipsis zombi, por lo que hay muchas formas de encontrar objetivos.
 
-Hay un tutorial para quienes entran por primera vez, y Discord sirve para revisar los eventos y pedir ayuda. Es una buena opción si quieres progresión, economía, misiones y eventos temporales junto a la supervivencia normal.
+Quienes entran por primera vez pueden consultar la Guía Munika para descubrir actividades y objetivos; Discord ofrece noticias de eventos y ayuda. Es una opción para quienes buscan progresión, economía y eventos temporales junto a la supervivencia normal.
 
 ### 5. [Noasaba](https://noasaba.com/)
 

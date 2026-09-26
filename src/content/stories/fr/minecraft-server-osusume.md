@@ -2,7 +2,7 @@
 title: 'Serveurs Minecraft recommandés au Japon : 6 choix selon Java/Bedrock et le style de jeu'
 description: Un guide des serveurs Minecraft publics au Japon, fondé sur les éditions, styles de jeu et informations de participation confirmés sur leurs sites officiels.
 translationOf: minecraft-server-osusume
-sourceHash: sha256:906e7d7b33dd0a9cec37c5b27d79d4c7a2bd2951f933d1faa39e4d68a3dd41bf
+sourceHash: sha256:c48e99e86f53cc69c5c0b117a8dfc8825867cf84ff89710801f1b51b3e492315
 date: 2026-08-01T10:00:00+09:00
 tags:
   - Minecraft
@@ -14,6 +14,8 @@ imageAlt: Trois voyageurs autour d'une table avec une carte, à un carrefour de 
 ---
 
 Ce guide présente des serveurs publics dont les guides officiels expliquent le style de jeu et l'accès ; l'ordre n'est pas un classement. Consultez toujours les indications officielles actuelles avant de rejoindre.
+
+**Vérifié le 26 septembre 2026 :** Nous avons revu les six sites officiels et leurs indications d’accès Java et Bedrock. [Nishisaba a lancé un mode survie saisonnier le 1er septembre](https://nishisaba.jp/news/20260901-notify) ; Home et TPA ne sont pas disponibles dans ce monde. [Munika est passé à Re:15](https://munikasvr.net/events/re15release/) et a remplacé ses anciennes quêtes tutoriels par le Guide Munika. Mondes et fonctions peuvent changer ; consultez les indications officielles avant de rejoindre.
 
 Si votre groupe comprend des joueurs sur Switch ou mobile, consultez [comment jouer à Minecraft avec des amis](/fr/stories/minecraft-play-with-friends/) avant de choisir la façon de rejoindre, afin de vérifier l’édition et les comptes.
 
@@ -51,7 +53,7 @@ Les nouveaux joueurs peuvent récupérer un kit de départ et choisir un métier
 
 Munika Server accepte Java et Bedrock et construit sa survie autour de l'économie, des compétences et des quêtes. Au-delà de l'extraction et de la construction, on y trouve notamment brassage, boutiques, casino et serveurs temporaires sur les thèmes des catastrophes ou de l'apocalypse zombie, ce qui donne de nombreuses façons de se fixer un objectif.
 
-Un tutoriel est disponible pour les nouvelles personnes, et Discord permet de suivre les événements et de demander de l'aide. C'est une bonne option si vous recherchez progression, économie, quêtes et événements temporaires en plus de la survie habituelle.
+Les nouveaux joueurs peuvent utiliser le Guide Munika pour découvrir activités et objectifs ; Discord fournit les informations sur les événements et de l’aide. C’est une option pour qui recherche progression, économie et événements temporaires en plus de la survie habituelle.
 
 ### 5. [Noasaba](https://noasaba.com/)
 
