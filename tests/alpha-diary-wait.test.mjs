@@ -92,10 +92,11 @@ test('switching dates resets transient retries before the debounced request', as
   assert.ok(reset >= 0 && delayedRequest > reset)
 })
 
-test('pending polls ease to fifteen seconds while respecting the server retry delay', () => {
+test('pending polls detect ready pages promptly while respecting the server retry delay', () => {
   assert.equal(diaryPendingPollDelayMs(0, 4_000), 4_000)
-  assert.equal(diaryPendingPollDelayMs(1, 4_000), 10_000)
-  assert.equal(diaryPendingPollDelayMs(2, 4_000), 15_000)
+  assert.equal(diaryPendingPollDelayMs(1, 4_000), 4_000)
+  assert.equal(diaryPendingPollDelayMs(14, 4_000), 4_000)
+  assert.equal(diaryPendingPollDelayMs(15, 4_000), 8_000)
   assert.equal(diaryPendingPollDelayMs(10, 30_000), 30_000)
 })
 
@@ -192,18 +193,18 @@ test('pending checks retain elapsed time through a four-second poll and then fin
 
   const secondRequest = lifecycle.startRequest()
   assert.equal(lifecycle.markPending(secondRequest, 4_000), true)
-  scheduler.advance(9_999)
+  scheduler.advance(3_999)
   assert.equal(polls, 1)
   scheduler.advance(1)
   assert.equal(polls, 2)
 
   const thirdRequest = lifecycle.startRequest()
   assert.equal(lifecycle.markPending(thirdRequest, 4_000), true)
-  scheduler.advance(15_000)
+  scheduler.advance(4_000)
   assert.equal(polls, 3)
 
   const readyRequest = lifecycle.startRequest()
-  assert.equal(snapshots.at(-1).elapsedSeconds, 29)
+  assert.equal(snapshots.at(-1).elapsedSeconds, 12)
   assert.equal(lifecycle.complete(readyRequest), true)
   assert.equal(snapshots.at(-1).isWaiting, false)
   assert.equal(scheduler.activeTimerCount(), 0)

@@ -29,8 +29,9 @@ export function diaryPendingPollDelayMs(
   pendingCount: number,
   retryAfterMs: number,
 ): number {
-  const minimum =
-    pendingCount <= 0 ? 4_000 : pendingCount === 1 ? 10_000 : 15_000
+  // Most new pages complete within a minute. Poll often enough that a ready
+  // page does not remain hidden behind the old 10–15 second backoff.
+  const minimum = pendingCount < 15 ? 4_000 : 8_000
   return Math.max(retryAfterMs, minimum)
 }
 
