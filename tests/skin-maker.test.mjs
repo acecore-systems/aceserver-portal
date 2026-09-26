@@ -381,7 +381,8 @@ test('API fails closed, verifies hostname/action and does not spend on invalid o
 test('all supported locales have complete nonempty controls', () => {
   for (const locale of LOCALES) {
     const c = getSkinMakerUi(locale)
-    assert.match(c.consent, /OpenAI GPT-6 Luna/)
+    assert.match(c.consent, /OpenAI/)
+    assert.match(c.consent, /Cloudflare Workers AI/)
     assert.match(c.privacy, /OpenAI/)
     assert.ok(
       Object.values(c).every((v) =>
