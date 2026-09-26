@@ -518,6 +518,7 @@ export function initAlphaDiary() {
     options: {
       history?: 'push' | 'replace' | 'none'
       resumeWaiting?: boolean
+      retryFailed?: boolean
     } = {},
   ): Promise<boolean> {
     const hadQueuedNavigation = navigationTimer !== 0
@@ -587,6 +588,7 @@ export function initAlphaDiary() {
             action: 'entry',
             entryDate: date || undefined,
             locale,
+            ...(options.retryFailed ? { retryFailed: true } : {}),
             version: 2,
             ...(date && date < BIRTH_BOUNDARY
               ? { adultConsentVersion: 1 }
@@ -1077,7 +1079,10 @@ export function initAlphaDiary() {
         history.replaceState(history.state || {}, '', fixtureUrl)
       }
     }
-    const ready = await loadEntry(serverToday, { history: 'push' })
+    const ready = await loadEntry(serverToday, {
+      history: 'push',
+      retryFailed: true,
+    })
     root.scrollIntoView({ behavior: 'smooth', block: 'start' })
     if (!openChat || !ready) return
     const question = root.querySelector<HTMLButtonElement>(
@@ -1098,13 +1103,14 @@ export function initAlphaDiary() {
   }
 
   function queueDateLoad(date: string, historyMode: 'push' | 'none' = 'push') {
+    const retryFailed = historyMode === 'push'
     if (
       date < BIRTH_BOUNDARY ||
       date > serverToday ||
       readyEntryCache.get(date) ||
       performance.now() < rateLimitUntil
     ) {
-      void loadEntry(date, { history: historyMode })
+      void loadEntry(date, { history: historyMode, retryFailed })
       return
     }
     clearNavigationTimer()
@@ -1122,7 +1128,11 @@ export function initAlphaDiary() {
     waitLifecycle.startRequest()
     navigationTimer = window.setTimeout(() => {
       navigationTimer = 0
-      void loadEntry(date, { history: 'none', resumeWaiting: true })
+      void loadEntry(date, {
+        history: 'none',
+        resumeWaiting: true,
+        retryFailed,
+      })
     }, DIARY_NAVIGATION_DEBOUNCE_MS)
   }
 
@@ -1212,11 +1222,15 @@ export function initAlphaDiary() {
       if (!(target instanceof Element)) return
       if (target.closest('[data-diary-retry]')) {
         if (waitLifecycle.isWaiting()) resumePendingEntry('manual')
-        else void loadEntry(currentDate || dateInput.value, { history: 'none' })
+        else
+          void loadEntry(currentDate || dateInput.value, {
+            history: 'none',
+            retryFailed: true,
+          })
         return
       }
       if (target.closest('[data-diary-today]')) {
-        void loadEntry(serverToday, { history: 'push' })
+        void loadEntry(serverToday, { history: 'push', retryFailed: true })
         return
       }
       if (target.closest('[data-diary-previous]')) {

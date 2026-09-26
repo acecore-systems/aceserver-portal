@@ -80,6 +80,45 @@ test('Portal diary adapter forwards only the bounded contract and a hashed clien
   assert.equal(forwarded.ignored, undefined)
 })
 
+test('only an explicit entry retry crosses the Portal service boundary', async () => {
+  let forwarded
+  const env = {
+    ALPHA_CHAT_SERVICE: {
+      async fetch(request) {
+        forwarded = await request.json()
+        return Response.json(
+          { errorCode: 'entry_generation_failed', ok: false, status: 'failed' },
+          { status: 503 },
+        )
+      },
+    },
+  }
+  const entry = {
+    action: 'entry',
+    entryDate: '2026-09-15',
+    locale: 'ja',
+    version: 2,
+  }
+  await onRequestPost({ env, request: createRequest(entry) })
+  assert.equal(forwarded.retryFailed, undefined)
+  await onRequestPost({
+    env,
+    request: createRequest({ ...entry, retryFailed: true }),
+  })
+  assert.equal(forwarded.retryFailed, true)
+  for (const retryFailed of ['true', 1]) {
+    assert.equal(
+      (
+        await onRequestPost({
+          env,
+          request: createRequest({ ...entry, retryFailed }),
+        })
+      ).status,
+      400,
+    )
+  }
+})
+
 test('all nine page languages reach diary generation unchanged despite browser language preferences', async () => {
   for (const locale of [
     'ja',

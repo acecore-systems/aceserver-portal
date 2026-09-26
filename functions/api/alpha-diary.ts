@@ -133,6 +133,9 @@ function normalizeRequest(value) {
     (action !== 'entry' && action !== 'finale') ||
     (value.locale !== undefined && locale !== value.locale) ||
     (value.entryDate !== undefined && !isValidDate(value.entryDate)) ||
+    (value.retryFailed !== undefined &&
+      typeof value.retryFailed !== 'boolean') ||
+    (value.retryFailed === true && action !== 'entry') ||
     value.journeyToken !== undefined ||
     value.followLatest !== undefined ||
     (value.finaleKeyword !== undefined &&
@@ -151,6 +154,7 @@ function normalizeRequest(value) {
     action,
     locale,
     ...(value.entryDate === undefined ? {} : { entryDate: value.entryDate }),
+    ...(value.retryFailed === true ? { retryFailed: true } : {}),
     ...(action === 'finale' ? { finaleKeyword } : {}),
     ...(value.adultConsentVersion === CONSENT_VERSION
       ? { adultConsentVersion: CONSENT_VERSION }
