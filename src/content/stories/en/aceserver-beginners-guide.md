@@ -2,7 +2,7 @@
 title: 'Aceserver Beginner Guide: Portal, World Maps, Videos, WIKI, and Connection Help'
 description: New to Aceserver? Learn when to use the official portal, world maps, videos, and WIKI, and where to check if you cannot join.
 translationOf: aceserver-beginners-guide
-sourceHash: sha256:cb0ce98cb1340bb61c9a04cc2327b5416da9b63a21e0b85b153c22d59acaa535
+sourceHash: sha256:7108a87eade48e3b330c2c4d9479621ac5fb39d688d79e17bd98a37f7b6c8791
 date: 2026-08-09T10:00:00+09:00
 tags:
   - Minecraft
@@ -53,6 +53,12 @@ The portal is the entrance to current information, not a place to memorize conne
 The [world maps](/en/world-map/) link to published maps such as the Main World, Resource World, RPG, Lobby, Season worlds, and event maps. If you want to tour builds, collect resources, or play RPG, learning a world's name from the map makes it easier to find the related WIKI and Discord guidance.
 
 A map being displayed does not by itself guarantee that you can enter it right now or use a particular feature. World status and travel methods can change, so check the latest announcements and rules before acting.
+
+## Choose a server by what you want to do
+
+For building and social play, start with the Life server. Visit the Resource server to gather materials, or a Season server to explore a world for a particular version. For minigames, look at the Content servers. If you want to propose a longer-running project, read the Concept server guidance. The [WIKI server guide](https://asv-wiki.acecore.net/article/other-server/) links to each server's purpose and rules. Check Discord for which servers are currently available.
+
+For shops and currency, see the [WIKI currency and My Page guide](https://asv-wiki.acecore.net/article/currency-web/). Check the Discord bulletin board before using prices or other conditions that may change.
 
 ## Use videos to understand the server atmosphere
 

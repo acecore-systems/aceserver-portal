@@ -2,7 +2,7 @@
 title: 'Aceserver 초보자 가이드: 포털, 월드 맵, 동영상, WIKI, 접속 문제'
 description: Aceserver가 처음이신가요? 공식 포털, 월드 맵, 동영상, WIKI를 언제 이용하는지와 접속할 수 없을 때 확인할 곳을 안내합니다.
 translationOf: aceserver-beginners-guide
-sourceHash: sha256:cb0ce98cb1340bb61c9a04cc2327b5416da9b63a21e0b85b153c22d59acaa535
+sourceHash: sha256:7108a87eade48e3b330c2c4d9479621ac5fb39d688d79e17bd98a37f7b6c8791
 date: 2026-08-09T10:00:00+09:00
 tags:
   - Minecraft
@@ -53,6 +53,12 @@ Java와 Bedrock이 함께 플레이할 수 있는 조건과 지원 서버를 구
 [월드 맵](/ko/world-map/)에는 Main World, Resource World, RPG, Lobby, Season 계열, 이벤트 맵 등 공개된 맵으로 가는 입구가 있습니다. 건축물을 구경하고 싶거나 자원을 모으고 싶거나 RPG를 하고 싶다면 맵에서 월드 이름을 먼저 알아 두면 WIKI나 Discord에서 관련 안내를 찾기 쉽습니다.
 
 맵이 표시된다는 사실만으로 지금 바로 들어갈 수 있거나 특정 기능을 사용할 수 있다고 판단하면 안 됩니다. 월드 상태와 이동 방법은 바뀔 수 있으므로 행동 전 최신 공지와 규칙을 확인하세요.
+
+## 하고 싶은 활동에 맞는 서버 고르기
+
+건축과 교류를 즐기려면 생활 서버부터 살펴보세요. 재료 수집은 자원 서버, 버전별 월드 탐험은 시즌 서버가 적합합니다. 미니게임 등은 콘텐츠 서버를 확인하세요. 장기 프로젝트를 제안하고 싶다면 콘셉트 서버 안내를 읽어 보세요. 각 서버의 목적과 규칙은 [WIKI 서버 안내](https://asv-wiki.acecore.net/article/other-server/)에 모여 있습니다. 현재 입장 가능한 서버는 Discord 공지에서 확인하세요.
+
+상점과 화폐에 대해서는 [WIKI 화폐 및 마이페이지 안내](https://asv-wiki.acecore.net/article/currency-web/)를 참고하세요. 가격처럼 바뀔 수 있는 조건은 이용 전에 Discord 게시판을 확인하세요.
 
 ## 동영상으로 서버 분위기 파악하기
 

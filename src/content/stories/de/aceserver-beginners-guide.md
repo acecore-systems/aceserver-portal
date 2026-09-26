@@ -2,7 +2,7 @@
 title: 'Aceserver-Einsteigerleitfaden: Portal, Weltkarten, Videos, WIKI und Verbindung'
 description: Neu bei Aceserver? Erfahre, wann du das offizielle Portal, Weltkarten, Videos und das WIKI nutzt und wo du nachsiehst, wenn du nicht beitreten kannst.
 translationOf: aceserver-beginners-guide
-sourceHash: sha256:cb0ce98cb1340bb61c9a04cc2327b5416da9b63a21e0b85b153c22d59acaa535
+sourceHash: sha256:7108a87eade48e3b330c2c4d9479621ac5fb39d688d79e17bd98a37f7b6c8791
 date: 2026-08-09T10:00:00+09:00
 tags:
   - Minecraft
@@ -53,6 +53,12 @@ Das Portal ist der Einstieg in aktuelle Informationen, kein Ort zum Auswendigler
 Die [Weltkarten](/de/world-map/) verlinken veröffentlichte Karten wie Main World, Resource World, RPG, Lobby, Season-Welten und Event-Karten. Wenn du Bauwerke ansehen, Ressourcen sammeln oder RPG spielen möchtest, erleichtert der Name einer Welt auf der Karte die Suche nach passenden Hinweisen im WIKI oder Discord.
 
 Allein die Anzeige einer Karte garantiert nicht, dass du sie sofort betreten oder eine bestimmte Funktion nutzen kannst. Weltstatus und Reisemethoden können sich ändern; prüfe vor dem Handeln die neuesten Hinweise und Regeln.
+
+## Wähle einen Server nach deinen Interessen
+
+Für Bauen und Austausch beginne auf dem Life-Server. Auf dem Ressourcenserver kannst du Materialien sammeln; auf einem Season-Server eine Welt zu einer bestimmten Version erkunden. Für Minispiele sieh dir die Content-Server an. Wenn du ein längerfristiges Projekt vorschlagen möchtest, lies die Hinweise zu Concept-Servern. Der [Serverleitfaden im WIKI](https://asv-wiki.acecore.net/article/other-server/) verlinkt Zweck und Regeln der einzelnen Server. Prüfe auf Discord, welche gerade verfügbar sind.
+
+Informationen zu Shops und Währungen findest du im [WIKI-Leitfaden zu Währungen und My Page](https://asv-wiki.acecore.net/article/currency-web/). Prüfe Preise und andere veränderliche Bedingungen vor der Nutzung am Discord-Schwarzen Brett.
 
 ## Nutze Videos, um die Serveratmosphäre zu verstehen
 
