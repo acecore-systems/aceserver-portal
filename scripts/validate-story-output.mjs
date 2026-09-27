@@ -58,6 +58,17 @@ const stories = [
       '開いた絵日記と日付を選ぶカレンダーを、ブロック調の風景に置いた案内用イラスト',
   },
   {
+    slug: 'wiki-alpha-guide',
+    title: 'WIKIとアルファくんで、知りたい案内を探す',
+    description:
+      'Aceserverの公式WIKIをカテゴリや検索から使い、アルファくんへの質問で公開情報への入口を見つける方法を紹介します。',
+    author: 'Gui',
+    datePublished: '2026-09-27T13:40:00.000Z',
+    image: '/uploads/stories/wiki-alpha-guide-hero.webp',
+    imageAlt:
+      '公式アルファくんが開いた案内書と検索結果を示す、ブロック調の案内イラスト',
+  },
+  {
     slug: 'minecraft-server-cannot-join',
     title: 'マイクラサーバーに入れない時の確認｜Java・統合版・Switch対応',
     description:

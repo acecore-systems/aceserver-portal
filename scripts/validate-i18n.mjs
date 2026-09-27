@@ -14,6 +14,7 @@ const expectedStorySlugs = [
   'aceserver-portal-launch',
   'aceserver-beginners-guide',
   'alpha-diary-guide',
+  'wiki-alpha-guide',
   'minecraft-java-bedrock-crossplay',
   'minecraft-java-bedrock-shared-server',
   'minecraft-server-cannot-join',
