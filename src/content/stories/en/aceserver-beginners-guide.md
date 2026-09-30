@@ -2,9 +2,9 @@
 title: 'Aceserver Beginner Guide: Portal, World Maps, Videos, WIKI, and Connection Help'
 description: New to Aceserver? Learn when to use the official portal, world maps, videos, and WIKI, and where to check if you cannot join.
 translationOf: aceserver-beginners-guide
-sourceHash: sha256:1a269151bdc087db6a64dd3b74df7d78d88e972a0d4462ee922e15d39b2b9e31
+sourceHash: sha256:0f9e84d470b4a6e63f3a3e0b9847eb780d62665769130043274fc32cf0fee14d
 date: 2026-08-09T10:00:00+09:00
-lastUpdated: 2026-09-26T19:09:11+09:00
+lastUpdated: 2026-09-30T21:15:00+09:00
 tags:
   - Minecraft
   - Aceserver
@@ -20,6 +20,8 @@ When you visit Aceserver for the first time, it can be hard to know where to loo
 If you are not sure where to find guidance, use the portal’s site search with terms such as “how to join” or “world map.” Open the page you find and check the latest joining requirements and rules.
 
 Connection destinations, ports, device-specific steps including Switch, joining requirements, and rules can change. This article is an introduction, so always treat the latest official guidance as the authority before you join.
+
+To create a look, read the [Skin Maker guide](/en/stories/minecraft-skin-maker-guide/): generate a new skin from text or an image, review it in 3D and save the PNG.
 
 ## The first four official places to open
 
