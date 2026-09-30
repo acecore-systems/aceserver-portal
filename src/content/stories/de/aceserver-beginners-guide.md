@@ -2,9 +2,9 @@
 title: 'Aceserver-Einsteigerleitfaden: Portal, Weltkarten, Videos, WIKI und Verbindung'
 description: Neu bei Aceserver? Erfahre, wann du das offizielle Portal, Weltkarten, Videos und das WIKI nutzt und wo du nachsiehst, wenn du nicht beitreten kannst.
 translationOf: aceserver-beginners-guide
-sourceHash: sha256:1a269151bdc087db6a64dd3b74df7d78d88e972a0d4462ee922e15d39b2b9e31
+sourceHash: sha256:0f9e84d470b4a6e63f3a3e0b9847eb780d62665769130043274fc32cf0fee14d
 date: 2026-08-09T10:00:00+09:00
-lastUpdated: 2026-09-26T19:09:11+09:00
+lastUpdated: 2026-09-30T21:15:00+09:00
 tags:
   - Minecraft
   - Aceserver
@@ -20,6 +20,8 @@ Beim ersten Besuch auf Aceserver kann es schwer sein zu wissen, was du zuerst an
 Wenn du nicht weißt, wo du die Informationen findest, nutze die Suche im Portal mit Begriffen wie „Beitreten“ oder „Weltkarte“. Öffne die gefundene Seite und prüfe die aktuellen Teilnahmebedingungen und Regeln.
 
 Verbindungsziele, Ports, gerätespezifische Schritte einschließlich Switch, Teilnahmebedingungen und Regeln können sich ändern. Dieser Artikel ist nur ein Einstieg; vor dem Beitritt gilt immer die neueste offizielle Anleitung als maßgeblich.
+
+Für ein eigenes Aussehen lesen Sie die [Skin-Maker-Anleitung](/de/stories/minecraft-skin-maker-guide/): neu aus Text oder Bild erstellen, in 3D prüfen und PNG speichern.
 
 ## Die ersten vier offiziellen Anlaufstellen
 

@@ -13,6 +13,17 @@ const settings = JSON.parse(
 const errors = []
 const stories = [
   {
+    slug: 'minecraft-skin-maker-guide',
+    title: 'スキンメーカーの使い方｜文章・画像から作って3Dで確認',
+    description:
+      'Aceserverのスキンメーカーで、文章と任意の参考画像から新しいスキンを作り、Classic・Slimの型、3D表示、64×64 PNG保存を確認する手順を紹介します。',
+    author: 'Gui',
+    datePublished: '2026-09-30T12:15:00.000Z',
+    image: '/uploads/stories/minecraft-skin-maker-guide.webp',
+    imageAlt:
+      '腕の型、文章と任意画像、3D確認、PNG保存の順を示す操作案内図。生成スキンの実例ではない。',
+  },
+  {
     slug: 'aceserver-hijacked',
     title: 'エースサーバー、乗っ取られる。',
     description:

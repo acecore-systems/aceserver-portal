@@ -29,6 +29,7 @@ const storySlugs = [
   'aceserver-beginners-guide',
   'alpha-diary-guide',
   'wiki-alpha-guide',
+  'minecraft-skin-maker-guide',
   'minecraft-java-bedrock-crossplay',
   'minecraft-java-bedrock-shared-server',
   'minecraft-server-cannot-join',
