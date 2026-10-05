@@ -2,7 +2,8 @@ const ASSET_ID_PATTERN = /^asset_[a-z0-9]{24,64}$/u
 const ALLOWED_CONTENT_TYPES = ['image/jpeg', 'image/png', 'image/webp']
 const MAX_IMAGE_BYTES = 8 * 1024 * 1024
 
-export async function onRequestGet({ env, params, request }) {
+export async function onRequestGet(context) {
+  const { env, params, request } = context
   if (request.headers.get('Sec-Fetch-Site') === 'cross-site') {
     return new Response('Not found.', { status: 404 })
   }
@@ -23,6 +24,22 @@ export async function onRequestGet({ env, params, request }) {
   if (ifNoneMatch && ifNoneMatch.length <= 100) {
     headers.set('If-None-Match', ifNoneMatch)
   }
+  const cache = typeof caches === 'undefined' ? undefined : caches.default
+  // An asset ID identifies immutable bytes; query strings and client headers
+  // must not create separate copies of the same image in the edge cache.
+  const cacheKey = new Request(
+    new URL(`/api/alpha-diary-image/${assetId}`, request.url),
+  )
+  if (cache) {
+    try {
+      const cached = await cache.match(new Request(cacheKey, { headers }))
+      if (cached && (cached.status === 200 || cached.status === 304)) {
+        return imageResponse(cached, 'HIT')
+      }
+    } catch (error) {
+      logCacheError('read', error)
+    }
+  }
   try {
     const serviceResponse = await service.fetch(
       new Request(
@@ -31,10 +48,7 @@ export async function onRequestGet({ env, params, request }) {
       ),
     )
     if (serviceResponse.status === 304) {
-      return new Response(null, {
-        headers: copyAssetHeaders(serviceResponse.headers),
-        status: 304,
-      })
+      return imageResponse(serviceResponse, 'BYPASS')
     }
     const contentType = serviceResponse.headers
       .get('Content-Type')
@@ -43,7 +57,7 @@ export async function onRequestGet({ env, params, request }) {
       .toLowerCase()
     const contentLength = Number(serviceResponse.headers.get('Content-Length'))
     if (
-      !serviceResponse.ok ||
+      serviceResponse.status !== 200 ||
       !serviceResponse.body ||
       !contentType ||
       !ALLOWED_CONTENT_TYPES.includes(contentType) ||
@@ -53,10 +67,16 @@ export async function onRequestGet({ env, params, request }) {
     ) {
       throw new Error('AlphaDiaryImageServicePayloadError')
     }
-    return new Response(serviceResponse.body, {
-      headers: copyAssetHeaders(serviceResponse.headers),
-      status: 200,
-    })
+    const response = imageResponse(serviceResponse, cache ? 'MISS' : 'BYPASS')
+    if (cache) {
+      const cachedResponse = response.clone()
+      const write = Promise.resolve()
+        .then(() => cache.put(cacheKey, cachedResponse))
+        .catch((error) => logCacheError('write', error))
+      if (typeof context.waitUntil === 'function') context.waitUntil(write)
+      else await write
+    }
+    return response
   } catch (error) {
     console.error(
       JSON.stringify({
@@ -70,6 +90,28 @@ export async function onRequestGet({ env, params, request }) {
       status: 503,
     })
   }
+}
+
+function imageResponse(
+  source: Response,
+  cacheState: 'HIT' | 'MISS' | 'BYPASS',
+) {
+  const headers = copyAssetHeaders(source.headers)
+  headers.set('X-Alpha-Diary-Image-Cache', cacheState)
+  return new Response(source.status === 304 ? null : source.body, {
+    headers,
+    status: source.status,
+  })
+}
+
+function logCacheError(operation: 'read' | 'write', error: unknown) {
+  console.warn(
+    JSON.stringify({
+      errorCode: error instanceof Error ? error.name : 'cache_error',
+      event: 'alpha_diary_image_cache_error',
+      operation,
+    }),
+  )
 }
 
 function copyAssetHeaders(source) {
