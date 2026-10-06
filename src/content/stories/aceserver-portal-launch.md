@@ -11,6 +11,7 @@ imageAlt: Minecraftの街並みを背景にしたエースサーバーポータ�
 relatedPages:
   - world-map
   - youtube-search-aceserver
+lastUpdated: '2026-10-06T13:52:45+09:00'
 ---
 
 誰でも参加できるMinecraft無料公開サーバー「エースサーバー」の公式ポータルを公開しました。
@@ -22,6 +23,14 @@ relatedPages:
 エースサーバーには、参加前に確認したい情報が複数あります。どんなサーバーなのか、どうやって参加するのか、どんなワールドがあるのか、ルールや詳細はどこで確認するのか。情報がDiscord、Wiki、動画、ワールドマップに分かれていると、初めて訪れた人は最初の一歩を選びにくくなります。
 
 そこで、既存の情報源を置き換えるのではなく、迷わず移動できる入口としてポータルを設計しました。
+
+<figure class="article-diagram" data-layout="branches" data-tone="teal" data-count="3" aria-labelledby="diagram-aceserver-portal-launch">
+<figcaption><strong id="diagram-aceserver-portal-launch">ポータルがつなぐ目的別の情報源</strong><span>入口は情報源をまとめますが、案内の原本は各公式ページです。参加前は最新情報を確かめます。</span></figcaption>
+<ol class="article-diagram__nodes">
+<li><span class="article-diagram__symbol"><span aria-hidden="true">1</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 10 12 3l9 7M5 10v11h14V10M9 21v-7h6v7"/></svg></span><strong>ポータルから始める</strong><span>概要と参加の入口を見て、知りたい情報を選ぶ。</span></li>
+<li><span class="article-diagram__symbol"><span aria-hidden="true">2</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m3 6 6-3 6 3 6-3v15l-6 3-6-3-6 3zM9 3v15m6-12v15"/></svg></span><strong>動画・ワールドマップ</strong><span>動画で雰囲気を知り、公開中のワールドを探す。</span></li>
+<li><span class="article-diagram__symbol"><span aria-hidden="true">3</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 3h9l4 4v14H6zM15 3v5h4M9 12h7M9 16h7"/></svg></span><strong>WIKI・Discord</strong><span>参加方法やルールなど、詳しい公式案内を読む。</span></li>
+</ol></figure>
 
 ## 動画、ワールドマップ、Wikiを分断しない
 

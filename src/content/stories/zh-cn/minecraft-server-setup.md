@@ -2,15 +2,16 @@
 title: 如何搭建免费的 Minecraft 服务器：Java、基岩版与 Realms 的区别
 description: 介绍如何搭建免费的 Minecraft 服务器，并比较 Java 版、基岩版和 Realms，包括准备工作与开放服务器前的安全检查。
 translationOf: minecraft-server-setup
-sourceHash: sha256:1d0155c2bfc03563a83d164bde21d3becb20f0f64d2ba85763512ad9c025b903
+sourceHash: sha256:48fe3113347491bab033478489964d0be50754b14687d8f189c3103a1696b1bf
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
   - Minecraft服务器
   - 入门
 author: Gui
-image: /uploads/stories/minecraft-server-setup-hero.webp
-imageAlt: 三名方块风格的冒险者眺望通往村庄、服务器和云端入口的三条道路
+image: '/uploads/stories/minecraft-server-setup-cover-v2.webp'
+imageAlt: '用方块组装套件、工具、收纳箱和微型服务器小屋表现准备与维护的概念插图'
+lastUpdated: '2026-10-06T13:52:45+09:00'
 ---
 
 和朋友一起玩 Minecraft 有几种方式：使用同一个局域网、在自己的电脑上运行专用服务器，或者使用 Realms。选择哪种方式，取决于所有人的版本，以及你愿意承担多少维护工作。

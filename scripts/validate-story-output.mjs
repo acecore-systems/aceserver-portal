@@ -97,9 +97,9 @@ const stories = [
       'MinecraftのJava版と統合版は、両方からの参加を公式に案内する対応サーバーなら一緒に遊べます。見分け方と参加前の確認点を紹介します。',
     author: 'Gui',
     datePublished: '2026-08-08T01:00:00.000Z',
-    image: '/uploads/stories/minecraft-java-bedrock-crossplay-hero.webp',
+    image: '/uploads/stories/minecraft-java-bedrock-crossplay-cover-v2.webp',
     imageAlt:
-      'ノートPCと携帯端末を使う3人が、同じワールドへ続く門を地図越しに見つめるブロック調の風景',
+      'PCとタブレットから、共通のブロックの島へ橋を渡す説明用イラスト。実際の接続画面ではない',
   },
   {
     slug: 'minecraft-java-bedrock-shared-server',
@@ -109,9 +109,10 @@ const stories = [
       'Java版の自分のサーバーへ統合版の友達を安全に招待するための、GeyserとFloodgateの構成、無料ホストの選び方、公開前の確認を解説します。',
     author: 'Gui',
     datePublished: '2026-08-09T01:00:00.000Z',
-    image: '/uploads/stories/minecraft-java-bedrock-shared-server-hero.webp',
+    image:
+      '/uploads/stories/minecraft-java-bedrock-shared-server-cover-v2.webp',
     imageAlt:
-      'PC・タブレット・携帯ゲーム機を持つ3人が、青い接続線と盾の印が灯る同じ小さなサーバーの家を見つめるブロック調の風景',
+      'サーバーを表すブロックの家にPCと橋を経由したタブレットがつながり、管理用の箱を分けた説明用イラスト',
   },
   {
     slug: 'minecraft-play-with-friends',
@@ -132,9 +133,9 @@ const stories = [
       '日本の公開Minecraftサーバーを、公式サイトで確認できた対応エディション・遊び方・参加案内から紹介します。',
     author: 'Gui',
     datePublished: '2026-08-01T01:00:00.000Z',
-    image: '/uploads/stories/minecraft-server-osusume-hero.webp',
+    image: '/uploads/stories/minecraft-server-osusume-cover-v2.webp',
     imageAlt:
-      '夕暮れのブロック調の広場で地図を囲み、さまざまな世界へ続く道を見渡す3人の旅人',
+      '街・鉄道・装置・市場・自然・建築の6種類の小さな島を並べた比較用イラスト。実サーバーのスクリーンショットではない',
   },
   {
     slug: 'minecraft-server-setup',
@@ -143,9 +144,9 @@ const stories = [
       'Minecraftの無料サーバーの立て方を、Java版・統合版・Realmsの違い、必要な準備、公開前の注意点とともに解説します。',
     author: 'Gui',
     datePublished: '2026-08-08T01:00:00.000Z',
-    image: '/uploads/stories/minecraft-server-setup-hero.webp',
+    image: '/uploads/stories/minecraft-server-setup-cover-v2.webp',
     imageAlt:
-      'サーバーの選択肢を見渡す3人のブロック調の冒険者と、村・サーバー・クラウドへ続く3つの道',
+      'ブロックの組立キット、工具、保管箱と小さなサーバーの家で、準備と運用を表した説明用イラスト',
   },
   {
     slug: 'metaverse-is-close',
@@ -154,8 +155,9 @@ const stories = [
       'VRゴーグルだけではなく、人が集まり交流するMinecraftのような仮想空間もメタバースではないか、という話。',
     author: 'Gui',
     datePublished: '2023-03-22T15:00:00.000Z',
-    image: '/uploads/stories/metaverse-is-close.webp',
-    imageAlt: '仮想空間でつながる人々とVRヘッドセットを表したイメージ',
+    image: '/uploads/stories/metaverse-is-close-cover-v2.webp',
+    imageAlt:
+      'PCとタブレットを入口に、人々がブロックの広場で共同建築を楽しむ説明用イラスト',
   },
 ]
 

@@ -8,13 +8,14 @@ tags:
   - Java版
   - 統合版
 author: Gui
-image: /uploads/stories/minecraft-java-bedrock-crossplay-hero.webp
-imageAlt: ノートPCと携帯端末を使う3人が、同じワールドへ続く門を地図越しに見つめるブロック調の風景
+image: '/uploads/stories/minecraft-java-bedrock-crossplay-cover-v2.webp'
+imageAlt: 'PCとタブレットから、共通のブロックの島へ橋を渡す説明用イラスト。実際の接続画面ではない'
 relatedStories:
   - minecraft-play-with-friends
   - minecraft-server-cannot-join
   - minecraft-server-osusume
   - minecraft-server-setup
+lastUpdated: '2026-10-06T13:52:45+09:00'
 ---
 
 Java版と統合版は、対応サーバーなら一緒に遊べます。友達のPCがJava版、スマホやゲーム機が統合版という組み合わせでも、サーバーが両方の接続を受け入れていれば、同じサーバーで建築や冒険を楽しめます。

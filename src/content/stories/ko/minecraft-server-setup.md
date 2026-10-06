@@ -2,15 +2,16 @@
 title: '무료 마인크래프트 서버 만드는 방법: Java, 베드락, Realms의 차이'
 description: 무료 마인크래프트 서버를 만드는 방법을 소개하고, Java Edition·Bedrock Edition·Realms의 차이와 준비 사항, 공개 전 보안 점검을 설명합니다.
 translationOf: minecraft-server-setup
-sourceHash: sha256:1d0155c2bfc03563a83d164bde21d3becb20f0f64d2ba85763512ad9c025b903
+sourceHash: sha256:48fe3113347491bab033478489964d0be50754b14687d8f189c3103a1696b1bf
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
   - 마인크래프트 서버
   - 시작하기
 author: Gui
-image: /uploads/stories/minecraft-server-setup-hero.webp
-imageAlt: 마을·서버·클라우드 게이트웨이로 이어지는 세 갈래 길을 바라보는 블록 스타일 모험가 세 명
+image: '/uploads/stories/minecraft-server-setup-cover-v2.webp'
+imageAlt: '블록 조립 키트, 도구, 보관 상자와 작은 서버 집으로 준비와 운영을 나타낸 개념 일러스트'
+lastUpdated: '2026-10-06T13:52:45+09:00'
 ---
 
 친구와 마인크래프트를 플레이하는 방법은 여러 가지입니다. 같은 로컬 네트워크를 사용하거나, 자신의 PC에서 전용 서버를 실행하거나, Realms를 사용할 수 있습니다. 적합한 방법은 모두가 사용하는 에디션과 감당할 수 있는 관리 작업의 양에 따라 달라집니다.

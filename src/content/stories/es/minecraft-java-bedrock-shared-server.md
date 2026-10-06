@@ -2,7 +2,7 @@
 title: 'Cómo compartir tu servidor Java con Bedrock: configuración segura de juego cruzado'
 description: Aprende a invitar de forma segura a amistades de Bedrock a tu propio servidor Java con Geyser y Floodgate, elegir un host gratuito y revisar la configuración antes de abrirlo.
 translationOf: minecraft-java-bedrock-shared-server
-sourceHash: sha256:61f4cc5be0d88b01fdab4917b333d828a9483f4f9e34ec5ffb2b35a5eda2dd9c
+sourceHash: sha256:3ad44805fe1520a43fa6286eae62b3315998d010a7fb1cecff5f763ab1805b87
 date: 2026-08-09T10:00:00+09:00
 tags:
   - Minecraft
@@ -12,8 +12,9 @@ tags:
   - Servidor gratuito
   - Geyser
 author: Gui
-image: /uploads/stories/minecraft-java-bedrock-shared-server-hero.webp
-imageAlt: Tres personas con un PC, una tableta y una consola portátil miran una misma pequeña casa-servidor de bloques iluminada por líneas azules y un emblema de escudo
+image: '/uploads/stories/minecraft-java-bedrock-shared-server-cover-v2.webp'
+imageAlt: 'Ilustración conceptual de una casa-servidor de bloques conectada a un PC y a una tableta mediante un puente, con una caja de administración aparte'
+lastUpdated: '2026-10-06T13:52:45+09:00'
 ---
 
 Para invitar a tu propio servidor Java a amistades que usan Bedrock en móviles, tabletas, Windows o consolas, una opción práctica es instalar Geyser y Floodgate en el servidor Java. Geyser conecta las comunicaciones de Bedrock con el servidor Java, mientras Floodgate permite identificar las cuentas de Bedrock de forma segura.

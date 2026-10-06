@@ -2,16 +2,16 @@
 title: 'Serveurs Minecraft recommandés au Japon : 6 choix selon Java/Bedrock et le style de jeu'
 description: Un guide des serveurs Minecraft publics au Japon, fondé sur les éditions, styles de jeu et informations de participation confirmés sur leurs sites officiels.
 translationOf: minecraft-server-osusume
-sourceHash: sha256:29f9c55325049c2099392fc122a01b9daa5b3c7ffc9426a9eb0c7515cad28f4c
+sourceHash: sha256:c2e48929cf9d67ea2cb76eaf8ccdaf7e1aa1a511a05ff69f766fe497de5dc626
 date: 2026-08-01T10:00:00+09:00
-lastUpdated: 2026-09-26T18:05:22+09:00
+lastUpdated: '2026-10-06T13:52:45+09:00'
 tags:
   - Minecraft
   - Serveur Minecraft
   - Premiers pas
 author: Gui
-image: /uploads/stories/minecraft-server-osusume-hero.webp
-imageAlt: Trois voyageurs autour d'une table avec une carte, à un carrefour de blocs donnant sur différents mondes au coucher du soleil
+image: '/uploads/stories/minecraft-server-osusume-cover-v2.webp'
+imageAlt: 'Illustration comparative de six îles miniatures : ville, chemin de fer, machines, marché, nature et construction ; ce ne sont pas des captures de serveurs réels'
 ---
 
 Ce guide présente des serveurs publics dont les guides officiels expliquent le style de jeu et l'accès ; l'ordre n'est pas un classement. Consultez toujours les indications officielles actuelles avant de rejoindre.

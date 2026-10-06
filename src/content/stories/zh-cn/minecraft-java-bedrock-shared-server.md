@@ -2,7 +2,7 @@
 title: 如何让 Java 版与基岩版共用自己的服务器：安全跨平台设置
 description: 介绍如何通过 Geyser 与 Floodgate 安全地邀请基岩版朋友加入自己的 Java 版服务器，并说明免费主机的选择和公开前检查。
 translationOf: minecraft-java-bedrock-shared-server
-sourceHash: sha256:61f4cc5be0d88b01fdab4917b333d828a9483f4f9e34ec5ffb2b35a5eda2dd9c
+sourceHash: sha256:3ad44805fe1520a43fa6286eae62b3315998d010a7fb1cecff5f763ab1805b87
 date: 2026-08-09T10:00:00+09:00
 tags:
   - Minecraft
@@ -12,8 +12,9 @@ tags:
   - 免费服务器
   - Geyser
 author: Gui
-image: /uploads/stories/minecraft-java-bedrock-shared-server-hero.webp
-imageAlt: 三名使用电脑、平板和掌机的人望向同一座小型方块服务器屋，屋上亮着蓝色连接线和盾牌标志
+image: '/uploads/stories/minecraft-java-bedrock-shared-server-cover-v2.webp'
+imageAlt: '方块服务器小屋连接电脑和通过桥梁接入的平板，管理工具箱独立放置的概念插图'
+lastUpdated: '2026-10-06T13:52:45+09:00'
 ---
 
 如果想邀请使用手机、平板、Windows 或游戏机基岩版的朋友加入自己的 Java 版服务器，可以在 Java 版服务器中安装 Geyser 与 Floodgate。Geyser 负责把基岩版连接桥接到 Java 版服务器，Floodgate 则让服务器能安全识别基岩版账号。

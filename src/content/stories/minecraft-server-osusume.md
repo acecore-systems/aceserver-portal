@@ -2,14 +2,14 @@
 title: 【2026年9月確認】おすすめのマイクラサーバー6選｜Java・統合版対応や遊び方で比較
 description: 日本の公開Minecraftサーバーを、公式サイトで確認できた対応エディション・遊び方・参加案内から紹介します。
 date: 2026-08-01T10:00:00+09:00
-lastUpdated: 2026-09-26T18:05:22+09:00
+lastUpdated: '2026-10-06T13:52:45+09:00'
 tags:
   - Minecraft
   - マイクラサーバー
   - はじめ方
 author: Gui
-image: /uploads/stories/minecraft-server-osusume-hero.webp
-imageAlt: 夕暮れのブロック調の広場で地図を囲み、さまざまな世界へ続く道を見渡す3人の旅人
+image: '/uploads/stories/minecraft-server-osusume-cover-v2.webp'
+imageAlt: '街・鉄道・装置・市場・自然・建築の6種類の小さな島を並べた比較用イラスト。実サーバーのスクリーンショットではない'
 relatedStories:
   - minecraft-play-with-friends
   - minecraft-java-bedrock-crossplay

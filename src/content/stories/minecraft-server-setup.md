@@ -7,13 +7,14 @@ tags:
   - マイクラサーバー
   - はじめ方
 author: Gui
-image: /uploads/stories/minecraft-server-setup-hero.webp
-imageAlt: サーバーの選択肢を見渡す3人のブロック調の冒険者と、村・サーバー・クラウドへ続く3つの道
+image: '/uploads/stories/minecraft-server-setup-cover-v2.webp'
+imageAlt: 'ブロックの組立キット、工具、保管箱と小さなサーバーの家で、準備と運用を表した説明用イラスト'
 relatedStories:
   - minecraft-play-with-friends
   - minecraft-java-bedrock-crossplay
   - minecraft-server-cannot-join
   - minecraft-server-osusume
+lastUpdated: '2026-10-06T13:52:45+09:00'
 ---
 
 マイクラを友達と遊ぶ方法は、同じ家のネットワークで遊ぶ方法、自宅のPCで専用サーバーを動かす方法、Realmsを使う方法に分けられます。参加する人のエディションと、どのくらい管理の手間をかけられるかで選択肢が変わります。

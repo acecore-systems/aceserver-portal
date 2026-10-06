@@ -2,7 +2,7 @@
 title: Java et Bedrock peuvent-ils jouer ensemble ? Comment reconnaître un serveur compatible
 description: Minecraft Java Edition et Bedrock Edition peuvent jouer ensemble sur les serveurs qui annoncent officiellement la prise en charge des deux éditions. Voici comment les reconnaître et quoi vérifier avant de rejoindre.
 translationOf: minecraft-java-bedrock-crossplay
-sourceHash: sha256:e34b9fbed14f5809549af229a9299b68cee79d8096537207f2c52d5498756461
+sourceHash: sha256:a400c74f0a5e4f3c61d3080ae0ecb58c655507fb3b11a6ab57a088428126b530
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -10,8 +10,9 @@ tags:
   - Java Edition
   - Bedrock Edition
 author: Gui
-image: /uploads/stories/minecraft-java-bedrock-crossplay-hero.webp
-imageAlt: Trois joueurs utilisant un ordinateur portable et un appareil portatif regardent, au-delà d'une carte, une porte vers le même monde de blocs
+image: '/uploads/stories/minecraft-java-bedrock-crossplay-cover-v2.webp'
+imageAlt: 'Illustration conceptuelle d’un PC et d’une tablette reliés par des ponts à une île en blocs, sans écran de connexion réel'
+lastUpdated: '2026-10-06T13:52:45+09:00'
 ---
 
 Les joueurs Java et Bedrock peuvent jouer ensemble sur un serveur compatible. Si le serveur accepte les connexions des deux éditions, des amis sur Java sur PC et d'autres sur Bedrock sur mobile ou console peuvent construire et partir à l'aventure sur le même serveur.

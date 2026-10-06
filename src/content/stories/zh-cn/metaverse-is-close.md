@@ -2,14 +2,15 @@
 title: 元宇宙其实就在身边
 description: 元宇宙不只存在于 VR 头显中；像 Minecraft 这样让人们相聚和交流的虚拟空间，也可以被视为元宇宙。
 translationOf: metaverse-is-close
-sourceHash: sha256:14531152050ca4f10b2e7f6961d2f2d34d7cdc802d07ceac87945f13b9d02486
+sourceHash: sha256:f34ab749c2a8f41450eda70a0a2cd519d52c85f8a65d9e8bf4d6f42fa4032335
 date: 2023-03-23T00:00:00+09:00
 tags:
   - 社区
   - Minecraft
 author: Gui
-image: /uploads/stories/metaverse-is-close.webp
-imageAlt: 表现人们在虚拟空间中相连以及 VR 头显的图像
+image: '/uploads/stories/metaverse-is-close-cover-v2.webp'
+imageAlt: '人们通过电脑和平板进入方块广场，共同建造的概念插图'
+lastUpdated: '2026-10-06T13:52:45+09:00'
 ---
 
 提到“元宇宙”，很多人也许会想到戴上 VR 头显、进入虚拟空间。Facebook 更名为 Meta，并把重点放在 Horizon Worlds 上，但老实说，可能仍有许多人没有很强的实感。
@@ -21,6 +22,14 @@ imageAlt: 表现人们在虚拟空间中相连以及 VR 头显的图像
 玩家在虚拟空间里建造、冒险，并与其他玩家交流。即使没有 VR 头显，也能通过电脑或智能手机参与。
 
 我认为，元宇宙的入口并不是某一种设备，而是“人们相聚的虚拟空间”。
+
+<figure class="article-diagram" data-layout="layers" data-tone="amber" data-count="3" aria-labelledby="diagram-metaverse-is-close">
+<figcaption><strong id="diagram-metaverse-is-close">建造、冒险与交流交汇的虚拟空间</strong><span>这里关注的是人们聚集并分享活动的空间，而不是进入时是否使用VR设备。</span></figcaption>
+<ol class="article-diagram__nodes">
+<li><span class="article-diagram__symbol"><span aria-hidden="true">1</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 20h16M6 20V9l6-6 6 6v11M9 20v-6h6v6"/></svg></span><strong>建造</strong><span>与其他玩家一起，在虚拟空间中营造场所。</span></li>
+<li><span class="article-diagram__symbol"><span aria-hidden="true">2</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m15 9-2 4-4 2 2-4z"/></svg></span><strong>冒险</strong><span>探索世界，体验Minecraft中的旅程。</span></li>
+<li><span class="article-diagram__symbol"><span aria-hidden="true">3</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M20 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><strong>交流</strong><span>聚集在同一空间，与其他玩家互动。</span></li>
+</ol></figure>
 
 ## Minecraft 社区的可能性
 
