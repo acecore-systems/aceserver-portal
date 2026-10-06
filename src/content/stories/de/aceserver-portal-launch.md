@@ -2,7 +2,7 @@
 title: Das Aceserver-Portal ist online
 description: Wir haben die zuvor auf Discord, Wiki, Videos und Weltkarten verteilten Informationen vor dem Beitritt in einem gemeinsamen Einstieg gebündelt.
 translationOf: aceserver-portal-launch
-sourceHash: sha256:8928266b63395c3af0fbe52abff591003c8c4a0a6ad259740be5052f605e031e
+sourceHash: sha256:7135f8b1e68e3bdb744b643f856f26305e2d1e25296653417993ddf4cdd9e1c0
 date: 2026-06-07T10:00:00+09:00
 tags:
   - Ankündigung
@@ -10,6 +10,7 @@ tags:
 author: Gui
 image: /uploads/stories/aceserver-portal-launch.webp
 imageAlt: Startseite des Aceserver-Portals vor einer Minecraft-Stadt
+lastUpdated: '2026-10-06T13:52:45+09:00'
 ---
 
 Wir haben das offizielle Portal für Aceserver veröffentlicht, einen kostenlosen öffentlichen Minecraft-Server, dem alle beitreten können.
@@ -21,6 +22,14 @@ Aceserver ist sowohl mit der Java Edition als auch mit der Bedrock Edition spiel
 Vor dem Beitritt zu Aceserver gibt es mehrere Dinge zu klären: Was für ein Server ist es, wie tritt man bei, welche Welten gibt es und wo stehen Regeln und weitere Details? Sind diese Informationen auf Discord, Wiki, Videos und Weltkarten verteilt, fällt es neuen Besucherinnen und Besuchern schwer, den ersten Schritt zu wählen.
 
 Deshalb haben wir das Portal als klaren Eingang zu den bestehenden Informationsquellen gestaltet, nicht als deren Ersatz.
+
+<figure class="article-diagram" data-layout="branches" data-tone="teal" data-count="3" aria-labelledby="diagram-aceserver-portal-launch">
+<figcaption><strong id="diagram-aceserver-portal-launch">Das Portal verbindet offizielle Informationen nach Zweck</strong><span>Das Portal bündelt die Einstiege, ersetzt aber nicht die ursprünglichen Informationsquellen. Prüfen Sie vor dem Beitritt die aktuellen offiziellen Hinweise.</span></figcaption>
+<ol class="article-diagram__nodes">
+<li><span class="article-diagram__symbol"><span aria-hidden="true">1</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 10 12 3l9 7M5 10v11h14V10M9 21v-7h6v7"/></svg></span><strong>Im Portal beginnen</strong><span>Überblick ansehen und die passenden Informationen auswählen.</span></li>
+<li><span class="article-diagram__symbol"><span aria-hidden="true">2</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m3 6 6-3 6 3 6-3v15l-6 3-6-3-6 3zM9 3v15m6-12v15"/></svg></span><strong>Videos und Weltkarten</strong><span>Einen Eindruck gewinnen und die vorgestellten Welten erkunden.</span></li>
+<li><span class="article-diagram__symbol"><span aria-hidden="true">3</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 3h9l4 4v14H6zM15 3v5h4M9 12h7M9 16h7"/></svg></span><strong>WIKI und Discord</strong><span>Ausführliche Hinweise zur Teilnahme und die Regeln lesen.</span></li>
+</ol></figure>
 
 ## Videos, Weltkarten und Wiki bleiben miteinander verbunden
 

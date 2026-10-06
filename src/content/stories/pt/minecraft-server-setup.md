@@ -2,15 +2,16 @@
 title: 'Como configurar um servidor gratuito de Minecraft: Java, Bedrock e Realms'
 description: Aprenda a configurar um servidor gratuito de Minecraft e compare Java Edition, Bedrock Edition e Realms, incluindo os preparativos e as verificações de segurança antes de abri-lo.
 translationOf: minecraft-server-setup
-sourceHash: sha256:1d0155c2bfc03563a83d164bde21d3becb20f0f64d2ba85763512ad9c025b903
+sourceHash: sha256:48fe3113347491bab033478489964d0be50754b14687d8f189c3103a1696b1bf
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
   - Servidor de Minecraft
   - Primeiros passos
 author: Gui
-image: /uploads/stories/minecraft-server-setup-hero.webp
-imageAlt: Três aventureiros em estilo de blocos observam três caminhos que levam a uma vila, a um servidor e a uma entrada na nuvem
+image: '/uploads/stories/minecraft-server-setup-cover-v2.webp'
+imageAlt: 'Ilustração conceitual de preparação e manutenção com kit de blocos, ferramentas, caixa de armazenamento e casa-servidor em miniatura'
+lastUpdated: '2026-10-06T13:52:45+09:00'
 ---
 
 Há várias formas de jogar Minecraft com amigos: usar a mesma rede local, executar um servidor dedicado no seu próprio PC ou usar Realms. A escolha certa depende da edição de todos os jogadores e do quanto de manutenção você aceita fazer.

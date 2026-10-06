@@ -2,7 +2,7 @@
 title: 'Как открыть свой Java-сервер для Bedrock: безопасная настройка кроссплея'
 description: Узнайте, как безопасно пригласить друзей с Bedrock на свой Java-сервер через Geyser и Floodgate, выбрать бесплатный хостинг и проверить настройки до публикации.
 translationOf: minecraft-java-bedrock-shared-server
-sourceHash: sha256:61f4cc5be0d88b01fdab4917b333d828a9483f4f9e34ec5ffb2b35a5eda2dd9c
+sourceHash: sha256:3ad44805fe1520a43fa6286eae62b3315998d010a7fb1cecff5f763ab1805b87
 date: 2026-08-09T10:00:00+09:00
 tags:
   - Minecraft
@@ -12,8 +12,9 @@ tags:
   - Бесплатный сервер
   - Geyser
 author: Gui
-image: /uploads/stories/minecraft-java-bedrock-shared-server-hero.webp
-imageAlt: Три человека с ПК, планшетом и портативной консолью смотрят на один небольшой блочный дом-сервер, освещённый синими линиями соединения и эмблемой щита
+image: '/uploads/stories/minecraft-java-bedrock-shared-server-cover-v2.webp'
+imageAlt: 'Концептуальная иллюстрация дома-сервера из блоков с ПК, планшетом через мост и отдельным ящиком для администрирования'
+lastUpdated: '2026-10-06T13:52:45+09:00'
 ---
 
 Чтобы пригласить на собственный Java-сервер друзей, использующих Bedrock на телефонах, планшетах, Windows или консолях, практично установить на Java-сервер Geyser и Floodgate. Geyser связывает подключения Bedrock с Java-сервером, а Floodgate помогает серверу безопасно распознавать учётные записи Bedrock.

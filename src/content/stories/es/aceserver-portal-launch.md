@@ -2,7 +2,7 @@
 title: Publicamos el Portal de Aceserver
 description: Reunimos en una sola entrada la información previa para participar que estaba repartida entre Discord, la Wiki, los vídeos y los mapas.
 translationOf: aceserver-portal-launch
-sourceHash: sha256:8928266b63395c3af0fbe52abff591003c8c4a0a6ad259740be5052f605e031e
+sourceHash: sha256:7135f8b1e68e3bdb744b643f856f26305e2d1e25296653417993ddf4cdd9e1c0
 date: 2026-06-07T10:00:00+09:00
 tags:
   - Anuncio
@@ -10,6 +10,7 @@ tags:
 author: Gui
 image: /uploads/stories/aceserver-portal-launch.webp
 imageAlt: Página principal del Portal de Aceserver sobre un paisaje urbano de Minecraft
+lastUpdated: '2026-10-06T13:52:45+09:00'
 ---
 
 Publicamos el portal oficial de Aceserver, un servidor público gratuito de Minecraft en el que cualquiera puede participar.
@@ -21,6 +22,14 @@ Aceserver admite tanto Java Edition como Bedrock Edition. El portal reúne en un
 Antes de entrar en Aceserver hay varias cosas que conviene comprobar: qué tipo de servidor es, cómo participar, qué mundos existen y dónde consultar las reglas y los detalles. Cuando la información está repartida entre Discord, la Wiki, los vídeos y los mapas, a quien llega por primera vez le cuesta decidir por dónde empezar.
 
 Por eso diseñamos el portal como una entrada clara hacia las fuentes existentes, sin sustituirlas.
+
+<figure class="article-diagram" data-layout="branches" data-tone="teal" data-count="3" aria-labelledby="diagram-aceserver-portal-launch">
+<figcaption><strong id="diagram-aceserver-portal-launch">El portal conecta la información oficial según cada propósito</strong><span>El portal reúne los puntos de entrada sin sustituir las fuentes originales. Consulta la información oficial vigente antes de participar.</span></figcaption>
+<ol class="article-diagram__nodes">
+<li><span class="article-diagram__symbol"><span aria-hidden="true">1</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 10 12 3l9 7M5 10v11h14V10M9 21v-7h6v7"/></svg></span><strong>Empieza por el portal</strong><span>Revisa la presentación y elige qué información necesitas.</span></li>
+<li><span class="article-diagram__symbol"><span aria-hidden="true">2</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m3 6 6-3 6 3 6-3v15l-6 3-6-3-6 3zM9 3v15m6-12v15"/></svg></span><strong>Vídeos y mapas del mundo</strong><span>Conoce el ambiente y explora los mundos presentados.</span></li>
+<li><span class="article-diagram__symbol"><span aria-hidden="true">3</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 3h9l4 4v14H6zM15 3v5h4M9 12h7M9 16h7"/></svg></span><strong>WIKI y Discord</strong><span>Consulta las indicaciones detalladas para participar y las reglas.</span></li>
+</ol></figure>
 
 ## Vídeos, mapas y Wiki sin quedar aislados
 

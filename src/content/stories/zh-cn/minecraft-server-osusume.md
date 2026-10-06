@@ -2,16 +2,16 @@
 title: '日本推荐 Minecraft 服务器 6 选：按 Java/Bedrock 支持与玩法比较'
 description: 根据各官方站点确认的版本支持、玩法和加入说明，介绍日本的公开 Minecraft 服务器。
 translationOf: minecraft-server-osusume
-sourceHash: sha256:29f9c55325049c2099392fc122a01b9daa5b3c7ffc9426a9eb0c7515cad28f4c
+sourceHash: sha256:c2e48929cf9d67ea2cb76eaf8ccdaf7e1aa1a511a05ff69f766fe497de5dc626
 date: 2026-08-01T10:00:00+09:00
-lastUpdated: 2026-09-26T18:05:22+09:00
+lastUpdated: '2026-10-06T13:52:45+09:00'
 tags:
   - Minecraft
   - Minecraft 服务器
   - 入门指南
 author: Gui
-image: /uploads/stories/minecraft-server-osusume-hero.webp
-imageAlt: 三位旅人围在方块风格岔路口的地图桌旁，眺望夕阳下通往不同世界的道路
+image: '/uploads/stories/minecraft-server-osusume-cover-v2.webp'
+imageAlt: '城镇、铁路、机械、市场、自然和建筑六种微型岛屿的比较插图，并非实际服务器截图'
 ---
 
 本文介绍官方说明中可确认玩法和加入方式的公开服务器；以下顺序不是排名。实际加入前，请务必查看各服务器的最新官方说明。

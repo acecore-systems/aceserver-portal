@@ -2,7 +2,7 @@
 title: Java 版和基岩版能一起玩吗？如何识别兼容服务器
 description: 只要服务器在官方说明中明确支持两个版本，Minecraft Java 版和基岩版就能一起游玩。本文介绍识别方法与加入前的确认要点。
 translationOf: minecraft-java-bedrock-crossplay
-sourceHash: sha256:e34b9fbed14f5809549af229a9299b68cee79d8096537207f2c52d5498756461
+sourceHash: sha256:a400c74f0a5e4f3c61d3080ae0ecb58c655507fb3b11a6ab57a088428126b530
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -10,8 +10,9 @@ tags:
   - Java 版
   - 基岩版
 author: Gui
-image: /uploads/stories/minecraft-java-bedrock-crossplay-hero.webp
-imageAlt: 三名玩家使用笔记本电脑和便携设备，隔着地图望向通往同一方块世界的入口
+image: '/uploads/stories/minecraft-java-bedrock-crossplay-cover-v2.webp'
+imageAlt: '电脑和平板通过桥梁连接到同一个方块岛的概念插图，并非实际连接画面'
+lastUpdated: '2026-10-06T13:52:45+09:00'
 ---
 
 Java 版和基岩版玩家可以在兼容的服务器中一起游玩。只要服务器接受两个版本的连接，使用 Java 版电脑的朋友与使用手机或游戏机基岩版的朋友，就能在同一服务器建造和冒险。

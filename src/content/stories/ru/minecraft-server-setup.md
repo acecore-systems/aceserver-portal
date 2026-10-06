@@ -2,15 +2,16 @@
 title: 'Как создать бесплатный сервер Minecraft: Java, Bedrock и Realms'
 description: Узнайте, как создать бесплатный сервер Minecraft, и сравните Java Edition, Bedrock Edition и Realms, включая подготовку и проверки безопасности перед открытием сервера.
 translationOf: minecraft-server-setup
-sourceHash: sha256:1d0155c2bfc03563a83d164bde21d3becb20f0f64d2ba85763512ad9c025b903
+sourceHash: sha256:48fe3113347491bab033478489964d0be50754b14687d8f189c3103a1696b1bf
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
   - Сервер Minecraft
   - Начало игры
 author: Gui
-image: /uploads/stories/minecraft-server-setup-hero.webp
-imageAlt: Три блочных героя смотрят на три дороги, ведущие к деревне, серверу и облачному шлюзу
+image: '/uploads/stories/minecraft-server-setup-cover-v2.webp'
+imageAlt: 'Концептуальная иллюстрация подготовки и обслуживания с набором блоков, инструментами, ящиком хранения и миниатюрным домом-сервером'
+lastUpdated: '2026-10-06T13:52:45+09:00'
 ---
 
 Играть в Minecraft с друзьями можно несколькими способами: использовать одну локальную сеть, запустить выделенный сервер на собственном компьютере или воспользоваться Realms. Выбор зависит от издания у всех игроков и от того, сколько работы по обслуживанию вы готовы выполнять.

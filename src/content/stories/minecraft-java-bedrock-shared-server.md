@@ -10,13 +10,14 @@ tags:
   - 無料サーバー
   - Geyser
 author: Gui
-image: /uploads/stories/minecraft-java-bedrock-shared-server-hero.webp
-imageAlt: PC・タブレット・携帯ゲーム機を持つ3人が、青い接続線と盾の印が灯る同じ小さなサーバーの家を見つめるブロック調の風景
+image: '/uploads/stories/minecraft-java-bedrock-shared-server-cover-v2.webp'
+imageAlt: 'サーバーを表すブロックの家にPCと橋を経由したタブレットがつながり、管理用の箱を分けた説明用イラスト'
 relatedStories:
   - minecraft-play-with-friends
   - minecraft-java-bedrock-crossplay
   - minecraft-server-setup
   - minecraft-server-cannot-join
+lastUpdated: '2026-10-06T13:52:45+09:00'
 ---
 
 Java版の自分のサーバーへ、統合版のスマホ・タブレット・Windows・ゲーム機の友達を招待したいときは、Javaサーバーに Geyser と Floodgate を導入する構成が候補になります。Geyser が統合版の接続を Java サーバーへ橋渡しし、Floodgate が統合版アカウントを安全に識別できるようにします。
