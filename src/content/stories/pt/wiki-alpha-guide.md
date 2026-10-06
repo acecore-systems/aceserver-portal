@@ -8,7 +8,8 @@ author: Gui
 image: /uploads/stories/wiki-alpha-guide-hero.webp
 imageAlt: Ilustração do Alpha-kun oficial ao lado de um guia aberto e resultados de busca em uma paisagem de blocos
 translationOf: wiki-alpha-guide
-sourceHash: sha256:8dd6c1ea1cf0627e34e782df7f744db3b24dae3528799f0abb35ea9de1fff167
+sourceHash: sha256:9e3dd3bb72ef54f933f8c39962710715e13a833ee359a9ecb2407f1f9f7612f7
+lastUpdated: 2026-10-06T08:52:00+09:00
 ---
 
 Para descobrir como entrar ou consultar as regras, comece pela [WIKI oficial do Aceserver](https://asv-wiki.acecore.net/). Se não souber qual artigo abrir, o botão “Perguntar ao Alpha-kun” no portal e na WIKI é outra porta de entrada.
@@ -26,3 +27,5 @@ O [portal](/pt/) e a WIKI têm o botão “Perguntar ao Alpha-kun”. Escreva su
 Se faltar informação ou houver divergência entre guias, consulte as mensagens mais recentes no [Discord oficial](https://discord.gg/acsv). As publicações oficiais no Discord são a fonte principal para requisitos, regras e avisos de operação.
 
 Para seguir um roteiro pelo portal, pela WIKI e pelo mapa, veja o [guia para iniciantes](/pt/stories/aceserver-beginners-guide/).
+
+<figure class="article-diagram" data-layout="layers" data-tone="green" data-count="3" aria-labelledby="diagram-wiki-sources"><figcaption><strong id="diagram-wiki-sources">Encontrar orientação e conferir a fonte original</strong><span>As publicações recentes do Discord oficial são a fonte principal de requisitos, regras e avisos.</span></figcaption><ol class="article-diagram__nodes"><li><span class="article-diagram__symbol"><span aria-hidden="true">1</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20 3H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h4l4 3v-3h8a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2Z"/><path d="M6 8h12M6 12h8"/></svg></span><strong>Alpha-kun</strong><span>Encontre um caminho até informações publicadas. Uma resposta sozinha não confirma uma mudança.</span></li><li><span class="article-diagram__symbol"><span aria-hidden="true">2</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="10" cy="10" r="7"/><path d="m15 15 6 6"/></svg></span><strong>WIKI oficial</strong><span>Abra um artigo por categoria ou busca e leia a orientação original.</span></li><li><span class="article-diagram__symbol"><span aria-hidden="true">3</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 5c-3-2-6-2-10-1v15c4-1 7-1 10 1 3-2 6-2 10-1V4c-4-1-7-1-10 1v15"/></svg></span><strong>Discord oficial</strong><span>Confira as publicações recentes quando faltam informações ou há divergências.</span></li></ol></figure>

@@ -19,9 +19,9 @@ const stories = [
       'Aceserverのスキンメーカーで、文章と任意の参考画像から新しいスキンを作り、Classic・Slimの型、3D表示、64×64 PNG保存を確認する手順を紹介します。',
     author: 'Gui',
     datePublished: '2026-09-30T12:15:00.000Z',
-    image: '/uploads/stories/minecraft-skin-maker-guide.webp',
+    image: '/uploads/stories/minecraft-skin-maker-cover-v2.webp',
     imageAlt:
-      '腕の型、文章と任意画像、3D確認、PNG保存の順を示す操作案内図。生成スキンの実例ではない。',
+      '白いブロック人形と絵具パレットによるスキン作成の説明用イラスト。生成スキンの実例ではない。',
   },
   {
     slug: 'aceserver-hijacked',

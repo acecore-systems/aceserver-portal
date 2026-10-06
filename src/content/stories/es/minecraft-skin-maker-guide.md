@@ -4,11 +4,12 @@ description: 'Cree una skin nueva con texto e imagen opcional, elija Classic o S
 date: 2026-09-30T21:15:00+09:00
 author: Gui
 tags: [Minecraft, Aceserver, Skin Maker]
-image: /uploads/stories/minecraft-skin-maker-guide.webp
-imageAlt: 'Diagrama de brazos, texto e imagen opcional, revisión 3D y guardado PNG. No es un resultado generado.'
+image: /uploads/stories/minecraft-skin-maker-cover-v2.webp
+imageAlt: 'Ilustración de maniquíes de bloques blancos y una paleta que representa la creación de skins. No es un resultado generado.'
 relatedStories: [aceserver-beginners-guide]
 translationOf: minecraft-skin-maker-guide
-sourceHash: sha256:54b374de27985de659ceacaa5efb2164ff06b342258ca708f4583bc11aaf7b8b
+sourceHash: sha256:fe34610835abbf50b5d0bf33f7222c06525fdaa5a148c518fc4c9e36244aa7f8
+lastUpdated: 2026-10-06T08:52:00+09:00
 ---
 
 El [creador de skins](/es/skin-maker/) genera skins nuevas de Minecraft con texto y una imagen opcional. Revise en 3D y guarde un PNG de 64×64.
@@ -17,6 +18,8 @@ El [creador de skins](/es/skin-maker/) genera skins nuevas de Minecraft con text
 
 Classic usa brazos de 4px; Slim, de 3px. Describa colores o ropa. La referencia opcional admite PNG, JPEG o WebP hasta 5 MB. Se crea una skin nueva; no se edita una existente.
 
+<figure class="article-diagram article-diagram--skin-arms" data-layout="choices" data-tone="amber" data-count="2" aria-labelledby="diagram-skin-arms"><figcaption><strong id="diagram-skin-arms">Diferencia entre los brazos Classic y Slim</strong><span>Los esquemas muestran el ancho del brazo, no skins generadas. Elige en el juego el mismo modelo usado al crear la skin.</span></figcaption><ol class="article-diagram__nodes"><li><strong>Classic</strong><img src="/uploads/stories/skin-arm-classic-diagram.svg" alt="Brazos de 4px de ancho" width="240" height="300" loading="lazy" decoding="async"/><span>Brazos de 4px de ancho</span></li><li><strong>Slim</strong><img src="/uploads/stories/skin-arm-slim-diagram.svg" alt="Brazos de 3px de ancho" width="240" height="300" loading="lazy" decoding="async"/><span>Brazos de 3px de ancho</span></li></ol></figure>
+
 ## 2. Dar consentimiento y esperar
 
 Confirme derechos de uso y consentimiento antes de enviar. Texto e imágenes van al proveedor configurado, OpenAI API o Cloudflare Workers AI. No incluya datos personales ni secretos. Puede tardar varios minutos o no generarse por límites o congestión; siga el estado en pantalla.
@@ -24,6 +27,8 @@ Confirme derechos de uso y consentimiento antes de enviar. Texto e imágenes van
 ## 3. Revisar en 3D
 
 Revise frente, espalda y lados. Arrastre para girar y cambie rotación automática o capa exterior. La IA puede apartarse de lo previsto; compruebe brazos y bordes de ropa antes de guardar.
+
+<figure class="article-diagram" data-layout="flow" data-tone="violet" data-count="3" aria-labelledby="diagram-skin-check-save"><figcaption><strong id="diagram-skin-check-save">Comprobaciones desde la generación hasta el guardado</strong><span>Generar requiere consentimiento. Revisa el resultado antes de guardarlo.</span></figcaption><ol class="article-diagram__nodes"><li><span class="article-diagram__symbol"><span aria-hidden="true">1</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m5 17 9-12 5 4-10 11H4Z"/><path d="m12 8 5 4M4 20l1-3"/></svg></span><strong>Genera con texto e imagen opcional</strong><span>Confirma los derechos de uso y el consentimiento al procesamiento de IA antes de enviar.</span></li><li><span class="article-diagram__symbol"><span aria-hidden="true">2</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m12 2 10 5v10l-10 5-10-5V7Zm0 10v10M2 7l10 5 10-5"/></svg></span><strong>Revisa todos los lados en 3D</strong><span>Comprueba frente, espalda, laterales, brazos y bordes de la ropa.</span></li><li><span class="article-diagram__symbol"><span aria-hidden="true">3</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 2h13l5 5v15H2V2Zm2 0v7h12V3M6 22V13h12v9"/></svg></span><strong>Guarda el PNG de 64×64</strong><span>Guarda antes de cerrar la página e importa con el mismo modelo en el juego.</span></li></ol></figure>
 
 ## 4. Guardar e importar en el juego
 
