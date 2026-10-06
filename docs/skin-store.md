@@ -39,7 +39,7 @@ WHERE s.state = 'published'
 GROUP BY s.id ORDER BY reports DESC;
 
 -- 対象UUIDを確認してから実施する。blockedは一覧・詳細・PNGから即時除外される。
-UPDATE skin_store SET state = 'blocked' WHERE id = '対象UUID';
+UPDATE skin_store SET state = 'blocked' WHERE id = '対象UUID' AND state = 'published';
 -- 誤判定の復旧は運営が対象を再確認して行う。
 UPDATE skin_store SET state = 'published' WHERE id = '対象UUID' AND state = 'blocked';
 
