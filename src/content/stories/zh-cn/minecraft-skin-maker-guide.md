@@ -4,11 +4,12 @@ description: '从文字和可选图片生成Minecraft新皮肤，选择Classic�
 date: 2026-09-30T21:15:00+09:00
 author: Gui
 tags: [Minecraft, Aceserver, Skin Maker]
-image: /uploads/stories/minecraft-skin-maker-guide.webp
-imageAlt: '手臂类型、文字与可选图片、3D检查、PNG保存的操作流程图，并非生成结果示例。'
+image: /uploads/stories/minecraft-skin-maker-cover-v2.webp
+imageAlt: '用白色方块人偶和调色板表现皮肤制作的说明插画，并非生成结果实例。'
 relatedStories: [aceserver-beginners-guide]
 translationOf: minecraft-skin-maker-guide
-sourceHash: sha256:54b374de27985de659ceacaa5efb2164ff06b342258ca708f4583bc11aaf7b8b
+sourceHash: sha256:fe34610835abbf50b5d0bf33f7222c06525fdaa5a148c518fc4c9e36244aa7f8
+lastUpdated: 2026-10-06T08:52:00+09:00
 ---
 
 [皮肤制作器](/zh-cn/skin-maker/)可用文字和可选参考图片生成Minecraft新皮肤，随后查看3D效果并保存64×64 PNG。
@@ -17,6 +18,8 @@ sourceHash: sha256:54b374de27985de659ceacaa5efb2164ff06b342258ca708f4583bc11aaf7
 
 Classic手臂为4px，Slim为3px。用文字描述颜色、服装等。参考图可选，支持PNG、JPEG、WebP，最大5 MB。工具用于新生成，不是编辑已有皮肤。
 
+<figure class="article-diagram article-diagram--skin-arms" data-layout="choices" data-tone="amber" data-count="2" aria-labelledby="diagram-skin-arms"><figcaption><strong id="diagram-skin-arms">Classic与Slim的手臂区别</strong><span>示意图用于说明手臂宽度，并非生成皮肤的实例。 在游戏中也请选择与创建时相同的模型。</span></figcaption><ol class="article-diagram__nodes"><li><strong>Classic</strong><img src="/uploads/stories/skin-arm-classic-diagram.svg" alt="手臂宽4px" width="240" height="300" loading="lazy" decoding="async"/><span>手臂宽4px</span></li><li><strong>Slim</strong><img src="/uploads/stories/skin-arm-slim-diagram.svg" alt="手臂宽3px" width="240" height="300" loading="lazy" decoding="async"/><span>手臂宽3px</span></li></ol></figure>
+
 ## 2. 同意处理并等待生成
 
 发送前确认图片使用权及AI处理同意。文字和图片会发送到配置中的OpenAI API或Cloudflare Workers AI。不要输入个人信息或秘密。生成可能需要几分钟，也可能因用量限制或拥堵失败，请查看屏幕提示。
@@ -24,6 +27,8 @@ Classic手臂为4px，Slim为3px。用文字描述颜色、服装等。参考图
 ## 3. 检查3D效果
 
 查看正面、背面和左右侧，拖动旋转，可切换自动旋转和外层显示。AI输出可能与预期不同，保存前检查手臂及服装接缝。
+
+<figure class="article-diagram" data-layout="flow" data-tone="violet" data-count="3" aria-labelledby="diagram-skin-check-save"><figcaption><strong id="diagram-skin-check-save">从生成到保存的检查顺序</strong><span>生成需要同意。生成后先检查外观，再保存。</span></figcaption><ol class="article-diagram__nodes"><li><span class="article-diagram__symbol"><span aria-hidden="true">1</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m5 17 9-12 5 4-10 11H4Z"/><path d="m12 8 5 4M4 20l1-3"/></svg></span><strong>用文字和可选图片生成</strong><span>发送前确认使用权和AI处理同意。</span></li><li><span class="article-diagram__symbol"><span aria-hidden="true">2</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m12 2 10 5v10l-10 5-10-5V7Zm0 10v10M2 7l10 5 10-5"/></svg></span><strong>从各方向检查3D</strong><span>查看正面、背面、左右以及手臂和服装交界。</span></li><li><span class="article-diagram__symbol"><span aria-hidden="true">3</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 2h13l5 5v15H2V2Zm2 0v7h12V3M6 22V13h12v9"/></svg></span><strong>保存64×64 PNG</strong><span>关闭页面前保存，在游戏中使用相同模型导入。</span></li></ol></figure>
 
 ## 4. 保存并在游戏中导入
 
