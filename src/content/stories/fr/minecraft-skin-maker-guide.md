@@ -8,8 +8,8 @@ image: /uploads/stories/minecraft-skin-maker-cover-v2.webp
 imageAlt: 'Illustration de mannequins en blocs blancs et d’une palette représentant la création de skins. Ce n’est pas un résultat généré.'
 relatedStories: [aceserver-beginners-guide]
 translationOf: minecraft-skin-maker-guide
-sourceHash: sha256:fe34610835abbf50b5d0bf33f7222c06525fdaa5a148c518fc4c9e36244aa7f8
-lastUpdated: 2026-10-06T08:52:00+09:00
+sourceHash: sha256:330d43691471ce0ea01b3a5dafd7e46b4c63468dce23d2728bbde663336b6daf
+lastUpdated: 2026-10-06T19:18:00+09:00
 ---
 
 Le [créateur de skins](/fr/skin-maker/) génère de nouvelles skins Minecraft à partir de texte et d’une image facultative. Vérifiez en 3D et sauvegardez un PNG 64×64.
@@ -32,4 +32,8 @@ Examinez face, dos et côtés. Faites glisser pour tourner, activez la rotation 
 
 ## 4. Sauvegarder et importer dans le jeu
 
-Téléchargez avec « Sauvegarder le PNG 64×64 » puis utilisez l’import de skin personnalisée du jeu. Choisissez le même modèle Classic ou Slim. Méthode et compatibilité varient selon édition et appareil ; aucune compatibilité universelle n’est garantie. Le site ne conserve pas texte, images ou skins ; fermer efface le travail, sauvegardez donc le PNG avant.
+Téléchargez avec « Sauvegarder le PNG 64×64 » puis utilisez l’import de skin personnalisée du jeu. Choisissez le même modèle Classic ou Slim. Méthode et compatibilité varient selon édition et appareil ; aucune compatibilité universelle n’est garantie. Le site ne conserve ni le texte saisi ni l’image de référence. Les skins non publiées sont perdues à la fermeture de la page ; sauvegardez donc le PNG avant.
+
+## 5. Publier les skins de votre choix dans la boutique
+
+Après la génération, nommez votre skin et acceptez que chacun puisse la télécharger et l’utiliser gratuitement pour la publier dans la [Boutique de skins](/fr/skin-maker/store/). La publication est facultative ; seuls le nom et la skin générée sont conservés. Vous pouvez la retirer dans les 24 heures suivant la génération tant que cette page de génération reste ouverte.

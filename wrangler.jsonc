@@ -12,6 +12,7 @@
     ],
   },
   "vars": {
+    "SKIN_STORE_ENABLED": "false",
     "SKIN_MAKER_ENABLED": "false",
     "SKIN_AI_MODEL": "gpt-6-luna",
     "SKIN_TURNSTILE_SITE_KEY": "",
@@ -79,6 +80,7 @@
         },
       ],
       "vars": {
+        "SKIN_STORE_ENABLED": "false",
         "SKIN_MAKER_ENABLED": "false",
         "SKIN_AI_MODEL": "gpt-6-luna",
         "SKIN_TURNSTILE_SITE_KEY": "",
@@ -166,6 +168,7 @@
         },
       ],
       "vars": {
+        "SKIN_STORE_ENABLED": "true",
         "SKIN_MAKER_ENABLED": "true",
         "SKIN_AI_MODEL": "gpt-6-luna",
         "CMS_ACCESS_AUD": "3c891371aa539493f09b2030c67d9d7c42011ce274b2aa42fdad0ad90e809265",

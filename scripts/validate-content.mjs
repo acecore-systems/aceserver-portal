@@ -228,6 +228,7 @@ async function validatePages() {
   for (const locale of LOCALES) {
     routes.add(localizedRoute(locale, '/alpha-diary/'))
     routes.add(localizedRoute(locale, '/skin-maker/'))
+    routes.add(localizedRoute(locale, '/skin-maker/store/'))
   }
   const slugs = new Set()
 

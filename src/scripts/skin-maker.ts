@@ -1,4 +1,5 @@
 import { getSkinMakerUi } from '../data/skin-maker-ui'
+import { getSkinStoreUi } from '../data/skin-store-ui'
 import { isLocale } from '../i18n/config'
 import {
   decodePixels,
@@ -37,6 +38,7 @@ export function initSkinMaker(root: HTMLElement) {
   const locale = root.dataset.locale
   if (!isLocale(locale)) return
   const c = getSkinMakerUi(locale)
+  const store = getSkinStoreUi(locale)
   const el = <T extends HTMLElement>(s: string) => root.querySelector<T>(s)!
   const form = el<HTMLFormElement>('[data-form]')
   const inputs = el<HTMLFieldSetElement>('[data-inputs]')
@@ -73,6 +75,10 @@ export function initSkinMaker(root: HTMLElement) {
     el('[data-empty]').hidden = !!current
   }
   let current: Uint8Array | undefined
+  let storeTicket: string | undefined, removeTicket: string | undefined
+  const publishForm = el<HTMLFormElement>('[data-publish-form]')
+  const publishStatus = el('[data-publish-status]')
+  const unpublish = el<HTMLButtonElement>('[data-unpublish]')
   let reference: SkinRequest['reference']
   let skinModel: Model = 'classic'
   let viewer: SkinViewer | undefined
@@ -87,6 +93,11 @@ export function initSkinMaker(root: HTMLElement) {
     inputs.disabled = busy
     modelSelect.disabled = busy
     el<HTMLButtonElement>('[data-clear]').disabled = busy
+    el<HTMLButtonElement>('[data-publish]').disabled = busy
+    unpublish.disabled = busy
+    publishForm.querySelectorAll<HTMLInputElement>('input').forEach((input) => {
+      input.disabled = busy
+    })
   }
   const render = () => {
     const ctx = atlas.getContext('2d')!
@@ -214,6 +225,13 @@ export function initSkinMaker(root: HTMLElement) {
   el('[data-remove]').addEventListener('click', removeReference)
   el('[data-clear]').addEventListener('click', () => {
     current = undefined
+    storeTicket = undefined
+    removeTicket = undefined
+    publishForm.hidden = true
+    publishForm.reset()
+    publishStatus.textContent = ''
+    unpublish.hidden = true
+    el('[data-published-link]').hidden = true
     removeReference()
     form.reset()
     skinModel = model()
@@ -284,6 +302,14 @@ export function initSkinMaker(root: HTMLElement) {
       validateSkin(pixels, model())
       current = pixels
       skinModel = model()
+      storeTicket =
+        typeof result.storeTicket === 'string' ? result.storeTicket : undefined
+      removeTicket = undefined
+      publishForm.reset()
+      publishForm.hidden = !storeTicket
+      publishStatus.textContent = ''
+      unpublish.hidden = true
+      el('[data-published-link]').hidden = true
       render()
       status.textContent = c.ready
     } catch {
@@ -294,6 +320,66 @@ export function initSkinMaker(root: HTMLElement) {
       stopLoading()
       token = ''
       if (widget) window.turnstile?.reset(widget)
+      sync()
+    }
+  })
+  publishForm.addEventListener('submit', async (event) => {
+    event.preventDefault()
+    if (busy || !current || !storeTicket || !publishForm.reportValidity())
+      return
+    const data = new FormData(publishForm)
+    busy = true
+    sync()
+    publishStatus.textContent = store.publishing
+    try {
+      const response = await fetch('/api/skin-store', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: String(data.get('skin-name')),
+          model: skinModel,
+          pixels: encodePixels(current),
+          ticket: storeTicket,
+          consent: data.get('public-consent') === 'on',
+        }),
+        signal: AbortSignal.timeout(20000),
+      })
+      const result = await response.json()
+      if (!response.ok || typeof result.removeTicket !== 'string')
+        throw new Error('publish')
+      removeTicket = result.removeTicket
+      publishForm.hidden = true
+      unpublish.hidden = false
+      el('[data-published-link]').hidden = false
+      publishStatus.textContent = store.published
+    } catch {
+      publishStatus.textContent = store.publishError
+    } finally {
+      busy = false
+      sync()
+    }
+  })
+  unpublish.addEventListener('click', async () => {
+    if (busy || !removeTicket) return
+    busy = true
+    sync()
+    try {
+      const response = await fetch('/api/skin-store', {
+        method: 'DELETE',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ticket: removeTicket }),
+        signal: AbortSignal.timeout(20000),
+      })
+      if (!response.ok) throw new Error('remove')
+      storeTicket = undefined
+      removeTicket = undefined
+      unpublish.hidden = true
+      el('[data-published-link]').hidden = true
+      publishStatus.textContent = store.removed
+    } catch {
+      publishStatus.textContent = store.publishError
+    } finally {
+      busy = false
       sync()
     }
   })

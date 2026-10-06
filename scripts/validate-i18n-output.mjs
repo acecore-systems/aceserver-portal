@@ -43,6 +43,7 @@ const fixedPagePaths = [
   '/search/',
   '/alpha-diary/',
   '/skin-maker/',
+  '/skin-maker/store/',
 ]
 
 function fail(scope, message) {

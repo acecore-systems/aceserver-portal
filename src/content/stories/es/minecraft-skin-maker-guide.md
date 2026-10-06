@@ -8,8 +8,8 @@ image: /uploads/stories/minecraft-skin-maker-cover-v2.webp
 imageAlt: 'Ilustración de maniquíes de bloques blancos y una paleta que representa la creación de skins. No es un resultado generado.'
 relatedStories: [aceserver-beginners-guide]
 translationOf: minecraft-skin-maker-guide
-sourceHash: sha256:fe34610835abbf50b5d0bf33f7222c06525fdaa5a148c518fc4c9e36244aa7f8
-lastUpdated: 2026-10-06T08:52:00+09:00
+sourceHash: sha256:330d43691471ce0ea01b3a5dafd7e46b4c63468dce23d2728bbde663336b6daf
+lastUpdated: 2026-10-06T19:18:00+09:00
 ---
 
 El [creador de skins](/es/skin-maker/) genera skins nuevas de Minecraft con texto y una imagen opcional. Revise en 3D y guarde un PNG de 64×64.
@@ -32,4 +32,8 @@ Revise frente, espalda y lados. Arrastre para girar y cambie rotación automáti
 
 ## 4. Guardar e importar en el juego
 
-Descargue con “Guardar PNG de 64×64” e importe como skin personalizada en su juego. Elija el mismo modelo Classic o Slim. Método y compatibilidad varían según edición y dispositivo; no se garantiza compatibilidad universal. El sitio no guarda texto, imágenes ni skins; cerrar borra el trabajo, así que guarde antes el PNG.
+Descargue con “Guardar PNG de 64×64” e importe como skin personalizada en su juego. Elija el mismo modelo Classic o Slim. Método y compatibilidad varían según edición y dispositivo; no se garantiza compatibilidad universal. El sitio no guarda el texto introducido ni la imagen de referencia. Las skins no publicadas se pierden al cerrar la página, así que guarde antes el PNG.
+
+## 5. Publicar las skins que elija en la tienda
+
+Tras la generación, dé un nombre a la skin y acepte que cualquiera pueda descargarla y usarla gratis para publicarla en la [Tienda de skins](/es/skin-maker/store/). Publicar es opcional; solo se guardan el nombre y la skin generada. Puede retirarla durante las 24 horas siguientes a la generación mientras esta página de generación siga abierta.

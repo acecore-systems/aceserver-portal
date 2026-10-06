@@ -8,8 +8,8 @@ image: /uploads/stories/minecraft-skin-maker-cover-v2.webp
 imageAlt: '用白色方块人偶和调色板表现皮肤制作的说明插画，并非生成结果实例。'
 relatedStories: [aceserver-beginners-guide]
 translationOf: minecraft-skin-maker-guide
-sourceHash: sha256:fe34610835abbf50b5d0bf33f7222c06525fdaa5a148c518fc4c9e36244aa7f8
-lastUpdated: 2026-10-06T08:52:00+09:00
+sourceHash: sha256:330d43691471ce0ea01b3a5dafd7e46b4c63468dce23d2728bbde663336b6daf
+lastUpdated: 2026-10-06T19:18:00+09:00
 ---
 
 [皮肤制作器](/zh-cn/skin-maker/)可用文字和可选参考图片生成Minecraft新皮肤，随后查看3D效果并保存64×64 PNG。
@@ -32,4 +32,8 @@ Classic手臂为4px，Slim为3px。用文字描述颜色、服装等。参考图
 
 ## 4. 保存并在游戏中导入
 
-通过“保存64×64 PNG”下载，在游戏的自定义皮肤导入功能中使用，并选择相同Classic或Slim类型。不同版本和设备的导入方式与支持范围不同，不能保证通用兼容。网站不保存文字、图片或皮肤，关闭页面会清空工作内容，请先保存PNG。
+通过“保存64×64 PNG”下载，在游戏的自定义皮肤导入功能中使用，并选择相同Classic或Slim类型。不同版本和设备的导入方式与支持范围不同，不能保证通用兼容。网站不保存输入文字或参考图片。未公开的皮肤会在关闭页面后丢失，请先保存PNG。
+
+## 5. 将喜欢的作品公开到商店
+
+生成后，为皮肤命名并同意任何人都可以免费下载和使用，即可公开到[皮肤商店](/zh-cn/skin-maker/store/)。公开是可选的，只保存名称和生成的皮肤。在生成后24小时内，只要此生成页面仍然打开，就可以取消公开。

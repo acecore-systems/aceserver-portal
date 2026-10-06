@@ -8,8 +8,8 @@ image: /uploads/stories/minecraft-skin-maker-cover-v2.webp
 imageAlt: 'Illustration of blank block mannequins and a paint palette representing skin creation. Not an example of generated output.'
 relatedStories: [aceserver-beginners-guide]
 translationOf: minecraft-skin-maker-guide
-sourceHash: sha256:fe34610835abbf50b5d0bf33f7222c06525fdaa5a148c518fc4c9e36244aa7f8
-lastUpdated: 2026-10-06T08:52:00+09:00
+sourceHash: sha256:330d43691471ce0ea01b3a5dafd7e46b4c63468dce23d2728bbde663336b6daf
+lastUpdated: 2026-10-06T19:18:00+09:00
 ---
 
 The [Skin Maker](/en/skin-maker/) creates new Minecraft skins from text and an optional reference image. Review the result in 3D and save a 64×64 PNG.
@@ -32,4 +32,8 @@ Check the front, back and sides. Drag to rotate and toggle automatic rotation or
 
 ## 4. Save and import in your game
 
-Download with “Save 64×64 PNG” and use your game’s custom skin import. Select the same Classic or Slim model in the game. Import methods and support vary by edition and device; universal compatibility is not guaranteed. The site does not store text, images or skins, and closing the page clears the work, so save your PNG first.
+Download with “Save 64×64 PNG” and use your game’s custom skin import. Select the same Classic or Slim model in the game. Import methods and support vary by edition and device; universal compatibility is not guaranteed. The site does not store your prompt or reference image. Unpublished skins are lost when you close the page, so save your PNG first.
+
+## 5. Publish selected skins to the store
+
+After generation, give your skin a name and agree that anyone may download and use it for free to publish it in the [Skin Store](/en/skin-maker/store/). Publishing is optional; only the name and generated skin are stored. You can withdraw it within 24 hours of generation while this generation page remains open.

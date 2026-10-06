@@ -1,0 +1,62 @@
+---
+import { getSkinStoreUi } from '../data/skin-store-ui'
+import { localizePath, type Locale } from '../i18n/config'
+interface Props {
+  locale: Locale
+  current: 'maker' | 'store'
+}
+const { locale, current } = Astro.props
+const c = getSkinStoreUi(locale)
+---
+
+<nav class="skin-nav" aria-label={c.title}>
+  <a
+    href={localizePath(locale, '/skin-maker/')}
+    aria-current={current === 'maker' ? 'page' : undefined}>{c.make}</a
+  >
+  <a
+    href={localizePath(locale, '/skin-maker/store/')}
+    aria-current={current === 'store' ? 'page' : undefined}>{c.store}</a
+  >
+</nav>
+
+<style>
+  .skin-nav {
+    display: flex;
+    gap: 6px;
+    width: fit-content;
+    max-width: 100%;
+    padding: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #dbcdb1;
+    border-radius: 12px;
+    background: #f1e7cf;
+  }
+  a {
+    padding: 10px 18px;
+    border-radius: 8px;
+    color: #66553f;
+    font-weight: 800;
+    font-size: 0.9rem;
+    text-decoration: none;
+    text-align: center;
+  }
+  a:hover {
+    background: #fff9e9;
+  }
+  a[aria-current] {
+    color: #302619;
+    background: #fffdf5;
+    box-shadow: 0 2px 4px #30261915;
+  }
+  a:focus-visible {
+    outline: 3px solid #257f89;
+    outline-offset: 3px;
+  }
+  @media (max-width: 450px) {
+    a {
+      padding: 10px 12px;
+      font-size: 0.8rem;
+    }
+  }
+</style>

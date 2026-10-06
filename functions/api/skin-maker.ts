@@ -4,6 +4,7 @@ import {
   type SkinStage,
 } from '../_lib/skin-diagnostics.ts'
 import { encode } from 'fast-png'
+import { issueStoreTicket, storeAvailable } from '../_lib/skin-store.ts'
 import {
   applyDesign,
   buildPrompt,
@@ -304,11 +305,21 @@ const onRequestPost: PagesFunction<SkinEnv> = async ({ request, env }) => {
     stage = 'design'
     const output = applyDesign(design, input)
     stage = 'response'
+    const storeTicket = storeAvailable(env)
+      ? await issueStoreTicket(
+          requestId,
+          input.model,
+          output.pixels,
+          origin,
+          env.SKIN_QUOTA_SALT!,
+        )
+      : null
     const response = json({
       requestId,
       pixels: encodePixels(output.pixels),
       changed: output.changed,
       model: input.model,
+      storeTicket,
     })
     await diagnostics.record(stage, 'success', 200)
     return response

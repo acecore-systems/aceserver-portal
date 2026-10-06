@@ -1,0 +1,29 @@
+---
+import SkinStorePage from '../../../../components/SkinStorePage.astro'
+import BaseLayout from '../../../../layouts/BaseLayout.astro'
+import { getSkinStoreUi } from '../../../../data/skin-store-ui'
+import {
+  TRANSLATED_LOCALES,
+  type TranslatedLocale,
+} from '../../../../i18n/config'
+export function getStaticPaths() {
+  return TRANSLATED_LOCALES.map((locale) => ({
+    params: { locale },
+    props: { locale },
+  }))
+}
+interface Props {
+  locale: TranslatedLocale
+}
+const { locale } = Astro.props
+const c = getSkinStoreUi(locale)
+---
+
+<BaseLayout
+  locale={locale}
+  title={c.title}
+  description={c.intro}
+  plainBackground
+>
+  <SkinStorePage locale={locale} />
+</BaseLayout>

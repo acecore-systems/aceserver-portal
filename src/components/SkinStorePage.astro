@@ -1,0 +1,594 @@
+---
+import { getSkinStoreUi } from '../data/skin-store-ui'
+import { getSkinMakerUi } from '../data/skin-maker-ui'
+import { localizePath, type Locale } from '../i18n/config'
+import SkinMakerNav from './SkinMakerNav.astro'
+interface Props {
+  locale: Locale
+}
+const { locale } = Astro.props
+const c = getSkinStoreUi(locale)
+const maker = getSkinMakerUi(locale)
+---
+
+<section class="skin-store" data-skin-store data-locale={locale}>
+  <header class="store-heading">
+    <div>
+      <span class="eyebrow">MINECRAFT SKINS · FREE DOWNLOADS</span>
+      <h1>{c.title}</h1>
+      <p>{c.intro}</p>
+    </div>
+    <a class="primary create" href={localizePath(locale, '/skin-maker/')}
+      ><span aria-hidden="true">＋</span>{c.make}</a
+    >
+  </header>
+  <SkinMakerNav locale={locale} current="store" />
+  <div class="filters">
+    <label class="search"
+      ><span class="sr-only">{c.search}</span>
+      <svg
+        viewBox="0 0 24 24"
+        width="20"
+        height="20"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        aria-hidden="true"
+        ><circle cx="10" cy="10" r="7"></circle><path d="m15 15 6 6"
+        ></path></svg
+      >
+      <input
+        data-search
+        type="search"
+        placeholder={c.placeholder}
+        maxlength="40"
+      />
+    </label>
+    <div class="model-filters" role="group" aria-label={maker.model}>
+      <button type="button" data-model="all" aria-pressed="true">{c.all}</button
+      >
+      <button type="button" data-model="classic" aria-pressed="false"
+        >Classic</button
+      >
+      <button type="button" data-model="slim" aria-pressed="false">Slim</button>
+    </div>
+    <span class="sort">{c.newest}</span>
+  </div>
+  <p data-store-status class="status" role="status" aria-live="polite">
+    {c.loading}
+  </p>
+  <div class="skin-grid" data-store-grid aria-busy="true"></div>
+  <div class="store-empty" data-store-empty hidden>
+    <span class="empty-pixels" aria-hidden="true">▦</span>
+    <p data-empty-message>{c.empty}</p>
+    <a
+      class="primary"
+      data-empty-create
+      href={localizePath(locale, '/skin-maker/')}>{c.make}</a
+    >
+  </div>
+  <div class="store-actions">
+    <button type="button" data-store-retry hidden>{c.retry}</button>
+    <button type="button" data-store-more hidden
+      >{c.more}<span aria-hidden="true"> ↓</span></button
+    >
+  </div>
+  <template data-skin-card>
+    <article class="skin-card">
+      <button class="card-preview" type="button" data-open>
+        <span class="pedestal" aria-hidden="true"></span>
+        <img
+          data-portrait
+          width="128"
+          height="144"
+          loading="lazy"
+          alt={c.preview}
+        />
+        <span class="preview-label"
+          >{c.preview}<span aria-hidden="true"> ↗</span></span
+        >
+      </button>
+      <div class="card-content">
+        <div class="card-meta">
+          <span data-card-model></span><span class="free">{c.free}</span>
+        </div>
+        <h2 data-card-name></h2>
+        <a class="card-download" data-card-download download
+          >{c.download}<span aria-hidden="true"> ↓</span></a
+        >
+      </div>
+    </article>
+  </template>
+  <dialog data-skin-dialog aria-labelledby="skin-detail-name">
+    <div class="detail-heading">
+      <h2 id="skin-detail-name" data-detail-name></h2><button
+        type="button"
+        data-detail-close
+        aria-label={c.close}>×</button
+      >
+    </div>
+    <div class="detail-stage" data-detail-stage>
+      <canvas data-detail-viewer aria-label={maker.preview}></canvas>
+      <img
+        data-detail-portrait
+        hidden
+        width="128"
+        height="144"
+        alt={maker.preview}
+      />
+    </div>
+    <p class="detail-note">{maker.note}</p>
+    <p data-detail-status class="status" role="status" aria-live="polite"></p>
+    <a class="primary detail-download" data-detail-download download
+      >{c.download}</a
+    >
+    <details class="report">
+      <summary>{c.report}</summary>
+      <form data-report-form>
+        <label
+          >{c.reason}<select name="reason"
+            ><option value="inappropriate">{c.inappropriate}</option><option
+              value="rights">{c.rights}</option
+            ><option value="other">{c.other}</option></select
+          ></label
+        >
+        <button type="submit">{c.report}</button>
+      </form>
+      <p data-report-status class="status" role="status"></p>
+    </details>
+  </dialog>
+</section>
+
+<script>
+  import { initSkinStore } from '../scripts/skin-store'
+  document
+    .querySelectorAll<HTMLElement>('[data-skin-store]')
+    .forEach(initSkinStore)
+</script>
+
+<style>
+  .skin-store {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 44px 22px 64px;
+    color: #302619;
+  }
+  .store-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 20px;
+  }
+  .eyebrow {
+    color: #846125;
+    font-size: 0.75rem;
+    letter-spacing: 0.13em;
+    font-weight: 800;
+  }
+  h1 {
+    font-size: clamp(2.1rem, 4vw, 3rem);
+    font-weight: 900;
+    line-height: 1.2;
+    margin: 8px 0 14px;
+  }
+  .store-heading p {
+    max-width: 650px;
+    line-height: 1.8;
+    color: #66553f;
+    margin: 0;
+  }
+  a,
+  button,
+  input,
+  select {
+    font: inherit;
+  }
+  button,
+  .primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 44px;
+    padding: 10px 18px;
+    border: 1px solid #c6b28b;
+    border-radius: 9px;
+    background: #fff9e9;
+    color: #302619;
+    font-size: 0.85rem;
+    font-weight: 800;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .primary {
+    background: #ffd84d;
+    border-color: #ae861e;
+    box-shadow: 0 3px 0 #c09a32;
+  }
+  .primary:hover,
+  button:hover {
+    background: #fbe6a8;
+  }
+  .create {
+    flex-shrink: 0;
+  }
+  .filters {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 14px 0;
+    border-block: 1px solid #dbcdb1;
+    margin-bottom: 20px;
+  }
+  .search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    min-width: 160px;
+    max-width: 380px;
+    background: #fffdf5;
+    border: 1px solid #c9b994;
+    border-radius: 9px;
+    padding: 0 14px;
+    color: #846e50;
+  }
+  input {
+    width: 100%;
+    min-width: 0;
+    min-height: 44px;
+    color: #302619;
+    background: transparent;
+    border: 0;
+    font-size: 0.9rem;
+  }
+  input:focus {
+    outline: none;
+  }
+  .search:focus-within {
+    outline: 3px solid #257f89;
+    outline-offset: 3px;
+  }
+  .model-filters {
+    display: flex;
+    gap: 7px;
+  }
+  .model-filters button {
+    padding: 8px 16px;
+    border-radius: 24px;
+  }
+  [aria-pressed='true'] {
+    background: #302619;
+    border-color: #302619;
+    color: #fffdf5;
+  }
+  [aria-pressed='true']:hover {
+    background: #51412c;
+  }
+  .sort {
+    margin-left: auto;
+    font-size: 0.8rem;
+    color: #715e42;
+    white-space: nowrap;
+  }
+  .skin-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+  }
+  .skin-grid[aria-busy='true'] {
+    opacity: 0.65;
+  }
+  .skin-card {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid #dbcdb1;
+    border-radius: 16px;
+    background: #fffdf5;
+    box-shadow: 0 4px 0 #e4d7b9;
+    transition: transform 0.18s;
+  }
+  .skin-card:hover {
+    transform: translateY(-3px);
+  }
+  .card-preview {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 192px;
+    padding: 20px;
+    border: 0;
+    border-radius: 0;
+    overflow: hidden;
+    background:
+      radial-gradient(ellipse at 50% 82%, #d3c5a0, transparent 55%),
+      linear-gradient(#f8f0da, #ebe0c3);
+  }
+  .skin-card:nth-child(4n + 2) .card-preview {
+    background:
+      radial-gradient(ellipse at 50% 82%, #b6c9bd, transparent 55%),
+      linear-gradient(#eaf2e6, #dbe6d2);
+  }
+  .skin-card:nth-child(4n + 3) .card-preview {
+    background:
+      radial-gradient(ellipse at 50% 82%, #b9c3d2, transparent 55%),
+      linear-gradient(#edf1f7, #dce2ed);
+  }
+  .skin-card:nth-child(4n + 4) .card-preview {
+    background:
+      radial-gradient(ellipse at 50% 82%, #d0bcbc, transparent 55%),
+      linear-gradient(#f8ece9, #eddbd7);
+  }
+  .card-preview img {
+    position: relative;
+    width: 144px;
+    height: 162px;
+    object-fit: contain;
+    image-rendering: pixelated;
+    z-index: 1;
+  }
+  .pedestal {
+    position: absolute;
+    bottom: 26px;
+    width: 92px;
+    height: 13px;
+    background: #30261916;
+    border-radius: 50%;
+  }
+  .preview-label {
+    position: absolute;
+    bottom: 9px;
+    right: 12px;
+    color: #66553f;
+    font-size: 0.65rem;
+    font-weight: 700;
+    z-index: 2;
+  }
+  .card-content {
+    padding: 16px;
+  }
+  .card-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    font-size: 0.7rem;
+    color: #715e42;
+    font-weight: 700;
+  }
+  .free {
+    color: #32652e;
+    background: #eaf3dd;
+    border-radius: 5px;
+    padding: 3px 8px;
+  }
+  .skin-card h2 {
+    font-size: 0.96rem;
+    font-weight: 800;
+    line-height: 1.55;
+    margin: 9px 0 14px;
+    overflow-wrap: anywhere;
+  }
+  .card-download {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    color: #66502b;
+    border-top: 1px solid #e8dcc4;
+    padding-top: 12px;
+    min-height: 40px;
+    font-size: 0.76rem;
+    font-weight: 800;
+    text-decoration: none;
+  }
+  .card-download:hover {
+    color: #302619;
+    text-decoration: underline;
+  }
+  .status {
+    font-size: 0.85rem;
+    line-height: 1.8;
+    color: #715e42;
+  }
+  .status:empty {
+    display: none;
+  }
+  .store-empty {
+    text-align: center;
+    padding: 60px 20px;
+    border: 1px dashed #c9b994;
+    border-radius: 16px;
+    background: #fffdf5;
+  }
+  .store-empty p {
+    max-width: 500px;
+    margin: 15px auto 24px;
+    line-height: 1.8;
+    color: #715e42;
+  }
+  .empty-pixels {
+    font-size: 3rem;
+    color: #b3975b;
+  }
+  .store-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+  }
+  dialog {
+    margin: auto;
+    width: min(480px, calc(100% - 28px));
+    max-height: calc(100dvh - 40px);
+    overflow: auto;
+    padding: 24px;
+    border: 1px solid #c9b994;
+    border-radius: 18px;
+    background: #fffdf5;
+    color: #302619;
+    box-shadow: 0 20px 80px #0004;
+  }
+  dialog::backdrop {
+    background: #201c16b3;
+  }
+  .detail-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+  }
+  .detail-heading h2 {
+    margin: 0;
+    font-weight: 800;
+    font-size: 1.15rem;
+    overflow-wrap: anywhere;
+  }
+  .detail-heading button {
+    padding: 0;
+    min-width: 44px;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+  }
+  .detail-stage {
+    position: relative;
+    height: 320px;
+    margin: 18px 0;
+    border-radius: 12px;
+    background:
+      radial-gradient(ellipse at 50% 80%, #d3c5a0, transparent 50%), #f8f0da;
+    overflow: hidden;
+  }
+  .detail-stage canvas {
+    width: 100%;
+    height: 100%;
+    touch-action: none;
+  }
+  .detail-stage img {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 224px;
+    height: 252px;
+    image-rendering: pixelated;
+  }
+  .detail-note {
+    font-size: 0.78rem;
+    color: #715e42;
+    line-height: 1.8;
+  }
+  .detail-download {
+    width: 100%;
+  }
+  .report {
+    margin-top: 24px;
+    font-size: 0.8rem;
+    color: #715e42;
+  }
+  .report summary {
+    cursor: pointer;
+    padding: 8px 0;
+  }
+  .report form {
+    display: flex;
+    align-items: end;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-top: 12px;
+  }
+  .report label {
+    display: grid;
+    gap: 5px;
+    flex: 1;
+  }
+  select {
+    color: #302619;
+    background: #fff;
+    border: 1px solid #c9b994;
+    border-radius: 8px;
+    padding: 10px;
+    width: 100%;
+  }
+  button:focus-visible,
+  a:focus-visible,
+  select:focus-visible,
+  summary:focus-visible {
+    outline: 3px solid #257f89;
+    outline-offset: 3px;
+  }
+  button:disabled,
+  [aria-disabled='true'] {
+    opacity: 0.45;
+    pointer-events: none;
+  }
+  [hidden] {
+    display: none !important;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .skin-card {
+      transition: none;
+    }
+    .skin-card:hover {
+      transform: none;
+    }
+  }
+  @media (max-width: 980px) {
+    .skin-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+  @media (max-width: 650px) {
+    .create {
+      display: none;
+    }
+    .skin-store {
+      padding: 26px 14px 40px;
+    }
+    .store-heading {
+      align-items: start;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .skin-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .filters {
+      gap: 12px;
+    }
+    .search {
+      flex-basis: 100%;
+      max-width: none;
+    }
+    .model-filters button {
+      padding: 8px 12px;
+      font-size: 0.76rem;
+    }
+    .card-preview {
+      height: 180px;
+      padding: 10px;
+    }
+    .card-preview img {
+      width: 128px;
+      height: 144px;
+    }
+    .card-content {
+      padding: 12px;
+    }
+    .skin-card h2 {
+      font-size: 0.84rem;
+    }
+    .card-download {
+      font-size: 0.68rem;
+    }
+    dialog {
+      padding: 18px;
+    }
+    .detail-stage {
+      height: 280px;
+    }
+  }
+</style>
