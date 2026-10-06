@@ -8,8 +8,8 @@ image: /uploads/stories/minecraft-skin-maker-cover-v2.webp
 imageAlt: '흰색 블록 마네킹과 팔레트로 스킨 제작을 표현한 설명용 그림. 생성 결과의 예시가 아닙니다.'
 relatedStories: [aceserver-beginners-guide]
 translationOf: minecraft-skin-maker-guide
-sourceHash: sha256:fe34610835abbf50b5d0bf33f7222c06525fdaa5a148c518fc4c9e36244aa7f8
-lastUpdated: 2026-10-06T08:52:00+09:00
+sourceHash: sha256:330d43691471ce0ea01b3a5dafd7e46b4c63468dce23d2728bbde663336b6daf
+lastUpdated: 2026-10-06T19:18:00+09:00
 ---
 
 [스킨 메이커](/ko/skin-maker/)는 글과 선택 참고 이미지로 새 Minecraft 스킨을 만듭니다. 결과를 3D로 확인하고 64×64 PNG로 저장할 수 있습니다.
@@ -32,4 +32,8 @@ Classic은 4px, Slim은 3px 팔입니다. 색상과 옷 등을 글로 설명합�
 
 ## 4. 저장하고 게임에 불러오기
 
-“64×64 PNG 저장”으로 내려받고 게임의 사용자 스킨 불러오기 기능을 사용합니다. 게임에서도 같은 Classic·Slim 형태를 고릅니다. 기기와 버전마다 지원과 방법이 달라 모든 환경을 보장하지 않습니다. 사이트는 글·이미지·스킨을 저장하지 않으며 페이지를 닫으면 작업이 사라지므로 PNG를 먼저 저장하세요.
+“64×64 PNG 저장”으로 내려받고 게임의 사용자 스킨 불러오기 기능을 사용합니다. 게임에서도 같은 Classic·Slim 형태를 고릅니다. 기기와 버전마다 지원과 방법이 달라 모든 환경을 보장하지 않습니다. 사이트는 입력한 글과 참고 이미지를 저장하지 않습니다. 공개하지 않은 스킨은 페이지를 닫으면 사라지므로 PNG를 먼저 저장하세요.
+
+## 5. 원하는 스킨을 스토어에 공개하기
+
+생성 후 스킨에 이름을 붙이고 누구나 무료로 내려받아 사용할 수 있다는 데 동의하면 [스킨 스토어](/ko/skin-maker/store/)에 공개할 수 있습니다. 공개는 선택 사항이며 이름과 생성된 스킨만 저장됩니다. 생성 후 24시간 이내에 이 생성 화면을 열어 둔 동안에는 공개를 취소할 수 있습니다.

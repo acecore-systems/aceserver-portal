@@ -1,0 +1,10 @@
+---
+import SkinStorePage from '../../../components/SkinStorePage.astro'
+import BaseLayout from '../../../layouts/BaseLayout.astro'
+import { getSkinStoreUi } from '../../../data/skin-store-ui'
+const c = getSkinStoreUi('ja')
+---
+
+<BaseLayout locale="ja" title={c.title} description={c.intro} plainBackground>
+  <SkinStorePage locale="ja" />
+</BaseLayout>

@@ -8,7 +8,9 @@
   },
   "include": [
     "src/scripts/skin-maker.ts",
+    "src/scripts/skin-store.ts",
     "src/lib/skin-*.ts",
-    "src/data/skin-maker-ui.ts"
+    "src/data/skin-maker-ui.ts",
+    "src/data/skin-store-ui.ts"
   ]
 }

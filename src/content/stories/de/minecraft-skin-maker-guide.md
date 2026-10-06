@@ -8,8 +8,8 @@ image: /uploads/stories/minecraft-skin-maker-cover-v2.webp
 imageAlt: 'Illustration weißer Blockfiguren und einer Farbpalette als Symbol für die Skin-Erstellung. Kein generiertes Skin-Beispiel.'
 relatedStories: [aceserver-beginners-guide]
 translationOf: minecraft-skin-maker-guide
-sourceHash: sha256:fe34610835abbf50b5d0bf33f7222c06525fdaa5a148c518fc4c9e36244aa7f8
-lastUpdated: 2026-10-06T08:52:00+09:00
+sourceHash: sha256:330d43691471ce0ea01b3a5dafd7e46b4c63468dce23d2728bbde663336b6daf
+lastUpdated: 2026-10-06T19:18:00+09:00
 ---
 
 Der [Skin Maker](/de/skin-maker/) erstellt neue Minecraft-Skins aus Text und optionalem Referenzbild. Prüfen Sie das Ergebnis in 3D und speichern Sie ein 64×64-PNG.
@@ -32,4 +32,8 @@ Prüfen Sie Vorderseite, Rücken und Seiten. Ziehen zum Drehen; automatische Dre
 
 ## 4. Speichern und im Spiel importieren
 
-Laden Sie über „64×64-PNG speichern“ herunter und nutzen Sie den eigenen Skin-Import im Spiel. Wählen Sie dort dasselbe Classic-/Slim-Modell. Import und Unterstützung hängen von Edition und Gerät ab; universelle Kompatibilität ist nicht zugesichert. Die Website speichert Text, Bilder und Skins nicht; Schließen löscht die Arbeit, daher PNG vorher speichern.
+Laden Sie über „64×64-PNG speichern“ herunter und nutzen Sie den eigenen Skin-Import im Spiel. Wählen Sie dort dasselbe Classic-/Slim-Modell. Import und Unterstützung hängen von Edition und Gerät ab; universelle Kompatibilität ist nicht zugesichert. Die Website speichert weder Ihren Eingabetext noch das Referenzbild. Unveröffentlichte Skins gehen beim Schließen der Seite verloren; speichern Sie daher zuerst das PNG.
+
+## 5. Ausgewählte Skins im Store veröffentlichen
+
+Geben Sie dem Skin nach der Erstellung einen Namen und stimmen Sie dem kostenlosen Download und der Nutzung durch alle zu, um ihn im [Skin-Store](/de/skin-maker/store/) zu veröffentlichen. Die Veröffentlichung ist freiwillig; gespeichert werden nur der Name und der generierte Skin. Sie können die Veröffentlichung innerhalb von 24 Stunden nach der Erstellung zurücknehmen, solange diese Erstellungsseite geöffnet bleibt.
