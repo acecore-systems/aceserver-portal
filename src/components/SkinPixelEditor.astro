@@ -1,0 +1,411 @@
+---
+import { getSkinEditorUi } from '../data/skin-editor-ui'
+import { getSkinMakerUi } from '../data/skin-maker-ui'
+import { PARTS, FACES, LAYERS } from '../lib/skin-maker'
+import type { Locale } from '../i18n/config'
+interface Props {
+  locale: Locale
+}
+const { locale } = Astro.props
+const e = getSkinEditorUi(locale)
+const c = getSkinMakerUi(locale)
+const tools = ['pencil', 'fill', 'erase', 'picker', 'select', 'rotate']
+---
+
+<section
+  class="pixel-editor"
+  data-pixel-editor
+  hidden
+  aria-labelledby="skin-editor-title"
+>
+  <h2 id="skin-editor-title" tabindex="-1">{e.title}</h2>
+  <p class="hint">{e.intro}</p>
+  <form data-edit-form>
+    <fieldset data-edit-inputs>
+      <div class="edit-controls">
+        <label
+          >{e.part}<select data-edit-part
+            >{
+              PARTS.map((part, i) => (
+                <option value={part}>{e.partNames[i]}</option>
+              ))
+            }</select
+          ></label
+        >
+        <label
+          >{e.layer}<select data-edit-layer
+            >{
+              LAYERS.map((layer, i) => (
+                <option value={layer}>{c.layerNames[i]}</option>
+              ))
+            }</select
+          ></label
+        >
+        <label
+          >{e.face}<select data-edit-face
+            >{
+              FACES.map((face, i) => (
+                <option value={face} selected={face === 'front'}>
+                  {c.faceNames[i]}
+                </option>
+              ))
+            }</select
+          ></label
+        >
+        <label
+          >{e.tool}<select data-edit-tool
+            >{
+              tools.map((tool, i) => (
+                <option value={tool}>{e.toolNames[i] ?? e.rotate}</option>
+              ))
+            }</select
+          ></label
+        >
+        <label
+          >{e.color}<input
+            type="color"
+            data-edit-color
+            value="#3388dd"
+          /></label
+        >
+      </div>
+      <div class="edit-grid">
+        <div class="drawing">
+          <div class="view-controls">
+            <label class="consent"
+              ><input type="checkbox" data-edit-isolate />{e.isolate}</label
+            >
+            <button type="button" data-reset-view>{e.resetView}</button>
+          </div>
+          <div class="editor-stage" data-edit-stage>
+            <canvas
+              data-edit-3d
+              tabindex="0"
+              role="img"
+              aria-label={e.stage}
+              aria-describedby="skin-3d-hint"></canvas>
+          </div>
+          <p class="hint" data-edit-webgl hidden>{e.webgl}</p>
+          <p id="skin-3d-hint" class="hint">{e.stageHint}</p>
+          <div class="history-controls">
+            <button type="button" data-undo disabled>{e.undo}</button>
+            <button type="button" data-redo disabled>{e.redo}</button>
+            <button type="button" data-clear-selection disabled
+              >{e.clearSelection}</button
+            >
+          </div>
+          <p data-selection-info class="hint" hidden></p>
+          <details data-edit-fine>
+            <summary>{e.fineEdit}</summary>
+            <p data-face-size class="face-size"></p>
+            <canvas
+              data-edit-canvas
+              tabindex="0"
+              role="img"
+              aria-label={e.canvas}
+              aria-describedby="skin-editor-hint"></canvas>
+            <p
+              data-pixel-position
+              class="hint"
+              role="status"
+              aria-live="polite"
+            >
+            </p>
+            <p id="skin-editor-hint" class="hint">{e.editorHint}</p>
+            <p class="hint">{e.baseHint}</p>
+          </details>
+        </div>
+        <div class="ai-edit">
+          <h3>{e.aiTitle}</h3>
+          <p class="hint">{e.aiHint}</p>
+          <label
+            >{e.scope}<select data-edit-scope>
+              <option value="selection" disabled>{e.scopeNames[0]}</option>
+              <option value="face" selected>{e.scopeNames[1]}</option>
+              <option value="part">{e.scopeNames[2]}</option>
+            </select></label
+          >
+          <p class="scope-summary" data-scope-summary></p>
+          <label
+            >{e.prompt}<textarea
+              name="edit-prompt"
+              rows="3"
+              maxlength="1200"
+              placeholder={e.placeholder}
+              required></textarea></label
+          >
+          <label class="consent"
+            ><input type="checkbox" name="edit-consent" required /><span
+              >{e.consent}</span
+            ></label
+          >
+          <div data-edit-turnstile></div>
+          <button class="primary" data-ai-edit type="submit" disabled
+            ><span
+              class="edit-spinner"
+              data-edit-spinner
+              hidden
+              aria-hidden="true"></span><span data-edit-label>{e.edit}</span
+            ></button
+          >
+          <p class="hint" data-edit-elapsed-row hidden>
+            {c.elapsed}
+            <span data-elapsed role="timer" aria-live="off">0:00</span>
+          </p>
+        </div>
+      </div>
+    </fieldset>
+    <p data-edit-status class="hint" role="status" aria-live="polite"></p>
+  </form>
+  <p class="hint" data-manual-publish hidden>{e.manualPublish}</p>
+</section>
+<style>
+  .pixel-editor {
+    margin-top: 28px;
+    padding: 24px;
+    background: #fffdf5;
+    border: 1px solid #dbcdb1;
+    border-radius: 18px;
+    box-shadow: 0 5px 0 #e4d7b9;
+    color: #302619;
+  }
+  h2,
+  h3 {
+    margin: 0;
+  }
+  h2 {
+    font-size: 1.4rem;
+    scroll-margin-top: 140px;
+  }
+  h3 {
+    font-size: 1.1rem;
+  }
+  fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    min-width: 0;
+  }
+  fieldset:disabled {
+    opacity: 0.65;
+  }
+  .edit-controls {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) 80px;
+    gap: 12px;
+    margin: 20px 0;
+  }
+  label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 0.88rem;
+    font-weight: 700;
+    min-width: 0;
+  }
+  select,
+  textarea,
+  input[type='color'] {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #c9b994;
+    border-radius: 8px;
+    padding: 10px;
+    background: #fff;
+    color: #302619;
+    font: inherit;
+  }
+  input[type='color'] {
+    height: 44px;
+    padding: 4px;
+    cursor: pointer;
+  }
+  textarea {
+    resize: vertical;
+    min-height: 96px;
+  }
+  .edit-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+    gap: 28px;
+  }
+  .drawing {
+    min-width: 0;
+    text-align: center;
+  }
+  canvas {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #c9b994;
+    border-radius: 4px;
+    touch-action: none;
+    image-rendering: pixelated;
+    cursor: crosshair;
+  }
+  canvas:focus-visible {
+    outline: 3px solid #95632c;
+    outline-offset: 4px;
+  }
+  .view-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+  .editor-stage {
+    height: 440px;
+    overflow: hidden;
+    border: 1px solid #c9b994;
+    border-radius: 12px;
+    background: radial-gradient(ellipse at center, #fffdf5, #ece2ca);
+  }
+  .editor-stage canvas {
+    border: 0;
+    border-radius: 12px;
+    width: 100%;
+    height: 100%;
+  }
+  details {
+    padding: 12px;
+    border: 1px solid #dbcdb1;
+    border-radius: 10px;
+    text-align: center;
+  }
+  summary {
+    font-size: 0.85rem;
+    font-weight: 700;
+    cursor: pointer;
+    min-height: 32px;
+  }
+  details .face-size {
+    margin-top: 12px;
+  }
+  .face-size {
+    margin: 0 0 10px;
+    font-size: 0.85rem;
+    font-weight: 700;
+  }
+  .history-controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin: 14px 0;
+  }
+  button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 14px;
+    border: 1px solid #c6b28b;
+    border-radius: 8px;
+    background: #fff9e9;
+    color: #302619;
+    font: inherit;
+    font-size: 0.85rem;
+    font-weight: 700;
+    cursor: pointer;
+    min-height: 44px;
+  }
+  button:disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
+  .primary {
+    gap: 8px;
+    background: #8b5b27;
+    color: white;
+    border-color: #8b5b27;
+    width: 100%;
+  }
+  .edit-spinner {
+    width: 14px;
+    height: 14px;
+    border: 2px solid currentColor;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: edit-spin 0.8s linear infinite;
+    flex-shrink: 0;
+  }
+  @keyframes edit-spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .edit-spinner {
+      animation: none;
+    }
+  }
+  .ai-edit {
+    align-self: start;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    min-width: 0;
+    padding: 22px;
+    background: #f7f0df;
+    border-radius: 12px;
+  }
+  .hint {
+    color: #715e42;
+    font-size: 0.8rem;
+    line-height: 1.8;
+    margin: 8px 0;
+  }
+  .scope-summary {
+    margin: 0;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #715e42;
+  }
+  .consent {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 9px;
+    font-size: 0.8rem;
+    line-height: 1.7;
+    font-weight: 400;
+  }
+  input[type='checkbox'] {
+    width: 17px;
+    height: 17px;
+    flex-shrink: 0;
+    margin-top: 4px;
+    accent-color: #7b5422;
+  }
+  [hidden] {
+    display: none !important;
+  }
+  @media (max-width: 760px) {
+    .pixel-editor {
+      padding: 18px;
+    }
+    .edit-controls {
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 10px;
+    }
+    .edit-controls label:nth-child(-n + 3) {
+      grid-column: span 2;
+    }
+    .edit-controls label:nth-child(n + 4) {
+      grid-column: span 3;
+    }
+    .edit-grid {
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+    .editor-stage {
+      height: 380px;
+    }
+    .view-controls {
+      align-items: flex-start;
+    }
+    .ai-edit {
+      padding: 18px;
+    }
+  }
+</style>

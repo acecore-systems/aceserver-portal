@@ -8,17 +8,19 @@ image: /uploads/stories/minecraft-skin-maker-cover-v2.webp
 imageAlt: 'Illustration weißer Blockfiguren und einer Farbpalette als Symbol für die Skin-Erstellung. Kein generiertes Skin-Beispiel.'
 relatedStories: [aceserver-beginners-guide]
 translationOf: minecraft-skin-maker-guide
-sourceHash: sha256:330d43691471ce0ea01b3a5dafd7e46b4c63468dce23d2728bbde663336b6daf
-lastUpdated: 2026-10-06T19:18:00+09:00
+sourceHash: sha256:e8ad3623730aa5e4d192bca6b58111b7d0d5f616ad2848e69a8beaaa2c6de9e8
+lastUpdated: 2026-10-07
 ---
 
 Der [Skin Maker](/de/skin-maker/) erstellt neue Minecraft-Skins aus Text und optionalem Referenzbild. Prüfen Sie das Ergebnis in 3D und speichern Sie ein 64×64-PNG.
 
 ## 1. Armtyp und Aussehen wählen
 
-Classic hat 4px-Arme, Slim 3px-Arme. Beschreiben Sie Farben oder Kleidung. Optionale Bilder: PNG, JPEG oder WebP bis 5 MB. Das Werkzeug erzeugt neue Skins; es bearbeitet keinen vorhandenen Skin.
+Classic hat 4px-Arme, Slim 3px-Arme. Beschreiben Sie Farben oder Kleidung. Optionale Bilder: PNG, JPEG oder WebP bis 5 MB. Nach der Generierung können Sie unter „Skin bearbeiten“ Körperteil, Fläche und Ebene wählen und Pixel zeichnen oder füllen. Für KI-Änderungen wählen Sie ein Rechteck, die sichtbare Fläche oder einen Körperteil und stimmen dem Senden des aktuellen Skins und der Anweisungen zu. Pixel außerhalb bleiben erhalten. Manuelle und KI-Änderungen lassen sich rückgängig machen und wiederholen. Zeichnen sendet keine Daten an die KI. Die Bearbeitung teilt die Generierungslimits.
 
 <figure class="article-diagram article-diagram--skin-arms" data-layout="choices" data-tone="amber" data-count="2" aria-labelledby="diagram-skin-arms"><figcaption><strong id="diagram-skin-arms">Unterschied zwischen Classic- und Slim-Armen</strong><span>Die Skizzen zeigen die Armbreite, keine generierten Skins. Wählen Sie im Spiel dasselbe Modell wie bei der Erstellung.</span></figcaption><ol class="article-diagram__nodes"><li><strong>Classic</strong><img src="/uploads/stories/skin-arm-classic-diagram.svg" alt="Arme sind 4px breit" width="240" height="300" loading="lazy" decoding="async"/><span>Arme sind 4px breit</span></li><li><strong>Slim</strong><img src="/uploads/stories/skin-arm-slim-diagram.svg" alt="Arme sind 3px breit" width="240" height="300" loading="lazy" decoding="async"/><span>Arme sind 3px breit</span></li></ol></figure>
+
+Male mit dem Stift direkt auf dem 3D-Modell. Ziehe mit der rechten Maustaste oder den Hintergrund zum Drehen und nutze das Mausrad zum Zoomen. Auf Touchscreens wähle „Drehen / zoomen“. Mit „Nur das ausgewählte Körperteil anzeigen“ erreichst du die Innenseiten der Arme. Beim Bearbeiten der Basis wird die äußere Ebene ausgeblendet. Die ausgewählte 2D-Seite eignet sich für feine Anpassungen.
 
 ## 2. Zustimmen und warten
 

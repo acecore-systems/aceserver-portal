@@ -394,7 +394,7 @@ test('all supported locales have complete nonempty controls', () => {
   }
 })
 
-test('retired edit API requests and edit payloads are rejected', () => {
+test('create requests reject incomplete edits and unrelated edit fields', () => {
   assert.equal(requestSchema.safeParse(create()).success, true)
   for (const extra of [
     { mode: 'edit' },

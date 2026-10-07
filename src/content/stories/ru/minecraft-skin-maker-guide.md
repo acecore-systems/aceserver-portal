@@ -8,17 +8,19 @@ image: /uploads/stories/minecraft-skin-maker-cover-v2.webp
 imageAlt: 'Поясняющая иллюстрация белых блочных манекенов и палитры для создания скинов. Не пример сгенерированного результата.'
 relatedStories: [aceserver-beginners-guide]
 translationOf: minecraft-skin-maker-guide
-sourceHash: sha256:330d43691471ce0ea01b3a5dafd7e46b4c63468dce23d2728bbde663336b6daf
-lastUpdated: 2026-10-06T19:18:00+09:00
+sourceHash: sha256:e8ad3623730aa5e4d192bca6b58111b7d0d5f616ad2848e69a8beaaa2c6de9e8
+lastUpdated: 2026-10-07
 ---
 
 [Skin Maker](/ru/skin-maker/) создаёт новые скины Minecraft по тексту и необязательному изображению. Результат можно проверить в 3D и сохранить как PNG 64×64.
 
 ## 1. Выберите руки и опишите вид
 
-У Classic руки 4px, у Slim — 3px. Опишите цвета или одежду. Необязательное изображение: PNG, JPEG или WebP до 5 MB. Инструмент создаёт новый скин, а не редактирует существующий.
+У Classic руки 4px, у Slim — 3px. Опишите цвета или одежду. Необязательное изображение: PNG, JPEG или WebP до 5 MB. После генерации выберите часть, грань и слой в «Редактировать скин» и рисуйте или заливайте пиксели. Для правки ИИ выберите прямоугольник, видимую грань или часть тела и согласитесь отправить текущий скин и инструкции. Пиксели вне области сохраняются. Ручные правки и правки ИИ можно отменить и повторить. Рисование не отправляет данные ИИ. Правки используют общий лимит генерации.
 
 <figure class="article-diagram article-diagram--skin-arms" data-layout="choices" data-tone="amber" data-count="2" aria-labelledby="diagram-skin-arms"><figcaption><strong id="diagram-skin-arms">Разница между руками Classic и Slim</strong><span>Схемы показывают ширину рук, а не примеры сгенерированных скинов. В игре выбирайте ту же модель, что и при создании скина.</span></figcaption><ol class="article-diagram__nodes"><li><strong>Classic</strong><img src="/uploads/stories/skin-arm-classic-diagram.svg" alt="Ширина рук — 4px" width="240" height="300" loading="lazy" decoding="async"/><span>Ширина рук — 4px</span></li><li><strong>Slim</strong><img src="/uploads/stories/skin-arm-slim-diagram.svg" alt="Ширина рук — 3px" width="240" height="300" loading="lazy" decoding="async"/><span>Ширина рук — 3px</span></li></ol></figure>
+
+Рисуйте карандашом прямо на 3D-модели. Перетаскивайте правой кнопкой или фон для вращения, используйте колесо для масштаба. На сенсорном экране выберите «Вращать / масштаб». «Показать только выбранную часть» позволяет редактировать внутреннюю сторону рук. При правке базового слоя внешний скрывается. Для точных деталей используйте выбранную 2D-грань.
 
 ## 2. Подтвердите согласие и ждите
 

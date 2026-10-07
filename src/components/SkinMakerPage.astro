@@ -6,12 +6,15 @@ import { serializeJsonForHtmlScript } from '../data/safe-json'
 import { FACES } from '../lib/skin-maker'
 import SkinMakerNav from './SkinMakerNav.astro'
 import { getSkinStoreUi } from '../data/skin-store-ui'
+import SkinPixelEditor from './SkinPixelEditor.astro'
+import { getSkinEditorUi } from '../data/skin-editor-ui'
 interface Props {
   locale: Locale
 }
 const { locale } = Astro.props
 const c = getSkinMakerUi(locale)
 const store = getSkinStoreUi(locale)
+const edit = getSkinEditorUi(locale)
 const seo = getSkinMakerSeo(locale)
 const url = new URL(localizePath(locale, '/skin-maker/'), Astro.site).href
 const appJsonLd = serializeJsonForHtmlScript({
@@ -100,7 +103,7 @@ const appJsonLd = serializeJsonForHtmlScript({
               ))
             }
           </div>
-          <strong>{c.generating}</strong>
+          <strong data-loading-title>{c.generating}</strong>
           <p data-loading-message>{c.busy}</p>
           <p class="elapsed">
             {c.elapsed}
@@ -133,35 +136,45 @@ const appJsonLd = serializeJsonForHtmlScript({
             download="minecraft-classic.png">{c.download}</a
           >
           <button type="button" data-clear>{c.clear}</button>
+          <a
+            class="editor-link"
+            href="#skin-editor-title"
+            data-open-editor
+            hidden>{edit.open}</a
+          >
         </div>
       </div>
       <p class="hint">{c.note}</p>
-      <form class="publish-form" data-publish-form hidden>
-        <label class="field"
-          >{store.name}<input name="skin-name" maxlength="40" required /></label
-        >
-        <label class="consent"
-          ><input type="checkbox" name="public-consent" required /><span
-            >{store.consent}</span
-          ></label
-        >
-        <p class="hint">{store.hint}</p>
-        <button class="primary" type="submit" data-publish
-          >{store.publish}</button
-        >
-      </form>
-      <p class="hint" data-publish-status role="status" aria-live="polite"></p>
-      <div class="publication-actions">
-        <a
-          data-published-link
-          hidden
-          href={localizePath(locale, '/skin-maker/store/')}>{store.store} →</a
-        >
-        <button type="button" data-unpublish hidden>{store.remove}</button>
-      </div>
     </section>
   </div>
+  <SkinPixelEditor locale={locale} />
+  <section class="publication" data-publication hidden aria-label={store.title}>
+    <h2>{store.title}</h2>
+    <form class="publish-form" data-publish-form hidden>
+      <label class="field"
+        >{store.name}<input name="skin-name" maxlength="40" required /></label
+      >
+      <label class="consent"
+        ><input type="checkbox" name="public-consent" required /><span
+          >{store.consent}</span
+        ></label
+      >
+      <p class="hint">{store.hint}</p>
+      <button class="primary" type="submit" data-publish>{store.publish}</button
+      >
+    </form>
+    <p class="hint" data-publish-status role="status" aria-live="polite"></p>
+    <div class="publication-actions">
+      <a
+        data-published-link
+        hidden
+        href={localizePath(locale, '/skin-maker/store/')}>{store.store} →</a
+      >
+      <button type="button" data-unpublish hidden>{store.remove}</button>
+    </div>
+  </section>
   <aside class="privacy">
+    <p>{edit.privacy}</p>
     <p>{c.privacy}</p><a
       href="https://developers.cloudflare.com/workers-ai/platform/data-usage/"
       target="_blank"
@@ -291,7 +304,8 @@ const appJsonLd = serializeJsonForHtmlScript({
     margin-bottom: 7px;
   }
   button,
-  .primary {
+  .primary,
+  .editor-link {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -307,7 +321,8 @@ const appJsonLd = serializeJsonForHtmlScript({
     min-height: 42px;
   }
   button:hover,
-  .primary:hover {
+  .primary:hover,
+  .editor-link:hover {
     background: #fbe6a8;
   }
   button:focus-visible,
@@ -508,10 +523,17 @@ const appJsonLd = serializeJsonForHtmlScript({
   .privacy a {
     text-decoration: underline;
   }
-  .publish-form {
-    margin-top: 24px;
-    padding-top: 8px;
-    border-top: 1px solid #dbcdb1;
+  .publication {
+    margin-top: 28px;
+    padding: 24px;
+    background: #fffdf5;
+    border: 1px solid #dbcdb1;
+    border-radius: 18px;
+    box-shadow: 0 5px 0 #e4d7b9;
+  }
+  .publication h2 {
+    font-size: 1.15rem;
+    margin: 0;
   }
   .publish-form .primary {
     width: 100%;
