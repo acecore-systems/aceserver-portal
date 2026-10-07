@@ -408,6 +408,7 @@ const fixturesEnabled = import.meta.env.DEV
 
   .diary-hero {
     --asv-hero-border: #5e9e3e;
+    background: #a8e9fa;
   }
 
   .diary-hero::after {
@@ -502,7 +503,7 @@ const fixturesEnabled = import.meta.env.DEV
 
   .diary-hero__portrait {
     position: relative;
-    height: 205px;
+    height: 160px;
   }
 
   .diary-hero__portrait img {
@@ -510,8 +511,8 @@ const fixturesEnabled = import.meta.env.DEV
     z-index: 1;
     right: 12px;
     bottom: 0;
-    width: min(230px, 100%);
-    height: 230px;
+    width: min(180px, 100%);
+    height: 180px;
     object-fit: contain;
     filter: drop-shadow(0 10px 0 rgba(74, 84, 33, 0.18));
   }
@@ -2017,11 +2018,11 @@ const fixturesEnabled = import.meta.env.DEV
       grid-template-columns: 1fr 150px;
     }
     .diary-hero__portrait {
-      height: 160px;
+      height: 140px;
     }
     .diary-hero__portrait img {
-      width: 170px;
-      height: 170px;
+      width: 150px;
+      height: 150px;
       right: -12px;
     }
     .diary-hero__sun {
@@ -2085,9 +2086,6 @@ const fixturesEnabled = import.meta.env.DEV
     }
     .alpha-diary[data-record-kind='observation'] .diary-hero__inner {
       grid-template-columns: minmax(0, 1fr) 58px;
-    }
-    .alpha-diary[data-record-kind='observation'] .diary-hero h1 {
-      font-size: clamp(1.8rem, 10vw, 2.7rem);
     }
     .alpha-diary[data-record-kind='observation'] .diary-hero__portrait {
       width: 54px;

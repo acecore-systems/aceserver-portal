@@ -92,7 +92,7 @@ const introText = intro?.text ?? page.meta.description
   .world-hero-inner {
     display: grid;
     justify-items: center;
-    gap: 24px;
+    gap: 16px;
   }
 
   .world-bg {
@@ -119,14 +119,14 @@ const introText = intro?.text ?? page.meta.description
   .map-sign {
     display: inline-flex;
     align-items: center;
-    gap: 18px;
+    gap: 12px;
     border-radius: 14px;
     background: linear-gradient(
       180deg,
       rgba(42, 33, 24, 0.94),
       rgba(23, 18, 13, 0.96)
     );
-    padding: clamp(18px, 3vw, 28px) clamp(22px, 5vw, 60px);
+    padding: clamp(14px, 2vw, 20px) clamp(18px, 4vw, 40px);
   }
 
   .map-sign h1 {
@@ -148,7 +148,7 @@ const introText = intro?.text ?? page.meta.description
 
   .map-sign > :global(.asv-icon) {
     color: #ffd84d;
-    font-size: clamp(2rem, 5vw, 4rem);
+    font-size: clamp(1.75rem, 3.5vw, 3rem);
   }
 
   .world-hero p {
@@ -293,10 +293,6 @@ const introText = intro?.text ?? page.meta.description
       max-width: 640px;
       margin: 0 auto;
       width: 100%;
-    }
-
-    .map-sign {
-      flex-direction: column;
     }
 
     .map-sign h1 {

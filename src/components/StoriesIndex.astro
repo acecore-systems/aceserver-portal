@@ -120,7 +120,8 @@ const getStoryPath = (story: CollectionEntry<'stories'>) =>
   }
 
   .stories-hero p:first-child {
-    margin: 0 0 12px;
+    margin: 0 0 8px;
+    font-size: 0.875rem;
     font-weight: 900;
     letter-spacing: 0.12em;
   }
@@ -134,7 +135,7 @@ const getStoryPath = (story: CollectionEntry<'stories'>) =>
 
   .stories-lead {
     max-width: 680px;
-    margin: 24px 0 0;
+    margin: 16px 0 0;
     font-size: var(--asv-hero-lead-size);
     font-weight: 700;
   }
@@ -143,6 +144,7 @@ const getStoryPath = (story: CollectionEntry<'stories'>) =>
     display: grid;
     gap: 0;
     padding-block: clamp(54px, 8vw, 96px);
+    padding-top: clamp(32px, 4vw, 48px);
   }
 
   .stories-list article {

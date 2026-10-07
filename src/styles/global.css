@@ -65,10 +65,10 @@
     --asv-gold: var(--color-gold-300);
     --asv-green: var(--color-grass-500);
     --asv-blue: var(--color-skyforge-500);
-    --asv-hero-min-height: clamp(420px, 36vw, 480px);
-    --asv-hero-padding: clamp(32px, 5vw, 56px);
-    --asv-hero-title-size: clamp(2.35rem, 5.5vw, 5rem);
-    --asv-hero-lead-size: clamp(1rem, 1.6vw, 1.25rem);
+    --asv-hero-min-height: clamp(240px, 24vw, 320px);
+    --asv-hero-padding: clamp(24px, 4vw, 32px);
+    --asv-hero-title-size: clamp(2rem, 4.5vw, 3.5rem);
+    --asv-hero-lead-size: clamp(1rem, 1.35vw, 1.125rem);
   }
 
   * {
