@@ -82,6 +82,7 @@ export function faceSurface(
 export function surfaceOutline(
   surface: SkinSurface,
   box: { x: number; y: number; w: number; h: number },
+  offset = 0.02,
 ): Vector3[] {
   const {
     mesh,
@@ -96,7 +97,7 @@ export function surfaceOutline(
   const normal = new Vector3()
     .crossVectors(ab, ac)
     .normalize()
-    .multiplyScalar(0.02)
+    .multiplyScalar(offset)
   const u0 = uv.getX(a),
     v0 = uv.getY(a),
     ub = uv.getX(b) - u0,
@@ -118,4 +119,26 @@ export function surfaceOutline(
       .addScaledVector(ac, (v * ub - u * vb) / det)
       .add(normal)
   })
+}
+
+// Each pair is a grid segment. Keep it below the hover/selection outlines.
+export function surfaceGrid(surface: SkinSurface): Vector3[] {
+  const { w, h } = surface.region
+  const [origin, right, , bottom] = surfaceOutline(
+    surface,
+    { x: 0, y: 0, w, h },
+    0.01,
+  )
+  const horizontal = right.sub(origin),
+    vertical = bottom.sub(origin),
+    points: Vector3[] = []
+  for (let x = 0; x <= w; x++) {
+    const start = origin.clone().addScaledVector(horizontal, x / w)
+    points.push(start, start.clone().add(vertical))
+  }
+  for (let y = 0; y <= h; y++) {
+    const start = origin.clone().addScaledVector(vertical, y / h)
+    points.push(start, start.clone().add(horizontal))
+  }
+  return points
 }

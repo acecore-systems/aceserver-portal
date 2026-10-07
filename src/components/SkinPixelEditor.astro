@@ -72,9 +72,14 @@ const tools = ['pencil', 'fill', 'erase', 'picker', 'select', 'rotate']
       <div class="edit-grid">
         <div class="drawing">
           <div class="view-controls">
-            <label class="consent"
-              ><input type="checkbox" data-edit-isolate />{e.isolate}</label
-            >
+            <div class="view-options">
+              <label class="consent"
+                ><input type="checkbox" data-edit-grid checked />{e.grid}</label
+              >
+              <label class="consent"
+                ><input type="checkbox" data-edit-isolate />{e.isolate}</label
+              >
+            </div>
             <button type="button" data-reset-view>{e.resetView}</button>
           </div>
           <div class="editor-stage" data-edit-stage>
@@ -250,10 +255,17 @@ const tools = ['pencil', 'fill', 'erase', 'picker', 'select', 'rotate']
   }
   .view-controls {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     gap: 12px;
     margin-bottom: 12px;
+  }
+  .view-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+    text-align: left;
   }
   .editor-stage {
     height: 440px;
