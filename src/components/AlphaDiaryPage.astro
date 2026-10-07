@@ -3,6 +3,7 @@ import { getAlphaDiaryUi } from '../data/alpha-diary-ui'
 import { serializeJsonForHtmlScript } from '../data/safe-json'
 import type { Locale } from '../i18n/config'
 import Icon from './Icon.astro'
+import PageHero from './PageHero.astro'
 
 interface Props {
   locale: Locale
@@ -27,35 +28,31 @@ const fixturesEnabled = import.meta.env.DEV
     set:html={serializeJsonForHtmlScript(copy)}
   />
 
-  <header class="diary-hero asv-page-hero">
-    <div class="diary-hero__sky" aria-hidden="true">
+  <PageHero title={copy.title} tone="sky">
+    <div slot="backdrop" class="diary-hero__sky" aria-hidden="true">
       <span></span><span></span><span></span><span></span><span></span>
     </div>
-    <div class="diary-hero__inner asv-hero-inner">
-      <div class="diary-hero__copy">
-        <p class="diary-eyebrow">
-          <span class="diary-mode-copy">{copy.eyebrow}</span>
-          <span class="observation-mode-copy">{copy.dateLabel}</span>
-        </p>
-        <h1>
-          <span class="diary-mode-copy">{copy.title}</span>
-          <span class="observation-mode-copy">{copy.observationKind}</span>
-        </h1>
-      </div>
-      <div class="diary-hero__portrait" aria-hidden="true">
-        <span class="diary-hero__sun"></span>
-        <img
-          src="/uploads/alpha-kun.png"
-          alt={copy.title}
-          width="256"
-          height="256"
-        />
-        <span class="diary-hero__archive-mark">
-          <Icon name="notebook-pen" />
-        </span>
-      </div>
+    <Fragment slot="eyebrow">
+      <span class="diary-mode-copy">{copy.eyebrow}</span>
+      <span class="observation-mode-copy">{copy.dateLabel}</span>
+    </Fragment>
+    <Fragment slot="title">
+      <span class="diary-mode-copy">{copy.title}</span>
+      <span class="observation-mode-copy">{copy.observationKind}</span>
+    </Fragment>
+    <div slot="decoration" class="diary-hero__portrait" aria-hidden="true">
+      <span class="diary-hero__sun"></span>
+      <img
+        src="/uploads/alpha-kun.png"
+        alt={copy.title}
+        width="256"
+        height="256"
+      />
+      <span class="diary-hero__archive-mark">
+        <Icon name="notebook-pen" />
+      </span>
     </div>
-  </header>
+  </PageHero>
 
   <div class="diary-shell">
     <aside class="diary-sidebar" aria-label={copy.dateLabel}>
@@ -383,6 +380,9 @@ const fixturesEnabled = import.meta.env.DEV
     --diary-blue: #6fd6f6;
     --diary-green: #65bd4a;
     --diary-gold: #f7c948;
+    --asv-hero-color: #2a2117;
+    --asv-hero-title-shadow:
+      3px 3px 0 rgb(255 255 255 / 80%), 6px 6px 0 rgb(56 117 56 / 18%);
     position: relative;
     min-height: 100vh;
     background:
@@ -392,10 +392,9 @@ const fixturesEnabled = import.meta.env.DEV
         32px,
       linear-gradient(
         180deg,
-        #a8e9fa 0 var(--asv-hero-min-height),
-        #d9f4c6 var(--asv-hero-min-height)
-          calc(var(--asv-hero-min-height) + 48px),
-        #f3e4bd calc(var(--asv-hero-min-height) + 48px) 100%
+        #a8e9fa 0 var(--asv-hero-height),
+        #d9f4c6 var(--asv-hero-height) calc(var(--asv-hero-height) + 48px),
+        #f3e4bd calc(var(--asv-hero-height) + 48px) 100%
       );
     color: var(--diary-ink);
     overflow: clip;
@@ -406,12 +405,7 @@ const fixturesEnabled = import.meta.env.DEV
     display: none;
   }
 
-  .diary-hero {
-    --asv-hero-border: #5e9e3e;
-    background: #a8e9fa;
-  }
-
-  .diary-hero::after {
+  .diary-hero__sky::after {
     position: absolute;
     right: -5%;
     bottom: -48px;
@@ -463,46 +457,9 @@ const fixturesEnabled = import.meta.env.DEV
     transform: scale(0.5);
   }
 
-  .diary-hero__inner {
-    position: relative;
-    z-index: 1;
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(210px, 0.42fr);
-    align-items: center;
-    column-gap: clamp(16px, 3vw, 32px);
-  }
-
-  .diary-hero__copy {
-    max-width: 760px;
-  }
-  .diary-eyebrow {
-    display: inline-flex;
-    margin: 0 0 12px;
-    border: 2px solid #4d341f;
-    background: #fff4b7;
-    padding: 5px 11px;
-    font-size: 0.75rem;
-    font-weight: 900;
-    letter-spacing: 0.08em;
-    transform: rotate(-1deg);
-    box-shadow: 3px 3px 0 rgba(71, 49, 28, 0.22);
-  }
-
-  .diary-hero h1 {
-    max-width: 12em;
-    margin: 0;
-    color: #2a2117;
-    font-size: var(--asv-hero-title-size);
-    font-weight: 900;
-    letter-spacing: -0.055em;
-    line-height: 1.1;
-    text-shadow:
-      3px 3px 0 rgba(255, 255, 255, 0.8),
-      6px 6px 0 rgba(56, 117, 56, 0.18);
-  }
-
   .diary-hero__portrait {
     position: relative;
+    width: 100%;
     height: 160px;
   }
 
@@ -710,39 +667,13 @@ const fixturesEnabled = import.meta.env.DEV
     display: inline-flex;
   }
 
-  .alpha-diary[data-record-kind='observation'] .diary-hero {
+  .alpha-diary[data-record-kind='observation'] {
     --asv-hero-border: #66747d;
-    background: #1f2b33;
-  }
-
-  .alpha-diary[data-record-kind='observation'] .diary-hero::after {
-    display: none;
-  }
-
-  .alpha-diary[data-record-kind='observation'] .diary-hero__inner {
-    grid-template-columns: minmax(0, 1fr) auto;
-  }
-
-  .alpha-diary[data-record-kind='observation'] .diary-eyebrow {
-    margin-bottom: 8px;
-    border: 0;
-    background: transparent;
-    padding: 0;
-    color: #aebbc2;
-    font-family: ui-monospace, 'Noto Sans JP', monospace;
-    font-size: 0.7rem;
-    letter-spacing: 0.16em;
-    box-shadow: none;
-    transform: none;
-  }
-
-  .alpha-diary[data-record-kind='observation'] .diary-hero h1 {
-    color: #f1efe8;
-    font-family: 'Yu Mincho', 'Hiragino Mincho ProN', serif;
-    font-size: var(--asv-hero-title-size);
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-shadow: none;
+    --asv-hero-background: #1f2b33;
+    --asv-hero-color: #f1efe8;
+    --asv-hero-title-font: 'Yu Mincho', 'Hiragino Mincho ProN', serif;
+    --asv-hero-title-weight: 600;
+    --asv-hero-title-shadow: none;
   }
 
   .alpha-diary[data-record-kind='observation'] .diary-hero__portrait {
@@ -2014,9 +1945,6 @@ const fixturesEnabled = import.meta.env.DEV
   }
 
   @media (max-width: 820px) {
-    .diary-hero__inner {
-      grid-template-columns: 1fr 150px;
-    }
     .diary-hero__portrait {
       height: 140px;
     }
@@ -2038,9 +1966,6 @@ const fixturesEnabled = import.meta.env.DEV
     }
     .diary-control-card {
       grid-row: span 2;
-    }
-    .alpha-diary[data-record-kind='observation'] .diary-hero__inner {
-      grid-template-columns: minmax(0, 1fr) 76px;
     }
     .alpha-diary[data-record-kind='observation'] .diary-hero__portrait {
       width: 72px;
@@ -2072,28 +1997,18 @@ const fixturesEnabled = import.meta.env.DEV
     .alpha-diary {
       background: linear-gradient(
         180deg,
-        #a8e9fa 0 var(--asv-hero-min-height),
-        #d9f4c6 var(--asv-hero-min-height)
-          calc(var(--asv-hero-min-height) + 48px),
-        #f3e4bd calc(var(--asv-hero-min-height) + 48px) 100%
+        #a8e9fa 0 var(--asv-hero-height),
+        #d9f4c6 var(--asv-hero-height) calc(var(--asv-hero-height) + 48px),
+        #f3e4bd calc(var(--asv-hero-height) + 48px) 100%
       );
     }
     .alpha-diary[data-record-kind='observation'] {
       background: #26333c;
     }
-    .diary-hero__inner {
-      grid-template-columns: 1fr 96px;
-    }
-    .alpha-diary[data-record-kind='observation'] .diary-hero__inner {
-      grid-template-columns: minmax(0, 1fr) 58px;
-    }
     .alpha-diary[data-record-kind='observation'] .diary-hero__portrait {
       width: 54px;
       height: 54px;
       font-size: 0.8rem;
-    }
-    .diary-eyebrow {
-      font-size: 0.65rem;
     }
     .diary-hero__portrait img {
       right: -12px;

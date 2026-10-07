@@ -65,7 +65,7 @@
     --asv-gold: var(--color-gold-300);
     --asv-green: var(--color-grass-500);
     --asv-blue: var(--color-skyforge-500);
-    --asv-hero-min-height: clamp(240px, 24vw, 320px);
+    --asv-hero-height: clamp(240px, 24vw, 320px);
     --asv-hero-padding: clamp(24px, 4vw, 32px);
     --asv-hero-title-size: clamp(2rem, 4.5vw, 3.5rem);
     --asv-hero-lead-size: clamp(1rem, 1.35vw, 1.125rem);
@@ -199,25 +199,6 @@
       0 0 0 2px rgba(46, 34, 22, 0.92),
       inset 0 0 0 2px rgba(255, 255, 255, 0.18),
       0 8px 0 rgba(34, 23, 13, 0.25);
-  }
-
-  .asv-page-hero {
-    position: relative;
-    display: grid;
-    min-height: var(--asv-hero-min-height);
-    align-items: center;
-    border-bottom: 8px solid var(--asv-hero-border, #1e1710);
-    padding-block: var(--asv-hero-padding);
-    overflow: hidden;
-  }
-
-  .asv-hero-inner {
-    width: min(1120px, calc(100% - 36px));
-    margin-inline: auto;
-  }
-
-  .asv-page-hero h1 {
-    text-wrap: balance;
   }
 
   @media (max-width: 700px) {

@@ -277,7 +277,7 @@ function inspectImage(html, article, story, scope) {
   const expectedImageAlt = story.imageAlt ?? settings.logoAlt
   const expectedImageUrl = new URL(expectedImage, siteUrl).toString()
   const hero = html.match(
-    /<figure\b[^>]*class\s*=\s*["'][^"']*\bstory-hero\b[^"']*["'][^>]*>[\s\S]*?<img\b[^>]*>/i,
+    /<header\b[^>]*\bdata-page-hero(?:\s|=|>)[\s\S]*?<img\b[^>]*\bdata-page-hero-image(?:\s|=|>)[^>]*>/i,
   )?.[0]
 
   if (story.image) {

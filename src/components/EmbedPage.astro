@@ -11,6 +11,7 @@ import {
 import { getUi } from '../i18n/translations'
 import { externalLinkAttrs } from '../utils/links'
 import Icon from './Icon.astro'
+import PageHero from './PageHero.astro'
 
 interface Props {
   page: PortalPage
@@ -51,47 +52,49 @@ const nextMap =
     : undefined
 ---
 
+<PageHero
+  title={embed.title ?? page.pageName}
+  backgroundImage={embed.fallbackImage ?? '/uploads/legacy-world-map.png'}
+>
+  <Fragment slot="actions">
+    {
+      previousMap ? (
+        <a class="toolbar-button" href={previousMap.href}>
+          <Icon name="chevron-left" />
+          <span>{ui.previous}</span>
+          <span class="toolbar-button__label">{previousMap.title}</span>
+        </a>
+      ) : (
+        <a class="toolbar-button" href={localizePath(locale, '/world-map/')}>
+          <Icon name="arrow-left" />
+          <span>{ui.back}</span>
+        </a>
+      )
+    }
+    {
+      nextMap ? (
+        <a class="toolbar-button toolbar-button--next" href={nextMap.href}>
+          <span>{ui.next}</span>
+          <span class="toolbar-button__label">{nextMap.title}</span>
+          <Icon name="chevron-right" />
+        </a>
+      ) : (
+        <a
+          class="toolbar-button toolbar-button--external"
+          href={embed.externalUrl ?? embed.src}
+          {...externalLinkAttrs(embed.externalUrl ?? embed.src, true)}
+        >
+          <span>{ui.openNewTab}</span>
+          <Icon name="external-link" />
+        </a>
+      )
+    }
+  </Fragment>
+</PageHero>
+
 <section class="embed-page" data-variant={embed.variant}>
   <div class="embed-layout">
     <div class="embed-shell pixel-border">
-      <div class="embed-toolbar">
-        {
-          previousMap ? (
-            <a class="toolbar-button" href={previousMap.href}>
-              <Icon name="chevron-left" />
-              <span>{ui.previous}</span>
-              <span class="toolbar-button__label">{previousMap.title}</span>
-            </a>
-          ) : (
-            <a
-              class="toolbar-button"
-              href={localizePath(locale, '/world-map/')}
-            >
-              <Icon name="arrow-left" />
-              <span>{ui.back}</span>
-            </a>
-          )
-        }
-        <h1>{embed.title ?? page.pageName}</h1>
-        {
-          nextMap ? (
-            <a class="toolbar-button toolbar-button--next" href={nextMap.href}>
-              <span>{ui.next}</span>
-              <span class="toolbar-button__label">{nextMap.title}</span>
-              <Icon name="chevron-right" />
-            </a>
-          ) : (
-            <a
-              class="toolbar-button toolbar-button--external"
-              href={embed.externalUrl ?? embed.src}
-              {...externalLinkAttrs(embed.externalUrl ?? embed.src, true)}
-            >
-              <span>{ui.openNewTab}</span>
-              <Icon name="external-link" />
-            </a>
-          )
-        }
-      </div>
       <div class="embed-frame" style={`--fallback-image: ${fallbackImageCss}`}>
         <iframe
           src={embed.src}
@@ -160,7 +163,7 @@ const nextMap =
 
 <style>
   .embed-page {
-    min-height: calc(100vh - 72px);
+    min-height: calc(100vh - 72px - var(--asv-hero-height));
     background:
       linear-gradient(180deg, rgba(15, 18, 19, 0.94), rgba(12, 10, 8, 0.98)),
       url('/uploads/legacy-world-map.png') center / cover;
@@ -174,35 +177,10 @@ const nextMap =
 
   .embed-shell {
     display: grid;
-    min-height: calc(100vh - 112px);
+    min-height: calc(100vh - 112px - var(--asv-hero-height));
     overflow: hidden;
     border-radius: 18px;
     background: #15110c;
-  }
-
-  .embed-toolbar {
-    display: grid;
-    min-height: 68px;
-    align-items: center;
-    gap: 12px;
-    grid-template-columns: minmax(120px, 1fr) auto minmax(120px, 1fr);
-    border-bottom: 3px solid rgba(255, 216, 77, 0.64);
-    background: linear-gradient(
-      180deg,
-      rgba(48, 36, 24, 0.98),
-      rgba(24, 19, 14, 0.98)
-    );
-    color: #fff5dc;
-    padding: 10px clamp(10px, 2vw, 18px);
-  }
-
-  .embed-toolbar h1 {
-    margin: 0;
-    font-size: clamp(1.08rem, 2.2vw, 1.65rem);
-    font-weight: 900;
-    letter-spacing: 0;
-    line-height: 1.2;
-    text-align: center;
   }
 
   .toolbar-button {
@@ -221,11 +199,7 @@ const nextMap =
   }
 
   .toolbar-button__label {
-    max-width: min(24vw, 180px);
-    overflow: hidden;
     color: rgba(255, 245, 220, 0.72);
-    text-overflow: ellipsis;
-    white-space: nowrap;
   }
 
   .toolbar-button:hover {
@@ -240,7 +214,7 @@ const nextMap =
 
   .embed-frame {
     position: relative;
-    min-height: 60vh;
+    min-height: max(320px, calc(100vh - 112px - var(--asv-hero-height)));
     background:
       linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.28)),
       var(--fallback-image) center / cover;
@@ -250,7 +224,7 @@ const nextMap =
     display: block;
     width: 100%;
     height: 100%;
-    min-height: calc(100vh - 180px);
+    min-height: max(320px, calc(100vh - 112px - var(--asv-hero-height)));
     border: 0;
     background: transparent;
   }
@@ -391,10 +365,6 @@ const nextMap =
   }
 
   @media (max-width: 760px) {
-    .embed-toolbar {
-      grid-template-columns: 1fr;
-    }
-    .embed-toolbar h1,
     .toolbar-button,
     .toolbar-button--external {
       justify-self: stretch;
@@ -403,10 +373,6 @@ const nextMap =
     .toolbar-button {
       justify-content: center;
     }
-    .toolbar-button__label {
-      max-width: 100%;
-    }
-
     .video-gallery__header {
       align-items: stretch;
       flex-direction: column;

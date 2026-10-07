@@ -10,6 +10,7 @@ import SkinPixelEditor from './SkinPixelEditor.astro'
 import { getSkinEditorUi } from '../data/skin-editor-ui'
 import { getSkinRemixUi } from '../data/skin-remix-ui'
 import { getSkinUploadUi } from '../data/skin-upload-ui'
+import PageHero from './PageHero.astro'
 interface Props {
   locale: Locale
 }
@@ -38,13 +39,10 @@ const appJsonLd = serializeJsonForHtmlScript({
 ---
 
 <script type="application/ld+json" set:html={appJsonLd} />
+<PageHero title={c.title} eyebrow="MINECRAFT · 64 × 64" />
 
 <section class="skin-maker" data-skin-maker data-locale={locale}>
-  <header class="maker-heading">
-    <span class="eyebrow">MINECRAFT · 64 × 64</span>
-    <h1>{c.title}</h1>
-    <p>{c.intro}</p>
-  </header>
+  <p class="maker-intro">{c.intro}</p>
   <SkinMakerNav locale={locale} current="maker" />
   <div class="maker-grid">
     <form class="editor" data-form>
@@ -269,28 +267,14 @@ const appJsonLd = serializeJsonForHtmlScript({
     padding: 44px 22px 56px;
     color: #302619;
   }
-  .maker-heading {
-    max-width: 780px;
-    margin-bottom: 30px;
-  }
-  .eyebrow {
-    color: #846125;
-    font-size: 0.78rem;
-    letter-spacing: 0.16em;
-    font-weight: 800;
-  }
-  h1 {
-    font-size: clamp(2.1rem, 5vw, 3.5rem);
-    font-weight: 900;
-    margin: 8px 0;
-    line-height: 1.2;
-  }
   h2 {
     font-size: 1.15rem;
     font-weight: 800;
     margin: 0;
   }
-  .maker-heading p {
+  .maker-intro {
+    max-width: 780px;
+    margin: 0 0 24px;
     line-height: 1.8;
     color: #66553f;
   }

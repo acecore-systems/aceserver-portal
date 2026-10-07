@@ -11,7 +11,7 @@
     "dev": "astro dev",
     "prebuild": "node scripts/write-cms-runtime-config.mjs && npm run validate:content",
     "build": "astro build",
-    "postbuild": "node scripts/enrich-sitemap-i18n.mjs && npm run build:pagefind && npm run build:portal-corpus && npm run build:portal-meta && npm run validate:image-alts && npm run validate:story-output && npm run validate:i18n-output",
+    "postbuild": "node scripts/enrich-sitemap-i18n.mjs && npm run build:pagefind && npm run build:portal-corpus && npm run build:portal-meta && npm run validate:image-alts && npm run validate:story-output && npm run validate:i18n-output && npm run validate:page-heroes",
     "build:pagefind": "pagefind --site dist",
     "build:portal-corpus": "node scripts/build-portal-vector-corpus.mjs",
     "build:portal-meta": "node scripts/write-portal-build-meta.mjs",
@@ -45,6 +45,7 @@
     "validate:i18n-output": "node scripts/validate-i18n-output.mjs",
     "validate:image-alts": "node scripts/validate-image-alts.mjs",
     "validate:story-output": "node scripts/validate-story-output.mjs",
+    "validate:page-heroes": "node scripts/validate-page-heroes.mjs",
     "sync:portal-vectorize": "node scripts/sync-portal-vectorize.mjs",
     "sync:portal-vectorize:dry-run": "node scripts/sync-portal-vectorize.mjs --dry-run"
   },
