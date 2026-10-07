@@ -8,6 +8,7 @@ import SkinMakerNav from './SkinMakerNav.astro'
 import { getSkinStoreUi } from '../data/skin-store-ui'
 import SkinPixelEditor from './SkinPixelEditor.astro'
 import { getSkinEditorUi } from '../data/skin-editor-ui'
+import { getSkinRemixUi } from '../data/skin-remix-ui'
 interface Props {
   locale: Locale
 }
@@ -15,6 +16,7 @@ const { locale } = Astro.props
 const c = getSkinMakerUi(locale)
 const store = getSkinStoreUi(locale)
 const edit = getSkinEditorUi(locale)
+const remix = getSkinRemixUi(locale)
 const seo = getSkinMakerSeo(locale)
 const url = new URL(localizePath(locale, '/skin-maker/'), Astro.site).href
 const appJsonLd = serializeJsonForHtmlScript({
@@ -147,6 +149,21 @@ const appJsonLd = serializeJsonForHtmlScript({
       <p class="hint">{c.note}</p>
     </section>
   </div>
+  <section
+    class="remix-context"
+    data-remix
+    hidden
+    aria-labelledby="skin-copy-title"
+  >
+    <h2 id="skin-copy-title" tabindex="-1">{remix.title}</h2>
+    <p data-remix-source hidden>
+      <strong>{remix.source}:</strong>
+      <span data-remix-name></span>
+    </p>
+    <p data-remix-status role="status" aria-live="polite">{remix.loading}</p>
+    <button type="button" data-remix-retry hidden>{store.retry}</button>
+    <a href={localizePath(locale, '/skin-maker/store/')}>{store.store} →</a>
+  </section>
   <SkinPixelEditor locale={locale} />
   <section class="publication" data-publication hidden aria-label={store.title}>
     <h2>{store.title}</h2>
@@ -159,7 +176,7 @@ const appJsonLd = serializeJsonForHtmlScript({
           >{store.consent}</span
         ></label
       >
-      <p class="hint">{store.hint}</p>
+      <p class="hint" data-publish-hint>{store.hint}</p>
       <button class="primary" type="submit" data-publish>{store.publish}</button
       >
     </form>
@@ -530,6 +547,25 @@ const appJsonLd = serializeJsonForHtmlScript({
     border: 1px solid #dbcdb1;
     border-radius: 18px;
     box-shadow: 0 5px 0 #e4d7b9;
+  }
+  .remix-context {
+    margin-top: 28px;
+    padding: 20px 24px;
+    border: 1px solid #c9b994;
+    border-radius: 14px;
+    background: #fff4ce;
+    scroll-margin-top: 140px;
+  }
+  .remix-context p {
+    font-size: 0.85rem;
+    line-height: 1.8;
+    margin: 12px 0;
+    overflow-wrap: anywhere;
+  }
+  .remix-context a {
+    font-size: 0.85rem;
+    text-decoration: underline;
+    margin-left: 12px;
   }
   .publication h2 {
     font-size: 1.15rem;

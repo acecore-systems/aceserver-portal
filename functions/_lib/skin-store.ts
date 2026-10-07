@@ -19,9 +19,17 @@ const tokenSchema = z
     hash: z.string().regex(/^[a-f0-9]{64}$/),
     origin: z.string().url(),
     expires: z.number().int().positive(),
-    purpose: z.enum(['publish', 'remove']),
+    purpose: z.enum(['publish', 'remix', 'remove']),
+    source: z.string().uuid().optional(),
   })
   .strict()
+  .refine((ticket) =>
+    ticket.purpose === 'remix'
+      ? !!ticket.source && ticket.source !== ticket.id
+      : ticket.purpose === 'publish'
+        ? ticket.source === undefined
+        : ticket.source !== ticket.id,
+  )
 export type StoreTicket = z.infer<typeof tokenSchema>
 
 async function key(salt: string) {
@@ -111,6 +119,42 @@ export async function issueStoreTicket(
       purpose: 'publish',
     },
     salt,
+  )
+}
+export async function issueRemixTicket(
+  source: string,
+  model: Model,
+  pixels: Uint8Array,
+  origin: string,
+  salt: string,
+): Promise<string> {
+  return signStoreTicket(
+    {
+      id: crypto.randomUUID(),
+      source,
+      model,
+      hash: await pixelHash(pixels),
+      origin,
+      expires: Math.floor(Date.now() / 1000) + 86400,
+      purpose: 'remix',
+    },
+    salt,
+  )
+}
+// Rotate the quota identifier each UTC day; raw IPs are never stored.
+export async function remixClient(
+  ip: string,
+  day: string,
+  salt: string,
+): Promise<string> {
+  return base64url(
+    new Uint8Array(
+      await crypto.subtle.sign(
+        'HMAC',
+        await key(salt),
+        new TextEncoder().encode(`skin-store-remix:${day}:${ip}`),
+      ),
+    ),
   )
 }
 export async function reportClient(ip: string, salt: string): Promise<string> {

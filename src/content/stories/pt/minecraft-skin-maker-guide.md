@@ -8,7 +8,7 @@ image: /uploads/stories/minecraft-skin-maker-cover-v2.webp
 imageAlt: 'Ilustração de manequins de blocos brancos e uma paleta que representa a criação de skins. Não é um resultado gerado.'
 relatedStories: [aceserver-beginners-guide]
 translationOf: minecraft-skin-maker-guide
-sourceHash: sha256:e8ad3623730aa5e4d192bca6b58111b7d0d5f616ad2848e69a8beaaa2c6de9e8
+sourceHash: sha256:417830da11a893bd01fad6116a244c4a149a4cf163397414588057a87b317f1d
 lastUpdated: 2026-10-07
 ---
 
@@ -39,3 +39,9 @@ Baixe com “Salvar PNG de 64×64” e importe como skin personalizada no jogo. 
 ## 5. Publicar as skins escolhidas na loja
 
 Após a geração, dê um nome à skin e aceite que qualquer pessoa possa baixá-la e usá-la gratuitamente para publicá-la na [Loja de skins](/pt/skin-maker/store/). A publicação é opcional; apenas o nome e a skin gerada são armazenados. Você pode retirar a publicação nas 24 horas após a geração enquanto esta página de geração permanecer aberta.
+
+## 6. Copiar e editar uma skin da loja
+
+Escolha “Copiar e editar” em um cartão ou na visualização 3D para abrir uma cópia no criador. O tipo de braços e os pixels são preservados. Desenhe em 3D ou autorize uma edição parcial com IA. O original nunca é sobrescrito. Salve o PNG ou informe um nome e autorize a publicação como outra skin. Copiar não publica automaticamente. Editar novamente após publicar cria outra obra. Retirar a cópia não afeta o original.
+
+Publique em até 24 horas após copiar, enquanto o original continuar público. As chaves para publicar e retirar ficam apenas nesta página. Copiar e editar manualmente não consomem IA. Edições com IA compartilham os limites de geração. Cópias têm um limite de cinco publicações por dia e uma por minuto, além do limite do site.

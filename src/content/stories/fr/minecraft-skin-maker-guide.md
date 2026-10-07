@@ -8,7 +8,7 @@ image: /uploads/stories/minecraft-skin-maker-cover-v2.webp
 imageAlt: 'Illustration de mannequins en blocs blancs et d’une palette représentant la création de skins. Ce n’est pas un résultat généré.'
 relatedStories: [aceserver-beginners-guide]
 translationOf: minecraft-skin-maker-guide
-sourceHash: sha256:e8ad3623730aa5e4d192bca6b58111b7d0d5f616ad2848e69a8beaaa2c6de9e8
+sourceHash: sha256:417830da11a893bd01fad6116a244c4a149a4cf163397414588057a87b317f1d
 lastUpdated: 2026-10-07
 ---
 
@@ -39,3 +39,9 @@ Téléchargez avec « Sauvegarder le PNG 64×64 » puis utilisez l’import de s
 ## 5. Publier les skins de votre choix dans la boutique
 
 Après la génération, nommez votre skin et acceptez que chacun puisse la télécharger et l’utiliser gratuitement pour la publier dans la [Boutique de skins](/fr/skin-maker/store/). La publication est facultative ; seuls le nom et la skin générée sont conservés. Vous pouvez la retirer dans les 24 heures suivant la génération tant que cette page de génération reste ouverte.
+
+## 6. Copier et modifier un skin de la boutique
+
+Choisissez « Copier et modifier » sur une carte ou dans sa vue 3D pour ouvrir une copie dans le créateur. Le type de bras et les pixels sont conservés. Dessinez en 3D ou consentez à une modification partielle par IA. L’original n’est jamais écrasé. Enregistrez le PNG ou saisissez un nom et consentez à publier un skin distinct. Copier ne publie rien automatiquement. Modifier après publication crée une nouvelle œuvre. Retirer la copie n’affecte pas l’original.
+
+Publiez dans les 24 heures suivant la copie, tant que l’original est public. Les clés de publication et de retrait restent uniquement sur cette page. Copier et modifier à la main ne consomment pas d’IA. Les modifications par IA partagent les limites de génération. Les copies sont limitées à cinq publications par jour et une par minute, avec un plafond pour le site.

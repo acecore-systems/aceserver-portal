@@ -3,15 +3,22 @@ import { getSkinStoreUi } from '../data/skin-store-ui'
 import { getSkinMakerUi } from '../data/skin-maker-ui'
 import { localizePath, type Locale } from '../i18n/config'
 import SkinMakerNav from './SkinMakerNav.astro'
+import { getSkinRemixUi } from '../data/skin-remix-ui'
 interface Props {
   locale: Locale
 }
 const { locale } = Astro.props
 const c = getSkinStoreUi(locale)
 const maker = getSkinMakerUi(locale)
+const remix = getSkinRemixUi(locale)
 ---
 
-<section class="skin-store" data-skin-store data-locale={locale}>
+<section
+  class="skin-store"
+  data-skin-store
+  data-locale={locale}
+  data-maker-url={localizePath(locale, '/skin-maker/')}
+>
   <header class="store-heading">
     <div>
       <span class="eyebrow">MINECRAFT SKINS · FREE DOWNLOADS</span>
@@ -93,6 +100,9 @@ const maker = getSkinMakerUi(locale)
           <span data-card-model></span><span class="free">{c.free}</span>
         </div>
         <h2 data-card-name></h2>
+        <a class="card-edit" data-card-edit
+          >{remix.edit}<span aria-hidden="true"> ↗</span></a
+        >
         <a class="card-download" data-card-download download
           >{c.download}<span aria-hidden="true"> ↓</span></a
         >
@@ -119,6 +129,7 @@ const maker = getSkinMakerUi(locale)
     </div>
     <p class="detail-note">{maker.note}</p>
     <p data-detail-status class="status" role="status" aria-live="polite"></p>
+    <a class="primary detail-edit" data-detail-edit>{remix.edit}</a>
     <a class="primary detail-download" data-detail-download download
       >{c.download}</a
     >
@@ -353,6 +364,7 @@ const maker = getSkinMakerUi(locale)
   }
   .card-meta {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     gap: 5px;
@@ -361,6 +373,7 @@ const maker = getSkinMakerUi(locale)
     font-weight: 700;
   }
   .free {
+    white-space: nowrap;
     color: #32652e;
     background: #eaf3dd;
     border-radius: 5px;
@@ -373,6 +386,7 @@ const maker = getSkinMakerUi(locale)
     margin: 9px 0 14px;
     overflow-wrap: anywhere;
   }
+  .card-edit,
   .card-download {
     display: flex;
     justify-content: space-between;
@@ -385,6 +399,17 @@ const maker = getSkinMakerUi(locale)
     font-size: 0.76rem;
     font-weight: 800;
     text-decoration: none;
+  }
+  .card-edit {
+    background: #fff0b9;
+    border: 1px solid #d5b654;
+    border-radius: 7px;
+    margin-bottom: 8px;
+    min-height: 44px;
+    padding: 8px 10px;
+  }
+  .card-edit:hover {
+    background: #fbe6a8;
   }
   .card-download:hover {
     color: #302619;
@@ -480,8 +505,12 @@ const maker = getSkinMakerUi(locale)
     color: #715e42;
     line-height: 1.8;
   }
+  .detail-edit,
   .detail-download {
     width: 100%;
+  }
+  .detail-edit {
+    margin-bottom: 12px;
   }
   .report {
     margin-top: 24px;
@@ -581,8 +610,12 @@ const maker = getSkinMakerUi(locale)
     .skin-card h2 {
       font-size: 0.84rem;
     }
+    .card-edit,
     .card-download {
       font-size: 0.68rem;
+    }
+    .card-edit {
+      font-size: 0.75rem;
     }
     dialog {
       padding: 18px;

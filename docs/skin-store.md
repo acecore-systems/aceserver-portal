@@ -8,6 +8,10 @@
 2. スキンの名前（40文字以内）を入力し、誰でも無料でダウンロード・使用できることに同意して公開する。
 3. ストアで名前の検索、Classic／Slimの絞り込み、24件ずつの追加読み込みができる。カードは正規UVから作った全身サムネイル。詳細を開くと同じPNGを3D表示する。WebGLがない場合もサムネイルとPNG保存は使える。
 4. 公開した本人は、生成後24時間以内、この生成画面を開いている間に公開を取り消せる。画面を閉じたり新しいスキンを生成したりすると操作キーは失われる。入力文・参考画像・公開操作キーは永続保存しない。それ以降の取り下げは運営へ依頼する。
+5. ストアのカード／3D詳細から「複製して編集」を選ぶと、同じ言語のスキンメーカーへ移動する。元の作品の腕タイプとピクセルをコピーして3D編集を開く。手描き・AI部分修正・Undo／Redo・PNG保存を使える。複製や手編集はAIを呼ばず、公開もしない。
+6. コピーに名前を付け、公開への同意をチェックすると別IDの新しい作品として登録できる。元の作品の名前・PNG・公開状態・取り消し権限は引き継がず、上書きしない。公開後にさらに編集して公開する場合も新しいIDを使う。コピーの公開を取り消しても元の作品や他のコピーは残る。
+
+新しい作品の公開同意は、無料ダウンロード・使用に加え、複製・編集・再公開を含む。コピー元が非公開になった場合は新たな複製・公開を拒否するが、すでに公開されたコピーは独立した作品として残る。元の作品がなくなっても、開いている編集結果のPNG保存は使える。
 
 過去の生成物は保存していなかったため、過去に作ったスキンは一覧へ復元できない。公開された実作品がない場合は空の状態と作成へのリンクを表示する。架空の作品を本番に混ぜない。
 
@@ -21,8 +25,14 @@
 - `POST /api/skin-store`：名前、腕タイプ、生成RGBA、署名済みticket、公開同意。入力文・参考画像・任意ファイルは受理しない。
 - `DELETE /api/skin-store`：本人の削除ticketで公開を取り消す。PNG・サムネイルを空にして非公開状態を残す。同じticketでの再公開を防ぐ。すでに利用者が保存したPNGを回収することはできない。
 - `POST /api/skin-store?action=report`：作品IDと固定の通報理由だけを受理する。
+- `POST /api/skin-store?action=clone`：公開作品IDだけを受理し、検証済みRGBA・腕タイプ・元の名前と、別IDに対する24時間の複製編集ticketを返す。URLは `/{locale}/skin-maker/?clone=UUID#skin-editor-title`（日本語はlocaleなし）。ピクセルや操作キーをURL／永続ストレージへ入れず、公開作品やAI利用枠への書き込みもしない。
+- `POST /api/skin-store?action=remix`：名前、腕タイプ、編集済みRGBA、複製編集ticket、公開同意を受理する。生成ticketと用途を分け、公開中の複製元・同じ腕タイプ・正規64×64 RGBAを確認し、別IDの新規作品だけをINSERTする。
 
 生成APIは、出力ピクセルのSHA-256・腕タイプ・生成ID・origin・有効期限・用途を `SKIN_QUOTA_SALT` でHMAC署名した24時間のticketを返す。ticketそのものは保存しない。AI部分修正は現在画像と一致する有効な生成ticketがある場合だけ、修正結果の新しいticketを返す。手編集後は公開ticketを外し、手編集→AI部分修正もPNG保存だけに対応する。Undoで署名済み結果へ戻れば公開できる。公開済み作品は編集で書き換えない。公開APIで署名とピクセルを再確認するため、画像の差し替え・型の変更・生成外の任意アップロードはできない。生成とAI修正の共通上限（全体100回/UTC日）と作品IDの一意制約で新規投稿を制限する。応答喪失後の再送は同じ作品と取り消しticketを返し、重複投稿を作らない。
+
+ストアからの複製は別の公開経路を使う。複製元ID・腕タイプ・複製元ピクセルのSHA-256・新規ID・origin・用途 `remix`・期限をHMAC署名する。編集中はこの権限を作業コピーに保持し、手描きやAI修正で画素が変わっても別作品として公開できる。生成APIには複製ticketを渡さず、生成専用の画素一致条件を緩めない。公開後の再送は名前・PNG・腕タイプ・複製元が一致する場合だけ成功とし、同じIDで違う結果を送っても409で拒否する。削除ticketは新しいコピーIDだけに発行する。
+
+`0004_store_remixes.sql` で `skin_store.source_id`（複製元の参照）と `remix_client` を追加する。既存作品にはどちらもNULLとなり、PNGや公開状態を変更しない。複製元の参照にcascade deleteは使わない。複製作品の登録は1利用者5作品/UTC日、1分1作品、サイト全体100作品/UTC日。`CF-Connecting-IP` をUTC日ごとの用途別HMACへ変換し、生IPは保存しない。非公開／取り消し済みのコピーも上限に含め、公開中の複製元と全上限を単一INSERTで照合する。AI生成・部分修正のquotaとは独立し、単なる複製やPNG保存には適用しない。
 
 POST／DELETEは同一originだけを許可し、実ストリームを28,000 bytesで制限する。名前の表示はtextContentで行う。公開一覧・詳細・PNGは `no-store` とし、公開の取り消しや運営非公開化が新しい取得に反映される。APIは未設定・migration未適用・DB障害時に503。例外本文やticketをログに出さない。
 
@@ -53,11 +63,18 @@ DELETE FROM skin_store_reports WHERE created < unixepoch() - 604800;
 本番DB変更・マージ・本番反映は実装PR作成とは別の承認対象。GitHub連携Pagesを使用する。
 
 1. ローカルSQLiteと隔離したPreview DBへ `0003_store.sql` を適用して確認する。現行のPreview bindingは本番検索DBなので、そのまま有効化・書き込み確認しない。
+   複製編集のリリースでは、すでに適用済みの0003を再実行せず、追加の `0004_store_remixes.sql` を先に適用する。新しいsecret・bindingは不要。
 2. CI・画面確認・差分レビュー後に、本番DBへの追加テーブル適用とmainへのマージについて承認を得る。
 3. 本番DBを確認・バックアップし、先にmigrationを適用する。既存の検索・予約・診断テーブルは変更しない。
 
    ```powershell
    npx wrangler d1 execute SEARCH_RATE_LIMIT_DB --env production --remote --file migrations/skin-maker/0003_store.sql
+   ```
+
+   複製編集の追加時は以下を使う（本番承認・DBバックアップ後）。
+
+   ```powershell
+   npx wrangler d1 execute SEARCH_RATE_LIMIT_DB --env production --remote --file migrations/skin-maker/0004_store_remixes.sql
    ```
 
 4. PRをmainへマージし、Git Provider: Yes、source repo、production branch main、github:push由来deploy成功、custom domain activeを確認する。
@@ -79,3 +96,5 @@ git diff --check
 ```
 
 テストは実際のSQLiteにmigrationを適用し、生成ticketの改変・期限・型・origin、公開同意、任意入力拒否、PNG一致、重複再送、取り消し後の再公開拒否、検索、同一時刻ページング、運営非公開、通報のquotaを検証する。画面確認には隔離したローカルDBとfixtureを使用し、実AI呼び出しや本番への試験投稿はしない。
+
+複製編集はClassic／SlimのRGBA一致、編集コピーの新規登録、元作品不変、取り消しの分離、改変再送拒否、元作品の非公開境界、独立quota、旧DBへの追加migration、手編集→範囲限定AI→別作品公開も検証する。

@@ -71,7 +71,7 @@ const copy = {
     privacy:
       '手で編集している間はAIへ送信しません。AI修正を実行したときだけ、現在のスキンと修正指示を送信します。編集履歴はこのページ内だけに保持し、閉じると消えます。',
     manualPublish:
-      '手編集を含むスキンはPNGで保存できます。現在のストアはAI生成のみの作品に対応しています。元に戻すと、公開できる生成結果に戻せます。',
+      'この生成結果を手で編集した場合はPNGで保存できます。元に戻すと公開できる生成結果に戻せます。ストアから複製して編集したスキンは別の作品として公開できます。',
     noChanges: '変更はありませんでした。',
     edited: '修正できました。変更ピクセル数',
   },
@@ -120,7 +120,7 @@ const copy = {
     privacy:
       'Drawing does not send anything to AI. The current skin and instructions are sent only when you request an AI edit. Edit history stays in this page and is lost when you close it.',
     manualPublish:
-      'Skins with manual edits can be saved as PNG. The store currently accepts AI-only results. Undo can restore a publishable generated result.',
+      'Manual edits to this generated result can be saved as PNG. Undo can restore a publishable generated result. Copies opened from the store can be edited and published as separate skins.',
     noChanges: 'No pixels changed.',
     edited: 'Edit complete. Changed pixels',
   },
@@ -157,7 +157,7 @@ const copy = {
     privacy:
       '手动编辑不会发送给AI。仅在执行AI修改时发送当前皮肤和指示。编辑历史仅保留在此页面，关闭后消失。',
     manualPublish:
-      '手动修改的皮肤可保存为PNG。商店目前仅接受纯AI结果。撤销可恢复可发布的生成结果。',
+      '手动编辑此生成结果后可保存PNG。撤销可恢复可发布的生成结果。从商店复制的皮肤可编辑并作为独立作品发布。',
     noChanges: '没有像素发生变化。',
     edited: '修改完成。修改像素数',
   },
@@ -213,7 +213,7 @@ const copy = {
     privacy:
       'Dibujar no envía nada a la IA. La skin y las instrucciones se envían solo al solicitar una edición IA. El historial se pierde al cerrar la página.',
     manualPublish:
-      'Las skins editadas a mano se pueden guardar como PNG. La tienda acepta resultados solo de IA. Deshacer puede restaurar un resultado publicable.',
+      'Las ediciones manuales de este resultado se guardan como PNG. Deshacer restaura el resultado publicable. Las copias abiertas desde la tienda se pueden editar y publicar como otras skins.',
     noChanges: 'No cambió ningún píxel.',
     edited: 'Edición completada. Píxeles cambiados',
   },
@@ -268,7 +268,7 @@ const copy = {
     privacy:
       'Desenhar não envia dados à IA. A skin e as instruções são enviadas apenas ao solicitar uma edição IA. O histórico se perde ao fechar a página.',
     manualPublish:
-      'Skins editadas à mão podem ser salvas como PNG. A loja aceita resultados apenas de IA. Desfazer pode restaurar um resultado publicável.',
+      'Edições manuais deste resultado podem ser salvas como PNG. Desfazer restaura o resultado publicável. Cópias abertas da loja podem ser editadas e publicadas como outras skins.',
     noChanges: 'Nenhum pixel mudou.',
     edited: 'Edição concluída. Pixels alterados',
   },
@@ -317,7 +317,7 @@ const copy = {
     privacy:
       'Dessiner n’envoie rien à l’IA. Le skin et les instructions sont envoyés uniquement lors d’une modification IA. L’historique disparaît à la fermeture de la page.',
     manualPublish:
-      'Les skins modifiés à la main peuvent être enregistrés en PNG. La boutique accepte uniquement les résultats IA. Annuler peut restaurer un résultat publiable.',
+      'Les modifications manuelles de ce résultat peuvent être enregistrées en PNG. Annuler restaure le résultat publiable. Les copies ouvertes depuis la boutique peuvent être modifiées et publiées séparément.',
     noChanges: 'Aucun pixel modifié.',
     edited: 'Modification terminée. Pixels modifiés',
   },
@@ -359,7 +359,7 @@ const copy = {
     privacy:
       '수동 편집 중에는 AI로 전송하지 않습니다. AI 수정을 실행할 때만 스킨과 지시를 보냅니다. 편집 기록은 페이지를 닫으면 사라집니다.',
     manualPublish:
-      '수동 편집한 스킨은 PNG로 저장할 수 있습니다. 스토어는 현재 AI 결과만 지원합니다. 실행 취소로 게시 가능한 생성 결과를 복원할 수 있습니다.',
+      '이 생성 결과를 수동 편집하면 PNG로 저장할 수 있습니다. 실행 취소로 공개 가능한 생성 결과를 복원할 수 있습니다. 스토어에서 복사한 스킨은 편집 후 별도의 스킨으로 공개할 수 있습니다.',
     noChanges: '변경된 픽셀이 없습니다.',
     edited: '수정 완료. 변경 픽셀 수',
   },
@@ -409,7 +409,7 @@ const copy = {
     privacy:
       'Beim Zeichnen wird nichts an die KI gesendet. Skin und Anweisungen werden erst bei einer KI-Bearbeitung gesendet. Der Verlauf geht beim Schließen der Seite verloren.',
     manualPublish:
-      'Manuell bearbeitete Skins lassen sich als PNG speichern. Der Store akzeptiert reine KI-Ergebnisse. Rückgängig kann ein veröffentlichbares Ergebnis wiederherstellen.',
+      'Manuelle Änderungen dieses Ergebnisses lassen sich als PNG speichern. Rückgängig stellt das veröffentlichbare Ergebnis wieder her. Kopien aus dem Store lassen sich bearbeiten und separat veröffentlichen.',
     noChanges: 'Keine Pixel geändert.',
     edited: 'Bearbeitung abgeschlossen. Geänderte Pixel',
   },
@@ -458,7 +458,7 @@ const copy = {
     privacy:
       'Рисование не отправляет данные ИИ. Скин и инструкции отправляются только при запросе правки ИИ. История исчезает при закрытии страницы.',
     manualPublish:
-      'Скины с ручными правками можно сохранить в PNG. Магазин принимает только результаты ИИ. Отмена может восстановить результат для публикации.',
+      'Ручные правки этого результата можно сохранить в PNG. Отмена восстановит результат для публикации. Копии из магазина можно редактировать и публиковать как отдельные скины.',
     noChanges: 'Пиксели не изменились.',
     edited: 'Готово. Изменено пикселей',
   },

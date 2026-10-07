@@ -8,7 +8,7 @@ image: /uploads/stories/minecraft-skin-maker-cover-v2.webp
 imageAlt: '用白色方块人偶和调色板表现皮肤制作的说明插画，并非生成结果实例。'
 relatedStories: [aceserver-beginners-guide]
 translationOf: minecraft-skin-maker-guide
-sourceHash: sha256:e8ad3623730aa5e4d192bca6b58111b7d0d5f616ad2848e69a8beaaa2c6de9e8
+sourceHash: sha256:417830da11a893bd01fad6116a244c4a149a4cf163397414588057a87b317f1d
 lastUpdated: 2026-10-07
 ---
 
@@ -39,3 +39,9 @@ Classic手臂为4px，Slim为3px。用文字描述颜色、服装等。参考图
 ## 5. 将喜欢的作品公开到商店
 
 生成后，为皮肤命名并同意任何人都可以免费下载和使用，即可公开到[皮肤商店](/zh-cn/skin-maker/store/)。公开是可选的，只保存名称和生成的皮肤。在生成后24小时内，只要此生成页面仍然打开，就可以取消公开。
+
+## 6. 复制并编辑商店的皮肤
+
+在商店卡片或3D详情中选择“复制并编辑”，即可在皮肤制作工具中打开副本。保留原有手臂类型和像素，可以在3D中手绘，或同意后使用AI局部修改。不会覆盖原作品。编辑后的PNG可下载；输入名称并同意公开后，可以作为独立作品发布。仅复制不会自动公开。发布后继续编辑也会创建新作品。撤回副本不影响原作品。
+
+原作品仍公开时，可在复制后24小时内发布副本。发布和撤回的操作密钥仅保存在此页面。复制和手动编辑不占用AI额度，AI修改与生成共用额度。副本每天最多发布5个，每分钟1个，网站总额度也有限制。

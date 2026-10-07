@@ -62,7 +62,7 @@ const copy = {
     publish: 'ストアに公開する',
     name: 'スキンの名前',
     consent:
-      'このスキンを公開し、誰でも無料でダウンロードして使えることに同意します。',
+      'このスキンを公開し、誰でも無料でダウンロード・使用・複製・編集・再公開できることに同意します。',
     hint: '保存・公開するのはスキンと名前だけです。入力文や参考画像は公開しません。生成後24時間以内、この画面を開いている間に公開を取り消せます。',
     publishing: '公開しています。',
     published: 'ストアに公開しました。',
@@ -102,7 +102,7 @@ const copy = {
     publish: 'Publish to the store',
     name: 'Skin name',
     consent:
-      'I agree to publish this skin so anyone can download and use it for free.',
+      'I agree to publish this skin so anyone can download, use, copy, edit and republish it for free.',
     hint: 'Only the skin and its name are saved and published. Your prompt and reference image stay private. You can withdraw the skin on this screen within 24 hours of generation.',
     publishing: 'Publishing.',
     published: 'Published to the store.',
@@ -140,7 +140,7 @@ const copy = {
     close: '关闭',
     publish: '发布到商店',
     name: '皮肤名称',
-    consent: '我同意公开此皮肤，让任何人免费下载和使用。',
+    consent: '我同意公开此皮肤，让任何人免费下载、使用、复制、编辑和重新发布。',
     hint: '仅保存和公开皮肤及名称。描述和参考图片不会公开。可在生成后24小时内于此页面撤回。',
     publishing: '正在发布。',
     published: '已发布到商店。',
@@ -178,7 +178,7 @@ const copy = {
     publish: 'Publicar en la tienda',
     name: 'Nombre de la skin',
     consent:
-      'Acepto publicar esta skin para que cualquiera la descargue y use gratis.',
+      'Acepto publicar esta skin para que cualquiera la descargue, use, copie, edite y vuelva a publicar gratis.',
     hint: 'Solo se guardan y publican la skin y su nombre. El texto y la referencia no se publican. Puedes retirarla en esta pantalla dentro de las 24 horas posteriores a su generación.',
     publishing: 'Publicando.',
     published: 'Publicada en la tienda.',
@@ -218,7 +218,7 @@ const copy = {
     publish: 'Publicar na loja',
     name: 'Nome da skin',
     consent:
-      'Concordo em publicar esta skin para que qualquer pessoa possa baixá-la e usá-la gratuitamente.',
+      'Concordo em publicar esta skin para que qualquer pessoa possa baixá-la, usá-la, copiá-la, editá-la e republicá-la gratuitamente.',
     hint: 'Somente a skin e seu nome são salvos e publicados. O texto e a referência não são publicados. Você pode retirar a skin nesta tela em até 24 horas após a geração.',
     publishing: 'Publicando.',
     published: 'Publicada na loja.',
@@ -258,7 +258,7 @@ const copy = {
     publish: 'Publier dans la boutique',
     name: 'Nom du skin',
     consent:
-      'Je consens à publier ce skin pour que tout le monde puisse le télécharger et l’utiliser gratuitement.',
+      'Je consens à publier ce skin pour que tout le monde puisse le télécharger, l’utiliser, le copier, le modifier et le republier gratuitement.',
     hint: 'Seuls le skin et son nom sont enregistrés et publiés. Le texte et l’image de référence restent privés. Vous pouvez retirer le skin sur cet écran dans les 24 heures suivant sa création.',
     publishing: 'Publication en cours.',
     published: 'Publié dans la boutique.',
@@ -298,7 +298,7 @@ const copy = {
     publish: '스토어에 공개',
     name: '스킨 이름',
     consent:
-      '이 스킨을 공개하여 누구나 무료로 다운로드하고 사용할 수 있음에 동의합니다.',
+      '이 스킨을 공개하여 누구나 무료로 다운로드, 사용, 복사, 편집 및 재공개할 수 있음에 동의합니다.',
     hint: '스킨과 이름만 저장하고 공개합니다. 설명과 참고 이미지는 공개하지 않습니다. 생성 후 24시간 이내에 이 화면에서 공개를 취소할 수 있습니다.',
     publishing: '공개 중입니다.',
     published: '스토어에 공개했습니다.',
@@ -340,7 +340,7 @@ const copy = {
     publish: 'Im Store veröffentlichen',
     name: 'Skin-Name',
     consent:
-      'Ich stimme zu, diesen Skin zu veröffentlichen, damit ihn jeder kostenlos herunterladen und verwenden kann.',
+      'Ich stimme zu, diesen Skin zu veröffentlichen, damit ihn jeder kostenlos herunterladen, verwenden, kopieren, bearbeiten und erneut veröffentlichen kann.',
     hint: 'Nur Skin und Name werden gespeichert und veröffentlicht. Text und Referenzbild bleiben privat. Du kannst den Skin hier innerhalb von 24 Stunden nach der Erstellung zurückziehen.',
     publishing: 'Wird veröffentlicht.',
     published: 'Im Store veröffentlicht.',
@@ -380,7 +380,7 @@ const copy = {
     publish: 'Опубликовать в магазине',
     name: 'Название скина',
     consent:
-      'Я согласен опубликовать этот скин, чтобы любой мог бесплатно скачать и использовать его.',
+      'Я согласен опубликовать этот скин, чтобы любой мог бесплатно скачать, использовать, копировать, редактировать и публиковать его заново.',
     hint: 'Сохраняются и публикуются только скин и его название. Текст и образец не публикуются. Отозвать скин можно на этом экране в течение 24 часов после создания.',
     publishing: 'Публикация.',
     published: 'Опубликовано в магазине.',
