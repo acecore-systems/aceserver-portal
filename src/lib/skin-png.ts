@@ -41,6 +41,15 @@ export function readSkinPng(bytes: Uint8Array, model: Model): Uint8Array {
       const rgb = Array.from(image.data.subarray(i * 3, i * 3 + 3))
       const transparent = image.transparency?.every((v, j) => v === rgb[j])
       pixels.set([...rgb, transparent ? 0 : 255], i * 4)
+    } else if (image.channels === 1 || image.channels === 2) {
+      const gray = image.data[i * image.channels]
+      const alpha =
+        image.channels === 2
+          ? image.data[i * 2 + 1]
+          : image.transparency?.[0] === gray
+            ? 0
+            : 255
+      pixels.set([gray, gray, gray, alpha], i * 4)
     } else throw new Error('channels')
   }
   validateSkin(pixels, model)

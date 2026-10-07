@@ -683,3 +683,53 @@ test('local upload instructions and errors are available in every supported loca
     assert.match(copy.file, /64×64/)
   }
 })
+
+for (const model of ['classic', 'slim'])
+  test(
+    model +
+      ': grayscale uploads keep their colors and grayscale-alpha uploads preserve outer transparency',
+    () => {
+      const plain = new Uint8Array(16384)
+      for (let i = 0; i < 4096; i++) plain.set([180, 180, 180, 255], i * 4)
+      const grayPng = encode({
+        width: 64,
+        height: 64,
+        depth: 8,
+        channels: 1,
+        data: new Uint8Array(4096).fill(180),
+      })
+      assert.deepEqual(readSkinPng(grayPng, model), plain)
+
+      const source = skin(model)
+      source[(8 * 64 + 40) * 4 + 3] = 128
+      const grayAlpha = new Uint8Array(8192)
+      const expected = new Uint8Array(16384)
+      for (let i = 0; i < 4096; i++) {
+        const gray = (i * 13) % 256
+        const alpha = source[i * 4 + 3]
+        grayAlpha.set([gray, alpha], i * 2)
+        expected.set([gray, gray, gray, alpha], i * 4)
+      }
+      const grayAlphaPng = encode({
+        width: 64,
+        height: 64,
+        depth: 8,
+        channels: 2,
+        data: grayAlpha,
+      })
+      assert.deepEqual(readSkinPng(grayAlphaPng, model), expected)
+      grayAlpha[(8 * 64 + 8) * 2 + 1] = 128
+      assert.throws(() =>
+        readSkinPng(
+          encode({
+            width: 64,
+            height: 64,
+            depth: 8,
+            channels: 2,
+            data: grayAlpha,
+          }),
+          model,
+        ),
+      )
+    },
+  )
