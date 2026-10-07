@@ -54,7 +54,10 @@ export function initSkinMaker(root: HTMLElement) {
   const inputs = el<HTMLFieldSetElement>('[data-inputs]')
   const modelSelect = el<HTMLSelectElement>('[name=model]')
   const uploadInputs = el<HTMLFieldSetElement>('[data-upload-inputs]')
-  const uploadModel = el<HTMLSelectElement>('[data-upload-model]')
+  const sourceInputs = el<HTMLFieldSetElement>('[data-source-inputs]')
+  const createPanel = el('[data-create-panel]')
+  const uploadPanel = el('[data-upload-panel]')
+  const uploadSource = el<HTMLInputElement>('[name=source][value=upload]')
   const uploadStatus = el('[data-upload-status]')
   const atlas = el<HTMLCanvasElement>('[data-atlas]')
   const download = el<HTMLAnchorElement>('[data-download]')
@@ -126,11 +129,16 @@ export function initSkinMaker(root: HTMLElement) {
     siteKey = '',
     disposed = false
   const model = () => modelSelect.value as Model
+  const isUploadMode = () => uploadSource.checked
   const sync = () => {
-    generate.disabled = !enabled || busy || !token
+    const uploading = isUploadMode()
+    createPanel.hidden = uploading
+    uploadPanel.hidden = !uploading
+    sourceInputs.disabled = busy
+    generate.disabled = uploading || !enabled || busy || !token
     aiEdit.disabled = !enabled || busy || !editToken || !current
-    inputs.disabled = busy
-    uploadInputs.disabled = busy
+    inputs.disabled = busy || uploading
+    uploadInputs.disabled = busy || !uploading
     modelSelect.disabled = busy
     el<HTMLButtonElement>('[data-clear]').disabled = busy
     el<HTMLButtonElement>('[data-publish]').disabled = busy
@@ -386,13 +394,17 @@ export function initSkinMaker(root: HTMLElement) {
       (e.target as HTMLInputElement).checked,
     ),
   )
+  form.querySelectorAll<HTMLInputElement>('[name=source]').forEach((input) => {
+    input.addEventListener('change', sync)
+  })
+  sync()
   el<HTMLInputElement>('[data-skin-upload]').addEventListener(
     'change',
     async (event) => {
       const input = event.target as HTMLInputElement
       const file = input.files?.[0]
-      if (!file || busy || disposed) return
-      const nextModel = uploadModel.value as Model
+      if (!file || busy || disposed || !isUploadMode()) return
+      const nextModel = model()
       busy = true
       uploadStatus.textContent = uploadCopy.loading
       sync()
@@ -490,7 +502,6 @@ export function initSkinMaker(root: HTMLElement) {
     current = undefined
     uploaded = false
     uploadStatus.textContent = ''
-    uploadModel.value = 'classic'
     storeTicket = undefined
     removeTicket = undefined
     publishedTicket = undefined
@@ -619,7 +630,8 @@ export function initSkinMaker(root: HTMLElement) {
   }
   form.addEventListener('submit', async (event) => {
     event.preventDefault()
-    if (busy || !enabled || !token || !form.reportValidity()) return
+    if (isUploadMode() || busy || !enabled || !token || !form.reportValidity())
+      return
     const data = new FormData(form)
     if (data.get('consent') !== 'on') return
     await requestSkin({

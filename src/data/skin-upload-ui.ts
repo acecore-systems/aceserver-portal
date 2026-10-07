@@ -1,6 +1,9 @@
 import type { Locale } from '../i18n/config'
 
 type Copy = {
+  source: string
+  ai: string
+  custom: string
   title: string
   hint: string
   file: string
@@ -12,6 +15,9 @@ type Copy = {
 }
 const copy = {
   ja: {
+    source: '始め方',
+    ai: 'AIで作る',
+    custom: '自作スキンを編集',
     title: '自作スキンをアップロードして編集',
     hint: 'スキンと同じ腕のタイプを選び、PNGを読み込むと編集できます。新しいファイルを読み込むと、現在のスキンと編集履歴が入れ替わります。必要な作品は先にPNGで保存してください。',
     file: 'スキンのPNG（64×64・1 MBまで）',
@@ -25,6 +31,9 @@ const copy = {
     downloadHint: 'アップロードしたスキンは、編集後もPNGで保存できます。',
   },
   en: {
+    source: 'Start with',
+    ai: 'Create with AI',
+    custom: 'Edit your own skin',
     title: 'Upload and edit your own skin',
     hint: 'Choose the matching arm type, then open your PNG to edit it. A new file replaces your current skin and undo history. Save any work you want to keep as a PNG first.',
     file: 'Skin PNG (64×64 · up to 1 MB)',
@@ -37,6 +46,9 @@ const copy = {
     downloadHint: 'You can save your uploaded skin as a PNG after editing.',
   },
   'zh-cn': {
+    source: '开始方式',
+    ai: '用AI创建',
+    custom: '编辑自己的皮肤',
     title: '上传并编辑自己的皮肤',
     hint: '选择与皮肤相同的手臂类型，再打开PNG进行编辑。新文件会替换当前皮肤和撤销记录。请先将需要保留的作品保存为PNG。',
     file: '皮肤PNG（64×64 · 最大1 MB）',
@@ -49,6 +61,9 @@ const copy = {
     downloadHint: '上传的皮肤在编辑后也可保存为PNG。',
   },
   es: {
+    source: 'Cómo empezar',
+    ai: 'Crear con IA',
+    custom: 'Editar mi skin',
     title: 'Sube y edita tu propia skin',
     hint: 'Elige el tipo de brazos de tu skin y abre el PNG para editarlo. Un nuevo archivo sustituye la skin y el historial actuales. Guarda antes como PNG el trabajo que quieras conservar.',
     file: 'PNG de skin (64×64 · hasta 1 MB)',
@@ -61,6 +76,9 @@ const copy = {
     downloadHint: 'Puedes guardar la skin subida como PNG después de editarla.',
   },
   pt: {
+    source: 'Como começar',
+    ai: 'Criar com IA',
+    custom: 'Editar minha skin',
     title: 'Envie e edite sua própria skin',
     hint: 'Escolha o tipo de braços da skin e abra o PNG para editar. Um novo arquivo substitui a skin e o histórico atuais. Salve antes em PNG o que deseja manter.',
     file: 'PNG da skin (64×64 · até 1 MB)',
@@ -73,6 +91,9 @@ const copy = {
     downloadHint: 'Você pode salvar a skin enviada como PNG após editar.',
   },
   fr: {
+    source: 'Pour commencer',
+    ai: 'Créer avec l’IA',
+    custom: 'Modifier mon skin',
     title: 'Importez et modifiez votre skin',
     hint: 'Choisissez le type de bras correspondant puis ouvrez le PNG. Un nouveau fichier remplace le skin et son historique. Enregistrez d’abord en PNG le travail à conserver.',
     file: 'PNG du skin (64×64 · 1 Mo maximum)',
@@ -86,6 +107,9 @@ const copy = {
       'Vous pouvez enregistrer le skin importé en PNG après modification.',
   },
   ko: {
+    source: '시작 방법',
+    ai: 'AI로 만들기',
+    custom: '내 스킨 편집',
     title: '내 스킨을 업로드하고 편집',
     hint: '스킨과 같은 팔 유형을 선택한 후 PNG를 열어 편집하세요. 새 파일은 현재 스킨과 편집 기록을 대체합니다. 보관할 작업은 먼저 PNG로 저장하세요.',
     file: '스킨 PNG (64×64 · 최대 1 MB)',
@@ -98,6 +122,9 @@ const copy = {
     downloadHint: '업로드한 스킨은 편집 후에도 PNG로 저장할 수 있습니다.',
   },
   de: {
+    source: 'So startest du',
+    ai: 'Mit KI erstellen',
+    custom: 'Eigenen Skin bearbeiten',
     title: 'Eigenen Skin hochladen und bearbeiten',
     hint: 'Wähle den passenden Armtyp und öffne das PNG. Eine neue Datei ersetzt den aktuellen Skin und den Verlauf. Speichere gewünschte Änderungen vorher als PNG.',
     file: 'Skin-PNG (64×64 · bis zu 1 MB)',
@@ -111,6 +138,9 @@ const copy = {
       'Den hochgeladenen Skin kannst du nach der Bearbeitung als PNG speichern.',
   },
   ru: {
+    source: 'С чего начать',
+    ai: 'Создать с ИИ',
+    custom: 'Изменить свой скин',
     title: 'Загрузите и отредактируйте свой скин',
     hint: 'Выберите подходящий тип рук и откройте PNG. Новый файл заменяет текущий скин и историю изменений. Сначала сохраните нужную работу в PNG.',
     file: 'PNG скина (64×64 · до 1 МБ)',
