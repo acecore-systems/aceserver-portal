@@ -2,6 +2,7 @@ import { getSkinMakerUi } from '../data/skin-maker-ui'
 import { getSkinStoreUi } from '../data/skin-store-ui'
 import { getSkinEditorUi } from '../data/skin-editor-ui'
 import { getSkinRemixUi } from '../data/skin-remix-ui'
+import { getSkinUploadUi } from '../data/skin-upload-ui'
 import { initSkinEditor } from './skin-editor'
 import { equalPixels, SkinHistory, type SkinSnapshot } from '../lib/skin-editor'
 import { isLocale } from '../i18n/config'
@@ -13,7 +14,7 @@ import {
   type SkinRequest,
   type CreateRequest,
 } from '../lib/skin-maker'
-import { skinPngUrl } from '../lib/skin-png'
+import { readSkinPng, skinPngUrl } from '../lib/skin-png'
 import type { SkinViewer } from 'skinview3d'
 import { STORE_ID } from '../lib/skin-store'
 
@@ -47,10 +48,14 @@ export function initSkinMaker(root: HTMLElement) {
   const store = getSkinStoreUi(locale)
   const editCopy = getSkinEditorUi(locale)
   const remixCopy = getSkinRemixUi(locale)
+  const uploadCopy = getSkinUploadUi(locale)
   const el = <T extends HTMLElement>(s: string) => root.querySelector<T>(s)!
   const form = el<HTMLFormElement>('[data-form]')
   const inputs = el<HTMLFieldSetElement>('[data-inputs]')
   const modelSelect = el<HTMLSelectElement>('[name=model]')
+  const uploadInputs = el<HTMLFieldSetElement>('[data-upload-inputs]')
+  const uploadModel = el<HTMLSelectElement>('[data-upload-model]')
+  const uploadStatus = el('[data-upload-status]')
   const atlas = el<HTMLCanvasElement>('[data-atlas]')
   const download = el<HTMLAnchorElement>('[data-download]')
   const generate = el<HTMLButtonElement>('[data-generate]')
@@ -99,6 +104,7 @@ export function initSkinMaker(root: HTMLElement) {
     el('[data-empty]').hidden = !!current
   }
   let current: Uint8Array | undefined
+  let uploaded = false
   let storeTicket: string | undefined, removeTicket: string | undefined
   let remix: { sourceId: string; ticket: string } | undefined
   let publishedPixels: Uint8Array | undefined
@@ -124,6 +130,7 @@ export function initSkinMaker(root: HTMLElement) {
     generate.disabled = !enabled || busy || !token
     aiEdit.disabled = !enabled || busy || !editToken || !current
     inputs.disabled = busy
+    uploadInputs.disabled = busy
     modelSelect.disabled = busy
     el<HTMLButtonElement>('[data-clear]').disabled = busy
     el<HTMLButtonElement>('[data-publish]').disabled = busy
@@ -165,6 +172,9 @@ export function initSkinMaker(root: HTMLElement) {
       !current ||
       (!storeTicket && !remix && !removeTicket && !publishStatus.textContent)
     el('[data-manual-publish]').hidden = !current || !manuallyEdited || !!remix
+    el('[data-manual-publish]').textContent = uploaded
+      ? uploadCopy.downloadHint
+      : editCopy.manualPublish
     el('[data-publish]').textContent = remix ? remixCopy.publish : store.publish
     el('[data-publish-hint]').textContent = remix
       ? remixCopy.publishHint
@@ -302,6 +312,8 @@ export function initSkinMaker(root: HTMLElement) {
       const data = await fetchCopy(cloneId, controller.signal)
       if (disposed || controller.signal.aborted) return
       current = data.pixels
+      uploaded = false
+      uploadStatus.textContent = ''
       skinModel = data.model
       modelSelect.value = data.model
       storeTicket = undefined
@@ -374,6 +386,53 @@ export function initSkinMaker(root: HTMLElement) {
       (e.target as HTMLInputElement).checked,
     ),
   )
+  el<HTMLInputElement>('[data-skin-upload]').addEventListener(
+    'change',
+    async (event) => {
+      const input = event.target as HTMLInputElement
+      const file = input.files?.[0]
+      if (!file || busy || disposed) return
+      const nextModel = uploadModel.value as Model
+      busy = true
+      uploadStatus.textContent = uploadCopy.loading
+      sync()
+      try {
+        if (file.size > 1_000_000) throw new Error('file')
+        const pixels = readSkinPng(
+          new Uint8Array(await file.arrayBuffer()),
+          nextModel,
+        )
+        if (disposed) return
+        current = pixels
+        skinModel = nextModel
+        modelSelect.value = nextModel
+        uploaded = true
+        storeTicket = undefined
+        removeTicket = undefined
+        publishedTicket = undefined
+        clearRemix()
+        manuallyEdited = false
+        history.reset({ pixels })
+        pixelEditor?.reset()
+        editForm.reset()
+        editStatus.textContent = ''
+        publishForm.reset()
+        publishStatus.textContent = ''
+        unpublish.hidden = true
+        el('[data-published-link]').hidden = true
+        render()
+        uploadStatus.textContent = uploadCopy.ready
+        el('#skin-editor-title').focus()
+        el('[data-pixel-editor]').scrollIntoView({ block: 'start' })
+      } catch {
+        if (!disposed) uploadStatus.textContent = uploadCopy.error
+      } finally {
+        input.value = ''
+        busy = false
+        if (!disposed) sync()
+      }
+    },
+  )
   el<HTMLInputElement>('[name=reference]').addEventListener(
     'change',
     async (e) => {
@@ -429,6 +488,9 @@ export function initSkinMaker(root: HTMLElement) {
   el('[data-clear]').addEventListener('click', () => {
     if (busy) return
     current = undefined
+    uploaded = false
+    uploadStatus.textContent = ''
+    uploadModel.value = 'classic'
     storeTicket = undefined
     removeTicket = undefined
     publishedTicket = undefined
@@ -518,6 +580,8 @@ export function initSkinMaker(root: HTMLElement) {
       storeTicket =
         typeof result.storeTicket === 'string' ? result.storeTicket : undefined
       if (input.mode === 'create') {
+        uploaded = false
+        uploadStatus.textContent = ''
         clearRemix()
         removeTicket = undefined
         publishedTicket = undefined

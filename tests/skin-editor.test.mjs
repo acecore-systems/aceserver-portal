@@ -1,6 +1,8 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
+import { encode } from 'fast-png'
+import { getSkinUploadUi } from '../src/data/skin-upload-ui.ts'
 import {
   regions,
   encodePixels,
@@ -602,5 +604,82 @@ test('editor copy covers every supported locale and all tools, parts, and AI sco
     assert.equal(copy.scopeNames.length, 3)
     assert.match(copy.consent, /OpenAI/)
     assert.match(copy.consent, /Cloudflare Workers AI/)
+  }
+})
+
+for (const model of ['classic', 'slim'])
+  test(
+    model +
+      ': local PNG upload preserves pixels through editing, undo and export',
+    () => {
+      const original = skin(model)
+      const face = regions(model).find(
+        (r) => r.part === 'head' && r.layer === 'outer' && r.face === 'front',
+      )
+      original.set([51, 102, 153, 128], (face.y * 64 + face.x) * 4)
+      const png = Buffer.from(skinPngUrl(original).split(',')[1], 'base64')
+      const imported = readSkinPng(png, model)
+      assert.deepEqual(imported, original)
+      const history = new SkinHistory()
+      history.reset({ pixels: imported })
+      const edited = new Uint8Array(imported)
+      editPixel(edited, face, { x: 0, y: 0 }, [24, 35, 46, 255])
+      history.push({ pixels: edited, manuallyEdited: true })
+      assert.deepEqual(history.move(-1).pixels, original)
+      const redone = history.move(1)
+      assert.deepEqual(redone.pixels, edited)
+      assert.equal(redone.storeTicket, undefined)
+      const output = Buffer.from(
+        skinPngUrl(redone.pixels).split(',')[1],
+        'base64',
+      )
+      assert.deepEqual(readSkinPng(output, model), edited)
+    },
+  )
+
+test('local PNG upload rejects wrong dimensions, corrupt data, oversized input and transparent base', () => {
+  const pixels = skin('classic')
+  const valid = Buffer.from(skinPngUrl(pixels).split(',')[1], 'base64')
+  const corrupt = new Uint8Array(valid)
+  corrupt[corrupt.length - 20] ^= 1
+  const transparent = new Uint8Array(pixels)
+  transparent[(8 * 64 + 8) * 4 + 3] = 0
+  for (const bytes of [
+    new Uint8Array(),
+    new TextEncoder().encode('this is not a PNG'.repeat(4)),
+    valid.subarray(0, 33),
+    corrupt,
+    new Uint8Array(1_000_001),
+    encode({
+      width: 64,
+      height: 32,
+      channels: 4,
+      data: new Uint8Array(64 * 32 * 4),
+    }),
+    encode({
+      width: 128,
+      height: 128,
+      channels: 4,
+      data: new Uint8Array(128 * 128 * 4),
+    }),
+    Buffer.from(skinPngUrl(transparent).split(',')[1], 'base64'),
+  ])
+    assert.throws(() => readSkinPng(bytes, 'classic'))
+  const slim = Buffer.from(skinPngUrl(skin('slim')).split(',')[1], 'base64')
+  assert.throws(() => readSkinPng(slim, 'classic'))
+  assert.deepEqual(readSkinPng(valid, 'classic'), pixels)
+})
+
+test('local upload instructions and errors are available in every supported locale', () => {
+  const keys = Object.keys(getSkinUploadUi('ja')).sort()
+  for (const locale of LOCALES) {
+    const copy = getSkinUploadUi(locale)
+    assert.deepEqual(Object.keys(copy).sort(), keys)
+    assert.ok(
+      Object.values(copy).every(
+        (value) => typeof value === 'string' && value.length > 0,
+      ),
+    )
+    assert.match(copy.file, /64×64/)
   }
 })
