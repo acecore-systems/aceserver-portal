@@ -8,17 +8,19 @@ image: /uploads/stories/minecraft-skin-maker-cover-v2.webp
 imageAlt: '흰색 블록 마네킹과 팔레트로 스킨 제작을 표현한 설명용 그림. 생성 결과의 예시가 아닙니다.'
 relatedStories: [aceserver-beginners-guide]
 translationOf: minecraft-skin-maker-guide
-sourceHash: sha256:330d43691471ce0ea01b3a5dafd7e46b4c63468dce23d2728bbde663336b6daf
-lastUpdated: 2026-10-06T19:18:00+09:00
+sourceHash: sha256:e8ad3623730aa5e4d192bca6b58111b7d0d5f616ad2848e69a8beaaa2c6de9e8
+lastUpdated: 2026-10-07
 ---
 
 [스킨 메이커](/ko/skin-maker/)는 글과 선택 참고 이미지로 새 Minecraft 스킨을 만듭니다. 결과를 3D로 확인하고 64×64 PNG로 저장할 수 있습니다.
 
 ## 1. 팔 형태와 이미지 선택
 
-Classic은 4px, Slim은 3px 팔입니다. 색상과 옷 등을 글로 설명합니다. 참고 이미지는 선택 사항이며 PNG·JPEG·WebP, 최대 5 MB입니다. 기존 스킨 편집이 아닌 새 스킨 생성 도구입니다.
+Classic은 4px, Slim은 3px 팔입니다. 색상과 옷 등을 글로 설명합니다. 참고 이미지는 선택 사항이며 PNG·JPEG·WebP, 최대 5 MB입니다. 생성 후 “스킨 편집”에서 부위·면·레이어를 선택하고 펜이나 채우기로 수정할 수 있습니다. AI 수정은 사각형·현재 면·부위를 선택한 뒤 현재 스킨과 지시 전송에 동의하고 실행합니다. 영역 밖 픽셀은 유지되며 수동 편집과 AI 수정 모두 실행 취소와 다시 실행을 지원합니다. 수동 편집은 AI로 전송하지 않습니다. AI 수정은 생성과 이용 한도를 공유합니다.
 
 <figure class="article-diagram article-diagram--skin-arms" data-layout="choices" data-tone="amber" data-count="2" aria-labelledby="diagram-skin-arms"><figcaption><strong id="diagram-skin-arms">Classic과 Slim의 팔 차이</strong><span>팔의 가로 폭을 나타낸 도식입니다. 생성된 스킨의 예시가 아닙니다. 게임에서도 제작할 때와 같은 모델을 선택합니다.</span></figcaption><ol class="article-diagram__nodes"><li><strong>Classic</strong><img src="/uploads/stories/skin-arm-classic-diagram.svg" alt="팔 너비 4px" width="240" height="300" loading="lazy" decoding="async"/><span>팔 너비 4px</span></li><li><strong>Slim</strong><img src="/uploads/stories/skin-arm-slim-diagram.svg" alt="팔 너비 3px" width="240" height="300" loading="lazy" decoding="async"/><span>팔 너비 3px</span></li></ol></figure>
+
+펜으로 3D 모델에 직접 그릴 수 있습니다. 오른쪽 버튼이나 빈 공간을 드래그하면 회전하고, 휠로 확대합니다. 터치 화면에서는 “회전 / 확대”를 선택하세요. “선택한 부위만 표시”로 팔 안쪽도 편집할 수 있습니다. 기본 레이어 편집 시 외부 레이어를 숨깁니다. 세밀한 조정에는 선택한 2D 면을 사용하세요.
 
 ## 2. 동의하고 생성 기다리기
 

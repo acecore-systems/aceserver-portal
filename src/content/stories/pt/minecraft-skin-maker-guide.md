@@ -8,17 +8,19 @@ image: /uploads/stories/minecraft-skin-maker-cover-v2.webp
 imageAlt: 'Ilustração de manequins de blocos brancos e uma paleta que representa a criação de skins. Não é um resultado gerado.'
 relatedStories: [aceserver-beginners-guide]
 translationOf: minecraft-skin-maker-guide
-sourceHash: sha256:330d43691471ce0ea01b3a5dafd7e46b4c63468dce23d2728bbde663336b6daf
-lastUpdated: 2026-10-06T19:18:00+09:00
+sourceHash: sha256:e8ad3623730aa5e4d192bca6b58111b7d0d5f616ad2848e69a8beaaa2c6de9e8
+lastUpdated: 2026-10-07
 ---
 
 O [criador de skins](/pt/skin-maker/) gera novas skins de Minecraft com texto e imagem opcional. Confira em 3D e salve um PNG de 64×64.
 
 ## 1. Escolher braços e descrever o visual
 
-Classic usa braços de 4px; Slim, de 3px. Descreva cores ou roupas. A referência opcional aceita PNG, JPEG ou WebP até 5 MB. A ferramenta cria skins novas, sem editar uma existente.
+Classic usa braços de 4px; Slim, de 3px. Descreva cores ou roupas. A referência opcional aceita PNG, JPEG ou WebP até 5 MB. Após gerar, use “Editar sua skin” para escolher parte, face e camada e desenhar ou preencher pixels. Para editar com IA, escolha um retângulo, face visível ou parte e aceite enviar a skin atual e as instruções. Os pixels externos são preservados. Edições manuais e de IA permitem desfazer e refazer. Desenhar não envia dados à IA. As edições compartilham o limite de geração.
 
 <figure class="article-diagram article-diagram--skin-arms" data-layout="choices" data-tone="amber" data-count="2" aria-labelledby="diagram-skin-arms"><figcaption><strong id="diagram-skin-arms">Diferença entre os braços Classic e Slim</strong><span>Os esquemas mostram a largura do braço, não skins geradas. Escolha no jogo o mesmo modelo usado para criar a skin.</span></figcaption><ol class="article-diagram__nodes"><li><strong>Classic</strong><img src="/uploads/stories/skin-arm-classic-diagram.svg" alt="Braços com 4px de largura" width="240" height="300" loading="lazy" decoding="async"/><span>Braços com 4px de largura</span></li><li><strong>Slim</strong><img src="/uploads/stories/skin-arm-slim-diagram.svg" alt="Braços com 3px de largura" width="240" height="300" loading="lazy" decoding="async"/><span>Braços com 3px de largura</span></li></ol></figure>
+
+Pinte diretamente no modelo 3D com o lápis. Arraste com o botão direito ou no fundo para girar e use a roda para ampliar. Em telas de toque, escolha “Girar / ampliar”. “Mostrar apenas a parte selecionada” permite editar o interior dos braços. A camada externa fica oculta ao editar a base. Use a face 2D selecionada para ajustes precisos.
 
 ## 2. Consentir e esperar
 

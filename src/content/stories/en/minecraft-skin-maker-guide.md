@@ -8,17 +8,19 @@ image: /uploads/stories/minecraft-skin-maker-cover-v2.webp
 imageAlt: 'Illustration of blank block mannequins and a paint palette representing skin creation. Not an example of generated output.'
 relatedStories: [aceserver-beginners-guide]
 translationOf: minecraft-skin-maker-guide
-sourceHash: sha256:330d43691471ce0ea01b3a5dafd7e46b4c63468dce23d2728bbde663336b6daf
-lastUpdated: 2026-10-06T19:18:00+09:00
+sourceHash: sha256:e8ad3623730aa5e4d192bca6b58111b7d0d5f616ad2848e69a8beaaa2c6de9e8
+lastUpdated: 2026-10-07
 ---
 
 The [Skin Maker](/en/skin-maker/) creates new Minecraft skins from text and an optional reference image. Review the result in 3D and save a 64×64 PNG.
 
 ## 1. Choose an arm type and describe the look
 
-Classic uses 4px arms; Slim uses 3px arms. Describe colors, clothing or other details in text. An optional reference can be PNG, JPEG or WebP up to 5 MB. This creates a new skin; it does not edit an existing skin.
+Classic uses 4px arms; Slim uses 3px arms. Describe colors, clothing or other details in text. An optional reference can be PNG, JPEG or WebP up to 5 MB. After generation, use “Edit your skin” to choose a part, face and layer, then draw or fill pixels. For AI edits, choose a rectangle, visible face or body part, and consent to sending the current skin and instructions. Pixels outside the area stay unchanged. Both manual and AI edits support undo and redo. Drawing does not send data to AI. AI edits share the generation usage limits.
 
 <figure class="article-diagram article-diagram--skin-arms" data-layout="choices" data-tone="amber" data-count="2" aria-labelledby="diagram-skin-arms"><figcaption><strong id="diagram-skin-arms">How Classic and Slim arms differ</strong><span>These schematics show arm width, not examples of generated skins. Choose the same model in your game as when creating the skin.</span></figcaption><ol class="article-diagram__nodes"><li><strong>Classic</strong><img src="/uploads/stories/skin-arm-classic-diagram.svg" alt="Arms are 4px wide" width="240" height="300" loading="lazy" decoding="async"/><span>Arms are 4px wide</span></li><li><strong>Slim</strong><img src="/uploads/stories/skin-arm-slim-diagram.svg" alt="Arms are 3px wide" width="240" height="300" loading="lazy" decoding="async"/><span>Arms are 3px wide</span></li></ol></figure>
+
+Paint directly on the 3D model with the pencil. Right-drag or drag empty space to rotate, and scroll to zoom. On touch screens, choose “Rotate / zoom”. “Show only the selected body part” lets you reach the inside of arms. Outer layers are hidden while editing the base. Use the selected 2D face for fine adjustments.
 
 ## 2. Consent and wait for generation
 

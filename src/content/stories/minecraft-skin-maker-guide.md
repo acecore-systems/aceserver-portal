@@ -7,16 +7,18 @@ tags: [Minecraft, Aceserver, Skin Maker]
 image: /uploads/stories/minecraft-skin-maker-cover-v2.webp
 imageAlt: '白いブロック人形と絵具パレットによるスキン作成の説明用イラスト。生成スキンの実例ではない。'
 relatedStories: [aceserver-beginners-guide]
-lastUpdated: 2026-10-06T19:18:00+09:00
+lastUpdated: 2026-10-07
 ---
 
 文章や任意の参考画像から、Minecraft用の新しいスキンを作れる[スキンメーカー](/skin-maker/)があります。生成した見た目は3D表示で確認し、64×64 PNGとして保存できます。
 
 ## 1. 腕の型とイメージを選ぶ
 
-Classicは4px、Slimは3pxの腕です。作りたい色や服装などを文章で書きます。参考画像は任意で、PNG・JPEG・WebP、5 MBまでです。既存のスキンを編集するモードではなく、新規生成のツールです。
+Classicは4px、Slimは3pxの腕です。作りたい色や服装などを文章で書きます。参考画像は任意で、PNG・JPEG・WebP、5 MBまでです。生成後は「スキンを編集」で部位・面・レイヤーを選び、ペンや塗りつぶしで修正できます。AIで修正するときは四角い範囲・表示中の面・部位を選び、現在のスキンと修正指示の送信に同意して実行します。範囲外のピクセルは保持され、手編集とAI修正は元に戻す・やり直すが使えます。手編集中はAIへ送信しません。AI修正は生成と共通の利用上限に数えます。
 
 <figure class="article-diagram article-diagram--skin-arms" data-layout="choices" data-tone="amber" data-count="2" aria-labelledby="diagram-skin-arms"><figcaption><strong id="diagram-skin-arms">ClassicとSlimの腕の違い</strong><span>腕の横幅を表す模式図です。生成スキンの実例ではありません。ゲーム側でも、作成時と同じ型を選びます。</span></figcaption><ol class="article-diagram__nodes"><li><strong>Classic</strong><img src="/uploads/stories/skin-arm-classic-diagram.svg" alt="腕の幅は4px" width="240" height="300" loading="lazy" decoding="async"/><span>腕の幅は4px</span></li><li><strong>Slim</strong><img src="/uploads/stories/skin-arm-slim-diagram.svg" alt="腕の幅は3px" width="240" height="300" loading="lazy" decoding="async"/><span>腕の幅は3px</span></li></ol></figure>
+
+3Dモデルにはペンで直接描けます。右ドラッグや余白のドラッグで回転し、ホイールで拡大します。スマホでは道具を「回転・拡大」に切り替えます。「選択した部位だけを表示」で腕の内側なども編集できます。基本レイヤーの編集中は外側を隠します。細かい調整には選択面の2Dエディターも使えます。
 
 ## 2. 同意して生成を待つ
 

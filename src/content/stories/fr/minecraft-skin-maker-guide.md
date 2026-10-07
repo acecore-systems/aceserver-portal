@@ -8,17 +8,19 @@ image: /uploads/stories/minecraft-skin-maker-cover-v2.webp
 imageAlt: 'Illustration de mannequins en blocs blancs et d’une palette représentant la création de skins. Ce n’est pas un résultat généré.'
 relatedStories: [aceserver-beginners-guide]
 translationOf: minecraft-skin-maker-guide
-sourceHash: sha256:330d43691471ce0ea01b3a5dafd7e46b4c63468dce23d2728bbde663336b6daf
-lastUpdated: 2026-10-06T19:18:00+09:00
+sourceHash: sha256:e8ad3623730aa5e4d192bca6b58111b7d0d5f616ad2848e69a8beaaa2c6de9e8
+lastUpdated: 2026-10-07
 ---
 
 Le [créateur de skins](/fr/skin-maker/) génère de nouvelles skins Minecraft à partir de texte et d’une image facultative. Vérifiez en 3D et sauvegardez un PNG 64×64.
 
 ## 1. Choisir les bras et décrire le style
 
-Classic utilise des bras de 4px, Slim de 3px. Décrivez couleurs ou vêtements. L’image facultative accepte PNG, JPEG ou WebP jusqu’à 5 MB. L’outil crée une nouvelle skin, sans modifier une skin existante.
+Classic utilise des bras de 4px, Slim de 3px. Décrivez couleurs ou vêtements. L’image facultative accepte PNG, JPEG ou WebP jusqu’à 5 MB. Après génération, utilisez « Modifier votre skin » pour choisir une partie, une face et une couche, puis dessiner ou remplir les pixels. Pour une modification IA, choisissez un rectangle, la face visible ou une partie et acceptez d’envoyer le skin actuel et les instructions. Les pixels extérieurs sont conservés. Les modifications manuelles et IA peuvent être annulées et rétablies. Dessiner n’envoie rien à l’IA. Les modifications partagent les limites de génération.
 
 <figure class="article-diagram article-diagram--skin-arms" data-layout="choices" data-tone="amber" data-count="2" aria-labelledby="diagram-skin-arms"><figcaption><strong id="diagram-skin-arms">Différence entre les bras Classic et Slim</strong><span>Ces schémas montrent la largeur des bras, pas des skins générés. Choisissez dans le jeu le même modèle que lors de la création.</span></figcaption><ol class="article-diagram__nodes"><li><strong>Classic</strong><img src="/uploads/stories/skin-arm-classic-diagram.svg" alt="Bras de 4px de large" width="240" height="300" loading="lazy" decoding="async"/><span>Bras de 4px de large</span></li><li><strong>Slim</strong><img src="/uploads/stories/skin-arm-slim-diagram.svg" alt="Bras de 3px de large" width="240" height="300" loading="lazy" decoding="async"/><span>Bras de 3px de large</span></li></ol></figure>
+
+Peignez directement sur le modèle 3D avec le crayon. Faites glisser avec le bouton droit ou sur le fond pour tourner et utilisez la molette pour zoomer. Sur écran tactile, choisissez « Tourner / zoomer ». « Afficher uniquement la partie sélectionnée » permet de modifier l’intérieur des bras. La couche externe est masquée pendant la retouche de la base. Utilisez la face 2D sélectionnée pour les détails.
 
 ## 2. Consentir et attendre
 

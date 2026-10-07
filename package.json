@@ -24,7 +24,7 @@
     "test:search": "node --experimental-strip-types --test tests/search-api.test.mjs tests/network-search-contract.test.mjs",
     "test:cms": "node --experimental-strip-types --import=./scripts/json-module-loader.mjs --test --test-concurrency=1 --test-isolation=none tests/cms-*.test.mjs",
     "test:content": "node --test tests/content-validation.test.mjs",
-    "test:skin-maker": "node --experimental-strip-types --test tests/skin-maker.test.mjs tests/skin-store.test.mjs",
+    "test:skin-maker": "node --experimental-strip-types --test tests/skin-maker.test.mjs tests/skin-editor.test.mjs tests/skin-store.test.mjs",
     "typecheck:skin-maker": "tsc --project tsconfig.skin-maker.json",
     "typecheck:skin-openai": "tsc --project cloudflare/skin-openai/tsconfig.json",
     "deploy:skin-openai": "wrangler deploy --config cloudflare/skin-openai/wrangler.jsonc",
@@ -56,6 +56,7 @@
     "graphql": "^17.0.2",
     "jose": "^6.2.12",
     "skinview3d": "3.4.2",
+    "three": "0.156.1",
     "zod": "^4.6.5"
   },
   "devDependencies": {

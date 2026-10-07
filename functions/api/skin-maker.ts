@@ -4,7 +4,12 @@ import {
   type SkinStage,
 } from '../_lib/skin-diagnostics.ts'
 import { encode } from 'fast-png'
-import { issueStoreTicket, storeAvailable } from '../_lib/skin-store.ts'
+import {
+  issueStoreTicket,
+  storeAvailable,
+  readStoreTicket,
+  pixelHash,
+} from '../_lib/skin-store.ts'
 import {
   applyDesign,
   buildPrompt,
@@ -13,6 +18,7 @@ import {
   MODEL,
   isWorkersSkinModel,
   requestSchema,
+  validateEdit,
   type SkinRequest,
 } from '../../src/lib/skin-maker.ts'
 
@@ -138,7 +144,12 @@ export function modelInput(request: SkinRequest) {
     | { type: 'text'; text: string }
     | { type: 'image_url'; image_url: { url: string } }
   )[] = [{ type: 'text', text: buildPrompt(request) }]
-  if (request.reference) {
+  if (request.mode === 'edit') {
+    content.push({
+      type: 'image_url',
+      image_url: { url: pngUrl(decodePixels(request.current, 64, 64)) },
+    })
+  } else if (request.reference) {
     const r = request.reference
     content.push(
       { type: 'text', text: 'Appearance reference:' },
@@ -211,9 +222,27 @@ const onRequestPost: PagesFunction<SkinEnv> = async ({ request, env }) => {
     return fail('forbidden', 403)
   if (!available(env)) return fail('unavailable', 503)
   let input: SkinRequest
+  let publishable = true
   try {
     input = requestSchema.parse(await readBody(request))
-    if (input.reference)
+    if (input.mode === 'edit') {
+      const current = validateEdit(input)
+      publishable = false
+      if (input.storeTicket) {
+        const ticket = await readStoreTicket(
+          input.storeTicket,
+          env.SKIN_QUOTA_SALT!,
+          origin,
+          'publish',
+        )
+        if (
+          ticket.model !== input.model ||
+          ticket.hash !== (await pixelHash(current))
+        )
+          throw new Error('ticket')
+        publishable = true
+      }
+    } else if (input.reference)
       decodePixels(
         input.reference.pixels,
         input.reference.width,
@@ -305,15 +334,16 @@ const onRequestPost: PagesFunction<SkinEnv> = async ({ request, env }) => {
     stage = 'design'
     const output = applyDesign(design, input)
     stage = 'response'
-    const storeTicket = storeAvailable(env)
-      ? await issueStoreTicket(
-          requestId,
-          input.model,
-          output.pixels,
-          origin,
-          env.SKIN_QUOTA_SALT!,
-        )
-      : null
+    const storeTicket =
+      storeAvailable(env) && publishable
+        ? await issueStoreTicket(
+            requestId,
+            input.model,
+            output.pixels,
+            origin,
+            env.SKIN_QUOTA_SALT!,
+          )
+        : null
     const response = json({
       requestId,
       pixels: encodePixels(output.pixels),

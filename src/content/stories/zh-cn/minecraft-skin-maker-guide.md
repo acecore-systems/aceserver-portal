@@ -8,17 +8,19 @@ image: /uploads/stories/minecraft-skin-maker-cover-v2.webp
 imageAlt: '用白色方块人偶和调色板表现皮肤制作的说明插画，并非生成结果实例。'
 relatedStories: [aceserver-beginners-guide]
 translationOf: minecraft-skin-maker-guide
-sourceHash: sha256:330d43691471ce0ea01b3a5dafd7e46b4c63468dce23d2728bbde663336b6daf
-lastUpdated: 2026-10-06T19:18:00+09:00
+sourceHash: sha256:e8ad3623730aa5e4d192bca6b58111b7d0d5f616ad2848e69a8beaaa2c6de9e8
+lastUpdated: 2026-10-07
 ---
 
 [皮肤制作器](/zh-cn/skin-maker/)可用文字和可选参考图片生成Minecraft新皮肤，随后查看3D效果并保存64×64 PNG。
 
 ## 1. 选择手臂类型与外观
 
-Classic手臂为4px，Slim为3px。用文字描述颜色、服装等。参考图可选，支持PNG、JPEG、WebP，最大5 MB。工具用于新生成，不是编辑已有皮肤。
+Classic手臂为4px，Slim为3px。用文字描述颜色、服装等。参考图可选，支持PNG、JPEG、WebP，最大5 MB。生成后可在“编辑皮肤”中选择部位、面和图层，用画笔或填充修改像素。AI修改可选择矩形、当前面或部位，同意发送当前皮肤和修改指示后执行。范围外的像素保持不变。手动和AI修改均支持撤销与重做。手动绘制不会发送给AI。AI修改与生成共用次数限制。
 
 <figure class="article-diagram article-diagram--skin-arms" data-layout="choices" data-tone="amber" data-count="2" aria-labelledby="diagram-skin-arms"><figcaption><strong id="diagram-skin-arms">Classic与Slim的手臂区别</strong><span>示意图用于说明手臂宽度，并非生成皮肤的实例。 在游戏中也请选择与创建时相同的模型。</span></figcaption><ol class="article-diagram__nodes"><li><strong>Classic</strong><img src="/uploads/stories/skin-arm-classic-diagram.svg" alt="手臂宽4px" width="240" height="300" loading="lazy" decoding="async"/><span>手臂宽4px</span></li><li><strong>Slim</strong><img src="/uploads/stories/skin-arm-slim-diagram.svg" alt="手臂宽3px" width="240" height="300" loading="lazy" decoding="async"/><span>手臂宽3px</span></li></ol></figure>
+
+可以用画笔直接在3D模型上绘制。右键拖动或拖动空白处可旋转，滚轮可缩放。触屏请选择“旋转 / 缩放”。“只显示选中的部位”可方便地编辑手臂内侧。编辑基础图层时会隐藏外层。精细调整也可以使用选中的2D面。
 
 ## 2. 同意处理并等待生成
 
