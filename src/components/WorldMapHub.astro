@@ -23,17 +23,19 @@ const introImageCss = serializeCssUrl(introImage)
 const introText = intro?.text ?? page.meta.description
 ---
 
-<section class="world-hero" aria-labelledby="world-title">
+<section class="world-hero asv-page-hero" aria-labelledby="world-title">
   <div class="world-bg" style={`--world-hero-image: ${introImageCss}`}></div>
-  <div class="map-sign pixel-border">
-    <Icon name="map" />
-    <h1 id="world-title">
-      {ui.worldMapTitleParts.map((part) => <span>{part}</span>)}
-    </h1>
+  <div class="world-hero-inner asv-hero-inner">
+    <div class="map-sign pixel-border">
+      <Icon name="map" />
+      <h1 id="world-title">
+        {ui.worldMapTitleParts.map((part) => <span>{part}</span>)}
+      </h1>
+    </div>
+    <p>
+      {introText}
+    </p>
   </div>
-  <p>
-    {introText}
-  </p>
 </section>
 
 <section class="world-gates" aria-label={ui.worldSelection}>
@@ -81,16 +83,16 @@ const introText = intro?.text ?? page.meta.description
 
 <style>
   .world-hero {
-    position: relative;
-    display: grid;
-    min-height: 380px;
     place-items: center;
-    gap: 20px;
-    overflow: hidden;
-    padding: clamp(58px, 9vw, 118px) 18px clamp(44px, 7vw, 82px);
     text-align: center;
     color: white;
     isolation: isolate;
+  }
+
+  .world-hero-inner {
+    display: grid;
+    justify-items: center;
+    gap: 24px;
   }
 
   .world-bg {
@@ -132,10 +134,10 @@ const introText = intro?.text ?? page.meta.description
     flex-wrap: wrap;
     justify-content: center;
     margin: 0;
-    font-size: clamp(3.1rem, 8vw, 7rem);
+    font-size: var(--asv-hero-title-size);
     font-weight: 900;
     letter-spacing: 0;
-    line-height: 1;
+    line-height: 1.1;
     text-shadow: 0 5px 0 rgba(0, 0, 0, 0.35);
     word-break: keep-all;
   }
@@ -152,7 +154,7 @@ const introText = intro?.text ?? page.meta.description
   .world-hero p {
     max-width: 720px;
     margin: 0;
-    font-size: clamp(1rem, 2vw, 1.3rem);
+    font-size: var(--asv-hero-lead-size);
     font-weight: 800;
     text-shadow: 0 3px 12px rgba(0, 0, 0, 0.55);
   }

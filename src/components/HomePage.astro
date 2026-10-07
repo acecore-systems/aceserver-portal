@@ -123,7 +123,7 @@ const multiplayerGuidePath = localizePath(
 const diaryPath = localizePath(locale, '/alpha-diary/')
 ---
 
-<section class="hero" aria-labelledby="home-title">
+<section class="hero asv-page-hero" aria-labelledby="home-title">
   <img
     class="hero-bg"
     src={heroImage}
@@ -131,7 +131,7 @@ const diaryPath = localizePath(locale, '/alpha-diary/')
     aria-hidden="true"
   />
   <div class="hero-shade"></div>
-  <div class="hero-content">
+  <div class="hero-content asv-hero-inner">
     <h1 id="home-title">
       {ui.homeTitleParts.map((part) => <span>{part}</span>)}
     </h1>
@@ -306,11 +306,7 @@ const diaryPath = localizePath(locale, '/alpha-diary/')
 
 <style>
   .hero {
-    position: relative;
-    min-height: clamp(620px, 88vh, 880px);
     isolation: isolate;
-    overflow: hidden;
-    border-bottom: 12px solid #1e1710;
     background: #6bd7ff;
   }
 
@@ -379,9 +375,8 @@ const diaryPath = localizePath(locale, '/alpha-diary/')
 
   .hero-content {
     display: grid;
-    max-width: min(94vw, 1060px);
-    gap: 24px;
-    padding: clamp(94px, 14vh, 150px) clamp(18px, 7vw, 96px) 120px;
+    gap: 20px;
+    padding-bottom: 36px;
     color: white;
     text-shadow:
       0 5px 0 rgba(0, 0, 0, 0.32),
@@ -392,10 +387,10 @@ const diaryPath = localizePath(locale, '/alpha-diary/')
     display: flex;
     flex-wrap: wrap;
     margin: 0;
-    font-size: clamp(4rem, 8vw, 7.4rem);
+    font-size: var(--asv-hero-title-size);
     font-weight: 900;
     letter-spacing: 0;
-    line-height: 0.96;
+    line-height: 1.1;
     word-break: keep-all;
   }
 
@@ -406,7 +401,7 @@ const diaryPath = localizePath(locale, '/alpha-diary/')
   .hero p {
     max-width: 680px;
     margin: 0;
-    font-size: clamp(1.12rem, 2vw, 1.55rem);
+    font-size: var(--asv-hero-lead-size);
     font-weight: 900;
   }
 
@@ -498,11 +493,11 @@ const diaryPath = localizePath(locale, '/alpha-diary/')
 
   .scroll-cue {
     position: absolute;
-    bottom: 36px;
+    bottom: 20px;
     left: 50%;
     display: grid;
-    width: 58px;
-    height: 58px;
+    width: 44px;
+    height: 44px;
     place-items: center;
     border: 2px solid rgba(255, 255, 255, 0.78);
     border-radius: 12px;
@@ -816,7 +811,7 @@ const diaryPath = localizePath(locale, '/alpha-diary/')
     .feature-band,
     .crossplay-band,
     .cta-grid {
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0, 1fr);
     }
 
     .feature-band--left .feature-copy {
@@ -825,17 +820,16 @@ const diaryPath = localizePath(locale, '/alpha-diary/')
   }
 
   @media (max-width: 640px) {
-    .hero {
-      min-height: 700px;
+    .hero-actions {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .hero-content {
-      padding-top: 90px;
-    }
-
-    .hero h1 {
-      flex-direction: column;
-      font-size: clamp(3.45rem, 16vw, 4.8rem);
+    .hero-actions a {
+      min-width: 0;
+      padding-inline: 10px;
+      font-size: 0.82rem;
+      text-wrap: balance;
     }
 
     .join-card,

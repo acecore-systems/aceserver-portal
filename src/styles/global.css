@@ -65,6 +65,10 @@
     --asv-gold: var(--color-gold-300);
     --asv-green: var(--color-grass-500);
     --asv-blue: var(--color-skyforge-500);
+    --asv-hero-min-height: clamp(420px, 36vw, 480px);
+    --asv-hero-padding: clamp(32px, 5vw, 56px);
+    --asv-hero-title-size: clamp(2.35rem, 5.5vw, 5rem);
+    --asv-hero-lead-size: clamp(1rem, 1.6vw, 1.25rem);
   }
 
   * {
@@ -82,7 +86,7 @@
   }
 
   body {
-    min-width: 320px;
+    min-width: min(320px, 100%);
     background:
       linear-gradient(180deg, #87dfff 0, #f9efd0 45%, #15130f 100%), #fff5dc;
     color: var(--asv-ink);
@@ -195,6 +199,25 @@
       0 0 0 2px rgba(46, 34, 22, 0.92),
       inset 0 0 0 2px rgba(255, 255, 255, 0.18),
       0 8px 0 rgba(34, 23, 13, 0.25);
+  }
+
+  .asv-page-hero {
+    position: relative;
+    display: grid;
+    min-height: var(--asv-hero-min-height);
+    align-items: center;
+    border-bottom: 8px solid var(--asv-hero-border, #1e1710);
+    padding-block: var(--asv-hero-padding);
+    overflow: hidden;
+  }
+
+  .asv-hero-inner {
+    width: min(1120px, calc(100% - 36px));
+    margin-inline: auto;
+  }
+
+  .asv-page-hero h1 {
+    text-wrap: balance;
   }
 
   @media (max-width: 700px) {
