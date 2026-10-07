@@ -219,6 +219,18 @@ const hasEyebrow = Boolean(eyebrow) || Astro.slots.has('eyebrow')
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
+    .page-hero__actions :global(a),
+    .page-hero__actions :global(button) {
+      padding: 8px 10px;
+      gap: 8px;
+    }
+
+    .page-hero__actions :global(img) {
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+    }
+
     .page-hero__actions :global(a:only-child),
     .page-hero__actions :global(button:only-child) {
       grid-column: 1 / -1;
