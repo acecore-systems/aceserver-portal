@@ -9,6 +9,7 @@ import { getSkinStoreUi } from '../data/skin-store-ui'
 import SkinPixelEditor from './SkinPixelEditor.astro'
 import { getSkinEditorUi } from '../data/skin-editor-ui'
 import { getSkinRemixUi } from '../data/skin-remix-ui'
+import { getSkinUploadUi } from '../data/skin-upload-ui'
 interface Props {
   locale: Locale
 }
@@ -17,6 +18,7 @@ const c = getSkinMakerUi(locale)
 const store = getSkinStoreUi(locale)
 const edit = getSkinEditorUi(locale)
 const remix = getSkinRemixUi(locale)
+const upload = getSkinUploadUi(locale)
 const seo = getSkinMakerSeo(locale)
 const url = new URL(localizePath(locale, '/skin-maker/'), Astro.site).href
 const appJsonLd = serializeJsonForHtmlScript({
@@ -44,6 +46,30 @@ const appJsonLd = serializeJsonForHtmlScript({
     <p>{c.intro}</p>
   </header>
   <SkinMakerNav locale={locale} current="maker" />
+  <section class="upload" aria-labelledby="skin-upload-title">
+    <h2 id="skin-upload-title">{upload.title}</h2>
+    <p class="hint" id="skin-upload-hint">{upload.hint}</p>
+    <fieldset class="upload-controls" data-upload-inputs>
+      <label class="field">
+        {c.model}
+        <select data-upload-model>
+          <option value="classic">Classic · 4px</option>
+          <option value="slim">Slim · 3px</option>
+        </select>
+      </label>
+      <label class="field">
+        {upload.file}
+        <input
+          data-skin-upload
+          type="file"
+          accept="image/png,.png"
+          aria-describedby="skin-upload-hint skin-upload-privacy"
+        />
+      </label>
+    </fieldset>
+    <p class="hint" id="skin-upload-privacy">{upload.privacy}</p>
+    <p class="hint" data-upload-status role="status" aria-live="polite"></p>
+  </section>
   <div class="maker-grid">
     <form class="editor" data-form>
       <fieldset data-inputs>
@@ -238,6 +264,24 @@ const appJsonLd = serializeJsonForHtmlScript({
   .maker-heading p {
     line-height: 1.8;
     color: #66553f;
+  }
+  .upload {
+    background: #fffdf5;
+    border: 1px solid #dbcdb1;
+    border-radius: 18px;
+    padding: 24px;
+    margin-bottom: 24px;
+  }
+  .upload-controls {
+    display: grid;
+    grid-template-columns: minmax(140px, 180px) minmax(0, 1fr);
+    gap: 18px;
+  }
+  .upload .field {
+    margin-top: 0;
+  }
+  .upload [data-upload-status]:empty {
+    display: none;
   }
   .maker-grid {
     display: grid;
@@ -611,6 +655,10 @@ const appJsonLd = serializeJsonForHtmlScript({
       grid-template-columns: 1fr;
       gap: 22px;
     }
+    .upload-controls {
+      grid-template-columns: 1fr;
+    }
+    .upload,
     .editor,
     .result {
       padding: 18px;
