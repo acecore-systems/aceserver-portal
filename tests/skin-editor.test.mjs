@@ -33,9 +33,77 @@ import {
   skinHit,
   faceSurface,
   surfaceOutline,
+  surfaceGrid,
 } from '../src/lib/skin-editor-3d.ts'
 
 for (const model of ['classic', 'slim']) {
+  test(`${model}: 3D grid covers every integer pixel boundary on all 72 actual faces`, () => {
+    const object = new SkinObject()
+    object.modelType = model === 'slim' ? 'slim' : 'default'
+    const boxFaces = ['left', 'right', 'top', 'bottom', 'front', 'back']
+    for (const r of regions(model)) {
+      const mesh =
+        object[r.part][r.layer === 'base' ? 'innerLayer' : 'outerLayer']
+      const geometry = mesh.geometry,
+        group = geometry.groups[boxFaces.indexOf(r.face)],
+        vertices = [0, 1, 2].map((n) => geometry.index.getX(group.start + n)),
+        uv = geometry.getAttribute('uv'),
+        position = geometry.getAttribute('position')
+      const triangle = new Triangle(
+        ...vertices.map((i) => new Vector3().fromBufferAttribute(position, i)),
+      )
+      const normal = triangle.getNormal(new Vector3())
+      const points = surfaceGrid(faceSurface(mesh, r))
+      assert.equal(points.length, 2 * (r.w + r.h + 2))
+      const vertical = new Set(),
+        horizontal = new Set()
+      for (let i = 0; i < points.length; i += 2) {
+        // Recover UVs independently from the model's actual face geometry.
+        const coordinates = points.slice(i, i + 2).map((point) => {
+          assert.ok(
+            Math.abs(point.clone().sub(triangle.a).dot(normal) - 0.01) < 1e-6,
+          )
+          const weights = triangle.getBarycoord(
+            point.clone().addScaledVector(normal, -0.01),
+            new Vector3(),
+          )
+          const coordinate = new Vector2()
+          for (const [n, weight] of weights.toArray().entries())
+            coordinate.addScaledVector(
+              new Vector2(uv.getX(vertices[n]), uv.getY(vertices[n])),
+              weight,
+            )
+          const x = coordinate.x * 64 - r.x,
+            y = (1 - coordinate.y) * 64 - r.y
+          assert.ok(Math.abs(x - Math.round(x)) < 1e-5)
+          assert.ok(Math.abs(y - Math.round(y)) < 1e-5)
+          assert.ok(x > -1e-5 && x < r.w + 1e-5)
+          assert.ok(y > -1e-5 && y < r.h + 1e-5)
+          return {
+            x: Math.max(0, Math.round(x)),
+            y: Math.max(0, Math.round(y)),
+          }
+        })
+        const [a, b] = coordinates
+        if (a.x === b.x) {
+          assert.deepEqual(
+            [a.y, b.y].sort((a, b) => a - b),
+            [0, r.h],
+          )
+          vertical.add(a.x)
+        } else {
+          assert.equal(a.y, b.y)
+          assert.deepEqual(
+            [a.x, b.x].sort((a, b) => a - b),
+            [0, r.w],
+          )
+          horizontal.add(a.y)
+        }
+      }
+      assert.equal(vertical.size, r.w + 1)
+      assert.equal(horizontal.size, r.h + 1)
+    }
+  })
   test(`${model}: real 3D raycasts resolve every pixel on all parts, layers and faces after rotation`, () => {
     const object = new SkinObject()
     object.modelType = model === 'slim' ? 'slim' : 'default'

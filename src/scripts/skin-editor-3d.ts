@@ -4,6 +4,7 @@ import {
   BufferGeometry,
   LineBasicMaterial,
   LineLoop,
+  LineSegments,
   Mesh,
   MOUSE,
   Raycaster,
@@ -30,6 +31,7 @@ import {
   faceSurface,
   skinHit,
   surfaceOutline,
+  surfaceGrid,
   type SkinHit,
   type SkinSurface,
 } from '../lib/skin-editor-3d'
@@ -45,6 +47,7 @@ export type ViewState = {
   rectangle?: Selection['rectangle']
   busy: boolean
   isolate: boolean
+  grid: boolean
 }
 type Options = {
   state: () => ViewState | undefined
@@ -93,8 +96,16 @@ export function initSkin3dEditor(root: HTMLElement, options: Options) {
   const blockedPointers = new Set<number>()
   let hover: LineLoop | undefined, selectionLine: LineLoop | undefined
   const hoverMaterial = new LineBasicMaterial({ color: '#ffffff' }),
-    selectionMaterial = new LineBasicMaterial({ color: '#287bcc' })
-  const removeLine = (line?: LineLoop) => {
+    selectionMaterial = new LineBasicMaterial({ color: '#287bcc' }),
+    gridMaterial = new LineBasicMaterial({
+      color: '#888888',
+      transparent: true,
+      opacity: 0.65,
+      depthWrite: false,
+    })
+  let gridModel: Model | undefined
+  const grids: { layer: Layer; lines: LineSegments }[] = []
+  const removeLine = (line?: LineLoop | LineSegments) => {
     line?.removeFromParent()
     line?.geometry.dispose()
   }
@@ -114,6 +125,32 @@ export function initSkin3dEditor(root: HTMLElement, options: Options) {
     viewer.playerObject.skin[part][
       layer === 'base' ? 'innerLayer' : 'outerLayer'
     ] as Mesh
+  const updateGrid = (state: ViewState) => {
+    if (state.grid && gridModel !== state.model) {
+      for (const { lines } of grids) removeLine(lines)
+      grids.length = 0
+      const points = new Map<Mesh, { layer: Layer; vertices: Vector3[] }>()
+      for (const region of regions(state.model)) {
+        const mesh = meshFor(region.part, region.layer),
+          surface = faceSurface(mesh, region)
+        if (!surface) continue
+        if (!points.has(mesh))
+          points.set(mesh, { layer: region.layer, vertices: [] })
+        points.get(mesh)!.vertices.push(...surfaceGrid(surface))
+      }
+      for (const [mesh, { layer, vertices }] of points) {
+        const lines = new LineSegments(
+          new BufferGeometry().setFromPoints(vertices),
+          gridMaterial,
+        )
+        mesh.add(lines)
+        grids.push({ layer, lines })
+      }
+      gridModel = state.model
+    }
+    for (const grid of grids)
+      grid.lines.visible = state.grid && grid.layer === state.layer
+  }
   const home = () => {
     viewer.controls.target.set(0, 0, 0)
     viewer.camera.position.set(18, 8, 40)
@@ -165,6 +202,7 @@ export function initSkin3dEditor(root: HTMLElement, options: Options) {
       viewer.playerObject.skin[part].outerLayer.visible =
         state.layer === 'outer'
     }
+    updateGrid(state)
     if (state.isolate && (!lastIsolate || lastPart !== state.part)) focus(state)
     else if (!state.isolate && lastIsolate) home()
     lastIsolate = state.isolate
@@ -439,8 +477,10 @@ export function initSkin3dEditor(root: HTMLElement, options: Options) {
       canvas.removeEventListener('keydown', keydown)
       removeLine(hover)
       removeLine(selectionLine)
+      for (const { lines } of grids) removeLine(lines)
       hoverMaterial.dispose()
       selectionMaterial.dispose()
+      gridMaterial.dispose()
       viewer.dispose()
     },
   }

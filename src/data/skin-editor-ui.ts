@@ -471,6 +471,7 @@ type ViewCopy = {
   stageHint: string
   fineEdit: string
   isolate: string
+  grid: string
   resetView: string
   webgl: string
 }
@@ -484,6 +485,7 @@ const viewCopy = {
       'ペンでモデルを直接塗れます。右ドラッグや余白のドラッグで回転、ホイールで拡大。スマホでは「回転・拡大」に切り替えて操作します。基本レイヤーの編集中は外側を隠します。',
     fineEdit: '選択した面を2Dで細かく編集',
     isolate: '選択した部位だけを表示',
+    grid: 'グリッドを表示',
     resetView: '視点を戻す',
     webgl: '3Dを表示できません。下の2Dエディターで編集できます。',
   },
@@ -496,6 +498,7 @@ const viewCopy = {
       'Paint directly with the pencil. Drag the background or right-drag to rotate; scroll to zoom. On touch screens, choose Rotate / zoom. Outer layers are hidden while editing the base.',
     fineEdit: 'Fine edits on the selected 2D face',
     isolate: 'Show only the selected body part',
+    grid: 'Show pixel grid',
     resetView: 'Reset view',
     webgl: '3D is unavailable. You can use the 2D editor below.',
   },
@@ -508,6 +511,7 @@ const viewCopy = {
       '用画笔直接涂画模型。拖动空白处或右键拖动可旋转，滚轮可缩放。触屏请选择“旋转 / 缩放”。编辑基础图层时会隐藏外层。',
     fineEdit: '在选中的2D面上精细编辑',
     isolate: '只显示选中的部位',
+    grid: '显示像素网格',
     resetView: '重置视角',
     webgl: '无法显示3D。可以使用下方的2D编辑器。',
   },
@@ -520,6 +524,7 @@ const viewCopy = {
       'Pinta con el lápiz. Arrastra el fondo o con el botón derecho para girar; usa la rueda para ampliar. En pantallas táctiles, elige Girar / ampliar. La capa exterior se oculta al editar la base.',
     fineEdit: 'Edición precisa de la cara 2D seleccionada',
     isolate: 'Mostrar solo la parte seleccionada',
+    grid: 'Mostrar cuadrícula de píxeles',
     resetView: 'Restablecer vista',
     webgl: 'No se puede mostrar el modelo 3D. Usa el editor 2D de abajo.',
   },
@@ -532,6 +537,7 @@ const viewCopy = {
       'Pinte com o lápis. Arraste o fundo ou com o botão direito para girar; use a roda para ampliar. Em telas de toque, escolha Girar / ampliar. A camada externa fica oculta ao editar a base.',
     fineEdit: 'Edição precisa da face 2D selecionada',
     isolate: 'Mostrar apenas a parte selecionada',
+    grid: 'Mostrar grade de pixels',
     resetView: 'Redefinir visão',
     webgl: 'Não é possível mostrar o modelo 3D. Use o editor 2D abaixo.',
   },
@@ -545,6 +551,7 @@ const viewCopy = {
       'Peignez avec le crayon. Faites glisser le fond ou utilisez le bouton droit pour tourner, la molette pour zoomer. Sur écran tactile, choisissez Tourner / zoomer. La couche externe est masquée pendant la modification de la base.',
     fineEdit: 'Retouche précise de la face 2D sélectionnée',
     isolate: 'Afficher uniquement la partie sélectionnée',
+    grid: 'Afficher la grille de pixels',
     resetView: 'Réinitialiser la vue',
     webgl: 'La 3D est indisponible. Utilisez l’éditeur 2D ci-dessous.',
   },
@@ -557,6 +564,7 @@ const viewCopy = {
       '펜으로 모델을 직접 칠하세요. 빈 공간이나 마우스 오른쪽 버튼으로 드래그하면 회전하고, 휠로 확대합니다. 터치 화면에서는 회전 / 확대를 선택하세요. 기본 레이어 편집 시 외부 레이어를 숨깁니다.',
     fineEdit: '선택한 2D 면을 세밀하게 편집',
     isolate: '선택한 부위만 표시',
+    grid: '픽셀 격자 표시',
     resetView: '시점 초기화',
     webgl: '3D를 표시할 수 없습니다. 아래 2D 에디터를 사용할 수 있습니다.',
   },
@@ -569,6 +577,7 @@ const viewCopy = {
       'Male direkt mit dem Stift. Ziehe den Hintergrund oder mit der rechten Maustaste zum Drehen, nutze das Mausrad zum Zoomen. Auf Touchscreens wähle Drehen / zoomen. Beim Bearbeiten der Basis wird die äußere Ebene ausgeblendet.',
     fineEdit: 'Feinbearbeitung der ausgewählten 2D-Seite',
     isolate: 'Nur das ausgewählte Körperteil anzeigen',
+    grid: 'Pixelraster anzeigen',
     resetView: 'Ansicht zurücksetzen',
     webgl: '3D ist nicht verfügbar. Nutze den 2D-Editor unten.',
   },
@@ -581,6 +590,7 @@ const viewCopy = {
       'Рисуйте карандашом прямо на модели. Перетаскивайте фон или правой кнопкой для вращения, используйте колесо для масштаба. На сенсорном экране выберите Вращать / масштаб. При правке базового слоя внешний скрывается.',
     fineEdit: 'Точная правка выбранной 2D-грани',
     isolate: 'Показать только выбранную часть',
+    grid: 'Показать пиксельную сетку',
     resetView: 'Сбросить вид',
     webgl: '3D недоступно. Используйте 2D-редактор ниже.',
   },

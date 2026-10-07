@@ -43,6 +43,7 @@ export function initSkinEditor(
   const color = el<HTMLInputElement>('[data-edit-color]')
   const scope = el<HTMLSelectElement>('[data-edit-scope]')
   const isolate = el<HTMLInputElement>('[data-edit-isolate]')
+  const grid = el<HTMLInputElement>('[data-edit-grid]')
   let view: ReturnType<typeof initSkin3dEditor> | undefined
   let viewLoading = false,
     disposed = false
@@ -200,6 +201,7 @@ export function initSkinEditor(
                     rectangle,
                     busy,
                     isolate: isolate.checked,
+                    grid: grid.checked,
                   }
                 : undefined
             },
@@ -251,6 +253,7 @@ export function initSkinEditor(
     })
   scope.addEventListener('change', render)
   isolate.addEventListener('change', render)
+  grid.addEventListener('change', render)
   tool.addEventListener('change', () => {
     view?.cancel()
     stroke = undefined
