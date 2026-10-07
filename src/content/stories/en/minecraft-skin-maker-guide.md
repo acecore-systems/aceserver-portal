@@ -8,7 +8,7 @@ image: /uploads/stories/minecraft-skin-maker-cover-v2.webp
 imageAlt: 'Illustration of blank block mannequins and a paint palette representing skin creation. Not an example of generated output.'
 relatedStories: [aceserver-beginners-guide]
 translationOf: minecraft-skin-maker-guide
-sourceHash: sha256:e8ad3623730aa5e4d192bca6b58111b7d0d5f616ad2848e69a8beaaa2c6de9e8
+sourceHash: sha256:417830da11a893bd01fad6116a244c4a149a4cf163397414588057a87b317f1d
 lastUpdated: 2026-10-07
 ---
 
@@ -39,3 +39,9 @@ Download with “Save 64×64 PNG” and use your game’s custom skin import. Se
 ## 5. Publish selected skins to the store
 
 After generation, give your skin a name and agree that anyone may download and use it for free to publish it in the [Skin Store](/en/skin-maker/store/). Publishing is optional; only the name and generated skin are stored. You can withdraw it within 24 hours of generation while this generation page remains open.
+
+## 6. Copy and edit a store skin
+
+Choose “Copy and edit” on a store card or its 3D detail to open a copy in the Skin Maker. The arm type and pixels are preserved. Draw on it in 3D or consent to a partial AI edit. The original is never overwritten. Save the edited PNG, or enter a name and consent to publish it as a separate skin. Copying alone does not publish anything. Further edits after publication create another work. Withdrawing a copy does not affect the original.
+
+Publish a copy within 24 hours of copying while the original is still public. Publication and withdrawal keys stay only on this page. Copying and manual editing use no AI quota. AI edits share generation limits. Copied skins are limited to five publications per day and one per minute, with a site-wide cap as well.

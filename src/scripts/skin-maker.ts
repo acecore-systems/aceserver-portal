@@ -1,6 +1,7 @@
 import { getSkinMakerUi } from '../data/skin-maker-ui'
 import { getSkinStoreUi } from '../data/skin-store-ui'
 import { getSkinEditorUi } from '../data/skin-editor-ui'
+import { getSkinRemixUi } from '../data/skin-remix-ui'
 import { initSkinEditor } from './skin-editor'
 import { equalPixels, SkinHistory, type SkinSnapshot } from '../lib/skin-editor'
 import { isLocale } from '../i18n/config'
@@ -14,6 +15,7 @@ import {
 } from '../lib/skin-maker'
 import { skinPngUrl } from '../lib/skin-png'
 import type { SkinViewer } from 'skinview3d'
+import { STORE_ID } from '../lib/skin-store'
 
 type Turnstile = {
   render: (
@@ -44,6 +46,7 @@ export function initSkinMaker(root: HTMLElement) {
   const c = getSkinMakerUi(locale)
   const store = getSkinStoreUi(locale)
   const editCopy = getSkinEditorUi(locale)
+  const remixCopy = getSkinRemixUi(locale)
   const el = <T extends HTMLElement>(s: string) => root.querySelector<T>(s)!
   const form = el<HTMLFormElement>('[data-form]')
   const inputs = el<HTMLFieldSetElement>('[data-inputs]')
@@ -97,6 +100,11 @@ export function initSkinMaker(root: HTMLElement) {
   }
   let current: Uint8Array | undefined
   let storeTicket: string | undefined, removeTicket: string | undefined
+  let remix: { sourceId: string; ticket: string } | undefined
+  let publishedPixels: Uint8Array | undefined
+  let importing: AbortController | undefined
+  let remixAttempt:
+    { ticket: string; pixels: Uint8Array; name: string } | undefined
   const publishForm = el<HTMLFormElement>('[data-publish-form]')
   const publishStatus = el('[data-publish-status]')
   const unpublish = el<HTMLButtonElement>('[data-unpublish]')
@@ -120,6 +128,7 @@ export function initSkinMaker(root: HTMLElement) {
     el<HTMLButtonElement>('[data-clear]').disabled = busy
     el<HTMLButtonElement>('[data-publish]').disabled = busy
     unpublish.disabled = busy
+    el<HTMLButtonElement>('[data-remix-retry]').disabled = busy
     publishForm.querySelectorAll<HTMLInputElement>('input').forEach((input) => {
       input.disabled = busy
     })
@@ -147,11 +156,19 @@ export function initSkinMaker(root: HTMLElement) {
     }
     el('[data-empty]').hidden = !!current || generationStarted !== undefined
     el('[data-open-editor]').hidden = !current
+    const alreadyPublished = remix
+      ? !!current && !!publishedPixels && equalPixels(current, publishedPixels)
+      : storeTicket === publishedTicket
     publishForm.hidden =
-      !current || !storeTicket || storeTicket === publishedTicket
+      !current || (!storeTicket && !remix) || alreadyPublished
     el('[data-publication]').hidden =
-      !current || (!storeTicket && !removeTicket && !publishStatus.textContent)
-    el('[data-manual-publish]').hidden = !current || !manuallyEdited
+      !current ||
+      (!storeTicket && !remix && !removeTicket && !publishStatus.textContent)
+    el('[data-manual-publish]').hidden = !current || !manuallyEdited || !!remix
+    el('[data-publish]').textContent = remix ? remixCopy.publish : store.publish
+    el('[data-publish-hint]').textContent = remix
+      ? remixCopy.publishHint
+      : store.hint
     pixelEditor?.render()
     ensureEditWidget()
     sync()
@@ -224,6 +241,108 @@ export function initSkinMaker(root: HTMLElement) {
       el('[data-webgl]').hidden = false
     }
   })()
+  const clearRemix = () => {
+    remix = undefined
+    remixAttempt = undefined
+    publishedPixels = undefined
+    el('[data-remix]').hidden = true
+    const url = new URL(window.location.href)
+    url.searchParams.delete('clone')
+    window.history.replaceState(window.history.state, '', url)
+  }
+  const fetchCopy = async (id: string, signal?: AbortSignal) => {
+    if (!STORE_ID.test(id)) throw new Error('copy')
+    const response = await fetch('/api/skin-store?action=clone', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ id }),
+      signal: signal
+        ? AbortSignal.any([signal, AbortSignal.timeout(15000)])
+        : AbortSignal.timeout(15000),
+    })
+    if (!response.ok) throw new Error('copy')
+    const data = await response.json()
+    if (
+      data.sourceId !== id ||
+      !['classic', 'slim'].includes(data.model) ||
+      typeof data.name !== 'string' ||
+      !data.name.length ||
+      data.name.length > 40 ||
+      /[\p{Cc}\p{Cf}]/u.test(data.name) ||
+      typeof data.ticket !== 'string' ||
+      !data.ticket.length ||
+      data.ticket.length > 2048 ||
+      typeof data.pixels !== 'string'
+    )
+      throw new Error('copy')
+    const pixels = decodePixels(data.pixels, 64, 64)
+    validateSkin(pixels, data.model)
+    return {
+      sourceId: id,
+      model: data.model as Model,
+      name: data.name as string,
+      ticket: data.ticket as string,
+      pixels,
+    }
+  }
+  const cloneId = new URL(window.location.href).searchParams.get('clone')
+  const loadCopy = async () => {
+    if (!cloneId || busy || disposed) return
+    const controller = new AbortController()
+    importing = controller
+    busy = true
+    el('[data-remix]').hidden = false
+    el('[data-remix-source]').hidden = true
+    el('[data-remix-status]').textContent = remixCopy.loading
+    el('[data-remix-retry]').hidden = true
+    el('#skin-copy-title').focus()
+    el('[data-remix]').scrollIntoView({ block: 'start' })
+    sync()
+    try {
+      const data = await fetchCopy(cloneId, controller.signal)
+      if (disposed || controller.signal.aborted) return
+      current = data.pixels
+      skinModel = data.model
+      modelSelect.value = data.model
+      storeTicket = undefined
+      removeTicket = undefined
+      publishedTicket = undefined
+      publishedPixels = undefined
+      manuallyEdited = false
+      remix = { sourceId: data.sourceId, ticket: data.ticket }
+      remixAttempt = undefined
+      history.reset({ pixels: current })
+      pixelEditor?.reset()
+      editForm.reset()
+      publishForm.reset()
+      // Keep whole Unicode characters within the name's 40-code-unit limit.
+      let name = ''
+      for (const character of data.name) {
+        if (name.length + character.length + remixCopy.suffix.length > 40) break
+        name += character
+      }
+      el<HTMLInputElement>('[name=skin-name]').value = name + remixCopy.suffix
+      el('[data-remix-name]').textContent = data.name
+      el('[data-remix-source]').hidden = false
+      el('[data-remix-status]').textContent = remixCopy.hint
+      render()
+      el('[data-remix]').scrollIntoView({ block: 'start' })
+    } catch {
+      if (!disposed && !controller.signal.aborted) {
+        el('[data-remix-status]').textContent = remixCopy.error
+        el('[data-remix-retry]').hidden = false
+      }
+    } finally {
+      if (!disposed) {
+        busy = false
+        importing = undefined
+        sync()
+      }
+    }
+  }
+  el('[data-remix-retry]').addEventListener('click', () => {
+    void loadCopy()
+  })
   const resize = new ResizeObserver(() => {
     if (viewer) {
       viewer.width = el('[data-stage]').clientWidth
@@ -313,6 +432,7 @@ export function initSkinMaker(root: HTMLElement) {
     storeTicket = undefined
     removeTicket = undefined
     publishedTicket = undefined
+    clearRemix()
     manuallyEdited = false
     history.reset()
     pixelEditor?.reset()
@@ -370,6 +490,7 @@ export function initSkinMaker(root: HTMLElement) {
         signal: AbortSignal.timeout(270_000),
       })
       const result = await response.json().catch(() => null)
+      if (disposed) return
       requestId =
         typeof result?.requestId === 'string' &&
         /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/.test(
@@ -397,6 +518,7 @@ export function initSkinMaker(root: HTMLElement) {
       storeTicket =
         typeof result.storeTicket === 'string' ? result.storeTicket : undefined
       if (input.mode === 'create') {
+        clearRemix()
         removeTicket = undefined
         publishedTicket = undefined
         manuallyEdited = false
@@ -471,39 +593,73 @@ export function initSkinMaker(root: HTMLElement) {
   })
   publishForm.addEventListener('submit', async (event) => {
     event.preventDefault()
-    if (busy || !current || !storeTicket || !publishForm.reportValidity())
+    if (
+      busy ||
+      !current ||
+      (!storeTicket && !remix) ||
+      !publishForm.reportValidity()
+    )
       return
     const data = new FormData(publishForm)
     busy = true
     sync()
     publishStatus.textContent = store.publishing
     try {
-      const response = await fetch('/api/skin-store', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          name: String(data.get('skin-name')),
-          model: skinModel,
-          pixels: encodePixels(current),
-          ticket: storeTicket,
-          consent: data.get('public-consent') === 'on',
-        }),
-        signal: AbortSignal.timeout(20000),
-      })
+      const name = String(data.get('skin-name')).trim()
+      if (
+        remix &&
+        (!remix.ticket ||
+          remix.ticket === publishedTicket ||
+          (remixAttempt?.ticket === remix.ticket &&
+            (!equalPixels(current, remixAttempt.pixels) ||
+              remixAttempt.name !== name)))
+      ) {
+        // Further edits become another work; published pixels never change.
+        const fresh = await fetchCopy(remix.sourceId)
+        if (disposed) return
+        if (fresh.model !== skinModel) throw new Error('copy')
+        remix.ticket = fresh.ticket
+      }
+      const ticket = remix?.ticket ?? storeTicket!
+      if (remix)
+        remixAttempt = { ticket, pixels: new Uint8Array(current), name }
+      const response = await fetch(
+        remix ? '/api/skin-store?action=remix' : '/api/skin-store',
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name,
+            model: skinModel,
+            pixels: encodePixels(current),
+            ticket,
+            consent: data.get('public-consent') === 'on',
+          }),
+          signal: AbortSignal.timeout(20000),
+        },
+      )
       const result = await response.json()
+      if (disposed) return
+      if (remix && response.status === 429) {
+        publishStatus.textContent = remixCopy.rateLimit
+        return
+      }
       if (!response.ok || typeof result.removeTicket !== 'string')
         throw new Error('publish')
       removeTicket = result.removeTicket
-      publishedTicket = storeTicket
+      publishedTicket = ticket
+      publishedPixels = new Uint8Array(current)
       publishForm.hidden = true
       unpublish.hidden = false
       el('[data-published-link]').hidden = false
-      publishStatus.textContent = store.published
+      publishStatus.textContent = remix ? remixCopy.published : store.published
     } catch {
-      publishStatus.textContent = store.publishError
+      publishStatus.textContent = remix
+        ? remixCopy.publishError
+        : store.publishError
     } finally {
       busy = false
-      sync()
+      if (!disposed) render()
     }
   })
   unpublish.addEventListener('click', async () => {
@@ -523,6 +679,8 @@ export function initSkinMaker(root: HTMLElement) {
         if (storeTicket === publishedTicket) storeTicket = undefined
       }
       publishedTicket = undefined
+      publishedPixels = undefined
+      if (remix) remix.ticket = ''
       removeTicket = undefined
       unpublish.hidden = true
       el('[data-published-link]').hidden = true
@@ -581,6 +739,7 @@ export function initSkinMaker(root: HTMLElement) {
     'pagehide',
     () => {
       disposed = true
+      importing?.abort()
       stopLoading()
       resize.disconnect()
       viewer?.dispose()
@@ -588,9 +747,13 @@ export function initSkinMaker(root: HTMLElement) {
       if (widget) window.turnstile?.remove(widget)
       if (editWidget) window.turnstile?.remove(editWidget)
       current = undefined
+      remix = undefined
+      remixAttempt = undefined
+      publishedPixels = undefined
       reference = undefined
       history.reset()
     },
     { once: true },
   )
+  void loadCopy()
 }

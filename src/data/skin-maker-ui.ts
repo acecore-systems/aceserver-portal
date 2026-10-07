@@ -25,7 +25,7 @@ const copy = {
     consent:
       '画像を使う権利があり、文章・画像を現在選択されているOpenAIまたはCloudflare Workers AIのモデルへ送ることに同意します。',
     privacy:
-      '送信前に参考画像を最大256×256へ縮小し、メタデータを除去します。文章・参考画像はこのサイトに保存しません。ストアへの公開に同意した場合だけ、生成したスキンと名前を保存し、誰でもダウンロードできるようにします。未公開の作業はページを閉じると消えます。AI処理には設定中のOpenAI APIまたはCloudflare Workers AIを使い、各提供元のデータ保持条件が適用されます。個人情報や秘密を含む画像は使わないでください。',
+      '送信前に参考画像を最大256×256へ縮小し、メタデータを除去します。文章・参考画像はこのサイトに保存しません。ストアへの公開に同意した場合だけ、スキンと名前を保存し、誰でもダウンロードできるようにします。未公開の作業はページを閉じると消えます。AI処理には設定中のOpenAI APIまたはCloudflare Workers AIを使い、各提供元のデータ保持条件が適用されます。個人情報や秘密を含む画像は使わないでください。',
     note: 'Classicは4px、Slimは3pxの腕です。ドラッグで回転できます。ゲーム側でも同じ型を選び、カスタムスキンの読み込み機能を使ってください。',
     remove: '参考画像を外す',
     webgl:
@@ -62,7 +62,7 @@ const copy = {
     consent:
       'I have rights to use these images and agree to send the text and images to the currently selected OpenAI or Cloudflare Workers AI model.',
     privacy:
-      'References are resized to 256×256 maximum and stripped of metadata before sending. This site does not store prompts or reference images. Only when you agree to publish to the store are the generated skin and its name saved for anyone to download. Unpublished work is cleared when you close the page. Processing uses the configured OpenAI API or Cloudflare Workers AI, subject to that provider’s data retention terms. Do not upload private or sensitive information.',
+      'References are resized to 256×256 maximum and stripped of metadata before sending. This site does not store prompts or reference images. Only when you agree to publish to the store are the skin and its name saved for anyone to download. Unpublished work is cleared when you close the page. Processing uses the configured OpenAI API or Cloudflare Workers AI, subject to that provider’s data retention terms. Do not upload private or sensitive information.',
     note: 'Classic has 4px arms; Slim has 3px arms. Drag to rotate. Select the same type when importing the skin in your game.',
     remove: 'Remove reference',
     webgl:
@@ -97,7 +97,7 @@ const copy = {
     consent:
       '我有权使用这些图片，并同意将文字和图片发送给当前选用的OpenAI或Cloudflare Workers AI模型。',
     privacy:
-      '发送前，参考图片会缩小至最大256×256并移除元数据。本站不保存描述或参考图片。仅在您同意发布到商店时保存生成的皮肤和名称，供任何人下载。关闭页面会清除未公开的作品。处理使用当前配置的OpenAI API或Cloudflare Workers AI，并适用相应服务商的数据保留条款。请勿上传隐私或敏感信息。',
+      '发送前，参考图片会缩小至最大256×256并移除元数据。本站不保存描述或参考图片。仅在您同意发布到商店时保存皮肤和名称，供任何人下载。关闭页面会清除未公开的作品。处理使用当前配置的OpenAI API或Cloudflare Workers AI，并适用相应服务商的数据保留条款。请勿上传隐私或敏感信息。',
     note: 'Classic手臂宽4像素，Slim宽3像素。拖动可旋转。在游戏中导入皮肤时请选择相同类型。',
     remove: '移除参考图片',
     webgl: '无法显示3D。请使用支持WebGL的浏览器。仍可保存下方PNG。',

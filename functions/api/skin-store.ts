@@ -3,8 +3,9 @@ import {
   encodePixels,
   decodePixels,
   validateSkin,
+  type Model,
 } from '../../src/lib/skin-maker.ts'
-import { skinPngUrl } from '../../src/lib/skin-png.ts'
+import { readSkinPng, skinPngUrl } from '../../src/lib/skin-png.ts'
 import {
   skinPortrait,
   STORE_ID,
@@ -16,7 +17,10 @@ import {
   readStoreTicket,
   signStoreTicket,
   reportClient,
+  remixClient,
+  issueRemixTicket,
   type SkinStoreEnv,
+  type StoreTicket,
 } from '../_lib/skin-store.ts'
 
 const publishSchema = z
@@ -48,6 +52,16 @@ const reportSchema = z
     reason: z.enum(['inappropriate', 'rights', 'other']),
   })
   .strict()
+
+// One INSERT makes source visibility and every quota check atomic across PoPs.
+export const REMIX_SQL = `INSERT OR IGNORE INTO skin_store
+  (id, name, model, created, png, preview, source_id, remix_client)
+SELECT ?, ?, ?, ?, ?, ?, ?, ?
+WHERE EXISTS (SELECT 1 FROM skin_store WHERE id = ? AND model = ? AND state = 'published')
+  AND (SELECT count(*) FROM skin_store WHERE source_id IS NOT NULL AND created >= ?) < 100
+  AND (SELECT count(*) FROM skin_store WHERE remix_client = ? AND created >= ?) < 5
+  AND NOT EXISTS (SELECT 1 FROM skin_store WHERE remix_client = ? AND created > ?)
+RETURNING id`
 
 function json(body: unknown, status = 200) {
   return Response.json(body, {
@@ -259,6 +273,42 @@ export const onRequest: PagesFunction<SkinStoreEnv> = async ({
         .run()
       return json({ reported: true })
     }
+    if (url.searchParams.get('action') === 'clone') {
+      const parsed = z
+        .object({ id: z.string().regex(STORE_ID) })
+        .strict()
+        .safeParse(input)
+      if (!parsed.success) return json({ error: 'invalid_request' }, 400)
+      const source = await db
+        .prepare(
+          "SELECT id, name, model, png FROM skin_store WHERE id = ? AND state = 'published'",
+        )
+        .bind(parsed.data.id)
+        .first<{ id: string; name: string; model: Model; png: string }>()
+      if (!source) return json({ error: 'not_found' }, 404)
+      const pixels = readSkinPng(
+        Uint8Array.from(atob(source.png), (v) => v.charCodeAt(0)),
+        source.model,
+      )
+      const ticket = await issueRemixTicket(
+        source.id,
+        source.model,
+        pixels,
+        url.origin,
+        env.SKIN_QUOTA_SALT!,
+      )
+      // Opening a copy does not persist a work or consume an AI/publication quota.
+      return json({
+        sourceId: source.id,
+        name: source.name,
+        model: source.model,
+        pixels: encodePixels(pixels),
+        ticket,
+      })
+    }
+    const remix = url.searchParams.get('action') === 'remix'
+    if (url.searchParams.has('action') && !remix)
+      return json({ error: 'invalid_request' }, 400)
     const parsed = publishSchema.safeParse(input)
     if (!parsed.success) return json({ error: 'invalid_request' }, 400)
     const data = parsed.data
@@ -269,46 +319,102 @@ export const onRequest: PagesFunction<SkinStoreEnv> = async ({
     } catch {
       return json({ error: 'invalid_request' }, 400)
     }
-    let ticket
+    let ticket: StoreTicket
     try {
       ticket = await readStoreTicket(
         data.ticket,
         env.SKIN_QUOTA_SALT!,
         url.origin,
-        'publish',
+        remix ? 'remix' : 'publish',
       )
       if (
         ticket.model !== data.model ||
-        ticket.hash !== (await pixelHash(pixels))
+        (!remix && ticket.hash !== (await pixelHash(pixels)))
       )
         throw new Error('ticket')
     } catch {
       return json({ error: 'forbidden' }, 403)
     }
-    const inserted = await db
-      .prepare(
-        'INSERT OR IGNORE INTO skin_store (id, name, model, created, png, preview) VALUES (?, ?, ?, ?, ?, ?) RETURNING id',
-      )
-      .bind(
-        ticket.id,
-        data.name,
-        data.model,
-        Math.floor(Date.now() / 1000),
-        skinPngUrl(pixels).split(',')[1],
-        skinPortrait(pixels, data.model),
-      )
-      .first()
+    const png = skinPngUrl(pixels).split(',')[1]
+    const now = Math.floor(Date.now() / 1000)
+    let inserted: { id: string } | null
+    if (remix) {
+      const ip = request.headers.get('cf-connecting-ip')
+      if (!ip) return json({ error: 'unavailable' }, 503)
+      const day = new Date(now * 1000).toISOString().slice(0, 10)
+      const dayStart = Date.parse(`${day}T00:00:00Z`) / 1000
+      const client = await remixClient(ip, day, env.SKIN_QUOTA_SALT!)
+      inserted = await db
+        .prepare(REMIX_SQL)
+        .bind(
+          ticket.id,
+          data.name,
+          data.model,
+          now,
+          png,
+          skinPortrait(pixels, data.model),
+          ticket.source,
+          client,
+          ticket.source,
+          data.model,
+          dayStart,
+          client,
+          dayStart,
+          client,
+          now - 60,
+        )
+        .first<{ id: string }>()
+    } else {
+      inserted = await db
+        .prepare(
+          'INSERT OR IGNORE INTO skin_store (id, name, model, created, png, preview) VALUES (?, ?, ?, ?, ?, ?) RETURNING id',
+        )
+        .bind(
+          ticket.id,
+          data.name,
+          data.model,
+          now,
+          png,
+          skinPortrait(pixels, data.model),
+        )
+        .first<{ id: string }>()
+    }
     // Retry after a lost response returns the same receipt. Tombstones cannot be republished.
     if (!inserted) {
       const existing = await db
-        .prepare('SELECT state FROM skin_store WHERE id = ?')
+        .prepare(
+          'SELECT state, name, model, png, source_id FROM skin_store WHERE id = ?',
+        )
         .bind(ticket.id)
-        .first<{ state: string }>()
-      if (existing?.state !== 'published')
+        .first<{
+          state: string
+          name: string
+          model: Model
+          png: string
+          source_id: string | null
+        }>()
+      if (!existing && remix) {
+        const source = await db
+          .prepare(
+            "SELECT id FROM skin_store WHERE id = ? AND model = ? AND state = 'published'",
+          )
+          .bind(ticket.source, data.model)
+          .first()
+        return source
+          ? json({ error: 'rate_limit' }, 429)
+          : json({ error: 'not_found' }, 404)
+      }
+      if (
+        existing?.state !== 'published' ||
+        existing.name !== data.name ||
+        existing.model !== data.model ||
+        existing.png !== png ||
+        existing.source_id !== (ticket.source ?? null)
+      )
         return json({ error: 'already_published' }, 409)
     }
     const removeTicket = await signStoreTicket(
-      { ...ticket, purpose: 'remove' },
+      { ...ticket, hash: await pixelHash(pixels), purpose: 'remove' },
       env.SKIN_QUOTA_SALT!,
     )
     return json({ id: ticket.id, removeTicket }, inserted ? 201 : 200)

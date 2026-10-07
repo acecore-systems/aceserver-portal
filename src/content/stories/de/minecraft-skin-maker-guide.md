@@ -8,7 +8,7 @@ image: /uploads/stories/minecraft-skin-maker-cover-v2.webp
 imageAlt: 'Illustration weißer Blockfiguren und einer Farbpalette als Symbol für die Skin-Erstellung. Kein generiertes Skin-Beispiel.'
 relatedStories: [aceserver-beginners-guide]
 translationOf: minecraft-skin-maker-guide
-sourceHash: sha256:e8ad3623730aa5e4d192bca6b58111b7d0d5f616ad2848e69a8beaaa2c6de9e8
+sourceHash: sha256:417830da11a893bd01fad6116a244c4a149a4cf163397414588057a87b317f1d
 lastUpdated: 2026-10-07
 ---
 
@@ -39,3 +39,9 @@ Laden Sie über „64×64-PNG speichern“ herunter und nutzen Sie den eigenen S
 ## 5. Ausgewählte Skins im Store veröffentlichen
 
 Geben Sie dem Skin nach der Erstellung einen Namen und stimmen Sie dem kostenlosen Download und der Nutzung durch alle zu, um ihn im [Skin-Store](/de/skin-maker/store/) zu veröffentlichen. Die Veröffentlichung ist freiwillig; gespeichert werden nur der Name und der generierte Skin. Sie können die Veröffentlichung innerhalb von 24 Stunden nach der Erstellung zurücknehmen, solange diese Erstellungsseite geöffnet bleibt.
+
+## 6. Einen Store-Skin kopieren und bearbeiten
+
+Wähle „Kopieren und bearbeiten“ auf einer Karte oder in der 3D-Ansicht, um eine Kopie im Skin Maker zu öffnen. Armtyp und Pixel bleiben erhalten. Zeichne in 3D oder stimme einer partiellen KI-Bearbeitung zu. Das Original wird nie überschrieben. Speichere das PNG oder gib einen Namen ein und stimme der Veröffentlichung als separaten Skin zu. Kopieren veröffentlicht nichts automatisch. Weitere Änderungen nach Veröffentlichung werden zu einem neuen Werk. Die Rücknahme der Kopie betrifft das Original nicht.
+
+Veröffentliche innerhalb von 24 Stunden nach dem Kopieren, solange das Original öffentlich ist. Die Schlüssel zur Veröffentlichung und Rücknahme bleiben nur auf dieser Seite. Kopieren und manuelles Bearbeiten verbrauchen kein KI-Kontingent. KI-Änderungen teilen die Generierungslimits. Kopien sind auf fünf Veröffentlichungen pro Tag und eine pro Minute begrenzt; zusätzlich gilt ein Seitenlimit.

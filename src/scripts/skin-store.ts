@@ -1,4 +1,5 @@
 import { getSkinStoreUi } from '../data/skin-store-ui'
+import { getSkinRemixUi } from '../data/skin-remix-ui'
 import { isLocale } from '../i18n/config'
 import { readSkinPng } from '../lib/skin-png'
 import { STORE_ID, type StoreSkin } from '../lib/skin-store'
@@ -7,6 +8,7 @@ import type { SkinViewer } from 'skinview3d'
 export function initSkinStore(root: HTMLElement) {
   if (!isLocale(root.dataset.locale)) return
   const c = getSkinStoreUi(root.dataset.locale)
+  const remix = getSkinRemixUi(root.dataset.locale)
   const el = <T extends HTMLElement>(selector: string) =>
     root.querySelector<T>(selector)!
   const grid = el('[data-store-grid]')
@@ -25,6 +27,8 @@ export function initSkinStore(root: HTMLElement) {
 
   const downloadUrl = (id: string) =>
     `/api/skin-store?id=${encodeURIComponent(id)}&download=1`
+  const editUrl = (id: string) =>
+    `${root.dataset.makerUrl}?clone=${encodeURIComponent(id)}#skin-editor-title`
   const closeDetail = () => {
     detail?.abort()
     resize?.disconnect()
@@ -61,6 +65,9 @@ export function initSkinStore(root: HTMLElement) {
     const download = el<HTMLAnchorElement>('[data-detail-download]')
     download.removeAttribute('href')
     download.setAttribute('aria-disabled', 'true')
+    const edit = el<HTMLAnchorElement>('[data-detail-edit]')
+    edit.removeAttribute('href')
+    edit.setAttribute('aria-disabled', 'true')
     const portrait = el<HTMLImageElement>('[data-detail-portrait]')
     portrait.src = item.preview
     portrait.hidden = false
@@ -88,6 +95,8 @@ export function initSkinStore(root: HTMLElement) {
       )
       download.href = downloadUrl(item.id)
       download.setAttribute('aria-disabled', 'false')
+      edit.href = editUrl(item.id)
+      edit.setAttribute('aria-disabled', 'false')
       el('[data-detail-status]').textContent =
         `${item.model === 'slim' ? 'Slim · 3px' : 'Classic · 4px'} · 64 × 64 PNG`
       // A portrait and download remain available if WebGL is unavailable.
@@ -177,6 +186,9 @@ export function initSkinStore(root: HTMLElement) {
     })
     fragment.querySelector<HTMLAnchorElement>('[data-card-download]')!.href =
       downloadUrl(item.id)
+    const edit = fragment.querySelector<HTMLAnchorElement>('[data-card-edit]')!
+    edit.href = editUrl(item.id)
+    edit.setAttribute('aria-label', `${remix.edit}: ${item.name}`)
     return fragment
   }
   const load = async (append = false) => {

@@ -3,18 +3,26 @@ import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
 import { DatabaseSync } from 'node:sqlite'
 import { decode } from 'fast-png'
-import { onRequest } from '../functions/api/skin-store.ts'
+import { onRequest, REMIX_SQL } from '../functions/api/skin-store.ts'
 import { onRequest as generate } from '../functions/api/skin-maker.ts'
 import {
   issueStoreTicket,
   readStoreTicket,
   signStoreTicket,
   pixelHash,
+  remixClient,
 } from '../functions/_lib/skin-store.ts'
-import { applyDesign, regions, encodePixels } from '../src/lib/skin-maker.ts'
+import {
+  applyDesign,
+  regions,
+  encodePixels,
+  decodePixels,
+  selectedRegions,
+} from '../src/lib/skin-maker.ts'
 import { skinPngUrl, readSkinPng } from '../src/lib/skin-png.ts'
 import { skinPortrait, STORE_PAGE_SIZE } from '../src/lib/skin-store.ts'
 import { getSkinStoreUi } from '../src/data/skin-store-ui.ts'
+import { getSkinRemixUi } from '../src/data/skin-remix-ui.ts'
 import { LOCALES } from '../src/i18n/config.ts'
 
 const origin = 'https://asv.acecore.net'
@@ -40,12 +48,13 @@ const design = (model = 'classic') => ({
   ),
 })
 const skin = (model = 'classic') => applyDesign(design(model), { model }).pixels
-function database() {
+function database(withRemixes = true) {
   const db = new DatabaseSync(':memory:')
   for (const file of [
     '0001_usage.sql',
     '0002_diagnostics.sql',
     '0003_store.sql',
+    ...(withRemixes ? ['0004_store_remixes.sql'] : []),
   ])
     db.exec(
       readFileSync(
@@ -507,5 +516,550 @@ test('store controls are complete in every supported locale', () => {
         (value) => typeof value === 'string' && value.trim().length,
       ),
     )
+  }
+  const remixKeys = Object.keys(getSkinRemixUi('ja')).sort()
+  for (const locale of LOCALES) {
+    const copy = getSkinRemixUi(locale)
+    assert.deepEqual(Object.keys(copy).sort(), remixKeys)
+    assert.ok(Object.values(copy).every((value) => value.trim().length))
+  }
+})
+
+test('copying a published skin is private, preserves Classic/Slim pixels and grants a separate, bounded-purpose ticket', async () => {
+  const { db, send } = database()
+  try {
+    for (const model of ['classic', 'slim']) {
+      const source = await publication(model)
+      await send('POST', source.input)
+      const before = db.prepare('SELECT * FROM skin_store').all()
+      const response = await send('POST', { id: source.id }, '?action=clone')
+      assert.equal(response.status, 200)
+      assert.equal(response.headers.get('cache-control'), 'no-store')
+      const copy = await response.json()
+      assert.equal(copy.sourceId, source.id)
+      assert.equal(copy.model, model)
+      assert.equal(copy.pixels, source.input.pixels)
+      assert.equal(copy.name, source.input.name)
+      assert.equal('removeTicket' in copy, false)
+      const ticket = await readStoreTicket(copy.ticket, salt, origin, 'remix')
+      assert.notEqual(ticket.id, source.id)
+      assert.equal(ticket.source, source.id)
+      assert.equal(ticket.hash, await pixelHash(skin(model)))
+      const again = await (
+        await send('POST', { id: source.id }, '?action=clone')
+      ).json()
+      assert.notEqual(
+        (await readStoreTicket(again.ticket, salt, origin, 'remix')).id,
+        ticket.id,
+      )
+      await assert.rejects(
+        readStoreTicket(copy.ticket, salt, origin, 'publish'),
+      )
+      await assert.rejects(readStoreTicket(copy.ticket, salt, origin, 'remove'))
+      assert.deepEqual(db.prepare('SELECT * FROM skin_store').all(), before)
+      assert.equal(
+        db.prepare('SELECT count(*) n FROM skin_maker_usage').get().n,
+        0,
+      )
+    }
+  } finally {
+    db.close()
+  }
+})
+
+test('an edited copy publishes as its own work; exact retries are idempotent, changed retries never overwrite either work, and removal affects only the copy', async () => {
+  const { db, send } = database()
+  try {
+    const source = await publication('slim')
+    await send('POST', source.input)
+    const original = db
+      .prepare('SELECT * FROM skin_store WHERE id = ?')
+      .get(source.id)
+    const copy = await (
+      await send('POST', { id: source.id }, '?action=clone')
+    ).json()
+    const pixels = skin('slim')
+    pixels.set([12, 34, 56, 255], (8 * 64 + 8) * 4)
+    const input = {
+      ...source.input,
+      name: '青い目のコピー',
+      pixels: encodePixels(pixels),
+      ticket: copy.ticket,
+    }
+    assert.equal((await send('POST', input)).status, 403)
+    const published = await send('POST', input, '?action=remix')
+    assert.equal(published.status, 201)
+    const receipt = await published.json()
+    assert.notEqual(receipt.id, source.id)
+    const result = db
+      .prepare('SELECT * FROM skin_store WHERE id = ?')
+      .get(receipt.id)
+    assert.equal(result.source_id, source.id)
+    assert.equal(result.png, skinPngUrl(pixels).split(',')[1])
+    assert.ok(result.remix_client && !result.remix_client.includes('192.0.2.1'))
+    assert.deepEqual(
+      db.prepare('SELECT * FROM skin_store WHERE id = ?').get(source.id),
+      original,
+    )
+    assert.equal((await (await send()).json()).items.length, 2)
+    const retry = await send('POST', input, '?action=remix')
+    assert.equal(retry.status, 200)
+    assert.deepEqual(await retry.json(), receipt)
+    assert.equal(
+      (await send('POST', { ...input, name: '違う名前' }, '?action=remix'))
+        .status,
+      409,
+    )
+    pixels[(8 * 64 + 9) * 4] ^= 1
+    assert.equal(
+      (
+        await send(
+          'POST',
+          { ...input, pixels: encodePixels(pixels) },
+          '?action=remix',
+        )
+      ).status,
+      409,
+    )
+    assert.deepEqual(
+      db.prepare('SELECT * FROM skin_store WHERE id = ?').get(receipt.id),
+      result,
+    )
+    assert.equal((await send('DELETE', { ticket: copy.ticket })).status, 403)
+    const removal = await readStoreTicket(
+      receipt.removeTicket,
+      salt,
+      origin,
+      'remove',
+    )
+    assert.equal(removal.id, receipt.id)
+    assert.equal(
+      (await send('DELETE', { ticket: receipt.removeTicket })).status,
+      200,
+    )
+    assert.equal((await send('POST', input, '?action=remix')).status, 409)
+    assert.equal((await send('GET', undefined, `?id=${source.id}`)).status, 200)
+    assert.equal(
+      (await send('GET', undefined, `?id=${receipt.id}`)).status,
+      404,
+    )
+    // Republishing another version requires a new copy ID, not reviving a tombstone.
+    const next = await (
+      await send('POST', { id: source.id }, '?action=clone')
+    ).json()
+    const nextResponse = await send(
+      'POST',
+      { ...input, ticket: next.ticket },
+      '?action=remix',
+      { 'cf-connecting-ip': '192.0.2.2' },
+    )
+    assert.equal(nextResponse.status, 201)
+    assert.notEqual((await nextResponse.json()).id, receipt.id)
+    assert.deepEqual(
+      db.prepare('SELECT * FROM skin_store WHERE id = ?').get(source.id),
+      original,
+    )
+  } finally {
+    db.close()
+  }
+})
+
+test('copy publication fails closed on consent, invalid pixels/model, forged/expired/wrong-purpose tickets and cross-origin input', async () => {
+  const { db, send } = database()
+  try {
+    const source = await publication()
+    await send('POST', source.input)
+    const copy = await (
+      await send('POST', { id: source.id }, '?action=clone')
+    ).json()
+    const input = { ...source.input, ticket: copy.ticket }
+    for (const changes of [
+      { consent: false },
+      { pixels: 'invalid' },
+      { prompt: 'private' },
+      { name: '\u202ebad' },
+    ])
+      assert.equal(
+        (await send('POST', { ...input, ...changes }, '?action=remix')).status,
+        400,
+      )
+    const pixels = skin()
+    pixels[(8 * 64 + 8) * 4 + 3] = 0
+    assert.equal(
+      (
+        await send(
+          'POST',
+          { ...input, pixels: encodePixels(pixels) },
+          '?action=remix',
+        )
+      ).status,
+      400,
+    )
+    const ticket = await readStoreTicket(copy.ticket, salt, origin, 'remix')
+    for (const invalid of [
+      copy.ticket + 'x',
+      source.input.ticket,
+      await signStoreTicket({ ...ticket, expires: 1 }, salt),
+      await signStoreTicket(
+        { ...ticket, origin: 'https://preview.invalid' },
+        salt,
+      ),
+      await signStoreTicket({ ...ticket, id: ticket.source }, salt),
+      await signStoreTicket({ ...ticket, source: undefined }, salt),
+    ])
+      assert.equal(
+        (await send('POST', { ...input, ticket: invalid }, '?action=remix'))
+          .status,
+        403,
+      )
+    assert.equal(
+      (
+        await send(
+          'POST',
+          { ...input, model: 'slim', pixels: encodePixels(skin('slim')) },
+          '?action=remix',
+        )
+      ).status,
+      403,
+    )
+    assert.equal(
+      (
+        await send('POST', input, '?action=remix', {
+          origin: 'https://other.invalid',
+        })
+      ).status,
+      403,
+    )
+    assert.equal(
+      (
+        await send('POST', input, '?action=remix', {
+          'sec-fetch-site': 'cross-site',
+        })
+      ).status,
+      403,
+    )
+    assert.equal(
+      (await send('POST', input, '?action=remix', { 'cf-connecting-ip': '' }))
+        .status,
+      503,
+    )
+    assert.equal(db.prepare('SELECT count(*) n FROM skin_store').get().n, 1)
+  } finally {
+    db.close()
+  }
+})
+
+test('hidden sources cannot be copied or newly republished; already published derivatives stay independent', async () => {
+  const { db, send } = database()
+  try {
+    const source = await publication()
+    const owner = await (await send('POST', source.input)).json()
+    const copy = await (
+      await send('POST', { id: source.id }, '?action=clone')
+    ).json()
+    const waiting = await (
+      await send('POST', { id: source.id }, '?action=clone')
+    ).json()
+    const input = { ...source.input, ticket: copy.ticket }
+    const receipt = await (await send('POST', input, '?action=remix')).json()
+    for (const state of ['blocked', 'withdrawn']) {
+      db.prepare('UPDATE skin_store SET state = ? WHERE id = ?').run(
+        state,
+        source.id,
+      )
+      assert.equal(
+        (await send('POST', { id: source.id }, '?action=clone')).status,
+        404,
+      )
+      assert.equal(
+        (
+          await send(
+            'POST',
+            { ...input, ticket: waiting.ticket },
+            '?action=remix',
+          )
+        ).status,
+        404,
+      )
+      assert.equal((await send('POST', input, '?action=remix')).status, 200)
+      assert.equal(
+        (await send('GET', undefined, `?id=${receipt.id}&download=1`)).status,
+        200,
+      )
+    }
+    await send('DELETE', { ticket: owner.removeTicket })
+    assert.equal(
+      (await send('GET', undefined, `?id=${receipt.id}`)).status,
+      200,
+    )
+    assert.equal(
+      (await send('POST', { id: receipt.id }, '?action=clone')).status,
+      200,
+    )
+    assert.equal(
+      (await send('POST', { id: 'bad' }, '?action=clone')).status,
+      400,
+    )
+    assert.equal(
+      (
+        await send(
+          'POST',
+          { id: source.id, pixels: input.pixels },
+          '?action=clone',
+        )
+      ).status,
+      400,
+    )
+    assert.equal(
+      (
+        await send('POST', { id: source.id }, '?action=clone', {
+          origin: 'https://other.invalid',
+        })
+      ).status,
+      403,
+    )
+  } finally {
+    db.close()
+  }
+})
+
+test('copy publication quotas are atomic: one per minute, five per UTC client day, 100 site-wide, including withdrawn works', async () => {
+  const { db, send } = database()
+  try {
+    const source = await publication()
+    await send('POST', source.input)
+    const day = '2026-10-07',
+      start = Date.parse(`${day}T00:00:00Z`) / 1000
+    const client = await remixClient('192.0.2.1', day, salt)
+    assert.notEqual(client, await remixClient('192.0.2.1', '2026-10-08', salt))
+    const insert = (client, now, model = 'classic') =>
+      db
+        .prepare(REMIX_SQL)
+        .get(
+          crypto.randomUUID(),
+          'コピー',
+          model,
+          now,
+          'png',
+          'preview',
+          source.id,
+          client,
+          source.id,
+          model,
+          start,
+          client,
+          start,
+          client,
+          now - 60,
+        )
+    const first = insert(client, start)
+    assert.ok(first)
+    assert.equal(insert(client, start + 59), undefined)
+    for (let i = 1; i < 5; i++) assert.ok(insert(client, start + i * 60))
+    db.prepare("UPDATE skin_store SET state='withdrawn' WHERE id=?").run(
+      first.id,
+    )
+    assert.equal(insert(client, start + 5 * 60), undefined)
+    assert.equal(insert('other-model', start + 360, 'slim'), undefined)
+    for (let i = 0; i < 95; i++) assert.ok(insert(`other-${i}`, start + 360))
+    assert.equal(insert('site-over-quota', start + 420), undefined)
+    assert.equal(
+      db
+        .prepare(
+          'SELECT count(*) n FROM skin_store WHERE source_id IS NOT NULL',
+        )
+        .get().n,
+      100,
+    )
+  } finally {
+    db.close()
+  }
+})
+
+test('over-quota publication keeps the original and reserves no new work; exact retries remain possible', async () => {
+  const { db, send } = database()
+  try {
+    const source = await publication()
+    await send('POST', source.input)
+    const copy = await (
+      await send('POST', { id: source.id }, '?action=clone')
+    ).json()
+    const input = { ...source.input, ticket: copy.ticket }
+    assert.equal((await send('POST', input, '?action=remix')).status, 201)
+    const next = await (
+      await send('POST', { id: source.id }, '?action=clone')
+    ).json()
+    const limited = await send(
+      'POST',
+      { ...input, ticket: next.ticket },
+      '?action=remix',
+    )
+    assert.equal(limited.status, 429)
+    assert.deepEqual(await limited.json(), { error: 'rate_limit' })
+    assert.equal(db.prepare('SELECT count(*) n FROM skin_store').get().n, 2)
+    assert.equal((await send('POST', input, '?action=remix')).status, 200)
+    assert.equal(
+      db.prepare('SELECT count(*) n FROM skin_maker_usage').get().n,
+      0,
+    )
+  } finally {
+    db.close()
+  }
+})
+
+test('manual -> masked AI edits of a store copy still publish as a separate work without masquerading as a generated-only result', async (t) => {
+  const { db, env, send } = database()
+  try {
+    const source = await publication('slim')
+    await send('POST', source.input)
+    const copy = await (
+      await send('POST', { id: source.id }, '?action=clone')
+    ).json()
+    const before = decodePixels(copy.pixels, 64, 64)
+    before.set([22, 33, 44, 255], (12 * 64 + 10) * 4)
+    const selection = {
+      part: 'head',
+      layer: 'base',
+      face: 'front',
+      rectangle: { x: 0, y: 0, w: 2, h: 2 },
+    }
+    let calls = 0
+    t.mock.method(globalThis, 'fetch', async () =>
+      Response.json({
+        success: true,
+        hostname: 'asv.acecore.net',
+        action: 'skin-maker',
+      }),
+    )
+    const aiEnv = {
+      ...env,
+      SKIN_MAKER_ENABLED: 'true',
+      SKIN_AI_MODEL: '@cf/local/mocked-design',
+      SKIN_TURNSTILE_SITE_KEY: 'synthetic',
+      SKIN_TURNSTILE_SECRET: 'synthetic',
+      AI: {
+        run: async () => {
+          calls++
+          return {
+            response: JSON.stringify({
+              palette: { 1: '#3388ee' },
+              faces: Object.fromEntries(
+                selectedRegions('slim', selection).map((r) => [
+                  `${r.part}.${r.layer}.${r.face}`,
+                  Array(r.h).fill('1'.repeat(r.w)),
+                ]),
+              ),
+            }),
+          }
+        },
+      },
+    }
+    const ai = (storeTicket) =>
+      generate({
+        env: aiEnv,
+        request: new Request(origin + '/api/skin-maker', {
+          method: 'POST',
+          headers: {
+            origin,
+            'content-type': 'application/json',
+            'cf-connecting-ip': '192.0.2.1',
+          },
+          body: JSON.stringify({
+            mode: 'edit',
+            model: 'slim',
+            current: encodePixels(before),
+            prompt: 'blue eyes',
+            selection,
+            token: 'synthetic',
+            consent: true,
+            ...(storeTicket ? { storeTicket } : {}),
+          }),
+        }),
+      })
+    assert.equal((await ai(copy.ticket)).status, 400)
+    assert.equal(calls, 0)
+    const response = await ai()
+    assert.equal(response.status, 200)
+    const result = await response.json()
+    assert.equal(result.storeTicket, null)
+    assert.equal(result.changed, 4)
+    assert.equal(calls, 1)
+    const after = decodePixels(result.pixels, 64, 64)
+    for (let i = 0; i < 4096; i++) {
+      const x = i % 64,
+        y = Math.floor(i / 64)
+      if (x >= 8 && x < 10 && y >= 8 && y < 10)
+        assert.deepEqual(
+          Array.from(after.slice(i * 4, i * 4 + 4)),
+          [51, 136, 238, 255],
+        )
+      else
+        assert.deepEqual(
+          after.slice(i * 4, i * 4 + 4),
+          before.slice(i * 4, i * 4 + 4),
+        )
+    }
+    const published = await send(
+      'POST',
+      {
+        ...source.input,
+        name: '手編集とAIのコピー',
+        pixels: result.pixels,
+        ticket: copy.ticket,
+      },
+      '?action=remix',
+    )
+    assert.equal(published.status, 201)
+    const receipt = await published.json()
+    const png = await send('GET', undefined, `?id=${receipt.id}&download=1`)
+    assert.deepEqual(
+      readSkinPng(new Uint8Array(await png.arrayBuffer()), 'slim'),
+      after,
+    )
+    assert.equal(
+      (await (await send('GET', undefined, `?id=${source.id}`)).json()).png,
+      skinPngUrl(skin('slim')),
+    )
+  } finally {
+    db.close()
+  }
+})
+
+test('the additive remix migration preserves existing works; missing migration blocks only the attempted copy publication', async () => {
+  const { db, send } = database(false)
+  try {
+    const source = await publication()
+    assert.equal((await send('POST', source.input)).status, 201)
+    const original = db
+      .prepare(
+        'SELECT id, name, model, created, state, png, preview FROM skin_store WHERE id=?',
+      )
+      .get(source.id)
+    const copy = await (
+      await send('POST', { id: source.id }, '?action=clone')
+    ).json()
+    const input = { ...source.input, ticket: copy.ticket }
+    assert.equal((await send('POST', input, '?action=remix')).status, 503)
+    db.exec(
+      readFileSync(
+        new URL(
+          '../migrations/skin-maker/0004_store_remixes.sql',
+          import.meta.url,
+        ),
+        'utf8',
+      ),
+    )
+    assert.deepEqual(
+      db
+        .prepare(
+          'SELECT id, name, model, created, state, png, preview FROM skin_store WHERE id=?',
+        )
+        .get(source.id),
+      original,
+    )
+    assert.equal((await send('POST', source.input)).status, 200)
+    assert.equal((await send('POST', input, '?action=remix')).status, 201)
+  } finally {
+    db.close()
   }
 })
