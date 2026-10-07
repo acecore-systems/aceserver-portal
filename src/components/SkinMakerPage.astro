@@ -46,75 +46,104 @@ const appJsonLd = serializeJsonForHtmlScript({
     <p>{c.intro}</p>
   </header>
   <SkinMakerNav locale={locale} current="maker" />
-  <section class="upload" aria-labelledby="skin-upload-title">
-    <h2 id="skin-upload-title">{upload.title}</h2>
-    <p class="hint" id="skin-upload-hint">{upload.hint}</p>
-    <fieldset class="upload-controls" data-upload-inputs>
+  <div class="maker-grid">
+    <form class="editor" data-form>
+      <fieldset class="source-choice" data-source-inputs>
+        <legend>{upload.source}</legend>
+        <div class="source-options">
+          <label class="source-option">
+            <input
+              type="radio"
+              name="source"
+              value="create"
+              aria-controls="skin-create-panel"
+              checked
+            />
+            <span>{upload.ai}</span>
+          </label>
+          <label class="source-option">
+            <input
+              type="radio"
+              name="source"
+              value="upload"
+              aria-controls="skin-upload-panel"
+            />
+            <span>{upload.custom}</span>
+          </label>
+        </div>
+      </fieldset>
       <label class="field">
         {c.model}
-        <select data-upload-model>
+        <select name="model">
           <option value="classic">Classic · 4px</option>
           <option value="slim">Slim · 3px</option>
         </select>
       </label>
-      <label class="field">
-        {upload.file}
-        <input
-          data-skin-upload
-          type="file"
-          accept="image/png,.png"
-          aria-describedby="skin-upload-hint skin-upload-privacy"
-        />
-      </label>
-    </fieldset>
-    <p class="hint" id="skin-upload-privacy">{upload.privacy}</p>
-    <p class="hint" data-upload-status role="status" aria-live="polite"></p>
-  </section>
-  <div class="maker-grid">
-    <form class="editor" data-form>
-      <fieldset data-inputs>
-        <label class="field"
-          >{c.model}
-          <select name="model"
-            ><option value="classic">Classic · 4px</option><option value="slim"
-              >Slim · 3px</option
-            ></select
-          >
-        </label>
-        <label class="field"
-          >{c.reference}<input
-            name="reference"
-            type="file"
-            accept="image/png,image/jpeg,image/webp"
-          /></label
-        >
-        <div class="reference" data-reference hidden>
-          <img data-reference-image alt={c.reference} width="96" height="96" />
-          <button type="button" data-remove>{c.remove}</button>
-        </div>
-        <label class="field"
-          >{c.prompt}<textarea name="prompt" rows="4" maxlength="1200" required
-          ></textarea></label
-        >
-        <label class="consent"
-          ><input type="checkbox" name="consent" required />
-          <span>{c.consent}</span></label
-        >
-        <div data-turnstile></div>
-      </fieldset>
-      <button class="primary" data-generate type="submit" disabled>
-        <span
-          class="loading-spinner"
-          data-button-spinner
-          hidden
-          aria-hidden="true"></span>
-        <span data-generate-label>{c.generate}</span>
-      </button>
-      <p data-status role="status" aria-live="polite">{c.disabled}</p>
-      <p class="elapsed" data-elapsed-row hidden>
-        {c.elapsed}
-        <span data-elapsed role="timer" aria-live="off">0:00</span>
-      </p>
+      <div data-create-panel id="skin-create-panel">
+        <fieldset data-inputs>
+          <label class="field">
+            {c.reference}<input
+              name="reference"
+              type="file"
+              accept="image/png,image/jpeg,image/webp"
+            />
+          </label>
+          <div class="reference" data-reference hidden>
+            <img
+              data-reference-image
+              alt={c.reference}
+              width="96"
+              height="96"
+            />
+            <button type="button" data-remove>{c.remove}</button>
+          </div>
+          <label class="field">
+            {c.prompt}<textarea name="prompt" rows="4" maxlength="1200" required
+            ></textarea>
+          </label>
+          <label class="consent">
+            <input type="checkbox" name="consent" required />
+            <span>{c.consent}</span>
+          </label>
+          <div data-turnstile></div>
+        </fieldset>
+        <button class="primary" data-generate type="submit" disabled>
+          <span
+            class="loading-spinner"
+            data-button-spinner
+            hidden
+            aria-hidden="true"></span>
+          <span data-generate-label>{c.generate}</span>
+        </button>
+        <p data-status role="status" aria-live="polite">{c.disabled}</p>
+        <p class="elapsed" data-elapsed-row hidden>
+          {c.elapsed}
+          <span data-elapsed role="timer" aria-live="off">0:00</span>
+        </p>
+      </div>
+      <section
+        class="upload"
+        data-upload-panel
+        id="skin-upload-panel"
+        hidden
+        aria-labelledby="skin-upload-title"
+      >
+        <h2 id="skin-upload-title">{upload.title}</h2>
+        <p class="hint" id="skin-upload-hint">{upload.hint}</p>
+        <fieldset data-upload-inputs disabled>
+          <label class="field">
+            {upload.file}
+            <input
+              data-skin-upload
+              type="file"
+              accept="image/png,.png"
+              aria-describedby="skin-upload-hint skin-upload-privacy"
+            />
+          </label>
+        </fieldset>
+        <p class="hint" id="skin-upload-privacy">{upload.privacy}</p>
+        <p class="hint" data-upload-status role="status" aria-live="polite"></p>
+      </section>
     </form>
     <section class="result" aria-label={c.preview}>
       <div class="preview-heading">
@@ -265,20 +294,39 @@ const appJsonLd = serializeJsonForHtmlScript({
     line-height: 1.8;
     color: #66553f;
   }
-  .upload {
-    background: #fffdf5;
-    border: 1px solid #dbcdb1;
-    border-radius: 18px;
-    padding: 24px;
-    margin-bottom: 24px;
+  .source-choice legend {
+    font-size: 0.88rem;
+    font-weight: 700;
   }
-  .upload-controls {
+  .source-options {
     display: grid;
-    grid-template-columns: minmax(140px, 180px) minmax(0, 1fr);
-    gap: 18px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 10px;
   }
-  .upload .field {
-    margin-top: 0;
+  .source-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 10px;
+    border: 1px solid #c9b994;
+    border-radius: 8px;
+    background: #fff;
+    font-size: 0.85rem;
+    font-weight: 700;
+    line-height: 1.5;
+    cursor: pointer;
+  }
+  .source-option:has(input:checked) {
+    border-color: #9b722b;
+    background: #f4e7c4;
+    color: #553914;
+  }
+  .source-option input {
+    margin: 0;
+  }
+  .upload {
+    margin-top: 24px;
   }
   .upload [data-upload-status]:empty {
     display: none;
@@ -655,10 +703,9 @@ const appJsonLd = serializeJsonForHtmlScript({
       grid-template-columns: 1fr;
       gap: 22px;
     }
-    .upload-controls {
+    .source-options {
       grid-template-columns: 1fr;
     }
-    .upload,
     .editor,
     .result {
       padding: 18px;
