@@ -2,6 +2,7 @@ import { readdir, readFile } from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { parse } from 'parse5'
+import { LOCALES } from '../src/i18n/config.ts'
 
 const dist = fileURLToPath(new URL('../dist/', import.meta.url))
 const errors = []
@@ -50,6 +51,13 @@ for (const file of files) {
   }
 
   const hero = heroes[0]
+  const isHome =
+    scope === 'index.html' ||
+    LOCALES.some((locale) => scope === `${locale}/index.html`)
+  const expectedVariant = isHome ? 'home' : 'page'
+  if (attribute(hero, 'data-page-hero-variant') !== expectedVariant) {
+    errors.push(`${scope}: expected the shared ${expectedVariant} hero variant`)
+  }
   const headings = descendants(main, (node) => node.tagName === 'h1')
   const heroHeadings = descendants(hero, (node) => node.tagName === 'h1')
   if (headings.length !== 1 || heroHeadings.length !== 1) {

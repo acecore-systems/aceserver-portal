@@ -8,7 +8,6 @@ import { getUi } from '../i18n/translations'
 import { externalLinkAttrs } from '../utils/links'
 import Icon from './Icon.astro'
 import PageHero from './PageHero.astro'
-import PageIntro from './PageIntro.astro'
 
 interface Props {
   page: PortalPage
@@ -126,11 +125,16 @@ const diaryPath = localizePath(locale, '/alpha-diary/')
 ---
 
 <PageHero
+  variant="home"
   title={ui.homeTitleParts.join('')}
   titleId="home-title"
+  lead={page.meta.description}
   backgroundImage={heroImage}
   imageAlt={overview.imageAlt}
 >
+  <Fragment slot="title">
+    {ui.homeTitleParts.map((part) => <span>{part}</span>)}
+  </Fragment>
   <Fragment slot="actions">
     <a
       class="asv-btn-blue"
@@ -165,7 +169,6 @@ const diaryPath = localizePath(locale, '/alpha-diary/')
     </a>
   </Fragment>
 </PageHero>
-<PageIntro text={page.meta.description} />
 
 <section id="overview" class="intro-section">
   <div class="floating-island">
