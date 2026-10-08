@@ -1,10 +1,11 @@
 ---
 import type { PortalPage, PortalSection } from '../types'
-import { serializeCssUrl } from '../data/safe-json'
 import { getLocalizedSettings } from '../i18n/content'
 import type { Locale } from '../i18n/config'
 import { getUi } from '../i18n/translations'
 import Icon from './Icon.astro'
+import PageHero from './PageHero.astro'
+import PageIntro from './PageIntro.astro'
 
 interface Props {
   page: PortalPage
@@ -19,22 +20,16 @@ const intro = page.sections.find(
   (section): section is IntroSection => section.type === 'featureImageFull',
 )
 const introImage = intro?.image ?? '/uploads/legacy-world-map.png'
-const introImageCss = serializeCssUrl(introImage)
 const introText = intro?.text ?? page.meta.description
 ---
 
-<section class="world-hero" aria-labelledby="world-title">
-  <div class="world-bg" style={`--world-hero-image: ${introImageCss}`}></div>
-  <div class="map-sign pixel-border">
-    <Icon name="map" />
-    <h1 id="world-title">
-      {ui.worldMapTitleParts.map((part) => <span>{part}</span>)}
-    </h1>
-  </div>
-  <p>
-    {introText}
-  </p>
-</section>
+<PageHero
+  title={ui.worldMapTitleParts.join('')}
+  titleId="world-title"
+  backgroundImage={introImage}
+  imageAlt={intro?.imageAlt ?? ui.worldMapTitleParts.join('')}
+/>
+<PageIntro text={introText} />
 
 <section class="world-gates" aria-label={ui.worldSelection}>
   {
@@ -80,83 +75,6 @@ const introText = intro?.text ?? page.meta.description
 </section>
 
 <style>
-  .world-hero {
-    position: relative;
-    display: grid;
-    min-height: 380px;
-    place-items: center;
-    gap: 20px;
-    overflow: hidden;
-    padding: clamp(58px, 9vw, 118px) 18px clamp(44px, 7vw, 82px);
-    text-align: center;
-    color: white;
-    isolation: isolate;
-  }
-
-  .world-bg {
-    position: absolute;
-    inset: 0;
-    z-index: -2;
-    background:
-      linear-gradient(180deg, rgba(22, 17, 12, 0.34), rgba(22, 17, 12, 0.62)),
-      var(--world-hero-image) center / cover;
-  }
-
-  .world-hero::after {
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    background: radial-gradient(
-      circle at 50% 35%,
-      rgba(255, 216, 77, 0.28),
-      transparent 34%
-    );
-    content: '';
-  }
-
-  .map-sign {
-    display: inline-flex;
-    align-items: center;
-    gap: 18px;
-    border-radius: 14px;
-    background: linear-gradient(
-      180deg,
-      rgba(42, 33, 24, 0.94),
-      rgba(23, 18, 13, 0.96)
-    );
-    padding: clamp(18px, 3vw, 28px) clamp(22px, 5vw, 60px);
-  }
-
-  .map-sign h1 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 0;
-    font-size: clamp(3.1rem, 8vw, 7rem);
-    font-weight: 900;
-    letter-spacing: 0;
-    line-height: 1;
-    text-shadow: 0 5px 0 rgba(0, 0, 0, 0.35);
-    word-break: keep-all;
-  }
-
-  .map-sign h1 span {
-    display: inline-block;
-  }
-
-  .map-sign > :global(.asv-icon) {
-    color: #ffd84d;
-    font-size: clamp(2rem, 5vw, 4rem);
-  }
-
-  .world-hero p {
-    max-width: 720px;
-    margin: 0;
-    font-size: clamp(1rem, 2vw, 1.3rem);
-    font-weight: 800;
-    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.55);
-  }
-
   .world-gates {
     display: grid;
     gap: clamp(18px, 3vw, 30px);
@@ -291,14 +209,6 @@ const introText = intro?.text ?? page.meta.description
       max-width: 640px;
       margin: 0 auto;
       width: 100%;
-    }
-
-    .map-sign {
-      flex-direction: column;
-    }
-
-    .map-sign h1 {
-      flex-direction: column;
     }
   }
 </style>

@@ -7,6 +7,7 @@ import { localizePath, type Locale } from '../i18n/config'
 import { getUi } from '../i18n/translations'
 import { externalLinkAttrs } from '../utils/links'
 import Icon from './Icon.astro'
+import PageHero from './PageHero.astro'
 
 interface Props {
   page: PortalPage
@@ -123,57 +124,51 @@ const multiplayerGuidePath = localizePath(
 const diaryPath = localizePath(locale, '/alpha-diary/')
 ---
 
-<section class="hero" aria-labelledby="home-title">
-  <img
-    class="hero-bg"
-    src={heroImage}
-    alt={overview.imageAlt}
-    aria-hidden="true"
-  />
-  <div class="hero-shade"></div>
-  <div class="hero-content">
-    <h1 id="home-title">
-      {ui.homeTitleParts.map((part) => <span>{part}</span>)}
-    </h1>
-    <p>{page.meta.description}</p>
-    <div class="hero-actions">
-      <a
-        class="asv-btn-blue"
-        href={heroJoinButton.href}
-        {...externalLinkAttrs(heroJoinButton.href, heroJoinButton.external)}
-      >
-        <Icon name="message-circle" />
-        <span>{heroJoinButton.label}</span>
-      </a>
-      <a
-        class="asv-btn-green"
-        href={heroWikiButton.href}
-        {...externalLinkAttrs(heroWikiButton.href, heroWikiButton.external)}
-      >
-        <Icon name="book-open" />
-        <span>{heroWikiButton.label}</span>
-      </a>
-      <a class="asv-btn-alpha" href="#alpha-guide" data-alpha-open>
-        <img
-          class="hero-alpha-icon"
-          src={alphaLogo}
-          alt={ui.alphaImageAlt}
-          aria-hidden="true"
-          width="28"
-          height="28"
-        />
-        <span>{ui.askAlpha}</span>
-      </a>
-      <a class="asv-btn-diary" href={diaryPath}>
-        <Icon name="notebook-pen" />
-        <span>{diaryUi.navLabel}</span>
-      </a>
-    </div>
-  </div>
-  <a class="scroll-cue" href="#overview" aria-label={ui.nextSection}
-    ><Icon name="chevron-right" /></a
-  >
-</section>
+<PageHero
+  variant="home"
+  title={ui.homeTitleParts.join('')}
+  titleId="home-title"
+  lead={page.meta.description}
+  backgroundImage={heroImage}
+  imageAlt={overview.imageAlt}
+>
+  <Fragment slot="title">
+    {ui.homeTitleParts.map((part) => <span>{part}</span>)}
+  </Fragment>
+  <Fragment slot="actions">
+    <a
+      class="asv-btn-blue"
+      href={heroJoinButton.href}
+      {...externalLinkAttrs(heroJoinButton.href, heroJoinButton.external)}
+    >
+      <Icon name="message-circle" />
+      <span>{heroJoinButton.label}</span>
+    </a>
+    <a
+      class="asv-btn-green"
+      href={heroWikiButton.href}
+      {...externalLinkAttrs(heroWikiButton.href, heroWikiButton.external)}
+    >
+      <Icon name="book-open" />
+      <span>{heroWikiButton.label}</span>
+    </a>
+    <a class="asv-btn-alpha" href="#alpha-guide" data-alpha-open>
+      <img
+        class="hero-alpha-icon"
+        src={alphaLogo}
+        alt={ui.alphaImageAlt}
+        aria-hidden="true"
+        width="28"
+        height="28"
+      />
+      <span>{ui.askAlpha}</span>
+    </a>
+    <a class="asv-btn-diary" href={diaryPath}>
+      <Icon name="notebook-pen" />
+      <span>{diaryUi.navLabel}</span>
+    </a>
+  </Fragment>
+</PageHero>
 
 <section id="overview" class="intro-section">
   <div class="floating-island">
@@ -305,117 +300,6 @@ const diaryPath = localizePath(locale, '/alpha-diary/')
 </section>
 
 <style>
-  .hero {
-    position: relative;
-    min-height: clamp(620px, 88vh, 880px);
-    isolation: isolate;
-    overflow: hidden;
-    border-bottom: 12px solid #1e1710;
-    background: #6bd7ff;
-  }
-
-  .hero-bg,
-  .hero-shade {
-    position: absolute;
-    inset: 0;
-  }
-
-  .hero-bg {
-    z-index: -3;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-  }
-
-  .hero-shade {
-    z-index: -2;
-    background:
-      linear-gradient(
-        90deg,
-        rgba(14, 11, 8, 0.72),
-        rgba(14, 11, 8, 0.22) 48%,
-        rgba(14, 11, 8, 0.06)
-      ),
-      linear-gradient(180deg, rgba(0, 0, 0, 0) 70%, rgba(21, 19, 15, 0.62));
-  }
-
-  .hero::after {
-    position: absolute;
-    inset: auto 0 0;
-    z-index: -1;
-    height: 120px;
-    background: linear-gradient(
-      90deg,
-      rgba(255, 216, 77, 0.85),
-      rgba(53, 170, 47, 0.88)
-    );
-    clip-path: polygon(
-      0 58%,
-      7% 58%,
-      7% 50%,
-      15% 50%,
-      15% 62%,
-      26% 62%,
-      26% 46%,
-      36% 46%,
-      36% 58%,
-      47% 58%,
-      47% 50%,
-      56% 50%,
-      56% 62%,
-      67% 62%,
-      67% 46%,
-      78% 46%,
-      78% 58%,
-      88% 58%,
-      88% 50%,
-      100% 50%,
-      100% 100%,
-      0 100%
-    );
-    content: '';
-  }
-
-  .hero-content {
-    display: grid;
-    max-width: min(94vw, 1060px);
-    gap: 24px;
-    padding: clamp(94px, 14vh, 150px) clamp(18px, 7vw, 96px) 120px;
-    color: white;
-    text-shadow:
-      0 5px 0 rgba(0, 0, 0, 0.32),
-      0 18px 46px rgba(0, 0, 0, 0.34);
-  }
-
-  .hero h1 {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0;
-    font-size: clamp(4rem, 8vw, 7.4rem);
-    font-weight: 900;
-    letter-spacing: 0;
-    line-height: 0.96;
-    word-break: keep-all;
-  }
-
-  .hero h1 span {
-    display: inline-block;
-  }
-
-  .hero p {
-    max-width: 680px;
-    margin: 0;
-    font-size: clamp(1.12rem, 2vw, 1.55rem);
-    font-weight: 900;
-  }
-
-  .hero-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 14px;
-  }
-
   .asv-btn-alpha {
     display: inline-flex;
     min-height: 3rem;
@@ -494,23 +378,6 @@ const diaryPath = localizePath(locale, '/alpha-diary/')
     height: 28px;
     object-fit: contain;
     filter: drop-shadow(0 2px 0 rgba(0, 0, 0, 0.16));
-  }
-
-  .scroll-cue {
-    position: absolute;
-    bottom: 36px;
-    left: 50%;
-    display: grid;
-    width: 58px;
-    height: 58px;
-    place-items: center;
-    border: 2px solid rgba(255, 255, 255, 0.78);
-    border-radius: 12px;
-    background: rgba(53, 170, 47, 0.88);
-    color: white;
-    font-size: 1.5rem;
-    text-decoration: none;
-    transform: translateX(-50%) rotate(90deg);
   }
 
   .intro-section,
@@ -816,7 +683,7 @@ const diaryPath = localizePath(locale, '/alpha-diary/')
     .feature-band,
     .crossplay-band,
     .cta-grid {
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0, 1fr);
     }
 
     .feature-band--left .feature-copy {
@@ -825,19 +692,6 @@ const diaryPath = localizePath(locale, '/alpha-diary/')
   }
 
   @media (max-width: 640px) {
-    .hero {
-      min-height: 700px;
-    }
-
-    .hero-content {
-      padding-top: 90px;
-    }
-
-    .hero h1 {
-      flex-direction: column;
-      font-size: clamp(3.45rem, 16vw, 4.8rem);
-    }
-
     .join-card,
     .wiki-card,
     .shop-card,

@@ -1,0 +1,290 @@
+---
+interface Props {
+  title: string
+  titleId?: string
+  eyebrow?: string
+  lead?: string
+  backgroundImage?: string
+  imageAlt?: string
+  tone?: 'parchment' | 'image' | 'sky' | 'dark'
+  variant?: 'home' | 'page'
+}
+
+const {
+  title,
+  titleId = 'page-title',
+  eyebrow,
+  lead,
+  backgroundImage,
+  imageAlt = title,
+  tone = backgroundImage ? 'image' : 'parchment',
+  variant = 'page',
+} = Astro.props
+const hasDecoration = Astro.slots.has('decoration')
+const hasEyebrow = Boolean(eyebrow) || Astro.slots.has('eyebrow')
+---
+
+<header
+  class:list={[
+    'asv-page-hero',
+    `asv-page-hero--${tone}`,
+    `asv-page-hero--${variant}`,
+  ]}
+  data-page-hero
+  data-page-hero-variant={variant}
+  aria-labelledby={titleId}
+>
+  {
+    backgroundImage && (
+      <img
+        class="page-hero__image"
+        data-page-hero-image
+        src={backgroundImage}
+        alt={imageAlt}
+        aria-hidden="true"
+        fetchpriority="high"
+        decoding="async"
+      />
+    )
+  }
+  <div class="page-hero__backdrop" aria-hidden="true">
+    <slot name="backdrop" />
+  </div>
+  <div class="asv-hero-inner" data-with-decoration={hasDecoration}>
+    <div class="page-hero__copy" data-page-hero-copy>
+      {
+        hasEyebrow && (
+          <p class="page-hero__eyebrow">
+            <slot name="eyebrow">{eyebrow}</slot>
+          </p>
+        )
+      }
+      <h1 id={titleId} data-page-hero-title>
+        <slot name="title">{title}</slot>
+      </h1>
+      {lead && <p class="page-hero__lead">{lead}</p>}
+      {
+        Astro.slots.has('actions') && (
+          <div class="page-hero__actions" data-page-hero-actions>
+            <slot name="actions" />
+          </div>
+        )
+      }
+    </div>
+    {
+      hasDecoration && (
+        <div class="page-hero__decoration" aria-hidden="true">
+          <slot name="decoration" />
+        </div>
+      )
+    }
+  </div>
+</header>
+
+<script>
+  import { initPageHeroes } from '../scripts/page-hero'
+
+  initPageHeroes()
+  document.addEventListener('astro:after-swap', initPageHeroes)
+</script>
+
+<style>
+  .asv-page-hero {
+    position: relative;
+    isolation: isolate;
+    height: var(--asv-hero-height);
+    border-bottom: 8px solid
+      var(--asv-hero-border, var(--page-hero-border, #1e1710));
+    background: var(
+      --asv-hero-background,
+      var(--page-hero-background, #fff0cb)
+    );
+    color: var(--asv-hero-color, var(--page-hero-color, #302619));
+    overflow: hidden;
+  }
+
+  .asv-page-hero--image,
+  .asv-page-hero--dark {
+    --page-hero-background: #172e27;
+    --page-hero-color: #fff;
+    text-shadow: 0 2px 12px rgb(0 0 0 / 45%);
+  }
+
+  .asv-page-hero--sky {
+    --page-hero-background: #a8e9fa;
+    --page-hero-color: #24613b;
+    --page-hero-border: #4f992e;
+  }
+
+  .asv-page-hero--home {
+    --asv-hero-height: clamp(620px, 88vh, 880px);
+    --asv-hero-padding: clamp(90px, 14vh, 150px);
+    --asv-hero-title-size: clamp(4rem, 8vw, 7.4rem);
+    --asv-hero-lead-size: clamp(1.12rem, 2vw, 1.55rem);
+    border-bottom-width: 12px;
+  }
+
+  .asv-page-hero--home .page-hero__copy {
+    gap: 24px;
+  }
+
+  .asv-page-hero--home h1 {
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 0.96;
+  }
+
+  .asv-page-hero--home .page-hero__image {
+    object-position: center;
+  }
+
+  .page-hero__image,
+  .page-hero__backdrop {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+  }
+
+  .page-hero__image {
+    object-fit: cover;
+    object-position: center 60%;
+  }
+
+  .asv-page-hero--image .page-hero__backdrop {
+    background:
+      linear-gradient(
+        90deg,
+        rgb(14 24 20 / 86%),
+        rgb(14 24 20 / 62%) 52%,
+        rgb(14 24 20 / 18%)
+      ),
+      linear-gradient(180deg, rgb(14 24 20 / 8%), rgb(14 24 20 / 36%));
+  }
+
+  .asv-hero-inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    align-items: center;
+    gap: clamp(16px, 3vw, 32px);
+    width: min(1120px, calc(100% - 36px));
+    height: 100%;
+    min-height: 0;
+    margin-inline: auto;
+    padding-block: var(--asv-hero-padding);
+  }
+
+  .asv-hero-inner[data-with-decoration='true'] {
+    grid-template-columns: minmax(0, 1fr) clamp(96px, 22vw, 200px);
+  }
+
+  .page-hero__copy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: stretch;
+    gap: 10px;
+    min-width: 0;
+    min-height: 0;
+  }
+
+  .page-hero__eyebrow,
+  .page-hero__lead,
+  h1 {
+    flex-shrink: 0;
+    margin: 0;
+  }
+
+  .page-hero__eyebrow {
+    font-size: 0.75rem;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    line-height: 1.5;
+  }
+
+  .page-hero__lead {
+    max-width: 680px;
+    font-size: var(--asv-hero-lead-size);
+    font-weight: 900;
+    line-height: 1.6;
+  }
+
+  h1 {
+    font-family: var(--asv-hero-title-font, var(--font-display));
+    font-size: var(--asv-hero-title-size);
+    font-weight: var(--asv-hero-title-weight, 900);
+    letter-spacing: 0;
+    line-height: 1.15;
+    text-wrap: balance;
+    overflow-wrap: anywhere;
+    text-shadow: var(--asv-hero-title-shadow, inherit);
+  }
+
+  .page-hero__actions {
+    display: flex;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    gap: 10px 12px;
+    min-width: 0;
+  }
+
+  .page-hero__actions :global(a),
+  .page-hero__actions :global(button) {
+    min-width: 0;
+    min-height: 44px;
+    padding: 10px 14px;
+    font-size: 0.875rem;
+    line-height: 1.25;
+    white-space: normal;
+    text-wrap: balance;
+    text-shadow: none;
+  }
+
+  .page-hero__actions :global(.asv-icon),
+  .page-hero__actions :global(img) {
+    flex-shrink: 0;
+  }
+
+  .page-hero__decoration {
+    display: grid;
+    place-items: center;
+    min-width: 0;
+    max-height: 100%;
+  }
+
+  @media (max-width: 640px) {
+    .asv-page-hero--home {
+      --asv-hero-height: 700px;
+      --asv-hero-padding: 64px;
+      --asv-hero-title-size: clamp(3.45rem, 16vw, 4.8rem);
+    }
+
+    .asv-page-hero--home h1 {
+      flex-direction: column;
+    }
+
+    .page-hero__actions {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .page-hero__actions :global(a),
+    .page-hero__actions :global(button) {
+      padding: 8px 10px;
+      gap: 8px;
+    }
+
+    .page-hero__actions :global(img) {
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+    }
+
+    .page-hero__actions :global(a:only-child),
+    .page-hero__actions :global(button:only-child) {
+      grid-column: 1 / -1;
+      justify-self: start;
+    }
+  }
+</style>

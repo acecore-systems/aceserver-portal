@@ -10,6 +10,7 @@ import {
 } from '../i18n/config'
 import { getUi } from '../i18n/translations'
 import BaseLayout from '../layouts/BaseLayout.astro'
+import PageHero from './PageHero.astro'
 import '../styles/article-diagrams.css'
 
 interface Props {
@@ -165,99 +166,96 @@ const breadcrumbJsonLd = serializeJsonForHtmlScript({
 >
   <script type="application/ld+json" set:html={articleJsonLd} />
   <script type="application/ld+json" set:html={breadcrumbJsonLd} />
-  <article class="story-shell">
-    <nav class="story-breadcrumb" aria-label={ui.breadcrumbLabel}>
-      <ol>
-        <li><a href={homePath}>{ui.homeLabel}</a></li>
-        <li><a href={storiesPath}>{ui.storiesTitle}</a></li>
-        <li aria-current="page">{story.data.title}</li>
-      </ol>
-    </nav>
-    <header class="story-header">
-      <p class="story-kicker">ACESERVER STORY</p>
-      <h1>{story.data.title}</h1>
-      <p class="story-description">{story.data.description}</p>
-      <div class="story-meta">
-        <time datetime={story.data.date.toISOString()}>
+  <article>
+    <PageHero
+      title={story.data.title}
+      eyebrow="ACESERVER STORY"
+      backgroundImage={story.data.image}
+      imageAlt={story.data.imageAlt}
+    />
+    <div class="story-shell">
+      <nav class="story-breadcrumb" aria-label={ui.breadcrumbLabel}>
+        <ol>
+          <li><a href={homePath}>{ui.homeLabel}</a></li>
+          <li><a href={storiesPath}>{ui.storiesTitle}</a></li>
+          <li aria-current="page">{story.data.title}</li>
+        </ol>
+      </nav>
+      <div class="story-details">
+        <p class="story-description">{story.data.description}</p>
+        <div class="story-meta">
+          <time datetime={story.data.date.toISOString()}>
+            {
+              story.data.date.toLocaleDateString(
+                DATE_LOCALE_BY_LOCALE[locale],
+                {
+                  timeZone: 'Asia/Tokyo',
+                },
+              )
+            }
+          </time>
           {
-            story.data.date.toLocaleDateString(DATE_LOCALE_BY_LOCALE[locale], {
-              timeZone: 'Asia/Tokyo',
-            })
-          }
-        </time>
-        {
-          story.data.lastUpdated && (
-            <span>
-              {updatedLabelByLocale[locale]}{' '}
-              <time datetime={story.data.lastUpdated.toISOString()}>
-                {story.data.lastUpdated.toLocaleDateString(
-                  DATE_LOCALE_BY_LOCALE[locale],
-                  { timeZone: 'Asia/Tokyo' },
-                )}
-              </time>
-            </span>
-          )
-        }
-        <span>{ui.byAuthor.replace('{author}', story.data.author)}</span>
-      </div>
-    </header>
-    {
-      story.data.image && story.data.imageAlt && (
-        <figure class="story-hero">
-          <img
-            src={story.data.image}
-            alt={story.data.imageAlt}
-            loading="eager"
-            decoding="async"
-          />
-        </figure>
-      )
-    }
-    <div class="story-body">
-      <Content />
-    </div>
-    {
-      relatedContent.length > 0 && (
-        <section class="story-related" aria-labelledby="story-related-title">
-          <h2 id="story-related-title">{ui.relatedContentTitle}</h2>
-          <div class="story-related-grid">
-            {relatedContent.map((item) => (
-              <a
-                class:list={{
-                  'story-related-card': true,
-                  'story-related-card--page': item.kind === 'page',
-                  'story-related-card--story': item.kind === 'story',
-                }}
-                href={item.href}
-              >
-                {item.image && item.imageAlt && (
-                  <img
-                    class="story-related-image"
-                    src={item.image}
-                    alt={item.imageAlt}
-                    loading="lazy"
-                    decoding="async"
-                  />
-                )}
-                <span class="story-related-copy">
-                  {item.kind === 'page' && (
-                    <span class="story-related-label">
-                      {ui.relatedPageLabel}
-                    </span>
+            story.data.lastUpdated && (
+              <span>
+                {updatedLabelByLocale[locale]}{' '}
+                <time datetime={story.data.lastUpdated.toISOString()}>
+                  {story.data.lastUpdated.toLocaleDateString(
+                    DATE_LOCALE_BY_LOCALE[locale],
+                    { timeZone: 'Asia/Tokyo' },
                   )}
-                  <strong>{item.title}</strong>
-                  <span>{item.description}</span>
-                </span>
-              </a>
-            ))}
-          </div>
-        </section>
-      )
-    }
-    <footer class="story-footer">
-      <a href={storiesPath}>{ui.backToStories}</a>
-      <a href={homePath}>{ui.joinAceserver}</a>
-    </footer>
+                </time>
+              </span>
+            )
+          }
+          <span>{ui.byAuthor.replace('{author}', story.data.author)}</span>
+        </div>
+      </div>
+      <div class="story-body">
+        <Content />
+      </div>
+      {
+        relatedContent.length > 0 && (
+          <section class="story-related" aria-labelledby="story-related-title">
+            <h2 id="story-related-title">{ui.relatedContentTitle}</h2>
+            <div class="story-related-grid">
+              {relatedContent.map((item) => (
+                <a
+                  class:list={{
+                    'story-related-card': true,
+                    'story-related-card--page': item.kind === 'page',
+                    'story-related-card--story': item.kind === 'story',
+                  }}
+                  href={item.href}
+                >
+                  {item.image && item.imageAlt && (
+                    <img
+                      class="story-related-image"
+                      src={item.image}
+                      alt={item.imageAlt}
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  )}
+                  <span class="story-related-copy">
+                    {item.kind === 'page' && (
+                      <span class="story-related-label">
+                        {ui.relatedPageLabel}
+                      </span>
+                    )}
+                    <strong>{item.title}</strong>
+                    <span>{item.description}</span>
+                  </span>
+                </a>
+              ))}
+            </div>
+          </section>
+        )
+      }
+      <footer class="story-footer">
+        <a href={storiesPath}>{ui.backToStories}</a>
+        <a href={homePath}>{ui.joinAceserver}</a>
+      </footer>
+    </div>
   </article>
 </BaseLayout>
 
@@ -265,7 +263,7 @@ const breadcrumbJsonLd = serializeJsonForHtmlScript({
   .story-shell {
     width: min(880px, calc(100% - 36px));
     margin-inline: auto;
-    padding-block: clamp(56px, 8vw, 104px);
+    padding-block: clamp(28px, 4vw, 48px);
   }
 
   .story-breadcrumb {
@@ -300,23 +298,9 @@ const breadcrumbJsonLd = serializeJsonForHtmlScript({
     text-underline-offset: 0.16em;
   }
 
-  .story-header {
+  .story-details {
     border-bottom: 4px solid #1e1710;
-    padding-bottom: clamp(30px, 5vw, 54px);
-  }
-
-  .story-kicker {
-    margin: 0 0 16px;
-    color: #0862c4;
-    font-weight: 900;
-    letter-spacing: 0.12em;
-  }
-
-  .story-header h1 {
-    margin: 0;
-    font-size: clamp(2.3rem, 6vw, 4.9rem);
-    letter-spacing: -0.03em;
-    line-height: 1.18;
+    padding-bottom: clamp(24px, 4vw, 40px);
   }
 
   .story-description {
@@ -334,22 +318,6 @@ const breadcrumbJsonLd = serializeJsonForHtmlScript({
     margin-top: 24px;
     font-size: 0.9rem;
     font-weight: 800;
-  }
-
-  .story-hero {
-    overflow: hidden;
-    margin: clamp(30px, 5vw, 54px) 0 0;
-    border: 3px solid #1e1710;
-    border-radius: 12px;
-    background: #1e1710;
-    box-shadow: 0 8px 0 rgba(21, 19, 15, 0.22);
-  }
-
-  .story-hero img {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
   }
 
   .story-body {

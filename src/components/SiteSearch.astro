@@ -2,6 +2,7 @@
 import type { Locale } from '../i18n/config'
 import { localizePath } from '../i18n/config'
 import { getUi } from '../i18n/translations'
+import PageHero from './PageHero.astro'
 
 interface Props {
   locale: Locale
@@ -10,6 +11,8 @@ interface Props {
 const { locale } = Astro.props
 const ui = getUi(locale)
 ---
+
+<PageHero title={ui.search.title} />
 
 <section
   class="site-search"
@@ -20,7 +23,6 @@ const ui = getUi(locale)
   data-no-results={ui.search.noResults}
   data-pagefind-ignore
 >
-  <h1>{ui.search.title}</h1>
   <form
     class="site-search__form"
     action={localizePath(locale, '/search/')}
@@ -76,19 +78,14 @@ const ui = getUi(locale)
     width: min(100% - 32px, 850px);
     min-height: 56vh;
     margin: 0 auto;
-    padding: clamp(52px, 9vw, 96px) 0;
+    padding: clamp(24px, 4vw, 40px) 0;
   }
 
-  h1,
   h2 {
     margin: 0;
     color: #25180f;
     font-weight: 900;
     line-height: 1.25;
-  }
-
-  h1 {
-    font-size: clamp(2rem, 5vw, 3.8rem);
   }
 
   h2 {
@@ -98,7 +95,7 @@ const ui = getUi(locale)
   .site-search__form {
     display: flex;
     gap: 10px;
-    margin-top: 28px;
+    margin-top: 0;
   }
 
   .site-search__form input {

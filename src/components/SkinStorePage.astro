@@ -4,6 +4,7 @@ import { getSkinMakerUi } from '../data/skin-maker-ui'
 import { localizePath, type Locale } from '../i18n/config'
 import SkinMakerNav from './SkinMakerNav.astro'
 import { getSkinRemixUi } from '../data/skin-remix-ui'
+import PageHero from './PageHero.astro'
 interface Props {
   locale: Locale
 }
@@ -13,22 +14,19 @@ const maker = getSkinMakerUi(locale)
 const remix = getSkinRemixUi(locale)
 ---
 
+<PageHero title={c.title} eyebrow="MINECRAFT SKINS · FREE DOWNLOADS">
+  <a slot="actions" class="primary" href={localizePath(locale, '/skin-maker/')}>
+    <span aria-hidden="true">＋</span>{c.make}
+  </a>
+</PageHero>
+
 <section
   class="skin-store"
   data-skin-store
   data-locale={locale}
   data-maker-url={localizePath(locale, '/skin-maker/')}
 >
-  <header class="store-heading">
-    <div>
-      <span class="eyebrow">MINECRAFT SKINS · FREE DOWNLOADS</span>
-      <h1>{c.title}</h1>
-      <p>{c.intro}</p>
-    </div>
-    <a class="primary create" href={localizePath(locale, '/skin-maker/')}
-      ><span aria-hidden="true">＋</span>{c.make}</a
-    >
-  </header>
+  <p class="store-intro">{c.intro}</p>
   <SkinMakerNav locale={locale} current="store" />
   <div class="filters">
     <label class="search"
@@ -164,30 +162,11 @@ const remix = getSkinRemixUi(locale)
     padding: 44px 22px 64px;
     color: #302619;
   }
-  .store-heading {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 30px;
-    margin-bottom: 20px;
-  }
-  .eyebrow {
-    color: #846125;
-    font-size: 0.75rem;
-    letter-spacing: 0.13em;
-    font-weight: 800;
-  }
-  h1 {
-    font-size: clamp(2.1rem, 4vw, 3rem);
-    font-weight: 900;
-    line-height: 1.2;
-    margin: 8px 0 14px;
-  }
-  .store-heading p {
-    max-width: 650px;
+  .store-intro {
+    max-width: 780px;
+    margin: 0 0 24px;
     line-height: 1.8;
     color: #66553f;
-    margin: 0;
   }
   a,
   button,
@@ -220,9 +199,6 @@ const remix = getSkinRemixUi(locale)
   .primary:hover,
   button:hover {
     background: #fbe6a8;
-  }
-  .create {
-    flex-shrink: 0;
   }
   .filters {
     display: flex;
@@ -570,16 +546,8 @@ const remix = getSkinRemixUi(locale)
     }
   }
   @media (max-width: 650px) {
-    .create {
-      display: none;
-    }
     .skin-store {
       padding: 26px 14px 40px;
-    }
-    .store-heading {
-      align-items: start;
-      flex-direction: column;
-      gap: 20px;
     }
     .skin-grid {
       grid-template-columns: repeat(2, minmax(0, 1fr));

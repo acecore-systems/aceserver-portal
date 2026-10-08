@@ -1,0 +1,29 @@
+---
+interface Props {
+  text: string
+}
+
+const { text } = Astro.props
+---
+
+<div class="page-intro"><div class="page-intro__inner"><p>{text}</p></div></div>
+
+<style>
+  .page-intro {
+    background: var(--asv-parchment);
+    padding-block: clamp(24px, 3vw, 32px);
+  }
+
+  .page-intro__inner {
+    width: min(1120px, calc(100% - 36px));
+    margin-inline: auto;
+  }
+
+  p {
+    max-width: 900px;
+    margin: 0;
+    font-size: var(--asv-hero-lead-size);
+    font-weight: 700;
+    line-height: 1.8;
+  }
+</style>
