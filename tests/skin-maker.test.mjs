@@ -423,7 +423,7 @@ test('completion parsing and reference input remain available', () => {
   })
   assert.equal(input.max_completion_tokens, MAX_TOKENS)
   assert.equal(input.store, false)
-  assert.equal(input.reasoning_effort, 'low')
+  assert.equal(input.reasoning_effort, 'high')
   assert.equal('temperature' in input, false)
   assert.ok(
     input.messages[0].content.some(
