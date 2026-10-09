@@ -1,5 +1,5 @@
 ---
-title: 用 WIKI 和阿尔法君查找所需指南
+title: 'Aceserver WIKI使用方法｜搜索参加指南与规则，向阿尔法君提问'
 description: 通过分类或搜索使用 Aceserver 官方 WIKI，再向阿尔法君提问，找到已公开指南的入口。
 date: 2026-09-27T22:40:00+09:00
 tags:
@@ -8,11 +8,13 @@ author: Gui
 image: /uploads/stories/wiki-alpha-guide-hero.webp
 imageAlt: 官方阿尔法君站在打开的指南书和搜索结果旁的方块风格插画
 translationOf: wiki-alpha-guide
-sourceHash: sha256:9e3dd3bb72ef54f933f8c39962710715e13a833ee359a9ecb2407f1f9f7612f7
-lastUpdated: 2026-10-06T08:52:00+09:00
+sourceHash: sha256:48391e4744aaa6d425e51e9a26126cca72e4d4f6d013eaf1f48f250a4f5437f9
+lastUpdated: 2026-10-09T15:00:00+09:00
 ---
 
 需要了解加入方法或规则时，可以从 [Aceserver 官方 WIKI](https://asv-wiki.acecore.net/) 开始查找。如果不确定该打开哪篇文章，门户和 WIKI 上的“问问阿尔法君”也是入口。
+
+开始搜索时，用“参加方法”“土地保护”等简短词语表达目的。向阿尔法君提问时，说明所在的服务器或世界，以及遇到困难的操作。打开回答中的参考文章，在原文确认参加条件和规则后再行动。
 
 ## 按分类浏览 WIKI
 

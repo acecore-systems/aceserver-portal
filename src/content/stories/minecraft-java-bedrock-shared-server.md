@@ -17,7 +17,7 @@ relatedStories:
   - minecraft-java-bedrock-crossplay
   - minecraft-server-setup
   - minecraft-server-cannot-join
-lastUpdated: '2026-10-06T13:52:45+09:00'
+lastUpdated: 2026-10-09T15:00:00+09:00
 ---
 
 Java版の自分のサーバーへ、統合版のスマホ・タブレット・Windows・ゲーム機の友達を招待したいときは、Javaサーバーに Geyser と Floodgate を導入する構成が候補になります。Geyser が統合版の接続を Java サーバーへ橋渡しし、Floodgate が統合版アカウントを安全に識別できるようにします。
@@ -25,6 +25,8 @@ Java版の自分のサーバーへ、統合版のスマホ・タブレット・W
 大切なのは、統合版の友達を入れるために Java サーバーのアカウント認証を無効にしないことです。この記事では、Java 側の認証を維持し、招待した人だけが入れる状態から始める手順を紹介します。Java版と統合版で操作や一部の機能が完全に同じになるわけではないため、公開前に両方の端末で試します。
 
 Java版・統合版・Switch・スマホを含めて友達と遊ぶ方法から整理したい場合は、[マイクラで友達と遊ぶ方法](/stories/minecraft-play-with-friends/)も先に確認してください。
+
+設定に進む前に、[Geyser公式セットアップ](https://geysermc.org/wiki/geyser/setup/)から自分のホストとサーバーソフトに合う手順を選びます。本文の構成例と違う環境へ設定を丸ごと移すより、導入先を選び、LANで両エディションの参加を確かめてから友達を招待する順序が分かりやすくなります。
 
 ## 先に結論：Javaサーバー + Geyser + Floodgate で共用できる
 

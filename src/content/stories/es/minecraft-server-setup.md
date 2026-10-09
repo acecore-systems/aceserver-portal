@@ -2,7 +2,7 @@
 title: 'Cómo configurar un servidor gratuito de Minecraft: Java, Bedrock y Realms'
 description: Guía para configurar un servidor gratuito de Minecraft y comparar Java Edition, Bedrock Edition y Realms, con la preparación y las comprobaciones de seguridad necesarias antes de abrirlo.
 translationOf: minecraft-server-setup
-sourceHash: sha256:48fe3113347491bab033478489964d0be50754b14687d8f189c3103a1696b1bf
+sourceHash: sha256:b511296812b20a640219e6d23416407abef5bf20c9fc4a1c018182604f9b5cdf
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -11,7 +11,7 @@ tags:
 author: Gui
 image: '/uploads/stories/minecraft-server-setup-cover-v2.webp'
 imageAlt: 'Ilustración conceptual de preparación y mantenimiento con un kit de bloques, herramientas, caja de almacenamiento y casa-servidor en miniatura'
-lastUpdated: '2026-10-06T13:52:45+09:00'
+lastUpdated: 2026-10-09T15:00:00+09:00
 ---
 
 Hay varias formas de jugar a Minecraft con amigos: usar la misma red local, ejecutar un servidor dedicado en tu propio PC o usar Realms. La opción adecuada depende de la edición de todos los jugadores y del mantenimiento que estés dispuesto a asumir.
@@ -19,6 +19,8 @@ Hay varias formas de jugar a Minecraft con amigos: usar la misma red local, ejec
 Lo primero que debes saber es que un servidor gratuito significa que el software del servidor es gratuito. El juego de Minecraft, el ordenador, la electricidad, la conexión a Internet, las copias de seguridad y las actualizaciones no pasan a ser gratuitos. Esta guía se centra en alojar el software oficial en tu propio PC.
 
 Si el grupo incluye jugadores de Switch o móvil, antes de decidir cómo entrar consulta [cómo jugar Minecraft con amigos](/es/stories/minecraft-play-with-friends/) para comprobar la edición y las cuentas.
+
+Antes de descargar, acordad la edición de todos y si podéis dejar de jugar cuando se apague el PC anfitrión. La [descarga oficial de Java](https://www.minecraft.net/en-us/download/server) es para Java; la [de Bedrock](https://www.minecraft.net/en-us/download/server/bedrock), para Bedrock. Comprueba los entornos admitidos y las instrucciones incluidas, y consigue una conexión LAN antes de ampliar el acceso.
 
 ## Resumen: elige según los jugadores y la edición
 

@@ -1,15 +1,18 @@
 ---
-title: Aceserver a été détourné.
-description: Le récit du « détournement » survenu sur Aceserver. Un document saisissant où la raison des membres se trouve rongée l’une après l’autre.
+title: 'Récit de l’événement de « détournement » d’Aceserver | Octobre 2022'
+description: 'Article sur l’événement de « détournement » d’Aceserver publié le 12 octobre 2022. Retrouvez le récit des membres perdant la raison et l’accès aux informations actuelles pour rejoindre le serveur.'
 translationOf: aceserver-hijacked
-sourceHash: sha256:d4ed78f447d9c7d8b80f00e170eaebd2f24a8faf1285b827b6499d2029541950
+sourceHash: sha256:6477d2ba77de82cf756ee99ee7fae154e500828d919a42c43eeb07eb29b07bc9
 date: 2022-10-12T00:00:00+09:00
 tags:
   - Événement
 author: ハット
 image: /uploads/stories/aceserver-hijacked.webp
 imageAlt: Un étrange appareil serveur aux lueurs violettes et vertes se propage dans une ville de blocs nocturne
+lastUpdated: 2026-10-09T15:00:00+09:00
 ---
+
+Cet article retrace l’événement de « détournement » publié le 12 octobre 2022. Le texte ci-dessous conserve la narration de l’époque ; il n’annonce ni panne actuelle du serveur ni compromission de comptes.
 
 ## Aceserver a été détourné
 

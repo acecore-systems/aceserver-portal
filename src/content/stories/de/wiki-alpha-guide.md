@@ -1,5 +1,5 @@
 ---
-title: Mit WIKI und Alpha-kun die passende Hilfe finden
+title: 'Das Aceserver-Wiki nutzen | Teilnahme und Regeln suchen, Alpha-kun fragen'
 description: Durchsuche das offizielle Aceserver-WIKI nach Kategorien oder Begriffen und frage Alpha-kun nach veröffentlichten Anleitungen.
 date: 2026-09-27T22:40:00+09:00
 tags:
@@ -8,11 +8,13 @@ author: Gui
 image: /uploads/stories/wiki-alpha-guide-hero.webp
 imageAlt: Illustration des offiziellen Alpha-kun neben einem offenen Handbuch und Suchergebnissen in einer Blocklandschaft
 translationOf: wiki-alpha-guide
-sourceHash: sha256:9e3dd3bb72ef54f933f8c39962710715e13a833ee359a9ecb2407f1f9f7612f7
-lastUpdated: 2026-10-06T08:52:00+09:00
+sourceHash: sha256:48391e4744aaa6d425e51e9a26126cca72e4d4f6d013eaf1f48f250a4f5437f9
+lastUpdated: 2026-10-09T15:00:00+09:00
 ---
 
 Wenn du wissen möchtest, wie du beitrittst oder welche Regeln gelten, beginne im [offiziellen Aceserver-WIKI](https://asv-wiki.acecore.net/). Falls du den passenden Artikel nicht kennst, hilft dir die Schaltfläche „Alpha-kun fragen“ im Portal und WIKI beim Einstieg.
+
+Beginnen Sie die Suche mit kurzen Begriffen wie „Teilnahme“ oder „Grundstücksschutz“. Nennen Sie Alpha-kun den Server oder die Welt und die Handlung, bei der Sie Hilfe brauchen. Öffnen Sie den genannten Artikel und prüfen Sie Teilnahmebedingungen oder Regeln im Original, bevor Sie handeln.
 
 ## Das WIKI nach Kategorien durchsuchen
 

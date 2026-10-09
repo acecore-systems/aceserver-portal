@@ -1,5 +1,5 @@
 ---
-title: Encuentra la información que necesitas con la WIKI y Alpha-kun
+title: 'Cómo usar la Wiki de Aceserver | Buscar instrucciones y preguntar a Alpha-kun'
 description: Explora la WIKI oficial de Aceserver por categorías o búsqueda y pregunta a Alpha-kun para encontrar las guías publicadas.
 date: 2026-09-27T22:40:00+09:00
 tags:
@@ -8,11 +8,13 @@ author: Gui
 image: /uploads/stories/wiki-alpha-guide-hero.webp
 imageAlt: Ilustración de Alpha-kun oficial junto a una guía abierta y resultados de búsqueda en un paisaje de bloques
 translationOf: wiki-alpha-guide
-sourceHash: sha256:9e3dd3bb72ef54f933f8c39962710715e13a833ee359a9ecb2407f1f9f7612f7
-lastUpdated: 2026-10-06T08:52:00+09:00
+sourceHash: sha256:48391e4744aaa6d425e51e9a26126cca72e4d4f6d013eaf1f48f250a4f5437f9
+lastUpdated: 2026-10-09T15:00:00+09:00
 ---
 
 Si necesitas instrucciones para entrar o consultar las reglas, empieza por la [WIKI oficial de Aceserver](https://asv-wiki.acecore.net/). Si no sabes qué artículo abrir, el botón «Preguntar a Alpha-kun» del portal y la WIKI te ofrece otro punto de partida.
+
+Empieza la búsqueda con una frase breve sobre tu objetivo, como «participar» o «protección de terrenos». Al preguntar a Alpha-kun, indica el servidor o mundo y la acción con la que necesitas ayuda. Abre el artículo citado y comprueba las condiciones o reglas en el texto original antes de actuar.
 
 ## Explora la WIKI por categorías
 

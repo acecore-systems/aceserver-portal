@@ -2,7 +2,7 @@
 title: 如何与朋友一起玩 Minecraft：Java版、基岩版、Switch 和手机的选择指南
 description: 先厘清 Java 版与基岩版的差异，再从自己的世界、Realms 和公开服务器中，按设备选择与朋友一起游玩的方式。
 translationOf: minecraft-play-with-friends
-sourceHash: sha256:649ea26618c0eb16f2b02374bfdfa83d576ef0d2ac7fed3cfa3061bf52b5b14e
+sourceHash: sha256:2dcd36662b79814ddebf5ac37fffe0713d91a554eb5ff82763bbeb6e64cf2e7e
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -11,9 +11,12 @@ tags:
 author: Gui
 image: /uploads/stories/minecraft-play-with-friends-hero.webp
 imageAlt: 四位朋友围着地图讨论一起游玩的方式，旁边放着电脑、掌机和手机，背景是积木风格的夕阳广场
+lastUpdated: 2026-10-09T15:00:00+09:00
 ---
 
 和朋友开始玩 Minecraft 时，与其先决定去哪个世界，不如先确认所有人能否使用同一个版本：**Java 版或基岩版**。本指南比较自己的世界、Realms 和公开服务器，并整理 PC、Switch 与手机玩家的选择方法。
+
+例如“今晚Switch和手机上的两个人一起玩”，可以先确认基岩版及账号条件，再尝试邀请朋友进入自己的世界。若想在不同时间继续建造，就比较Realms和有人管理的服务器。Minecraft官方的[与朋友一起玩](https://www.minecraft.net/en-us/play-with-friends)页面可用于了解玩法选择。
 
 ## 先确认：Java 版与基岩版默认不能直接一起玩
 

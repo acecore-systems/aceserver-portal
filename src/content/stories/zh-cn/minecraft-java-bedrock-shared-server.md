@@ -2,7 +2,7 @@
 title: 如何让 Java 版与基岩版共用自己的服务器：安全跨平台设置
 description: 介绍如何通过 Geyser 与 Floodgate 安全地邀请基岩版朋友加入自己的 Java 版服务器，并说明免费主机的选择和公开前检查。
 translationOf: minecraft-java-bedrock-shared-server
-sourceHash: sha256:3ad44805fe1520a43fa6286eae62b3315998d010a7fb1cecff5f763ab1805b87
+sourceHash: sha256:1cf7f0fc312533bba07e7685f6d623f97319b7dd9d9814821dec1d6bb9926a1f
 date: 2026-08-09T10:00:00+09:00
 tags:
   - Minecraft
@@ -14,7 +14,7 @@ tags:
 author: Gui
 image: '/uploads/stories/minecraft-java-bedrock-shared-server-cover-v2.webp'
 imageAlt: '方块服务器小屋连接电脑和通过桥梁接入的平板，管理工具箱独立放置的概念插图'
-lastUpdated: '2026-10-06T13:52:45+09:00'
+lastUpdated: 2026-10-09T15:00:00+09:00
 ---
 
 如果想邀请使用手机、平板、Windows 或游戏机基岩版的朋友加入自己的 Java 版服务器，可以在 Java 版服务器中安装 Geyser 与 Floodgate。Geyser 负责把基岩版连接桥接到 Java 版服务器，Floodgate 则让服务器能安全识别基岩版账号。
@@ -22,6 +22,8 @@ lastUpdated: '2026-10-06T13:52:45+09:00'
 关键是不应为了让基岩版朋友加入而关闭 Java 版的账号认证。本文从保留 Java 版认证、只允许受邀者加入的状态开始说明。Java 版与基岩版的操作和部分功能并不完全相同，公开前必须用两种设备实际测试。
 
 如果还在决定不同设备的朋友怎样一起玩，也可先阅读[如何和朋友一起玩 Minecraft](/zh-cn/stories/minecraft-play-with-friends/)。
+
+开始配置前，先在[Geyser官方安装指南](https://geysermc.org/wiki/geyser/setup/)中选择适合自己主机和服务器软件的步骤。不要把示例配置整套复制到不同环境；先确定部署类型，在局域网验证两个版本均可参加，再邀请朋友。
 
 ## 结论：Java 服务器 + Geyser + Floodgate 可以共用
 

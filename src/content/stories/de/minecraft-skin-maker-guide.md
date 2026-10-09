@@ -1,5 +1,5 @@
 ---
-title: 'Skin Maker verwenden: Text, Bilder und 3D-Prüfung'
+title: 'Minecraft-Skin-Maker nutzen | Text, Bilder, 3D-Bearbeitung und PNG-Export'
 description: 'Neue Minecraft-Skins aus Text und optionalem Bild erstellen, Classic oder Slim wählen, in 3D prüfen und als 64×64-PNG speichern.'
 date: 2026-09-30T21:15:00+09:00
 author: Gui
@@ -8,11 +8,13 @@ image: /uploads/stories/minecraft-skin-maker-cover-v2.webp
 imageAlt: 'Illustration weißer Blockfiguren und einer Farbpalette als Symbol für die Skin-Erstellung. Kein generiertes Skin-Beispiel.'
 relatedStories: [aceserver-beginners-guide]
 translationOf: minecraft-skin-maker-guide
-sourceHash: sha256:417830da11a893bd01fad6116a244c4a149a4cf163397414588057a87b317f1d
-lastUpdated: 2026-10-07
+sourceHash: sha256:79a7458953ba34306faa5905c5cef14193cb3fd066e37a641017d518b25b0899
+lastUpdated: 2026-10-09T15:00:00+09:00
 ---
 
 Der [Skin Maker](/de/skin-maker/) erstellt neue Minecraft-Skins aus Text und optionalem Referenzbild. Prüfen Sie das Ergebnis in 3D und speichern Sie ein 64×64-PNG.
+
+Wählen Sie für den ersten Versuch das Armmodell und beschreiben Sie Kleidung und Farben kurz, um einen Skin zu erstellen. Prüfen Sie vor der Verwendung des PNG im [offiziellen Skin-Leitfaden](https://www.minecraft.net/en-us/article/what-is-minecraft-skin), ob Ihre Edition und Ihr Gerät Bilder importieren können. Das PNG lässt sich auch ohne Veröffentlichung im Store speichern und verwenden.
 
 ## 1. Armtyp und Aussehen wählen
 

@@ -2,9 +2,9 @@
 title: '일본 추천 마인크래프트 서버 6선: Java/Bedrock 지원과 플레이 방식 비교'
 description: 공식 사이트에서 확인한 지원 에디션, 플레이 방식, 참여 안내를 바탕으로 일본의 공개 Minecraft 서버를 소개합니다.
 translationOf: minecraft-server-osusume
-sourceHash: sha256:c2e48929cf9d67ea2cb76eaf8ccdaf7e1aa1a511a05ff69f766fe497de5dc626
+sourceHash: sha256:2278e516442d294853fc357cea7e80dbcaa0ccd6a278ab2f2a33f94694725e43
 date: 2026-08-01T10:00:00+09:00
-lastUpdated: '2026-10-06T13:52:45+09:00'
+lastUpdated: 2026-10-09T15:00:00+09:00
 tags:
   - Minecraft
   - 마인크래프트 서버
@@ -19,6 +19,8 @@ imageAlt: '마을·철도·장치·시장·자연·건축을 나타내는 여섯
 **2026년 9월 26일 확인:** 6곳의 공식 사이트와 Java·Bedrock 참여 안내를 다시 확인했습니다. [니시사바는 9월 1일 시즌제 서바이벌을 시작](https://nishisaba.jp/news/20260901-notify)했으며 이 월드에서는 Home과 TPA를 사용할 수 없습니다. [무니카는 Re:15로 전환](https://munikasvr.net/events/re15release/)하면서 기존 튜토리얼 퀘스트를 무니카 가이드로 대체했습니다. 월드와 기능은 바뀔 수 있으므로 참여 시점의 공식 안내를 확인하세요.
 
 그룹에 Switch나 스마트폰 플레이어가 있다면 참여 방법을 정하기 전에 [친구와 마인크래프트를 함께 플레이하는 방법](/ko/stories/minecraft-play-with-friends/)에서 에디션과 계정 조건을 확인하세요.
+
+비교할 때는 건축·관광, 장치 제작, 경제·퀘스트, 바닐라에 가까운 생활 중 무엇을 즐기고 싶은지 먼저 정하면 선택하기 쉽습니다. 이어서 친구 모두의 에디션 지원 여부, 참가 조건, 토지 보호 규칙을 공식 사이트에서 비교하세요. 아래 소개는 2026년 9월 확인 기록이며 현재 모집 상태나 기능을 보장하지 않습니다.
 
 ## 추천 마인크래프트 서버 6선
 

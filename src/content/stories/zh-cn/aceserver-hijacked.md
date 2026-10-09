@@ -1,15 +1,18 @@
 ---
-title: Aceserver 被“劫持”了。
-description: 记录 Aceserver 上发生的“劫持”事件。成员们的理智接连被侵蚀，这是一份令人震惊的记录。
+title: 'Aceserver“劫持”活动记录｜2022年10月'
+description: '2022年10月12日发布的Aceserver“劫持”活动文章。保留成员逐渐失去理智的当时叙述，并提供当前参加指南的入口。'
 translationOf: aceserver-hijacked
-sourceHash: sha256:d4ed78f447d9c7d8b80f00e170eaebd2f24a8faf1285b827b6499d2029541950
+sourceHash: sha256:6477d2ba77de82cf756ee99ee7fae154e500828d919a42c43eeb07eb29b07bc9
 date: 2022-10-12T00:00:00+09:00
 tags:
   - 活动
 author: ハット
 image: /uploads/stories/aceserver-hijacked.webp
 imageAlt: 夜晚的方块城市中，一台散发紫绿光芒的异常服务器装置正在蔓延
+lastUpdated: 2026-10-09T15:00:00+09:00
 ---
+
+本文记录了2022年10月12日发布的“劫持”活动。下文保留当时的故事叙述，并非当前服务器故障或账号受害的通知。
 
 ## Aceserver 被“劫持”了
 

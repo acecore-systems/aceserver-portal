@@ -1,5 +1,5 @@
 ---
-title: '스킨 메이커 사용법: 글·이미지로 만들고 3D로 확인'
+title: 'Minecraft 스킨 메이커 사용법｜글·이미지 생성, 3D 편집·PNG 저장'
 description: '글과 선택 참고 이미지로 새 Minecraft 스킨을 만들고 Classic·Slim 선택, 3D 확인, 64×64 PNG 저장을 진행하는 안내입니다.'
 date: 2026-09-30T21:15:00+09:00
 author: Gui
@@ -8,11 +8,13 @@ image: /uploads/stories/minecraft-skin-maker-cover-v2.webp
 imageAlt: '흰색 블록 마네킹과 팔레트로 스킨 제작을 표현한 설명용 그림. 생성 결과의 예시가 아닙니다.'
 relatedStories: [aceserver-beginners-guide]
 translationOf: minecraft-skin-maker-guide
-sourceHash: sha256:417830da11a893bd01fad6116a244c4a149a4cf163397414588057a87b317f1d
-lastUpdated: 2026-10-07
+sourceHash: sha256:79a7458953ba34306faa5905c5cef14193cb3fd066e37a641017d518b25b0899
+lastUpdated: 2026-10-09T15:00:00+09:00
 ---
 
 [스킨 메이커](/ko/skin-maker/)는 글과 선택 참고 이미지로 새 Minecraft 스킨을 만듭니다. 결과를 3D로 확인하고 64×64 PNG로 저장할 수 있습니다.
+
+처음에는 팔 유형을 고르고 의상과 색을 짧은 글로 지정해 스킨 하나를 만들어 보세요. 저장한 PNG를 쓰기 전에 Minecraft 공식 [스킨 설명과 변경 방법](https://www.minecraft.net/en-us/article/what-is-minecraft-skin)에서 자신의 에디션·기기가 이미지 불러오기를 지원하는지 확인하세요. 스토어에 공개하지 않아도 PNG를 저장해 사용할 수 있습니다.
 
 ## 1. 팔 형태와 이미지 선택
 

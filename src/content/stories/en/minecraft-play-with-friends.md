@@ -2,7 +2,7 @@
 title: 'How to play Minecraft with friends: choosing Java, Bedrock, Switch, and mobile'
 description: Compare your own world, Realms, and public servers after sorting out Java and Bedrock, then choose a way to play with friends for each device.
 translationOf: minecraft-play-with-friends
-sourceHash: sha256:649ea26618c0eb16f2b02374bfdfa83d576ef0d2ac7fed3cfa3061bf52b5b14e
+sourceHash: sha256:2dcd36662b79814ddebf5ac37fffe0713d91a554eb5ff82763bbeb6e64cf2e7e
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -11,9 +11,12 @@ tags:
 author: Gui
 image: /uploads/stories/minecraft-play-with-friends-hero.webp
 imageAlt: Four friends around a map in a block-style sunset plaza, with a PC, handheld game device, and smartphone nearby as they discuss how to play together
+lastUpdated: 2026-10-09T15:00:00+09:00
 ---
 
 Before choosing where to play Minecraft with friends, first make sure everyone can use the same edition: **Java Edition or Bedrock Edition**. This guide compares your own world, Realms, and public servers, then helps PC, Switch, and mobile players choose a path.
+
+For example, two friends on Switch and mobile playing tonight can first check Bedrock and account requirements, then try inviting each other to a personal world. To keep building at different times, compare Realms and managed servers. Minecraft’s official [play-with-friends page](https://www.minecraft.net/en-us/play-with-friends) helps you explore the available ways to play.
 
 ## First check: Java and Bedrock do not play together by default
 

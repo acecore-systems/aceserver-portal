@@ -2,9 +2,9 @@
 title: 'Guía para principiantes de Aceserver: portal, mapas, vídeos, WIKI y conexión'
 description: ¿Es tu primera vez en Aceserver? Aprende cuándo usar el portal oficial, los mapas, los vídeos y la WIKI, y dónde comprobar si no puedes entrar.
 translationOf: aceserver-beginners-guide
-sourceHash: sha256:0f9e84d470b4a6e63f3a3e0b9847eb780d62665769130043274fc32cf0fee14d
+sourceHash: sha256:be8dad22534446be8cb3ba2ead60bd55b7f3d8831e062173aaa45b356907177a
 date: 2026-08-09T10:00:00+09:00
-lastUpdated: 2026-09-30T21:15:00+09:00
+lastUpdated: 2026-10-09T15:00:00+09:00
 tags:
   - Minecraft
   - Aceserver
@@ -22,6 +22,8 @@ Si no sabes dónde encontrar la información, usa la búsqueda del portal con t�
 Los destinos de conexión, puertos, pasos por dispositivo —incluido Switch—, requisitos de participación y reglas pueden cambiar. Este artículo es solo una entrada: antes de jugar, toma siempre como autoridad la información oficial más reciente.
 
 Para crear un aspecto, lea la [guía del creador de skins](/es/stories/minecraft-skin-maker-guide/): nueva generación desde texto o imagen, revisión 3D y guardado PNG.
+
+Si no conoces la pantalla de multijugador, la [guía oficial para entrar en servidores](https://www.minecraft.net/en-us/article/how-play-minecraft-server) explica los controles básicos de Java y Bedrock. Después abre las instrucciones de Aceserver y sigue las indicaciones para tu dispositivo.
 
 ## Los cuatro lugares oficiales que debes abrir primero
 

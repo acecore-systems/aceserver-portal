@@ -1,8 +1,8 @@
 ---
-title: The Metaverse Is Closer Than You Think
+title: 'Is Minecraft a Familiar Metaverse? | Building, Adventure, and Community'
 description: A reflection on how virtual spaces such as Minecraft—where people gather and interact—can also be a metaverse, not only experiences that require a VR headset.
 translationOf: metaverse-is-close
-sourceHash: sha256:f34ab749c2a8f41450eda70a0a2cd519d52c85f8a65d9e8bf4d6f42fa4032335
+sourceHash: sha256:606804ba1492526b52c0704977725e09c339c251ef048984a5fff31251da80d7
 date: 2023-03-23T00:00:00+09:00
 tags:
   - Community
@@ -10,8 +10,10 @@ tags:
 author: Gui
 image: '/uploads/stories/metaverse-is-close-cover-v2.webp'
 imageAlt: 'Conceptual illustration of people building together in a block-style square, with a PC and tablet as entry points'
-lastUpdated: '2026-10-06T13:52:45+09:00'
+lastUpdated: 2026-10-09T15:00:00+09:00
 ---
+
+This is the author’s March 2023 view of Minecraft communities as a metaverse. Before buying VR equipment, consider the experience of building with friends in one world or exploring a server’s town. Minecraft’s official [guide to playing on a server](https://www.minecraft.net/en-us/article/how-play-minecraft-server) explains the multiplayer basics; it is an operating guide, not a definition of the metaverse.
 
 When you hear “metaverse,” you may picture putting on a VR headset and entering a virtual world. Facebook changed its name to Meta and has been focusing on Horizon Worlds, but many people may honestly feel that the idea still does not quite resonate.
 

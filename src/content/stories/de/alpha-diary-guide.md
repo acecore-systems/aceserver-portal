@@ -1,18 +1,20 @@
 ---
-title: Alpha-kuns Bildertagebuch lesen
+title: 'Alpha-kuns Bildtagebuch lesen | Datum wählen, Einträge lesen, Fragen stellen'
 description: Wähle Daten in Alpha-kuns Bildertagebuch, lies die illustrierten Aufzeichnungen und frage nach, was dich interessiert. Erkunde alles in deinem eigenen Tempo.
 date: 2026-09-25T00:00:00+09:00
 tags:
   - Neuigkeiten
 author: Gui
-lastUpdated: 2026-10-06T08:52:00+09:00
+lastUpdated: 2026-10-09T15:00:00+09:00
 image: /uploads/stories/alpha-diary-guide-hero.webp
 imageAlt: Illustration eines offenen Tagebuchs und Kalenders in einer Blocklandschaft
 translationOf: alpha-diary-guide
-sourceHash: sha256:d19617ba25118538d9991868e340b5c130e6de4d165b705e14e07bcbcf0c20a2
+sourceHash: sha256:579053ddd3728f07e06d1cd3119ef5114913929d2959c68ff9998a26bb8df587
 ---
 
 Alpha-kuns Bildertagebuch enthält Zeichnungen und Texte aus Aceserver, geordnet nach Datum. Der Einstieg ist die [Tagebuchseite](/de/alpha-diary/).
+
+Lesen Sie beim ersten Besuch zunächst Bild und Text eines Tages und wählen Sie einen interessanten Ort oder ein Ereignis aus. Mit Datum und Thema, etwa „Erzähl mir von diesem Ort an diesem Tag“, wird Ihre Frage klarer. Sie können die Einträge auch einfach ohne Fragen genießen.
 
 ## Wähle selbst ein Datum
 

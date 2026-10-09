@@ -1,8 +1,8 @@
 ---
-title: We Launched the Aceserver Portal
+title: 'Aceserver Portal Launch | Joining, Wiki, and World Map Links'
 description: We brought the pre-join information that had been split across Discord, the Wiki, videos, and world maps together into one clear entry point.
 translationOf: aceserver-portal-launch
-sourceHash: sha256:7135f8b1e68e3bdb744b643f856f26305e2d1e25296653417993ddf4cdd9e1c0
+sourceHash: sha256:63ad63b246cc398492535615e6e4fa3c296bab0a7f8cf321886fdf4ff6183f3c
 date: 2026-06-07T10:00:00+09:00
 tags:
   - Announcement
@@ -10,8 +10,10 @@ tags:
 author: Gui
 image: /uploads/stories/aceserver-portal-launch.webp
 imageAlt: The Aceserver Portal homepage shown over a Minecraft cityscape
-lastUpdated: '2026-10-06T13:52:45+09:00'
+lastUpdated: 2026-10-09T15:00:00+09:00
 ---
+
+This is the portal launch announcement from June 7, 2026. If you are joining now, start with the portal overview, then check the latest official Discord and Wiki guidance for your edition’s joining instructions and rules.
 
 We launched the official portal for Aceserver, a free public Minecraft server that anyone can join.
 

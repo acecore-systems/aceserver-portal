@@ -1,8 +1,8 @@
 ---
-title: El metaverso está más cerca de lo que parece
+title: '¿Es Minecraft un metaverso cercano? | Construcción, aventura y comunidad'
 description: El metaverso no se limita a las gafas de realidad virtual; espacios como Minecraft, donde las personas se reúnen e interactúan, también pueden serlo.
 translationOf: metaverse-is-close
-sourceHash: sha256:f34ab749c2a8f41450eda70a0a2cd519d52c85f8a65d9e8bf4d6f42fa4032335
+sourceHash: sha256:606804ba1492526b52c0704977725e09c339c251ef048984a5fff31251da80d7
 date: 2023-03-23T00:00:00+09:00
 tags:
   - Comunidad
@@ -10,8 +10,10 @@ tags:
 author: Gui
 image: '/uploads/stories/metaverse-is-close-cover-v2.webp'
 imageAlt: 'Ilustración conceptual de personas construyendo juntas en una plaza de bloques, con un PC y una tableta como entradas'
-lastUpdated: '2026-10-06T13:52:45+09:00'
+lastUpdated: 2026-10-09T15:00:00+09:00
 ---
+
+Esta es la visión del autor de marzo de 2023 sobre las comunidades de Minecraft como metaverso. Antes de comprar equipo de RV, considera construir con amigos en un mismo mundo o visitar la ciudad de un servidor. La [guía oficial para jugar en un servidor](https://www.minecraft.net/en-us/article/how-play-minecraft-server) explica las operaciones básicas del multijugador; no define el metaverso.
 
 Al oír «metaverso», quizá imaginemos que nos ponemos unas gafas de realidad virtual y entramos en un mundo virtual. Facebook cambió su nombre a Meta y está impulsando Horizon Worlds, pero es probable que mucha gente todavía no termine de sentirlo cercano.
 
