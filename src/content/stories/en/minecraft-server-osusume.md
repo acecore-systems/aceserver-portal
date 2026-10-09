@@ -2,9 +2,9 @@
 title: 'Recommended Minecraft servers in Japan: 6 picks by Java/Bedrock support and play style'
 description: A guide to public Minecraft servers in Japan, based on the editions, play styles, and joining information confirmed on their official sites.
 translationOf: minecraft-server-osusume
-sourceHash: sha256:c2e48929cf9d67ea2cb76eaf8ccdaf7e1aa1a511a05ff69f766fe497de5dc626
+sourceHash: sha256:2278e516442d294853fc357cea7e80dbcaa0ccd6a278ab2f2a33f94694725e43
 date: 2026-08-01T10:00:00+09:00
-lastUpdated: '2026-10-06T13:52:45+09:00'
+lastUpdated: 2026-10-09T15:00:00+09:00
 tags:
   - Minecraft
   - Minecraft server
@@ -19,6 +19,8 @@ This guide introduces public servers whose official guidance explains their play
 **Checked September 26, 2026:** We revisited all six official sites and their Java and Bedrock joining guidance. [Nishisaba launched seasonal Survival on September 1](https://nishisaba.jp/news/20260901-notify); Home and TPA are unavailable in that world. [Munika moved to Re:15](https://munikasvr.net/events/re15release/) and replaced its former tutorial quests with the Munika Guide. Worlds and features can change, so check the current official guidance before joining.
 
 If your group includes Switch or smartphone players, check [how to play Minecraft with friends](/en/stories/minecraft-play-with-friends/) for the edition and account conditions before choosing how to join.
+
+Narrow the choices by deciding whether you want building and sightseeing, technical contraptions, economy and quests, or vanilla-style survival. Then compare official sites for your group’s editions, joining conditions, and land-protection rules. The descriptions below record checks from September 2026 and do not guarantee current recruitment or features.
 
 ## Six recommended Minecraft servers
 

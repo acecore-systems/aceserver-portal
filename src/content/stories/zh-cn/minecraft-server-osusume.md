@@ -2,9 +2,9 @@
 title: '日本推荐 Minecraft 服务器 6 选：按 Java/Bedrock 支持与玩法比较'
 description: 根据各官方站点确认的版本支持、玩法和加入说明，介绍日本的公开 Minecraft 服务器。
 translationOf: minecraft-server-osusume
-sourceHash: sha256:c2e48929cf9d67ea2cb76eaf8ccdaf7e1aa1a511a05ff69f766fe497de5dc626
+sourceHash: sha256:2278e516442d294853fc357cea7e80dbcaa0ccd6a278ab2f2a33f94694725e43
 date: 2026-08-01T10:00:00+09:00
-lastUpdated: '2026-10-06T13:52:45+09:00'
+lastUpdated: 2026-10-09T15:00:00+09:00
 tags:
   - Minecraft
   - Minecraft 服务器
@@ -19,6 +19,8 @@ imageAlt: '城镇、铁路、机械、市场、自然和建筑六种微型岛屿
 **2026年9月26日核查：** 已重新查看六个官方网站及其Java版、基岩版加入说明。[西鯖于9月1日推出赛季制生存服](https://nishisaba.jp/news/20260901-notify)，该世界不提供Home和TPA。[Munika进入Re:15赛季](https://munikasvr.net/events/re15release/)，以Munika指南取代原有的新手教程任务。世界和功能可能变化，加入前请查阅当时的官方说明。
 
 如果队伍中有 Switch 或手机玩家，在决定参加方式前，可先阅读[如何与朋友一起玩 Minecraft](/zh-cn/stories/minecraft-play-with-friends/)，确认版本和账户条件。
+
+比较时，先决定想体验建造与观光、机械装置、经济与任务，还是偏原版的生存生活，就更容易缩小范围。再通过官方网站比较所有朋友的版本是否受支持、参加条件和土地保护规则。下方介绍保留2026年9月的核查记录，并不保证当前招募状态或功能。
 
 ## 推荐 Minecraft 服务器 6 选
 

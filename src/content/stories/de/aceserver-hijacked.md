@@ -1,15 +1,18 @@
 ---
-title: Aceserver wurde übernommen.
-description: Ein Bericht über die „Übernahme“ von Aceserver – ein erschütterndes Dokument darüber, wie der Verstand der Mitglieder einer nach dem anderen zerfällt.
+title: 'Aceserver: Bericht zum „Übernahme“-Event | Oktober 2022'
+description: 'Am 12. Oktober 2022 veröffentlichter Bericht zum „Übernahme“-Event von Aceserver. Der damalige Erzähltext bleibt erhalten; außerdem finden Sie den Zugang zu aktuellen Teilnahmeinformationen.'
 translationOf: aceserver-hijacked
-sourceHash: sha256:d4ed78f447d9c7d8b80f00e170eaebd2f24a8faf1285b827b6499d2029541950
+sourceHash: sha256:6477d2ba77de82cf756ee99ee7fae154e500828d919a42c43eeb07eb29b07bc9
 date: 2022-10-12T00:00:00+09:00
 tags:
   - Event
 author: ハット
 image: /uploads/stories/aceserver-hijacked.webp
 imageAlt: Ein ungewöhnliches Servergerät mit violettem und grünem Leuchten breitet sich durch eine Blockstadt bei Nacht aus
+lastUpdated: 2026-10-09T15:00:00+09:00
 ---
+
+Dieser Artikel dokumentiert das am 12. Oktober 2022 veröffentlichte „Übernahme“-Event. Der folgende Text bewahrt die damalige Erzählung und meldet weder eine aktuelle Serverstörung noch kompromittierte Konten.
 
 ## Aceserver wurde übernommen
 

@@ -2,7 +2,7 @@
 title: 'Comment configurer un serveur Minecraft gratuit : Java, Bedrock et Realms'
 description: Découvrez comment configurer un serveur Minecraft gratuit et comparez Java Edition, Bedrock Edition et Realms, avec les préparatifs et les vérifications de sécurité à effectuer avant de l'ouvrir.
 translationOf: minecraft-server-setup
-sourceHash: sha256:48fe3113347491bab033478489964d0be50754b14687d8f189c3103a1696b1bf
+sourceHash: sha256:b511296812b20a640219e6d23416407abef5bf20c9fc4a1c018182604f9b5cdf
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -11,7 +11,7 @@ tags:
 author: Gui
 image: '/uploads/stories/minecraft-server-setup-cover-v2.webp'
 imageAlt: 'Illustration conceptuelle de la préparation et de la maintenance avec kit de blocs, outils, boîte de rangement et maison-serveur miniature'
-lastUpdated: '2026-10-06T13:52:45+09:00'
+lastUpdated: 2026-10-09T15:00:00+09:00
 ---
 
 Il existe plusieurs façons de jouer à Minecraft avec des amis : utiliser le même réseau local, exécuter un serveur dédié sur son propre PC ou utiliser Realms. Le bon choix dépend de l'édition utilisée par tout le monde et de la maintenance que vous êtes prêt à assurer.
@@ -19,6 +19,8 @@ Il existe plusieurs façons de jouer à Minecraft avec des amis : utiliser le m�
 Il faut d'abord comprendre qu'un serveur gratuit signifie que le logiciel du serveur est gratuit. Le jeu Minecraft, l'ordinateur, l'électricité, la connexion Internet, les sauvegardes et les mises à jour restent à votre charge. Ce guide se concentre sur l'hébergement du logiciel officiel sur votre propre PC.
 
 Si votre groupe comprend des joueurs sur Switch ou mobile, consultez [comment jouer à Minecraft avec des amis](/fr/stories/minecraft-play-with-friends/) avant de choisir la façon de rejoindre, afin de vérifier l’édition et les comptes.
+
+Avant le téléchargement, accordez-vous sur l’édition de chacun et sur l’arrêt du jeu lorsque le PC hôte s’éteint. Le [téléchargement officiel Java](https://www.minecraft.net/en-us/download/server) concerne Java ; celui de [Bedrock](https://www.minecraft.net/en-us/download/server/bedrock) concerne Bedrock. Vérifiez les environnements compatibles et le guide fourni, puis réussissez une connexion locale avant d’élargir l’accès.
 
 ## En bref : choisissez selon les joueurs et l’édition
 

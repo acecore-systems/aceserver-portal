@@ -2,7 +2,7 @@
 title: 'Can’t join a Minecraft server? Checks for Java, Bedrock, and Switch'
 description: Learn how to check your edition, game version, account, and network when you cannot join a Minecraft server, then continue playing with confidence after you connect.
 translationOf: minecraft-server-cannot-join
-sourceHash: sha256:014fe443391942d389ae8c13f0259af504df8fb7df2d4f38effea66213930476
+sourceHash: sha256:22e7daa49d737d74089286ebf1a965d34c3ce62833a3a18b8ff4476d65a27414
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -11,11 +11,14 @@ tags:
 author: Gui
 image: /uploads/stories/minecraft-server-cannot-join-hero.webp
 imageAlt: A block-style traveler holding a map chooses among paths to a computer, smartphone, and game controller
+lastUpdated: 2026-10-09T15:00:00+09:00
 ---
 
 When you cannot join a Minecraft server, separate the possible causes before repeatedly trying to connect: game edition, the server’s own guidance, account settings, and your network. The first half of this article is a general checklist for any server. Aceserver-specific guidance is kept separate near the end.
 
 If your group includes Switch or smartphone players, check [how to play Minecraft with friends](/en/stories/minecraft-play-with-friends/) for the edition and account conditions before choosing how to join.
+
+“Multiplayer is disabled” points you toward account permissions; a timeout points toward the address, server availability, or connection. They do not necessarily need the same fix. If the controls are unclear, check your edition’s input screen in Minecraft’s [official server joining guide](https://www.minecraft.net/en-us/article/how-play-minecraft-server), then follow the checks below.
 
 ## First, separate a connection problem from uncertainty after joining
 
@@ -36,7 +39,7 @@ These are different problems. You do not need to tolerate the second one while s
 
 ### Java Edition
 
-Java Edition runs on Windows, macOS, and Linux. If a server provides Java instructions, select the specified normal release in the launcher and enter its address through Multiplayer. The address may be an IP address or a URL-style hostname.
+Java Edition runs on Windows, macOS, and Linux. If a server provides Java instructions, select the specified normal release in the launcher and enter its address through Multiplayer. The address is an IP address or hostname. Enter the server address provided in its instructions, rather than a web page URL.
 
 Pay particular attention to the server’s required game version and to mod or launcher settings. A vanilla server may refuse a test build or unnecessary mods. Start with the normal version specified by the official guide, and add extras only when the server explicitly requires them.
 

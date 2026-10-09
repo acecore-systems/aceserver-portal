@@ -2,7 +2,7 @@
 title: Aceserver初心者ガイド｜ポータル・ワールドマップ・動画・WIKI・接続トラブルの見方
 description: 初めてAceserverに参加する人へ。公式ポータル、ワールドマップ、動画、WIKIの使い分けと、入れないときの確認先をまとめます。
 date: 2026-08-09T10:00:00+09:00
-lastUpdated: 2026-09-30T21:15:00+09:00
+lastUpdated: 2026-10-09T15:00:00+09:00
 tags:
   - Minecraft
   - Aceserver
@@ -24,6 +24,8 @@ relatedStories:
 接続先、ポート、Switchを含む機種ごとの手順、参加条件、ルールは更新されることがあります。この記事は入口を案内するものです。実際に参加する前は、必ず公式の最新案内を正として確認してください。
 
 見た目を作りたいときは[スキンメーカーの使い方](/stories/minecraft-skin-maker-guide/)へ進めます。文章や参考画像から新しいスキンを作り、3Dで確認してPNGを保存する手順をまとめています。
+
+ゲームの「マルチプレイ」画面そのものが初めてなら、Minecraft公式の[サーバーへの参加ガイド](https://www.minecraft.net/en-us/article/how-play-minecraft-server)でJava版・統合版の基本操作を確認できます。そのあとAceserverの参加方法を開き、使う端末に合う案内で接続しましょう。
 
 ## 最初に開く4つの公式案内
 

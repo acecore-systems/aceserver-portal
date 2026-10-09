@@ -1,18 +1,20 @@
 ---
-title: Lire le journal illustré d'Alpha
+title: 'Lire le journal illustré d’Alpha-kun | Dates, récits et questions'
 description: Choisissez des dates dans le journal illustré d'Alpha, lisez ses dessins et ses textes, puis posez les questions qui vous viennent. Explorez à votre rythme.
 date: 2026-09-25T00:00:00+09:00
 tags:
   - Actualités
 author: Gui
-lastUpdated: 2026-10-06T08:52:00+09:00
+lastUpdated: 2026-10-09T15:00:00+09:00
 image: /uploads/stories/alpha-diary-guide-hero.webp
 imageAlt: Illustration d'un journal ouvert et d'un calendrier dans un paysage de blocs
 translationOf: alpha-diary-guide
-sourceHash: sha256:d19617ba25118538d9991868e340b5c130e6de4d165b705e14e07bcbcf0c20a2
+sourceHash: sha256:579053ddd3728f07e06d1cd3119ef5114913929d2959c68ff9998a26bb8df587
 ---
 
 Le journal illustré d'Alpha réunit des dessins et des textes d'Aceserver classés par date. Commencez sur la [page du journal](/fr/alpha-diary/).
+
+Pour une première visite, regardez le dessin et lisez le texte d’une journée, puis choisissez un lieu ou un événement qui vous intrigue. Précisez la date et le sujet, par exemple « Parle-moi de ce lieu ce jour-là », pour clarifier votre question. Vous pouvez aussi profiter des récits sans poser de question.
 
 ## Choisissez vous-même une date
 

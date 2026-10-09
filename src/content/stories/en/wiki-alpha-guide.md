@@ -1,5 +1,5 @@
 ---
-title: Find the Help You Need with the WIKI and Alpha-kun
+title: 'How to Use the Aceserver Wiki | Find Joining Rules and Ask Alpha-kun'
 description: Use the official Aceserver WIKI by category or search, then ask Alpha-kun to find a path to published guidance.
 date: 2026-09-27T22:40:00+09:00
 tags:
@@ -8,11 +8,13 @@ author: Gui
 image: /uploads/stories/wiki-alpha-guide-hero.webp
 imageAlt: Illustration of the official Alpha-kun beside an open guidebook and search results in a block-style landscape
 translationOf: wiki-alpha-guide
-sourceHash: sha256:9e3dd3bb72ef54f933f8c39962710715e13a833ee359a9ecb2407f1f9f7612f7
-lastUpdated: 2026-10-06T08:52:00+09:00
+sourceHash: sha256:48391e4744aaa6d425e51e9a26126cca72e4d4f6d013eaf1f48f250a4f5437f9
+lastUpdated: 2026-10-09T15:00:00+09:00
 ---
 
 When you need joining instructions or rules, start at the [official Aceserver WIKI](https://asv-wiki.acecore.net/). If you are unsure which article to open, the “Ask Alpha-kun” button on the portal and WIKI offers another starting point.
+
+Start a search with a short phrase describing your goal, such as “joining” or “land protection.” When asking Alpha-kun, include the server or world you are playing in and the action you need help with. Open the cited article and confirm joining conditions or rules in the original guidance before acting.
 
 ## Browse the WIKI by category
 

@@ -1,8 +1,8 @@
 ---
-title: Das Metaverse ist näher, als man denkt
+title: 'Minecraft als vertrautes Metaversum? | Bauen, Abenteuer und Gemeinschaft'
 description: Das Metaverse beschränkt sich nicht auf VR-Headsets; auch virtuelle Räume wie Minecraft, in denen Menschen zusammenkommen und sich austauschen, können dazu gehören.
 translationOf: metaverse-is-close
-sourceHash: sha256:f34ab749c2a8f41450eda70a0a2cd519d52c85f8a65d9e8bf4d6f42fa4032335
+sourceHash: sha256:606804ba1492526b52c0704977725e09c339c251ef048984a5fff31251da80d7
 date: 2023-03-23T00:00:00+09:00
 tags:
   - Community
@@ -10,8 +10,10 @@ tags:
 author: Gui
 image: '/uploads/stories/metaverse-is-close-cover-v2.webp'
 imageAlt: 'Konzeptillustration von Menschen beim gemeinsamen Bauen auf einem Blockplatz, mit PC und Tablet als Zugängen'
-lastUpdated: '2026-10-06T13:52:45+09:00'
+lastUpdated: 2026-10-09T15:00:00+09:00
 ---
+
+Dies ist die Sicht des Autors vom März 2023 auf Minecraft-Gemeinschaften als Metaversum. Denken Sie vor einem VR-Kauf an gemeinsames Bauen in einer Welt oder einen Stadtbesuch auf einem Server. Die offizielle [Anleitung zum Spielen auf einem Server](https://www.minecraft.net/en-us/article/how-play-minecraft-server) erläutert die Multiplayer-Bedienung und liefert keine Definition des Metaversums.
 
 Beim Wort „Metaverse“ denkt man vielleicht an ein VR-Headset, mit dem man eine virtuelle Welt betritt. Facebook hat sich in Meta umbenannt und setzt auf Horizon Worlds, doch für viele Menschen fühlt sich die Idee vermutlich noch nicht wirklich greifbar an.
 

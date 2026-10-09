@@ -1,5 +1,5 @@
 ---
-title: 'スキンメーカーの使い方｜文章・画像から作って3Dで確認'
+title: 'Minecraftスキンメーカーの使い方｜文章・画像で作成、3D編集・PNG保存'
 description: 'Aceserverのスキンメーカーで、文章と任意の参考画像から新しいスキンを作り、Classic・Slimの型、3D表示、64×64 PNG保存を確認する手順を紹介します。'
 date: 2026-09-30T21:15:00+09:00
 author: Gui
@@ -7,10 +7,12 @@ tags: [Minecraft, Aceserver, Skin Maker]
 image: /uploads/stories/minecraft-skin-maker-cover-v2.webp
 imageAlt: '白いブロック人形と絵具パレットによるスキン作成の説明用イラスト。生成スキンの実例ではない。'
 relatedStories: [aceserver-beginners-guide]
-lastUpdated: 2026-10-07
+lastUpdated: 2026-10-09T15:00:00+09:00
 ---
 
 文章や任意の参考画像から、Minecraft用の新しいスキンを作れる[スキンメーカー](/skin-maker/)があります。生成した見た目は3D表示で確認し、64×64 PNGとして保存できます。
+
+初めてなら、腕の型を選び、服装と色を短い文章で指定して一体作るところから始めます。保存したPNGを使う前に、Minecraft公式の[スキンの説明と変更方法](https://www.minecraft.net/en-us/article/what-is-minecraft-skin)で、自分の版・端末が画像の読み込みに対応するか確認してください。ストアへ公開しなくても、PNGを保存して使えます。
 
 ## 1. 腕の型とイメージを選ぶ
 

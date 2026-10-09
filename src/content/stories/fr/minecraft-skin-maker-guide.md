@@ -1,5 +1,5 @@
 ---
-title: 'Utiliser le créateur de skins : texte, images et contrôle 3D'
+title: 'Utiliser le créateur de skins Minecraft | Texte, images, édition 3D et PNG'
 description: 'Créez une nouvelle skin avec du texte et une image facultative, choisissez Classic ou Slim, vérifiez en 3D et sauvegardez un PNG 64×64.'
 date: 2026-09-30T21:15:00+09:00
 author: Gui
@@ -8,11 +8,13 @@ image: /uploads/stories/minecraft-skin-maker-cover-v2.webp
 imageAlt: 'Illustration de mannequins en blocs blancs et d’une palette représentant la création de skins. Ce n’est pas un résultat généré.'
 relatedStories: [aceserver-beginners-guide]
 translationOf: minecraft-skin-maker-guide
-sourceHash: sha256:417830da11a893bd01fad6116a244c4a149a4cf163397414588057a87b317f1d
-lastUpdated: 2026-10-07
+sourceHash: sha256:79a7458953ba34306faa5905c5cef14193cb3fd066e37a641017d518b25b0899
+lastUpdated: 2026-10-09T15:00:00+09:00
 ---
 
 Le [créateur de skins](/fr/skin-maker/) génère de nouvelles skins Minecraft à partir de texte et d’une image facultative. Vérifiez en 3D et sauvegardez un PNG 64×64.
+
+Pour commencer, choisissez le modèle des bras et décrivez brièvement les vêtements et couleurs afin de créer un skin. Avant d’utiliser le PNG enregistré, consultez le [guide officiel sur les skins et leur changement](https://www.minecraft.net/en-us/article/what-is-minecraft-skin) pour vérifier l’importation d’images sur votre édition et appareil. Vous pouvez enregistrer et utiliser le PNG sans le publier dans la boutique.
 
 ## 1. Choisir les bras et décrire le style
 

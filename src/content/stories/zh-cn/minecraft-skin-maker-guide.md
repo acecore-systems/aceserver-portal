@@ -1,5 +1,5 @@
 ---
-title: '皮肤制作器使用指南：文字、图片生成与3D检查'
+title: 'Minecraft皮肤制作器使用方法｜文字图片生成、3D编辑与PNG保存'
 description: '从文字和可选图片生成Minecraft新皮肤，选择Classic或Slim，查看3D效果并保存64×64 PNG。'
 date: 2026-09-30T21:15:00+09:00
 author: Gui
@@ -8,11 +8,13 @@ image: /uploads/stories/minecraft-skin-maker-cover-v2.webp
 imageAlt: '用白色方块人偶和调色板表现皮肤制作的说明插画，并非生成结果实例。'
 relatedStories: [aceserver-beginners-guide]
 translationOf: minecraft-skin-maker-guide
-sourceHash: sha256:417830da11a893bd01fad6116a244c4a149a4cf163397414588057a87b317f1d
-lastUpdated: 2026-10-07
+sourceHash: sha256:79a7458953ba34306faa5905c5cef14193cb3fd066e37a641017d518b25b0899
+lastUpdated: 2026-10-09T15:00:00+09:00
 ---
 
 [皮肤制作器](/zh-cn/skin-maker/)可用文字和可选参考图片生成Minecraft新皮肤，随后查看3D效果并保存64×64 PNG。
+
+第一次使用时，先选手臂模型，用简短文字指定服装与颜色，制作一个皮肤。使用保存的PNG前，请通过Minecraft官方的[皮肤说明与更换方法](https://www.minecraft.net/en-us/article/what-is-minecraft-skin)确认自己的版本和设备是否支持图片导入。不公开到商店，也可以保存并使用PNG。
 
 ## 1. 选择手臂类型与外观
 

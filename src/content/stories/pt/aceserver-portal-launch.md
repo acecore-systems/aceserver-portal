@@ -1,8 +1,8 @@
 ---
-title: Lançamos o Portal do Aceserver
+title: 'Lançamento do portal Aceserver | Participação, Wiki e mapas'
 description: Reunimos em uma única entrada as informações anteriores à participação que estavam separadas entre Discord, Wiki, vídeos e mapas.
 translationOf: aceserver-portal-launch
-sourceHash: sha256:7135f8b1e68e3bdb744b643f856f26305e2d1e25296653417993ddf4cdd9e1c0
+sourceHash: sha256:63ad63b246cc398492535615e6e4fa3c296bab0a7f8cf321886fdf4ff6183f3c
 date: 2026-06-07T10:00:00+09:00
 tags:
   - Anúncio
@@ -10,8 +10,10 @@ tags:
 author: Gui
 image: /uploads/stories/aceserver-portal-launch.webp
 imageAlt: Página inicial do Portal do Aceserver sobre uma cidade de Minecraft
-lastUpdated: '2026-10-06T13:52:45+09:00'
+lastUpdated: 2026-10-09T15:00:00+09:00
 ---
+
+Este é o anúncio de lançamento do portal de 7 de junho de 2026. Para participar agora, veja primeiro a visão geral no portal e depois confira no Discord oficial e na Wiki as instruções e regras atuais para sua edição.
 
 Lançamos o portal oficial do Aceserver, um servidor público gratuito de Minecraft do qual qualquer pessoa pode participar.
 

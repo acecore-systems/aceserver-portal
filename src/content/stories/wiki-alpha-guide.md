@@ -1,5 +1,5 @@
 ---
-title: WIKIとアルファくんで、知りたい案内を探す
+title: 'Aceserver WIKIの使い方｜参加方法・ルールを検索し、アルファくんに聞く'
 description: Aceserverの公式WIKIをカテゴリや検索から使い、アルファくんへの質問で公開情報への入口を見つける方法を紹介します。
 date: 2026-09-27T22:40:00+09:00
 tags:
@@ -9,10 +9,12 @@ image: /uploads/stories/wiki-alpha-guide-hero.webp
 imageAlt: 公式アルファくんが開いた案内書と検索結果を示す、ブロック調の案内イラスト
 relatedStories:
   - aceserver-beginners-guide
-lastUpdated: 2026-10-06T08:52:00+09:00
+lastUpdated: 2026-10-09T15:00:00+09:00
 ---
 
 参加方法やルールを知りたいときは、[Aceserver公式WIKI](https://asv-wiki.acecore.net/)から探せます。どの記事を開けばよいか迷ったら、ポータルやWIKIの「アルファくんに聞く」も入口になります。
+
+検索を始めるときは、「参加方法」「土地保護」のように目的を短い言葉にします。アルファくんに聞くなら、遊んでいるサーバーやワールドと、困っている操作を添えましょう。答えに出た参照記事を開き、参加条件やルールは原文で確かめてから行動します。
 
 ## WIKIをカテゴリから探す
 

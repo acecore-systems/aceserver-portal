@@ -2,7 +2,7 @@
 title: 'Java 서버를 베드락과 함께 쓰는 방법: 안전한 크로스플레이 설정'
 description: Geyser와 Floodgate로 베드락 친구를 자신의 Java 서버에 안전하게 초대하고, 무료 호스트를 고르는 방법과 공개 전 점검 항목을 안내합니다.
 translationOf: minecraft-java-bedrock-shared-server
-sourceHash: sha256:3ad44805fe1520a43fa6286eae62b3315998d010a7fb1cecff5f763ab1805b87
+sourceHash: sha256:1cf7f0fc312533bba07e7685f6d623f97319b7dd9d9814821dec1d6bb9926a1f
 date: 2026-08-09T10:00:00+09:00
 tags:
   - Minecraft
@@ -14,7 +14,7 @@ tags:
 author: Gui
 image: '/uploads/stories/minecraft-java-bedrock-shared-server-cover-v2.webp'
 imageAlt: '서버를 나타내는 블록 집에 PC와 다리를 거친 태블릿이 연결되고 관리 상자는 별도로 놓인 개념 일러스트'
-lastUpdated: '2026-10-06T13:52:45+09:00'
+lastUpdated: 2026-10-09T15:00:00+09:00
 ---
 
 휴대폰, 태블릿, Windows, 콘솔의 베드락 친구를 자신의 Java 서버에 초대하려면 Java 서버에 Geyser와 Floodgate를 설치하는 구성이 실용적입니다. Geyser는 베드락 연결을 Java 서버로 이어 주고, Floodgate는 서버가 베드락 계정을 안전하게 식별할 수 있게 합니다.
@@ -22,6 +22,8 @@ lastUpdated: '2026-10-06T13:52:45+09:00'
 중요한 점은 베드락 친구를 받기 위해 Java 계정 인증을 꺼서는 안 된다는 것입니다. 이 안내는 Java 인증과 초대 전용 상태를 유지하는 것에서 시작합니다. Java와 베드락은 조작과 일부 기능이 완전히 같지 않으므로, 공개 전에 두 종류의 기기에서 실제로 시험해야 합니다.
 
 서로 다른 기기의 친구와 어떻게 함께 플레이할지 아직 정하는 중이라면 [친구와 Minecraft를 함께 하는 방법](/ko/stories/minecraft-play-with-friends/)도 확인하세요.
+
+설정을 시작하기 전에 [Geyser 공식 설치 안내](https://geysermc.org/wiki/geyser/setup/)에서 자신의 호스트와 서버 소프트웨어에 맞는 절차를 고릅니다. 다른 환경에 설정을 통째로 복사하기보다 설치 유형을 정하고, LAN에서 두 에디션의 참가를 확인한 뒤 친구를 초대하세요.
 
 ## 요약: Java + Geyser + Floodgate로 하나의 서버를 함께 쓸 수 있다
 

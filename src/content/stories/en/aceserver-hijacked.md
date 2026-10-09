@@ -1,15 +1,18 @@
 ---
-title: Aceserver Has Been Hijacked.
-description: A record of the “hijacking” event on Aceserver—a shocking document of the members’ sanity being consumed one after another.
+title: 'Aceserver “Hijacking” Event Record | October 2022'
+description: 'An Aceserver “hijacking” event story published on October 12, 2022. Read the original account of members losing their sanity and find today’s joining information.'
 translationOf: aceserver-hijacked
-sourceHash: sha256:d4ed78f447d9c7d8b80f00e170eaebd2f24a8faf1285b827b6499d2029541950
+sourceHash: sha256:6477d2ba77de82cf756ee99ee7fae154e500828d919a42c43eeb07eb29b07bc9
 date: 2022-10-12T00:00:00+09:00
 tags:
   - Event
 author: ハット
 image: /uploads/stories/aceserver-hijacked.webp
 imageAlt: A strange server device glowing purple and green spreads through a block-built city at night
+lastUpdated: 2026-10-09T15:00:00+09:00
 ---
+
+This article records the “hijacking” event published on October 12, 2022. The account below preserves the storytelling from that time; it is not a notice of a current server outage or account compromise.
 
 ## Aceserver Has Been Hijacked
 

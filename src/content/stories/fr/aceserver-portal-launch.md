@@ -1,8 +1,8 @@
 ---
-title: Le portail Aceserver est en ligne
+title: 'Lancement du portail Aceserver | Rejoindre, consulter le Wiki et les cartes'
 description: Nous avons réuni en un seul point d’entrée les informations préalables qui étaient réparties entre Discord, le Wiki, les vidéos et les cartes.
 translationOf: aceserver-portal-launch
-sourceHash: sha256:7135f8b1e68e3bdb744b643f856f26305e2d1e25296653417993ddf4cdd9e1c0
+sourceHash: sha256:63ad63b246cc398492535615e6e4fa3c296bab0a7f8cf321886fdf4ff6183f3c
 date: 2026-06-07T10:00:00+09:00
 tags:
   - Annonce
@@ -10,8 +10,10 @@ tags:
 author: Gui
 image: /uploads/stories/aceserver-portal-launch.webp
 imageAlt: Page d’accueil du portail Aceserver sur fond de ville Minecraft
-lastUpdated: '2026-10-06T13:52:45+09:00'
+lastUpdated: 2026-10-09T15:00:00+09:00
 ---
+
+Voici l’annonce du lancement du portail du 7 juin 2026. Pour rejoindre le serveur aujourd’hui, consultez d’abord sa présentation, puis les dernières instructions et règles pour votre édition sur le Discord officiel et le Wiki.
 
 Nous avons mis en ligne le portail officiel d’Aceserver, un serveur Minecraft public et gratuit ouvert à toutes et à tous.
 

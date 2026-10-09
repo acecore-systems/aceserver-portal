@@ -1,18 +1,20 @@
 ---
-title: Leer el diario ilustrado de Alfa
+title: 'Cómo leer el diario ilustrado de Alpha-kun | Fechas, registros y preguntas'
 description: Elige fechas en el diario ilustrado de Alfa, lee los dibujos y textos y pregunta por lo que te interese. Una guía para explorar a tu propio ritmo.
 date: 2026-09-25T00:00:00+09:00
 tags:
   - Novedades
 author: Gui
-lastUpdated: 2026-10-06T08:52:00+09:00
+lastUpdated: 2026-10-09T15:00:00+09:00
 image: /uploads/stories/alpha-diary-guide-hero.webp
 imageAlt: Ilustración de un diario abierto y un calendario en un paisaje de bloques
 translationOf: alpha-diary-guide
-sourceHash: sha256:d19617ba25118538d9991868e340b5c130e6de4d165b705e14e07bcbcf0c20a2
+sourceHash: sha256:579053ddd3728f07e06d1cd3119ef5114913929d2959c68ff9998a26bb8df587
 ---
 
 El diario ilustrado de Alfa reúne dibujos y textos de Aceserver organizados por fecha. Puedes empezar en la [página del diario](/es/alpha-diary/).
+
+En tu primera visita, lee el dibujo y el texto de un día y elige un lugar o un suceso que te interese. Incluye la fecha y el tema, por ejemplo: «Cuéntame sobre este lugar en este día», para expresar qué quieres saber. También puedes disfrutar de los registros sin preguntar nada.
 
 ## Elige la fecha
 

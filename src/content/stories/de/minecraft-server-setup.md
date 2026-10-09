@@ -2,7 +2,7 @@
 title: 'So richtest du einen kostenlosen Minecraft-Server ein: Java, Bedrock und Realms'
 description: Erfahre, wie du einen kostenlosen Minecraft-Server einrichtest und Java Edition, Bedrock Edition und Realms vergleichst, einschließlich Vorbereitung und Sicherheitsprüfungen vor der Freigabe.
 translationOf: minecraft-server-setup
-sourceHash: sha256:48fe3113347491bab033478489964d0be50754b14687d8f189c3103a1696b1bf
+sourceHash: sha256:b511296812b20a640219e6d23416407abef5bf20c9fc4a1c018182604f9b5cdf
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -11,7 +11,7 @@ tags:
 author: Gui
 image: '/uploads/stories/minecraft-server-setup-cover-v2.webp'
 imageAlt: 'Konzeptillustration von Vorbereitung und Wartung mit Blockbaukasten, Werkzeugen, Aufbewahrungsbox und kleinem Serverhaus'
-lastUpdated: '2026-10-06T13:52:45+09:00'
+lastUpdated: 2026-10-09T15:00:00+09:00
 ---
 
 Es gibt mehrere Möglichkeiten, mit Freunden Minecraft zu spielen: Ihr könnt dasselbe lokale Netzwerk verwenden, einen eigenen dedizierten Server auf eurem PC betreiben oder Realms nutzen. Die passende Wahl hängt von der Edition aller Spieler und davon ab, wie viel Wartung du übernehmen möchtest.
@@ -19,6 +19,8 @@ Es gibt mehrere Möglichkeiten, mit Freunden Minecraft zu spielen: Ihr könnt da
 Wichtig ist zuerst: Ein kostenloser Server bedeutet, dass die Serversoftware kostenlos ist. Das Minecraft-Spiel, der Computer, Strom, Internetverbindung, Backups und Updates werden dadurch nicht kostenlos. Dieser Leitfaden konzentriert sich darauf, die offizielle Software auf dem eigenen PC zu hosten.
 
 Wenn zu eurer Gruppe Switch- oder Smartphone-Spieler gehören, lest vor der Wahl des Beitrittswegs [wie ihr Minecraft mit Freunden spielt](/de/stories/minecraft-play-with-friends/), um Edition und Kontobedingungen zu prüfen.
+
+Klären Sie vor dem Download die Edition aller Mitspieler und ob das Spiel bei ausgeschaltetem Host-PC pausieren darf. Der [offizielle Java-Download](https://www.minecraft.net/en-us/download/server) ist für Java, der [Bedrock-Download](https://www.minecraft.net/en-us/download/server/bedrock) für Bedrock. Prüfen Sie unterstützte Umgebungen und die beiliegende Anleitung, bevor Sie nach einem erfolgreichen LAN-Test den Zugriff erweitern.
 
 ## Kurz gesagt: Nach Spielern und Edition auswählen
 

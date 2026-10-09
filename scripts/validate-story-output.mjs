@@ -14,7 +14,7 @@ const errors = []
 const stories = [
   {
     slug: 'minecraft-skin-maker-guide',
-    title: 'スキンメーカーの使い方｜文章・画像から作って3Dで確認',
+    title: 'Minecraftスキンメーカーの使い方｜文章・画像で作成、3D編集・PNG保存',
     description:
       'Aceserverのスキンメーカーで、文章と任意の参考画像から新しいスキンを作り、Classic・Slimの型、3D表示、64×64 PNG保存を確認する手順を紹介します。',
     author: 'Gui',
@@ -25,9 +25,9 @@ const stories = [
   },
   {
     slug: 'aceserver-hijacked',
-    title: 'エースサーバー、乗っ取られる。',
+    title: 'エースサーバー「乗っ取り」イベントの記録｜2022年10月',
     description:
-      'エースサーバーで起きた「乗っ取り」イベントの記録。メンバーたちの理性が次々と侵食されていく、衝撃のドキュメント。',
+      '2022年10月12日に公開したエースサーバーの「乗っ取り」イベント記事。メンバーの理性が侵食されていく当時の語りと、現在の参加案内への入口を残しています。',
     author: 'ハット',
     datePublished: '2022-10-11T15:00:00.000Z',
     image: '/uploads/stories/aceserver-hijacked.webp',
@@ -36,7 +36,7 @@ const stories = [
   },
   {
     slug: 'aceserver-portal-launch',
-    title: 'エースサーバーポータルを公開しました',
+    title: 'エースサーバーポータル公開｜参加方法・WIKI・ワールドマップへの入口',
     description:
       'Discord、Wiki、動画、ワールドマップに分かれていた参加前の情報を、一つの入口へ整理しました。',
     author: 'Gui',
@@ -59,7 +59,7 @@ const stories = [
   },
   {
     slug: 'alpha-diary-guide',
-    title: '絵日記の読み方',
+    title: 'アルファ君の絵日記の読み方｜日付を選ぶ・記録を読む・質問する',
     description:
       'アルファ君の絵日記では、日付を選んで絵と文章の記録を開き、気になったことをアルファ君に質問できます。自分のペースでたどるための案内です。',
     author: 'Gui',
@@ -70,7 +70,8 @@ const stories = [
   },
   {
     slug: 'wiki-alpha-guide',
-    title: 'WIKIとアルファくんで、知りたい案内を探す',
+    title:
+      'Aceserver WIKIの使い方｜参加方法・ルールを検索し、アルファくんに聞く',
     description:
       'Aceserverの公式WIKIをカテゴリや検索から使い、アルファくんへの質問で公開情報への入口を見つける方法を紹介します。',
     author: 'Gui',
@@ -150,7 +151,7 @@ const stories = [
   },
   {
     slug: 'metaverse-is-close',
-    title: 'メタバースは案外身近にあるよね',
+    title: 'Minecraftも身近なメタバース？｜建築・冒険・交流から考える',
     description:
       'VRゴーグルだけではなく、人が集まり交流するMinecraftのような仮想空間もメタバースではないか、という話。',
     author: 'Gui',

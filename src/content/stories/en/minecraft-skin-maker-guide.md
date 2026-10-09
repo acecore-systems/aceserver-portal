@@ -1,5 +1,5 @@
 ---
-title: 'Using the Skin Maker: create from text or images and check in 3D'
+title: 'How to Use the Minecraft Skin Maker | Text, Images, 3D Editing, and PNG Export'
 description: 'Create a new Minecraft skin with text and an optional image, choose Classic or Slim, review it in 3D and save a 64×64 PNG.'
 date: 2026-09-30T21:15:00+09:00
 author: Gui
@@ -8,11 +8,13 @@ image: /uploads/stories/minecraft-skin-maker-cover-v2.webp
 imageAlt: 'Illustration of blank block mannequins and a paint palette representing skin creation. Not an example of generated output.'
 relatedStories: [aceserver-beginners-guide]
 translationOf: minecraft-skin-maker-guide
-sourceHash: sha256:417830da11a893bd01fad6116a244c4a149a4cf163397414588057a87b317f1d
-lastUpdated: 2026-10-07
+sourceHash: sha256:79a7458953ba34306faa5905c5cef14193cb3fd066e37a641017d518b25b0899
+lastUpdated: 2026-10-09T15:00:00+09:00
 ---
 
 The [Skin Maker](/en/skin-maker/) creates new Minecraft skins from text and an optional reference image. Review the result in 3D and save a 64×64 PNG.
+
+For a first attempt, choose the arm model and describe the outfit and colors briefly to make one skin. Before using the saved PNG, check Minecraft’s official [skin explanation and changing guide](https://www.minecraft.net/en-us/article/what-is-minecraft-skin) for image-import support on your edition and device. You can save and use the PNG without publishing it to the store.
 
 ## 1. Choose an arm type and describe the look
 

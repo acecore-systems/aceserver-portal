@@ -2,7 +2,7 @@
 title: 如何搭建免费的 Minecraft 服务器：Java、基岩版与 Realms 的区别
 description: 介绍如何搭建免费的 Minecraft 服务器，并比较 Java 版、基岩版和 Realms，包括准备工作与开放服务器前的安全检查。
 translationOf: minecraft-server-setup
-sourceHash: sha256:48fe3113347491bab033478489964d0be50754b14687d8f189c3103a1696b1bf
+sourceHash: sha256:b511296812b20a640219e6d23416407abef5bf20c9fc4a1c018182604f9b5cdf
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -11,7 +11,7 @@ tags:
 author: Gui
 image: '/uploads/stories/minecraft-server-setup-cover-v2.webp'
 imageAlt: '用方块组装套件、工具、收纳箱和微型服务器小屋表现准备与维护的概念插图'
-lastUpdated: '2026-10-06T13:52:45+09:00'
+lastUpdated: 2026-10-09T15:00:00+09:00
 ---
 
 和朋友一起玩 Minecraft 有几种方式：使用同一个局域网、在自己的电脑上运行专用服务器，或者使用 Realms。选择哪种方式，取决于所有人的版本，以及你愿意承担多少维护工作。
@@ -19,6 +19,8 @@ lastUpdated: '2026-10-06T13:52:45+09:00'
 首先要理解的是，免费服务器通常表示服务器软件本身可以免费使用。Minecraft 游戏本体、电脑、电费、网络、备份和更新并不会因此免费。本文以在自己的电脑上运行官方软件为中心进行说明。
 
 如果队伍中有 Switch 或手机玩家，在决定参加方式前，可先阅读[如何与朋友一起玩 Minecraft](/zh-cn/stories/minecraft-play-with-friends/)，确认版本和账户条件。
+
+下载前，先确定所有朋友的版本，以及主机关闭时停止游玩是否可以接受。[Java官方配布](https://www.minecraft.net/en-us/download/server)用于Java版，[基岩版官方配布](https://www.minecraft.net/en-us/download/server/bedrock)用于基岩版。在配布页面确认支持环境和附带指南，先成功完成一次局域网连接，再扩大开放范围。
 
 ## 简单结论：根据玩家和版本来选择
 
