@@ -1,6 +1,6 @@
 ---
-title: 'Utiliser le Wiki Aceserver | Chercher les règles et interroger Alpha-kun'
-description: Parcourez le WIKI officiel d'Aceserver par catégorie ou par recherche, puis demandez à Alpha-kun où trouver les guides publiés.
+title: 'Wiki Aceserver | Accès, règles et exemples de questions'
+description: 'Parcourez ou recherchez dans le WIKI officiel Aceserver, utilisez un exemple concret pour interroger Alpha-kun et vérifiez l’article cité. Un guide vers les instructions et les règles officielles.'
 date: 2026-09-27T22:40:00+09:00
 tags:
   - Actualités
@@ -8,8 +8,8 @@ author: Gui
 image: /uploads/stories/wiki-alpha-guide-hero.webp
 imageAlt: Illustration d'Alpha-kun officiel près d'un guide ouvert et de résultats de recherche dans un paysage de blocs
 translationOf: wiki-alpha-guide
-sourceHash: sha256:48391e4744aaa6d425e51e9a26126cca72e4d4f6d013eaf1f48f250a4f5437f9
-lastUpdated: 2026-10-09T15:00:00+09:00
+sourceHash: sha256:09d836d05c32b2bb8847133b900739b589ed6ce1f5d772c3a092d09fa5c7e16d
+lastUpdated: 2026-10-10T16:29:02+09:00
 ---
 
 Pour savoir comment rejoindre le serveur ou consulter les règles, commencez par le [WIKI officiel d'Aceserver](https://asv-wiki.acecore.net/). Si vous ne savez pas quel article ouvrir, le bouton « Demander à Alpha-kun » du portail et du WIKI offre une autre entrée.
@@ -21,6 +21,14 @@ Commencez la recherche avec quelques mots décrivant votre objectif, comme « re
 La page d'accueil du WIKI met en avant la procédure pour rejoindre le serveur, l'index des règles, les questions fréquentes et les commandes. Plus bas figurent des catégories sur les premiers pas, le serveur de survie et les autres serveurs. Choisissez celle qui correspond à votre question, puis lisez l'article original.
 
 Pour une première visite, commencez par [comment rejoindre](https://asv-wiki.acecore.net/article/in/) et [l'index des règles](https://asv-wiki.acecore.net/article/rules-index/). En cours de jeu, vous pouvez aussi saisir un mot-clé dans la recherche en haut du WIKI.
+
+## Précisez votre question : un exemple et des sources utiles
+
+Indiquez votre édition ou le nom du serveur, puis une chose que vous souhaitez savoir. Par exemple : « Je veux rejoindre Aceserver pour la première fois avec Java Edition. Quel article officiel explique les préparatifs ? » Il s’agit d’un exemple de formulation.
+
+Vous pouvez aussi consulter directement [comment rejoindre](https://asv-wiki.acecore.net/article/in/) pour les préparatifs ou [l’index des règles](https://asv-wiki.acecore.net/article/rules-index/) pour trouver les règles. Si la réponse cite un autre article, vérifiez qu’il correspond à votre serveur et à votre objectif.
+
+Les articles cités du WIKI sont en japonais. Même si vous posez votre question dans une autre langue, vérifiez la langue de la source et le texte original avant de décider comment rejoindre le serveur ou quelles règles s’appliquent.
 
 ## Demander à Alpha-kun
 

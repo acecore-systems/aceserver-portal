@@ -1,6 +1,6 @@
 ---
-title: 'Aceserver WIKI 사용법｜참가 방법·규칙 검색과 알파군에게 질문하기'
-description: Aceserver 공식 WIKI의 분류와 검색을 이용하고 알파군에게 질문해 공개된 안내로 가는 길을 찾습니다.
+title: 'Aceserver WIKI 사용법｜참가 방법·규칙 찾기와 질문 예시'
+description: 'Aceserver 공식 WIKI를 분류나 검색으로 살펴보고, 구체적인 예시를 참고해 알파군에게 질문한 뒤 출처 글을 확인하는 방법을 안내합니다. 공식 참가 방법과 규칙을 찾기 위한 가이드입니다.'
 date: 2026-09-27T22:40:00+09:00
 tags:
   - 소식
@@ -8,8 +8,8 @@ author: Gui
 image: /uploads/stories/wiki-alpha-guide-hero.webp
 imageAlt: 블록 풍경 속에서 공식 알파군이 펼친 안내서와 검색 결과를 보여 주는 삽화
 translationOf: wiki-alpha-guide
-sourceHash: sha256:48391e4744aaa6d425e51e9a26126cca72e4d4f6d013eaf1f48f250a4f5437f9
-lastUpdated: 2026-10-09T15:00:00+09:00
+sourceHash: sha256:09d836d05c32b2bb8847133b900739b589ed6ce1f5d772c3a092d09fa5c7e16d
+lastUpdated: 2026-10-10T16:29:02+09:00
 ---
 
 참가 방법이나 규칙을 알고 싶다면 [Aceserver 공식 WIKI](https://asv-wiki.acecore.net/)에서 찾아보세요. 어느 글을 열어야 할지 모르겠다면 포털과 WIKI의 ‘알파군에게 묻기’ 버튼도 출발점이 됩니다.
@@ -21,6 +21,14 @@ lastUpdated: 2026-10-09T15:00:00+09:00
 WIKI 첫 화면에는 참가 방법, 규칙 목록, 자주 묻는 질문, 명령어 안내가 있습니다. 아래에는 입문, 생활 서버, 다른 서버 등의 분류가 있습니다. 질문과 가까운 분류를 고른 뒤 원문을 읽어 보세요.
 
 처음 참가한다면 [참가 방법](https://asv-wiki.acecore.net/article/in/)과 [규칙 목록](https://asv-wiki.acecore.net/article/rules-index/)부터 시작할 수 있습니다. 플레이 중 궁금한 점은 WIKI 위쪽의 사이트 검색에 단어를 입력해 찾아보세요.
+
+## 구체적으로 질문하기: 예시와 확인할 자료
+
+사용하는 에디션이나 서버 이름과 알고 싶은 것 한 가지를 함께 적어 주세요. 예를 들어 “Java Edition으로 Aceserver에 처음 참가하고 싶어요. 준비할 사항은 어느 공식 글에서 확인할 수 있나요?”라고 물을 수 있습니다. 질문을 작성하는 방법의 예시입니다.
+
+참가 전 준비는 [참가 방법](https://asv-wiki.acecore.net/article/in/), 규칙을 찾을 때는 [규칙 목록](https://asv-wiki.acecore.net/article/rules-index/)을 바로 열어도 됩니다. 답변이 다른 글을 안내한다면 자신의 서버와 목적에 맞는 글인지 확인하세요.
+
+참고하는 WIKI 글은 일본어로 되어 있습니다. 다른 언어로 질문할 때도 출처의 언어와 원문을 확인한 뒤 참가 방법이나 적용되는 규칙을 판단하세요.
 
 ## 알파군에게 질문하기
 

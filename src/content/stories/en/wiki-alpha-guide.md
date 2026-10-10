@@ -1,6 +1,6 @@
 ---
-title: 'How to Use the Aceserver Wiki | Find Joining Rules and Ask Alpha-kun'
-description: Use the official Aceserver WIKI by category or search, then ask Alpha-kun to find a path to published guidance.
+title: 'Aceserver Wiki Guide | Joining, Rules and Question Examples'
+description: 'Browse or search the official Aceserver WIKI, use a concrete example to ask Alpha-kun, and check the cited article. A guide to finding official joining instructions and rules.'
 date: 2026-09-27T22:40:00+09:00
 tags:
   - News
@@ -8,8 +8,8 @@ author: Gui
 image: /uploads/stories/wiki-alpha-guide-hero.webp
 imageAlt: Illustration of the official Alpha-kun beside an open guidebook and search results in a block-style landscape
 translationOf: wiki-alpha-guide
-sourceHash: sha256:48391e4744aaa6d425e51e9a26126cca72e4d4f6d013eaf1f48f250a4f5437f9
-lastUpdated: 2026-10-09T15:00:00+09:00
+sourceHash: sha256:09d836d05c32b2bb8847133b900739b589ed6ce1f5d772c3a092d09fa5c7e16d
+lastUpdated: 2026-10-10T16:29:02+09:00
 ---
 
 When you need joining instructions or rules, start at the [official Aceserver WIKI](https://asv-wiki.acecore.net/). If you are unsure which article to open, the “Ask Alpha-kun” button on the portal and WIKI offers another starting point.
@@ -21,6 +21,14 @@ Start a search with a short phrase describing your goal, such as “joining” o
 The WIKI homepage highlights joining instructions, the rules index, frequently asked questions, and commands. Below those are categories for introductions, the survival server, other servers, and more. Choose a category close to your question, then read the original article.
 
 If you are new, begin with [how to join](https://asv-wiki.acecore.net/article/in/) and the [rules index](https://asv-wiki.acecore.net/article/rules-index/). For a question during play, enter a keyword in the site search at the top of the WIKI.
+
+## Make your question specific: an example and useful sources
+
+Include your edition or server name and one thing you want to know. For example: “I want to join Aceserver for the first time on Java Edition. Which official article explains what to prepare?” This is an example of how to phrase a question.
+
+You can also go directly to [how to join](https://asv-wiki.acecore.net/article/in/) for preparation or the [rules index](https://asv-wiki.acecore.net/article/rules-index/) to find rules. If an answer points to another article, check that it applies to your server and goal.
+
+The cited WIKI articles are in Japanese. Even when you ask in another language, check the source language and original text before deciding how to join or which rules apply.
 
 ## Ask Alpha-kun
 
