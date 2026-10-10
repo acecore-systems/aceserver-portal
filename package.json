@@ -23,7 +23,7 @@
     "test:portal-vectorize": "node --experimental-strip-types --test tests/portal-vectorize.test.mjs tests/portal-sync-receipt.test.mjs",
     "test:search": "node --experimental-strip-types --test tests/search-api.test.mjs tests/network-search-contract.test.mjs",
     "test:cms": "node --experimental-strip-types --import=./scripts/json-module-loader.mjs --test --test-concurrency=1 --test-isolation=none tests/cms-*.test.mjs",
-    "test:content": "node --test tests/content-validation.test.mjs",
+    "test:content": "node --test tests/content-validation.test.mjs tests/story-source-metadata.test.mjs",
     "test:skin-maker": "node --experimental-strip-types --test tests/skin-maker.test.mjs tests/skin-editor.test.mjs tests/skin-store.test.mjs",
     "typecheck:skin-maker": "tsc --project tsconfig.skin-maker.json",
     "typecheck:skin-openai": "tsc --project cloudflare/skin-openai/tsconfig.json",
@@ -70,7 +70,8 @@
     "prettier-plugin-astro": "^0.14.1",
     "tailwindcss": "^4.3.3",
     "typescript": "^7.0.2",
-    "wrangler": "4.134.0"
+    "wrangler": "4.134.0",
+    "yaml": "2.9.1"
   },
   "allowScripts": {
     "esbuild@0.28.1": true,
