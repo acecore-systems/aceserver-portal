@@ -3,6 +3,11 @@ import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 import { readStoryMetadata } from './story-source-metadata.mjs'
+import {
+  attributeValue,
+  visibleText,
+  storyMetaDescription,
+} from './story-output-values.mjs'
 
 const root = path.resolve(fileURLToPath(new URL('..', import.meta.url)))
 const distDir = path.join(root, 'dist')
@@ -129,16 +134,6 @@ for (const story of stories) {
   Object.assign(story, readStoryMetadata(markdown, story.slug))
 }
 
-function attributeValue(tag, name) {
-  const match = tag.match(
-    new RegExp(
-      `(?:^|\\s)${name}\\s*=\\s*(?:"([^"]*)"|'([^']*)'|([^\\s>]+))`,
-      'i',
-    ),
-  )
-  return match ? (match[1] ?? match[2] ?? match[3]) : null
-}
-
 function metaContent(html, attributeName, expectedAttributeValue) {
   for (const match of html.matchAll(/<meta\b[^>]*>/gi)) {
     if (expectedAttributeValue === attributeValue(match[0], attributeName)) {
@@ -234,7 +229,7 @@ function inspectBreadcrumb(html, nodes, story, storyUrl, scope) {
     !visibleBreadcrumb.includes('href="/"') ||
     !visibleBreadcrumb.includes('href="/stories/"') ||
     !visibleBreadcrumb.includes('aria-current="page"') ||
-    !visibleBreadcrumb.includes(story.title)
+    !visibleText(visibleBreadcrumb).includes(story.title)
   ) {
     errors.push(`${scope}: visible story breadcrumb is missing`)
   }
@@ -251,8 +246,10 @@ function inspectImage(html, article, story, scope) {
   if (story.image) {
     if (
       !hero ||
-      attributeValue(hero, 'src') !== story.image ||
-      attributeValue(hero, 'alt') !== story.imageAlt
+      attributeValue(hero?.match(/<img\b[^>]*>/i)?.[0], 'src') !==
+        story.image ||
+      attributeValue(hero?.match(/<img\b[^>]*>/i)?.[0], 'alt') !==
+        story.imageAlt
     ) {
       errors.push(`${scope}: migrated story hero image or alt is missing`)
     }
@@ -289,10 +286,10 @@ function inspectPageMetadata(html, article, story, storyUrl, scope) {
     ['property', 'og:type', 'article'],
     ['property', 'og:url', expectedUrl],
     ['property', 'og:title', expectedPageTitle],
-    ['property', 'og:description', story.description],
+    ['property', 'og:description', storyMetaDescription(story, settings)],
     ['name', 'twitter:card', 'summary_large_image'],
     ['name', 'twitter:title', expectedPageTitle],
-    ['name', 'twitter:description', story.description],
+    ['name', 'twitter:description', storyMetaDescription(story, settings)],
   ]) {
     if (metaContent(html, attributeName, key) !== expected) {
       errors.push(`${scope}: ${key} metadata is missing or invalid`)

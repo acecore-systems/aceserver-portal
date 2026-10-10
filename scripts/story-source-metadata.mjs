@@ -17,7 +17,7 @@ export function readStoryMetadata(source, slug) {
     if (typeof data?.[field] !== 'string' || !data[field].trim()) {
       throw new Error(`${slug}: story ${field} must be a nonempty string`)
     }
-    result[field] = data[field]
+    result[field] = data[field].trim()
   }
   return result
 }

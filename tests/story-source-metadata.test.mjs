@@ -46,3 +46,62 @@ test('欠落・重複・空文字・非文字列のmetadataを合格にしない
     assert.throws(() => readStoryMetadata(source, 'example'))
   }
 })
+
+test('schemaと同じtrimを適用し、Article用の内部空白は維持する', () => {
+  assert.deepEqual(
+    readStoryMetadata(
+      '---\ntitle: "  案内  "\ndescription: |\n  一行目\n  二行目\n---\n',
+      'example',
+    ),
+    { title: '案内', description: '一行目\n二行目' },
+  )
+})
+
+test('HTML文字参照を復号してmeta・リンク・見えるパンくずを照合する', async () => {
+  const { attributeValue, visibleText } =
+    await import('../scripts/story-output-values.mjs')
+  assert.equal(
+    attributeValue(
+      '<meta content="Reader&#39;s &amp; &quot;Guide&quot;">',
+      'content',
+    ),
+    `Reader's & "Guide"`,
+  )
+  assert.equal(
+    attributeValue(' type="application/ld+json"', 'type'),
+    'application/ld+json',
+  )
+  assert.equal(
+    attributeValue('<a href="/stories/" aria-label="A &amp; B">', 'aria-label'),
+    'A & B',
+  )
+  assert.equal(
+    attributeValue('<figure><img src="/example.webp"></figure>', 'src'),
+    null,
+  )
+  assert.equal(
+    visibleText('<a href="/">ホーム</a><span>Reader&#39;s &amp; Guide</span>'),
+    "ホームReader's & Guide",
+  )
+  assert.equal(
+    visibleText('<script>not visible</script><style>not visible</style>案内'),
+    '案内',
+  )
+})
+
+test('metaのdescriptionはレイアウトと同じ補足・空白整理・上限を使う', async () => {
+  const { storyMetaDescription } =
+    await import('../scripts/story-output-values.mjs')
+  const shortStory = { description: '  参加方法\nを確認  ' }
+  const settings = { description: '公式の参加案内を掲載しています。' }
+  assert.equal(
+    storyMetaDescription(shortStory, settings),
+    '参加方法 を確認 公式の参加案内を掲載しています。',
+  )
+  const longStory = { description: '長'.repeat(200) }
+  assert.equal(
+    storyMetaDescription(longStory, settings),
+    '長'.repeat(159) + '…',
+  )
+  assert.equal(longStory.description.length, 200)
+})
