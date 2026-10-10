@@ -2,6 +2,13 @@ import { readFile } from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
+import { readStoryMetadata } from './story-source-metadata.mjs'
+import {
+  attributeValue,
+  visibleText,
+  storyMetaDescription,
+} from './story-output-values.mjs'
+
 const root = path.resolve(fileURLToPath(new URL('..', import.meta.url)))
 const distDir = path.join(root, 'dist')
 const siteUrl = new URL(
@@ -14,9 +21,6 @@ const errors = []
 const stories = [
   {
     slug: 'minecraft-skin-maker-guide',
-    title: 'Minecraftスキンメーカーの使い方｜文章・画像で作成、3D編集・PNG保存',
-    description:
-      'Aceserverのスキンメーカーで、文章と任意の参考画像から新しいスキンを作り、Classic・Slimの型、3D表示、64×64 PNG保存を確認する手順を紹介します。',
     author: 'Gui',
     datePublished: '2026-09-30T12:15:00.000Z',
     image: '/uploads/stories/minecraft-skin-maker-cover-v2.webp',
@@ -25,9 +29,6 @@ const stories = [
   },
   {
     slug: 'aceserver-hijacked',
-    title: 'エースサーバー「乗っ取り」イベントの記録｜2022年10月',
-    description:
-      '2022年10月12日に公開したエースサーバーの「乗っ取り」イベント記事。メンバーの理性が侵食されていく当時の語りと、現在の参加案内への入口を残しています。',
     author: 'ハット',
     datePublished: '2022-10-11T15:00:00.000Z',
     image: '/uploads/stories/aceserver-hijacked.webp',
@@ -36,9 +37,6 @@ const stories = [
   },
   {
     slug: 'aceserver-portal-launch',
-    title: 'エースサーバーポータル公開｜参加方法・WIKI・ワールドマップへの入口',
-    description:
-      'Discord、Wiki、動画、ワールドマップに分かれていた参加前の情報を、一つの入口へ整理しました。',
     author: 'Gui',
     datePublished: '2026-06-07T01:00:00.000Z',
     image: '/uploads/stories/aceserver-portal-launch.webp',
@@ -47,10 +45,6 @@ const stories = [
   },
   {
     slug: 'aceserver-beginners-guide',
-    title:
-      'Aceserver初心者ガイド｜ポータル・ワールドマップ・動画・WIKI・接続トラブルの見方',
-    description:
-      '初めてAceserverに参加する人へ。公式ポータル、ワールドマップ、動画、WIKIの使い分けと、入れないときの確認先をまとめます。',
     author: 'Gui',
     datePublished: '2026-08-09T01:00:00.000Z',
     image: '/uploads/stories/aceserver-beginners-guide-hero.png',
@@ -59,9 +53,6 @@ const stories = [
   },
   {
     slug: 'alpha-diary-guide',
-    title: 'アルファ君の絵日記の読み方｜日付を選ぶ・記録を読む・質問する',
-    description:
-      'アルファ君の絵日記では、日付を選んで絵と文章の記録を開き、気になったことをアルファ君に質問できます。自分のペースでたどるための案内です。',
     author: 'Gui',
     datePublished: '2026-09-24T15:00:00.000Z',
     image: '/uploads/stories/alpha-diary-guide-hero.webp',
@@ -70,10 +61,6 @@ const stories = [
   },
   {
     slug: 'wiki-alpha-guide',
-    title:
-      'Aceserver WIKIの使い方｜参加方法・ルールを検索し、アルファくんに聞く',
-    description:
-      'Aceserverの公式WIKIをカテゴリや検索から使い、アルファくんへの質問で公開情報への入口を見つける方法を紹介します。',
     author: 'Gui',
     datePublished: '2026-09-27T13:40:00.000Z',
     image: '/uploads/stories/wiki-alpha-guide-hero.webp',
@@ -82,9 +69,6 @@ const stories = [
   },
   {
     slug: 'minecraft-server-cannot-join',
-    title: 'マイクラサーバーに入れない時の確認｜Java・統合版・Switch対応',
-    description:
-      'マイクラサーバーに入れないとき、エディション・バージョン・アカウント・通信を順に確認し、参加後も安心して遊び続けるための案内です。',
     author: 'Gui',
     datePublished: '2026-08-08T01:00:00.000Z',
     image: '/uploads/stories/minecraft-server-cannot-join-hero.webp',
@@ -93,9 +77,6 @@ const stories = [
   },
   {
     slug: 'minecraft-java-bedrock-crossplay',
-    title: 'Java版と統合版は一緒に遊べる？｜対応サーバーの見分け方',
-    description:
-      'MinecraftのJava版と統合版は、両方からの参加を公式に案内する対応サーバーなら一緒に遊べます。見分け方と参加前の確認点を紹介します。',
     author: 'Gui',
     datePublished: '2026-08-08T01:00:00.000Z',
     image: '/uploads/stories/minecraft-java-bedrock-crossplay-cover-v2.webp',
@@ -104,10 +85,6 @@ const stories = [
   },
   {
     slug: 'minecraft-java-bedrock-shared-server',
-    title:
-      'Java版・統合版で自分のサーバーを共用する方法｜安全なクロスプレイ設定',
-    description:
-      'Java版の自分のサーバーへ統合版の友達を安全に招待するための、GeyserとFloodgateの構成、無料ホストの選び方、公開前の確認を解説します。',
     author: 'Gui',
     datePublished: '2026-08-09T01:00:00.000Z',
     image:
@@ -117,9 +94,6 @@ const stories = [
   },
   {
     slug: 'minecraft-play-with-friends',
-    title: 'マイクラで友達と遊ぶ方法｜Java・統合版・Switch・スマホ別の選び方',
-    description:
-      'Java版と統合版の違いを整理し、自分のワールド・Realms・公開サーバーから、友達と遊ぶ方法を端末別に選べるガイドです。',
     author: 'Gui',
     datePublished: '2026-08-08T01:00:00.000Z',
     image: '/uploads/stories/minecraft-play-with-friends-hero.webp',
@@ -128,10 +102,6 @@ const stories = [
   },
   {
     slug: 'minecraft-server-osusume',
-    title:
-      '【2026年9月確認】おすすめのマイクラサーバー6選｜Java・統合版対応や遊び方で比較',
-    description:
-      '日本の公開Minecraftサーバーを、公式サイトで確認できた対応エディション・遊び方・参加案内から紹介します。',
     author: 'Gui',
     datePublished: '2026-08-01T01:00:00.000Z',
     image: '/uploads/stories/minecraft-server-osusume-cover-v2.webp',
@@ -140,9 +110,6 @@ const stories = [
   },
   {
     slug: 'minecraft-server-setup',
-    title: 'マイクラの無料サーバーの立て方｜Java・統合版・Realmsの違い',
-    description:
-      'Minecraftの無料サーバーの立て方を、Java版・統合版・Realmsの違い、必要な準備、公開前の注意点とともに解説します。',
     author: 'Gui',
     datePublished: '2026-08-08T01:00:00.000Z',
     image: '/uploads/stories/minecraft-server-setup-cover-v2.webp',
@@ -151,9 +118,6 @@ const stories = [
   },
   {
     slug: 'metaverse-is-close',
-    title: 'Minecraftも身近なメタバース？｜建築・冒険・交流から考える',
-    description:
-      'VRゴーグルだけではなく、人が集まり交流するMinecraftのような仮想空間もメタバースではないか、という話。',
     author: 'Gui',
     datePublished: '2023-03-22T15:00:00.000Z',
     image: '/uploads/stories/metaverse-is-close-cover-v2.webp',
@@ -162,14 +126,12 @@ const stories = [
   },
 ]
 
-function attributeValue(tag, name) {
-  const match = tag.match(
-    new RegExp(
-      `(?:^|\\s)${name}\\s*=\\s*(?:"([^"]*)"|'([^']*)'|([^\\s>]+))`,
-      'i',
-    ),
+for (const story of stories) {
+  const markdown = await readFile(
+    path.join(root, 'src/content/stories', `${story.slug}.md`),
+    'utf8',
   )
-  return match ? (match[1] ?? match[2] ?? match[3]) : null
+  Object.assign(story, readStoryMetadata(markdown, story.slug))
 }
 
 function metaContent(html, attributeName, expectedAttributeValue) {
@@ -267,7 +229,7 @@ function inspectBreadcrumb(html, nodes, story, storyUrl, scope) {
     !visibleBreadcrumb.includes('href="/"') ||
     !visibleBreadcrumb.includes('href="/stories/"') ||
     !visibleBreadcrumb.includes('aria-current="page"') ||
-    !visibleBreadcrumb.includes(story.title)
+    !visibleText(visibleBreadcrumb).includes(story.title)
   ) {
     errors.push(`${scope}: visible story breadcrumb is missing`)
   }
@@ -284,8 +246,10 @@ function inspectImage(html, article, story, scope) {
   if (story.image) {
     if (
       !hero ||
-      attributeValue(hero, 'src') !== story.image ||
-      attributeValue(hero, 'alt') !== story.imageAlt
+      attributeValue(hero?.match(/<img\b[^>]*>/i)?.[0], 'src') !==
+        story.image ||
+      attributeValue(hero?.match(/<img\b[^>]*>/i)?.[0], 'alt') !==
+        story.imageAlt
     ) {
       errors.push(`${scope}: migrated story hero image or alt is missing`)
     }
@@ -322,10 +286,10 @@ function inspectPageMetadata(html, article, story, storyUrl, scope) {
     ['property', 'og:type', 'article'],
     ['property', 'og:url', expectedUrl],
     ['property', 'og:title', expectedPageTitle],
-    ['property', 'og:description', story.description],
+    ['property', 'og:description', storyMetaDescription(story, settings)],
     ['name', 'twitter:card', 'summary_large_image'],
     ['name', 'twitter:title', expectedPageTitle],
-    ['name', 'twitter:description', story.description],
+    ['name', 'twitter:description', storyMetaDescription(story, settings)],
   ]) {
     if (metaContent(html, attributeName, key) !== expected) {
       errors.push(`${scope}: ${key} metadata is missing or invalid`)
