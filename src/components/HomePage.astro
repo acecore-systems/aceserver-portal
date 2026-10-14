@@ -131,6 +131,7 @@ const diaryPath = localizePath(locale, '/alpha-diary/')
   lead={page.meta.description}
   backgroundImage={heroImage}
   imageAlt={overview.imageAlt}
+  scrollCue={{ href: '#overview', label: ui.nextSection }}
 >
   <Fragment slot="title">
     {ui.homeTitleParts.map((part) => <span>{part}</span>)}
