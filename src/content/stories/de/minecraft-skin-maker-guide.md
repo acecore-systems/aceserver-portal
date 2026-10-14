@@ -1,6 +1,6 @@
 ---
 title: 'Minecraft-Skin-Maker nutzen | Text, Bilder, 3D-Bearbeitung und PNG-Export'
-description: 'Neue Minecraft-Skins aus Text und optionalem Bild erstellen, Classic oder Slim wählen, in 3D prüfen und als 64×64-PNG speichern.'
+description: 'Neue Minecraft-Skins aus Text und optionalem Bild erstellen, Classic oder Slim wählen, in 3D prüfen und als 64×64-PNG speichern. Du kannst auch eine eigene 64×64-PNG laden und ohne KI von Hand bearbeiten.'
 date: 2026-09-30T21:15:00+09:00
 author: Gui
 tags: [Minecraft, Aceserver, Skin Maker]
@@ -8,11 +8,11 @@ image: /uploads/stories/minecraft-skin-maker-cover-v2.webp
 imageAlt: 'Illustration weißer Blockfiguren und einer Farbpalette als Symbol für die Skin-Erstellung. Kein generiertes Skin-Beispiel.'
 relatedStories: [aceserver-beginners-guide]
 translationOf: minecraft-skin-maker-guide
-sourceHash: sha256:79a7458953ba34306faa5905c5cef14193cb3fd066e37a641017d518b25b0899
-lastUpdated: 2026-10-09T15:00:00+09:00
+sourceHash: sha256:53f8e1662fe56ef7d93fab2aba9733911a0240d614d35e416b2b41624217ccc2
+lastUpdated: 2026-10-14T12:00:00+09:00
 ---
 
-Der [Skin Maker](/de/skin-maker/) erstellt neue Minecraft-Skins aus Text und optionalem Referenzbild. Prüfen Sie das Ergebnis in 3D und speichern Sie ein 64×64-PNG.
+Der [Skin Maker](/de/skin-maker/) erstellt neue Minecraft-Skins aus Text und optionalem Referenzbild. Prüfen Sie das Ergebnis in 3D und speichern Sie ein 64×64-PNG. Du kannst auch eine eigene 64×64-PNG laden und ohne KI von Hand bearbeiten.
 
 Wählen Sie für den ersten Versuch das Armmodell und beschreiben Sie Kleidung und Farben kurz, um einen Skin zu erstellen. Prüfen Sie vor der Verwendung des PNG im [offiziellen Skin-Leitfaden](https://www.minecraft.net/en-us/article/what-is-minecraft-skin), ob Ihre Edition und Ihr Gerät Bilder importieren können. Das PNG lässt sich auch ohne Veröffentlichung im Store speichern und verwenden.
 
@@ -24,6 +24,12 @@ Classic hat 4px-Arme, Slim 3px-Arme. Beschreiben Sie Farben oder Kleidung. Optio
 
 Male mit dem Stift direkt auf dem 3D-Modell. Ziehe mit der rechten Maustaste oder den Hintergrund zum Drehen und nutze das Mausrad zum Zoomen. Auf Touchscreens wähle „Drehen / zoomen“. Mit „Nur das ausgewählte Körperteil anzeigen“ erreichst du die Innenseiten der Arme. Beim Bearbeiten der Basis wird die äußere Ebene ausgeblendet. Die ausgewählte 2D-Seite eignet sich für feine Anpassungen.
 
+### Mit einer eigenen PNG beginnen
+
+Wähle im linken Eingabebereich die Bearbeitung deines eigenen Skins, stelle die gemeinsame Auswahl Classic oder Slim passend zum Skin ein und lade eine 64×64-PNG mit höchstens 1 MB. Beim Wechsel zwischen diesem Modus und der KI-Erstellung bleiben Eingaben und aktuelle Bearbeitungen erhalten. Die Basisebene muss undurchsichtig sein; das alte Format 64×32 wird nicht unterstützt. Graustufen-PNGs und teilweise transparente äußere Ebenen werden unterstützt.
+
+Das erfolgreiche Laden einer neuen Datei ersetzt den aktuellen Skin und den Rückgängig-Verlauf. Speichere Arbeiten, die du behalten möchtest, vorher als PNG. Ein fehlgeschlagener Import erhält Skin und Verlauf. Laden und manuelles Bearbeiten finden im Browser statt, ohne den Skin an die KI zu senden. Teilweise KI-Bearbeitungen erfordern eine gesonderte Zustimmung und Ausführung. Die folgenden Generierungsschritte gelten für die KI-Erstellung.
+
 ## 2. Zustimmen und warten
 
 Bestätigen Sie Bildrechte und Verarbeitung vor dem Senden. Text und Bilder gehen an den konfigurierten Anbieter OpenAI API oder Cloudflare Workers AI. Keine persönlichen oder geheimen Daten eingeben. Erzeugung kann Minuten dauern oder durch Grenzen/Auslastung scheitern; beachten Sie die Anzeige.
@@ -32,7 +38,9 @@ Bestätigen Sie Bildrechte und Verarbeitung vor dem Senden. Text und Bilder gehe
 
 Prüfen Sie Vorderseite, Rücken und Seiten. Ziehen zum Drehen; automatische Drehung und äußere Schicht lassen sich umschalten. KI-Ergebnisse können abweichen; prüfen Sie Arme und Kleidungsübergänge vor dem Speichern.
 
-<figure class="article-diagram" data-layout="flow" data-tone="violet" data-count="3" aria-labelledby="diagram-skin-check-save"><figcaption><strong id="diagram-skin-check-save">Prüfschritte von der Generierung bis zum Speichern</strong><span>Die Generierung erfordert Zustimmung. Prüfen Sie das Ergebnis vor dem Speichern.</span></figcaption><ol class="article-diagram__nodes"><li><span class="article-diagram__symbol"><span aria-hidden="true">1</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m5 17 9-12 5 4-10 11H4Z"/><path d="m12 8 5 4M4 20l1-3"/></svg></span><strong>Mit Text und optionalem Bild erstellen</strong><span>Bestätigen Sie Nutzungsrechte und Zustimmung zur KI-Verarbeitung vor dem Senden.</span></li><li><span class="article-diagram__symbol"><span aria-hidden="true">2</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m12 2 10 5v10l-10 5-10-5V7Zm0 10v10M2 7l10 5 10-5"/></svg></span><strong>Alle Seiten in 3D prüfen</strong><span>Prüfen Sie Vorderseite, Rückseite, Seiten, Arme und Kleidungskanten.</span></li><li><span class="article-diagram__symbol"><span aria-hidden="true">3</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 2h13l5 5v15H2V2Zm2 0v7h12V3M6 22V13h12v9"/></svg></span><strong>64×64-PNG speichern</strong><span>Speichern Sie vor dem Schließen der Seite und importieren Sie mit demselben Spielmodell.</span></li></ol></figure>
+Schalte das Raster ein, um Pixelgrenzen auf dem 3D-Modell zu sehen. Es folgt der Drehung, den Ebenen und der Slim-Form. Das Raster dient nur als Bearbeitungshilfe und erscheint nicht in der gespeicherten PNG.
+
+<figure class="article-diagram" data-layout="flow" data-tone="violet" data-count="3" aria-labelledby="diagram-skin-check-save"><figcaption><strong id="diagram-skin-check-save">Vom gewählten Einstieg bis zum Speichern</strong><span>KI-Generierung und das Laden einer eigenen PNG sind zwei Einstiege. Prüfe in beiden Fällen die Bearbeitungen vor dem Speichern.</span></figcaption><ol class="article-diagram__nodes"><li><span class="article-diagram__symbol"><span aria-hidden="true">1</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m5 17 9-12 5 4-10 11H4Z"/><path d="m12 8 5 4M4 20l1-3"/></svg></span><strong>Mit KI erzeugen oder eigene PNG laden</strong><span>Die Generierung erfordert Nutzungsrechte und KI-Zustimmung. Deine PNG wird im Browser geladen.</span></li><li><span class="article-diagram__symbol"><span aria-hidden="true">2</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m12 2 10 5v10l-10 5-10-5V7Zm0 10v10M2 7l10 5 10-5"/></svg></span><strong>Alle Seiten in 3D prüfen</strong><span>Prüfen Sie Vorderseite, Rückseite, Seiten, Arme und Kleidungskanten.</span></li><li><span class="article-diagram__symbol"><span aria-hidden="true">3</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 2h13l5 5v15H2V2Zm2 0v7h12V3M6 22V13h12v9"/></svg></span><strong>64×64-PNG speichern</strong><span>Speichern Sie vor dem Schließen der Seite und importieren Sie mit demselben Spielmodell.</span></li></ol></figure>
 
 ## 4. Speichern und im Spiel importieren
 
@@ -41,6 +49,8 @@ Laden Sie über „64×64-PNG speichern“ herunter und nutzen Sie den eigenen S
 ## 5. Ausgewählte Skins im Store veröffentlichen
 
 Geben Sie dem Skin nach der Erstellung einen Namen und stimmen Sie dem kostenlosen Download und der Nutzung durch alle zu, um ihn im [Skin-Store](/de/skin-maker/store/) zu veröffentlichen. Die Veröffentlichung ist freiwillig; gespeichert werden nur der Name und der generierte Skin. Sie können die Veröffentlichung innerhalb von 24 Stunden nach der Erstellung zurücknehmen, solange diese Erstellungsseite geöffnet bleibt.
+
+Das Laden einer eigenen PNG ermöglicht keine Veröffentlichung im Store. Ersetzt du einen generierten Skin oder eine Store-Kopie durch eine neue PNG, stehen auch die bisherigen Veröffentlichungs- und Rücknahmefunktionen nicht mehr zur Verfügung.
 
 ## 6. Einen Store-Skin kopieren und bearbeiten
 

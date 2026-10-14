@@ -1,16 +1,16 @@
 ---
 title: 'Minecraftスキンメーカーの使い方｜文章・画像で作成、3D編集・PNG保存'
-description: 'Aceserverのスキンメーカーで、文章と任意の参考画像から新しいスキンを作り、Classic・Slimの型、3D表示、64×64 PNG保存を確認する手順を紹介します。'
+description: 'Minecraftスキンを文章・画像で作る方法と、自作PNGを読み込んで編集する手順を紹介。Classic・Slim、3Dグリッド、PNG保存、ストア公開の違いを確認できます。'
 date: 2026-09-30T21:15:00+09:00
 author: Gui
 tags: [Minecraft, Aceserver, Skin Maker]
 image: /uploads/stories/minecraft-skin-maker-cover-v2.webp
 imageAlt: '白いブロック人形と絵具パレットによるスキン作成の説明用イラスト。生成スキンの実例ではない。'
 relatedStories: [aceserver-beginners-guide]
-lastUpdated: 2026-10-09T15:00:00+09:00
+lastUpdated: 2026-10-14T12:00:00+09:00
 ---
 
-文章や任意の参考画像から、Minecraft用の新しいスキンを作れる[スキンメーカー](/skin-maker/)があります。生成した見た目は3D表示で確認し、64×64 PNGとして保存できます。
+文章や任意の参考画像から、Minecraft用の新しいスキンを作れる[スキンメーカー](/skin-maker/)があります。生成した見た目は3D表示で確認し、64×64 PNGとして保存できます。自作の64×64 PNGを読み込み、AIを使わず手で編集することもできます。
 
 初めてなら、腕の型を選び、服装と色を短い文章で指定して一体作るところから始めます。保存したPNGを使う前に、Minecraft公式の[スキンの説明と変更方法](https://www.minecraft.net/en-us/article/what-is-minecraft-skin)で、自分の版・端末が画像の読み込みに対応するか確認してください。ストアへ公開しなくても、PNGを保存して使えます。
 
@@ -22,6 +22,12 @@ Classicは4px、Slimは3pxの腕です。作りたい色や服装などを文章
 
 3Dモデルにはペンで直接描けます。右ドラッグや余白のドラッグで回転し、ホイールで拡大します。スマホでは道具を「回転・拡大」に切り替えます。「選択した部位だけを表示」で腕の内側なども編集できます。基本レイヤーの編集中は外側を隠します。細かい調整には選択面の2Dエディターも使えます。
 
+### 自作PNGから始める場合
+
+左の入力枠で「自作スキンを編集」を選び、共通のClassic・Slimの選択をスキンに合わせてから、64×64 PNG（1 MB以下）を読み込みます。「AIで作る」と切り替えても入力内容や編集中のスキンは保持されます。基本レイヤーは不透明である必要があり、64×32の旧形式は読み込めません。グレースケールPNGと外側レイヤーの半透明には対応しています。
+
+新しいファイルの読み込みに成功すると、現在のスキンと編集履歴が入れ替わるため、残したい作品は先にPNGで保存してください。読み込みに失敗した場合は、現在のスキンと履歴を保持します。読み込みと手編集はブラウザ内で行い、AIへ送信しません。AI部分修正を使う場合だけ、別途同意して実行します。以下の生成手順は「AIで作る」を使う場合のものです。
+
 ## 2. 同意して生成を待つ
 
 入力を送る前に、画像を使う権利とAI処理への同意を確認します。文章・画像は設定中のOpenAI APIまたはCloudflare Workers AIに送られます。個人情報や秘密を含む入力は使わないでください。生成には数分かかることがあり、利用制限や混雑で生成できない場合もあります。画面の案内を確認してください。
@@ -30,7 +36,9 @@ Classicは4px、Slimは3pxの腕です。作りたい色や服装などを文章
 
 生成できたら正面・背面・左右から確認します。ドラッグで回転でき、自動回転と外側レイヤーの表示も切り替えられます。AIの出力が意図した姿になるとは限らないため、保存前に腕や服の境目なども見てください。
 
-<figure class="article-diagram" data-layout="flow" data-tone="violet" data-count="3" aria-labelledby="diagram-skin-check-save"><figcaption><strong id="diagram-skin-check-save">生成から保存までの確認順序</strong><span>生成には同意が必要です。生成後も、見た目を確認してから保存します。</span></figcaption><ol class="article-diagram__nodes"><li><span class="article-diagram__symbol"><span aria-hidden="true">1</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m5 17 9-12 5 4-10 11H4Z"/><path d="m12 8 5 4M4 20l1-3"/></svg></span><strong>文章・任意画像で生成</strong><span>権利とAI処理への同意を確認して送る。</span></li><li><span class="article-diagram__symbol"><span aria-hidden="true">2</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m12 2 10 5v10l-10 5-10-5V7Zm0 10v10M2 7l10 5 10-5"/></svg></span><strong>3Dで各方向を確認</strong><span>正面・背面・左右、腕や服の境目を見る。</span></li><li><span class="article-diagram__symbol"><span aria-hidden="true">3</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 2h13l5 5v15H2V2Zm2 0v7h12V3M6 22V13h12v9"/></svg></span><strong>64×64 PNGを保存</strong><span>ページを閉じる前に保存し、同じ型でゲームへ読み込む。</span></li></ol></figure>
+「グリッドを表示」をオンにすると、3Dモデル上でピクセルの境目を確認できます。回転やレイヤー、Slimの形にも追従します。グリッドは編集用の目印で、保存するPNGには入りません。
+
+<figure class="article-diagram" data-layout="flow" data-tone="violet" data-count="3" aria-labelledby="diagram-skin-check-save"><figcaption><strong id="diagram-skin-check-save">作成方法を選んでから保存するまで</strong><span>AI生成と自作PNGの読み込みは別の入口です。どちらも編集後の見た目を確認して保存します。</span></figcaption><ol class="article-diagram__nodes"><li><span class="article-diagram__symbol"><span aria-hidden="true">1</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m5 17 9-12 5 4-10 11H4Z"/><path d="m12 8 5 4M4 20l1-3"/></svg></span><strong>AI生成 または 自作PNG</strong><span>生成は権利とAI処理への同意が必要。自作PNGはブラウザ内で読み込む。</span></li><li><span class="article-diagram__symbol"><span aria-hidden="true">2</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m12 2 10 5v10l-10 5-10-5V7Zm0 10v10M2 7l10 5 10-5"/></svg></span><strong>3Dで各方向を確認</strong><span>正面・背面・左右、腕や服の境目を見る。</span></li><li><span class="article-diagram__symbol"><span aria-hidden="true">3</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 2h13l5 5v15H2V2Zm2 0v7h12V3M6 22V13h12v9"/></svg></span><strong>64×64 PNGを保存</strong><span>ページを閉じる前に保存し、同じ型でゲームへ読み込む。</span></li></ol></figure>
 
 ## 4. 保存してゲーム側で読み込む
 
@@ -39,6 +47,8 @@ Classicは4px、Slimは3pxの腕です。作りたい色や服装などを文章
 ## 5. 希望する作品をストアに公開する
 
 生成後に名前を付け、誰でも無料でダウンロード・使用できることに同意すると、[スキンストア](/skin-maker/store/)に公開できます。公開は任意で、名前と生成スキンだけが保存されます。生成後24時間以内、この生成画面を開いている間は公開を取り消せます。
+
+自作PNGの読み込みではストア公開はできません。生成結果やストアのコピーを新しいPNGで置き換えた場合、以前の公開・取り消し操作も引き継ぎません。
 
 ## 6. ストアのスキンを複製して編集する
 
