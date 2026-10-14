@@ -56,40 +56,26 @@ const nextMap =
   title={embed.title ?? page.pageName}
   backgroundImage={embed.fallbackImage ?? '/uploads/legacy-world-map.png'}
 >
-  <Fragment slot="actions">
-    {
-      previousMap ? (
-        <a class="toolbar-button" href={previousMap.href}>
-          <Icon name="chevron-left" />
-          <span>{ui.previous}</span>
-          <span class="toolbar-button__label">{previousMap.title}</span>
-        </a>
-      ) : (
-        <a class="toolbar-button" href={localizePath(locale, '/world-map/')}>
-          <Icon name="arrow-left" />
-          <span>{ui.back}</span>
-        </a>
-      )
-    }
-    {
-      nextMap ? (
-        <a class="toolbar-button toolbar-button--next" href={nextMap.href}>
-          <span>{ui.next}</span>
-          <span class="toolbar-button__label">{nextMap.title}</span>
-          <Icon name="chevron-right" />
-        </a>
-      ) : (
-        <a
-          class="toolbar-button toolbar-button--external"
-          href={embed.externalUrl ?? embed.src}
-          {...externalLinkAttrs(embed.externalUrl ?? embed.src, true)}
-        >
-          <span>{ui.openNewTab}</span>
-          <Icon name="external-link" />
-        </a>
-      )
-    }
-  </Fragment>
+  {
+    (previousMap || nextMap) && (
+      <Fragment slot="actions">
+        {previousMap && (
+          <a class="toolbar-button" href={previousMap.href}>
+            <Icon name="chevron-left" />
+            <span>{ui.previous}</span>
+            <span class="toolbar-button__label">{previousMap.title}</span>
+          </a>
+        )}
+        {nextMap && (
+          <a class="toolbar-button toolbar-button--next" href={nextMap.href}>
+            <span>{ui.next}</span>
+            <span class="toolbar-button__label">{nextMap.title}</span>
+            <Icon name="chevron-right" />
+          </a>
+        )}
+      </Fragment>
+    )
+  }
 </PageHero>
 
 <section class="embed-page" data-variant={embed.variant}>

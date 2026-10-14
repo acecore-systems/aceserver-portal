@@ -26,6 +26,7 @@ const {
 } = Astro.props
 const hasDecoration = Astro.slots.has('decoration')
 const hasEyebrow = Boolean(eyebrow) || Astro.slots.has('eyebrow')
+const hasActions = Boolean((await Astro.slots.render('actions'))?.trim())
 ---
 
 <header
@@ -68,7 +69,7 @@ const hasEyebrow = Boolean(eyebrow) || Astro.slots.has('eyebrow')
       </h1>
       {lead && <p class="page-hero__lead">{lead}</p>}
       {
-        Astro.slots.has('actions') && (
+        hasActions && (
           <div class="page-hero__actions" data-page-hero-actions>
             <slot name="actions" />
           </div>

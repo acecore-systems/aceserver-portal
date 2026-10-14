@@ -39,7 +39,11 @@ const appJsonLd = serializeJsonForHtmlScript({
 ---
 
 <script type="application/ld+json" set:html={appJsonLd} />
-<PageHero title={c.title} eyebrow="MINECRAFT · 64 × 64" />
+<PageHero
+  title={c.title}
+  eyebrow="MINECRAFT · 64 × 64"
+  backgroundImage="/uploads/stories/minecraft-skin-maker-cover-v2.webp"
+/>
 
 <section class="skin-maker" data-skin-maker data-locale={locale}>
   <p class="maker-intro">{c.intro}</p>
