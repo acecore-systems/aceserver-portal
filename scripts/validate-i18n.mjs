@@ -306,6 +306,7 @@ async function validateFixedContent() {
         {
           title: community.title,
           intro: community.intro,
+          heroCaption: community.heroCaption,
           gallery: Object.fromEntries(
             community.gallery.map((item) => [
               item.id,
