@@ -2,13 +2,13 @@
   "version": 1,
   "samples": [
     {
-      "observedAt": "2026-10-15T07:32:22.130Z",
+      "observedAt": "2026-10-15T08:18:29.673Z",
       "discord": {
         "members": 1465,
-        "online": 91
+        "online": 100
       },
       "worlds": {
-        "main": 3,
+        "main": 1,
         "resource": 0,
         "rpg": 0,
         "lobby": 0,
