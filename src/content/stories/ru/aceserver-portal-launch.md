@@ -1,8 +1,8 @@
 ---
-title: Портал Aceserver открыт
+title: 'Запуск портала Aceserver | Подключение, Wiki и карты миров'
 description: Мы собрали в одной точке входа информацию перед подключением, которая раньше была распределена между Discord, Wiki, видео и картами миров.
 translationOf: aceserver-portal-launch
-sourceHash: sha256:7135f8b1e68e3bdb744b643f856f26305e2d1e25296653417993ddf4cdd9e1c0
+sourceHash: sha256:63ad63b246cc398492535615e6e4fa3c296bab0a7f8cf321886fdf4ff6183f3c
 date: 2026-06-07T10:00:00+09:00
 tags:
   - Объявление
@@ -10,8 +10,10 @@ tags:
 author: Gui
 image: /uploads/stories/aceserver-portal-launch.webp
 imageAlt: Главная страница портала Aceserver на фоне города Minecraft
-lastUpdated: '2026-10-06T13:52:45+09:00'
+lastUpdated: 2026-10-09T15:00:00+09:00
 ---
+
+Это объявление о запуске портала от 7 июня 2026 года. Чтобы присоединиться сейчас, сначала изучите обзор на портале, затем проверьте актуальные инструкции и правила для своей редакции в официальном Discord и Wiki.
 
 Мы открыли официальный портал Aceserver — бесплатного публичного сервера Minecraft, к которому может присоединиться любой желающий.
 

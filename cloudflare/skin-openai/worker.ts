@@ -42,7 +42,7 @@ function isSkinRequest(value: unknown): value is Record<string, unknown> {
     ) &&
     body.model === 'gpt-6-luna' &&
     body.max_completion_tokens === 12_000 &&
-    body.reasoning_effort === 'low' &&
+    (body.reasoning_effort === 'high' || body.reasoning_effort === 'low') &&
     body.store === false &&
     body.stream === false &&
     Array.isArray(messages) &&

@@ -2,9 +2,9 @@
 title: 'Servidores de Minecraft recomendados no Japão: 6 opções por Java/Bedrock e estilo de jogo'
 description: Um guia de servidores públicos de Minecraft no Japão com base nas edições, estilos de jogo e informações de participação confirmados nos sites oficiais.
 translationOf: minecraft-server-osusume
-sourceHash: sha256:c2e48929cf9d67ea2cb76eaf8ccdaf7e1aa1a511a05ff69f766fe497de5dc626
+sourceHash: sha256:2278e516442d294853fc357cea7e80dbcaa0ccd6a278ab2f2a33f94694725e43
 date: 2026-08-01T10:00:00+09:00
-lastUpdated: '2026-10-06T13:52:45+09:00'
+lastUpdated: 2026-10-09T15:00:00+09:00
 tags:
   - Minecraft
   - Servidor de Minecraft
@@ -19,6 +19,8 @@ Este guia apresenta servidores públicos cujas orientações oficiais explicam o
 **Verificado em 26 de setembro de 2026:** Conferimos novamente os seis sites oficiais e as orientações de entrada para Java e Bedrock. [Nishisaba iniciou o Survival sazonal em 1º de setembro](https://nishisaba.jp/news/20260901-notify); Home e TPA não estão disponíveis nesse mundo. [Munika passou para Re:15](https://munikasvr.net/events/re15release/) e substituiu as antigas missões de tutorial pelo Guia Munika. Mundos e recursos podem mudar; confira as orientações oficiais antes de entrar.
 
 Se o grupo inclui jogadores de Switch ou celular, antes de decidir como participar, consulte [como jogar Minecraft com amigos](/pt/stories/minecraft-play-with-friends/) para conferir a edição e as contas.
+
+Reduza as opções decidindo se prefere construção e turismo, mecanismos técnicos, economia e missões ou sobrevivência próxima do vanilla. Depois compare nos sites oficiais as edições do grupo, as condições de entrada e as regras de proteção de terrenos. As descrições registram verificações de setembro de 2026 e não garantem a admissão ou os recursos atuais.
 
 ## Seis servidores de Minecraft recomendados
 

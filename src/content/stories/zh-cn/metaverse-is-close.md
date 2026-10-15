@@ -1,8 +1,8 @@
 ---
-title: 元宇宙其实就在身边
+title: 'Minecraft也是身边的元宇宙？｜从建造、冒险和交流来思考'
 description: 元宇宙不只存在于 VR 头显中；像 Minecraft 这样让人们相聚和交流的虚拟空间，也可以被视为元宇宙。
 translationOf: metaverse-is-close
-sourceHash: sha256:f34ab749c2a8f41450eda70a0a2cd519d52c85f8a65d9e8bf4d6f42fa4032335
+sourceHash: sha256:606804ba1492526b52c0704977725e09c339c251ef048984a5fff31251da80d7
 date: 2023-03-23T00:00:00+09:00
 tags:
   - 社区
@@ -10,8 +10,10 @@ tags:
 author: Gui
 image: '/uploads/stories/metaverse-is-close-cover-v2.webp'
 imageAlt: '人们通过电脑和平板进入方块广场，共同建造的概念插图'
-lastUpdated: '2026-10-06T13:52:45+09:00'
+lastUpdated: 2026-10-09T15:00:00+09:00
 ---
+
+这是笔者在2023年3月将Minecraft社区视作元宇宙的看法。购买VR设备之前，不妨从与朋友在同一个世界建造、参观服务器城镇的体验出发。Minecraft官方的[服务器多人游玩指南](https://www.minecraft.net/en-us/article/how-play-minecraft-server)可用于了解基本操作；它介绍多人游戏，并不定义元宇宙。
 
 提到“元宇宙”，很多人也许会想到戴上 VR 头显、进入虚拟空间。Facebook 更名为 Meta，并把重点放在 Horizon Worlds 上，但老实说，可能仍有许多人没有很强的实感。
 

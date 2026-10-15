@@ -178,7 +178,7 @@ export function modelInput(request: SkinRequest) {
       },
     ],
     max_completion_tokens: MAX_TOKENS,
-    reasoning_effort: 'low' as const,
+    reasoning_effort: 'high' as const,
     store: false,
     stream: false as const,
   }

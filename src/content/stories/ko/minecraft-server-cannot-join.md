@@ -2,7 +2,7 @@
 title: '마인크래프트 서버에 접속할 수 없을 때 확인할 점 | Java·베드락·Switch'
 description: 마인크래프트 서버에 접속할 수 없을 때 에디션, 게임 버전, 계정, 네트워크를 순서대로 확인하고 접속 후에도 안심하고 플레이를 이어 가기 위한 안내입니다.
 translationOf: minecraft-server-cannot-join
-sourceHash: sha256:014fe443391942d389ae8c13f0259af504df8fb7df2d4f38effea66213930476
+sourceHash: sha256:22e7daa49d737d74089286ebf1a965d34c3ce62833a3a18b8ff4476d65a27414
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -11,11 +11,14 @@ tags:
 author: Gui
 image: /uploads/stories/minecraft-server-cannot-join-hero.webp
 imageAlt: 지도를 든 블록풍 여행자가 컴퓨터, 스마트폰, 게임 컨트롤러로 이어지는 길 가운데 접속 경로를 고르는 모습
+lastUpdated: 2026-10-09T15:00:00+09:00
 ---
 
 마인크래프트 서버에 접속할 수 없을 때는 무작정 여러 번 재접속하기보다 게임 에디션, 서버 자체의 안내, 계정, 네트워크로 원인을 나누어 보는 편이 좋습니다. 이 글의 앞부분은 어느 서버에나 적용되는 공통 확인 절차입니다. Aceserver 전용 안내는 뒤에서 따로 다룹니다.
 
 그룹에 Switch나 스마트폰 플레이어가 있다면 참여 방법을 정하기 전에 [친구와 마인크래프트를 함께 플레이하는 방법](/ko/stories/minecraft-play-with-friends/)에서 에디션과 계정 조건을 확인하세요.
+
+「멀티플레이가 비활성화됨」은 계정 권한을, 「시간 초과」는 접속 주소·서버 상태·통신을 조사하는 출발점입니다. 두 오류에 같은 해결책이 필요한 것은 아닙니다. 화면 조작이 헷갈리면 Minecraft 공식 [서버 참가 절차](https://www.minecraft.net/en-us/article/how-play-minecraft-server)에서 자신의 에디션 입력 화면을 확인한 뒤 아래 점검으로 넘어가세요.
 
 ## 먼저 접속 문제와 접속 후의 불안을 나누기
 
@@ -36,7 +39,7 @@ imageAlt: 지도를 든 블록풍 여행자가 컴퓨터, 스마트폰, 게임 �
 
 ### Java Edition
 
-Java Edition은 Windows, macOS, Linux에서 이용할 수 있습니다. 서버가 Java용 안내를 제공한다면 런처에서 지정된 일반 정식 버전을 선택하고 멀티플레이에서 서버 주소를 입력합니다. 주소는 IP 주소일 수도 있고 URL 형식의 호스트 이름일 수도 있습니다.
+Java Edition은 Windows, macOS, Linux에서 이용할 수 있습니다. 서버가 Java용 안내를 제공한다면 런처에서 지정된 일반 정식 버전을 선택하고 멀티플레이에서 서버 주소를 입력합니다. 접속 주소는 IP 주소나 호스트 이름입니다. 웹 페이지 URL과 혼동하지 말고 서버가 안내하는 주소를 입력하세요.
 
 특히 서버가 요구하는 게임 버전과 MOD 또는 런처 설정을 확인해야 합니다. 바닐라 서버는 테스트 버전이나 불필요한 MOD를 거부할 수 있습니다. 먼저 공식 안내에 나온 일반 버전으로 시도하고, 추가 요소는 서버가 명시한 경우에만 넣으세요.
 

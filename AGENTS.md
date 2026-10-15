@@ -11,6 +11,10 @@
 - 既存の未コミット変更や別 branch の作業を戻さない。
 - 失敗した検証、未実施の確認、外部要因による制約は隠さず報告する。
 
+## Stories の執筆
+
+`src/content/stories/` の新規記事・改訂では、[読みものの執筆・参考リンク・公開方針](docs/04_運用設計/05_読みものの執筆・参考リンク・公開方針.md)を読む。参加・遊び方・トラブルなど読者の疑問に答え、関連する参考URLをSEO改善の標準施策として掲載する。過去の出来事と現在の案内を分け、WIKIの可変情報を複製しない。変更した内容は8言語とsourceHashにも反映する。
+
 ## CMS とコンテンツ
 
 - CMS 編集対象は `src/content/pages/*.json` と `src/content/site/*.json` を正とする。
@@ -40,3 +44,11 @@
 - PR タイトルと本文は日本語で書き、`.github/pull_request_template.md` に沿って関連 Issue、概要、確認、補足を簡潔に書く。
 - PR は draft で作成してよい。差分レビューと必要な検証が通ったら、ユーザー指示の範囲で ready にしてよい。
 - 実行したコマンドは省略せず書く。実行していない検証は「未実施」と明記する。
+
+## 共通SEO・執筆ガイドの参照
+
+新規記事・改訂の共通方針は、[共通執筆ガイド](https://github.com/acecore-systems/seo-content-ops/blob/main/docs/01-writing-guide.md) と [このサイトの補足](https://github.com/acecore-systems/seo-content-ops/blob/main/docs/sites/aceserver-portal.md) を確認する。
+
+実装、コンテンツschema、翻訳、検証、CMS、公開手順は、このrepoの最新のguidanceとローカルガイドを正本とする。共通ガイドの参照だけで、変更・翻訳・公開の権限や経路を追加しない。
+
+参照先は非公開repoのため、閲覧権限がない場合や取得できない場合は、読めなかった資料を明記し、このrepoの既存ガイドに従う。読者向けの公開参考資料を非公開のガイドリンクへ置き換えない。

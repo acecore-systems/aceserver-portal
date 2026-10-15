@@ -1,6 +1,6 @@
 ---
-title: '皮肤制作器使用指南：文字、图片生成与3D检查'
-description: '从文字和可选图片生成Minecraft新皮肤，选择Classic或Slim，查看3D效果并保存64×64 PNG。'
+title: 'Minecraft皮肤制作器使用方法｜文字图片生成、3D编辑与PNG保存'
+description: '从文字和可选图片生成Minecraft新皮肤，选择Classic或Slim，查看3D效果并保存64×64 PNG。 也可以读取自己的64×64 PNG，不使用AI而手动编辑。'
 date: 2026-09-30T21:15:00+09:00
 author: Gui
 tags: [Minecraft, Aceserver, Skin Maker]
@@ -8,11 +8,13 @@ image: /uploads/stories/minecraft-skin-maker-cover-v2.webp
 imageAlt: '用白色方块人偶和调色板表现皮肤制作的说明插画，并非生成结果实例。'
 relatedStories: [aceserver-beginners-guide]
 translationOf: minecraft-skin-maker-guide
-sourceHash: sha256:417830da11a893bd01fad6116a244c4a149a4cf163397414588057a87b317f1d
-lastUpdated: 2026-10-07
+sourceHash: sha256:53f8e1662fe56ef7d93fab2aba9733911a0240d614d35e416b2b41624217ccc2
+lastUpdated: 2026-10-14T12:00:00+09:00
 ---
 
-[皮肤制作器](/zh-cn/skin-maker/)可用文字和可选参考图片生成Minecraft新皮肤，随后查看3D效果并保存64×64 PNG。
+[皮肤制作器](/zh-cn/skin-maker/)可用文字和可选参考图片生成Minecraft新皮肤，随后查看3D效果并保存64×64 PNG。 也可以读取自己的64×64 PNG，不使用AI而手动编辑。
+
+第一次使用时，先选手臂模型，用简短文字指定服装与颜色，制作一个皮肤。使用保存的PNG前，请通过Minecraft官方的[皮肤说明与更换方法](https://www.minecraft.net/en-us/article/what-is-minecraft-skin)确认自己的版本和设备是否支持图片导入。不公开到商店，也可以保存并使用PNG。
 
 ## 1. 选择手臂类型与外观
 
@@ -22,6 +24,12 @@ Classic手臂为4px，Slim为3px。用文字描述颜色、服装等。参考图
 
 可以用画笔直接在3D模型上绘制。右键拖动或拖动空白处可旋转，滚轮可缩放。触屏请选择“旋转 / 缩放”。“只显示选中的部位”可方便地编辑手臂内侧。编辑基础图层时会隐藏外层。精细调整也可以使用选中的2D面。
 
+### 从自己的PNG开始
+
+在左侧输入区域选择“编辑自己的皮肤”，通过共用的Classic或Slim选项选择匹配的手臂类型，再读取不超过1 MB的64×64 PNG。切换到“用AI创建”或切换回来时，输入内容和当前编辑会保留。基础层必须不透明，不支持旧版64×32格式。支持灰度PNG和半透明外层。
+
+成功读取新文件会替换当前皮肤和撤销记录，因此请先将要保留的作品保存为PNG。读取失败会保留当前皮肤和记录。读取与手动编辑在浏览器内完成，不会发送给AI。只有另行同意并执行AI局部修改时才会发送。以下生成步骤适用于“用AI创建”。
+
 ## 2. 同意处理并等待生成
 
 发送前确认图片使用权及AI处理同意。文字和图片会发送到配置中的OpenAI API或Cloudflare Workers AI。不要输入个人信息或秘密。生成可能需要几分钟，也可能因用量限制或拥堵失败，请查看屏幕提示。
@@ -30,7 +38,9 @@ Classic手臂为4px，Slim为3px。用文字描述颜色、服装等。参考图
 
 查看正面、背面和左右侧，拖动旋转，可切换自动旋转和外层显示。AI输出可能与预期不同，保存前检查手臂及服装接缝。
 
-<figure class="article-diagram" data-layout="flow" data-tone="violet" data-count="3" aria-labelledby="diagram-skin-check-save"><figcaption><strong id="diagram-skin-check-save">从生成到保存的检查顺序</strong><span>生成需要同意。生成后先检查外观，再保存。</span></figcaption><ol class="article-diagram__nodes"><li><span class="article-diagram__symbol"><span aria-hidden="true">1</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m5 17 9-12 5 4-10 11H4Z"/><path d="m12 8 5 4M4 20l1-3"/></svg></span><strong>用文字和可选图片生成</strong><span>发送前确认使用权和AI处理同意。</span></li><li><span class="article-diagram__symbol"><span aria-hidden="true">2</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m12 2 10 5v10l-10 5-10-5V7Zm0 10v10M2 7l10 5 10-5"/></svg></span><strong>从各方向检查3D</strong><span>查看正面、背面、左右以及手臂和服装交界。</span></li><li><span class="article-diagram__symbol"><span aria-hidden="true">3</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 2h13l5 5v15H2V2Zm2 0v7h12V3M6 22V13h12v9"/></svg></span><strong>保存64×64 PNG</strong><span>关闭页面前保存，在游戏中使用相同模型导入。</span></li></ol></figure>
+开启网格后，可以在3D模型上查看像素边界。网格会跟随旋转、图层和Slim形状变化。它只是编辑辅助线，不会写入保存的PNG。
+
+<figure class="article-diagram" data-layout="flow" data-tone="violet" data-count="3" aria-labelledby="diagram-skin-check-save"><figcaption><strong id="diagram-skin-check-save">从选择起点到保存</strong><span>AI生成和读取自己的PNG是两种不同的入口。无论采用哪一种，都应先检查编辑结果再保存。</span></figcaption><ol class="article-diagram__nodes"><li><span class="article-diagram__symbol"><span aria-hidden="true">1</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m5 17 9-12 5 4-10 11H4Z"/><path d="m12 8 5 4M4 20l1-3"/></svg></span><strong>AI生成或读取自己的PNG</strong><span>生成需要使用权和AI处理同意；自己的PNG在浏览器内读取。</span></li><li><span class="article-diagram__symbol"><span aria-hidden="true">2</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m12 2 10 5v10l-10 5-10-5V7Zm0 10v10M2 7l10 5 10-5"/></svg></span><strong>从各方向检查3D</strong><span>查看正面、背面、左右以及手臂和服装交界。</span></li><li><span class="article-diagram__symbol"><span aria-hidden="true">3</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 2h13l5 5v15H2V2Zm2 0v7h12V3M6 22V13h12v9"/></svg></span><strong>保存64×64 PNG</strong><span>关闭页面前保存，在游戏中使用相同模型导入。</span></li></ol></figure>
 
 ## 4. 保存并在游戏中导入
 
@@ -39,6 +49,8 @@ Classic手臂为4px，Slim为3px。用文字描述颜色、服装等。参考图
 ## 5. 将喜欢的作品公开到商店
 
 生成后，为皮肤命名并同意任何人都可以免费下载和使用，即可公开到[皮肤商店](/zh-cn/skin-maker/store/)。公开是可选的，只保存名称和生成的皮肤。在生成后24小时内，只要此生成页面仍然打开，就可以取消公开。
+
+读取自己的PNG不能将其发布到商店。用新PNG替换生成的皮肤或商店副本后，也不会保留之前的发布与撤回操作。
 
 ## 6. 复制并编辑商店的皮肤
 

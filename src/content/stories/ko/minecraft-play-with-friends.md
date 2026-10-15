@@ -2,7 +2,7 @@
 title: '친구와 마인크래프트 하는 법: Java, 베드락, Switch, 모바일별 선택 가이드'
 description: Java 에디션과 베드락 에디션의 차이를 정리하고, 내 월드·Realms·공개 서버 중에서 기기별로 친구와 함께할 방법을 고르는 안내서입니다.
 translationOf: minecraft-play-with-friends
-sourceHash: sha256:649ea26618c0eb16f2b02374bfdfa83d576ef0d2ac7fed3cfa3061bf52b5b14e
+sourceHash: sha256:2dcd36662b79814ddebf5ac37fffe0713d91a554eb5ff82763bbeb6e64cf2e7e
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -11,9 +11,12 @@ tags:
 author: Gui
 image: /uploads/stories/minecraft-play-with-friends-hero.webp
 imageAlt: 블록 스타일의 노을 광장에서 PC, 휴대용 게임기, 스마트폰을 곁에 두고 지도를 둘러싼 네 친구가 함께할 방법을 의논하는 모습
+lastUpdated: 2026-10-09T15:00:00+09:00
 ---
 
 친구와 마인크래프트를 시작할 때는 어디서 놀지보다 먼저 모두가 같은 에디션, 즉 **Java 에디션 또는 베드락 에디션**을 쓸 수 있는지 확인하는 편이 빠릅니다. 이 글에서는 내 월드, Realms, 공개 서버를 비교하고 PC·Switch·모바일별 선택 방법을 정리합니다.
+
+예를 들어 「오늘 밤 Switch와 스마트폰으로 두 명이 플레이」하려면 Bedrock과 계정 조건을 먼저 맞춘 뒤 개인 월드 초대를 시도합니다. 「서로 다른 시간에도 건축을 이어 가고 싶다」면 Realms나 관리되는 서버를 비교하세요. Minecraft 공식 [친구와 플레이하는 방법](https://www.minecraft.net/en-us/play-with-friends)은 가능한 플레이 방식을 알아보는 참고 자료입니다.
 
 ## 먼저 확인하기: Java와 베드락은 기본적으로 함께 플레이할 수 없습니다
 

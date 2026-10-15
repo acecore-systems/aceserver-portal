@@ -2,7 +2,7 @@
 title: 'Como configurar um servidor gratuito de Minecraft: Java, Bedrock e Realms'
 description: Aprenda a configurar um servidor gratuito de Minecraft e compare Java Edition, Bedrock Edition e Realms, incluindo os preparativos e as verificações de segurança antes de abri-lo.
 translationOf: minecraft-server-setup
-sourceHash: sha256:48fe3113347491bab033478489964d0be50754b14687d8f189c3103a1696b1bf
+sourceHash: sha256:b511296812b20a640219e6d23416407abef5bf20c9fc4a1c018182604f9b5cdf
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -11,7 +11,7 @@ tags:
 author: Gui
 image: '/uploads/stories/minecraft-server-setup-cover-v2.webp'
 imageAlt: 'Ilustração conceitual de preparação e manutenção com kit de blocos, ferramentas, caixa de armazenamento e casa-servidor em miniatura'
-lastUpdated: '2026-10-06T13:52:45+09:00'
+lastUpdated: 2026-10-09T15:00:00+09:00
 ---
 
 Há várias formas de jogar Minecraft com amigos: usar a mesma rede local, executar um servidor dedicado no seu próprio PC ou usar Realms. A escolha certa depende da edição de todos os jogadores e do quanto de manutenção você aceita fazer.
@@ -19,6 +19,8 @@ Há várias formas de jogar Minecraft com amigos: usar a mesma rede local, execu
 A primeira coisa a entender é que servidor gratuito significa que o software do servidor é gratuito. O jogo Minecraft, o computador, a eletricidade, a conexão de internet, os backups e as atualizações continuam sendo responsabilidades separadas. Este guia se concentra em hospedar o software oficial no seu próprio PC.
 
 Se o grupo inclui jogadores de Switch ou celular, antes de decidir como participar, consulte [como jogar Minecraft com amigos](/pt/stories/minecraft-play-with-friends/) para conferir a edição e as contas.
+
+Antes de baixar, combinem a edição de todos e se o jogo pode parar quando o PC anfitrião for desligado. O [download oficial de Java](https://www.minecraft.net/en-us/download/server) é para Java; o [de Bedrock](https://www.minecraft.net/en-us/download/server/bedrock), para Bedrock. Confira os ambientes aceitos e as instruções incluídas e faça uma conexão LAN funcionar antes de ampliar o acesso.
 
 ## Resumo: escolha pelos jogadores e pela edição
 

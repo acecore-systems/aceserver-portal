@@ -1,15 +1,18 @@
 ---
-title: Aceserver가 장악당했다.
-description: Aceserver에서 벌어진 ‘장악’ 사건의 기록. 멤버들의 이성이 차례로 잠식되어 가는 충격적인 문서다.
+title: '에이스서버 「탈취」 이벤트 기록｜2022년 10월'
+description: '2022년 10월 12일에 공개한 에이스서버 「탈취」 이벤트 글입니다. 멤버들의 이성이 잠식되는 당시의 이야기를 읽고 현재 참가 안내도 확인할 수 있습니다.'
 translationOf: aceserver-hijacked
-sourceHash: sha256:d4ed78f447d9c7d8b80f00e170eaebd2f24a8faf1285b827b6499d2029541950
+sourceHash: sha256:6477d2ba77de82cf756ee99ee7fae154e500828d919a42c43eeb07eb29b07bc9
 date: 2022-10-12T00:00:00+09:00
 tags:
   - 이벤트
 author: ハット
 image: /uploads/stories/aceserver-hijacked.webp
 imageAlt: 밤의 블록 도시에서 보라색과 초록색으로 빛나는 이상한 서버 장치가 퍼져 나가는 모습
+lastUpdated: 2026-10-09T15:00:00+09:00
 ---
+
+이 글은 2022년 10월 12일에 공개한 「탈취」 이벤트의 기록입니다. 아래 내용은 당시의 이야기로 남겨 두었으며, 현재 서버 장애나 계정 피해를 알리는 공지가 아닙니다.
 
 ## Aceserver가 장악당했다
 

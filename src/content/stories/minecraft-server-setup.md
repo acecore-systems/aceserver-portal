@@ -14,7 +14,7 @@ relatedStories:
   - minecraft-java-bedrock-crossplay
   - minecraft-server-cannot-join
   - minecraft-server-osusume
-lastUpdated: '2026-10-06T13:52:45+09:00'
+lastUpdated: 2026-10-09T15:00:00+09:00
 ---
 
 マイクラを友達と遊ぶ方法は、同じ家のネットワークで遊ぶ方法、自宅のPCで専用サーバーを動かす方法、Realmsを使う方法に分けられます。参加する人のエディションと、どのくらい管理の手間をかけられるかで選択肢が変わります。
@@ -22,6 +22,8 @@ lastUpdated: '2026-10-06T13:52:45+09:00'
 最初に知っておきたいのは、「無料サーバー」はサーバーソフトの利用料が無料という意味であって、Minecraft本体、PC、電気、通信回線、バックアップや更新の手間まで無料になるわけではないことです。ここでは、公式ソフトを使って自分のPCに立てる方法を中心に説明します。
 
 Switchやスマホの友達と遊ぶ場合の端末別の条件は、サーバーを立てる前に[マイクラで友達と遊ぶ方法](/stories/minecraft-play-with-friends/)で確認しておきましょう。
+
+ダウンロードを始める前に、友達全員のエディションと、ホストPCを止めたときに遊べなくてもよいかを決めます。[Java版の公式配布](https://www.minecraft.net/en-us/download/server)はJava用、[統合版の公式配布](https://www.minecraft.net/en-us/download/server/bedrock)はBedrock用です。配布ページで対応環境と同梱ガイドを確認し、まずLAN内の接続一件を成功させてから公開範囲を広げましょう。
 
 ## 先に結論：遊ぶ人数とエディションで選ぶ
 

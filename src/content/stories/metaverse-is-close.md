@@ -1,5 +1,5 @@
 ---
-title: メタバースは案外身近にあるよね
+title: 'Minecraftも身近なメタバース？｜建築・冒険・交流から考える'
 description: VRゴーグルだけではなく、人が集まり交流するMinecraftのような仮想空間もメタバースではないか、という話。
 date: 2023-03-23T00:00:00+09:00
 tags:
@@ -10,8 +10,10 @@ image: '/uploads/stories/metaverse-is-close-cover-v2.webp'
 imageAlt: 'PCとタブレットを入口に、人々がブロックの広場で共同建築を楽しむ説明用イラスト'
 relatedPages:
   - world-map
-lastUpdated: '2026-10-06T13:52:45+09:00'
+lastUpdated: 2026-10-09T15:00:00+09:00
 ---
+
+これは2023年3月に書いた、Minecraftのコミュニティをメタバースとして捉える筆者の考えです。VR機器を買う前に、友達と同じワールドで建築したり、サーバーの街を見学したりする体験から考えてみます。遊ぶ方法の基本は、Minecraft公式の[サーバーで一緒に遊ぶガイド](https://www.minecraft.net/en-us/article/how-play-minecraft-server)で確認できます。この資料はマルチプレイの操作案内で、メタバースの定義を示すものではありません。
 
 「メタバース」と聞くと、VRゴーグルをつけて仮想空間に入る――そんなイメージが強いかもしれません。FacebookがMetaに社名を変え、Horizon Worldsに力を入れていますが、正直なところあまりピンときていない人も多いのではないでしょうか。
 

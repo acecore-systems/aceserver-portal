@@ -2,7 +2,7 @@
 title: '무료 마인크래프트 서버 만드는 방법: Java, 베드락, Realms의 차이'
 description: 무료 마인크래프트 서버를 만드는 방법을 소개하고, Java Edition·Bedrock Edition·Realms의 차이와 준비 사항, 공개 전 보안 점검을 설명합니다.
 translationOf: minecraft-server-setup
-sourceHash: sha256:48fe3113347491bab033478489964d0be50754b14687d8f189c3103a1696b1bf
+sourceHash: sha256:b511296812b20a640219e6d23416407abef5bf20c9fc4a1c018182604f9b5cdf
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -11,7 +11,7 @@ tags:
 author: Gui
 image: '/uploads/stories/minecraft-server-setup-cover-v2.webp'
 imageAlt: '블록 조립 키트, 도구, 보관 상자와 작은 서버 집으로 준비와 운영을 나타낸 개념 일러스트'
-lastUpdated: '2026-10-06T13:52:45+09:00'
+lastUpdated: 2026-10-09T15:00:00+09:00
 ---
 
 친구와 마인크래프트를 플레이하는 방법은 여러 가지입니다. 같은 로컬 네트워크를 사용하거나, 자신의 PC에서 전용 서버를 실행하거나, Realms를 사용할 수 있습니다. 적합한 방법은 모두가 사용하는 에디션과 감당할 수 있는 관리 작업의 양에 따라 달라집니다.
@@ -19,6 +19,8 @@ lastUpdated: '2026-10-06T13:52:45+09:00'
 먼저 무료 서버라는 말은 서버 소프트웨어 자체를 무료로 사용할 수 있다는 뜻입니다. 마인크래프트 게임, 컴퓨터, 전기, 인터넷 연결, 백업과 업데이트까지 무료가 되는 것은 아닙니다. 이 글에서는 자신의 PC에서 공식 소프트웨어를 호스팅하는 방법을 중심으로 설명합니다.
 
 그룹에 Switch나 스마트폰 플레이어가 있다면 참여 방법을 정하기 전에 [친구와 마인크래프트를 함께 플레이하는 방법](/ko/stories/minecraft-play-with-friends/)에서 에디션과 계정 조건을 확인하세요.
+
+다운로드 전에 친구 모두의 에디션과 호스트 PC가 꺼지면 플레이를 멈춰도 되는지 정합니다. [Java 공식 배포](https://www.minecraft.net/en-us/download/server)는 Java용이고, [Bedrock 공식 배포](https://www.minecraft.net/en-us/download/server/bedrock)는 Bedrock용입니다. 배포 페이지에서 지원 환경과 동봉 안내를 확인하고, LAN 접속 한 건을 먼저 성공시킨 뒤 공개 범위를 넓히세요.
 
 ## 결론: 플레이어와 에디션에 맞춰 선택하기
 

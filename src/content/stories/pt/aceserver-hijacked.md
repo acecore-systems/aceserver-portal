@@ -1,15 +1,18 @@
 ---
-title: O Aceserver foi sequestrado.
-description: Um registro do “sequestro” ocorrido no Aceserver. Um documento chocante sobre a sanidade dos membros sendo consumida um após outro.
+title: 'Registro do evento de “sequestro” do Aceserver | Outubro de 2022'
+description: 'Artigo do evento de “sequestro” do Aceserver publicado em 12 de outubro de 2022. Preserva o relato dos membros perdendo a razão e indica onde encontrar as orientações atuais para participar.'
 translationOf: aceserver-hijacked
-sourceHash: sha256:d4ed78f447d9c7d8b80f00e170eaebd2f24a8faf1285b827b6499d2029541950
+sourceHash: sha256:6477d2ba77de82cf756ee99ee7fae154e500828d919a42c43eeb07eb29b07bc9
 date: 2022-10-12T00:00:00+09:00
 tags:
   - Evento
 author: ハット
 image: /uploads/stories/aceserver-hijacked.webp
 imageAlt: Um estranho dispositivo de servidor brilhando em violeta e verde se espalha por uma cidade de blocos à noite
+lastUpdated: 2026-10-09T15:00:00+09:00
 ---
+
+Este artigo registra o evento de “sequestro” publicado em 12 de outubro de 2022. O texto abaixo preserva a narrativa daquela época; não é um aviso de falha atual do servidor ou de contas comprometidas.
 
 ## O Aceserver foi sequestrado
 

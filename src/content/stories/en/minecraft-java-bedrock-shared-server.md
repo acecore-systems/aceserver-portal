@@ -2,7 +2,7 @@
 title: 'How to Share Your Own Java Server with Bedrock: Safe Cross-Play Setup'
 description: Learn how to safely invite Bedrock friends to your own Java server with Geyser and Floodgate, choose a free host, and check settings before opening access.
 translationOf: minecraft-java-bedrock-shared-server
-sourceHash: sha256:3ad44805fe1520a43fa6286eae62b3315998d010a7fb1cecff5f763ab1805b87
+sourceHash: sha256:1cf7f0fc312533bba07e7685f6d623f97319b7dd9d9814821dec1d6bb9926a1f
 date: 2026-08-09T10:00:00+09:00
 tags:
   - Minecraft
@@ -14,7 +14,7 @@ tags:
 author: Gui
 image: '/uploads/stories/minecraft-java-bedrock-shared-server-cover-v2.webp'
 imageAlt: 'Conceptual illustration of a block-style server house connected to a PC and a tablet through a bridge, with a separate administration box'
-lastUpdated: '2026-10-06T13:52:45+09:00'
+lastUpdated: 2026-10-09T15:00:00+09:00
 ---
 
 To invite friends using Bedrock on phones, tablets, Windows, or consoles to your own Java server, a Java server with Geyser and Floodgate is a practical option. Geyser bridges Bedrock connections to the Java server, while Floodgate lets the server identify Bedrock accounts safely.
@@ -22,6 +22,8 @@ To invite friends using Bedrock on phones, tablets, Windows, or consoles to your
 The important part is not disabling Java account authentication just to admit Bedrock friends. This guide starts with Java authentication and an invitation-only server kept in place. Java and Bedrock controls and some features are not identical, so test with both kinds of device before opening the server.
 
 If you are still deciding how friends on different devices should play together, also see [how to play Minecraft with friends](/en/stories/minecraft-play-with-friends/).
+
+Before configuring anything, select the instructions for your host and server software in the [official Geyser setup guide](https://geysermc.org/wiki/geyser/setup/). Rather than copying every setting into a different environment, choose the deployment type, test both editions on your LAN, and then invite friends.
 
 ## The short answer: share one server with Java + Geyser + Floodgate
 

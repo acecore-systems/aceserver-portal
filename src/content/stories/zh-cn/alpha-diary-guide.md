@@ -1,18 +1,20 @@
 ---
-title: 阅读阿尔法君的绘画日记
+title: '如何阅读阿尔法君绘图日记｜选择日期、阅读记录、提问'
 description: 在阿尔法君的绘画日记中选择日期，阅读图画与文字记录，并提出让你感兴趣的问题。按照自己的节奏继续探索。
 date: 2026-09-25T00:00:00+09:00
 tags:
   - 公告
 author: Gui
-lastUpdated: 2026-10-06T08:52:00+09:00
+lastUpdated: 2026-10-09T15:00:00+09:00
 image: /uploads/stories/alpha-diary-guide-hero.webp
 imageAlt: 方块风景中的打开的绘图日记和日期日历插图
 translationOf: alpha-diary-guide
-sourceHash: sha256:d19617ba25118538d9991868e340b5c130e6de4d165b705e14e07bcbcf0c20a2
+sourceHash: sha256:579053ddd3728f07e06d1cd3119ef5114913929d2959c68ff9998a26bb8df587
 ---
 
 阿尔法君的绘画日记收录了 Aceserver 按日期记录的画与文字。可以从[绘画日记页面](/zh-cn/alpha-diary/)进入。
+
+第一次阅读时，先看完一天的图画和文字，再选一个感兴趣的地点或事件。提问时带上日期和主题，例如“请介绍这一天的这个地方”，更容易表达想了解的内容。不提问、只阅读记录也可以。
 
 ## 自己选择日期
 

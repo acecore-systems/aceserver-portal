@@ -2,7 +2,7 @@
 title: 无法加入 Minecraft 服务器时的检查｜Java、基岩版与 Switch
 description: 无法加入 Minecraft 服务器时，依次检查版本、游戏版本、账户和网络，并在成功加入后安心继续游玩的指南。
 translationOf: minecraft-server-cannot-join
-sourceHash: sha256:014fe443391942d389ae8c13f0259af504df8fb7df2d4f38effea66213930476
+sourceHash: sha256:22e7daa49d737d74089286ebf1a965d34c3ce62833a3a18b8ff4476d65a27414
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -11,11 +11,14 @@ tags:
 author: Gui
 image: /uploads/stories/minecraft-server-cannot-join-hero.webp
 imageAlt: 手持地图的方块风旅行者在通往电脑、智能手机和游戏手柄的道路前选择接入方式
+lastUpdated: 2026-10-09T15:00:00+09:00
 ---
 
 无法加入 Minecraft 服务器时，不要反复尝试连接。先将可能原因分为游戏版本、服务器自己的说明、账户设置和网络。本文前半部分适用于所有服务器；Aceserver 专用说明会在后半部分单独列出。
 
 如果队伍中有 Switch 或手机玩家，在决定参加方式前，可先阅读[如何与朋友一起玩 Minecraft](/zh-cn/stories/minecraft-play-with-friends/)，确认版本和账户条件。
+
+“多人游戏已禁用”应先检查账号权限，“连接超时”则从地址、服务器状态和通信入手。两者未必适用同一种处理方法。不清楚界面操作时，先通过Minecraft官方[服务器参加步骤](https://www.minecraft.net/en-us/article/how-play-minecraft-server)确认自己版本的输入界面，再进行下方检查。
 
 ## 先区分：无法连接，还是加入后感到不安
 
@@ -36,7 +39,7 @@ imageAlt: 手持地图的方块风旅行者在通往电脑、智能手机和游�
 
 ### Java 版
 
-Java 版适用于 Windows、macOS 和 Linux。如果服务器提供 Java 版说明，请在启动器中选择指定的普通正式版，并通过“多人游戏”输入服务器地址。地址可能是 IP 地址，也可能是网址形式的主机名。
+Java 版适用于 Windows、macOS 和 Linux。如果服务器提供 Java 版说明，请在启动器中选择指定的普通正式版，并通过“多人游戏”输入服务器地址。连接地址是IP地址或主机名。请填写服务器指南提供的地址，不要与网页URL混淆。
 
 重点确认服务器要求的游戏版本以及 MOD 或启动器设置。原版服务器可能会拒绝测试版或不需要的 MOD。先使用官方说明指定的普通版本，只有服务器明确要求时才添加额外内容。
 

@@ -2,7 +2,7 @@
 title: 'Eigenen Java-Server mit Bedrock teilen: sichere Crossplay-Konfiguration'
 description: Erfahre, wie du Bedrock-Freunde mit Geyser und Floodgate sicher auf deinen Java-Server einlädst, einen kostenlosen Hoster auswählst und die Einstellungen vor der Freigabe prüfst.
 translationOf: minecraft-java-bedrock-shared-server
-sourceHash: sha256:3ad44805fe1520a43fa6286eae62b3315998d010a7fb1cecff5f763ab1805b87
+sourceHash: sha256:1cf7f0fc312533bba07e7685f6d623f97319b7dd9d9814821dec1d6bb9926a1f
 date: 2026-08-09T10:00:00+09:00
 tags:
   - Minecraft
@@ -14,7 +14,7 @@ tags:
 author: Gui
 image: '/uploads/stories/minecraft-java-bedrock-shared-server-cover-v2.webp'
 imageAlt: 'Konzeptillustration eines Serverhauses aus Blöcken mit PC und über eine Brücke angeschlossenem Tablet sowie separatem Verwaltungskasten'
-lastUpdated: '2026-10-06T13:52:45+09:00'
+lastUpdated: 2026-10-09T15:00:00+09:00
 ---
 
 Wenn du Freunde auf Bedrock von Telefonen, Tablets, Windows oder Konsolen auf deinen eigenen Java-Server einladen möchtest, ist ein Java-Server mit Geyser und Floodgate eine praktische Option. Geyser überbrückt Bedrock-Verbindungen zum Java-Server, während Floodgate dem Server hilft, Bedrock-Konten sicher zu erkennen.
@@ -22,6 +22,8 @@ Wenn du Freunde auf Bedrock von Telefonen, Tablets, Windows oder Konsolen auf de
 Wichtig ist, die Java-Kontoauthentifizierung nicht nur für Bedrock-Freunde abzuschalten. Dieser Leitfaden beginnt mit aktivierter Java-Authentifizierung und einem Server nur für Eingeladene. Steuerung und einige Funktionen sind in Java und Bedrock nicht vollständig gleich, deshalb sollten beide Gerätetypen vor der Freigabe getestet werden.
 
 Wenn ihr noch entscheidet, wie Freunde mit unterschiedlichen Geräten zusammen spielen sollen, lest auch [wie man Minecraft mit Freunden spielt](/de/stories/minecraft-play-with-friends/).
+
+Wählen Sie vor der Konfiguration in der [offiziellen Geyser-Installationsanleitung](https://geysermc.org/wiki/geyser/setup/) die Schritte für Ihren Host und Ihre Serversoftware. Statt alle Einstellungen in eine andere Umgebung zu kopieren, wählen Sie den Installationstyp, testen beide Editionen im LAN und laden dann Freunde ein.
 
 ## Kurz gesagt: Einen Server mit Java + Geyser + Floodgate teilen
 

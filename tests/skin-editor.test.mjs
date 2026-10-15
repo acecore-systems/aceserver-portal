@@ -420,11 +420,19 @@ test('undo restores pixels and publication eligibility; new edits clear redo and
 })
 
 test('AI edits use the exact current PNG with masked face data and fit the existing private Worker contract', async (t) => {
-  for (const model of ['classic', 'slim']) {
+  for (const [model, effort] of [
+    ['classic', 'high'],
+    ['slim', 'high'],
+    ['classic', 'low'],
+  ]) {
     const request = input(model, {
       selection: { part: 'head', layer: 'outer' },
     })
-    const body = { model: 'gpt-6-luna', ...modelInput(request) }
+    const body = {
+      model: 'gpt-6-luna',
+      ...modelInput(request),
+      reasoning_effort: effort,
+    }
     assert.equal(body.messages[0].content.length, 2)
     assert.ok(body.messages[0].content[0].text.length < 30000)
     assert.equal(

@@ -2,7 +2,7 @@
 title: 'How to set up a free Minecraft server: Java, Bedrock, and Realms'
 description: Learn how to set up a free Minecraft server and compare Java Edition, Bedrock Edition, and Realms, including preparation and safety checks before opening it.
 translationOf: minecraft-server-setup
-sourceHash: sha256:48fe3113347491bab033478489964d0be50754b14687d8f189c3103a1696b1bf
+sourceHash: sha256:b511296812b20a640219e6d23416407abef5bf20c9fc4a1c018182604f9b5cdf
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -11,7 +11,7 @@ tags:
 author: Gui
 image: '/uploads/stories/minecraft-server-setup-cover-v2.webp'
 imageAlt: 'Conceptual illustration of setup and maintenance using a block-building kit, tools, storage box and miniature server house'
-lastUpdated: '2026-10-06T13:52:45+09:00'
+lastUpdated: 2026-10-09T15:00:00+09:00
 ---
 
 There are several ways to play Minecraft with friends: use the same local network, run a dedicated server on your own PC, or use Realms. The right choice depends on everyone's edition and how much maintenance you are willing to handle.
@@ -19,6 +19,8 @@ There are several ways to play Minecraft with friends: use the same local networ
 The first thing to understand is that a free server means the server software itself is free. It does not make the Minecraft game, computer, electricity, internet connection, backups, or updates free. This guide focuses on hosting the official software on your own PC.
 
 If your group includes Switch or smartphone players, check [how to play Minecraft with friends](/en/stories/minecraft-play-with-friends/) for the edition and account conditions before choosing how to join.
+
+Before downloading, agree on everyone’s edition and whether play can stop when the host PC shuts down. The [official Java download](https://www.minecraft.net/en-us/download/server) is for Java; the [official Bedrock download](https://www.minecraft.net/en-us/download/server/bedrock) is for Bedrock. Check supported environments and bundled guidance, then make one LAN connection work before expanding access.
 
 ## The short answer: choose by players and edition
 

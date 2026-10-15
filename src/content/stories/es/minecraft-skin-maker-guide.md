@@ -1,6 +1,6 @@
 ---
-title: 'Cómo usar el creador de skins: texto, imágenes y vista 3D'
-description: 'Cree una skin nueva con texto e imagen opcional, elija Classic o Slim, revise en 3D y guarde un PNG de 64×64.'
+title: 'Cómo usar el creador de skins de Minecraft | Texto, imágenes, edición 3D y PNG'
+description: 'Cree una skin nueva con texto e imagen opcional, elija Classic o Slim, revise en 3D y guarde un PNG de 64×64. También puedes cargar tu propio PNG de 64×64 y editarlo a mano sin usar IA.'
 date: 2026-09-30T21:15:00+09:00
 author: Gui
 tags: [Minecraft, Aceserver, Skin Maker]
@@ -8,11 +8,13 @@ image: /uploads/stories/minecraft-skin-maker-cover-v2.webp
 imageAlt: 'Ilustración de maniquíes de bloques blancos y una paleta que representa la creación de skins. No es un resultado generado.'
 relatedStories: [aceserver-beginners-guide]
 translationOf: minecraft-skin-maker-guide
-sourceHash: sha256:417830da11a893bd01fad6116a244c4a149a4cf163397414588057a87b317f1d
-lastUpdated: 2026-10-07
+sourceHash: sha256:53f8e1662fe56ef7d93fab2aba9733911a0240d614d35e416b2b41624217ccc2
+lastUpdated: 2026-10-14T12:00:00+09:00
 ---
 
-El [creador de skins](/es/skin-maker/) genera skins nuevas de Minecraft con texto y una imagen opcional. Revise en 3D y guarde un PNG de 64×64.
+El [creador de skins](/es/skin-maker/) genera skins nuevas de Minecraft con texto y una imagen opcional. Revise en 3D y guarde un PNG de 64×64. También puedes cargar tu propio PNG de 64×64 y editarlo a mano sin usar IA.
+
+Para empezar, elige el modelo de brazos y describe brevemente la ropa y los colores para crear una skin. Antes de usar el PNG guardado, consulta la [explicación oficial de las skins y cómo cambiarlas](https://www.minecraft.net/en-us/article/what-is-minecraft-skin) para comprobar la importación de imágenes en tu edición y dispositivo. Puedes guardar y usar el PNG sin publicarlo en la tienda.
 
 ## 1. Elegir brazos y describir el aspecto
 
@@ -22,6 +24,12 @@ Classic usa brazos de 4px; Slim, de 3px. Describa colores o ropa. La referencia 
 
 Pinta directamente sobre el modelo 3D con el lápiz. Arrastra con el botón derecho o sobre el fondo para girar y usa la rueda para ampliar. En pantallas táctiles, elige «Girar / ampliar». «Mostrar solo la parte seleccionada» permite editar el interior de los brazos. La capa exterior se oculta al editar la base. Usa la cara 2D seleccionada para ajustes precisos.
 
+### Empezar con tu propio PNG
+
+Elige “Editar mi skin” en el panel de entrada izquierdo, ajusta la opción compartida Classic o Slim al skin y carga un PNG de 64×64 de hasta 1 MB. Cambiar entre este modo y la creación con IA conserva los datos introducidos y las ediciones actuales. La capa base debe ser opaca; no se admite el antiguo formato 64×32. Se admiten PNG en escala de grises y capas exteriores parcialmente transparentes.
+
+Cargar correctamente un archivo nuevo sustituye el skin y el historial de deshacer: guarda antes como PNG cualquier trabajo que quieras conservar. Una carga fallida mantiene el skin y el historial. La carga y la edición manual se realizan en el navegador sin enviar el skin a la IA. Las modificaciones parciales con IA requieren un consentimiento y una ejecución independientes. Los siguientes pasos de generación corresponden al modo de creación con IA.
+
 ## 2. Dar consentimiento y esperar
 
 Confirme derechos de uso y consentimiento antes de enviar. Texto e imágenes van al proveedor configurado, OpenAI API o Cloudflare Workers AI. No incluya datos personales ni secretos. Puede tardar varios minutos o no generarse por límites o congestión; siga el estado en pantalla.
@@ -30,7 +38,9 @@ Confirme derechos de uso y consentimiento antes de enviar. Texto e imágenes van
 
 Revise frente, espalda y lados. Arrastre para girar y cambie rotación automática o capa exterior. La IA puede apartarse de lo previsto; compruebe brazos y bordes de ropa antes de guardar.
 
-<figure class="article-diagram" data-layout="flow" data-tone="violet" data-count="3" aria-labelledby="diagram-skin-check-save"><figcaption><strong id="diagram-skin-check-save">Comprobaciones desde la generación hasta el guardado</strong><span>Generar requiere consentimiento. Revisa el resultado antes de guardarlo.</span></figcaption><ol class="article-diagram__nodes"><li><span class="article-diagram__symbol"><span aria-hidden="true">1</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m5 17 9-12 5 4-10 11H4Z"/><path d="m12 8 5 4M4 20l1-3"/></svg></span><strong>Genera con texto e imagen opcional</strong><span>Confirma los derechos de uso y el consentimiento al procesamiento de IA antes de enviar.</span></li><li><span class="article-diagram__symbol"><span aria-hidden="true">2</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m12 2 10 5v10l-10 5-10-5V7Zm0 10v10M2 7l10 5 10-5"/></svg></span><strong>Revisa todos los lados en 3D</strong><span>Comprueba frente, espalda, laterales, brazos y bordes de la ropa.</span></li><li><span class="article-diagram__symbol"><span aria-hidden="true">3</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 2h13l5 5v15H2V2Zm2 0v7h12V3M6 22V13h12v9"/></svg></span><strong>Guarda el PNG de 64×64</strong><span>Guarda antes de cerrar la página e importa con el mismo modelo en el juego.</span></li></ol></figure>
+Activa la cuadrícula para ver los límites de los píxeles sobre el modelo 3D. Se adapta a la rotación, las capas y la forma Slim. Es una guía de edición y no aparece en el PNG guardado.
+
+<figure class="article-diagram" data-layout="flow" data-tone="violet" data-count="3" aria-labelledby="diagram-skin-check-save"><figcaption><strong id="diagram-skin-check-save">Desde elegir cómo empezar hasta guardar</strong><span>Generar con IA y cargar tu propio PNG son dos puntos de partida. Revisa las ediciones antes de guardar en ambos casos.</span></figcaption><ol class="article-diagram__nodes"><li><span class="article-diagram__symbol"><span aria-hidden="true">1</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m5 17 9-12 5 4-10 11H4Z"/><path d="m12 8 5 4M4 20l1-3"/></svg></span><strong>Generar con IA o cargar tu PNG</strong><span>La generación requiere derechos de uso y consentimiento para la IA. Tu PNG se carga en el navegador.</span></li><li><span class="article-diagram__symbol"><span aria-hidden="true">2</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m12 2 10 5v10l-10 5-10-5V7Zm0 10v10M2 7l10 5 10-5"/></svg></span><strong>Revisa todos los lados en 3D</strong><span>Comprueba frente, espalda, laterales, brazos y bordes de la ropa.</span></li><li><span class="article-diagram__symbol"><span aria-hidden="true">3</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 2h13l5 5v15H2V2Zm2 0v7h12V3M6 22V13h12v9"/></svg></span><strong>Guarda el PNG de 64×64</strong><span>Guarda antes de cerrar la página e importa con el mismo modelo en el juego.</span></li></ol></figure>
 
 ## 4. Guardar e importar en el juego
 
@@ -39,6 +49,8 @@ Descargue con “Guardar PNG de 64×64” e importe como skin personalizada en s
 ## 5. Publicar las skins que elija en la tienda
 
 Tras la generación, dé un nombre a la skin y acepte que cualquiera pueda descargarla y usarla gratis para publicarla en la [Tienda de skins](/es/skin-maker/store/). Publicar es opcional; solo se guardan el nombre y la skin generada. Puede retirarla durante las 24 horas siguientes a la generación mientras esta página de generación siga abierta.
+
+Cargar tu propio PNG no permite publicarlo en la tienda. Sustituir un skin generado o una copia de la tienda por un PNG nuevo también elimina el acceso a los controles anteriores de publicación y retirada.
 
 ## 6. Copiar y editar una skin de la tienda
 

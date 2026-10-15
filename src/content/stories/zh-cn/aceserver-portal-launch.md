@@ -1,8 +1,8 @@
 ---
-title: Aceserver Portal 正式上线
+title: 'Aceserver门户上线｜参加方法、WIKI与世界地图入口'
 description: 将原本分散在 Discord、Wiki、视频和世界地图中的加入前信息，整理到一个统一入口。
 translationOf: aceserver-portal-launch
-sourceHash: sha256:7135f8b1e68e3bdb744b643f856f26305e2d1e25296653417993ddf4cdd9e1c0
+sourceHash: sha256:63ad63b246cc398492535615e6e4fa3c296bab0a7f8cf321886fdf4ff6183f3c
 date: 2026-06-07T10:00:00+09:00
 tags:
   - 公告
@@ -10,8 +10,10 @@ tags:
 author: Gui
 image: /uploads/stories/aceserver-portal-launch.webp
 imageAlt: 以 Minecraft 城镇为背景的 Aceserver Portal 首页
-lastUpdated: '2026-10-06T13:52:45+09:00'
+lastUpdated: 2026-10-09T15:00:00+09:00
 ---
+
+这是2026年6月7日的门户上线公告。现在想参加的玩家，请先在门户了解整体情况，再通过官方Discord和WIKI的最新指南确认自己版本的参加方法与规则。
 
 我们上线了人人都可参加的免费 Minecraft 公共服务器“Aceserver”的官方 Portal。
 

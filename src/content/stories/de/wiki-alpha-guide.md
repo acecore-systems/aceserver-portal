@@ -1,6 +1,6 @@
 ---
-title: Mit WIKI und Alpha-kun die passende Hilfe finden
-description: Durchsuche das offizielle Aceserver-WIKI nach Kategorien oder Begriffen und frage Alpha-kun nach veröffentlichten Anleitungen.
+title: 'Aceserver-Wiki | Beitritt, Regeln und Fragebeispiele'
+description: 'Durchsuche das offizielle Aceserver-WIKI, stelle Alpha-kun anhand eines konkreten Beispiels eine Frage und prüfe den genannten Artikel. Ein Leitfaden zu offiziellen Teilnahmehinweisen und Regeln.'
 date: 2026-09-27T22:40:00+09:00
 tags:
   - Neuigkeiten
@@ -8,17 +8,27 @@ author: Gui
 image: /uploads/stories/wiki-alpha-guide-hero.webp
 imageAlt: Illustration des offiziellen Alpha-kun neben einem offenen Handbuch und Suchergebnissen in einer Blocklandschaft
 translationOf: wiki-alpha-guide
-sourceHash: sha256:9e3dd3bb72ef54f933f8c39962710715e13a833ee359a9ecb2407f1f9f7612f7
-lastUpdated: 2026-10-06T08:52:00+09:00
+sourceHash: sha256:09d836d05c32b2bb8847133b900739b589ed6ce1f5d772c3a092d09fa5c7e16d
+lastUpdated: 2026-10-10T16:29:02+09:00
 ---
 
 Wenn du wissen möchtest, wie du beitrittst oder welche Regeln gelten, beginne im [offiziellen Aceserver-WIKI](https://asv-wiki.acecore.net/). Falls du den passenden Artikel nicht kennst, hilft dir die Schaltfläche „Alpha-kun fragen“ im Portal und WIKI beim Einstieg.
+
+Beginnen Sie die Suche mit kurzen Begriffen wie „Teilnahme“ oder „Grundstücksschutz“. Nennen Sie Alpha-kun den Server oder die Welt und die Handlung, bei der Sie Hilfe brauchen. Öffnen Sie den genannten Artikel und prüfen Sie Teilnahmebedingungen oder Regeln im Original, bevor Sie handeln.
 
 ## Das WIKI nach Kategorien durchsuchen
 
 Auf der Startseite findest du Hinweise zum Beitritt, den Regelindex, häufige Fragen und Befehle. Darunter stehen Kategorien für den Einstieg, den Survival-Server, andere Server und weitere Themen. Wähle eine passende Kategorie und lies den Originalartikel.
 
 Wenn du neu bist, beginne mit [dem Beitritt](https://asv-wiki.acecore.net/article/in/) und dem [Regelindex](https://asv-wiki.acecore.net/article/rules-index/). Bei Fragen während des Spiels kannst du oben im WIKI nach einem Stichwort suchen.
+
+## Stelle eine konkrete Frage: Beispiel und hilfreiche Quellen
+
+Nenne deine Edition oder den Servernamen und eine Sache, die du wissen möchtest. Zum Beispiel: „Ich möchte Aceserver zum ersten Mal mit der Java Edition beitreten. Welcher offizielle Artikel erklärt die Vorbereitung?“ Das ist ein Beispiel für die Formulierung einer Frage.
+
+Für die Vorbereitung kannst du auch direkt [die Beitrittsanleitung](https://asv-wiki.acecore.net/article/in/) öffnen und für Regeln [den Regelindex](https://asv-wiki.acecore.net/article/rules-index/). Verweist eine Antwort auf einen anderen Artikel, prüfe, ob er zu deinem Server und deinem Ziel passt.
+
+Die genannten WIKI-Artikel sind auf Japanisch. Auch wenn du in einer anderen Sprache fragst, prüfe die Sprache der Quelle und den Originaltext, bevor du über den Beitritt oder geltende Regeln entscheidest.
 
 ## Alpha-kun fragen
 

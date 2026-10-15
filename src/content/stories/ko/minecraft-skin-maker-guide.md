@@ -1,6 +1,6 @@
 ---
-title: '스킨 메이커 사용법: 글·이미지로 만들고 3D로 확인'
-description: '글과 선택 참고 이미지로 새 Minecraft 스킨을 만들고 Classic·Slim 선택, 3D 확인, 64×64 PNG 저장을 진행하는 안내입니다.'
+title: 'Minecraft 스킨 메이커 사용법｜글·이미지 생성, 3D 편집·PNG 저장'
+description: '글과 선택 참고 이미지로 새 Minecraft 스킨을 만들고 Classic·Slim 선택, 3D 확인, 64×64 PNG 저장을 진행하는 안내입니다. 직접 만든 64×64 PNG를 불러와 AI 없이 손으로 편집할 수도 있습니다.'
 date: 2026-09-30T21:15:00+09:00
 author: Gui
 tags: [Minecraft, Aceserver, Skin Maker]
@@ -8,11 +8,13 @@ image: /uploads/stories/minecraft-skin-maker-cover-v2.webp
 imageAlt: '흰색 블록 마네킹과 팔레트로 스킨 제작을 표현한 설명용 그림. 생성 결과의 예시가 아닙니다.'
 relatedStories: [aceserver-beginners-guide]
 translationOf: minecraft-skin-maker-guide
-sourceHash: sha256:417830da11a893bd01fad6116a244c4a149a4cf163397414588057a87b317f1d
-lastUpdated: 2026-10-07
+sourceHash: sha256:53f8e1662fe56ef7d93fab2aba9733911a0240d614d35e416b2b41624217ccc2
+lastUpdated: 2026-10-14T12:00:00+09:00
 ---
 
-[스킨 메이커](/ko/skin-maker/)는 글과 선택 참고 이미지로 새 Minecraft 스킨을 만듭니다. 결과를 3D로 확인하고 64×64 PNG로 저장할 수 있습니다.
+[스킨 메이커](/ko/skin-maker/)는 글과 선택 참고 이미지로 새 Minecraft 스킨을 만듭니다. 결과를 3D로 확인하고 64×64 PNG로 저장할 수 있습니다. 직접 만든 64×64 PNG를 불러와 AI 없이 손으로 편집할 수도 있습니다.
+
+처음에는 팔 유형을 고르고 의상과 색을 짧은 글로 지정해 스킨 하나를 만들어 보세요. 저장한 PNG를 쓰기 전에 Minecraft 공식 [스킨 설명과 변경 방법](https://www.minecraft.net/en-us/article/what-is-minecraft-skin)에서 자신의 에디션·기기가 이미지 불러오기를 지원하는지 확인하세요. 스토어에 공개하지 않아도 PNG를 저장해 사용할 수 있습니다.
 
 ## 1. 팔 형태와 이미지 선택
 
@@ -22,6 +24,12 @@ Classic은 4px, Slim은 3px 팔입니다. 색상과 옷 등을 글로 설명합�
 
 펜으로 3D 모델에 직접 그릴 수 있습니다. 오른쪽 버튼이나 빈 공간을 드래그하면 회전하고, 휠로 확대합니다. 터치 화면에서는 “회전 / 확대”를 선택하세요. “선택한 부위만 표시”로 팔 안쪽도 편집할 수 있습니다. 기본 레이어 편집 시 외부 레이어를 숨깁니다. 세밀한 조정에는 선택한 2D 면을 사용하세요.
 
+### 직접 만든 PNG로 시작하기
+
+왼쪽 입력 영역에서 직접 만든 스킨 편집을 선택하고, 공통 Classic·Slim 설정을 스킨에 맞춘 뒤 1 MB 이하의 64×64 PNG를 불러옵니다. AI 생성 모드와 전환해도 입력 내용과 편집 중인 스킨은 유지됩니다. 기본 레이어는 불투명해야 하며, 이전 64×32 형식은 지원하지 않습니다. 회색조 PNG와 반투명 외부 레이어는 지원합니다.
+
+새 파일을 성공적으로 불러오면 현재 스킨과 실행 취소 기록이 교체되므로, 보관할 작업은 먼저 PNG로 저장하세요. 불러오기에 실패하면 현재 스킨과 기록을 유지합니다. 불러오기와 수동 편집은 브라우저 안에서 이루어지며 AI로 전송하지 않습니다. AI 부분 수정을 사용할 때만 별도로 동의하고 실행합니다. 다음 생성 단계는 AI 생성 모드에 해당합니다.
+
 ## 2. 동의하고 생성 기다리기
 
 보내기 전 이미지 사용 권리와 AI 처리 동의를 확인합니다. 글과 이미지는 설정된 OpenAI API 또는 Cloudflare Workers AI로 전송됩니다. 개인정보나 비밀을 넣지 마세요. 생성에 몇 분 걸리거나 사용 제한·혼잡으로 실패할 수 있으므로 화면 안내를 확인합니다.
@@ -30,7 +38,9 @@ Classic은 4px, Slim은 3px 팔입니다. 색상과 옷 등을 글로 설명합�
 
 앞·뒤·양옆을 확인하고 드래그로 회전합니다. 자동 회전과 외부 레이어도 전환할 수 있습니다. AI 결과가 의도와 다를 수 있으니 저장 전 팔과 옷 경계도 확인하세요.
 
-<figure class="article-diagram" data-layout="flow" data-tone="violet" data-count="3" aria-labelledby="diagram-skin-check-save"><figcaption><strong id="diagram-skin-check-save">생성부터 저장까지의 확인 순서</strong><span>생성에는 동의가 필요합니다. 생성 후에도 외형을 확인한 뒤 저장합니다.</span></figcaption><ol class="article-diagram__nodes"><li><span class="article-diagram__symbol"><span aria-hidden="true">1</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m5 17 9-12 5 4-10 11H4Z"/><path d="m12 8 5 4M4 20l1-3"/></svg></span><strong>글과 선택 이미지로 생성</strong><span>전송 전에 사용 권리와 AI 처리 동의를 확인합니다.</span></li><li><span class="article-diagram__symbol"><span aria-hidden="true">2</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m12 2 10 5v10l-10 5-10-5V7Zm0 10v10M2 7l10 5 10-5"/></svg></span><strong>3D로 모든 방향 확인</strong><span>앞, 뒤, 좌우와 팔·옷의 경계를 살펴봅니다.</span></li><li><span class="article-diagram__symbol"><span aria-hidden="true">3</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 2h13l5 5v15H2V2Zm2 0v7h12V3M6 22V13h12v9"/></svg></span><strong>64×64 PNG 저장</strong><span>페이지를 닫기 전에 저장하고 같은 모델로 게임에 불러옵니다.</span></li></ol></figure>
+격자를 켜면 3D 모델에서 픽셀 경계를 확인할 수 있습니다. 회전, 레이어, Slim 모양을 따라 표시됩니다. 격자는 편집용 안내선이며 저장한 PNG에는 포함되지 않습니다.
+
+<figure class="article-diagram" data-layout="flow" data-tone="violet" data-count="3" aria-labelledby="diagram-skin-check-save"><figcaption><strong id="diagram-skin-check-save">시작 방법 선택부터 저장까지</strong><span>AI 생성과 직접 만든 PNG 불러오기는 별개의 시작 방법입니다. 어느 쪽이든 편집 결과를 확인한 뒤 저장하세요.</span></figcaption><ol class="article-diagram__nodes"><li><span class="article-diagram__symbol"><span aria-hidden="true">1</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m5 17 9-12 5 4-10 11H4Z"/><path d="m12 8 5 4M4 20l1-3"/></svg></span><strong>AI 생성 또는 직접 만든 PNG</strong><span>생성에는 사용 권한과 AI 처리 동의가 필요합니다. 직접 만든 PNG는 브라우저에서 불러옵니다.</span></li><li><span class="article-diagram__symbol"><span aria-hidden="true">2</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m12 2 10 5v10l-10 5-10-5V7Zm0 10v10M2 7l10 5 10-5"/></svg></span><strong>3D로 모든 방향 확인</strong><span>앞, 뒤, 좌우와 팔·옷의 경계를 살펴봅니다.</span></li><li><span class="article-diagram__symbol"><span aria-hidden="true">3</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 2h13l5 5v15H2V2Zm2 0v7h12V3M6 22V13h12v9"/></svg></span><strong>64×64 PNG 저장</strong><span>페이지를 닫기 전에 저장하고 같은 모델로 게임에 불러옵니다.</span></li></ol></figure>
 
 ## 4. 저장하고 게임에 불러오기
 
@@ -39,6 +49,8 @@ Classic은 4px, Slim은 3px 팔입니다. 색상과 옷 등을 글로 설명합�
 ## 5. 원하는 스킨을 스토어에 공개하기
 
 생성 후 스킨에 이름을 붙이고 누구나 무료로 내려받아 사용할 수 있다는 데 동의하면 [스킨 스토어](/ko/skin-maker/store/)에 공개할 수 있습니다. 공개는 선택 사항이며 이름과 생성된 스킨만 저장됩니다. 생성 후 24시간 이내에 이 생성 화면을 열어 둔 동안에는 공개를 취소할 수 있습니다.
+
+직접 만든 PNG를 불러오는 기능으로는 스토어에 공개할 수 없습니다. 생성한 스킨이나 스토어 복사본을 새 PNG로 바꾸면 이전 공개·철회 조작도 이어받지 않습니다.
 
 ## 6. 스토어 스킨을 복사하여 편집하기
 

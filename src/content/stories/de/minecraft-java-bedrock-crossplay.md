@@ -2,7 +2,7 @@
 title: Können Java und Bedrock zusammen spielen? So erkennst du einen kompatiblen Server
 description: Minecraft Java Edition und Bedrock Edition können auf Servern zusammen spielen, die beide Editionen offiziell unterstützen. Erfahre, woran du sie erkennst und was du vor dem Beitritt prüfen solltest.
 translationOf: minecraft-java-bedrock-crossplay
-sourceHash: sha256:a400c74f0a5e4f3c61d3080ae0ecb58c655507fb3b11a6ab57a088428126b530
+sourceHash: sha256:c645799ab0ed90e7884500f83b329e68ac3d513507e4cddc9a5b5dc7026f59ba
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -12,7 +12,7 @@ tags:
 author: Gui
 image: '/uploads/stories/minecraft-java-bedrock-crossplay-cover-v2.webp'
 imageAlt: 'Konzeptillustration eines PCs und Tablets mit Brücken zu derselben Blockinsel, kein tatsächlicher Verbindungsbildschirm'
-lastUpdated: '2026-10-06T13:52:45+09:00'
+lastUpdated: 2026-10-09T15:00:00+09:00
 ---
 
 Java- und Bedrock-Spieler können auf einem kompatiblen Server zusammen spielen. Wenn der Server Verbindungen von beiden Editionen akzeptiert, können Freunde mit Java auf dem PC und mit Bedrock auf Mobilgeräten oder Konsolen auf demselben Server bauen und Abenteuer erleben.
@@ -20,6 +20,8 @@ Java- und Bedrock-Spieler können auf einem kompatiblen Server zusammen spielen.
 Allerdings **unterstützt nicht jeder Java-Edition-Server Bedrock Edition.** Java und Bedrock verwenden unterschiedliche Verbindungsmethoden; das Serverteam muss daher einen Weg für Bedrock-Spieler bereitstellen. Entscheide nicht allein anhand der Bezeichnung „Java-Server“, sondern prüfe in der offiziellen Beitrittsanleitung, ob beide Editionen genannt werden.
 
 Wenn zu eurer Gruppe Switch- oder Smartphone-Spieler gehören, lest vor der Wahl des Beitrittswegs [wie ihr Minecraft mit Freunden spielt](/de/stories/minecraft-play-with-friends/), um Edition und Kontobedingungen zu prüfen.
+
+Warum sagt die offizielle Anleitung, dass beide Editionen nicht zusammen spielen können? Der [Java-und-Bedrock-Vergleich](https://www.minecraft.net/en-us/article/java-or-bedrock-edition) erklärt die normale Trennung, die [Geyser-Übersicht](https://geysermc.org/wiki/geyser/) die zusätzliche Brücke. Geyser ist ein Drittanbieterprojekt; unterstützte Geräte und Versionen prüfen Sie in der Anleitung des Servers.
 
 ## Java und Bedrock können auf kompatiblen Servern zusammen spielen
 

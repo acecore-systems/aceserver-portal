@@ -1,6 +1,6 @@
 ---
-title: 'Using the Skin Maker: create from text or images and check in 3D'
-description: 'Create a new Minecraft skin with text and an optional image, choose Classic or Slim, review it in 3D and save a 64×64 PNG.'
+title: 'How to Use the Minecraft Skin Maker | Text, Images, 3D Editing, and PNG Export'
+description: 'Create a new Minecraft skin with text and an optional image, choose Classic or Slim, review it in 3D and save a 64×64 PNG. You can also load your own 64×64 PNG and edit it by hand without using AI.'
 date: 2026-09-30T21:15:00+09:00
 author: Gui
 tags: [Minecraft, Aceserver, Skin Maker]
@@ -8,11 +8,13 @@ image: /uploads/stories/minecraft-skin-maker-cover-v2.webp
 imageAlt: 'Illustration of blank block mannequins and a paint palette representing skin creation. Not an example of generated output.'
 relatedStories: [aceserver-beginners-guide]
 translationOf: minecraft-skin-maker-guide
-sourceHash: sha256:417830da11a893bd01fad6116a244c4a149a4cf163397414588057a87b317f1d
-lastUpdated: 2026-10-07
+sourceHash: sha256:53f8e1662fe56ef7d93fab2aba9733911a0240d614d35e416b2b41624217ccc2
+lastUpdated: 2026-10-14T12:00:00+09:00
 ---
 
-The [Skin Maker](/en/skin-maker/) creates new Minecraft skins from text and an optional reference image. Review the result in 3D and save a 64×64 PNG.
+The [Skin Maker](/en/skin-maker/) creates new Minecraft skins from text and an optional reference image. Review the result in 3D and save a 64×64 PNG. You can also load your own 64×64 PNG and edit it by hand without using AI.
+
+For a first attempt, choose the arm model and describe the outfit and colors briefly to make one skin. Before using the saved PNG, check Minecraft’s official [skin explanation and changing guide](https://www.minecraft.net/en-us/article/what-is-minecraft-skin) for image-import support on your edition and device. You can save and use the PNG without publishing it to the store.
 
 ## 1. Choose an arm type and describe the look
 
@@ -22,6 +24,12 @@ Classic uses 4px arms; Slim uses 3px arms. Describe colors, clothing or other de
 
 Paint directly on the 3D model with the pencil. Right-drag or drag empty space to rotate, and scroll to zoom. On touch screens, choose “Rotate / zoom”. “Show only the selected body part” lets you reach the inside of arms. Outer layers are hidden while editing the base. Use the selected 2D face for fine adjustments.
 
+### Starting with your own PNG
+
+Choose “Edit your own skin” in the left input panel, match the shared Classic or Slim setting to your skin, then load a 64×64 PNG up to 1 MB. Switching between this mode and “Create with AI” preserves your inputs and current edits. The base layer must be opaque; the old 64×32 format is not supported. Grayscale PNGs and partially transparent outer layers are supported.
+
+Loading a valid new file replaces the current skin and undo history, so save any work you want to keep as a PNG first. A failed load preserves the current skin and history. Loading and manual editing happen in your browser without sending the skin to AI. Partial AI edits require separate consent and execution. The following generation steps apply when you use “Create with AI”.
+
 ## 2. Consent and wait for generation
 
 Before sending, confirm your right to use the image and consent to AI processing. Text and images go to the configured OpenAI API or Cloudflare Workers AI provider. Do not include personal or secret information. Generation may take several minutes; usage limits or congestion may prevent it. Follow the on-screen status.
@@ -30,7 +38,9 @@ Before sending, confirm your right to use the image and consent to AI processing
 
 Check the front, back and sides. Drag to rotate and toggle automatic rotation or the outer layer. AI output may differ from your intention, so inspect arms and clothing boundaries before saving.
 
-<figure class="article-diagram" data-layout="flow" data-tone="violet" data-count="3" aria-labelledby="diagram-skin-check-save"><figcaption><strong id="diagram-skin-check-save">Checks from generation to saving</strong><span>Generation requires consent. Review the result before saving it.</span></figcaption><ol class="article-diagram__nodes"><li><span class="article-diagram__symbol"><span aria-hidden="true">1</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m5 17 9-12 5 4-10 11H4Z"/><path d="m12 8 5 4M4 20l1-3"/></svg></span><strong>Generate from text and an optional image</strong><span>Confirm usage rights and consent to AI processing before sending.</span></li><li><span class="article-diagram__symbol"><span aria-hidden="true">2</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m12 2 10 5v10l-10 5-10-5V7Zm0 10v10M2 7l10 5 10-5"/></svg></span><strong>Review all sides in 3D</strong><span>Check front, back, sides, arms and clothing boundaries.</span></li><li><span class="article-diagram__symbol"><span aria-hidden="true">3</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 2h13l5 5v15H2V2Zm2 0v7h12V3M6 22V13h12v9"/></svg></span><strong>Save the 64×64 PNG</strong><span>Save before closing the page, then import using the same game model.</span></li></ol></figure>
+Turn on the grid to see pixel boundaries on the 3D model. It follows rotation, layers and the Slim shape. The grid is an editing guide and is not included in the saved PNG.
+
+<figure class="article-diagram" data-layout="flow" data-tone="violet" data-count="3" aria-labelledby="diagram-skin-check-save"><figcaption><strong id="diagram-skin-check-save">From choosing a starting point to saving</strong><span>AI generation and loading your own PNG are separate starting points. Review your edits before saving either result.</span></figcaption><ol class="article-diagram__nodes"><li><span class="article-diagram__symbol"><span aria-hidden="true">1</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m5 17 9-12 5 4-10 11H4Z"/><path d="m12 8 5 4M4 20l1-3"/></svg></span><strong>Generate with AI or load your PNG</strong><span>Generation requires usage rights and AI consent. Your own PNG loads in the browser.</span></li><li><span class="article-diagram__symbol"><span aria-hidden="true">2</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m12 2 10 5v10l-10 5-10-5V7Zm0 10v10M2 7l10 5 10-5"/></svg></span><strong>Review all sides in 3D</strong><span>Check front, back, sides, arms and clothing boundaries.</span></li><li><span class="article-diagram__symbol"><span aria-hidden="true">3</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 2h13l5 5v15H2V2Zm2 0v7h12V3M6 22V13h12v9"/></svg></span><strong>Save the 64×64 PNG</strong><span>Save before closing the page, then import using the same game model.</span></li></ol></figure>
 
 ## 4. Save and import in your game
 
@@ -39,6 +49,8 @@ Download with “Save 64×64 PNG” and use your game’s custom skin import. Se
 ## 5. Publish selected skins to the store
 
 After generation, give your skin a name and agree that anyone may download and use it for free to publish it in the [Skin Store](/en/skin-maker/store/). Publishing is optional; only the name and generated skin are stored. You can withdraw it within 24 hours of generation while this generation page remains open.
+
+Loading your own PNG does not enable store publication. Replacing a generated skin or store copy with a new PNG also removes access to the previous publication and withdrawal controls.
 
 ## 6. Copy and edit a store skin
 

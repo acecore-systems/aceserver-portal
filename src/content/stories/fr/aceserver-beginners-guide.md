@@ -2,9 +2,9 @@
 title: 'Guide du débutant Aceserver : portail, cartes, vidéos, WIKI et connexion'
 description: Vous découvrez Aceserver ? Apprenez quand utiliser le portail officiel, les cartes, les vidéos et le WIKI, et où vérifier si vous ne pouvez pas rejoindre le serveur.
 translationOf: aceserver-beginners-guide
-sourceHash: sha256:0f9e84d470b4a6e63f3a3e0b9847eb780d62665769130043274fc32cf0fee14d
+sourceHash: sha256:be8dad22534446be8cb3ba2ead60bd55b7f3d8831e062173aaa45b356907177a
 date: 2026-08-09T10:00:00+09:00
-lastUpdated: 2026-09-30T21:15:00+09:00
+lastUpdated: 2026-10-09T15:00:00+09:00
 tags:
   - Minecraft
   - Aceserver
@@ -22,6 +22,8 @@ Si vous ne savez pas où trouver les informations, utilisez la recherche du port
 Les destinations de connexion, ports, étapes selon l'appareil — y compris Switch —, conditions de participation et règles peuvent changer. Cet article est une porte d'entrée : avant de jouer, considérez toujours les informations officielles les plus récentes comme la référence.
 
 Pour créer un style, lisez le [guide du créateur de skins](/fr/stories/minecraft-skin-maker-guide/) : nouvelle génération par texte ou image, contrôle 3D et sauvegarde PNG.
+
+Si l’écran multijoueur vous est inconnu, le [guide officiel pour rejoindre un serveur](https://www.minecraft.net/en-us/article/how-play-minecraft-server) présente les commandes de base de Java et Bedrock. Ouvrez ensuite les instructions d’Aceserver et suivez celles qui correspondent à votre appareil.
 
 ## Les quatre pages officielles à ouvrir en premier
 

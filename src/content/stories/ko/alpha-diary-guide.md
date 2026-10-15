@@ -1,18 +1,20 @@
 ---
-title: 알파 군의 그림일기 읽기
+title: '알파군 그림일기 읽는 법｜날짜 선택·기록 읽기·질문하기'
 description: 알파 군의 그림일기에서 날짜를 골라 그림과 글을 읽고 궁금한 점을 물어보세요. 자신의 속도로 기록을 따라갈 수 있도록 안내합니다.
 date: 2026-09-25T00:00:00+09:00
 tags:
   - 소식
 author: Gui
-lastUpdated: 2026-10-06T08:52:00+09:00
+lastUpdated: 2026-10-09T15:00:00+09:00
 image: /uploads/stories/alpha-diary-guide-hero.webp
 imageAlt: 블록 풍경 속 펼쳐진 그림일기와 날짜 달력 안내 그림
 translationOf: alpha-diary-guide
-sourceHash: sha256:d19617ba25118538d9991868e340b5c130e6de4d165b705e14e07bcbcf0c20a2
+sourceHash: sha256:579053ddd3728f07e06d1cd3119ef5114913929d2959c68ff9998a26bb8df587
 ---
 
 알파 군의 그림일기는 Aceserver의 날짜별 그림과 글을 모은 기록입니다. [그림일기 페이지](/ko/alpha-diary/)에서 시작할 수 있습니다.
+
+처음 읽는다면 하루치 그림과 글을 끝까지 살펴보고, 마음에 남는 장소나 사건을 하나 골라 보세요. 「이날 이 장소에 대해 알려 줘」처럼 날짜와 주제를 함께 적으면 무엇을 알고 싶은지 전달하기 쉽습니다. 질문 없이 기록만 읽어도 즐길 수 있습니다.
 
 ## 날짜를 직접 고르기
 

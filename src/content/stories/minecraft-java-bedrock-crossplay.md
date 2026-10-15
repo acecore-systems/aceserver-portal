@@ -15,7 +15,7 @@ relatedStories:
   - minecraft-server-cannot-join
   - minecraft-server-osusume
   - minecraft-server-setup
-lastUpdated: '2026-10-06T13:52:45+09:00'
+lastUpdated: 2026-10-09T15:00:00+09:00
 ---
 
 Java版と統合版は、対応サーバーなら一緒に遊べます。友達のPCがJava版、スマホやゲーム機が統合版という組み合わせでも、サーバーが両方の接続を受け入れていれば、同じサーバーで建築や冒険を楽しめます。
@@ -23,6 +23,8 @@ Java版と統合版は、対応サーバーなら一緒に遊べます。友達�
 ただし、**すべてのJava版サーバーが統合版に対応しているわけではありません。** Java版と統合版は接続の仕組みが異なるため、運営側が統合版からの接続を受け入れる仕組みを用意している必要があります。Java版サーバーと書かれているだけでは判断せず、公式案内で両エディションへの対応を確認することが大切です。
 
 Switchやスマホの友達を含むグループなら、参加方法を決める前に[マイクラで友達と遊ぶ方法](/stories/minecraft-play-with-friends/)で、エディションとアカウントの条件を確認しておきましょう。
+
+「公式では一緒に遊べないと書いてあるのに？」と迷う場合は、Minecraft公式の[Java版・統合版比較](https://www.minecraft.net/en-us/article/java-or-bedrock-edition)で標準の違いを確認し、[Geyserの概要](https://geysermc.org/wiki/geyser/)で追加の橋渡しの役割を読むと整理できます。Geyserは第三者のプロジェクトで、利用できる機種や対応バージョンは参加先の案内で確認します。
 
 ## Java版と統合版は、対応サーバーなら一緒に遊べる
 

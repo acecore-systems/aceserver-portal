@@ -1,18 +1,20 @@
 ---
-title: Reading Alpha-kun's Picture Diary
+title: 'How to Read Alpha-kun’s Picture Diary | Dates, Records, and Questions'
 description: Choose dates in Alpha-kun's picture diary, read illustrated records, and ask about what interests you. A guide to exploring at your own pace.
 date: 2026-09-25T00:00:00+09:00
 tags:
   - News
 author: Gui
-lastUpdated: 2026-10-06T08:52:00+09:00
+lastUpdated: 2026-10-09T15:00:00+09:00
 image: /uploads/stories/alpha-diary-guide-hero.webp
 imageAlt: Illustration of an open diary and date calendar in a block-style landscape
 translationOf: alpha-diary-guide
-sourceHash: sha256:d19617ba25118538d9991868e340b5c130e6de4d165b705e14e07bcbcf0c20a2
+sourceHash: sha256:579053ddd3728f07e06d1cd3119ef5114913929d2959c68ff9998a26bb8df587
 ---
 
 Alpha-kun's picture diary is a collection of dated drawings and writing from Aceserver. You can begin on the [picture diary page](/en/alpha-diary/).
+
+For a first visit, read one day’s drawing and text, then pick a place or event that catches your attention. Include the date and topic in a question such as “Tell me about this place on this day” to make your interest clear. You can also simply enjoy the records without asking anything.
 
 ## Choose a date yourself
 

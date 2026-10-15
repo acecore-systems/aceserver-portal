@@ -17,9 +17,12 @@ relatedStories:
 relatedPages:
   - world-map
   - youtube-search-aceserver
+lastUpdated: 2026-10-09T15:00:00+09:00
 ---
 
 友達とマイクラを始めるときは、先に「どのワールドで遊ぶか」を決めるより、全員が **Java版か統合版か** をそろえられるかを確認するのが近道です。ここでは自分のワールド、Realms、公開サーバーの違いを比べ、PC・Switch・スマホごとの選び方を整理します。
+
+たとえば「今夜、Switchとスマホの2人で遊ぶ」なら、まず統合版とアカウントの条件をそろえて、自分のワールドへの招待を試します。「別々の時間にも建築を続けたい」ならRealmsや管理されたサーバーを比較します。Minecraft公式の[友達と遊ぶ方法](https://www.minecraft.net/en-us/play-with-friends)は、遊び方の候補を知るための参考資料です。
 
 ## 最初に確認する：Java版と統合版はそのままでは一緒に遊べない
 

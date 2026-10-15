@@ -2,7 +2,7 @@
 title: 'Comment partager son serveur Java avec Bedrock : configuration de cross-play sûre'
 description: Découvrez comment inviter en sécurité des amis sur Bedrock sur votre propre serveur Java avec Geyser et Floodgate, choisir un hébergement gratuit et vérifier les réglages avant l'ouverture.
 translationOf: minecraft-java-bedrock-shared-server
-sourceHash: sha256:3ad44805fe1520a43fa6286eae62b3315998d010a7fb1cecff5f763ab1805b87
+sourceHash: sha256:1cf7f0fc312533bba07e7685f6d623f97319b7dd9d9814821dec1d6bb9926a1f
 date: 2026-08-09T10:00:00+09:00
 tags:
   - Minecraft
@@ -14,7 +14,7 @@ tags:
 author: Gui
 image: '/uploads/stories/minecraft-java-bedrock-shared-server-cover-v2.webp'
 imageAlt: 'Illustration conceptuelle d’une maison-serveur en blocs reliée à un PC et, par un pont, à une tablette, avec un coffre d’administration séparé'
-lastUpdated: '2026-10-06T13:52:45+09:00'
+lastUpdated: 2026-10-09T15:00:00+09:00
 ---
 
 Pour inviter sur votre serveur Java des amis qui utilisent Bedrock sur téléphone, tablette, Windows ou console, installer Geyser et Floodgate sur le serveur Java est une option pratique. Geyser fait le pont entre les connexions Bedrock et le serveur Java, tandis que Floodgate permet au serveur d'identifier les comptes Bedrock de façon sûre.
@@ -22,6 +22,8 @@ Pour inviter sur votre serveur Java des amis qui utilisent Bedrock sur télépho
 L'important est de ne pas désactiver l'authentification des comptes Java simplement pour accepter des amis Bedrock. Ce guide part d'un serveur qui conserve l'authentification Java et l'accès sur invitation. Les commandes et certaines fonctions ne sont pas identiques entre Java et Bedrock : testez donc les deux types d'appareils avant d'ouvrir le serveur.
 
 Si vous décidez encore comment des amis sur différents appareils peuvent jouer ensemble, consultez aussi [comment jouer à Minecraft avec des amis](/fr/stories/minecraft-play-with-friends/).
+
+Avant toute configuration, choisissez les instructions adaptées à votre hébergement et logiciel dans le [guide officiel d’installation de Geyser](https://geysermc.org/wiki/geyser/setup/). Évitez de copier tous les réglages dans un autre environnement : choisissez le type d’installation, testez les deux éditions sur le réseau local, puis invitez vos amis.
 
 ## En bref : partagez un serveur avec Java + Geyser + Floodgate
 

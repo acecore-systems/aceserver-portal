@@ -1,6 +1,6 @@
 ---
-title: Encuentra la información que necesitas con la WIKI y Alpha-kun
-description: Explora la WIKI oficial de Aceserver por categorías o búsqueda y pregunta a Alpha-kun para encontrar las guías publicadas.
+title: 'Guía de la Wiki de Aceserver | Acceso, reglas y preguntas'
+description: 'Explora o busca en la WIKI oficial de Aceserver, usa un ejemplo concreto para preguntar a Alpha-kun y comprueba el artículo citado. Una guía para encontrar instrucciones y reglas oficiales.'
 date: 2026-09-27T22:40:00+09:00
 tags:
   - Noticias
@@ -8,17 +8,27 @@ author: Gui
 image: /uploads/stories/wiki-alpha-guide-hero.webp
 imageAlt: Ilustración de Alpha-kun oficial junto a una guía abierta y resultados de búsqueda en un paisaje de bloques
 translationOf: wiki-alpha-guide
-sourceHash: sha256:9e3dd3bb72ef54f933f8c39962710715e13a833ee359a9ecb2407f1f9f7612f7
-lastUpdated: 2026-10-06T08:52:00+09:00
+sourceHash: sha256:09d836d05c32b2bb8847133b900739b589ed6ce1f5d772c3a092d09fa5c7e16d
+lastUpdated: 2026-10-10T16:29:02+09:00
 ---
 
 Si necesitas instrucciones para entrar o consultar las reglas, empieza por la [WIKI oficial de Aceserver](https://asv-wiki.acecore.net/). Si no sabes qué artículo abrir, el botón «Preguntar a Alpha-kun» del portal y la WIKI te ofrece otro punto de partida.
+
+Empieza la búsqueda con una frase breve sobre tu objetivo, como «participar» o «protección de terrenos». Al preguntar a Alpha-kun, indica el servidor o mundo y la acción con la que necesitas ayuda. Abre el artículo citado y comprueba las condiciones o reglas en el texto original antes de actuar.
 
 ## Explora la WIKI por categorías
 
 La portada de la WIKI destaca cómo entrar, el índice de reglas, las preguntas frecuentes y los comandos. Debajo aparecen categorías de introducción, servidor de supervivencia, otros servidores y más. Elige la más cercana a tu duda y lee el artículo original.
 
 Si es tu primera visita, comienza por [cómo entrar](https://asv-wiki.acecore.net/article/in/) y el [índice de reglas](https://asv-wiki.acecore.net/article/rules-index/). Durante el juego, también puedes escribir una palabra clave en la búsqueda de la parte superior de la WIKI.
+
+## Concreta tu pregunta: un ejemplo y fuentes útiles
+
+Indica tu edición o el nombre del servidor y una cosa que quieras saber. Por ejemplo: «Quiero entrar en Aceserver por primera vez con Java Edition. ¿Qué artículo oficial explica los preparativos?» Es un ejemplo de cómo formular la pregunta.
+
+También puedes ir directamente a [cómo entrar](https://asv-wiki.acecore.net/article/in/) para los preparativos o al [índice de reglas](https://asv-wiki.acecore.net/article/rules-index/) para buscar normas. Si la respuesta cita otro artículo, comprueba que corresponda a tu servidor y objetivo.
+
+Los artículos citados de la WIKI están en japonés. Aunque preguntes en otro idioma, comprueba el idioma de la fuente y el texto original antes de decidir cómo entrar o qué reglas se aplican.
 
 ## Pregunta a Alpha-kun
 

@@ -1,8 +1,8 @@
 ---
-title: Le métavers est plus proche qu’on ne le pense
+title: 'Minecraft, un métavers à portée de main ? | Construction, aventure et échanges'
 description: 'Le métavers ne se limite pas aux casques de réalité virtuelle : des espaces comme Minecraft, où les personnes se retrouvent et échangent, peuvent aussi en être.'
 translationOf: metaverse-is-close
-sourceHash: sha256:f34ab749c2a8f41450eda70a0a2cd519d52c85f8a65d9e8bf4d6f42fa4032335
+sourceHash: sha256:606804ba1492526b52c0704977725e09c339c251ef048984a5fff31251da80d7
 date: 2023-03-23T00:00:00+09:00
 tags:
   - Communauté
@@ -10,8 +10,10 @@ tags:
 author: Gui
 image: '/uploads/stories/metaverse-is-close-cover-v2.webp'
 imageAlt: 'Illustration conceptuelle de personnes construisant ensemble sur une place en blocs, accessible par PC et tablette'
-lastUpdated: '2026-10-06T13:52:45+09:00'
+lastUpdated: 2026-10-09T15:00:00+09:00
 ---
+
+Ce texte présente le point de vue de l’auteur en mars 2023 sur les communautés Minecraft comme métavers. Avant d’acheter du matériel VR, pensez à construire avec des amis dans un même monde ou à visiter la ville d’un serveur. Le [guide officiel pour jouer sur un serveur](https://www.minecraft.net/en-us/article/how-play-minecraft-server) explique les bases du multijoueur ; il ne définit pas le métavers.
 
 À l’évocation du « métavers », on imagine peut-être un casque de réalité virtuelle qui permet d’entrer dans un monde virtuel. Facebook est devenu Meta et mise sur Horizon Worlds, mais beaucoup de personnes ont sans doute encore du mal à se sentir concernées.
 

@@ -1,8 +1,8 @@
 ---
-title: Aceserver Portal을 공개했습니다
+title: '에이스서버 포털 공개｜참가 방법·WIKI·월드맵 안내'
 description: Discord, Wiki, 동영상, 월드 맵에 나뉘어 있던 참가 전 정보를 하나의 입구로 정리했습니다.
 translationOf: aceserver-portal-launch
-sourceHash: sha256:7135f8b1e68e3bdb744b643f856f26305e2d1e25296653417993ddf4cdd9e1c0
+sourceHash: sha256:63ad63b246cc398492535615e6e4fa3c296bab0a7f8cf321886fdf4ff6183f3c
 date: 2026-06-07T10:00:00+09:00
 tags:
   - 공지
@@ -10,8 +10,10 @@ tags:
 author: Gui
 image: /uploads/stories/aceserver-portal-launch.webp
 imageAlt: Minecraft 거리 풍경을 배경으로 한 Aceserver Portal의 첫 화면
-lastUpdated: '2026-10-06T13:52:45+09:00'
+lastUpdated: 2026-10-09T15:00:00+09:00
 ---
+
+이 글은 2026년 6월 7일 포털 공개 소식입니다. 지금 참가하려면 먼저 포털에서 전체 모습을 살펴보고, 공식 Discord와 WIKI의 최신 안내에서 자신의 에디션에 맞는 참가 방법과 규칙을 확인하세요.
 
 누구나 참가할 수 있는 무료 공개 Minecraft 서버 ‘Aceserver’의 공식 Portal을 공개했습니다.
 

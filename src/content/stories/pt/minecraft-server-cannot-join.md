@@ -2,7 +2,7 @@
 title: 'Não consegue entrar em um servidor de Minecraft? Verificações para Java, Bedrock e Switch'
 description: Veja como conferir edição, versão do jogo, conta e rede quando não conseguir entrar em um servidor de Minecraft e como continuar jogando com segurança depois de conectar.
 translationOf: minecraft-server-cannot-join
-sourceHash: sha256:014fe443391942d389ae8c13f0259af504df8fb7df2d4f38effea66213930476
+sourceHash: sha256:22e7daa49d737d74089286ebf1a965d34c3ce62833a3a18b8ff4476d65a27414
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -11,11 +11,14 @@ tags:
 author: Gui
 image: /uploads/stories/minecraft-server-cannot-join-hero.webp
 imageAlt: Um viajante em estilo de blocos com um mapa escolhe entre caminhos para um computador, celular e controle de jogo
+lastUpdated: 2026-10-09T15:00:00+09:00
 ---
 
 Quando não conseguir entrar em um servidor de Minecraft, não tente reconectar repetidamente sem antes separar as possíveis causas: edição do jogo, orientações do próprio servidor, conta e rede. A primeira metade deste artigo vale para qualquer servidor; as orientações específicas do Aceserver ficam separadas no fim.
 
 Se o grupo inclui jogadores de Switch ou celular, antes de decidir como participar, consulte [como jogar Minecraft com amigos](/pt/stories/minecraft-play-with-friends/) para conferir a edição e as contas.
+
+“Multijogador desativado” aponta para as permissões da conta; um tempo limite excedido, para o endereço, o estado do servidor ou a conexão. Nem sempre a solução é a mesma. Se tiver dúvidas sobre a tela, confira sua edição no [guia oficial para entrar em servidores](https://www.minecraft.net/en-us/article/how-play-minecraft-server) e prossiga com as verificações abaixo.
 
 ## Primeiro, separe uma falha de conexão da insegurança depois de entrar
 
@@ -36,7 +39,7 @@ São problemas diferentes. Não é preciso suportar o segundo enquanto resolve o
 
 ### Java Edition
 
-Java Edition funciona em Windows, macOS e Linux. Se um servidor oferece instruções para Java, escolha no launcher a versão normal indicada e informe o endereço em Multijogador. O endereço pode ser um IP ou um nome de host em formato de URL.
+Java Edition funciona em Windows, macOS e Linux. Se um servidor oferece instruções para Java, escolha no launcher a versão normal indicada e informe o endereço em Multijogador. O endereço é um IP ou um nome de host. Informe o endereço indicado pelo servidor, não a URL de uma página web.
 
 Preste atenção especial à versão exigida pelo servidor e às configurações de MOD ou do launcher. Um servidor vanilla pode recusar uma versão de teste ou MODs desnecessários. Comece pela versão normal indicada no guia oficial e adicione extras apenas quando o servidor exigir explicitamente.
 

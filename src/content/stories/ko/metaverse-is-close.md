@@ -1,8 +1,8 @@
 ---
-title: 메타버스는 생각보다 가까이에 있다
+title: 'Minecraft도 가까운 메타버스일까?｜건축·모험·교류로 생각하기'
 description: VR 헤드셋뿐 아니라 사람들이 모여 교류하는 Minecraft 같은 가상 공간도 메타버스라고 볼 수 있다는 이야기입니다.
 translationOf: metaverse-is-close
-sourceHash: sha256:f34ab749c2a8f41450eda70a0a2cd519d52c85f8a65d9e8bf4d6f42fa4032335
+sourceHash: sha256:606804ba1492526b52c0704977725e09c339c251ef048984a5fff31251da80d7
 date: 2023-03-23T00:00:00+09:00
 tags:
   - 커뮤니티
@@ -10,8 +10,10 @@ tags:
 author: Gui
 image: '/uploads/stories/metaverse-is-close-cover-v2.webp'
 imageAlt: 'PC와 태블릿을 입구로 삼아 블록 광장에서 사람들이 함께 건축하는 개념 일러스트'
-lastUpdated: '2026-10-06T13:52:45+09:00'
+lastUpdated: 2026-10-09T15:00:00+09:00
 ---
+
+이 글은 2023년 3월에 Minecraft 커뮤니티를 메타버스로 바라본 필자의 생각입니다. VR 기기를 사기 전에 친구와 같은 월드에서 건축하거나 서버의 도시를 구경하는 경험부터 생각해 봅니다. Minecraft 공식 [서버에서 함께 플레이하는 안내](https://www.minecraft.net/en-us/article/how-play-minecraft-server)는 멀티플레이 기본 조작을 설명하는 자료이며 메타버스의 정의를 제시하지는 않습니다.
 
 ‘메타버스’라고 하면 VR 헤드셋을 쓰고 가상 공간에 들어가는 모습을 떠올릴 수 있습니다. Facebook은 회사 이름을 Meta로 바꾸고 Horizon Worlds에 힘을 쏟고 있지만, 솔직히 아직 와닿지 않는 사람도 많을 것입니다.
 
