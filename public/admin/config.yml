@@ -187,6 +187,86 @@ collections:
                       options: [map, video],
                       required: false,
                     }
+          - name: community
+            label: トップページのコミュニティ表示
+            widget: object
+            required: false
+            hint: トップページ専用。公開済みの実データ・素材のみ掲載し、変更時は8言語の翻訳も更新します。
+            fields:
+              - { name: title, label: 見出し, widget: string }
+              - { name: intro, label: 紹介文, widget: text }
+              - name: mapWorld
+                label: プレビューマップ
+                widget: select
+                options:
+                  [
+                    main,
+                    resource,
+                    rpg,
+                    lobby,
+                    rpg-sub,
+                    season-a,
+                    season-a-c,
+                    event,
+                  ]
+              - name: gallery
+                label: 実際の建築・ワールドの写真
+                widget: list
+                max: 8
+                fields:
+                  - { name: id, label: 固定ID, widget: string }
+                  - { name: title, label: 見出し, widget: string }
+                  - { name: text, label: 説明, widget: text }
+                  - { name: image, label: 実際の画像, widget: image }
+                  - { name: imageAlt, label: 画像の説明, widget: string }
+                  - {
+                      name: href,
+                      label: 関連する公開マップの内部URL,
+                      widget: string,
+                    }
+              - name: events
+                label: 開催予定イベント
+                widget: list
+                required: false
+                max: 12
+                hint: 確認済みの開催予定だけ登録。日付のない案内は「お知らせ」で管理してください。
+                fields:
+                  - { name: id, label: 固定ID, widget: string }
+                  - { name: title, label: 見出し, widget: string }
+                  - { name: text, label: 内容, widget: text }
+                  - {
+                      name: startsAt,
+                      label: 開催開始（タイムゾーン付き）,
+                      widget: datetime,
+                      format: YYYY-MM-DDTHH:mm:ssZ,
+                    }
+                  - {
+                      name: endsAt,
+                      label: 開催終了（タイムゾーン付き）,
+                      widget: datetime,
+                      format: YYYY-MM-DDTHH:mm:ssZ,
+                    }
+                  - { name: href, label: 詳細のHTTPS URL, widget: string }
+              - name: xPosts
+                label: 公式Xの選抜投稿
+                widget: list
+                required: false
+                max: 4
+                fields:
+                  - { name: id, label: 固定ID, widget: string }
+                  - { name: label, label: 紹介ラベル, widget: string }
+                  - {
+                      name: url,
+                      label: 公式Xの投稿URL,
+                      widget: string,
+                      hint: 'https://x.com/acecores/status/数字 の形式',
+                    }
+                  - {
+                      name: publishedAt,
+                      label: 実際の投稿日時,
+                      widget: datetime,
+                      format: YYYY-MM-DDTHH:mm:ssZ,
+                    }
       - {
           name: world_map,
           label: ワールドマップ,

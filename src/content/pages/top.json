@@ -20,15 +20,15 @@
       "type": "featureImageRight",
       "titleCopy": "誰とでもマルチプレイ！",
       "text": "JAVA版・統合版どちらでも遊ぶことが可能です！",
-      "image": "/uploads/legacy-multiplayer.jpg",
-      "imageAlt": "夕焼けの海を岩場から眺める人"
+      "image": "/uploads/legacy-scc.png",
+      "imageAlt": "街並みの上に浮かぶ巨大な白い飛行船"
     },
     {
       "type": "featureImageLeft",
       "titleCopy": "楽しい！",
       "text": "バニラに近い、限りなく自由なサーバーです！",
-      "image": "/uploads/legacy-free-play.jpg",
-      "imageAlt": "山間の渓谷を背に両手を広げて跳ぶ人"
+      "image": "/uploads/legacy-world-main.png",
+      "imageAlt": "メインワールドに広がる街並みと鉄道、高層ビル"
     },
     {
       "type": "cta",
@@ -52,5 +52,43 @@
         "external": true
       }
     }
-  ]
+  ],
+  "community": {
+    "title": "いま、エースサーバーで。",
+    "intro": "街の続きをつくる人、鉄道で旅をする人。今日のワールドと、ここに集まるみんなの動きをのぞいてみよう。",
+    "mapWorld": "main",
+    "gallery": [
+      {
+        "id": "airship",
+        "title": "街の上には、巨大な飛行船。",
+        "text": "実際のワールドでつくられた街並み。地図を開いて、次に見に行く場所を探してみよう。",
+        "image": "/uploads/legacy-scc.png",
+        "imageAlt": "Minecraftの街並みと巨大な白い飛行船",
+        "href": "/world-map-main/"
+      },
+      {
+        "id": "city",
+        "title": "線路の先にも、誰かの街。",
+        "text": "メインワールドには街や鉄道、高層ビルが広がっています。空から見ると、建築どうしのつながりも見えてきます。",
+        "image": "/uploads/legacy-world-main.png",
+        "imageAlt": "メインワールドの街並み、鉄道と高層ビルを上から見た実際の地図",
+        "href": "/world-map-main/"
+      }
+    ],
+    "events": [],
+    "xPosts": [
+      {
+        "id": "railway",
+        "label": "鉄道でめぐるエースサーバー",
+        "url": "https://x.com/acecores/status/2105586459369755086",
+        "publishedAt": "2026-10-01T09:11:46.000Z"
+      },
+      {
+        "id": "station",
+        "label": "札苅駅からの景色",
+        "url": "https://x.com/acecores/status/2098029904290021855",
+        "publishedAt": "2026-09-10T12:44:43.000Z"
+      }
+    ]
+  }
 }

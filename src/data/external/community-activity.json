@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "samples": [
+    {
+      "observedAt": "2026-10-15T07:32:22.130Z",
+      "discord": {
+        "members": 1465,
+        "online": 91
+      },
+      "worlds": {
+        "main": 3,
+        "resource": 0,
+        "rpg": 0,
+        "lobby": 0,
+        "rpg-sub": 0,
+        "season-a": 0,
+        "season-a-c": 0,
+        "event": 0
+      }
+    }
+  ]
+}

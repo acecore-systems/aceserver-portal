@@ -167,6 +167,28 @@ export function getLocalizedPage(page: PortalPage, locale: Locale): PortalPage {
       title: translatedPage.meta.title,
       description: translatedPage.meta.description,
     },
+    ...(page.community
+      ? {
+          community: {
+            ...clone(page.community),
+            title: translation.community.title,
+            intro: translation.community.intro,
+            gallery: page.community.gallery.map((item) => ({
+              ...item,
+              ...translation.community.gallery[item.id],
+              href: localizeInternalHref(locale, item.href),
+            })),
+            events: page.community.events.map((item) => ({
+              ...item,
+              ...translation.community.events[item.id],
+            })),
+            xPosts: page.community.xPosts.map((item) => ({
+              ...item,
+              ...translation.community.xPosts[item.id],
+            })),
+          },
+        }
+      : {}),
     sections: page.sections.map((section, index) =>
       overlaySection(
         locale,

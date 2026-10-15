@@ -47,6 +47,12 @@ jobs:
       - name: Test YouTube Atom snapshot
         run: npm run test:youtube-atom
 
+      - name: Test community status and daily history
+        run: npm run test:community
+
+      - name: Type-check community client
+        run: npm run typecheck:community
+
       - name: Test i18n
         run: npm run test:i18n
 
