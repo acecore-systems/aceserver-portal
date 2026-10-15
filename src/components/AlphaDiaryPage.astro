@@ -534,10 +534,17 @@ const fixturesEnabled = import.meta.env.DEV
   }
   .diary-date-form {
     display: grid;
+    grid-template-columns: minmax(0, 1fr);
     gap: 9px;
   }
   .diary-date-form input {
+    /* Keep the native date control within its grid track on iOS Safari. */
+    box-sizing: border-box;
+    min-width: 0;
+    max-width: 100%;
     width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
     min-height: 48px;
     border: 2px solid #6b4a2e;
     border-radius: 5px;
