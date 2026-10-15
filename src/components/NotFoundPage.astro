@@ -1,0 +1,18 @@
+---
+import { localizePath, type Locale } from '../i18n/config'
+import { getUi } from '../i18n/translations'
+import PageHero from './PageHero.astro'
+
+interface Props {
+  locale: Locale
+}
+
+const { locale } = Astro.props
+const ui = getUi(locale)
+---
+
+<PageHero title={ui.notFoundTitle} eyebrow="404" lead={ui.notFoundMessage}>
+  <a slot="actions" class="asv-btn-primary" href={localizePath(locale, '/')}>
+    {ui.backHome}
+  </a>
+</PageHero>

@@ -1,0 +1,416 @@
+---
+import Icon from './Icon.astro'
+
+interface Props {
+  title: string
+  titleId?: string
+  eyebrow: string
+  lead: string
+  backgroundImage?: string
+  imageAlt?: string
+  tone?: 'parchment' | 'image' | 'sky' | 'dark'
+  variant?: 'home' | 'page'
+  scrollCue?: { href: string; label: string }
+}
+
+const {
+  title,
+  titleId = 'page-title',
+  eyebrow,
+  lead,
+  backgroundImage,
+  imageAlt = title,
+  tone = backgroundImage ? 'image' : 'parchment',
+  variant = 'page',
+  scrollCue,
+} = Astro.props
+const hasDecoration = Astro.slots.has('decoration')
+const hasActions = Boolean((await Astro.slots.render('actions'))?.trim())
+if (!title.trim() || !eyebrow.trim() || !lead.trim()) {
+  throw new Error('PageHero requires an eyebrow, title, and introduction.')
+}
+---
+
+<header
+  class:list={[
+    'asv-page-hero',
+    `asv-page-hero--${tone}`,
+    `asv-page-hero--${variant}`,
+  ]}
+  data-page-hero
+  data-page-hero-variant={variant}
+  aria-labelledby={titleId}
+>
+  {
+    backgroundImage && (
+      <img
+        class="page-hero__image"
+        data-page-hero-image
+        src={backgroundImage}
+        alt={imageAlt}
+        aria-hidden="true"
+        fetchpriority="high"
+        decoding="async"
+      />
+    )
+  }
+  <div class="page-hero__backdrop" aria-hidden="true">
+    <slot name="backdrop" />
+  </div>
+  <div class="asv-hero-inner" data-with-decoration={hasDecoration}>
+    <div class="page-hero__copy" data-page-hero-copy>
+      <p class="page-hero__eyebrow" data-page-hero-eyebrow>
+        <slot name="eyebrow">{eyebrow}</slot>
+      </p>
+      <h1 id={titleId} data-page-hero-title>
+        <slot name="title">{title}</slot>
+      </h1>
+      <p class="page-hero__lead" data-page-hero-lead>{lead}</p>
+      {
+        variant === 'home' && hasActions && (
+          <div class="page-hero__actions" data-page-hero-actions>
+            <slot name="actions" />
+          </div>
+        )
+      }
+    </div>
+    {
+      hasDecoration && (
+        <div class="page-hero__decoration" aria-hidden="true">
+          <slot name="decoration" />
+        </div>
+      )
+    }
+  </div>
+  {
+    variant === 'home' && scrollCue && (
+      <a
+        class="page-hero__scroll-cue"
+        href={scrollCue.href}
+        aria-label={scrollCue.label}
+      >
+        <Icon name="chevron-right" />
+      </a>
+    )
+  }
+</header>
+
+{
+  variant === 'page' && hasActions && (
+    <div class="page-hero__toolbar">
+      <div class="page-hero__actions" data-page-hero-actions>
+        <slot name="actions" />
+      </div>
+    </div>
+  )
+}
+
+<script>
+  import { initPageHeroes } from '../scripts/page-hero'
+
+  initPageHeroes()
+  document.addEventListener('astro:after-swap', initPageHeroes)
+</script>
+
+<style>
+  .asv-page-hero {
+    position: relative;
+    isolation: isolate;
+    height: var(--asv-hero-height);
+    border-bottom: 8px solid
+      var(--asv-hero-border, var(--page-hero-border, #1e1710));
+    background: var(
+      --asv-hero-background,
+      var(--page-hero-background, #fff0cb)
+    );
+    color: var(--asv-hero-color, var(--page-hero-color, #302619));
+    overflow: hidden;
+  }
+
+  .asv-page-hero--image,
+  .asv-page-hero--dark {
+    --page-hero-background: #172e27;
+    --page-hero-color: #fff;
+    text-shadow: 0 2px 12px rgb(0 0 0 / 45%);
+  }
+
+  .asv-page-hero--sky {
+    --page-hero-background: #a8e9fa;
+    --page-hero-color: #24613b;
+    --page-hero-border: #4f992e;
+  }
+
+  .asv-page-hero--home {
+    --asv-hero-height: clamp(620px, 88vh, 880px);
+    --asv-hero-padding: clamp(90px, 14vh, 150px);
+    --asv-hero-title-size: clamp(4rem, 8vw, 7.4rem);
+    --asv-hero-lead-size: clamp(1.12rem, 2vw, 1.55rem);
+    border-bottom-width: 12px;
+    text-shadow:
+      0 5px 0 rgb(0 0 0 / 32%),
+      0 18px 46px rgb(0 0 0 / 34%);
+  }
+
+  .asv-page-hero--home::after {
+    position: absolute;
+    inset: auto 0 0;
+    z-index: -1;
+    height: 120px;
+    background: linear-gradient(
+      90deg,
+      rgb(255 216 77 / 85%),
+      rgb(53 170 47 / 88%)
+    );
+    clip-path: polygon(
+      0 58%,
+      7% 58%,
+      7% 50%,
+      15% 50%,
+      15% 62%,
+      26% 62%,
+      26% 46%,
+      36% 46%,
+      36% 58%,
+      47% 58%,
+      47% 50%,
+      56% 50%,
+      56% 62%,
+      67% 62%,
+      67% 46%,
+      78% 46%,
+      78% 58%,
+      88% 58%,
+      88% 50%,
+      100% 50%,
+      100% 100%,
+      0 100%
+    );
+    pointer-events: none;
+    content: '';
+  }
+
+  .asv-page-hero--home .asv-hero-inner {
+    padding-bottom: max(var(--asv-hero-padding), 120px);
+  }
+
+  .page-hero__scroll-cue {
+    position: absolute;
+    bottom: 36px;
+    left: 50%;
+    display: grid;
+    width: 58px;
+    height: 58px;
+    place-items: center;
+    border: 2px solid rgb(255 255 255 / 78%);
+    border-radius: 12px;
+    background: rgb(53 170 47 / 88%);
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transform: translateX(-50%) rotate(90deg);
+  }
+
+  .asv-page-hero--home .page-hero__copy {
+    gap: 24px;
+  }
+
+  .asv-page-hero--home h1 {
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 0.96;
+  }
+
+  .asv-page-hero--home .page-hero__image {
+    object-position: center;
+  }
+
+  .page-hero__image,
+  .page-hero__backdrop {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+  }
+
+  .page-hero__image {
+    object-fit: cover;
+    object-position: center 60%;
+  }
+
+  .asv-page-hero--image .page-hero__backdrop {
+    background:
+      linear-gradient(
+        90deg,
+        rgb(14 24 20 / 86%),
+        rgb(14 24 20 / 62%) 52%,
+        rgb(14 24 20 / 18%)
+      ),
+      linear-gradient(180deg, rgb(14 24 20 / 8%), rgb(14 24 20 / 36%));
+  }
+
+  .asv-page-hero--home .page-hero__backdrop {
+    background:
+      linear-gradient(
+        90deg,
+        rgb(14 11 8 / 72%),
+        rgb(14 11 8 / 22%) 48%,
+        rgb(14 11 8 / 6%)
+      ),
+      linear-gradient(180deg, rgb(0 0 0 / 0%) 70%, rgb(21 19 15 / 62%));
+  }
+
+  .asv-hero-inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    align-items: center;
+    gap: clamp(16px, 3vw, 32px);
+    width: min(1120px, calc(100% - 36px));
+    height: 100%;
+    min-height: 0;
+    margin-inline: auto;
+    padding-block: var(--asv-hero-padding);
+  }
+
+  .asv-hero-inner[data-with-decoration='true'] {
+    grid-template-columns: minmax(0, 1fr) clamp(96px, 22vw, 200px);
+  }
+
+  .page-hero__copy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: stretch;
+    gap: 10px;
+    min-width: 0;
+    min-height: 0;
+  }
+
+  .page-hero__eyebrow,
+  .page-hero__lead,
+  h1 {
+    flex-shrink: 0;
+    margin: 0;
+  }
+
+  .page-hero__eyebrow {
+    font-size: 0.75rem;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    line-height: 1.5;
+  }
+
+  .page-hero__lead {
+    max-width: 680px;
+    font-size: var(--asv-hero-lead-size);
+    font-weight: 900;
+    line-height: 1.6;
+  }
+
+  h1 {
+    font-family: var(--asv-hero-title-font, var(--font-display));
+    font-size: var(--asv-hero-title-size);
+    font-weight: var(--asv-hero-title-weight, 900);
+    letter-spacing: 0;
+    line-height: 1.15;
+    text-wrap: balance;
+    overflow-wrap: anywhere;
+    text-shadow: var(--asv-hero-title-shadow, inherit);
+  }
+
+  .page-hero__actions {
+    display: flex;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    gap: 10px 12px;
+    min-width: 0;
+  }
+
+  .page-hero__toolbar {
+    width: min(1120px, calc(100% - 36px));
+    margin: 20px auto;
+  }
+
+  .page-hero__actions :global(a),
+  .page-hero__actions :global(button) {
+    min-width: 0;
+    min-height: 44px;
+    padding: 10px 14px;
+    font-size: 0.875rem;
+    line-height: 1.25;
+    white-space: normal;
+    text-wrap: balance;
+    text-shadow: none;
+  }
+
+  .page-hero__actions :global(.asv-icon),
+  .page-hero__actions :global(img) {
+    flex-shrink: 0;
+  }
+
+  .page-hero__decoration {
+    display: grid;
+    place-items: center;
+    min-width: 0;
+    max-height: 100%;
+  }
+
+  @media (max-width: 640px) {
+    .asv-page-hero--page .page-hero__copy {
+      gap: 8px;
+    }
+
+    .asv-page-hero--page .page-hero__lead {
+      font-size: 0.875rem;
+      line-height: 1.5;
+    }
+
+    .asv-hero-inner[data-with-decoration='true'] {
+      position: relative;
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .page-hero__decoration {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      width: 96px;
+      opacity: 0.18;
+      pointer-events: none;
+    }
+
+    .asv-page-hero--home {
+      --asv-hero-height: 700px;
+      --asv-hero-padding: 64px;
+      --asv-hero-title-size: clamp(3.45rem, 16vw, 4.8rem);
+    }
+
+    .asv-page-hero--home h1 {
+      flex-direction: column;
+    }
+
+    .page-hero__actions {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .page-hero__actions :global(a),
+    .page-hero__actions :global(button) {
+      padding: 8px 10px;
+      gap: 8px;
+    }
+
+    .page-hero__actions :global(img) {
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+    }
+
+    .page-hero__actions :global(a:only-child),
+    .page-hero__actions :global(button:only-child) {
+      grid-column: 1 / -1;
+      justify-self: start;
+    }
+  }
+</style>

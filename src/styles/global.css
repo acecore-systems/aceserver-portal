@@ -65,6 +65,10 @@
     --asv-gold: var(--color-gold-300);
     --asv-green: var(--color-grass-500);
     --asv-blue: var(--color-skyforge-500);
+    --asv-hero-height: clamp(200px, 18vw, 240px);
+    --asv-hero-padding: clamp(16px, 2.5vw, 24px);
+    --asv-hero-title-size: clamp(1.75rem, 3.5vw, 2.75rem);
+    --asv-hero-lead-size: clamp(1rem, 1.35vw, 1.125rem);
   }
 
   * {
@@ -82,7 +86,7 @@
   }
 
   body {
-    min-width: 320px;
+    min-width: min(320px, 100%);
     background:
       linear-gradient(180deg, #87dfff 0, #f9efd0 45%, #15130f 100%), #fff5dc;
     color: var(--asv-ink);
