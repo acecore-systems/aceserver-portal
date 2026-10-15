@@ -43,6 +43,35 @@ for (const file of files) {
         (node) => attribute(node, 'data-page-hero') !== undefined,
       )
     : []
+  const routeParts = scope.split('/')
+  if (LOCALES.includes(routeParts[0])) routeParts.shift()
+  const isStory =
+    routeParts.length === 3 &&
+    routeParts[0] === 'stories' &&
+    routeParts[2] === 'index.html'
+  if (isStory) {
+    if (heroes.length !== 0) {
+      errors.push(`${scope}: individual stories must not render a PageHero`)
+    }
+    const headers = main
+      ? descendants(
+          main,
+          (node) => attribute(node, 'data-story-header') !== undefined,
+        )
+      : []
+    const headings = main
+      ? descendants(main, (node) => node.tagName === 'h1')
+      : []
+    if (
+      headers.length !== 1 ||
+      headings.length !== 1 ||
+      !textContent(headings[0]).trim() ||
+      !descendants(headers[0], (node) => node === headings[0]).length
+    ) {
+      errors.push(`${scope}: story header must own the page's only nonempty h1`)
+    }
+    continue
+  }
   if (heroes.length !== 1) {
     errors.push(
       `${scope}: expected one shared PageHero, found ${heroes.length}`,
