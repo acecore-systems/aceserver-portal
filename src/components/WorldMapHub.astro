@@ -20,15 +20,18 @@ const intro = page.sections.find(
 )
 const introImage = intro?.image ?? '/uploads/legacy-world-map.png'
 const introText = intro?.text ?? page.meta.description
+const worldMapTitle = ui.worldMapTitleParts.join(
+  ['ja', 'zh-cn', 'de'].includes(locale) ? '' : ' ',
+)
 ---
 
 <PageHero
-  title={ui.worldMapTitleParts.join('')}
+  title={worldMapTitle}
   titleId="world-title"
   eyebrow="ACESERVER MAPS"
   lead={introText}
   backgroundImage={introImage}
-  imageAlt={intro?.imageAlt ?? ui.worldMapTitleParts.join('')}
+  imageAlt={intro?.imageAlt ?? worldMapTitle}
 />
 
 <section class="world-gates" aria-label={ui.worldSelection}>
