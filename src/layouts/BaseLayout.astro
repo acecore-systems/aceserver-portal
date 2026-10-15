@@ -64,14 +64,14 @@ const siteBase = Astro.site ?? new URL(settings.siteUrl)
 const canonical =
   canonicalInput === null ? null : new URL(canonicalInput, siteBase)
 const pageUrl = canonical ?? new URL(Astro.url.pathname, siteBase)
+const isHome = pageUrl.pathname === localizePath(locale, '/')
 const pageTitle = buildSeoTitle({
   title,
   siteTitle: settings.shortTitle,
   titleContext: ui.siteTitleSuffix,
-  isHome: title === settings.title,
+  isHome,
 })
-const socialTitle =
-  title === settings.title ? pageTitle : `${title} | ${settings.shortTitle}`
+const socialTitle = isHome ? pageTitle : `${title} | ${settings.shortTitle}`
 const ogImage = new URL(image, siteBase)
 const socialImageAlt =
   imageAltInput ?? (image === settings.logo ? settings.logoAlt : title)
