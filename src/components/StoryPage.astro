@@ -10,8 +10,6 @@ import {
 } from '../i18n/config'
 import { getUi } from '../i18n/translations'
 import BaseLayout from '../layouts/BaseLayout.astro'
-import PageHero from './PageHero.astro'
-import { getPageHeroUi } from '../data/page-hero-ui'
 import '../styles/article-diagrams.css'
 
 interface Props {
@@ -168,13 +166,6 @@ const breadcrumbJsonLd = serializeJsonForHtmlScript({
   <script type="application/ld+json" set:html={articleJsonLd} />
   <script type="application/ld+json" set:html={breadcrumbJsonLd} />
   <article>
-    <PageHero
-      title={story.data.title}
-      eyebrow="ACESERVER STORY"
-      lead={getPageHeroUi(locale).story}
-      backgroundImage={story.data.image}
-      imageAlt={story.data.imageAlt}
-    />
     <div class="story-shell">
       <nav class="story-breadcrumb" aria-label={ui.breadcrumbLabel}>
         <ol>
@@ -183,7 +174,8 @@ const breadcrumbJsonLd = serializeJsonForHtmlScript({
           <li aria-current="page">{story.data.title}</li>
         </ol>
       </nav>
-      <div class="story-details">
+      <header class="story-details" data-story-header>
+        <h1>{story.data.title}</h1>
         <p class="story-description">{story.data.description}</p>
         <div class="story-meta">
           <time datetime={story.data.date.toISOString()}>
@@ -211,7 +203,19 @@ const breadcrumbJsonLd = serializeJsonForHtmlScript({
           }
           <span>{ui.byAuthor.replace('{author}', story.data.author)}</span>
         </div>
-      </div>
+      </header>
+      {
+        story.data.image && (
+          <figure class="story-cover" data-story-cover>
+            <img
+              src={story.data.image}
+              alt={story.data.imageAlt}
+              fetchpriority="high"
+              decoding="async"
+            />
+          </figure>
+        )
+      }
       <div class="story-body">
         <Content />
       </div>
@@ -303,6 +307,26 @@ const breadcrumbJsonLd = serializeJsonForHtmlScript({
   .story-details {
     border-bottom: 4px solid #1e1710;
     padding-bottom: clamp(24px, 4vw, 40px);
+  }
+
+  .story-details h1 {
+    margin: 0;
+    font-size: clamp(1.75rem, 4vw, 2.75rem);
+    font-weight: 900;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+  }
+
+  .story-cover {
+    margin: clamp(24px, 4vw, 40px) 0 0;
+  }
+
+  .story-cover img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 3px solid #1e1710;
+    border-radius: 12px;
   }
 
   .story-description {

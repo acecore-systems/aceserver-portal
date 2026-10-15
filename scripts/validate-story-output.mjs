@@ -239,22 +239,22 @@ function inspectImage(html, article, story, scope) {
   const expectedImage = story.image ?? settings.logo
   const expectedImageAlt = story.imageAlt ?? settings.logoAlt
   const expectedImageUrl = new URL(expectedImage, siteUrl).toString()
-  const hero = html.match(
-    /<header\b[^>]*\bdata-page-hero(?:\s|=|>)[\s\S]*?<img\b[^>]*\bdata-page-hero-image(?:\s|=|>)[^>]*>/i,
+  const cover = html.match(
+    /<figure\b[^>]*\bdata-story-cover(?:\s|=|>)[\s\S]*?<\/figure>/i,
   )?.[0]
 
   if (story.image) {
     if (
-      !hero ||
-      attributeValue(hero?.match(/<img\b[^>]*>/i)?.[0], 'src') !==
+      !cover ||
+      attributeValue(cover?.match(/<img\b[^>]*>/i)?.[0], 'src') !==
         story.image ||
-      attributeValue(hero?.match(/<img\b[^>]*>/i)?.[0], 'alt') !==
+      attributeValue(cover?.match(/<img\b[^>]*>/i)?.[0], 'alt') !==
         story.imageAlt
     ) {
-      errors.push(`${scope}: migrated story hero image or alt is missing`)
+      errors.push(`${scope}: story cover image or alt is missing`)
     }
-  } else if (hero) {
-    errors.push(`${scope}: story without an image unexpectedly renders a hero`)
+  } else if (cover) {
+    errors.push(`${scope}: story without an image unexpectedly renders a cover`)
   }
 
   for (const [attributeName, key, expected] of [
