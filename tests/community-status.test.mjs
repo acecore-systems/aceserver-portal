@@ -22,6 +22,13 @@ import {
 import { validatePortalContentFile } from '../src/data/content-schemas.ts'
 import { activityDay } from '../src/lib/community-history.ts'
 import { observationState } from '../src/lib/community-freshness.ts'
+import {
+  isGalleryMapLocation,
+  mapEmbedUrl,
+  mapLocationLink,
+  mapLocationQuery,
+} from '../src/lib/map-location.ts'
+import { localizePath } from '../src/i18n/config.ts'
 import { onRequestGet } from '../functions/api/community-status.ts'
 
 const checkedAt = '2026-10-15T03:17:00.000Z'
@@ -572,6 +579,93 @@ test('missing and stale sources are null in history; malformed pending data stop
   )
 })
 
+test('verified gallery locations survive locale links and forward only bounded map coordinates', () => {
+  const query = 'worldname=world&mapname=surface&zoom=3&x=82&y=64&z=16'
+  const href = `/world-map-main/?${query}`
+  assert.equal(isGalleryMapLocation(href), true)
+  assert.equal(localizePath('en', href), `/en${href}`)
+  assert.equal(
+    mapLocationLink('/en/world-map-main/', `?${query}`),
+    `/en${href}`,
+  )
+  assert.equal(mapLocationLink('/world-map-main/', `?${query}`), href)
+  assert.equal(mapLocationLink('/alpha-diary/', `?${query}`), '/alpha-diary/')
+  assert.equal(
+    mapLocationLink('/en/world-map-main/', '?x=1&follow=private-name'),
+    '/en/world-map-main/',
+  )
+  assert.equal(
+    mapEmbedUrl(
+      'https://mc-map-main.acecore.net',
+      `?${query}&playername=private-name&follow=private-name&url=https://attacker.example`,
+    ),
+    `https://mc-map-main.acecore.net/?${query}`,
+  )
+  assert.equal(
+    mapEmbedUrl(
+      'https://mc-map-sigen.acecore.net/?worldname=world&mapname=flat',
+      '',
+    ),
+    'https://mc-map-sigen.acecore.net/?worldname=world&mapname=flat',
+  )
+  assert.equal(
+    mapEmbedUrl('https://mc-map-main.acecore.net', '?x=1&z=2'),
+    'https://mc-map-main.acecore.net/',
+  )
+  for (const source of [
+    'https://attacker.example/',
+    'https://mc-map-main.acecore.net/other',
+    'https://mc-map-main.acecore.net/?playername=private-name',
+    'https://user:pass@mc-map-main.acecore.net/',
+    'https://mc-map-main.acecore.net:444/',
+  ])
+    assert.equal(mapEmbedUrl(source, `?${query}`), null)
+  for (const invalid of [
+    `${query}&x=1`,
+    query.replace('x=82', 'x=Infinity'),
+    query.replace('x=82', 'x=30000001'),
+    query.replace('y=64', 'y=9999'),
+    query.replace('zoom=3', 'zoom=11'),
+    query.replace('zoom=3', 'zoom=1.5'),
+    query.replace('mapname=surface', 'mapname=../../secret'),
+  ])
+    assert.equal(mapLocationQuery(invalid), null)
+  for (const invalid of [
+    `/world-map-main/?${query}&follow=private-name`,
+    `/world-map-main/?${query}?ignored=1`,
+    `/world-map-main/?${query}#playername=private-name`,
+    `/alpha-diary/?${query}`,
+    `/world-map-resource/?${query}`,
+    `//attacker.example/?${query}`,
+    '/world-map-main/',
+  ])
+    assert.equal(isGalleryMapLocation(invalid), false)
+})
+
+test('all existing map sources retain their configured default view', async () => {
+  for (const id of [
+    'main',
+    'sigen',
+    'rpg',
+    'lobby',
+    'rpg-sub',
+    'season-a',
+    'season-a-c',
+    'event',
+  ]) {
+    const page = JSON.parse(
+      await readFile(
+        new URL(`../src/content/pages/world-map-${id}.json`, import.meta.url),
+        'utf8',
+      ),
+    )
+    const source = page.sections.find(
+      (section) => section.variant === 'map',
+    ).src
+    assert.equal(mapEmbedUrl(source, ''), new URL(source).href)
+  }
+})
+
 test('CMS community accepts undated notices separately and rejects unsafe or ambiguous gallery, posts and dates', async () => {
   const top = JSON.parse(
     await readFile(
@@ -583,12 +677,25 @@ test('CMS community accepts undated notices separately and rejects unsafe or amb
     validatePortalContentFile('src/content/pages/top.json', top).ok,
     true,
   )
+  const archive = structuredClone(top)
+  archive.community.gallery[0].context = 'archive'
+  assert.equal(
+    validatePortalContentFile('src/content/pages/top.json', archive).ok,
+    false,
+  )
+  delete archive.community.gallery[0].href
+  assert.equal(
+    validatePortalContentFile('src/content/pages/top.json', archive).ok,
+    true,
+  )
   for (const mutate of [
     (page) => (page.community.gallery[0].image = '/uploads/../secret.png'),
     (page) => (page.community.gallery[0].href = 'https://attacker.example/'),
     (page) => (page.community.gallery[0].href = '/world-map-main/'),
     (page) => delete page.community.gallery[0].context,
     (page) => delete page.community.gallery[0].periodLabel,
+    (page) => delete page.community.gallery[0].href,
+    (page) => delete page.community.heroCaption,
     (page) => (page.community.xPosts[0].url = 'https://x.com/other/status/123'),
     (page) =>
       page.community.events.push({

@@ -19,9 +19,9 @@ export const COMMUNITY_UI = {
     noticesTitle: 'イベント・お知らせ',
     noEvents: '公開範囲の予定・開催中イベントはありません。',
     moreNotices: 'Discordで案内を見る',
-    galleryTitle: '過去のワールドの記録',
+    galleryTitle: '地図で見つけた、いまの街。',
     galleryIntro:
-      '過去のエースサーバーの記録です。現在のワールドにはこの場所はありません。',
+      '現在のメインワールドを公開マップで探索しました。写真と同じ地点を、地図で開けます。',
     openMap: '地図で見る',
     socialTitle: 'コミュニティのひとこま',
     socialIntro: '公式Xから選んだ投稿。読み込むとXに接続します。',
@@ -47,8 +47,6 @@ export const COMMUNITY_UI = {
     dataSources: 'データの出典',
     noAnnouncements: '取得した範囲にお知らせはありません。',
     historyTable: '観測データを見る',
-    heroArchiveCaption:
-      '背景は過去の風景です。現在のワールドの案内ではありません。',
     partial: '一部の人数のみ取得できました。',
     previousValue:
       '更新できないため、前回の取得値を表示しています（最長6時間）。',
@@ -77,9 +75,9 @@ export const COMMUNITY_UI = {
     noticesTitle: 'Events & notices',
     noEvents: 'No public upcoming or ongoing events were found.',
     moreNotices: 'See announcements on Discord',
-    galleryTitle: 'Scenes from our past',
+    galleryTitle: 'Places to explore now',
     galleryIntro:
-      'An archive of Aceserver. These places no longer exist in the current worlds.',
+      'Views found while exploring the current main world on its public map. Open each picture’s exact location.',
     openMap: 'View on map',
     socialTitle: 'Community moments',
     socialIntro:
@@ -106,8 +104,6 @@ export const COMMUNITY_UI = {
     dataSources: 'Data sources',
     noAnnouncements: 'No notices were found in the retrieved messages.',
     historyTable: 'View observations',
-    heroArchiveCaption:
-      'The background is a historical scene, not a view of the current worlds.',
     partial: 'Only some counts are available.',
     previousValue:
       'Showing the previous observation because refresh failed (up to 6 hours).',
@@ -135,8 +131,9 @@ export const COMMUNITY_UI = {
     noticesTitle: '活动与公告',
     noEvents: '没有找到公开的预定或正在进行的活动。',
     moreNotices: '在 Discord 查看公告',
-    galleryTitle: '往日世界的记录',
-    galleryIntro: '这是 Aceserver 的历史记录。这些地方已不存在于当前世界中。',
+    galleryTitle: '地图上的当下风景',
+    galleryIntro:
+      '我们在公开地图上探索了当前的主世界。点击即可打开与图片相同的位置。',
     openMap: '在地图上查看',
     socialTitle: '社区片段',
     socialIntro: '官方 X 账号的精选帖子。加载后会连接 X。',
@@ -161,7 +158,6 @@ export const COMMUNITY_UI = {
     dataSources: '数据来源',
     noAnnouncements: '获取的消息中没有公告。',
     historyTable: '查看观测数据',
-    heroArchiveCaption: '背景为过去的风景，并非当前世界的景象。',
     partial: '仅获取到部分人数。',
     previousValue: '刷新失败，正在显示上次获取的值（最长 6 小时）。',
     feedUnavailable: '请到 Discord 查看最新信息。',
@@ -189,9 +185,9 @@ export const COMMUNITY_UI = {
     noticesTitle: 'Eventos y avisos',
     noEvents: 'No se encontraron eventos públicos próximos o en curso.',
     moreNotices: 'Ver anuncios en Discord',
-    galleryTitle: 'Escenas del pasado',
+    galleryTitle: 'Rincones para explorar ahora',
     galleryIntro:
-      'Un archivo de Aceserver. Estos lugares ya no existen en los mundos actuales.',
+      'Vistas descubiertas al explorar el mundo principal actual en su mapa público. Abre el lugar exacto de cada imagen.',
     openMap: 'Ver en el mapa',
     socialTitle: 'Momentos de la comunidad',
     socialIntro:
@@ -218,8 +214,6 @@ export const COMMUNITY_UI = {
     dataSources: 'Fuentes de datos',
     noAnnouncements: 'No se encontraron avisos en los mensajes obtenidos.',
     historyTable: 'Ver observaciones',
-    heroArchiveCaption:
-      'El fondo es una escena histórica, no una vista de los mundos actuales.',
     partial: 'Solo se ha obtenido parte de las cifras.',
     previousValue:
       'Se muestra la observación anterior porque falló la actualización (hasta 6 horas).',
@@ -248,9 +242,9 @@ export const COMMUNITY_UI = {
     noticesTitle: 'Eventos e avisos',
     noEvents: 'Nenhum evento público futuro ou em andamento foi encontrado.',
     moreNotices: 'Ver anúncios no Discord',
-    galleryTitle: 'Cenas do passado',
+    galleryTitle: 'Lugares para explorar agora',
     galleryIntro:
-      'Um arquivo do Aceserver. Esses lugares não existem mais nos mundos atuais.',
+      'Cenas encontradas ao explorar o mundo principal atual pelo mapa público. Abra o local exato de cada imagem.',
     openMap: 'Ver no mapa',
     socialTitle: 'Momentos da comunidade',
     socialIntro:
@@ -277,8 +271,6 @@ export const COMMUNITY_UI = {
     dataSources: 'Fontes dos dados',
     noAnnouncements: 'Nenhum aviso foi encontrado nas mensagens obtidas.',
     historyTable: 'Ver observações',
-    heroArchiveCaption:
-      'O fundo é uma cena histórica, não uma vista dos mundos atuais.',
     partial: 'Apenas parte dos números está disponível.',
     previousValue:
       'Exibindo a observação anterior porque a atualização falhou (até 6 horas).',
@@ -307,9 +299,9 @@ export const COMMUNITY_UI = {
     noticesTitle: 'Événements et annonces',
     noEvents: 'Aucun événement public à venir ou en cours n’a été trouvé.',
     moreNotices: 'Voir les annonces sur Discord',
-    galleryTitle: 'Souvenirs des anciens mondes',
+    galleryTitle: 'Des lieux à explorer aujourd’hui',
     galleryIntro:
-      'Une archive d’Aceserver. Ces lieux n’existent plus dans les mondes actuels.',
+      'Des vues découvertes en explorant le monde principal actuel sur sa carte publique. Ouvrez le lieu exact de chaque image.',
     openMap: 'Voir sur la carte',
     socialTitle: 'Instants de communauté',
     socialIntro:
@@ -337,8 +329,6 @@ export const COMMUNITY_UI = {
     dataSources: 'Sources des données',
     noAnnouncements: 'Aucune annonce trouvée dans les messages récupérés.',
     historyTable: 'Voir les observations',
-    heroArchiveCaption:
-      'L’arrière-plan est une scène historique, pas une vue des mondes actuels.',
     partial: 'Seule une partie des chiffres est disponible.',
     previousValue:
       'La dernière observation est affichée après l’échec de l’actualisation (6 heures maximum).',
@@ -367,9 +357,9 @@ export const COMMUNITY_UI = {
     noticesTitle: '이벤트와 공지',
     noEvents: '공개된 예정 또는 진행 중인 이벤트가 없습니다.',
     moreNotices: 'Discord에서 공지 보기',
-    galleryTitle: '지난 월드의 기록',
+    galleryTitle: '지도에서 찾은 지금의 풍경',
     galleryIntro:
-      'Aceserver의 과거 기록입니다. 현재 월드에는 이 장소가 없습니다.',
+      '공개 지도로 현재 메인 월드를 둘러봤습니다. 사진과 같은 위치를 지도에서 열 수 있습니다.',
     openMap: '지도에서 보기',
     socialTitle: '커뮤니티의 한 장면',
     socialIntro: '공식 X에서 고른 게시물입니다. 불러오면 X에 연결됩니다.',
@@ -395,7 +385,6 @@ export const COMMUNITY_UI = {
     dataSources: '데이터 출처',
     noAnnouncements: '가져온 메시지에 공지가 없습니다.',
     historyTable: '관측 데이터 보기',
-    heroArchiveCaption: '배경은 과거의 풍경이며 현재 월드의 모습이 아닙니다.',
     partial: '일부 인원수만 가져왔습니다.',
     previousValue: '새로고침에 실패해 이전 관측값을 표시합니다 (최대 6시간).',
     feedUnavailable: '최신 정보는 Discord에서 확인해 주세요.',
@@ -423,9 +412,9 @@ export const COMMUNITY_UI = {
     noticesTitle: 'Events und Hinweise',
     noEvents: 'Keine öffentlichen kommenden oder laufenden Events gefunden.',
     moreNotices: 'Ankündigungen auf Discord',
-    galleryTitle: 'Ansichten aus der Vergangenheit',
+    galleryTitle: 'Orte, die es jetzt zu entdecken gibt',
     galleryIntro:
-      'Ein Archiv von Aceserver. Diese Orte gibt es in den aktuellen Welten nicht mehr.',
+      'Ansichten von unserer Erkundung der aktuellen Hauptwelt auf ihrer öffentlichen Karte. Öffne den genauen Ort jedes Bildes.',
     openMap: 'Auf der Karte ansehen',
     socialTitle: 'Momente aus der Community',
     socialIntro:
@@ -453,8 +442,6 @@ export const COMMUNITY_UI = {
     noAnnouncements:
       'In den abgerufenen Nachrichten wurden keine Hinweise gefunden.',
     historyTable: 'Beobachtungen ansehen',
-    heroArchiveCaption:
-      'Der Hintergrund zeigt eine historische Szene, nicht die aktuellen Welten.',
     partial: 'Nur ein Teil der Zahlen ist verfügbar.',
     previousValue:
       'Nach fehlgeschlagener Aktualisierung wird die letzte Beobachtung angezeigt (höchstens 6 Stunden).',
@@ -483,8 +470,9 @@ export const COMMUNITY_UI = {
     noticesTitle: 'События и объявления',
     noEvents: 'Публичных предстоящих или текущих событий не найдено.',
     moreNotices: 'Объявления в Discord',
-    galleryTitle: 'Виды из прошлого',
-    galleryIntro: 'Архив Aceserver. Этих мест больше нет в нынешних мирах.',
+    galleryTitle: 'Места для новых открытий',
+    galleryIntro:
+      'Виды, найденные при изучении нынешнего основного мира на публичной карте. Откройте точное место каждого снимка.',
     openMap: 'Посмотреть на карте',
     socialTitle: 'Моменты сообщества',
     socialIntro:
@@ -511,7 +499,6 @@ export const COMMUNITY_UI = {
     dataSources: 'Источники данных',
     noAnnouncements: 'В полученных сообщениях объявлений не найдено.',
     historyTable: 'Посмотреть наблюдения',
-    heroArchiveCaption: 'На фоне исторический вид, а не нынешние миры.',
     partial: 'Доступна лишь часть показателей.',
     previousValue:
       'После ошибки обновления показано предыдущее наблюдение (не старше 6 часов).',

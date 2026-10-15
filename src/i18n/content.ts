@@ -173,6 +173,7 @@ export function getLocalizedPage(page: PortalPage, locale: Locale): PortalPage {
             ...clone(page.community),
             title: translation.community.title,
             intro: translation.community.intro,
+            heroCaption: translation.community.heroCaption,
             gallery: page.community.gallery.map((item) => ({
               ...item,
               ...translation.community.gallery[item.id],

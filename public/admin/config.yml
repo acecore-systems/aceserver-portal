@@ -195,6 +195,11 @@ collections:
             fields:
               - { name: title, label: 見出し, widget: string }
               - { name: intro, label: 紹介文, widget: text }
+              - {
+                  name: heroCaption,
+                  label: トップ背景の撮影日・説明,
+                  widget: string,
+                }
               - name: mapWorld
                 label: プレビューマップ
                 widget: select
@@ -210,7 +215,7 @@ collections:
                     event,
                   ]
               - name: gallery
-                label: 建築・ワールドの写真（過去と現在を区別）
+                label: 探索した建築・ワールドの写真
                 widget: list
                 max: 8
                 fields:
@@ -223,20 +228,20 @@ collections:
                       name: context,
                       label: 写真の区分,
                       widget: select,
-                      options: [archive, current],
-                      default: archive,
+                      options: [current, archive],
+                      default: current,
                     }
                   - {
                       name: periodLabel,
-                      label: 撮影時期・過去の風景の注記,
+                      label: 公開マップの確認日・撮影時期,
                       widget: string,
                     }
                   - {
                       name: href,
-                      label: 現在の写真だけに設定する地図の内部URL,
+                      label: 写真と同じ地点を開く地図の内部URL,
                       widget: string,
                       required: false,
-                      hint: 'archiveの場合は空欄。撮影時期が不明な過去画像を現在の地図へ誘導しないでください。',
+                      hint: 'currentは実際に探索した地点の/world-map-main/?worldname=world&mapname=surface&zoom=3&x=82&y=64&z=16の形式を指定。archiveの場合は空欄。',
                     }
               - name: events
                 label: 開催予定イベント
