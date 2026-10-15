@@ -8,6 +8,7 @@ import { getUi } from '../i18n/translations'
 import { externalLinkAttrs } from '../utils/links'
 import Icon from './Icon.astro'
 import PageHero from './PageHero.astro'
+import HomeCommunity from './HomeCommunity.astro'
 
 interface Props {
   page: PortalPage
@@ -172,56 +173,29 @@ const diaryPath = localizePath(locale, '/alpha-diary/')
   </Fragment>
 </PageHero>
 
-<section id="overview" class="intro-section">
-  <div class="floating-island">
-    {overview.image && <img src={overview.image} alt={overview.imageAlt} />}
-  </div>
-  <div class="intro-copy asv-panel pixel-border">
+{page.community && <HomeCommunity page={page} locale={locale} mode="status" />}
+
+<section id="overview" class="intro-section intro-section--compact">
+  <div class="intro-copy">
     <h2>{overview.titleCopy}</h2>
     {overview.text && <p>{overview.text}</p>}
     <p>{ui.homeFreedom}</p>
   </div>
-</section>
-
-<section class="feature-band feature-band--right">
-  <div class="feature-copy">
-    <h2>{multiplayer.titleCopy}</h2>
+  <div class="intro-copy intro-copy--details">
+    <h3>{multiplayer.titleCopy}</h3>
     {multiplayer.text && <p>{multiplayer.text}</p>}
-    <p>{ui.homeMultiplayer}</p>
-  </div>
-  <div class="feature-image pixel-border">
-    {
-      multiplayer.image && (
-        <img src={multiplayer.image} alt={multiplayer.imageAlt} />
-      )
-    }
+    <p>{freePlay.text}</p>
+    <a class="crossplay-guide" href={multiplayerGuidePath}
+      >{ui.homeMultiplayerGuide}<Icon name="chevron-right" /></a
+    >
   </div>
 </section>
 
-<section class="crossplay-band">
-  <div class="device-scene pixel-border">
-    <div class="device device--desktop"><Icon name="gamepad-2" /></div>
-    <Icon name="chevron-right" class="device-arrow" />
-    <div class="device device--mobile"><Icon name="globe-2" /></div>
-  </div>
-  <div class="crossplay-copy">
-    <h2>{ui.homeCrossplay}</h2>
-    <a class="crossplay-guide" href={multiplayerGuidePath}>
-      {ui.homeMultiplayerGuide}
-      <Icon name="chevron-right" />
-    </a>
-  </div>
-</section>
-
-<section class="feature-band feature-band--left">
-  <div class="feature-copy">
-    <h2>{freePlay.titleCopy}</h2>
-    {freePlay.text && <p>{freePlay.text}</p>}
-  </div>
-  <div class="feature-image pixel-border">
-    {freePlay.image && <img src={freePlay.image} alt={freePlay.imageAlt} />}
-  </div>
-</section>
+{
+  page.community && (
+    <HomeCommunity page={page} locale={locale} mode="discover" />
+  )
+}
 
 <section class="cta-grid" aria-label={ui.homeCtaLabel}>
   <article class="join-card pixel-border">
@@ -383,8 +357,6 @@ const diaryPath = localizePath(locale, '/alpha-diary/')
   }
 
   .intro-section,
-  .feature-band,
-  .crossplay-band,
   .cta-grid {
     position: relative;
     padding: clamp(58px, 8vw, 108px) clamp(18px, 6vw, 86px);
@@ -402,79 +374,27 @@ const diaryPath = localizePath(locale, '/alpha-diary/')
     );
   }
 
-  .floating-island img {
-    width: min(100%, 560px);
-    margin: 0 auto;
-    filter: drop-shadow(0 20px 20px rgba(75, 47, 20, 0.24));
+  .intro-section--compact {
+    padding-block: clamp(28px, 4vw, 50px);
   }
-
-  .intro-copy {
-    padding: clamp(24px, 4vw, 46px);
-  }
-
-  .intro-copy h2,
-  .feature-copy h2,
-  .crossplay-band h2,
-  .cta-grid h2 {
-    margin: 0 0 18px;
-    font-size: clamp(2rem, 4vw, 4rem);
+  .intro-copy h2 {
+    margin: 0 0 12px;
+    font-size: clamp(1.45rem, 2.6vw, 2rem);
     font-weight: 900;
-    letter-spacing: 0;
-    line-height: 1.1;
   }
-
-  .intro-copy p,
-  .feature-copy p,
-  .cta-grid p {
-    margin: 0 0 10px;
-    font-size: clamp(1.02rem, 1.5vw, 1.28rem);
-    font-weight: 800;
+  .intro-copy h3 {
+    margin: 0 0 8px;
+    font-size: 1.1rem;
+    font-weight: 900;
   }
-
-  .feature-band {
-    display: grid;
-    align-items: center;
-    gap: clamp(28px, 5vw, 70px);
-    grid-template-columns: minmax(260px, 0.72fr) minmax(320px, 1.28fr);
-    background: #fff8e6;
+  .intro-copy p {
+    margin: 0 0 8px;
+    font-size: 0.94rem;
+    line-height: 1.7;
   }
-
-  .feature-band--left {
-    background: #e9f8ff;
-  }
-
-  .feature-band--left .feature-copy {
-    order: 2;
-  }
-
-  .feature-copy {
-    max-width: 520px;
-  }
-
-  .feature-image {
-    overflow: hidden;
-    border-radius: 16px;
-    background: #15130f;
-  }
-
-  .feature-image img {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-  }
-
-  .crossplay-band {
-    display: grid;
-    align-items: center;
-    gap: clamp(26px, 5vw, 72px);
-    grid-template-columns: minmax(260px, 0.72fr) minmax(280px, 1fr);
-    background: linear-gradient(135deg, #baeaff, #f6fbff 58%, #fff2bf);
-  }
-
-  .crossplay-copy {
-    display: grid;
-    justify-items: start;
-    gap: 18px;
+  .intro-copy--details {
+    border-left: 2px solid #d6cdb4;
+    padding-left: 28px;
   }
 
   .crossplay-guide {
@@ -502,47 +422,6 @@ const diaryPath = localizePath(locale, '/alpha-diary/')
     outline-offset: 3px;
   }
 
-  .device-scene {
-    display: flex;
-    min-height: 230px;
-    align-items: center;
-    justify-content: center;
-    gap: 22px;
-    border-radius: 18px;
-    background: linear-gradient(
-      135deg,
-      rgba(28, 21, 15, 0.92),
-      rgba(50, 38, 27, 0.92)
-    );
-    color: #ffd84d;
-  }
-
-  .device {
-    display: grid;
-    place-items: center;
-    border: 4px solid #0b141d;
-    border-radius: 10px;
-    background: linear-gradient(180deg, #dff7ff, #63d5ff);
-    color: #15130f;
-    box-shadow: inset 0 -10px rgba(0, 0, 0, 0.12);
-  }
-
-  .device--desktop {
-    width: 148px;
-    height: 98px;
-    font-size: 3rem;
-  }
-
-  .device--mobile {
-    width: 74px;
-    height: 132px;
-    font-size: 2.2rem;
-  }
-
-  :global(.device-arrow) {
-    font-size: 2rem;
-  }
-
   .cta-grid {
     display: grid;
     gap: 24px;
@@ -555,12 +434,25 @@ const diaryPath = localizePath(locale, '/alpha-diary/')
     color: white;
   }
 
+  .cta-grid h2 {
+    margin: 0 0 12px;
+    font-size: clamp(1.3rem, 2vw, 1.8rem);
+    font-weight: 900;
+    line-height: 1.3;
+  }
+
+  .cta-grid p {
+    margin: 0 0 10px;
+    font-size: 0.94rem;
+    line-height: 1.7;
+  }
+
   .join-card,
   .wiki-card,
   .shop-card,
   .diary-card {
     display: grid;
-    min-height: 320px;
+    min-height: 230px;
     gap: 22px;
     overflow: hidden;
     padding: clamp(24px, 4vw, 44px);
@@ -682,14 +574,13 @@ const diaryPath = localizePath(locale, '/alpha-diary/')
 
   @media (max-width: 920px) {
     .intro-section,
-    .feature-band,
-    .crossplay-band,
     .cta-grid {
       grid-template-columns: minmax(0, 1fr);
     }
 
-    .feature-band--left .feature-copy {
-      order: 0;
+    .intro-copy--details {
+      border-left: 0;
+      padding-left: 0;
     }
   }
 

@@ -1,5 +1,13 @@
 import type { Locale, TranslatedLocale } from './config'
 
+export type CommunityTranslation = {
+  title: string
+  intro: string
+  gallery: Record<string, { title: string; text: string; imageAlt: string }>
+  events: Record<string, { title: string; text: string }>
+  xPosts: Record<string, { label: string }>
+}
+
 export type UiCopy = {
   siteTitleSuffix: string
   homeTitleParts: [string, string]
@@ -127,6 +135,7 @@ export type LocaleTranslation = {
     string,
     { title: string; text: string; linkLabel: string }
   >
+  community: CommunityTranslation
   pages: Record<string, PageTranslation>
 }
 
@@ -262,7 +271,7 @@ export const JA_UI: UiCopy = {
 
 const en: LocaleTranslation = {
   sourceHash:
-    'sha256:1bdb859ab4df175fba8ef175a1af9d854d93eba5a57b1f148af22c54aab6277d',
+    'sha256:3dd6323e7d3088de144f17d0a6fb3654fec251c1394a8c0a07c82ec10e8b09f1',
   ui: {
     siteTitleSuffix: 'Official portal for the free public Minecraft server',
     homeTitleParts: ['Ace', 'server'],
@@ -423,6 +432,33 @@ const en: LocaleTranslation = {
     'https://asv-wiki.acecore.net': 'WIKI',
   },
   announcements: {},
+  community: {
+    title: 'Right now, in Aceserver.',
+    intro:
+      'Building the next street or taking a railway trip: explore the worlds and the community today.',
+    gallery: {
+      airship: {
+        title: 'A giant airship above the city.',
+        text: 'A real build from our world. Open the map and find somewhere to visit next.',
+        imageAlt: 'A Minecraft city with a giant white airship',
+      },
+      city: {
+        title: 'Another town beyond the tracks.',
+        text: 'Cities, railways and towers spread across the main world. Seen from above, their connections come into view.',
+        imageAlt:
+          'An actual overhead map of the main world, showing buildings, railways and towers',
+      },
+    },
+    events: {},
+    xPosts: {
+      railway: {
+        label: 'Touring Aceserver by rail',
+      },
+      station: {
+        label: 'The view from Satsukari Station',
+      },
+    },
+  },
   pages: {
     top: homePage(
       'Aceserver Portal',
@@ -437,14 +473,12 @@ const en: LocaleTranslation = {
         {
           titleCopy: 'Play multiplayer with anyone!',
           text: 'Play from both Java Edition and Bedrock Edition!',
-          imageAlt:
-            'A person looking over the sea at sunset from a rocky shore',
+          imageAlt: 'A giant white airship above the city',
         },
         {
           titleCopy: 'Have fun!',
           text: 'A highly flexible server that stays close to vanilla Minecraft!',
-          imageAlt:
-            'A person jumping with both arms raised in a mountain valley',
+          imageAlt: 'Main-world buildings, railways and towers',
         },
         {
           titleCopy: 'Want to join Aceserver?',
@@ -506,7 +540,7 @@ const en: LocaleTranslation = {
 
 const zhCn: LocaleTranslation = {
   sourceHash:
-    'sha256:1bdb859ab4df175fba8ef175a1af9d854d93eba5a57b1f148af22c54aab6277d',
+    'sha256:3dd6323e7d3088de144f17d0a6fb3654fec251c1394a8c0a07c82ec10e8b09f1',
   ui: {
     siteTitleSuffix: '免费公开 Minecraft 服务器官方门户',
     homeTitleParts: ['Ace', 'server'],
@@ -659,6 +693,31 @@ const zhCn: LocaleTranslation = {
     'https://asv-wiki.acecore.net': 'WIKI',
   },
   announcements: {},
+  community: {
+    title: '此刻，在 Aceserver。',
+    intro: '有人继续建造街道，有人乘铁路旅行。一起来看看今天的世界与社区。',
+    gallery: {
+      airship: {
+        title: '城市上空的巨大飞艇。',
+        text: '这是世界中实际建造的街景。打开地图，寻找下一个想去的地方。',
+        imageAlt: 'Minecraft 城市与巨大的白色飞艇',
+      },
+      city: {
+        title: '铁轨的另一端，也有一座城。',
+        text: '主世界中分布着城市、铁路与高楼。俯瞰地图，也能看见建筑之间的联系。',
+        imageAlt: '主世界的真实俯瞰地图，展示城市、铁路与高楼',
+      },
+    },
+    events: {},
+    xPosts: {
+      railway: {
+        label: '乘铁路游览 Aceserver',
+      },
+      station: {
+        label: '札苅站的风景',
+      },
+    },
+  },
   pages: {
     top: homePage(
       'Aceserver 门户',
@@ -673,12 +732,12 @@ const zhCn: LocaleTranslation = {
         {
           titleCopy: '和任何人一起多人游玩！',
           text: 'Java 版与基岩版均可游玩！',
-          imageAlt: '从岩岸眺望夕阳海面的行人',
+          imageAlt: '城市上空的巨大白色飞艇',
         },
         {
           titleCopy: '尽情享受！',
           text: '接近原版、自由度极高的服务器！',
-          imageAlt: '在山谷前张开双臂跳跃的人',
+          imageAlt: '主世界的城市、铁路与高楼',
         },
         {
           titleCopy: '想加入 Aceserver 吗？',
@@ -740,7 +799,7 @@ const zhCn: LocaleTranslation = {
 
 const es: LocaleTranslation = {
   sourceHash:
-    'sha256:1bdb859ab4df175fba8ef175a1af9d854d93eba5a57b1f148af22c54aab6277d',
+    'sha256:3dd6323e7d3088de144f17d0a6fb3654fec251c1394a8c0a07c82ec10e8b09f1',
   ui: {
     siteTitleSuffix:
       'Portal oficial del servidor público gratuito de Minecraft',
@@ -898,6 +957,33 @@ const es: LocaleTranslation = {
     'https://asv-wiki.acecore.net': 'WIKI',
   },
   announcements: {},
+  community: {
+    title: 'Ahora mismo, en Aceserver.',
+    intro:
+      'Hay quienes construyen una nueva calle y quienes viajan en tren. Descubre los mundos y la comunidad de hoy.',
+    gallery: {
+      airship: {
+        title: 'Un dirigible gigante sobre la ciudad.',
+        text: 'Una construcción real de nuestro mundo. Abre el mapa y busca tu próxima visita.',
+        imageAlt: 'Ciudad de Minecraft con un enorme dirigible blanco',
+      },
+      city: {
+        title: 'Otra ciudad al final de las vías.',
+        text: 'El mundo principal está lleno de ciudades, ferrocarriles y torres. Desde arriba se ven sus conexiones.',
+        imageAlt:
+          'Mapa aéreo real del mundo principal con edificios, ferrocarriles y torres',
+      },
+    },
+    events: {},
+    xPosts: {
+      railway: {
+        label: 'Recorriendo Aceserver en tren',
+      },
+      station: {
+        label: 'La vista desde la estación Satsukari',
+      },
+    },
+  },
   pages: {
     top: homePage(
       'Portal de Aceserver',
@@ -913,13 +999,12 @@ const es: LocaleTranslation = {
         {
           titleCopy: '¡Multijugador con cualquiera!',
           text: '¡Puedes jugar con Java Edition y Bedrock Edition!',
-          imageAlt: 'Una persona contempla el mar al atardecer desde las rocas',
+          imageAlt: 'Un enorme dirigible blanco sobre la ciudad',
         },
         {
           titleCopy: '¡Diviértete!',
           text: '¡Un servidor muy libre y cercano a Minecraft vanilla!',
-          imageAlt:
-            'Una persona salta con los brazos abiertos ante un valle montañoso',
+          imageAlt: 'Edificios, ferrocarriles y torres del mundo principal',
         },
         {
           titleCopy: '¿Quieres unirte a Aceserver?',
@@ -981,7 +1066,7 @@ const es: LocaleTranslation = {
 
 const pt: LocaleTranslation = {
   sourceHash:
-    'sha256:1bdb859ab4df175fba8ef175a1af9d854d93eba5a57b1f148af22c54aab6277d',
+    'sha256:3dd6323e7d3088de144f17d0a6fb3654fec251c1394a8c0a07c82ec10e8b09f1',
   ui: {
     siteTitleSuffix: 'Portal oficial do servidor público gratuito de Minecraft',
     homeTitleParts: ['Ace', 'server'],
@@ -1139,6 +1224,33 @@ const pt: LocaleTranslation = {
     'https://asv-wiki.acecore.net': 'WIKI',
   },
   announcements: {},
+  community: {
+    title: 'Agora, no Aceserver.',
+    intro:
+      'Alguns constroem a próxima rua; outros viajam de trem. Explore os mundos e a comunidade de hoje.',
+    gallery: {
+      airship: {
+        title: 'Um dirigível gigante sobre a cidade.',
+        text: 'Uma construção real do nosso mundo. Abra o mapa e encontre o próximo lugar para visitar.',
+        imageAlt: 'Cidade de Minecraft com um enorme dirigível branco',
+      },
+      city: {
+        title: 'Outra cidade além dos trilhos.',
+        text: 'O mundo principal tem cidades, ferrovias e torres. Vistas de cima, suas conexões aparecem.',
+        imageAlt:
+          'Mapa aéreo real do mundo principal com prédios, ferrovias e torres',
+      },
+    },
+    events: {},
+    xPosts: {
+      railway: {
+        label: 'Passeando de trem pelo Aceserver',
+      },
+      station: {
+        label: 'A vista da estação Satsukari',
+      },
+    },
+  },
   pages: {
     top: homePage(
       'Portal do Aceserver',
@@ -1154,13 +1266,12 @@ const pt: LocaleTranslation = {
         {
           titleCopy: 'Multiplayer com qualquer pessoa!',
           text: 'Jogue com Java Edition e Bedrock Edition!',
-          imageAlt: 'Uma pessoa observa o mar ao pôr do sol sobre as rochas',
+          imageAlt: 'Um enorme dirigível branco sobre a cidade',
         },
         {
           titleCopy: 'Divirta-se!',
           text: 'Um servidor muito livre e próximo do Minecraft vanilla!',
-          imageAlt:
-            'Uma pessoa salta de braços abertos diante de um vale montanhoso',
+          imageAlt: 'Prédios, ferrovias e torres do mundo principal',
         },
         {
           titleCopy: 'Quer entrar no Aceserver?',
@@ -1222,7 +1333,7 @@ const pt: LocaleTranslation = {
 
 const fr: LocaleTranslation = {
   sourceHash:
-    'sha256:1bdb859ab4df175fba8ef175a1af9d854d93eba5a57b1f148af22c54aab6277d',
+    'sha256:3dd6323e7d3088de144f17d0a6fb3654fec251c1394a8c0a07c82ec10e8b09f1',
   ui: {
     siteTitleSuffix: 'Portail officiel du serveur Minecraft public et gratuit',
     homeTitleParts: ['Ace', 'server'],
@@ -1379,6 +1490,33 @@ const fr: LocaleTranslation = {
     'https://asv-wiki.acecore.net': 'WIKI',
   },
   announcements: {},
+  community: {
+    title: 'En ce moment, sur Aceserver.',
+    intro:
+      'Certains prolongent une rue, d’autres voyagent en train. Découvrez les mondes et la communauté du jour.',
+    gallery: {
+      airship: {
+        title: 'Un dirigeable géant au-dessus de la ville.',
+        text: 'Une vraie construction de notre monde. Ouvrez la carte pour trouver votre prochaine visite.',
+        imageAlt: 'Une ville Minecraft avec un immense dirigeable blanc',
+      },
+      city: {
+        title: 'Une autre ville au bout des rails.',
+        text: 'Villes, voies ferrées et tours parcourent le monde principal. Vues du ciel, leurs connexions apparaissent.',
+        imageAlt:
+          'Une vraie carte aérienne du monde principal avec bâtiments, voies ferrées et tours',
+      },
+    },
+    events: {},
+    xPosts: {
+      railway: {
+        label: 'Explorer Aceserver en train',
+      },
+      station: {
+        label: 'La vue depuis la gare de Satsukari',
+      },
+    },
+  },
   pages: {
     top: homePage(
       'Portail Aceserver',
@@ -1394,14 +1532,12 @@ const fr: LocaleTranslation = {
         {
           titleCopy: 'Jouez en multijoueur avec tout le monde !',
           text: 'Jouez avec Java Edition et Bedrock Edition !',
-          imageAlt:
-            'Une personne contemple la mer au coucher du soleil depuis des rochers',
+          imageAlt: 'Un immense dirigeable blanc au-dessus de la ville',
         },
         {
           titleCopy: 'Amusez-vous !',
           text: 'Un serveur très libre, proche de Minecraft vanilla !',
-          imageAlt:
-            'Une personne saute les bras ouverts devant une vallée montagneuse',
+          imageAlt: 'Bâtiments, voies ferrées et tours du monde principal',
         },
         {
           titleCopy: 'Vous souhaitez rejoindre Aceserver ?',
@@ -1463,7 +1599,7 @@ const fr: LocaleTranslation = {
 
 const ko: LocaleTranslation = {
   sourceHash:
-    'sha256:1bdb859ab4df175fba8ef175a1af9d854d93eba5a57b1f148af22c54aab6277d',
+    'sha256:3dd6323e7d3088de144f17d0a6fb3654fec251c1394a8c0a07c82ec10e8b09f1',
   ui: {
     siteTitleSuffix: '무료 공개 Minecraft 서버 공식 포털',
     homeTitleParts: ['Ace', 'server'],
@@ -1621,6 +1757,32 @@ const ko: LocaleTranslation = {
     'https://asv-wiki.acecore.net': 'WIKI',
   },
   announcements: {},
+  community: {
+    title: '지금, Aceserver에서.',
+    intro:
+      '다음 거리를 만드는 사람, 철도로 여행하는 사람. 오늘의 월드와 커뮤니티를 둘러보세요.',
+    gallery: {
+      airship: {
+        title: '도시 위에 떠 있는 거대한 비행선.',
+        text: '실제 월드에서 지어진 거리입니다. 지도를 열고 다음에 방문할 곳을 찾아보세요.',
+        imageAlt: 'Minecraft 도시와 거대한 흰색 비행선',
+      },
+      city: {
+        title: '철길 너머에도 누군가의 도시.',
+        text: '메인 월드에는 도시와 철도, 고층 건물이 펼쳐집니다. 하늘에서 보면 건축물 사이의 연결도 보입니다.',
+        imageAlt: '도시와 철도, 고층 건물을 내려다본 메인 월드의 실제 지도',
+      },
+    },
+    events: {},
+    xPosts: {
+      railway: {
+        label: '철도로 둘러보는 Aceserver',
+      },
+      station: {
+        label: '사쓰카리역에서 바라본 풍경',
+      },
+    },
+  },
   pages: {
     top: homePage(
       'Aceserver 포털',
@@ -1635,12 +1797,12 @@ const ko: LocaleTranslation = {
         {
           titleCopy: '누구와도 멀티플레이!',
           text: 'Java Edition과 Bedrock Edition 모두 플레이할 수 있습니다!',
-          imageAlt: '바위 해안에서 노을 진 바다를 바라보는 사람',
+          imageAlt: '도시 위의 거대한 흰색 비행선',
         },
         {
           titleCopy: '즐겁게!',
           text: '바닐라에 가깝고 자유도가 높은 서버입니다!',
-          imageAlt: '산골짜기 앞에서 두 팔을 벌리고 뛰는 사람',
+          imageAlt: '메인 월드의 도시와 철도, 고층 건물',
         },
         {
           titleCopy: 'Aceserver에 참여하고 싶나요?',
@@ -1702,7 +1864,7 @@ const ko: LocaleTranslation = {
 
 const de: LocaleTranslation = {
   sourceHash:
-    'sha256:1bdb859ab4df175fba8ef175a1af9d854d93eba5a57b1f148af22c54aab6277d',
+    'sha256:3dd6323e7d3088de144f17d0a6fb3654fec251c1394a8c0a07c82ec10e8b09f1',
   ui: {
     siteTitleSuffix:
       'Offizielles Portal des kostenlosen öffentlichen Minecraft-Servers',
@@ -1864,6 +2026,33 @@ const de: LocaleTranslation = {
     'https://asv-wiki.acecore.net': 'WIKI',
   },
   announcements: {},
+  community: {
+    title: 'Gerade jetzt, auf Aceserver.',
+    intro:
+      'Eine neue Straße bauen oder mit der Bahn reisen: Entdecke die Welten und die Community von heute.',
+    gallery: {
+      airship: {
+        title: 'Ein riesiges Luftschiff über der Stadt.',
+        text: 'Ein echtes Bauwerk aus unserer Welt. Öffne die Karte und finde dein nächstes Ausflugsziel.',
+        imageAlt: 'Eine Minecraft-Stadt mit einem riesigen weißen Luftschiff',
+      },
+      city: {
+        title: 'Eine weitere Stadt hinter den Gleisen.',
+        text: 'Städte, Bahnstrecken und Türme prägen die Hauptwelt. Von oben werden ihre Verbindungen sichtbar.',
+        imageAlt:
+          'Eine echte Übersichtskarte der Hauptwelt mit Gebäuden, Bahnstrecken und Türmen',
+      },
+    },
+    events: {},
+    xPosts: {
+      railway: {
+        label: 'Mit der Bahn durch Aceserver',
+      },
+      station: {
+        label: 'Der Blick vom Bahnhof Satsukari',
+      },
+    },
+  },
   pages: {
     top: homePage(
       'Aceserver Portal',
@@ -1879,14 +2068,12 @@ const de: LocaleTranslation = {
         {
           titleCopy: 'Mehrspieler mit allen!',
           text: 'Spiele mit Java Edition und Bedrock Edition!',
-          imageAlt:
-            'Eine Person blickt von einer felsigen Küste auf das Meer bei Sonnenuntergang',
+          imageAlt: 'Ein riesiges weißes Luftschiff über der Stadt',
         },
         {
           titleCopy: 'Hab Spaß!',
           text: 'Ein sehr freier Server, der nah an Vanilla Minecraft bleibt!',
-          imageAlt:
-            'Eine Person springt mit ausgebreiteten Armen vor einem Bergtal',
+          imageAlt: 'Gebäude, Bahnstrecken und Türme der Hauptwelt',
         },
         {
           titleCopy: 'Möchtest du Aceserver beitreten?',
@@ -1948,7 +2135,7 @@ const de: LocaleTranslation = {
 
 const ru: LocaleTranslation = {
   sourceHash:
-    'sha256:1bdb859ab4df175fba8ef175a1af9d854d93eba5a57b1f148af22c54aab6277d',
+    'sha256:3dd6323e7d3088de144f17d0a6fb3654fec251c1394a8c0a07c82ec10e8b09f1',
   ui: {
     siteTitleSuffix:
       'Официальный портал бесплатного публичного сервера Minecraft',
@@ -2105,6 +2292,33 @@ const ru: LocaleTranslation = {
     'https://asv-wiki.acecore.net': 'WIKI',
   },
   announcements: {},
+  community: {
+    title: 'Прямо сейчас в Aceserver.',
+    intro:
+      'Кто-то строит новую улицу, кто-то путешествует на поезде. Посмотрите на сегодняшние миры и сообщество.',
+    gallery: {
+      airship: {
+        title: 'Огромный дирижабль над городом.',
+        text: 'Настоящая постройка в нашем мире. Откройте карту и выберите следующее место для прогулки.',
+        imageAlt: 'Город Minecraft с огромным белым дирижаблем',
+      },
+      city: {
+        title: 'За рельсами — ещё один город.',
+        text: 'Главный мир наполнен городами, железными дорогами и башнями. Сверху видны связи между постройками.',
+        imageAlt:
+          'Настоящая карта главного мира сверху: здания, железные дороги и башни',
+      },
+    },
+    events: {},
+    xPosts: {
+      railway: {
+        label: 'Путешествие по Aceserver на поезде',
+      },
+      station: {
+        label: 'Вид со станции Сацукари',
+      },
+    },
+  },
   pages: {
     top: homePage(
       'Портал Aceserver',
@@ -2119,13 +2333,12 @@ const ru: LocaleTranslation = {
         {
           titleCopy: 'Играйте вместе со всеми!',
           text: 'Играйте с Java Edition и Bedrock Edition!',
-          imageAlt: 'Человек смотрит на море на закате со скалистого берега',
+          imageAlt: 'Огромный белый дирижабль над городом',
         },
         {
           titleCopy: 'Развлекайтесь!',
           text: 'Свободный сервер, близкий к ванильному Minecraft!',
-          imageAlt:
-            'Человек прыгает с раскинутыми руками на фоне горной долины',
+          imageAlt: 'Здания, железные дороги и башни главного мира',
         },
         {
           titleCopy: 'Хотите присоединиться к Aceserver?',

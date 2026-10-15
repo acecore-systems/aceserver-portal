@@ -8,6 +8,93 @@ const linkItemSchema = z
   })
   .strict()
 
+const safeHttpsUrl = z
+  .string()
+  .url()
+  .refine((value) => {
+    const url = new URL(value)
+    return url.protocol === 'https:' && !url.username && !url.password
+  }, 'HTTPS URLを指定してください。')
+const communitySchema = z
+  .object({
+    title: z.string().trim().min(1),
+    intro: z.string().trim().min(1),
+    mapWorld: z.enum([
+      'main',
+      'resource',
+      'rpg',
+      'lobby',
+      'rpg-sub',
+      'season-a',
+      'season-a-c',
+      'event',
+    ]),
+    gallery: z
+      .array(
+        z
+          .object({
+            id: z.string().regex(/^[a-z0-9-]+$/u),
+            title: z.string().trim().min(1),
+            text: z.string().trim().min(1),
+            image: z
+              .string()
+              .regex(/^\/uploads\/[a-zA-Z0-9_./-]+$/u)
+              .refine((value) => !value.includes('..')),
+            imageAlt: z.string().trim().min(1),
+            href: z.string(),
+          })
+          .strict(),
+      )
+      .max(8),
+    events: z
+      .array(
+        z
+          .object({
+            id: z.string().regex(/^[a-z0-9-]+$/u),
+            title: z.string().trim().min(1),
+            text: z.string().trim().min(1),
+            startsAt: z.iso.datetime({ offset: true }),
+            endsAt: z.iso.datetime({ offset: true }),
+            href: safeHttpsUrl,
+          })
+          .strict()
+          .refine(
+            (event) => Date.parse(event.endsAt) > Date.parse(event.startsAt),
+            '終了は開始より後にしてください。',
+          ),
+      )
+      .max(12),
+    xPosts: z
+      .array(
+        z
+          .object({
+            id: z.string().regex(/^[a-z0-9-]+$/u),
+            label: z.string().trim().min(1),
+            url: safeHttpsUrl.refine((value) =>
+              /^https:\/\/x\.com\/acecores\/status\/[0-9]+$/iu.test(value),
+            ),
+            publishedAt: z.iso.datetime({ offset: true }),
+          })
+          .strict(),
+      )
+      .max(4),
+  })
+  .strict()
+  .superRefine((community, context) => {
+    for (const key of ['gallery', 'events', 'xPosts'] as const) {
+      if (
+        new Set(community[key].map(({ id }) => id)).size !==
+        community[key].length
+      ) {
+        context.addIssue({
+          code: 'custom',
+          path: [key],
+          message: 'IDは重複できません。',
+        })
+      }
+    }
+  })
+
 export const portalSectionSchema = z.discriminatedUnion('type', [
   z
     .object({
@@ -67,6 +154,7 @@ export const portalPageSchema = z
       })
       .strict(),
     sections: z.array(portalSectionSchema).min(1),
+    community: communitySchema.optional(),
   })
   .strict()
 
@@ -230,6 +318,19 @@ function validatePage(
 
   if (page.slug !== expectedSlug) {
     return { ok: false, message: 'slugはJSON filenameと一致させてください。' }
+  }
+
+  if (page.community) {
+    if (page.kind !== 'home')
+      return { ok: false, message: 'communityはトップページ専用です。' }
+    for (const item of page.community.gallery) {
+      const error = validateInternalHref(item.href)
+      if (error || !item.href.startsWith('/'))
+        return {
+          ok: false,
+          message: error ?? 'galleryは内部ページへリンクしてください。',
+        }
+    }
   }
 
   if (

@@ -47,7 +47,10 @@
     "validate:story-output": "node scripts/validate-story-output.mjs",
     "validate:page-heroes": "node scripts/validate-page-heroes.mjs",
     "sync:portal-vectorize": "node scripts/sync-portal-vectorize.mjs",
-    "sync:portal-vectorize:dry-run": "node scripts/sync-portal-vectorize.mjs --dry-run"
+    "sync:portal-vectorize:dry-run": "node scripts/sync-portal-vectorize.mjs --dry-run",
+    "sync:community": "node scripts/collect-community-activity.mjs",
+    "test:community": "node --experimental-strip-types --test tests/community-status.test.mjs",
+    "typecheck:community": "tsc --project tsconfig.community.json"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.4",

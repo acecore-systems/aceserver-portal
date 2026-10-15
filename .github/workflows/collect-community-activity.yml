@@ -1,0 +1,126 @@
+name: コミュニティ日次履歴
+
+on:
+  schedule:
+    - cron: '17 3 * * *'
+  workflow_dispatch:
+
+permissions:
+  actions: write
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: community-daily-activity
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      SYNC_BRANCH: automation/community-daily-activity
+      HISTORY_PATH: src/data/external/community-activity.json
+    steps:
+      - name: Check out approved main code
+        uses: actions/checkout@v7
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .node-version
+          cache: npm
+      - run: npm ci
+      - name: Restore only the pending aggregate snapshot
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git ls-remote --exit-code --heads origin "$SYNC_BRANCH" > /dev/null; then
+            git fetch --no-tags origin "$SYNC_BRANCH:refs/remotes/origin/$SYNC_BRANCH"
+            changed_paths="$(git diff --name-only "origin/main...origin/$SYNC_BRANCH")"
+            if [[ -n "$changed_paths" && "$changed_paths" != "$HISTORY_PATH" ]]; then
+              echo 'Snapshot branch contains unrelated changes; stopping.' >&2
+              exit 1
+            fi
+            git show "origin/$SYNC_BRANCH:$HISTORY_PATH" > "$RUNNER_TEMP/community-previous.json"
+          fi
+      - name: Collect and verify aggregate values using main code
+        shell: bash
+        run: |
+          set -euo pipefail
+          node scripts/collect-community-activity.mjs \
+            --previous "$RUNNER_TEMP/community-previous.json" \
+            --output "$RUNNER_TEMP/community-activity.json"
+          npx prettier "$RUNNER_TEMP/community-activity.json" --check
+          npm run test:community
+      - name: Refresh from main and commit the validated history
+        id: snapshot
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git fetch --no-tags origin main
+          if git show-ref --verify --quiet "refs/remotes/origin/$SYNC_BRANCH"; then
+            git switch --create "$SYNC_BRANCH" "origin/$SYNC_BRANCH"
+            if ! git merge --no-commit --no-ff origin/main; then
+              unresolved="$(git diff --name-only --diff-filter=U)"
+              if [[ "$unresolved" != "$HISTORY_PATH" ]]; then
+                echo 'Unexpected merge conflict; stopping without push.' >&2
+                exit 1
+              fi
+            fi
+          else
+            git switch --create "$SYNC_BRANCH" origin/main
+          fi
+          cp "$RUNNER_TEMP/community-activity.json" "$HISTORY_PATH"
+          git add -- "$HISTORY_PATH"
+          if git diff --quiet && git diff --cached --quiet; then
+            echo 'changed=false' >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git diff --check
+          git diff --cached --check
+          git commit -m 'コミュニティの日次集計を更新'
+          changed_paths="$(git diff --name-only origin/main...HEAD)"
+          if [[ -n "$changed_paths" && "$changed_paths" != "$HISTORY_PATH" ]]; then
+            echo 'Unexpected final PR changes; stopping without push.' >&2
+            exit 1
+          fi
+          git push --set-upstream origin "$SYNC_BRANCH"
+          echo 'changed=true' >> "$GITHUB_OUTPUT"
+      - name: Create or retain the review PR and run CI
+        if: steps.snapshot.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          pr_number="$(gh pr list --repo "$GITHUB_REPOSITORY" --head "$SYNC_BRANCH" --state open --json number --jq '.[0].number // empty')"
+          if [[ -z "$pr_number" ]]; then
+            cat > "$RUNNER_TEMP/community-pr.md" <<'EOF'
+          関連 Issue: なし
+
+          ## 概要
+
+          - 公開Discordの概数と8ワールドの公開マップ人数を1日1点、31日分保持します。
+          - 個人名・チャット・プレイヤー配列は保存しません。欠測と0人を区別します。
+
+          ## 確認
+
+          - `npm run test:community`
+          - `npx prettier "$RUNNER_TEMP/community-activity.json" --check`
+          - `git diff --check`
+          - `ci.yml` を明示起動します。レビュー後にマージしてください。
+
+          ## 補足
+
+          - 取得日時は各観測点の `observedAt`、公開反映はこのPRのマージ後のPagesビルドです。
+          - このPRのレビュー中も専用branchの検証済みJSONだけを読み継ぎ、日次観測を保持します。
+          - 自動マージは行いません。
+          EOF
+            gh pr create --repo "$GITHUB_REPOSITORY" --base main --head "$SYNC_BRANCH" --draft \
+              --title 'コミュニティの日次履歴を更新' --body-file "$RUNNER_TEMP/community-pr.md"
+          fi
+          gh workflow run ci.yml --repo "$GITHUB_REPOSITORY" --ref "$SYNC_BRANCH"

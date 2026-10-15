@@ -293,6 +293,12 @@ async function validatePages() {
         fail(scope, 'imageAlt is required when an image is rendered')
       }
     })
+    for (const [index, item] of (page.community?.gallery ?? []).entries()) {
+      await validateLocalImage(
+        `${relativePath}.community.gallery[${index}].image`,
+        item.image,
+      )
+    }
   }
 
   return routes

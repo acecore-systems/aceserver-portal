@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url'
 
 import { LOCALES, TRANSLATED_LOCALES } from '../src/i18n/config.ts'
 import { JA_UI, TRANSLATIONS } from '../src/i18n/translations.ts'
+import { COMMUNITY_UI } from '../src/data/community-ui.ts'
 import { extractStoryMarkdownTargets } from './markdown-targets.mjs'
 
 const root = path.resolve(fileURLToPath(new URL('..', import.meta.url)))
@@ -291,6 +292,39 @@ async function validateFixedContent() {
       expectedAnnouncementIds,
     )
     requireCopyShape(`${scope}.ui`, translation.ui, JA_UI, locale)
+    requireCopyShape(
+      `${scope}.communityUi`,
+      COMMUNITY_UI[locale],
+      COMMUNITY_UI.ja,
+      locale,
+    )
+    const community = pageBySlug.get('top')?.community
+    if (community) {
+      requireCopyShape(
+        `${scope}.community`,
+        translation.community,
+        {
+          title: community.title,
+          intro: community.intro,
+          gallery: Object.fromEntries(
+            community.gallery.map((item) => [
+              item.id,
+              { title: item.title, text: item.text, imageAlt: item.imageAlt },
+            ]),
+          ),
+          events: Object.fromEntries(
+            community.events.map((item) => [
+              item.id,
+              { title: item.title, text: item.text },
+            ]),
+          ),
+          xPosts: Object.fromEntries(
+            community.xPosts.map((item) => [item.id, { label: item.label }]),
+          ),
+        },
+        locale,
+      )
+    }
     for (const key of ['title', 'shortTitle', 'description', 'logoAlt']) {
       requireTranslatedCopy(
         `${scope}.settings.${key}`,
