@@ -7,7 +7,6 @@ import {
 } from '../i18n/config'
 import { getUi } from '../i18n/translations'
 import PageHero from './PageHero.astro'
-import PageIntro from './PageIntro.astro'
 
 interface Props {
   locale: Locale
@@ -26,10 +25,10 @@ const getStoryPath = (story: CollectionEntry<'stories'>) =>
 <PageHero
   title={ui.storiesTitle}
   titleId="stories-title"
+  lead={ui.storiesLead}
   eyebrow="ACESERVER STORIES"
   backgroundImage="/uploads/stories/alpha-diary-guide-hero.webp"
 />
-<PageIntro text={ui.storiesLead} />
 
 <section class="stories-list stories-shell" aria-label={ui.storyListLabel}>
   {

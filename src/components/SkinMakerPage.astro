@@ -41,12 +41,12 @@ const appJsonLd = serializeJsonForHtmlScript({
 <script type="application/ld+json" set:html={appJsonLd} />
 <PageHero
   title={c.title}
+  lead={c.intro}
   eyebrow="MINECRAFT · 64 × 64"
   backgroundImage="/uploads/stories/minecraft-skin-maker-cover-v2.webp"
 />
 
 <section class="skin-maker" data-skin-maker data-locale={locale}>
-  <p class="maker-intro">{c.intro}</p>
   <SkinMakerNav locale={locale} current="maker" />
   <div class="maker-grid">
     <form class="editor" data-form>
@@ -275,12 +275,6 @@ const appJsonLd = serializeJsonForHtmlScript({
     font-size: 1.15rem;
     font-weight: 800;
     margin: 0;
-  }
-  .maker-intro {
-    max-width: 780px;
-    margin: 0 0 24px;
-    line-height: 1.8;
-    color: #66553f;
   }
   .source-choice legend {
     font-size: 0.88rem;
