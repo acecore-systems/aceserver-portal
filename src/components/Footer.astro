@@ -51,6 +51,19 @@ const acecoreHomeUrl = new URL(
       <span>© {new Date().getFullYear()} {ACECORE_ORGANIZATION.legalName}</span>
     </div>
   </div>
+  <div class="footer-inner footer-philosophy">
+    <p>
+      {settings.corporatePhilosophy}{' '}
+      <a
+        href={new URL(
+          `${localizePath(locale, '/about/')}#corporate-philosophy-heading`,
+          ACECORE_ORGANIZATION.url,
+        ).toString()}
+        {...externalLinkAttrs(ACECORE_ORGANIZATION.url, true)}
+        >{settings.corporatePhilosophyLinkLabel}</a
+      >
+    </p>
+  </div>
 </footer>
 
 <style>
@@ -123,7 +136,26 @@ const acecoreHomeUrl = new URL(
     color: #ffd84d;
   }
 
+  .footer-philosophy {
+    margin-top: 18px;
+  }
+
+  .footer-philosophy p {
+    margin: 0;
+  }
+
+  .footer-philosophy a {
+    color: #ffd84d;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
+
   @media (max-width: 720px) {
+    .footer-philosophy {
+      padding-bottom: calc(5rem + env(safe-area-inset-bottom));
+    }
+
     .footer-inner {
       align-items: flex-start;
       flex-direction: column;

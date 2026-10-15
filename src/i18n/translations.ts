@@ -120,6 +120,8 @@ export type LocaleTranslation = {
     shortTitle: string
     description: string
     logoAlt: string
+    corporatePhilosophy: string
+    corporatePhilosophyLinkLabel: string
     worlds: Record<string, WorldTranslation>
   }
   navigation: Record<string, string>
@@ -262,7 +264,7 @@ export const JA_UI: UiCopy = {
 
 const en: LocaleTranslation = {
   sourceHash:
-    'sha256:c0d5d0c1ca92a27bd89116e286c11dcca0f8617070e262e078cf767d83cce9d2',
+    'sha256:2d30c9b9eb99e1a4485f95fbbda1e1067f1053957897b9567c679d72878b5c79',
   ui: {
     siteTitleSuffix: 'Official portal for the free public Minecraft server',
     homeTitleParts: ['Ace', 'server'],
@@ -369,6 +371,9 @@ const en: LocaleTranslation = {
     description:
       'The official portal for Aceserver, a free public Minecraft server open to everyone. Find participation guidance, world maps, the WIKI, videos, and current notices.',
     logoAlt: 'Aceserver logo featuring the blue and yellow Alpha-kun',
+    corporatePhilosophy:
+      '“Taking the world to the next stage.” Our operator, Acecore, aims for a society that reduces nonessential burdens and helps people pursue what they want to do.',
+    corporatePhilosophyLinkLabel: 'Our operator Acecore’s philosophy',
     worlds: {
       main: {
         title: 'Main World',
@@ -506,7 +511,7 @@ const en: LocaleTranslation = {
 
 const zhCn: LocaleTranslation = {
   sourceHash:
-    'sha256:c0d5d0c1ca92a27bd89116e286c11dcca0f8617070e262e078cf767d83cce9d2',
+    'sha256:2d30c9b9eb99e1a4485f95fbbda1e1067f1053957897b9567c679d72878b5c79',
   ui: {
     siteTitleSuffix: '免费公开 Minecraft 服务器官方门户',
     homeTitleParts: ['Ace', 'server'],
@@ -605,6 +610,9 @@ const zhCn: LocaleTranslation = {
     description:
       '面向所有人的免费公开 Minecraft 服务器 Aceserver 官方门户，汇集加入方式、世界地图、WIKI、视频和最新公告。',
     logoAlt: '绘有蓝黄配色 Alpha-kun 的 Aceserver 标志',
+    corporatePhilosophy:
+      '“让世界迈向下一阶段”。运营方Acecore致力于减少非本质的负担，支持人们挑战自己想做的事。',
+    corporatePhilosophyLinkLabel: '运营方Acecore的企业理念',
     worlds: {
       main: {
         title: '主世界',
@@ -740,7 +748,7 @@ const zhCn: LocaleTranslation = {
 
 const es: LocaleTranslation = {
   sourceHash:
-    'sha256:c0d5d0c1ca92a27bd89116e286c11dcca0f8617070e262e078cf767d83cce9d2',
+    'sha256:2d30c9b9eb99e1a4485f95fbbda1e1067f1053957897b9567c679d72878b5c79',
   ui: {
     siteTitleSuffix:
       'Portal oficial del servidor público gratuito de Minecraft',
@@ -844,6 +852,9 @@ const es: LocaleTranslation = {
     description:
       'Portal oficial de Aceserver, un servidor público gratuito de Minecraft abierto a todos. Reúne la guía de acceso, mapas, WIKI, vídeos y avisos.',
     logoAlt: 'Logotipo de Aceserver con Alpha-kun en azul y amarillo',
+    corporatePhilosophy:
+      '«Llevar el mundo a la siguiente etapa». Acecore, nuestra empresa operadora, aspira a una sociedad que reduzca las cargas no esenciales y ayude a las personas a perseguir sus aspiraciones.',
+    corporatePhilosophyLinkLabel: 'Filosofía de nuestra operadora, Acecore',
     worlds: {
       main: {
         title: 'Mundo principal',
@@ -981,7 +992,7 @@ const es: LocaleTranslation = {
 
 const pt: LocaleTranslation = {
   sourceHash:
-    'sha256:c0d5d0c1ca92a27bd89116e286c11dcca0f8617070e262e078cf767d83cce9d2',
+    'sha256:2d30c9b9eb99e1a4485f95fbbda1e1067f1053957897b9567c679d72878b5c79',
   ui: {
     siteTitleSuffix: 'Portal oficial do servidor público gratuito de Minecraft',
     homeTitleParts: ['Ace', 'server'],
@@ -1085,6 +1096,9 @@ const pt: LocaleTranslation = {
     description:
       'Portal oficial do Aceserver, servidor público gratuito de Minecraft aberto a todos. Reúne orientação de entrada, mapas, WIKI, vídeos e avisos.',
     logoAlt: 'Logo do Aceserver com o Alpha-kun azul e amarelo',
+    corporatePhilosophy:
+      '“Levar o mundo à próxima etapa”. A Acecore, responsável pela operação, busca uma sociedade que reduza encargos não essenciais e ajude as pessoas a realizar suas aspirações.',
+    corporatePhilosophyLinkLabel: 'Filosofia da nossa operadora, Acecore',
     worlds: {
       main: {
         title: 'Mundo principal',
@@ -1222,7 +1236,7 @@ const pt: LocaleTranslation = {
 
 const fr: LocaleTranslation = {
   sourceHash:
-    'sha256:c0d5d0c1ca92a27bd89116e286c11dcca0f8617070e262e078cf767d83cce9d2',
+    'sha256:2d30c9b9eb99e1a4485f95fbbda1e1067f1053957897b9567c679d72878b5c79',
   ui: {
     siteTitleSuffix: 'Portail officiel du serveur Minecraft public et gratuit',
     homeTitleParts: ['Ace', 'server'],
@@ -1325,6 +1339,9 @@ const fr: LocaleTranslation = {
     description:
       'Le portail officiel d’Aceserver, serveur Minecraft public et gratuit ouvert à tous. Retrouvez l’accès, les cartes, le WIKI, les vidéos et les annonces.',
     logoAlt: 'Logo Aceserver représentant Alpha-kun en bleu et jaune',
+    corporatePhilosophy:
+      '« Faire passer le monde à l’étape suivante ». Acecore, qui assure notre exploitation, vise une société qui réduit les contraintes non essentielles et aide chacun à poursuivre ses aspirations.',
+    corporatePhilosophyLinkLabel: 'Philosophie de notre opérateur Acecore',
     worlds: {
       main: {
         title: 'Monde principal',
@@ -1463,7 +1480,7 @@ const fr: LocaleTranslation = {
 
 const ko: LocaleTranslation = {
   sourceHash:
-    'sha256:c0d5d0c1ca92a27bd89116e286c11dcca0f8617070e262e078cf767d83cce9d2',
+    'sha256:2d30c9b9eb99e1a4485f95fbbda1e1067f1053957897b9567c679d72878b5c79',
   ui: {
     siteTitleSuffix: '무료 공개 Minecraft 서버 공식 포털',
     homeTitleParts: ['Ace', 'server'],
@@ -1567,6 +1584,9 @@ const ko: LocaleTranslation = {
     description:
       '누구나 참여할 수 있는 무료 공개 Minecraft 서버 Aceserver의 공식 포털입니다. 참여 안내, 월드 지도, WIKI, 동영상과 공지를 모았습니다.',
     logoAlt: '파란색과 노란색 Alpha-kun이 그려진 Aceserver 로고',
+    corporatePhilosophy:
+      '‘세계를 다음 단계로’. 운영사 Acecore는 본질적이지 않은 부담을 줄이고 하고 싶은 일에 대한 도전을 뒷받침하는 사회를 지향합니다.',
+    corporatePhilosophyLinkLabel: '운영사 Acecore의 기업 이념',
     worlds: {
       main: {
         title: '메인 월드',
@@ -1702,7 +1722,7 @@ const ko: LocaleTranslation = {
 
 const de: LocaleTranslation = {
   sourceHash:
-    'sha256:c0d5d0c1ca92a27bd89116e286c11dcca0f8617070e262e078cf767d83cce9d2',
+    'sha256:2d30c9b9eb99e1a4485f95fbbda1e1067f1053957897b9567c679d72878b5c79',
   ui: {
     siteTitleSuffix:
       'Offizielles Portal des kostenlosen öffentlichen Minecraft-Servers',
@@ -1810,6 +1830,9 @@ const de: LocaleTranslation = {
     description:
       'Das offizielle Portal von Aceserver, einem kostenlosen öffentlichen Minecraft-Server für alle. Hier findest du Teilnahmehinweise, Weltkarten, WIKI, Videos und Ankündigungen.',
     logoAlt: 'Aceserver-Logo mit dem blau-gelben Alpha-kun',
+    corporatePhilosophy:
+      '„Die Welt auf die nächste Stufe bringen.“ Unser Betreiber Acecore strebt eine Gesellschaft an, die unwesentliche Belastungen verringert und Menschen bei ihren Vorhaben unterstützt.',
+    corporatePhilosophyLinkLabel: 'Die Philosophie unseres Betreibers Acecore',
     worlds: {
       main: {
         title: 'Hauptwelt',
@@ -1948,7 +1971,7 @@ const de: LocaleTranslation = {
 
 const ru: LocaleTranslation = {
   sourceHash:
-    'sha256:c0d5d0c1ca92a27bd89116e286c11dcca0f8617070e262e078cf767d83cce9d2',
+    'sha256:2d30c9b9eb99e1a4485f95fbbda1e1067f1053957897b9567c679d72878b5c79',
   ui: {
     siteTitleSuffix:
       'Официальный портал бесплатного публичного сервера Minecraft',
@@ -2051,6 +2074,9 @@ const ru: LocaleTranslation = {
     description:
       'Официальный портал Aceserver — бесплатного публичного сервера Minecraft для всех. Здесь собраны инструкции, карты, WIKI, видео и объявления.',
     logoAlt: 'Логотип Aceserver с сине-жёлтым Alpha-kun',
+    corporatePhilosophy:
+      '«Вывести мир на следующий этап». Наша компания-оператор Acecore стремится к обществу, которое снижает несущественную нагрузку и помогает людям воплощать свои стремления.',
+    corporatePhilosophyLinkLabel: 'Философия нашей компании-оператора Acecore',
     worlds: {
       main: {
         title: 'Основной мир',

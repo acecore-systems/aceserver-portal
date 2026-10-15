@@ -291,7 +291,14 @@ async function validateFixedContent() {
       expectedAnnouncementIds,
     )
     requireCopyShape(`${scope}.ui`, translation.ui, JA_UI, locale)
-    for (const key of ['title', 'shortTitle', 'description', 'logoAlt']) {
+    for (const key of [
+      'title',
+      'shortTitle',
+      'description',
+      'logoAlt',
+      'corporatePhilosophy',
+      'corporatePhilosophyLinkLabel',
+    ]) {
       requireTranslatedCopy(
         `${scope}.settings.${key}`,
         translation.settings[key],

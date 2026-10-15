@@ -273,6 +273,16 @@ collections:
           - { name: siteUrl, label: サイトURL, widget: string }
           - { name: logo, label: ロゴ, widget: image }
           - { name: logoAlt, label: ロゴ代替テキスト, widget: string }
+          - {
+              name: corporatePhilosophy,
+              label: 運営元の企業理念紹介,
+              widget: text,
+            }
+          - {
+              name: corporatePhilosophyLinkLabel,
+              label: 企業理念リンク文言,
+              widget: string,
+            }
           - { name: discordUrl, label: Discord 招待URL, widget: string }
           - { name: wikiUrl, label: WIKI URL, widget: string }
           - name: worlds

@@ -52,6 +52,9 @@ export function getLocalizedSettings(locale: Locale): SiteSettings {
   localized.shortTitle = translation.settings.shortTitle
   localized.description = translation.settings.description
   localized.logoAlt = translation.settings.logoAlt
+  localized.corporatePhilosophy = translation.settings.corporatePhilosophy
+  localized.corporatePhilosophyLinkLabel =
+    translation.settings.corporatePhilosophyLinkLabel
   localized.worlds = localized.worlds.map((world) => {
     const translatedWorld = translation.settings.worlds[world.slug]
 

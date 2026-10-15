@@ -100,6 +100,8 @@ export const portalSettingsSchema = z
     siteUrl: z.string(),
     logo: z.string(),
     logoAlt: z.string().min(1),
+    corporatePhilosophy: z.string().trim().min(1).max(320),
+    corporatePhilosophyLinkLabel: z.string().trim().min(1).max(100),
     discordUrl: z.string(),
     wikiUrl: z.string(),
     worlds: z.array(worldEntrySchema),
