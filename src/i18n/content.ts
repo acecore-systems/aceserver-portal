@@ -176,7 +176,9 @@ export function getLocalizedPage(page: PortalPage, locale: Locale): PortalPage {
             gallery: page.community.gallery.map((item) => ({
               ...item,
               ...translation.community.gallery[item.id],
-              href: localizeInternalHref(locale, item.href),
+              href: item.href
+                ? localizeInternalHref(locale, item.href)
+                : undefined,
             })),
             events: page.community.events.map((item) => ({
               ...item,

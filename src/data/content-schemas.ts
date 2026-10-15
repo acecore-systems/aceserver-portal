@@ -41,9 +41,15 @@ const communitySchema = z
               .regex(/^\/uploads\/[a-zA-Z0-9_./-]+$/u)
               .refine((value) => !value.includes('..')),
             imageAlt: z.string().trim().min(1),
-            href: z.string(),
+            context: z.enum(['archive', 'current']),
+            periodLabel: z.string().trim().min(1),
+            href: z.string().optional(),
           })
-          .strict(),
+          .strict()
+          .refine(
+            (item) => item.context !== 'archive' || !item.href,
+            '過去の風景には現在の地図へのリンクを設定できません。',
+          ),
       )
       .max(8),
     events: z
@@ -324,6 +330,7 @@ function validatePage(
     if (page.kind !== 'home')
       return { ok: false, message: 'communityはトップページ専用です。' }
     for (const item of page.community.gallery) {
+      if (!item.href) continue
       const error = validateInternalHref(item.href)
       if (error || !item.href.startsWith('/'))
         return {

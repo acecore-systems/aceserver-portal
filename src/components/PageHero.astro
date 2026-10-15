@@ -8,6 +8,7 @@ interface Props {
   lead: string
   backgroundImage?: string
   imageAlt?: string
+  imageCaption?: string
   tone?: 'parchment' | 'image' | 'sky' | 'dark'
   variant?: 'home' | 'page'
   scrollCue?: { href: string; label: string }
@@ -20,6 +21,7 @@ const {
   lead,
   backgroundImage,
   imageAlt = title,
+  imageCaption,
   tone = backgroundImage ? 'image' : 'parchment',
   variant = 'page',
   scrollCue,
@@ -73,6 +75,7 @@ if (!title.trim() || !eyebrow.trim() || !lead.trim()) {
           </div>
         )
       }
+      {imageCaption && <p class="page-hero__image-caption">{imageCaption}</p>}
     </div>
     {
       hasDecoration && (
@@ -113,6 +116,13 @@ if (!title.trim() || !eyebrow.trim() || !lead.trim()) {
 </script>
 
 <style>
+  .page-hero__image-caption {
+    margin: 18px 0 0;
+    color: #fff9e8;
+    font-size: 0.76rem;
+    line-height: 1.6;
+    text-shadow: 0 1px 3px #000;
+  }
   .asv-page-hero {
     position: relative;
     isolation: isolate;

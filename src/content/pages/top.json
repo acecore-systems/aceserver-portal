@@ -14,21 +14,21 @@
       "titleCopy": "エースサーバーとは",
       "text": "誰でも参加可能なマインクラフト無料公開サーバーです",
       "image": "/uploads/legacy-scc.png",
-      "imageAlt": "Minecraftで建築された街並みと白い巨大な飛行船"
+      "imageAlt": "過去の風景：Minecraftで建築された街並みと白い巨大な飛行船"
     },
     {
       "type": "featureImageRight",
       "titleCopy": "誰とでもマルチプレイ！",
       "text": "JAVA版・統合版どちらでも遊ぶことが可能です！",
       "image": "/uploads/legacy-scc.png",
-      "imageAlt": "街並みの上に浮かぶ巨大な白い飛行船"
+      "imageAlt": "過去の風景：街並みの上に浮かぶ巨大な白い飛行船"
     },
     {
       "type": "featureImageLeft",
       "titleCopy": "楽しい！",
       "text": "バニラに近い、限りなく自由なサーバーです！",
       "image": "/uploads/legacy-world-main.png",
-      "imageAlt": "メインワールドに広がる街並みと鉄道、高層ビル"
+      "imageAlt": "過去の風景：メインワールドに広がる街並みと鉄道、高層ビル"
     },
     {
       "type": "cta",
@@ -61,18 +61,20 @@
       {
         "id": "airship",
         "title": "街の上には、巨大な飛行船。",
-        "text": "実際のワールドでつくられた街並み。地図を開いて、次に見に行く場所を探してみよう。",
+        "text": "過去のエースサーバーで撮影された、街と巨大な白い飛行船の記録です。",
         "image": "/uploads/legacy-scc.png",
-        "imageAlt": "Minecraftの街並みと巨大な白い飛行船",
-        "href": "/world-map-main/"
+        "imageAlt": "過去の風景：Minecraftの街並みと巨大な白い飛行船",
+        "context": "archive",
+        "periodLabel": "過去の風景（撮影時期不明）"
       },
       {
         "id": "city",
         "title": "線路の先にも、誰かの街。",
-        "text": "メインワールドには街や鉄道、高層ビルが広がっています。空から見ると、建築どうしのつながりも見えてきます。",
+        "text": "過去のエースサーバーにあった街並み、鉄道と高層ビルの記録です。",
         "image": "/uploads/legacy-world-main.png",
-        "imageAlt": "メインワールドの街並み、鉄道と高層ビルを上から見た実際の地図",
-        "href": "/world-map-main/"
+        "imageAlt": "過去の風景：メインワールドの街並み、鉄道と高層ビルを上から見た実際の地図",
+        "context": "archive",
+        "periodLabel": "過去の風景（撮影時期不明）"
       }
     ],
     "events": [],

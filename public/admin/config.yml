@@ -210,7 +210,7 @@ collections:
                     event,
                   ]
               - name: gallery
-                label: 実際の建築・ワールドの写真
+                label: 建築・ワールドの写真（過去と現在を区別）
                 widget: list
                 max: 8
                 fields:
@@ -220,9 +220,23 @@ collections:
                   - { name: image, label: 実際の画像, widget: image }
                   - { name: imageAlt, label: 画像の説明, widget: string }
                   - {
-                      name: href,
-                      label: 関連する公開マップの内部URL,
+                      name: context,
+                      label: 写真の区分,
+                      widget: select,
+                      options: [archive, current],
+                      default: archive,
+                    }
+                  - {
+                      name: periodLabel,
+                      label: 撮影時期・過去の風景の注記,
                       widget: string,
+                    }
+                  - {
+                      name: href,
+                      label: 現在の写真だけに設定する地図の内部URL,
+                      widget: string,
+                      required: false,
+                      hint: 'archiveの場合は空欄。撮影時期が不明な過去画像を現在の地図へ誘導しないでください。',
                     }
               - name: events
                 label: 開催予定イベント
