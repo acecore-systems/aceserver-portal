@@ -321,6 +321,23 @@ function inspectInternalLinks(html, locale, scope, knownRoutes) {
   }
 }
 
+function inspectHomeMetadata(html, scope) {
+  const title = html.match(/<title>([^<]*)<\/title>/iu)?.[1] ?? ''
+  const titleParts = title.split(' | ')
+  if (titleParts.length < 2 || titleParts[0] === titleParts[1]) {
+    fail(
+      scope,
+      'Home title must include the site name once and describe its purpose',
+    )
+  }
+  if (
+    metaContent(html, 'property', 'og:title') !== title ||
+    metaContent(html, 'name', 'twitter:title') !== title
+  ) {
+    fail(scope, 'Home social titles must match the non-duplicated page title')
+  }
+}
+
 function inspectStorySeo(html, locale, pathname, scope) {
   if (metaContent(html, 'property', 'og:type') !== 'article') {
     fail(scope, 'Article OGP type is missing')
@@ -386,6 +403,9 @@ for (const locale of LOCALES) {
     inspectLanguageMetadata(html, locale, pathname, scope)
     inspectInternalLinks(html, locale, scope, knownRoutes)
     await inspectLocalAssets(html, scope)
+    if (pathname === localePath(locale, '/')) {
+      inspectHomeMetadata(html, scope)
+    }
     if (/\/stories\/[^/]+\/$/u.test(pathname)) {
       inspectStorySeo(html, locale, pathname, scope)
     }
