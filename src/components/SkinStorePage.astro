@@ -14,7 +14,11 @@ const maker = getSkinMakerUi(locale)
 const remix = getSkinRemixUi(locale)
 ---
 
-<PageHero title={c.title} eyebrow="MINECRAFT SKINS · FREE DOWNLOADS">
+<PageHero
+  title={c.title}
+  eyebrow="MINECRAFT SKINS · FREE DOWNLOADS"
+  lead={c.intro}
+>
   <a slot="actions" class="primary" href={localizePath(locale, '/skin-maker/')}>
     <span aria-hidden="true">＋</span>{c.make}
   </a>
@@ -26,7 +30,6 @@ const remix = getSkinRemixUi(locale)
   data-locale={locale}
   data-maker-url={localizePath(locale, '/skin-maker/')}
 >
-  <p class="store-intro">{c.intro}</p>
   <SkinMakerNav locale={locale} current="store" />
   <div class="filters">
     <label class="search"
@@ -161,12 +164,6 @@ const remix = getSkinRemixUi(locale)
     margin: 0 auto;
     padding: 44px 22px 64px;
     color: #302619;
-  }
-  .store-intro {
-    max-width: 780px;
-    margin: 0 0 24px;
-    line-height: 1.8;
-    color: #66553f;
   }
   a,
   button,

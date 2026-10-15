@@ -4,8 +4,8 @@ import Icon from './Icon.astro'
 interface Props {
   title: string
   titleId?: string
-  eyebrow?: string
-  lead?: string
+  eyebrow: string
+  lead: string
   backgroundImage?: string
   imageAlt?: string
   tone?: 'parchment' | 'image' | 'sky' | 'dark'
@@ -25,8 +25,10 @@ const {
   scrollCue,
 } = Astro.props
 const hasDecoration = Astro.slots.has('decoration')
-const hasEyebrow = Boolean(eyebrow) || Astro.slots.has('eyebrow')
 const hasActions = Boolean((await Astro.slots.render('actions'))?.trim())
+if (!title.trim() || !eyebrow.trim() || !lead.trim()) {
+  throw new Error('PageHero requires an eyebrow, title, and introduction.')
+}
 ---
 
 <header
@@ -57,19 +59,15 @@ const hasActions = Boolean((await Astro.slots.render('actions'))?.trim())
   </div>
   <div class="asv-hero-inner" data-with-decoration={hasDecoration}>
     <div class="page-hero__copy" data-page-hero-copy>
-      {
-        hasEyebrow && (
-          <p class="page-hero__eyebrow">
-            <slot name="eyebrow">{eyebrow}</slot>
-          </p>
-        )
-      }
+      <p class="page-hero__eyebrow" data-page-hero-eyebrow>
+        <slot name="eyebrow">{eyebrow}</slot>
+      </p>
       <h1 id={titleId} data-page-hero-title>
         <slot name="title">{title}</slot>
       </h1>
-      {lead && <p class="page-hero__lead">{lead}</p>}
+      <p class="page-hero__lead" data-page-hero-lead>{lead}</p>
       {
-        hasActions && (
+        variant === 'home' && hasActions && (
           <div class="page-hero__actions" data-page-hero-actions>
             <slot name="actions" />
           </div>
@@ -96,6 +94,16 @@ const hasActions = Boolean((await Astro.slots.render('actions'))?.trim())
     )
   }
 </header>
+
+{
+  variant === 'page' && hasActions && (
+    <div class="page-hero__toolbar">
+      <div class="page-hero__actions" data-page-hero-actions>
+        <slot name="actions" />
+      </div>
+    </div>
+  )
+}
 
 <script>
   import { initPageHeroes } from '../scripts/page-hero'
@@ -318,6 +326,11 @@ const hasActions = Boolean((await Astro.slots.render('actions'))?.trim())
     min-width: 0;
   }
 
+  .page-hero__toolbar {
+    width: min(1120px, calc(100% - 36px));
+    margin: 20px auto;
+  }
+
   .page-hero__actions :global(a),
   .page-hero__actions :global(button) {
     min-width: 0;
@@ -343,6 +356,30 @@ const hasActions = Boolean((await Astro.slots.render('actions'))?.trim())
   }
 
   @media (max-width: 640px) {
+    .asv-page-hero--page .page-hero__copy {
+      gap: 8px;
+    }
+
+    .asv-page-hero--page .page-hero__lead {
+      font-size: 0.875rem;
+      line-height: 1.5;
+    }
+
+    .asv-hero-inner[data-with-decoration='true'] {
+      position: relative;
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .page-hero__decoration {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      width: 96px;
+      opacity: 0.18;
+      pointer-events: none;
+    }
+
     .asv-page-hero--home {
       --asv-hero-height: 700px;
       --asv-hero-padding: 64px;

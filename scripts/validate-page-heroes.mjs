@@ -66,6 +66,27 @@ for (const file of files) {
   }
 
   const title = heroHeadings[0]
+  const copy = descendants(
+    hero,
+    (node) => attribute(node, 'data-page-hero-copy') !== undefined,
+  )[0]
+  const rows = (copy?.childNodes ?? []).filter((node) => node.tagName)
+  const markers = [
+    'data-page-hero-eyebrow',
+    'data-page-hero-title',
+    'data-page-hero-lead',
+  ]
+  if (
+    markers.some(
+      (marker, index) =>
+        attribute(rows[index] ?? {}, marker) === undefined ||
+        !textContent(rows[index] ?? {}).trim(),
+    )
+  ) {
+    errors.push(
+      `${scope}: hero must start with a nonempty eyebrow, title, and introduction in that order`,
+    )
+  }
   if (
     !textContent(title).trim() ||
     !attribute(title, 'id') ||

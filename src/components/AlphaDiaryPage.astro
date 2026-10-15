@@ -4,6 +4,7 @@ import { serializeJsonForHtmlScript } from '../data/safe-json'
 import type { Locale } from '../i18n/config'
 import Icon from './Icon.astro'
 import PageHero from './PageHero.astro'
+import { getPageHeroUi } from '../data/page-hero-ui'
 
 interface Props {
   locale: Locale
@@ -28,7 +29,12 @@ const fixturesEnabled = import.meta.env.DEV
     set:html={serializeJsonForHtmlScript(copy)}
   />
 
-  <PageHero title={copy.title} tone="sky">
+  <PageHero
+    title={copy.title}
+    eyebrow={copy.eyebrow}
+    lead={getPageHeroUi(locale).diary}
+    tone="sky"
+  >
     <div slot="backdrop" class="diary-hero__sky" aria-hidden="true">
       <span></span><span></span><span></span><span></span><span></span>
     </div>

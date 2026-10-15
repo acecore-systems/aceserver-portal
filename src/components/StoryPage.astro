@@ -11,6 +11,7 @@ import {
 import { getUi } from '../i18n/translations'
 import BaseLayout from '../layouts/BaseLayout.astro'
 import PageHero from './PageHero.astro'
+import { getPageHeroUi } from '../data/page-hero-ui'
 import '../styles/article-diagrams.css'
 
 interface Props {
@@ -170,6 +171,7 @@ const breadcrumbJsonLd = serializeJsonForHtmlScript({
     <PageHero
       title={story.data.title}
       eyebrow="ACESERVER STORY"
+      lead={getPageHeroUi(locale).story}
       backgroundImage={story.data.image}
       imageAlt={story.data.imageAlt}
     />

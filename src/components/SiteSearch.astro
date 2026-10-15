@@ -3,6 +3,7 @@ import type { Locale } from '../i18n/config'
 import { localizePath } from '../i18n/config'
 import { getUi } from '../i18n/translations'
 import PageHero from './PageHero.astro'
+import { getPageHeroUi } from '../data/page-hero-ui'
 
 interface Props {
   locale: Locale
@@ -12,7 +13,11 @@ const { locale } = Astro.props
 const ui = getUi(locale)
 ---
 
-<PageHero title={ui.search.title} />
+<PageHero
+  title={ui.search.title}
+  eyebrow="ACESERVER SEARCH"
+  lead={getPageHeroUi(locale).search}
+/>
 
 <section
   class="site-search"

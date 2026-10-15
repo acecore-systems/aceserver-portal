@@ -12,6 +12,7 @@ import { getUi } from '../i18n/translations'
 import { externalLinkAttrs } from '../utils/links'
 import Icon from './Icon.astro'
 import PageHero from './PageHero.astro'
+import { getPageHeroUi } from '../data/page-hero-ui'
 
 interface Props {
   page: PortalPage
@@ -21,6 +22,7 @@ interface Props {
 const { page, locale = 'ja' } = Astro.props
 const settings = getLocalizedSettings(locale)
 const ui = getUi(locale)
+const heroCopy = getPageHeroUi(locale)
 const embed = page.sections.find((section) => section.type === 'iframe')
 
 if (!embed || embed.type !== 'iframe') {
@@ -54,6 +56,8 @@ const nextMap =
 
 <PageHero
   title={embed.title ?? page.pageName}
+  eyebrow={isVideoPage ? 'ACESERVER VIDEOS' : 'ACESERVER MAPS'}
+  lead={isVideoPage ? heroCopy.video : heroCopy.map}
   backgroundImage={embed.fallbackImage ?? '/uploads/legacy-world-map.png'}
 >
   {
