@@ -452,7 +452,7 @@ const en: LocaleTranslation = {
       },
       waterfront: {
         title: 'Green roofs across the water.',
-        text: 'Covered walkways connect a central green-roofed tower to round and square buildings. A bridge links the buildings to the shore.',
+        text: 'Walkways connect a central green-roofed tower to round and square buildings. A bridge links the buildings to the shore.',
         imageAlt:
           'Public map view of a green-roofed tower over the water, connecting walkways and a bridge to shore',
         periodLabel: 'Checked on the public map · 2026-10-15',
@@ -1262,7 +1262,7 @@ const pt: LocaleTranslation = {
       },
       waterfront: {
         title: 'Telhados verdes sobre a água.',
-        text: 'Passagens cobertas ligam a torre central de telhado verde a edifícios redondos e quadrados. Uma ponte conecta o conjunto à margem.',
+        text: 'Passagens ligam a torre central de telhado verde a edifícios redondos e quadrados. Uma ponte conecta o conjunto à margem.',
         imageAlt:
           'Mapa público de uma torre de telhado verde sobre a água, passagens e uma ponte até a margem',
         periodLabel: 'Conferido no mapa público · 2026-10-15',

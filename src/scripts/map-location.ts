@@ -1,4 +1,4 @@
-import { mapEmbedUrl } from '../lib/map-location'
+import { mapEmbedUrl, mapLocationLink } from '../lib/map-location'
 
 document
   .querySelectorAll<HTMLIFrameElement>('[data-map-embed-source]')
@@ -19,3 +19,11 @@ document
     )
     if (url) link.href = url
   })
+
+if (document.querySelector('[data-map-embed-source]')) {
+  document
+    .querySelectorAll<HTMLOptionElement>('[data-locale-select] option')
+    .forEach((option) => {
+      option.value = mapLocationLink(option.value, window.location.search)
+    })
+}

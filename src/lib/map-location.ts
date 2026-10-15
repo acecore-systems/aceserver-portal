@@ -72,3 +72,10 @@ export function mapEmbedUrl(source: string, search: string): string | null {
   if (query) url.search = query
   return url.href
 }
+
+export function mapLocationLink(href: string, search: string): string {
+  const pathname = href.split(/[?#]/u, 1)[0]
+  const route = pathname.replace(/^\/(?:en|zh-cn|es|pt|fr|ko|de|ru)(?=\/)/u, '')
+  const query = mapLocationQuery(search)
+  return MAP_ROUTE.test(route) && query ? `${pathname}?${query}` : href
+}

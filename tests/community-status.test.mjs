@@ -25,6 +25,7 @@ import { observationState } from '../src/lib/community-freshness.ts'
 import {
   isGalleryMapLocation,
   mapEmbedUrl,
+  mapLocationLink,
   mapLocationQuery,
 } from '../src/lib/map-location.ts'
 import { localizePath } from '../src/i18n/config.ts'
@@ -583,6 +584,16 @@ test('verified gallery locations survive locale links and forward only bounded m
   const href = `/world-map-main/?${query}`
   assert.equal(isGalleryMapLocation(href), true)
   assert.equal(localizePath('en', href), `/en${href}`)
+  assert.equal(
+    mapLocationLink('/en/world-map-main/', `?${query}`),
+    `/en${href}`,
+  )
+  assert.equal(mapLocationLink('/world-map-main/', `?${query}`), href)
+  assert.equal(mapLocationLink('/alpha-diary/', `?${query}`), '/alpha-diary/')
+  assert.equal(
+    mapLocationLink('/en/world-map-main/', '?x=1&follow=private-name'),
+    '/en/world-map-main/',
+  )
   assert.equal(
     mapEmbedUrl(
       'https://mc-map-main.acecore.net',
