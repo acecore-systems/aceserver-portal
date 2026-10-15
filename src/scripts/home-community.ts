@@ -1,5 +1,6 @@
 import type { CommunityUi } from '../data/community-ui'
 import { activityDay } from '../lib/community-history'
+import { observationState } from '../lib/community-freshness'
 
 const count = (value: unknown): value is number =>
   Number.isSafeInteger(value) &&
@@ -20,43 +21,154 @@ function initStatus(root: HTMLElement) {
   const date = dateFormatter(root.dataset.locale)
   const refresh = root.querySelector<HTMLButtonElement>('[data-refresh]')!
   let lastPayload: any
+  let refreshFailed = false
   let busy = false
   let lastAttempt = 0
   function text(selector: string, value: string) {
     const item = root.querySelector(selector)
     if (item) item.textContent = value
   }
+  function renderFeed(kind: 'announcements' | 'events') {
+    const container = root.querySelector<HTMLElement>(
+      '[data-feed-' + kind + ']',
+    )!
+    const feed = lastPayload?.[kind]
+    const freshness = observationState(
+      feed?.checkedAt,
+      Date.now(),
+      refreshFailed,
+    )
+    const available =
+      feed?.state === 'available' &&
+      freshness !== 'unavailable' &&
+      Array.isArray(feed.items)
+    const items = available
+      ? feed.items.filter(
+          (item: any) =>
+            kind !== 'events' ||
+            !item.endsAt ||
+            Date.parse(item.endsAt) >= Date.now(),
+        )
+      : []
+    const state = container.querySelector<HTMLElement>('[data-feed-state]')!
+    state.textContent = !available
+      ? ui.feedUnavailable
+      : freshness === 'stale'
+        ? ui.stale
+        : items.length
+          ? ''
+          : kind === 'events'
+            ? ui.noEvents
+            : ui.noAnnouncements
+    state.hidden = state.textContent === ''
+    state.dataset.state = !available ? 'unavailable' : freshness
+    container.querySelector('[data-feed-time]')!.textContent = available
+      ? ui.updated + ': ' + date.format(new Date(feed.checkedAt)) + ' (JST)'
+      : ''
+    const list = container.querySelector('[data-feed-items]')!
+    const open = new Set(
+      [...list.querySelectorAll<HTMLDetailsElement>('details[open]')].map(
+        (item) => item.dataset.feedId,
+      ),
+    )
+    list.replaceChildren()
+    for (const item of items) {
+      const url = typeof item.url === 'string' ? item.url : ''
+      if (
+        !(
+          kind === 'events'
+            ? /^https:\/\/discord\.com\/events\/737538781024092170\/\d{16,22}$/u
+            : /^https:\/\/discord\.com\/channels\/737538781024092170\/774152638450237460\/\d{16,22}$/u
+        ).test(url)
+      )
+        continue
+      const bodyText = kind === 'events' ? item.description : item.text
+      const label = kind === 'events' ? item.name : item.text
+      const published = kind === 'events' ? item.startsAt : item.publishedAt
+      if (
+        typeof label !== 'string' ||
+        typeof bodyText !== 'string' ||
+        !Number.isFinite(Date.parse(published))
+      )
+        continue
+      const article = document.createElement('details')
+      article.className = 'feed-item'
+      article.dataset.feedId = item.id
+      article.open = open.has(item.id)
+      const summary = document.createElement('summary')
+      const time = document.createElement('time')
+      time.dateTime = published
+      time.textContent =
+        date.format(new Date(published)) +
+        (kind === 'events' && item.endsAt
+          ? ' – ' + date.format(new Date(item.endsAt))
+          : '') +
+        ' (JST)'
+      const title = document.createElement('span')
+      title.textContent =
+        kind === 'announcements' && label.length > 110
+          ? label.slice(0, 110) + '…'
+          : label
+      summary.append(time, title)
+      const body = document.createElement('p')
+      body.className = 'feed-body'
+      body.textContent = bodyText
+      const source = document.createElement('a')
+      source.href = url
+      source.target = '_blank'
+      source.rel = 'noopener noreferrer'
+      source.textContent = ui.openOriginal
+      article.append(summary, body, source)
+      list.append(article)
+    }
+  }
   function render() {
     if (!lastPayload) return
     const now = Date.now()
     const discord = lastPayload.discord
+    const freshness = observationState(
+      discord?.checkedAt,
+      now,
+      refreshFailed || discord?.state === 'stale',
+    )
     const discordAvailable =
-      discord?.state === 'available' &&
-      count(discord.members) &&
-      count(discord.online)
-    const age = now - Date.parse(lastPayload.checkedAt)
-    const discordStale =
-      !Number.isFinite(age) || age > 5 * 60_000 || age < -60_000
+      ['available', 'partial', 'stale'].includes(discord?.state) &&
+      freshness !== 'unavailable'
+    const hasMembers = discordAvailable && count(discord.members)
+    const hasOnline = discordAvailable && count(discord.online)
     text(
       '[data-discord-members]',
-      discordAvailable ? number.format(discord.members) : '—',
+      hasMembers ? number.format(discord.members) : '—',
     )
     text(
       '[data-discord-online]',
-      discordAvailable ? number.format(discord.online) : '—',
+      hasOnline ? number.format(discord.online) : '—',
     )
-    text(
-      '[data-discord-state]',
-      !discordAvailable
+    const state = root.querySelector<HTMLElement>('[data-discord-state]')!
+    state.textContent =
+      !hasMembers && !hasOnline
         ? ui.unavailable
-        : discordStale
-          ? ui.stale
-          : ui.approximate,
-    )
-    root.querySelector<HTMLElement>('[data-discord-state]')!.dataset.state =
-      !discordAvailable ? 'unavailable' : discordStale ? 'stale' : 'fresh'
-    root.querySelector<HTMLElement>('[data-discord-state]')!.hidden =
-      discordAvailable && !discordStale
+        : freshness === 'stale'
+          ? refreshFailed || discord?.state === 'stale'
+            ? ui.previousValue
+            : ui.stale
+          : !hasMembers || !hasOnline
+            ? ui.partial
+            : ''
+    state.dataset.state = !hasMembers && !hasOnline ? 'unavailable' : freshness
+    state.hidden = state.textContent === ''
+    const discordTime = root.querySelector<HTMLTimeElement>(
+      '[data-discord-time]',
+    )!
+    discordTime.textContent =
+      hasMembers || hasOnline
+        ? ui.sampleTime +
+          ': ' +
+          date.format(new Date(discord.checkedAt)) +
+          ' (JST)'
+        : ''
+    if (hasMembers || hasOnline) discordTime.dateTime = discord.checkedAt
+    else discordTime.removeAttribute('datetime')
     root.querySelectorAll<HTMLElement>('[data-world]').forEach((element) => {
       const source = lastPayload.worlds?.find(
         (item: any) => item.id === element.dataset.world,
@@ -64,22 +176,23 @@ function initStatus(root: HTMLElement) {
       const sourceTime = Date.parse(source?.sourceUpdatedAt)
       const available =
         count(source?.count) &&
-        Number.isFinite(sourceTime) &&
-        sourceTime <= now + 60_000 &&
+        observationState(source?.sourceUpdatedAt, now) !== 'unavailable' &&
         source.state !== 'unavailable'
-      const state = !available
+      const worldState = !available
         ? 'unavailable'
-        : now - sourceTime > 5 * 60_000 || discordStale
+        : refreshFailed ||
+            source.state === 'stale' ||
+            now - sourceTime > 5 * 60_000
           ? 'stale'
           : 'fresh'
-      element.dataset.state = state
+      element.dataset.state = worldState
       element.querySelector('[data-world-count]')!.textContent = available
         ? number.format(source.count)
         : '—'
       element.querySelector('[data-world-state]')!.textContent =
-        state === 'fresh'
+        worldState === 'fresh'
           ? ui.mapFresh
-          : state === 'stale'
+          : worldState === 'stale'
             ? ui.stale
             : ui.unavailable
       const time = element.querySelector<HTMLTimeElement>('[data-world-time]')!
@@ -90,10 +203,16 @@ function initStatus(root: HTMLElement) {
     const checked = Date.parse(lastPayload.checkedAt)
     text(
       '[data-status-checked]',
-      Number.isFinite(checked)
-        ? `${ui.updated}: ${date.format(new Date(checked))} (JST)`
-        : ui.unavailable,
+      refreshFailed
+        ? observationState(lastPayload.checkedAt, now) !== 'unavailable'
+          ? ui.previousValue
+          : ui.unavailable
+        : Number.isFinite(checked)
+          ? ui.updated + ': ' + date.format(new Date(checked)) + ' (JST)'
+          : ui.unavailable,
     )
+    renderFeed('events')
+    renderFeed('announcements')
   }
   async function load() {
     if (busy || Date.now() - lastAttempt < 60_000) return
@@ -114,37 +233,18 @@ function initStatus(root: HTMLElement) {
       )
         throw new Error('Status contract')
       lastPayload = payload
-      render()
+      refreshFailed = false
     } catch {
-      if (lastPayload) {
-        // An unsuccessful refresh must not leave a previously fresh label in place.
-        lastPayload = {
-          ...lastPayload,
-          checkedAt: 'unavailable',
-          discord: { state: 'unavailable' },
-          worlds: [],
-        }
+      // Keep successful observations with their original times, visibly stale, for at most six hours.
+      refreshFailed = true
+      lastPayload ??= {
+        discord: { state: 'unavailable' },
+        worlds: [],
+        announcements: { state: 'unavailable' },
+        events: { state: 'unavailable' },
       }
-      root
-        .querySelectorAll(
-          '[data-world-count], [data-discord-members], [data-discord-online]',
-        )
-        .forEach((element) => (element.textContent = '—'))
-      root
-        .querySelectorAll<HTMLElement>(
-          '[data-world-state], [data-discord-state]',
-        )
-        .forEach((element) => {
-          element.textContent = ui.unavailable
-          element.dataset.state = 'unavailable'
-          element.hidden = false
-        })
-      root.querySelectorAll('[data-world-time]').forEach((element) => {
-        element.textContent = ''
-        element.removeAttribute('datetime')
-      })
-      text('[data-status-checked]', ui.unavailable)
     } finally {
+      render()
       busy = false
       window.setTimeout(
         () => {
@@ -369,40 +469,10 @@ function initHistory(root: HTMLElement) {
   render()
 }
 
-function initNotices(root: HTMLElement) {
-  const setHidden = (selector: string, value: boolean) => {
-    const item = root.querySelector<HTMLElement>(selector)!
-    if (item.hidden !== value) item.hidden = value
-  }
-  function update() {
-    setHidden(
-      '[data-no-events]',
-      [...root.querySelectorAll<HTMLElement>('[data-community-event]')].some(
-        (item) => !item.hidden,
-      ),
-    )
-    setHidden(
-      '[data-no-notices]',
-      [...root.querySelectorAll<HTMLElement>('[data-community-notice]')].some(
-        (item) => !item.hidden,
-      ),
-    )
-  }
-  new MutationObserver(update).observe(root, {
-    attributes: true,
-    attributeFilter: ['hidden'],
-    subtree: true,
-  })
-  update()
-}
-
 document
   .querySelectorAll<HTMLElement>('[data-community-status]')
   .forEach(initStatus)
 document
   .querySelectorAll<HTMLElement>('[data-community-history]')
   .forEach(initHistory)
-document
-  .querySelectorAll<HTMLElement>('[data-community-notices]')
-  .forEach(initNotices)
 initEmbeds()

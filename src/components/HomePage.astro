@@ -2,6 +2,7 @@
 import type { LinkItem, PortalPage, PortalSection } from '../types'
 import { getSkinMakerUi } from '../data/skin-maker-ui'
 import { getAlphaDiaryUi } from '../data/alpha-diary-ui'
+import { getCommunityUi } from '../data/community-ui'
 import { serializeCssUrl } from '../data/safe-json'
 import { localizePath, type Locale } from '../i18n/config'
 import { getUi } from '../i18n/translations'
@@ -133,6 +134,7 @@ const diaryPath = localizePath(locale, '/alpha-diary/')
   lead={page.meta.description}
   backgroundImage={heroImage}
   imageAlt={overview.imageAlt}
+  imageCaption={getCommunityUi(locale).heroArchiveCaption}
   scrollCue={{ href: '#overview', label: ui.nextSection }}
 >
   <Fragment slot="title">

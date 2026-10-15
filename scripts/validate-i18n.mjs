@@ -309,7 +309,12 @@ async function validateFixedContent() {
           gallery: Object.fromEntries(
             community.gallery.map((item) => [
               item.id,
-              { title: item.title, text: item.text, imageAlt: item.imageAlt },
+              {
+                title: item.title,
+                text: item.text,
+                imageAlt: item.imageAlt,
+                periodLabel: item.periodLabel,
+              },
             ]),
           ),
           events: Object.fromEntries(
