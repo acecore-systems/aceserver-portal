@@ -84,15 +84,23 @@ const nextMap =
 
 <section class="embed-page" data-variant={embed.variant}>
   <div class="embed-layout">
-    <div class="embed-shell pixel-border">
-      <div class="embed-frame" style={`--fallback-image: ${fallbackImageCss}`}>
-        <iframe
-          src={embed.src}
-          title={embed.title ?? page.pageName}
-          loading="lazy"
-          allow="fullscreen; picture-in-picture"></iframe>
-      </div>
-    </div>
+    {
+      !isVideoPage && (
+        <div class="embed-shell pixel-border">
+          <div
+            class="embed-frame"
+            style={`--fallback-image: ${fallbackImageCss}`}
+          >
+            <iframe
+              src={embed.src}
+              title={embed.title ?? page.pageName}
+              loading="lazy"
+              allow="fullscreen; picture-in-picture"
+            />
+          </div>
+        </div>
+      )
+    }
 
     {
       isVideoPage && (
@@ -217,22 +225,6 @@ const nextMap =
     min-height: max(320px, calc(100vh - 112px - var(--asv-hero-height)));
     border: 0;
     background: transparent;
-  }
-
-  [data-variant='video'] .embed-shell {
-    min-height: auto;
-    max-width: 1180px;
-    margin: 0 auto;
-  }
-
-  [data-variant='video'] .embed-frame {
-    aspect-ratio: 16 / 9;
-    min-height: auto;
-  }
-
-  [data-variant='video'] .embed-frame iframe {
-    height: 100%;
-    min-height: 0;
   }
 
   .video-gallery {
