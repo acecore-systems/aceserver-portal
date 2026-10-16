@@ -166,6 +166,11 @@
           "binding": "SKIN_OPENAI_SERVICE",
           "service": "aceserver-portal-skin-openai",
         },
+        {
+          "binding": "DISCORD_COMMUNITY_SERVICE",
+          "service": "aceserver-alpha-discord-production",
+          "entrypoint": "PortalCommunityFeed",
+        },
       ],
       "vars": {
         "SKIN_STORE_ENABLED": "true",

@@ -85,6 +85,21 @@ const nextMap =
 <section class="embed-page" data-variant={embed.variant}>
   <div class="embed-layout">
     {
+      isMapPage && (
+        <a
+          class="toolbar-button toolbar-button--external map-open"
+          href={embed.externalUrl ?? embed.src}
+          data-map-external-source={embed.externalUrl ?? embed.src}
+          {...externalLinkAttrs(embed.externalUrl ?? embed.src, true)}
+        >
+          <>
+            <span>{ui.openMap}</span>
+            <Icon name="external-link" />
+          </>
+        </a>
+      )
+    }
+    {
       !isVideoPage && (
         <div class="embed-shell pixel-border">
           <div
@@ -92,7 +107,8 @@ const nextMap =
             style={`--fallback-image: ${fallbackImageCss}`}
           >
             <iframe
-              src={embed.src}
+              src={isMapPage ? undefined : embed.src}
+              data-map-embed-source={isMapPage ? embed.src : undefined}
               title={embed.title ?? page.pageName}
               loading="lazy"
               allow="fullscreen; picture-in-picture"
@@ -159,7 +175,14 @@ const nextMap =
   </div>
 </section>
 
+<script>
+  import '../scripts/map-location'
+</script>
+
 <style>
+  .map-open {
+    justify-self: end;
+  }
   .embed-page {
     min-height: calc(100vh - 72px - var(--asv-hero-height));
     background:

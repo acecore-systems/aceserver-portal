@@ -3,7 +3,11 @@ import type { Locale, TranslatedLocale } from './config'
 export type CommunityTranslation = {
   title: string
   intro: string
-  gallery: Record<string, { title: string; text: string; imageAlt: string }>
+  heroCaption: string
+  gallery: Record<
+    string,
+    { title: string; text: string; imageAlt: string; periodLabel: string }
+  >
   events: Record<string, { title: string; text: string }>
   xPosts: Record<string, { label: string }>
 }
@@ -271,7 +275,7 @@ export const JA_UI: UiCopy = {
 
 const en: LocaleTranslation = {
   sourceHash:
-    'sha256:3dd6323e7d3088de144f17d0a6fb3654fec251c1394a8c0a07c82ec10e8b09f1',
+    'sha256:2a2d2ae411a0d4bb02515d7a11fedb7db3c9dcc798719d540d4ffcc8a584e5d4',
   ui: {
     siteTitleSuffix: 'Official portal for the free public Minecraft server',
     homeTitleParts: ['Ace', 'server'],
@@ -381,7 +385,8 @@ const en: LocaleTranslation = {
     worlds: {
       main: {
         title: 'Main World',
-        imageAlt: 'Existing world-map screenshot of the Main World',
+        imageAlt:
+          'Public map view of main-world streets and waterways, pink trees and a white lattice-patterned tower',
         statusLabel: 'Map available',
       },
       resource: {
@@ -436,17 +441,21 @@ const en: LocaleTranslation = {
     title: 'Right now, in Aceserver.',
     intro:
       'Building the next street or taking a railway trip: explore the worlds and the community today.',
+    heroCaption: 'The main world seen on its public map · 2026-10-15',
     gallery: {
-      airship: {
-        title: 'A giant airship above the city.',
-        text: 'A real build from our world. Open the map and find somewhere to visit next.',
-        imageAlt: 'A Minecraft city with a giant white airship',
-      },
-      city: {
-        title: 'Another town beyond the tracks.',
-        text: 'Cities, railways and towers spread across the main world. Seen from above, their connections come into view.',
+      stadium: {
+        title: 'A baseball field by the water.',
+        text: 'Water surrounds a baseball field with a diamond and tiered stands. Nearby bridges and paths are visible from above.',
         imageAlt:
-          'An actual overhead map of the main world, showing buildings, railways and towers',
+          'Public map view of a baseball diamond and tiered stands surrounded by water',
+        periodLabel: 'Checked on the public map · 2026-10-15',
+      },
+      waterfront: {
+        title: 'Green roofs across the water.',
+        text: 'Walkways connect a central green-roofed tower to round and square buildings. A bridge links the buildings to the shore.',
+        imageAlt:
+          'Public map view of a green-roofed tower over the water, connecting walkways and a bridge to shore',
+        periodLabel: 'Checked on the public map · 2026-10-15',
       },
     },
     events: {},
@@ -468,17 +477,20 @@ const en: LocaleTranslation = {
         {
           titleCopy: 'What is Aceserver?',
           text: 'A free public Minecraft server open to everyone',
-          imageAlt: 'A Minecraft cityscape with a large white airship overhead',
+          imageAlt:
+            'Public map view of main-world streets and waterways, pink trees and a white lattice-patterned tower',
         },
         {
           titleCopy: 'Play multiplayer with anyone!',
           text: 'Play from both Java Edition and Bedrock Edition!',
-          imageAlt: 'A giant white airship above the city',
+          imageAlt:
+            'Public map view of a baseball diamond and tiered stands surrounded by water',
         },
         {
           titleCopy: 'Have fun!',
           text: 'A highly flexible server that stays close to vanilla Minecraft!',
-          imageAlt: 'Main-world buildings, railways and towers',
+          imageAlt:
+            'Public map view of a green-roofed tower over the water, connecting walkways and a bridge to shore',
         },
         {
           titleCopy: 'Want to join Aceserver?',
@@ -540,7 +552,7 @@ const en: LocaleTranslation = {
 
 const zhCn: LocaleTranslation = {
   sourceHash:
-    'sha256:3dd6323e7d3088de144f17d0a6fb3654fec251c1394a8c0a07c82ec10e8b09f1',
+    'sha256:2a2d2ae411a0d4bb02515d7a11fedb7db3c9dcc798719d540d4ffcc8a584e5d4',
   ui: {
     siteTitleSuffix: '免费公开 Minecraft 服务器官方门户',
     homeTitleParts: ['Ace', 'server'],
@@ -642,7 +654,7 @@ const zhCn: LocaleTranslation = {
     worlds: {
       main: {
         title: '主世界',
-        imageAlt: '主世界现有地图截图',
+        imageAlt: '公开地图上的主世界街区、水道、粉色树木与白色格子高塔',
         statusLabel: '地图已公开',
       },
       resource: {
@@ -696,16 +708,19 @@ const zhCn: LocaleTranslation = {
   community: {
     title: '此刻，在 Aceserver。',
     intro: '有人继续建造街道，有人乘铁路旅行。一起来看看今天的世界与社区。',
+    heroCaption: '公开地图上的主世界街景 · 2026-10-15',
     gallery: {
-      airship: {
-        title: '城市上空的巨大飞艇。',
-        text: '这是世界中实际建造的街景。打开地图，寻找下一个想去的地方。',
-        imageAlt: 'Minecraft 城市与巨大的白色飞艇',
+      stadium: {
+        title: '水边的棒球场。',
+        text: '水环绕着棒球场，场内有菱形内场与阶梯式观众席。从上空还能看见附近的桥梁和道路。',
+        imageAlt: '公开地图上的棒球场，菱形内场和阶梯式观众席四周环水',
+        periodLabel: '在公开地图上确认 · 2026-10-15',
       },
-      city: {
-        title: '铁轨的另一端，也有一座城。',
-        text: '主世界中分布着城市、铁路与高楼。俯瞰地图，也能看见建筑之间的联系。',
-        imageAlt: '主世界的真实俯瞰地图，展示城市、铁路与高楼',
+      waterfront: {
+        title: '水面上相连的绿色屋顶。',
+        text: '中央的绿顶塔楼通过回廊与圆形、方形建筑相连，一座桥通向岸边。可以沿着地图观察这些水上建筑的连接。',
+        imageAlt: '公开地图上的绿顶水上塔楼、连接建筑的回廊和通向岸边的桥',
+        periodLabel: '在公开地图上确认 · 2026-10-15',
       },
     },
     events: {},
@@ -727,17 +742,17 @@ const zhCn: LocaleTranslation = {
         {
           titleCopy: '什么是 Aceserver？',
           text: '任何人都可以加入的免费公开 Minecraft 服务器',
-          imageAlt: 'Minecraft 城市与上空巨大的白色飞艇',
+          imageAlt: '公开地图上的主世界街区、水道、粉色树木与白色格子高塔',
         },
         {
           titleCopy: '和任何人一起多人游玩！',
           text: 'Java 版与基岩版均可游玩！',
-          imageAlt: '城市上空的巨大白色飞艇',
+          imageAlt: '公开地图上的棒球场，菱形内场和阶梯式观众席四周环水',
         },
         {
           titleCopy: '尽情享受！',
           text: '接近原版、自由度极高的服务器！',
-          imageAlt: '主世界的城市、铁路与高楼',
+          imageAlt: '公开地图上的绿顶水上塔楼、连接建筑的回廊和通向岸边的桥',
         },
         {
           titleCopy: '想加入 Aceserver 吗？',
@@ -799,7 +814,7 @@ const zhCn: LocaleTranslation = {
 
 const es: LocaleTranslation = {
   sourceHash:
-    'sha256:3dd6323e7d3088de144f17d0a6fb3654fec251c1394a8c0a07c82ec10e8b09f1',
+    'sha256:2a2d2ae411a0d4bb02515d7a11fedb7db3c9dcc798719d540d4ffcc8a584e5d4',
   ui: {
     siteTitleSuffix:
       'Portal oficial del servidor público gratuito de Minecraft',
@@ -906,7 +921,8 @@ const es: LocaleTranslation = {
     worlds: {
       main: {
         title: 'Mundo principal',
-        imageAlt: 'Captura existente del mapa del mundo principal',
+        imageAlt:
+          'Mapa público con calles y canales del mundo principal, árboles rosas y una torre blanca con entramado',
         statusLabel: 'Mapa disponible',
       },
       resource: {
@@ -961,17 +977,21 @@ const es: LocaleTranslation = {
     title: 'Ahora mismo, en Aceserver.',
     intro:
       'Hay quienes construyen una nueva calle y quienes viajan en tren. Descubre los mundos y la comunidad de hoy.',
+    heroCaption: 'El mundo principal visto en su mapa público · 2026-10-15',
     gallery: {
-      airship: {
-        title: 'Un dirigible gigante sobre la ciudad.',
-        text: 'Una construcción real de nuestro mundo. Abre el mapa y busca tu próxima visita.',
-        imageAlt: 'Ciudad de Minecraft con un enorme dirigible blanco',
-      },
-      city: {
-        title: 'Otra ciudad al final de las vías.',
-        text: 'El mundo principal está lleno de ciudades, ferrocarriles y torres. Desde arriba se ven sus conexiones.',
+      stadium: {
+        title: 'Un campo de béisbol junto al agua.',
+        text: 'El agua rodea un campo de béisbol con diamante y gradas escalonadas. Desde arriba también se ven los puentes y caminos cercanos.',
         imageAlt:
-          'Mapa aéreo real del mundo principal con edificios, ferrocarriles y torres',
+          'Mapa público de un diamante de béisbol y gradas escalonadas rodeados de agua',
+        periodLabel: 'Comprobado en el mapa público · 2026-10-15',
+      },
+      waterfront: {
+        title: 'Tejados verdes sobre el agua.',
+        text: 'Unas galerías unen la torre central de tejado verde con edificios redondos y cuadrados. Un puente conecta el conjunto con la orilla.',
+        imageAlt:
+          'Mapa público de una torre de tejado verde sobre el agua, galerías y un puente hacia la orilla',
+        periodLabel: 'Comprobado en el mapa público · 2026-10-15',
       },
     },
     events: {},
@@ -994,17 +1014,19 @@ const es: LocaleTranslation = {
           titleCopy: '¿Qué es Aceserver?',
           text: 'Un servidor público gratuito de Minecraft abierto a todos',
           imageAlt:
-            'Una ciudad de Minecraft con una gran aeronave blanca en el cielo',
+            'Mapa público con calles y canales del mundo principal, árboles rosas y una torre blanca con entramado',
         },
         {
           titleCopy: '¡Multijugador con cualquiera!',
           text: '¡Puedes jugar con Java Edition y Bedrock Edition!',
-          imageAlt: 'Un enorme dirigible blanco sobre la ciudad',
+          imageAlt:
+            'Mapa público de un diamante de béisbol y gradas escalonadas rodeados de agua',
         },
         {
           titleCopy: '¡Diviértete!',
           text: '¡Un servidor muy libre y cercano a Minecraft vanilla!',
-          imageAlt: 'Edificios, ferrocarriles y torres del mundo principal',
+          imageAlt:
+            'Mapa público de una torre de tejado verde sobre el agua, galerías y un puente hacia la orilla',
         },
         {
           titleCopy: '¿Quieres unirte a Aceserver?',
@@ -1066,7 +1088,7 @@ const es: LocaleTranslation = {
 
 const pt: LocaleTranslation = {
   sourceHash:
-    'sha256:3dd6323e7d3088de144f17d0a6fb3654fec251c1394a8c0a07c82ec10e8b09f1',
+    'sha256:2a2d2ae411a0d4bb02515d7a11fedb7db3c9dcc798719d540d4ffcc8a584e5d4',
   ui: {
     siteTitleSuffix: 'Portal oficial do servidor público gratuito de Minecraft',
     homeTitleParts: ['Ace', 'server'],
@@ -1173,7 +1195,8 @@ const pt: LocaleTranslation = {
     worlds: {
       main: {
         title: 'Mundo principal',
-        imageAlt: 'Captura existente do mapa do mundo principal',
+        imageAlt:
+          'Mapa público com ruas e canais do mundo principal, árvores rosas e uma torre branca com estrutura em grade',
         statusLabel: 'Mapa disponível',
       },
       resource: {
@@ -1228,17 +1251,21 @@ const pt: LocaleTranslation = {
     title: 'Agora, no Aceserver.',
     intro:
       'Alguns constroem a próxima rua; outros viajam de trem. Explore os mundos e a comunidade de hoje.',
+    heroCaption: 'O mundo principal visto no mapa público · 2026-10-15',
     gallery: {
-      airship: {
-        title: 'Um dirigível gigante sobre a cidade.',
-        text: 'Uma construção real do nosso mundo. Abra o mapa e encontre o próximo lugar para visitar.',
-        imageAlt: 'Cidade de Minecraft com um enorme dirigível branco',
-      },
-      city: {
-        title: 'Outra cidade além dos trilhos.',
-        text: 'O mundo principal tem cidades, ferrovias e torres. Vistas de cima, suas conexões aparecem.',
+      stadium: {
+        title: 'Um campo de beisebol à beira d’água.',
+        text: 'A água cerca um campo de beisebol com diamante e arquibancadas em degraus. Pontes e caminhos próximos também aparecem vistos de cima.',
         imageAlt:
-          'Mapa aéreo real do mundo principal com prédios, ferrovias e torres',
+          'Mapa público de um campo de beisebol e arquibancadas em degraus cercados por água',
+        periodLabel: 'Conferido no mapa público · 2026-10-15',
+      },
+      waterfront: {
+        title: 'Telhados verdes sobre a água.',
+        text: 'Passagens ligam a torre central de telhado verde a edifícios redondos e quadrados. Uma ponte conecta o conjunto à margem.',
+        imageAlt:
+          'Mapa público de uma torre de telhado verde sobre a água, passagens e uma ponte até a margem',
+        periodLabel: 'Conferido no mapa público · 2026-10-15',
       },
     },
     events: {},
@@ -1261,17 +1288,19 @@ const pt: LocaleTranslation = {
           titleCopy: 'O que é o Aceserver?',
           text: 'Um servidor público gratuito de Minecraft aberto a todos',
           imageAlt:
-            'Uma cidade do Minecraft com uma grande aeronave branca no céu',
+            'Mapa público com ruas e canais do mundo principal, árvores rosas e uma torre branca com estrutura em grade',
         },
         {
           titleCopy: 'Multiplayer com qualquer pessoa!',
           text: 'Jogue com Java Edition e Bedrock Edition!',
-          imageAlt: 'Um enorme dirigível branco sobre a cidade',
+          imageAlt:
+            'Mapa público de um campo de beisebol e arquibancadas em degraus cercados por água',
         },
         {
           titleCopy: 'Divirta-se!',
           text: 'Um servidor muito livre e próximo do Minecraft vanilla!',
-          imageAlt: 'Prédios, ferrovias e torres do mundo principal',
+          imageAlt:
+            'Mapa público de uma torre de telhado verde sobre a água, passagens e uma ponte até a margem',
         },
         {
           titleCopy: 'Quer entrar no Aceserver?',
@@ -1333,7 +1362,7 @@ const pt: LocaleTranslation = {
 
 const fr: LocaleTranslation = {
   sourceHash:
-    'sha256:3dd6323e7d3088de144f17d0a6fb3654fec251c1394a8c0a07c82ec10e8b09f1',
+    'sha256:2a2d2ae411a0d4bb02515d7a11fedb7db3c9dcc798719d540d4ffcc8a584e5d4',
   ui: {
     siteTitleSuffix: 'Portail officiel du serveur Minecraft public et gratuit',
     homeTitleParts: ['Ace', 'server'],
@@ -1439,7 +1468,8 @@ const fr: LocaleTranslation = {
     worlds: {
       main: {
         title: 'Monde principal',
-        imageAlt: 'Capture existante de la carte du monde principal',
+        imageAlt:
+          'Carte publique des rues et canaux du monde principal, avec des arbres roses et une tour blanche à structure quadrillée',
         statusLabel: 'Carte disponible',
       },
       resource: {
@@ -1494,17 +1524,21 @@ const fr: LocaleTranslation = {
     title: 'En ce moment, sur Aceserver.',
     intro:
       'Certains prolongent une rue, d’autres voyagent en train. Découvrez les mondes et la communauté du jour.',
+    heroCaption: 'Le monde principal vu sur sa carte publique · 2026-10-15',
     gallery: {
-      airship: {
-        title: 'Un dirigeable géant au-dessus de la ville.',
-        text: 'Une vraie construction de notre monde. Ouvrez la carte pour trouver votre prochaine visite.',
-        imageAlt: 'Une ville Minecraft avec un immense dirigeable blanc',
-      },
-      city: {
-        title: 'Une autre ville au bout des rails.',
-        text: 'Villes, voies ferrées et tours parcourent le monde principal. Vues du ciel, leurs connexions apparaissent.',
+      stadium: {
+        title: 'Un terrain de baseball au bord de l’eau.',
+        text: 'L’eau entoure un terrain de baseball avec son losange et ses gradins. Les ponts et chemins voisins sont aussi visibles depuis le ciel.',
         imageAlt:
-          'Une vraie carte aérienne du monde principal avec bâtiments, voies ferrées et tours',
+          'Carte publique d’un terrain de baseball et de ses gradins entourés d’eau',
+        periodLabel: 'Vérifié sur la carte publique · 2026-10-15',
+      },
+      waterfront: {
+        title: 'Des toits verts au-dessus de l’eau.',
+        text: 'Des galeries relient la tour centrale au toit vert à des bâtiments ronds et carrés. Un pont mène à la rive.',
+        imageAlt:
+          'Carte publique d’une tour au toit vert sur l’eau, de galeries et d’un pont vers la rive',
+        periodLabel: 'Vérifié sur la carte publique · 2026-10-15',
       },
     },
     events: {},
@@ -1527,17 +1561,19 @@ const fr: LocaleTranslation = {
           titleCopy: 'Qu’est-ce qu’Aceserver ?',
           text: 'Un serveur Minecraft public et gratuit ouvert à tous',
           imageAlt:
-            'Une ville Minecraft survolée par un grand dirigeable blanc',
+            'Carte publique des rues et canaux du monde principal, avec des arbres roses et une tour blanche à structure quadrillée',
         },
         {
           titleCopy: 'Jouez en multijoueur avec tout le monde !',
           text: 'Jouez avec Java Edition et Bedrock Edition !',
-          imageAlt: 'Un immense dirigeable blanc au-dessus de la ville',
+          imageAlt:
+            'Carte publique d’un terrain de baseball et de ses gradins entourés d’eau',
         },
         {
           titleCopy: 'Amusez-vous !',
           text: 'Un serveur très libre, proche de Minecraft vanilla !',
-          imageAlt: 'Bâtiments, voies ferrées et tours du monde principal',
+          imageAlt:
+            'Carte publique d’une tour au toit vert sur l’eau, de galeries et d’un pont vers la rive',
         },
         {
           titleCopy: 'Vous souhaitez rejoindre Aceserver ?',
@@ -1599,7 +1635,7 @@ const fr: LocaleTranslation = {
 
 const ko: LocaleTranslation = {
   sourceHash:
-    'sha256:3dd6323e7d3088de144f17d0a6fb3654fec251c1394a8c0a07c82ec10e8b09f1',
+    'sha256:2a2d2ae411a0d4bb02515d7a11fedb7db3c9dcc798719d540d4ffcc8a584e5d4',
   ui: {
     siteTitleSuffix: '무료 공개 Minecraft 서버 공식 포털',
     homeTitleParts: ['Ace', 'server'],
@@ -1706,7 +1742,8 @@ const ko: LocaleTranslation = {
     worlds: {
       main: {
         title: '메인 월드',
-        imageAlt: '메인 월드의 기존 지도 스크린샷',
+        imageAlt:
+          '공개 지도에 보이는 메인 월드의 거리와 수로, 분홍색 나무, 흰색 격자 모양 고층 건물',
         statusLabel: '지도 공개 중',
       },
       resource: {
@@ -1761,16 +1798,21 @@ const ko: LocaleTranslation = {
     title: '지금, Aceserver에서.',
     intro:
       '다음 거리를 만드는 사람, 철도로 여행하는 사람. 오늘의 월드와 커뮤니티를 둘러보세요.',
+    heroCaption: '공개 지도에서 본 메인 월드의 거리 · 2026-10-15',
     gallery: {
-      airship: {
-        title: '도시 위에 떠 있는 거대한 비행선.',
-        text: '실제 월드에서 지어진 거리입니다. 지도를 열고 다음에 방문할 곳을 찾아보세요.',
-        imageAlt: 'Minecraft 도시와 거대한 흰색 비행선',
+      stadium: {
+        title: '물가에 펼쳐진 야구장.',
+        text: '물로 둘러싸인 야구장에 다이아몬드와 계단식 관중석이 보입니다. 주변의 다리와 길도 위에서 둘러볼 수 있습니다.',
+        imageAlt:
+          '공개 지도에 보이는 물로 둘러싸인 야구장 다이아몬드와 계단식 관중석',
+        periodLabel: '공개 지도에서 확인 · 2026-10-15',
       },
-      city: {
-        title: '철길 너머에도 누군가의 도시.',
-        text: '메인 월드에는 도시와 철도, 고층 건물이 펼쳐집니다. 하늘에서 보면 건축물 사이의 연결도 보입니다.',
-        imageAlt: '도시와 철도, 고층 건물을 내려다본 메인 월드의 실제 지도',
+      waterfront: {
+        title: '수면 위로 이어지는 초록 지붕.',
+        text: '초록 지붕의 중앙 탑과 원형·사각형 건물이 회랑으로 이어집니다. 다리는 이 수상 건물들을 물가와 연결합니다.',
+        imageAlt:
+          '공개 지도에 보이는 초록 지붕의 수상 탑과 회랑, 물가로 이어지는 다리',
+        periodLabel: '공개 지도에서 확인 · 2026-10-15',
       },
     },
     events: {},
@@ -1792,17 +1834,20 @@ const ko: LocaleTranslation = {
         {
           titleCopy: 'Aceserver란?',
           text: '누구나 참여할 수 있는 무료 공개 Minecraft 서버',
-          imageAlt: 'Minecraft 도시와 하늘의 거대한 흰색 비행선',
+          imageAlt:
+            '공개 지도에 보이는 메인 월드의 거리와 수로, 분홍색 나무, 흰색 격자 모양 고층 건물',
         },
         {
           titleCopy: '누구와도 멀티플레이!',
           text: 'Java Edition과 Bedrock Edition 모두 플레이할 수 있습니다!',
-          imageAlt: '도시 위의 거대한 흰색 비행선',
+          imageAlt:
+            '공개 지도에 보이는 물로 둘러싸인 야구장 다이아몬드와 계단식 관중석',
         },
         {
           titleCopy: '즐겁게!',
           text: '바닐라에 가깝고 자유도가 높은 서버입니다!',
-          imageAlt: '메인 월드의 도시와 철도, 고층 건물',
+          imageAlt:
+            '공개 지도에 보이는 초록 지붕의 수상 탑과 회랑, 물가로 이어지는 다리',
         },
         {
           titleCopy: 'Aceserver에 참여하고 싶나요?',
@@ -1864,7 +1909,7 @@ const ko: LocaleTranslation = {
 
 const de: LocaleTranslation = {
   sourceHash:
-    'sha256:3dd6323e7d3088de144f17d0a6fb3654fec251c1394a8c0a07c82ec10e8b09f1',
+    'sha256:2a2d2ae411a0d4bb02515d7a11fedb7db3c9dcc798719d540d4ffcc8a584e5d4',
   ui: {
     siteTitleSuffix:
       'Offizielles Portal des kostenlosen öffentlichen Minecraft-Servers',
@@ -1975,7 +2020,8 @@ const de: LocaleTranslation = {
     worlds: {
       main: {
         title: 'Hauptwelt',
-        imageAlt: 'Vorhandener Karten-Screenshot der Hauptwelt',
+        imageAlt:
+          'Öffentliche Karte mit Straßen und Wasserwegen der Hauptwelt, rosa Bäumen und einem weißen Turm mit Gitterstruktur',
         statusLabel: 'Karte verfügbar',
       },
       resource: {
@@ -2030,17 +2076,21 @@ const de: LocaleTranslation = {
     title: 'Gerade jetzt, auf Aceserver.',
     intro:
       'Eine neue Straße bauen oder mit der Bahn reisen: Entdecke die Welten und die Community von heute.',
+    heroCaption: 'Die Hauptwelt auf ihrer öffentlichen Karte · 2026-10-15',
     gallery: {
-      airship: {
-        title: 'Ein riesiges Luftschiff über der Stadt.',
-        text: 'Ein echtes Bauwerk aus unserer Welt. Öffne die Karte und finde dein nächstes Ausflugsziel.',
-        imageAlt: 'Eine Minecraft-Stadt mit einem riesigen weißen Luftschiff',
-      },
-      city: {
-        title: 'Eine weitere Stadt hinter den Gleisen.',
-        text: 'Städte, Bahnstrecken und Türme prägen die Hauptwelt. Von oben werden ihre Verbindungen sichtbar.',
+      stadium: {
+        title: 'Ein Baseballfeld am Wasser.',
+        text: 'Wasser umgibt ein Baseballfeld mit Spielfeldraute und gestuften Tribünen. Auch die nahen Brücken und Wege sind von oben sichtbar.',
         imageAlt:
-          'Eine echte Übersichtskarte der Hauptwelt mit Gebäuden, Bahnstrecken und Türmen',
+          'Öffentliche Karte eines von Wasser umgebenen Baseballfelds mit gestuften Tribünen',
+        periodLabel: 'Auf der öffentlichen Karte geprüft · 2026-10-15',
+      },
+      waterfront: {
+        title: 'Grüne Dächer über dem Wasser.',
+        text: 'Galerien verbinden den zentralen Turm mit grünem Dach mit runden und eckigen Gebäuden. Eine Brücke führt zum Ufer.',
+        imageAlt:
+          'Öffentliche Karte eines Turms mit grünem Dach im Wasser, verbindender Galerien und einer Brücke zum Ufer',
+        periodLabel: 'Auf der öffentlichen Karte geprüft · 2026-10-15',
       },
     },
     events: {},
@@ -2063,17 +2113,19 @@ const de: LocaleTranslation = {
           titleCopy: 'Was ist Aceserver?',
           text: 'Ein kostenloser öffentlicher Minecraft-Server für alle',
           imageAlt:
-            'Eine Minecraft-Stadt mit einem großen weißen Luftschiff darüber',
+            'Öffentliche Karte mit Straßen und Wasserwegen der Hauptwelt, rosa Bäumen und einem weißen Turm mit Gitterstruktur',
         },
         {
           titleCopy: 'Mehrspieler mit allen!',
           text: 'Spiele mit Java Edition und Bedrock Edition!',
-          imageAlt: 'Ein riesiges weißes Luftschiff über der Stadt',
+          imageAlt:
+            'Öffentliche Karte eines von Wasser umgebenen Baseballfelds mit gestuften Tribünen',
         },
         {
           titleCopy: 'Hab Spaß!',
           text: 'Ein sehr freier Server, der nah an Vanilla Minecraft bleibt!',
-          imageAlt: 'Gebäude, Bahnstrecken und Türme der Hauptwelt',
+          imageAlt:
+            'Öffentliche Karte eines Turms mit grünem Dach im Wasser, verbindender Galerien und einer Brücke zum Ufer',
         },
         {
           titleCopy: 'Möchtest du Aceserver beitreten?',
@@ -2135,7 +2187,7 @@ const de: LocaleTranslation = {
 
 const ru: LocaleTranslation = {
   sourceHash:
-    'sha256:3dd6323e7d3088de144f17d0a6fb3654fec251c1394a8c0a07c82ec10e8b09f1',
+    'sha256:2a2d2ae411a0d4bb02515d7a11fedb7db3c9dcc798719d540d4ffcc8a584e5d4',
   ui: {
     siteTitleSuffix:
       'Официальный портал бесплатного публичного сервера Minecraft',
@@ -2241,7 +2293,8 @@ const ru: LocaleTranslation = {
     worlds: {
       main: {
         title: 'Основной мир',
-        imageAlt: 'Существующий снимок карты основного мира',
+        imageAlt:
+          'Публичная карта улиц и каналов основного мира, розовых деревьев и белой башни с решётчатой структурой',
         statusLabel: 'Карта доступна',
       },
       resource: {
@@ -2296,17 +2349,21 @@ const ru: LocaleTranslation = {
     title: 'Прямо сейчас в Aceserver.',
     intro:
       'Кто-то строит новую улицу, кто-то путешествует на поезде. Посмотрите на сегодняшние миры и сообщество.',
+    heroCaption: 'Основной мир на публичной карте · 2026-10-15',
     gallery: {
-      airship: {
-        title: 'Огромный дирижабль над городом.',
-        text: 'Настоящая постройка в нашем мире. Откройте карту и выберите следующее место для прогулки.',
-        imageAlt: 'Город Minecraft с огромным белым дирижаблем',
-      },
-      city: {
-        title: 'За рельсами — ещё один город.',
-        text: 'Главный мир наполнен городами, железными дорогами и башнями. Сверху видны связи между постройками.',
+      stadium: {
+        title: 'Бейсбольное поле у воды.',
+        text: 'Вода окружает бейсбольное поле с ромбовидной площадкой и ступенчатыми трибунами. Сверху видны и соседние мосты с дорожками.',
         imageAlt:
-          'Настоящая карта главного мира сверху: здания, железные дороги и башни',
+          'Публичная карта бейсбольного поля со ступенчатыми трибунами, окружённого водой',
+        periodLabel: 'Проверено на публичной карте · 2026-10-15',
+      },
+      waterfront: {
+        title: 'Зелёные крыши над водой.',
+        text: 'Галереи соединяют центральную башню с зелёной крышей с круглыми и квадратными зданиями. Мост ведёт к берегу.',
+        imageAlt:
+          'Публичная карта башни с зелёной крышей над водой, галерей и моста к берегу',
+        periodLabel: 'Проверено на публичной карте · 2026-10-15',
       },
     },
     events: {},
@@ -2328,17 +2385,20 @@ const ru: LocaleTranslation = {
         {
           titleCopy: 'Что такое Aceserver?',
           text: 'Бесплатный публичный сервер Minecraft, открытый для всех',
-          imageAlt: 'Город Minecraft и большой белый воздушный корабль над ним',
+          imageAlt:
+            'Публичная карта улиц и каналов основного мира, розовых деревьев и белой башни с решётчатой структурой',
         },
         {
           titleCopy: 'Играйте вместе со всеми!',
           text: 'Играйте с Java Edition и Bedrock Edition!',
-          imageAlt: 'Огромный белый дирижабль над городом',
+          imageAlt:
+            'Публичная карта бейсбольного поля со ступенчатыми трибунами, окружённого водой',
         },
         {
           titleCopy: 'Развлекайтесь!',
           text: 'Свободный сервер, близкий к ванильному Minecraft!',
-          imageAlt: 'Здания, железные дороги и башни главного мира',
+          imageAlt:
+            'Публичная карта башни с зелёной крышей над водой, галерей и моста к берегу',
         },
         {
           titleCopy: 'Хотите присоединиться к Aceserver?',

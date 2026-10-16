@@ -54,8 +54,9 @@ export function appendActivity(histories, status) {
     discord: {
       members:
         status.discord.state === 'available' ? status.discord.members : null,
-      online:
-        status.discord.state === 'available' ? status.discord.online : null,
+      online: ['available', 'partial'].includes(status.discord.state)
+        ? status.discord.online
+        : null,
     },
     worlds: Object.fromEntries(
       status.worlds.map((world) => [

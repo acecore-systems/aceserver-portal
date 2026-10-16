@@ -42,22 +42,22 @@ const fallbackOverview: FeatureSection = {
   type: 'featureImageFull',
   titleCopy: 'エースサーバーとは',
   text: '誰でも参加可能なマインクラフト無料公開サーバーです',
-  image: '/uploads/legacy-scc.png',
-  imageAlt: 'エースサーバーの街区スクリーンショット',
+  image: '/uploads/current-world-city-20261015.jpg',
+  imageAlt: '公開マップで確認したメインワールドの街区と水路',
 }
 const fallbackMultiplayer: FeatureSection = {
   type: 'featureImageRight',
   titleCopy: '誰とでもマルチプレイ！',
   text: 'JAVA版・統合版どちらでも遊ぶことが可能です！',
-  image: '/uploads/legacy-multiplayer.jpg',
-  imageAlt: 'マルチプレイ紹介用の写真',
+  image: '/uploads/current-world-stadium-20261015.jpg',
+  imageAlt: '公開マップで確認した水辺の野球場',
 }
 const fallbackFreePlay: FeatureSection = {
   type: 'featureImageLeft',
   titleCopy: '楽しい！',
   text: 'バニラに近い、限りなく自由なサーバーです！',
-  image: '/uploads/legacy-free-play.jpg',
-  imageAlt: '自由な遊び方を示す写真',
+  image: '/uploads/current-world-waterfront-20261015.jpg',
+  imageAlt: '公開マップで確認した水上の塔と橋',
 }
 const fallbackJoinCta: CtaSection = {
   type: 'cta',
@@ -111,7 +111,7 @@ const multiplayer = getFeatureSection('featureImageRight', fallbackMultiplayer)
 const freePlay = getFeatureSection('featureImageLeft', fallbackFreePlay)
 const joinCta = getSection('cta') ?? fallbackJoinCta
 const wikiCta = getSection('hero') ?? fallbackWikiCta
-const heroImage = overview.image ?? '/uploads/legacy-scc.png'
+const heroImage = overview.image ?? '/uploads/current-world-city-20261015.jpg'
 const wikiBackgroundImage =
   wikiCta.backgroundImage ?? '/uploads/legacy-wiki-bg.png'
 const wikiBackgroundImageCss = serializeCssUrl(wikiBackgroundImage)
@@ -133,6 +133,7 @@ const diaryPath = localizePath(locale, '/alpha-diary/')
   lead={page.meta.description}
   backgroundImage={heroImage}
   imageAlt={overview.imageAlt}
+  imageCaption={page.community?.heroCaption}
   scrollCue={{ href: '#overview', label: ui.nextSection }}
 >
   <Fragment slot="title">

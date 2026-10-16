@@ -1,5 +1,9 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": { "noEmit": true },
-  "include": ["src/scripts/home-community.ts", "src/data/community-ui.ts"]
+  "include": [
+    "src/scripts/home-community.ts",
+    "src/scripts/map-location.ts",
+    "src/data/community-ui.ts"
+  ]
 }

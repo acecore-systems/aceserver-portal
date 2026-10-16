@@ -1,4 +1,5 @@
 import { z } from 'zod'
+import { isGalleryMapLocation } from '../lib/map-location.ts'
 
 const linkItemSchema = z
   .object({
@@ -19,6 +20,7 @@ const communitySchema = z
   .object({
     title: z.string().trim().min(1),
     intro: z.string().trim().min(1),
+    heroCaption: z.string().trim().min(1),
     mapWorld: z.enum([
       'main',
       'resource',
@@ -41,9 +43,21 @@ const communitySchema = z
               .regex(/^\/uploads\/[a-zA-Z0-9_./-]+$/u)
               .refine((value) => !value.includes('..')),
             imageAlt: z.string().trim().min(1),
-            href: z.string(),
+            context: z.enum(['archive', 'current']),
+            periodLabel: z.string().trim().min(1),
+            href: z.string().optional(),
           })
-          .strict(),
+          .strict()
+          .refine(
+            (item) => item.context !== 'archive' || !item.href,
+            '過去の風景には現在の地図へのリンクを設定できません。',
+          )
+          .refine(
+            (item) =>
+              item.context !== 'current' ||
+              Boolean(item.href && isGalleryMapLocation(item.href)),
+            '現在の写真には確認済み地点の地図URL（worldname/mapname/zoom/x/y/z）が必要です。',
+          ),
       )
       .max(8),
     events: z
@@ -324,6 +338,13 @@ function validatePage(
     if (page.kind !== 'home')
       return { ok: false, message: 'communityはトップページ専用です。' }
     for (const item of page.community.gallery) {
+      if (
+        item.context === 'current' &&
+        item.href &&
+        isGalleryMapLocation(item.href)
+      )
+        continue
+      if (!item.href) continue
       const error = validateInternalHref(item.href)
       if (error || !item.href.startsWith('/'))
         return {
