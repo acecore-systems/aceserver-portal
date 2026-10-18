@@ -51,6 +51,23 @@
         "season-a-c": 0,
         "event": 0
       }
+    },
+    {
+      "observedAt": "2026-10-18T03:29:26.971Z",
+      "discord": {
+        "members": 1470,
+        "online": 121
+      },
+      "worlds": {
+        "main": 1,
+        "resource": 1,
+        "rpg": 0,
+        "lobby": 0,
+        "rpg-sub": 0,
+        "season-a": 0,
+        "season-a-c": 0,
+        "event": 0
+      }
     }
   ]
 }
