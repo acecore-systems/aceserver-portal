@@ -1,3 +1,4 @@
+import { createHash } from 'node:crypto'
 import { readFile } from 'node:fs/promises'
 import { resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
@@ -59,6 +60,7 @@ export async function syncPortalVectorize({
   dryRun = false,
   waitForMutations = true,
   allowLargeDelete = false,
+  approvedPlanSha256 = null,
   productionConfirmation = null,
   fetchImpl = globalThis.fetch,
   requestTimeoutMs = REQUEST_TIMEOUT_MS,
@@ -103,7 +105,7 @@ export async function syncPortalVectorize({
     sleepImpl,
     randomImpl,
   })
-  const index = await ensureIndex(client, indexName)
+  const index = await ensureIndex(client, indexName, !approvedPlanSha256)
   validateIndexConfiguration(index, indexName)
 
   const currentIds = await listVectorIds(client, indexName, {
@@ -116,10 +118,32 @@ export async function syncPortalVectorize({
   const expectedIds = new Set(corpus.chunks.map(({ id }) => id))
   const chunksToUpsert = corpus.chunks.filter(({ id }) => !currentIds.has(id))
   const idsToDelete = [...currentIds].filter((id) => !expectedIds.has(id))
+  const planSha256 = reconciliationPlanHash({
+    indexName,
+    corpusVersion: corpus.version,
+    corpusSha256: createHash('sha256')
+      .update(JSON.stringify(corpus))
+      .digest('hex'),
+    currentIds,
+    expectedIds,
+  })
+  logger.log(
+    JSON.stringify({
+      event: 'portal_vectorize_plan_review',
+      indexName,
+      corpusVersion: corpus.version,
+      current: currentIds.size,
+      expected: expectedIds.size,
+      upsert: chunksToUpsert.length,
+      delete: idsToDelete.length,
+      planSha256,
+    }),
+  )
+  const planApproved = validatePlanApproval(approvedPlanSha256, planSha256)
   validateDeletePlan({
     currentCount: currentIds.size,
     deleteCount: idsToDelete.length,
-    allowLargeDelete,
+    allowLargeDelete: allowLargeDelete || planApproved,
   })
 
   logger.log(
@@ -347,6 +371,41 @@ function validateExistingVectorIds(ids, indexName) {
   )
 }
 
+export function reconciliationPlanHash({
+  indexName,
+  corpusVersion,
+  corpusSha256,
+  currentIds,
+  expectedIds,
+}) {
+  return createHash('sha256')
+    .update(
+      JSON.stringify({
+        version: 1,
+        indexName,
+        corpusVersion,
+        corpusSha256,
+        currentIds: [...currentIds].sort(),
+        expectedIds: [...expectedIds].sort(),
+      }),
+    )
+    .digest('hex')
+}
+
+export function validatePlanApproval(approved, actual) {
+  if (approved === null || approved === '') return false
+  if (
+    typeof approved !== 'string' ||
+    !/^[a-f0-9]{64}$/u.test(approved) ||
+    approved !== actual
+  ) {
+    throw new Error(
+      'Approved reconciliation plan does not match the current index and target corpus; review the new plan before retrying.',
+    )
+  }
+  return true
+}
+
 export function validateDeletePlan({
   currentCount,
   deleteCount,
@@ -459,7 +518,7 @@ function createCloudflareClient({
   }
 }
 
-async function ensureIndex(client, indexName) {
+async function ensureIndex(client, indexName, allowCreate = true) {
   const encodedName = encodeURIComponent(indexName)
   try {
     const payload = await client.request(`/vectorize/v2/indexes/${encodedName}`)
@@ -468,6 +527,12 @@ async function ensureIndex(client, indexName) {
     if (!(error instanceof CloudflareApiError) || error.status !== 404) {
       throw error
     }
+  }
+
+  if (!allowCreate) {
+    throw new Error(
+      'Reviewed reconciliation requires an existing index; refusing to create it before plan validation.',
+    )
   }
 
   const payload = await client.request('/vectorize/v2/indexes', {
@@ -869,6 +934,7 @@ function parseArguments(argv) {
     dryRun: false,
     waitForMutations: true,
     allowLargeDelete: false,
+    approvedPlanSha256: null,
     productionConfirmation: null,
     indexName: process.env.VECTORIZE_INDEX_NAME,
     corpusFile: DEFAULT_CORPUS_FILE,
@@ -880,6 +946,13 @@ function parseArguments(argv) {
     else if (argument === '--no-wait') options.waitForMutations = false
     else if (argument === '--allow-large-delete') {
       options.allowLargeDelete = true
+    } else if (argument === '--approved-plan-sha256') {
+      options.approvedPlanSha256 = argv[++index]
+      if (!/^[a-f0-9]{64}$/u.test(options.approvedPlanSha256 || '')) {
+        throw new Error(
+          '--approved-plan-sha256 requires an exact lowercase SHA-256.',
+        )
+      }
     } else if (argument === '--index') {
       options.indexName = argv[++index]
     } else if (argument === '--corpus') {
