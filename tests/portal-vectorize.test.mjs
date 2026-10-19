@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict'
+import { createHash } from 'node:crypto'
 import { mkdir, mkdtemp, readFile, rm, writeFile } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
@@ -18,6 +19,8 @@ import {
   validatePortalCorpus,
   validateDeletePlan,
   validateReconciliation,
+  reconciliationPlanHash,
+  validatePlanApproval,
 } from '../scripts/sync-portal-vectorize.mjs'
 import {
   assertDeployedPortalBuild,
@@ -410,6 +413,168 @@ test('limits portal Vectorize sync to managed indexes and safe deletions', async
       allowLargeDelete: true,
     }),
   )
+})
+
+test('binds reviewed reconciliation to the exact index, corpus and both ID sets', () => {
+  const plan = {
+    indexName: PRODUCTION_INDEX_NAME,
+    corpusVersion: 'a'.repeat(20),
+    corpusSha256: 'c'.repeat(64),
+    currentIds: new Set([managedId(1), managedId(2)]),
+    expectedIds: new Set([managedId(3), managedId(4)]),
+  }
+  const hash = reconciliationPlanHash(plan)
+  assert.equal(
+    hash,
+    reconciliationPlanHash({
+      ...plan,
+      currentIds: new Set([...plan.currentIds].reverse()),
+      expectedIds: new Set([...plan.expectedIds].reverse()),
+    }),
+  )
+  assert.equal(validatePlanApproval(null, hash), false)
+  assert.equal(validatePlanApproval('', hash), false)
+  assert.equal(validatePlanApproval(hash, hash), true)
+  for (const changed of [
+    { indexName: 'another-index' },
+    { corpusVersion: 'b'.repeat(20) },
+    { corpusSha256: 'd'.repeat(64) },
+    { currentIds: new Set([managedId(5), managedId(2)]) },
+    { expectedIds: new Set([managedId(3), managedId(5)]) },
+  ]) {
+    assert.throws(
+      () =>
+        validatePlanApproval(
+          hash,
+          reconciliationPlanHash({ ...plan, ...changed }),
+        ),
+      /does not match/u,
+    )
+  }
+  for (const invalid of [true, 'approved', hash.toUpperCase()])
+    assert.throws(() => validatePlanApproval(invalid, hash), /does not match/u)
+})
+
+test('rejects a stale reviewed plan before any embedding or mutation request', async () => {
+  const corpus = createPortalCorpus()
+  const corpusFile = await writeCorpus(corpus)
+  const calls = []
+  await assert.rejects(
+    syncPortalVectorize({
+      corpusFile,
+      accountId: 'account',
+      apiToken: 'token',
+      indexName: PRODUCTION_INDEX_NAME,
+      productionConfirmation: PRODUCTION_INDEX_NAME,
+      approvedPlanSha256: 'a'.repeat(64),
+      logger: silentLogger,
+      fetchImpl: async (input, init = {}) => {
+        calls.push(init.method || 'GET')
+        if (String(input).includes('/list?'))
+          return cloudflareResponse({
+            vectors: corpus.chunks.map(({ id }) => ({ id })),
+            count: corpus.chunks.length,
+            totalCount: corpus.chunks.length,
+            isTruncated: false,
+          })
+        return cloudflareResponse({
+          name: PRODUCTION_INDEX_NAME,
+          config: { dimensions: PORTAL_EMBEDDING_DIMENSIONS, metric: 'cosine' },
+        })
+      },
+    }),
+    /does not match/u,
+  )
+  assert.deepEqual(calls, ['GET', 'GET'])
+})
+
+test('does not create a missing index when a reviewed plan is supplied', async () => {
+  const calls = []
+  await assert.rejects(
+    syncPortalVectorize({
+      corpusFile: await writeCorpus(createPortalCorpus()),
+      accountId: 'account',
+      apiToken: 'token',
+      indexName: PRODUCTION_INDEX_NAME,
+      productionConfirmation: PRODUCTION_INDEX_NAME,
+      approvedPlanSha256: 'a'.repeat(64),
+      logger: silentLogger,
+      fetchImpl: async (input, init = {}) => {
+        calls.push(init.method || 'GET')
+        return cloudflareResponse(null, 404)
+      },
+    }),
+    /requires an existing index/u,
+  )
+  assert.deepEqual(calls, ['GET'])
+})
+
+test('allows a large replacement only with the matching reviewed plan', async () => {
+  const corpus = createPortalCorpus()
+  const corpusFile = await writeCorpus(corpus)
+  const currentIds = new Set(corpus.chunks.map((_, i) => managedId(200 + i)))
+  const expectedIds = new Set(corpus.chunks.map(({ id }) => id))
+  const approved = reconciliationPlanHash({
+    indexName: PRODUCTION_INDEX_NAME,
+    corpusVersion: corpus.version,
+    corpusSha256: createHash('sha256')
+      .update(JSON.stringify(corpus))
+      .digest('hex'),
+    currentIds,
+    expectedIds,
+  })
+  for (const approvedPlanSha256 of [null, approved]) {
+    const writes = []
+    const result = syncPortalVectorize({
+      corpusFile,
+      accountId: 'account',
+      apiToken: 'token',
+      indexName: PRODUCTION_INDEX_NAME,
+      productionConfirmation: PRODUCTION_INDEX_NAME,
+      approvedPlanSha256,
+      waitForMutations: false,
+      logger: silentLogger,
+      fetchImpl: async (input, init = {}) => {
+        const url = String(input)
+        if (url.includes('/list?'))
+          return cloudflareResponse({
+            vectors: [...currentIds].map((id) => ({ id })),
+            count: currentIds.size,
+            totalCount: currentIds.size,
+            isTruncated: false,
+          })
+        if (url.endsWith(`/vectorize/v2/indexes/${PRODUCTION_INDEX_NAME}`))
+          return cloudflareResponse({
+            name: PRODUCTION_INDEX_NAME,
+            config: {
+              dimensions: PORTAL_EMBEDDING_DIMENSIONS,
+              metric: 'cosine',
+            },
+          })
+        writes.push(url)
+        if (url.endsWith('/ai/run/@cf/baai/bge-m3'))
+          return cloudflareResponse({
+            data: JSON.parse(init.body).text.map(() => TEST_EMBEDDING),
+          })
+        if (url.endsWith('/delete_by_ids'))
+          assert.deepEqual(new Set(JSON.parse(init.body).ids), currentIds)
+        return cloudflareResponse({ mutationId: 'mutation' })
+      },
+    })
+    if (approvedPlanSha256 === null) {
+      await assert.rejects(result, /Refusing to delete/u)
+      assert.equal(writes.length, 0)
+    } else {
+      const value = await result
+      assert.equal(value.deleted, currentIds.size)
+      assert.equal(value.upserted, expectedIds.size)
+      assert(writes.at(-1).endsWith('/delete_by_ids'))
+      assert(
+        writes.findIndex((url) => url.endsWith('/upsert')) <
+          writes.findIndex((url) => url.endsWith('/delete_by_ids')),
+      )
+    }
+  }
 })
 
 test('requires exact confirmation before mutating the production index', async () => {

@@ -11,6 +11,11 @@ on:
         description: Force full reconciliation, including unchanged content
         type: boolean
         default: true
+      approved_plan_sha256:
+        description: Reviewed exact index and corpus plan hash (leave empty for normal guarded sync)
+        type: string
+        required: false
+        default: ''
 
 permissions:
   contents: read
@@ -100,6 +105,7 @@ jobs:
           CLOUDFLARE_ACCOUNT_ID: db9b62f409f463da7acbcc374b8385d0
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_PORTAL_SEARCH_PRODUCTION_API_TOKEN }}
           VECTORIZE_INDEX_NAME: aceserver-portal-search-bge-m3-1024-production-v1
+          APPROVED_PLAN_SHA256: ${{ github.event_name == 'workflow_dispatch' && inputs.approved_plan_sha256 || '' }}
         run: |
           if [ -z "${CLOUDFLARE_API_TOKEN:-}" ]; then
             echo "::error::CLOUDFLARE_PORTAL_SEARCH_PRODUCTION_API_TOKEN is not configured."
@@ -109,6 +115,9 @@ jobs:
             --corpus site/dist/vector-corpus.json
             --confirm-production "$VECTORIZE_INDEX_NAME"
           )
+          if [ -n "$APPROVED_PLAN_SHA256" ]; then
+            args+=(--approved-plan-sha256 "$APPROVED_PLAN_SHA256")
+          fi
           node tooling/scripts/sync-portal-vectorize.mjs \
             "${args[@]}"
 
