@@ -22,7 +22,7 @@ Quando não conseguir entrar em um servidor de Minecraft, compare a mensagem de 
 
 Neste artigo, explicamos o que muda entre Java Edition, Bedrock Edition e Switch, onde verificar cada tipo de erro e quais são os canais oficiais do Aceserver. Se quiser entender as condições para participar usando um Switch ou celular, consulte também [como jogar Minecraft com amigos](/pt/stories/minecraft-play-with-friends/).
 
-A mensagem de multijogador desativado é uma pista para verificar as permissões da conta; um tempo limite excedido é uma pista para verificar o destino, o estado do servidor e a conexão. A mesma solução nem sempre resolve os dois casos. Se tiver dúvidas sobre os controles na tela, consulte o [guia oficial para entrar em servidores](https://www.minecraft.net/en-us/article/how-play-minecraft-server) e identifique a tela correspondente à sua edição. Em seguida, verifique os itens abaixo.
+A mensagem de multijogador desativado é uma pista para verificar as permissões da conta; um tempo limite excedido é uma pista para verificar o destino, o estado do servidor e a conexão. A mesma solução nem sempre resolve os dois casos. Se não souber onde inserir os dados, consulte o [guia oficial para entrar em servidores](https://www.minecraft.net/en-us/article/how-play-minecraft-server) e identifique a tela correspondente à sua edição. Em seguida, verifique os itens abaixo.
 
 ## Primeiro, verifique se o problema é conectar ou saber o que fazer depois de entrar
 
@@ -65,7 +65,7 @@ Verifique, nesta ordem, se o jogo está atualizado, qual conta Microsoft está c
 
 Consulte as instruções oficiais do servidor em que deseja entrar. Não reutilize configurações que funcionaram em outro servidor.
 
-| Item a verificar      | Desencontro comum                                                                    |
+| Item a verificar      | Problema comum                                                                       |
 | --------------------- | ------------------------------------------------------------------------------------ |
 | Edição compatível     | Usar instruções para Java Edition no Bedrock Edition, ou o contrário                 |
 | Versão do jogo        | Conectar com uma versão antiga, snapshot ou preview                                  |
@@ -110,7 +110,7 @@ Esses três passos podem ajudar tanto quem está entrando pela primeira vez quan
 
 Esta seção trata das orientações para participar do Aceserver, não de um método geral de conexão. O portal oficial do Aceserver informa que é possível participar usando Java Edition ou Bedrock Edition. Os endereços de conexão, as portas, os procedimentos para Switch, o estado do servidor e as regras podem ser atualizados. Antes de participar, consulte as orientações oficiais abaixo.
 
-1. Consulte o [portal do Aceserver](/pt/) para verificar o ponto de entrada e os avisos.
+1. Consulte o [portal do Aceserver](/pt/) para verificar as instruções de acesso e os avisos.
 2. Consulte o [Discord oficial](https://discord.gg/acsv) para obter informações sobre manutenção e participação.
 3. Consulte a [WIKI oficial](https://asv-wiki.acecore.net) para ver as regras do jogo e as orientações de cada mundo.
 

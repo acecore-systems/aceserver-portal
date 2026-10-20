@@ -22,7 +22,7 @@ Si no puedes entrar a un servidor de Minecraft, compara el error que aparece con
 
 En este artículo encontrarás las diferencias entre Java Edition, Bedrock Edition y Switch, qué revisar según el error y dónde consultar las indicaciones oficiales de Aceserver. Si quieres aclarar las condiciones antes de entrar desde Switch o un móvil, consulta también [cómo jugar Minecraft con amigos](/es/stories/minecraft-play-with-friends/).
 
-«El multijugador está desactivado» puede indicar un problema con los permisos de la cuenta; un tiempo de espera agotado puede orientar hacia la dirección, el estado del servidor o la conexión. No siempre se resuelven de la misma manera. Si tienes dudas sobre los controles, consulta la pantalla correspondiente a tu edición en la [guía oficial para entrar en servidores](https://www.minecraft.net/en-us/article/how-play-minecraft-server) y revisa los siguientes puntos en orden.
+«El multijugador está desactivado» puede indicar un problema con los permisos de la cuenta; un tiempo de espera agotado puede orientar hacia la dirección, el estado del servidor o la conexión. No siempre se resuelven de la misma manera. Si no sabes dónde introducir los datos, consulta la pantalla correspondiente a tu edición en la [guía oficial para entrar en servidores](https://www.minecraft.net/en-us/article/how-play-minecraft-server) y revisa los siguientes puntos en orden.
 
 ## Primero, distingue entre un problema de conexión y las dudas después de entrar
 
@@ -110,7 +110,7 @@ Estas tres acciones pueden ser útiles tanto para quienes entran por primera vez
 
 Esta sección contiene indicaciones para participar en Aceserver, no un método general para conectarse a cualquier servidor. El portal oficial de Aceserver indica que se puede entrar tanto desde Java Edition como desde Bedrock Edition. La dirección de conexión, el puerto, los pasos para Switch, el estado del servidor y las reglas pueden cambiar, así que consulta estas fuentes oficiales antes de entrar.
 
-1. Comprueba el punto de entrada y los avisos en el [portal de Aceserver](/es/).
+1. Consulta las instrucciones para entrar y los avisos en el [portal de Aceserver](/es/).
 2. Consulta el [Discord oficial](https://discord.gg/acsv) para ver las indicaciones sobre mantenimiento y participación.
 3. Consulta la [WIKI oficial](https://asv-wiki.acecore.net) para conocer las reglas del juego y las indicaciones de cada mundo.
 
