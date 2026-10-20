@@ -29,7 +29,7 @@ Le message « Le multijoueur est désactivé » oriente vers les autorisations d
 - **Impossible de se connecter au serveur :** vérifiez le message d’erreur, l’édition, la version, les conditions d’accès, le compte, la connexion et la disponibilité du serveur.
 - **Connecté, mais vous ne savez pas quoi faire :** consultez les règles, le premier endroit à visiter et les coordonnées à utiliser en cas de problème.
 
-Un problème de connexion et une incertitude après l’arrivée sont deux choses différentes. Commencez par chercher pourquoi vous ne pouvez pas vous connecter ; une fois dans le serveur, consultez ses indications.
+Un problème de connexion et une incertitude après l’arrivée sont deux choses différentes. Commencez par chercher pourquoi vous ne pouvez pas vous connecter ; une fois sur le serveur, consultez ses indications.
 
 ## Vérifications communes à effectuer en premier
 
@@ -87,12 +87,12 @@ Vous n’avez pas besoin d’ouvrir des ports sur le routeur au hasard pour rejo
 
 ## Choisissez quoi vérifier selon le message d’erreur
 
-| Message ou situation                            | À vérifier en premier                                                               | À éviter au départ                                               |
-| ----------------------------------------------- | ----------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
-| Version incompatible                            | La version demandée par le serveur et la version normale lancée dans le jeu         | Passer à une version de test ou à une autre édition              |
-| Erreur de connexion ou d’authentification       | Le bon compte Microsoft et son état de connexion                                    | Envoyer un mot de passe à quelqu’un ou à l’équipe du serveur     |
-| Délai d’attente dépassé ou connexion impossible | Les annonces officielles de panne ou de maintenance et votre connexion              | Réessayer sans cesse en modifiant plusieurs paramètres à la fois |
-| Erreur d’autorisation ou de condition d’accès   | Les règles, la liste d’autorisation, les conditions d’âge et l’état de l’invitation | Chercher à contourner les conditions avec un autre compte        |
+| Message ou situation                                | À vérifier en premier                                                               | À éviter au départ                                               |
+| --------------------------------------------------- | ----------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
+| Version incompatible                                | La version demandée par le serveur et la version normale lancée dans le jeu         | Passer à une version de test ou à une autre édition              |
+| Erreur de connexion au compte ou d’authentification | Le bon compte Microsoft et son état de connexion                                    | Envoyer un mot de passe à quelqu’un ou à l’équipe du serveur     |
+| Délai d’attente dépassé ou connexion impossible     | Les annonces officielles de panne ou de maintenance et votre connexion              | Réessayer sans cesse en modifiant plusieurs paramètres à la fois |
+| Erreur d’autorisation ou de condition d’accès       | Les règles, la liste d’autorisation, les conditions d’âge et l’état de l’invitation | Chercher à contourner les conditions avec un autre compte        |
 
 Si un nom d’erreur s’affiche, notez-le également. Lorsque vous contactez l’équipe du serveur ou le support officiel, indiquez l’appareil, l’édition, la version du jeu, l’heure de la tentative et le nom de l’erreur pour décrire plus facilement la situation.
 

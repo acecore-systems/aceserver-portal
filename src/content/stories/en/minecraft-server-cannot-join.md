@@ -34,7 +34,7 @@ A connection problem and uncertainty after joining are different issues. First n
 ## Start with these common checks
 
 1. Note the error message, the time you tried to connect, and the device you are using. You can also save a screenshot.
-2. Check the server’s official guidance for maintenance, closed applications, allow-lists, and supported editions.
+2. Check the server’s official guidance for maintenance, whether new players are currently being accepted, allow-lists, and supported editions.
 3. Compare the server address, any required port, and the game version with the guidance, character by character.
 4. Restart Minecraft and your device. Check that you are using the normal release, not a test or preview version.
 5. If the problem continues, check your account, permissions, and connection one at a time. Changing several settings at once can make the cause harder to identify.
@@ -45,7 +45,7 @@ A connection problem and uncertainty after joining are different issues. First n
 
 Java Edition is available for Windows, macOS, and Linux. If the server is for Java Edition, select the normal release specified in its guidance in the launcher, then enter the server address from the Multiplayer menu. The address is an IP address or hostname, not a web page URL, so enter the address provided by the server.
 
-Pay particular attention to the game version specified by the server and to your mod or launcher settings. If the server is for vanilla Minecraft, unnecessary mods or a test version may prevent you from joining. First try the normal version specified in the server’s guidance, and use additional content only if the server explicitly says it is required.
+Pay particular attention to the game version specified by the server and to your mod or launcher settings. If the server is for vanilla Minecraft, unnecessary mods or a test version may prevent you from joining. First try the normal version specified in the server’s guidance, and use additional content only as specified by the server.
 
 ### Bedrock Edition
 
@@ -110,7 +110,7 @@ These steps can help both first-time visitors and people returning after a break
 
 This section is about joining Aceserver, not general connection methods. The Aceserver portal says that players can join from either Java Edition or Bedrock Edition. The actual address, port, steps for Switch, server status, and rules may change, so check the following official sources before joining.
 
-1. Check the joining entry and notices on the [Aceserver portal](/en/).
+1. Check the joining instructions and announcements on the [Aceserver portal](/en/).
 2. Check the [official Discord](https://discord.gg/acsv) for maintenance and joining notices.
 3. Check the [official WIKI](https://asv-wiki.acecore.net) for in-game rules and guidance for each world.
 

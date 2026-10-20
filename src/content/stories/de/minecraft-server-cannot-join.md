@@ -29,7 +29,7 @@ Dieser Artikel erklärt, worauf es bei Java Edition, Bedrock Edition und Nintend
 - **Keine Verbindung zum Server:** Prüfen Sie die Fehlermeldung, Edition, Version, Beitrittsbedingungen, Konto, Netzwerk und den Serverstatus.
 - **Sie sind verbunden, wissen aber nicht, was Sie tun sollen:** Informieren Sie sich über Regeln, den ersten Anlaufpunkt und die Kontaktstelle bei Problemen.
 
-Ein Verbindungsproblem und Unsicherheit nach dem Beitritt sind zwei verschiedene Dinge. Grenzen Sie zuerst die Verbindungsursache ein und lesen Sie nach dem Beitritt die Hinweise des Servers.
+Ein Verbindungsproblem und Unsicherheit nach dem Beitritt sind zwei verschiedene Dinge. Grenzen Sie zuerst die Ursache des Verbindungsproblems ein und lesen Sie nach dem Beitritt die Hinweise des Servers.
 
 ## Gemeinsame erste Prüfungen
 
@@ -94,7 +94,7 @@ Als beitretende Person müssen Sie nicht auf Verdacht Router-Ports freigeben. We
 | Zeitüberschreitung oder keine Verbindung            | Offizielle Hinweise zu Störungen oder Wartung und die eigene Verbindung    | Immer wieder verbinden und gleichzeitig mehrere Einstellungen ändern |
 | Fehler bei Berechtigungen oder Beitrittsbedingungen | Regeln, Whitelist, Altersvorgaben und Einladungsstatus                     | Versuchen, die Bedingungen mit einem anderen Konto zu umgehen        |
 
-Wenn ein Fehlername angezeigt wird, notieren Sie ihn ebenfalls. Wenn Sie das Serverteam oder den offiziellen Support kontaktieren, können Sie Ihre Situation mit Gerät, Edition, Spielversion, Zeitpunkt des Verbindungsversuchs und Fehlername leichter beschreiben.
+Wenn ein Fehlername angezeigt wird, notieren Sie ihn ebenfalls. Wenn Sie das Serverteam oder den offiziellen Support kontaktieren, können Sie Ihre Situation mit Gerät, Edition, Spielversion, Zeitpunkt des Verbindungsversuchs und Fehlernamen leichter beschreiben.
 
 ## Drei Dinge, die Sie nach dem Beitritt prüfen sollten
 
@@ -110,7 +110,7 @@ Diese drei Schritte sind sowohl für neue als auch für zurückkehrende Spielend
 
 Dieser Abschnitt enthält Hinweise zum Beitritt zu Aceserver und ist keine allgemeine Anleitung für andere Server. Im offiziellen Aceserver-Portal wird erklärt, dass sowohl Spielerinnen und Spieler mit Java als auch mit Bedrock beitreten können. Die tatsächlichen Verbindungsziele, Ports, Schritte für Switch, der Serverstatus und die Regeln können sich ändern. Prüfen Sie daher vor dem Beitritt die folgenden offiziellen Hinweise.
 
-1. Prüfen Sie im [Aceserver-Portal](/de/) den Zugang zum Beitritt und die Mitteilungen.
+1. Prüfen Sie im [Aceserver-Portal](/de/) die Hinweise zum Beitritt und die Ankündigungen.
 2. Informieren Sie sich im [offiziellen Discord](https://discord.gg/acsv) über Hinweise zu Wartungsarbeiten und zum Beitritt.
 3. Lesen Sie im [offiziellen WIKI](https://asv-wiki.acecore.net) die Regeln im Spiel und die Hinweise zu den einzelnen Welten.
 
