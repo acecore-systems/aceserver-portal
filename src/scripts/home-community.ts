@@ -1,6 +1,7 @@
 import type { CommunityUi } from '../data/community-ui'
 import { activityDay } from '../lib/community-history'
 import { observationState } from '../lib/community-freshness'
+import { renderCommunityFeedItems } from '../lib/community-feed'
 
 const count = (value: unknown): value is number =>
   Number.isSafeInteger(value) &&
@@ -66,61 +67,7 @@ function initStatus(root: HTMLElement) {
       ? ui.updated + ': ' + date.format(new Date(feed.checkedAt)) + ' (JST)'
       : ''
     const list = container.querySelector('[data-feed-items]')!
-    const open = new Set(
-      [...list.querySelectorAll<HTMLDetailsElement>('details[open]')].map(
-        (item) => item.dataset.feedId,
-      ),
-    )
-    list.replaceChildren()
-    for (const item of items) {
-      const url = typeof item.url === 'string' ? item.url : ''
-      if (
-        !(
-          kind === 'events'
-            ? /^https:\/\/discord\.com\/events\/737538781024092170\/\d{16,22}$/u
-            : /^https:\/\/discord\.com\/channels\/737538781024092170\/774152638450237460\/\d{16,22}$/u
-        ).test(url)
-      )
-        continue
-      const bodyText = kind === 'events' ? item.description : item.text
-      const label = kind === 'events' ? item.name : item.text
-      const published = kind === 'events' ? item.startsAt : item.publishedAt
-      if (
-        typeof label !== 'string' ||
-        typeof bodyText !== 'string' ||
-        !Number.isFinite(Date.parse(published))
-      )
-        continue
-      const article = document.createElement('details')
-      article.className = 'feed-item'
-      article.dataset.feedId = item.id
-      article.open = open.has(item.id)
-      const summary = document.createElement('summary')
-      const time = document.createElement('time')
-      time.dateTime = published
-      time.textContent =
-        date.format(new Date(published)) +
-        (kind === 'events' && item.endsAt
-          ? ' – ' + date.format(new Date(item.endsAt))
-          : '') +
-        ' (JST)'
-      const title = document.createElement('span')
-      title.textContent =
-        kind === 'announcements' && label.length > 110
-          ? label.slice(0, 110) + '…'
-          : label
-      summary.append(time, title)
-      const body = document.createElement('p')
-      body.className = 'feed-body'
-      body.textContent = bodyText
-      const source = document.createElement('a')
-      source.href = url
-      source.target = '_blank'
-      source.rel = 'noopener noreferrer'
-      source.textContent = ui.openOriginal
-      article.append(summary, body, source)
-      list.append(article)
-    }
+    renderCommunityFeedItems(list, kind, items, date, ui.openOriginal)
   }
   function render() {
     if (!lastPayload) return

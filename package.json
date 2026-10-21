@@ -49,7 +49,7 @@
     "sync:portal-vectorize": "node scripts/sync-portal-vectorize.mjs",
     "sync:portal-vectorize:dry-run": "node scripts/sync-portal-vectorize.mjs --dry-run",
     "sync:community": "node scripts/collect-community-activity.mjs",
-    "test:community": "node --experimental-strip-types --test tests/community-status.test.mjs",
+    "test:community": "node --experimental-strip-types --test tests/community-status.test.mjs tests/community-feed.test.mjs",
     "typecheck:community": "tsc --project tsconfig.community.json"
   },
   "dependencies": {
