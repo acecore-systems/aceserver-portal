@@ -6,7 +6,11 @@ interface Props {
 const { text } = Astro.props
 ---
 
-<div class="page-intro"><div class="page-intro__inner"><p>{text}</p></div></div>
+<div class="page-intro">
+  <div class="page-intro__inner">
+    <p>{text}</p>
+  </div>
+</div>
 
 <style>
   .page-intro {

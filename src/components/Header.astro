@@ -53,39 +53,37 @@ const isCurrentNavigationItem = (href: string) =>
         },
       ]}
       aria-label={ui.search.link}
-      aria-current={isCurrentNavigationItem(localizePath(locale, '/search/'))
-        ? 'page'
-        : undefined}
+      aria-current={
+        isCurrentNavigationItem(localizePath(locale, '/search/'))
+          ? 'page'
+          : undefined
+      }
       title={ui.search.link}
     >
       <Icon name="search" />
     </a>
-    {
-      navigation.map((item) => (
-        <a
-          href={item.href}
-          class:list={[{ 'is-active': isCurrentNavigationItem(item.href) }]}
-          aria-current={isCurrentNavigationItem(item.href) ? 'page' : undefined}
-          {...externalLinkAttrs(item.href, item.external)}
-        >
-          <Icon name={item.icon} />
-          <span>{item.text}</span>
-        </a>
-      ))
-    }
+    {navigation.map((item) => (
+      <a
+        href={item.href}
+        class:list={[{ 'is-active': isCurrentNavigationItem(item.href) }]}
+        aria-current={isCurrentNavigationItem(item.href) ? 'page' : undefined}
+        {...externalLinkAttrs(item.href, item.external)}
+      >
+        <Icon name={item.icon} />
+        <span>{item.text}</span>
+      </a>
+    ))}
   </nav>
 
   <label class="language-switcher language-switcher--desktop">
     <span class="sr-only">{ui.languageSelector}</span>
     <Icon name="globe-2" />
     <select aria-label={ui.languageSelector} data-locale-select>
-      {
-        alternatePaths.map((item) => (
-          <option value={item.href} selected={item.locale === locale}>
-            {LOCALE_LABELS[item.locale]}
-          </option>
-        ))
-      }
+      {alternatePaths.map((item) => (
+        <option value={item.href} selected={item.locale === locale}>
+          {LOCALE_LABELS[item.locale]}
+        </option>
+      ))}
     </select>
   </label>
 
@@ -113,13 +111,11 @@ const isCurrentNavigationItem = (href: string) =>
       <Icon name="globe-2" />
       <span class="sr-only">{ui.languageSelector}</span>
       <select aria-label={ui.languageSelector} data-locale-select>
-        {
-          alternatePaths.map((item) => (
-            <option value={item.href} selected={item.locale === locale}>
-              {LOCALE_LABELS[item.locale]}
-            </option>
-          ))
-        }
+        {alternatePaths.map((item) => (
+          <option value={item.href} selected={item.locale === locale}>
+            {LOCALE_LABELS[item.locale]}
+          </option>
+        ))}
       </select>
     </label>
     <a
@@ -131,26 +127,26 @@ const isCurrentNavigationItem = (href: string) =>
           ),
         },
       ]}
-      aria-current={isCurrentNavigationItem(localizePath(locale, '/search/'))
-        ? 'page'
-        : undefined}
+      aria-current={
+        isCurrentNavigationItem(localizePath(locale, '/search/'))
+          ? 'page'
+          : undefined
+      }
     >
       <Icon name="search" />
       <span>{ui.search.link}</span>
     </a>
-    {
-      navigation.map((item) => (
-        <a
-          href={item.href}
-          class:list={[{ 'is-active': isCurrentNavigationItem(item.href) }]}
-          aria-current={isCurrentNavigationItem(item.href) ? 'page' : undefined}
-          {...externalLinkAttrs(item.href, item.external)}
-        >
-          <Icon name={item.icon} />
-          <span>{item.text}</span>
-        </a>
-      ))
-    }
+    {navigation.map((item) => (
+      <a
+        href={item.href}
+        class:list={[{ 'is-active': isCurrentNavigationItem(item.href) }]}
+        aria-current={isCurrentNavigationItem(item.href) ? 'page' : undefined}
+        {...externalLinkAttrs(item.href, item.external)}
+      >
+        <Icon name={item.icon} />
+        <span>{item.text}</span>
+      </a>
+    ))}
   </nav>
 </header>
 

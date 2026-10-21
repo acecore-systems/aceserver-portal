@@ -18,69 +18,68 @@ const tools = ['pencil', 'fill', 'erase', 'picker', 'select', 'rotate']
   hidden
   aria-labelledby="skin-editor-title"
 >
-  <h2 id="skin-editor-title" tabindex="-1">{e.title}</h2>
+  <h2 id="skin-editor-title" tabindex="-1">
+    {e.title}
+  </h2>
   <p class="hint">{e.intro}</p>
   <form data-edit-form>
     <fieldset data-edit-inputs>
       <div class="edit-controls">
-        <label
-          >{e.part}<select data-edit-part
-            >{
-              PARTS.map((part, i) => (
-                <option value={part}>{e.partNames[i]}</option>
-              ))
-            }</select
-          ></label
-        >
-        <label
-          >{e.layer}<select data-edit-layer
-            >{
-              LAYERS.map((layer, i) => (
-                <option value={layer}>{c.layerNames[i]}</option>
-              ))
-            }</select
-          ></label
-        >
-        <label
-          >{e.face}<select data-edit-face
-            >{
-              FACES.map((face, i) => (
-                <option value={face} selected={face === 'front'}>
-                  {c.faceNames[i]}
-                </option>
-              ))
-            }</select
-          ></label
-        >
-        <label
-          >{e.tool}<select data-edit-tool
-            >{
-              tools.map((tool, i) => (
-                <option value={tool}>{e.toolNames[i] ?? e.rotate}</option>
-              ))
-            }</select
-          ></label
-        >
-        <label
-          >{e.color}<input
-            type="color"
-            data-edit-color
-            value="#3388dd"
-          /></label
-        >
+        <label>
+          {e.part}
+          <select data-edit-part>
+            {PARTS.map((part, i) => (
+              <option value={part}>{e.partNames[i]}</option>
+            ))}
+          </select>
+        </label>
+        <label>
+          {e.layer}
+          <select data-edit-layer>
+            {LAYERS.map((layer, i) => (
+              <option value={layer}>{c.layerNames[i]}</option>
+            ))}
+          </select>
+        </label>
+        <label>
+          {e.face}
+          <select data-edit-face>
+            {FACES.map((face, i) => (
+              <option value={face} selected={face === 'front'}>
+                {c.faceNames[i]}
+              </option>
+            ))}
+          </select>
+        </label>
+        <label>
+          {e.tool}
+          <select data-edit-tool>
+            {tools.map((tool, i) => (
+              <option value={tool}>{e.toolNames[i] ?? e.rotate}</option>
+            ))}
+          </select>
+        </label>
+        <label>
+          {e.color}
+          <input type="color" data-edit-color value="#3388dd" />
+        </label>
       </div>
       <div class="edit-grid">
         <div class="drawing">
           <div class="view-controls">
             <div class="view-options">
-              <label class="consent"
-                ><input type="checkbox" data-edit-grid checked />{e.grid}</label
-              >
-              <label class="consent"
-                ><input type="checkbox" data-edit-isolate />{e.isolate}</label
-              >
+              <label class="consent">
+                <input type="checkbox" data-edit-grid checked />
+                {e.grid}
+              </label>
+              <label class="consent">
+                <input type="checkbox" data-edit-isolate />
+                {e.isolate}
+              </label>
             </div>
-            <button type="button" data-reset-view>{e.resetView}</button>
+            <button type="button" data-reset-view>
+              {e.resetView}
+            </button>
           </div>
           <div class="editor-stage" data-edit-stage>
             <canvas
@@ -88,16 +87,25 @@ const tools = ['pencil', 'fill', 'erase', 'picker', 'select', 'rotate']
               tabindex="0"
               role="img"
               aria-label={e.stage}
-              aria-describedby="skin-3d-hint"></canvas>
+              aria-describedby="skin-3d-hint"
+            ></canvas>
           </div>
-          <p class="hint" data-edit-webgl hidden>{e.webgl}</p>
-          <p id="skin-3d-hint" class="hint">{e.stageHint}</p>
+          <p class="hint" data-edit-webgl hidden>
+            {e.webgl}
+          </p>
+          <p id="skin-3d-hint" class="hint">
+            {e.stageHint}
+          </p>
           <div class="history-controls">
-            <button type="button" data-undo disabled>{e.undo}</button>
-            <button type="button" data-redo disabled>{e.redo}</button>
-            <button type="button" data-clear-selection disabled
-              >{e.clearSelection}</button
-            >
+            <button type="button" data-undo disabled>
+              {e.undo}
+            </button>
+            <button type="button" data-redo disabled>
+              {e.redo}
+            </button>
+            <button type="button" data-clear-selection disabled>
+              {e.clearSelection}
+            </button>
           </div>
           <p data-selection-info class="hint" hidden></p>
           <details data-edit-fine>
@@ -108,61 +116,74 @@ const tools = ['pencil', 'fill', 'erase', 'picker', 'select', 'rotate']
               tabindex="0"
               role="img"
               aria-label={e.canvas}
-              aria-describedby="skin-editor-hint"></canvas>
+              aria-describedby="skin-editor-hint"
+            ></canvas>
             <p
               data-pixel-position
               class="hint"
               role="status"
               aria-live="polite"
-            >
+            ></p>
+            <p id="skin-editor-hint" class="hint">
+              {e.editorHint}
             </p>
-            <p id="skin-editor-hint" class="hint">{e.editorHint}</p>
             <p class="hint">{e.baseHint}</p>
           </details>
         </div>
         <div class="ai-edit">
           <h3>{e.aiTitle}</h3>
           <p class="hint">{e.aiHint}</p>
-          <label
-            >{e.scope}<select data-edit-scope>
-              <option value="selection" disabled>{e.scopeNames[0]}</option>
-              <option value="face" selected>{e.scopeNames[1]}</option>
+          <label>
+            {e.scope}
+            <select data-edit-scope>
+              <option value="selection" disabled>
+                {e.scopeNames[0]}
+              </option>
+              <option value="face" selected>
+                {e.scopeNames[1]}
+              </option>
               <option value="part">{e.scopeNames[2]}</option>
-            </select></label
-          >
+            </select>
+          </label>
           <p class="scope-summary" data-scope-summary></p>
-          <label
-            >{e.prompt}<textarea
+          <label>
+            {e.prompt}
+            <textarea
               name="edit-prompt"
               rows="3"
               maxlength="1200"
               placeholder={e.placeholder}
-              required></textarea></label
-          >
-          <label class="consent"
-            ><input type="checkbox" name="edit-consent" required /><span
-              >{e.consent}</span
-            ></label
-          >
+              required
+            ></textarea>
+          </label>
+          <label class="consent">
+            <input type="checkbox" name="edit-consent" required />
+            <span>{e.consent}</span>
+          </label>
           <div data-edit-turnstile></div>
-          <button class="primary" data-ai-edit type="submit" disabled
-            ><span
+          <button class="primary" data-ai-edit type="submit" disabled>
+            <span
               class="edit-spinner"
               data-edit-spinner
               hidden
-              aria-hidden="true"></span><span data-edit-label>{e.edit}</span
-            ></button
-          >
+              aria-hidden="true"
+            ></span>
+            <span data-edit-label>{e.edit}</span>
+          </button>
           <p class="hint" data-edit-elapsed-row hidden>
             {c.elapsed}
-            <span data-elapsed role="timer" aria-live="off">0:00</span>
+            <span data-elapsed role="timer" aria-live="off">
+              0:00
+            </span>
           </p>
         </div>
       </div>
     </fieldset>
     <p data-edit-status class="hint" role="status" aria-live="polite"></p>
   </form>
-  <p class="hint" data-manual-publish hidden>{e.manualPublish}</p>
+  <p class="hint" data-manual-publish hidden>
+    {e.manualPublish}
+  </p>
 </section>
 <style>
   .pixel-editor {

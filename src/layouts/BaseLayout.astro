@@ -155,15 +155,13 @@ const rssUrl = new URL(localizePath(locale, '/rss.xml'), siteBase)
     <meta name="robots" content={robots} />
     <meta name="theme-color" content="#15130f" />
     {canonical && <link rel="canonical" href={canonical} />}
-    {
-      alternateUrls.map((alternate) => (
-        <link
-          rel="alternate"
-          hreflang={HTML_LANG_BY_LOCALE[alternate.locale]}
-          href={alternate.url}
-        />
-      ))
-    }
+    {alternateUrls.map((alternate) => (
+      <link
+        rel="alternate"
+        hreflang={HTML_LANG_BY_LOCALE[alternate.locale]}
+        href={alternate.url}
+      />
+    ))}
     <link rel="alternate" hreflang="x-default" href={defaultAlternateUrl} />
     <link
       rel="alternate"
@@ -173,36 +171,29 @@ const rssUrl = new URL(localizePath(locale, '/rss.xml'), siteBase)
     />
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="apple-touch-icon" href="/uploads/legacy-acico.png" />
-    {
-      shouldShowAds && (
-        <>
-          <meta name="google-adsense-account" content={ADSENSE.clientId} />
-          <link
-            rel="dns-prefetch"
-            href="https://pagead2.googlesyndication.com"
-          />
-          <link rel="dns-prefetch" href="https://googleads.g.doubleclick.net" />
-          <link
-            rel="preconnect"
-            href="https://pagead2.googlesyndication.com"
-            crossorigin="anonymous"
-          />
-        </>
-      )
-    }
+    {shouldShowAds && (
+      <>
+        <meta name="google-adsense-account" content={ADSENSE.clientId} />
+        <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com" />
+        <link rel="dns-prefetch" href="https://googleads.g.doubleclick.net" />
+        <link
+          rel="preconnect"
+          href="https://pagead2.googlesyndication.com"
+          crossorigin="anonymous"
+        />
+      </>
+    )}
     <title>{pageTitle}</title>
     <meta property="og:type" content={ogType} />
     <meta property="og:locale" content={OGP_LOCALE_BY_LOCALE[locale]} />
-    {
-      alternateUrls
-        .filter((alternate) => alternate.locale !== locale)
-        .map((alternate) => (
-          <meta
-            property="og:locale:alternate"
-            content={OGP_LOCALE_BY_LOCALE[alternate.locale]}
-          />
-        ))
-    }
+    {alternateUrls
+      .filter((alternate) => alternate.locale !== locale)
+      .map((alternate) => (
+        <meta
+          property="og:locale:alternate"
+          content={OGP_LOCALE_BY_LOCALE[alternate.locale]}
+        />
+      ))}
     <meta property="og:title" content={socialTitle} />
     <meta property="og:description" content={description} />
     {canonical && <meta property="og:url" content={canonical} />}
@@ -227,7 +218,9 @@ const rssUrl = new URL(localizePath(locale, '/rss.xml'), siteBase)
       },
     ]}
   >
-    <a class="skip-link" href="#main">{ui.skipToContent}</a>
+    <a class="skip-link" href="#main">
+      {ui.skipToContent}
+    </a>
     <Header locale={locale} />
     <AnnouncementBanner locale={locale} />
     <main id="main" tabindex="-1">

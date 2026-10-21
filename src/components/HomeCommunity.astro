@@ -50,428 +50,417 @@ const fullDate = (value: string) =>
   }).format(new Date(value))
 ---
 
-{
-  mode === 'status' && (
-    <section
-      class="community community--status"
-      aria-labelledby="community-title"
-      data-community-status
-      data-copy={JSON.stringify(ui)}
-      data-locale={locale}
+{mode === 'status' && (
+  <section
+    class="community community--status"
+    aria-labelledby="community-title"
+    data-community-status
+    data-copy={JSON.stringify(ui)}
+    data-locale={locale}
+  >
+    <header class="community-heading">
+      <div>
+        <>
+          <p class="eyebrow">LIVE COMMUNITY</p>
+          <h2 id="community-title">{community.title}</h2>
+          <p>{community.intro}</p>
+        </>
+      </div>
+      <button class="small-button" type="button" data-refresh hidden>
+        <Icon name="refresh-cw" />
+        {ui.refresh}
+      </button>
+    </header>
+    <div class="status-layout">
+      <article class="community-card discord-card">
+        <h3>
+          <Icon name="message-circle" />
+          {ui.discordTitle}
+        </h3>
+        <dl class="discord-counts">
+          <div>
+            <>
+              <dt>{ui.members}</dt>
+              <dd data-discord-members>—</dd>
+            </>
+          </div>
+          <div>
+            <>
+              <dt>{ui.online}</dt>
+              <dd data-discord-online>—</dd>
+            </>
+          </div>
+        </dl>
+        <p class="state-label" data-discord-state aria-live="polite">
+          {ui.loading}
+        </p>
+        <p class="fine-print">{ui.approximate}</p>
+        <time class="fine-print" data-discord-time />
+        <a
+          class="text-link"
+          href={settings.discordUrl}
+          {...externalLinkAttrs(settings.discordUrl, true)}
+        >
+          {ui.moreNotices}
+          <Icon name="arrow-up-right" />
+        </a>
+      </article>
+      <article class="community-card minecraft-card">
+        <h3>
+          <Icon name="gamepad-2" />
+          {ui.minecraftTitle}
+        </h3>
+        <ul class="world-status-grid">
+          {worlds.map((world) => (
+            <li data-world={world.slug}>
+              <a href={world.href}>
+                <span>{world.title}</span>
+                <strong data-world-count>—</strong>
+              </a>
+              <span class="state-label" data-world-state>
+                {ui.loading}
+              </span>
+              <time data-world-time />
+            </li>
+          ))}
+        </ul>
+        <p class="fine-print">{ui.mapCaution}</p>
+      </article>
+    </div>
+    <noscript>
+      <p class="fine-print">
+        {ui.unavailable} <a href={settings.discordUrl}>{ui.moreNotices}</a>
+      </p>
+    </noscript>
+    <p class="checked-line" data-status-checked aria-live="polite" />
+    <details class="source-details">
+      <>
+        <summary>{ui.dataSources}</summary>
+        <a
+          href={discordSourceUrl}
+          {...externalLinkAttrs(discordSourceUrl, true)}
+        >
+          Discord
+        </a>
+      </>{' '}
+      · <a href={localizePath(locale, '/world-map/')}>Dynmap</a>
+    </details>
+    <aside
+      class="notice-strip"
+      aria-labelledby="community-notices-title"
+      data-community-notices
     >
+      <h3 id="community-notices-title">
+        <Icon name="calendar-days" />
+        {ui.noticesTitle}
+      </h3>
+      <div class="notice-items">
+        <section class="discord-feed" data-feed-events>
+          <h4>{ui.eventsTitle}</h4>
+          <p class="state-label" data-feed-state aria-live="polite">
+            {ui.loading}
+          </p>
+          <p class="fine-print" data-feed-time />
+          <div data-feed-items />
+        </section>
+        <section class="discord-feed" data-feed-announcements>
+          <h4>{ui.announcementsTitle}</h4>
+          <p class="fine-print">{ui.originalText}</p>
+          <p class="state-label" data-feed-state aria-live="polite">
+            {ui.loading}
+          </p>
+          <p class="fine-print" data-feed-time />
+          <div data-feed-items />
+        </section>
+        {community.events.map((event) => (
+          <article
+            class="notice-item"
+            data-community-event
+            data-publication-window
+            data-publication-ends-at={event.endsAt}
+            hidden={Date.parse(event.endsAt) < Date.now()}
+          >
+            <time datetime={event.startsAt}>
+              {fullDate(event.startsAt)} – {fullDate(event.endsAt)}
+            </time>
+            <h4>
+              <a href={event.href} {...externalLinkAttrs(event.href, true)}>
+                {event.title}
+              </a>
+            </h4>
+            <p>{event.text}</p>
+          </article>
+        ))}
+        {notices.map((notice) => (
+          <article
+            class="notice-item"
+            data-community-notice
+            data-publication-window
+            data-publication-starts-at={notice.startsAt}
+            data-publication-ends-at={notice.endsAt}
+            hidden={!isWithinPublicationWindow(notice.startsAt, notice.endsAt)}
+          >
+            <h4>{notice.title}</h4>
+            {notice.text && <p>{notice.text}</p>}
+            {notice.href && (
+              <a
+                href={notice.href}
+                {...externalLinkAttrs(notice.href, notice.external)}
+              >
+                {notice.linkLabel ?? notice.title}
+              </a>
+            )}
+          </article>
+        ))}
+      </div>
+    </aside>
+  </section>
+)}
+
+{mode === 'discover' && (
+  <div class="community community--discover">
+    <section class="gallery-section" aria-labelledby="community-gallery-title">
       <header class="community-heading">
         <div>
           <>
-            <p class="eyebrow">LIVE COMMUNITY</p>
-            <h2 id="community-title">{community.title}</h2>
-            <p>{community.intro}</p>
+            <p class="eyebrow">MADE IN ACESERVER</p>
+            <h2 id="community-gallery-title">{ui.galleryTitle}</h2>
+            <p>{ui.galleryIntro}</p>
           </>
         </div>
-        <button class="small-button" type="button" data-refresh hidden>
-          <Icon name="refresh-cw" />
-          {ui.refresh}
-        </button>
       </header>
-      <div class="status-layout">
-        <article class="community-card discord-card">
-          <h3>
-            <Icon name="message-circle" />
-            {ui.discordTitle}
-          </h3>
-          <dl class="discord-counts">
-            <div>
-              <>
-                <dt>{ui.members}</dt>
-                <dd data-discord-members>—</dd>
-              </>
+      <div class="build-gallery">
+        {community.gallery.map((item) => (
+          <article class="build-card">
+            <div class="build-image">
+              <img
+                src={item.image}
+                alt={item.imageAlt}
+                width="960"
+                height="540"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
-            <div>
-              <>
-                <dt>{ui.online}</dt>
-                <dd data-discord-online>—</dd>
-              </>
-            </div>
-          </dl>
-          <p class="state-label" data-discord-state aria-live="polite">
-            {ui.loading}
-          </p>
-          <p class="fine-print">{ui.approximate}</p>
-          <time class="fine-print" data-discord-time />
-          <a
-            class="text-link"
-            href={settings.discordUrl}
-            {...externalLinkAttrs(settings.discordUrl, true)}
-          >
-            {ui.moreNotices}
-            <Icon name="arrow-up-right" />
-          </a>
-        </article>
-        <article class="community-card minecraft-card">
-          <h3>
-            <Icon name="gamepad-2" />
-            {ui.minecraftTitle}
-          </h3>
-          <ul class="world-status-grid">
-            {worlds.map((world) => (
-              <li data-world={world.slug}>
-                <a href={world.href}>
-                  <span>{world.title}</span>
-                  <strong data-world-count>—</strong>
-                </a>
-                <span class="state-label" data-world-state>
-                  {ui.loading}
-                </span>
-                <time data-world-time />
-              </li>
-            ))}
-          </ul>
-          <p class="fine-print">{ui.mapCaution}</p>
-        </article>
-      </div>
-      <noscript>
-        <p class="fine-print">
-          {ui.unavailable} <a href={settings.discordUrl}>{ui.moreNotices}</a>
-        </p>
-      </noscript>
-      <p class="checked-line" data-status-checked aria-live="polite" />
-      <details class="source-details">
-        <>
-          <summary>{ui.dataSources}</summary>
-          <a
-            href={discordSourceUrl}
-            {...externalLinkAttrs(discordSourceUrl, true)}
-          >
-            Discord
-          </a>
-        </>{' '}
-        · <a href={localizePath(locale, '/world-map/')}>Dynmap</a>
-      </details>
-      <aside
-        class="notice-strip"
-        aria-labelledby="community-notices-title"
-        data-community-notices
-      >
-        <h3 id="community-notices-title">
-          <Icon name="calendar-days" />
-          {ui.noticesTitle}
-        </h3>
-        <div class="notice-items">
-          <section class="discord-feed" data-feed-events>
-            <h4>{ui.eventsTitle}</h4>
-            <p class="state-label" data-feed-state aria-live="polite">
-              {ui.loading}
-            </p>
-            <p class="fine-print" data-feed-time />
-            <div data-feed-items />
-          </section>
-          <section class="discord-feed" data-feed-announcements>
-            <h4>{ui.announcementsTitle}</h4>
-            <p class="fine-print">{ui.originalText}</p>
-            <p class="state-label" data-feed-state aria-live="polite">
-              {ui.loading}
-            </p>
-            <p class="fine-print" data-feed-time />
-            <div data-feed-items />
-          </section>
-          {community.events.map((event) => (
-            <article
-              class="notice-item"
-              data-community-event
-              data-publication-window
-              data-publication-ends-at={event.endsAt}
-              hidden={Date.parse(event.endsAt) < Date.now()}
-            >
-              <time datetime={event.startsAt}>
-                {fullDate(event.startsAt)} – {fullDate(event.endsAt)}
-              </time>
-              <h4>
-                <a href={event.href} {...externalLinkAttrs(event.href, true)}>
-                  {event.title}
-                </a>
-              </h4>
-              <p>{event.text}</p>
-            </article>
-          ))}
-          {notices.map((notice) => (
-            <article
-              class="notice-item"
-              data-community-notice
-              data-publication-window
-              data-publication-starts-at={notice.startsAt}
-              data-publication-ends-at={notice.endsAt}
-              hidden={
-                !isWithinPublicationWindow(notice.startsAt, notice.endsAt)
-              }
-            >
-              <h4>{notice.title}</h4>
-              {notice.text && <p>{notice.text}</p>}
-              {notice.href && (
-                <a
-                  href={notice.href}
-                  {...externalLinkAttrs(notice.href, notice.external)}
-                >
-                  {notice.linkLabel ?? notice.title}
+            <div class="build-copy">
+              <p class="capture-label">{item.periodLabel}</p>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+              {item.context === 'current' && item.href && (
+                <a class="text-link" href={item.href}>
+                  {ui.openMap}
+                  <Icon name="arrow-up-right" />
                 </a>
               )}
-            </article>
-          ))}
-        </div>
-      </aside>
+            </div>
+          </article>
+        ))}
+      </div>
     </section>
-  )
-}
-
-{
-  mode === 'discover' && (
-    <div class="community community--discover">
+    <div class="explore-grid">
       <section
-        class="gallery-section"
-        aria-labelledby="community-gallery-title"
+        class="community-card map-card"
+        aria-labelledby="community-map-title"
       >
-        <header class="community-heading">
-          <div>
+        <>
+          <p class="eyebrow">EXPLORE</p>
+          <h2 id="community-map-title">{ui.mapTitle}</h2>
+        </>
+        <div
+          class="map-preview"
+          data-map-preview
+          data-map-url={mapUrl}
+          data-map-title={selectedWorld.title}
+        >
+          <div class="map-placeholder" aria-hidden="true">
             <>
-              <p class="eyebrow">MADE IN ACESERVER</p>
-              <h2 id="community-gallery-title">{ui.galleryTitle}</h2>
-              <p>{ui.galleryIntro}</p>
+              <Icon name="map" />
+              <span>{ui.mapPlaceholder}</span>
             </>
           </div>
-        </header>
-        <div class="build-gallery">
-          {community.gallery.map((item) => (
-            <article class="build-card">
-              <div class="build-image">
-                <img
-                  src={item.image}
-                  alt={item.imageAlt}
-                  width="960"
-                  height="540"
-                  loading="lazy"
-                  decoding="async"
-                />
+          <button class="small-button" type="button" data-load-map hidden>
+            <Icon name="map" />
+            {ui.loadMap}
+          </button>
+        </div>
+        <>
+          <p class="fine-print">{ui.mapHelp}</p>
+          <a class="text-link" href={localizePath(locale, '/world-map/')}>
+            {ui.openMap}
+            <Icon name="arrow-up-right" />
+          </a>
+        </>
+      </section>
+      <section
+        class="community-card activity-card"
+        aria-labelledby="community-activity-title"
+        data-community-history
+        data-history={JSON.stringify(activity)}
+        data-copy={JSON.stringify(ui)}
+        data-locale={locale}
+      >
+        <>
+          <p class="eyebrow">COMMUNITY LOG</p>
+          <h2 id="community-activity-title">{ui.activityTitle}</h2>
+          <p class="fine-print">{ui.activityIntro}</p>
+        </>
+        <label class="series-label">
+          {ui.historySeries}
+          <select data-history-series>
+            {worlds.map((world) => (
+              <option value={world.slug}>{world.title}</option>
+            ))}
+            <>
+              <option value="discord-online">Discord · {ui.online}</option>
+              <option value="discord-members">Discord · {ui.members}</option>
+            </>
+          </select>
+        </label>
+        <p class="empty-note" data-history-empty>
+          {ui.noHistory}
+        </p>
+        <svg
+          class="activity-chart"
+          data-history-chart
+          viewBox="0 0 560 200"
+          role="img"
+          aria-label={ui.activityTitle}
+          hidden
+        />
+        <details class="history-table" data-history-details hidden>
+          <>
+            <summary>{ui.historyTable}</summary>
+            <div class="table-scroll">
+              <table>
+                <>
+                  <thead>
+                    <tr>
+                      <>
+                        <th>{ui.sampleTime} (JST)</th>
+                        <th data-series-name>{selectedWorld.title}</th>
+                      </>
+                    </tr>
+                  </thead>
+                  <tbody data-history-rows />
+                </>
+              </table>
+            </div>
+          </>
+        </details>
+        <noscript>
+          <p class="fine-print">
+            {ui.sampleTime}: {activity.samples.at(-1)?.observedAt ?? '—'}
+          </p>
+        </noscript>
+      </section>
+    </div>
+    <div class="media-grid">
+      <section
+        class="community-card social-card"
+        aria-labelledby="community-social-title"
+      >
+        <>
+          <p class="eyebrow">FROM X</p>
+          <h2 id="community-social-title">{ui.socialTitle}</h2>
+          <p class="fine-print">{ui.socialIntro}</p>
+        </>
+        <div class="post-list">
+          {community.xPosts.map((post) => (
+            <article
+              class="post-card"
+              data-selected-post
+              data-post-url={post.url}
+            >
+              <time datetime={post.publishedAt}>{date(post.publishedAt)}</time>
+              <h3>{post.label}</h3>
+              <div class="post-actions">
+                <button
+                  type="button"
+                  class="small-button"
+                  data-load-post
+                  hidden
+                >
+                  {ui.loadPost}
+                </button>
+                <a href={post.url} {...externalLinkAttrs(post.url, true)}>
+                  {ui.openPost}
+                  <Icon name="arrow-up-right" />
+                </a>
               </div>
-              <div class="build-copy">
-                <p class="capture-label">{item.periodLabel}</p>
-                <h3>{item.title}</h3>
-                <p>{item.text}</p>
-                {item.context === 'current' && item.href && (
-                  <a class="text-link" href={item.href}>
-                    {ui.openMap}
-                    <Icon name="arrow-up-right" />
-                  </a>
-                )}
-              </div>
+              <div data-post-embed />
+              <p class="fine-print" data-embed-help hidden>
+                {ui.embedHelp}
+              </p>
             </article>
           ))}
         </div>
       </section>
-      <div class="explore-grid">
-        <section
-          class="community-card map-card"
-          aria-labelledby="community-map-title"
+      <section
+        class="community-card recent-card"
+        aria-labelledby="community-videos-title"
+      >
+        <>
+          <p class="eyebrow">WATCH & READ</p>
+          <h2 id="community-videos-title">{ui.videosTitle}</h2>
+        </>
+        <div class="recent-videos">
+          {youtube.videos.slice(0, 3).map((video) => (
+            <a
+              class="recent-video"
+              href={video.url}
+              {...externalLinkAttrs(video.url, true)}
+            >
+              <img
+                src={video.thumbnailUrl}
+                alt={video.title}
+                loading="lazy"
+                width="240"
+                height="135"
+              />
+              <span>
+                <strong>{video.title}</strong>
+                <time datetime={video.publishedAt}>
+                  {date(video.publishedAt)}
+                </time>
+              </span>
+            </a>
+          ))}
+        </div>
+        <a
+          class="text-link"
+          href={localizePath(locale, '/youtube-search-aceserver/')}
         >
+          {ui.allVideos}
+          <Icon name="arrow-up-right" />
+        </a>
+        <article class="diary-teaser">
           <>
-            <p class="eyebrow">EXPLORE</p>
-            <h2 id="community-map-title">{ui.mapTitle}</h2>
-          </>
-          <div
-            class="map-preview"
-            data-map-preview
-            data-map-url={mapUrl}
-            data-map-title={selectedWorld.title}
-          >
-            <div class="map-placeholder" aria-hidden="true">
+            <img
+              src="/uploads/alpha-kun.png"
+              alt={sharedUi.alphaImageAlt}
+              width="76"
+              height="76"
+              loading="lazy"
+            />
+            <div>
               <>
-                <Icon name="map" />
-                <span>{ui.mapPlaceholder}</span>
+                <h3>{ui.diaryTitle}</h3>
+                <p>{ui.diaryIntro}</p>
+                <a
+                  class="text-link"
+                  href={localizePath(locale, '/alpha-diary/')}
+                >
+                  {ui.readDiary}
+                  <Icon name="arrow-up-right" />
+                </a>
               </>
             </div>
-            <button class="small-button" type="button" data-load-map hidden>
-              <Icon name="map" />
-              {ui.loadMap}
-            </button>
-          </div>
-          <>
-            <p class="fine-print">{ui.mapHelp}</p>
-            <a class="text-link" href={localizePath(locale, '/world-map/')}>
-              {ui.openMap}
-              <Icon name="arrow-up-right" />
-            </a>
           </>
-        </section>
-        <section
-          class="community-card activity-card"
-          aria-labelledby="community-activity-title"
-          data-community-history
-          data-history={JSON.stringify(activity)}
-          data-copy={JSON.stringify(ui)}
-          data-locale={locale}
-        >
-          <>
-            <p class="eyebrow">COMMUNITY LOG</p>
-            <h2 id="community-activity-title">{ui.activityTitle}</h2>
-            <p class="fine-print">{ui.activityIntro}</p>
-          </>
-          <label class="series-label">
-            {ui.historySeries}
-            <select data-history-series>
-              {worlds.map((world) => (
-                <option value={world.slug}>{world.title}</option>
-              ))}
-              <>
-                <option value="discord-online">Discord · {ui.online}</option>
-                <option value="discord-members">Discord · {ui.members}</option>
-              </>
-            </select>
-          </label>
-          <p class="empty-note" data-history-empty>
-            {ui.noHistory}
-          </p>
-          <svg
-            class="activity-chart"
-            data-history-chart
-            viewBox="0 0 560 200"
-            role="img"
-            aria-label={ui.activityTitle}
-            hidden
-          />
-          <details class="history-table" data-history-details hidden>
-            <>
-              <summary>{ui.historyTable}</summary>
-              <div class="table-scroll">
-                <table>
-                  <>
-                    <thead>
-                      <tr>
-                        <>
-                          <th>{ui.sampleTime} (JST)</th>
-                          <th data-series-name>{selectedWorld.title}</th>
-                        </>
-                      </tr>
-                    </thead>
-                    <tbody data-history-rows />
-                  </>
-                </table>
-              </div>
-            </>
-          </details>
-          <noscript>
-            <p class="fine-print">
-              {ui.sampleTime}: {activity.samples.at(-1)?.observedAt ?? '—'}
-            </p>
-          </noscript>
-        </section>
-      </div>
-      <div class="media-grid">
-        <section
-          class="community-card social-card"
-          aria-labelledby="community-social-title"
-        >
-          <>
-            <p class="eyebrow">FROM X</p>
-            <h2 id="community-social-title">{ui.socialTitle}</h2>
-            <p class="fine-print">{ui.socialIntro}</p>
-          </>
-          <div class="post-list">
-            {community.xPosts.map((post) => (
-              <article
-                class="post-card"
-                data-selected-post
-                data-post-url={post.url}
-              >
-                <time datetime={post.publishedAt}>
-                  {date(post.publishedAt)}
-                </time>
-                <h3>{post.label}</h3>
-                <div class="post-actions">
-                  <button
-                    type="button"
-                    class="small-button"
-                    data-load-post
-                    hidden
-                  >
-                    {ui.loadPost}
-                  </button>
-                  <a href={post.url} {...externalLinkAttrs(post.url, true)}>
-                    {ui.openPost}
-                    <Icon name="arrow-up-right" />
-                  </a>
-                </div>
-                <div data-post-embed />
-                <p class="fine-print" data-embed-help hidden>
-                  {ui.embedHelp}
-                </p>
-              </article>
-            ))}
-          </div>
-        </section>
-        <section
-          class="community-card recent-card"
-          aria-labelledby="community-videos-title"
-        >
-          <>
-            <p class="eyebrow">WATCH & READ</p>
-            <h2 id="community-videos-title">{ui.videosTitle}</h2>
-          </>
-          <div class="recent-videos">
-            {youtube.videos.slice(0, 3).map((video) => (
-              <a
-                class="recent-video"
-                href={video.url}
-                {...externalLinkAttrs(video.url, true)}
-              >
-                <img
-                  src={video.thumbnailUrl}
-                  alt={video.title}
-                  loading="lazy"
-                  width="240"
-                  height="135"
-                />
-                <span>
-                  <strong>{video.title}</strong>
-                  <time datetime={video.publishedAt}>
-                    {date(video.publishedAt)}
-                  </time>
-                </span>
-              </a>
-            ))}
-          </div>
-          <a
-            class="text-link"
-            href={localizePath(locale, '/youtube-search-aceserver/')}
-          >
-            {ui.allVideos}
-            <Icon name="arrow-up-right" />
-          </a>
-          <article class="diary-teaser">
-            <>
-              <img
-                src="/uploads/alpha-kun.png"
-                alt={sharedUi.alphaImageAlt}
-                width="76"
-                height="76"
-                loading="lazy"
-              />
-              <div>
-                <>
-                  <h3>{ui.diaryTitle}</h3>
-                  <p>{ui.diaryIntro}</p>
-                  <a
-                    class="text-link"
-                    href={localizePath(locale, '/alpha-diary/')}
-                  >
-                    {ui.readDiary}
-                    <Icon name="arrow-up-right" />
-                  </a>
-                </>
-              </div>
-            </>
-          </article>
-        </section>
-      </div>
+        </article>
+      </section>
     </div>
-  )
-}
+  </div>
+)}
 
 <script>
   import '../scripts/home-community'

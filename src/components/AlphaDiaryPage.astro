@@ -28,7 +28,6 @@ const fixturesEnabled = import.meta.env.DEV
     data-alpha-diary-copy
     set:html={serializeJsonForHtmlScript(copy)}
   />
-
   <PageHero
     title={copy.title}
     eyebrow={copy.eyebrow}
@@ -36,7 +35,11 @@ const fixturesEnabled = import.meta.env.DEV
     tone="sky"
   >
     <div slot="backdrop" class="diary-hero__sky" aria-hidden="true">
-      <span></span><span></span><span></span><span></span><span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
     <Fragment slot="eyebrow">
       <span class="diary-mode-copy">{copy.eyebrow}</span>
@@ -99,7 +102,11 @@ const fixturesEnabled = import.meta.env.DEV
     <div class="diary-main-column">
       <article class="diary-paper" data-diary-paper data-record-kind="loading">
         <div class="diary-paper__rings" aria-hidden="true">
-          <span></span><span></span><span></span><span></span><span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
         <div class="diary-paper__rule" aria-hidden="true"></div>
 
@@ -120,8 +127,7 @@ const fixturesEnabled = import.meta.env.DEV
             data-diary-wait-elapsed
             aria-live="off"
             hidden
-          >
-          </p>
+          ></p>
           <p class="diary-state__summary" data-diary-load-summary hidden></p>
           <button
             type="button"
@@ -137,21 +143,24 @@ const fixturesEnabled = import.meta.env.DEV
         <div class="diary-entry" data-diary-entry hidden>
           <header class="diary-entry__header">
             <div>
-              <span class="diary-kind" data-diary-kind>{copy.diaryKind}</span>
+              <span class="diary-kind" data-diary-kind>
+                {copy.diaryKind}
+              </span>
               <time data-diary-record-date></time>
               <p
                 class="diary-entry__load-summary"
                 data-diary-entry-load-summary
                 hidden
-              >
-              </p>
+              ></p>
             </div>
             <span class="diary-record-id" data-diary-record-id></span>
           </header>
           <h2 data-diary-title></h2>
           <figure class="diary-drawing">
             <span class="diary-tape diary-tape--left" aria-hidden="true"></span>
-            <span class="diary-tape diary-tape--right" aria-hidden="true"
+            <span
+              class="diary-tape diary-tape--right"
+              aria-hidden="true"
             ></span>
             <div class="diary-drawing__mat">
               <img
@@ -171,9 +180,9 @@ const fixturesEnabled = import.meta.env.DEV
               <div>
                 <h3 id="diary-question-title">
                   <span class="diary-mode-copy">{copy.questionsTitle}</span>
-                  <span class="observation-mode-copy"
-                    >{copy.observationQuestionsTitle}</span
-                  >
+                  <span class="observation-mode-copy">
+                    {copy.observationQuestionsTitle}
+                  </span>
                 </h3>
                 <p>{copy.questionsLead}</p>
               </div>
@@ -218,7 +227,9 @@ const fixturesEnabled = import.meta.env.DEV
   </div>
 
   <p class="diary-live" role="status" aria-live="polite" data-diary-live></p>
-  <noscript><p class="diary-noscript">{copy.noScript}</p></noscript>
+  <noscript>
+    <p class="diary-noscript">{copy.noScript}</p>
+  </noscript>
 
   <dialog
     class="diary-dialog diary-gate"
@@ -226,7 +237,9 @@ const fixturesEnabled = import.meta.env.DEV
     aria-labelledby="diary-gate-title"
   >
     <div class="diary-dialog__page">
-      <span class="diary-dialog__mark" aria-hidden="true">18+</span>
+      <span class="diary-dialog__mark" aria-hidden="true">
+        18+
+      </span>
       <p class="diary-dialog__kicker">CONTENT NOTICE</p>
       <h2 id="diary-gate-title">{copy.gateTitle}</h2>
       <p>{copy.gateBody}</p>
@@ -310,7 +323,9 @@ const fixturesEnabled = import.meta.env.DEV
         <em data-finale-correction>DATE ACCEPTED</em>
       </div>
       <p class="finale-glitch" data-finale-glitch>
-        RECORD DATE MISMATCH<br />SUBJECT / ALPHA
+        RECORD DATE MISMATCH
+        <br />
+        SUBJECT / ALPHA
       </p>
       <p class="finale-reversal">THE RECORD IS LOOKING BACK</p>
       <div class="finale-paper-invasion"></div>
@@ -340,14 +355,12 @@ const fixturesEnabled = import.meta.env.DEV
           class="finale-message__generated"
           data-finale-message-visual
           aria-hidden="true"
-        >
-        </p>
+        ></p>
         <p
           id="diary-finale-message-accessible"
           class="diary-sr-only"
           data-finale-message
-        >
-        </p>
+        ></p>
       </section>
 
       <section class="finale-hope">

@@ -20,7 +20,8 @@ const remix = getSkinRemixUi(locale)
   lead={c.intro}
 >
   <a slot="actions" class="primary" href={localizePath(locale, '/skin-maker/')}>
-    <span aria-hidden="true">＋</span>{c.make}
+    <span aria-hidden="true">＋</span>
+    {c.make}
   </a>
 </PageHero>
 
@@ -32,8 +33,8 @@ const remix = getSkinRemixUi(locale)
 >
   <SkinMakerNav locale={locale} current="store" />
   <div class="filters">
-    <label class="search"
-      ><span class="sr-only">{c.search}</span>
+    <label class="search">
+      <span class="sr-only">{c.search}</span>
       <svg
         viewBox="0 0 24 24"
         width="20"
@@ -42,9 +43,10 @@ const remix = getSkinRemixUi(locale)
         stroke="currentColor"
         stroke-width="2"
         aria-hidden="true"
-        ><circle cx="10" cy="10" r="7"></circle><path d="m15 15 6 6"
-        ></path></svg
       >
+        <circle cx="10" cy="10" r="7"></circle>
+        <path d="m15 15 6 6"></path>
+      </svg>
       <input
         data-search
         type="search"
@@ -53,12 +55,15 @@ const remix = getSkinRemixUi(locale)
       />
     </label>
     <div class="model-filters" role="group" aria-label={maker.model}>
-      <button type="button" data-model="all" aria-pressed="true">{c.all}</button
-      >
-      <button type="button" data-model="classic" aria-pressed="false"
-        >Classic</button
-      >
-      <button type="button" data-model="slim" aria-pressed="false">Slim</button>
+      <button type="button" data-model="all" aria-pressed="true">
+        {c.all}
+      </button>
+      <button type="button" data-model="classic" aria-pressed="false">
+        Classic
+      </button>
+      <button type="button" data-model="slim" aria-pressed="false">
+        Slim
+      </button>
     </div>
     <span class="sort">{c.newest}</span>
   </div>
@@ -67,19 +72,26 @@ const remix = getSkinRemixUi(locale)
   </p>
   <div class="skin-grid" data-store-grid aria-busy="true"></div>
   <div class="store-empty" data-store-empty hidden>
-    <span class="empty-pixels" aria-hidden="true">▦</span>
+    <span class="empty-pixels" aria-hidden="true">
+      ▦
+    </span>
     <p data-empty-message>{c.empty}</p>
     <a
       class="primary"
       data-empty-create
-      href={localizePath(locale, '/skin-maker/')}>{c.make}</a
+      href={localizePath(locale, '/skin-maker/')}
     >
+      {c.make}
+    </a>
   </div>
   <div class="store-actions">
-    <button type="button" data-store-retry hidden>{c.retry}</button>
-    <button type="button" data-store-more hidden
-      >{c.more}<span aria-hidden="true"> ↓</span></button
-    >
+    <button type="button" data-store-retry hidden>
+      {c.retry}
+    </button>
+    <button type="button" data-store-more hidden>
+      {c.more}
+      <span aria-hidden="true"> ↓</span>
+    </button>
   </div>
   <template data-skin-card>
     <article class="skin-card">
@@ -92,31 +104,34 @@ const remix = getSkinRemixUi(locale)
           loading="lazy"
           alt={c.preview}
         />
-        <span class="preview-label"
-          >{c.preview}<span aria-hidden="true"> ↗</span></span
-        >
+        <span class="preview-label">
+          {c.preview}
+          <span aria-hidden="true"> ↗</span>
+        </span>
       </button>
       <div class="card-content">
         <div class="card-meta">
-          <span data-card-model></span><span class="free">{c.free}</span>
+          <span data-card-model></span>
+          <span class="free">{c.free}</span>
         </div>
         <h2 data-card-name></h2>
-        <a class="card-edit" data-card-edit
-          >{remix.edit}<span aria-hidden="true"> ↗</span></a
-        >
-        <a class="card-download" data-card-download download
-          >{c.download}<span aria-hidden="true"> ↓</span></a
-        >
+        <a class="card-edit" data-card-edit>
+          {remix.edit}
+          <span aria-hidden="true"> ↗</span>
+        </a>
+        <a class="card-download" data-card-download download>
+          {c.download}
+          <span aria-hidden="true"> ↓</span>
+        </a>
       </div>
     </article>
   </template>
   <dialog data-skin-dialog aria-labelledby="skin-detail-name">
     <div class="detail-heading">
-      <h2 id="skin-detail-name" data-detail-name></h2><button
-        type="button"
-        data-detail-close
-        aria-label={c.close}>×</button
-      >
+      <h2 id="skin-detail-name" data-detail-name></h2>
+      <button type="button" data-detail-close aria-label={c.close}>
+        ×
+      </button>
     </div>
     <div class="detail-stage" data-detail-stage>
       <canvas data-detail-viewer aria-label={maker.preview}></canvas>
@@ -130,20 +145,23 @@ const remix = getSkinRemixUi(locale)
     </div>
     <p class="detail-note">{maker.note}</p>
     <p data-detail-status class="status" role="status" aria-live="polite"></p>
-    <a class="primary detail-edit" data-detail-edit>{remix.edit}</a>
-    <a class="primary detail-download" data-detail-download download
-      >{c.download}</a
-    >
+    <a class="primary detail-edit" data-detail-edit>
+      {remix.edit}
+    </a>
+    <a class="primary detail-download" data-detail-download download>
+      {c.download}
+    </a>
     <details class="report">
       <summary>{c.report}</summary>
       <form data-report-form>
-        <label
-          >{c.reason}<select name="reason"
-            ><option value="inappropriate">{c.inappropriate}</option><option
-              value="rights">{c.rights}</option
-            ><option value="other">{c.other}</option></select
-          ></label
-        >
+        <label>
+          {c.reason}
+          <select name="reason">
+            <option value="inappropriate">{c.inappropriate}</option>
+            <option value="rights">{c.rights}</option>
+            <option value="other">{c.other}</option>
+          </select>
+        </label>
         <button type="submit">{c.report}</button>
       </form>
       <p data-report-status class="status" role="status"></p>

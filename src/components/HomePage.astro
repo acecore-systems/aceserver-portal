@@ -137,7 +137,9 @@ const diaryPath = localizePath(locale, '/alpha-diary/')
   scrollCue={{ href: '#overview', label: ui.nextSection }}
 >
   <Fragment slot="title">
-    {ui.homeTitleParts.map((part) => <span>{part}</span>)}
+    {ui.homeTitleParts.map((part) => (
+      <span>{part}</span>
+    ))}
   </Fragment>
   <Fragment slot="actions">
     <a
@@ -186,21 +188,22 @@ const diaryPath = localizePath(locale, '/alpha-diary/')
     <h3>{multiplayer.titleCopy}</h3>
     {multiplayer.text && <p>{multiplayer.text}</p>}
     <p>{freePlay.text}</p>
-    <a class="crossplay-guide" href={multiplayerGuidePath}
-      >{ui.homeMultiplayerGuide}<Icon name="chevron-right" /></a
-    >
+    <a class="crossplay-guide" href={multiplayerGuidePath}>
+      {ui.homeMultiplayerGuide}
+      <Icon name="chevron-right" />
+    </a>
   </div>
 </section>
 
-{
-  page.community && (
-    <HomeCommunity page={page} locale={locale} mode="discover" />
-  )
-}
+{page.community && (
+  <HomeCommunity page={page} locale={locale} mode="discover" />
+)}
 
 <section class="cta-grid" aria-label={ui.homeCtaLabel}>
   <article class="join-card pixel-border">
-    <div class="cube-icon"><Icon name="message-circle" /></div>
+    <div class="cube-icon">
+      <Icon name="message-circle" />
+    </div>
     <div>
       <h2>{joinCta.titleCopy}</h2>
       {joinCta.text && <p>{joinCta.text}</p>}
@@ -250,12 +253,15 @@ const diaryPath = localizePath(locale, '/alpha-diary/')
     />
   </article>
   <article class="join-card pixel-border">
-    <div class="cube-icon"><Icon name="shirt" /></div>
+    <div class="cube-icon">
+      <Icon name="shirt" />
+    </div>
     <div>
       <h2>{skinUi.title}</h2>
       <p>{skinUi.intro}</p>
       <a class="asv-btn-primary" href={localizePath(locale, '/skin-maker/')}>
-        <span>{skinUi.title}</span><Icon name="chevron-right" />
+        <span>{skinUi.title}</span>
+        <Icon name="chevron-right" />
       </a>
     </div>
   </article>

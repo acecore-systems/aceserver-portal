@@ -43,19 +43,17 @@ if (!title.trim() || !eyebrow.trim() || !lead.trim()) {
   data-page-hero-variant={variant}
   aria-labelledby={titleId}
 >
-  {
-    backgroundImage && (
-      <img
-        class="page-hero__image"
-        data-page-hero-image
-        src={backgroundImage}
-        alt={imageAlt}
-        aria-hidden="true"
-        fetchpriority="high"
-        decoding="async"
-      />
-    )
-  }
+  {backgroundImage && (
+    <img
+      class="page-hero__image"
+      data-page-hero-image
+      src={backgroundImage}
+      alt={imageAlt}
+      aria-hidden="true"
+      fetchpriority="high"
+      decoding="async"
+    />
+  )}
   <div class="page-hero__backdrop" aria-hidden="true">
     <slot name="backdrop" />
   </div>
@@ -67,46 +65,40 @@ if (!title.trim() || !eyebrow.trim() || !lead.trim()) {
       <h1 id={titleId} data-page-hero-title>
         <slot name="title">{title}</slot>
       </h1>
-      <p class="page-hero__lead" data-page-hero-lead>{lead}</p>
-      {
-        variant === 'home' && hasActions && (
-          <div class="page-hero__actions" data-page-hero-actions>
-            <slot name="actions" />
-          </div>
-        )
-      }
+      <p class="page-hero__lead" data-page-hero-lead>
+        {lead}
+      </p>
+      {variant === 'home' && hasActions && (
+        <div class="page-hero__actions" data-page-hero-actions>
+          <slot name="actions" />
+        </div>
+      )}
       {imageCaption && <p class="page-hero__image-caption">{imageCaption}</p>}
     </div>
-    {
-      hasDecoration && (
-        <div class="page-hero__decoration" aria-hidden="true">
-          <slot name="decoration" />
-        </div>
-      )
-    }
+    {hasDecoration && (
+      <div class="page-hero__decoration" aria-hidden="true">
+        <slot name="decoration" />
+      </div>
+    )}
   </div>
-  {
-    variant === 'home' && scrollCue && (
-      <a
-        class="page-hero__scroll-cue"
-        href={scrollCue.href}
-        aria-label={scrollCue.label}
-      >
-        <Icon name="chevron-right" />
-      </a>
-    )
-  }
+  {variant === 'home' && scrollCue && (
+    <a
+      class="page-hero__scroll-cue"
+      href={scrollCue.href}
+      aria-label={scrollCue.label}
+    >
+      <Icon name="chevron-right" />
+    </a>
+  )}
 </header>
 
-{
-  variant === 'page' && hasActions && (
-    <div class="page-hero__toolbar">
-      <div class="page-hero__actions" data-page-hero-actions>
-        <slot name="actions" />
-      </div>
+{variant === 'page' && hasActions && (
+  <div class="page-hero__toolbar">
+    <div class="page-hero__actions" data-page-hero-actions>
+      <slot name="actions" />
     </div>
-  )
-}
+  </div>
+)}
 
 <script>
   import { initPageHeroes } from '../scripts/page-hero'
