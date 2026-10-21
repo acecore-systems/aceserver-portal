@@ -38,8 +38,8 @@ export function renderCommunityMarkdown(
         element = document.createElement('p')
         break
       case 'heading':
-        // This feed sits below the page's h4 and the event's h5.
-        element = document.createElement('h6')
+        // Keep imported headings below the feed and event titles.
+        element = document.createElement('h5')
         element.dataset.markdownLevel = String(node.depth)
         break
       case 'blockquote':
