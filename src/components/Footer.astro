@@ -33,22 +33,22 @@ const acecoreHomeUrl = new URL(
       <span>{settings.shortTitle}</span>
     </a>
     <nav aria-label={ui.footerNavigation}>
-      {
-        navigation.map((item) => (
-          <a href={item.href} {...externalLinkAttrs(item.href, item.external)}>
-            {item.text}
-          </a>
-        ))
-      }
+      {navigation.map((item) => (
+        <a href={item.href} {...externalLinkAttrs(item.href, item.external)}>
+          {item.text}
+        </a>
+      ))}
     </nav>
     <div class="footer-meta">
-      <a href={localizePath(locale, '/skin-maker/')}
-        >{getSkinMakerUi(locale).title}</a
-      >
+      <a href={localizePath(locale, '/skin-maker/')}>
+        {getSkinMakerUi(locale).title}
+      </a>
       <a href={acecoreHomeUrl} {...externalLinkAttrs(acecoreHomeUrl, true)}>
         {ACECORE_ORGANIZATION.name} ({ACECORE_ORGANIZATION.legalName})
       </a>
-      <span>© {new Date().getFullYear()} {ACECORE_ORGANIZATION.legalName}</span>
+      <span>
+        © {new Date().getFullYear()} {ACECORE_ORGANIZATION.legalName}
+      </span>
     </div>
   </div>
 </footer>

@@ -169,8 +169,12 @@ const breadcrumbJsonLd = serializeJsonForHtmlScript({
     <div class="story-shell">
       <nav class="story-breadcrumb" aria-label={ui.breadcrumbLabel}>
         <ol>
-          <li><a href={homePath}>{ui.homeLabel}</a></li>
-          <li><a href={storiesPath}>{ui.storiesTitle}</a></li>
+          <li>
+            <a href={homePath}>{ui.homeLabel}</a>
+          </li>
+          <li>
+            <a href={storiesPath}>{ui.storiesTitle}</a>
+          </li>
           <li aria-current="page">{story.data.title}</li>
         </ol>
       </nav>
@@ -179,84 +183,73 @@ const breadcrumbJsonLd = serializeJsonForHtmlScript({
         <p class="story-description">{story.data.description}</p>
         <div class="story-meta">
           <time datetime={story.data.date.toISOString()}>
-            {
-              story.data.date.toLocaleDateString(
-                DATE_LOCALE_BY_LOCALE[locale],
-                {
-                  timeZone: 'Asia/Tokyo',
-                },
-              )
-            }
+            {story.data.date.toLocaleDateString(DATE_LOCALE_BY_LOCALE[locale], {
+              timeZone: 'Asia/Tokyo',
+            })}
           </time>
-          {
-            story.data.lastUpdated && (
-              <span>
-                {updatedLabelByLocale[locale]}{' '}
-                <time datetime={story.data.lastUpdated.toISOString()}>
-                  {story.data.lastUpdated.toLocaleDateString(
-                    DATE_LOCALE_BY_LOCALE[locale],
-                    { timeZone: 'Asia/Tokyo' },
-                  )}
-                </time>
-              </span>
-            )
-          }
+          {story.data.lastUpdated && (
+            <span>
+              {updatedLabelByLocale[locale]}{' '}
+              <time datetime={story.data.lastUpdated.toISOString()}>
+                {story.data.lastUpdated.toLocaleDateString(
+                  DATE_LOCALE_BY_LOCALE[locale],
+                  { timeZone: 'Asia/Tokyo' },
+                )}
+              </time>
+            </span>
+          )}
           <span>{ui.byAuthor.replace('{author}', story.data.author)}</span>
         </div>
       </header>
-      {
-        story.data.image && (
-          <figure class="story-cover" data-story-cover>
-            <img
-              src={story.data.image}
-              alt={story.data.imageAlt}
-              fetchpriority="high"
-              decoding="async"
-            />
-          </figure>
-        )
-      }
+      {story.data.image && (
+        <figure class="story-cover" data-story-cover>
+          <img
+            src={story.data.image}
+            alt={story.data.imageAlt}
+            fetchpriority="high"
+            decoding="async"
+          />
+        </figure>
+      )}
       <div class="story-body">
         <Content />
       </div>
-      {
-        relatedContent.length > 0 && (
-          <section class="story-related" aria-labelledby="story-related-title">
-            <h2 id="story-related-title">{ui.relatedContentTitle}</h2>
-            <div class="story-related-grid">
-              {relatedContent.map((item) => (
-                <a
-                  class:list={{
-                    'story-related-card': true,
-                    'story-related-card--page': item.kind === 'page',
-                    'story-related-card--story': item.kind === 'story',
-                  }}
-                  href={item.href}
-                >
-                  {item.image && item.imageAlt && (
-                    <img
-                      class="story-related-image"
-                      src={item.image}
-                      alt={item.imageAlt}
-                      loading="lazy"
-                      decoding="async"
-                    />
+      {relatedContent.length > 0 && (
+        <section class="story-related" aria-labelledby="story-related-title">
+          <h2 id="story-related-title">{ui.relatedContentTitle}</h2>
+          <div class="story-related-grid">
+            {relatedContent.map((item) => (
+              <a
+                class:list={{
+                  'story-related-card': true,
+                  'story-related-card--page': item.kind === 'page',
+                  'story-related-card--story': item.kind === 'story',
+                }}
+                href={item.href}
+              >
+                {item.image && item.imageAlt && (
+                  <img
+                    class="story-related-image"
+                    src={item.image}
+                    alt={item.imageAlt}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                )}
+                <span class="story-related-copy">
+                  {item.kind === 'page' && (
+                    <span class="story-related-label">
+                      {ui.relatedPageLabel}
+                    </span>
                   )}
-                  <span class="story-related-copy">
-                    {item.kind === 'page' && (
-                      <span class="story-related-label">
-                        {ui.relatedPageLabel}
-                      </span>
-                    )}
-                    <strong>{item.title}</strong>
-                    <span>{item.description}</span>
-                  </span>
-                </a>
-              ))}
-            </div>
-          </section>
-        )
-      }
+                  <strong>{item.title}</strong>
+                  <span>{item.description}</span>
+                </span>
+              </a>
+            ))}
+          </div>
+        </section>
+      )}
       <footer class="story-footer">
         <a href={storiesPath}>{ui.backToStories}</a>
         <a href={homePath}>{ui.joinAceserver}</a>

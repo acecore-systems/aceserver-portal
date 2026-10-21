@@ -84,7 +84,8 @@ const appJsonLd = serializeJsonForHtmlScript({
       <div data-create-panel id="skin-create-panel">
         <fieldset data-inputs>
           <label class="field">
-            {c.reference}<input
+            {c.reference}
+            <input
               name="reference"
               type="file"
               accept="image/png,image/jpeg,image/webp"
@@ -97,10 +98,17 @@ const appJsonLd = serializeJsonForHtmlScript({
               width="96"
               height="96"
             />
-            <button type="button" data-remove>{c.remove}</button>
+            <button type="button" data-remove>
+              {c.remove}
+            </button>
           </div>
           <label class="field">
-            {c.prompt}<textarea name="prompt" rows="4" maxlength="1200" required
+            {c.prompt}
+            <textarea
+              name="prompt"
+              rows="4"
+              maxlength="1200"
+              required
             ></textarea>
           </label>
           <label class="consent">
@@ -114,13 +122,18 @@ const appJsonLd = serializeJsonForHtmlScript({
             class="loading-spinner"
             data-button-spinner
             hidden
-            aria-hidden="true"></span>
+            aria-hidden="true"
+          ></span>
           <span data-generate-label>{c.generate}</span>
         </button>
-        <p data-status role="status" aria-live="polite">{c.disabled}</p>
+        <p data-status role="status" aria-live="polite">
+          {c.disabled}
+        </p>
         <p class="elapsed" data-elapsed-row hidden>
           {c.elapsed}
-          <span data-elapsed role="timer" aria-live="off">0:00</span>
+          <span data-elapsed role="timer" aria-live="off">
+            0:00
+          </span>
         </p>
       </div>
       <section
@@ -131,7 +144,9 @@ const appJsonLd = serializeJsonForHtmlScript({
         aria-labelledby="skin-upload-title"
       >
         <h2 id="skin-upload-title">{upload.title}</h2>
-        <p class="hint" id="skin-upload-hint">{upload.hint}</p>
+        <p class="hint" id="skin-upload-hint">
+          {upload.hint}
+        </p>
         <fieldset data-upload-inputs disabled>
           <label class="field">
             {upload.file}
@@ -143,64 +158,83 @@ const appJsonLd = serializeJsonForHtmlScript({
             />
           </label>
         </fieldset>
-        <p class="hint" id="skin-upload-privacy">{upload.privacy}</p>
+        <p class="hint" id="skin-upload-privacy">
+          {upload.privacy}
+        </p>
         <p class="hint" data-upload-status role="status" aria-live="polite"></p>
       </section>
     </form>
     <section class="result" aria-label={c.preview}>
       <div class="preview-heading">
-        <h2>{c.preview}</h2><span>PNG · 64 × 64</span>
+        <h2>{c.preview}</h2>
+        <span>PNG · 64 × 64</span>
       </div>
       <div class="stage" data-stage>
         <canvas data-viewer aria-label={c.preview}></canvas>
-        <p class="empty" data-empty>{c.empty}</p>
+        <p class="empty" data-empty>
+          {c.empty}
+        </p>
         <div class="loading" data-loading hidden>
           <div class="loading-pixels" aria-hidden="true">
-            {
-              Array.from({ length: 9 }, (_, i) => (
-                <span style={`--pixel: ${i}`} />
-              ))
-            }
+            {Array.from({ length: 9 }, (_, i) => (
+              <span style={`--pixel: ${i}`} />
+            ))}
           </div>
           <strong data-loading-title>{c.generating}</strong>
           <p data-loading-message>{c.busy}</p>
           <p class="elapsed">
             {c.elapsed}
-            <span data-elapsed role="timer" aria-live="off">0:00</span>
+            <span data-elapsed role="timer" aria-live="off">
+              0:00
+            </span>
           </p>
         </div>
       </div>
-      <p data-webgl hidden>{c.webgl}</p>
+      <p data-webgl hidden>
+        {c.webgl}
+      </p>
       <div class="view-controls">
-        {
-          [3, 5, 2, 4].map((i) => (
-            <button type="button" data-angle={FACES[i]}>
-              {c.faceNames[i]}
-            </button>
-          ))
-        }
-        <label><input type="checkbox" data-rotate />{c.rotate}</label>
-        <label
-          ><input type="checkbox" data-outer checked />{c.layerNames[1]}</label
-        >
+        {[3, 5, 2, 4].map((i) => (
+          <button type="button" data-angle={FACES[i]}>
+            {c.faceNames[i]}
+          </button>
+        ))}
+        <label>
+          <input type="checkbox" data-rotate />
+          {c.rotate}
+        </label>
+        <label>
+          <input type="checkbox" data-outer checked />
+          {c.layerNames[1]}
+        </label>
       </div>
       <div class="atlas-row">
-        <canvas data-atlas width="64" height="64" aria-label="64×64 PNG"
+        <canvas
+          data-atlas
+          width="64"
+          height="64"
+          aria-label="64×64 PNG"
         ></canvas>
         <div class="export-controls">
           <a
             class="primary"
             data-download
             aria-disabled="true"
-            download="minecraft-classic.png">{c.download}</a
+            download="minecraft-classic.png"
           >
-          <button type="button" data-clear>{c.clear}</button>
+            {c.download}
+          </a>
+          <button type="button" data-clear>
+            {c.clear}
+          </button>
           <a
             class="editor-link"
             href="#skin-editor-title"
             data-open-editor
-            hidden>{edit.open}</a
+            hidden
           >
+            {edit.open}
+          </a>
         </div>
       </div>
       <p class="hint">{c.note}</p>
@@ -212,48 +246,64 @@ const appJsonLd = serializeJsonForHtmlScript({
     hidden
     aria-labelledby="skin-copy-title"
   >
-    <h2 id="skin-copy-title" tabindex="-1">{remix.title}</h2>
+    <h2 id="skin-copy-title" tabindex="-1">
+      {remix.title}
+    </h2>
     <p data-remix-source hidden>
       <strong>{remix.source}:</strong>
       <span data-remix-name></span>
     </p>
-    <p data-remix-status role="status" aria-live="polite">{remix.loading}</p>
-    <button type="button" data-remix-retry hidden>{store.retry}</button>
+    <p data-remix-status role="status" aria-live="polite">
+      {remix.loading}
+    </p>
+    <button type="button" data-remix-retry hidden>
+      {store.retry}
+    </button>
     <a href={localizePath(locale, '/skin-maker/store/')}>{store.store} →</a>
   </section>
   <SkinPixelEditor locale={locale} />
   <section class="publication" data-publication hidden aria-label={store.title}>
     <h2>{store.title}</h2>
     <form class="publish-form" data-publish-form hidden>
-      <label class="field"
-        >{store.name}<input name="skin-name" maxlength="40" required /></label
-      >
-      <label class="consent"
-        ><input type="checkbox" name="public-consent" required /><span
-          >{store.consent}</span
-        ></label
-      >
-      <p class="hint" data-publish-hint>{store.hint}</p>
-      <button class="primary" type="submit" data-publish>{store.publish}</button
-      >
+      <label class="field">
+        {store.name}
+        <input name="skin-name" maxlength="40" required />
+      </label>
+      <label class="consent">
+        <input type="checkbox" name="public-consent" required />
+        <span>{store.consent}</span>
+      </label>
+      <p class="hint" data-publish-hint>
+        {store.hint}
+      </p>
+      <button class="primary" type="submit" data-publish>
+        {store.publish}
+      </button>
     </form>
     <p class="hint" data-publish-status role="status" aria-live="polite"></p>
     <div class="publication-actions">
       <a
         data-published-link
         hidden
-        href={localizePath(locale, '/skin-maker/store/')}>{store.store} →</a
+        href={localizePath(locale, '/skin-maker/store/')}
       >
-      <button type="button" data-unpublish hidden>{store.remove}</button>
+        {store.store} →
+      </a>
+      <button type="button" data-unpublish hidden>
+        {store.remove}
+      </button>
     </div>
   </section>
   <aside class="privacy">
     <p>{edit.privacy}</p>
-    <p>{c.privacy}</p><a
+    <p>{c.privacy}</p>
+    <a
       href="https://developers.cloudflare.com/workers-ai/platform/data-usage/"
       target="_blank"
-      rel="noopener noreferrer">Cloudflare · Workers AI</a
+      rel="noopener noreferrer"
     >
+      Cloudflare · Workers AI
+    </a>
   </aside>
 </section>
 

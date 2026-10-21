@@ -34,7 +34,9 @@ const ui = getUi(locale)
     method="get"
     role="search"
   >
-    <label class="sr-only" for="site-search-query">{ui.search.title}</label>
+    <label class="sr-only" for="site-search-query">
+      {ui.search.title}
+    </label>
     <input
       id="site-search-query"
       data-search-query
@@ -43,7 +45,9 @@ const ui = getUi(locale)
       placeholder={ui.search.placeholder}
       autocomplete="off"
     />
-    <button class="asv-btn-primary" type="submit">{ui.search.link}</button>
+    <button class="asv-btn-primary" type="submit">
+      {ui.search.link}
+    </button>
   </form>
   <p class="site-search__privacy">{ui.search.privacy}</p>
   <p class="site-search__status" data-search-status aria-live="polite">
