@@ -709,11 +709,87 @@ const fullDate = (value: string) =>
     line-height: 1.6;
     overflow-wrap: anywhere;
   }
+  .discord-feed :global(.feed-title) {
+    font-weight: 800;
+  }
+  .discord-feed :global(.feed-item--featured .feed-title) {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin: 0;
+    overflow-wrap: anywhere;
+  }
   .discord-feed :global(.feed-body) {
-    white-space: pre-wrap;
     overflow-wrap: anywhere;
     font-size: 0.86rem;
+    line-height: 1.85;
     margin: 8px 0;
+  }
+  .discord-feed :global(.feed-body p) {
+    white-space: pre-line;
+    margin: 0.6em 0;
+  }
+  .discord-feed :global(.feed-body h6) {
+    font-size: 0.98rem;
+    font-weight: 800;
+    line-height: 1.6;
+    margin: 1.1em 0 0.4em;
+  }
+  .discord-feed :global(.feed-body h6[data-markdown-level='1']) {
+    font-size: 1.03rem;
+  }
+  .discord-feed :global(.feed-body h6[data-markdown-level='3']),
+  .discord-feed :global(.feed-body h6[data-markdown-level='4']),
+  .discord-feed :global(.feed-body h6[data-markdown-level='5']),
+  .discord-feed :global(.feed-body h6[data-markdown-level='6']) {
+    font-size: 0.9rem;
+  }
+  .discord-feed :global(.feed-body blockquote) {
+    border-left: 3px solid #91a77c;
+    background: #f4f2e8;
+    color: #514c3e;
+    margin: 0.7em 0;
+    padding: 0.25em 0.8em;
+  }
+  .discord-feed :global(.feed-body ul),
+  .discord-feed :global(.feed-body ol) {
+    margin: 0.6em 0;
+    padding-left: 1.6em;
+  }
+  .discord-feed :global(.feed-body ul) {
+    list-style: disc;
+  }
+  .discord-feed :global(.feed-body ol) {
+    list-style: decimal;
+  }
+  .discord-feed :global(.feed-body li + li) {
+    margin-top: 0.25em;
+  }
+  .discord-feed :global(.feed-body strong) {
+    font-weight: 800;
+  }
+  .discord-feed :global(.feed-body em) {
+    font-style: italic;
+  }
+  .discord-feed :global(.feed-body code) {
+    border-radius: 3px;
+    background: #ece7d9;
+    padding: 0.1em 0.3em;
+    font-size: 0.9em;
+  }
+  .discord-feed :global(.feed-body pre) {
+    overflow-x: auto;
+    white-space: pre-wrap;
+    background: #ece7d9;
+    padding: 0.7em;
+    border-radius: 6px;
+  }
+  .discord-feed :global(.feed-body pre code) {
+    padding: 0;
+  }
+  .discord-feed :global(.feed-body hr) {
+    border: 0;
+    border-top: 1px solid #ddd4c0;
+    margin: 1em 0;
   }
   .discord-feed :global(time),
   .discord-feed :global(a) {
@@ -722,6 +798,9 @@ const fullDate = (value: string) =>
   .discord-feed :global(a) {
     color: #356d45;
     text-decoration: underline;
+  }
+  .discord-feed :global(.feed-body a) {
+    font-size: inherit;
   }
   .discord-feed :global(time) {
     display: block;
