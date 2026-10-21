@@ -1,8 +1,11 @@
 ---
-title: 'Impossible de rejoindre un serveur Minecraft ? Vérifications pour Java, Bedrock et Switch'
-description: Vérifiez l’édition, la version du jeu, le compte et le réseau lorsque vous ne pouvez pas rejoindre un serveur Minecraft, puis jouez sereinement après la connexion.
+title: 'Impossible de rejoindre un serveur Minecraft : solutions pour Java,
+  Bedrock et Switch'
+description: 'Découvrez quoi vérifier lorsque vous ne pouvez pas rejoindre un
+  serveur Minecraft : édition, version, compte et réseau, avec des étapes
+  adaptées à Java, Bedrock et Switch.'
 translationOf: minecraft-server-cannot-join
-sourceHash: sha256:22e7daa49d737d74089286ebf1a965d34c3ce62833a3a18b8ff4476d65a27414
+sourceHash: sha256:c19e1b5fcf6a1fa0d21c7d1f1a9c8e25b03be51e1e8c109a0ca356006bf6c1b0
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -10,113 +13,116 @@ tags:
   - Dépannage
 author: Gui
 image: /uploads/stories/minecraft-server-cannot-join-hero.webp
-imageAlt: Un voyageur en style blocs tenant une carte choisit entre des chemins vers un ordinateur, un smartphone et une manette de jeu
-lastUpdated: 2026-10-09T15:00:00+09:00
+imageAlt: Un voyageur en style blocs tient une carte devant des chemins menant à
+  un ordinateur, un smartphone et une manette de jeu
+lastUpdated: 2026-10-19T12:52:23Z
 ---
 
-Lorsque vous ne pouvez pas rejoindre un serveur Minecraft, évitez de réessayer sans cesse avant d’avoir séparé les causes possibles : édition du jeu, consignes du serveur, compte et réseau. La première moitié de cet article s’applique à tous les serveurs ; les indications propres à Aceserver sont séparées à la fin.
+Lorsque vous ne pouvez pas rejoindre un serveur Minecraft, comparez le message d’erreur aux consignes du serveur, puis vérifiez l’édition, la version et les conditions d’accès avant de contrôler le compte et la connexion. Pour mieux cerner la cause, vérifiez les éléments un par un au lieu de réessayer sans cesse.
 
-Si votre groupe comprend des joueurs sur Switch ou mobile, consultez [comment jouer à Minecraft avec des amis](/fr/stories/minecraft-play-with-friends/) avant de choisir la façon de rejoindre, afin de vérifier l’édition et les comptes.
+Cet article présente les différences entre Java Edition, Bedrock Edition et Switch, les vérifications à effectuer selon l’erreur et les sources officielles à consulter si vous utilisez Aceserver. Si vous voulez d’abord vérifier les conditions pour jouer avec des amis depuis une Switch ou un smartphone, consultez aussi [comment jouer à Minecraft avec des amis](/fr/stories/minecraft-play-with-friends/).
 
-« Multijoueur désactivé » invite à vérifier les autorisations du compte ; un délai dépassé, l’adresse, l’état du serveur ou la connexion. Ces problèmes n’ont pas forcément la même solution. Si l’écran vous semble peu clair, consultez celui de votre édition dans le [guide officiel pour rejoindre un serveur](https://www.minecraft.net/en-us/article/how-play-minecraft-server), puis passez aux vérifications ci-dessous.
+Le message « Le multijoueur est désactivé » oriente vers les autorisations du compte ; un délai d’attente dépassé invite à vérifier l’adresse, l’état du serveur et la connexion. Ces problèmes ne se résolvent pas forcément de la même manière. Si vous ne savez pas où saisir les informations, consultez l’écran correspondant à votre édition dans le [guide officiel pour rejoindre un serveur](https://www.minecraft.net/en-us/article/how-play-minecraft-server), puis vérifiez les points ci-dessous dans l’ordre.
 
-## Distinguez d’abord un problème de connexion d’une hésitation après l’arrivée
+## Commencez par distinguer un problème de connexion d’une difficulté après l’arrivée
 
-- **Impossible de se connecter :** Vérifiez le message d’erreur, l’édition, la version, le compte, le réseau et la disponibilité du serveur.
-- **Vous êtes entré mais ne savez pas quoi faire :** Vérifiez les règles, le point de départ et le contact officiel. Se sentir guidé après la connexion aide aussi à continuer à participer.
+- **Impossible de se connecter au serveur :** vérifiez le message d’erreur, l’édition, la version, les conditions d’accès, le compte, la connexion et la disponibilité du serveur.
+- **Connecté, mais vous ne savez pas quoi faire :** consultez les règles, le premier endroit à visiter et les coordonnées à utiliser en cas de problème.
 
-Ce sont deux problèmes différents. Il n’est pas nécessaire de subir le second pendant la résolution du premier.
+Un problème de connexion et une incertitude après l’arrivée sont deux choses différentes. Commencez par chercher pourquoi vous ne pouvez pas vous connecter ; une fois sur le serveur, consultez ses indications.
 
-## Une vérification commune en cinq minutes
+## Vérifications communes à effectuer en premier
 
-1. Conservez l’erreur affichée, l’heure de la tentative et l’appareil utilisé. Une capture d’écran convient.
-2. Lisez les informations officielles du serveur : maintenance, inscriptions fermées, liste d’autorisation et éditions compatibles.
-3. Comparez caractère par caractère l’adresse, le port demandé et la version du jeu avec ces informations.
-4. Redémarrez Minecraft et l’appareil, puis vérifiez que vous utilisez la version normale et non une version de test, snapshot ou preview.
-5. Si cela ne fonctionne toujours pas, vérifiez le compte, les autorisations et le réseau un par un. Modifier plusieurs réglages à la fois masque la cause.
+1. Notez le message d’erreur, l’heure de la tentative et l’appareil utilisé. Vous pouvez aussi conserver une capture d’écran.
+2. Consultez les informations officielles du serveur visé pour vérifier s’il est en maintenance, si les inscriptions sont suspendues, si une liste d’autorisation est requise et quelles éditions sont compatibles.
+3. Comparez caractère par caractère l’adresse du serveur, le port nécessaire et la version du jeu avec les informations fournies.
+4. Redémarrez Minecraft et l’appareil. Vérifiez que vous lancez la version normale du jeu, et non une version de test ou preview.
+5. Si le problème persiste, vérifiez le compte, les autorisations et la connexion un par un. Modifier plusieurs paramètres à la fois rend la cause plus difficile à identifier.
 
-## Ce qui diffère entre Java, Bedrock et Switch
+## Vérifications selon Java Edition, Bedrock Edition et Switch
 
 ### Java Edition
 
-Java Edition fonctionne sous Windows, macOS et Linux. Si un serveur fournit des instructions Java, choisissez dans le lanceur la version normale demandée et entrez son adresse dans Multijoueur. L’adresse est une IP ou un nom d’hôte. Saisissez l’adresse indiquée par le serveur, sans la confondre avec l’URL d’une page web.
+Java Edition est l’édition destinée à Windows, macOS et Linux. Si le serveur est prévu pour Java Edition, sélectionnez dans le lanceur la version normale indiquée, puis saisissez l’adresse du serveur dans le menu Multijoueur. Cette adresse est une adresse IP ou un nom d’hôte. Elle est différente de l’URL d’une page web : utilisez celle que le serveur vous a communiquée.
 
-Vérifiez surtout la version demandée par le serveur ainsi que les MOD et réglages du lanceur. Un serveur vanilla peut refuser une version de test ou des MOD inutiles. Commencez avec la version normale indiquée officiellement et n’ajoutez des éléments que si le serveur les demande explicitement.
+Vérifiez en particulier la version du jeu demandée par le serveur ainsi que les réglages des mods et du lanceur. Si le serveur est prévu pour une version vanilla, des mods inutiles ou une version de test peuvent empêcher la connexion. Essayez d’abord la version normale indiquée et n’utilisez des éléments supplémentaires que si le serveur le précise.
 
 ### Bedrock Edition
 
-Bedrock Edition est utilisée sur Windows, mobiles, consoles et d’autres plateformes compatibles. Java et Bedrock utilisent des systèmes de serveurs en ligne distincts : vous ne pouvez donc pas rejoindre avec l’autre édition, sauf si le serveur indique clairement prendre en charge les deux.
+Bedrock Edition est disponible sur Windows, les smartphones et les consoles de jeu, entre autres appareils. Java Edition et Bedrock Edition utilisent des systèmes de connexion en ligne différents. Vous ne pouvez donc pas rejoindre un serveur avec l’autre édition, sauf si celui-ci indique être compatible avec les deux.
 
-Sur Bedrock, vérifiez que le jeu est à jour, que vous êtes connecté avec un compte Microsoft et que le multijoueur est autorisé. Pour inviter des amis dans un monde personnel, ce monde doit aussi autoriser le multijoueur. Pour un serveur public, utilisez uniquement l’adresse et le port publiés pour Bedrock par ce serveur.
+Vérifiez que le jeu est à jour, que vous êtes connecté à votre compte Microsoft et que le multijoueur est autorisé. Si vous invitez des amis dans votre propre monde, vérifiez aussi les paramètres multijoueur de ce monde. Pour rejoindre un serveur public, utilisez l’adresse et le port indiqués par ce serveur pour Bedrock Edition.
 
 ### Nintendo Switch
 
-Minecraft sur Nintendo Switch est Bedrock Edition ; des indications réservées à Java ne fonctionneront donc pas. Le multijoueur en ligne de Minecraft nécessite un compte Microsoft connecté et un abonnement Nintendo Switch Online actif.
+La version de Minecraft pour Nintendo Switch est une version Bedrock. Les instructions destinées uniquement à Java Edition ne permettent donc pas de rejoindre un serveur. Le multijoueur en ligne de Minecraft nécessite d’être connecté à un compte Microsoft et d’avoir un abonnement Nintendo Switch Online actif.
 
-Sur Switch, vérifiez dans cet ordre la mise à jour du jeu, le compte Microsoft connecté, Nintendo Switch Online et toute restriction parentale liée au multijoueur. Les écrans et procédures d’accès aux serveurs varient selon l’appareil ; utilisez uniquement la méthode publiée officiellement pour Switch par le serveur visé. Il n’est pas nécessaire d’essayer des changements DNS inconnus ou une ouverture de ports pour se connecter.
+Vérifiez dans l’ordre la mise à jour du jeu, le compte Microsoft connecté, l’abonnement Nintendo Switch Online et les restrictions parentales liées au multijoueur. L’écran d’ajout d’un serveur et la procédure pour le rejoindre varient selon l’appareil. Pour vous connecter à un serveur donné, suivez la procédure que celui-ci indique pour Switch. Il n’est pas nécessaire d’essayer des changements DNS mal compris ou d’ouvrir des ports pour se connecter.
 
-![Schéma en style blocs qui oriente un ordinateur, un smartphone et une console portable vers leur méthode de connexion compatible](/uploads/stories/minecraft-server-cannot-join-edition-device.webp)
+![Illustration montrant comment choisir la méthode de connexion adaptée à un ordinateur, un smartphone ou une console portable](/uploads/stories/minecraft-server-cannot-join-edition-device.webp)
 
-## Faites correspondre les informations du serveur
+## Comparez les informations du serveur aux données saisies
 
-Confirmez toujours les éléments suivants dans les informations officielles du serveur que vous voulez rejoindre. Ne réutilisez pas des réglages qui fonctionnaient sur un autre serveur.
+Consultez les informations officielles du serveur que vous voulez rejoindre et évitez de réutiliser des paramètres qui fonctionnaient sur un autre serveur.
 
-| Élément à vérifier | Écart fréquent                                                                       |
-| ------------------ | ------------------------------------------------------------------------------------ |
-| Édition compatible | Employer des instructions Java dans Bedrock, ou l’inverse                            |
-| Version du jeu     | Se connecter avec une version ancienne, snapshot ou preview                          |
-| Adresse et port    | Utiliser une annonce ancienne, une faute de frappe ou les données d’un autre serveur |
-| Conditions d’accès | Oublier liste d’autorisation, âge, confirmation des règles ou inscriptions fermées   |
-| État du serveur    | Réessayer sans cesse pendant une maintenance, une panne ou un redémarrage            |
+| Élément à vérifier | Erreur fréquente                                                                                                        |
+| ------------------ | ----------------------------------------------------------------------------------------------------------------------- |
+| Édition compatible | Utiliser les instructions pour Java Edition dans Bedrock Edition, ou l’inverse                                          |
+| Version du jeu     | Se connecter avec une ancienne version, un snapshot ou une version preview                                              |
+| Adresse et port    | Utiliser une ancienne annonce, faire une erreur de saisie ou entrer les informations d’un autre serveur                 |
+| Conditions d’accès | Ne pas remarquer une liste d’autorisation, une condition d’âge, une règle à accepter ou une suspension des inscriptions |
+| État du serveur    | Réessayer plusieurs fois pendant une maintenance, une panne ou un redémarrage                                           |
 
-Même lorsqu’un serveur indique accepter Java et Bedrock, les destinations et procédures peuvent différer. Choisissez d’abord votre édition, puis suivez les indications actuelles de cette édition.
+Même si un serveur indique accepter Java Edition et Bedrock Edition, l’adresse ou la procédure de connexion peut différer. Choisissez l’édition que vous utilisez et suivez les instructions qui lui sont destinées.
 
-## Vérifiez le compte, les autorisations et le réseau
+## Vérifiez le compte, les autorisations et la connexion
 
-Un message indiquant que le multijoueur est désactivé ou qu’une autorisation manque peut venir du compte et non de l’adresse du serveur. Vérifiez le bon compte Microsoft, l’autorisation du multijoueur et l’absence de restriction provenant d’un compte enfant ou familial.
+Si le message indique que le multijoueur est désactivé ou que vous n’avez pas l’autorisation, vérifiez aussi les paramètres du compte, et pas seulement l’adresse du serveur. Assurez-vous d’être connecté au bon compte Microsoft, que le multijoueur y est autorisé et qu’un compte enfant ou des paramètres familiaux ne le restreignent pas.
 
-En cas d’erreur réseau ou de délai d’attente, redémarrez Minecraft et l’appareil, puis vérifiez la stabilité de votre connexion habituelle. Un réseau scolaire, professionnel ou d’établissement, un VPN ou un DNS personnalisé peut limiter les jeux en ligne. La personne qui rejoint un serveur n’a pas besoin d’ouvrir des ports de routeur au hasard. Les DNS et ports personnalisés peuvent gêner Minecraft ; revenez à l’état précédent avant de tester.
+En cas d’erreur de connexion ou de délai d’attente, redémarrez Minecraft et l’appareil, puis vérifiez que votre connexion Internet habituelle fonctionne correctement. Un réseau scolaire, professionnel ou celui d’un établissement, un VPN ou un DNS personnalisé peut restreindre les jeux en ligne.
 
-![Schéma en style blocs pour vérifier dans l’ordre la clé du compte, l’autorisation, le matériel réseau et une loupe](/uploads/stories/minecraft-server-cannot-join-account-network.webp)
+Vous n’avez pas besoin d’ouvrir des ports sur le routeur au hasard pour rejoindre un serveur. Si vous avez modifié un DNS ou des paramètres de ports, vérifiez s’ils peuvent gêner la connexion à Minecraft et, si nécessaire, rétablissez les paramètres précédents avant de réessayer.
 
-## Utilisez l’erreur affichée pour choisir l’étape suivante
+![Illustration en style blocs pour vérifier successivement la clé du compte, les autorisations, le matériel réseau et une loupe](/uploads/stories/minecraft-server-cannot-join-account-network.webp)
 
-| Message ou situation                      | Vérifier d’abord                                                    | Ne pas faire en premier                                                    |
-| ----------------------------------------- | ------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| Version différente                        | La version demandée par le serveur et votre version normale         | Passer à une version de test ou à une autre édition                        |
-| Erreur de connexion ou d’authentification | Le compte Microsoft attendu et son état de connexion                | Envoyer un mot de passe à qui que ce soit, y compris à l’équipe du serveur |
-| Délai d’attente ou connexion impossible   | Les annonces officielles de maintenance ou de panne et votre réseau | Se reconnecter sans cesse en modifiant plusieurs réglages                  |
-| Erreur de droit ou de condition d’accès   | Règles, liste d’autorisation, âge et état de l’invitation           | Chercher à contourner les conditions avec un autre compte                  |
+## Choisissez quoi vérifier selon le message d’erreur
 
-Si l’erreur a un nom ou un code, conservez-le aussi. L’appareil, l’édition, la version du jeu, l’heure et le nom de l’erreur aideront le support officiel ou l’équipe du serveur à comprendre la situation.
+| Message ou situation                                | À vérifier en premier                                                               | À éviter au départ                                               |
+| --------------------------------------------------- | ----------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
+| Version incompatible                                | La version demandée par le serveur et la version normale lancée dans le jeu         | Passer à une version de test ou à une autre édition              |
+| Erreur de connexion au compte ou d’authentification | Le bon compte Microsoft et son état de connexion                                    | Envoyer un mot de passe à quelqu’un ou à l’équipe du serveur     |
+| Délai d’attente dépassé ou connexion impossible     | Les annonces officielles de panne ou de maintenance et votre connexion              | Réessayer sans cesse en modifiant plusieurs paramètres à la fois |
+| Erreur d’autorisation ou de condition d’accès       | Les règles, la liste d’autorisation, les conditions d’âge et l’état de l’invitation | Chercher à contourner les conditions avec un autre compte        |
 
-## Trois gestes pour continuer à jouer plus sereinement après l’entrée
+Si un nom d’erreur s’affiche, notez-le également. Lorsque vous contactez l’équipe du serveur ou le support officiel, indiquez l’appareil, l’édition, la version du jeu, l’heure de la tentative et le nom de l’erreur pour décrire plus facilement la situation.
 
-1. **Lisez d’abord les règles :** Zones de construction, protection des terrains, chat, objets et déplacements entre mondes varient selon le serveur. Consultez les panneaux du point d’apparition, le site officiel, un WIKI ou les messages Discord épinglés.
-2. **Choisissez un petit premier objectif :** Visitez un monde, récoltez des ressources ou cherchez un emplacement de base. Un objectif modeste évite la surcharge d’informations lors de la première visite.
-3. **Conservez le contact officiel :** Si un problème survient après l’entrée, vous pourrez consulter la bonne information au lieu de vous fier à des suppositions ou à des méthodes non officielles.
+## Trois choses à vérifier après la connexion
 
-Ces gestes aident autant les nouveaux visiteurs que les personnes qui reviennent après une absence. Ne considérez pas la connexion comme la ligne d’arrivée : créez une entrée sûre pour continuer à jouer.
+1. **Lisez les règles en premier :** les règles de construction, la protection des terrains, le chat, les objets et les déplacements entre mondes varient selon le serveur. Consultez les panneaux au point d’apparition, le site officiel, le WIKI ou les messages épinglés sur Discord.
+2. **Choisissez un premier objectif :** visiter un monde, récolter des ressources ou chercher un emplacement pour une base sont de petits objectifs qui aident à s’organiser lors d’une première visite.
+3. **Gardez le contact officiel à portée de main :** vous pourrez ainsi retrouver les indications officielles si un problème survient après la connexion.
 
-![Un voyageur en style blocs lit un panneau d’orientation avant de partir vers des ressources, une visite de ville et la construction d’une base](/uploads/stories/minecraft-server-cannot-join-after-join.webp)
+Ces conseils peuvent aider aussi bien les personnes qui découvrent un serveur que celles qui y reviennent après une longue absence. Une fois connecté, commencez à jouer en suivant les indications du serveur.
 
-## Vérifications réservées à Aceserver
+![Un voyageur en style blocs lit un panneau avant de partir récolter des ressources, visiter une ville ou construire une base](/uploads/stories/minecraft-server-cannot-join-after-join.webp)
 
-Cette section contient les indications d’Aceserver, et non une méthode générale. Le portail Aceserver indique que les joueurs Java et Bedrock peuvent rejoindre, mais les adresses réelles, ports, étapes Switch, état du serveur et règles peuvent changer. Prenez les sources officielles suivantes, et non les notes générales précédentes, comme référence.
+## Où vérifier les informations si vous utilisez Aceserver
 
-1. Vérifiez l’entrée actuelle et les annonces sur le [portail Aceserver](/fr/).
-2. Consultez le [Discord officiel](https://discord.gg/acsv) pour les annonces actuelles de maintenance et de participation.
-3. Consultez le [WIKI officiel](https://asv-wiki.acecore.net) pour les règles en jeu et les indications de chaque monde.
+Cette section concerne les indications de participation à Aceserver et non la procédure générale de connexion. Le portail officiel Aceserver indique que les joueurs peuvent rejoindre le serveur depuis Java Edition ou Bedrock Edition. Les adresses, ports, procédures pour Switch, informations sur l’état du serveur et règles peuvent évoluer. Avant de participer, consultez les sources officielles suivantes.
 
-Si vous ne pouvez toujours pas rejoindre, indiquez Java ou Bedrock, votre appareil (Switch le cas échéant), la version du jeu, l’erreur affichée et l’heure de la tentative. Vous n’avez jamais à partager un mot de passe de compte ni un code d’authentification.
+1. Consultez le [portail Aceserver](/fr/) pour trouver l’accès au serveur et les annonces.
+2. Consultez le [Discord officiel](https://discord.gg/acsv) pour les informations concernant la maintenance et la participation.
+3. Consultez le [WIKI officiel](https://asv-wiki.acecore.net) pour les règles en jeu et les indications relatives à chaque monde.
 
-![Parcours en style blocs allant d’un portail à un panneau officiel puis à un guide pour vérifier les informations de connexion à Aceserver](/uploads/stories/minecraft-server-cannot-join-official-guidance.webp)
+![Illustration en style blocs montrant le parcours du portail à un panneau officiel puis à un guide pour vérifier les informations de participation](/uploads/stories/minecraft-server-cannot-join-official-guidance.webp)
 
-## Privilégiez les informations officielles et dépannez sans risque
+Si la connexion ne fonctionne toujours pas, indiquez si vous utilisez Java Edition ou Bedrock Edition, l’appareil utilisé (précisez Switch le cas échéant), la version du jeu, le message d’erreur et l’heure de la tentative. Vous n’avez pas à communiquer votre mot de passe ni un code d’authentification.
 
-Les écrans du jeu, réglages de console et conditions des services en ligne peuvent changer. Pour les étapes actuelles, privilégiez les informations officielles de Minecraft et de la plateforme concernée.
+## Privilégiez les informations officielles pour résoudre le problème
 
-- [Différence entre Minecraft Java et Bedrock](https://www.minecraft.net/en-us/article/java-or-bedrock-edition)
-- [Dépannage de la connexion multijoueur Minecraft Bedrock](https://help.minecraft.net/hc/en-us/articles/4409236107789-Minecraft-Bedrock-Edition-Multiplayer-Connectivity-Issues)
-- [Rejoindre un serveur en ligne Minecraft Java Edition](https://help.minecraft.net/hc/en-us/articles/32899741198989-Play-Minecraft-Java-Edition-Online-in-a-Multiplayer-Server)
+Les écrans du jeu, les conditions des services en ligne et les menus des appareils peuvent évoluer. Pour vérifier les étapes ou les conditions d’utilisation, privilégiez les informations officielles de Minecraft et de la plateforme concernée.
+
+- [Différences entre Minecraft Java Edition et Bedrock Edition](https://www.minecraft.net/en-us/article/java-or-bedrock-edition)
+- [Résoudre les problèmes de connexion multijoueur dans Minecraft Bedrock Edition](https://help.minecraft.net/hc/en-us/articles/4409236107789-Minecraft-Bedrock-Edition-Multiplayer-Connectivity-Issues)
+- [Comment rejoindre un serveur en ligne dans Minecraft Java Edition](https://help.minecraft.net/hc/en-us/articles/32899741198989-Play-Minecraft-Java-Edition-Online-in-a-Multiplayer-Server)
 - [Guide Nintendo Switch Online pour le jeu en ligne](https://support.nintendo.com/jp/nso/services/onlineplay/index.html)
