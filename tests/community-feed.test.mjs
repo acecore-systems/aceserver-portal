@@ -60,9 +60,9 @@ test('Discord headings, quotes, lists and inline formatting become readable DOM 
     createDocument(),
     '## 開催内容\n\n> 引用\n> ・参加案内\n\n- **強調**と*斜体*と`/spawn`\n\n3. 順序あり\n\n[公式](https://asv.acecore.net/)',
   )
-  for (const tag of ['h6', 'blockquote', 'ul', 'ol', 'strong', 'em', 'code'])
+  for (const tag of ['h5', 'blockquote', 'ul', 'ol', 'strong', 'em', 'code'])
     assert.equal(descendants(result, tag).length, 1, tag)
-  assert.equal(descendants(result, 'h6')[0].textContent, '開催内容')
+  assert.equal(descendants(result, 'h5')[0].textContent, '開催内容')
   assert.equal(
     descendants(result, 'blockquote')[0].textContent,
     '引用\n・参加案内',
@@ -134,7 +134,7 @@ test('the earliest valid event is always visible and cannot collapse, while late
   const featured = list.childNodes[0]
   assert.equal(featured.tagName, 'article')
   assert.equal(descendants(featured, 'summary').length, 0)
-  assert.equal(descendants(featured, 'h5')[0].textContent, first.name)
+  assert.equal(descendants(featured, 'h4')[0].textContent, first.name)
   assert.equal(descendants(featured, 'blockquote').length, 1)
   assert.equal(list.childNodes[1].tagName, 'details')
   assert.equal(list.childNodes[1].open, false)

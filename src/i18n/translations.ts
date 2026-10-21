@@ -195,7 +195,7 @@ export const JA_UI: UiCopy = {
   homeMultiplayer:
     '一人でも、友達とも、世界中のプレイヤーとも一緒に冒険や建築を楽しめます。',
   homeCrossplay: 'JAVA版・統合版どちらでも遊ぶことが可能です！',
-  homeCtaLabel: '参加・WIKI・絵日記・公式グッズ',
+  homeCtaLabel: 'スキン制作・公式グッズ',
   homeShopTitle: 'Aceserverを、日常にも。',
   homeShopText:
     'アルファくんやAceserverの世界観を、公式グッズとしてお届けしています。',
@@ -298,7 +298,7 @@ const en: LocaleTranslation = {
     homeMultiplayer:
       'Enjoy adventures and building alone, with friends, or with players from around the world.',
     homeCrossplay: 'Play from both Java Edition and Bedrock Edition!',
-    homeCtaLabel: 'Join, WIKI, picture diary, and official goods',
+    homeCtaLabel: 'Skin creation and official goods',
     homeShopTitle: 'Bring Aceserver into everyday life.',
     homeShopText:
       'Explore official goods inspired by Alpha-kun and the world of Aceserver.',
@@ -575,7 +575,7 @@ const zhCn: LocaleTranslation = {
     homeMultiplayer:
       '无论独自、与朋友，还是和世界各地的玩家，都能一起冒险和建造。',
     homeCrossplay: 'Java 版与基岩版均可游玩！',
-    homeCtaLabel: '参与方式、WIKI、图画日记与官方周边',
+    homeCtaLabel: '皮肤制作与官方周边',
     homeShopTitle: '把 Aceserver 带入日常生活。',
     homeShopText: '探索以 Alpha-kun 和 Aceserver 世界观为灵感的官方周边。',
     openShop: '查看官方周边',
@@ -838,7 +838,7 @@ const es: LocaleTranslation = {
     homeMultiplayer:
       'Disfruta de aventuras y construcciones a solas, con amigos o con jugadores de todo el mundo.',
     homeCrossplay: '¡Puedes jugar con Java Edition y Bedrock Edition!',
-    homeCtaLabel: 'Participación, WIKI, diario ilustrado y artículos oficiales',
+    homeCtaLabel: 'Creación de skins y artículos oficiales',
     homeShopTitle: 'Lleva Aceserver a tu día a día.',
     homeShopText:
       'Descubre artículos oficiales inspirados en Alpha-kun y el mundo de Aceserver.',
@@ -1111,7 +1111,7 @@ const pt: LocaleTranslation = {
     homeMultiplayer:
       'Aventure-se e construa sozinho, com amigos ou com jogadores do mundo todo.',
     homeCrossplay: 'Jogue com Java Edition e Bedrock Edition!',
-    homeCtaLabel: 'Participação, WIKI, diário ilustrado e produtos oficiais',
+    homeCtaLabel: 'Criação de skins e produtos oficiais',
     homeShopTitle: 'Leve o Aceserver para o seu dia a dia.',
     homeShopText:
       'Conheça produtos oficiais inspirados no Alpha-kun e no mundo do Aceserver.',
@@ -1385,7 +1385,7 @@ const fr: LocaleTranslation = {
     homeMultiplayer:
       'Partez à l’aventure et construisez seul, avec vos amis ou avec des joueurs du monde entier.',
     homeCrossplay: 'Jouez avec Java Edition et Bedrock Edition !',
-    homeCtaLabel: 'Participation, WIKI, journal illustré et produits officiels',
+    homeCtaLabel: 'Création de skins et produits officiels',
     homeShopTitle: 'Emportez Aceserver dans votre quotidien.',
     homeShopText:
       'Découvrez des produits officiels inspirés d’Alpha-kun et de l’univers d’Aceserver.',
@@ -1659,7 +1659,7 @@ const ko: LocaleTranslation = {
     homeMultiplayer:
       '혼자서도, 친구와도, 전 세계 플레이어와도 모험과 건축을 즐길 수 있습니다.',
     homeCrossplay: 'Java Edition과 Bedrock Edition 모두 플레이할 수 있습니다!',
-    homeCtaLabel: '참여, WIKI, 그림일기 및 공식 굿즈',
+    homeCtaLabel: '스킨 제작 및 공식 굿즈',
     homeShopTitle: 'Aceserver를 일상으로.',
     homeShopText:
       'Alpha-kun과 Aceserver의 세계관에서 영감을 받은 공식 굿즈를 만나보세요.',
@@ -1933,7 +1933,7 @@ const de: LocaleTranslation = {
     homeMultiplayer:
       'Erlebe Abenteuer und Bauprojekte allein, mit Freunden oder mit Spielern aus aller Welt.',
     homeCrossplay: 'Spiele mit Java Edition und Bedrock Edition!',
-    homeCtaLabel: 'Teilnahme, WIKI, Bildertagebuch und offizielle Artikel',
+    homeCtaLabel: 'Skin-Erstellung und offizielle Artikel',
     homeShopTitle: 'Hol dir Aceserver in den Alltag.',
     homeShopText:
       'Entdecke offizielle Artikel, inspiriert von Alpha-kun und der Welt von Aceserver.',
@@ -2211,7 +2211,7 @@ const ru: LocaleTranslation = {
     homeMultiplayer:
       'Исследуйте мир и стройте в одиночку, с друзьями или с игроками со всего света.',
     homeCrossplay: 'Играйте с Java Edition и Bedrock Edition!',
-    homeCtaLabel: 'Участие, WIKI, дневник и официальные товары',
+    homeCtaLabel: 'Создание скинов и официальные товары',
     homeShopTitle: 'Добавьте Aceserver в повседневную жизнь.',
     homeShopText:
       'Откройте официальные товары, вдохновлённые Alpha-kun и миром Aceserver.',

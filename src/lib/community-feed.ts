@@ -77,7 +77,7 @@ export function renderCommunityFeedItems(
       date.format(new Date(item.published)) +
       (item.endsAt ? ' – ' + date.format(new Date(item.endsAt)) : '') +
       ' (JST)'
-    const title = document.createElement(featured ? 'h5' : 'span')
+    const title = document.createElement(featured ? 'h4' : 'span')
     title.className = 'feed-title'
     title.textContent =
       kind === 'announcements' && item.label.length > 110
