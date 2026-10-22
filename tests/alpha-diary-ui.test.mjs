@@ -21,13 +21,17 @@ test('the picture diary has complete fixed safety and navigation copy in all nin
 })
 
 test('the picture diary is reachable without opening Alpha Chat', async () => {
-  const [navigationSource, homeSource] = await Promise.all([
+  const [navigationSource, homeSource, communitySource] = await Promise.all([
     readFile(
       new URL('../src/content/site/navigation.json', import.meta.url),
       'utf8',
     ),
     readFile(
       new URL('../src/components/HomePage.astro', import.meta.url),
+      'utf8',
+    ),
+    readFile(
+      new URL('../src/components/HomeCommunity.astro', import.meta.url),
       'utf8',
     ),
   ])
@@ -41,8 +45,14 @@ test('the picture diary is reachable without opening Alpha Chat', async () => {
     href: '/alpha-diary/',
     icon: 'notebook-pen',
   })
-  assert.equal([...homeSource.matchAll(/href=\{diaryPath\}/gu)].length, 2)
-  assert.match(homeSource, /getAlphaDiaryUi\(locale\)/u)
+  assert.match(homeSource, /<HomeCommunity[^>]*mode="discover"/u)
+  const diaryLinks = [
+    ...communitySource.matchAll(
+      /<a\b[^>]*href=\{localizePath\(locale, '\/alpha-diary\/'\)\}[^>]*>/gu,
+    ),
+  ]
+  assert.equal(diaryLinks.length, 1)
+  assert.doesNotMatch(diaryLinks[0][0], /data-alpha-open/u)
 })
 
 test('the diary handoff pre-fills Alpha Chat without automatically submitting', async () => {

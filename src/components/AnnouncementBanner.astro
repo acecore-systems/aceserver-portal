@@ -15,50 +15,43 @@ const announcements = getLocalizedAnnouncements(locale)
 const ui = getUi(locale)
 ---
 
-{
-  announcements.length > 0 && (
-    <aside class="announcement-stack" aria-label={ui.announcementLabel}>
-      {announcements.map((announcement) => (
-        <section
-          class:list={[
-            'announcement',
-            `announcement--${announcement.tone ?? 'brand'}`,
-          ]}
-          data-publication-window="true"
-          data-publication-starts-at={
-            announcement.startsAt?.trim() || undefined
-          }
-          data-publication-ends-at={announcement.endsAt?.trim() || undefined}
-          data-pagefind-ignore
-          hidden={
-            !isWithinPublicationWindow(
-              announcement.startsAt,
-              announcement.endsAt,
-            )
-          }
-        >
-          <div class="announcement-icon" aria-hidden="true">
-            <Icon name={announcement.icon ?? 'megaphone'} />
-          </div>
-          <div class="announcement-copy">
-            <p class="announcement-title">{announcement.title}</p>
-            {announcement.text && <p>{announcement.text}</p>}
-          </div>
-          {announcement.href && announcement.linkLabel && (
-            <a
-              class="announcement-link"
-              href={announcement.href}
-              {...externalLinkAttrs(announcement.href, announcement.external)}
-            >
-              <span>{announcement.linkLabel}</span>
-              <Icon name="chevron-right" />
-            </a>
-          )}
-        </section>
-      ))}
-    </aside>
-  )
-}
+{announcements.length > 0 && (
+  <aside class="announcement-stack" aria-label={ui.announcementLabel}>
+    {announcements.map((announcement) => (
+      <section
+        class:list={[
+          'announcement',
+          `announcement--${announcement.tone ?? 'brand'}`,
+        ]}
+        data-publication-window="true"
+        data-publication-starts-at={announcement.startsAt?.trim() || undefined}
+        data-publication-ends-at={announcement.endsAt?.trim() || undefined}
+        data-pagefind-ignore
+        hidden={
+          !isWithinPublicationWindow(announcement.startsAt, announcement.endsAt)
+        }
+      >
+        <div class="announcement-icon" aria-hidden="true">
+          <Icon name={announcement.icon ?? 'megaphone'} />
+        </div>
+        <div class="announcement-copy">
+          <p class="announcement-title">{announcement.title}</p>
+          {announcement.text && <p>{announcement.text}</p>}
+        </div>
+        {announcement.href && announcement.linkLabel && (
+          <a
+            class="announcement-link"
+            href={announcement.href}
+            {...externalLinkAttrs(announcement.href, announcement.external)}
+          >
+            <span>{announcement.linkLabel}</span>
+            <Icon name="chevron-right" />
+          </a>
+        )}
+      </section>
+    ))}
+  </aside>
+)}
 
 <script>
   import { initPublicationWindowRuntime } from '../scripts/publication-window'

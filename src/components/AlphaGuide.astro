@@ -115,21 +115,18 @@ const alphaLinkResources = [
       aria-live="polite"
       aria-label={ui.alpha.conversation}
       data-alpha-messages
-    >
-    </div>
+    ></div>
 
     <div class="alpha-prompt-row" aria-label={ui.alpha.promptExamples}>
-      {
-        alphaPrompts.map((prompt) => (
-          <button
-            type="button"
-            data-alpha-prompt={prompt.question}
-            title={prompt.question}
-          >
-            {prompt.label}
-          </button>
-        ))
-      }
+      {alphaPrompts.map((prompt) => (
+        <button
+          type="button"
+          data-alpha-prompt={prompt.question}
+          title={prompt.question}
+        >
+          {prompt.label}
+        </button>
+      ))}
     </div>
 
     <form class="alpha-form" data-alpha-form>
@@ -143,7 +140,8 @@ const alphaLinkResources = [
         maxlength="500"
         autocomplete="off"
         placeholder={ui.alpha.placeholder}
-        data-alpha-input></textarea>
+        data-alpha-input
+      ></textarea>
       <button type="submit" aria-label={ui.alpha.send} data-alpha-send>
         <Icon name="send-horizontal" />
       </button>

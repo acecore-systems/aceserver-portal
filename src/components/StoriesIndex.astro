@@ -31,46 +31,44 @@ const getStoryPath = (story: CollectionEntry<'stories'>) =>
 />
 
 <section class="stories-list stories-shell" aria-label={ui.storyListLabel}>
-  {
-    stories.map((story, index) => (
-      <article>
-        <a
-          class={`story-thumbnail${story.data.image ? '' : ' story-thumbnail--placeholder'}`}
-          href={getStoryPath(story)}
-          aria-label={story.data.title}
-        >
-          {story.data.image ? (
-            <img
-              src={story.data.image}
-              alt={story.data.imageAlt}
-              loading={index === 0 ? 'eager' : 'lazy'}
-              decoding="async"
-            />
-          ) : (
-            <span aria-hidden="true">ACESERVER STORY</span>
-          )}
-        </a>
-        <div class="story-content">
-          <p class="stories-date">
-            <time datetime={story.data.date.toISOString()}>
-              {story.data.date.toLocaleDateString(dateLocale, {
-                timeZone: 'Asia/Tokyo',
-              })}
-            </time>
-          </p>
-          <h2>
-            <a href={getStoryPath(story)}>{story.data.title}</a>
-          </h2>
-          <p>{story.data.description}</p>
-          <ul aria-label={ui.tagsLabel}>
-            {story.data.tags.map((tag) => (
-              <li>{tag}</li>
-            ))}
-          </ul>
-        </div>
-      </article>
-    ))
-  }
+  {stories.map((story, index) => (
+    <article>
+      <a
+        class={`story-thumbnail${story.data.image ? '' : ' story-thumbnail--placeholder'}`}
+        href={getStoryPath(story)}
+        aria-label={story.data.title}
+      >
+        {story.data.image ? (
+          <img
+            src={story.data.image}
+            alt={story.data.imageAlt}
+            loading={index === 0 ? 'eager' : 'lazy'}
+            decoding="async"
+          />
+        ) : (
+          <span aria-hidden="true">ACESERVER STORY</span>
+        )}
+      </a>
+      <div class="story-content">
+        <p class="stories-date">
+          <time datetime={story.data.date.toISOString()}>
+            {story.data.date.toLocaleDateString(dateLocale, {
+              timeZone: 'Asia/Tokyo',
+            })}
+          </time>
+        </p>
+        <h2>
+          <a href={getStoryPath(story)}>{story.data.title}</a>
+        </h2>
+        <p>{story.data.description}</p>
+        <ul aria-label={ui.tagsLabel}>
+          {story.data.tags.map((tag) => (
+            <li>{tag}</li>
+          ))}
+        </ul>
+      </div>
+    </article>
+  ))}
 </section>
 
 <style>

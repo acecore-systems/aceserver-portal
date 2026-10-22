@@ -60,118 +60,110 @@ const nextMap =
   lead={isVideoPage ? heroCopy.video : heroCopy.map}
   backgroundImage={embed.fallbackImage ?? '/uploads/legacy-world-map.png'}
 >
-  {
-    (previousMap || nextMap) && (
-      <Fragment slot="actions">
-        {previousMap && (
-          <a class="toolbar-button" href={previousMap.href}>
-            <Icon name="chevron-left" />
-            <span>{ui.previous}</span>
-            <span class="toolbar-button__label">{previousMap.title}</span>
-          </a>
-        )}
-        {nextMap && (
-          <a class="toolbar-button toolbar-button--next" href={nextMap.href}>
-            <span>{ui.next}</span>
-            <span class="toolbar-button__label">{nextMap.title}</span>
-            <Icon name="chevron-right" />
-          </a>
-        )}
-      </Fragment>
-    )
-  }
+  {(previousMap || nextMap) && (
+    <Fragment slot="actions">
+      {previousMap && (
+        <a class="toolbar-button" href={previousMap.href}>
+          <Icon name="chevron-left" />
+          <span>{ui.previous}</span>
+          <span class="toolbar-button__label">{previousMap.title}</span>
+        </a>
+      )}
+      {nextMap && (
+        <a class="toolbar-button toolbar-button--next" href={nextMap.href}>
+          <span>{ui.next}</span>
+          <span class="toolbar-button__label">{nextMap.title}</span>
+          <Icon name="chevron-right" />
+        </a>
+      )}
+    </Fragment>
+  )}
 </PageHero>
 
 <section class="embed-page" data-variant={embed.variant}>
   <div class="embed-layout">
-    {
-      isMapPage && (
-        <a
-          class="toolbar-button toolbar-button--external map-open"
-          href={embed.externalUrl ?? embed.src}
-          data-map-external-source={embed.externalUrl ?? embed.src}
-          {...externalLinkAttrs(embed.externalUrl ?? embed.src, true)}
+    {isMapPage && (
+      <a
+        class="toolbar-button toolbar-button--external map-open"
+        href={embed.externalUrl ?? embed.src}
+        data-map-external-source={embed.externalUrl ?? embed.src}
+        {...externalLinkAttrs(embed.externalUrl ?? embed.src, true)}
+      >
+        <>
+          <span>{ui.openMap}</span>
+          <Icon name="external-link" />
+        </>
+      </a>
+    )}
+    {!isVideoPage && (
+      <div class="embed-shell pixel-border">
+        <div
+          class="embed-frame"
+          style={`--fallback-image: ${fallbackImageCss}`}
         >
-          <>
-            <span>{ui.openMap}</span>
-            <Icon name="external-link" />
-          </>
-        </a>
-      )
-    }
-    {
-      !isVideoPage && (
-        <div class="embed-shell pixel-border">
-          <div
-            class="embed-frame"
-            style={`--fallback-image: ${fallbackImageCss}`}
-          >
-            <iframe
-              src={isMapPage ? undefined : embed.src}
-              data-map-embed-source={isMapPage ? embed.src : undefined}
-              title={embed.title ?? page.pageName}
-              loading="lazy"
-              allow="fullscreen; picture-in-picture"
-            />
-          </div>
+          <iframe
+            src={isMapPage ? undefined : embed.src}
+            data-map-embed-source={isMapPage ? embed.src : undefined}
+            title={embed.title ?? page.pageName}
+            loading="lazy"
+            allow="fullscreen; picture-in-picture"
+          />
         </div>
-      )
-    }
+      </div>
+    )}
 
-    {
-      isVideoPage && (
-        <section class="video-gallery">
-          <div class="video-gallery__header">
-            <div>
-              <p class="video-gallery__eyebrow">YouTube</p>
-              <h2>{ui.latestVideos}</h2>
-            </div>
+    {isVideoPage && (
+      <section class="video-gallery">
+        <div class="video-gallery__header">
+          <div>
+            <p class="video-gallery__eyebrow">YouTube</p>
+            <h2>{ui.latestVideos}</h2>
+          </div>
+          <a
+            class="toolbar-button toolbar-button--external"
+            href={videoChannelUrl}
+            {...externalLinkAttrs(videoChannelUrl, true)}
+          >
+            <span>{ui.channel}</span>
+            <Icon name="external-link" />
+          </a>
+        </div>
+        <div class="video-grid">
+          {videos.map((video) => (
             <a
-              class="toolbar-button toolbar-button--external"
-              href={videoChannelUrl}
-              {...externalLinkAttrs(videoChannelUrl, true)}
+              class="video-card"
+              href={video.url}
+              {...externalLinkAttrs(video.url, true)}
             >
-              <span>{ui.channel}</span>
-              <Icon name="external-link" />
+              <span class="video-card__thumbnail">
+                <img
+                  src={video.thumbnailUrl}
+                  alt={ui.videoThumbnail.replace('{title}', video.title)}
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span class="video-card__play">▶</span>
+              </span>
+              <span class="video-card__body">
+                <span class="video-card__title">{video.title}</span>
+                {video.publishedAt && (
+                  <span class="video-card__meta">
+                    {new Intl.DateTimeFormat(DATE_LOCALE_BY_LOCALE[locale], {
+                      year: 'numeric',
+                      month: 'short',
+                      day: 'numeric',
+                    }).format(new Date(video.publishedAt))}
+                  </span>
+                )}
+              </span>
             </a>
-          </div>
-          <div class="video-grid">
-            {videos.map((video) => (
-              <a
-                class="video-card"
-                href={video.url}
-                {...externalLinkAttrs(video.url, true)}
-              >
-                <span class="video-card__thumbnail">
-                  <img
-                    src={video.thumbnailUrl}
-                    alt={ui.videoThumbnail.replace('{title}', video.title)}
-                    loading="lazy"
-                    decoding="async"
-                  />
-                  <span class="video-card__play">▶</span>
-                </span>
-                <span class="video-card__body">
-                  <span class="video-card__title">{video.title}</span>
-                  {video.publishedAt && (
-                    <span class="video-card__meta">
-                      {new Intl.DateTimeFormat(DATE_LOCALE_BY_LOCALE[locale], {
-                        year: 'numeric',
-                        month: 'short',
-                        day: 'numeric',
-                      }).format(new Date(video.publishedAt))}
-                    </span>
-                  )}
-                </span>
-              </a>
-            ))}
-          </div>
-          <p class="video-gallery__status" hidden={videos.length > 0}>
-            {ui.videoLoadError}
-          </p>
-        </section>
-      )
-    }
+          ))}
+        </div>
+        <p class="video-gallery__status" hidden={videos.length > 0}>
+          {ui.videoLoadError}
+        </p>
+      </section>
+    )}
   </div>
 </section>
 

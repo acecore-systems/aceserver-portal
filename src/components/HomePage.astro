@@ -1,8 +1,6 @@
 ---
 import type { LinkItem, PortalPage, PortalSection } from '../types'
 import { getSkinMakerUi } from '../data/skin-maker-ui'
-import { getAlphaDiaryUi } from '../data/alpha-diary-ui'
-import { serializeCssUrl } from '../data/safe-json'
 import { localizePath, type Locale } from '../i18n/config'
 import { getUi } from '../i18n/translations'
 import { externalLinkAttrs } from '../utils/links'
@@ -17,7 +15,6 @@ interface Props {
 
 const { page, locale = 'ja' } = Astro.props
 const ui = getUi(locale)
-const diaryUi = getAlphaDiaryUi(locale)
 const skinUi = getSkinMakerUi(locale)
 const sections = page.sections ?? []
 
@@ -44,13 +41,6 @@ const fallbackOverview: FeatureSection = {
   text: '誰でも参加可能なマインクラフト無料公開サーバーです',
   image: '/uploads/current-world-city-20261015.jpg',
   imageAlt: '公開マップで確認したメインワールドの街区と水路',
-}
-const fallbackMultiplayer: FeatureSection = {
-  type: 'featureImageRight',
-  titleCopy: '誰とでもマルチプレイ！',
-  text: 'JAVA版・統合版どちらでも遊ぶことが可能です！',
-  image: '/uploads/current-world-stadium-20261015.jpg',
-  imageAlt: '公開マップで確認した水辺の野球場',
 }
 const fallbackFreePlay: FeatureSection = {
   type: 'featureImageLeft',
@@ -107,14 +97,10 @@ function getSection<T extends PortalSection['type']>(
 }
 
 const overview = getFeatureSection('featureImageFull', fallbackOverview)
-const multiplayer = getFeatureSection('featureImageRight', fallbackMultiplayer)
 const freePlay = getFeatureSection('featureImageLeft', fallbackFreePlay)
 const joinCta = getSection('cta') ?? fallbackJoinCta
 const wikiCta = getSection('hero') ?? fallbackWikiCta
 const heroImage = overview.image ?? '/uploads/current-world-city-20261015.jpg'
-const wikiBackgroundImage =
-  wikiCta.backgroundImage ?? '/uploads/legacy-wiki-bg.png'
-const wikiBackgroundImageCss = serializeCssUrl(wikiBackgroundImage)
 const heroJoinButton = joinCta.ctaButton ?? fallbackJoinButton
 const heroWikiButton = wikiCta.ctaButton ?? fallbackWikiButton
 const alphaLogo = '/uploads/alpha-kun.png'
@@ -122,7 +108,6 @@ const multiplayerGuidePath = localizePath(
   locale,
   '/stories/minecraft-play-with-friends/',
 )
-const diaryPath = localizePath(locale, '/alpha-diary/')
 ---
 
 <PageHero
@@ -137,7 +122,9 @@ const diaryPath = localizePath(locale, '/alpha-diary/')
   scrollCue={{ href: '#overview', label: ui.nextSection }}
 >
   <Fragment slot="title">
-    {ui.homeTitleParts.map((part) => <span>{part}</span>)}
+    {ui.homeTitleParts.map((part) => (
+      <span>{part}</span>
+    ))}
   </Fragment>
   <Fragment slot="actions">
     <a
@@ -167,10 +154,6 @@ const diaryPath = localizePath(locale, '/alpha-diary/')
       />
       <span>{ui.askAlpha}</span>
     </a>
-    <a class="asv-btn-diary" href={diaryPath}>
-      <Icon name="notebook-pen" />
-      <span>{diaryUi.navLabel}</span>
-    </a>
   </Fragment>
 </PageHero>
 
@@ -179,83 +162,31 @@ const diaryPath = localizePath(locale, '/alpha-diary/')
 <section id="overview" class="intro-section intro-section--compact">
   <div class="intro-copy">
     <h2>{overview.titleCopy}</h2>
-    {overview.text && <p>{overview.text}</p>}
-    <p>{ui.homeFreedom}</p>
-  </div>
-  <div class="intro-copy intro-copy--details">
-    <h3>{multiplayer.titleCopy}</h3>
-    {multiplayer.text && <p>{multiplayer.text}</p>}
-    <p>{freePlay.text}</p>
-    <a class="crossplay-guide" href={multiplayerGuidePath}
-      >{ui.homeMultiplayerGuide}<Icon name="chevron-right" /></a
-    >
+    <p>
+      {ui.homeFreedom} {freePlay.text}
+    </p>
+    <a class="crossplay-guide" href={multiplayerGuidePath}>
+      {ui.homeMultiplayerGuide}
+      <Icon name="chevron-right" />
+    </a>
   </div>
 </section>
 
-{
-  page.community && (
-    <HomeCommunity page={page} locale={locale} mode="discover" />
-  )
-}
+{page.community && (
+  <HomeCommunity page={page} locale={locale} mode="discover" />
+)}
 
 <section class="cta-grid" aria-label={ui.homeCtaLabel}>
-  <article class="join-card pixel-border">
-    <div class="cube-icon"><Icon name="message-circle" /></div>
-    <div>
-      <h2>{joinCta.titleCopy}</h2>
-      {joinCta.text && <p>{joinCta.text}</p>}
-      <a
-        class="asv-btn-primary"
-        href={heroJoinButton.href}
-        {...externalLinkAttrs(heroJoinButton.href, heroJoinButton.external)}
-      >
-        <span>{heroJoinButton.label}</span>
-        <Icon name="chevron-right" />
-      </a>
+  <article class="skin-card pixel-border">
+    <div class="cube-icon">
+      <Icon name="shirt" />
     </div>
-  </article>
-  <article
-    class="wiki-card pixel-border"
-    style={`--wiki-image: ${wikiBackgroundImageCss}`}
-  >
-    <div>
-      <h2>{wikiCta.titleCopy}</h2>
-      {wikiCta.text && <p>{wikiCta.text}</p>}
-      <a
-        class="asv-btn-green"
-        href={heroWikiButton.href}
-        {...externalLinkAttrs(heroWikiButton.href, heroWikiButton.external)}
-      >
-        <Icon name="book-open" />
-        <span>{heroWikiButton.label}</span>
-      </a>
-    </div>
-    <Icon name="book-open" class="wiki-mark" />
-  </article>
-  <article class="diary-card pixel-border">
-    <div>
-      <h2>{diaryUi.title}</h2>
-      <p>{diaryUi.eyebrow}</p>
-      <a class="asv-btn-diary" href={diaryPath}>
-        <Icon name="notebook-pen" />
-        <span>{diaryUi.openDate}</span>
-      </a>
-    </div>
-    <img
-      class="diary-mark"
-      src={alphaLogo}
-      alt={ui.alphaImageAlt}
-      width="168"
-      height="168"
-    />
-  </article>
-  <article class="join-card pixel-border">
-    <div class="cube-icon"><Icon name="shirt" /></div>
     <div>
       <h2>{skinUi.title}</h2>
       <p>{skinUi.intro}</p>
       <a class="asv-btn-primary" href={localizePath(locale, '/skin-maker/')}>
-        <span>{skinUi.title}</span><Icon name="chevron-right" />
+        <span>{skinUi.title}</span>
+        <Icon name="chevron-right" />
       </a>
     </div>
   </article>
@@ -311,45 +242,6 @@ const diaryPath = localizePath(locale, '/alpha-diary/')
     box-shadow: 0 2px 0 rgba(0, 0, 0, 0.35);
   }
 
-  .asv-btn-diary {
-    display: inline-flex;
-    min-height: 3rem;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    border: 2px solid #6a4d2f;
-    border-radius: 8px;
-    background: #fff3bd;
-    color: #211910;
-    font-size: 0.875rem;
-    font-weight: 900;
-    line-height: 1.2;
-    padding: 0.75rem 1.25rem;
-    text-decoration: none;
-    text-shadow: none;
-    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.3);
-    transition:
-      background-color 160ms ease,
-      transform 160ms ease,
-      box-shadow 160ms ease;
-  }
-
-  .asv-btn-diary:hover,
-  .asv-btn-diary:focus-visible {
-    background: #fff9df;
-    transform: translateY(-1px);
-  }
-
-  .asv-btn-diary:focus-visible {
-    outline: 4px solid #0862c4;
-    outline-offset: 3px;
-  }
-
-  .asv-btn-diary:active {
-    transform: translateY(1px);
-    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.3);
-  }
-
   .hero-alpha-icon {
     width: 28px;
     height: 28px;
@@ -364,10 +256,7 @@ const diaryPath = localizePath(locale, '/alpha-diary/')
   }
 
   .intro-section {
-    display: grid;
-    align-items: center;
-    gap: clamp(28px, 6vw, 84px);
-    grid-template-columns: minmax(220px, 0.92fr) minmax(280px, 1fr);
+    display: block;
     background: linear-gradient(
       180deg,
       rgba(255, 245, 220, 0.96),
@@ -378,24 +267,18 @@ const diaryPath = localizePath(locale, '/alpha-diary/')
   .intro-section--compact {
     padding-block: clamp(28px, 4vw, 50px);
   }
+  .intro-copy {
+    max-width: 900px;
+  }
   .intro-copy h2 {
     margin: 0 0 12px;
     font-size: clamp(1.45rem, 2.6vw, 2rem);
-    font-weight: 900;
-  }
-  .intro-copy h3 {
-    margin: 0 0 8px;
-    font-size: 1.1rem;
     font-weight: 900;
   }
   .intro-copy p {
     margin: 0 0 8px;
     font-size: 0.94rem;
     line-height: 1.7;
-  }
-  .intro-copy--details {
-    border-left: 2px solid #d6cdb4;
-    padding-left: 28px;
   }
 
   .crossplay-guide {
@@ -448,10 +331,8 @@ const diaryPath = localizePath(locale, '/alpha-diary/')
     line-height: 1.7;
   }
 
-  .join-card,
-  .wiki-card,
-  .shop-card,
-  .diary-card {
+  .skin-card,
+  .shop-card {
     display: grid;
     min-height: 230px;
     gap: 22px;
@@ -459,16 +340,9 @@ const diaryPath = localizePath(locale, '/alpha-diary/')
     padding: clamp(24px, 4vw, 44px);
   }
 
-  .join-card {
+  .skin-card {
     grid-template-columns: auto 1fr;
     background: linear-gradient(135deg, #0862c4, #0aa7e2);
-  }
-
-  .wiki-card {
-    grid-template-columns: 1fr auto;
-    background:
-      linear-gradient(135deg, rgba(20, 89, 28, 0.9), rgba(25, 129, 39, 0.78)),
-      var(--wiki-image) center / cover;
   }
 
   .shop-card {
@@ -476,39 +350,6 @@ const diaryPath = localizePath(locale, '/alpha-diary/')
     background:
       linear-gradient(135deg, rgba(39, 30, 121, 0.96), rgba(18, 76, 154, 0.94)),
       #211f4c;
-  }
-
-  .diary-card {
-    grid-template-columns: 1fr auto;
-    background:
-      linear-gradient(
-        90deg,
-        transparent 0 38px,
-        rgba(205, 85, 75, 0.2) 38px 41px,
-        transparent 41px
-      ),
-      repeating-linear-gradient(
-        0deg,
-        rgba(55, 150, 190, 0.18) 0 2px,
-        transparent 2px 34px
-      ),
-      linear-gradient(135deg, #fffdf0, #dff7ff);
-    color: #211910;
-  }
-
-  .diary-card p {
-    color: #4b3a28;
-  }
-
-  .diary-card .asv-btn-diary {
-    margin-top: 12px;
-  }
-
-  .diary-mark {
-    width: clamp(112px, 14vw, 168px);
-    height: auto;
-    align-self: end;
-    filter: drop-shadow(0 9px 0 rgba(73, 50, 21, 0.16));
   }
 
   .asv-btn-shop {
@@ -544,7 +385,6 @@ const diaryPath = localizePath(locale, '/alpha-diary/')
   }
 
   .cube-icon,
-  :global(.wiki-mark),
   :global(.shop-mark) {
     display: grid;
     place-items: center;
@@ -561,12 +401,6 @@ const diaryPath = localizePath(locale, '/alpha-diary/')
     font-size: 3rem;
   }
 
-  :global(.wiki-mark) {
-    align-self: end;
-    font-size: clamp(4rem, 10vw, 8rem);
-    opacity: 0.88;
-  }
-
   :global(.shop-mark) {
     align-self: end;
     font-size: clamp(4rem, 10vw, 8rem);
@@ -574,31 +408,15 @@ const diaryPath = localizePath(locale, '/alpha-diary/')
   }
 
   @media (max-width: 920px) {
-    .intro-section,
     .cta-grid {
       grid-template-columns: minmax(0, 1fr);
-    }
-
-    .intro-copy--details {
-      border-left: 0;
-      padding-left: 0;
     }
   }
 
   @media (max-width: 640px) {
-    .join-card,
-    .wiki-card,
-    .shop-card,
-    .diary-card {
+    .skin-card,
+    .shop-card {
       grid-template-columns: 1fr;
-    }
-
-    .diary-mark {
-      justify-self: end;
-    }
-
-    .diary-card h2 {
-      font-size: 1.65rem;
     }
   }
 </style>

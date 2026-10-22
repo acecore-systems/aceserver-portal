@@ -12,12 +12,16 @@ const c = getSkinStoreUi(locale)
 <nav class="skin-nav" aria-label={c.title}>
   <a
     href={localizePath(locale, '/skin-maker/')}
-    aria-current={current === 'maker' ? 'page' : undefined}>{c.make}</a
+    aria-current={current === 'maker' ? 'page' : undefined}
   >
+    {c.make}
+  </a>
   <a
     href={localizePath(locale, '/skin-maker/store/')}
-    aria-current={current === 'store' ? 'page' : undefined}>{c.store}</a
+    aria-current={current === 'store' ? 'page' : undefined}
   >
+    {c.store}
+  </a>
 </nav>
 
 <style>
