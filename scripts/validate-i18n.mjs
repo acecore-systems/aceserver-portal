@@ -1,3 +1,4 @@
+import { translationBaseline } from './stage-seo-translation.mjs'
 import { createHash } from 'node:crypto'
 import { access, readdir, readFile } from 'node:fs/promises'
 import path from 'node:path'
@@ -447,6 +448,19 @@ async function validateFixedContent() {
 }
 
 async function validateStories() {
+  const describeJapanese = (source) => ({
+    source,
+    sourceHash: hashSource(source),
+    body: markdownBody(source),
+    codeTokens: protectedCodeTokens(markdownBody(source)),
+    links: extractStoryMarkdownTargets(source).links,
+    images: extractStoryMarkdownTargets(source).images,
+    author: frontmatterString(source, 'author'),
+    date: frontmatterString(source, 'date'),
+    image: frontmatterString(source, 'image'),
+    imageAlt: frontmatterString(source, 'imageAlt'),
+    tags: frontmatterList(source, 'tags'),
+  })
   const japaneseStories = new Map()
 
   for (const slug of expectedStorySlugs) {
@@ -454,19 +468,7 @@ async function validateStories() {
     const source = normalizeLf(
       await readFile(path.join(root, relativePath), 'utf8'),
     )
-    japaneseStories.set(slug, {
-      source,
-      sourceHash: hashSource(source),
-      body: markdownBody(source),
-      codeTokens: protectedCodeTokens(markdownBody(source)),
-      links: extractStoryMarkdownTargets(source).links,
-      images: extractStoryMarkdownTargets(source).images,
-      author: frontmatterString(source, 'author'),
-      date: frontmatterString(source, 'date'),
-      image: frontmatterString(source, 'image'),
-      imageAlt: frontmatterString(source, 'imageAlt'),
-      tags: frontmatterList(source, 'tags'),
-    })
+    japaneseStories.set(slug, describeJapanese(source))
   }
 
   for (const locale of TRANSLATED_LOCALES) {
@@ -493,7 +495,14 @@ async function validateStories() {
       } catch {
         continue
       }
-      const japanese = japaneseStories.get(slug)
+      const japanese = describeJapanese(
+        translationBaseline(
+          root,
+          `src/content/stories/${slug}.md`,
+          locale,
+          source,
+        ),
+      )
       const translationOf = frontmatterString(source, 'translationOf')
       const sourceHash = frontmatterString(source, 'sourceHash')
 
