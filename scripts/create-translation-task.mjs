@@ -1,5 +1,6 @@
 import { execFileSync } from 'node:child_process'
 import { pathToFileURL } from 'node:url'
+import { loadPending, hashText } from './stage-seo-translation.mjs'
 
 import {
   createTranslationSourceContract,
@@ -63,6 +64,42 @@ export function normalizeSha(value) {
 
 export function isCmsCommitSubject(subject) {
   return /^cms: (?:create|update|delete|upload) /u.test(subject || '')
+}
+
+export function isPendingSeoUpdate({
+  changedFiles,
+  revisions,
+  baseSha,
+  headSha,
+  readAt,
+}) {
+  if (!baseSha || !changedFiles.length) return false
+  return changedFiles.every((file) => {
+    const entry = revisions[file]
+    if (!/^src\/content\/stories\/[A-Za-z0-9_-]+\.md$/.test(file) || !entry)
+      return false
+    const before = readAt(baseSha, file),
+      after = readAt(headSha, file)
+    if (
+      typeof before !== 'string' ||
+      typeof after !== 'string' ||
+      hashText(before) !== entry.previousSourceHash ||
+      hashText(after) !== entry.sourceHash ||
+      hashText(entry.previousSource) !== entry.previousSourceHash
+    )
+      return false
+    return TRANSLATED_LOCALES.every((locale) => {
+      const translatedPath = file.replace(/\/([^/]+)$/, `/${locale}/$1`)
+      const oldTranslation = readAt(baseSha, translatedPath),
+        currentTranslation = readAt(headSha, translatedPath)
+      return (
+        typeof oldTranslation === 'string' &&
+        typeof currentTranslation === 'string' &&
+        hashText(oldTranslation) === entry.translations[locale] &&
+        hashText(currentTranslation) === entry.translations[locale]
+      )
+    })
+  })
 }
 
 export function classifyCmsCommitSet(commits) {
@@ -276,14 +313,24 @@ async function main() {
   }
 
   if (process.env.GITHUB_EVENT_NAME === 'push') {
+    const pendingSeo = isPendingSeoUpdate({
+      changedFiles,
+      revisions: loadPending(process.cwd()),
+      baseSha,
+      headSha,
+      readAt: readSourceFileAtCommit,
+    })
     const classification = classifyCmsCommitSet(listCommits(baseSha, headSha))
-    if (classification === 'none' || classification === 'empty') {
+    if (
+      !pendingSeo &&
+      (classification === 'none' || classification === 'empty')
+    ) {
       console.log(
-        'No direct CMS commit detected. Normal PRs must update translations before merge.',
+        'No direct CMS commit or verified pending SEO revision detected.',
       )
       return
     }
-    if (classification === 'mixed') {
+    if (!pendingSeo && classification === 'mixed') {
       throw new Error(
         'CMS and non-CMS commits are mixed; create the translation task manually after reviewing the source diff.',
       )

@@ -30,7 +30,7 @@
     "deploy:skin-openai": "wrangler deploy --config cloudflare/skin-openai/wrangler.jsonc",
     "probe:skin-maker": "node --experimental-strip-types scripts/probe-skin-maker.mjs",
     "test:dynmap": "node --experimental-strip-types --test cloudflare/dynmap-r2-cache/worker.test.mjs",
-    "test:i18n": "node --experimental-strip-types --test tests/i18n.test.mjs",
+    "test:i18n": "node --experimental-strip-types --test tests/i18n.test.mjs tests/seo-translation-pending.test.mjs",
     "test:translation-merge": "node --test tests/translation-merge.test.mjs",
     "test:youtube-atom": "node --test tests/youtube-atom-sync.test.mjs",
     "typecheck:functions": "tsc --project tsconfig.functions.json && npm run typecheck:api",
