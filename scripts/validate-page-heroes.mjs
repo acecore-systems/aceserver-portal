@@ -65,10 +65,10 @@ for (const file of files) {
       heroes.length !== 0 ||
       headings.length !== 1 ||
       !textContent(headings[0]).trim() ||
-      toolbars.length !== 1
+      toolbars.length !== 0
     ) {
       errors.push(
-        `${scope}: map must have no hero, one nonempty h1, and one toolbar`,
+        `${scope}: map must have no hero or toolbar and one nonempty h1`,
       )
     }
     continue
