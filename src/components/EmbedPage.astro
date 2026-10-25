@@ -54,46 +54,46 @@ const nextMap =
     : undefined
 ---
 
-<PageHero
-  title={embed.title ?? page.pageName}
-  eyebrow={isVideoPage ? 'ACESERVER VIDEOS' : 'ACESERVER MAPS'}
-  lead={isVideoPage ? heroCopy.video : heroCopy.map}
-  backgroundImage={embed.fallbackImage ?? '/uploads/legacy-world-map.png'}
->
-  {(previousMap || nextMap) && (
-    <Fragment slot="actions">
-      {previousMap && (
-        <a class="toolbar-button" href={previousMap.href}>
-          <Icon name="chevron-left" />
-          <span>{ui.previous}</span>
-          <span class="toolbar-button__label">{previousMap.title}</span>
-        </a>
-      )}
-      {nextMap && (
-        <a class="toolbar-button toolbar-button--next" href={nextMap.href}>
-          <span>{ui.next}</span>
-          <span class="toolbar-button__label">{nextMap.title}</span>
-          <Icon name="chevron-right" />
-        </a>
-      )}
-    </Fragment>
-  )}
-</PageHero>
+{!isMapPage && (
+  <PageHero
+    title={embed.title ?? page.pageName}
+    eyebrow={isVideoPage ? 'ACESERVER VIDEOS' : 'ACESERVER MAPS'}
+    lead={isVideoPage ? heroCopy.video : heroCopy.map}
+    backgroundImage={embed.fallbackImage ?? '/uploads/legacy-world-map.png'}
+  />
+)}
 
 <section class="embed-page" data-variant={embed.variant}>
   <div class="embed-layout">
     {isMapPage && (
-      <a
-        class="toolbar-button toolbar-button--external map-open"
-        href={embed.externalUrl ?? embed.src}
-        data-map-external-source={embed.externalUrl ?? embed.src}
-        {...externalLinkAttrs(embed.externalUrl ?? embed.src, true)}
-      >
-        <>
-          <span>{ui.openMap}</span>
-          <Icon name="external-link" />
-        </>
-      </a>
+      <>
+        <h1 class="sr-only">{embed.title ?? page.pageName}</h1>
+        <div class="map-toolbar" data-map-toolbar>
+          <a
+            class="toolbar-button toolbar-button--external"
+            href={embed.externalUrl ?? embed.src}
+            data-map-external-source={embed.externalUrl ?? embed.src}
+            {...externalLinkAttrs(embed.externalUrl ?? embed.src, true)}
+          >
+            <span>{ui.openMap}</span>
+            <Icon name="external-link" />
+          </a>
+          {previousMap && (
+            <a class="toolbar-button" href={previousMap.href}>
+              <Icon name="chevron-left" />
+              <span>{ui.previous}</span>
+              <span class="toolbar-button__label">{previousMap.title}</span>
+            </a>
+          )}
+          {nextMap && (
+            <a class="toolbar-button" href={nextMap.href}>
+              <span>{ui.next}</span>
+              <span class="toolbar-button__label">{nextMap.title}</span>
+              <Icon name="chevron-right" />
+            </a>
+          )}
+        </div>
+      </>
     )}
     {!isVideoPage && (
       <div class="embed-shell pixel-border">
@@ -172,8 +172,21 @@ const nextMap =
 </script>
 
 <style>
-  .map-open {
-    justify-self: end;
+  .map-toolbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .embed-page[data-variant='map'] {
+    --asv-hero-height: 0px;
+  }
+
+  .embed-page[data-variant='map'] .embed-shell,
+  .embed-page[data-variant='map'] .embed-frame,
+  .embed-page[data-variant='map'] iframe {
+    min-height: max(320px, calc(100svh - 200px));
   }
   .embed-page {
     min-height: calc(100vh - 72px - var(--asv-hero-height));
@@ -362,6 +375,23 @@ const nextMap =
   }
 
   @media (max-width: 760px) {
+    .map-toolbar {
+      gap: 6px;
+    }
+    .map-toolbar .toolbar-button {
+      gap: 4px;
+      padding-inline: 6px;
+      font-size: 0.8rem;
+    }
+    .map-toolbar .toolbar-button__label {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      overflow: hidden;
+      clip-path: inset(50%);
+      white-space: nowrap;
+    }
     .toolbar-button,
     .toolbar-button--external {
       justify-self: stretch;

@@ -49,6 +49,30 @@ for (const file of files) {
     routeParts.length === 3 &&
     routeParts[0] === 'stories' &&
     routeParts[2] === 'index.html'
+  const isMap =
+    routeParts.length === 2 && routeParts[0].startsWith('world-map-')
+  if (isMap) {
+    const headings = main
+      ? descendants(main, (node) => node.tagName === 'h1')
+      : []
+    const toolbars = main
+      ? descendants(
+          main,
+          (node) => attribute(node, 'data-map-toolbar') !== undefined,
+        )
+      : []
+    if (
+      heroes.length !== 0 ||
+      headings.length !== 1 ||
+      !textContent(headings[0]).trim() ||
+      toolbars.length !== 1
+    ) {
+      errors.push(
+        `${scope}: map must have no hero, one nonempty h1, and one toolbar`,
+      )
+    }
+    continue
+  }
   if (isStory) {
     if (heroes.length !== 0) {
       errors.push(`${scope}: individual stories must not render a PageHero`)
