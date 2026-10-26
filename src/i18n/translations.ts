@@ -275,7 +275,7 @@ export const JA_UI: UiCopy = {
 
 const en: LocaleTranslation = {
   sourceHash:
-    'sha256:2a2d2ae411a0d4bb02515d7a11fedb7db3c9dcc798719d540d4ffcc8a584e5d4',
+    'sha256:632900dfd80632b6908cddd1c07006165828c1688f6fcab90d2105a8eed2d5ad',
   ui: {
     siteTitleSuffix: 'Official portal for the free public Minecraft server',
     homeTitleParts: ['Ace', 'server'],
@@ -385,43 +385,42 @@ const en: LocaleTranslation = {
     worlds: {
       main: {
         title: 'Main World',
-        imageAlt:
-          'Public map view of main-world streets and waterways, pink trees and a white lattice-patterned tower',
+        imageAlt: 'Current public map of Main World',
         statusLabel: 'Map available',
       },
       resource: {
         title: 'Resource World',
-        imageAlt: 'Existing world-map screenshot of the Resource World',
+        imageAlt: 'Current public map of Resource World',
         statusLabel: 'Map available',
       },
       rpg: {
         title: 'RPG',
-        imageAlt: 'Actual screenshot of the RPG world map',
+        imageAlt: 'Current public map of RPG',
         statusLabel: 'Map available',
       },
       lobby: {
         title: 'Lobby',
-        imageAlt: 'Image representing the Lobby World',
+        imageAlt: 'Current public map of Lobby',
         statusLabel: 'Map available',
       },
       'rpg-sub': {
         title: 'RPG Subworld',
-        imageAlt: 'Image representing the RPG Subworld',
+        imageAlt: 'Current public map of RPG Subworld',
         statusLabel: 'Map available',
       },
       'season-a': {
         title: 'Season A',
-        imageAlt: 'Image representing the Season A world',
+        imageAlt: 'Current public map of Season A',
         statusLabel: 'Map available',
       },
       'season-a-c': {
         title: 'Season Creative',
-        imageAlt: 'Image representing the Season Creative world',
+        imageAlt: 'Current public map of Season Creative',
         statusLabel: 'Map available',
       },
       event: {
         title: 'Event Map',
-        imageAlt: 'Image representing the event map',
+        imageAlt: 'Current public map of Event Map',
         statusLabel: 'Map available',
       },
     },
@@ -552,7 +551,7 @@ const en: LocaleTranslation = {
 
 const zhCn: LocaleTranslation = {
   sourceHash:
-    'sha256:2a2d2ae411a0d4bb02515d7a11fedb7db3c9dcc798719d540d4ffcc8a584e5d4',
+    'sha256:632900dfd80632b6908cddd1c07006165828c1688f6fcab90d2105a8eed2d5ad',
   ui: {
     siteTitleSuffix: '免费公开 Minecraft 服务器官方门户',
     homeTitleParts: ['Ace', 'server'],
@@ -654,42 +653,42 @@ const zhCn: LocaleTranslation = {
     worlds: {
       main: {
         title: '主世界',
-        imageAlt: '公开地图上的主世界街区、水道、粉色树木与白色格子高塔',
+        imageAlt: '主世界的最新公开地图',
         statusLabel: '地图已公开',
       },
       resource: {
         title: '资源世界',
-        imageAlt: '资源世界现有地图截图',
+        imageAlt: '资源世界的最新公开地图',
         statusLabel: '地图已公开',
       },
       rpg: {
         title: 'RPG',
-        imageAlt: 'RPG 世界地图实际截图',
+        imageAlt: 'RPG的最新公开地图',
         statusLabel: '地图已公开',
       },
       lobby: {
         title: '大厅',
-        imageAlt: '大厅世界示意图',
+        imageAlt: '大厅的最新公开地图',
         statusLabel: '地图已公开',
       },
       'rpg-sub': {
         title: 'RPG 子世界',
-        imageAlt: 'RPG 子世界示意图',
+        imageAlt: 'RPG 子世界的最新公开地图',
         statusLabel: '地图已公开',
       },
       'season-a': {
         title: 'Season A',
-        imageAlt: 'Season A 世界示意图',
+        imageAlt: 'Season A的最新公开地图',
         statusLabel: '地图已公开',
       },
       'season-a-c': {
         title: 'Season Creative',
-        imageAlt: 'Season Creative 世界示意图',
+        imageAlt: 'Season Creative的最新公开地图',
         statusLabel: '地图已公开',
       },
       event: {
         title: '活动地图',
-        imageAlt: '活动地图示意图',
+        imageAlt: '活动地图的最新公开地图',
         statusLabel: '地图已公开',
       },
     },
@@ -814,7 +813,7 @@ const zhCn: LocaleTranslation = {
 
 const es: LocaleTranslation = {
   sourceHash:
-    'sha256:2a2d2ae411a0d4bb02515d7a11fedb7db3c9dcc798719d540d4ffcc8a584e5d4',
+    'sha256:632900dfd80632b6908cddd1c07006165828c1688f6fcab90d2105a8eed2d5ad',
   ui: {
     siteTitleSuffix:
       'Portal oficial del servidor público gratuito de Minecraft',
@@ -921,43 +920,42 @@ const es: LocaleTranslation = {
     worlds: {
       main: {
         title: 'Mundo principal',
-        imageAlt:
-          'Mapa público con calles y canales del mundo principal, árboles rosas y una torre blanca con entramado',
+        imageAlt: 'Mapa público actual de Mundo principal',
         statusLabel: 'Mapa disponible',
       },
       resource: {
         title: 'Mundo de recursos',
-        imageAlt: 'Captura existente del mapa del mundo de recursos',
+        imageAlt: 'Mapa público actual de Mundo de recursos',
         statusLabel: 'Mapa disponible',
       },
       rpg: {
         title: 'RPG',
-        imageAlt: 'Captura real del mapa del mundo RPG',
+        imageAlt: 'Mapa público actual de RPG',
         statusLabel: 'Mapa disponible',
       },
       lobby: {
         title: 'Vestíbulo',
-        imageAlt: 'Imagen representativa del mundo vestíbulo',
+        imageAlt: 'Mapa público actual de Vestíbulo',
         statusLabel: 'Mapa disponible',
       },
       'rpg-sub': {
         title: 'Submundo RPG',
-        imageAlt: 'Imagen representativa del submundo RPG',
+        imageAlt: 'Mapa público actual de Submundo RPG',
         statusLabel: 'Mapa disponible',
       },
       'season-a': {
         title: 'Season A',
-        imageAlt: 'Imagen representativa del mundo Season A',
+        imageAlt: 'Mapa público actual de Season A',
         statusLabel: 'Mapa disponible',
       },
       'season-a-c': {
         title: 'Season Creative',
-        imageAlt: 'Imagen representativa de Season Creative',
+        imageAlt: 'Mapa público actual de Season Creative',
         statusLabel: 'Mapa disponible',
       },
       event: {
         title: 'Mapa de eventos',
-        imageAlt: 'Imagen representativa del mapa de eventos',
+        imageAlt: 'Mapa público actual de Mapa de eventos',
         statusLabel: 'Mapa disponible',
       },
     },
@@ -1088,7 +1086,7 @@ const es: LocaleTranslation = {
 
 const pt: LocaleTranslation = {
   sourceHash:
-    'sha256:2a2d2ae411a0d4bb02515d7a11fedb7db3c9dcc798719d540d4ffcc8a584e5d4',
+    'sha256:632900dfd80632b6908cddd1c07006165828c1688f6fcab90d2105a8eed2d5ad',
   ui: {
     siteTitleSuffix: 'Portal oficial do servidor público gratuito de Minecraft',
     homeTitleParts: ['Ace', 'server'],
@@ -1195,43 +1193,42 @@ const pt: LocaleTranslation = {
     worlds: {
       main: {
         title: 'Mundo principal',
-        imageAlt:
-          'Mapa público com ruas e canais do mundo principal, árvores rosas e uma torre branca com estrutura em grade',
+        imageAlt: 'Mapa público atual de Mundo principal',
         statusLabel: 'Mapa disponível',
       },
       resource: {
         title: 'Mundo de recursos',
-        imageAlt: 'Captura existente do mapa do mundo de recursos',
+        imageAlt: 'Mapa público atual de Mundo de recursos',
         statusLabel: 'Mapa disponível',
       },
       rpg: {
         title: 'RPG',
-        imageAlt: 'Captura real do mapa do mundo RPG',
+        imageAlt: 'Mapa público atual de RPG',
         statusLabel: 'Mapa disponível',
       },
       lobby: {
         title: 'Lobby',
-        imageAlt: 'Imagem representando o mundo lobby',
+        imageAlt: 'Mapa público atual de Lobby',
         statusLabel: 'Mapa disponível',
       },
       'rpg-sub': {
         title: 'Submundo RPG',
-        imageAlt: 'Imagem representando o submundo RPG',
+        imageAlt: 'Mapa público atual de Submundo RPG',
         statusLabel: 'Mapa disponível',
       },
       'season-a': {
         title: 'Season A',
-        imageAlt: 'Imagem representando o mundo Season A',
+        imageAlt: 'Mapa público atual de Season A',
         statusLabel: 'Mapa disponível',
       },
       'season-a-c': {
         title: 'Season Creative',
-        imageAlt: 'Imagem representando o Season Creative',
+        imageAlt: 'Mapa público atual de Season Creative',
         statusLabel: 'Mapa disponível',
       },
       event: {
         title: 'Mapa de eventos',
-        imageAlt: 'Imagem representando o mapa de eventos',
+        imageAlt: 'Mapa público atual de Mapa de eventos',
         statusLabel: 'Mapa disponível',
       },
     },
@@ -1362,7 +1359,7 @@ const pt: LocaleTranslation = {
 
 const fr: LocaleTranslation = {
   sourceHash:
-    'sha256:2a2d2ae411a0d4bb02515d7a11fedb7db3c9dcc798719d540d4ffcc8a584e5d4',
+    'sha256:632900dfd80632b6908cddd1c07006165828c1688f6fcab90d2105a8eed2d5ad',
   ui: {
     siteTitleSuffix: 'Portail officiel du serveur Minecraft public et gratuit',
     homeTitleParts: ['Ace', 'server'],
@@ -1468,43 +1465,42 @@ const fr: LocaleTranslation = {
     worlds: {
       main: {
         title: 'Monde principal',
-        imageAlt:
-          'Carte publique des rues et canaux du monde principal, avec des arbres roses et une tour blanche à structure quadrillée',
+        imageAlt: 'Carte publique actuelle : Monde principal',
         statusLabel: 'Carte disponible',
       },
       resource: {
         title: 'Monde ressources',
-        imageAlt: 'Capture existante de la carte du monde ressources',
+        imageAlt: 'Carte publique actuelle : Monde ressources',
         statusLabel: 'Carte disponible',
       },
       rpg: {
         title: 'RPG',
-        imageAlt: 'Capture réelle de la carte du monde RPG',
+        imageAlt: 'Carte publique actuelle : RPG',
         statusLabel: 'Carte disponible',
       },
       lobby: {
         title: 'Lobby',
-        imageAlt: 'Image représentant le monde lobby',
+        imageAlt: 'Carte publique actuelle : Lobby',
         statusLabel: 'Carte disponible',
       },
       'rpg-sub': {
         title: 'Sous-monde RPG',
-        imageAlt: 'Image représentant le sous-monde RPG',
+        imageAlt: 'Carte publique actuelle : Sous-monde RPG',
         statusLabel: 'Carte disponible',
       },
       'season-a': {
         title: 'Season A',
-        imageAlt: 'Image représentant le monde Season A',
+        imageAlt: 'Carte publique actuelle : Season A',
         statusLabel: 'Carte disponible',
       },
       'season-a-c': {
         title: 'Season Creative',
-        imageAlt: 'Image représentant Season Creative',
+        imageAlt: 'Carte publique actuelle : Season Creative',
         statusLabel: 'Carte disponible',
       },
       event: {
         title: 'Carte des événements',
-        imageAlt: 'Image représentant la carte des événements',
+        imageAlt: 'Carte publique actuelle : Carte des événements',
         statusLabel: 'Carte disponible',
       },
     },
@@ -1635,7 +1631,7 @@ const fr: LocaleTranslation = {
 
 const ko: LocaleTranslation = {
   sourceHash:
-    'sha256:2a2d2ae411a0d4bb02515d7a11fedb7db3c9dcc798719d540d4ffcc8a584e5d4',
+    'sha256:632900dfd80632b6908cddd1c07006165828c1688f6fcab90d2105a8eed2d5ad',
   ui: {
     siteTitleSuffix: '무료 공개 Minecraft 서버 공식 포털',
     homeTitleParts: ['Ace', 'server'],
@@ -1742,43 +1738,42 @@ const ko: LocaleTranslation = {
     worlds: {
       main: {
         title: '메인 월드',
-        imageAlt:
-          '공개 지도에 보이는 메인 월드의 거리와 수로, 분홍색 나무, 흰색 격자 모양 고층 건물',
+        imageAlt: '메인 월드의 최신 공개 지도',
         statusLabel: '지도 공개 중',
       },
       resource: {
         title: '자원 월드',
-        imageAlt: '자원 월드의 기존 지도 스크린샷',
+        imageAlt: '자원 월드의 최신 공개 지도',
         statusLabel: '지도 공개 중',
       },
       rpg: {
         title: 'RPG',
-        imageAlt: 'RPG 월드 지도 실제 스크린샷',
+        imageAlt: 'RPG의 최신 공개 지도',
         statusLabel: '지도 공개 중',
       },
       lobby: {
         title: '로비',
-        imageAlt: '로비 월드 이미지',
+        imageAlt: '로비의 최신 공개 지도',
         statusLabel: '지도 공개 중',
       },
       'rpg-sub': {
         title: 'RPG 서브 월드',
-        imageAlt: 'RPG 서브 월드 이미지',
+        imageAlt: 'RPG 서브 월드의 최신 공개 지도',
         statusLabel: '지도 공개 중',
       },
       'season-a': {
         title: 'Season A',
-        imageAlt: 'Season A 월드 이미지',
+        imageAlt: 'Season A의 최신 공개 지도',
         statusLabel: '지도 공개 중',
       },
       'season-a-c': {
         title: 'Season Creative',
-        imageAlt: 'Season Creative 월드 이미지',
+        imageAlt: 'Season Creative의 최신 공개 지도',
         statusLabel: '지도 공개 중',
       },
       event: {
         title: '이벤트 지도',
-        imageAlt: '이벤트 지도 이미지',
+        imageAlt: '이벤트 지도의 최신 공개 지도',
         statusLabel: '지도 공개 중',
       },
     },
@@ -1909,7 +1904,7 @@ const ko: LocaleTranslation = {
 
 const de: LocaleTranslation = {
   sourceHash:
-    'sha256:2a2d2ae411a0d4bb02515d7a11fedb7db3c9dcc798719d540d4ffcc8a584e5d4',
+    'sha256:632900dfd80632b6908cddd1c07006165828c1688f6fcab90d2105a8eed2d5ad',
   ui: {
     siteTitleSuffix:
       'Offizielles Portal des kostenlosen öffentlichen Minecraft-Servers',
@@ -2020,43 +2015,42 @@ const de: LocaleTranslation = {
     worlds: {
       main: {
         title: 'Hauptwelt',
-        imageAlt:
-          'Öffentliche Karte mit Straßen und Wasserwegen der Hauptwelt, rosa Bäumen und einem weißen Turm mit Gitterstruktur',
+        imageAlt: 'Aktuelle öffentliche Karte: Hauptwelt',
         statusLabel: 'Karte verfügbar',
       },
       resource: {
         title: 'Ressourcenwelt',
-        imageAlt: 'Vorhandener Karten-Screenshot der Ressourcenwelt',
+        imageAlt: 'Aktuelle öffentliche Karte: Ressourcenwelt',
         statusLabel: 'Karte verfügbar',
       },
       rpg: {
         title: 'RPG',
-        imageAlt: 'Echter Screenshot der RPG-Weltkarte',
+        imageAlt: 'Aktuelle öffentliche Karte: RPG',
         statusLabel: 'Karte verfügbar',
       },
       lobby: {
         title: 'Lobby',
-        imageAlt: 'Bild der Lobbywelt',
+        imageAlt: 'Aktuelle öffentliche Karte: Lobby',
         statusLabel: 'Karte verfügbar',
       },
       'rpg-sub': {
         title: 'RPG-Unterwelt',
-        imageAlt: 'Bild der RPG-Unterwelt',
+        imageAlt: 'Aktuelle öffentliche Karte: RPG-Unterwelt',
         statusLabel: 'Karte verfügbar',
       },
       'season-a': {
         title: 'Season A',
-        imageAlt: 'Bild der Season-A-Welt',
+        imageAlt: 'Aktuelle öffentliche Karte: Season A',
         statusLabel: 'Karte verfügbar',
       },
       'season-a-c': {
         title: 'Season Creative',
-        imageAlt: 'Bild der Season-Creative-Welt',
+        imageAlt: 'Aktuelle öffentliche Karte: Season Creative',
         statusLabel: 'Karte verfügbar',
       },
       event: {
         title: 'Eventkarte',
-        imageAlt: 'Bild der Eventkarte',
+        imageAlt: 'Aktuelle öffentliche Karte: Eventkarte',
         statusLabel: 'Karte verfügbar',
       },
     },
@@ -2187,7 +2181,7 @@ const de: LocaleTranslation = {
 
 const ru: LocaleTranslation = {
   sourceHash:
-    'sha256:2a2d2ae411a0d4bb02515d7a11fedb7db3c9dcc798719d540d4ffcc8a584e5d4',
+    'sha256:632900dfd80632b6908cddd1c07006165828c1688f6fcab90d2105a8eed2d5ad',
   ui: {
     siteTitleSuffix:
       'Официальный портал бесплатного публичного сервера Minecraft',
@@ -2293,43 +2287,42 @@ const ru: LocaleTranslation = {
     worlds: {
       main: {
         title: 'Основной мир',
-        imageAlt:
-          'Публичная карта улиц и каналов основного мира, розовых деревьев и белой башни с решётчатой структурой',
+        imageAlt: 'Текущая публичная карта: Основной мир',
         statusLabel: 'Карта доступна',
       },
       resource: {
         title: 'Ресурсный мир',
-        imageAlt: 'Существующий снимок карты ресурсного мира',
+        imageAlt: 'Текущая публичная карта: Ресурсный мир',
         statusLabel: 'Карта доступна',
       },
       rpg: {
         title: 'RPG',
-        imageAlt: 'Настоящий снимок карты RPG-мира',
+        imageAlt: 'Текущая публичная карта: RPG',
         statusLabel: 'Карта доступна',
       },
       lobby: {
         title: 'Лобби',
-        imageAlt: 'Изображение мира-лобби',
+        imageAlt: 'Текущая публичная карта: Лобби',
         statusLabel: 'Карта доступна',
       },
       'rpg-sub': {
         title: 'Дополнительный RPG-мир',
-        imageAlt: 'Изображение дополнительного RPG-мира',
+        imageAlt: 'Текущая публичная карта: Дополнительный RPG-мир',
         statusLabel: 'Карта доступна',
       },
       'season-a': {
         title: 'Season A',
-        imageAlt: 'Изображение мира Season A',
+        imageAlt: 'Текущая публичная карта: Season A',
         statusLabel: 'Карта доступна',
       },
       'season-a-c': {
         title: 'Season Creative',
-        imageAlt: 'Изображение мира Season Creative',
+        imageAlt: 'Текущая публичная карта: Season Creative',
         statusLabel: 'Карта доступна',
       },
       event: {
         title: 'Карта событий',
-        imageAlt: 'Изображение карты событий',
+        imageAlt: 'Текущая публичная карта: Карта событий',
         statusLabel: 'Карта доступна',
       },
     },

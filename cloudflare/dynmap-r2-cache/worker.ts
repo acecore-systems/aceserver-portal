@@ -1,3 +1,5 @@
+import { INITIAL_VIEW_PATH, INITIAL_VIEW_SCRIPT } from './initial-view.ts'
+
 type BucketBinding =
   | 'MAIN_BUCKET'
   | 'SIGEN_BUCKET'
@@ -266,6 +268,20 @@ async function handleRequest(request: Request, env: Env): Promise<Response> {
   }
 
   const key = objectKeyForRequest(request)
+  const fitInitialView =
+    key === 'index.html' && target.bucket !== env.MAIN_BUCKET
+
+  if (new URL(request.url).pathname === INITIAL_VIEW_PATH) {
+    return new Response(
+      request.method === 'HEAD' ? null : INITIAL_VIEW_SCRIPT,
+      {
+        headers: {
+          'content-type': 'application/javascript; charset=utf-8',
+          'cache-control': STATIC_CACHE_CONTROL,
+        },
+      },
+    )
+  }
 
   if (request.method === 'HEAD') {
     const object = await target.bucket.head(key)
@@ -274,9 +290,15 @@ async function handleRequest(request: Request, env: Env): Promise<Response> {
       return missingResponse()
     }
 
+    const headers = responseHeaders(object, key, 'HIT')
+    if (fitInitialView) {
+      headers.delete('etag')
+      headers.delete('last-modified')
+      headers.delete('content-length')
+    }
     return new Response(null, {
-      status: isNotModified(request, object) ? 304 : 200,
-      headers: responseHeaders(object, key, 'HIT'),
+      status: !fitInitialView && isNotModified(request, object) ? 304 : 200,
+      headers,
     })
   }
 
@@ -288,10 +310,26 @@ async function handleRequest(request: Request, env: Env): Promise<Response> {
 
   const headers = responseHeaders(object, key, 'HIT')
 
-  if (isNotModified(request, object)) {
+  if (!fitInitialView && isNotModified(request, object)) {
     return new Response(null, { status: 304, headers })
   }
 
+  // Main keeps its current initial view. Other maps fit only when no explicit
+  // location was requested; manual input cancels the one-time adjustment.
+  if (fitInitialView) {
+    headers.delete('etag')
+    headers.delete('last-modified')
+    headers.delete('content-length')
+    return new HTMLRewriter()
+      .on('head', {
+        element(element) {
+          element.append(`<script defer src="${INITIAL_VIEW_PATH}"></script>`, {
+            html: true,
+          })
+        },
+      })
+      .transform(new Response(object.body, { status: 200, headers }))
+  }
   return new Response(object.body, { status: 200, headers })
 }
 
