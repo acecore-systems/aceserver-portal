@@ -1,4 +1,4 @@
-import { Mesh, Vector2, Vector3, type Intersection } from 'three'
+import { Vector2, Vector3, type Mesh, type Intersection } from 'three'
 import {
   regions,
   type Model,
@@ -36,15 +36,24 @@ export function skinHit(
   layer: Layer,
   hit: Intersection,
 ): SkinHit | undefined {
-  if (!(hit.object instanceof Mesh) || !hit.face || !hit.uv) return
+  // skinview3d can carry a separate Three.js copy, so constructor identity
+  // does not identify its meshes. Three.js exposes isMesh for this check.
+  if (
+    !('isMesh' in hit.object) ||
+    hit.object.isMesh !== true ||
+    !hit.face ||
+    !hit.uv
+  )
+    return
+  const mesh = hit.object as Mesh
   const triangle: SkinSurface['triangle'] = [hit.face.a, hit.face.b, hit.face.c]
-  const center = uvCenter(hit.object, triangle)
+  const center = uvCenter(mesh, triangle)
   const region = regions(model).find(
     (r) => r.part === part && r.layer === layer && contains(r, center),
   )
   if (!region) return
   return {
-    mesh: hit.object,
+    mesh,
     triangle,
     region,
     point: {
