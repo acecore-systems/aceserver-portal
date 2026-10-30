@@ -2,6 +2,8 @@
 
 エースサーバーの公式ポータルサイトです。Astro 7 + Tailwind CSS v4 + Sveltia CMS で構成しています。
 
+コンテンツ・CMS・翻訳の変更と検証は [AGENTS.md](AGENTS.md) の方針を確認してください。
+
 ## UI スタイル
 
 Tailwind CSS v4 は Astro の Vite プラグインで統合しています。共通の色、書体、
