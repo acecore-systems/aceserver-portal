@@ -30,7 +30,7 @@ relatedStories:
 ## 最初に開く4つの公式案内
 
 1. [Aceserver公式ポータル](/)で、全体の入口を確認します。
-2. [公式Discord](https://discord.gg/acsv)に参加し、メンテナンスや参加に関する最新案内を確認します。
+2. [公式Discord](https://discord.gg/KtEjYbPQ35)に参加し、メンテナンスや参加に関する最新案内を確認します。
 3. [Aceserver WIKIの参加方法](https://asv-wiki.acecore.net/article/in/)で、現在の参加手順を確認します。
 4. [Aceserver WIKIのルール一覧](https://asv-wiki.acecore.net/article/rules-index/)から、自分が遊ぶ場所のルールを読んでからゲーム内へ入りましょう。
 

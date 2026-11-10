@@ -34,7 +34,6 @@ const selectedWorld =
   worlds.find((world) => world.slug === community.mapWorld) ?? worlds[0]
 const mapHost = community.mapWorld === 'resource' ? 'sigen' : community.mapWorld
 const mapUrl = `https://mc-map-${mapHost}.acecore.net/`
-const discordSourceUrl = settings.discordUrl
 const discordDiscoveryUrl =
   'https://discord.com/servers/aceserver-maikuramaruchisaba-737538781024092170'
 const date = (value: string) =>
@@ -139,8 +138,8 @@ const fullDate = (value: string) =>
       <>
         <summary>{ui.dataSources}</summary>
         <a
-          href={discordSourceUrl}
-          {...externalLinkAttrs(discordSourceUrl, true)}
+          href={discordDiscoveryUrl}
+          {...externalLinkAttrs(discordDiscoveryUrl, true)}
         >
           Discord
         </a>

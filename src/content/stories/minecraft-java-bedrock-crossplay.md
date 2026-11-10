@@ -70,7 +70,7 @@ Java版と統合版は別のクライアントで、接続の仕組みも異な�
 
 ![公開サーバーのロビーで、仲間が地図を囲んで合流するブロック調のイメージ](/uploads/stories/minecraft-java-bedrock-crossplay-hub.webp)
 
-まずは[エースサーバーのポータル](/)でワールドマップや動画を見て、[公式Discord](https://discord.gg/acsv)で参加前の最新案内を確認してください。詳しいルールや遊び方は[Aceserver WIKI](https://asv-wiki.acecore.net)にまとまっています。
+まずは[エースサーバーのポータル](/)でワールドマップや動画を見て、[公式Discord](https://discord.gg/KtEjYbPQ35)で参加前の最新案内を確認してください。詳しいルールや遊び方は[Aceserver WIKI](https://asv-wiki.acecore.net)にまとまっています。
 
 ## まとめ
 

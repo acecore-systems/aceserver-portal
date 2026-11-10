@@ -1,6 +1,7 @@
 ---
 import type { LinkItem, PortalPage, PortalSection } from '../types'
 import { getSkinMakerUi } from '../data/skin-maker-ui'
+import { PORTAL_DISCORD_INVITE } from '../data/discord'
 import { localizePath, type Locale } from '../i18n/config'
 import { getUi } from '../i18n/translations'
 import { externalLinkAttrs } from '../utils/links'
@@ -27,7 +28,7 @@ type HeroSection = Extract<PortalSection, { type: 'hero' }>
 
 const fallbackJoinButton: LinkItem = {
   label: ui.joinDiscord,
-  href: 'https://discord.gg/KtEjYbPQ35',
+  href: PORTAL_DISCORD_INVITE,
   external: true,
 }
 const fallbackWikiButton: LinkItem = {

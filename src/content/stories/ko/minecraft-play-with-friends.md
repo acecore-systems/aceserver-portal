@@ -2,7 +2,7 @@
 title: '친구와 마인크래프트 하는 법: Java, 베드락, Switch, 모바일'
 description: Java 에디션과 베드락 에디션의 차이를 정리하고, 내 월드·Realms·공개 서버 중에서 기기별로 친구와 함께할 방법을 고르는 안내서입니다.
 translationOf: minecraft-play-with-friends
-sourceHash: sha256:8570351e29bd89577fea599aaaf45cbc22d316ada640c8165fd5ae13a27b47fc
+sourceHash: sha256:f810c11725560d75a020908a7347bd60fda22ba01f7e7f9453cd35f6cf8d9c89
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -155,6 +155,6 @@ Xbox 본체가 없어도 Microsoft/Xbox 보호자 설정은 Switch와 모바일�
 
 ## Aceserver에서 친구와 플레이하기
 
-공개 서버를 고른다면 먼저 [Aceserver 포털](/ko/)에서 현재 입구를 확인하고, [공식 Discord](https://discord.gg/acsv)와 [공식 WIKI](https://asv-wiki.acecore.net)에서 최신 참가 안내와 규칙을 읽으세요. 이 글은 바뀔 수 있는 접속 정보를 복사하지 않으며, 공식 안내를 기준으로 합니다.
+공개 서버를 고른다면 먼저 [Aceserver 포털](/ko/)에서 현재 입구를 확인하고, [공식 Discord](https://discord.gg/KtEjYbPQ35)와 [공식 WIKI](https://asv-wiki.acecore.net)에서 최신 참가 안내와 규칙을 읽으세요. 이 글은 바뀔 수 있는 접속 정보를 복사하지 않으며, 공식 안내를 기준으로 합니다.
 
 친구를 초대할 때는 같은 에디션인지 확인하고, 참가 전에 규칙을 읽으며, 계정 정보를 공유하지 않는 것부터 알리면 좋습니다. 먼저 공개 서버를 비교하고 싶다면 [Minecraft 서버 선택 방법](/ko/stories/minecraft-server-osusume/)을 참고하세요.

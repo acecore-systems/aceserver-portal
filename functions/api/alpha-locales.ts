@@ -1,4 +1,6 @@
-export const DISCORD_URL = 'https://discord.gg/acsv'
+import { PORTAL_DISCORD_INVITE } from '../../src/data/discord.ts'
+
+export const DISCORD_URL = PORTAL_DISCORD_INVITE
 export const WIKI_URL = 'https://asv-wiki.acecore.net'
 export const WORLD_MAP_URL = '/world-map/'
 

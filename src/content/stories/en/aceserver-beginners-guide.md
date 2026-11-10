@@ -2,7 +2,7 @@
 title: 'Aceserver Beginner Guide: Portal, World Maps, Videos, WIKI, and Connection Help'
 description: New to Aceserver? Learn when to use the official portal, world maps, videos, and WIKI, and where to check if you cannot join.
 translationOf: aceserver-beginners-guide
-sourceHash: sha256:be8dad22534446be8cb3ba2ead60bd55b7f3d8831e062173aaa45b356907177a
+sourceHash: sha256:0b660a3eaf743dffa28c0f2694d29259ab639f6fec4edd4e2433c26b24747080
 date: 2026-08-09T10:00:00+09:00
 lastUpdated: 2026-10-09T15:00:00+09:00
 tags:
@@ -28,7 +28,7 @@ If the game’s multiplayer screen is new to you, Minecraft’s official [server
 ## The first four official places to open
 
 1. Check the [official Aceserver portal](/en/) for the main entry points.
-2. Join the [official Discord](https://discord.gg/acsv) and check the latest joining and maintenance notices.
+2. Join the [official Discord](https://discord.gg/KtEjYbPQ35) and check the latest joining and maintenance notices.
 3. Read the current joining steps in the [Aceserver WIKI joining guide](https://asv-wiki.acecore.net/article/in/).
 4. Read the [Aceserver WIKI rules index](https://asv-wiki.acecore.net/article/rules-index/) before entering the game.
 

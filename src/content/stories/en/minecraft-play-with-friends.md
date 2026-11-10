@@ -2,7 +2,7 @@
 title: 'How to play Minecraft with friends: Java, Bedrock, Switch and mobile'
 description: Compare your own world, Realms, and public servers after sorting out Java and Bedrock, then choose a way to play with friends for each device.
 translationOf: minecraft-play-with-friends
-sourceHash: sha256:8570351e29bd89577fea599aaaf45cbc22d316ada640c8165fd5ae13a27b47fc
+sourceHash: sha256:f810c11725560d75a020908a7347bd60fda22ba01f7e7f9453cd35f6cf8d9c89
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -155,6 +155,6 @@ If your group wants to manage a world that stays available, read [how to set up 
 
 ## Playing with friends on Aceserver
 
-If you choose a public server, first check the current entry point on the [Aceserver portal](/en/), then read the current joining guidance and rules in the [official Discord](https://discord.gg/acsv) and [official WIKI](https://asv-wiki.acecore.net). This article intentionally does not copy connection details that can change; use the official guidance as the source of truth.
+If you choose a public server, first check the current entry point on the [Aceserver portal](/en/), then read the current joining guidance and rules in the [official Discord](https://discord.gg/KtEjYbPQ35) and [official WIKI](https://asv-wiki.acecore.net). This article intentionally does not copy connection details that can change; use the official guidance as the source of truth.
 
 When inviting friends, start by confirming the same edition, reading the rules before joining, and never sharing account information. To start by comparing public servers, see [how to choose a Minecraft server](/en/stories/minecraft-server-osusume/).

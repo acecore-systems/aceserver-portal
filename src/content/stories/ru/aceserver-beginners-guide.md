@@ -2,7 +2,7 @@
 title: 'Руководство для новичков Aceserver: портал, карты миров, видео, WIKI и подключение'
 description: Впервые на Aceserver? Узнайте, когда использовать официальный портал, карты, видео и WIKI, а также где искать информацию, если не получается войти.
 translationOf: aceserver-beginners-guide
-sourceHash: sha256:be8dad22534446be8cb3ba2ead60bd55b7f3d8831e062173aaa45b356907177a
+sourceHash: sha256:0b660a3eaf743dffa28c0f2694d29259ab639f6fec4edd4e2433c26b24747080
 date: 2026-08-09T10:00:00+09:00
 lastUpdated: 2026-10-09T15:00:00+09:00
 tags:
@@ -28,7 +28,7 @@ imageAlt: Путешественник с картой идёт по блоко�
 ## Четыре официальных места, которые нужно открыть сначала
 
 1. Откройте [официальный портал Aceserver](/ru/), чтобы увидеть основные входы.
-2. Вступите в [официальный Discord](https://discord.gg/acsv) и проверьте последние объявления об участии и техобслуживании.
+2. Вступите в [официальный Discord](https://discord.gg/KtEjYbPQ35) и проверьте последние объявления об участии и техобслуживании.
 3. Посмотрите текущие шаги в [руководстве WIKI Aceserver по участию](https://asv-wiki.acecore.net/article/in/).
 4. Перед входом в игру прочитайте [список правил в WIKI Aceserver](https://asv-wiki.acecore.net/article/rules-index/).
 

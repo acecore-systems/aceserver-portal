@@ -5,7 +5,7 @@ description: 'Découvrez quoi vérifier lorsque vous ne pouvez pas rejoindre un
   serveur Minecraft : édition, version, compte et réseau, avec des étapes
   adaptées à Java, Bedrock et Switch.'
 translationOf: minecraft-server-cannot-join
-sourceHash: sha256:c19e1b5fcf6a1fa0d21c7d1f1a9c8e25b03be51e1e8c109a0ca356006bf6c1b0
+sourceHash: sha256:e6eea0d05f70fa8fcf92af6a97fbca2d2ec95a906a3e63236d9cdff123bafabd
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -111,7 +111,7 @@ Ces conseils peuvent aider aussi bien les personnes qui découvrent un serveur q
 Cette section concerne les indications de participation à Aceserver et non la procédure générale de connexion. Le portail officiel Aceserver indique que les joueurs peuvent rejoindre le serveur depuis Java Edition ou Bedrock Edition. Les adresses, ports, procédures pour Switch, informations sur l’état du serveur et règles peuvent évoluer. Avant de participer, consultez les sources officielles suivantes.
 
 1. Consultez le [portail Aceserver](/fr/) pour trouver l’accès au serveur et les annonces.
-2. Consultez le [Discord officiel](https://discord.gg/acsv) pour les informations concernant la maintenance et la participation.
+2. Consultez le [Discord officiel](https://discord.gg/KtEjYbPQ35) pour les informations concernant la maintenance et la participation.
 3. Consultez le [WIKI officiel](https://asv-wiki.acecore.net) pour les règles en jeu et les indications relatives à chaque monde.
 
 ![Illustration en style blocs montrant le parcours du portail à un panneau officiel puis à un guide pour vérifier les informations de participation](/uploads/stories/minecraft-server-cannot-join-official-guidance.webp)

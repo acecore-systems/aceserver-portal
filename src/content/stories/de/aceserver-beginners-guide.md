@@ -2,7 +2,7 @@
 title: 'Aceserver-Einsteigerleitfaden: Portal, Weltkarten, Videos, WIKI und Verbindung'
 description: Neu bei Aceserver? Erfahre, wann du das offizielle Portal, Weltkarten, Videos und das WIKI nutzt und wo du nachsiehst, wenn du nicht beitreten kannst.
 translationOf: aceserver-beginners-guide
-sourceHash: sha256:be8dad22534446be8cb3ba2ead60bd55b7f3d8831e062173aaa45b356907177a
+sourceHash: sha256:0b660a3eaf743dffa28c0f2694d29259ab639f6fec4edd4e2433c26b24747080
 date: 2026-08-09T10:00:00+09:00
 lastUpdated: 2026-10-09T15:00:00+09:00
 tags:
@@ -28,7 +28,7 @@ Wenn Sie den Multiplayer-Bildschirm noch nicht kennen, erklärt die offizielle [
 ## Die ersten vier offiziellen Anlaufstellen
 
 1. Öffne das [offizielle Aceserver-Portal](/de/), um die Haupteinstiege zu sehen.
-2. Tritt dem [offiziellen Discord](https://discord.gg/acsv) bei und prüfe die neuesten Hinweise zu Teilnahme und Wartung.
+2. Tritt dem [offiziellen Discord](https://discord.gg/KtEjYbPQ35) bei und prüfe die neuesten Hinweise zu Teilnahme und Wartung.
 3. Lies die aktuellen Schritte im [Aceserver-WIKI zur Teilnahme](https://asv-wiki.acecore.net/article/in/).
 4. Lies vor dem Spiel die [Regelübersicht im Aceserver-WIKI](https://asv-wiki.acecore.net/article/rules-index/).
 

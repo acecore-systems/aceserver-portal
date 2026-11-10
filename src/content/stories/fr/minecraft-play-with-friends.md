@@ -2,7 +2,7 @@
 title: 'Jouer à Minecraft entre amis : Java, Bedrock, Switch et mobile'
 description: Faites la différence entre Java et Bedrock, comparez votre monde, Realms et les serveurs publics, puis choisissez comment jouer entre amis selon chaque appareil.
 translationOf: minecraft-play-with-friends
-sourceHash: sha256:8570351e29bd89577fea599aaaf45cbc22d316ada640c8165fd5ae13a27b47fc
+sourceHash: sha256:f810c11725560d75a020908a7347bd60fda22ba01f7e7f9453cd35f6cf8d9c89
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -155,6 +155,6 @@ Si le groupe veut gérer un monde qui reste disponible, lisez [comment créer un
 
 ## Jouer avec des amis sur Aceserver
 
-Si vous choisissez un serveur public, vérifiez d'abord l'entrée actuelle sur le [portail Aceserver](/fr/), puis lisez les indications et les règles à jour sur le [Discord officiel](https://discord.gg/acsv) et le [WIKI officiel](https://asv-wiki.acecore.net). Cet article ne recopie pas des informations de connexion susceptibles de changer : les indications officielles font foi.
+Si vous choisissez un serveur public, vérifiez d'abord l'entrée actuelle sur le [portail Aceserver](/fr/), puis lisez les indications et les règles à jour sur le [Discord officiel](https://discord.gg/KtEjYbPQ35) et le [WIKI officiel](https://asv-wiki.acecore.net). Cet article ne recopie pas des informations de connexion susceptibles de changer : les indications officielles font foi.
 
 Lorsque vous invitez des amis, commencez par confirmer la même édition, lire les règles avant de rejoindre et ne partagez jamais d'informations de compte. Pour comparer d'abord les serveurs publics, consultez [comment choisir un serveur Minecraft](/fr/stories/minecraft-server-osusume/).

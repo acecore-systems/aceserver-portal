@@ -2,7 +2,7 @@
 title: 'Aceserver 新手指南：Portal、世界地图、视频、WIKI 与连接问题'
 description: 第一次来到 Aceserver？了解何时使用官方 Portal、世界地图、视频和 WIKI，以及无法加入时应查看哪里。
 translationOf: aceserver-beginners-guide
-sourceHash: sha256:be8dad22534446be8cb3ba2ead60bd55b7f3d8831e062173aaa45b356907177a
+sourceHash: sha256:0b660a3eaf743dffa28c0f2694d29259ab639f6fec4edd4e2433c26b24747080
 date: 2026-08-09T10:00:00+09:00
 lastUpdated: 2026-10-09T15:00:00+09:00
 tags:
@@ -28,7 +28,7 @@ imageAlt: 一位拿着地图的旅行者在方块风景中前往传送门、世�
 ## 首先打开的四个官方页面
 
 1. 在 [Aceserver 官方 Portal](/zh-cn/) 查看主要入口。
-2. 加入[官方 Discord](https://discord.gg/acsv)，查看最新的参加与维护通知。
+2. 加入[官方 Discord](https://discord.gg/KtEjYbPQ35)，查看最新的参加与维护通知。
 3. 在 [Aceserver WIKI 的参加方法](https://asv-wiki.acecore.net/article/in/)确认当前加入步骤。
 4. 进入游戏前阅读 [Aceserver WIKI 的规则目录](https://asv-wiki.acecore.net/article/rules-index/)。
 

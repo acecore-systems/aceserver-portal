@@ -8,7 +8,7 @@ author: Gui
 image: /uploads/stories/wiki-alpha-guide-hero.webp
 imageAlt: Illustration des offiziellen Alpha-kun neben einem offenen Handbuch und Suchergebnissen in einer Blocklandschaft
 translationOf: wiki-alpha-guide
-sourceHash: sha256:09d836d05c32b2bb8847133b900739b589ed6ce1f5d772c3a092d09fa5c7e16d
+sourceHash: sha256:7b63106786c8c20824979b90a4db52308503b1f4398fe48d8300cc17383403eb
 lastUpdated: 2026-10-10T16:29:02+09:00
 ---
 
@@ -34,7 +34,7 @@ Die genannten WIKI-Artikel sind auf Japanisch. Auch wenn du in einer anderen Spr
 
 Im [Portal](/de/) und WIKI gibt es die Schaltfläche „Alpha-kun fragen“. Stelle deine Frage in eigenen Worten, um Hinweise aus veröffentlichten Informationen zu erhalten. Wenn eine Quelle verlinkt ist, öffne den Link und prüfe den Originaltext. Eine Chatantwort allein bestätigt keine Änderung von Beitrittsbedingungen oder Regeln.
 
-Wenn Informationen fehlen oder Anleitungen sich widersprechen, prüfe die neuesten Beiträge im [offiziellen Discord](https://discord.gg/acsv). Diese Beiträge sind die maßgebliche Quelle für Beitrittsbedingungen, Regeln und Betriebsmitteilungen.
+Wenn Informationen fehlen oder Anleitungen sich widersprechen, prüfe die neuesten Beiträge im [offiziellen Discord](https://discord.gg/KtEjYbPQ35). Diese Beiträge sind die maßgebliche Quelle für Beitrittsbedingungen, Regeln und Betriebsmitteilungen.
 
 Eine Übersicht über Portal, WIKI und Weltkarte findest du im [Einsteigerleitfaden](/de/stories/aceserver-beginners-guide/).
 
