@@ -34,6 +34,9 @@
   "ai": {
     "binding": "AI",
   },
+  "analytics_engine_datasets": [
+    { "binding": "DISCORD_CTA_METRICS", "dataset": "portal_discord_cta" },
+  ],
   "d1_databases": [
     {
       "binding": "SEARCH_RATE_LIMIT_DB",
@@ -112,6 +115,9 @@
           "CMS_OAUTH_STATE_SECRET",
         ],
       },
+      "analytics_engine_datasets": [
+        { "binding": "DISCORD_CTA_METRICS", "dataset": "portal_discord_cta" },
+      ],
       "d1_databases": [
         {
           "binding": "SEARCH_RATE_LIMIT_DB",

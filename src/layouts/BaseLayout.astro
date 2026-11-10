@@ -215,6 +215,7 @@ const rssUrl = new URL(localizePath(locale, '/rss.xml'), siteBase)
     <script type="application/ld+json" set:html={webpageJsonLd} />
   </head>
   <body
+    data-discord-locale={locale}
     class:list={[
       {
         'has-plain-background': plainBackground,
@@ -240,5 +241,9 @@ const rssUrl = new URL(localizePath(locale, '/rss.xml'), siteBase)
       wikiButton={alphaWikiButton}
     />
     {shouldShowAds && <AdsRuntime />}
+    <script>
+      import { initDiscordCtaMetrics } from '../scripts/discord-cta-metrics'
+      initDiscordCtaMetrics()
+    </script>
   </body>
 </html>

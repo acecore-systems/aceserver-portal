@@ -130,6 +130,7 @@ const multiplayerGuidePath = localizePath(
   <Fragment slot="actions">
     <a
       class="asv-btn-blue"
+      data-discord-cta="home"
       href={heroJoinButton.href}
       {...externalLinkAttrs(heroJoinButton.href, heroJoinButton.external)}
     >
@@ -155,6 +156,11 @@ const multiplayerGuidePath = localizePath(
       />
       <span>{ui.askAlpha}</span>
     </a>
+    {locale === 'en' && (
+      <p class="join-language-note">
+        Community guidance is mainly in Japanese.
+      </p>
+    )}
   </Fragment>
 </PageHero>
 
@@ -209,6 +215,14 @@ const multiplayerGuidePath = localizePath(
 </section>
 
 <style>
+  .join-language-note {
+    flex-basis: 100%;
+    grid-column: 1 / -1;
+    margin: 0;
+    color: #fff;
+    font-size: 0.8rem;
+    text-shadow: 0 1px 3px #000;
+  }
   .asv-btn-alpha {
     display: inline-flex;
     min-height: 3rem;
