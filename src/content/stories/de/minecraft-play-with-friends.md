@@ -1,8 +1,8 @@
 ---
-title: 'Minecraft mit Freunden spielen: Java, Bedrock, Switch und Handy richtig wählen'
+title: 'Minecraft mit Freunden spielen: Java, Bedrock, Switch und Handy'
 description: Kläre den Unterschied zwischen Java und Bedrock, vergleiche eigene Welten, Realms und öffentliche Server und wähle für jedes Gerät den passenden Weg zum Spielen mit Freunden.
 translationOf: minecraft-play-with-friends
-sourceHash: sha256:2dcd36662b79814ddebf5ac37fffe0713d91a554eb5ff82763bbeb6e64cf2e7e
+sourceHash: sha256:8570351e29bd89577fea599aaaf45cbc22d316ada640c8165fd5ae13a27b47fc
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -11,7 +11,7 @@ tags:
 author: Gui
 image: /uploads/stories/minecraft-play-with-friends-hero.webp
 imageAlt: Vier Freunde beraten sich an einer Karte auf einem Platz im Blockstil bei Sonnenuntergang, neben ihnen stehen ein PC, ein Handheld und ein Smartphone
-lastUpdated: 2026-10-09T15:00:00+09:00
+lastUpdated: 2026-11-10T12:00:00+09:00
 ---
 
 Bevor ihr entscheidet, wo ihr Minecraft mit Freunden spielt, prüft zuerst, ob alle dieselbe Edition nutzen können: **Java Edition oder Bedrock Edition**. Dieser Leitfaden vergleicht eigene Welten, Realms und öffentliche Server und hilft PC-, Switch- und Mobilspielern bei der Auswahl.
@@ -72,6 +72,8 @@ Das passt zu Freunden mit unterschiedlichen Schul-, Arbeits- oder Vereinszeiten,
 ### 3. Öffentliche Server: einer Community beitreten
 
 Ein öffentlicher Server ist eine Online-Welt, die von einem Betreiber verwaltet wird. Er kann für Menschen passen, die mit noch unbekannten Spielern bauen, leben oder Veranstaltungen besuchen möchten. Prüft vor dem Beitreten Regeln, unterstützte Edition und Version, Altersbedingungen sowie den Umgang mit Sprachchat oder Discord.
+
+Wenn dich Aceserver interessiert, findest du die aktuelle Anleitung unter [Aceserver beitreten](https://asv-wiki.acecore.net/article/in/).
 
 Switch-Spieler sollten besonders die Hinweise des Servers zu unterstützten Geräten und dem Beitrittsweg lesen. Setzt keine inoffizielle Verbindungslösung voraus. Auch wenn ein Server Java und Bedrock bewirbt, hängen die tatsächlichen Anforderungen und unterstützten Versionen von diesem Server ab.
 

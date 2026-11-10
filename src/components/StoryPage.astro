@@ -157,6 +157,7 @@ const breadcrumbJsonLd = serializeJsonForHtmlScript({
 <BaseLayout
   locale={locale}
   title={story.data.title}
+  conciseTitle={locale === 'ja' && storySlug === 'minecraft-play-with-friends'}
   description={story.data.description}
   image={story.data.image}
   imageAlt={story.data.imageAlt}

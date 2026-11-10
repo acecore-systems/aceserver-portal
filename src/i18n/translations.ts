@@ -275,7 +275,7 @@ export const JA_UI: UiCopy = {
 
 const en: LocaleTranslation = {
   sourceHash:
-    'sha256:632900dfd80632b6908cddd1c07006165828c1688f6fcab90d2105a8eed2d5ad',
+    'sha256:e9df2ee965e7708cbd83ba5d3f8db942ccc1cada8e002c1d17b029cc0e32cdd0',
   ui: {
     siteTitleSuffix: 'Official portal for the free public Minecraft server',
     homeTitleParts: ['Ace', 'server'],
@@ -551,7 +551,7 @@ const en: LocaleTranslation = {
 
 const zhCn: LocaleTranslation = {
   sourceHash:
-    'sha256:632900dfd80632b6908cddd1c07006165828c1688f6fcab90d2105a8eed2d5ad',
+    'sha256:e9df2ee965e7708cbd83ba5d3f8db942ccc1cada8e002c1d17b029cc0e32cdd0',
   ui: {
     siteTitleSuffix: '免费公开 Minecraft 服务器官方门户',
     homeTitleParts: ['Ace', 'server'],
@@ -813,7 +813,7 @@ const zhCn: LocaleTranslation = {
 
 const es: LocaleTranslation = {
   sourceHash:
-    'sha256:632900dfd80632b6908cddd1c07006165828c1688f6fcab90d2105a8eed2d5ad',
+    'sha256:e9df2ee965e7708cbd83ba5d3f8db942ccc1cada8e002c1d17b029cc0e32cdd0',
   ui: {
     siteTitleSuffix:
       'Portal oficial del servidor público gratuito de Minecraft',
@@ -1086,7 +1086,7 @@ const es: LocaleTranslation = {
 
 const pt: LocaleTranslation = {
   sourceHash:
-    'sha256:632900dfd80632b6908cddd1c07006165828c1688f6fcab90d2105a8eed2d5ad',
+    'sha256:e9df2ee965e7708cbd83ba5d3f8db942ccc1cada8e002c1d17b029cc0e32cdd0',
   ui: {
     siteTitleSuffix: 'Portal oficial do servidor público gratuito de Minecraft',
     homeTitleParts: ['Ace', 'server'],
@@ -1359,7 +1359,7 @@ const pt: LocaleTranslation = {
 
 const fr: LocaleTranslation = {
   sourceHash:
-    'sha256:632900dfd80632b6908cddd1c07006165828c1688f6fcab90d2105a8eed2d5ad',
+    'sha256:e9df2ee965e7708cbd83ba5d3f8db942ccc1cada8e002c1d17b029cc0e32cdd0',
   ui: {
     siteTitleSuffix: 'Portail officiel du serveur Minecraft public et gratuit',
     homeTitleParts: ['Ace', 'server'],
@@ -1631,7 +1631,7 @@ const fr: LocaleTranslation = {
 
 const ko: LocaleTranslation = {
   sourceHash:
-    'sha256:632900dfd80632b6908cddd1c07006165828c1688f6fcab90d2105a8eed2d5ad',
+    'sha256:e9df2ee965e7708cbd83ba5d3f8db942ccc1cada8e002c1d17b029cc0e32cdd0',
   ui: {
     siteTitleSuffix: '무료 공개 Minecraft 서버 공식 포털',
     homeTitleParts: ['Ace', 'server'],
@@ -1904,7 +1904,7 @@ const ko: LocaleTranslation = {
 
 const de: LocaleTranslation = {
   sourceHash:
-    'sha256:632900dfd80632b6908cddd1c07006165828c1688f6fcab90d2105a8eed2d5ad',
+    'sha256:e9df2ee965e7708cbd83ba5d3f8db942ccc1cada8e002c1d17b029cc0e32cdd0',
   ui: {
     siteTitleSuffix:
       'Offizielles Portal des kostenlosen öffentlichen Minecraft-Servers',
@@ -2181,7 +2181,7 @@ const de: LocaleTranslation = {
 
 const ru: LocaleTranslation = {
   sourceHash:
-    'sha256:632900dfd80632b6908cddd1c07006165828c1688f6fcab90d2105a8eed2d5ad',
+    'sha256:e9df2ee965e7708cbd83ba5d3f8db942ccc1cada8e002c1d17b029cc0e32cdd0',
   ui: {
     siteTitleSuffix:
       'Официальный портал бесплатного публичного сервера Minecraft',

@@ -1,8 +1,8 @@
 ---
-title: 'How to play Minecraft with friends: choosing Java, Bedrock, Switch, and mobile'
+title: 'How to play Minecraft with friends: Java, Bedrock, Switch and mobile'
 description: Compare your own world, Realms, and public servers after sorting out Java and Bedrock, then choose a way to play with friends for each device.
 translationOf: minecraft-play-with-friends
-sourceHash: sha256:2dcd36662b79814ddebf5ac37fffe0713d91a554eb5ff82763bbeb6e64cf2e7e
+sourceHash: sha256:8570351e29bd89577fea599aaaf45cbc22d316ada640c8165fd5ae13a27b47fc
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -11,7 +11,7 @@ tags:
 author: Gui
 image: /uploads/stories/minecraft-play-with-friends-hero.webp
 imageAlt: Four friends around a map in a block-style sunset plaza, with a PC, handheld game device, and smartphone nearby as they discuss how to play together
-lastUpdated: 2026-10-09T15:00:00+09:00
+lastUpdated: 2026-11-10T12:00:00+09:00
 ---
 
 Before choosing where to play Minecraft with friends, first make sure everyone can use the same edition: **Java Edition or Bedrock Edition**. This guide compares your own world, Realms, and public servers, then helps PC, Switch, and mobile players choose a path.
@@ -72,6 +72,8 @@ It is a good fit for friends with different school, work, or club schedules who 
 ### 3. Public servers: join a community
 
 A public server is an online world run by an operator. It can suit people who want to build, live, or attend events with players they do not already know. Before joining, check that server's rules, supported edition and version, age conditions, and how it handles voice chat or Discord.
+
+If Aceserver interests you, [see how to join Aceserver](https://asv-wiki.acecore.net/article/in/) for the latest guidance.
 
 For Switch players especially, read the server's own guidance about supported devices and its joining method. Do not assume an unofficial connection workaround. Even when a server advertises Java-and-Bedrock support, its actual requirements and supported versions are specific to that server.
 
