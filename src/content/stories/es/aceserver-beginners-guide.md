@@ -2,9 +2,9 @@
 title: 'Guía para principiantes de Aceserver: portal, mapas, vídeos, WIKI y conexión'
 description: ¿Es tu primera vez en Aceserver? Aprende cuándo usar el portal oficial, los mapas, los vídeos y la WIKI, y dónde comprobar si no puedes entrar.
 translationOf: aceserver-beginners-guide
-sourceHash: sha256:0b660a3eaf743dffa28c0f2694d29259ab639f6fec4edd4e2433c26b24747080
+sourceHash: sha256:9285e21f00e413b503506a873320d9a1c4fd7fc8918da69e5c8bb06500946781
 date: 2026-08-09T10:00:00+09:00
-lastUpdated: 2026-10-09T15:00:00+09:00
+lastUpdated: 2026-11-11T00:00:00+09:00
 tags:
   - Minecraft
   - Aceserver
@@ -57,7 +57,12 @@ El portal es la entrada a la información actual, no un lugar para memorizar det
 
 Los [mapas de mundos](/es/world-map/) enlazan mapas publicados como Main World, Resource World, RPG, Lobby, mundos Season y mapas de eventos. Si quieres visitar construcciones, recoger recursos o jugar RPG, conocer el nombre del mundo en el mapa facilita encontrar la guía correspondiente en la WIKI o Discord.
 
-Que un mapa aparezca no garantiza por sí solo que puedas entrar en ese momento ni usar una función concreta. El estado de los mundos y los métodos de viaje pueden cambiar; consulta los avisos y las reglas más recientes antes de actuar.
+Empieza por estas dos construcciones en el mapa público de Main World. Cada enlace centra el mapa en la construcción.
+
+- Mira [Campo de béisbol junto al agua](/es/world-map-main/?worldname=world&mapname=surface&zoom=4&x=-423&y=64&z=-209). Observa desde arriba el diamante, las gradas escalonadas y los puentes y caminos cercanos.
+- Mira [Tejados verdes sobre el agua](/es/world-map-main/?worldname=world&mapname=surface&zoom=4&x=264&y=64&z=-479). Sigue la torre, los edificios unidos por pasarelas y el puente hacia la orilla.
+
+Para visitarlas en el juego, consulta la guía actual de desplazamiento y las reglas del mundo, y pide permiso al propietario antes de entrar en una construcción o terreno ajeno.
 
 ## Elige un servidor según lo que quieras hacer
 
