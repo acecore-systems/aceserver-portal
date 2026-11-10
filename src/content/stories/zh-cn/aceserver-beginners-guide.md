@@ -2,9 +2,9 @@
 title: 'Aceserver 新手指南：Portal、世界地图、视频、WIKI 与连接问题'
 description: 第一次来到 Aceserver？了解何时使用官方 Portal、世界地图、视频和 WIKI，以及无法加入时应查看哪里。
 translationOf: aceserver-beginners-guide
-sourceHash: sha256:0b660a3eaf743dffa28c0f2694d29259ab639f6fec4edd4e2433c26b24747080
+sourceHash: sha256:9285e21f00e413b503506a873320d9a1c4fd7fc8918da69e5c8bb06500946781
 date: 2026-08-09T10:00:00+09:00
-lastUpdated: 2026-10-09T15:00:00+09:00
+lastUpdated: 2026-11-11T00:00:00+09:00
 tags:
   - Minecraft
   - Aceserver
@@ -57,7 +57,12 @@ Portal 是最新信息的入口，并不是记住连接细节的地方。连接�
 
 [世界地图](/zh-cn/world-map/)提供主世界、资源世界、RPG、大厅、Season 系列和活动地图等公开地图的入口。想参观建筑、收集资源或游玩 RPG 时，先从地图知道世界名称，更容易在 WIKI 或 Discord 中找到相关说明。
 
-地图正在显示，并不代表现在一定可以进入，或一定可以使用某项功能。世界状态和移动方式可能变化，行动前请确认最新公告和规则。
+先在主世界公开地图上看看这两处建筑。打开链接后，地图会移动到对应建筑的位置。
+
+- 在[水边的棒球场](/zh-cn/world-map-main/?worldname=world&mapname=surface&zoom=4&x=-423&y=64&z=-209)，从上方观察球场、阶梯式看台以及附近的桥和道路。
+- 在[水上的绿色屋顶](/zh-cn/world-map-main/?worldname=world&mapname=surface&zoom=4&x=264&y=64&z=-479)，沿着塔楼、相连建筑和回廊，找到通往岸边的桥。
+
+在游戏内前往参观时，请查看最新的移动方式说明和各世界的规则，并在进入他人的建筑或场地前取得所有者许可。
 
 ## 根据想玩的内容选择服务器
 
