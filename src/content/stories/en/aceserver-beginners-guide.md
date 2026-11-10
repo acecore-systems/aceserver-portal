@@ -28,8 +28,8 @@ If the game’s multiplayer screen is new to you, Minecraft’s official [server
 ## The first four official places to open
 
 1. Check the [official Aceserver portal](/en/) for the main entry points.
-2. Join the [official Discord](https://discord.gg/KtEjYbPQ35) and check the latest joining and maintenance notices.
-3. Read the current joining steps in the [Aceserver WIKI joining guide](https://asv-wiki.acecore.net/article/in/).
+2. Join the [official Discord](https://discord.gg/KtEjYbPQ35) and check the latest joining and maintenance notices. Community guidance is mainly in Japanese.
+3. Read the current joining steps in the [Aceserver WIKI joining guide (Japanese)](https://asv-wiki.acecore.net/article/in/).
 4. Read the [Aceserver WIKI rules index](https://asv-wiki.acecore.net/article/rules-index/) before entering the game.
 
 Following this order takes you to information for the current Aceserver instead of relying on an old article or an unofficial connection method. If anything is unclear, do not guess; ask through the official Discord.
@@ -80,7 +80,7 @@ Videos are a doorway to understanding the community. Do not assume that a connec
 
 ## Use the WIKI to confirm joining steps and rules
 
-Use the [Aceserver WIKI joining guide](https://asv-wiki.acecore.net/article/in/) for the steps, then choose the community, Minecraft, server, and Discord rules from the [rules index](https://asv-wiki.acecore.net/article/rules-index/). The official Discord posts are the source for rules. If the WIKI and Discord differ, check Discord and ask staff when unsure.
+Use the [Aceserver WIKI joining guide (Japanese)](https://asv-wiki.acecore.net/article/in/) for the steps, then choose the community, Minecraft, server, and Discord rules from the [rules index](https://asv-wiki.acecore.net/article/rules-index/). The official Discord posts are the source for rules. If the WIKI and Discord differ, check Discord and ask staff when unsure.
 
 ## Join for the first time in this order
 

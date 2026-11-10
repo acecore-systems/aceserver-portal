@@ -41,6 +41,9 @@ jobs:
       - name: Validate CMS content
         run: npm run validate:content
 
+      - name: Test Discord CTA metrics
+        run: npm run test:discord-cta
+
       - name: Test content validation
         run: npm run test:content
 
