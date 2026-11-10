@@ -196,6 +196,7 @@ const alphaLinkResources = [
 </div>
 
 <script>
+  import { PORTAL_DISCORD_INVITE } from '../data/discord'
   import { createAlphaInlineMarkdownPattern } from '../utils/alpha-link-pattern'
 
   type AlphaRole = 'user' | 'assistant'
@@ -262,8 +263,7 @@ const alphaLinkResources = [
   }
 
   function getAlphaLinkContext(widget: HTMLElement): AlphaLinkContext {
-    const discordHref =
-      widget.dataset.alphaDiscordUrl || 'https://discord.gg/acsv'
+    const discordHref = widget.dataset.alphaDiscordUrl || PORTAL_DISCORD_INVITE
     const wikiHref =
       widget.dataset.alphaWikiUrl || 'https://asv-wiki.acecore.net'
     const worldMapHref = widget.dataset.alphaWorldMapUrl || '/world-map/'

@@ -5,7 +5,7 @@ description: "Find out what to check when you can't join a Minecraft server:
   connection. Includes separate guidance for Java, Bedrock, Switch, and
   Aceserver."
 translationOf: minecraft-server-cannot-join
-sourceHash: sha256:c19e1b5fcf6a1fa0d21c7d1f1a9c8e25b03be51e1e8c109a0ca356006bf6c1b0
+sourceHash: sha256:e6eea0d05f70fa8fcf92af6a97fbca2d2ec95a906a3e63236d9cdff123bafabd
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -111,7 +111,7 @@ These steps can help both first-time visitors and people returning after a break
 This section is about joining Aceserver, not general connection methods. The Aceserver portal says that players can join from either Java Edition or Bedrock Edition. The actual address, port, steps for Switch, server status, and rules may change, so check the following official sources before joining.
 
 1. Check the joining instructions and announcements on the [Aceserver portal](/en/).
-2. Check the [official Discord](https://discord.gg/acsv) for maintenance and joining notices.
+2. Check the [official Discord](https://discord.gg/KtEjYbPQ35) for maintenance and joining notices.
 3. Check the [official WIKI](https://asv-wiki.acecore.net) for in-game rules and guidance for each world.
 
 ![A block-style route from a portal to an official guideboard and guidebook for checking Aceserver joining information](/uploads/stories/minecraft-server-cannot-join-official-guidance.webp)

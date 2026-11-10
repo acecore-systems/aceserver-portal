@@ -2,7 +2,7 @@
 title: 'Empfohlene Minecraft-Server in Japan: 6 Optionen nach Java/Bedrock und Spielstil'
 description: Ein Überblick über öffentliche Minecraft-Server in Japan anhand der auf ihren offiziellen Seiten bestätigten Editionen, Spielweisen und Beitrittsinformationen.
 translationOf: minecraft-server-osusume
-sourceHash: sha256:2278e516442d294853fc357cea7e80dbcaa0ccd6a278ab2f2a33f94694725e43
+sourceHash: sha256:f0c40b2b24ae1a8c8583001f3e7a97355aea3c18bf1ab96f77e04770a7660705
 date: 2026-08-01T10:00:00+09:00
 lastUpdated: 2026-10-09T15:00:00+09:00
 tags:
@@ -74,7 +74,7 @@ Aceserver ist ein kostenloser öffentlicher Minecraft-Server, dem alle über Jav
 
 Er ist eine Option für Menschen, die Vanilla-nah frei und im eigenen Tempo bauen und leben und die detaillierten Regeln und Beitrittshinweise im WIKI nachsehen möchten. Prüfe zuerst das Portal und Discord auf aktuelle Informationen und probiere dann die Welt aus, die dich interessiert.
 
-Sieh dir vor dem Beitritt das [Aceserver-Portal](/de/), den [offiziellen Discord](https://discord.gg/acsv) und das [offizielle WIKI](https://asv-wiki.acecore.net) in dieser Reihenfolge an. So kannst du vor dem Beitritt einschätzen, ob der Server zu deiner Spielweise passt.
+Sieh dir vor dem Beitritt das [Aceserver-Portal](/de/), den [offiziellen Discord](https://discord.gg/KtEjYbPQ35) und das [offizielle WIKI](https://asv-wiki.acecore.net) in dieser Reihenfolge an. So kannst du vor dem Beitritt einschätzen, ob der Server zu deiner Spielweise passt.
 
 ## Wenn du unsicher bist, vergleiche die offiziellen Anleitungen
 

@@ -2,7 +2,7 @@
 title: 'Guide du débutant Aceserver : portail, cartes, vidéos, WIKI et connexion'
 description: Vous découvrez Aceserver ? Apprenez quand utiliser le portail officiel, les cartes, les vidéos et le WIKI, et où vérifier si vous ne pouvez pas rejoindre le serveur.
 translationOf: aceserver-beginners-guide
-sourceHash: sha256:be8dad22534446be8cb3ba2ead60bd55b7f3d8831e062173aaa45b356907177a
+sourceHash: sha256:0b660a3eaf743dffa28c0f2694d29259ab639f6fec4edd4e2433c26b24747080
 date: 2026-08-09T10:00:00+09:00
 lastUpdated: 2026-10-09T15:00:00+09:00
 tags:
@@ -28,7 +28,7 @@ Si l’écran multijoueur vous est inconnu, le [guide officiel pour rejoindre un
 ## Les quatre pages officielles à ouvrir en premier
 
 1. Consultez le [portail officiel Aceserver](/fr/) pour les accès principaux.
-2. Rejoignez le [Discord officiel](https://discord.gg/acsv) et vérifiez les dernières annonces de participation et de maintenance.
+2. Rejoignez le [Discord officiel](https://discord.gg/KtEjYbPQ35) et vérifiez les dernières annonces de participation et de maintenance.
 3. Consultez les étapes actuelles dans le [guide de participation du WIKI Aceserver](https://asv-wiki.acecore.net/article/in/).
 4. Lisez les [index des règles du WIKI Aceserver](https://asv-wiki.acecore.net/article/rules-index/) avant d'entrer en jeu.
 

@@ -2,7 +2,7 @@
 title: 'Guia para iniciantes no Aceserver: portal, mapas, vídeos, WIKI e conexão'
 description: Chegando agora ao Aceserver? Saiba quando usar o portal oficial, mapas, vídeos e a WIKI, e onde verificar se não conseguir entrar.
 translationOf: aceserver-beginners-guide
-sourceHash: sha256:be8dad22534446be8cb3ba2ead60bd55b7f3d8831e062173aaa45b356907177a
+sourceHash: sha256:0b660a3eaf743dffa28c0f2694d29259ab639f6fec4edd4e2433c26b24747080
 date: 2026-08-09T10:00:00+09:00
 lastUpdated: 2026-10-09T15:00:00+09:00
 tags:
@@ -28,7 +28,7 @@ Se a tela de multijogador ainda é novidade para você, o [guia oficial para ent
 ## Os quatro lugares oficiais para abrir primeiro
 
 1. Consulte o [portal oficial do Aceserver](/pt/) para ver os acessos principais.
-2. Entre no [Discord oficial](https://discord.gg/acsv) e confira os avisos mais recentes sobre participação e manutenção.
+2. Entre no [Discord oficial](https://discord.gg/KtEjYbPQ35) e confira os avisos mais recentes sobre participação e manutenção.
 3. Veja os passos atuais no [guia de participação da WIKI do Aceserver](https://asv-wiki.acecore.net/article/in/).
 4. Leia as [índice de regras da WIKI do Aceserver](https://asv-wiki.acecore.net/article/rules-index/) antes de entrar no jogo.
 

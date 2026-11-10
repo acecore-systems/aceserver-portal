@@ -4,7 +4,7 @@ description:
   마인크래프트 서버에 접속할 수 없을 때 확인할 절차를 Java Edition·Bedrock Edition·Switch별로
   설명합니다. 오류 표시를 바탕으로 에디션, 버전, 계정, 네트워크를 구분하고 Aceserver의 공식 안내를 어디서 확인할 수 있는지도 알려 드립니다.
 translationOf: minecraft-server-cannot-join
-sourceHash: sha256:c19e1b5fcf6a1fa0d21c7d1f1a9c8e25b03be51e1e8c109a0ca356006bf6c1b0
+sourceHash: sha256:e6eea0d05f70fa8fcf92af6a97fbca2d2ec95a906a3e63236d9cdff123bafabd
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -109,7 +109,7 @@ Nintendo Switch용 Minecraft는 Bedrock Edition입니다. Java Edition 전용 �
 여기부터는 일반적인 접속 방법이 아닌 Aceserver의 참가 안내입니다. Aceserver 공식 포털에는 Java Edition과 Bedrock Edition 어느 쪽에서도 참가할 수 있다고 안내되어 있습니다. 실제 접속 대상, 포트, Switch 절차, 운영 상태, 규칙은 변경될 수 있으므로 참가하기 전에 다음 공식 안내를 확인하세요.
 
 1. [Aceserver 포털](/ko/)에서 참가 안내와 공지사항을 확인합니다.
-2. [공식 Discord](https://discord.gg/acsv)에서 점검이나 참가 관련 안내를 확인합니다.
+2. [공식 Discord](https://discord.gg/KtEjYbPQ35)에서 점검이나 참가 관련 안내를 확인합니다.
 3. [공식 WIKI](https://asv-wiki.acecore.net)에서 게임 내 규칙과 각 월드 안내를 확인합니다.
 
 ![포털, 공식 안내판, 안내서를 차례로 살펴보며 참가 정보를 확인하는 블록풍 이미지](/uploads/stories/minecraft-server-cannot-join-official-guidance.webp)

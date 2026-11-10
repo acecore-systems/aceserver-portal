@@ -8,7 +8,7 @@ author: Gui
 image: /uploads/stories/wiki-alpha-guide-hero.webp
 imageAlt: 官方阿尔法君站在打开的指南书和搜索结果旁的方块风格插画
 translationOf: wiki-alpha-guide
-sourceHash: sha256:09d836d05c32b2bb8847133b900739b589ed6ce1f5d772c3a092d09fa5c7e16d
+sourceHash: sha256:7b63106786c8c20824979b90a4db52308503b1f4398fe48d8300cc17383403eb
 lastUpdated: 2026-10-10T16:29:02+09:00
 ---
 
@@ -34,7 +34,7 @@ WIKI 首页列出了加入方法、规则目录、常见问题和命令说明。
 
 [门户](/zh-cn/)和 WIKI 都有“问问阿尔法君”按钮。用自己的话提问后，它会参考已公开的信息提供指引。如果回答附有来源链接，请打开原文核对。不要仅凭聊天回答判断加入条件或规则已经变更。
 
-如果找不到信息，或不同指南之间有出入，请查看[官方 Discord](https://discord.gg/acsv) 的最新帖子。加入条件、规则和运营通知以官方 Discord 帖子为原本。
+如果找不到信息，或不同指南之间有出入，请查看[官方 Discord](https://discord.gg/KtEjYbPQ35) 的最新帖子。加入条件、规则和运营通知以官方 Discord 帖子为原本。
 
 想了解门户、WIKI 和世界地图的完整使用顺序，也可以阅读[新手指南](/zh-cn/stories/aceserver-beginners-guide/)。
 

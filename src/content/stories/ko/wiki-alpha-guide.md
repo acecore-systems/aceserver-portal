@@ -8,7 +8,7 @@ author: Gui
 image: /uploads/stories/wiki-alpha-guide-hero.webp
 imageAlt: 블록 풍경 속에서 공식 알파군이 펼친 안내서와 검색 결과를 보여 주는 삽화
 translationOf: wiki-alpha-guide
-sourceHash: sha256:09d836d05c32b2bb8847133b900739b589ed6ce1f5d772c3a092d09fa5c7e16d
+sourceHash: sha256:7b63106786c8c20824979b90a4db52308503b1f4398fe48d8300cc17383403eb
 lastUpdated: 2026-10-10T16:29:02+09:00
 ---
 
@@ -34,7 +34,7 @@ WIKI 첫 화면에는 참가 방법, 규칙 목록, 자주 묻는 질문, 명령
 
 [포털](/ko/)과 WIKI에는 ‘알파군에게 묻기’ 버튼이 있습니다. 자신의 말로 질문하면 공개된 안내를 바탕으로 길을 알려 줍니다. 답변에 출처 링크가 있으면 원문을 열어 확인하세요. 채팅 답변만으로 참가 조건이나 규칙이 바뀌었다고 판단하지 마세요.
 
-정보를 찾을 수 없거나 안내가 서로 다르면 [공식 Discord](https://discord.gg/acsv)의 최신 게시물을 확인하세요. 참가 조건, 규칙, 운영 공지의 원본은 공식 Discord 게시물입니다.
+정보를 찾을 수 없거나 안내가 서로 다르면 [공식 Discord](https://discord.gg/KtEjYbPQ35)의 최신 게시물을 확인하세요. 참가 조건, 규칙, 운영 공지의 원본은 공식 Discord 게시물입니다.
 
 포털, WIKI, 월드맵을 이용하는 전체 순서는 [초보자 가이드](/ko/stories/aceserver-beginners-guide/)도 참고하세요.
 

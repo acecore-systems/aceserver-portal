@@ -2,7 +2,7 @@
 title: '和朋友玩 Minecraft：Java、基岩版、Switch 和手机'
 description: 先厘清 Java 版与基岩版的差异，再从自己的世界、Realms 和公开服务器中，按设备选择与朋友一起游玩的方式。
 translationOf: minecraft-play-with-friends
-sourceHash: sha256:8570351e29bd89577fea599aaaf45cbc22d316ada640c8165fd5ae13a27b47fc
+sourceHash: sha256:f810c11725560d75a020908a7347bd60fda22ba01f7e7f9453cd35f6cf8d9c89
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -155,6 +155,6 @@ Switch 与手机版都是基岩版。只要所有人使用相同的最新版普�
 
 ## 在 Aceserver 与朋友一起玩
 
-选择公开服务器时，先在[Aceserver 门户](/zh-cn/)确认当前入口，再在[官方 Discord](https://discord.gg/acsv)和[官方 WIKI](https://asv-wiki.acecore.net)阅读最新的加入说明与规则。本文不会复制容易变化的连接信息，应以官方说明为准。
+选择公开服务器时，先在[Aceserver 门户](/zh-cn/)确认当前入口，再在[官方 Discord](https://discord.gg/KtEjYbPQ35)和[官方 WIKI](https://asv-wiki.acecore.net)阅读最新的加入说明与规则。本文不会复制容易变化的连接信息，应以官方说明为准。
 
 邀请朋友时，先确认版本相同、加入前阅读规则，并且绝不共享账户信息。若想先比较公开服务器，可参考[如何选择 Minecraft 服务器](/zh-cn/stories/minecraft-server-osusume/)。

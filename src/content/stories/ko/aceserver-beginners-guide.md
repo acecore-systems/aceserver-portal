@@ -2,7 +2,7 @@
 title: 'Aceserver 초보자 가이드: 포털, 월드 맵, 동영상, WIKI, 접속 문제'
 description: Aceserver가 처음이신가요? 공식 포털, 월드 맵, 동영상, WIKI를 언제 이용하는지와 접속할 수 없을 때 확인할 곳을 안내합니다.
 translationOf: aceserver-beginners-guide
-sourceHash: sha256:be8dad22534446be8cb3ba2ead60bd55b7f3d8831e062173aaa45b356907177a
+sourceHash: sha256:0b660a3eaf743dffa28c0f2694d29259ab639f6fec4edd4e2433c26b24747080
 date: 2026-08-09T10:00:00+09:00
 lastUpdated: 2026-10-09T15:00:00+09:00
 tags:
@@ -28,7 +28,7 @@ Aceserver를 처음 방문하면 무엇부터 확인해야 할지 막막할 수 
 ## 먼저 열어 볼 네 가지 공식 안내
 
 1. [Aceserver 공식 포털](/ko/)에서 주요 입구를 확인합니다.
-2. [공식 Discord](https://discord.gg/acsv)에 참가하여 최신 참가 및 점검 공지를 확인합니다.
+2. [공식 Discord](https://discord.gg/KtEjYbPQ35)에 참가하여 최신 참가 및 점검 공지를 확인합니다.
 3. [Aceserver WIKI의 참가 방법](https://asv-wiki.acecore.net/article/in/)에서 현재 참가 절차를 확인합니다.
 4. 게임에 들어가기 전에 [Aceserver WIKI의 규칙 목록](https://asv-wiki.acecore.net/article/rules-index/)을 읽습니다.
 

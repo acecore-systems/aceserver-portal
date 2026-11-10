@@ -4,7 +4,7 @@ description:
   无法加入 Minecraft 服务器时，按错误提示检查游戏类型（Java 版或基岩版）、游戏版本号、账户和网络。本文介绍 Java 版、基岩版与 Switch
   的排查要点，以及使用 Aceserver 时的官方查询渠道。
 translationOf: minecraft-server-cannot-join
-sourceHash: sha256:c19e1b5fcf6a1fa0d21c7d1f1a9c8e25b03be51e1e8c109a0ca356006bf6c1b0
+sourceHash: sha256:e6eea0d05f70fa8fcf92af6a97fbca2d2ec95a906a3e63236d9cdff123bafabd
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -109,7 +109,7 @@ Nintendo Switch 版 Minecraft 属于基岩版，不能按照仅适用于 Java �
 以下是 Aceserver 的加入说明，并非通用连接方法。Aceserver 官方门户说明，Java 版和基岩版玩家都可以加入。实际连接地址、端口、Switch 步骤、运行状态和规则可能会更新，加入前请查看以下官方说明。
 
 1. 在 [Aceserver Portal](/zh-cn/)查看加入入口和公告。
-2. 在[官方 Discord](https://discord.gg/acsv)查看维护和加入相关说明。
+2. 在[官方 Discord](https://discord.gg/KtEjYbPQ35)查看维护和加入相关说明。
 3. 在[官方 WIKI](https://asv-wiki.acecore.net)查看游戏内规则和各个世界的说明。
 
 ![依次通过门户、官方公告板和指南手册确认加入信息的方块风示意图](/uploads/stories/minecraft-server-cannot-join-official-guidance.webp)
