@@ -1,8 +1,8 @@
 ---
-title: 'Como jogar Minecraft com amigos: escolhendo Java, Bedrock, Switch e celular'
+title: 'Como jogar Minecraft com amigos: Java, Bedrock, Switch e celular'
 description: Organize a diferença entre Java e Bedrock, compare seu próprio mundo, Realms e servidores públicos e escolha como jogar com amigos em cada dispositivo.
 translationOf: minecraft-play-with-friends
-sourceHash: sha256:2dcd36662b79814ddebf5ac37fffe0713d91a554eb5ff82763bbeb6e64cf2e7e
+sourceHash: sha256:8570351e29bd89577fea599aaaf45cbc22d316ada640c8165fd5ae13a27b47fc
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -11,7 +11,7 @@ tags:
 author: Gui
 image: /uploads/stories/minecraft-play-with-friends-hero.webp
 imageAlt: Quatro amigos em volta de um mapa numa praça em estilo de blocos ao pôr do sol, com um PC, console portátil e smartphone próximos enquanto decidem como jogar juntos
-lastUpdated: 2026-10-09T15:00:00+09:00
+lastUpdated: 2026-11-10T12:00:00+09:00
 ---
 
 Antes de escolher onde jogar Minecraft com amigos, confirme que todos podem usar a mesma edição: **Java Edition ou Bedrock Edition**. Este guia compara seu próprio mundo, Realms e servidores públicos e ajuda jogadores de PC, Switch e celular a escolher um caminho.
@@ -72,6 +72,8 @@ Realms é a hospedagem oficial paga de Minecraft. Com a assinatura ativa, amigos
 ### 3. Servidores públicos: entre em uma comunidade
 
 Um servidor público é um mundo online administrado por um operador. Pode servir a quem quer construir, viver ou participar de eventos com jogadores que ainda não conhece. Antes de entrar, confira regras, edição e versão compatíveis, condições de idade e uso de chat de voz ou Discord.
+
+Se você tem interesse no Aceserver, [veja como entrar no Aceserver](https://asv-wiki.acecore.net/article/in/) para consultar as orientações mais recentes.
 
 Jogadores de Switch devem ler especialmente a orientação do próprio servidor sobre aparelhos compatíveis e método de entrada. Não suponha uma solução de conexão não oficial. Mesmo quando um servidor anuncia Java e Bedrock, seus requisitos e versões suportadas dependem dele.
 

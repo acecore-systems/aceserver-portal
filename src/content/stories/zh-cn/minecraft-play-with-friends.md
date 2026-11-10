@@ -1,8 +1,8 @@
 ---
-title: 如何与朋友一起玩 Minecraft：Java版、基岩版、Switch 和手机的选择指南
+title: '和朋友玩 Minecraft：Java、基岩版、Switch 和手机'
 description: 先厘清 Java 版与基岩版的差异，再从自己的世界、Realms 和公开服务器中，按设备选择与朋友一起游玩的方式。
 translationOf: minecraft-play-with-friends
-sourceHash: sha256:2dcd36662b79814ddebf5ac37fffe0713d91a554eb5ff82763bbeb6e64cf2e7e
+sourceHash: sha256:8570351e29bd89577fea599aaaf45cbc22d316ada640c8165fd5ae13a27b47fc
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -11,7 +11,7 @@ tags:
 author: Gui
 image: /uploads/stories/minecraft-play-with-friends-hero.webp
 imageAlt: 四位朋友围着地图讨论一起游玩的方式，旁边放着电脑、掌机和手机，背景是积木风格的夕阳广场
-lastUpdated: 2026-10-09T15:00:00+09:00
+lastUpdated: 2026-11-10T12:00:00+09:00
 ---
 
 和朋友开始玩 Minecraft 时，与其先决定去哪个世界，不如先确认所有人能否使用同一个版本：**Java 版或基岩版**。本指南比较自己的世界、Realms 和公开服务器，并整理 PC、Switch 与手机玩家的选择方法。
@@ -72,6 +72,8 @@ Realms 是 Minecraft 官方提供的付费托管。订阅有效期间，即使�
 ### 3. 公开服务器：加入社区
 
 公开服务器是由运营者管理的在线世界，适合想与陌生玩家一起建造、生活或参加活动的人。加入前应确认该服务器的规则、支持的版本与游戏版本、年龄条件，以及语音聊天或 Discord 的使用方式。
+
+如果你对 Aceserver 感兴趣，可以[查看 Aceserver 参加步骤](https://asv-wiki.acecore.net/article/in/)，了解最新指南。
 
 Switch 玩家尤其应阅读服务器自己的设备支持和加入说明，不要假设非官方的连接办法。即使服务器宣传 Java 与基岩均可加入，实际条件和支持版本也由该服务器决定。
 

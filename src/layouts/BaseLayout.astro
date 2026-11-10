@@ -26,6 +26,7 @@ import { buildSeoDescription, buildSeoTitle } from '../utils/seo-meta'
 interface Props {
   locale?: Locale
   title?: string
+  conciseTitle?: boolean
   description?: string
   image?: string
   imageAlt?: string
@@ -41,6 +42,7 @@ interface Props {
 const {
   locale = 'ja',
   title: titleInput,
+  conciseTitle = false,
   description: descriptionInput,
   image: imageInput,
   imageAlt: imageAltInput,
@@ -65,12 +67,14 @@ const canonical =
   canonicalInput === null ? null : new URL(canonicalInput, siteBase)
 const pageUrl = canonical ?? new URL(Astro.url.pathname, siteBase)
 const isHome = pageUrl.pathname === localizePath(locale, '/')
-const pageTitle = buildSeoTitle({
-  title,
-  siteTitle: settings.shortTitle,
-  titleContext: ui.siteTitleSuffix,
-  isHome,
-})
+const pageTitle = conciseTitle
+  ? `${title} | ${settings.shortTitle}`
+  : buildSeoTitle({
+      title,
+      siteTitle: settings.shortTitle,
+      titleContext: ui.siteTitleSuffix,
+      isHome,
+    })
 const socialTitle = isHome ? pageTitle : `${title} | ${settings.shortTitle}`
 const ogImage = new URL(image, siteBase)
 const socialImageAlt =
