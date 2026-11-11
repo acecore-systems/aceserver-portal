@@ -1,6 +1,6 @@
 import { z } from 'zod'
 
-export const MODEL = 'gpt-6-luna' as const
+export const MODEL = 'muse-ember-1.0' as const
 export function isWorkersSkinModel(model: string): boolean {
   return (
     model.startsWith('@cf/') &&

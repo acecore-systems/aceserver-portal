@@ -8,7 +8,7 @@ image: /uploads/stories/minecraft-skin-maker-cover-v2.webp
 imageAlt: 'Illustration of blank block mannequins and a paint palette representing skin creation. Not an example of generated output.'
 relatedStories: [aceserver-beginners-guide]
 translationOf: minecraft-skin-maker-guide
-sourceHash: sha256:53f8e1662fe56ef7d93fab2aba9733911a0240d614d35e416b2b41624217ccc2
+sourceHash: sha256:61e65a55f4e2072769abf24e6d06857c649156989104c475f6440696060c8d2f
 lastUpdated: 2026-10-14T12:00:00+09:00
 ---
 
@@ -32,7 +32,7 @@ Loading a valid new file replaces the current skin and undo history, so save any
 
 ## 2. Consent and wait for generation
 
-Before sending, confirm your right to use the image and consent to AI processing. Text and images go to the configured OpenAI API or Cloudflare Workers AI provider. Do not include personal or secret information. Generation may take several minutes; usage limits or congestion may prevent it. Follow the on-screen status.
+Before sending, confirm your right to use the image and consent to AI processing. Text and images go to the configured Meta API or Cloudflare Workers AI provider. Do not include personal or secret information. Generation may take several minutes; usage limits or congestion may prevent it. Follow the on-screen status.
 
 ## 3. Review the 3D result
 
