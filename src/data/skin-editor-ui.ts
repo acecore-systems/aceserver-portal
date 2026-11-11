@@ -67,7 +67,7 @@ const copy = {
     editing: 'スキンを修正中',
     busy: '部分修正中です。1〜4分ほどかかることがあります。',
     consent:
-      '現在のスキンと修正指示を、設定中のOpenAIまたはCloudflare Workers AIへ送ることに同意します。',
+      '現在のスキンと修正指示を、設定中のMetaまたはCloudflare Workers AIへ送ることに同意します。',
     privacy:
       '手で編集している間はAIへ送信しません。AI修正を実行したときだけ、現在のスキンと修正指示を送信します。編集履歴はこのページ内だけに保持し、閉じると消えます。',
     manualPublish:
@@ -116,7 +116,7 @@ const copy = {
     editing: 'Editing your skin',
     busy: 'Editing. This may take 1–4 minutes.',
     consent:
-      'I agree to send the current skin and edit instructions to the configured OpenAI or Cloudflare Workers AI provider.',
+      'I agree to send the current skin and edit instructions to the configured Meta or Cloudflare Workers AI provider.',
     privacy:
       'Drawing does not send anything to AI. The current skin and instructions are sent only when you request an AI edit. Edit history stays in this page and is lost when you close it.',
     manualPublish:
@@ -153,7 +153,7 @@ const copy = {
     editing: '正在修改皮肤',
     busy: '正在局部修改，可能需要1–4分钟。',
     consent:
-      '我同意将当前皮肤和修改指示发送给配置的OpenAI或Cloudflare Workers AI。',
+      '我同意将当前皮肤和修改指示发送给配置的Meta或Cloudflare Workers AI。',
     privacy:
       '手动编辑不会发送给AI。仅在执行AI修改时发送当前皮肤和指示。编辑历史仅保留在此页面，关闭后消失。',
     manualPublish:
@@ -209,7 +209,7 @@ const copy = {
     editing: 'Editando tu skin',
     busy: 'Editando. Puede tardar 1–4 minutos.',
     consent:
-      'Acepto enviar la skin actual y las instrucciones al proveedor configurado de OpenAI o Cloudflare Workers AI.',
+      'Acepto enviar la skin actual y las instrucciones al proveedor configurado de Meta o Cloudflare Workers AI.',
     privacy:
       'Dibujar no envía nada a la IA. La skin y las instrucciones se envían solo al solicitar una edición IA. El historial se pierde al cerrar la página.',
     manualPublish:
@@ -264,7 +264,7 @@ const copy = {
     editing: 'Editando sua skin',
     busy: 'Editando. Pode levar 1–4 minutos.',
     consent:
-      'Concordo em enviar a skin atual e as instruções ao provedor configurado OpenAI ou Cloudflare Workers AI.',
+      'Concordo em enviar a skin atual e as instruções ao provedor configurado Meta ou Cloudflare Workers AI.',
     privacy:
       'Desenhar não envia dados à IA. A skin e as instruções são enviadas apenas ao solicitar uma edição IA. O histórico se perde ao fechar a página.',
     manualPublish:
@@ -313,7 +313,7 @@ const copy = {
     editing: 'Modification du skin',
     busy: 'Modification en cours. Cela peut prendre 1–4 minutes.',
     consent:
-      'J’accepte d’envoyer le skin actuel et les instructions au fournisseur configuré OpenAI ou Cloudflare Workers AI.',
+      'J’accepte d’envoyer le skin actuel et les instructions au fournisseur configuré Meta ou Cloudflare Workers AI.',
     privacy:
       'Dessiner n’envoie rien à l’IA. Le skin et les instructions sont envoyés uniquement lors d’une modification IA. L’historique disparaît à la fermeture de la page.',
     manualPublish:
@@ -355,7 +355,7 @@ const copy = {
     editing: '스킨 수정 중',
     busy: '부분 수정 중입니다. 1–4분 걸릴 수 있습니다.',
     consent:
-      '현재 스킨과 수정 지시를 설정된 OpenAI 또는 Cloudflare Workers AI로 보내는 데 동의합니다.',
+      '현재 스킨과 수정 지시를 설정된 Meta 또는 Cloudflare Workers AI로 보내는 데 동의합니다.',
     privacy:
       '수동 편집 중에는 AI로 전송하지 않습니다. AI 수정을 실행할 때만 스킨과 지시를 보냅니다. 편집 기록은 페이지를 닫으면 사라집니다.',
     manualPublish:
@@ -405,7 +405,7 @@ const copy = {
     editing: 'Skin wird bearbeitet',
     busy: 'Bearbeitung läuft. Dies kann 1–4 Minuten dauern.',
     consent:
-      'Ich stimme zu, den aktuellen Skin und die Anweisungen an den konfigurierten Anbieter OpenAI oder Cloudflare Workers AI zu senden.',
+      'Ich stimme zu, den aktuellen Skin und die Anweisungen an den konfigurierten Anbieter Meta oder Cloudflare Workers AI zu senden.',
     privacy:
       'Beim Zeichnen wird nichts an die KI gesendet. Skin und Anweisungen werden erst bei einer KI-Bearbeitung gesendet. Der Verlauf geht beim Schließen der Seite verloren.',
     manualPublish:
@@ -454,7 +454,7 @@ const copy = {
     editing: 'Скин редактируется',
     busy: 'Редактирование. Это может занять 1–4 минуты.',
     consent:
-      'Я согласен отправить текущий скин и инструкции настроенному поставщику OpenAI или Cloudflare Workers AI.',
+      'Я согласен отправить текущий скин и инструкции настроенному поставщику Meta или Cloudflare Workers AI.',
     privacy:
       'Рисование не отправляет данные ИИ. Скин и инструкции отправляются только при запросе правки ИИ. История исчезает при закрытии страницы.',
     manualPublish:

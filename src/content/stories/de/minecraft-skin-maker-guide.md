@@ -8,7 +8,7 @@ image: /uploads/stories/minecraft-skin-maker-cover-v2.webp
 imageAlt: 'Illustration weißer Blockfiguren und einer Farbpalette als Symbol für die Skin-Erstellung. Kein generiertes Skin-Beispiel.'
 relatedStories: [aceserver-beginners-guide]
 translationOf: minecraft-skin-maker-guide
-sourceHash: sha256:53f8e1662fe56ef7d93fab2aba9733911a0240d614d35e416b2b41624217ccc2
+sourceHash: sha256:61e65a55f4e2072769abf24e6d06857c649156989104c475f6440696060c8d2f
 lastUpdated: 2026-10-14T12:00:00+09:00
 ---
 
@@ -32,7 +32,7 @@ Das erfolgreiche Laden einer neuen Datei ersetzt den aktuellen Skin und den Rüc
 
 ## 2. Zustimmen und warten
 
-Bestätigen Sie Bildrechte und Verarbeitung vor dem Senden. Text und Bilder gehen an den konfigurierten Anbieter OpenAI API oder Cloudflare Workers AI. Keine persönlichen oder geheimen Daten eingeben. Erzeugung kann Minuten dauern oder durch Grenzen/Auslastung scheitern; beachten Sie die Anzeige.
+Bestätigen Sie Bildrechte und Verarbeitung vor dem Senden. Text und Bilder gehen an den konfigurierten Anbieter Meta API oder Cloudflare Workers AI. Keine persönlichen oder geheimen Daten eingeben. Erzeugung kann Minuten dauern oder durch Grenzen/Auslastung scheitern; beachten Sie die Anzeige.
 
 ## 3. In 3D prüfen
 
