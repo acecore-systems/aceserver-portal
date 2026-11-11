@@ -2,9 +2,9 @@
 title: 'Aceserver 초보자 가이드: 포털, 월드 맵, 동영상, WIKI, 접속 문제'
 description: Aceserver가 처음이신가요? 공식 포털, 월드 맵, 동영상, WIKI를 언제 이용하는지와 접속할 수 없을 때 확인할 곳을 안내합니다.
 translationOf: aceserver-beginners-guide
-sourceHash: sha256:be8dad22534446be8cb3ba2ead60bd55b7f3d8831e062173aaa45b356907177a
+sourceHash: sha256:9285e21f00e413b503506a873320d9a1c4fd7fc8918da69e5c8bb06500946781
 date: 2026-08-09T10:00:00+09:00
-lastUpdated: 2026-10-09T15:00:00+09:00
+lastUpdated: 2026-11-11T00:00:00+09:00
 tags:
   - Minecraft
   - Aceserver
@@ -28,7 +28,7 @@ Aceserver를 처음 방문하면 무엇부터 확인해야 할지 막막할 수 
 ## 먼저 열어 볼 네 가지 공식 안내
 
 1. [Aceserver 공식 포털](/ko/)에서 주요 입구를 확인합니다.
-2. [공식 Discord](https://discord.gg/acsv)에 참가하여 최신 참가 및 점검 공지를 확인합니다.
+2. [공식 Discord](https://discord.gg/KtEjYbPQ35)에 참가하여 최신 참가 및 점검 공지를 확인합니다.
 3. [Aceserver WIKI의 참가 방법](https://asv-wiki.acecore.net/article/in/)에서 현재 참가 절차를 확인합니다.
 4. 게임에 들어가기 전에 [Aceserver WIKI의 규칙 목록](https://asv-wiki.acecore.net/article/rules-index/)을 읽습니다.
 
@@ -57,7 +57,12 @@ Java와 Bedrock이 함께 플레이할 수 있는 조건과 지원 서버를 구
 
 [월드 맵](/ko/world-map/)에는 Main World, Resource World, RPG, Lobby, Season 계열, 이벤트 맵 등 공개된 맵으로 가는 입구가 있습니다. 건축물을 구경하고 싶거나 자원을 모으고 싶거나 RPG를 하고 싶다면 맵에서 월드 이름을 먼저 알아 두면 WIKI나 Discord에서 관련 안내를 찾기 쉽습니다.
 
-맵이 표시된다는 사실만으로 지금 바로 들어갈 수 있거나 특정 기능을 사용할 수 있다고 판단하면 안 됩니다. 월드 상태와 이동 방법은 바뀔 수 있으므로 행동 전 최신 공지와 규칙을 확인하세요.
+공개된 Main World 지도에서 먼저 이 두 건축물을 살펴보세요. 각 링크를 열면 지도가 해당 건축물 위치로 이동합니다.
+
+- [물가의 야구장](/ko/world-map-main/?worldname=world&mapname=surface&zoom=4&x=-423&y=64&z=-209)에서는 위에서 야구장과 계단식 관중석, 주변 다리와 길을 볼 수 있습니다.
+- [물 위의 초록 지붕](/ko/world-map-main/?worldname=world&mapname=surface&zoom=4&x=264&y=64&z=-479)에서는 탑에서 회랑으로 이어지는 건물과 해안으로 가는 다리를 따라가 보세요.
+
+게임 안에서 찾아갈 때는 최신 안내에서 이동 방법과 각 월드의 규칙을 확인하고, 다른 사람의 건축물이나 부지에 들어가기 전에 소유자의 허락을 받으세요.
 
 ## 하고 싶은 활동에 맞는 서버 고르기
 

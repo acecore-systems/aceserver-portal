@@ -2,9 +2,9 @@
 title: 'Guide du débutant Aceserver : portail, cartes, vidéos, WIKI et connexion'
 description: Vous découvrez Aceserver ? Apprenez quand utiliser le portail officiel, les cartes, les vidéos et le WIKI, et où vérifier si vous ne pouvez pas rejoindre le serveur.
 translationOf: aceserver-beginners-guide
-sourceHash: sha256:be8dad22534446be8cb3ba2ead60bd55b7f3d8831e062173aaa45b356907177a
+sourceHash: sha256:9285e21f00e413b503506a873320d9a1c4fd7fc8918da69e5c8bb06500946781
 date: 2026-08-09T10:00:00+09:00
-lastUpdated: 2026-10-09T15:00:00+09:00
+lastUpdated: 2026-11-11T00:00:00+09:00
 tags:
   - Minecraft
   - Aceserver
@@ -28,7 +28,7 @@ Si l’écran multijoueur vous est inconnu, le [guide officiel pour rejoindre un
 ## Les quatre pages officielles à ouvrir en premier
 
 1. Consultez le [portail officiel Aceserver](/fr/) pour les accès principaux.
-2. Rejoignez le [Discord officiel](https://discord.gg/acsv) et vérifiez les dernières annonces de participation et de maintenance.
+2. Rejoignez le [Discord officiel](https://discord.gg/KtEjYbPQ35) et vérifiez les dernières annonces de participation et de maintenance.
 3. Consultez les étapes actuelles dans le [guide de participation du WIKI Aceserver](https://asv-wiki.acecore.net/article/in/).
 4. Lisez les [index des règles du WIKI Aceserver](https://asv-wiki.acecore.net/article/rules-index/) avant d'entrer en jeu.
 
@@ -57,7 +57,12 @@ Le portail est l'entrée vers l'information actuelle, pas un endroit où mémori
 
 Les [cartes de mondes](/fr/world-map/) donnent accès à des cartes publiées telles que Main World, Resource World, RPG, Lobby, les mondes Season et les cartes d'événements. Si vous souhaitez visiter des constructions, récolter des ressources ou jouer au RPG, connaître le nom du monde sur la carte facilite la recherche de l'aide correspondante dans le WIKI ou Discord.
 
-La présence d'une carte ne garantit pas à elle seule que vous pouvez entrer immédiatement ou utiliser une fonction particulière. L'état des mondes et les méthodes de déplacement peuvent changer ; consultez les dernières annonces et règles avant d'agir.
+Commencez par ces deux constructions sur la carte publique de Main World. Chaque lien centre la carte sur la construction.
+
+- Découvrez [Terrain de baseball au bord de l’eau](/fr/world-map-main/?worldname=world&mapname=surface&zoom=4&x=-423&y=64&z=-209). Observez du dessus le terrain, les gradins en escalier et les ponts et chemins proches.
+- Découvrez [Toits verts sur l’eau](/fr/world-map-main/?worldname=world&mapname=surface&zoom=4&x=264&y=64&z=-479). Suivez la tour, les bâtiments reliés par des galeries et le pont vers la rive.
+
+Pour les visiter dans le jeu, vérifiez les indications récentes de déplacement et les règles du monde, puis demandez l’autorisation du propriétaire avant d’entrer dans une construction ou sur un terrain qui appartient à quelqu’un d’autre.
 
 ## Choisissez un serveur selon vos envies
 

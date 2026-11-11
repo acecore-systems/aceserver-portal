@@ -5,7 +5,7 @@ description: Prüfen Sie bei Verbindungsproblemen Edition, Version, Konto und
   Switch, ordnet Fehlermeldungen ein und nennt offizielle
   Aceserver-Anlaufstellen.
 translationOf: minecraft-server-cannot-join
-sourceHash: sha256:c19e1b5fcf6a1fa0d21c7d1f1a9c8e25b03be51e1e8c109a0ca356006bf6c1b0
+sourceHash: sha256:e6eea0d05f70fa8fcf92af6a97fbca2d2ec95a906a3e63236d9cdff123bafabd
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -111,7 +111,7 @@ Diese drei Schritte sind sowohl für neue als auch für zurückkehrende Spielend
 Dieser Abschnitt enthält Hinweise zum Beitritt zu Aceserver und ist keine allgemeine Anleitung für andere Server. Im offiziellen Aceserver-Portal wird erklärt, dass sowohl Spielerinnen und Spieler mit Java als auch mit Bedrock beitreten können. Die tatsächlichen Verbindungsziele, Ports, Schritte für Switch, der Serverstatus und die Regeln können sich ändern. Prüfen Sie daher vor dem Beitritt die folgenden offiziellen Hinweise.
 
 1. Prüfen Sie im [Aceserver-Portal](/de/) die Hinweise zum Beitritt und die Ankündigungen.
-2. Informieren Sie sich im [offiziellen Discord](https://discord.gg/acsv) über Hinweise zu Wartungsarbeiten und zum Beitritt.
+2. Informieren Sie sich im [offiziellen Discord](https://discord.gg/KtEjYbPQ35) über Hinweise zu Wartungsarbeiten und zum Beitritt.
 3. Lesen Sie im [offiziellen WIKI](https://asv-wiki.acecore.net) die Regeln im Spiel und die Hinweise zu den einzelnen Welten.
 
 ![Ein Weg im Blockstil führt über das Portal und eine offizielle Hinweistafel zu einem Handbuch mit Informationen zum Beitritt](/uploads/stories/minecraft-server-cannot-join-official-guidance.webp)

@@ -8,7 +8,7 @@ author: Gui
 image: /uploads/stories/wiki-alpha-guide-hero.webp
 imageAlt: Ilustração do Alpha-kun oficial ao lado de um guia aberto e resultados de busca em uma paisagem de blocos
 translationOf: wiki-alpha-guide
-sourceHash: sha256:09d836d05c32b2bb8847133b900739b589ed6ce1f5d772c3a092d09fa5c7e16d
+sourceHash: sha256:7b63106786c8c20824979b90a4db52308503b1f4398fe48d8300cc17383403eb
 lastUpdated: 2026-10-10T16:29:02+09:00
 ---
 
@@ -34,7 +34,7 @@ Os artigos citados da WIKI estão em japonês. Mesmo ao perguntar em outro idiom
 
 O [portal](/pt/) e a WIKI têm o botão “Perguntar ao Alpha-kun”. Escreva sua pergunta para receber orientação baseada em informações publicadas. Se a resposta trouxer uma fonte, abra o link e confira o texto original. Uma resposta do chat, sozinha, não confirma mudanças nos requisitos de entrada ou nas regras.
 
-Se faltar informação ou houver divergência entre guias, consulte as mensagens mais recentes no [Discord oficial](https://discord.gg/acsv). As publicações oficiais no Discord são a fonte principal para requisitos, regras e avisos de operação.
+Se faltar informação ou houver divergência entre guias, consulte as mensagens mais recentes no [Discord oficial](https://discord.gg/KtEjYbPQ35). As publicações oficiais no Discord são a fonte principal para requisitos, regras e avisos de operação.
 
 Para seguir um roteiro pelo portal, pela WIKI e pelo mapa, veja o [guia para iniciantes](/pt/stories/aceserver-beginners-guide/).
 

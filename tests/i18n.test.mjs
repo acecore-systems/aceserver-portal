@@ -88,7 +88,7 @@ test('Alphaの主要リンクは全localeで同一allowlistとlocale内マップ
   for (const locale of LOCALES) {
     const resources = getGuideLinkResources(locale)
     assert.equal(resources.length, 3)
-    assert.equal(resources[0].href, 'https://discord.gg/acsv')
+    assert.equal(resources[0].href, 'https://discord.gg/KtEjYbPQ35')
     assert.equal(resources[1].href, 'https://asv-wiki.acecore.net')
     assert.equal(
       resources[2].href,

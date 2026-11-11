@@ -2,9 +2,9 @@
 title: 'Guia para iniciantes no Aceserver: portal, mapas, vídeos, WIKI e conexão'
 description: Chegando agora ao Aceserver? Saiba quando usar o portal oficial, mapas, vídeos e a WIKI, e onde verificar se não conseguir entrar.
 translationOf: aceserver-beginners-guide
-sourceHash: sha256:be8dad22534446be8cb3ba2ead60bd55b7f3d8831e062173aaa45b356907177a
+sourceHash: sha256:9285e21f00e413b503506a873320d9a1c4fd7fc8918da69e5c8bb06500946781
 date: 2026-08-09T10:00:00+09:00
-lastUpdated: 2026-10-09T15:00:00+09:00
+lastUpdated: 2026-11-11T00:00:00+09:00
 tags:
   - Minecraft
   - Aceserver
@@ -28,7 +28,7 @@ Se a tela de multijogador ainda é novidade para você, o [guia oficial para ent
 ## Os quatro lugares oficiais para abrir primeiro
 
 1. Consulte o [portal oficial do Aceserver](/pt/) para ver os acessos principais.
-2. Entre no [Discord oficial](https://discord.gg/acsv) e confira os avisos mais recentes sobre participação e manutenção.
+2. Entre no [Discord oficial](https://discord.gg/KtEjYbPQ35) e confira os avisos mais recentes sobre participação e manutenção.
 3. Veja os passos atuais no [guia de participação da WIKI do Aceserver](https://asv-wiki.acecore.net/article/in/).
 4. Leia as [índice de regras da WIKI do Aceserver](https://asv-wiki.acecore.net/article/rules-index/) antes de entrar no jogo.
 
@@ -57,7 +57,12 @@ O portal é a entrada para informações atuais, não um local para decorar deta
 
 Os [mapas de mundos](/pt/world-map/) levam a mapas publicados como Main World, Resource World, RPG, Lobby, mundos Season e mapas de eventos. Se você quer visitar construções, coletar recursos ou jogar RPG, saber o nome do mundo no mapa facilita encontrar a orientação correspondente na WIKI ou no Discord.
 
-Um mapa estar visível não garante, por si só, que seja possível entrar naquele momento ou usar um recurso específico. O estado dos mundos e as formas de deslocamento podem mudar; confira os avisos e as regras mais recentes antes de agir.
+Comece por estas duas construções no mapa público de Main World. Cada link centraliza o mapa na construção.
+
+- Veja [Campo de beisebol à beira d’água](/pt/world-map-main/?worldname=world&mapname=surface&zoom=4&x=-423&y=64&z=-209). Veja de cima o campo, as arquibancadas em degraus e as pontes e caminhos próximos.
+- Veja [Telhados verdes sobre a água](/pt/world-map-main/?worldname=world&mapname=surface&zoom=4&x=264&y=64&z=-479). Acompanhe a torre, os edifícios ligados por passarelas e a ponte até a margem.
+
+Para visitar no jogo, confira as orientações atuais de deslocamento e as regras do mundo e peça permissão ao dono antes de entrar na construção ou no terreno de outra pessoa.
 
 ## Escolha um servidor pelo que você quer fazer
 

@@ -2,7 +2,7 @@
 title: '일본 추천 마인크래프트 서버 6선: Java/Bedrock 지원과 플레이 방식 비교'
 description: 공식 사이트에서 확인한 지원 에디션, 플레이 방식, 참여 안내를 바탕으로 일본의 공개 Minecraft 서버를 소개합니다.
 translationOf: minecraft-server-osusume
-sourceHash: sha256:2278e516442d294853fc357cea7e80dbcaa0ccd6a278ab2f2a33f94694725e43
+sourceHash: sha256:f0c40b2b24ae1a8c8583001f3e7a97355aea3c18bf1ab96f77e04770a7660705
 date: 2026-08-01T10:00:00+09:00
 lastUpdated: 2026-10-09T15:00:00+09:00
 tags:
@@ -74,7 +74,7 @@ Aceserver는 Java와 Bedrock 어느 쪽에서나 누구나 참여할 수 있는 
 
 바닐라에 가까운 자유로운 건축과 생활을 자기 속도로 즐기면서 게임 안의 자세한 규칙과 참여 안내는 WIKI에서 확인하고 싶은 사람의 선택지입니다. 먼저 포털과 Discord에서 최신 정보를 확인하고, 관심 가는 월드부터 들어가 보세요.
 
-참여 전 [Aceserver 포털](/ko/), [공식 Discord](https://discord.gg/acsv), [공식 WIKI](https://asv-wiki.acecore.net)를 순서대로 확인해 주세요. 그 뒤 자신의 플레이 방식과 맞는지 판단하고 가볍게 참여할 수 있습니다.
+참여 전 [Aceserver 포털](/ko/), [공식 Discord](https://discord.gg/KtEjYbPQ35), [공식 WIKI](https://asv-wiki.acecore.net)를 순서대로 확인해 주세요. 그 뒤 자신의 플레이 방식과 맞는지 판단하고 가볍게 참여할 수 있습니다.
 
 ## 망설인다면 공식 안내를 비교하세요
 

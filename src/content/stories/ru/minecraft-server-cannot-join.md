@@ -5,7 +5,7 @@ description: 'Что проверить, если не удается подкл
   с учетом сообщения об ошибке проверьте редакцию и версию игры, условия входа, настройки аккаунта и
   сети. Также указаны официальные источники Aceserver.'
 translationOf: minecraft-server-cannot-join
-sourceHash: sha256:c19e1b5fcf6a1fa0d21c7d1f1a9c8e25b03be51e1e8c109a0ca356006bf6c1b0
+sourceHash: sha256:e6eea0d05f70fa8fcf92af6a97fbca2d2ec95a906a3e63236d9cdff123bafabd
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -111,7 +111,7 @@ Minecraft для Nintendo Switch относится к Bedrock Edition. Инст
 Этот раздел посвящен подключению к Aceserver, а не общим способам входа. На официальном портале Aceserver указано, что присоединиться можно как из Java Edition, так и из Bedrock Edition. Адреса, порты, инструкции для Switch, состояние сервера и правила могут меняться, поэтому перед подключением проверьте официальные источники:
 
 1. На [портале Aceserver](/ru/) ознакомьтесь с инструкциями по подключению и объявлениями.
-2. В [официальном Discord](https://discord.gg/acsv) проверьте информацию о технических работах и подключении.
+2. В [официальном Discord](https://discord.gg/KtEjYbPQ35) проверьте информацию о технических работах и подключении.
 3. В [официальной WIKI](https://asv-wiki.acecore.net) ознакомьтесь с игровыми правилами и информацией о мирах.
 
 ![Маршрут в блочном стиле от портала через официальную доску к путеводителю для проверки данных о входе в Aceserver](/uploads/stories/minecraft-server-cannot-join-official-guidance.webp)

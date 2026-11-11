@@ -1,8 +1,8 @@
 ---
-title: '친구와 마인크래프트 하는 법: Java, 베드락, Switch, 모바일별 선택 가이드'
+title: '친구와 마인크래프트 하는 법: Java, 베드락, Switch, 모바일'
 description: Java 에디션과 베드락 에디션의 차이를 정리하고, 내 월드·Realms·공개 서버 중에서 기기별로 친구와 함께할 방법을 고르는 안내서입니다.
 translationOf: minecraft-play-with-friends
-sourceHash: sha256:2dcd36662b79814ddebf5ac37fffe0713d91a554eb5ff82763bbeb6e64cf2e7e
+sourceHash: sha256:f810c11725560d75a020908a7347bd60fda22ba01f7e7f9453cd35f6cf8d9c89
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -11,7 +11,7 @@ tags:
 author: Gui
 image: /uploads/stories/minecraft-play-with-friends-hero.webp
 imageAlt: 블록 스타일의 노을 광장에서 PC, 휴대용 게임기, 스마트폰을 곁에 두고 지도를 둘러싼 네 친구가 함께할 방법을 의논하는 모습
-lastUpdated: 2026-10-09T15:00:00+09:00
+lastUpdated: 2026-11-10T12:00:00+09:00
 ---
 
 친구와 마인크래프트를 시작할 때는 어디서 놀지보다 먼저 모두가 같은 에디션, 즉 **Java 에디션 또는 베드락 에디션**을 쓸 수 있는지 확인하는 편이 빠릅니다. 이 글에서는 내 월드, Realms, 공개 서버를 비교하고 PC·Switch·모바일별 선택 방법을 정리합니다.
@@ -72,6 +72,8 @@ Realms는 Minecraft의 공식 유료 호스팅입니다. 구독이 유효하면 
 ### 3. 공개 서버: 커뮤니티에 참가하기
 
 공개 서버는 운영자가 관리하는 온라인 월드입니다. 아직 모르는 플레이어와 건축, 생활, 이벤트를 즐기고 싶은 사람에게 알맞을 수 있습니다. 참가 전에는 해당 서버의 규칙, 지원 에디션과 버전, 연령 조건, 음성 채팅이나 Discord 사용 방식을 확인해야 합니다.
+
+에이스서버에 관심이 있다면 [에이스서버 참가 방법 보기](https://asv-wiki.acecore.net/article/in/)에서 최신 안내를 확인하세요.
 
 Switch 플레이어는 특히 서버가 안내하는 지원 기기와 참가 방법을 읽어야 합니다. 비공식 접속 방법을 당연하게 생각하지 마세요. 서버가 Java와 베드락 모두를 안내하더라도 실제 조건과 지원 버전은 서버마다 다릅니다.
 
@@ -153,6 +155,6 @@ Xbox 본체가 없어도 Microsoft/Xbox 보호자 설정은 Switch와 모바일�
 
 ## Aceserver에서 친구와 플레이하기
 
-공개 서버를 고른다면 먼저 [Aceserver 포털](/ko/)에서 현재 입구를 확인하고, [공식 Discord](https://discord.gg/acsv)와 [공식 WIKI](https://asv-wiki.acecore.net)에서 최신 참가 안내와 규칙을 읽으세요. 이 글은 바뀔 수 있는 접속 정보를 복사하지 않으며, 공식 안내를 기준으로 합니다.
+공개 서버를 고른다면 먼저 [Aceserver 포털](/ko/)에서 현재 입구를 확인하고, [공식 Discord](https://discord.gg/KtEjYbPQ35)와 [공식 WIKI](https://asv-wiki.acecore.net)에서 최신 참가 안내와 규칙을 읽으세요. 이 글은 바뀔 수 있는 접속 정보를 복사하지 않으며, 공식 안내를 기준으로 합니다.
 
 친구를 초대할 때는 같은 에디션인지 확인하고, 참가 전에 규칙을 읽으며, 계정 정보를 공유하지 않는 것부터 알리면 좋습니다. 먼저 공개 서버를 비교하고 싶다면 [Minecraft 서버 선택 방법](/ko/stories/minecraft-server-osusume/)을 참고하세요.

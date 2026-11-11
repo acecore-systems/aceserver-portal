@@ -2,9 +2,9 @@
 title: 'Aceserver Beginner Guide: Portal, World Maps, Videos, WIKI, and Connection Help'
 description: New to Aceserver? Learn when to use the official portal, world maps, videos, and WIKI, and where to check if you cannot join.
 translationOf: aceserver-beginners-guide
-sourceHash: sha256:be8dad22534446be8cb3ba2ead60bd55b7f3d8831e062173aaa45b356907177a
+sourceHash: sha256:9285e21f00e413b503506a873320d9a1c4fd7fc8918da69e5c8bb06500946781
 date: 2026-08-09T10:00:00+09:00
-lastUpdated: 2026-10-09T15:00:00+09:00
+lastUpdated: 2026-11-11T00:00:00+09:00
 tags:
   - Minecraft
   - Aceserver
@@ -28,8 +28,8 @@ If the game’s multiplayer screen is new to you, Minecraft’s official [server
 ## The first four official places to open
 
 1. Check the [official Aceserver portal](/en/) for the main entry points.
-2. Join the [official Discord](https://discord.gg/acsv) and check the latest joining and maintenance notices.
-3. Read the current joining steps in the [Aceserver WIKI joining guide](https://asv-wiki.acecore.net/article/in/).
+2. Join the [official Discord](https://discord.gg/KtEjYbPQ35) and check the latest joining and maintenance notices. Community guidance is mainly in Japanese.
+3. Read the current joining steps in the [Aceserver WIKI joining guide (Japanese)](https://asv-wiki.acecore.net/article/in/).
 4. Read the [Aceserver WIKI rules index](https://asv-wiki.acecore.net/article/rules-index/) before entering the game.
 
 Following this order takes you to information for the current Aceserver instead of relying on an old article or an unofficial connection method. If anything is unclear, do not guess; ask through the official Discord.
@@ -57,7 +57,12 @@ The portal is the entrance to current information, not a place to memorize conne
 
 The [world maps](/en/world-map/) link to published maps such as the Main World, Resource World, RPG, Lobby, Season worlds, and event maps. If you want to tour builds, collect resources, or play RPG, learning a world's name from the map makes it easier to find the related WIKI and Discord guidance.
 
-A map being displayed does not by itself guarantee that you can enter it right now or use a particular feature. World status and travel methods can change, so check the latest announcements and rules before acting.
+Start with these two builds on the public Main World map. Each link centers the map on the build.
+
+- See [Waterfront baseball field](/en/world-map-main/?worldname=world&mapname=surface&zoom=4&x=-423&y=64&z=-209). Look down on the diamond, tiered stands, and nearby bridges and roads.
+- See [Green roofs over the water](/en/world-map-main/?worldname=world&mapname=surface&zoom=4&x=264&y=64&z=-479). Follow the tower, connected buildings and walkways, and the bridge to shore.
+
+To visit in game, check the latest travel guidance and world rules, and obtain the owner’s permission before entering someone else’s build or property.
 
 ## Choose a server by what you want to do
 
@@ -75,7 +80,7 @@ Videos are a doorway to understanding the community. Do not assume that a connec
 
 ## Use the WIKI to confirm joining steps and rules
 
-Use the [Aceserver WIKI joining guide](https://asv-wiki.acecore.net/article/in/) for the steps, then choose the community, Minecraft, server, and Discord rules from the [rules index](https://asv-wiki.acecore.net/article/rules-index/). The official Discord posts are the source for rules. If the WIKI and Discord differ, check Discord and ask staff when unsure.
+Use the [Aceserver WIKI joining guide (Japanese)](https://asv-wiki.acecore.net/article/in/) for the steps, then choose the community, Minecraft, server, and Discord rules from the [rules index](https://asv-wiki.acecore.net/article/rules-index/). The official Discord posts are the source for rules. If the WIKI and Discord differ, check Discord and ask staff when unsure.
 
 ## Join for the first time in this order
 

@@ -10,6 +10,7 @@ import AdUnit from '../components/AdUnit.astro'
 import AdsRuntime from '../components/AdsRuntime.astro'
 import AlphaGuide from '../components/AlphaGuide.astro'
 import { ADSENSE } from '../data/ads'
+import { PORTAL_DISCORD_INVITE } from '../data/discord'
 import { ACECORE_ORGANIZATION } from '../data/organization'
 import { serializeJsonForHtmlScript } from '../data/safe-json'
 import { getLocalizedSettings } from '../i18n/content'
@@ -26,6 +27,7 @@ import { buildSeoDescription, buildSeoTitle } from '../utils/seo-meta'
 interface Props {
   locale?: Locale
   title?: string
+  conciseTitle?: boolean
   description?: string
   image?: string
   imageAlt?: string
@@ -41,6 +43,7 @@ interface Props {
 const {
   locale = 'ja',
   title: titleInput,
+  conciseTitle = false,
   description: descriptionInput,
   image: imageInput,
   imageAlt: imageAltInput,
@@ -65,12 +68,14 @@ const canonical =
   canonicalInput === null ? null : new URL(canonicalInput, siteBase)
 const pageUrl = canonical ?? new URL(Astro.url.pathname, siteBase)
 const isHome = pageUrl.pathname === localizePath(locale, '/')
-const pageTitle = buildSeoTitle({
-  title,
-  siteTitle: settings.shortTitle,
-  titleContext: ui.siteTitleSuffix,
-  isHome,
-})
+const pageTitle = conciseTitle
+  ? `${title} | ${settings.shortTitle}`
+  : buildSeoTitle({
+      title,
+      siteTitle: settings.shortTitle,
+      titleContext: ui.siteTitleSuffix,
+      isHome,
+    })
 const socialTitle = isHome ? pageTitle : `${title} | ${settings.shortTitle}`
 const ogImage = new URL(image, siteBase)
 const socialImageAlt =
@@ -86,7 +91,7 @@ const shouldShowAds = showAds && ADSENSE.enabled
 const alphaLogo = '/uploads/alpha-kun.png'
 const alphaJoinButton = {
   label: ui.joinDiscord,
-  href: settings.discordUrl,
+  href: PORTAL_DISCORD_INVITE,
   external: true,
 }
 const alphaWikiButton = {
@@ -210,6 +215,7 @@ const rssUrl = new URL(localizePath(locale, '/rss.xml'), siteBase)
     <script type="application/ld+json" set:html={webpageJsonLd} />
   </head>
   <body
+    data-discord-locale={locale}
     class:list={[
       {
         'has-plain-background': plainBackground,
@@ -235,5 +241,9 @@ const rssUrl = new URL(localizePath(locale, '/rss.xml'), siteBase)
       wikiButton={alphaWikiButton}
     />
     {shouldShowAds && <AdsRuntime />}
+    <script>
+      import { initDiscordCtaMetrics } from '../scripts/discord-cta-metrics'
+      initDiscordCtaMetrics()
+    </script>
   </body>
 </html>

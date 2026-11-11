@@ -2,9 +2,9 @@
 title: 'Aceserver-Einsteigerleitfaden: Portal, Weltkarten, Videos, WIKI und Verbindung'
 description: Neu bei Aceserver? Erfahre, wann du das offizielle Portal, Weltkarten, Videos und das WIKI nutzt und wo du nachsiehst, wenn du nicht beitreten kannst.
 translationOf: aceserver-beginners-guide
-sourceHash: sha256:be8dad22534446be8cb3ba2ead60bd55b7f3d8831e062173aaa45b356907177a
+sourceHash: sha256:9285e21f00e413b503506a873320d9a1c4fd7fc8918da69e5c8bb06500946781
 date: 2026-08-09T10:00:00+09:00
-lastUpdated: 2026-10-09T15:00:00+09:00
+lastUpdated: 2026-11-11T00:00:00+09:00
 tags:
   - Minecraft
   - Aceserver
@@ -28,7 +28,7 @@ Wenn Sie den Multiplayer-Bildschirm noch nicht kennen, erklärt die offizielle [
 ## Die ersten vier offiziellen Anlaufstellen
 
 1. Öffne das [offizielle Aceserver-Portal](/de/), um die Haupteinstiege zu sehen.
-2. Tritt dem [offiziellen Discord](https://discord.gg/acsv) bei und prüfe die neuesten Hinweise zu Teilnahme und Wartung.
+2. Tritt dem [offiziellen Discord](https://discord.gg/KtEjYbPQ35) bei und prüfe die neuesten Hinweise zu Teilnahme und Wartung.
 3. Lies die aktuellen Schritte im [Aceserver-WIKI zur Teilnahme](https://asv-wiki.acecore.net/article/in/).
 4. Lies vor dem Spiel die [Regelübersicht im Aceserver-WIKI](https://asv-wiki.acecore.net/article/rules-index/).
 
@@ -57,7 +57,12 @@ Das Portal ist der Einstieg in aktuelle Informationen, kein Ort zum Auswendigler
 
 Die [Weltkarten](/de/world-map/) verlinken veröffentlichte Karten wie Main World, Resource World, RPG, Lobby, Season-Welten und Event-Karten. Wenn du Bauwerke ansehen, Ressourcen sammeln oder RPG spielen möchtest, erleichtert der Name einer Welt auf der Karte die Suche nach passenden Hinweisen im WIKI oder Discord.
 
-Allein die Anzeige einer Karte garantiert nicht, dass du sie sofort betreten oder eine bestimmte Funktion nutzen kannst. Weltstatus und Reisemethoden können sich ändern; prüfe vor dem Handeln die neuesten Hinweise und Regeln.
+Sieh dir zuerst diese beiden Bauwerke auf der öffentlichen Karte der Main World an. Jeder Link zentriert die Karte auf das jeweilige Bauwerk.
+
+- Sieh dir [Baseballfeld am Wasser](/de/world-map-main/?worldname=world&mapname=surface&zoom=4&x=-423&y=64&z=-209) an. Betrachte von oben das Spielfeld, die gestuften Tribünen sowie die Brücken und Wege in der Nähe.
+- Sieh dir [Grüne Dächer auf dem Wasser](/de/world-map-main/?worldname=world&mapname=surface&zoom=4&x=264&y=64&z=-479) an. Verfolge den Turm, die durch Gänge verbundenen Gebäude und die Brücke zum Ufer.
+
+Wenn du die Orte im Spiel besuchen möchtest, prüfe die aktuellen Hinweise zur Anreise und die Regeln der Welt und hole die Erlaubnis des Eigentümers ein, bevor du fremde Bauwerke oder Grundstücke betrittst.
 
 ## Wähle einen Server nach deinen Interessen
 

@@ -110,7 +110,7 @@ Nintendo Switch版のMinecraftは統合版です。Java版専用の案内では�
 ここからは一般的な接続方法ではなく、Aceserverの参加案内です。Aceserverの公式ポータルでは、Java版・統合版のどちらからでも参加できることが案内されています。実際の接続先、ポート、Switchでの手順、稼働状況、ルールは更新されることがあるため、参加前に以下の公式案内を確認してください。
 
 1. [エースサーバーポータル](/)で、参加入口とお知らせを確認します。
-2. [公式Discord](https://discord.gg/acsv)で、メンテナンスや参加に関する案内を確認します。
+2. [公式Discord](https://discord.gg/KtEjYbPQ35)で、メンテナンスや参加に関する案内を確認します。
 3. [公式WIKI](https://asv-wiki.acecore.net)で、ゲーム内のルールや各ワールドの案内を確認します。
 
 ![ポータル、公式の案内板、ガイドブックを順にたどって参加情報を確認するブロック調のイメージ](/uploads/stories/minecraft-server-cannot-join-official-guidance.webp)

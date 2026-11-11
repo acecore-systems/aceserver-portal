@@ -2,7 +2,7 @@
 title: '日本推荐 Minecraft 服务器 6 选：按 Java/Bedrock 支持与玩法比较'
 description: 根据各官方站点确认的版本支持、玩法和加入说明，介绍日本的公开 Minecraft 服务器。
 translationOf: minecraft-server-osusume
-sourceHash: sha256:2278e516442d294853fc357cea7e80dbcaa0ccd6a278ab2f2a33f94694725e43
+sourceHash: sha256:f0c40b2b24ae1a8c8583001f3e7a97355aea3c18bf1ab96f77e04770a7660705
 date: 2026-08-01T10:00:00+09:00
 lastUpdated: 2026-10-09T15:00:00+09:00
 tags:
@@ -74,7 +74,7 @@ Aceserver 是一台任何人都可以通过 Java 或 Bedrock 加入的免费公�
 
 它是想以接近原版的自由方式按自己的节奏建筑和生活，同时通过 WIKI 查看游戏内详细规则与加入说明的玩家的一个选择。先在 Portal 和 Discord 查看最新信息，再从感兴趣的世界开始吧。
 
-加入前，请按顺序查看 [Aceserver Portal](/zh-cn/)、[官方 Discord](https://discord.gg/acsv) 和 [官方 WIKI](https://asv-wiki.acecore.net)。这样可以先判断服务器是否适合自己的玩法，再轻松加入。
+加入前，请按顺序查看 [Aceserver Portal](/zh-cn/)、[官方 Discord](https://discord.gg/KtEjYbPQ35) 和 [官方 WIKI](https://asv-wiki.acecore.net)。这样可以先判断服务器是否适合自己的玩法，再轻松加入。
 
 ## 如果还在犹豫，请比较官方说明
 

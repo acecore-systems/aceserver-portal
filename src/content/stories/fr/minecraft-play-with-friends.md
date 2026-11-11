@@ -1,8 +1,8 @@
 ---
-title: 'Jouer à Minecraft entre amis : choisir Java, Bedrock, Switch ou mobile'
+title: 'Jouer à Minecraft entre amis : Java, Bedrock, Switch et mobile'
 description: Faites la différence entre Java et Bedrock, comparez votre monde, Realms et les serveurs publics, puis choisissez comment jouer entre amis selon chaque appareil.
 translationOf: minecraft-play-with-friends
-sourceHash: sha256:2dcd36662b79814ddebf5ac37fffe0713d91a554eb5ff82763bbeb6e64cf2e7e
+sourceHash: sha256:f810c11725560d75a020908a7347bd60fda22ba01f7e7f9453cd35f6cf8d9c89
 date: 2026-08-08T10:00:00+09:00
 tags:
   - Minecraft
@@ -11,7 +11,7 @@ tags:
 author: Gui
 image: /uploads/stories/minecraft-play-with-friends-hero.webp
 imageAlt: Quatre amis réunis autour d'une carte sur une place au coucher du soleil en style blocs, avec un PC, une console portable et un smartphone à côté, pour choisir comment jouer ensemble
-lastUpdated: 2026-10-09T15:00:00+09:00
+lastUpdated: 2026-11-10T12:00:00+09:00
 ---
 
 Avant de choisir où jouer à Minecraft avec des amis, vérifiez que tout le monde peut utiliser la même édition : **Java Edition ou Bedrock Edition**. Ce guide compare votre propre monde, Realms et les serveurs publics, puis aide les joueurs PC, Switch et mobile à choisir une solution.
@@ -72,6 +72,8 @@ C'est adapté à des amis dont les horaires d'école, de travail ou de club diff
 ### 3. Serveurs publics : rejoindre une communauté
 
 Un serveur public est un monde en ligne administré par un opérateur. Il peut convenir aux personnes qui souhaitent construire, vivre ou participer à des événements avec des joueurs qu'elles ne connaissent pas encore. Avant de rejoindre, vérifiez les règles, l'édition et la version prises en charge, les conditions d'âge et l'usage du chat vocal ou de Discord.
+
+Si Aceserver vous intéresse, [consultez les étapes pour rejoindre Aceserver](https://asv-wiki.acecore.net/article/in/) pour obtenir les dernières indications.
 
 Les joueurs Switch doivent surtout lire les indications du serveur sur les appareils compatibles et la méthode d'accès. Ne supposez pas une solution de connexion non officielle. Même lorsqu'un serveur annonce Java et Bedrock, ses conditions et versions prises en charge lui sont propres.
 
@@ -153,6 +155,6 @@ Si le groupe veut gérer un monde qui reste disponible, lisez [comment créer un
 
 ## Jouer avec des amis sur Aceserver
 
-Si vous choisissez un serveur public, vérifiez d'abord l'entrée actuelle sur le [portail Aceserver](/fr/), puis lisez les indications et les règles à jour sur le [Discord officiel](https://discord.gg/acsv) et le [WIKI officiel](https://asv-wiki.acecore.net). Cet article ne recopie pas des informations de connexion susceptibles de changer : les indications officielles font foi.
+Si vous choisissez un serveur public, vérifiez d'abord l'entrée actuelle sur le [portail Aceserver](/fr/), puis lisez les indications et les règles à jour sur le [Discord officiel](https://discord.gg/KtEjYbPQ35) et le [WIKI officiel](https://asv-wiki.acecore.net). Cet article ne recopie pas des informations de connexion susceptibles de changer : les indications officielles font foi.
 
 Lorsque vous invitez des amis, commencez par confirmer la même édition, lire les règles avant de rejoindre et ne partagez jamais d'informations de compte. Pour comparer d'abord les serveurs publics, consultez [comment choisir un serveur Minecraft](/fr/stories/minecraft-server-osusume/).

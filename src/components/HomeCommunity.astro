@@ -34,7 +34,8 @@ const selectedWorld =
   worlds.find((world) => world.slug === community.mapWorld) ?? worlds[0]
 const mapHost = community.mapWorld === 'resource' ? 'sigen' : community.mapWorld
 const mapUrl = `https://mc-map-${mapHost}.acecore.net/`
-const discordSourceUrl = settings.discordUrl
+const discordDiscoveryUrl =
+  'https://discord.com/servers/aceserver-maikuramaruchisaba-737538781024092170'
 const date = (value: string) =>
   new Intl.DateTimeFormat(DATE_LOCALE_BY_LOCALE[locale], {
     year: 'numeric',
@@ -98,8 +99,8 @@ const fullDate = (value: string) =>
         <time class="fine-print" data-discord-time />
         <a
           class="text-link"
-          href={settings.discordUrl}
-          {...externalLinkAttrs(settings.discordUrl, true)}
+          href={discordDiscoveryUrl}
+          {...externalLinkAttrs(discordDiscoveryUrl, true)}
         >
           {ui.moreNotices}
           <Icon name="arrow-up-right" />
@@ -129,7 +130,7 @@ const fullDate = (value: string) =>
     </div>
     <noscript>
       <p class="fine-print">
-        {ui.unavailable} <a href={settings.discordUrl}>{ui.moreNotices}</a>
+        {ui.unavailable} <a href={discordDiscoveryUrl}>{ui.moreNotices}</a>
       </p>
     </noscript>
     <p class="checked-line" data-status-checked aria-live="polite" />
@@ -137,8 +138,8 @@ const fullDate = (value: string) =>
       <>
         <summary>{ui.dataSources}</summary>
         <a
-          href={discordSourceUrl}
-          {...externalLinkAttrs(discordSourceUrl, true)}
+          href={discordDiscoveryUrl}
+          {...externalLinkAttrs(discordDiscoveryUrl, true)}
         >
           Discord
         </a>

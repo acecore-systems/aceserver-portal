@@ -157,6 +157,7 @@ const breadcrumbJsonLd = serializeJsonForHtmlScript({
 <BaseLayout
   locale={locale}
   title={story.data.title}
+  conciseTitle={locale === 'ja' && storySlug === 'minecraft-play-with-friends'}
   description={story.data.description}
   image={story.data.image}
   imageAlt={story.data.imageAlt}
@@ -165,7 +166,7 @@ const breadcrumbJsonLd = serializeJsonForHtmlScript({
 >
   <script type="application/ld+json" set:html={articleJsonLd} />
   <script type="application/ld+json" set:html={breadcrumbJsonLd} />
-  <article>
+  <article data-discord-cta="story">
     <div class="story-shell">
       <nav class="story-breadcrumb" aria-label={ui.breadcrumbLabel}>
         <ol>
