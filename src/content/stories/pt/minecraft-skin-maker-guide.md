@@ -8,7 +8,7 @@ image: /uploads/stories/minecraft-skin-maker-cover-v2.webp
 imageAlt: 'Ilustração de manequins de blocos brancos e uma paleta que representa a criação de skins. Não é um resultado gerado.'
 relatedStories: [aceserver-beginners-guide]
 translationOf: minecraft-skin-maker-guide
-sourceHash: sha256:53f8e1662fe56ef7d93fab2aba9733911a0240d614d35e416b2b41624217ccc2
+sourceHash: sha256:61e65a55f4e2072769abf24e6d06857c649156989104c475f6440696060c8d2f
 lastUpdated: 2026-10-14T12:00:00+09:00
 ---
 
@@ -32,7 +32,7 @@ Carregar um novo arquivo válido substitui o skin e o histórico de desfazer. Sa
 
 ## 2. Consentir e esperar
 
-Confirme o direito de uso e o consentimento antes de enviar. Texto e imagens vão ao provedor configurado, OpenAI API ou Cloudflare Workers AI. Não inclua dados pessoais ou segredos. Pode levar minutos ou falhar por limites e congestionamento; siga as mensagens da tela.
+Confirme o direito de uso e o consentimento antes de enviar. Texto e imagens vão ao provedor configurado, Meta API ou Cloudflare Workers AI. Não inclua dados pessoais ou segredos. Pode levar minutos ou falhar por limites e congestionamento; siga as mensagens da tela.
 
 ## 3. Conferir em 3D
 

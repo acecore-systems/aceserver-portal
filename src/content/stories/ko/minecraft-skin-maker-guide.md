@@ -8,7 +8,7 @@ image: /uploads/stories/minecraft-skin-maker-cover-v2.webp
 imageAlt: '흰색 블록 마네킹과 팔레트로 스킨 제작을 표현한 설명용 그림. 생성 결과의 예시가 아닙니다.'
 relatedStories: [aceserver-beginners-guide]
 translationOf: minecraft-skin-maker-guide
-sourceHash: sha256:53f8e1662fe56ef7d93fab2aba9733911a0240d614d35e416b2b41624217ccc2
+sourceHash: sha256:61e65a55f4e2072769abf24e6d06857c649156989104c475f6440696060c8d2f
 lastUpdated: 2026-10-14T12:00:00+09:00
 ---
 
@@ -32,7 +32,7 @@ Classic은 4px, Slim은 3px 팔입니다. 색상과 옷 등을 글로 설명합�
 
 ## 2. 동의하고 생성 기다리기
 
-보내기 전 이미지 사용 권리와 AI 처리 동의를 확인합니다. 글과 이미지는 설정된 OpenAI API 또는 Cloudflare Workers AI로 전송됩니다. 개인정보나 비밀을 넣지 마세요. 생성에 몇 분 걸리거나 사용 제한·혼잡으로 실패할 수 있으므로 화면 안내를 확인합니다.
+보내기 전 이미지 사용 권리와 AI 처리 동의를 확인합니다. 글과 이미지는 설정된 Meta API 또는 Cloudflare Workers AI로 전송됩니다. 개인정보나 비밀을 넣지 마세요. 생성에 몇 분 걸리거나 사용 제한·혼잡으로 실패할 수 있으므로 화면 안내를 확인합니다.
 
 ## 3. 3D 결과 확인
 

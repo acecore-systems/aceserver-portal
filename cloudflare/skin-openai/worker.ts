@@ -1,4 +1,4 @@
-type Env = { OPENAI_API_KEY_STORE?: { get(): Promise<string> } }
+type Env = { META_API_KEY_STORE?: { get(): Promise<string> } }
 
 const MAX_BODY_BYTES = 1_000_000
 const MAX_RESPONSE_BYTES = 512_000
@@ -40,9 +40,9 @@ function isSkinRequest(value: unknown): value is Record<string, unknown> {
         'stream',
       ].includes(key),
     ) &&
-    body.model === 'gpt-6-luna' &&
+    body.model === 'muse-ember-1.0' &&
     body.max_completion_tokens === 12_000 &&
-    (body.reasoning_effort === 'high' || body.reasoning_effort === 'low') &&
+    body.reasoning_effort === 'medium' &&
     body.store === false &&
     body.stream === false &&
     Array.isArray(messages) &&
@@ -77,25 +77,26 @@ export default {
 
     let apiKey: string
     try {
-      apiKey = (await env.OPENAI_API_KEY_STORE?.get())?.trim() || ''
+      apiKey = (await env.META_API_KEY_STORE?.get())?.trim() || ''
     } catch {
       apiKey = ''
     }
     if (!apiKey) return new Response(null, { status: 503 })
 
     try {
-      const response = await fetch(
-        'https://api.openai.com/v1/chat/completions',
-        {
-          method: 'POST',
-          headers: {
-            Authorization: `Bearer ${apiKey}`,
-            'Content-Type': 'application/json',
-          },
-          body,
-          signal: AbortSignal.timeout(240_000),
+      const response = await fetch('https://api.meta.ai/v1/chat/completions', {
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${apiKey}`,
+          'Content-Type': 'application/json',
         },
-      )
+        body: JSON.stringify({
+          ...parsed,
+          model: 'muse-ember-1.0',
+          reasoning_effort: 'medium',
+        }),
+        signal: AbortSignal.timeout(240_000),
+      })
       if (!response.ok) {
         await response.body?.cancel()
         return new Response(null, { status: 502 })

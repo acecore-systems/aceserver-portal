@@ -8,7 +8,7 @@ image: /uploads/stories/minecraft-skin-maker-cover-v2.webp
 imageAlt: '用白色方块人偶和调色板表现皮肤制作的说明插画，并非生成结果实例。'
 relatedStories: [aceserver-beginners-guide]
 translationOf: minecraft-skin-maker-guide
-sourceHash: sha256:53f8e1662fe56ef7d93fab2aba9733911a0240d614d35e416b2b41624217ccc2
+sourceHash: sha256:61e65a55f4e2072769abf24e6d06857c649156989104c475f6440696060c8d2f
 lastUpdated: 2026-10-14T12:00:00+09:00
 ---
 
@@ -32,7 +32,7 @@ Classic手臂为4px，Slim为3px。用文字描述颜色、服装等。参考图
 
 ## 2. 同意处理并等待生成
 
-发送前确认图片使用权及AI处理同意。文字和图片会发送到配置中的OpenAI API或Cloudflare Workers AI。不要输入个人信息或秘密。生成可能需要几分钟，也可能因用量限制或拥堵失败，请查看屏幕提示。
+发送前确认图片使用权及AI处理同意。文字和图片会发送到配置中的Meta API或Cloudflare Workers AI。不要输入个人信息或秘密。生成可能需要几分钟，也可能因用量限制或拥堵失败，请查看屏幕提示。
 
 ## 3. 检查3D效果
 

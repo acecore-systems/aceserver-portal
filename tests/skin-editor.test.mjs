@@ -29,6 +29,7 @@ import {
   pixelHash,
 } from '../functions/_lib/skin-store.ts'
 import openaiWorker from '../cloudflare/skin-openai/worker.ts'
+import previousSkinWorker from './fixtures/skin-openai-previous.ts'
 import { SkinObject } from 'skinview3d'
 import { Matrix3, Raycaster, Triangle, Vector2, Vector3 } from 'three'
 import {
@@ -421,15 +422,14 @@ test('undo restores pixels and publication eligibility; new edits clear redo and
 
 test('AI edits use the exact current PNG with masked face data and fit the existing private Worker contract', async (t) => {
   for (const [model, effort] of [
-    ['classic', 'high'],
-    ['slim', 'high'],
-    ['classic', 'low'],
+    ['classic', 'medium'],
+    ['slim', 'medium'],
   ]) {
     const request = input(model, {
       selection: { part: 'head', layer: 'outer' },
     })
     const body = {
-      model: 'gpt-6-luna',
+      model: 'muse-ember-1.0',
       ...modelInput(request),
       reasoning_effort: effort,
     }
@@ -445,8 +445,9 @@ test('AI edits use the exact current PNG with masked face data and fit the exist
     )
     assert.match(body.messages[0].content[0].text, /No tools, URLs or code/)
     let calls = 0
-    t.mock.method(globalThis, 'fetch', async (_url, init) => {
+    t.mock.method(globalThis, 'fetch', async (url, init) => {
       calls++
+      assert.equal(url, 'https://api.meta.ai/v1/chat/completions')
       assert.deepEqual(JSON.parse(init.body), body)
       return Response.json({ choices: [] })
     })
@@ -456,12 +457,56 @@ test('AI edits use the exact current PNG with masked face data and fit the exist
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify(body),
       }),
-      { OPENAI_API_KEY_STORE: { get: async () => 'synthetic-test-key' } },
+      { META_API_KEY_STORE: { get: async () => 'synthetic-test-key' } },
     )
     assert.equal(response.status, 200)
     assert.equal(calls, 1)
     t.mock.restoreAll()
   }
+})
+
+test('legacy OpenAI consent and invalid requests never reach Meta', async (t) => {
+  const body = { model: 'muse-ember-1.0', ...modelInput(input()) }
+  let calls = 0
+  t.mock.method(globalThis, 'fetch', async () => {
+    calls++
+    return Response.json({ choices: [] })
+  })
+  const send = (requestBody) =>
+    openaiWorker.fetch(
+      new Request('https://skin-openai.internal/v1/chat', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify(requestBody),
+      }),
+      { META_API_KEY_STORE: { get: async () => 'synthetic-test-key' } },
+    )
+  assert.equal(
+    (await send({ ...body, model: 'gpt-6-luna', reasoning_effort: 'high' }))
+      .status,
+    400,
+  )
+  assert.equal((await send({ ...body, model: 'other' })).status, 400)
+  assert.equal((await send({ ...body, store: true })).status, 400)
+  assert.equal(calls, 0)
+})
+
+test('previous worker rejects new Meta requests before its OpenAI fetch', async (t) => {
+  let calls = 0
+  t.mock.method(globalThis, 'fetch', async () => {
+    calls++
+    return Response.json({ choices: [] })
+  })
+  const response = await previousSkinWorker.fetch(
+    new Request('https://skin-openai.internal/v1/chat', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ model: 'muse-ember-1.0', ...modelInput(input()) }),
+    }),
+    { OPENAI_API_KEY_STORE: { get: async () => 'synthetic-test-key' } },
+  )
+  assert.equal(response.status, 400)
+  assert.equal(calls, 0)
 })
 
 test('edit API charges once, chains valid generation tickets, rejects forged provenance before AI, and never signs manually edited inputs', async (t) => {
@@ -610,7 +655,7 @@ test('editor copy covers every supported locale and all tools, parts, and AI sco
     assert.equal(copy.partNames.length, 6)
     assert.equal(copy.toolNames.length, 5)
     assert.equal(copy.scopeNames.length, 3)
-    assert.match(copy.consent, /OpenAI/)
+    assert.match(copy.consent, /Meta/)
     assert.match(copy.consent, /Cloudflare Workers AI/)
   }
 })
