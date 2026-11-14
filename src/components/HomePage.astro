@@ -104,6 +104,17 @@ const wikiCta = getSection('hero') ?? fallbackWikiCta
 const heroImage = overview.image ?? '/uploads/current-world-city-20261015.jpg'
 const heroJoinButton = joinCta.ctaButton ?? fallbackJoinButton
 const heroWikiButton = wikiCta.ctaButton ?? fallbackWikiButton
+const contributorLabels: Record<Locale, string> = {
+  ja: '支えてきた人たちを見る',
+  en: 'Meet the people who supported Aceserver',
+  'zh-cn': '认识支持Aceserver的人们',
+  es: 'Conoce a quienes han apoyado Aceserver',
+  pt: 'Conheça quem apoiou o Aceserver',
+  fr: 'Découvrir les personnes qui ont soutenu Aceserver',
+  ko: '함께 만들어 온 사람들 보기',
+  de: 'Die Menschen hinter Aceserver kennenlernen',
+  ru: 'Узнать о людях, поддержавших Aceserver',
+}
 const alphaLogo = '/uploads/alpha-kun.png'
 const multiplayerGuidePath = localizePath(
   locale,
@@ -172,10 +183,19 @@ const multiplayerGuidePath = localizePath(
     <p>
       {ui.homeFreedom} {freePlay.text}
     </p>
-    <a class="crossplay-guide" href={multiplayerGuidePath}>
-      {ui.homeMultiplayerGuide}
-      <Icon name="chevron-right" />
-    </a>
+    <div class="intro-links">
+      <a class="crossplay-guide" href={multiplayerGuidePath}>
+        {ui.homeMultiplayerGuide}
+        <Icon name="chevron-right" />
+      </a>
+      <a
+        class="crossplay-guide"
+        href={localizePath(locale, '/stories/aceserver-contributors/')}
+      >
+        {contributorLabels[locale]}
+        <Icon name="chevron-right" />
+      </a>
+    </div>
   </div>
 </section>
 
@@ -294,6 +314,12 @@ const multiplayerGuidePath = localizePath(
     margin: 0 0 8px;
     font-size: 0.94rem;
     line-height: 1.7;
+  }
+
+  .intro-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
   }
 
   .crossplay-guide {
