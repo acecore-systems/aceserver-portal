@@ -10,6 +10,7 @@ const errors = []
 const LOCALES = ['ja', 'en', 'zh-cn', 'es', 'pt', 'fr', 'ko', 'de', 'ru']
 const TRANSLATED_LOCALES = LOCALES.filter((locale) => locale !== 'ja')
 const EXPECTED_STORY_SLUGS = new Set([
+  'aceserver-contributors',
   'aceserver-hijacked',
   'aceserver-portal-launch',
   'aceserver-beginners-guide',

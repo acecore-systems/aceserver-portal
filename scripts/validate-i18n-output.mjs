@@ -24,6 +24,7 @@ const pageSlugs = await Promise.all(
   }),
 )
 const storySlugs = [
+  'aceserver-contributors',
   'aceserver-hijacked',
   'aceserver-portal-launch',
   'aceserver-beginners-guide',
