@@ -12,6 +12,7 @@ import { extractStoryMarkdownTargets } from './markdown-targets.mjs'
 const root = path.resolve(fileURLToPath(new URL('..', import.meta.url)))
 const errors = []
 const expectedStorySlugs = [
+  'aceserver-contributors',
   'aceserver-hijacked',
   'aceserver-portal-launch',
   'aceserver-beginners-guide',
@@ -566,7 +567,15 @@ async function validateStories() {
           'heading-level structure differs from Japanese source',
         )
       }
-      if (containsUnexpectedJapanese(body, locale)) {
+      // Preserve original Discord handles and event names in this historical record.
+      const bodyForLanguageCheck =
+        slug === 'aceserver-contributors'
+          ? body.replaceAll(
+              /エント|リンゴポン|ジェスター|ホステッチ|イザイザ|コッカー|あまぎ|新人|セガ|てぃあ|はっくん|ハット卿|はっ|コタ|キツネコ|ゆり|つなぐASF|タケ|センチュリーズ|ハルビィ|セキセイ|山田|ふーや|あすたん/gu,
+              '',
+            )
+          : body
+      if (containsUnexpectedJapanese(bodyForLanguageCheck, locale)) {
         fail(relativePath, 'translated body contains Japanese text')
       }
 
