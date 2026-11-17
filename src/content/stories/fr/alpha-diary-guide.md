@@ -5,11 +5,11 @@ date: 2026-09-25T00:00:00+09:00
 tags:
   - Actualités
 author: Gui
-lastUpdated: 2026-10-09T15:00:00+09:00
+lastUpdated: 2026-11-17T00:00:00+09:00
 image: /uploads/stories/alpha-diary-guide-hero.webp
 imageAlt: Illustration d'un journal ouvert et d'un calendrier dans un paysage de blocs
 translationOf: alpha-diary-guide
-sourceHash: sha256:579053ddd3728f07e06d1cd3119ef5114913929d2959c68ff9998a26bb8df587
+sourceHash: sha256:6414ea4652e83325ff91f2152a94e778e54b5076add570fffe2b6f3397a526ba
 ---
 
 Le journal illustré d'Alpha réunit des dessins et des textes d'Aceserver classés par date. Commencez sur la [page du journal](/fr/alpha-diary/).
@@ -19,6 +19,10 @@ Pour une première visite, regardez le dessin et lisez le texte d’une journée
 ## Choisissez vous-même une date
 
 Vous pouvez commencer par la page du jour ou sélectionner une date qui vous intrigue dans le calendrier. Pour ouvrir une ancienne entrée, choisissez le jour puis utilisez le bouton prévu à cet effet.
+
+## Quand aucune entrée n’apparaît à une date
+
+Si l’illustration ou le texte ne s’affiche pas encore pour la date choisie, essayez un autre jour dans le calendrier. Commencez par une entrée disponible et précisez sa date si vous posez une question à Alpha.
 
 ## Posez les questions qui vous viennent
 

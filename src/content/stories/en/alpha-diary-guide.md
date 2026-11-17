@@ -5,11 +5,11 @@ date: 2026-09-25T00:00:00+09:00
 tags:
   - News
 author: Gui
-lastUpdated: 2026-10-09T15:00:00+09:00
+lastUpdated: 2026-11-17T00:00:00+09:00
 image: /uploads/stories/alpha-diary-guide-hero.webp
 imageAlt: Illustration of an open diary and date calendar in a block-style landscape
 translationOf: alpha-diary-guide
-sourceHash: sha256:579053ddd3728f07e06d1cd3119ef5114913929d2959c68ff9998a26bb8df587
+sourceHash: sha256:6414ea4652e83325ff91f2152a94e778e54b5076add570fffe2b6f3397a526ba
 ---
 
 Alpha-kun's picture diary is a collection of dated drawings and writing from Aceserver. You can begin on the [picture diary page](/en/alpha-diary/).
@@ -19,6 +19,10 @@ For a first visit, read one day’s drawing and text, then pick a place or event
 ## Choose a date yourself
 
 Start with today's page or select a date that interests you in the calendar. To open an older entry, choose its date and press the button to open that day.
+
+## When there is no entry for a date
+
+If the illustration or text for your chosen date is unavailable, try another date in the calendar. Start with an entry you can read, and include its date if you ask Alpha about it.
 
 ## Ask about what you notice
 
