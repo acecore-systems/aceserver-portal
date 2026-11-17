@@ -2,12 +2,14 @@
 title: 支持Aceserver的人们
 description: 通过官方Discord公告，了解从建服初期到活动和技术方面支持Aceserver的人们。
 translationOf: aceserver-contributors
-sourceHash: sha256:4ff0703ef08a8beab74a64ba7b533fa62313a5c828d3e5af73694756f54bb82e
+sourceHash: sha256:3d5142d89ba5137b30a24edc3a729dc1bb0171d001adb76f6b3ba012fca59bff
 date: 2026-11-14T00:00:00+09:00
 tags:
   - Aceserver
   - Minecraft
 author: エースサーバー運営
+image: /uploads/current-world-city-20261015.jpg
+imageAlt: 2026 年 10 月在公开地图上截取的 Aceserver 主世界街景
 ---
 
 许多人以不同方式支持着Aceserver。这里从官方Discord公告中介绍其中一些活动。查看原帖需要加入官方Discord。
@@ -16,7 +18,7 @@ author: エースサーバー運営
 
 2020年12月，てぃあ宣布收录规则的初期Wiki上线。 [原帖](https://discord.com/channels/737538781024092170/774152638450237460/784929714296193034)
 
-2021年8月，Gui表示服务器最初是为了让大家都能来到はっ（はっくん、ハット卿）的世界游玩，并宣布暂时将运营决策交给コタ。コタ也宣布接受这一职责。 [Gui的公告](https://discord.com/channels/737538781024092170/774152638450237460/880745650009047080) [コタ的公告](https://discord.com/channels/737538781024092170/774152638450237460/880760188351705178)
+2021年8月，Gui表示服务器最初是为了让大家都能来到はっ的世界游玩，并宣布暂时将运营决策交给コタ。コタ也宣布接受这一职责。 [Gui的公告](https://discord.com/channels/737538781024092170/774152638450237460/880745650009047080) [コタ的公告](https://discord.com/channels/737538781024092170/774152638450237460/880760188351705178)
 
 ## 宣传与活动
 
@@ -34,7 +36,7 @@ author: エースサーバー運営
 
 ## 技术与支持
 
-2023年7月，Yukke宣布创建了资源服的新世界。2025年11月，服务器引入了あすたん（asutarisucu）制作的Minecraft与Discord聊天联动系统。 [资源世界公告](https://discord.com/channels/737538781024092170/774152638450237460/1135574163080364103) [聊天联动公告](https://discord.com/channels/737538781024092170/774152638450237460/1437973211961622670)
+2023年7月，Yukke宣布创建了资源服的新世界。2025年11月，服务器引入了あすたん制作的Minecraft与Discord聊天联动系统。 [资源世界公告](https://discord.com/channels/737538781024092170/774152638450237460/1135574163080364103) [聊天联动公告](https://discord.com/channels/737538781024092170/774152638450237460/1437973211961622670)
 
 2026年2月，Merutak报告创建了两个用于通知故障和服务器停止的Discord身份组。 [原帖](https://discord.com/channels/737538781024092170/774152638450237460/1477293143773810822)
 

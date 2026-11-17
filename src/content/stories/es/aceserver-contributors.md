@@ -2,12 +2,14 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce algunas contribuciones a Aceserver desde sus comienzos hasta los eventos y la tecnología.
 translationOf: aceserver-contributors
-sourceHash: sha256:4ff0703ef08a8beab74a64ba7b533fa62313a5c828d3e5af73694756f54bb82e
+sourceHash: sha256:3d5142d89ba5137b30a24edc3a729dc1bb0171d001adb76f6b3ba012fca59bff
 date: 2026-11-14T00:00:00+09:00
 tags:
   - Aceserver
   - Minecraft
 author: エースサーバー運営
+image: /uploads/current-world-city-20261015.jpg
+imageAlt: Ciudad del mundo principal de Aceserver, capturada en el mapa público en octubre de 2026
 ---
 
 Muchas personas han apoyado Aceserver de distintas maneras. Presentamos algunas de sus actividades a partir de los anuncios oficiales de Discord. Hay que unirse al Discord oficial para ver las publicaciones originales.
@@ -16,7 +18,7 @@ Muchas personas han apoyado Aceserver de distintas maneras. Presentamos algunas 
 
 En diciembre de 2020, てぃあ anunció la apertura de una wiki inicial con las reglas. [Publicación original](https://discord.com/channels/737538781024092170/774152638450237460/784929714296193034)
 
-En agosto de 2021, Gui explicó que el servidor comenzó para que cualquiera pudiera visitar y jugar en el mundo de はっ (はっくん, ハット卿). También anunció que コタ asumiría las decisiones de gestión por el momento. コタ confirmó que aceptaba. [Anuncio de Gui](https://discord.com/channels/737538781024092170/774152638450237460/880745650009047080) [Anuncio de コタ](https://discord.com/channels/737538781024092170/774152638450237460/880760188351705178)
+En agosto de 2021, Gui explicó que el servidor comenzó para que cualquiera pudiera visitar y jugar en el mundo de はっ. También anunció que コタ asumiría las decisiones de gestión por el momento. コタ confirmó que aceptaba. [Anuncio de Gui](https://discord.com/channels/737538781024092170/774152638450237460/880745650009047080) [Anuncio de コタ](https://discord.com/channels/737538781024092170/774152638450237460/880760188351705178)
 
 ## Difusión y eventos
 
@@ -34,7 +36,7 @@ En agosto de 2026, sekisei y ふーや anunciaron un CTF conjunto de búsqueda d
 
 ## Tecnología y apoyo
 
-En julio de 2023, Yukke anunció la creación de un nuevo mundo para el servidor de recursos. En noviembre de 2025 se incorporó un sistema de chat entre Minecraft y Discord creado por あすたん (asutarisucu). [Anuncio del mundo de recursos](https://discord.com/channels/737538781024092170/774152638450237460/1135574163080364103) [Anuncio de integración de chat](https://discord.com/channels/737538781024092170/774152638450237460/1437973211961622670)
+En julio de 2023, Yukke anunció la creación de un nuevo mundo para el servidor de recursos. En noviembre de 2025 se incorporó un sistema de chat entre Minecraft y Discord creado por あすたん. [Anuncio del mundo de recursos](https://discord.com/channels/737538781024092170/774152638450237460/1135574163080364103) [Anuncio de integración de chat](https://discord.com/channels/737538781024092170/774152638450237460/1437973211961622670)
 
 En febrero de 2026, Merutak informó de la creación de dos roles de Discord para avisos de problemas y paradas del servidor. [Publicación original](https://discord.com/channels/737538781024092170/774152638450237460/1477293143773810822)
 
