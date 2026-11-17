@@ -23,6 +23,7 @@ const DELETE_BATCH_SIZE = 100
 const LIST_BATCH_SIZE = 1000
 const REQUEST_TIMEOUT_MS = 30_000
 const MAX_CLOUDFLARE_RESPONSE_BYTES = 4_000_000
+const MAX_VECTOR_METADATA_BYTES = 10 * 1024
 const MAX_REQUEST_RETRIES = 5
 const RETRY_BASE_DELAY_MS = 500
 const MAX_LIST_CURSOR_RESTARTS = 3
@@ -171,7 +172,7 @@ export async function syncPortalVectorize({
       id: chunk.id,
       values: embeddings[index],
       namespace: chunk.namespace,
-      metadata: chunk.metadata,
+      metadata: vectorMetadata(chunk),
     }))
 
     for (const vectorBatch of batches(vectors, UPSERT_BATCH_SIZE)) {
@@ -275,6 +276,14 @@ export function validatePortalCorpus(corpus) {
     ) {
       throw new Error('Corpus contains an invalid chunk.')
     }
+    if (
+      Buffer.byteLength(JSON.stringify(vectorMetadata(chunk)), 'utf8') >
+      MAX_VECTOR_METADATA_BYTES
+    ) {
+      throw new Error(
+        `Vectorize metadata with content exceeds ${MAX_VECTOR_METADATA_BYTES} UTF-8 bytes for chunk ${chunk.id}.`,
+      )
+    }
     if (ids.has(chunk.id)) throw new Error(`Duplicate vector id: ${chunk.id}`)
     ids.add(chunk.id)
     sourceUrls.add(chunk.metadata.url)
@@ -283,6 +292,10 @@ export function validatePortalCorpus(corpus) {
   if (sourceUrls.size !== corpus.sourceCount) {
     throw new Error('Corpus sourceCount must match unique chunk URLs.')
   }
+}
+
+function vectorMetadata({ metadata, text }) {
+  return { ...metadata, content: text }
 }
 
 export function extractEmbeddingData(payload, expectedCount) {

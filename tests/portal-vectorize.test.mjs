@@ -347,6 +347,18 @@ test('rejects unsafe portal metadata before an index mutation', async () => {
   }
 })
 
+test('rejects Vectorize metadata exceeding the UTF-8 byte limit with content', () => {
+  const corpus = createPortalCorpus()
+  const [chunk] = corpus.chunks
+  chunk.metadata.extra = '文'.repeat(3000)
+  chunk.text = '本'.repeat(600)
+
+  assert.throws(
+    () => validatePortalCorpus(corpus),
+    /Vectorize metadata with content exceeds 10240 UTF-8 bytes/u,
+  )
+})
+
 test('validates Workers AI embedding dimensions and shape', () => {
   const embedding = Array.from(
     { length: PORTAL_EMBEDDING_DIMENSIONS },
@@ -675,6 +687,10 @@ test('syncs only the portal corpus delta', async () => {
       const vector = JSON.parse(ndjson.trim())
       assert.equal(vector.id, newChunk.id)
       assert.equal(vector.values.length, PORTAL_EMBEDDING_DIMENSIONS)
+      assert.deepEqual(vector.metadata, {
+        ...newChunk.metadata,
+        content: newChunk.text,
+      })
       return cloudflareResponse({ mutationId: 'mutation-upsert' })
     }
     if (url.endsWith('/delete_by_ids')) {
