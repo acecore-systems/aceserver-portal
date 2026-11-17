@@ -2,9 +2,9 @@
 title: 'Aceserver Beginner Guide: Portal, World Maps, Videos, WIKI, and Connection Help'
 description: New to Aceserver? Learn when to use the official portal, world maps, videos, and WIKI, and where to check if you cannot join.
 translationOf: aceserver-beginners-guide
-sourceHash: sha256:9285e21f00e413b503506a873320d9a1c4fd7fc8918da69e5c8bb06500946781
+sourceHash: sha256:8bcb8231b6d380f51bb010d02fc1dd387fe1f3bfed06f0fe7b9dda97399478d9
 date: 2026-08-09T10:00:00+09:00
-lastUpdated: 2026-11-11T00:00:00+09:00
+lastUpdated: 2026-11-17T00:00:00+09:00
 tags:
   - Minecraft
   - Aceserver
@@ -52,6 +52,10 @@ Start from the home page, then choose the page that matches your goal.
 | Look up rules or gameplay              | WIKI             | Joining steps, rules, and guides for each world           |
 
 The portal is the entrance to current information, not a place to memorize connection details. Check the joining guide and Discord notices once more immediately before connecting.
+
+## Find news and upcoming events on the homepage
+
+The [portal homepage](/en/) lists announcements separately from upcoming events. Check announcements for changes and messages from the team, or look under upcoming events for activities you can join. If no events are listed, check the latest notices in the official Discord before making plans.
 
 ## Find a place you want to explore with world maps
 

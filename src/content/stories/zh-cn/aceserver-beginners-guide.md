@@ -2,9 +2,9 @@
 title: 'Aceserver 新手指南：Portal、世界地图、视频、WIKI 与连接问题'
 description: 第一次来到 Aceserver？了解何时使用官方 Portal、世界地图、视频和 WIKI，以及无法加入时应查看哪里。
 translationOf: aceserver-beginners-guide
-sourceHash: sha256:9285e21f00e413b503506a873320d9a1c4fd7fc8918da69e5c8bb06500946781
+sourceHash: sha256:8bcb8231b6d380f51bb010d02fc1dd387fe1f3bfed06f0fe7b9dda97399478d9
 date: 2026-08-09T10:00:00+09:00
-lastUpdated: 2026-11-11T00:00:00+09:00
+lastUpdated: 2026-11-17T00:00:00+09:00
 tags:
   - Minecraft
   - Aceserver
@@ -52,6 +52,10 @@ Portal 是第一次认识 Aceserver 时的指示牌。它汇总了 Java 版和�
 | 查询规则或玩法     | WIKI         | 参加方法、规则和各世界说明   |
 
 Portal 是最新信息的入口，并不是记住连接细节的地方。连接前请再次查看参加方法和 Discord 公告。
+
+## 在首页查看公告和活动安排
+
+[官方门户首页](/zh-cn/)分别列出公告和即将举行的活动。要查看变更和运营团队的消息，请阅读公告；要找可以参加的活动，请查看活动安排。如果没有显示活动，请在安排行程前查看官方 Discord 的最新通知。
 
 ## 用世界地图寻找想去的地方
 
