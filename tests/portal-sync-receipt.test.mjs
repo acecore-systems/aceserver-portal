@@ -103,4 +103,25 @@ test('同期profileが異なるreceiptは同じ公開corpusでも再検証する
     },
   ).trim()
   assert.equal(result, 'true')
+  const both = {
+    ...receipt,
+    profile: 'both',
+    indexNames: [
+      receipt.indexName,
+      'aceserver-portal-search-voyage-4-lite-1024-production-v1',
+    ],
+  }
+  const matching = execFileSync(
+    process.execPath,
+    ['--input-type=module', '-e', code],
+    {
+      env: {
+        ...process.env,
+        PORTAL_SYNC_PROFILE: 'both',
+        TEST_RECEIPT: JSON.stringify(both),
+      },
+      encoding: 'utf8',
+    },
+  ).trim()
+  assert.equal(matching, 'false')
 })

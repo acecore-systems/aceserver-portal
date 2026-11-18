@@ -1,4 +1,5 @@
 import {
+  canUseAlphaSearchEmbedding,
   createAlphaSearchEmbedding,
   isAlphaSearchEmbedding,
 } from './alpha-search-embedding.ts'
@@ -53,7 +54,7 @@ export function shouldSearchAcecore(query) {
 export async function searchAcecore(query, env, providedEmbedding = null) {
   if (
     !query ||
-    (!providedEmbedding && !env?.AI) ||
+    (!providedEmbedding && !canUseAlphaSearchEmbedding(env)) ||
     !env?.ACECORE_SEARCH_INDEX ||
     env.ACECORE_SEARCH_ENABLED === 'false'
   ) {

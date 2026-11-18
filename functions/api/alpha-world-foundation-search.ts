@@ -1,4 +1,5 @@
 import {
+  canUseAlphaSearchEmbedding,
   createAlphaSearchEmbedding,
   isAlphaSearchEmbedding,
 } from './alpha-search-embedding.ts'
@@ -55,7 +56,7 @@ export async function searchWorldFoundation(
 ) {
   if (
     !query ||
-    (!providedEmbedding && !env?.AI) ||
+    (!providedEmbedding && !canUseAlphaSearchEmbedding(env)) ||
     !env?.WORLD_FOUNDATION_SEARCH_INDEX ||
     env.WORLD_FOUNDATION_SEARCH_ENABLED === 'false'
   ) {

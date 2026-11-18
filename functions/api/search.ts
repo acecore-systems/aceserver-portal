@@ -1,4 +1,5 @@
 import { searchAceserverPortal } from './alpha-portal-search.ts'
+import { canUseAlphaSearchEmbedding } from './alpha-search-embedding.ts'
 
 const MAX_REQUEST_BODY_BYTES = 2_048
 const MIN_QUERY_LENGTH = 2
@@ -148,7 +149,7 @@ export function isAllowedRequestOrigin(request) {
 function isSearchAvailable(env) {
   return Boolean(
     env?.PORTAL_SEARCH_ENABLED === 'true' &&
-    env.AI &&
+    canUseAlphaSearchEmbedding(env) &&
     env.PORTAL_SEARCH_INDEX &&
     env.SEARCH_RATE_LIMIT_DB,
   )

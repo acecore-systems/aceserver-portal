@@ -1,4 +1,5 @@
 import {
+  canUseAlphaSearchEmbedding,
   createAlphaSearchEmbedding,
   isAlphaSearchEmbedding,
 } from './alpha-search-embedding.ts'
@@ -54,7 +55,7 @@ export function shouldSearchSchools(query) {
 export async function searchSchools(query, env, providedEmbedding = null) {
   if (
     !query ||
-    (!providedEmbedding && !env?.AI) ||
+    (!providedEmbedding && !canUseAlphaSearchEmbedding(env)) ||
     !env?.SCHOOLS_SEARCH_INDEX ||
     env.SCHOOLS_SEARCH_ENABLED === 'false'
   ) {

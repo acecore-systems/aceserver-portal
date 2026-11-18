@@ -95,12 +95,14 @@ test('keeps the sync workflow production-only with explicit safety gates', async
   assert.match(
     wrangler,
     new RegExp(
-      `"binding": "PORTAL_SEARCH_INDEX",[^}]*"index_name": "${PRODUCTION_INDEX_NAME}"`,
+      `"binding": "PORTAL_SEARCH_INDEX",[^}]*"index_name": "aceserver-portal-search-voyage-4-lite-1024-production-v1"`,
       'u',
     ),
   )
   assert.equal(
-    wrangler.split(`"index_name": "${PRODUCTION_INDEX_NAME}"`).length - 1,
+    wrangler.split(
+      `"index_name": "aceserver-portal-search-voyage-4-lite-1024-production-v1"`,
+    ).length - 1,
     1,
   )
 })
@@ -190,6 +192,58 @@ test('Voyage同期flagと対象別approvalとreceiptを分離する', async () =
   assert.match(workflow, /portal-vectorize-receipt-voyage/)
   assert.match(workflow, /approved_plan_target/)
   assert.match(workflow, /VOYAGE_API_KEY: \$\{\{ secrets\.VOYAGE_API_KEY \}\}/)
+})
+
+test('Voyageの不正な文書応答では候補索引を変更しない', async () => {
+  const corpus = createPortalCorpus()
+  const corpusFile = await writeCorpus(corpus)
+  const indexName = 'aceserver-portal-search-voyage-4-lite-1024-production-v1'
+  const current = corpus.chunks.slice(0, -1).map(({ id }) => id)
+  for (const payload of [
+    { model: 'other', data: [{ index: 0, embedding: TEST_EMBEDDING }] },
+    { model: 'voyage-4-lite', data: [] },
+    { model: 'voyage-4-lite', data: [{ index: 1, embedding: TEST_EMBEDDING }] },
+    { model: 'voyage-4-lite', data: [{ index: 0, embedding: [1] }] },
+    {
+      model: 'voyage-4-lite',
+      data: [{ index: 0, embedding: [...TEST_EMBEDDING.slice(1), null] }],
+    },
+  ]) {
+    let mutated = false
+    const fetchImpl = async (input) => {
+      const url = String(input)
+      if (url.endsWith(`/indexes/${indexName}`))
+        return cloudflareResponse({
+          name: indexName,
+          config: { dimensions: 1024, metric: 'cosine' },
+        })
+      if (url.includes('/list?'))
+        return cloudflareResponse({
+          vectors: current.map((id) => ({ id })),
+          count: current.length,
+          totalCount: current.length,
+          isTruncated: false,
+        })
+      if (url === 'https://ai.mongodb.com/v1/embeddings')
+        return Response.json(payload)
+      mutated = true
+      throw Error('unexpected mutation')
+    }
+    await assert.rejects(
+      syncPortalVectorize({
+        accountId: 'account',
+        apiToken: 'token',
+        indexName,
+        productionConfirmation: indexName,
+        corpusFile,
+        voyageApiKey: 'test',
+        fetchImpl,
+        waitForMutations: false,
+        logger: { log() {} },
+      }),
+    )
+    assert.equal(mutated, false)
+  }
 })
 
 test('extracts a public story from built portal HTML', () => {
