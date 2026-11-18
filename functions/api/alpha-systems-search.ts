@@ -1,4 +1,5 @@
 import {
+  canUseAlphaSearchEmbedding,
   createAlphaSearchEmbedding,
   isAlphaSearchEmbedding,
 } from './alpha-search-embedding.ts'
@@ -60,7 +61,7 @@ export function shouldSearchSystems(query) {
 export async function searchSystems(query, env, providedEmbedding = null) {
   if (
     !query ||
-    (!providedEmbedding && !env?.AI) ||
+    (!providedEmbedding && !canUseAlphaSearchEmbedding(env)) ||
     !env?.SYSTEMS_SEARCH_INDEX ||
     env.SYSTEMS_SEARCH_ENABLED === 'false'
   ) {
