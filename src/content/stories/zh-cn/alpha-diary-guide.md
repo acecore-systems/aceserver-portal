@@ -5,11 +5,11 @@ date: 2026-09-25T00:00:00+09:00
 tags:
   - 公告
 author: Gui
-lastUpdated: 2026-10-09T15:00:00+09:00
+lastUpdated: 2026-11-17T00:00:00+09:00
 image: /uploads/stories/alpha-diary-guide-hero.webp
 imageAlt: 方块风景中的打开的绘图日记和日期日历插图
 translationOf: alpha-diary-guide
-sourceHash: sha256:579053ddd3728f07e06d1cd3119ef5114913929d2959c68ff9998a26bb8df587
+sourceHash: sha256:6414ea4652e83325ff91f2152a94e778e54b5076add570fffe2b6f3397a526ba
 ---
 
 阿尔法君的绘画日记收录了 Aceserver 按日期记录的画与文字。可以从[绘画日记页面](/zh-cn/alpha-diary/)进入。
@@ -19,6 +19,10 @@ sourceHash: sha256:579053ddd3728f07e06d1cd3119ef5114913929d2959c68ff9998a26bb8df
 ## 自己选择日期
 
 可以从今天的页面开始，也可以在日历中选择感兴趣的日期。打开过去的记录时，请先选好日期，再按“打开这一天”。
+
+## 找不到某一天的记录时
+
+如果选中的日期还没有显示插图或文字，可以在日历中打开其他日期。先阅读已有的记录，提问时写明日期，方便说明你想了解的内容。
 
 ## 询问感兴趣的事
 

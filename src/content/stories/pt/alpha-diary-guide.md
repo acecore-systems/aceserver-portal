@@ -5,11 +5,11 @@ date: 2026-09-25T00:00:00+09:00
 tags:
   - Novidades
 author: Gui
-lastUpdated: 2026-10-09T15:00:00+09:00
+lastUpdated: 2026-11-17T00:00:00+09:00
 image: /uploads/stories/alpha-diary-guide-hero.webp
 imageAlt: Ilustração de um diário aberto e um calendário em uma paisagem de blocos
 translationOf: alpha-diary-guide
-sourceHash: sha256:579053ddd3728f07e06d1cd3119ef5114913929d2959c68ff9998a26bb8df587
+sourceHash: sha256:6414ea4652e83325ff91f2152a94e778e54b5076add570fffe2b6f3397a526ba
 ---
 
 O diário ilustrado do Alfa reúne desenhos e textos de Aceserver organizados por data. Comece pela [página do diário](/pt/alpha-diary/).
@@ -19,6 +19,10 @@ Na primeira visita, leia o desenho e o texto de um dia e escolha um lugar ou aco
 ## Escolha a data
 
 Você pode começar pela página de hoje ou escolher no calendário uma data que desperte curiosidade. Para abrir um registro antigo, selecione o dia e use o botão para abri-lo.
+
+## Quando não houver registro para uma data
+
+Se a ilustração ou o texto do dia escolhido ainda não estiverem disponíveis, abra outra data no calendário. Comece por um registro que possa ler e informe a data se fizer uma pergunta ao Alpha.
 
 ## Pergunte sobre o que encontrar
 

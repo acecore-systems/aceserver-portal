@@ -5,11 +5,11 @@ date: 2026-09-25T00:00:00+09:00
 tags:
   - 소식
 author: Gui
-lastUpdated: 2026-10-09T15:00:00+09:00
+lastUpdated: 2026-11-17T00:00:00+09:00
 image: /uploads/stories/alpha-diary-guide-hero.webp
 imageAlt: 블록 풍경 속 펼쳐진 그림일기와 날짜 달력 안내 그림
 translationOf: alpha-diary-guide
-sourceHash: sha256:579053ddd3728f07e06d1cd3119ef5114913929d2959c68ff9998a26bb8df587
+sourceHash: sha256:6414ea4652e83325ff91f2152a94e778e54b5076add570fffe2b6f3397a526ba
 ---
 
 알파 군의 그림일기는 Aceserver의 날짜별 그림과 글을 모은 기록입니다. [그림일기 페이지](/ko/alpha-diary/)에서 시작할 수 있습니다.
@@ -19,6 +19,10 @@ sourceHash: sha256:579053ddd3728f07e06d1cd3119ef5114913929d2959c68ff9998a26bb8df
 ## 날짜를 직접 고르기
 
 오늘의 페이지부터 읽어도 되고 달력에서 궁금한 날짜를 선택해도 됩니다. 지난 기록을 열 때는 날짜를 고른 뒤 그날을 여는 버튼을 누르세요.
+
+## 선택한 날짜에 기록이 없을 때
+
+선택한 날의 그림이나 글이 아직 표시되지 않으면 달력에서 다른 날짜를 열어 보세요. 읽을 수 있는 기록부터 살펴보고, 알파에게 질문할 때는 그 기록의 날짜를 함께 적어 주세요.
 
 ## 궁금한 점 묻기
 

@@ -2,9 +2,9 @@
 title: 'Aceserver 초보자 가이드: 포털, 월드 맵, 동영상, WIKI, 접속 문제'
 description: Aceserver가 처음이신가요? 공식 포털, 월드 맵, 동영상, WIKI를 언제 이용하는지와 접속할 수 없을 때 확인할 곳을 안내합니다.
 translationOf: aceserver-beginners-guide
-sourceHash: sha256:9285e21f00e413b503506a873320d9a1c4fd7fc8918da69e5c8bb06500946781
+sourceHash: sha256:8bcb8231b6d380f51bb010d02fc1dd387fe1f3bfed06f0fe7b9dda97399478d9
 date: 2026-08-09T10:00:00+09:00
-lastUpdated: 2026-11-11T00:00:00+09:00
+lastUpdated: 2026-11-17T00:00:00+09:00
 tags:
   - Minecraft
   - Aceserver
@@ -52,6 +52,10 @@ Java와 Bedrock이 함께 플레이할 수 있는 조건과 지원 서버를 구
 | 규칙이나 플레이 방법 찾기     | WIKI         | 참가 방법, 규칙, 각 월드 안내       |
 
 포털은 현재 정보의 입구이지 접속 세부 사항을 외우는 곳이 아닙니다. 접속 직전에는 참가 방법과 Discord 공지를 한 번 더 확인하세요.
+
+## 홈에서 공지와 예정된 이벤트 확인하기
+
+[공식 포털 홈](/ko/)에서 공지와 예정된 이벤트를 따로 확인할 수 있습니다. 변경 사항과 운영팀의 안내는 공지에서, 참여할 활동을 찾을 때는 예정된 이벤트에서 확인하세요. 이벤트가 보이지 않으면 참가 일정을 정하기 전에 공식 Discord의 최신 안내도 확인하세요.
 
 ## 월드 맵으로 가 보고 싶은 장소 찾기
 

@@ -5,11 +5,11 @@ date: 2026-09-25T00:00:00+09:00
 tags:
   - Neuigkeiten
 author: Gui
-lastUpdated: 2026-10-09T15:00:00+09:00
+lastUpdated: 2026-11-17T00:00:00+09:00
 image: /uploads/stories/alpha-diary-guide-hero.webp
 imageAlt: Illustration eines offenen Tagebuchs und Kalenders in einer Blocklandschaft
 translationOf: alpha-diary-guide
-sourceHash: sha256:579053ddd3728f07e06d1cd3119ef5114913929d2959c68ff9998a26bb8df587
+sourceHash: sha256:6414ea4652e83325ff91f2152a94e778e54b5076add570fffe2b6f3397a526ba
 ---
 
 Alpha-kuns Bildertagebuch enthält Zeichnungen und Texte aus Aceserver, geordnet nach Datum. Der Einstieg ist die [Tagebuchseite](/de/alpha-diary/).
@@ -19,6 +19,10 @@ Lesen Sie beim ersten Besuch zunächst Bild und Text eines Tages und wählen Sie
 ## Wähle selbst ein Datum
 
 Beginne mit dem heutigen Eintrag oder wähle im Kalender einen Tag, der dich interessiert. Für ältere Einträge wählst du zuerst das Datum und öffnest anschließend diesen Tag.
+
+## Wenn für ein Datum kein Eintrag verfügbar ist
+
+Wenn Bild oder Text für das gewählte Datum noch fehlen, öffne im Kalender einen anderen Tag. Beginne mit einem vorhandenen Eintrag und nenne sein Datum, wenn du Alpha dazu befragst.
 
 ## Frage nach, was dich interessiert
 
