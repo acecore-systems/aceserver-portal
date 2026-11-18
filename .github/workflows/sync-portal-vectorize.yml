@@ -11,6 +11,11 @@ on:
         description: Force full reconciliation, including unchanged content
         type: boolean
         default: true
+      approved_plan_target:
+        description: Target index for the reviewed plan hash
+        type: choice
+        default: bge
+        options: [bge, voyage]
       approved_plan_sha256:
         description: Reviewed exact index and corpus plan hash (leave empty for normal guarded sync)
         type: string
@@ -35,6 +40,9 @@ jobs:
         github.event_name == 'schedule' ||
         github.event_name == 'workflow_dispatch'
       )
+    env:
+      PORTAL_SYNC_PROFILE: ${{ vars.PORTAL_VOYAGE_SYNC_ENABLED == 'true' && (vars.PORTAL_BGE_SYNC_ENABLED == 'false' && 'voyage' || 'both') || (vars.PORTAL_BGE_SYNC_ENABLED == 'false' && 'disabled' || 'bge') }}
+      PORTAL_RECEIPT_NAME: ${{ vars.PORTAL_VOYAGE_SYNC_ENABLED == 'true' && (vars.PORTAL_BGE_SYNC_ENABLED == 'false' && 'portal-vectorize-receipt-voyage' || 'portal-vectorize-receipt-both') || 'portal-vectorize-receipt' }}
     runs-on: ubuntu-latest
     timeout-minutes: 30
     environment:
@@ -104,22 +112,41 @@ jobs:
         env:
           CLOUDFLARE_ACCOUNT_ID: db9b62f409f463da7acbcc374b8385d0
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_PORTAL_SEARCH_PRODUCTION_API_TOKEN }}
-          VECTORIZE_INDEX_NAME: aceserver-portal-search-bge-m3-1024-production-v1
+          VOYAGE_API_KEY: ${{ secrets.VOYAGE_API_KEY }}
+          APPROVED_PLAN_TARGET: ${{ inputs.approved_plan_target || 'bge' }}
           APPROVED_PLAN_SHA256: ${{ github.event_name == 'workflow_dispatch' && inputs.approved_plan_sha256 || '' }}
         run: |
           if [ -z "${CLOUDFLARE_API_TOKEN:-}" ]; then
             echo "::error::CLOUDFLARE_PORTAL_SEARCH_PRODUCTION_API_TOKEN is not configured."
             exit 1
           fi
-          args=(
-            --corpus site/dist/vector-corpus.json
-            --confirm-production "$VECTORIZE_INDEX_NAME"
-          )
-          if [ -n "$APPROVED_PLAN_SHA256" ]; then
-            args+=(--approved-plan-sha256 "$APPROVED_PLAN_SHA256")
+          set -euo pipefail
+          if [[ -n "$APPROVED_PLAN_SHA256" ]] &&
+             [[ "$PORTAL_SYNC_PROFILE" != "both" && "$PORTAL_SYNC_PROFILE" != "$APPROVED_PLAN_TARGET" ]]; then
+            echo "::error::The approved plan target is not enabled."
+            exit 1
           fi
-          node tooling/scripts/sync-portal-vectorize.mjs \
-            "${args[@]}"
+          sync_index() {
+            local provider="$1" index="$2"
+            local args=(--corpus site/dist/vector-corpus.json --confirm-production "$index")
+            if [[ -n "$APPROVED_PLAN_SHA256" && "$APPROVED_PLAN_TARGET" == "$provider" ]]; then
+              args+=(--approved-plan-sha256 "$APPROVED_PLAN_SHA256")
+            fi
+            VECTORIZE_INDEX_NAME="$index" node tooling/scripts/sync-portal-vectorize.mjs "${args[@]}"
+          }
+          if [[ "$PORTAL_SYNC_PROFILE" == "bge" || "$PORTAL_SYNC_PROFILE" == "both" ]]; then
+            sync_index bge aceserver-portal-search-bge-m3-1024-production-v1
+          fi
+          if [[ "$PORTAL_SYNC_PROFILE" == "voyage" || "$PORTAL_SYNC_PROFILE" == "both" ]]; then
+            if [[ -z "${VOYAGE_API_KEY:-}" ]]; then
+              echo "::error::VOYAGE_API_KEY is not configured."
+              exit 1
+            fi
+            node tooling/scripts/wait-for-portal-deployment.mjs \
+              https://asv.acecore.net/.well-known/aceserver-portal-build.json \
+              --assert-current "${{ steps.site.outputs.commit }}" site/dist/vector-corpus.json
+            sync_index voyage aceserver-portal-search-voyage-4-lite-1024-production-v1
+          fi
 
       - name: Record successful reconciliation or unchanged receipt
         if: steps.site.outputs.eligible == 'true'
@@ -130,7 +157,7 @@ jobs:
         if: steps.site.outputs.eligible == 'true'
         uses: actions/upload-artifact@v7
         with:
-          name: portal-vectorize-receipt
+          name: ${{ env.PORTAL_RECEIPT_NAME }}
           path: tooling/.portal-sync-state/receipt.json
           include-hidden-files: true
           if-no-files-found: error

@@ -43,7 +43,9 @@ const MANAGED_VECTOR_ID_PATTERN = /^v1-[0-9a-f]{48}$/u
 const CORPUS_VERSION_PATTERN = /^[0-9a-f]{20}$/u
 export const PRODUCTION_INDEX_NAME =
   'aceserver-portal-search-bge-m3-1024-production-v1'
-const ALLOWED_INDEX_NAMES = new Set([PRODUCTION_INDEX_NAME])
+export const VOYAGE_INDEX_NAME =
+  'aceserver-portal-search-voyage-4-lite-1024-production-v1'
+const ALLOWED_INDEX_NAMES = new Set([PRODUCTION_INDEX_NAME, VOYAGE_INDEX_NAME])
 
 class CloudflareApiError extends Error {
   constructor(message, status) {
@@ -56,6 +58,7 @@ class CloudflareApiError extends Error {
 export async function syncPortalVectorize({
   accountId = process.env.CLOUDFLARE_ACCOUNT_ID,
   apiToken = process.env.CLOUDFLARE_API_TOKEN,
+  voyageApiKey = process.env.VOYAGE_API_KEY,
   indexName = process.env.VECTORIZE_INDEX_NAME,
   corpusFile = DEFAULT_CORPUS_FILE,
   dryRun = false,
@@ -97,6 +100,9 @@ export async function syncPortalVectorize({
     )
   }
 
+  if (indexName === VOYAGE_INDEX_NAME && !voyageApiKey?.trim())
+    throw new Error('VOYAGE_API_KEY is required for Voyage sync.')
+
   const client = createCloudflareClient({
     accountId,
     apiToken,
@@ -106,7 +112,11 @@ export async function syncPortalVectorize({
     sleepImpl,
     randomImpl,
   })
-  const index = await ensureIndex(client, indexName, !approvedPlanSha256)
+  const index = await ensureIndex(
+    client,
+    indexName,
+    !approvedPlanSha256 && indexName !== VOYAGE_INDEX_NAME,
+  )
   validateIndexConfiguration(index, indexName)
 
   const currentIds = await listVectorIds(client, indexName, {
@@ -162,7 +172,14 @@ export async function syncPortalVectorize({
   const mutationIds = []
   let queryCanary = null
   for (const chunkBatch of batches(chunksToUpsert, EMBEDDING_BATCH_SIZE)) {
-    const embeddings = await createEmbeddings(client, chunkBatch)
+    const embeddings =
+      indexName === VOYAGE_INDEX_NAME
+        ? await createVoyageEmbeddings(chunkBatch, {
+            apiKey: voyageApiKey,
+            fetchImpl,
+            requestTimeoutMs,
+          })
+        : await createEmbeddings(client, chunkBatch)
     queryCanary ??= {
       id: chunkBatch[0].id,
       namespace: chunkBatch[0].namespace,
@@ -719,6 +736,60 @@ async function createEmbeddings(client, chunks) {
     }),
   })
   return extractEmbeddingData(payload?.result, chunks.length)
+}
+
+async function createVoyageEmbeddings(
+  chunks,
+  { apiKey, fetchImpl, requestTimeoutMs },
+) {
+  let response
+  try {
+    response = await fetchImpl('https://ai.mongodb.com/v1/embeddings', {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${apiKey}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        model: 'voyage-4-lite',
+        input: chunks.map(({ text }) => text),
+        input_type: 'document',
+        output_dimension: 1024,
+        output_dtype: 'float',
+        truncation: false,
+      }),
+      redirect: 'error',
+      signal: AbortSignal.timeout(requestTimeoutMs),
+    })
+  } catch {
+    throw new Error('Voyage embeddings request failed.')
+  }
+  if (!response.ok) {
+    await response.body?.cancel().catch(() => {})
+    throw new Error(`Voyage embeddings returned HTTP ${response.status}.`)
+  }
+  const payload = await readJsonResponse(response)
+  if (
+    payload?.model !== 'voyage-4-lite' ||
+    !Array.isArray(payload.data) ||
+    payload.data.length !== chunks.length
+  )
+    throw new Error('Voyage returned an invalid embedding response.')
+  const ordered = new Map()
+  for (const row of payload.data) {
+    if (
+      !Number.isInteger(row?.index) ||
+      row.index < 0 ||
+      row.index >= chunks.length ||
+      ordered.has(row.index)
+    )
+      throw new Error('Voyage returned an invalid embedding index.')
+    ordered.set(row.index, row.embedding)
+  }
+  return extractEmbeddingData(
+    { data: chunks.map((_, i) => ordered.get(i)) },
+    chunks.length,
+  )
 }
 
 async function upsertVectors(client, indexName, vectors) {
