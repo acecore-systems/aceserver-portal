@@ -52,16 +52,34 @@ function environment(response) {
 const good = () => Response.json({ model, data: [{ index: 0, embedding }] })
 
 test('全6検索adapterがVoyage queryと対応indexを使う', async () => {
-  const env = environment(good)
-  for (const search of [
-    searchAceserverPortal,
-    searchAceserverWiki,
-    searchAcecore,
-    searchSchools,
-    searchSystems,
-    searchWorldFoundation,
-  ]) {
+  const targets = [
+    [searchAceserverPortal, 'PORTAL_SEARCH_INDEX'],
+    [searchAceserverWiki, 'WIKI_SEARCH_INDEX'],
+    [searchAcecore, 'ACECORE_SEARCH_INDEX'],
+    [searchSchools, 'SCHOOLS_SEARCH_INDEX'],
+    [searchSystems, 'SYSTEMS_SEARCH_INDEX'],
+    [searchWorldFoundation, 'WORLD_FOUNDATION_SEARCH_INDEX'],
+  ]
+  for (const [search, binding] of targets) {
+    const env = environment(good)
+    let embeds = 0,
+      queries = 0
+    const fetch = env.VOYAGE_EMBEDDER.fetch
+    env.VOYAGE_EMBEDDER.fetch = (...args) => {
+      embeds += 1
+      return fetch(...args)
+    }
+    const selected = env[binding]
+    for (const [, name] of targets) delete env[name]
+    env[binding] = {
+      async query(...args) {
+        queries += 1
+        return selected.query(...args)
+      },
+    }
     assert.deepEqual(await search('検索について', env), [])
+    assert.equal(embeds, 1)
+    assert.equal(queries, 1)
   }
 })
 
