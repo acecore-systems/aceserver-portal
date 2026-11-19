@@ -1,6 +1,7 @@
 import {
   ALPHA_SEARCH_EMBEDDING_DIMENSIONS,
   ALPHA_SEARCH_EMBEDDING_MODEL,
+  canUseAlphaSearchEmbedding,
   createAlphaSearchEmbedding,
   isAlphaSearchEmbedding,
 } from './alpha-search-embedding.ts'
@@ -66,7 +67,7 @@ export async function searchAceserverPortal(
 ) {
   if (
     !query ||
-    (!providedEmbedding && !env?.AI) ||
+    (!providedEmbedding && !canUseAlphaSearchEmbedding(env)) ||
     !env?.PORTAL_SEARCH_INDEX ||
     env.PORTAL_SEARCH_ENABLED === 'false'
   ) {

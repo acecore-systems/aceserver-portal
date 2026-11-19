@@ -243,8 +243,7 @@ export const JA_UI: UiCopy = {
     relatedSites: 'Acecore関連サイト',
     loading: '意味が近いページを検索しています…',
     noResults: '一致する公開ページは見つかりませんでした。',
-    privacy:
-      '検索語は公開情報との照合のためCloudflare Workers AIに送信されます。',
+    privacy: '検索語は公開情報との照合のためMongoDB Voyage AIに送信されます。',
   },
   alpha: {
     chatSubtitle: 'エースサーバー案内チャット',
@@ -347,7 +346,7 @@ const en: LocaleTranslation = {
       loading: 'Looking for semantically related pages…',
       noResults: 'No matching public pages were found.',
       privacy:
-        'Your query is sent to Cloudflare Workers AI to compare it with public information.',
+        'Your query is sent to MongoDB Voyage AI to compare it with public information.',
     },
     alpha: {
       chatSubtitle: 'Aceserver guide chat',
@@ -619,7 +618,7 @@ const zhCn: LocaleTranslation = {
       relatedSites: 'Acecore 相关网站',
       loading: '正在查找语义相近的页面…',
       noResults: '未找到匹配的公开页面。',
-      privacy: '搜索词会发送到 Cloudflare Workers AI，用于与公开信息进行比对。',
+      privacy: '搜索词会发送到 MongoDB Voyage AI，用于与公开信息进行比对。',
     },
     alpha: {
       chatSubtitle: 'Aceserver 导航聊天',
@@ -886,7 +885,7 @@ const es: LocaleTranslation = {
       loading: 'Buscando páginas relacionadas por significado…',
       noResults: 'No se encontraron páginas públicas coincidentes.',
       privacy:
-        'La consulta se envía a Cloudflare Workers AI para compararla con información pública.',
+        'La consulta se envía a MongoDB Voyage AI para compararla con información pública.',
     },
     alpha: {
       chatSubtitle: 'Chat guía de Aceserver',
@@ -1158,7 +1157,7 @@ const pt: LocaleTranslation = {
       loading: 'Procurando páginas semanticamente relacionadas…',
       noResults: 'Nenhuma página pública correspondente foi encontrada.',
       privacy:
-        'A consulta é enviada ao Cloudflare Workers AI para comparação com informações públicas.',
+        'A consulta é enviada ao MongoDB Voyage AI para comparação com informações públicas.',
     },
     alpha: {
       chatSubtitle: 'Chat de orientação do Aceserver',
@@ -1431,7 +1430,7 @@ const fr: LocaleTranslation = {
       loading: 'Recherche de pages proches par le sens…',
       noResults: 'Aucune page publique correspondante n’a été trouvée.',
       privacy:
-        'La recherche est envoyée à Cloudflare Workers AI pour comparaison avec des informations publiques.',
+        'La recherche est envoyée à MongoDB Voyage AI pour comparaison avec des informations publiques.',
     },
     alpha: {
       chatSubtitle: 'Chat d’orientation Aceserver',
@@ -1704,7 +1703,7 @@ const ko: LocaleTranslation = {
       loading: '의미가 가까운 페이지를 찾고 있어요…',
       noResults: '일치하는 공개 페이지를 찾지 못했어요.',
       privacy:
-        '검색어는 공개 정보와 비교하기 위해 Cloudflare Workers AI로 전송됩니다.',
+        '검색어는 공개 정보와 비교하기 위해 MongoDB Voyage AI로 전송됩니다.',
     },
     alpha: {
       chatSubtitle: 'Aceserver 안내 채팅',
@@ -1977,7 +1976,7 @@ const de: LocaleTranslation = {
       loading: 'Suche nach semantisch verwandten Seiten…',
       noResults: 'Keine passenden öffentlichen Seiten gefunden.',
       privacy:
-        'Die Suchanfrage wird zur Prüfung mit öffentlichen Informationen an Cloudflare Workers AI gesendet.',
+        'Die Suchanfrage wird zur Prüfung mit öffentlichen Informationen an MongoDB Voyage AI gesendet.',
     },
     alpha: {
       chatSubtitle: 'Aceserver Wegweiser-Chat',
@@ -2253,7 +2252,7 @@ const ru: LocaleTranslation = {
       loading: 'Ищем страницы, близкие по смыслу…',
       noResults: 'Подходящие публичные страницы не найдены.',
       privacy:
-        'Поисковый запрос отправляется в Cloudflare Workers AI для сравнения с публичной информацией.',
+        'Поисковый запрос отправляется в MongoDB Voyage AI для сравнения с публичной информацией.',
     },
     alpha: {
       chatSubtitle: 'Чат-помощник Aceserver',

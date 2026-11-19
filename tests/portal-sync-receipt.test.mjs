@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict'
 import test from 'node:test'
+import { execFileSync } from 'node:child_process'
 import {
   isPagesSuccess,
   maxReceiptAgeMs,
@@ -81,4 +82,46 @@ test('only successful Cloudflare Pages checks are deployment signals', () => {
     { name: 'CI' },
   ])
     assert.equal(isPagesSuccess({ check_run: { ...check, ...patch } }), false)
+})
+
+test('同期profileが異なるreceiptは同じ公開corpusでも再検証する', () => {
+  const moduleUrl = new URL(
+    '../scripts/portal-sync-receipt.mjs',
+    import.meta.url,
+  ).href
+  const code = `import {shouldReconcile} from ${JSON.stringify(moduleUrl)}; const x=JSON.parse(process.env.TEST_RECEIPT); console.log(shouldReconcile({receipt:x,corpusVersion:x.corpusVersion,toolingVersion:x.toolingVersion,now:Date.parse(x.verifiedAt)+1000}));`
+  const result = execFileSync(
+    process.execPath,
+    ['--input-type=module', '-e', code],
+    {
+      env: {
+        ...process.env,
+        PORTAL_SYNC_PROFILE: 'both',
+        TEST_RECEIPT: JSON.stringify(receipt),
+      },
+      encoding: 'utf8',
+    },
+  ).trim()
+  assert.equal(result, 'true')
+  const both = {
+    ...receipt,
+    profile: 'both',
+    indexNames: [
+      receipt.indexName,
+      'aceserver-portal-search-voyage-4-lite-1024-production-v1',
+    ],
+  }
+  const matching = execFileSync(
+    process.execPath,
+    ['--input-type=module', '-e', code],
+    {
+      env: {
+        ...process.env,
+        PORTAL_SYNC_PROFILE: 'both',
+        TEST_RECEIPT: JSON.stringify(both),
+      },
+      encoding: 'utf8',
+    },
+  ).trim()
+  assert.equal(matching, 'false')
 })

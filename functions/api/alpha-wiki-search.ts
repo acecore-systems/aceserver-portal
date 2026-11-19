@@ -1,6 +1,7 @@
 import {
   ALPHA_SEARCH_EMBEDDING_DIMENSIONS,
   ALPHA_SEARCH_EMBEDDING_MODEL,
+  canUseAlphaSearchEmbedding,
   createAlphaSearchEmbedding,
   isAlphaSearchEmbedding,
 } from './alpha-search-embedding.ts'
@@ -62,7 +63,7 @@ export async function searchAceserverWiki(
 ) {
   if (
     !query ||
-    (!providedEmbedding && !env?.AI) ||
+    (!providedEmbedding && !canUseAlphaSearchEmbedding(env)) ||
     !env?.WIKI_SEARCH_INDEX ||
     env.WIKI_SEARCH_ENABLED === 'false'
   ) {

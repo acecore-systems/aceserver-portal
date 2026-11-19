@@ -105,13 +105,11 @@ Cloudflare Pages のproduction / previewでは、build前に `public/admin/runti
 
 チャットで使う検索index、しきい値、根拠選択は共有Worker側の設定です。Portal repositoryは公開corpusの生成と同期を所有しますが、ブラウザ入口では検索や回答生成を行いません。Aceserver WIKIは引き続きルール、コマンド、参加条件、ワールド詳細、運用情報の正です。
 
-Portal固有の `/api/search` はチャットとは別機能で、`PORTAL_SEARCH_INDEX` とCloudflare Workers AI BGE-M3を使ってこのサイト内の公開ページだけを検索します。`SEARCH_EMBEDDING_MODEL` と `SEARCH_EMBEDDING_DIMENSIONS` はそれぞれ `@cf/baai/bge-m3` と `1024` に固定し、Previewでは検索を無効化します。実行時フォールバックは設けません。
+Portal固有の `/api/search` はチャットとは別機能で、`PORTAL_SEARCH_INDEX` と共有Workerの `VoyageEmbedding` service bindingを使って公開ページを検索します。Productionのqueryは `voyage-4-lite` / 1024次元で、Previewは検索を無効化します。失敗時に別の埋め込みモデルへ切り替えません。
 
-`npm run build` は `dist/vector-corpus.json` まで生成します。`npm run sync:portal-vectorize:dry-run` でsource数、vector数、corpus versionを確認できます。実同期先は `aceserver-portal-search-bge-m3-1024-production-v1` だけに制限し、対象index名と完全一致する `--confirm-production` がない実行、管理外ID、20%を超える削除、10 source未満のcorpusでは停止します。旧OpenAI indexはロールバック用に保持し、新しい同期先からは更新しません。
+`npm run build` は `dist/vector-corpus.json` まで生成します。同期先はBGEとVoyageの許可済み索引に限定し、`--confirm-production`、管理ID、corpusと削除計画を検証します。20%超の削除は対象indexとcorpusを含む承認済みplan SHA-256が一致した場合だけ許可します。複数索引を同期する際は `approved_plan_target` で承認対象を指定します。
 
-`.github/workflows/sync-portal-vectorize.yml` はProduction専用です。GitHub連携のPagesで公開されたcommitとcorpus versionを照合してから運用indexへ同期し、全vector IDの一致と実query canaryを確認します。`PORTAL_SEARCH_INDEX` bindingは検証済みのv2を参照します。通常は`main`へのpush、取りこぼしは6時間ごとのscheduleで再照合し、20%超の削除をworkflowから上書きする経路は設けません。旧indexは切替直後のロールバック用に削除せず保持します。
-
-自動同期には Repository Variable `ACESERVER_PORTAL_VECTORIZE_SYNC_ENABLED=true` と、GitHub Environment `cloudflare-portal-search-production` の `CLOUDFLARE_PORTAL_SEARCH_PRODUCTION_API_TOKEN` を使います。Cloudflare tokenは対象accountに限定し、Vectorize更新とWorkers AI実行に必要な最小権限を付与します。この構成はProduction専用であり、PreviewにはVectorize bindingや同期用secret、GitHub Environmentを置きません。Cloudflare Pages PreviewとPreview用D1は維持し、Previewは検索kill switchをすべて `"false"` にした安全なフォールバックで動作します。
+`.github/workflows/sync-portal-vectorize.yml` は公開commitとcorpus versionを照合し、Productionの候補索引へ同期します。Repository Variable `ACESERVER_PORTAL_VECTORIZE_SYNC_ENABLED=true` に加え、Voyage側は `PORTAL_VOYAGE_SYNC_ENABLED=true` とGitHub Environment `cloudflare-portal-search-production` の `VOYAGE_API_KEY` が必要です。BGE同期は既定で継続し、依存が解消した後に `PORTAL_BGE_SYNC_ENABLED=false` で停止できます。BGEのみ・両方・Voyageのみのreceiptを分け、別構成の完了を流用しません。候補索引と公開corpusの一致、検索品質、共有bindingを確認してから切り替えます。障害時は検索modelと6索引のbindingを一緒にrevertし、旧索引は保持します。
 
 本番custom domainの `/api/alpha-chat` へのPOSTは、`acecore.net` zoneのCloudflare WAF rate limiting rule `Rate limit Aceserver Alpha chat` で保護します。IP・colo単位で10秒に5 requestまでとし、超過時は10秒blockします。このruleはrepository外のCloudflare設定なので、zoneを再作成した場合は再設定してください。`pages.dev` のpreview URLはこのzone-level ruleの対象外です。
 

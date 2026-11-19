@@ -14,6 +14,7 @@ import {
 } from '../scripts/build-portal-vector-corpus.mjs'
 import {
   extractEmbeddingData,
+  probeVoyageDocument,
   PRODUCTION_INDEX_NAME,
   syncPortalVectorize,
   validatePortalCorpus,
@@ -86,7 +87,7 @@ test('keeps the sync workflow production-only with explicit safety gates', async
   )
   assert.match(workflow, /cloudflare-portal-search-production/u)
   assert.match(workflow, new RegExp(PRODUCTION_INDEX_NAME, 'u'))
-  assert.match(workflow, /--confirm-production "\$VECTORIZE_INDEX_NAME"/u)
+  assert.match(workflow, /--confirm-production "\$index"/u)
   assert.doesNotMatch(workflow, /--allow-large-delete|allow_large_delete/u)
   assert.match(
     workflow,
@@ -95,14 +96,155 @@ test('keeps the sync workflow production-only with explicit safety gates', async
   assert.match(
     wrangler,
     new RegExp(
-      `"binding": "PORTAL_SEARCH_INDEX",[^}]*"index_name": "${PRODUCTION_INDEX_NAME}"`,
+      `"binding": "PORTAL_SEARCH_INDEX",[^}]*"index_name": "aceserver-portal-search-voyage-4-lite-1024-production-v1"`,
       'u',
     ),
   )
   assert.equal(
-    wrangler.split(`"index_name": "${PRODUCTION_INDEX_NAME}"`).length - 1,
+    wrangler.split(
+      `"index_name": "aceserver-portal-search-voyage-4-lite-1024-production-v1"`,
+    ).length - 1,
     1,
   )
+})
+
+test('Voyage候補は専用キーと照合済みplanを維持して文書を同期する', async () => {
+  const corpus = createPortalCorpus()
+  const corpusFile = await writeCorpus(corpus)
+  const indexName = 'aceserver-portal-search-voyage-4-lite-1024-production-v1'
+  const current = corpus.chunks.slice(0, -1).map(({ id }) => id)
+  const options = {
+    accountId: 'account',
+    apiToken: 'token',
+    indexName,
+    productionConfirmation: indexName,
+    corpusFile,
+    waitForMutations: false,
+    logger: { log() {} },
+  }
+  await assert.rejects(
+    syncPortalVectorize({
+      ...options,
+      voyageApiKey: '',
+      fetchImpl() {
+        assert.fail('network must not run')
+      },
+    }),
+    /VOYAGE_API_KEY/u,
+  )
+  let embeddings = 0
+  const fetchImpl = async (input, init = {}) => {
+    const url = String(input)
+    if (url.endsWith(`/indexes/${indexName}`))
+      return cloudflareResponse({
+        name: indexName,
+        config: { dimensions: 1024, metric: 'cosine' },
+      })
+    if (url.includes('/list?'))
+      return cloudflareResponse({
+        vectors: current.map((id) => ({ id })),
+        count: current.length,
+        totalCount: current.length,
+        isTruncated: false,
+      })
+    if (url === 'https://ai.mongodb.com/v1/embeddings') {
+      embeddings += 1
+      assert.deepEqual(JSON.parse(init.body), {
+        model: 'voyage-4-lite',
+        input: [corpus.chunks.at(-1).text],
+        input_type: 'document',
+        output_dimension: 1024,
+        output_dtype: 'float',
+        truncation: false,
+      })
+      return Response.json({
+        model: 'voyage-4-lite',
+        data: [{ index: 0, embedding: TEST_EMBEDDING }],
+      })
+    }
+    if (url.endsWith('/upsert')) {
+      const row = JSON.parse((await init.body.get('vectors').text()).trim())
+      assert.equal(row.namespace, 'ja')
+      assert.deepEqual(row.metadata, {
+        ...corpus.chunks.at(-1).metadata,
+        content: corpus.chunks.at(-1).text,
+      })
+      return cloudflareResponse({ mutationId: 'test' })
+    }
+    throw Error('unexpected request')
+  }
+  const result = await syncPortalVectorize({
+    ...options,
+    voyageApiKey: 'test',
+    fetchImpl,
+  })
+  assert.equal(result.upserted, 1)
+  assert.equal(embeddings, 1)
+})
+
+test('Voyage同期flagと対象別approvalとreceiptを分離する', async () => {
+  const workflow = await readFile(
+    new URL('../.github/workflows/sync-portal-vectorize.yml', import.meta.url),
+    'utf8',
+  )
+  assert.match(workflow, /PORTAL_VOYAGE_SYNC_ENABLED/)
+  assert.match(workflow, /PORTAL_BGE_SYNC_ENABLED/)
+  assert.match(workflow, /portal-vectorize-receipt-both/)
+  assert.match(workflow, /portal-vectorize-receipt-voyage/)
+  assert.match(workflow, /approved_plan_target/)
+  assert.match(workflow, /VOYAGE_API_KEY: \$\{\{ secrets\.VOYAGE_API_KEY \}\}/)
+})
+
+test('Voyageの不正な文書応答では候補索引を変更しない', async () => {
+  const corpus = createPortalCorpus()
+  const corpusFile = await writeCorpus(corpus)
+  const indexName = 'aceserver-portal-search-voyage-4-lite-1024-production-v1'
+  const current = corpus.chunks.slice(0, -1).map(({ id }) => id)
+  for (const payload of [
+    { model: 'other', data: [{ index: 0, embedding: TEST_EMBEDDING }] },
+    { model: 'voyage-4-lite', data: [] },
+    { model: 'voyage-4-lite', data: [{ index: 1, embedding: TEST_EMBEDDING }] },
+    { model: 'voyage-4-lite', data: [{ index: 0, embedding: [1] }] },
+    {
+      model: 'voyage-4-lite',
+      data: [{ index: 0, embedding: [...TEST_EMBEDDING.slice(1), null] }],
+    },
+  ]) {
+    let mutated = false
+    const fetchImpl = async (input) => {
+      const url = String(input)
+      if (url.endsWith(`/indexes/${indexName}`))
+        return cloudflareResponse({
+          name: indexName,
+          config: { dimensions: 1024, metric: 'cosine' },
+        })
+      if (url.includes('/list?'))
+        return cloudflareResponse({
+          vectors: current.map((id) => ({ id })),
+          count: current.length,
+          totalCount: current.length,
+          isTruncated: false,
+        })
+      if (url === 'https://ai.mongodb.com/v1/embeddings')
+        return Response.json(payload)
+      mutated = true
+      throw Error('unexpected mutation')
+    }
+    await assert.rejects(
+      syncPortalVectorize({
+        accountId: 'account',
+        apiToken: 'token',
+        indexName,
+        productionConfirmation: indexName,
+        corpusFile,
+        voyageApiKey: 'test',
+        fetchImpl,
+        waitForMutations: false,
+        logger: { log() {} },
+      }),
+    )
+    assert.equal(mutated, false)
+  }
 })
 
 test('extracts a public story from built portal HTML', () => {
@@ -940,3 +1082,80 @@ function cloudflareResponse(result, status = 200) {
 }
 
 const silentLogger = { log() {} }
+
+test('合成文書probeはwriterと同じVoyage契約を使い不正応答を拒否する', async () => {
+  let request
+  const fetchImpl = async (url, init) => {
+    request = { url, body: JSON.parse(init.body), redirect: init.redirect }
+    return Response.json({
+      model: 'voyage-4-lite',
+      data: [{ index: 0, embedding: Array(1024).fill(0.1) }],
+    })
+  }
+  assert.deepEqual(
+    await probeVoyageDocument({ voyageApiKey: 'synthetic', fetchImpl }),
+    { model: 'voyage-4-lite', dimensions: 1024 },
+  )
+  assert.equal(request.url, 'https://ai.mongodb.com/v1/embeddings')
+  assert.equal(request.redirect, 'error')
+  assert.deepEqual(request.body, {
+    model: 'voyage-4-lite',
+    input: ['これは検索用の合成文書です。'],
+    input_type: 'document',
+    output_dimension: 1024,
+    output_dtype: 'float',
+    truncation: false,
+  })
+  await assert.rejects(
+    probeVoyageDocument({ voyageApiKey: '', fetchImpl }),
+    /VOYAGE_API_KEY/u,
+  )
+  for (const response of [
+    { model: 'wrong', data: [{ index: 0, embedding: Array(1024).fill(0.1) }] },
+    {
+      model: 'voyage-4-lite',
+      data: [{ index: 1, embedding: Array(1024).fill(0.1) }],
+    },
+    { model: 'voyage-4-lite', data: [{ index: 0, embedding: [0.1] }] },
+    {
+      model: 'voyage-4-lite',
+      data: [{ index: 0, embedding: Array(1024).fill(null) }],
+    },
+  ])
+    await assert.rejects(
+      probeVoyageDocument({
+        voyageApiKey: 'synthetic',
+        fetchImpl: async () => Response.json(response),
+      }),
+    )
+})
+
+test('手動Voyage probeはmain限定で同期や索引変更を起動しない', async () => {
+  const workflow = await readFile(
+    new URL('../.github/workflows/sync-portal-vectorize.yml', import.meta.url),
+    'utf8',
+  )
+  const sync = workflow.slice(
+    workflow.indexOf('  sync-production:'),
+    workflow.indexOf('  probe-voyage-document:'),
+  )
+  const probe = workflow.slice(workflow.indexOf('  probe-voyage-document:'))
+  assert.match(workflow, /voyage_probe:[\s\S]*?type: boolean\s+default: false/u)
+  assert.match(
+    sync,
+    /!\(github\.event_name == 'workflow_dispatch' && inputs\.voyage_probe == true\)/u,
+  )
+  assert.match(
+    probe,
+    /github\.ref == 'refs\/heads\/main'[\s\S]*?github\.event_name == 'workflow_dispatch'[\s\S]*?inputs\.voyage_probe == true/u,
+  )
+  assert.match(probe, /name: cloudflare-portal-search-production/u)
+  assert.match(probe, /vars\.PORTAL_VOYAGE_SYNC_ENABLED/u)
+  assert.match(probe, /secrets\.VOYAGE_API_KEY/u)
+  assert.match(probe, /\$VOYAGE_ENABLED.*!=.*true/u)
+  assert.match(probe, /\$\{VOYAGE_API_KEY:-\}/u)
+  assert.doesNotMatch(
+    probe,
+    /CLOUDFLARE_API_TOKEN|sync-vectorize\.mjs|sync-portal-vectorize\.mjs/u,
+  )
+})

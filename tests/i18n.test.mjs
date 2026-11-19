@@ -26,13 +26,20 @@ import {
   stripLocalePrefix,
   TRANSLATED_LOCALES,
 } from '../src/i18n/config.ts'
-import { TRANSLATIONS } from '../src/i18n/translations.ts'
+import { getUi, TRANSLATIONS } from '../src/i18n/translations.ts'
 import {
   createAlphaInlineMarkdownPattern,
   escapeRegExpLiteral,
 } from '../src/utils/alpha-link-pattern.ts'
 
 const TEST_CONTRACT_SECRET = 'portal-translation-test-secret-32-bytes'
+
+test('検索入力の送信先を9言語でVoyageと表示する', () => {
+  for (const locale of LOCALES) {
+    assert.match(getUi(locale).search.privacy, /MongoDB Voyage AI/u)
+    assert.doesNotMatch(getUi(locale).search.privacy, /Cloudflare Workers AI/u)
+  }
+})
 
 test('公開localeは日本語を既定とする9言語で固定する', () => {
   assert.deepEqual(LOCALES, [

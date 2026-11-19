@@ -128,33 +128,38 @@
       "vectorize": [
         {
           "binding": "WIKI_SEARCH_INDEX",
-          "index_name": "aceserver-wiki-search-bge-m3-1024-production-v1",
+          "index_name": "aceserver-wiki-search-voyage-4-lite-1024-production-v1",
         },
         {
           "binding": "PORTAL_SEARCH_INDEX",
-          "index_name": "aceserver-portal-search-bge-m3-1024-production-v1",
+          "index_name": "aceserver-portal-search-voyage-4-lite-1024-production-v1",
         },
         {
           "binding": "ACECORE_SEARCH_INDEX",
-          "index_name": "acecore-net-search-bge-m3-1024-production-v1",
+          "index_name": "acecore-net-search-voyage-4-lite-1024-production-v1",
         },
         {
           "binding": "SCHOOLS_SEARCH_INDEX",
-          "index_name": "acecore-schools-search-bge-m3-1024-production-v1",
+          "index_name": "acecore-schools-search-voyage-4-lite-1024-production-v1",
         },
         {
           "binding": "SYSTEMS_SEARCH_INDEX",
-          "index_name": "acecore-systems-search-bge-m3-1024-production-v1",
+          "index_name": "acecore-systems-search-voyage-4-lite-1024-production-v1",
         },
         {
           "binding": "WORLD_FOUNDATION_SEARCH_INDEX",
-          "index_name": "world-foundation-search-bge-m3-1024-production-v1",
+          "index_name": "world-foundation-search-voyage-4-lite-1024-production-v1",
         },
       ],
       "ai": {
         "binding": "AI",
       },
       "services": [
+        {
+          "binding": "VOYAGE_EMBEDDER",
+          "service": "acecore-chat-worker",
+          "entrypoint": "VoyageEmbedding",
+        },
         {
           "binding": "CMS_GITHUB_TOKEN_ISSUER",
           "service": "aceserver-portal-cms-token-issuer",
@@ -186,7 +191,7 @@
         "CMS_ACCESS_TEAM_DOMAIN": "https://acecore.cloudflareaccess.com",
         "CMS_ACCESS_HOSTNAMES": "asv.acecore.net",
         "SKIN_TURNSTILE_SITE_KEY": "0x4AAAAAAErIZJD3i5QFG2LB",
-        "SEARCH_EMBEDDING_MODEL": "@cf/baai/bge-m3",
+        "SEARCH_EMBEDDING_MODEL": "voyage-4-lite",
         "SEARCH_EMBEDDING_DIMENSIONS": "1024",
         "WIKI_SEARCH_ENABLED": "true",
         "WIKI_SEARCH_MIN_SCORE": "0.40",

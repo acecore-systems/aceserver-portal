@@ -9,8 +9,17 @@ import {
 
 const markerUrl =
   'https://asv.acecore.net/.well-known/aceserver-portal-build.json'
-const indexName = 'aceserver-portal-search-bge-m3-1024-production-v1'
-const receiptName = 'portal-vectorize-receipt'
+const profile = process.env.PORTAL_SYNC_PROFILE || 'bge'
+if (!['bge', 'both', 'voyage'].includes(profile))
+  throw new Error('Invalid portal sync profile')
+const bgeIndex = 'aceserver-portal-search-bge-m3-1024-production-v1'
+const voyageIndex = 'aceserver-portal-search-voyage-4-lite-1024-production-v1'
+const indexName = profile === 'voyage' ? voyageIndex : bgeIndex
+const indexNames = profile === 'both' ? [bgeIndex, voyageIndex] : [indexName]
+const receiptName =
+  profile === 'bge'
+    ? 'portal-vectorize-receipt'
+    : `portal-vectorize-receipt-${profile}`
 const stateDir = '.portal-sync-state'
 export const maxReceiptAgeMs = 24 * 60 * 60 * 1000
 
@@ -26,6 +35,10 @@ export function shouldReconcile({
     Boolean(force) ||
     receipt?.schema !== 1 ||
     receipt?.indexName !== indexName ||
+    (profile === 'bge'
+      ? receipt?.profile !== undefined
+      : receipt?.profile !== profile ||
+        JSON.stringify(receipt?.indexNames) !== JSON.stringify(indexNames)) ||
     receipt?.corpusVersion !== corpusVersion ||
     receipt?.toolingVersion !== toolingVersion ||
     !Number.isFinite(age) ||
@@ -188,6 +201,7 @@ async function record() {
   const receipt = {
     schema: 1,
     indexName,
+    ...(profile === 'bge' ? {} : { profile, indexNames }),
     corpusVersion: current.marker.searchCorpusVersion,
     toolingVersion: current.toolingVersion,
     verifiedAt: current.sync
