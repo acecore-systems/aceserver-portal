@@ -2,7 +2,7 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:87a6762ab0bd44b3b6303f26f16688bc276738d99226402f6fc4f6dbe2917baf
+sourceHash: sha256:c54545e0d5c17a0cbebbdd5fe8dd4e1567e392664492c3f9760d48bf266e737e
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -209,6 +209,8 @@ El 9 de septiembre de 2025, 山田 mostró el paisaje y los detalles del ferroca
 
 En octubre de 2025, durante los preparativos del boletín de Aceserver, sekisei informó de que ya tenía un montaje preliminar del vídeo de presentación del servidor de temporada.
 
+El 18 de octubre de 2025, End&#12539;コッカー compartió un gráfico que comparaba varios servidores de Minecraft por su cercanía al juego original y por la libertad para elegir cómo jugar. El gráfico sirvió para estudiar la posición de Aceserver en ese momento.
+
 El 26 de octubre de 2025, End&#12539;コッカー dio las gracias a quienes colaboraron con el pueblo de Halloween y con el evento. [Agradecimientos del pueblo de Halloween y del evento](https://discord.com/channels/737538781024092170/779569416438415421/1432012641571704905)
 
 En octubre de 2025, sh agradeció la ayuda en la preparación de eventos del Comité de Revitalización de Aceserver y pidió ideas para el siguiente. En noviembre, un anuncio presentó a amagi_467 como iniciador del primer torneo de mahjong de Aceserver, que el comité tenía previsto organizar. [Agradecimientos y convocatoria de ideas](https://discord.com/channels/737538781024092170/774152638450237460/1432028687376715897) [Anuncio del torneo de mahjong](https://discord.com/channels/737538781024092170/774152638450237460/1442742157315149865)
@@ -367,6 +369,8 @@ En mayo de 2025, End&#12539;コッカー compartió ideas para un RPG. Propuso q
 
 El 22 de junio de 2025, End&#12539;コッカー informó de que estaba construyendo en una isla que había hecho Yukke.
 
+El 1 de septiembre de 2025, End&#12539;コッカー propuso incorporar creaciones de jugadores de la comunidad como instalaciones del servidor de contenidos.
+
 El 2 de septiembre de 2025, mientras estudiaba la idea de Duelo, Yukke compartió como referencia dos capturas del equipo de combate de otro servidor.
 
 El 5 de septiembre, End&#12539;コッカー informó en el antiguo canal Construcción del vestíbulo de que había preparado una base y pidió ayuda para construir. El 7 de septiembre propuso trasladar las escaleras del servidor de minijuegos y añadir puestos. El 9 compartió tres imágenes del trabajo en curso que mostraban la fuente y los puestos de la plaza, además de un velero, y pidió la opinión de Yukke.
@@ -468,6 +472,10 @@ En enero de 2025, sekisei anunció que la receta de fabricación de hierba no es
 El 28 de marzo de 2025, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; preparó y compartió un borrador en el antiguo hilo de Discord para propuestas de reglas. Incluía apartados sobre la colaboración y los conflictos entre jugadores.
 
 En julio de 2025, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; elaboró y compartió un diagrama como referencia para estudiar el sistema. Ese mismo mes, sekisei informó de que había podido conectarse desde Bedrock Edition.
+
+En septiembre de 2025, sekisei reunió propuestas sobre cómo crear salas de minijuegos, cómo acceder a ellas desde el vestíbulo y cómo configurarlas. El 11 de septiembre, あすたん propuso guardar los resultados de las partidas para poder consultarlos. El 15, Yukke propuso registrar y mostrar victorias, derrotas y rachas de victorias.
+
+El 6 y el 27 de octubre de 2025, あすたん informó de que había preparado un sistema para reunir y consultar los ajustes de los minijuegos en pantalla.
 
 Entre finales de octubre y principios de noviembre de 2025, ゆり organizó y publicó por separado las reglas generales, las del servidor de supervivencia, las de contenido y temporadas, las de creación de servidores temáticos, las de la comunidad y las de Discord en el foro oficial de reglas de Discord. [Publicación de las reglas generales](https://discord.com/channels/737538781024092170/1433831969816449064/1433831969816449064) [Publicación de las reglas de la comunidad](https://discord.com/channels/737538781024092170/1433830521238061227/1433830521238061227) [Publicación de las reglas de Discord](https://discord.com/channels/737538781024092170/1433957818674970654/1433957818674970654)
 

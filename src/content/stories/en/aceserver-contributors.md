@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:87a6762ab0bd44b3b6303f26f16688bc276738d99226402f6fc4f6dbe2917baf
+sourceHash: sha256:c54545e0d5c17a0cbebbdd5fe8dd4e1567e392664492c3f9760d48bf266e737e
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -209,6 +209,8 @@ On September 9, 2025, 山田 featured railway scenery and details with a map ima
 
 In October 2025, while preparing for Aceserver News Desk, sekisei reported that a rough cut of a video introducing the Season Server was ready.
 
+On October 18, 2025, End&#12539;コッカー shared a chart comparing several Minecraft servers by how close they were to vanilla gameplay and how much freedom players had in choosing how to play. They used it to consider where Aceserver fit at the time.
+
 On October 26, 2025, End&#12539;コッカー thanked the people who helped with Halloween Town and the event. [Halloween Town and event acknowledgments](https://discord.com/channels/737538781024092170/779569416438415421/1432012641571704905)
 
 In October 2025, sh thanked the people who helped make events for the Aceserver Revitalization Committee and invited ideas for the next one. A November announcement named amagi_467 as the initiator of the first Aceserver Mahjong Tournament, which the committee planned to host. [Event thanks and call for ideas](https://discord.com/channels/737538781024092170/774152638450237460/1432028687376715897) [Mahjong tournament announcement](https://discord.com/channels/737538781024092170/774152638450237460/1442742157315149865)
@@ -367,6 +369,8 @@ In May 2025, End&#12539;コッカー shared RPG ideas for trading Psalms of Memo
 
 On June 22, 2025, End&#12539;コッカー reported building on an island that Yukke had made.
 
+On September 1, 2025, End&#12539;コッカー proposed using creations by regular players as facilities on the Content Server.
+
 On September 2, 2025, Yukke shared two reference screenshots of combat gear from another server while exploring the Duel concept.
 
 On September 5, End&#12539;コッカー reported laying a foundation and asked for help with the build in the old Lobby Building channel. On September 7, they suggested relocating the minigame server’s stairs and adding stalls. On September 9, they asked Yukke for feedback and shared three work-in-progress images showing the plaza’s fountain and stalls, as well as a sailing ship.
@@ -468,6 +472,10 @@ In January 2025, sekisei announced that the grass crafting recipe was unavailabl
 On March 28, 2025, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; compiled and shared a draft in the old Discord thread for proposed rules. It included sections on cooperation and disputes between players.
 
 In July 2025, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; created and shared a diagram as a reference for discussing the system. That month, sekisei reported successfully connecting from Bedrock Edition.
+
+In September 2025, sekisei outlined ideas for creating minigame rooms, joining them from the lobby, and configuring them. On September 11, あすたん proposed storing match records so players could look them up. On September 15, Yukke proposed recording and displaying wins, losses, and win streaks.
+
+On October 6 and 27, 2025, あすたん reported setting up a way to review the minigame settings together on screen.
 
 From late October to early November 2025, ゆり organized and posted separate sets of rules in the official Discord rules forum. The posts covered general rules, the survival server, content, seasons, setting up concept servers, the community, and Discord. [General rules post](https://discord.com/channels/737538781024092170/1433831969816449064/1433831969816449064) [Community rules post](https://discord.com/channels/737538781024092170/1433830521238061227/1433830521238061227) [Discord rules post](https://discord.com/channels/737538781024092170/1433957818674970654/1433957818674970654)
 

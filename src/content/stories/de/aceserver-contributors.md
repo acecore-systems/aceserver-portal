@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:87a6762ab0bd44b3b6303f26f16688bc276738d99226402f6fc4f6dbe2917baf
+sourceHash: sha256:c54545e0d5c17a0cbebbdd5fe8dd4e1567e392664492c3f9760d48bf266e737e
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -209,6 +209,8 @@ Am 9. September 2025 stellte 山田 die Landschaft und Details der Bahnstrecke m
 
 Im Oktober 2025 berichtete sekisei bei der Vorbereitung der Aceserver-Nachrichten, dass ein Rohschnitt des Videos über den Saisonserver vorlag.
 
+Am 18. Oktober 2025 teilte End&#12539;コッカー ein Schaubild, das mehrere Minecraft-Server danach verglich, wie nah sie am unveränderten Spiel waren und wie viel Freiheit sie bei der Spielweise boten. Damit untersuchte End&#12539;コッカー, wie Aceserver damals einzuordnen war.
+
 Am 26. Oktober 2025 dankte End&#12539;コッカー den Menschen, die beim Halloween-Dorf und dem Event geholfen hatten. [Dank für das Halloween-Dorf und das Event](https://discord.com/channels/737538781024092170/779569416438415421/1432012641571704905)
 
 Im Oktober 2025 dankte sh den Helfern bei den Veranstaltungen des Belebungskomitees von Aceserver und bat um Ideen für das nächste Projekt. Eine Ankündigung im November nannte amagi_467 als Initiator des ersten Mahjong-Turniers von Aceserver, das das Komitee ausrichten wollte. [Dank und Aufruf für Ideen](https://discord.com/channels/737538781024092170/774152638450237460/1432028687376715897) [Ankündigung des Mahjong-Turniers](https://discord.com/channels/737538781024092170/774152638450237460/1442742157315149865)
@@ -367,6 +369,8 @@ Im Mai 2025 teilte End&#12539;コッカー Ideen für ein Rollenspiel. Die beim 
 
 Am 22. Juni 2025 berichtete End&#12539;コッカー, auf einer von Yukke angelegten Insel zu bauen.
 
+Am 1. September 2025 schlug End&#12539;コッカー vor, Werke von Spielern aus der Community als Einrichtungen auf dem Content-Server zu übernehmen.
+
 Am 2. September 2025 teilte Yukke beim Ausarbeiten der Idee Duell als Referenz zwei Screenshots mit Kampfausrüstung von einem anderen Server.
 
 Am 5. September berichtete End&#12539;コッカー im früheren Kanal Lobby-Bau, ein Fundament angelegt zu haben, und bat um Hilfe beim Bauen. Am 7. September schlug End&#12539;コッカー vor, die Treppen des Minispielservers zu versetzen und Stände aufzustellen. Am 9. September zeigte End&#12539;コッカー drei Bilder vom Zwischenstand mit dem Brunnen und den Ständen auf dem Platz sowie einem Segelschiff und bat Yukke um Rückmeldung.
@@ -468,6 +472,10 @@ Im Januar 2025 teilte sekisei mit, dass das Herstellungsrezept für Gras nach ei
 Am 28. März 2025 stellte LuMiSIA\_&#26376;&#31070;&#24736;&#33673; einen Regelentwurf zusammen und teilte ihn im damaligen Discord-Thread für Regelvorschläge. Der Entwurf enthielt Punkte zur Zusammenarbeit und zu Konflikten zwischen Spielern.
 
 Im Juli 2025 erstellte und teilte LuMiSIA\_&#26376;&#31070;&#24736;&#33673; ein Schaubild als Grundlage für die Diskussion über das System. Im selben Monat meldete sekisei eine erfolgreiche Verbindung mit Bedrock Edition.
+
+Im September 2025 fasste sekisei Ideen zum Erstellen von Minispielräumen, zum Beitritt aus der Lobby und zu den Einstellungen zusammen. Am 11. September schlug あすたん vor, Spielergebnisse zu speichern und abrufbar zu machen. Am 15. September schlug Yukke vor, Siege, Niederlagen und Siegesserien zu erfassen und anzuzeigen.
+
+Am 6. und am 27. Oktober 2025 berichtete あすたん, eine Möglichkeit eingerichtet zu haben, die Minispieleinstellungen auf dem Bildschirm zu bündeln und einzusehen.
 
 Von Ende Oktober bis Anfang November 2025 ordnete ゆり die Regeln und veröffentlichte sie als einzelne Beiträge im offiziellen Discord-Regelforum. Die Beiträge behandelten die allgemeinen Regeln, den Survival-Server, Inhalte, Saisons, die Einrichtung von Konzeptservern, die Community und Discord. [Beitrag zu den allgemeinen Regeln](https://discord.com/channels/737538781024092170/1433831969816449064/1433831969816449064) [Beitrag zu den Community-Regeln](https://discord.com/channels/737538781024092170/1433830521238061227/1433830521238061227) [Beitrag zu den Discord-Regeln](https://discord.com/channels/737538781024092170/1433957818674970654/1433957818674970654)
 
