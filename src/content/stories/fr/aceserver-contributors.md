@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:b9dec405fbc4458efd02cfc0402ecdd357f851cdccd5d04eda586fc64a2ee434
+sourceHash: sha256:679c60d2ef701cbc60e98c21107cac53e4767025c1863bd44f834a1f6f8b9394
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -177,6 +177,8 @@ En décembre 2024, Pluto a proposé un espace appelé Zone de parkour et a annon
 
 En janvier 2025, une annonce a présenté Wenti (Hosttech255), Pluto et あすたん comme membres de l’équipe de soutien aux événements. [Annonce du soutien aux événements](https://discord.com/channels/737538781024092170/774152638450237460/1323911696237990039)
 
+Le 12 janvier 2025, sekisei a sollicité des idées de sujets de discussion quotidiens. Pluto a proposé les plats préférés et le sport, タケ les villes, gasawara les genres de jeux vidéo et de musique, et Merutak les biomes de Minecraft. Le 20 janvier, Merutak a ouvert un fil pour conserver les anciens sujets, auquel Pluto a aussi ajouté des entrées.
+
 En janvier 2025, sh a proposé de faire connaître le serveur avec des YouTube Shorts. LuMiSIA\_&#26376;&#31070;&#24736;&#33673; a décrit les étapes, du scénario au tournage, au montage, à la publication et à l’annonce, et a proposé d’aider au tournage.
 
 En février 2025, タケ a annoncé l’ouverture prévue d’une nouvelle gare sur la ligne principale de &#26628;&#38920;. En août, タケ a présenté le projet de rénovation de la station Colisée d’Ibaraki et l’interruption partielle prévue du service sur la ligne 1 du monorail Ace. En décembre, タケ a annoncé la distribution des cadeaux de Noël du monorail Ace.
@@ -240,6 +242,10 @@ En mars 2026, End&#12539;コッカー a partagé un essai de vidéo de présenta
 Le 7 mars 2026, End&#12539;コッカー a sollicité des idées d’événements et des volontaires, y compris pour des activités en dehors du PvP.
 
 En mars 2026, &#12486;&#12451;&#12512;&#12540; a sollicité des idées pour une nouvelle icône et des récits sur ce qui se passait sur le serveur pour le Journal d’Aceserver du comité de revitalisation d’Aceserver.
+
+Le 13 juillet 2026, sekisei a invité les membres à poser des questions, a expliqué comment les questions qui revenaient au même seraient comptées et a indiqué que Yuri-kun répondrait directement aux messages. Le 14 juillet, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; a annoncé un total de 120 questions pour la journée.
+
+Fin juillet 2026, sekisei a indiqué que les projets de mini-jeu dans Minecraft et d’activité hors du jeu étaient presque prêts. Les membres étaient aussi invités à suggérer des activités à préparer ensuite.
 
 Le 29 juillet 2026, &#29792;&#22856; a proposé une course de bateaux sur glace où les joueurs recevraient une récompense s’ils terminaient dans le temps imparti.
 

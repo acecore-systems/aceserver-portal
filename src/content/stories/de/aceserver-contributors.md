@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:b9dec405fbc4458efd02cfc0402ecdd357f851cdccd5d04eda586fc64a2ee434
+sourceHash: sha256:679c60d2ef701cbc60e98c21107cac53e4767025c1863bd44f834a1f6f8b9394
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -177,6 +177,8 @@ Im Dezember 2024 schlug Pluto einen Bereich namens Parkour-Zone vor und berichte
 
 Im Januar 2025 wurden Wenti (Hosttech255), Pluto und あすたん als Unterstützer für Veranstaltungen vorgestellt. [Ankündigung zur Veranstaltungsunterstützung](https://discord.com/channels/737538781024092170/774152638450237460/1323911696237990039)
 
+Am 12. Januar 2025 bat sekisei um Vorschläge für täglich wechselnde Gesprächsthemen. Pluto schlug Lieblingsgerichte und Sport vor, タケ Städte und Orte, gasawara Spiel- und Musikgenres und Merutak Minecraft-Biome. Am 20. Januar eröffnete Merutak einen Thread für frühere Themen, in dem Pluto weitere Einträge ergänzte.
+
 Im Januar 2025 schlug sh vor, den Server mit YouTube Shorts bekannter zu machen. LuMiSIA\_&#26376;&#31070;&#24736;&#33673; skizzierte die Schritte vom Drehbuch über Aufnahmen und Schnitt bis zur Veröffentlichung und Ankündigung und bot Hilfe bei den Aufnahmen an.
 
 Im Februar 2025 kündigte タケ die geplante Eröffnung einer neuen Station an der Hauptstrecke von &#26628;&#38920; an. Im August informierte タケ über die geplante Renovierung der Station Ibaraki-Kolosseum und die teilweise Unterbrechung des Betriebs auf Linie 1 der Ace-Monorail. Im Dezember kündigte タケ die Verteilung der Weihnachtsgeschenke der Ace-Monorail an.
@@ -240,6 +242,10 @@ Im März 2026 teilte End&#12539;コッカー eine Probeversion eines Videos übe
 Am 7. März 2026 bat End&#12539;コッカー um Veranstaltungsideen und Mithilfe und rief auch zu Vorschlägen jenseits von PvP auf.
 
 Im März 2026 bat &#12486;&#12451;&#12512;&#12540; für das Aceserver-Tagebuch des Belebungskomitees von Aceserver um Ideen für ein neues Symbol und um Beiträge zu Ereignissen auf dem Server.
+
+Am 13. Juli 2026 bat sekisei um Fragen und erläuterte, wie ähnliche Fragen gezählt würden und dass Yuri-kun direkt auf die Nachrichten antworten würde. Am 14. Juli meldete LuMiSIA\_&#26376;&#31070;&#24736;&#33673; für diesen Tag insgesamt 120 Fragen.
+
+Ende Juli 2026 berichtete sekisei, dass die Pläne für zwei Aktivitäten fast fertig seien, ein Minispiel in Minecraft und ein Vorhaben außerhalb von Minecraft. Außerdem bat sekisei um Vorschläge für weitere Aktivitäten.
 
 Am 29. Juli 2026 schlug &#29792;&#22856; ein Eisbootrennen vor, bei dem Spieler eine Belohnung erhalten würden, wenn sie das Ziel innerhalb der vorgegebenen Zeit erreichten.
 

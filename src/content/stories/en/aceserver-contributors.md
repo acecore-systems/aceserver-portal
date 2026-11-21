@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:b9dec405fbc4458efd02cfc0402ecdd357f851cdccd5d04eda586fc64a2ee434
+sourceHash: sha256:679c60d2ef701cbc60e98c21107cac53e4767025c1863bd44f834a1f6f8b9394
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -177,6 +177,8 @@ In December 2024, Pluto proposed an area called Parkour Zone and reported that i
 
 In January 2025, Aceserver announced that Wenti (Hosttech255), Pluto, and あすたん had become event supporters. [Event supporter announcement](https://discord.com/channels/737538781024092170/774152638450237460/1323911696237990039)
 
+On January 12, 2025, sekisei invited suggestions for a daily discussion topic. Pluto suggested favorite foods and sports, タケ suggested towns and cities, gasawara suggested game and music genres, and Merutak suggested Minecraft biomes. On January 20, Merutak opened a thread to keep track of past topics, and Pluto added entries.
+
 In January 2025, sh proposed using YouTube Shorts to promote the server. LuMiSIA\_&#26376;&#31070;&#24736;&#33673; laid out the steps from scripting through filming, editing, posting, and promotion, and offered to help with filming.
 
 In February 2025, タケ announced plans to open a new station on the &#26628;&#38920; Main Line. In August, タケ announced plans to renovate Ibaraki Colosseum Station and suspend service on part of Ace Monorail Line 1. In December, タケ announced the Ace Monorail Christmas gift distribution.
@@ -240,6 +242,10 @@ In March 2026, End&#12539;コッカー shared a draft video introducing Aceserve
 On March 7, 2026, End&#12539;コッカー invited event ideas and volunteers, including ideas for activities beyond PvP.
 
 In March 2026, &#12486;&#12451;&#12512;&#12540; asked people to submit ideas for a new icon and stories about happenings on the server for the Aceserver Revitalization Committee’s Aceserver Diary.
+
+On July 13, 2026, sekisei invited questions and explained how questions asking essentially the same thing would be counted and that Yuri-kun would answer in replies. On July 14, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; reported a total of 120 questions that day.
+
+In late July 2026, sekisei reported that plans for two activities were nearly ready, a Minecraft minigame and an activity outside Minecraft. They also asked what activities people wanted to see developed next.
 
 On July 29, 2026, &#29792;&#22856; proposed an ice boat race in which players would earn a reward for reaching the finish within their allotted time.
 
