@@ -2,7 +2,7 @@
 title: 支持Aceserver的人们
 description: 通过 Minecraft 皮肤头像认识 Aceserver 的贡献者，回顾社区活动记录，并查看活动与玩家提案路线图。
 translationOf: aceserver-contributors
-sourceHash: sha256:0db79ea00dbc0dde6ceeb9ca1cc74cbd7f3a8cc5852fcbcbd0cd82cfb900d112
+sourceHash: sha256:115a2ac3cdb0c8461404f113b844e0f3a9f15c534d80864e873a5a0fc3d95a4f
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-21T00:00:00+09:00
 tags:
@@ -53,7 +53,11 @@ KOTA-SAN 在旧 Discord 发布的 Aceserver 观光协会介绍中，将 MKOTA_SA
 
 2021 年 2 月，Gui 征集可用于宣传 Aceserver 的游戏截图。在旧征集频道中，kuroneko229 拍摄了 LibraI 建造的作品，LibraI 在介绍作品时注明了建造和摄影人员。
 
+2021 年 5 月，KOTA-SAN 报告称，自己发起的 Ace Fest 已结束为期两天的日程，并向主要负责会场布置的 キツネコ 致谢。会场设在 Ibaraki Overwatchers 的基地。
+
 旧 Discord 的 E-ha Radio 记录显示，2021 年，KOTA-SAN 以协助者身份征集听众来信，并介绍节目内容和日程。はっ也预告了下一次播出及来信主题。
+
+2021 年秋，てぃあ 在市政厅旁准备了摆放圣诞装饰的场地、搭建了圣诞树，并邀请大家参与布置。YM 报告称建造了一座圣诞小屋。
 
 ### **2022 年至 2023 年上半年**
 

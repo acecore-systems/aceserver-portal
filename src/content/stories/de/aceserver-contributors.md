@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:0db79ea00dbc0dde6ceeb9ca1cc74cbd7f3a8cc5852fcbcbd0cd82cfb900d112
+sourceHash: sha256:115a2ac3cdb0c8461404f113b844e0f3a9f15c534d80864e873a5a0fc3d95a4f
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-21T00:00:00+09:00
 tags:
@@ -53,7 +53,11 @@ Im Oktober 2023 stellte PetiteShelf7874 die Aktivitäten und die Karte des Dorfs
 
 Im Februar 2021 bat Gui um Screenshots für die Öffentlichkeitsarbeit von Aceserver. Im früheren Kanal für Einsendungen fotografierte kuroneko229 ein Bauwerk von LibraI. LibraI stellte das Werk mit den Zuständigkeiten für Bau und Fotografie vor.
 
+Im Mai 2021 meldete KOTA-SAN den Abschluss des zweitägigen Programms des selbst initiierten Ace Fests. Der Dank ging an キツネコ, der den Veranstaltungsort am Stützpunkt der Ibaraki Overwatchers maßgeblich vorbereitet hatte.
+
 Laut den Aufzeichnungen aus dem früheren Discord-Kanal von E-ha Radio unterstützte KOTA-SAN die Sendung 2021, indem er um Nachrichten der Zuhörer bat und Themen und Termine vorstellte. はっ kündigte ebenfalls die nächste Sendung und das Thema für die Zuschriften an.
+
+Im Herbst 2021 richtete てぃあ neben dem Rathaus einen Platz für Weihnachtsschmuck ein, baute den Baum und lud zum Schmücken ein. YM berichtete, ein Weihnachtshaus gebaut zu haben.
 
 ### **2022 bis erstes Halbjahr 2023**
 

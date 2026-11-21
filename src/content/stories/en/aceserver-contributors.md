@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:0db79ea00dbc0dde6ceeb9ca1cc74cbd7f3a8cc5852fcbcbd0cd82cfb900d112
+sourceHash: sha256:115a2ac3cdb0c8461404f113b844e0f3a9f15c534d80864e873a5a0fc3d95a4f
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-21T00:00:00+09:00
 tags:
@@ -53,7 +53,11 @@ In October 2023, PetiteShelf7874 introduced the activities and map of Small Hill
 
 In February 2021, Gui asked for screenshots to help promote Aceserver. In the old submissions channel, kuroneko229 photographed a build by LibraI, who introduced the work with credits for the build and the photography.
 
+In May 2021, KOTA-SAN reported that the Ace Fest they started had completed its two-day program. KOTA-SAN thanked キツネコ for leading the venue setup at the Ibaraki Overwatchers’ base.
+
 In the old Discord records for E-ha Radio, KOTA-SAN supported the show in 2021 by inviting listener messages and explaining the program and schedule. はっ also announced the next broadcast and its topic for listener messages.
+
+In autumn 2021, てぃあ prepared a spot for a Christmas display beside the town hall, built the tree, and invited people to help decorate. YM reported building a Christmas house.
 
 ### **2022 to the first half of 2023**
 

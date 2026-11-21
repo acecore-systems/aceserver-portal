@@ -2,7 +2,7 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:0db79ea00dbc0dde6ceeb9ca1cc74cbd7f3a8cc5852fcbcbd0cd82cfb900d112
+sourceHash: sha256:115a2ac3cdb0c8461404f113b844e0f3a9f15c534d80864e873a5a0fc3d95a4f
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-21T00:00:00+09:00
 tags:
@@ -53,7 +53,11 @@ En octubre de 2023, PetiteShelf7874 presentó las actividades y el mapa de la Al
 
 En febrero de 2021, Gui pidió capturas de pantalla para promocionar Aceserver. En el antiguo canal de aportaciones, kuroneko229 fotografió una construcción hecha por LibraI, que presentó la obra indicando quién se encargó de la construcción y quién tomó la imagen.
 
+En mayo de 2021, KOTA-SAN informó de que el Ace Fest que había puesto en marcha había completado su programa de dos días. Dio las gracias a キツネコ, que se encargó principalmente de preparar el recinto en la base de Ibaraki Overwatchers.
+
 En los registros del antiguo canal de Discord de E-ha Radio, KOTA-SAN colaboró con el programa en 2021 pidiendo mensajes a los oyentes y explicando los contenidos y el calendario. はっ también anunció la siguiente emisión y el tema de los mensajes.
+
+En otoño de 2021, てぃあ preparó un espacio para las decoraciones navideñas al lado del ayuntamiento, construyó el árbol e invitó a colaborar con la decoración. YM informó de que había construido una casa navideña.
 
 ### **2022 y primera mitad de 2023**
 
