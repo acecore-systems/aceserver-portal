@@ -2,7 +2,7 @@
 title: 支持Aceserver的人们
 description: 通过 Minecraft 皮肤头像认识 Aceserver 的贡献者，回顾社区活动记录，并查看活动与玩家提案路线图。
 translationOf: aceserver-contributors
-sourceHash: sha256:7bceab799ab2677c346ab8158bd352970d38b9eae375285f021836d59db2a04a
+sourceHash: sha256:b12a4acfc8086452a1d1d0ceba274ee1209ddecfe1aa82aeb8f5d25aa58d56ab
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-21T00:00:00+09:00
 tags:
@@ -13,7 +13,7 @@ image: /uploads/current-world-city-20261015.jpg
 imageAlt: 2026 年 10 月在公开地图上截取的 Aceserver 主世界街景
 ---
 
-从早期 Wiki 上线，到筹办活动和打通聊天，这里根据官方 Discord 公告与活动报告，回顾大家为 Aceserver 做出的部分贡献。
+从早期 Wiki 上线，到筹办活动和打通聊天，这里根据官方 Discord 公告、活动报告和旧频道的记录，回顾大家为 Aceserver 做出的部分贡献。
 
 ## 建服初期
 
@@ -24,6 +24,8 @@ imageAlt: 2026 年 10 月在公开地图上截取的 Aceserver 主世界街景
 ## 宣传与活动
 
 2022年5月，キツネコ宣布举办替代划船赛，使用Hako_Otoko建造的赛道。 [原帖](https://discord.com/channels/737538781024092170/774152638450237460/970291030152847390)
+
+2022 年 12 月，Yukke 为 Aceserver 摄影社开设了活动频道。旧 Discord 频道的照片征集记录显示，taibon0727 为制作相册征集新旧世界的照片。到次年 1 月，dont_stop 提交了登顶 Saihate 的纪念照，PillowKebap 提供了保存下来的照片，nnn_percent 提交了建筑照片。
 
 2023年3月，ゆり邀请大家参与服务器介绍视频的拍摄，并说明了城镇与世界的拍摄顺序。 [原帖](https://discord.com/channels/737538781024092170/774152638450237460/1087641197947932704)
 
@@ -36,6 +38,8 @@ imageAlt: 2026 年 10 月在公开地图上截取的 Aceserver 主世界街景
 2026年8月，sekisei和ふーや宣布共同举办线上CTF寻宝比赛，参与者解开密码等谜题寻找旗标。Aceserver CTF2026于8月28日开幕。 [共同举办公告](https://discord.com/channels/737538781024092170/774152638450237460/1541785510094184449) [开幕报告](https://discord.com/channels/737538781024092170/779569416438415421/1542704904055824394)
 
 ## 技术与支持
+
+2022 年 7 月，Maro 主导了旧大厅的建造，并报告工程已完工。旧 Discord 频道的建造进度记录感谢 BM_yurikun 负责绿化，以及 _BE_ChalkyMink87 将矿石嵌入地基。KOTA-SAN 提供了分享建造进度的空间。
 
 2023年7月，Yukke宣布创建了资源服的新世界。2025年11月，服务器引入了あすたん制作的Minecraft与Discord聊天联动系统。 [资源世界公告](https://discord.com/channels/737538781024092170/774152638450237460/1135574163080364103) [聊天联动公告](https://discord.com/channels/737538781024092170/774152638450237460/1437973211961622670)
 

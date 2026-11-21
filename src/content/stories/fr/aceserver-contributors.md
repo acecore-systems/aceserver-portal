@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:7bceab799ab2677c346ab8158bd352970d38b9eae375285f021836d59db2a04a
+sourceHash: sha256:b12a4acfc8086452a1d1d0ceba274ee1209ddecfe1aa82aeb8f5d25aa58d56ab
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-21T00:00:00+09:00
 tags:
@@ -13,7 +13,7 @@ image: /uploads/current-world-city-20261015.jpg
 imageAlt: Ville du monde principal d’Aceserver, capturée sur la carte publique en octobre 2026
 ---
 
-Des débuts du Wiki à l’organisation d’événements et à l’intégration du chat, voici quelques contributions à Aceserver retracées à partir des annonces et des comptes rendus du Discord officiel.
+Des débuts du Wiki à l’organisation d’événements et à l’intégration du chat, voici quelques contributions à Aceserver retracées à partir des annonces, des comptes rendus et des archives d’anciens salons du Discord officiel.
 
 ## Les débuts
 
@@ -24,6 +24,8 @@ En août 2021, Gui a expliqué que le serveur avait été lancé pour que tout l
 ## Communication et événements
 
 En mai 2022, キツネコ a annoncé une course de bateaux alternative sur un circuit construit par Hako_Otoko. [Message d’origine](https://discord.com/channels/737538781024092170/774152638450237460/970291030152847390)
+
+En décembre 2022, Yukke a ouvert un salon pour le club photo d’Aceserver. D’après les archives de l’ancien salon Discord, taibon0727 a demandé des photos d’anciens et de nouveaux mondes pour un album. En janvier 2023, dont_stop avait partagé une photo souvenir de l’ascension de Saihate, PillowKebap avait fourni des photos conservées et nnn_percent avait envoyé des photos de constructions.
 
 En mars 2023, ゆり a invité les joueurs à participer au tournage d’une vidéo de présentation et a indiqué l’ordre de tournage des villes et des mondes. [Message d’origine](https://discord.com/channels/737538781024092170/774152638450237460/1087641197947932704)
 
@@ -36,6 +38,8 @@ Pour l’événement de fin 2025, ハルビィ, セキセイ et タケ ont aidé
 En août 2026, sekisei et ふーや ont annoncé un CTF commun sous forme de chasse au trésor en ligne, où des énigmes comme des codes permettent de trouver des drapeaux. Aceserver CTF2026 a débuté le 28 août. [Annonce de coorganisation](https://discord.com/channels/737538781024092170/774152638450237460/1541785510094184449) [Annonce du début](https://discord.com/channels/737538781024092170/779569416438415421/1542704904055824394)
 
 ## Technologie et soutien
+
+En juillet 2022, Maro a dirigé la construction de l’ancien hall d’accueil et en a annoncé l’achèvement. Le suivi des travaux dans l’ancien salon Discord a remercié BM_yurikun pour les aménagements paysagers et _BE_ChalkyMink87 pour l’intégration de minerais dans la base. KOTA-SAN a préparé un espace pour partager l’avancement des travaux.
 
 En juillet 2023, Yukke a annoncé la création d’un nouveau monde sur le serveur de ressources. En novembre 2025, un système de liaison des discussions Minecraft et Discord créé par あすたん a été installé. [Annonce du monde de ressources](https://discord.com/channels/737538781024092170/774152638450237460/1135574163080364103) [Annonce de la liaison des discussions](https://discord.com/channels/737538781024092170/774152638450237460/1437973211961622670)
 
