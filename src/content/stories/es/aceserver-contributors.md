@@ -2,7 +2,7 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:b12a4acfc8086452a1d1d0ceba274ee1209ddecfe1aa82aeb8f5d25aa58d56ab
+sourceHash: sha256:5e2e89545abd175cabc11480690abf15b594a1950f30b33f990da59801fda1f7
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-21T00:00:00+09:00
 tags:
@@ -17,32 +17,72 @@ Desde la primera Wiki hasta la organización de eventos y la conexión de chats,
 
 ## Los comienzos
 
+En diciembre de 2020, てぃあ coordinó las primeras obras del ferrocarril y explicó el trámite que se pedía realizar antes de construir en aquella época. [Anuncio de la construcción ferroviaria](https://discord.com/channels/737538781024092170/774152638450237460/783543829676556349)
+
 En diciembre de 2020, てぃあ anunció la apertura de una wiki inicial con las reglas. [Publicación original](https://discord.com/channels/737538781024092170/774152638450237460/784929714296193034)
 
+En enero de 2021, Gui presentó a dos grupos. La Asociación de Turismo de Aceserver, encabezada por KotaMizuno, construía lugares para visitar. Between Tower, dirigida por Master_Yinfe, se centraba en el arte de píxeles. El anuncio también nombró a 6nuts, \_Dont_Stop\_, none_violet, taisa68 y Flare1011 como participantes iniciales. [Anuncio de los grupos](https://discord.com/channels/737538781024092170/774152638450237460/798378478293614643)
+
+En los informes de Between Tower del antiguo canal de Discord, PillowKebap anunció en enero de 2021 la finalización de la primera obra de arte de píxeles, «Apicultor». En agosto anunció la segunda, de unos 65 000 bloques, y agradeció la ayuda para reunir y colocar materiales. dont_stop informó en nombre del grupo sobre el tercer proyecto. En 2022, izaiza aportó bloques de arcilla y, en marzo, naop5 e Ivalaidea pasaron a ser miembros oficiales en reconocimiento a sus contribuciones. En abril, PillowKebap anunció que el museo había empezado a exponer arte en mapas.
+
 En agosto de 2021, Gui explicó que el servidor comenzó para que cualquiera pudiera visitar y jugar en el mundo de はっ. También anunció que コタ asumiría las decisiones de gestión por el momento. コタ confirmó que aceptaba. [Anuncio de Gui](https://discord.com/channels/737538781024092170/774152638450237460/880745650009047080) [Anuncio de コタ](https://discord.com/channels/737538781024092170/774152638450237460/880760188351705178)
+
+En agosto de 2021, KOTA-SAN adelantó una convocatoria para el logotipo del primer aniversario. En septiembre, Mugi informó de la reorganización de Discord y abrió la convocatoria. En noviembre, てぃあ anunció que se había elegido el diseño de YM y que ya se usaba en Discord. [Avance de la convocatoria](https://discord.com/channels/737538781024092170/774152638450237460/881193662321684601) [Apertura de la convocatoria](https://discord.com/channels/737538781024092170/774152638450237460/882433940621758474) [Anuncio del logotipo elegido](https://discord.com/channels/737538781024092170/774152638450237460/905830523761487872)
 
 ## Difusión y eventos
 
 En mayo de 2022, キツネコ anunció una carrera de barcos alternativa en un circuito construido por Hako_Otoko. [Publicación original](https://discord.com/channels/737538781024092170/774152638450237460/970291030152847390)
 
+En noviembre de 2022, yanyan_fafnir anunció que ゆり (Yū) había asumido un rol de apoyo por recomendación de Sosuke. [Anuncio del nombramiento](https://discord.com/channels/737538781024092170/774152638450237460/1043527218191663114)
+
 En diciembre de 2022, Yukke abrió un canal para el club de fotografía de Aceserver. Según los registros del antiguo canal de Discord, taibon0727 pidió fotos de mundos nuevos y antiguos para un álbum. Para enero de 2023, dont_stop había compartido una foto conmemorativa del ascenso a Saihate, PillowKebap había aportado fotos que conservaba y nnn_percent había enviado fotos de construcciones.
 
 En marzo de 2023, ゆり invitó a participar en la filmación de un video de presentación y explicó el orden de grabación de ciudades y mundos. [Publicación original](https://discord.com/channels/737538781024092170/774152638450237460/1087641197947932704)
 
+En mayo de 2023, ゆり presentó el plan del equipo de difusión para gestionar YouTube y Twitter de forma regular. [Planes de difusión](https://discord.com/channels/737538781024092170/774152638450237460/1110469768420532235)
+
 タケ creó el cartel del Ace Summer Festival de 2024. En el evento de fin de año «つなぐASF», taibon ayudó con el dispositivo de cuenta regresiva. タケ informó del fin de todas las actividades en enero de 2025. [Anuncio del cartel](https://discord.com/channels/737538781024092170/774152638450237460/1274157736015429744) [Anuncio de la cuenta regresiva](https://discord.com/channels/737538781024092170/774152638450237460/1319967701808189493) [Informe de cierre](https://discord.com/channels/737538781024092170/774152638450237460/1325487116419076129)
+
+En enero de 2025 se anunció que Wenti (Hosttech255), Pluto y あすたん asumían roles de apoyo a eventos. [Anuncio de apoyo a eventos](https://discord.com/channels/737538781024092170/774152638450237460/1323911696237990039)
 
 El anuncio del festival de verano de 2025 mencionó a センチュリーズ por la preparación y provisión del espectáculo de fuegos artificiales. El agradecimiento posterior nombró a セガ, リンゴポン, あまぎ, 新人, ジェスター, ホステッチ e イザイザ por los fuegos artificiales, y a コッカー y sh por la coordinación general. エント se encargó del circuito y moon y セキセイ del golf. ハルビィ, セキセイ y sh se encargaron del PvP de supervivencia, y はっ y sh del evento especial. [Publicación original](https://discord.com/channels/737538781024092170/774152638450237460/1408390549370572880) [Agradecimiento posterior](https://discord.com/channels/737538781024092170/779569416438415421/1411394624026710166)
 
+En octubre de 2025, sh agradeció la ayuda en la preparación de eventos del Comité de Revitalización de Aceserver y pidió ideas para el siguiente. En noviembre, un anuncio presentó a amagi_467 como iniciador del primer torneo de mahjong de Aceserver, que el comité tenía previsto organizar. [Agradecimientos y convocatoria de ideas](https://discord.com/channels/737538781024092170/774152638450237460/1432028687376715897) [Anuncio del torneo de mahjong](https://discord.com/channels/737538781024092170/774152638450237460/1442742157315149865)
+
 En el evento de finales de 2025, ハルビィ, セキセイ y タケ ayudaron con la carrera en la montaña nevada. セキセイ desarrolló el plugin de batalla de bolas de nieve PvP. 山田 construyó el recinto y ゆり apoyó la narración en directo y la coordinación. Los participantes también ayudaron con el ensayo. [Publicación original](https://discord.com/channels/737538781024092170/774152638450237460/1454846975227854859)
+
+Un anuncio de diciembre de 2025 explicó cómo sumarse a una sesión de fotos prevista en el santuario Tōgenkyō para crear una nueva imagen de cabecera. [Invitación a la sesión de fotos](https://discord.com/channels/737538781024092170/774152638450237460/1455820341988298905)
 
 En agosto de 2026, sekisei y ふーや anunciaron un CTF conjunto de búsqueda del tesoro en línea, con acertijos como criptogramas para encontrar banderas. Aceserver CTF2026 comenzó el 28 de agosto. [Anuncio de organización conjunta](https://discord.com/channels/737538781024092170/774152638450237460/1541785510094184449) [Informe de apertura](https://discord.com/channels/737538781024092170/779569416438415421/1542704904055824394)
 
-## Tecnología y apoyo
+## Construcción y proyectos en equipo
+
+En junio de 2022, yanyan_fafnir explicó cómo participar en el concurso de islas flotantes que dio paso a la construcción del antiguo vestíbulo y cómo se presentarían los proyectos ante el jurado. El anuncio indicó que はっ y los miembros con el rol de apoyo o superior serían los jueces. [Reglas del concurso](https://discord.com/channels/737538781024092170/774152638450237460/982990352422162482) [Anuncio de la presentación ante el jurado](https://discord.com/channels/737538781024092170/774152638450237460/986294242848669756)
 
 En julio de 2022, Maro dirigió la construcción del antiguo vestíbulo y anunció que había terminado. Los registros de la obra en el antiguo canal de Discord agradecieron a BM_yurikun la jardinería y a _BE_ChalkyMink87 la colocación de minerales en la base. KOTA-SAN habilitó un espacio para compartir avances de la obra.
 
-En julio de 2023, Yukke anunció la creación de un nuevo mundo para el servidor de recursos. En noviembre de 2025 se incorporó un sistema de chat entre Minecraft y Discord creado por あすたん. [Anuncio del mundo de recursos](https://discord.com/channels/737538781024092170/774152638450237460/1135574163080364103) [Anuncio de integración de chat](https://discord.com/channels/737538781024092170/774152638450237460/1437973211961622670)
+Entre octubre de 2022 y enero de 2023, varios jugadores drenaron un monumento oceánico, trabajaron en una instalación para guardianes y excavaron en paralelo para otra de esqueletos del Wither. Según los registros del antiguo canal de Discord, taka8621 abrió un canal de trabajo. Moon_666 organizó el drenaje y la excavación, repuso materiales y trabajó en una zona asignada. Yukke pidió ayuda con la excavación y preparó un paso hacia la fortaleza.
+
+taibon0727 preparó materiales como vidrio, un lugar para guardar botes de transporte y un dispositivo para trabajar con arena. SPdari aportó arena. UtaTheIrasutā ayudó a rellenar zonas con lava e instaló un puesto para elaborar pociones. nnn_percent colaboró con la arena para el relleno y あすたん ayudó a excavar. SPdari también agradeció a Buraki que orientara a los participantes.
+
+A finales de diciembre de 2022, edamameRex_java informó de que había concluido la construcción de la posada de aguas termales, según los registros del proyecto.
+
+En noviembre de 2025, End&#12539;コッカー informó de que había instalado portales en ocho direcciones para llegar a zonas lejanas del servidor de supervivencia. [Anuncio de la instalación de portales](https://discord.com/channels/737538781024092170/774152638450237460/1434193495752704134)
+
+## Tecnología y apoyo
+
+Según los registros del antiguo canal de Discord, en agosto de 2021 KOTA-SAN informó de que había creado y puesto en marcha Ace-kun, un bot que enviaba instrucciones automáticamente a quienes acababan de entrar en el vestíbulo. En enero de 2022, como uno de los creadores de Ace-kun y Kutya, KOTA-SAN anunció el restablecimiento de Ace-kun. En mayo, añadió la publicación automática de una plantilla de presentación personal.
+
+En junio de 2022, Mugi actualizó el bot de lectura Kutya para que funcionara con el chat dentro de los canales de voz. En marzo de 2023, anunció un bot para enviar comentarios anónimos al equipo del servidor. [Actualización de Kutya](https://discord.com/channels/737538781024092170/774152638450237460/986439863937155122) [Anuncio del canal de comentarios anónimos](https://discord.com/channels/737538781024092170/774152638450237460/1087976366126927882)
+
+En julio de 2023, Yukke anunció la creación de un nuevo mundo para el servidor de recursos. [Anuncio del mundo de recursos](https://discord.com/channels/737538781024092170/774152638450237460/1135574163080364103)
+
+En septiembre de 2023 se anunció que あすたん se incorporaba al equipo de administración y que Taka se encargaría de sistemas. En mayo de 2024, はっ anunció que sh y sekisei pasaban a prestar apoyo técnico a los usuarios. [Nombramientos de 2023](https://discord.com/channels/737538781024092170/774152638450237460/1151168895076548669) [Roles de apoyo de 2024](https://discord.com/channels/737538781024092170/774152638450237460/1236592686253867008)
+
+En noviembre de 2025 se incorporó un sistema de chat entre Minecraft y Discord creado por あすたん. [Anuncio de integración de chat](https://discord.com/channels/737538781024092170/774152638450237460/1437973211961622670)
 
 En febrero de 2026, Merutak informó de la creación de dos roles de Discord para avisos de problemas y paradas del servidor. [Publicación original](https://discord.com/channels/737538781024092170/774152638450237460/1477293143773810822)
+
+En julio de 2026, sekisei anunció la primera charla técnica sobre los servidores e Internet. [Anuncio de la charla técnica](https://discord.com/channels/737538781024092170/774152638450237460/1532641413500633108)
 
 Estas actividades son solo una parte de las contribuciones recibidas. Gracias a todas las personas que han ayudado. Consulta la [guía para participar](https://asv-wiki.acecore.net/article/in/) y [guía de contacto](https://asv-wiki.acecore.net/article/application-method/) para conocer cómo participar y contactar actualmente.
