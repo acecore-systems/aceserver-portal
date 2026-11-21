@@ -2,7 +2,7 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:3b6900ede6a3855dab085308bab458491e32b1cff116112d6e37abd168d57141
+sourceHash: sha256:dc57c3c63816aa005c92fb33f3537a12f26df3183476bd4908e6feda9e99cb6d
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -185,6 +185,8 @@ En febrero de 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673;, &#35199;&#26408;&
 
 En febrero de 2026, End&#12539;コッカー anunció el Concurso de Fotografía de Aceserver e indicó que las fotos podían enviarse del 16 al 28 de febrero. Preparó ejemplos de participación para las categorías general y del equipo de gestión. キツネコ presentó una foto de un trabajo de drenaje en curso. [Anuncio del Concurso de Fotografía de 2026](https://discord.com/channels/737538781024092170/774152638450237460/1471148847119208731)
 
+En marzo de 2026, End&#12539;コッカー compartió una versión de prueba de un vídeo de presentación de Aceserver. Merutak señaló que la primera mitad avanzaba rápido. sekisei propuso aclarar el objetivo, el público y el mensaje. あすたん comentó cuánta información incluir en un vídeo corto y LuMiSIA\_&#26376;&#31070;&#24736;&#33673; opinó sobre cómo presentar el texto y las animaciones.
+
 En agosto de 2026, sekisei y ふーや anunciaron un CTF conjunto de búsqueda del tesoro en línea, con acertijos como criptogramas para encontrar banderas. Aceserver CTF2026 comenzó el 28 de agosto. [Anuncio de organización conjunta](https://discord.com/channels/737538781024092170/774152638450237460/1541785510094184449) [Informe de apertura](https://discord.com/channels/737538781024092170/779569416438415421/1542704904055824394)
 
 ## Construcción y proyectos en equipo
@@ -299,12 +301,18 @@ Entre finales de octubre y principios de noviembre de 2025, ゆり organizó y p
 
 En noviembre de 2025 se incorporó un sistema de chat entre Minecraft y Discord creado por あすたん. [Anuncio de integración de chat](https://discord.com/channels/737538781024092170/774152638450237460/1437973211961622670)
 
+En noviembre de 2025, ゆり explicó cómo se vinculaban Minecraft y Discord en aquel momento y publicó las reglas generales en el canal destinado a confirmarlas. End&#12539;コッカー publicó respuestas a preguntas frecuentes sobre la confirmación de las reglas y dónde completar la vinculación con Discord. [Guía de vinculación de Minecraft y Discord](https://discord.com/channels/737538781024092170/1434155347832078398/1434158498148651008) [Reglas generales en el canal de confirmación](https://discord.com/channels/737538781024092170/1386851151428980856/1434162187475091529) [Preguntas frecuentes sobre las reglas y la vinculación](https://discord.com/channels/737538781024092170/1104052367407718533/1438756485701173270)
+
 En diciembre de 2025, sekisei explicó cómo usar Season Creative, un servidor temático. En enero de 2026, informó de que había traspasado su administración a sh31415. [Guía de Season Creative](https://discord.com/channels/737538781024092170/1445004286793879602/1445004286793879602) [Informe del traspaso de la administración](https://discord.com/channels/737538781024092170/1445004286793879602/1460090096475832425)
+
+En enero de 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; explicó a los nuevos jugadores las diferencias para conectarse desde Minecraft Java Edition y Bedrock Edition. En febrero, sekisei indicó cómo llegar a la guía de vinculación desde el paso de confirmación de las reglas. [Guía de conexión de Java y Bedrock](https://discord.com/channels/737538781024092170/1460983001809948744/1460983826439471380) [De la confirmación de las reglas a la guía de vinculación](https://discord.com/channels/737538781024092170/1386851151428980856/1467714894060060918)
 
 En febrero de 2026, Merutak informó de la creación de dos roles de Discord para avisos de problemas y paradas del servidor. [Publicación original](https://discord.com/channels/737538781024092170/774152638450237460/1477293143773810822)
 
 En marzo de 2026, あすたん publicó las reglas del servidor de recursos. En julio, sekisei publicó una actualización en el mismo hilo. [Publicación de las reglas del servidor de recursos](https://discord.com/channels/737538781024092170/1486515511029268610/1486515511029268610) [Publicación de la actualización](https://discord.com/channels/737538781024092170/1486515511029268610/1531835894196080653)
 
 En julio de 2026, sekisei anunció la primera charla técnica sobre los servidores e Internet. [Anuncio de la charla técnica](https://discord.com/channels/737538781024092170/774152638450237460/1532641413500633108)
+
+Entre septiembre y octubre de 2026, End&#12539;コッカー organizó la guía de acceso a Minecraft de la época para que fuera más fácil encontrar las reglas, las presentaciones y los recursos de conexión. También reunió los lugares donde consultar las reglas de cada mundo.
 
 Estas actividades son solo una parte de las contribuciones recibidas. Gracias a todas las personas que han ayudado. Consulta la [guía para participar](https://asv-wiki.acecore.net/article/in/) y [guía de contacto](https://asv-wiki.acecore.net/article/application-method/) para conocer cómo participar y contactar actualmente.
