@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:cc3e1bf1b588666f85f37c890005f51942077c226883d5268bd61973146071d2
+sourceHash: sha256:fb79dc00fdeb205aa46dd79c4602c5ffcd4dba82796f92e7c60cccf1c488ea77
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -251,6 +251,8 @@ Im Februar 2026 kündigte End&#12539;コッカー den Aceserver-Fotowettbewerb a
 
 Im März 2026 teilte End&#12539;コッカー eine Probeversion eines Videos über Aceserver. Merutak wies auf das schnelle Tempo in der ersten Hälfte hin. sekisei schlug vor, Ziel, Publikum und Aussage klarer zu bestimmen. あすたん kommentierte, wie viele Informationen in ein kurzes Video passen, und LuMiSIA\_&#26376;&#31070;&#24736;&#33673; gab Rückmeldung zur Gestaltung von Text und Animationen.
 
+Am 6. März 2026 schlug sekisei vor, regelmäßige offene Treffen der Informationsstelle abzuhalten, um Themen des Serverteams zu teilen. Außerdem schlug sekisei eine lockere Gruppe vor, in der Teilnehmer ohne Antrag für ihre Aktivitäten werben könnten. Am 11. März teilte End&#12539;コッカー sieben Folien für die Besprechung. Sie behandelten den Status als Stammspieler als mögliches Ziel, die Spielmöglichkeiten auf dem Content- und dem Survival-Server, Veranstaltungsvideos, Öffentlichkeitsarbeit auf X und die Anleitungen im Portal und im Wiki.
+
 Am 7. März 2026 bat End&#12539;コッカー um Veranstaltungsideen und Mithilfe und rief auch zu Vorschlägen jenseits von PvP auf.
 
 Im März 2026 bat &#12486;&#12451;&#12512;&#12540; für das Aceserver-Tagebuch des Belebungskomitees von Aceserver um Ideen für ein neues Symbol und um Beiträge zu Ereignissen auf dem Server.
@@ -449,6 +451,8 @@ Am 14. Januar 2023 schrieb &#33775;\*HAiNE das Protokoll einer damaligen Teamsit
 
 Im Januar 2023 veröffentlichte あすたん im damaligen Discord-Beitrittsleitfaden eine bebilderte Anleitung zur Verbindung mit Minecraft Java Edition und Bedrock Edition.
 
+Am 6. März 2023 führte Gui eine Testmigration der Datenbank durch und berichtete, dass der Umzug weniger Zeit benötigte. Am 11. Mai erklärte taka8621, dass ein Plugin zur Prüfung der Verarbeitungsgeschwindigkeit des Servers und der Netzwerklatenz im Einsatz war.
+
 Am 21. März 2023 teilte taka8621 sieben Bilder mit den damaligen eigenen Rezepten von Aceserver. Sie zeigten Beispiele mit Gras oder versteinerten Eichenholzstufen als Zutaten sowie Rezepte für verzauberte Bücher und Ausrüstung.
 
 Im April 2023 berichtete Yukke, die Aussprache von „Hi“ ins Vorlesewörterbuch der damaligen Chat-Verknüpfung aufgenommen zu haben.
@@ -511,7 +515,9 @@ Im Juli 2026 kündigte sekisei den ersten technischen Vortrag über Server und d
 
 Im Juli 2026 wurde überlegt, die Spielwährung in den vom Serverteam betriebenen Handelsposten aufzunehmen. sekisei teilte die bisherigen Wechselkurse und berichtete, den direkten Tausch zwischen Gegenständen umgesetzt zu haben und einen Test zu planen. Merutak schlug vor, Smaragde für begrenzte Zeit gegen Spielwährung eintauschen zu können. あすたん regte an, in großen Mengen herstellbare Gegenstände vom Tausch auszunehmen. End&#12539;コッカー schlug vor, die Wechselkurse für den Verkauf von Gegenständen zu ordnen.
 
-Von September bis Oktober 2026 strukturierte End&#12539;コッカー den damaligen Leitfaden für den Minecraft-Beitritt so, dass die Regeln, die Vorstellungsbereiche und die Hinweise zur Verbindung leichter zu finden waren. End&#12539;コッカー stellte auch zusammen, wo die Regeln der einzelnen Welten zu finden waren.
+Im August 2026 berichtete あすたん, die Weboberfläche für die Spielwährung neu gestaltet zu haben, und bat um eine Durchsicht. Ende August fragte sekisei, ob die Oberfläche bereits getestet worden sei. Im September bat あすたん sekisei erneut um eine Durchsicht.
+
+Von September bis Oktober 2026 strukturierte End&#12539;コッカー den damaligen Leitfaden für den Minecraft-Beitritt so, dass die Regeln, die Vorstellungsbereiche und die Hinweise zur Verbindung leichter zu finden waren. End&#12539;コッカー stellte auch zusammen, wo die Regeln der einzelnen Welten zu finden waren. Am 27. September schlug End&#12539;コッカー vor, Hinweise zum Beitritt, Befehle und Standorte von Einrichtungen in getrennten Threads in einem eigenen Infokanal zu sammeln.
 
 Im Oktober 2026 schlug sekisei vor, dass Personen bei ihrem ersten Besuch in der Lobby zunächst eine Einführungswelt durchlaufen, bevor sie die reguläre Lobby erreichen. Am 21. Oktober meldete End&#12539;コッカー, dass die Einführungslobby fertig war. Zwei Bilder, die am selben Tag veröffentlicht wurden, zeigten ein Lesepult mit den Regeln und ein Tor.
 

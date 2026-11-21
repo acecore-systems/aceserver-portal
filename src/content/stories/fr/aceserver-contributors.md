@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:cc3e1bf1b588666f85f37c890005f51942077c226883d5268bd61973146071d2
+sourceHash: sha256:fb79dc00fdeb205aa46dd79c4602c5ffcd4dba82796f92e7c60cccf1c488ea77
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -251,6 +251,8 @@ En février 2026, End&#12539;コッカー a annoncé le concours photo d’Acese
 
 En mars 2026, End&#12539;コッカー a partagé un essai de vidéo de présentation d’Aceserver. Merutak a relevé le rythme rapide de la première moitié. sekisei a suggéré de préciser l’objectif, le public et le message. あすたん a commenté la quantité d’informations à mettre dans une vidéo courte, et LuMiSIA\_&#26376;&#31070;&#24736;&#33673; a donné son avis sur la présentation du texte et des animations.
 
+Le 6 mars 2026, sekisei a proposé d’organiser des réunions ouvertes régulières du Bureau d’information pour partager les sujets de l’équipe du serveur. Une autre idée était de créer un groupe souple où les participants pourraient faire connaître leurs activités sans déposer de demande. Le 11 mars, End&#12539;コッカー a partagé sept diapositives de réunion sur le statut de membre régulier comme objectif pour les participants, les façons de jouer sur les serveurs de contenu et de survie, les vidéos d’événements, la communication sur X et les guides du portail et du wiki.
+
 Le 7 mars 2026, End&#12539;コッカー a sollicité des idées d’événements et des volontaires, y compris pour des activités en dehors du PvP.
 
 En mars 2026, &#12486;&#12451;&#12512;&#12540; a sollicité des idées pour une nouvelle icône et des récits sur ce qui se passait sur le serveur pour le Journal d’Aceserver du comité de revitalisation d’Aceserver.
@@ -449,6 +451,8 @@ Le 14 janvier 2023, &#33775;\*HAiNE a rédigé le compte rendu d’une réunion 
 
 En janvier 2023, あすたん a publié des instructions illustrées pour se connecter avec Minecraft Java Edition et Bedrock Edition dans le guide d’accès de l’ancien Discord.
 
+Le 6 mars 2023, Gui a effectué une migration de test de la base de données et a indiqué que l’opération avait pris moins de temps. Le 11 mai, taka8621 a expliqué utiliser un plugin pour vérifier la vitesse de traitement du serveur et la latence du réseau.
+
 Le 21 mars 2023, taka8621 a partagé sept images présentant les recettes personnalisées d’Aceserver à l’époque. Elles montraient des exemples utilisant de l’herbe ou des dalles de chêne pétrifié comme ingrédients, ainsi que des recettes de livres enchantés et d’équipements.
 
 En avril 2023, Yukke a indiqué avoir ajouté la prononciation de « Hi » au dictionnaire de lecture à voix haute de l’intégration du chat de l’époque.
@@ -511,7 +515,9 @@ En juillet 2026, sekisei a annoncé la première présentation technique sur les
 
 En juillet 2026, lors d’une réflexion sur l’introduction de la monnaie du jeu au comptoir d’échange géré par l’équipe du serveur, sekisei a partagé les anciens taux d’échange. sekisei a signalé avoir développé l’échange d’objets contre d’autres objets et prévu de le tester. Merutak a proposé de permettre l’échange d’émeraudes contre de la monnaie du jeu pour une durée limitée. あすたん a suggéré d’exclure des échanges les objets qu’on pouvait produire en grande quantité, et End&#12539;コッカー a proposé de revoir l’organisation des taux d’échange à la vente.
 
-Entre septembre et octobre 2026, End&#12539;コッカー a réorganisé le guide d’accès à Minecraft de l’époque pour faciliter la recherche des règles, des présentations et des ressources sur la connexion. End&#12539;コッカー a aussi indiqué où consulter les règles de chaque monde.
+En août 2026, あすたん a indiqué avoir repensé le panneau web de la monnaie du jeu et a demandé un avis sur le nouveau panneau. Fin août, sekisei a demandé si le panneau avait été testé. En septembre, あすたん a de nouveau demandé à sekisei de l’examiner.
+
+Entre septembre et octobre 2026, End&#12539;コッカー a réorganisé le guide d’accès à Minecraft de l’époque pour faciliter la recherche des règles, des présentations et des ressources sur la connexion. End&#12539;コッカー a aussi indiqué où consulter les règles de chaque monde. Le 27 septembre, End&#12539;コッカー a proposé de regrouper dans un salon consacré aux guides des fils distincts sur les modalités d’accès, les commandes et l’emplacement des installations.
 
 En octobre 2026, sekisei a proposé de faire passer les personnes qui arrivaient pour la première fois par un monde d’accueil avant de les diriger vers le hall habituel. Le 21 octobre, End&#12539;コッカー a annoncé que le hall d’accueil était terminé. Deux images publiées le même jour montraient un pupitre où lire les règles et un portail.
 

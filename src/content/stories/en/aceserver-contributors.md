@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:cc3e1bf1b588666f85f37c890005f51942077c226883d5268bd61973146071d2
+sourceHash: sha256:fb79dc00fdeb205aa46dd79c4602c5ffcd4dba82796f92e7c60cccf1c488ea77
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -251,6 +251,8 @@ In February 2026, End&#12539;コッカー announced the Aceserver Photo Contest 
 
 In March 2026, End&#12539;コッカー shared a draft video introducing Aceserver. Merutak noted that the first half moved quickly. sekisei suggested clarifying the purpose, audience, and message. あすたん commented on how much information to include in a short video, while LuMiSIA\_&#26376;&#31070;&#24736;&#33673; offered feedback on the presentation of text and animation.
 
+On March 6, 2026, sekisei proposed holding regular open meetings for the Information Bureau to share updates from the server team. They also proposed an informal group where members could promote their activities without having to apply. On March 11, End&#12539;コッカー shared seven meeting slides covering Regular status as something members could work toward, ways to play on the Content and Survival Servers, event videos, promotion on X, and guidance through the portal and Wiki.
+
 On March 7, 2026, End&#12539;コッカー invited event ideas and volunteers, including ideas for activities beyond PvP.
 
 In March 2026, &#12486;&#12451;&#12512;&#12540; asked people to submit ideas for a new icon and stories about happenings on the server for the Aceserver Revitalization Committee’s Aceserver Diary.
@@ -449,6 +451,8 @@ On January 14, 2023, &#33775;\*HAiNE wrote up the minutes of a server team meeti
 
 In January 2023, あすたん posted illustrated instructions for connecting with Minecraft Java Edition and Bedrock Edition in the Discord joining guide of the time.
 
+On March 6, 2023, Gui ran a trial database migration and reported that the migration took less time. On May 11, taka8621 explained that they were using a plugin to check server processing speed and network latency.
+
 On March 21, 2023, taka8621 shared seven images of Aceserver’s custom recipes at the time. They showed examples using grass or petrified oak slabs as ingredients and recipes for enchanted books and equipment.
 
 In April 2023, Yukke reported adding a pronunciation entry for “Hi” to the read-aloud dictionary of the chat integration used at the time.
@@ -511,7 +515,9 @@ In July 2026, sekisei announced the first technical talk about servers and the I
 
 In July 2026, while the team considered introducing in-game currency to the staff-run trading post, sekisei shared the previous exchange rates, reported implementing item-for-item trades, and said testing was planned. Merutak proposed letting players exchange emeralds for in-game currency for a limited time. あすたん suggested excluding items that could be produced in large quantities, and End&#12539;コッカー proposed organizing the exchange rates for selling items.
 
-From September to October 2026, End&#12539;コッカー organized the Minecraft joining guide of the time so players could find the rules, introductions, and connection resources. End&#12539;コッカー also listed where to check the rules for each world.
+In August 2026, あすたん reported redesigning the web panel for the in-game currency and asked for a review. In late August, sekisei asked whether it had been tested. In September, あすたん asked sekisei again to review it.
+
+From September to October 2026, End&#12539;コッカー organized the Minecraft joining guide of the time so players could find the rules, introductions, and connection resources. End&#12539;コッカー also listed where to check the rules for each world. On September 27, they proposed putting joining instructions, commands, and facility locations in separate threads within a dedicated guide channel.
 
 In October 2026, sekisei proposed that people arriving in the lobby for the first time pass through an introductory world before reaching the regular lobby. On October 21, End&#12539;コッカー reported that the introductory lobby was complete. Two images they posted that day showed a lectern displaying the rules and a gate.
 

@@ -2,7 +2,7 @@
 title: As pessoas que apoiaram o Aceserver
 description: Conheça quem ajudou o Aceserver pelos retratos de skins do Minecraft, relembre as atividades e confira o roteiro de eventos e propostas.
 translationOf: aceserver-contributors
-sourceHash: sha256:cc3e1bf1b588666f85f37c890005f51942077c226883d5268bd61973146071d2
+sourceHash: sha256:fb79dc00fdeb205aa46dd79c4602c5ffcd4dba82796f92e7c60cccf1c488ea77
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -251,6 +251,8 @@ Em fevereiro de 2026, End&#12539;コッカー anunciou o Concurso de Fotografia 
 
 Em março de 2026, End&#12539;コッカー compartilhou uma versão de teste de um vídeo de apresentação do Aceserver. Merutak observou que a primeira metade avançava rápido. sekisei sugeriu esclarecer o objetivo, o público e a mensagem. あすたん comentou a quantidade de informação em um vídeo curto, e LuMiSIA\_&#26376;&#31070;&#24736;&#33673; deu sugestões sobre a apresentação de textos e animações.
 
+Em 6 de março de 2026, sekisei propôs reuniões abertas periódicas do Departamento de Informações para compartilhar assuntos da equipe do servidor. Também sugeriu um grupo informal em que os participantes pudessem divulgar suas atividades sem precisar fazer uma solicitação. Em 11 de março, End&#12539;コッカー compartilhou sete slides para a reunião, sobre o status de participante regular como uma meta, as formas de jogar nos servidores de conteúdo e sobrevivência, os vídeos de eventos, a divulgação no X e as orientações do portal e da wiki.
+
 Em 7 de março de 2026, End&#12539;コッカー pediu ideias para eventos e voluntários, incluindo sugestões de atividades além de PvP.
 
 Em março de 2026, &#12486;&#12451;&#12512;&#12540; pediu propostas de um novo ícone e relatos de acontecimentos no servidor para o Diário do Aceserver, do Comitê de Revitalização do Aceserver.
@@ -449,6 +451,8 @@ Em 14 de janeiro de 2023, &#33775;\*HAiNE redigiu a ata de uma reunião da equip
 
 Em janeiro de 2023, あすたん publicou no guia de entrada do Discord da época instruções ilustradas para se conectar com Minecraft Java Edition e Bedrock Edition.
 
+Em 6 de março de 2023, Gui fez uma migração de teste do banco de dados e relatou que ela levou menos tempo. Em 11 de maio, taka8621 explicou que usava um plugin para verificar a velocidade de processamento do servidor e a latência da rede.
+
 Em 21 de março de 2023, taka8621 compartilhou sete imagens com as receitas personalizadas que o Aceserver tinha na época. Elas mostravam exemplos que usavam grama ou lajes de carvalho petrificado como ingredientes e receitas de livros encantados e equipamentos.
 
 Em abril de 2023, Yukke informou que havia adicionado a pronúncia de «Hi» ao dicionário de leitura em voz alta da integração de chat usada na época.
@@ -511,7 +515,9 @@ Em julho de 2026, sekisei anunciou a primeira palestra técnica sobre servidores
 
 Em julho de 2026, durante a discussão sobre incluir a moeda do jogo no posto de trocas administrado pela equipe do servidor, sekisei compartilhou as taxas de troca anteriores, informou que havia implementado a troca direta de itens e disse que pretendia testá-la. Merutak propôs permitir a troca de esmeraldas pela moeda do jogo por tempo limitado. あすたん sugeriu excluir das trocas os itens que podiam ser produzidos em grandes quantidades, e End&#12539;コッカー propôs organizar as taxas de troca para a venda de itens.
 
-Entre setembro e outubro de 2026, End&#12539;コッカー organizou o guia de entrada no Minecraft da época para facilitar o acesso a regras, apresentações e materiais de referência sobre a conexão. Também reuniu os locais onde consultar as regras de cada mundo.
+Em agosto de 2026, あすたん informou que havia reformulado o painel web da moeda do jogo e pediu uma revisão. No fim de agosto, sekisei perguntou se o painel já havia sido testado. Em setembro, あすたん voltou a pedir uma revisão a sekisei.
+
+Entre setembro e outubro de 2026, End&#12539;コッカー organizou o guia de entrada no Minecraft da época para facilitar o acesso a regras, apresentações e materiais de referência sobre a conexão. Também reuniu os locais onde consultar as regras de cada mundo. Em 27 de setembro, propôs um canal dedicado a orientações, com tópicos separados sobre como entrar, os comandos e a localização das instalações.
 
 Em outubro de 2026, sekisei propôs que quem chegasse ao lobby pela primeira vez passasse por um mundo introdutório antes de seguir para o lobby normal. Em 21 de outubro, End&#12539;コッカー informou que o lobby introdutório estava pronto. Duas imagens que publicou naquele dia mostravam um púlpito com as regras e um portal.
 

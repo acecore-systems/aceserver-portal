@@ -2,7 +2,7 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:cc3e1bf1b588666f85f37c890005f51942077c226883d5268bd61973146071d2
+sourceHash: sha256:fb79dc00fdeb205aa46dd79c4602c5ffcd4dba82796f92e7c60cccf1c488ea77
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -251,6 +251,8 @@ En febrero de 2026, End&#12539;コッカー anunció el Concurso de Fotografía 
 
 En marzo de 2026, End&#12539;コッカー compartió una versión de prueba de un vídeo de presentación de Aceserver. Merutak señaló que la primera mitad avanzaba rápido. sekisei propuso aclarar el objetivo, el público y el mensaje. あすたん comentó cuánta información incluir en un vídeo corto y LuMiSIA\_&#26376;&#31070;&#24736;&#33673; opinó sobre cómo presentar el texto y las animaciones.
 
+El 6 de marzo de 2026, sekisei propuso celebrar reuniones abiertas periódicas de la Oficina de Información para compartir novedades del equipo del servidor. También propuso un grupo informal en el que los participantes pudieran difundir sus actividades sin presentar una solicitud. El 11 de marzo, End&#12539;コッカー compartió siete diapositivas para la reunión sobre el estatus de miembro habitual como meta para los participantes, las formas de jugar en los servidores de contenidos y supervivencia, los vídeos de eventos, la difusión en X y las orientaciones del portal y la wiki.
+
 El 7 de marzo de 2026, End&#12539;コッカー pidió ideas para eventos y voluntarios, y también animó a proponer actividades aparte del PvP.
 
 En marzo de 2026, &#12486;&#12451;&#12512;&#12540; solicitó ideas para un nuevo icono y relatos de sucesos en el servidor para el Diario de Aceserver del Comité de Revitalización de Aceserver.
@@ -449,6 +451,8 @@ El 14 de enero de 2023, &#33775;\*HAiNE redactó el acta de una reunión del equ
 
 En enero de 2023, あすたん publicó en la guía de acceso de Discord de la época instrucciones ilustradas para conectarse con Minecraft Java Edition y Bedrock Edition.
 
+El 6 de marzo de 2023, Gui hizo una migración de prueba de la base de datos e informó que había tardado menos. El 11 de mayo, taka8621 explicó que estaba usando un complemento para comprobar la velocidad de procesamiento del servidor y la latencia de la red.
+
 El 21 de marzo de 2023, taka8621 compartió siete imágenes con las recetas personalizadas que tenía Aceserver por entonces. Mostraban ejemplos con hierba o losas de roble petrificado como ingredientes y recetas para fabricar libros encantados y equipamiento.
 
 En abril de 2023, Yukke informó de que había añadido la pronunciación de «Hi» al diccionario de lectura en voz alta de la integración de chat que se usaba entonces.
@@ -511,7 +515,9 @@ En julio de 2026, sekisei anunció la primera charla técnica sobre los servidor
 
 En julio de 2026, durante el estudio de cómo incorporar la moneda del juego al puesto de intercambio administrado por el equipo del servidor, sekisei compartió los tipos de cambio anteriores e informó de que había implementado el intercambio de objetos por otros objetos y que pensaba probarlo. Merutak propuso permitir por tiempo limitado cambiar esmeraldas por moneda del juego. あすたん sugirió excluir del intercambio los objetos que podían producirse en grandes cantidades y End&#12539;コッカー propuso poner en orden los tipos de cambio para la venta de objetos.
 
-Entre septiembre y octubre de 2026, End&#12539;コッカー organizó la guía de acceso a Minecraft de la época para que fuera más fácil encontrar las reglas, las presentaciones y los recursos de conexión. También reunió los lugares donde consultar las reglas de cada mundo.
+En agosto de 2026, あすたん informó de que había rediseñado el panel web de la moneda del juego y pidió una revisión. A finales de agosto, sekisei preguntó si ya se había probado. En septiembre, あすたん volvió a pedir una revisión a sekisei.
+
+Entre septiembre y octubre de 2026, End&#12539;コッカー organizó la guía de acceso a Minecraft de la época para que fuera más fácil encontrar las reglas, las presentaciones y los recursos de conexión. También reunió los lugares donde consultar las reglas de cada mundo. El 27 de septiembre, propuso dedicar hilos separados a cómo entrar, los comandos y la ubicación de las instalaciones, y reunirlos en un canal de guías.
 
 En octubre de 2026, sekisei propuso que quienes llegaran al vestíbulo por primera vez pasaran por un mundo de introducción antes de acceder al vestíbulo habitual. El 21 de octubre, End&#12539;コッカー informó de que el vestíbulo de introducción estaba terminado. Dos imágenes que publicó ese día mostraban un atril donde se podían consultar las reglas y un portal.
 
