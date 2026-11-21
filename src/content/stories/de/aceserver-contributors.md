@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:1928153836b2380a0b89a10dbab1638e62190fd5425cf6d719c77ca2d97d9dde
+sourceHash: sha256:f204dd596ae13180754c016f05cf7a35c677797b345127844b6740f0b13aecc1
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -355,6 +355,18 @@ Im Mai 2024 reichte PillowKebap einen Antrag für ein großes Kartenkunstprojekt
 
 Im April 2025 reichte Moon\_666 einen Plan für eine Raidfarm ein, die alle nutzen könnten.
 
+Im Mai 2025 teilte End&#12539;コッカー Ideen für ein Rollenspiel. Die beim Besiegen von Gegnern erhaltenen Psalmen der Erinnerung sollten sich gegen besondere Gegenstände eintauschen lassen. Als Handlung schlug End&#12539;コッカー eine Geschichte um einen großen Baum auf einer abgelegenen Insel vor. Für das separate Konzept Überleben auf See zog End&#12539;コッカー feindliche Dorfbewohner als Piraten in Betracht und überlegte, wie groß die Karte sein sollte.
+
+Am 22. Juni 2025 berichtete End&#12539;コッカー, auf einer von Yukke angelegten Insel zu bauen.
+
+Am 2. September 2025 teilte Yukke beim Ausarbeiten der Idee Duell als Referenz zwei Screenshots mit Kampfausrüstung von einem anderen Server.
+
+Am 5. September berichtete End&#12539;コッカー im früheren Kanal Lobby-Bau, ein Fundament angelegt zu haben, und bat um Hilfe beim Bauen. Am 7. September schlug End&#12539;コッカー vor, die Treppen des Minispielservers zu versetzen und Stände aufzustellen. Am 9. September zeigte End&#12539;コッカー drei Bilder vom Zwischenstand mit dem Brunnen und den Ständen auf dem Platz sowie einem Segelschiff und bat Yukke um Rückmeldung.
+
+Am 11. September fragte LuMiSIA\_&#26376;&#31070;&#24736;&#33673;, wie viele Portale der Entwurf vorsah. Am 22. September teilte Yukke mit, den Kanal von Lobby-Bau in Kartenbau umbenannt zu haben.
+
+Im Oktober 2025 schlug End&#12539;コッカー für Fall Battle eine zylindrische Karte vor und beschrieb den Bereich, in dem sich die Spieler bewegen könnten.
+
 Im November 2025 meldete End&#12539;コッカー, dass Portale in acht Richtungen eingerichtet worden waren, die zu entfernten Bereichen des Survival-Servers führten. [Ankündigung zum Einbau der Portale](https://discord.com/channels/737538781024092170/774152638450237460/1434193495752704134)
 
 Im November 2025 meldete Moon\_666 die Fertigstellung einer Farm für zombifizierte Piglins auf dem Saisonserver, die Gold und Erfahrungspunkte lieferte. [Bericht zur Fertigstellung auf dem Saisonserver](https://discord.com/channels/737538781024092170/1437442961507090443/1440300609545965649)
@@ -374,6 +386,8 @@ Am 14. April 2026 baute Moon\_666 auf dem Überlebensserver die Wohnungen im Wal
 Am 18. April 2026 berichtete Moon\_666, dass die Wohnungen im Waldanwesen Nr. 1 bis 3 fast fertig waren. Die Arbeiten an den Einrichtungen bei Nr. 2 liefen noch.
 
 Am 17. September 2026 kündigte タケ an, dass das Belebungskomitee von Aceserver mit der Neugestaltung des zentralen Bereichs des ehemaligen Century-Geländes begonnen hatte. タケ berichtete auch, dass mehrere Helfer beim Aufräumen vorangekommen waren. [Beginn der Neugestaltung des ehemaligen Century-Geländes](https://discord.com/channels/737538781024092170/1437442902547759125/1550005135311110154)
+
+Am 28. September 2026 erwog あすたん, das damals in Entwicklung befindliche MMO um Angeln zu ergänzen.
 
 Am 31. Oktober 2026 teilte タケ mit, dass auf dem Überlebensserver eine neue Kaktusfarm eingerichtet worden war und sie damals von allen genutzt werden konnte. [Ankündigung der neuen Kaktusfarm](https://discord.com/channels/737538781024092170/1437442902547759125/1565747261575790592)
 

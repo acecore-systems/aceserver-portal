@@ -2,7 +2,7 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:1928153836b2380a0b89a10dbab1638e62190fd5425cf6d719c77ca2d97d9dde
+sourceHash: sha256:f204dd596ae13180754c016f05cf7a35c677797b345127844b6740f0b13aecc1
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -355,6 +355,18 @@ En mayo de 2024, PillowKebap presentó una solicitud para un proyecto de arte en
 
 En abril de 2025, Moon\_666 presentó un proyecto de granja de incursiones que cualquiera podría usar.
 
+En mayo de 2025, End&#12539;コッカー compartió ideas para un RPG. Propuso que los jugadores obtuvieran Salmos de la memoria al derrotar enemigos y los canjearan por objetos especiales, y planteó una historia sobre un gran árbol en una isla aislada. Para otro concepto, Supervivencia a la deriva, barajó usar aldeanos hostiles como piratas y estudió el tamaño del mapa.
+
+El 22 de junio de 2025, End&#12539;コッカー informó de que estaba construyendo en una isla que había hecho Yukke.
+
+El 2 de septiembre de 2025, mientras estudiaba la idea de Duelo, Yukke compartió como referencia dos capturas del equipo de combate de otro servidor.
+
+El 5 de septiembre, End&#12539;コッカー informó en el antiguo canal Construcción del vestíbulo de que había preparado una base y pidió ayuda para construir. El 7 de septiembre propuso trasladar las escaleras del servidor de minijuegos y añadir puestos. El 9 compartió tres imágenes del trabajo en curso que mostraban la fuente y los puestos de la plaza, además de un velero, y pidió la opinión de Yukke.
+
+El 11 de septiembre, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; preguntó cuántos portales contemplaba el diseño. El 22 de septiembre, Yukke anunció que había cambiado el nombre del canal de Construcción del vestíbulo a Creación de mapas.
+
+En octubre de 2025, End&#12539;コッカー propuso un mapa cilíndrico para Fall Battle y planteó por qué zona podrían moverse los jugadores.
+
 En noviembre de 2025, End&#12539;コッカー informó de que había instalado portales en ocho direcciones para llegar a zonas lejanas del servidor de supervivencia. [Anuncio de la instalación de portales](https://discord.com/channels/737538781024092170/774152638450237460/1434193495752704134)
 
 En noviembre de 2025, Moon\_666 informó de que se había completado en el servidor de temporada una granja de piglins zombificados que daba oro y experiencia. [Informe de finalización en el servidor de temporada](https://discord.com/channels/737538781024092170/1437442961507090443/1440300609545965649)
@@ -374,6 +386,8 @@ El 14 de abril de 2026, Moon\_666 construyó los Apartamentos de la Mansión del
 El 18 de abril de 2026, Moon\_666 informó de que los Apartamentos de la Mansión del Bosque n.º 1 a 3 estaban casi terminados y que las instalaciones anexas al n.º 2 seguían en obras.
 
 El 17 de septiembre de 2026, タケ anunció que el Comité de Revitalización de Aceserver había empezado a remodelar la parte central del antiguo emplazamiento de Century. También informó de que varias personas habían ayudado a despejar la zona. [Inicio de la remodelación del antiguo emplazamiento de Century](https://discord.com/channels/737538781024092170/1437442902547759125/1550005135311110154)
+
+El 28 de septiembre de 2026, あすたん estudió la posibilidad de añadir pesca al MMO que estaba en desarrollo.
 
 El 31 de octubre de 2026, タケ anunció que se había instalado una nueva granja de cactus en el servidor de supervivencia y que cualquiera podía usarla en aquel momento. [Anuncio de la nueva granja de cactus](https://discord.com/channels/737538781024092170/1437442902547759125/1565747261575790592)
 

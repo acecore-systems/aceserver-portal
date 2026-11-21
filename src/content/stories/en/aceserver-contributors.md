@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:1928153836b2380a0b89a10dbab1638e62190fd5425cf6d719c77ca2d97d9dde
+sourceHash: sha256:f204dd596ae13180754c016f05cf7a35c677797b345127844b6740f0b13aecc1
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -355,6 +355,18 @@ In May 2024, PillowKebap applied for a large map art project. In August, Amagi\_
 
 In April 2025, Moon\_666 submitted a proposal for a raid farm that anyone could use.
 
+In May 2025, End&#12539;コッカー shared RPG ideas for trading Psalms of Memory earned by defeating enemies for special items, and for a story about a great tree on an isolated island. For a separate Castaway Survival concept, they considered using illagers as pirates and discussed how large the map could be.
+
+On June 22, 2025, End&#12539;コッカー reported building on an island that Yukke had made.
+
+On September 2, 2025, Yukke shared two reference screenshots of combat gear from another server while exploring the Duel concept.
+
+On September 5, End&#12539;コッカー reported laying a foundation and asked for help with the build in the old Lobby Building channel. On September 7, they suggested relocating the minigame server’s stairs and adding stalls. On September 9, they asked Yukke for feedback and shared three work-in-progress images showing the plaza’s fountain and stalls, as well as a sailing ship.
+
+On September 11, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; asked how many portals the design would need. On September 22, Yukke announced that they had renamed the Lobby Building channel to Map Building.
+
+In October 2025, End&#12539;コッカー proposed a cylindrical map for Fall Battle and outlined the area players could move within.
+
 In November 2025, End&#12539;コッカー reported installing gates in eight directions to reach distant parts of the survival server. [Gate installation announcement](https://discord.com/channels/737538781024092170/774152638450237460/1434193495752704134)
 
 In November 2025, Moon\_666 reported that a zombified piglin farm for gold and experience points was complete on the Season Server. [Season Server completion report](https://discord.com/channels/737538781024092170/1437442961507090443/1440300609545965649)
@@ -374,6 +386,8 @@ On April 14, 2026, Moon\_666 built the Woodland Mansion Apartments on the surviv
 On April 18, 2026, Moon\_666 reported that Woodland Mansion Apartments Nos. 1 to 3 were nearly complete, with work still underway on the facilities alongside No. 2.
 
 On September 17, 2026, タケ announced that the Aceserver Revitalization Committee had started redeveloping the central part of the old Century site. タケ also reported that several volunteers had made progress clearing the area. [Start of the old Century site redevelopment](https://discord.com/channels/737538781024092170/1437442902547759125/1550005135311110154)
+
+On September 28, 2026, あすたん considered adding fishing to the MMO under development.
 
 On October 31, 2026, タケ announced that a new cactus farm had been installed on the survival server and that anyone could use it at the time. [New cactus farm announcement](https://discord.com/channels/737538781024092170/1437442902547759125/1565747261575790592)
 

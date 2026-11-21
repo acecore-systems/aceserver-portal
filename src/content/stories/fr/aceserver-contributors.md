@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:1928153836b2380a0b89a10dbab1638e62190fd5425cf6d719c77ca2d97d9dde
+sourceHash: sha256:f204dd596ae13180754c016f05cf7a35c677797b345127844b6740f0b13aecc1
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -355,6 +355,18 @@ En mai 2024, PillowKebap a déposé une demande pour un grand projet d’art sur
 
 En avril 2025, Moon\_666 a déposé un projet de ferme à raids ouverte à tous.
 
+En mai 2025, End&#12539;コッカー a présenté des idées pour un RPG. Le projet permettrait d’échanger contre des objets spéciaux les Psaumes de la mémoire obtenus en battant des ennemis. Un scénario mettait en scène un grand arbre sur une île isolée. Pour un autre projet, Survie à la dérive, End&#12539;コッカー a envisagé de donner le rôle des pirates à des villageois hostiles et a réfléchi à la taille de la carte.
+
+Le 22 juin 2025, End&#12539;コッカー a indiqué travailler à une construction sur une île créée par Yukke.
+
+Le 2 septembre 2025, Yukke a partagé deux captures de l’équipement de combat d’un autre serveur pour prendre des idées en réfléchissant au projet Duel.
+
+Le 5 septembre, End&#12539;コッカー a indiqué dans l’ancien salon Construction du hall avoir préparé une base et a demandé de l’aide pour la construction. Le 7 septembre, End&#12539;コッカー a suggéré de déplacer les escaliers du serveur de mini-jeux et d’ajouter des stands. Le 9 septembre, End&#12539;コッカー a demandé l’avis de Yukke et a partagé trois images du chantier montrant la fontaine et les stands de la place ainsi qu’un voilier.
+
+Le 11 septembre, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; a demandé combien de portails étaient prévus dans le projet. Le 22 septembre, Yukke a annoncé que le nom du salon était passé de Construction du hall à Création de cartes.
+
+En octobre 2025, End&#12539;コッカー a proposé une carte cylindrique pour Fall Battle ainsi qu’une zone dans laquelle les joueurs pourraient se déplacer.
+
 En novembre 2025, End&#12539;コッカー a annoncé l’installation de portails dans huit directions pour atteindre les zones éloignées du serveur de survie. [Annonce de l’installation des portails](https://discord.com/channels/737538781024092170/774152638450237460/1434193495752704134)
 
 En novembre 2025, Moon\_666 a annoncé qu’une ferme à piglins zombifiés qui rapportait de l’or et des points d’expérience était terminée sur le serveur de saison. [Rapport d’achèvement sur le serveur de saison](https://discord.com/channels/737538781024092170/1437442961507090443/1440300609545965649)
@@ -374,6 +386,8 @@ Le 14 avril 2026, Moon\_666 a construit les Appartements du Manoir forestier sur
 Le 18 avril 2026, Moon\_666 a signalé que les Appartements du Manoir forestier numéros 1 à 3 étaient presque terminés et que les travaux dans les installations attenantes au numéro 2 se poursuivaient.
 
 Le 17 septembre 2026, タケ a annoncé que le comité de revitalisation d’Aceserver avait commencé à réaménager la partie centrale de l’ancien site de Century. タケ a aussi signalé que plusieurs personnes avaient aidé à dégager la zone. [Début du réaménagement de l’ancien site de Century](https://discord.com/channels/737538781024092170/1437442902547759125/1550005135311110154)
+
+Le 28 septembre 2026, あすたん a envisagé d’ajouter la pêche au MMO alors en cours de développement.
 
 Le 31 octobre 2026, タケ a annoncé qu’une nouvelle ferme à cactus avait été installée sur le serveur de survie et que tout le monde pouvait l’utiliser à l’époque. [Annonce de la nouvelle ferme à cactus](https://discord.com/channels/737538781024092170/1437442902547759125/1565747261575790592)
 
