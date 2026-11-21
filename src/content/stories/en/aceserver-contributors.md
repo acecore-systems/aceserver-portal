@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:27b1dd136756dabc1fab44adeb717aa9462d3916cf900704f756c65ed5a7c5b8
+sourceHash: sha256:86bff087c6530f2f3a3411f39564a9e005070403dca6347a52136ed53a1491c0
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -99,7 +99,7 @@ In October 2022, nuu\_mink invited players to visit the casino and bar at POCKET
 
 In November 2022, yanyan_fafnir reported that ゆり (Yū) had become a supporter after a recommendation from Sosuke. [Supporter appointment announcement](https://discord.com/channels/737538781024092170/774152638450237460/1043527218191663114)
 
-In December 2022, Yukke opened a channel for the Aceserver Photography Club. Records from the old Discord channel show that taibon0727 asked for photos of old and new worlds for an album. By January 2023, dont_stop had shared a photo commemorating an ascent of Saihate, PillowKebap had contributed from their saved photos, and nnn_percent had shared photos of builds.
+In December 2022, Yukke opened a channel for the Aceserver Photography Club. Records from the old Discord channel show that taibon0727 asked for photos of old and new worlds for an album. By January 2023, dont\_stop had contributed one photo taken at the world border to commemorate the climb to Saihate. PillowKebap had contributed five saved photos showing in-game creations, facilities, and moments with players. nnn\_percent had contributed one photo of a building with red pillars and an orange roof. taibon0727 described the building as Chinese-style.
 
 In December 2022, &#12383;&#12356;&#12420;&#12365; (taiyaki5190) opened two submission threads in the old Discord’s Letters Room, asking players to write in about topics such as what surprised them when they first joined.
 
@@ -188,6 +188,8 @@ In July 2025, End&#12539;コッカー reported preparing a proposal for the summ
 The 2025 summer festival announcement named センチュリーズ for preparing and providing the fireworks display. The post-event thanks named セガ, リンゴポン, あまぎ, 新人, ジェスター, ホステッチ and イザイザ for the fireworks, and コッカー and sh for overall coordination. エント worked on the circuit, and moon and セキセイ on golf. ハルビィ, セキセイ and sh worked on survival PvP, and はっ and sh on the special event. [Original post](https://discord.com/channels/737538781024092170/774152638450237460/1408390549370572880) [Post-event thanks](https://discord.com/channels/737538781024092170/779569416438415421/1411394624026710166)
 
 In September 2025, End&#12539;コッカー introduced the work of four departments devoted to railways, events, building, and work projects, and invited people to join the Aceserver Revitalization Committee.
+
+On September 9, 2025, 山田 featured railway scenery and details with a map image showing a curve in the tracks and a bridge crossing the sea, and an in-game view of the stonework. [Map showing the tracks and bridge](https://discord.com/channels/737538781024092170/1337748039317848137/1414913878097133629) [In-game view of the stonework](https://discord.com/channels/737538781024092170/1337748039317848137/1414914292750487623)
 
 In October 2025, while preparing for Aceserver News Desk, sekisei reported that a rough cut of a video introducing the Season Server was ready.
 

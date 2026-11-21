@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:27b1dd136756dabc1fab44adeb717aa9462d3916cf900704f756c65ed5a7c5b8
+sourceHash: sha256:86bff087c6530f2f3a3411f39564a9e005070403dca6347a52136ed53a1491c0
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -99,7 +99,7 @@ Im Oktober 2022 lud nuu\_mink zum Besuch des Casinos und der Bar von POCKET ACES
 
 Im November 2022 berichtete yanyan_fafnir, dass ゆり (Yū) auf Empfehlung von Sosuke die Rolle „Supporter“ übernommen hatte. [Bekanntgabe der Ernennung](https://discord.com/channels/737538781024092170/774152638450237460/1043527218191663114)
 
-Im Dezember 2022 eröffnete Yukke einen Kanal für den Fotoclub von Aceserver. Laut den Aufzeichnungen aus dem früheren Discord-Kanal bat taibon0727 um Fotos aus alten und neuen Welten für ein Album. Bis Januar 2023 steuerte dont_stop ein Erinnerungsfoto von der Besteigung von Saihate bei, PillowKebap teilte aufbewahrte Fotos und nnn_percent reichte Fotos von Bauwerken ein.
+Im Dezember 2022 eröffnete Yukke einen Kanal für den Fotoclub von Aceserver. Laut den Aufzeichnungen aus dem früheren Discord-Kanal bat taibon0727 um Fotos aus alten und neuen Welten für ein Album. Bis Januar 2023 steuerte dont\_stop ein Foto bei, das an der Weltgrenze zur Erinnerung an die Besteigung von Saihate aufgenommen worden war. PillowKebap steuerte fünf aufbewahrte Fotos bei, die unter anderem Bauwerke, Einrichtungen und Szenen mit Spielern zeigten. nnn\_percent steuerte ein Foto eines Gebäudes mit roten Säulen und einem orangefarbenen Dach bei. taibon0727 beschrieb das Gebäude als Bauwerk im chinesischen Stil.
 
 Im Dezember 2022 eröffnete &#12383;&#12356;&#12420;&#12365; (taiyaki5190) im Briefraum des damaligen Discord-Servers zwei Threads für Zuschriften. Gefragt waren unter anderem Erlebnisse, die Spieler bei ihrem ersten Besuch überrascht hatten.
 
@@ -188,6 +188,8 @@ Im Juli 2025 berichtete End&#12539;コッカー, einen Vorschlag für das Sommer
 In der Ankündigung zum Sommerfest 2025 wurde センチュリーズ für die Vorbereitung und Bereitstellung des Feuerwerks genannt. Der Dank nach der Veranstaltung nannte セガ, リンゴポン, あまぎ, 新人, ジェスター, ホステッチ und イザイザ für das Feuerwerk sowie コッカー und sh für die Gesamtkoordination. エント betreute den Rundkurs, moon und セキセイ das Golfspiel. ハルビィ, セキセイ und sh betreuten das Survival-PvP, はっ und sh das Sonderereignis. [Originalbeitrag](https://discord.com/channels/737538781024092170/774152638450237460/1408390549370572880) [Dank nach der Veranstaltung](https://discord.com/channels/737538781024092170/779569416438415421/1411394624026710166)
 
 Im September 2025 stellte End&#12539;コッカー die Arbeit der vier Bereiche Eisenbahn, Veranstaltungen, Bauen und gemeinsame Arbeiten vor und warb um Mitglieder für das Belebungskomitee von Aceserver.
+
+Am 9. September 2025 stellte 山田 die Landschaft und Details der Bahnstrecke mit einem Kartenbild vor, das eine Gleiskurve und eine Brücke über das Meer zeigte. Dazu kam eine Ansicht des Mauerwerks aus dem Spiel. [Karte mit Gleisen und Brücke](https://discord.com/channels/737538781024092170/1337748039317848137/1414913878097133629) [Ansicht des Mauerwerks aus dem Spiel](https://discord.com/channels/737538781024092170/1337748039317848137/1414914292750487623)
 
 Im Oktober 2025 berichtete sekisei bei der Vorbereitung der Aceserver-Nachrichten, dass ein Rohschnitt des Videos über den Saisonserver vorlag.
 

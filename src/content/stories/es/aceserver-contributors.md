@@ -2,7 +2,7 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:27b1dd136756dabc1fab44adeb717aa9462d3916cf900704f756c65ed5a7c5b8
+sourceHash: sha256:86bff087c6530f2f3a3411f39564a9e005070403dca6347a52136ed53a1491c0
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -99,7 +99,7 @@ En octubre de 2022, nuu\_mink invitó a los jugadores a visitar el casino y el b
 
 En noviembre de 2022, yanyan_fafnir anunció que ゆり (Yū) había asumido un rol de apoyo por recomendación de Sosuke. [Anuncio del nombramiento](https://discord.com/channels/737538781024092170/774152638450237460/1043527218191663114)
 
-En diciembre de 2022, Yukke abrió un canal para el club de fotografía de Aceserver. Según los registros del antiguo canal de Discord, taibon0727 pidió fotos de mundos nuevos y antiguos para un álbum. Para enero de 2023, dont_stop había compartido una foto conmemorativa del ascenso a Saihate, PillowKebap había aportado fotos que conservaba y nnn_percent había enviado fotos de construcciones.
+En diciembre de 2022, Yukke abrió un canal para el club de fotografía de Aceserver. Según los registros del antiguo canal de Discord, taibon0727 pidió fotos de mundos nuevos y antiguos para un álbum. Para enero de 2023, dont\_stop había aportado una foto tomada en el límite del mundo para conmemorar el ascenso a Saihate. PillowKebap había aportado cinco fotos que conservaba, con creaciones, instalaciones y escenas de jugadores dentro del juego. nnn\_percent había aportado una foto de un edificio con columnas rojas y tejado naranja. taibon0727 describió el edificio como de estilo chino.
 
 En diciembre de 2022, &#12383;&#12356;&#12420;&#12365; (taiyaki5190) abrió dos hilos para recibir mensajes en la sala de cartas del antiguo Discord. Invitó a contar, entre otros temas, qué les había sorprendido a los jugadores al entrar por primera vez.
 
@@ -188,6 +188,8 @@ En julio de 2025, End&#12539;コッカー informó de que había preparado una p
 El anuncio del festival de verano de 2025 mencionó a センチュリーズ por la preparación y provisión del espectáculo de fuegos artificiales. El agradecimiento posterior nombró a セガ, リンゴポン, あまぎ, 新人, ジェスター, ホステッチ e イザイザ por los fuegos artificiales, y a コッカー y sh por la coordinación general. エント se encargó del circuito y moon y セキセイ del golf. ハルビィ, セキセイ y sh se encargaron del PvP de supervivencia, y はっ y sh del evento especial. [Publicación original](https://discord.com/channels/737538781024092170/774152638450237460/1408390549370572880) [Agradecimiento posterior](https://discord.com/channels/737538781024092170/779569416438415421/1411394624026710166)
 
 En septiembre de 2025, End&#12539;コッカー presentó el trabajo de las cuatro áreas de ferrocarriles, eventos, construcción y trabajos compartidos e invitó a incorporarse al Comité de Revitalización de Aceserver.
+
+El 9 de septiembre de 2025, 山田 mostró el paisaje y los detalles del ferrocarril con una imagen del mapa en la que se veían una curva de las vías y un puente que cruzaba el mar, y una vista de la parte de piedra desde el juego. [Mapa con las vías y el puente](https://discord.com/channels/737538781024092170/1337748039317848137/1414913878097133629) [Vista de la parte de piedra desde el juego](https://discord.com/channels/737538781024092170/1337748039317848137/1414914292750487623)
 
 En octubre de 2025, durante los preparativos del boletín de Aceserver, sekisei informó de que ya tenía un montaje preliminar del vídeo de presentación del servidor de temporada.
 
