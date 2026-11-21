@@ -2,7 +2,7 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:d381819698fb333a51c0522c75b6ac8cc71666e5eaf9e9a8f54b64ffdfdd65c3
+sourceHash: sha256:a8cef8b78f82364dc376a8cd6297476fcac520935088b89e2c59029034c3c6f7
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -277,7 +277,7 @@ En junio de 2022, yanyan_fafnir explicó cómo participar en el concurso de isla
 
 En julio de 2022, Maro dirigió la construcción del antiguo vestíbulo y anunció que había terminado. Los registros de la obra en el antiguo canal de Discord agradecieron a BM_yurikun la jardinería y a _BE_ChalkyMink87 la colocación de minerales en la base. KOTA-SAN habilitó un espacio para compartir avances de la obra.
 
-En agosto de 2022, \_BE\_Kuten2021110 empezó a marcar con tierra el perímetro del terreno previsto para la plaza provisionalmente llamada Ace e invitó a colaborar en la construcción y el diseño del estadio. También preparó y compartió un diseño preliminar para los establos de caballos.
+En agosto de 2022, \_BE\_Kuten2021110 empezó a marcar con tierra el perímetro del terreno previsto para la plaza provisionalmente llamada Ace e invitó a colaborar en la construcción y el diseño del estadio. También compartió un plano a mano alzada con un circuito alrededor de la plaza, establos para caballos y un espacio para puestos. También preparó un diseño preliminar para los establos y compartió cuatro capturas que mostraban el exterior y el interior. &#12525;&#12483;&#12463;&#12384;&#12424;&#12316; (BlissfulRook\_BE\_) mostró una foto de unos establos como referencia y propuso un tejado triangular de pizarra profunda. Al día siguiente, \_BE\_Kuten2021110 compartió una imagen de la estructura que había construido en un mundo de pruebas.
 
 En agosto de 2022, Yukke informó que la sala de espera del antiguo recinto de la liga PvP estaba casi terminada. ゆり informó que los asientos de la terraza estaban listos y compartió una foto.
 

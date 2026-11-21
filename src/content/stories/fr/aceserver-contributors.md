@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:d381819698fb333a51c0522c75b6ac8cc71666e5eaf9e9a8f54b64ffdfdd65c3
+sourceHash: sha256:a8cef8b78f82364dc376a8cd6297476fcac520935088b89e2c59029034c3c6f7
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -277,7 +277,7 @@ En juin 2022, yanyan_fafnir a expliqué comment participer au concours d’îles
 
 En juillet 2022, Maro a dirigé la construction de l’ancien hall d’accueil et en a annoncé l’achèvement. Le suivi des travaux dans l’ancien salon Discord a remercié BM_yurikun pour les aménagements paysagers et _BE_ChalkyMink87 pour l’intégration de minerais dans la base. KOTA-SAN a préparé un espace pour partager l’avancement des travaux.
 
-En août 2022, \_BE\_Kuten2021110 a commencé à délimiter avec de la terre le site de la place provisoirement appelée Ace et a demandé de l’aide pour la construction et la conception du stade. La même personne a aussi préparé et partagé un premier plan d’écuries.
+En août 2022, \_BE\_Kuten2021110 a commencé à délimiter avec de la terre le site de la place provisoirement appelée Ace et a demandé de l’aide pour la construction et la conception du stade. \_BE\_Kuten2021110 a aussi partagé un plan dessiné à la main montrant un parcours autour de la place, des écuries et un espace pour les stands. Cette personne a aussi préparé un premier plan d’écuries et partagé quatre captures d’écran montrant l’extérieur et l’intérieur. &#12525;&#12483;&#12463;&#12384;&#12424;&#12316; (BlissfulRook\_BE\_) a montré une photo d’écuries comme référence et proposé un toit triangulaire en ardoise des abîmes. Le lendemain, \_BE\_Kuten2021110 a partagé une image de l’ossature que cette personne avait construite dans un monde de test.
 
 En août 2022, Yukke a indiqué que la salle d’attente de l’ancien site de la ligue PvP était presque terminée. ゆり a annoncé la fin de l’aménagement des places en terrasse et a partagé une photo.
 

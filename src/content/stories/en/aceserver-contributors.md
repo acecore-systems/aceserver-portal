@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:d381819698fb333a51c0522c75b6ac8cc71666e5eaf9e9a8f54b64ffdfdd65c3
+sourceHash: sha256:a8cef8b78f82364dc376a8cd6297476fcac520935088b89e2c59029034c3c6f7
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -277,7 +277,7 @@ In June 2022, yanyan_fafnir explained how to enter the floating-island contest t
 
 In July 2022, Maro led construction of the former lobby and reported its completion. The build logs from the old Discord channel thanked BM_yurikun for landscaping and _BE_ChalkyMink87 for embedding ore in the foundation. KOTA-SAN set up a place to share updates on the build.
 
-In August 2022, \_BE\_Kuten2021110 began marking out the site for the project tentatively called Ace Plaza with dirt and asked for help with construction and stadium design. They also made and shared a preliminary design for horse stables.
+In August 2022, \_BE\_Kuten2021110 began marking out the site for the project tentatively called Ace Plaza with dirt and asked for help with construction and stadium design. They also shared a hand-drawn layout showing a course around the plaza, horse stables, and space for stalls. They also made a preliminary design for the stables and shared four screenshots showing the exterior and interior. &#12525;&#12483;&#12463;&#12384;&#12424;&#12316; (BlissfulRook\_BE\_) shared a photo of stables as a reference and suggested a triangular deepslate roof. The next day, \_BE\_Kuten2021110 shared an image of the framework they built in a test world.
 
 In August 2022, Yukke reported that the waiting room at the old PvP league venue was nearly complete. ゆり reported that the terrace seating was complete and shared a photo.
 

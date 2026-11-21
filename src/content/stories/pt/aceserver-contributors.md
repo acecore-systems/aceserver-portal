@@ -2,7 +2,7 @@
 title: As pessoas que apoiaram o Aceserver
 description: Conheça quem ajudou o Aceserver pelos retratos de skins do Minecraft, relembre as atividades e confira o roteiro de eventos e propostas.
 translationOf: aceserver-contributors
-sourceHash: sha256:d381819698fb333a51c0522c75b6ac8cc71666e5eaf9e9a8f54b64ffdfdd65c3
+sourceHash: sha256:a8cef8b78f82364dc376a8cd6297476fcac520935088b89e2c59029034c3c6f7
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -277,7 +277,7 @@ Em junho de 2022, yanyan_fafnir explicou as regras para participar do concurso d
 
 Em julho de 2022, Maro liderou a construção do lobby antigo e informou sua conclusão. Os registros da obra no antigo canal do Discord agradeceram a BM_yurikun pelo paisagismo e a _BE_ChalkyMink87 por embutir minérios na base. KOTA-SAN preparou um espaço para compartilhar o andamento da obra.
 
-Em agosto de 2022, \_BE\_Kuten2021110 começou a delimitar com terra a área prevista para a praça provisoriamente chamada Ace e pediu ajuda na construção e no projeto do estádio. Também preparou e compartilhou um esboço para os estábulos de cavalos.
+Em agosto de 2022, \_BE\_Kuten2021110 começou a delimitar com terra a área prevista para a praça provisoriamente chamada Ace e pediu ajuda na construção e no projeto do estádio. Também compartilhou um esboço à mão com um percurso ao redor da praça, estábulos para cavalos e espaço para barracas. Também preparou um projeto preliminar para os estábulos e compartilhou quatro capturas de tela mostrando o exterior e o interior. &#12525;&#12483;&#12463;&#12384;&#12424;&#12316; (BlissfulRook\_BE\_) mostrou uma foto de estábulos como referência e sugeriu um telhado triangular de ardósia. No dia seguinte, \_BE\_Kuten2021110 compartilhou uma imagem da estrutura que montou em um mundo de testes.
 
 Em agosto de 2022, Yukke informou que a sala de espera do antigo local da liga PvP estava quase pronta. ゆり informou que os assentos do terraço estavam concluídos e compartilhou uma foto.
 

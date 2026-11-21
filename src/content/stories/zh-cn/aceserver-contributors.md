@@ -2,7 +2,7 @@
 title: 支持Aceserver的人们
 description: 通过 Minecraft 皮肤头像认识 Aceserver 的贡献者，回顾社区活动记录，并查看活动与玩家提案路线图。
 translationOf: aceserver-contributors
-sourceHash: sha256:d381819698fb333a51c0522c75b6ac8cc71666e5eaf9e9a8f54b64ffdfdd65c3
+sourceHash: sha256:a8cef8b78f82364dc376a8cd6297476fcac520935088b89e2c59029034c3c6f7
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -277,7 +277,7 @@ edamameRex_java（Edamame）介绍了自己的摊位，Moon_666 也公布了摊�
 
 2022 年 7 月，Maro 主导了旧大厅的建造，并报告工程已完工。旧 Discord 频道的建造进度记录感谢 BM_yurikun 负责绿化，以及 _BE_ChalkyMink87 将矿石嵌入地基。KOTA-SAN 提供了分享建造进度的空间。
 
-2022年8月，\_BE\_Kuten2021110着手用泥土围出暂名“Ace 广场”的拟建地点，并招募协助建设和设计体育场的人。还制作并分享了马厩的初步设计。
+2022年8月，\_BE\_Kuten2021110着手用泥土围出暂名“Ace 广场”的拟建地点，并招募协助建设和设计体育场的人。还分享了一张手绘布局图，标出了环绕广场的路线、马厩和摊位区。此外还制作了马厩的初步设计，分享了四张展示外观和内部的截图。&#12525;&#12483;&#12463;&#12384;&#12424;&#12316;（BlissfulRook\_BE\_）展示了一张马厩的参考照片，并建议用深板岩做三角形屋顶。次日，\_BE\_Kuten2021110分享了在测试世界中搭建的框架的图片。
 
 2022年8月，Yukke报告说，旧 PvP 联赛场地的等候室已接近完工。ゆり配图报告了露台座位区的完工情况。
 
