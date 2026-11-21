@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:8776d76afcdad23eb5e26ebeec687ddcbcad8e45f20c6fe9be6be0f429bb1825
+sourceHash: sha256:f8eb9a54aaba2676b7bb24fff26f948bf56be457feffaeabd562dc461e4c0ade
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -16,6 +16,8 @@ imageAlt: Ville du monde principal d’Aceserver, capturée sur la carte publiqu
 Des débuts du Wiki à l’organisation d’événements et à l’intégration du chat, voici quelques contributions à Aceserver retracées à partir des annonces, des comptes rendus et des archives d’anciens salons du Discord officiel.
 
 ## Les débuts
+
+En novembre 2020, てぃあ a proposé un concours de construction de maisons sur un terrain divisé en parcelles, avec un thème et un vote. En décembre, てぃあ a annoncé avoir créé un salon pour les demandes de construction de voies ferrées.
 
 En décembre 2020, てぃあ a coordonné les premiers travaux ferroviaires et expliqué la démarche à suivre à l’époque pour demander l’autorisation de construire. [Annonce sur la construction ferroviaire](https://discord.com/channels/737538781024092170/774152638450237460/783543829676556349)
 
@@ -165,6 +167,8 @@ En décembre 2024, Pluto a proposé un espace appelé Zone de parkour et a annon
 
 En janvier 2025, une annonce a présenté Wenti (Hosttech255), Pluto et あすたん comme membres de l’équipe de soutien aux événements. [Annonce du soutien aux événements](https://discord.com/channels/737538781024092170/774152638450237460/1323911696237990039)
 
+En janvier 2025, sh a proposé de faire connaître le serveur avec des YouTube Shorts. LuMiSIA\_&#26376;&#31070;&#24736;&#33673; a décrit les étapes, du scénario au tournage, au montage, à la publication et à l’annonce, et a proposé d’aider au tournage.
+
 En février 2025, タケ a annoncé l’ouverture prévue d’une nouvelle gare sur la ligne principale de &#26628;&#38920;. En août, タケ a présenté le projet de rénovation de la station Colisée d’Ibaraki et l’interruption partielle prévue du service sur la ligne 1 du monorail Ace. En décembre, タケ a annoncé la distribution des cadeaux de Noël du monorail Ace.
 
 En mars 2025, sh a demandé de l’aide pour écrire le scénario et monter une vidéo verticale de présentation d’Aceserver. End&#12539;コッカー a proposé un plan de tournage mettant en valeur les constructions et un brouillon de narration.
@@ -182,6 +186,8 @@ Le 26 octobre 2025, End&#12539;コッカー a remercié les personnes qui avaien
 En octobre 2025, sh a remercié les personnes qui avaient aidé à préparer les événements du comité de revitalisation d’Aceserver et a sollicité des idées pour la suite. En novembre, une annonce a présenté amagi_467 comme l’initiateur du premier tournoi de mahjong d’Aceserver, que le comité prévoyait d’organiser. [Remerciements et appel à idées](https://discord.com/channels/737538781024092170/774152638450237460/1432028687376715897) [Annonce du tournoi de mahjong](https://discord.com/channels/737538781024092170/774152638450237460/1442742157315149865)
 
 Pour la fin de 2025, Pluto a annoncé Herobrine, un événement de parkour en neuf étapes.
+
+En décembre 2025, en s’appuyant aussi sur l’idée de ゆり, sekisei a proposé de recruter un comité d’organisation chargé de planifier et de promouvoir les événements, de coordonner leur déroulement et d’en fixer le calendrier.
 
 Pour l’événement de fin 2025, ハルビィ, セキセイ et タケ ont aidé à la course en montagne enneigée. セキセイ a développé le plugin de bataille de boules de neige PvP. 山田 a construit le lieu et ゆり a aidé aux commentaires en direct et au déroulement de l’événement. Des participants ont aussi aidé à la répétition. [Message d’origine](https://discord.com/channels/737538781024092170/774152638450237460/1454846975227854859)
 
@@ -205,9 +211,17 @@ En août 2026, sekisei et ふーや ont annoncé un CTF commun sous forme de cha
 
 ## Construction et projets collectifs
 
+En décembre 2020, bamoshi4869 a invité les joueurs à aider au nivellement des terrains et à d’autres travaux communs. &#12365;&#12383;&#12422;&#12358; a proposé son aide et Gui a suggéré de créer un salon pour coordonner les travaux. bamoshi4869 a aussi invité les joueurs à aider à assécher un monument océanique.
+
 En décembre 2020, bamoshi4869 a indiqué dans l’ancien groupe de travaux que des travaux d’arasement de la montagne et d’excavation à ciel ouvert avaient eu lieu les 24 et 25 décembre. Le compte rendu précise que l’excavation à ciel ouvert avait été menée à terme jusqu’à l’altitude 5. Le compte rendu cite &#12400;&#12418;&#12375;, &#21311;&#21517;, &#12354;&#12363;&#12426;&#12435;, &#12356;&#12385;&#12398;&#12379;, jag., &#12513;&#12525;&#12531; et &#12504;&#12490;&#12509;&#12531; parmi les participants.
 
 Le 29 décembre de la même année, bamoshi4869 a signalé que l’assèchement d’un monument océanique avait été achevé dans le cadre d’un autre chantier. La liste des participants mentionnait &#12400;&#12418;&#12375;, &#21311;&#21517;, &#12354;&#12363;&#12426;&#12435;, J, &#12450;&#12474;, &#12504;&#12490;&#12509;&#12531;, &#12495;&#12488;&#12512;&#12462; et &#12371;&#12383;.
+
+En janvier 2021, bamoshi4869 a préparé et annoncé le démantèlement d’une forteresse du Nether. Le même mois, yizu\_TrPf a réalisé en mode Créatif un prototype de maison à mécanismes et a également réuni des matériaux.
+
+En février 2021, Jagdsolid a signalé que la ferme à noyés était terminée. ninopan1122 a annoncé avoir recréé la Danse du cercueil avec des blocs musicaux.
+
+En mars 2021, Game\_Tokumei a lancé un service appelé « Tous travaux » et a annoncé accepter des demandes comme l’aménagement de routes. En mai, kuroneko229 a indiqué qu’à l’époque, tout le monde pouvait construire dans la Ville en développement.
 
 En juin 2021, KOTA-SAN a signalé le démarrage du projet de construction collective Yasuragi no Mori et indiqué avoir planté un arbre pour marquer le début des travaux. Le même mois, KOTA-SAN a aussi signalé qu’un dispositif pour fabriquer des cadres invisibles avait été construit à Yasuragi no Mori.
 
@@ -219,7 +233,7 @@ En juin 2022, yanyan_fafnir a expliqué comment participer au concours d’îles
 
 En juillet 2022, Maro a dirigé la construction de l’ancien hall d’accueil et en a annoncé l’achèvement. Le suivi des travaux dans l’ancien salon Discord a remercié BM_yurikun pour les aménagements paysagers et _BE_ChalkyMink87 pour l’intégration de minerais dans la base. KOTA-SAN a préparé un espace pour partager l’avancement des travaux.
 
-En août 2022, \_BE\_Kuten2021110 a commencé à délimiter avec de la terre le site de la place provisoirement appelée Ace et a demandé de l’aide pour la construction et la conception du stade.
+En août 2022, \_BE\_Kuten2021110 a commencé à délimiter avec de la terre le site de la place provisoirement appelée Ace et a demandé de l’aide pour la construction et la conception du stade. La même personne a aussi préparé et partagé un premier plan d’écuries.
 
 En août 2022, Yukke a indiqué que la salle d’attente de l’ancien site de la ligue PvP était presque terminée. ゆり a annoncé la fin de l’aménagement des places en terrasse et a partagé une photo.
 
@@ -264,6 +278,8 @@ En mars 2026, Merutak a annoncé la fin du drainage d’une vaste zone pour le p
 Le 30 mars, Merutak a annoncé la fin de la construction du monument océanique ×6. L’excavation à ciel ouvert était alors en cours. [Annonce de l’achèvement du monument](https://discord.com/channels/737538781024092170/779569416438415421/1488001468970827896)
 
 ## Technologie et soutien
+
+En février 2021, sya\_ri a proposé un accès à plusieurs serveurs par une entrée commune ainsi que des façons de se connecter depuis Minecraft Java Edition et Bedrock Edition.
 
 En mars 2021, KOTA-SAN a indiqué avoir créé Kutya, un bot Discord de lecture à voix haute. KOTA-SAN a ajouté la possibilité de choisir le salon textuel dont le bot lisait les messages à voix haute et un texte d’explication pour les nouveaux joueurs. En mai, KOTA-SAN a ajouté une liste des coordonnées des installations.
 

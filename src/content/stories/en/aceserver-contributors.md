@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:8776d76afcdad23eb5e26ebeec687ddcbcad8e45f20c6fe9be6be0f429bb1825
+sourceHash: sha256:f8eb9a54aaba2676b7bb24fff26f948bf56be457feffaeabd562dc461e4c0ade
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -16,6 +16,8 @@ imageAlt: A main-world city on Aceserver, captured on the public map in October 
 From the early Wiki to planning events and linking chats, these are some of the contributions to Aceserver documented in official Discord announcements, event reports, and records from earlier channels.
 
 ## The early days
+
+In November 2020, てぃあ proposed a themed home-building contest with voting at a venue laid out in plots. In December, てぃあ reported creating a channel for railway construction applications.
 
 In December 2020, てぃあ coordinated early railway construction and explained the application process builders were asked to follow at the time. [Railway construction announcement](https://discord.com/channels/737538781024092170/774152638450237460/783543829676556349)
 
@@ -165,6 +167,8 @@ In December 2024, Pluto proposed an area called Parkour Zone and reported that i
 
 In January 2025, Aceserver announced that Wenti (Hosttech255), Pluto, and あすたん had become event supporters. [Event supporter announcement](https://discord.com/channels/737538781024092170/774152638450237460/1323911696237990039)
 
+In January 2025, sh proposed using YouTube Shorts to promote the server. LuMiSIA\_&#26376;&#31070;&#24736;&#33673; laid out the steps from scripting through filming, editing, posting, and promotion, and offered to help with filming.
+
 In February 2025, タケ announced plans to open a new station on the &#26628;&#38920; Main Line. In August, タケ announced plans to renovate Ibaraki Colosseum Station and suspend service on part of Ace Monorail Line 1. In December, タケ announced the Ace Monorail Christmas gift distribution.
 
 In March 2025, sh asked for help writing and editing a vertical video introducing Aceserver. End&#12539;コッカー proposed a filming plan that would showcase builds and drafted narration.
@@ -182,6 +186,8 @@ On October 26, 2025, End&#12539;コッカー thanked the people who helped with 
 In October 2025, sh thanked the people who helped make events for the Aceserver Revitalization Committee and invited ideas for the next one. A November announcement named amagi_467 as the initiator of the first Aceserver Mahjong Tournament, which the committee planned to host. [Event thanks and call for ideas](https://discord.com/channels/737538781024092170/774152638450237460/1432028687376715897) [Mahjong tournament announcement](https://discord.com/channels/737538781024092170/774152638450237460/1442742157315149865)
 
 Ahead of the end of 2025, Pluto announced Herobrine, a parkour event with nine stages.
+
+In December 2025, building on ゆり’s proposal, sekisei suggested recruiting an event organizing committee to handle planning, promotion, event-day coordination, and scheduling.
 
 For the event at the end of 2025, ハルビィ, セキセイ and タケ helped with the snowy mountain race. セキセイ developed the snowball fight PvP plugin. 山田 built the venue and ゆり supported live commentary and event operations. Participants also helped with the rehearsal. [Original post](https://discord.com/channels/737538781024092170/774152638450237460/1454846975227854859)
 
@@ -205,9 +211,17 @@ In August 2026, sekisei and ふーや announced a jointly hosted online CTF trea
 
 ## Building and joint projects
 
+In December 2020, bamoshi4869 invited players to help with land clearing and other shared work. &#12365;&#12383;&#12422;&#12358; offered to help, and Gui suggested setting up a channel to coordinate the work. bamoshi4869 also invited people to help drain an ocean monument.
+
 In December 2020, bamoshi4869 reported in the former work group that mountain clearing and open-pit excavation took place on December 24 and 25, and that the open-pit excavation was complete down to elevation 5. The report listed &#12400;&#12418;&#12375;, &#21311;&#21517;, &#12354;&#12363;&#12426;&#12435;, &#12356;&#12385;&#12398;&#12379;, jag., &#12513;&#12525;&#12531;, and &#12504;&#12490;&#12509;&#12531; as participants.
 
 On December 29 that year, bamoshi4869 reported that a separate project to drain an ocean monument was complete. It listed &#12400;&#12418;&#12375;, &#21311;&#21517;, &#12354;&#12363;&#12426;&#12435;, J, &#12450;&#12474;, &#12504;&#12490;&#12509;&#12531;, &#12495;&#12488;&#12512;&#12462;, and &#12371;&#12383; as participants.
+
+In January 2021, bamoshi4869 announced a plan to dismantle a Nether fortress. That month, yizu\_TrPf prototyped a house with mechanical contraptions in Creative mode and also gathered materials.
+
+In February 2021, Jagdsolid reported that a drowned farm was complete. ninopan1122 reported making Coffin Dance with note blocks.
+
+In March 2021, Game\_Tokumei started a service called Odd Jobs, taking requests for work such as improving roads. In May, kuroneko229 announced that anyone could build in Development City at the time.
 
 In June 2021, KOTA-SAN reported the launch of the collaborative building project Yasuragi no Mori and said they had planted a tree to mark its start. That month, KOTA-SAN also reported that a device for making invisible item frames had been built at Yasuragi no Mori.
 
@@ -219,7 +233,7 @@ In June 2022, yanyan_fafnir explained how to enter the floating-island contest t
 
 In July 2022, Maro led construction of the former lobby and reported its completion. The build logs from the old Discord channel thanked BM_yurikun for landscaping and _BE_ChalkyMink87 for embedding ore in the foundation. KOTA-SAN set up a place to share updates on the build.
 
-In August 2022, \_BE\_Kuten2021110 began marking out the site for the project tentatively called Ace Plaza with dirt and asked for help with construction and stadium design.
+In August 2022, \_BE\_Kuten2021110 began marking out the site for the project tentatively called Ace Plaza with dirt and asked for help with construction and stadium design. They also made and shared a preliminary design for horse stables.
 
 In August 2022, Yukke reported that the waiting room at the old PvP league venue was nearly complete. ゆり reported that the terrace seating was complete and shared a photo.
 
@@ -264,6 +278,8 @@ In March 2026, Merutak reported that drainage of a large area for the ×6 Ocean 
 On March 30, Merutak reported that the ×6 Ocean Monument build itself was complete. The open-pit excavation was still in progress at that point. [Ocean Monument completion report](https://discord.com/channels/737538781024092170/779569416438415421/1488001468970827896)
 
 ## Technology and support
+
+In February 2021, sya\_ri proposed a setup for joining multiple servers through a shared entrance and suggested ways to connect from both Minecraft Java Edition and Bedrock Edition.
 
 In March 2021, KOTA-SAN reported creating Kutya, a Discord text-to-speech bot. KOTA-SAN added a way to choose which text channel’s messages the bot read aloud and an explanation shown to new players. In May, KOTA-SAN added a list of facility coordinates.
 
