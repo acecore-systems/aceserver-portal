@@ -2,7 +2,7 @@
 title: As pessoas que apoiaram o Aceserver
 description: Conheça quem ajudou o Aceserver pelos retratos de skins do Minecraft, relembre as atividades e confira o roteiro de eventos e propostas.
 translationOf: aceserver-contributors
-sourceHash: sha256:5e2e89545abd175cabc11480690abf15b594a1950f30b33f990da59801fda1f7
+sourceHash: sha256:412414ffe6264a4a1eb72735e0f2b25e37559393a7dd3cebd562ce94de8f9d5f
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-21T00:00:00+09:00
 tags:
@@ -31,23 +31,65 @@ Em agosto de 2021, KOTA-SAN adiantou que seriam aceitas propostas de logotipo pa
 
 ## Divulgação e eventos
 
+### **2022 e primeiro semestre de 2023**
+
 Em maio de 2022, キツネコ anunciou uma corrida alternativa de barcos em uma pista construída por Hako_Otoko. [Publicação original](https://discord.com/channels/737538781024092170/774152638450237460/970291030152847390)
 
 Em novembro de 2022, yanyan_fafnir informou que ゆり (Yū) havia se tornado apoiador após uma indicação de Sosuke. [Anúncio da nomeação](https://discord.com/channels/737538781024092170/774152638450237460/1043527218191663114)
 
 Em dezembro de 2022, Yukke abriu um canal para o clube de fotografia do Aceserver. Segundo os registros do antigo canal do Discord, taibon0727 pediu fotos de mundos novos e antigos para um álbum. Até janeiro de 2023, dont_stop compartilhou uma foto para lembrar a subida a Saihate, PillowKebap contribuiu com fotos que ainda guardava e nnn_percent enviou fotos de construções.
 
+Para o Ace Fest in Christmas Life de dezembro de 2022, ゆり divulgou a programação, com a abertura e a transmissão ao vivo, e explicou como se inscrever na terceira Copa Ace. タケ também anunciou a programação da virada de 2022 para 2023 em Tōgenkyō. O aviso apresentou a Associação de Caçadores, que incluía タケ e コッカー, como organizadora e Taibon como colaborador.
+
+No início de 2023, Taiyaki (taiyaki5190) anunciou como organizador o evento PvP in the Sky e convidou competidores e responsáveis por barracas a se inscrever. Para o Festival do Wither em fevereiro, edamameRex_java convidou jogadores a enfrentar o Wither no servidor de recursos, cuidou dos empréstimos de equipamentos e das recompensas de participação e agradeceu aos participantes após o evento.
+
 Em março de 2023, ゆり convidou participantes para a gravação de um vídeo de apresentação e explicou a ordem de filmagem das cidades e dos mundos. [Publicação original](https://discord.com/channels/737538781024092170/774152638450237460/1087641197947932704)
+
+Para o Ace Fest Offline na primavera de 2023, Gui publicou os anúncios oficiais e はっ explicou onde quem não pudesse ir ao local poderia participar online. [Anúncio do evento](https://discord.com/channels/737538781024092170/774152638450237460/1091302323298521181) [Anúncio sobre a participação](https://discord.com/channels/737538781024092170/774152638450237460/1092392407229804544)
 
 Em maio de 2023, ゆり apresentou os planos da equipe de divulgação para administrar os canais no YouTube e no Twitter regularmente. [Planos de divulgação](https://discord.com/channels/737538781024092170/774152638450237460/1110469768420532235)
 
+### **Segundo semestre de 2023 e 2024**
+
+Em julho de 2023, Inuneko anunciou um evento de PvP e depois informou que dont_stop havia vencido.
+
+Em 2023, End&#12539;コッカー divulgou a preparação de um evento de RPG e informou o adiamento. Em 2024, End&#12539;コッカー anunciou a beta de RPG Memórias Alteradas. Pluto participou dos testes preliminares e enviou comentários.
+
+No verão de 2023, タケ anunciou a festa de um ano organizada pela empresa Ace Monorail Take e agradeceu a quem ajudou na expansão da linha. Em 2024, também anunciou a festa de dois anos organizada pela empresa.
+
+No relato de 7 de agosto de 2023 sobre a festa de um ano da inauguração da Ace Monorail, タケ agradeceu aos visitantes BURAKI_UTALOVE\_, yukke_11, edamameRex_java, \_BE_nanashi91239 e mallosan_52, e a sekisei0077 pelo patrocínio. O relato citou uma torre aérea de criaturas, uma fazenda de blazes e uma fazenda de invasões como fontes de materiais. [Relato da festa de um ano](https://discord.com/channels/737538781024092170/779569416438415421/1137777672425050163)
+
+Em 7 de agosto de 2024, タケ informou que toda a programação da festa de dois anos havia terminado. O passeio apresentou a nova sinalização das estações, a nova estação e o trecho de extensão da linha Jiyūgaoka. [Relato da festa de dois anos](https://discord.com/channels/737538781024092170/779569416438415421/1270424971667308565)
+
+Para o Festival da Colheita de Hatt de 2023, taiyaki5190 divulgou as regras e a programação. A data prevista mudou de 15 para 29 de outubro. Em 28 de outubro, Taiyaki informou que o festival seria no dia seguinte e explicou como participar. Publicações posteriores incluem informações sobre as recompensas e comentários dos participantes. [Anúncio da mudança de data](https://discord.com/channels/737538781024092170/779569416438415421/1161919748074917900) [Anúncio sobre a participação](https://discord.com/channels/737538781024092170/779569416438415421/1167836013142495353)
+
+Em novembro de 2023, あすたん abriu as inscrições do concurso de fotografia do Aceserver e Hatto foi anunciado como jurado. Biwahoshi esteve entre os jogadores que enviaram trabalhos. [Anúncio do concurso de fotografia](https://discord.com/channels/737538781024092170/774152638450237460/1174938045674438749)
+
+No fim de 2023, edamameRex_java pediu contribuições de construções para um mapa de pega-pega em desenvolvimento. Na mesma época, foi anunciado o adiamento de Aceserver em Fuga.
+
+O anúncio da virada de 2023 para 2024 apresentou a equipe da Ace Monorail Take (Take no Niwa, sekisei e Shino) como organizadora, com apoio de Taibon (\_BE_taibon0727), あすたん e da equipe do Aceserver. タケ divulgou o site do evento e informou a correção de um carimbo no circuito de carimbos. Na mesma época, também foi anunciado o adiamento de Aguesser vol2.
+
+Em 1º de janeiro de 2024, タケ informou que a celebração da virada havia terminado e que amuletos haviam sido distribuídos. [Relato da celebração da virada](https://discord.com/channels/737538781024092170/779569416438415421/1191037263002488872)
+
+Na primavera de 2024, sekisei informou o horário de início e o contato do Ace Guesser v2. No verão, Pluto anunciou um evento de parkour.
+
 タケ criou o cartaz do Ace Summer Festival de 2024. No evento de fim de ano 「つなぐASF」, taibon ajudou com o dispositivo de contagem regressiva. タケ informou o encerramento de toda a programação em janeiro de 2025. [Anúncio do cartaz](https://discord.com/channels/737538781024092170/774152638450237460/1274157736015429744) [Anúncio da contagem regressiva](https://discord.com/channels/737538781024092170/774152638450237460/1319967701808189493) [Relato de encerramento](https://discord.com/channels/737538781024092170/774152638450237460/1325487116419076129)
+
+No fim de 2024, タケ lançou um quiz da Ace Monorail e informou o prazo da votação. Yukke divulgou as inscrições de competidores para a Copa Ace de PvP.
+
+### **2025 e 2026**
 
 Em janeiro de 2025, foi anunciado que Wenti (Hosttech255), Pluto e あすたん passariam a apoiar os eventos. [Anúncio sobre o apoio aos eventos](https://discord.com/channels/737538781024092170/774152638450237460/1323911696237990039)
 
+No verão de 2025, End&#12539;コッカー abriu uma discussão sobre um torneio de Among Us. Pluto sugeriu um formato e sh31415 propôs como recrutar participantes.
+
 O anúncio do festival de verão de 2025 citou センチュリーズ pela preparação e pelo fornecimento do espetáculo de fogos. O agradecimento após o evento citou セガ, リンゴポン, あまぎ, 新人, ジェスター, ホステッチ e イザイザ pelos fogos, e コッカー e sh pela coordenação geral. エント cuidou do circuito, e moon e セキセイ do golfe. ハルビィ, セキセイ e sh cuidaram do PvP de sobrevivência, e はっ e sh do evento especial. [Publicação original](https://discord.com/channels/737538781024092170/774152638450237460/1408390549370572880) [Agradecimento após o evento](https://discord.com/channels/737538781024092170/779569416438415421/1411394624026710166)
 
+Em 26 de outubro de 2025, End&#12539;コッカー agradeceu a quem colaborou com a Vila de Halloween e com o evento. [Agradecimentos da Vila de Halloween e do evento](https://discord.com/channels/737538781024092170/779569416438415421/1432012641571704905)
+
 Em outubro de 2025, sh agradeceu a quem ajudou a preparar eventos do Comitê de Revitalização do Aceserver e pediu ideias para o próximo. Em novembro, um anúncio apresentou amagi_467 como idealizador do primeiro torneio de mahjong do Aceserver, que o comitê planejava organizar. [Agradecimentos e pedido de ideias](https://discord.com/channels/737538781024092170/774152638450237460/1432028687376715897) [Anúncio do torneio de mahjong](https://discord.com/channels/737538781024092170/774152638450237460/1442742157315149865)
+
+Para o fim de 2025, Pluto anunciou Herobrine, um evento de parkour de nove etapas.
 
 No evento do fim de 2025, ハルビィ, セキセイ e タケ ajudaram na corrida na montanha nevada. セキセイ desenvolveu o plugin de batalha de bolas de neve PvP. 山田 construiu o espaço e ゆり ajudou na narração ao vivo e na condução do evento. Participantes também ajudaram no ensaio. [Publicação original](https://discord.com/channels/737538781024092170/774152638450237460/1454846975227854859)
 
@@ -67,7 +109,15 @@ taibon0727 preparou materiais como vidro, um local para guardar barcos de transp
 
 No fim de dezembro de 2022, edamameRex_java informou que a construção da pousada de águas termais havia terminado, conforme consta nos registros do projeto.
 
+Em fevereiro de 2023, あすたん explicou como organizar uma escavação conjunta para uma instalação de piglins-zumbis.
+
+Em uma inscrição no concurso de fotografia de novembro de 2023, Yukke relembrou a escavação de 256 chunks para a instalação de esqueletos Wither e as medidas para impedir o surgimento de criaturas. Em dezembro, あすたん descreveu como usou a instalação de Yukke para derrotar Withers com outros jogadores e criar um arco-íris com mais de 200 sinalizadores.
+
 Em novembro de 2025, End&#12539;コッカー informou que havia instalado portais em oito direções para chegar a áreas distantes do servidor de sobrevivência. [Anúncio da instalação de portais](https://discord.com/channels/737538781024092170/774152638450237460/1434193495752704134)
+
+Em março de 2026, Merutak informou que a drenagem de uma área extensa para o projeto do Monumento Oceânico ×6 e da escavação a céu aberto havia sido concluída. Agradeceu a sega, take, sekisei, harubie, hatt, timu, buraki, yukke, moon, sinzin e siu pelos materiais e pela ajuda no trabalho. [Relato da drenagem e agradecimentos](https://discord.com/channels/737538781024092170/779569416438415421/1483522273020215497)
+
+Em 30 de março, Merutak informou que a construção do Monumento Oceânico ×6 estava concluída. Naquele momento, a escavação a céu aberto ainda estava em andamento. [Relato da conclusão do monumento](https://discord.com/channels/737538781024092170/779569416438415421/1488001468970827896)
 
 ## Tecnologia e apoio
 
