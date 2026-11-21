@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:099a9f24caab88c766d4aff807d70418d4641eede55ccb778490416d7b935aeb
+sourceHash: sha256:b23906bcf95b90160981ff8203c485aa80aed8a70d177a0a3cbacd33700b9a3d
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-21T00:00:00+09:00
 tags:
@@ -27,7 +27,7 @@ Laut den Berichten aus dem früheren Discord-Kanal von Between Tower meldete Pil
 
 Im August 2021 erklärte Gui, dass der Server begann, damit alle die Welt von はっ besuchen und darin spielen konnten. Gui kündigte auch an, dass コタ vorerst die Entscheidungen zum Betrieb übernehmen würde. コタ bestätigte die Übernahme. [Guis Ankündigung](https://discord.com/channels/737538781024092170/774152638450237460/880745650009047080) [コタs Ankündigung](https://discord.com/channels/737538781024092170/774152638450237460/880760188351705178)
 
-Im August 2021 kündigte KOTA-SAN einen Logo-Aufruf zum ersten Jubiläum an. Im September berichtete Mugi über die Neuordnung des Discord-Servers und startete die Einreichungsphase. Im November gab てぃあ bekannt, dass der Entwurf von YM ausgewählt und auf Discord eingesetzt worden war. [Vorankündigung des Aufrufs](https://discord.com/channels/737538781024092170/774152638450237460/881193662321684601) [Start der Einreichungsphase](https://discord.com/channels/737538781024092170/774152638450237460/882433940621758474) [Bekanntgabe des ausgewählten Logos](https://discord.com/channels/737538781024092170/774152638450237460/905830523761487872)
+Im August 2021 kündigte KOTA-SAN einen Logo-Aufruf zum ersten Jubiläum an. Im September berichtete Mugi über die Neuordnung des Discord-Servers und startete die Einreichungsphase. Am 2. Oktober eröffnete Mugi die Abstimmung über fünf Entwürfe. Am 4. November gab てぃあ bekannt, dass der Entwurf von YM ausgewählt und auf Discord eingesetzt worden war, und dankte YM, J&#27663;, Mea und Café Mocha für ihre Arbeiten. [Vorankündigung des Aufrufs](https://discord.com/channels/737538781024092170/774152638450237460/881193662321684601) [Start der Einreichungsphase](https://discord.com/channels/737538781024092170/774152638450237460/882433940621758474) [Ankündigung des Abstimmungsstarts](https://discord.com/channels/737538781024092170/882218927055331369/893689014039765053) [Auswahlergebnis und Dank](https://discord.com/channels/737538781024092170/882218927055331369/905494118606725131) [Bekanntgabe des ausgewählten Logos](https://discord.com/channels/737538781024092170/774152638450237460/905830523761487872)
 
 ## Gemeinschaften und Baugruppen
 
@@ -44,6 +44,8 @@ Die Vorstellung der Gruppe zur Wiederbelebung der antiken Stadt nannte Golden Co
 Als Inhaber von A Yū (A-shō) informierte ゆり (Yū) über den Verkauf von Materialien und suchte Freiwillige für den Bau eines Spielbereichs.
 
 ## Öffentlichkeitsarbeit und Veranstaltungen
+
+Laut den Aufzeichnungen aus dem früheren Discord-Kanal von E-ha Radio unterstützte KOTA-SAN die Sendung 2021, indem er um Nachrichten der Zuhörer bat und Themen und Termine vorstellte. はっ kündigte ebenfalls die nächste Sendung und das Thema für die Zuschriften an.
 
 ### **2022 bis erstes Halbjahr 2023**
 
@@ -96,6 +98,8 @@ Zum Jahreswechsel 2023–2024 wurde das Team der Ace Monorail Take Company (Take
 Am 1. Januar 2024 meldete タケ das Ende der Neujahrsfeier und die Verteilung von Glücksbringern. [Bericht zur Neujahrsfeier](https://discord.com/channels/737538781024092170/779569416438415421/1191037263002488872)
 
 Im Frühjahr 2024 teilte sekisei die Startzeit und die Kontaktstelle für Ace Guesser v2 mit. Im Sommer kündigte Pluto ein Parkour-Event an.
+
+Im April 2024 kündigte ゆり eine Folge von E-ha Radio mit Master und Yuri-kun in der angekündigten Hauptbesetzung an. Für die Sondersendung im August wurden Auftritte von コタ und はっ angekündigt. KOTA-SAN berichtete, einen Angelteich vorbereitet zu haben, und sagte den für diesen Tag geplanten Stream ab.
 
 Beim Sommerfest am 17. August 2024 erläuterte sekisei die Regeln und die Teameinteilung des Angelwettbewerbs und gab den Start bekannt. sh stellte die Ultra-Gegenstandssuche vor, erklärte die Teilnahme und teilte am nächsten Tag ein Video der offiziellen Übertragung. はっ erläuterte den Ablauf und die Teameinteilung des Nachrichtenstaffelspiels mit minimaler Abstraktion.
 
@@ -163,9 +167,15 @@ Laut den Aufzeichnungen aus dem früheren Discord-Kanal berichtete KOTA-SAN im A
 
 Im Juni 2022 aktualisierte Mugi den Vorlesebot Kutya für Textchats in Sprachkanälen. Im März 2023 kündigte Mugi einen Bot an, über den Spieler dem Serverteam anonym Rückmeldung geben konnten. [Kutya-Update](https://discord.com/channels/737538781024092170/774152638450237460/986439863937155122) [Ankündigung für anonymes Feedback](https://discord.com/channels/737538781024092170/774152638450237460/1087976366126927882)
 
+Im September 2022 kündigte Gui eine Testversion der Website an. Im Oktober berichtete Gui, dass Blog und Dokumentation getrennt und Seiten für die Bearbeitung durch mehrere Personen eingerichtet worden waren. taka8621 bat um Befehlsanleitungen, bebilderte Anleitungen zu Einrichtungen und Karten. yanyan schlug bearbeitbare Seiten vor. Im Januar 2023 probierte &#33775;\*HAiNE die Bearbeitungsumgebung des Wikis aus und sprach an, wie Leser sich zurechtfinden würden, wenn Anleitungen auf mehrere Seiten verteilt wären.
+
+Im November 2022 schlug キツネコ vor, die Regeln zur Landnutzung ins Wiki aufzunehmen und getrennte Antragsvorlagen für das Einebnen und den offenen Aushub zu verwenden. Nishikino Sega fragte nach dem Antragsverfahren, wenn nach dem Einebnen gebaut werden sollte. Im Januar 2023 bat taka8621 um Mithilfe beim Ordnen der Bau- und ähnlicher Regeln, und &#33775;\*HAiNE schlug Regeln für unterirdische Ausgrabungen vor. Ein Beitrag von taka8621 aus dem Februar hielt die von Yukke gesammelten Vorschläge zum Landschaftsbild und zum Einsatz von Dorfbewohnern in Fallen fest.
+
 Im Juli 2023 kündigte Yukke die Erstellung einer neuen Welt auf dem Ressourcenserver an. [Ankündigung der Ressourcenwelt](https://discord.com/channels/737538781024092170/774152638450237460/1135574163080364103)
 
 Im September 2023 wurde bekannt gegeben, dass あすたん zum Serverteam kam und Taka die Systembetreuung übernahm. Im Mai 2024 kündigte はっ an, dass sh und sekisei den Nutzersupport für Systemfragen übernommen hatten. [Ernennungen von 2023](https://discord.com/channels/737538781024092170/774152638450237460/1151168895076548669) [Supportrollen von 2024](https://discord.com/channels/737538781024092170/774152638450237460/1236592686253867008)
+
+Im Januar 2024 erklärte あすたん die Teilnahmeregeln und das Einreichen von Rekorden im Ace Server Leaderboard Archive (ASLA), das Rekorde von Aceserver sammelte. あすたん veröffentlichte auch Listen zum Abbau, zu Statistiken und zu Barren. キツネコ, Feruno und Taiyaki reichten Statistiken im Beitragskanal ein. Tabekirareta Potechi schlug Kandidaten für Rekorde wie die erste Burg vor.
 
 Im November 2025 wurde ein von あすたん entwickeltes Chatsystem zur Verbindung von Minecraft und Discord eingeführt. [Ankündigung der Chatverbindung](https://discord.com/channels/737538781024092170/774152638450237460/1437973211961622670)
 

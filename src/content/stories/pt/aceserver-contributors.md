@@ -2,7 +2,7 @@
 title: As pessoas que apoiaram o Aceserver
 description: Conheça quem ajudou o Aceserver pelos retratos de skins do Minecraft, relembre as atividades e confira o roteiro de eventos e propostas.
 translationOf: aceserver-contributors
-sourceHash: sha256:099a9f24caab88c766d4aff807d70418d4641eede55ccb778490416d7b935aeb
+sourceHash: sha256:b23906bcf95b90160981ff8203c485aa80aed8a70d177a0a3cbacd33700b9a3d
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-21T00:00:00+09:00
 tags:
@@ -27,7 +27,7 @@ Nos registros do antigo canal do Between Tower no Discord, PillowKebap anunciou 
 
 Em agosto de 2021, Gui contou que o servidor começou para que qualquer pessoa pudesse visitar e jogar no mundo de はっ. Gui também anunciou que コタ assumiria as decisões de operação por enquanto. コタ confirmou que aceitou. [Anúncio de Gui](https://discord.com/channels/737538781024092170/774152638450237460/880745650009047080) [Anúncio de コタ](https://discord.com/channels/737538781024092170/774152638450237460/880760188351705178)
 
-Em agosto de 2021, KOTA-SAN adiantou que seriam aceitas propostas de logotipo para o primeiro aniversário. Em setembro, Mugi informou sobre a reorganização do Discord e abriu as inscrições. Em novembro, てぃあ anunciou que o trabalho de YM havia sido escolhido e já estava em uso no Discord. [Prévia da chamada](https://discord.com/channels/737538781024092170/774152638450237460/881193662321684601) [Abertura das inscrições](https://discord.com/channels/737538781024092170/774152638450237460/882433940621758474) [Anúncio do logotipo escolhido](https://discord.com/channels/737538781024092170/774152638450237460/905830523761487872)
+Em agosto de 2021, KOTA-SAN adiantou que seriam aceitas propostas de logotipo para o primeiro aniversário. Em setembro, Mugi informou sobre a reorganização do Discord e abriu as inscrições. Em 2 de outubro, Mugi abriu a votação entre cinco propostas de design. Em 4 de novembro, てぃあ anunciou que o trabalho de YM havia sido escolhido e já estava em uso no Discord, e agradeceu pelos trabalhos de YM, J&#27663;, Mea e Café Mocha. [Prévia da chamada](https://discord.com/channels/737538781024092170/774152638450237460/881193662321684601) [Abertura das inscrições](https://discord.com/channels/737538781024092170/774152638450237460/882433940621758474) [Anúncio da abertura da votação](https://discord.com/channels/737538781024092170/882218927055331369/893689014039765053) [Resultado da seleção e agradecimentos](https://discord.com/channels/737538781024092170/882218927055331369/905494118606725131) [Anúncio do logotipo escolhido](https://discord.com/channels/737538781024092170/774152638450237460/905830523761487872)
 
 ## Comunidades e grupos criativos
 
@@ -44,6 +44,8 @@ A apresentação do Grupo de Restauração da Cidade Antiga citou Golden Cocker 
 Como titular da A Yū (A-shō), ゆり (Yū) apresentou a venda de materiais e pediu voluntários para construir uma área de lazer.
 
 ## Divulgação e eventos
+
+Nos registros do antigo canal do Discord da E-ha Radio, KOTA-SAN apoiou o programa em 2021 pedindo mensagens dos ouvintes e explicando o conteúdo e a programação. はっ também anunciou a próxima transmissão e o tema das mensagens.
 
 ### **2022 e primeiro semestre de 2023**
 
@@ -96,6 +98,8 @@ O anúncio da virada de 2023 para 2024 apresentou a equipe da Ace Monorail Take 
 Em 1º de janeiro de 2024, タケ informou que a celebração da virada havia terminado e que amuletos haviam sido distribuídos. [Relato da celebração da virada](https://discord.com/channels/737538781024092170/779569416438415421/1191037263002488872)
 
 Na primavera de 2024, sekisei informou o horário de início e o contato do Ace Guesser v2. No verão, Pluto anunciou um evento de parkour.
+
+Em abril de 2024, ゆり anunciou um episódio da E-ha Radio com Master e Yuri-kun no elenco principal divulgado. Para o especial de agosto, foi anunciada a participação de コタ e はっ. KOTA-SAN informou que havia preparado um lago para pesca e anunciou o cancelamento da transmissão prevista para aquele dia.
 
 No festival de verão de 17 de agosto de 2024, sekisei explicou as regras e a divisão das equipes do torneio de pesca e anunciou seu início. sh apresentou a Busca Ultra por Itens e explicou como participar. No dia seguinte, compartilhou um vídeo da transmissão oficial. はっ explicou o andamento e a divisão das equipes do jogo de repasse de mensagens por abstração mínima.
 
@@ -163,9 +167,15 @@ Segundo os registros do antigo canal do Discord, em agosto de 2021 KOTA-SAN info
 
 Em junho de 2022, Mugi atualizou o bot de leitura Kutya para incluir o chat dos canais de voz. Em março de 2023, anunciou um bot para enviar comentários anônimos à equipe do servidor. [Atualização do Kutya](https://discord.com/channels/737538781024092170/774152638450237460/986439863937155122) [Anúncio do feedback anônimo](https://discord.com/channels/737538781024092170/774152638450237460/1087976366126927882)
 
+Em setembro de 2022, Gui anunciou uma versão de teste do site. Em outubro, informou que havia separado o blog da documentação e preparado páginas que várias pessoas podiam editar. taka8621 pediu guias de comandos, guias ilustrados das instalações e mapas. yanyan sugeriu páginas editáveis. Em janeiro de 2023, &#33775;\*HAiNE testou o ambiente de edição da wiki e levantou a questão de como os leitores encontrariam as informações se os guias ficassem em páginas separadas.
+
+Em novembro de 2022, キツネコ propôs publicar na wiki as regras de uso do terreno e adotar modelos de solicitação separados para nivelamento e escavação a céu aberto. Nishikino Sega perguntou como pedir autorização para construir depois de nivelar o terreno. Em janeiro de 2023, taka8621 pediu ajuda para organizar as regras de construção e outras relacionadas, e &#33775;\*HAiNE apresentou uma proposta sobre escavações subterrâneas. Uma publicação de fevereiro de taka8621 registrou as sugestões reunidas por Yukke sobre a paisagem e o uso de aldeões em armadilhas.
+
 Em julho de 2023, Yukke anunciou a criação de um novo mundo no servidor de recursos. [Anúncio do mundo de recursos](https://discord.com/channels/737538781024092170/774152638450237460/1135574163080364103)
 
 Em setembro de 2023, foi anunciado que あすたん passaria a integrar a administração e que Taka ficaria responsável pelos sistemas. Em maio de 2024, はっ anunciou que sh e sekisei passaram a apoiar os usuários em assuntos ligados aos sistemas. [Nomeações de 2023](https://discord.com/channels/737538781024092170/774152638450237460/1151168895076548669) [Funções de apoio de 2024](https://discord.com/channels/737538781024092170/774152638450237460/1236592686253867008)
+
+Em janeiro de 2024, あすたん explicou as regras de participação e como enviar registros para o Ace Server Leaderboard Archive (ASLA), que reunia registros do Aceserver. Também publicou listas de mineração, estatísticas e lingotes. キツネコ, Feruno e Taiyaki enviaram estatísticas ao canal de contribuições, e Tabekirareta Potechi sugeriu candidatos para registros como o primeiro castelo.
 
 Em novembro de 2025, foi introduzido um sistema de integração de chat entre Minecraft e Discord feito por あすたん. [Anúncio da integração de chat](https://discord.com/channels/737538781024092170/774152638450237460/1437973211961622670)
 
