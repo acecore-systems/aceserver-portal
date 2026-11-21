@@ -1,9 +1,10 @@
 ---
 title: People who have supported Aceserver
-description: Meet some of the people whose work has supported Aceserver, from its early days to events and technology.
+description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:3d5142d89ba5137b30a24edc3a729dc1bb0171d001adb76f6b3ba012fca59bff
+sourceHash: sha256:7bceab799ab2677c346ab8158bd352970d38b9eae375285f021836d59db2a04a
 date: 2026-11-14T00:00:00+09:00
+lastUpdated: 2026-11-21T00:00:00+09:00
 tags:
   - Aceserver
   - Minecraft
@@ -12,7 +13,7 @@ image: /uploads/current-world-city-20261015.jpg
 imageAlt: A main-world city on Aceserver, captured on the public map in October 2026
 ---
 
-Many people have supported Aceserver in different ways. Here are some of their contributions from official Discord announcements. Joining the official Discord is required to view the original posts.
+From the early Wiki to planning events and linking chats, these are some of the contributions to Aceserver documented in official Discord announcements and event reports.
 
 ## The early days
 

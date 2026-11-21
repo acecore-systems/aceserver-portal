@@ -1,9 +1,10 @@
 ---
 title: Die Menschen hinter Aceserver
-description: Lerne einige Beiträge zu Aceserver kennen, von den Anfängen bis zu Veranstaltungen und Technik.
+description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:3d5142d89ba5137b30a24edc3a729dc1bb0171d001adb76f6b3ba012fca59bff
+sourceHash: sha256:7bceab799ab2677c346ab8158bd352970d38b9eae375285f021836d59db2a04a
 date: 2026-11-14T00:00:00+09:00
+lastUpdated: 2026-11-21T00:00:00+09:00
 tags:
   - Aceserver
   - Minecraft
@@ -12,7 +13,7 @@ image: /uploads/current-world-city-20261015.jpg
 imageAlt: Stadt in der Hauptwelt von Aceserver, aufgenommen auf der öffentlichen Karte im Oktober 2026
 ---
 
-Viele Menschen haben Aceserver auf unterschiedliche Weise unterstützt. Hier stellen wir einige ihrer Aktivitäten anhand offizieller Discord-Ankündigungen vor. Für die Originalbeiträge ist der Beitritt zum offiziellen Discord nötig.
+Vom frühen Wiki über die Planung von Events bis zur Chat-Verknüpfung. Wir blicken auf einige Beiträge zu Aceserver zurück, die in Ankündigungen und Berichten im offiziellen Discord dokumentiert sind.
 
 ## Die Anfänge
 

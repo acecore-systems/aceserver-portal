@@ -1,9 +1,10 @@
 ---
 title: 에이스서버를 함께 만들어 온 사람들
-description: 초기의 시작부터 행사와 기술까지 에이스서버를 도운 활동을 공식 Discord 공지에서 소개합니다.
+description: Minecraft 스킨 얼굴과 함께 에이스서버를 도운 사람들을 만나고, 활동 기록과 이벤트 및 플레이어 제안 로드맵을 확인하세요.
 translationOf: aceserver-contributors
-sourceHash: sha256:3d5142d89ba5137b30a24edc3a729dc1bb0171d001adb76f6b3ba012fca59bff
+sourceHash: sha256:7bceab799ab2677c346ab8158bd352970d38b9eae375285f021836d59db2a04a
 date: 2026-11-14T00:00:00+09:00
+lastUpdated: 2026-11-21T00:00:00+09:00
 tags:
   - Aceserver
   - Minecraft
@@ -12,7 +13,7 @@ image: /uploads/current-world-city-20261015.jpg
 imageAlt: 2026년 10월 공개 지도에서 촬영한 Aceserver 메인 월드의 도시
 ---
 
-많은 분들이 여러 방식으로 에이스서버를 도와주셨습니다. 공식 Discord 공지에서 그 활동 일부를 소개합니다. 원문을 보려면 공식 Discord에 참가해야 합니다.
+초기 Wiki 공개부터 이벤트 기획과 채팅 연동까지, 공식 Discord 공지와 행사 보고를 바탕으로 에이스서버를 도운 활동을 돌아봅니다.
 
 ## 초기의 시작
 

@@ -1,9 +1,10 @@
 ---
 title: 支持Aceserver的人们
-description: 通过官方Discord公告，了解从建服初期到活动和技术方面支持Aceserver的人们。
+description: 通过 Minecraft 皮肤头像认识 Aceserver 的贡献者，回顾社区活动记录，并查看活动与玩家提案路线图。
 translationOf: aceserver-contributors
-sourceHash: sha256:3d5142d89ba5137b30a24edc3a729dc1bb0171d001adb76f6b3ba012fca59bff
+sourceHash: sha256:7bceab799ab2677c346ab8158bd352970d38b9eae375285f021836d59db2a04a
 date: 2026-11-14T00:00:00+09:00
+lastUpdated: 2026-11-21T00:00:00+09:00
 tags:
   - Aceserver
   - Minecraft
@@ -12,7 +13,7 @@ image: /uploads/current-world-city-20261015.jpg
 imageAlt: 2026 年 10 月在公开地图上截取的 Aceserver 主世界街景
 ---
 
-许多人以不同方式支持着Aceserver。这里从官方Discord公告中介绍其中一些活动。查看原帖需要加入官方Discord。
+从早期 Wiki 上线，到筹办活动和打通聊天，这里根据官方 Discord 公告与活动报告，回顾大家为 Aceserver 做出的部分贡献。
 
 ## 建服初期
 
