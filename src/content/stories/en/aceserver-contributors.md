@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:dc57c3c63816aa005c92fb33f3537a12f26df3183476bd4908e6feda9e99cb6d
+sourceHash: sha256:bef59e1840707c63ccbe22563996951a08601a76acb54e632f97d2cfe6c8000d
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -155,15 +155,21 @@ For **POCKET ACES CASINO**, the album credited \_BE\_StrangeDownp, \_BE\_Minksec
 
 At the end of 2024, タケ set an Ace Monorail quiz and announced the voting deadline. Yukke shared registration details for PvP Ace Cup competitors.
 
+In December 2024, Pluto proposed an area called Parkour Zone and reported that its first stage was complete.
+
 ### **2025 to 2026**
 
 In January 2025, Aceserver announced that Wenti (Hosttech255), Pluto, and あすたん had become event supporters. [Event supporter announcement](https://discord.com/channels/737538781024092170/774152638450237460/1323911696237990039)
+
+In February 2025, タケ announced plans to open a new station on the &#26628;&#38920; Main Line. In August, タケ announced plans to renovate Ibaraki Colosseum Station and suspend service on part of Ace Monorail Line 1. In December, タケ announced the Ace Monorail Christmas gift distribution.
 
 In March 2025, sh asked for help writing and editing a vertical video introducing Aceserver. End&#12539;コッカー proposed a filming plan that would showcase builds and drafted narration.
 
 In summer 2025, End&#12539;コッカー started a discussion about an Among Us tournament, Pluto suggested a format, and sh31415 proposed a way to recruit players.
 
 The 2025 summer festival announcement named センチュリーズ for preparing and providing the fireworks display. The post-event thanks named セガ, リンゴポン, あまぎ, 新人, ジェスター, ホステッチ and イザイザ for the fireworks, and コッカー and sh for overall coordination. エント worked on the circuit, and moon and セキセイ on golf. ハルビィ, セキセイ and sh worked on survival PvP, and はっ and sh on the special event. [Original post](https://discord.com/channels/737538781024092170/774152638450237460/1408390549370572880) [Post-event thanks](https://discord.com/channels/737538781024092170/779569416438415421/1411394624026710166)
+
+In September 2025, End&#12539;コッカー introduced the work of four departments devoted to railways, events, building, and work projects, and invited people to join the Aceserver Revitalization Committee.
 
 In October 2025, while preparing for Aceserver News Desk, sekisei reported that a rough cut of a video introducing the Season Server was ready.
 
@@ -181,11 +187,15 @@ For the concept server contest in autumn 2025, sekisei prepared a submission tem
 
 Other submissions included Mugi’s Curse You, Mythic and ATM, 山田’s robots, タケ’s Let’s Take the Ace Train, Defend Maikura City by &#12454;&#12455;&#12531;&#12486;&#12451; (Hosttech255), Moon\_666’s high-difficulty Ender Dragon battle, sekisei’s seasonal building, and sh’s Chef’s Whim Server.
 
-In February 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673;, &#35199;&#26408;&#37326;&#28716;&#36032;&#27663;, Amagi\_467, Moon\_666, CP-sinzin, Yukke, and あすたん submitted photos for consideration for social media posts.
+In February and August 2026, sh introduced the Aceserver Revitalization Committee’s event planning and unofficial promotional activities and invited people to join.
+
+In February 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; asked players to submit photos for social media posts. LuMiSIA\_&#26376;&#31070;&#24736;&#33673;, &#35199;&#26408;&#37326;&#28716;&#36032;&#27663;, Amagi\_467, Moon\_666, CP-sinzin, Yukke, and あすたん submitted photos for consideration for social media posts.
 
 In February 2026, End&#12539;コッカー announced the Aceserver Photo Contest and listed February 16 to 28 as the submission period. End&#12539;コッカー provided sample submissions for both the general and staff categories. キツネコ entered a photo showing drainage work in progress. [2026 Photo Contest announcement](https://discord.com/channels/737538781024092170/774152638450237460/1471148847119208731)
 
 In March 2026, End&#12539;コッカー shared a draft video introducing Aceserver. Merutak noted that the first half moved quickly. sekisei suggested clarifying the purpose, audience, and message. あすたん commented on how much information to include in a short video, while LuMiSIA\_&#26376;&#31070;&#24736;&#33673; offered feedback on the presentation of text and animation.
+
+In March 2026, &#12486;&#12451;&#12512;&#12540; asked people to submit ideas for a new icon and stories about happenings on the server for the Aceserver Revitalization Committee’s Aceserver Diary.
 
 In August 2026, sekisei and ふーや announced a jointly hosted online CTF treasure hunt where players solve puzzles such as ciphers to find flags. Aceserver CTF2026 began on August 28. [Co-host announcement](https://discord.com/channels/737538781024092170/774152638450237460/1541785510094184449) [Opening report](https://discord.com/channels/737538781024092170/779569416438415421/1542704904055824394)
 
@@ -204,6 +214,8 @@ In April 2022, SPdari reported that the foundation and roof of the main base at 
 In June 2022, yanyan_fafnir explained how to enter the floating-island contest that led to work on the former lobby and how entries would be presented at judging. The announcement named はっ and members with the supporter role or above as judges. [Contest entry rules](https://discord.com/channels/737538781024092170/774152638450237460/982990352422162482) [Judging session announcement](https://discord.com/channels/737538781024092170/774152638450237460/986294242848669756)
 
 In July 2022, Maro led construction of the former lobby and reported its completion. The build logs from the old Discord channel thanked BM_yurikun for landscaping and _BE_ChalkyMink87 for embedding ore in the foundation. KOTA-SAN set up a place to share updates on the build.
+
+In August 2022, \_BE\_Kuten2021110 began marking out the site for the project tentatively called Ace Plaza with dirt and asked for help with construction and stadium design.
 
 In August 2022, Yukke reported that the waiting room at the old PvP league venue was nearly complete. ゆり reported that the terrace seating was complete and shared a photo.
 
@@ -253,6 +265,8 @@ In March 2021, KOTA-SAN reported creating Kutya, a Discord text-to-speech bot. K
 
 In April 2021, KOTA-SAN reported successfully testing a way to join from a Nintendo Switch and proposed adding guidance to the how-to-play page on the site at the time.
 
+In March 2021, KOTA-SAN explained changes to the rules and etiquette for communication at the time. In May, kuroneko229 posted guidance on how to respond to and report griefing if players witnessed it. In July, てぃあ shared advice on countering griefing.
+
 In August 2021, てぃあ put together a guide to major facilities such as the town hall, trading hall, tree farm, and shared farm, and identified which places new players should be shown first. In February 2022, はっ added accommodation for newcomers to the shared facilities guide.
 
 In August 2021, KOTA-SAN compiled a list of useful commands for the plugins installed at the time.
@@ -268,6 +282,8 @@ In May 2022, Mugi reported that Kutya could read Japanese Morse code aloud.
 In June 2022, Mugi updated the text-to-speech bot Kutya to support chat inside voice channels. In March 2023, Mugi announced a bot for sending anonymous feedback to the server team. [Kutya update](https://discord.com/channels/737538781024092170/774152638450237460/986439863937155122) [Anonymous feedback announcement](https://discord.com/channels/737538781024092170/774152638450237460/1087976366126927882)
 
 In September 2022, Gui announced a test release of the site. In October, Gui reported separating the blog from the documentation and setting up pages that multiple people could edit. taka8621 requested command guides, illustrated guides to facilities, and maps. yanyan proposed editable pages. In January 2023, &#33775;\*HAiNE tried the wiki editing environment and raised a question about how readers would navigate if guidance were split across pages.
+
+From July to August 2022, KOTA-SAN explained the policies of the time for building applications and land clearing. In October, taka8621 explained how community applications and chunk loaders were handled.
 
 In October 2022, hana0c0haine reported reviewing every wiki page published at the time and correcting inconsistencies in terminology and Japanese phrasing. In March 2023, あすたん organized separate channels for wiki editors and provided guidance on writing in Markdown.
 

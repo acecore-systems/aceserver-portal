@@ -2,7 +2,7 @@
 title: As pessoas que apoiaram o Aceserver
 description: Conheça quem ajudou o Aceserver pelos retratos de skins do Minecraft, relembre as atividades e confira o roteiro de eventos e propostas.
 translationOf: aceserver-contributors
-sourceHash: sha256:dc57c3c63816aa005c92fb33f3537a12f26df3183476bd4908e6feda9e99cb6d
+sourceHash: sha256:bef59e1840707c63ccbe22563996951a08601a76acb54e632f97d2cfe6c8000d
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -155,15 +155,21 @@ Para o **POCKET ACES CASINO**, o álbum creditou a construção a \_BE\_StrangeD
 
 No fim de 2024, タケ lançou um quiz da Ace Monorail e informou o prazo da votação. Yukke divulgou as inscrições de competidores para a Copa Ace de PvP.
 
+Em dezembro de 2024, Pluto propôs uma área chamada Zona de Parkour e informou que a primeira fase estava pronta.
+
 ### **2025 e 2026**
 
 Em janeiro de 2025, foi anunciado que Wenti (Hosttech255), Pluto e あすたん passariam a apoiar os eventos. [Anúncio sobre o apoio aos eventos](https://discord.com/channels/737538781024092170/774152638450237460/1323911696237990039)
+
+Em fevereiro de 2025, タケ anunciou planos para abrir uma nova estação na linha principal de &#26628;&#38920;. Em agosto, anunciou a reforma prevista da Estação Coliseu de Ibaraki e a suspensão parcial do serviço da linha 1 do Monotrilho Ace. Em dezembro, anunciou a distribuição de presentes de Natal do Monotrilho Ace.
 
 Em março de 2025, sh pediu ajuda para escrever o roteiro e editar um vídeo vertical de apresentação do Aceserver. End&#12539;コッカー propôs um plano de gravação para mostrar as construções e um rascunho da narração.
 
 No verão de 2025, End&#12539;コッカー abriu uma discussão sobre um torneio de Among Us. Pluto sugeriu um formato e sh31415 propôs como recrutar participantes.
 
 O anúncio do festival de verão de 2025 citou センチュリーズ pela preparação e pelo fornecimento do espetáculo de fogos. O agradecimento após o evento citou セガ, リンゴポン, あまぎ, 新人, ジェスター, ホステッチ e イザイザ pelos fogos, e コッカー e sh pela coordenação geral. エント cuidou do circuito, e moon e セキセイ do golfe. ハルビィ, セキセイ e sh cuidaram do PvP de sobrevivência, e はっ e sh do evento especial. [Publicação original](https://discord.com/channels/737538781024092170/774152638450237460/1408390549370572880) [Agradecimento após o evento](https://discord.com/channels/737538781024092170/779569416438415421/1411394624026710166)
+
+Em setembro de 2025, End&#12539;コッカー apresentou as atividades de quatro áreas, ferrovias, eventos, construção e trabalhos coletivos, e convidou pessoas a participar do Comitê de Revitalização do Aceserver.
 
 Em outubro de 2025, durante a preparação do boletim do Aceserver, sekisei informou que uma montagem preliminar do vídeo de apresentação do servidor de temporada estava pronta.
 
@@ -181,11 +187,15 @@ Para o concurso de servidores temáticos no outono de 2025, sekisei preparou um 
 
 Outras propostas incluíram Maldito Mythic e ATM, de Mugi, os robôs de 山田, Vamos de trem Ace, de タケ, Defenda a cidade de Maikura, de &#12454;&#12455;&#12531;&#12486;&#12451; (Hosttech255), o combate de alta dificuldade contra o dragão do End, de Moon\_666, as construções sazonais de sekisei e o Servidor ao capricho do chef, de sh.
 
-Em fevereiro de 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673;, &#35199;&#26408;&#37326;&#28716;&#36032;&#27663;, Amagi\_467, Moon\_666, CP-sinzin, Yukke e あすたん enviaram fotos para possível uso em publicações de divulgação nas redes sociais.
+Em fevereiro e agosto de 2026, sh apresentou as atividades de planejamento de eventos e divulgação não oficial do Comitê de Revitalização do Aceserver e convidou pessoas a se juntar ao grupo.
+
+Em fevereiro de 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; pediu fotos para publicações de divulgação nas redes sociais. LuMiSIA\_&#26376;&#31070;&#24736;&#33673;, &#35199;&#26408;&#37326;&#28716;&#36032;&#27663;, Amagi\_467, Moon\_666, CP-sinzin, Yukke e あすたん enviaram fotos para possível uso em publicações de divulgação nas redes sociais.
 
 Em fevereiro de 2026, End&#12539;コッカー anunciou o Concurso de Fotografia do Aceserver e informou que o período de envio era de 16 a 28 de fevereiro. Preparou exemplos de inscrições para a categoria geral e para a equipe de gestão. キツネコ enviou uma foto de um trabalho de drenagem em andamento. [Anúncio do Concurso de Fotografia de 2026](https://discord.com/channels/737538781024092170/774152638450237460/1471148847119208731)
 
 Em março de 2026, End&#12539;コッカー compartilhou uma versão de teste de um vídeo de apresentação do Aceserver. Merutak observou que a primeira metade avançava rápido. sekisei sugeriu esclarecer o objetivo, o público e a mensagem. あすたん comentou a quantidade de informação em um vídeo curto, e LuMiSIA\_&#26376;&#31070;&#24736;&#33673; deu sugestões sobre a apresentação de textos e animações.
+
+Em março de 2026, &#12486;&#12451;&#12512;&#12540; pediu propostas de um novo ícone e relatos de acontecimentos no servidor para o Diário do Aceserver, do Comitê de Revitalização do Aceserver.
 
 Em agosto de 2026, sekisei e ふーや anunciaram um CTF conjunto de caça ao tesouro on-line, com enigmas como cifras para encontrar bandeiras. Aceserver CTF2026 começou em 28 de agosto. [Anúncio da organização conjunta](https://discord.com/channels/737538781024092170/774152638450237460/1541785510094184449) [Relato de abertura](https://discord.com/channels/737538781024092170/779569416438415421/1542704904055824394)
 
@@ -204,6 +214,8 @@ Em abril de 2022, SPdari informou que a fundação e o telhado da base principal
 Em junho de 2022, yanyan_fafnir explicou as regras para participar do concurso de ilhas flutuantes que deu origem à construção do antigo lobby e como os projetos seriam apresentados para avaliação. O anúncio indicou que はっ e membros com cargo de apoiador ou superior fariam parte do júri. [Regras de inscrição](https://discord.com/channels/737538781024092170/774152638450237460/982990352422162482) [Anúncio da sessão de avaliação](https://discord.com/channels/737538781024092170/774152638450237460/986294242848669756)
 
 Em julho de 2022, Maro liderou a construção do lobby antigo e informou sua conclusão. Os registros da obra no antigo canal do Discord agradeceram a BM_yurikun pelo paisagismo e a _BE_ChalkyMink87 por embutir minérios na base. KOTA-SAN preparou um espaço para compartilhar o andamento da obra.
+
+Em agosto de 2022, \_BE\_Kuten2021110 começou a delimitar com terra a área prevista para a praça provisoriamente chamada Ace e pediu ajuda na construção e no projeto do estádio.
 
 Em agosto de 2022, Yukke informou que a sala de espera do antigo local da liga PvP estava quase pronta. ゆり informou que os assentos do terraço estavam concluídos e compartilhou uma foto.
 
@@ -253,6 +265,8 @@ Em março de 2021, KOTA-SAN informou que havia criado o Kutya, um bot de leitura
 
 Em abril de 2021, KOTA-SAN informou que havia testado com sucesso uma forma de entrar usando o Nintendo Switch e propôs acrescentar orientações à página sobre como jogar do site da época.
 
+Em março de 2021, KOTA-SAN explicou as mudanças nas regras e na etiqueta de comunicação da época. Em maio, kuroneko229 publicou orientações sobre como agir e relatar atos de vandalismo no jogo ao presenciá-los. Em julho, てぃあ apresentou medidas de combate a esse tipo de vandalismo.
+
 Em agosto de 2021, てぃあ reuniu em um guia instalações importantes como a prefeitura, o centro de trocas, a plantação de árvores e a fazenda compartilhada, e indicou quais locais deveriam ser apresentados primeiro aos novos jogadores. Em fevereiro de 2022, はっ acrescentou hospedagem para novos jogadores ao guia de instalações compartilhadas.
 
 Em agosto de 2021, KOTA-SAN reuniu comandos úteis dos plugins instalados na época.
@@ -268,6 +282,8 @@ Em maio de 2022, Mugi informou que o Kutya passou a ler código Morse japonês e
 Em junho de 2022, Mugi atualizou o bot de leitura Kutya para incluir o chat dos canais de voz. Em março de 2023, anunciou um bot para enviar comentários anônimos à equipe do servidor. [Atualização do Kutya](https://discord.com/channels/737538781024092170/774152638450237460/986439863937155122) [Anúncio do feedback anônimo](https://discord.com/channels/737538781024092170/774152638450237460/1087976366126927882)
 
 Em setembro de 2022, Gui anunciou uma versão de teste do site. Em outubro, informou que havia separado o blog da documentação e preparado páginas que várias pessoas podiam editar. taka8621 pediu guias de comandos, guias ilustrados das instalações e mapas. yanyan sugeriu páginas editáveis. Em janeiro de 2023, &#33775;\*HAiNE testou o ambiente de edição da wiki e levantou a questão de como os leitores encontrariam as informações se os guias ficassem em páginas separadas.
+
+Entre julho e agosto de 2022, KOTA-SAN explicou as diretrizes da época para solicitar construções e preparar terrenos. Em outubro, taka8621 explicou como eram tratados os pedidos de comunidades e os carregadores de chunks.
 
 Em outubro de 2022, hana0c0haine informou que havia revisado todas as páginas da wiki que estavam publicadas e corrigido diferenças na grafia dos termos e na redação em japonês. Em março de 2023, あすたん separou os canais para quem editava a wiki e orientou a redação em Markdown.
 
