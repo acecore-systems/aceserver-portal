@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:f8eb9a54aaba2676b7bb24fff26f948bf56be457feffaeabd562dc461e4c0ade
+sourceHash: sha256:43c0aca449c70593756bc8fc40b5eb7f0bdc7005cc70d4a9b1379cc90bb4e72b
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -175,6 +175,8 @@ En mars 2025, sh a demandé de l’aide pour écrire le scénario et monter une 
 
 À l’été 2025, End&#12539;コッカー a lancé une discussion sur un tournoi Among Us, Pluto a proposé un format et sh31415 une manière de recruter des participants.
 
+En juillet 2025, End&#12539;コッカー a indiqué avoir préparé une proposition pour la fête d’été.
+
 L’annonce du festival d’été 2025 citait センチュリーズ pour la préparation et la fourniture du feu d’artifice. Les remerciements après l’événement citaient セガ, リンゴポン, あまぎ, 新人, ジェスター, ホステッチ et イザイザ pour le feu d’artifice, ainsi que コッカー et sh pour la coordination générale. エント s’est occupé du circuit, et moon et セキセイ du golf. ハルビィ, セキセイ et sh ont assuré le PvP de survie, et はっ et sh l’événement spécial. [Message d’origine](https://discord.com/channels/737538781024092170/774152638450237460/1408390549370572880) [Remerciements après l’événement](https://discord.com/channels/737538781024092170/779569416438415421/1411394624026710166)
 
 En septembre 2025, End&#12539;コッカー a présenté les activités de quatre sections consacrées au rail, aux événements, à la construction et aux travaux collectifs, puis a invité des volontaires à rejoindre le comité de revitalisation d’Aceserver.
@@ -269,9 +271,17 @@ Fin décembre 2022, edamameRex_java a annoncé l’achèvement de la constructio
 
 En février 2023, あすたん a expliqué comment organiser le creusement collectif pour une installation destinée aux piglins zombifiés.
 
+En avril 2023, あすたん a expliqué quelles informations étaient alors requises pour demander l’autorisation d’une construction de grande ampleur, et ゆり a partagé un modèle de demande. ゆり a aussi présenté le projet de faire passer dans un tunnel le tronçon montagneux du Circuit international du royaume de Kuwa.
+
 Dans sa participation au concours photo de novembre 2023, Yukke est revenu sur l’excavation de 256 chunks pour l’installation de squelettes Wither et sur les mesures prises contre l’apparition de créatures. En décembre, あすたん a expliqué avoir utilisé l’installation de Yukke pour vaincre des Withers avec d’autres joueurs et créer un arc-en-ciel avec plus de 200 balises.
 
+En mai 2024, PillowKebap a déposé une demande pour un grand projet d’art sur carte. En août, Amagi\_467 a présenté un projet de ferme à golems pour les installations publiques. En novembre, タケ a demandé à construire des installations dont un dépôt ferroviaire et des entrepôts.
+
+En avril 2025, Moon\_666 a déposé un projet de ferme à raids ouverte à tous.
+
 En novembre 2025, End&#12539;コッカー a annoncé l’installation de portails dans huit directions pour atteindre les zones éloignées du serveur de survie. [Annonce de l’installation des portails](https://discord.com/channels/737538781024092170/774152638450237460/1434193495752704134)
+
+En novembre 2025, Moon\_666 a annoncé qu’une ferme à piglins zombifiés qui rapportait de l’or et des points d’expérience était terminée sur le serveur de saison. [Rapport d’achèvement sur le serveur de saison](https://discord.com/channels/737538781024092170/1437442961507090443/1440300609545965649)
 
 En mars 2026, Merutak a annoncé la fin du drainage d’une vaste zone pour le projet de monument océanique ×6 et d’excavation à ciel ouvert. Merutak a remercié sega, take, sekisei, harubie, hatt, timu, buraki, yukke, moon, sinzin et siu pour les matériaux et leur aide sur le chantier. [Compte rendu du drainage et remerciements](https://discord.com/channels/737538781024092170/779569416438415421/1483522273020215497)
 
@@ -319,6 +329,8 @@ En janvier 2023, あすたん a publié des instructions illustrées pour se con
 
 Le 21 mars 2023, taka8621 a partagé sept images présentant les recettes personnalisées d’Aceserver à l’époque. Elles montraient des exemples utilisant de l’herbe ou des dalles de chêne pétrifié comme ingrédients, ainsi que des recettes de livres enchantés et d’équipements.
 
+En avril 2023, Yukke a indiqué avoir ajouté la prononciation de « Hi » au dictionnaire de lecture à voix haute de l’intégration du chat de l’époque.
+
 En mai 2023, あすたん a préparé un guide sur le rôle de chaque serveur à l’époque et sur l’accès au wiki et à la carte du monde. Le guide montrait aussi en images les entrées du serveur principal et du serveur de ressources. Le même mois, あすたん a expliqué les fonctions de protection de CoreProtect et de LWC dans un guide distinct.
 
 En juin 2023, タケ a demandé dans le salon d’échange en anglais s’il existait un bot capable de traduire entre l’anglais et le japonais.
@@ -338,6 +350,8 @@ En juillet 2024, taka8621 a rédigé la procédure de réinitialisation du monde
 En octobre 2024, sekisei a préparé un guide sur l’utilisation du plugin de portails Advanced Portals avec Minecraft 1.21 et les versions ultérieures. En décembre, sekisei a fait le point sur l’emplacement des portails du serveur.
 
 En janvier 2025, sekisei a annoncé que la recette de fabrication de l’herbe était indisponible à la suite d’une mise à jour.
+
+En juillet 2025, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; a réalisé et partagé un schéma pour servir de référence dans la réflexion sur le système. Le même mois, sekisei a indiqué avoir réussi à se connecter depuis Bedrock Edition.
 
 Entre la fin octobre et le début novembre 2025, ゆり a organisé et publié séparément les règles générales, celles du serveur de survie, du contenu et des saisons, de la création de serveurs thématiques, de la communauté et du Discord sur le forum des règles du Discord officiel. [Publication des règles générales](https://discord.com/channels/737538781024092170/1433831969816449064/1433831969816449064) [Publication des règles de la communauté](https://discord.com/channels/737538781024092170/1433830521238061227/1433830521238061227) [Publication des règles du Discord](https://discord.com/channels/737538781024092170/1433957818674970654/1433957818674970654)
 

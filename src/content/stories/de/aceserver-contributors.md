@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:f8eb9a54aaba2676b7bb24fff26f948bf56be457feffaeabd562dc461e4c0ade
+sourceHash: sha256:43c0aca449c70593756bc8fc40b5eb7f0bdc7005cc70d4a9b1379cc90bb4e72b
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -175,6 +175,8 @@ Im März 2025 bat sh um Hilfe beim Schreiben und Schneiden eines Hochformatvideo
 
 Im Sommer 2025 begann End&#12539;コッカー eine Diskussion über ein Among-Us-Turnier. Pluto schlug ein Format vor und sh31415 eine Möglichkeit, Teilnehmer zu gewinnen.
 
+Im Juli 2025 berichtete End&#12539;コッカー, einen Vorschlag für das Sommerfest ausgearbeitet zu haben.
+
 In der Ankündigung zum Sommerfest 2025 wurde センチュリーズ für die Vorbereitung und Bereitstellung des Feuerwerks genannt. Der Dank nach der Veranstaltung nannte セガ, リンゴポン, あまぎ, 新人, ジェスター, ホステッチ und イザイザ für das Feuerwerk sowie コッカー und sh für die Gesamtkoordination. エント betreute den Rundkurs, moon und セキセイ das Golfspiel. ハルビィ, セキセイ und sh betreuten das Survival-PvP, はっ und sh das Sonderereignis. [Originalbeitrag](https://discord.com/channels/737538781024092170/774152638450237460/1408390549370572880) [Dank nach der Veranstaltung](https://discord.com/channels/737538781024092170/779569416438415421/1411394624026710166)
 
 Im September 2025 stellte End&#12539;コッカー die Arbeit der vier Bereiche Eisenbahn, Veranstaltungen, Bauen und gemeinsame Arbeiten vor und warb um Mitglieder für das Belebungskomitee von Aceserver.
@@ -269,9 +271,17 @@ Ende Dezember 2022 meldete edamameRex_java laut den Aufzeichnungen des Bauprojek
 
 Im Februar 2023 erklärte あすたん, wie die gemeinsamen Ausgrabungen für eine Anlage für zombifizierte Piglins ablaufen sollten.
 
+Im April 2023 erklärte あすたん, welche Angaben damals für Anträge auf größere Bauvorhaben nötig waren. ゆり teilte eine Antragsvorlage und erläuterte außerdem den Plan für einen Tunnel auf dem Abschnitt der internationalen Rennstrecke des Königreichs Kuwa, der durch einen Berg führen sollte.
+
 In einem Fotowettbewerbsbeitrag vom November 2023 erinnerte sich Yukke daran, 256 Chunks für die Witherskelettanlage ausgehoben und Maßnahmen gegen das Spawnen getroffen zu haben. In einem Beitrag vom Dezember beschrieb あすたん, wie die Gruppe in Yukkes Anlage Wither besiegte und mit mehr als 200 Leuchtfeuern einen Regenbogen baute.
 
+Im Mai 2024 reichte PillowKebap einen Antrag für ein großes Kartenkunstprojekt ein. Im August legte Amagi\_467 einen Plan für eine Golemfarm für öffentliche Einrichtungen vor. Im November beantragte タケ den Bau von Einrichtungen wie einem Bahnbetriebshof und Lagerhäusern.
+
+Im April 2025 reichte Moon\_666 einen Plan für eine Raidfarm ein, die alle nutzen könnten.
+
 Im November 2025 meldete End&#12539;コッカー, dass Portale in acht Richtungen eingerichtet worden waren, die zu entfernten Bereichen des Survival-Servers führten. [Ankündigung zum Einbau der Portale](https://discord.com/channels/737538781024092170/774152638450237460/1434193495752704134)
+
+Im November 2025 meldete Moon\_666 die Fertigstellung einer Farm für zombifizierte Piglins auf dem Saisonserver, die Gold und Erfahrungspunkte lieferte. [Bericht zur Fertigstellung auf dem Saisonserver](https://discord.com/channels/737538781024092170/1437442961507090443/1440300609545965649)
 
 Im März 2026 berichtete Merutak, dass die Trockenlegung eines großen Gebiets für das Projekt ×6 Ozeanmonument und offener Aushub abgeschlossen war. Merutak dankte sega, take, sekisei, harubie, hatt, timu, buraki, yukke, moon, sinzin und siu für Material und Mithilfe. [Bericht über die Entwässerung und Dank](https://discord.com/channels/737538781024092170/779569416438415421/1483522273020215497)
 
@@ -319,6 +329,8 @@ Im Januar 2023 veröffentlichte あすたん im damaligen Discord-Beitrittsleitf
 
 Am 21. März 2023 teilte taka8621 sieben Bilder mit den damaligen eigenen Rezepten von Aceserver. Sie zeigten Beispiele mit Gras oder versteinerten Eichenholzstufen als Zutaten sowie Rezepte für verzauberte Bücher und Ausrüstung.
 
+Im April 2023 berichtete Yukke, die Aussprache von „Hi“ ins Vorlesewörterbuch der damaligen Chat-Verknüpfung aufgenommen zu haben.
+
 Im Mai 2023 fasste あすたん zusammen, welchen Zweck die einzelnen Server damals hatten und wo das Wiki und die Weltkarte zu finden waren. Der Leitfaden zeigte auch Bilder von den Zugängen zum Hauptserver und zum Ressourcenserver. Im selben Monat erklärte あすたん in einer separaten Anleitung die Schutzfunktionen von CoreProtect und LWC.
 
 Im Juni 2023 fragte タケ im Kanal für den englischsprachigen Austausch, ob es einen Bot für Übersetzungen zwischen Englisch und Japanisch gab.
@@ -338,6 +350,8 @@ Im Juli 2024 dokumentierte taka8621 das Vorgehen zum Zurücksetzen der Welt auf 
 Im Oktober 2024 erstellte sekisei eine Anleitung zur Nutzung des Portal-Plugins Advanced Portals mit Minecraft 1.21 und späteren Versionen. Im Dezember fasste sekisei zusammen, wo sich die Portale auf dem Server befanden.
 
 Im Januar 2025 teilte sekisei mit, dass das Herstellungsrezept für Gras nach einem Update nicht verfügbar war.
+
+Im Juli 2025 erstellte und teilte LuMiSIA\_&#26376;&#31070;&#24736;&#33673; ein Schaubild als Grundlage für die Diskussion über das System. Im selben Monat meldete sekisei eine erfolgreiche Verbindung mit Bedrock Edition.
 
 Von Ende Oktober bis Anfang November 2025 ordnete ゆり die Regeln und veröffentlichte sie als einzelne Beiträge im offiziellen Discord-Regelforum. Die Beiträge behandelten die allgemeinen Regeln, den Survival-Server, Inhalte, Saisons, die Einrichtung von Konzeptservern, die Community und Discord. [Beitrag zu den allgemeinen Regeln](https://discord.com/channels/737538781024092170/1433831969816449064/1433831969816449064) [Beitrag zu den Community-Regeln](https://discord.com/channels/737538781024092170/1433830521238061227/1433830521238061227) [Beitrag zu den Discord-Regeln](https://discord.com/channels/737538781024092170/1433957818674970654/1433957818674970654)
 

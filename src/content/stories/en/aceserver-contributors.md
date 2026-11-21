@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:f8eb9a54aaba2676b7bb24fff26f948bf56be457feffaeabd562dc461e4c0ade
+sourceHash: sha256:43c0aca449c70593756bc8fc40b5eb7f0bdc7005cc70d4a9b1379cc90bb4e72b
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -175,6 +175,8 @@ In March 2025, sh asked for help writing and editing a vertical video introducin
 
 In summer 2025, End&#12539;コッカー started a discussion about an Among Us tournament, Pluto suggested a format, and sh31415 proposed a way to recruit players.
 
+In July 2025, End&#12539;コッカー reported preparing a proposal for the summer festival.
+
 The 2025 summer festival announcement named センチュリーズ for preparing and providing the fireworks display. The post-event thanks named セガ, リンゴポン, あまぎ, 新人, ジェスター, ホステッチ and イザイザ for the fireworks, and コッカー and sh for overall coordination. エント worked on the circuit, and moon and セキセイ on golf. ハルビィ, セキセイ and sh worked on survival PvP, and はっ and sh on the special event. [Original post](https://discord.com/channels/737538781024092170/774152638450237460/1408390549370572880) [Post-event thanks](https://discord.com/channels/737538781024092170/779569416438415421/1411394624026710166)
 
 In September 2025, End&#12539;コッカー introduced the work of four departments devoted to railways, events, building, and work projects, and invited people to join the Aceserver Revitalization Committee.
@@ -269,9 +271,17 @@ At the end of December 2022, edamameRex_java reported that construction of the h
 
 In February 2023, あすたん shared how to organize a group excavation for a zombified piglin facility.
 
+In April 2023, あすたん explained what information was needed to apply for large builds at the time, and ゆり shared an application template. ゆり also outlined a plan for a tunnel where the course at the Kuwa Kingdom International Circuit crossed a mountain.
+
 In a November 2023 photo contest entry, Yukke looked back on excavating 256 chunks for the wither skeleton facility and taking measures to prevent spawns. In a December entry, あすたん described using Yukke’s facility to defeat Withers with other players and make a rainbow with more than 200 beacons.
 
+In May 2024, PillowKebap applied for a large map art project. In August, Amagi\_467 submitted a plan for a golem farm for public facilities. In November, タケ applied to build facilities including a rail depot and warehouses.
+
+In April 2025, Moon\_666 submitted a proposal for a raid farm that anyone could use.
+
 In November 2025, End&#12539;コッカー reported installing gates in eight directions to reach distant parts of the survival server. [Gate installation announcement](https://discord.com/channels/737538781024092170/774152638450237460/1434193495752704134)
+
+In November 2025, Moon\_666 reported that a zombified piglin farm for gold and experience points was complete on the Season Server. [Season Server completion report](https://discord.com/channels/737538781024092170/1437442961507090443/1440300609545965649)
 
 In March 2026, Merutak reported that drainage of a large area for the ×6 Ocean Monument and Open-Pit Excavation project was complete and thanked sega, take, sekisei, harubie, hatt, timu, buraki, yukke, moon, sinzin, and siu for materials and help with the work. [Drainage and acknowledgments](https://discord.com/channels/737538781024092170/779569416438415421/1483522273020215497)
 
@@ -319,6 +329,8 @@ In January 2023, あすたん posted illustrated instructions for connecting wit
 
 On March 21, 2023, taka8621 shared seven images of Aceserver’s custom recipes at the time. They showed examples using grass or petrified oak slabs as ingredients and recipes for enchanted books and equipment.
 
+In April 2023, Yukke reported adding a pronunciation entry for “Hi” to the read-aloud dictionary of the chat integration used at the time.
+
 In May 2023, あすたん put together a guide to what each server was for at the time and where to find the wiki and world map. The guide also showed the entrances to the main and resource servers with images. That month, あすたん explained the protection features of CoreProtect and LWC in a separate guide.
 
 In June 2023, タケ asked in the English chat channel whether there was a bot that could translate between English and Japanese.
@@ -338,6 +350,8 @@ In July 2024, taka8621 documented how to reset the resource server world and sha
 In October 2024, sekisei prepared a guide to using the Advanced Portals plugin with Minecraft 1.21 and later versions. In December, sekisei compiled a summary of where portals were located on the server.
 
 In January 2025, sekisei announced that the grass crafting recipe was unavailable following an update.
+
+In July 2025, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; created and shared a diagram as a reference for discussing the system. That month, sekisei reported successfully connecting from Bedrock Edition.
 
 From late October to early November 2025, ゆり organized and posted separate sets of rules in the official Discord rules forum. The posts covered general rules, the survival server, content, seasons, setting up concept servers, the community, and Discord. [General rules post](https://discord.com/channels/737538781024092170/1433831969816449064/1433831969816449064) [Community rules post](https://discord.com/channels/737538781024092170/1433830521238061227/1433830521238061227) [Discord rules post](https://discord.com/channels/737538781024092170/1433957818674970654/1433957818674970654)
 
