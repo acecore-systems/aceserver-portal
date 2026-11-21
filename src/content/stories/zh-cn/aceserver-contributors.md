@@ -2,7 +2,7 @@
 title: 支持Aceserver的人们
 description: 通过 Minecraft 皮肤头像认识 Aceserver 的贡献者，回顾社区活动记录，并查看活动与玩家提案路线图。
 translationOf: aceserver-contributors
-sourceHash: sha256:b23906bcf95b90160981ff8203c485aa80aed8a70d177a0a3cbacd33700b9a3d
+sourceHash: sha256:b9ba4579880a4a676e15dca28c67d58bcd31ac085e5dfa0560a1ae7073763a08
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-21T00:00:00+09:00
 tags:
@@ -42,6 +42,10 @@ Mugi 介绍了 RS 电路技术部的活动及负责人 sousuke3018。SEGA 帝国
 古城复兴小组的介绍将 Golden Cocker 列为当时的负责人，Taibon 和 タケ 列为早期参与者。RPG 制作部的招募同样将 Golden Cocker 列为负责人，并邀请大家参与建造 RPG 风格的城镇与创作故事。
 
 ゆり（Yū）以 A悠（A商）店主的身份介绍了物资销售，并招募游乐区的建造志愿者。
+
+2023 年 7 月，ゆり 在 Ace Lab 的公告中介绍了月神村与 RPG 制作部的联盟。公告记载，当时的负责人为 BM\_yurikun 和 \_BE\_golden\_cokka，早期成员包括 amya7238 和 \_BE\_golden\_cokka。公告列出的活动方向包括冰上划船比赛 ACE1GP 和 RPG 制作。
+
+2023 年 10 月，PetiteShelf7874 介绍了小丘村的活动和地图。
 
 ## 宣传与活动
 
@@ -101,9 +105,17 @@ edamameRex_java（Edamame）介绍了自己的摊位，Moon_666 也公布了摊�
 
 2024 年 4 月，ゆり 预告了一期 E-ha Radio 节目，主演名单列有 Master 和 Yuri-kun。同年 8 月的特别节目预告由 コタ 和 はっ 出演。KOTA-SAN 报告已准备好钓鱼池，并通知取消当天的直播。
 
-在 2024 年 8 月 17 日的夏日祭中，sekisei 介绍了钓鱼比赛的规则和分组，并宣布比赛开始。sh 介绍了超级寻物比赛的企划和参加方式，次日分享了官方直播的视频。はっ介绍了最小抽象化传话游戏的流程和分组。
+在 2024 年 8 月 17 日的夏日祭中，sekisei 介绍了钓鱼比赛的规则和分组，并宣布比赛开始。sh 介绍了超级寻物比赛的企划和参加方式，次日分享了官方直播的视频。はっ介绍了最小抽象化传话游戏的流程和分组。 当时的筹备记录中，sh 提到跳蚤市场的建筑由 Ohagi 建造。
 
 タケ制作了2024年Ace Summer Festival的海报。在年末的「つなぐASF」活动中，taibon协助制作跨年倒计时装置。タケ于2025年1月报告全部日程结束。 [海报公告](https://discord.com/channels/737538781024092170/774152638450237460/1274157736015429744) [倒计时装置公告](https://discord.com/channels/737538781024092170/774152638450237460/1319967701808189493) [结束报告](https://discord.com/channels/737538781024092170/774152638450237460/1325487116419076129)
+
+2024 年 9 月，Yukke 向 Aceserver 摄影社征集拍摄地点的建议，并介绍了相册投稿位置。9 月 27 日，taibon852 发布了大厅、市政厅和 POCKET ACES CASINO 的照片与介绍文章。
+
+相册把**大厅**介绍为 2022 年 6 月比赛入选作品的重制版。相册记载，建造由 mallooo052、BM\_tsukiyurikun\_ 和 \_BE\_Minksecond87 负责，摄影由 mallooo052 负责，编辑由 Take\_no\_niwa 负责。
+
+**市政厅**由 BM\_yurikun、\_BE\_golden\_cokka 和 taiyaki5190 建造，yukyaa 摄影，Harubie 编辑。
+
+**POCKET ACES CASINO** 由 \_BE\_StrangeDownp、\_BE\_Minksecond87、mallooo052、KITUNEKO0605、yukke\_11、\_BE\_Zakk893 和 \_BE\_taibon0727 建造，Lopila 摄影，taibon0727 编辑。
 
 2024 年年底，タケ出了 Ace 单轨问答题，并公布答题投票的截止时间。Yukke 介绍了 PvP Ace 杯的选手登记方式。
 
@@ -173,13 +185,21 @@ taibon0727 准备了玻璃等物资、出行用船的停放处和处理沙子的
 
 2023年7月，Yukke宣布创建了资源服的新世界。 [资源世界公告](https://discord.com/channels/737538781024092170/774152638450237460/1135574163080364103)
 
+2023 年 7 月，あすたん 编写并发布了 LWC、CoreProtect、Gsit 和 LunaChat 的命令指南。9 月，taka8621 补充了草交换命令的使用说明。
+
 2023 年 9 月，公告介绍 あすたん 加入运营团队、Taka 接任系统工作。2024 年 5 月，はっ宣布 sh 和 sekisei 成为负责系统相关事务的用户支持者。 [2023 年任命公告](https://discord.com/channels/737538781024092170/774152638450237460/1151168895076548669) [2024 年支持者公告](https://discord.com/channels/737538781024092170/774152638450237460/1236592686253867008)
 
 2024 年 1 月，あすたん 在收集 Aceserver 游戏记录的 Ace Server Leaderboard Archive（ASLA）中介绍了参与规则和提交记录的方法，还发布了采矿、统计数据和金属锭的列表。キツネコ、Feruno 和 Taiyaki 在提交频道分享了统计记录，Tabekirareta Potechi 则提交了「首座城堡」等项目的候选记录。
 
+2025 年 10 月底至 11 月初，ゆり 在官方 Discord 规则论坛整理并分别发布了通用规则、生存服规则、内容规则、赛季规则、设立概念服的规则、社群规则和 Discord 规则。 [通用规则帖子](https://discord.com/channels/737538781024092170/1433831969816449064/1433831969816449064) [社群规则帖子](https://discord.com/channels/737538781024092170/1433830521238061227/1433830521238061227) [Discord 规则帖子](https://discord.com/channels/737538781024092170/1433957818674970654/1433957818674970654)
+
 2025年11月，服务器引入了あすたん制作的Minecraft与Discord聊天联动系统。 [聊天联动公告](https://discord.com/channels/737538781024092170/774152638450237460/1437973211961622670)
 
+2025 年 12 月，sekisei 介绍了概念服 Season Creative 的使用方法。2026 年 1 月，sekisei 报告已将该服务器的管理工作交给 sh31415。 [Season Creative 使用指南](https://discord.com/channels/737538781024092170/1445004286793879602/1445004286793879602) [管理交接报告](https://discord.com/channels/737538781024092170/1445004286793879602/1460090096475832425)
+
 2026年2月，Merutak报告创建了两个用于通知故障和服务器停止的Discord身份组。 [原帖](https://discord.com/channels/737538781024092170/774152638450237460/1477293143773810822)
+
+2026 年 3 月，あすたん 发布了资源服规则。7 月，sekisei 在同一主题中发布了更新内容。 [资源服规则帖子](https://discord.com/channels/737538781024092170/1486515511029268610/1486515511029268610) [更新内容帖子](https://discord.com/channels/737538781024092170/1486515511029268610/1531835894196080653)
 
 2026 年 7 月，sekisei 发布了首场技术讲座的通知，主题是服务器和互联网。 [技术讲座公告](https://discord.com/channels/737538781024092170/774152638450237460/1532641413500633108)
 

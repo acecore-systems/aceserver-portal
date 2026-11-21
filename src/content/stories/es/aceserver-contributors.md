@@ -2,7 +2,7 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:b23906bcf95b90160981ff8203c485aa80aed8a70d177a0a3cbacd33700b9a3d
+sourceHash: sha256:b9ba4579880a4a676e15dca28c67d58bcd31ac085e5dfa0560a1ae7073763a08
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-21T00:00:00+09:00
 tags:
@@ -42,6 +42,10 @@ kurenohachi (Hachi), responsable del Grupo del Parque de Atracciones, informó d
 La presentación del Grupo de Restauración de la Ciudad Antigua nombraba a Golden Cocker como responsable de entonces y a Taibon y タケ como participantes iniciales. En una convocatoria del Grupo de Creación RPG también figuraba Golden Cocker como responsable y se pedía ayuda para crear ciudades e historias al estilo de los juegos de rol.
 
 Como titular de A Yū (A-shō), ゆり (Yū) informó de la venta de materiales y buscó voluntarios para construir una zona de juegos.
+
+En julio de 2023, ゆり presentó en un anuncio de Ace Lab la alianza entre la Aldea del Dios Lunar y el Grupo de Creación RPG. El anuncio nombró a BM\_yurikun y \_BE\_golden\_cokka como responsables de entonces, y a amya7238 y \_BE\_golden\_cokka como miembros iniciales. Entre las actividades propuestas figuraban las carreras de barcos sobre hielo ACE1GP y la creación de RPG.
+
+En octubre de 2023, PetiteShelf7874 presentó las actividades y el mapa de la Aldea de la Colina Pequeña.
 
 ## Difusión y eventos
 
@@ -101,9 +105,17 @@ En la primavera de 2024, sekisei anunció la hora de inicio y el contacto de Ace
 
 En abril de 2024, ゆり anunció un episodio de E-ha Radio con Master y Yuri-kun en los créditos principales. Para el especial de agosto se anunció la participación de コタ y はっ. KOTA-SAN informó de que había preparado un estanque de pesca y anunció la cancelación de la transmisión prevista para aquel día.
 
-En el festival de verano del 17 de agosto de 2024, sekisei presentó las reglas y los equipos del concurso de pesca y anunció su comienzo. sh presentó la Gran Búsqueda de Objetos, explicó cómo participar y al día siguiente compartió un video de la retransmisión oficial. はっ explicó el funcionamiento y los equipos del juego de transmisión de mensajes por abstracción mínima.
+En el festival de verano del 17 de agosto de 2024, sekisei presentó las reglas y los equipos del concurso de pesca y anunció su comienzo. sh presentó la Gran Búsqueda de Objetos, explicó cómo participar y al día siguiente compartió un video de la retransmisión oficial. はっ explicó el funcionamiento y los equipos del juego de transmisión de mensajes por abstracción mínima. En los registros de preparación del festival, sh indicó que Ohagi había construido el edificio del mercadillo.
 
 タケ creó el cartel del Ace Summer Festival de 2024. En el evento de fin de año «つなぐASF», taibon ayudó con el dispositivo de cuenta regresiva. タケ informó del fin de todas las actividades en enero de 2025. [Anuncio del cartel](https://discord.com/channels/737538781024092170/774152638450237460/1274157736015429744) [Anuncio de la cuenta regresiva](https://discord.com/channels/737538781024092170/774152638450237460/1319967701808189493) [Informe de cierre](https://discord.com/channels/737538781024092170/774152638450237460/1325487116419076129)
+
+En septiembre de 2024, Yukke pidió al club de fotografía de Aceserver que propusiera lugares para las sesiones e indicó dónde publicar las aportaciones al álbum. El 27 de septiembre, taibon852 publicó fotos y artículos sobre el vestíbulo, el ayuntamiento y POCKET ACES CASINO.
+
+El álbum presentó el **vestíbulo** como una nueva versión de una obra seleccionada en el concurso de junio de 2022. Atribuyó la construcción a mallooo052, BM\_tsukiyurikun\_ y \_BE\_Minksecond87, la fotografía a mallooo052 y la edición a Take\_no\_niwa.
+
+Para el **ayuntamiento**, el álbum atribuyó la construcción a BM\_yurikun, \_BE\_golden\_cokka y taiyaki5190, la fotografía a yukyaa y la edición a Harubie.
+
+Para **POCKET ACES CASINO**, el álbum atribuyó la construcción a \_BE\_StrangeDownp, \_BE\_Minksecond87, mallooo052, KITUNEKO0605, yukke\_11, \_BE\_Zakk893 y \_BE\_taibon0727, la fotografía a Lopila y la edición a taibon0727.
 
 A finales de 2024, タケ propuso un concurso de preguntas de Ace Monorail y anunció el plazo de votación de las respuestas. Yukke explicó cómo inscribirse en la Copa Ace de PvP.
 
@@ -173,13 +185,21 @@ En noviembre de 2022, キツネコ propuso publicar las reglas de uso del suelo 
 
 En julio de 2023, Yukke anunció la creación de un nuevo mundo para el servidor de recursos. [Anuncio del mundo de recursos](https://discord.com/channels/737538781024092170/774152638450237460/1135574163080364103)
 
+En julio de 2023, あすたん redactó y publicó guías de comandos para LWC, CoreProtect, Gsit y LunaChat. En septiembre, taka8621 añadió una explicación sobre el uso del comando de intercambio de hierba.
+
 En septiembre de 2023 se anunció que あすたん se incorporaba al equipo de administración y que Taka se encargaría de sistemas. En mayo de 2024, はっ anunció que sh y sekisei pasaban a prestar apoyo técnico a los usuarios. [Nombramientos de 2023](https://discord.com/channels/737538781024092170/774152638450237460/1151168895076548669) [Roles de apoyo de 2024](https://discord.com/channels/737538781024092170/774152638450237460/1236592686253867008)
 
 En enero de 2024, あすたん explicó las reglas de participación y cómo enviar registros al Ace Server Leaderboard Archive (ASLA), que recopilaba registros de Aceserver. También publicó listas de minería, estadísticas y lingotes. キツネコ, Feruno y Taiyaki enviaron estadísticas al canal de aportaciones, y Tabekirareta Potechi propuso candidatos para registros como el primer castillo.
 
+Entre finales de octubre y principios de noviembre de 2025, ゆり organizó y publicó por separado las reglas generales, las del servidor de supervivencia, las de contenido y temporadas, las de creación de servidores temáticos, las de la comunidad y las de Discord en el foro oficial de reglas de Discord. [Publicación de las reglas generales](https://discord.com/channels/737538781024092170/1433831969816449064/1433831969816449064) [Publicación de las reglas de la comunidad](https://discord.com/channels/737538781024092170/1433830521238061227/1433830521238061227) [Publicación de las reglas de Discord](https://discord.com/channels/737538781024092170/1433957818674970654/1433957818674970654)
+
 En noviembre de 2025 se incorporó un sistema de chat entre Minecraft y Discord creado por あすたん. [Anuncio de integración de chat](https://discord.com/channels/737538781024092170/774152638450237460/1437973211961622670)
 
+En diciembre de 2025, sekisei explicó cómo usar Season Creative, un servidor temático. En enero de 2026, informó de que había traspasado su administración a sh31415. [Guía de Season Creative](https://discord.com/channels/737538781024092170/1445004286793879602/1445004286793879602) [Informe del traspaso de la administración](https://discord.com/channels/737538781024092170/1445004286793879602/1460090096475832425)
+
 En febrero de 2026, Merutak informó de la creación de dos roles de Discord para avisos de problemas y paradas del servidor. [Publicación original](https://discord.com/channels/737538781024092170/774152638450237460/1477293143773810822)
+
+En marzo de 2026, あすたん publicó las reglas del servidor de recursos. En julio, sekisei publicó una actualización en el mismo hilo. [Publicación de las reglas del servidor de recursos](https://discord.com/channels/737538781024092170/1486515511029268610/1486515511029268610) [Publicación de la actualización](https://discord.com/channels/737538781024092170/1486515511029268610/1531835894196080653)
 
 En julio de 2026, sekisei anunció la primera charla técnica sobre los servidores e Internet. [Anuncio de la charla técnica](https://discord.com/channels/737538781024092170/774152638450237460/1532641413500633108)
 

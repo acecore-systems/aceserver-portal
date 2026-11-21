@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:b23906bcf95b90160981ff8203c485aa80aed8a70d177a0a3cbacd33700b9a3d
+sourceHash: sha256:b9ba4579880a4a676e15dca28c67d58bcd31ac085e5dfa0560a1ae7073763a08
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-21T00:00:00+09:00
 tags:
@@ -42,6 +42,10 @@ Le responsable du groupe du parc d’attractions, kurenohachi (Hachi), a annonc�
 Une présentation du groupe de restauration de la cité antique mentionnait Golden Cocker comme responsable de l’époque, ainsi que Taibon et タケ parmi les premiers participants. Un appel du groupe de création RPG indiquait aussi Golden Cocker comme responsable et proposait d’aider à créer des villes et des histoires de style RPG.
 
 En tant que propriétaire d’A Yū (A-shō), ゆり (Yū) a présenté la vente de matériaux et demandé des volontaires pour construire un espace de loisirs.
+
+En juillet 2023, ゆり a présenté, dans une annonce d’Ace Lab, l’alliance entre le Village du dieu de la Lune et le groupe de création RPG. L’annonce indiquait BM\_yurikun et \_BE\_golden\_cokka comme responsables à l’époque, et amya7238 et \_BE\_golden\_cokka parmi les premiers membres. La course de bateaux sur glace ACE1GP et la création de RPG figuraient parmi les activités envisagées.
+
+En octobre 2023, PetiteShelf7874 a présenté les activités et la carte du Village de la Petite Colline.
 
 ## Communication et événements
 
@@ -101,9 +105,17 @@ Au printemps 2024, sekisei a annoncé l’heure de début d’Ace Guesser v2 et 
 
 En avril 2024, ゆり a annoncé un épisode d’E-ha Radio dont la distribution principale indiquait Master et Yuri-kun. La participation de コタ et はっ a été annoncée pour l’émission spéciale d’août. KOTA-SAN a indiqué avoir aménagé un étang de pêche et annoncé l’annulation de la diffusion prévue ce jour-là.
 
-Lors de la fête d’été du 17 août 2024, sekisei a expliqué les règles et la répartition des équipes du concours de pêche, puis en a annoncé le début. sh a présenté l’Ultra Chasse aux objets et indiqué comment y participer, puis a partagé le lendemain une vidéo de la diffusion officielle. はっ a expliqué le déroulement et la formation des équipes du jeu de transmission de messages par abstraction minimale.
+Lors de la fête d’été du 17 août 2024, sekisei a expliqué les règles et la répartition des équipes du concours de pêche, puis en a annoncé le début. sh a présenté l’Ultra Chasse aux objets et indiqué comment y participer, puis a partagé le lendemain une vidéo de la diffusion officielle. はっ a expliqué le déroulement et la formation des équipes du jeu de transmission de messages par abstraction minimale. Dans les archives de la préparation de la fête, sh a indiqué qu’Ohagi avait construit le bâtiment du marché aux puces.
 
 タケ a créé l’affiche de l’Ace Summer Festival 2024. Pour l’événement de fin d’année « つなぐASF », taibon a aidé avec le dispositif de compte à rebours. タケ a annoncé la fin de tout le programme en janvier 2025. [Annonce de l’affiche](https://discord.com/channels/737538781024092170/774152638450237460/1274157736015429744) [Annonce du compte à rebours](https://discord.com/channels/737538781024092170/774152638450237460/1319967701808189493) [Bilan de clôture](https://discord.com/channels/737538781024092170/774152638450237460/1325487116419076129)
+
+En septembre 2024, Yukke a demandé au club photo d’Aceserver des idées de lieux à photographier et a indiqué où publier les contributions à l’album. Le 27 septembre, taibon852 a publié des photos et des articles sur le hall, l’hôtel de ville et POCKET ACES CASINO.
+
+L’album présentait le **hall** comme une nouvelle version d’une création retenue au concours de juin 2022. Il créditait mallooo052, BM\_tsukiyurikun\_ et \_BE\_Minksecond87 pour la construction, mallooo052 pour la photographie et Take\_no\_niwa pour l’édition.
+
+Pour l’**hôtel de ville**, l’album créditait BM\_yurikun, \_BE\_golden\_cokka et taiyaki5190 pour la construction, yukyaa pour la photographie et Harubie pour l’édition.
+
+Pour **POCKET ACES CASINO**, l’album créditait \_BE\_StrangeDownp, \_BE\_Minksecond87, mallooo052, KITUNEKO0605, yukke\_11, \_BE\_Zakk893 et \_BE\_taibon0727 pour la construction, Lopila pour la photographie et taibon0727 pour l’édition.
 
 Fin 2024, タケ a lancé un quiz Ace Monorail et indiqué la date limite pour voter. Yukke a expliqué comment s’inscrire à la Coupe Ace de PvP.
 
@@ -173,13 +185,21 @@ En novembre 2022, キツネコ a proposé de publier les règles d’utilisation
 
 En juillet 2023, Yukke a annoncé la création d’un nouveau monde sur le serveur de ressources. [Annonce du monde de ressources](https://discord.com/channels/737538781024092170/774152638450237460/1135574163080364103)
 
+En juillet 2023, あすたん a rédigé et publié des guides de commandes pour LWC, CoreProtect, Gsit et LunaChat. En septembre, taka8621 a complété les explications sur l’utilisation de la commande d’échange d’herbe.
+
 En septembre 2023, une annonce a présenté l’arrivée de あすたん dans l’équipe d’administration et la nomination de Taka à la gestion des systèmes. En mai 2024, はっ a annoncé que sh et sekisei avaient pris des fonctions d’assistance technique aux utilisateurs. [Nominations de 2023](https://discord.com/channels/737538781024092170/774152638450237460/1151168895076548669) [Fonctions d’assistance de 2024](https://discord.com/channels/737538781024092170/774152638450237460/1236592686253867008)
 
 En janvier 2024, あすたん a expliqué les règles de participation et la procédure de dépôt des records dans l’Ace Server Leaderboard Archive (ASLA), qui rassemblait les records d’Aceserver. あすたん a aussi publié des listes sur le minage, les statistiques et les lingots. キツネコ, Feruno et Taiyaki ont transmis des statistiques sur le salon des contributions, et Tabekirareta Potechi a proposé des entrées possibles pour des catégories comme celle du premier château.
 
+Entre la fin octobre et le début novembre 2025, ゆり a organisé et publié séparément les règles générales, celles du serveur de survie, du contenu et des saisons, de la création de serveurs thématiques, de la communauté et du Discord sur le forum des règles du Discord officiel. [Publication des règles générales](https://discord.com/channels/737538781024092170/1433831969816449064/1433831969816449064) [Publication des règles de la communauté](https://discord.com/channels/737538781024092170/1433830521238061227/1433830521238061227) [Publication des règles du Discord](https://discord.com/channels/737538781024092170/1433957818674970654/1433957818674970654)
+
 En novembre 2025, un système de liaison des discussions Minecraft et Discord créé par あすたん a été installé. [Annonce de la liaison des discussions](https://discord.com/channels/737538781024092170/774152638450237460/1437973211961622670)
 
+En décembre 2025, sekisei a publié un guide pour utiliser le serveur thématique Season Creative. En janvier 2026, sekisei a indiqué en avoir transmis la gestion à sh31415. [Guide de Season Creative](https://discord.com/channels/737538781024092170/1445004286793879602/1445004286793879602) [Compte rendu du transfert de gestion](https://discord.com/channels/737538781024092170/1445004286793879602/1460090096475832425)
+
 En février 2026, Merutak a annoncé la création de deux rôles Discord pour les avis de problèmes et d’arrêts du serveur. [Message d’origine](https://discord.com/channels/737538781024092170/774152638450237460/1477293143773810822)
+
+En mars 2026, あすたん a publié les règles du serveur de ressources. En juillet, sekisei a publié une mise à jour dans le même fil. [Publication des règles du serveur de ressources](https://discord.com/channels/737538781024092170/1486515511029268610/1486515511029268610) [Publication de la mise à jour](https://discord.com/channels/737538781024092170/1486515511029268610/1531835894196080653)
 
 En juillet 2026, sekisei a annoncé la première présentation technique sur les serveurs et Internet. [Annonce de la présentation technique](https://discord.com/channels/737538781024092170/774152638450237460/1532641413500633108)
 
