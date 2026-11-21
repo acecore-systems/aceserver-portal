@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:9aa0f10a68a6d6a371c6ce05b7b7bf379b336ccd690a11d931a08ee7e9f9570a
+sourceHash: sha256:3d265c43acbecf02061e2244b18d6448daae933ee2fca14b33dd2d48ab55e72f
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -49,7 +49,11 @@ In 2022, s1nan0sub shared the rules for using Iroha Village and reported that In
 
 In July 2023, ゆり introduced an alliance between the Village of the Moon God and the RPG Creation Group in an Ace Lab announcement. It named BM\_yurikun and \_BE\_golden\_cokka as the leaders at the time, and amya7238 and \_BE\_golden\_cokka as early members. The activities outlined included ACE1GP ice boat racing and RPG creation.
 
-In October 2023, PetiteShelf7874 introduced the activities and map of Small Hill Village.
+In September 2023, タケ introduced the Ace Monorail Take Company, listing Take\_no\_niwa as leader and sekisei0077 and HeroTree as early members. The introduction also covered how the group operated and how to contact it.
+
+In October 2023, PetiteShelf7874 introduced the activities and map of Small Hill Village. The introduction listed PetiteShelf7874 as leader and yamaharu929, kacchan0706, bananakun315, and TK7K2 as early members.
+
+In September 2024, sekisei introduced Mars (working title), a group for planning and making minigames. The introduction listed sekisei0077 as leader and usualparrot and miin2000 as early members. sekisei described minigame ideas based on falling and Elytra and invited people to help build and develop them.
 
 ## Promotion and events
 
@@ -185,6 +189,22 @@ In June 2022, yanyan_fafnir explained how to enter the floating-island contest t
 
 In July 2022, Maro led construction of the former lobby and reported its completion. The build logs from the old Discord channel thanked BM_yurikun for landscaping and _BE_ChalkyMink87 for embedding ore in the foundation. KOTA-SAN set up a place to share updates on the build.
 
+In August 2022, Yukke reported that the waiting room at the old PvP league venue was nearly complete. ゆり reported that the terrace seating was complete and shared a photo.
+
+In August 2022, taka8621 put together a guide to the facilities and the people responsible for them. It recorded the following contributions.
+
+- **タケ** — Cactus farm. [Cactus farm announcement](https://discord.com/channels/737538781024092170/779569416438415421/1001883117402984459)
+- **&#12422;&#12387;&#12369;&#12539;&#12383;&#12356;&#12420;&#12365;** — Shared responsibility for a sky XP farm. &#12422;&#12387;&#12369; also handled the clay generator, and &#12383;&#12356;&#12420;&#12365; handled the automatic pumpkin and melon farm and the pet shop.
+- **taibon** — Shared trading hall.
+- **&#12525;&#12483;&#12463;** — Automatic wool farm.
+- **&#12450;&#12510;&#12484;** — Found desert, mesa, coral sea, and flower biomes.
+- **&#12426;&#12435;&#12372;** — Golem farm and a large trading hall.
+- **Moon** — Sky XP farm, sky librarian room, and guardian farm.
+- **Minku** — Bar.
+- **&#26525;&#35910;** — Second Colosseum project.
+
+In a September 2022 update, taka8621 listed Moon for the blaze farm and Moon and sh31415 for the froglight farm. sh31415 handled the free pickaxe loans for new players. sh reported providing diamond pickaxes and said there had been additional donations. [Pickaxe loan announcement](https://discord.com/channels/737538781024092170/779569416438415421/1015550548914733106)
+
 On September 4, 2022, NCGpotechi reported that the castle’s exterior was complete and open to visitors. Work on the interior was still in progress at the time. NCGpotechi thanked the people who donated materials. [Castle exterior completion report](https://discord.com/channels/737538781024092170/779569416438415421/1015951272916045934)
 
 From October 2022 to January 2023, players worked on draining an ocean monument and building a guardian facility while also excavating for a wither skeleton facility. According to the old Discord work records, taka8621 opened a project channel. Moon_666 organized the drainage and excavation, replenished materials, and worked in an assigned area. Yukke called for help with the excavation and prepared a route to the fortress. [Call for Nether excavation volunteers](https://discord.com/channels/737538781024092170/779569416438415421/1053305090922004560)
@@ -214,6 +234,8 @@ On March 30, Merutak reported that the ×6 Ocean Monument build itself was compl
 ## Technology and support
 
 In April 2021, KOTA-SAN reported successfully testing a way to join from a Nintendo Switch and proposed adding guidance to the how-to-play page on the site at the time.
+
+In August 2021, てぃあ put together a guide to major facilities such as the town hall, trading hall, tree farm, and shared farm, and identified which places new players should be shown first. In February 2022, はっ added accommodation for newcomers to the shared facilities guide.
 
 In August 2021, KOTA-SAN compiled a list of useful commands for the plugins installed at the time.
 

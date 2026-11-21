@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:9aa0f10a68a6d6a371c6ce05b7b7bf379b336ccd690a11d931a08ee7e9f9570a
+sourceHash: sha256:3d265c43acbecf02061e2244b18d6448daae933ee2fca14b33dd2d48ab55e72f
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -49,7 +49,11 @@ En 2022, s1nan0sub a présenté les règles d’utilisation du village d’Iroha
 
 En juillet 2023, ゆり a présenté, dans une annonce d’Ace Lab, l’alliance entre le Village du dieu de la Lune et le groupe de création RPG. L’annonce indiquait BM\_yurikun et \_BE\_golden\_cokka comme responsables à l’époque, et amya7238 et \_BE\_golden\_cokka parmi les premiers membres. La course de bateaux sur glace ACE1GP et la création de RPG figuraient parmi les activités envisagées.
 
-En octobre 2023, PetiteShelf7874 a présenté les activités et la carte du Village de la Petite Colline.
+En septembre 2023, タケ a présenté la Compagnie Take du monorail Ace. La présentation indiquait Take\_no\_niwa comme responsable et sekisei0077 et HeroTree comme premiers membres. Elle expliquait aussi le fonctionnement du groupe et comment le contacter.
+
+En octobre 2023, PetiteShelf7874 a présenté les activités et la carte du Village de la Petite Colline. La présentation indiquait PetiteShelf7874 comme responsable et yamaharu929, kacchan0706, bananakun315 et TK7K2 comme premiers membres.
+
+En septembre 2024, sekisei a présenté Mars (nom provisoire), un groupe de conception et de création de mini-jeux. La présentation indiquait sekisei0077 comme responsable et usualparrot et miin2000 comme premiers membres. sekisei a décrit des idées de mini-jeux autour de la chute et des élytres et a fait appel à des volontaires pour la construction et la création.
 
 ## Communication et événements
 
@@ -185,6 +189,22 @@ En juin 2022, yanyan_fafnir a expliqué comment participer au concours d’îles
 
 En juillet 2022, Maro a dirigé la construction de l’ancien hall d’accueil et en a annoncé l’achèvement. Le suivi des travaux dans l’ancien salon Discord a remercié BM_yurikun pour les aménagements paysagers et _BE_ChalkyMink87 pour l’intégration de minerais dans la base. KOTA-SAN a préparé un espace pour partager l’avancement des travaux.
 
+En août 2022, Yukke a indiqué que la salle d’attente de l’ancien site de la ligue PvP était presque terminée. ゆり a annoncé la fin de l’aménagement des places en terrasse et a partagé une photo.
+
+En août 2022, taka8621 a dressé la liste des installations et des personnes qui en avaient la charge. Le guide de l’époque mentionnait les contributions suivantes.
+
+- **タケ** — Ferme à cactus. [Annonce de la ferme à cactus](https://discord.com/channels/737538781024092170/779569416438415421/1001883117402984459)
+- **&#12422;&#12387;&#12369;&#12539;&#12383;&#12356;&#12420;&#12365;** — Responsabilité partagée pour une ferme à expérience en hauteur. &#12422;&#12387;&#12369; s’occupait aussi du générateur d’argile et &#12383;&#12356;&#12420;&#12365; de la ferme automatique à citrouilles et pastèques ainsi que de l’animalerie.
+- **taibon** — Centre d’échanges partagé.
+- **&#12525;&#12483;&#12463;** — Ferme à laine automatique.
+- **&#12450;&#12510;&#12484;** — Découverte de biomes de désert, de mesa, de mer avec du corail et de fleurs.
+- **&#12426;&#12435;&#12372;** — Ferme à golems et grand centre d’échanges.
+- **Moon** — Ferme à expérience en hauteur, salle des bibliothécaires en hauteur et ferme à gardiens.
+- **Minku** — Bar.
+- **&#26525;&#35910;** — Deuxième projet de Colisée.
+
+Dans une mise à jour de septembre 2022, taka8621 a crédité Moon pour la ferme à blazes et Moon et sh31415 pour la ferme à lampes de grenouille. sh31415 s’occupait du prêt gratuit de pioches aux nouveaux joueurs. sh a indiqué avoir fourni des pioches en diamant et a signalé des dons supplémentaires. [Annonce du prêt de pioches](https://discord.com/channels/737538781024092170/779569416438415421/1015550548914733106)
+
 Le 4 septembre 2022, NCGpotechi a annoncé que l’extérieur du château était terminé et pouvait être visité. L’intérieur était encore en construction à cette date. NCGpotechi a remercié les personnes qui avaient donné des matériaux. [Annonce de l’achèvement de l’extérieur du château](https://discord.com/channels/737538781024092170/779569416438415421/1015951272916045934)
 
 D’octobre 2022 à janvier 2023, des joueurs ont travaillé à vider un monument océanique et à aménager une installation pour les gardiens tout en creusant pour une autre destinée aux squelettes Wither. Selon les archives de l’ancien salon Discord, taka8621 a ouvert un salon de travail. Moon_666 a organisé le drainage et le creusement, réapprovisionné les matériaux et travaillé dans une zone attribuée. Yukke a sollicité de l’aide pour le creusement et aménagé un passage vers la forteresse. [Appel à participer au creusement dans le Nether](https://discord.com/channels/737538781024092170/779569416438415421/1053305090922004560)
@@ -214,6 +234,8 @@ Le 30 mars, Merutak a annoncé la fin de la construction du monument océanique 
 ## Technologie et soutien
 
 En avril 2021, KOTA-SAN a signalé avoir testé avec succès une méthode de connexion depuis une Nintendo Switch et a proposé de compléter le guide de jeu du site de l’époque.
+
+En août 2021, てぃあ a recensé les principaux équipements, dont l’hôtel de ville, le centre d’échanges, la plantation d’arbres et la ferme partagée, et indiqué lesquels présenter en priorité aux nouveaux joueurs. En février 2022, はっ a ajouté un hébergement pour les nouveaux joueurs au guide des équipements collectifs.
 
 En août 2021, KOTA-SAN a recensé des commandes utiles des plugins installés à l’époque.
 

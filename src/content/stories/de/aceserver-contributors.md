@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:9aa0f10a68a6d6a371c6ce05b7b7bf379b336ccd690a11d931a08ee7e9f9570a
+sourceHash: sha256:3d265c43acbecf02061e2244b18d6448daae933ee2fca14b33dd2d48ab55e72f
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -49,7 +49,11 @@ Als Inhaber von A Yū (A-shō) informierte ゆり (Yū) über den Verkauf von Ma
 
 Im Juli 2023 stellte ゆり in einer Ankündigung von Ace Lab die Allianz zwischen dem Dorf des Mondgottes und der RPG-Baugruppe vor. Die Ankündigung nannte BM\_yurikun und \_BE\_golden\_cokka als damalige Leiter und amya7238 sowie \_BE\_golden\_cokka als frühe Mitglieder. Als geplante Aktivitäten wurden das Eisbootrennen ACE1GP und die RPG-Entwicklung genannt.
 
-Im Oktober 2023 stellte PetiteShelf7874 die Aktivitäten und die Karte des Dorfs am kleinen Hügel vor.
+Im September 2023 stellte タケ die Ace-Monorail-Gesellschaft Take vor. In der Vorstellung standen Take\_no\_niwa als Leiter sowie sekisei0077 und HeroTree als frühe Mitglieder. Sie erklärte auch, wie die Gruppe arbeitete und wie man sie erreichen konnte.
+
+Im Oktober 2023 stellte PetiteShelf7874 die Aktivitäten und die Karte des Dorfs am kleinen Hügel vor. In der Vorstellung standen PetiteShelf7874 als Leiter sowie yamaharu929, kacchan0706, bananakun315 und TK7K2 als frühe Mitglieder.
+
+Im September 2024 stellte sekisei Mars (Arbeitstitel) vor, eine Gruppe zur Planung und Entwicklung von Minispielen. In der Vorstellung standen sekisei0077 als Leiter sowie usualparrot und miin2000 als frühe Mitglieder. sekisei beschrieb Ideen für Minispiele rund um das Fallen und die Elytren und warb um Hilfe beim Bauen und Entwickeln.
 
 ## Öffentlichkeitsarbeit und Veranstaltungen
 
@@ -185,6 +189,22 @@ Im Juni 2022 erklärte yanyan_fafnir die Teilnahmebedingungen für den Wettbewer
 
 Im Juli 2022 leitete Maro den Bau der früheren Lobby und meldete den Abschluss. Im alten Discord-Kanal wurde BM_yurikun für die Begrünung und _BE_ChalkyMink87 für das Einlassen von Erzen in das Fundament gedankt. KOTA-SAN richtete einen Ort ein, an dem der Baufortschritt geteilt werden konnte.
 
+Im August 2022 berichtete Yukke, dass der Warteraum am früheren Austragungsort der PvP-Liga fast fertig war. ゆり meldete, dass die Terrassenplätze fertig waren, und teilte ein Foto.
+
+Im August 2022 stellte taka8621 die Einrichtungen und ihre Zuständigen in einem Leitfaden zusammen. Darin waren die folgenden Beiträge verzeichnet.
+
+- **タケ** — Kaktusfarm. [Ankündigung der Kaktusfarm](https://discord.com/channels/737538781024092170/779569416438415421/1001883117402984459)
+- **&#12422;&#12387;&#12369;&#12539;&#12383;&#12356;&#12420;&#12365;** — Gemeinsam für eine hoch gelegene Erfahrungsfarm zuständig. &#12422;&#12387;&#12369; betreute außerdem den Tongenerator, &#12383;&#12356;&#12420;&#12365; die automatische Kürbis- und Melonenfarm und die Tierhandlung.
+- **taibon** — Gemeinsame Handelshalle.
+- **&#12525;&#12483;&#12463;** — Automatische Wollfarm.
+- **&#12450;&#12510;&#12484;** — Entdeckung von Wüsten-, Mesa-, Korallenmeer- und Blumenbiomen.
+- **&#12426;&#12435;&#12372;** — Golemfarm und große Handelshalle.
+- **Moon** — Hoch gelegene Erfahrungsfarm, hoch gelegener Bibliothekarsraum und Wächterfarm.
+- **Minku** — Bar.
+- **&#26525;&#35910;** — Zweites Kolosseumsprojekt.
+
+Im September 2022 ergänzte taka8621 den Leitfaden um Moon für die Lohenfarm und um Moon und sh31415 für die Froschlichtfarm. sh31415 betreute den kostenlosen Spitzhackenverleih für neue Spieler. sh berichtete, selbst Diamantspitzhacken bereitgestellt zu haben. Hinzu kamen laut dem Bericht weitere Spenden. [Ankündigung des Spitzhackenverleihs](https://discord.com/channels/737538781024092170/779569416438415421/1015550548914733106)
+
 Am 4. September 2022 berichtete NCGpotechi, dass das Äußere der Burg fertiggestellt und für Besuche geöffnet war. Am Innenausbau wurde zu diesem Zeitpunkt noch gearbeitet. NCGpotechi dankte den Personen, die Material gespendet hatten. [Bericht zur Fertigstellung des Burgäußeren](https://discord.com/channels/737538781024092170/779569416438415421/1015951272916045934)
 
 Von Oktober 2022 bis Januar 2023 arbeiteten Spieler daran, ein Ozeanmonument trockenzulegen und eine Anlage für Wächter zu errichten. Parallel liefen Ausgrabungen für eine Anlage für Witherskelette. Den Aufzeichnungen aus dem früheren Discord-Kanal zufolge eröffnete taka8621 einen Arbeitskanal. Moon_666 organisierte die Entwässerung und die Ausgrabungen, füllte Materialvorräte auf und arbeitete in einem zugeteilten Bereich. Yukke bat um Hilfe bei den Ausgrabungen und richtete einen Weg zur Festung ein. [Aufruf zur Mithilfe bei den Ausgrabungen im Nether](https://discord.com/channels/737538781024092170/779569416438415421/1053305090922004560)
@@ -214,6 +234,8 @@ Am 30. März meldete Merutak die Fertigstellung des ×6-Ozeanmonuments. Der offe
 ## Technik und Unterstützung
 
 Im April 2021 meldete KOTA-SAN einen erfolgreichen Verbindungstest von einer Nintendo Switch und schlug vor, die Spielanleitung auf der damaligen Website um entsprechende Hinweise zu ergänzen.
+
+Im August 2021 stellte てぃあ wichtige Einrichtungen wie das Rathaus, die Handelshalle, die Baumfarm und die Gemeinschaftsfarm zusammen und hielt fest, welche Orte neuen Spielern zuerst gezeigt werden sollten. Im Februar 2022 ergänzte はっ den Leitfaden zu gemeinsamen Einrichtungen um eine Unterkunft für neue Spieler.
 
 Im August 2021 stellte KOTA-SAN nützliche Befehle für die damals installierten Plugins zusammen.
 

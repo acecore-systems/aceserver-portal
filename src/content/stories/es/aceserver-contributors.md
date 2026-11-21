@@ -2,7 +2,7 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:9aa0f10a68a6d6a371c6ce05b7b7bf379b336ccd690a11d931a08ee7e9f9570a
+sourceHash: sha256:3d265c43acbecf02061e2244b18d6448daae933ee2fca14b33dd2d48ab55e72f
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -49,7 +49,11 @@ En 2022, s1nan0sub explicó las normas de uso de la Aldea Iroha e informó que e
 
 En julio de 2023, ゆり presentó en un anuncio de Ace Lab la alianza entre la Aldea del Dios Lunar y el Grupo de Creación RPG. El anuncio nombró a BM\_yurikun y \_BE\_golden\_cokka como responsables de entonces, y a amya7238 y \_BE\_golden\_cokka como miembros iniciales. Entre las actividades propuestas figuraban las carreras de barcos sobre hielo ACE1GP y la creación de RPG.
 
-En octubre de 2023, PetiteShelf7874 presentó las actividades y el mapa de la Aldea de la Colina Pequeña.
+En septiembre de 2023, タケ presentó la Compañía Take del Monorraíl Ace e identificó a Take\_no\_niwa como responsable y a sekisei0077 y HeroTree como miembros iniciales. También explicó cómo funcionaba el grupo y cómo contactar con él.
+
+En octubre de 2023, PetiteShelf7874 presentó las actividades y el mapa de la Aldea de la Colina Pequeña. La presentación identificó a PetiteShelf7874 como responsable y a yamaharu929, kacchan0706, bananakun315 y TK7K2 como miembros iniciales.
+
+En septiembre de 2024, sekisei presentó Mars (nombre provisional), un grupo de diseño y producción de minijuegos. Presentó a sekisei0077 como responsable y a usualparrot y miin2000 como miembros iniciales. Expuso ideas de minijuegos basados en caídas y élitros e invitó a colaborar en la construcción y el desarrollo.
 
 ## Difusión y eventos
 
@@ -185,6 +189,22 @@ En junio de 2022, yanyan_fafnir explicó cómo participar en el concurso de isla
 
 En julio de 2022, Maro dirigió la construcción del antiguo vestíbulo y anunció que había terminado. Los registros de la obra en el antiguo canal de Discord agradecieron a BM_yurikun la jardinería y a _BE_ChalkyMink87 la colocación de minerales en la base. KOTA-SAN habilitó un espacio para compartir avances de la obra.
 
+En agosto de 2022, Yukke informó que la sala de espera del antiguo recinto de la liga PvP estaba casi terminada. ゆり informó que los asientos de la terraza estaban listos y compartió una foto.
+
+En agosto de 2022, taka8621 reunió en una guía las instalaciones y las personas a cargo. En la guía de la época figuraban las siguientes contribuciones.
+
+- **タケ** — Granja de cactus. [Anuncio de la granja de cactus](https://discord.com/channels/737538781024092170/779569416438415421/1001883117402984459)
+- **&#12422;&#12387;&#12369;&#12539;&#12383;&#12356;&#12420;&#12365;** — Granja elevada de experiencia a su cargo conjuntamente. &#12422;&#12387;&#12369; también se encargó del generador de arcilla, y &#12383;&#12356;&#12420;&#12365; de la granja automática de calabazas y sandías y de la tienda de mascotas.
+- **taibon** — Centro de comercio compartido.
+- **&#12525;&#12483;&#12463;** — Granja automática de lana.
+- **&#12450;&#12510;&#12484;** — Descubrimiento de biomas de desierto, mesa, mares con coral y flores.
+- **&#12426;&#12435;&#12372;** — Granja de gólems y gran centro de comercio.
+- **Moon** — Granja elevada de experiencia, sala elevada de bibliotecarios y granja de guardianes.
+- **Minku** — Bar.
+- **&#26525;&#35910;** — Segundo proyecto del Coliseo.
+
+En una actualización de septiembre de 2022, taka8621 señaló a Moon como responsable de la granja de blazes y a Moon y sh31415 como responsables de la granja de luces de rana. sh31415 se encargó del préstamo gratuito de picos a los nuevos jugadores. sh informó que había aportado picos de diamante y que había habido donaciones adicionales. [Anuncio del préstamo de picos](https://discord.com/channels/737538781024092170/779569416438415421/1015550548914733106)
+
 El 4 de septiembre de 2022, NCGpotechi informó de que el exterior del castillo estaba terminado y podía visitarse. El interior seguía en construcción en ese momento. NCGpotechi agradeció a quienes donaron materiales. [Informe de finalización del exterior del castillo](https://discord.com/channels/737538781024092170/779569416438415421/1015951272916045934)
 
 Entre octubre de 2022 y enero de 2023, varios jugadores drenaron un monumento oceánico, trabajaron en una instalación para guardianes y excavaron en paralelo para otra de esqueletos del Wither. Según los registros del antiguo canal de Discord, taka8621 abrió un canal de trabajo. Moon_666 organizó el drenaje y la excavación, repuso materiales y trabajó en una zona asignada. Yukke pidió ayuda con la excavación y preparó un paso hacia la fortaleza. [Convocatoria para excavar en el Nether](https://discord.com/channels/737538781024092170/779569416438415421/1053305090922004560)
@@ -214,6 +234,8 @@ El 30 de marzo, Merutak informó de que se había completado la construcción de
 ## Tecnología y apoyo
 
 En abril de 2021, KOTA-SAN informó de que había probado con éxito una forma de conectarse desde Nintendo Switch y propuso añadir la información a la guía de juego del sitio de entonces.
+
+En agosto de 2021, てぃあ reunió en una guía instalaciones importantes como el ayuntamiento, el centro de comercio, la granja de árboles y la granja compartida, e indicó cuáles convenía mostrar primero a los nuevos jugadores. En febrero de 2022, はっ añadió el alojamiento para nuevos jugadores a la guía de instalaciones compartidas.
 
 En agosto de 2021, KOTA-SAN recopiló comandos útiles de los plugins que estaban instalados en ese momento.
 
