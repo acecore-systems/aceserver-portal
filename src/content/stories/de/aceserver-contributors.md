@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:79598ef83feaf1f3b8cec99db72aafd4cb8180da6a5e9770be3355b4454bfd40
+sourceHash: sha256:1928153836b2380a0b89a10dbab1638e62190fd5425cf6d719c77ca2d97d9dde
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -443,6 +443,8 @@ Im Oktober 2024 erstellte sekisei eine Anleitung zur Nutzung des Portal-Plugins 
 
 Im Januar 2025 teilte sekisei mit, dass das Herstellungsrezept für Gras nach einem Update nicht verfügbar war.
 
+Am 28. März 2025 stellte LuMiSIA\_&#26376;&#31070;&#24736;&#33673; einen Regelentwurf zusammen und teilte ihn im damaligen Discord-Thread für Regelvorschläge. Der Entwurf enthielt Punkte zur Zusammenarbeit und zu Konflikten zwischen Spielern.
+
 Im Juli 2025 erstellte und teilte LuMiSIA\_&#26376;&#31070;&#24736;&#33673; ein Schaubild als Grundlage für die Diskussion über das System. Im selben Monat meldete sekisei eine erfolgreiche Verbindung mit Bedrock Edition.
 
 Von Ende Oktober bis Anfang November 2025 ordnete ゆり die Regeln und veröffentlichte sie als einzelne Beiträge im offiziellen Discord-Regelforum. Die Beiträge behandelten die allgemeinen Regeln, den Survival-Server, Inhalte, Saisons, die Einrichtung von Konzeptservern, die Community und Discord. [Beitrag zu den allgemeinen Regeln](https://discord.com/channels/737538781024092170/1433831969816449064/1433831969816449064) [Beitrag zu den Community-Regeln](https://discord.com/channels/737538781024092170/1433830521238061227/1433830521238061227) [Beitrag zu den Discord-Regeln](https://discord.com/channels/737538781024092170/1433957818674970654/1433957818674970654)
@@ -453,7 +455,9 @@ Im November 2025 erklärte ゆり, wie man Minecraft und Discord damals verknüp
 
 Im Dezember 2025 veröffentlichte sekisei eine Anleitung zur Nutzung des Konzeptservers Season Creative. Im Januar 2026 meldete sekisei, die Verwaltung an sh31415 übergeben zu haben. [Anleitung zu Season Creative](https://discord.com/channels/737538781024092170/1445004286793879602/1445004286793879602) [Bericht zur Übergabe der Verwaltung](https://discord.com/channels/737538781024092170/1445004286793879602/1460090096475832425)
 
-Im Januar 2026 erklärte LuMiSIA\_&#26376;&#31070;&#24736;&#33673; neuen Spielern, wie sich der Beitritt mit Minecraft Java Edition und Bedrock Edition unterschied. Im Februar zeigte sekisei, wie man von der Regelbestätigung zur Anleitung für die Verknüpfung gelangte. [Verbindungsanleitung für Java und Bedrock](https://discord.com/channels/737538781024092170/1460983001809948744/1460983826439471380) [Von der Regelbestätigung zur Verknüpfungsanleitung](https://discord.com/channels/737538781024092170/1386851151428980856/1467714894060060918)
+Am 14. Januar 2026 erklärte LuMiSIA\_&#26376;&#31070;&#24736;&#33673; neuen Spielern, wie sich der Beitritt mit Minecraft Java Edition und Bedrock Edition unterschied. In einem weiteren Beitrag im selben Kanal teilte LuMiSIA ein Bild, das die Schaltfläche zum Hinzufügen eines Servers und die Felder für Servername und -adresse in beiden Editionen nebeneinander zeigte. [Verbindungsanleitung für Java und Bedrock](https://discord.com/channels/737538781024092170/1460983001809948744/1460983826439471380) [Java- und Bedrock-Bildschirme im Vergleich](https://discord.com/channels/737538781024092170/1460983001809948744/1460983916172148859)
+
+Im Februar zeigte sekisei, wie man von der Regelbestätigung zur Anleitung für die Verknüpfung gelangte. [Von der Regelbestätigung zur Verknüpfungsanleitung](https://discord.com/channels/737538781024092170/1386851151428980856/1467714894060060918)
 
 Am 26. Februar 2026 fragte Merutak, welche Discord-Kanäle archiviert werden könnten. Mugi nannte unter anderem alte Veranstaltungskanäle und schlug vor, bestehende Kanäle wiederzuverwenden, um den Bedarf an neuen Kanälen zu begrenzen. [Aufruf zu Archivierungsvorschlägen](https://discord.com/channels/737538781024092170/1476561093244620913/1476567428610658457) [Vorschlag zur Wiederverwendung von Kanälen](https://discord.com/channels/737538781024092170/1476561093244620913/1476568683689283686)
 

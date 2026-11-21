@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:79598ef83feaf1f3b8cec99db72aafd4cb8180da6a5e9770be3355b4454bfd40
+sourceHash: sha256:1928153836b2380a0b89a10dbab1638e62190fd5425cf6d719c77ca2d97d9dde
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -443,6 +443,8 @@ En octobre 2024, sekisei a préparé un guide sur l’utilisation du plugin de p
 
 En janvier 2025, sekisei a annoncé que la recette de fabrication de l’herbe était indisponible à la suite d’une mise à jour.
 
+Le 28 mars 2025, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; a préparé et partagé un projet dans l’ancien fil Discord consacré aux propositions de règles. Le texte abordait notamment l’entraide et les conflits entre joueurs.
+
 En juillet 2025, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; a réalisé et partagé un schéma pour servir de référence dans la réflexion sur le système. Le même mois, sekisei a indiqué avoir réussi à se connecter depuis Bedrock Edition.
 
 Entre la fin octobre et le début novembre 2025, ゆり a organisé et publié séparément les règles générales, celles du serveur de survie, du contenu et des saisons, de la création de serveurs thématiques, de la communauté et du Discord sur le forum des règles du Discord officiel. [Publication des règles générales](https://discord.com/channels/737538781024092170/1433831969816449064/1433831969816449064) [Publication des règles de la communauté](https://discord.com/channels/737538781024092170/1433830521238061227/1433830521238061227) [Publication des règles du Discord](https://discord.com/channels/737538781024092170/1433957818674970654/1433957818674970654)
@@ -453,7 +455,9 @@ En novembre 2025, ゆり a expliqué comment lier Minecraft et Discord à l’é
 
 En décembre 2025, sekisei a publié un guide pour utiliser le serveur thématique Season Creative. En janvier 2026, sekisei a indiqué en avoir transmis la gestion à sh31415. [Guide de Season Creative](https://discord.com/channels/737538781024092170/1445004286793879602/1445004286793879602) [Compte rendu du transfert de gestion](https://discord.com/channels/737538781024092170/1445004286793879602/1460090096475832425)
 
-En janvier 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; a expliqué aux nouveaux joueurs les différences de connexion entre Minecraft Java Edition et Bedrock Edition. En février, sekisei a indiqué comment accéder au guide de liaison depuis l’étape de validation des règles. [Guide de connexion pour Java et Bedrock](https://discord.com/channels/737538781024092170/1460983001809948744/1460983826439471380) [De la validation des règles au guide de liaison](https://discord.com/channels/737538781024092170/1386851151428980856/1467714894060060918)
+Le 14 janvier 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; a expliqué aux nouveaux joueurs les différences de connexion entre Minecraft Java Edition et Bedrock Edition. Dans un autre message du même salon, LuMiSIA a partagé un visuel montrant côte à côte, pour les deux éditions, le bouton d’ajout de serveur et les champs du nom et de l’adresse. [Guide de connexion pour Java et Bedrock](https://discord.com/channels/737538781024092170/1460983001809948744/1460983826439471380) [Écrans de Java et Bedrock côte à côte](https://discord.com/channels/737538781024092170/1460983001809948744/1460983916172148859)
+
+En février, sekisei a indiqué comment accéder au guide de liaison depuis l’étape de validation des règles. [De la validation des règles au guide de liaison](https://discord.com/channels/737538781024092170/1386851151428980856/1467714894060060918)
 
 Le 26 février 2026, Merutak a demandé quels salons Discord pourraient être archivés. Mugi a proposé notamment d’anciens salons d’événements et a suggéré de réutiliser des salons existants pour limiter les nouvelles créations. [Appel à suggestions de salons à archiver](https://discord.com/channels/737538781024092170/1476561093244620913/1476567428610658457) [Proposition de réutilisation des salons](https://discord.com/channels/737538781024092170/1476561093244620913/1476568683689283686)
 

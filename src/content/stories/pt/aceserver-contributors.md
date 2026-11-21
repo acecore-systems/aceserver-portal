@@ -2,7 +2,7 @@
 title: As pessoas que apoiaram o Aceserver
 description: Conheça quem ajudou o Aceserver pelos retratos de skins do Minecraft, relembre as atividades e confira o roteiro de eventos e propostas.
 translationOf: aceserver-contributors
-sourceHash: sha256:79598ef83feaf1f3b8cec99db72aafd4cb8180da6a5e9770be3355b4454bfd40
+sourceHash: sha256:1928153836b2380a0b89a10dbab1638e62190fd5425cf6d719c77ca2d97d9dde
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -443,6 +443,8 @@ Em outubro de 2024, sekisei preparou um guia sobre o uso do plugin de portais Ad
 
 Em janeiro de 2025, sekisei informou que a receita de fabricação de grama estava indisponível após uma atualização.
 
+Em 28 de março de 2025, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; reuniu e compartilhou uma proposta no antigo tópico do Discord sobre regras. O texto incluía pontos sobre a cooperação e os conflitos entre jogadores.
+
 Em julho de 2025, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; criou e compartilhou um diagrama como referência para avaliar o sistema. No mesmo mês, sekisei informou que conseguiu se conectar pela Bedrock Edition.
 
 Entre o fim de outubro e o início de novembro de 2025, ゆり organizou e publicou separadamente as regras gerais, do servidor de sobrevivência, de conteúdo, de temporadas, de criação de servidores temáticos, da comunidade e do Discord, no fórum de regras do Discord oficial. [Publicação das regras gerais](https://discord.com/channels/737538781024092170/1433831969816449064/1433831969816449064) [Publicação das regras da comunidade](https://discord.com/channels/737538781024092170/1433830521238061227/1433830521238061227) [Publicação das regras do Discord](https://discord.com/channels/737538781024092170/1433957818674970654/1433957818674970654)
@@ -453,7 +455,9 @@ Em novembro de 2025, ゆり explicou como vincular Minecraft e Discord na época
 
 Em dezembro de 2025, sekisei publicou orientações para usar o servidor temático Season Creative. Em janeiro de 2026, informou que havia transferido a gestão do servidor para sh31415. [Guia do Season Creative](https://discord.com/channels/737538781024092170/1445004286793879602/1445004286793879602) [Relato da transferência da gestão](https://discord.com/channels/737538781024092170/1445004286793879602/1460090096475832425)
 
-Em janeiro de 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; explicou aos novos jogadores as diferenças para se conectar pelo Minecraft Java Edition e Bedrock Edition. Em fevereiro, sekisei mostrou como chegar ao guia de vinculação a partir da etapa de confirmação das regras. [Guia de conexão para Java e Bedrock](https://discord.com/channels/737538781024092170/1460983001809948744/1460983826439471380) [Da confirmação das regras ao guia de vinculação](https://discord.com/channels/737538781024092170/1386851151428980856/1467714894060060918)
+Em 14 de janeiro de 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; explicou aos novos jogadores as diferenças para se conectar pelo Minecraft Java Edition e Bedrock Edition. Em outra mensagem no mesmo canal, compartilhou uma única imagem que mostrava, lado a lado nas duas edições, o botão para adicionar um servidor e os campos de nome e endereço. [Guia de conexão para Java e Bedrock](https://discord.com/channels/737538781024092170/1460983001809948744/1460983826439471380) [Telas de Java e Bedrock lado a lado](https://discord.com/channels/737538781024092170/1460983001809948744/1460983916172148859)
+
+Em fevereiro, sekisei mostrou como chegar ao guia de vinculação a partir da etapa de confirmação das regras. [Da confirmação das regras ao guia de vinculação](https://discord.com/channels/737538781024092170/1386851151428980856/1467714894060060918)
 
 Em 26 de fevereiro de 2026, Merutak pediu sugestões de canais do Discord que poderiam ser arquivados. Mugi indicou canais de eventos antigos, entre outros, e propôs reaproveitar os canais existentes para reduzir a necessidade de criar outros. [Pedido de sugestões para arquivamento](https://discord.com/channels/737538781024092170/1476561093244620913/1476567428610658457) [Proposta de reaproveitamento de canais](https://discord.com/channels/737538781024092170/1476561093244620913/1476568683689283686)
 

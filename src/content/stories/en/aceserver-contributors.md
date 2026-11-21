@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:79598ef83feaf1f3b8cec99db72aafd4cb8180da6a5e9770be3355b4454bfd40
+sourceHash: sha256:1928153836b2380a0b89a10dbab1638e62190fd5425cf6d719c77ca2d97d9dde
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -443,6 +443,8 @@ In October 2024, sekisei prepared a guide to using the Advanced Portals plugin w
 
 In January 2025, sekisei announced that the grass crafting recipe was unavailable following an update.
 
+On March 28, 2025, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; compiled and shared a draft in the old Discord thread for proposed rules. It included sections on cooperation and disputes between players.
+
 In July 2025, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; created and shared a diagram as a reference for discussing the system. That month, sekisei reported successfully connecting from Bedrock Edition.
 
 From late October to early November 2025, ゆり organized and posted separate sets of rules in the official Discord rules forum. The posts covered general rules, the survival server, content, seasons, setting up concept servers, the community, and Discord. [General rules post](https://discord.com/channels/737538781024092170/1433831969816449064/1433831969816449064) [Community rules post](https://discord.com/channels/737538781024092170/1433830521238061227/1433830521238061227) [Discord rules post](https://discord.com/channels/737538781024092170/1433957818674970654/1433957818674970654)
@@ -453,7 +455,9 @@ In November 2025, ゆり explained how to link Minecraft and Discord at the time
 
 In December 2025, sekisei posted a guide to using the Season Creative concept server. In January 2026, sekisei reported handing its management over to sh31415. [Season Creative guide](https://discord.com/channels/737538781024092170/1445004286793879602/1445004286793879602) [Management handover report](https://discord.com/channels/737538781024092170/1445004286793879602/1460090096475832425)
 
-In January 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; explained to new players how joining differed between Minecraft Java Edition and Bedrock Edition. In February, sekisei showed how to get from the rules confirmation step to the linking guide. [Java and Bedrock connection guide](https://discord.com/channels/737538781024092170/1460983001809948744/1460983826439471380) [From rules confirmation to the linking guide](https://discord.com/channels/737538781024092170/1386851151428980856/1467714894060060918)
+On January 14, 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; explained to new players how joining differed between Minecraft Java Edition and Bedrock Edition. In a separate post in the same channel, they shared a single image showing the “Add Server” button and the server name and address fields side by side for the two editions. [Java and Bedrock connection guide](https://discord.com/channels/737538781024092170/1460983001809948744/1460983826439471380) [Java and Bedrock screens side by side](https://discord.com/channels/737538781024092170/1460983001809948744/1460983916172148859)
+
+In February, sekisei showed how to get from the rules confirmation step to the linking guide. [From rules confirmation to the linking guide](https://discord.com/channels/737538781024092170/1386851151428980856/1467714894060060918)
 
 On February 26, 2026, Merutak asked which Discord channels could be archived. Mugi suggested older event channels, among others, and proposed reusing existing channels to limit the need for new ones. [Call for archiving suggestions](https://discord.com/channels/737538781024092170/1476561093244620913/1476567428610658457) [Proposal to reuse channels](https://discord.com/channels/737538781024092170/1476561093244620913/1476568683689283686)
 
