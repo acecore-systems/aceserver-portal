@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:3d265c43acbecf02061e2244b18d6448daae933ee2fca14b33dd2d48ab55e72f
+sourceHash: sha256:b12607e9367dd013f1b30c48a35fd8fd1e80b360e9bfea61a0679b822fd250f0
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -171,6 +171,8 @@ Eine Ankündigung vom Dezember 2025 erläuterte die Teilnahme am geplanten Fotot
 
 Im Februar 2026 reichten LuMiSIA\_&#26376;&#31070;&#24736;&#33673;, &#35199;&#26408;&#37326;&#28716;&#36032;&#27663;, Amagi\_467, Moon\_666, CP-sinzin, Yukke und あすたん Fotos zur Auswahl für Werbebeiträge in den sozialen Medien ein.
 
+Im Februar 2026 kündigte End&#12539;コッカー den Aceserver-Fotowettbewerb an und gab den 16. bis 28. Februar als Einreichungszeitraum an. End&#12539;コッカー bereitete Beispiele für die allgemeine Kategorie und die Kategorie für das Serverteam vor. キツネコ reichte ein Foto von laufenden Entwässerungsarbeiten ein. [Ankündigung des Fotowettbewerbs 2026](https://discord.com/channels/737538781024092170/774152638450237460/1471148847119208731)
+
 Im August 2026 kündigten sekisei und ふーや gemeinsam einen Online-CTF-Wettbewerb als Schatzsuche an, bei dem Rätsel wie Geheimschriften zu Flaggen führen. Aceserver CTF2026 begann am 28. August. [Ankündigung der gemeinsamen Veranstaltung](https://discord.com/channels/737538781024092170/774152638450237460/1541785510094184449) [Bericht zum Start](https://discord.com/channels/737538781024092170/779569416438415421/1542704904055824394)
 
 ## Bau und gemeinsame Projekte
@@ -255,6 +257,8 @@ Im November 2022 schlug キツネコ vor, die Regeln zur Landnutzung ins Wiki au
 
 Im Januar 2023 veröffentlichte あすたん im damaligen Discord-Beitrittsleitfaden eine bebilderte Anleitung zur Verbindung mit Minecraft Java Edition und Bedrock Edition.
 
+Am 21. März 2023 teilte taka8621 sieben Bilder mit den damaligen eigenen Rezepten von Aceserver. Sie zeigten Beispiele mit Gras oder versteinerten Eichenholzstufen als Zutaten sowie Rezepte für verzauberte Bücher und Ausrüstung.
+
 Im Mai 2023 fasste あすたん zusammen, welchen Zweck die einzelnen Server damals hatten und wo das Wiki und die Weltkarte zu finden waren. Der Leitfaden zeigte auch Bilder von den Zugängen zum Hauptserver und zum Ressourcenserver. Im selben Monat erklärte あすたん in einer separaten Anleitung die Schutzfunktionen von CoreProtect und LWC.
 
 Im Juli 2023 kündigte Yukke die Erstellung einer neuen Welt auf dem Ressourcenserver an. [Ankündigung der Ressourcenwelt](https://discord.com/channels/737538781024092170/774152638450237460/1135574163080364103)
@@ -262,6 +266,8 @@ Im Juli 2023 kündigte Yukke die Erstellung einer neuen Welt auf dem Ressourcens
 Im Juli 2023 schrieb und veröffentlichte あすたん Befehlsanleitungen für LWC, CoreProtect, Gsit und LunaChat. Im August erklärte taka8621, wie man mit dem Gras-Plugin hohes Gras erhalten und tauschen konnte. Im September ergänzte taka8621 Hinweise zur Verwendung des Gras-Tauschbefehls.
 
 Im September 2023 wurde bekannt gegeben, dass あすたん zum Serverteam kam und Taka die Systembetreuung übernahm. Im Mai 2024 kündigte はっ an, dass sh und sekisei den Nutzersupport für Systemfragen übernommen hatten. [Ernennungen von 2023](https://discord.com/channels/737538781024092170/774152638450237460/1151168895076548669) [Supportrollen von 2024](https://discord.com/channels/737538781024092170/774152638450237460/1236592686253867008)
+
+Am 4. Oktober 2023 berichtete あすたん, dass die Berechtigungen für Befehle zum Wechsel zwischen Servern eingerichtet waren.
 
 Im Januar 2024 eröffnete あすたん den Discord-Server Ace Server Leaderboard Archive (ASLA), um Rekorde von Aceserver zu sammeln. あすたん erklärte die Teilnahmeregeln und wie man Rekorde einreichen konnte. あすたん veröffentlichte auch Listen zum Abbau, zu Statistiken und zu Barren. キツネコ, Feruno und Taiyaki reichten Statistiken im Beitragskanal ein. Tabekirareta Potechi schlug Kandidaten für Rekorde wie die erste Burg vor.
 

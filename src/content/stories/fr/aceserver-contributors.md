@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:3d265c43acbecf02061e2244b18d6448daae933ee2fca14b33dd2d48ab55e72f
+sourceHash: sha256:b12607e9367dd013f1b30c48a35fd8fd1e80b360e9bfea61a0679b822fd250f0
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -171,6 +171,8 @@ Une annonce de décembre 2025 indiquait comment participer à une séance photo 
 
 En février 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673;, &#35199;&#26408;&#37326;&#28716;&#36032;&#27663;, Amagi\_467, Moon\_666, CP-sinzin, Yukke et あすたん ont proposé des photos pour des publications promotionnelles sur les réseaux sociaux.
 
+En février 2026, End&#12539;コッカー a annoncé le concours photo d’Aceserver et indiqué que les candidatures étaient prévues du 16 au 28 février. Des exemples ont été préparés par End&#12539;コッカー pour la catégorie générale et celle de l’équipe de gestion. キツネコ a présenté une photo de travaux de drainage en cours. [Annonce du concours photo de 2026](https://discord.com/channels/737538781024092170/774152638450237460/1471148847119208731)
+
 En août 2026, sekisei et ふーや ont annoncé un CTF commun sous forme de chasse au trésor en ligne, où des énigmes comme des codes permettent de trouver des drapeaux. Aceserver CTF2026 a débuté le 28 août. [Annonce de coorganisation](https://discord.com/channels/737538781024092170/774152638450237460/1541785510094184449) [Annonce du début](https://discord.com/channels/737538781024092170/779569416438415421/1542704904055824394)
 
 ## Construction et projets collectifs
@@ -255,6 +257,8 @@ En novembre 2022, キツネコ a proposé de publier les règles d’utilisation
 
 En janvier 2023, あすたん a publié des instructions illustrées pour se connecter avec Minecraft Java Edition et Bedrock Edition dans le guide d’accès de l’ancien Discord.
 
+Le 21 mars 2023, taka8621 a partagé sept images présentant les recettes personnalisées d’Aceserver à l’époque. Elles montraient des exemples utilisant de l’herbe ou des dalles de chêne pétrifié comme ingrédients, ainsi que des recettes de livres enchantés et d’équipements.
+
 En mai 2023, あすたん a préparé un guide sur le rôle de chaque serveur à l’époque et sur l’accès au wiki et à la carte du monde. Le guide montrait aussi en images les entrées du serveur principal et du serveur de ressources. Le même mois, あすたん a expliqué les fonctions de protection de CoreProtect et de LWC dans un guide distinct.
 
 En juillet 2023, Yukke a annoncé la création d’un nouveau monde sur le serveur de ressources. [Annonce du monde de ressources](https://discord.com/channels/737538781024092170/774152638450237460/1135574163080364103)
@@ -262,6 +266,8 @@ En juillet 2023, Yukke a annoncé la création d’un nouveau monde sur le serve
 En juillet 2023, あすたん a rédigé et publié des guides de commandes pour LWC, CoreProtect, Gsit et LunaChat. En août, taka8621 a expliqué comment obtenir et échanger de l’herbe haute grâce au plugin dédié à l’herbe. En septembre, taka8621 a complété les explications sur l’utilisation de la commande d’échange d’herbe.
 
 En septembre 2023, une annonce a présenté l’arrivée de あすたん dans l’équipe d’administration et la nomination de Taka à la gestion des systèmes. En mai 2024, はっ a annoncé que sh et sekisei avaient pris des fonctions d’assistance technique aux utilisateurs. [Nominations de 2023](https://discord.com/channels/737538781024092170/774152638450237460/1151168895076548669) [Fonctions d’assistance de 2024](https://discord.com/channels/737538781024092170/774152638450237460/1236592686253867008)
+
+Le 4 octobre 2023, あすたん a annoncé que la configuration des permissions des commandes de déplacement entre les serveurs était terminée.
 
 En janvier 2024, あすたん a ouvert le serveur Discord Ace Server Leaderboard Archive (ASLA) pour rassembler les records d’Aceserver. あすたん a présenté les règles de participation et la procédure de dépôt des records. あすたん a aussi publié des listes sur le minage, les statistiques et les lingots. キツネコ, Feruno et Taiyaki ont transmis des statistiques sur le salon des contributions, et Tabekirareta Potechi a proposé des entrées possibles pour des catégories comme celle du premier château.
 

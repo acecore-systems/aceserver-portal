@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:3d265c43acbecf02061e2244b18d6448daae933ee2fca14b33dd2d48ab55e72f
+sourceHash: sha256:b12607e9367dd013f1b30c48a35fd8fd1e80b360e9bfea61a0679b822fd250f0
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -171,6 +171,8 @@ A December 2025 announcement explained how players could join a planned photo sh
 
 In February 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673;, &#35199;&#26408;&#37326;&#28716;&#36032;&#27663;, Amagi\_467, Moon\_666, CP-sinzin, Yukke, and あすたん submitted photos for consideration for social media posts.
 
+In February 2026, End&#12539;コッカー announced the Aceserver Photo Contest and listed February 16 to 28 as the submission period. End&#12539;コッカー provided sample submissions for both the general and staff categories. キツネコ entered a photo showing drainage work in progress. [2026 Photo Contest announcement](https://discord.com/channels/737538781024092170/774152638450237460/1471148847119208731)
+
 In August 2026, sekisei and ふーや announced a jointly hosted online CTF treasure hunt where players solve puzzles such as ciphers to find flags. Aceserver CTF2026 began on August 28. [Co-host announcement](https://discord.com/channels/737538781024092170/774152638450237460/1541785510094184449) [Opening report](https://discord.com/channels/737538781024092170/779569416438415421/1542704904055824394)
 
 ## Building and joint projects
@@ -255,6 +257,8 @@ In November 2022, キツネコ proposed putting the land-use rules on the wiki a
 
 In January 2023, あすたん posted illustrated instructions for connecting with Minecraft Java Edition and Bedrock Edition in the Discord joining guide of the time.
 
+On March 21, 2023, taka8621 shared seven images of Aceserver’s custom recipes at the time. They showed examples using grass or petrified oak slabs as ingredients and recipes for enchanted books and equipment.
+
 In May 2023, あすたん put together a guide to what each server was for at the time and where to find the wiki and world map. The guide also showed the entrances to the main and resource servers with images. That month, あすたん explained the protection features of CoreProtect and LWC in a separate guide.
 
 In July 2023, Yukke announced creating a new resource server world. [Resource world announcement](https://discord.com/channels/737538781024092170/774152638450237460/1135574163080364103)
@@ -262,6 +266,8 @@ In July 2023, Yukke announced creating a new resource server world. [Resource wo
 In July 2023, あすたん wrote and posted command guides for LWC, CoreProtect, Gsit, and LunaChat. In August, taka8621 explained how the grass plugin let players obtain and trade tall grass. In September, they added guidance on using the grass exchange command.
 
 In September 2023, Aceserver announced that あすたん had joined the operations team and that Taka would oversee systems. In May 2024, はっ announced that sh and sekisei had taken on user support roles covering systems. [2023 appointments](https://discord.com/channels/737538781024092170/774152638450237460/1151168895076548669) [2024 support roles](https://discord.com/channels/737538781024092170/774152638450237460/1236592686253867008)
+
+On October 4, 2023, あすたん reported that the permissions for commands used to move between servers had been configured.
 
 In January 2024, あすたん opened a Discord server, the Ace Server Leaderboard Archive (ASLA), to collect records from Aceserver. They explained the participation rules and how to submit records. あすたん also posted lists covering mining, statistics, and ingots. キツネコ, Feruno, and Taiyaki sent statistics to the submissions channel, and Tabekirareta Potechi proposed candidates for records such as the first castle.
 

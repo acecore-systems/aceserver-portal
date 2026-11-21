@@ -2,7 +2,7 @@
 title: As pessoas que apoiaram o Aceserver
 description: Conheça quem ajudou o Aceserver pelos retratos de skins do Minecraft, relembre as atividades e confira o roteiro de eventos e propostas.
 translationOf: aceserver-contributors
-sourceHash: sha256:3d265c43acbecf02061e2244b18d6448daae933ee2fca14b33dd2d48ab55e72f
+sourceHash: sha256:b12607e9367dd013f1b30c48a35fd8fd1e80b360e9bfea61a0679b822fd250f0
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -171,6 +171,8 @@ Um anúncio de dezembro de 2025 explicou como participar de uma sessão de fotos
 
 Em fevereiro de 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673;, &#35199;&#26408;&#37326;&#28716;&#36032;&#27663;, Amagi\_467, Moon\_666, CP-sinzin, Yukke e あすたん enviaram fotos para possível uso em publicações de divulgação nas redes sociais.
 
+Em fevereiro de 2026, End&#12539;コッカー anunciou o Concurso de Fotografia do Aceserver e informou que o período de envio era de 16 a 28 de fevereiro. Preparou exemplos de inscrições para a categoria geral e para a equipe de gestão. キツネコ enviou uma foto de um trabalho de drenagem em andamento. [Anúncio do Concurso de Fotografia de 2026](https://discord.com/channels/737538781024092170/774152638450237460/1471148847119208731)
+
 Em agosto de 2026, sekisei e ふーや anunciaram um CTF conjunto de caça ao tesouro on-line, com enigmas como cifras para encontrar bandeiras. Aceserver CTF2026 começou em 28 de agosto. [Anúncio da organização conjunta](https://discord.com/channels/737538781024092170/774152638450237460/1541785510094184449) [Relato de abertura](https://discord.com/channels/737538781024092170/779569416438415421/1542704904055824394)
 
 ## Construção e projetos em equipe
@@ -255,6 +257,8 @@ Em novembro de 2022, キツネコ propôs publicar na wiki as regras de uso do t
 
 Em janeiro de 2023, あすたん publicou no guia de entrada do Discord da época instruções ilustradas para se conectar com Minecraft Java Edition e Bedrock Edition.
 
+Em 21 de março de 2023, taka8621 compartilhou sete imagens com as receitas personalizadas que o Aceserver tinha na época. Elas mostravam exemplos que usavam grama ou lajes de carvalho petrificado como ingredientes e receitas de livros encantados e equipamentos.
+
 Em maio de 2023, あすたん reuniu em um guia a finalidade de cada servidor na época e as orientações para encontrar a wiki e o mapa do mundo. O guia também mostrou com imagens as entradas do servidor principal e do servidor de recursos. Nesse mesmo mês, あすたん explicou os recursos de proteção do CoreProtect e do LWC em outro guia.
 
 Em julho de 2023, Yukke anunciou a criação de um novo mundo no servidor de recursos. [Anúncio do mundo de recursos](https://discord.com/channels/737538781024092170/774152638450237460/1135574163080364103)
@@ -262,6 +266,8 @@ Em julho de 2023, Yukke anunciou a criação de um novo mundo no servidor de rec
 Em julho de 2023, あすたん escreveu e publicou guias de comandos para LWC, CoreProtect, Gsit e LunaChat. Em agosto, taka8621 explicou como obter e trocar grama alta pelo plugin de grama. Em setembro, acrescentou orientações sobre o uso do comando de troca de grama.
 
 Em setembro de 2023, foi anunciado que あすたん passaria a integrar a administração e que Taka ficaria responsável pelos sistemas. Em maio de 2024, はっ anunciou que sh e sekisei passaram a apoiar os usuários em assuntos ligados aos sistemas. [Nomeações de 2023](https://discord.com/channels/737538781024092170/774152638450237460/1151168895076548669) [Funções de apoio de 2024](https://discord.com/channels/737538781024092170/774152638450237460/1236592686253867008)
+
+Em 4 de outubro de 2023, あすたん informou que a configuração das permissões dos comandos de troca entre servidores tinha sido concluída.
 
 Em janeiro de 2024, あすたん abriu o Ace Server Leaderboard Archive (ASLA), um servidor no Discord para reunir registros do Aceserver. Explicou as regras de participação e como enviar os registros. Também publicou listas de mineração, estatísticas e lingotes. キツネコ, Feruno e Taiyaki enviaram estatísticas ao canal de contribuições, e Tabekirareta Potechi sugeriu candidatos para registros como o primeiro castelo.
 

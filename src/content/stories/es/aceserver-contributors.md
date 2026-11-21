@@ -2,7 +2,7 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:3d265c43acbecf02061e2244b18d6448daae933ee2fca14b33dd2d48ab55e72f
+sourceHash: sha256:b12607e9367dd013f1b30c48a35fd8fd1e80b360e9bfea61a0679b822fd250f0
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -171,6 +171,8 @@ Un anuncio de diciembre de 2025 explicó cómo sumarse a una sesión de fotos pr
 
 En febrero de 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673;, &#35199;&#26408;&#37326;&#28716;&#36032;&#27663;, Amagi\_467, Moon\_666, CP-sinzin, Yukke y あすたん enviaron fotos para que se consideraran para publicaciones promocionales en redes sociales.
 
+En febrero de 2026, End&#12539;コッカー anunció el Concurso de Fotografía de Aceserver e indicó que las fotos podían enviarse del 16 al 28 de febrero. Preparó ejemplos de participación para las categorías general y del equipo de gestión. キツネコ presentó una foto de un trabajo de drenaje en curso. [Anuncio del Concurso de Fotografía de 2026](https://discord.com/channels/737538781024092170/774152638450237460/1471148847119208731)
+
 En agosto de 2026, sekisei y ふーや anunciaron un CTF conjunto de búsqueda del tesoro en línea, con acertijos como criptogramas para encontrar banderas. Aceserver CTF2026 comenzó el 28 de agosto. [Anuncio de organización conjunta](https://discord.com/channels/737538781024092170/774152638450237460/1541785510094184449) [Informe de apertura](https://discord.com/channels/737538781024092170/779569416438415421/1542704904055824394)
 
 ## Construcción y proyectos en equipo
@@ -255,6 +257,8 @@ En noviembre de 2022, キツネコ propuso publicar las reglas de uso del suelo 
 
 En enero de 2023, あすたん publicó en la guía de acceso de Discord de la época instrucciones ilustradas para conectarse con Minecraft Java Edition y Bedrock Edition.
 
+El 21 de marzo de 2023, taka8621 compartió siete imágenes con las recetas personalizadas que tenía Aceserver por entonces. Mostraban ejemplos con hierba o losas de roble petrificado como ingredientes y recetas para fabricar libros encantados y equipamiento.
+
 En mayo de 2023, あすたん reunió en una guía la finalidad de cada servidor en aquel momento y las indicaciones para encontrar la wiki y el mapa del mundo. La guía también mostraba con imágenes las entradas al servidor principal y al servidor de recursos. Ese mes, あすたん explicó las funciones de protección de CoreProtect y LWC en otra guía.
 
 En julio de 2023, Yukke anunció la creación de un nuevo mundo para el servidor de recursos. [Anuncio del mundo de recursos](https://discord.com/channels/737538781024092170/774152638450237460/1135574163080364103)
@@ -262,6 +266,8 @@ En julio de 2023, Yukke anunció la creación de un nuevo mundo para el servidor
 En julio de 2023, あすたん redactó y publicó guías de comandos para LWC, CoreProtect, Gsit y LunaChat. En agosto, taka8621 explicó el funcionamiento del plugin de hierba para conseguir e intercambiar hierba alta. En septiembre, amplió las indicaciones sobre el uso del comando de intercambio de hierba.
 
 En septiembre de 2023 se anunció que あすたん se incorporaba al equipo de administración y que Taka se encargaría de sistemas. En mayo de 2024, はっ anunció que sh y sekisei pasaban a prestar apoyo técnico a los usuarios. [Nombramientos de 2023](https://discord.com/channels/737538781024092170/774152638450237460/1151168895076548669) [Roles de apoyo de 2024](https://discord.com/channels/737538781024092170/774152638450237460/1236592686253867008)
+
+El 4 de octubre de 2023, あすたん informó de que había terminado la configuración de permisos de los comandos para moverse entre servidores.
 
 En enero de 2024, あすたん abrió el servidor de Discord Ace Server Leaderboard Archive (ASLA) para recopilar registros de Aceserver. Explicó las reglas de participación y cómo enviar los registros. También publicó listas de minería, estadísticas y lingotes. キツネコ, Feruno y Taiyaki enviaron estadísticas al canal de aportaciones, y Tabekirareta Potechi propuso candidatos para registros como el primer castillo.
 
