@@ -2,7 +2,7 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:a1620a9dd3c960ef3929722e18706171e05bbc6ac580280e21905c1a0ab1677e
+sourceHash: sha256:79598ef83feaf1f3b8cec99db72aafd4cb8180da6a5e9770be3355b4454bfd40
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -282,6 +282,30 @@ En marzo de 2022, タケ pidió ayuda para nivelar el terreno de un dibujo sobre
 En abril de 2022, SPdari informó de que los cimientos y el tejado de la base principal de Sora no Yama ya estaban hechos y de que el exterior estaba casi terminado. Aún quedaba trabajo en el interior.
 
 En junio de 2022, yanyan_fafnir explicó cómo participar en el concurso de islas flotantes que dio paso a la construcción del antiguo vestíbulo y cómo se presentarían los proyectos ante el jurado. El anuncio indicó que はっ y los miembros con el rol de apoyo o superior serían los jueces. [Reglas del concurso](https://discord.com/channels/737538781024092170/774152638450237460/982990352422162482) [Anuncio de la presentación ante el jurado](https://discord.com/channels/737538781024092170/774152638450237460/986294242848669756)
+
+KOTA-SAN preparó un formulario para anotar el nombre del participante, la parcela preferida y el concepto, junto con un plano de las 36 parcelas. yanyan_fafnir compartió listados de parcelas con las inscripciones y los cambios dos veces el 6 de junio y una vez tanto el 8 como el 15 de junio.
+
+En los mensajes de inscripción aparecían las siguientes ideas.
+
+- **&#12384;&#12426;** – Estación
+- **YM** – Edad Media, con posibilidad de cambios
+- **&#26666;&#24335;&#20250;&#31038;&#24093;&#29579;** – Mar y playa de arena
+- **Kaji** – Bosque, provisional
+- **&#12461;&#12484;&#12493;&#12467;** – Árbol
+- **Ne1Ne10104** – Fantasía de estilo japonés
+- **&#12479;&#12465;** – Viaje
+- **&#26525;&#35910;** – Fortaleza
+- **&#12450;&#12510;&#12484;** – Construcción invertida
+- **nuu_mink** – Templo
+- **nnn_percent** – Una casa sobre las nubes
+- **PillowKebap** – &#26087;&#19990;&#30028;&#12392;&#26032;&#12398;&#25161; (el viejo mundo y una puerta a lo nuevo)
+- **Moon_666** – Rime of the Ancient Mariner, provisional
+- **NCGpotechi** – Una combinación de vestíbulos de minijuegos de servidores existentes y consolas
+- **ErnFern** – Un diseño inspirado en ruinas
+- **taiyaki5190** – El End
+- **MC kiri 4649** – Un cruce inspirado en Shibuya
+
+taka8621 propuso inicialmente una roca y retiró la idea el 6 de junio.
 
 En julio de 2022, Maro dirigió la construcción del antiguo vestíbulo y anunció que había terminado. Los registros de la obra en el antiguo canal de Discord agradecieron a BM_yurikun la jardinería y a _BE_ChalkyMink87 la colocación de minerales en la base. KOTA-SAN habilitó un espacio para compartir avances de la obra.
 

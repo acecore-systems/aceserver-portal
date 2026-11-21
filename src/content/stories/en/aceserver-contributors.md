@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:a1620a9dd3c960ef3929722e18706171e05bbc6ac580280e21905c1a0ab1677e
+sourceHash: sha256:79598ef83feaf1f3b8cec99db72aafd4cb8180da6a5e9770be3355b4454bfd40
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -282,6 +282,30 @@ In March 2022, タケ asked for help leveling the ground for a ground artwork. O
 In April 2022, SPdari reported that the foundation and roof of the main base at Sora no Yama were in place and the exterior was nearly complete. Work still remained on the interior.
 
 In June 2022, yanyan_fafnir explained how to enter the floating-island contest that led to work on the former lobby and how entries would be presented at judging. The announcement named はっ and members with the supporter role or above as judges. [Contest entry rules](https://discord.com/channels/737538781024092170/774152638450237460/982990352422162482) [Judging session announcement](https://discord.com/channels/737538781024092170/774152638450237460/986294242848669756)
+
+KOTA-SAN prepared an entry form for the entrant’s name, preferred plot, and concept, along with a map of the 36 plots. yanyan_fafnir shared plot lists reflecting entries and changes twice on June 6, once on June 8, and once on June 15.
+
+The entry posts included the following ideas.
+
+- **&#12384;&#12426;** – Station
+- **YM** – Middle Ages, subject to change
+- **&#26666;&#24335;&#20250;&#31038;&#24093;&#29579;** – Sea and sandy beach
+- **Kaji** – Forest, tentative
+- **&#12461;&#12484;&#12493;&#12467;** – Tree
+- **Ne1Ne10104** – Japanese-style fantasy
+- **&#12479;&#12465;** – Travel
+- **&#26525;&#35910;** – Fortress
+- **&#12450;&#12510;&#12484;** – Upside-down structure
+- **nuu_mink** – Temple
+- **nnn_percent** – A house above the clouds
+- **PillowKebap** – &#26087;&#19990;&#30028;&#12392;&#26032;&#12398;&#25161; (the old world and a door to the new)
+- **Moon_666** – Rime of the Ancient Mariner, tentative
+- **NCGpotechi** – A mix of minigame lobbies from existing servers and game consoles
+- **ErnFern** – Ruins
+- **taiyaki5190** – The End
+- **MC kiri 4649** – A crossing in the style of Shibuya
+
+taka8621 initially proposed a rock theme and withdrew it on June 6.
 
 In July 2022, Maro led construction of the former lobby and reported its completion. The build logs from the old Discord channel thanked BM_yurikun for landscaping and _BE_ChalkyMink87 for embedding ore in the foundation. KOTA-SAN set up a place to share updates on the build.
 

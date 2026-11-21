@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:a1620a9dd3c960ef3929722e18706171e05bbc6ac580280e21905c1a0ab1677e
+sourceHash: sha256:79598ef83feaf1f3b8cec99db72aafd4cb8180da6a5e9770be3355b4454bfd40
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -282,6 +282,30 @@ Im März 2022 bat タケ um Hilfe beim Einebnen des Geländes für ein Bodenbild
 Im April 2022 berichtete SPdari, dass das Fundament und das Dach der Hauptbasis in Sora no Yama fertig waren und der Außenbau fast abgeschlossen war. Im Innenbereich standen noch Arbeiten aus.
 
 Im Juni 2022 erklärte yanyan_fafnir die Teilnahmebedingungen für den Wettbewerb um schwebende Inseln, aus dem die frühere Lobby hervorging. Die Ankündigung beschrieb auch, wie die Beiträge bei der Bewertung vorgestellt werden sollten. はっ und Mitglieder mit der Rolle „Supporter“ oder höher sollten die Jury bilden. [Teilnahmebedingungen](https://discord.com/channels/737538781024092170/774152638450237460/982990352422162482) [Ankündigung des Jurytermins](https://discord.com/channels/737538781024092170/774152638450237460/986294242848669756)
+
+KOTA-SAN bereitete ein Anmeldeformular für den Namen, die Wunschparzelle und das Konzept sowie einen Plan mit 36 Parzellen vor. yanyan_fafnir teilte die Belegungslisten mit den Anmeldungen und Änderungen zweimal am 6. Juni sowie je einmal am 8. und 15. Juni.
+
+In den Anmeldungen standen unter anderem folgende Ideen.
+
+- **&#12384;&#12426;** – Bahnhof
+- **YM** – Mittelalter, Änderungen möglich
+- **&#26666;&#24335;&#20250;&#31038;&#24093;&#29579;** – Meer und Sandstrand
+- **Kaji** – Wald, vorläufig
+- **&#12461;&#12484;&#12493;&#12467;** – Baum
+- **Ne1Ne10104** – Fantasy im japanischen Stil
+- **&#12479;&#12465;** – Reise
+- **&#26525;&#35910;** – Festung
+- **&#12450;&#12510;&#12484;** – Ein auf dem Kopf stehendes Bauwerk
+- **nuu_mink** – Tempel
+- **nnn_percent** – Ein Haus über den Wolken
+- **PillowKebap** – &#26087;&#19990;&#30028;&#12392;&#26032;&#12398;&#25161; (die alte Welt und eine Tür zur neuen)
+- **Moon_666** – Rime of the Ancient Mariner, vorläufig
+- **NCGpotechi** – Eine Kombination aus Minispiel-Lobbys bestehender Server und Spielkonsolen
+- **ErnFern** – Ein Entwurf im Stil von Ruinen
+- **taiyaki5190** – Das Ende
+- **MC kiri 4649** – Eine Kreuzung nach dem Vorbild von Shibuya
+
+taka8621 schlug zunächst einen Felsen vor und zog die Idee am 6. Juni zurück.
 
 Im Juli 2022 leitete Maro den Bau der früheren Lobby und meldete den Abschluss. Im alten Discord-Kanal wurde BM_yurikun für die Begrünung und _BE_ChalkyMink87 für das Einlassen von Erzen in das Fundament gedankt. KOTA-SAN richtete einen Ort ein, an dem der Baufortschritt geteilt werden konnte.
 

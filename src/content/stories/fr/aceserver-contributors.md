@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:a1620a9dd3c960ef3929722e18706171e05bbc6ac580280e21905c1a0ab1677e
+sourceHash: sha256:79598ef83feaf1f3b8cec99db72aafd4cb8180da6a5e9770be3355b4454bfd40
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -282,6 +282,30 @@ En mars 2022, タケ a demandé de l’aide pour niveler le terrain destiné à 
 En avril 2022, SPdari a signalé que les fondations et le toit de la base principale de Sora no Yama étaient en place et que l’extérieur était presque terminé. Il restait du travail à l’intérieur.
 
 En juin 2022, yanyan_fafnir a expliqué comment participer au concours d’îles flottantes qui a mené à la construction de l’ancien hall et comment les projets seraient présentés au jury. L’annonce nommait はっ et les membres ayant le rôle de soutien ou un rôle supérieur parmi les juges. [Règles du concours](https://discord.com/channels/737538781024092170/774152638450237460/982990352422162482) [Annonce de la séance du jury](https://discord.com/channels/737538781024092170/774152638450237460/986294242848669756)
+
+KOTA-SAN a préparé un formulaire pour indiquer le nom du participant, la parcelle souhaitée et le concept, ainsi qu’un plan des 36 parcelles. yanyan_fafnir a partagé des listes de parcelles tenant compte des inscriptions et des changements deux fois le 6 juin, puis une fois le 8 et une fois le 15 juin.
+
+Les messages d’inscription mentionnaient les idées suivantes.
+
+- **&#12384;&#12426;** – Gare
+- **YM** – Moyen Âge, susceptible de changer
+- **&#26666;&#24335;&#20250;&#31038;&#24093;&#29579;** – Mer et plage de sable
+- **Kaji** – Forêt, provisoire
+- **&#12461;&#12484;&#12493;&#12467;** – Arbre
+- **Ne1Ne10104** – Univers fantastique d’inspiration japonaise
+- **&#12479;&#12465;** – Voyage
+- **&#26525;&#35910;** – Forteresse
+- **&#12450;&#12510;&#12484;** – Construction à l’envers
+- **nuu_mink** – Temple
+- **nnn_percent** – Une maison au-dessus des nuages
+- **PillowKebap** – &#26087;&#19990;&#30028;&#12392;&#26032;&#12398;&#25161; (l’ancien monde et une porte vers le nouveau)
+- **Moon_666** – Rime of the Ancient Mariner, provisoire
+- **NCGpotechi** – Une combinaison de halls de mini-jeux de serveurs existants et de consoles
+- **ErnFern** – Un décor inspiré de ruines
+- **taiyaki5190** – L’End
+- **MC kiri 4649** – Un carrefour dans le style de Shibuya
+
+taka8621 a d’abord proposé un rocher, puis a retiré cette idée le 6 juin.
 
 En juillet 2022, Maro a dirigé la construction de l’ancien hall d’accueil et en a annoncé l’achèvement. Le suivi des travaux dans l’ancien salon Discord a remercié BM_yurikun pour les aménagements paysagers et _BE_ChalkyMink87 pour l’intégration de minerais dans la base. KOTA-SAN a préparé un espace pour partager l’avancement des travaux.
 
