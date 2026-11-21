@@ -2,7 +2,7 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:412414ffe6264a4a1eb72735e0f2b25e37559393a7dd3cebd562ce94de8f9d5f
+sourceHash: sha256:099a9f24caab88c766d4aff807d70418d4641eede55ccb778490416d7b935aeb
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-21T00:00:00+09:00
 tags:
@@ -29,11 +29,29 @@ En agosto de 2021, Gui explicó que el servidor comenzó para que cualquiera pud
 
 En agosto de 2021, KOTA-SAN adelantó una convocatoria para el logotipo del primer aniversario. En septiembre, Mugi informó de la reorganización de Discord y abrió la convocatoria. En noviembre, てぃあ anunció que se había elegido el diseño de YM y que ya se usaba en Discord. [Avance de la convocatoria](https://discord.com/channels/737538781024092170/774152638450237460/881193662321684601) [Apertura de la convocatoria](https://discord.com/channels/737538781024092170/774152638450237460/882433940621758474) [Anuncio del logotipo elegido](https://discord.com/channels/737538781024092170/774152638450237460/905830523761487872)
 
+## Comunidades y grupos creativos
+
+En una presentación publicada por KOTA-SAN en el antiguo canal de Discord, la Asociación de Turismo de Aceserver nombraba a MKOTA_SAN como su responsable en aquel momento. La presentación recogía la apertura de un templo, un acuario y una zona de casino que incluía un hotel y un museo de arte. También mencionaba concursos y el desarrollo conjunto del bot Kutya de la asociación.
+
+En marzo de 2021, kuroneko229 presentó el Departamento de Obras Públicas y señaló a Kuro neko2229 como su responsable en aquel momento. En noviembre de 2022, informó de los proyectos en los que había trabajado el grupo, ya llamado Departamento de Obras Privadas, como el metro, los caminos del Nether, el alumbrado, una zona comercial y apartamentos.
+
+Mugi presentó las actividades del Club de Circuitos RS y a su responsable, sousuke3018. En la presentación del Imperio SEGA figuraba segarikihiro como su responsable de entonces.
+
+kurenohachi (Hachi), responsable del Grupo del Parque de Atracciones, informó de que habían elegido un terreno para el proyecto con ayuda de otras personas. En una publicación sobre el Reino de Kuwa, Yukke indicó que el responsable era yukke40901 e invitó a colaborar en la construcción del castillo y la capital. Nishikino Sega anunció que el grupo Eirin-tai apoyaría las actividades del Reino de Kuwa.
+
+La presentación del Grupo de Restauración de la Ciudad Antigua nombraba a Golden Cocker como responsable de entonces y a Taibon y タケ como participantes iniciales. En una convocatoria del Grupo de Creación RPG también figuraba Golden Cocker como responsable y se pedía ayuda para crear ciudades e historias al estilo de los juegos de rol.
+
+Como titular de A Yū (A-shō), ゆり (Yū) informó de la venta de materiales y buscó voluntarios para construir una zona de juegos.
+
 ## Difusión y eventos
 
 ### **2022 y primera mitad de 2023**
 
 En mayo de 2022, キツネコ anunció una carrera de barcos alternativa en un circuito construido por Hako_Otoko. [Publicación original](https://discord.com/channels/737538781024092170/774152638450237460/970291030152847390)
+
+Antes del Nuevo Festival de Verano del 21 de agosto de 2022, ゆり pidió propuestas para puestos y actividades. El día del festival, confirmó que se celebraría y compartió el programa, que incluía fuegos artificiales, un adelanto del video promocional y la clausura. [Anuncio del día del festival](https://discord.com/channels/737538781024092170/779569416438415421/1010817999575449610)
+
+edamameRex_java (Edamame) anunció su puesto. Moon_666 presentó lo que habría en su puesto, incluido un gacha. Tras el festival, Yukke compartió sus impresiones y dio las gracias a ゆり, Edamame y los responsables de los puestos. [Anuncio del puesto de Edamame](https://discord.com/channels/737538781024092170/779569416438415421/1010359403259641856) [Anuncio del puesto de Moon_666](https://discord.com/channels/737538781024092170/779569416438415421/1010344489270923304) [Impresiones y agradecimientos tras el festival](https://discord.com/channels/737538781024092170/779569416438415421/1010919818972631110)
 
 En noviembre de 2022, yanyan_fafnir anunció que ゆり (Yū) había asumido un rol de apoyo por recomendación de Sosuke. [Anuncio del nombramiento](https://discord.com/channels/737538781024092170/774152638450237460/1043527218191663114)
 
@@ -43,7 +61,11 @@ Para el Ace Fest in Christmas Life de diciembre de 2022, ゆり publicó el prog
 
 A principios de 2023, Taiyaki (taiyaki5190) anunció como organizador el evento PvP in the Sky e invitó a inscribirse a competidores y responsables de puestos. Para el Festival del Wither de febrero, edamameRex_java invitó a enfrentarse al Wither en el servidor de recursos, gestionó los préstamos de equipo y las recompensas de participación, y dio las gracias al terminar.
 
+En agosto de 2022, ゆり pidió fotos del servidor antiguo para un video promocional en producción. En marzo de 2023, Yukke pidió sugerencias de lugares y edificios para el video promocional oficial. [Convocatoria de fotos del servidor antiguo](https://discord.com/channels/737538781024092170/779569416438415421/1008524402922639390) [Convocatoria de lugares para la filmación](https://discord.com/channels/737538781024092170/779569416438415421/1085549170905059383)
+
 En marzo de 2023, ゆり invitó a participar en la filmación de un video de presentación y explicó el orden de grabación de ciudades y mundos. [Publicación original](https://discord.com/channels/737538781024092170/774152638450237460/1087641197947932704)
+
+Los registros del antiguo canal de Discord indican que, en marzo de 2023, あすたん habilitó un espacio para hablar de la filmación del video promocional. nnn_percent explicó cómo lidiar con los obstáculos para filmar el castillo n.
 
 Para el Ace Fest Offline de primavera de 2023, Gui publicó los anuncios oficiales y はっ indicó dónde podían participar en línea quienes no pudieran acudir en persona. [Anuncio del evento](https://discord.com/channels/737538781024092170/774152638450237460/1091302323298521181) [Anuncio de participación](https://discord.com/channels/737538781024092170/774152638450237460/1092392407229804544)
 
@@ -54,6 +76,8 @@ En mayo de 2023, ゆり presentó el plan del equipo de difusión para gestionar
 En julio de 2023, Inuneko anunció un evento de PvP y después informó de que dont_stop había ganado.
 
 En 2023, End&#12539;コッカー informó de la preparación de un evento de RPG y comunicó su aplazamiento. En 2024, End&#12539;コッカー anunció la beta de RPG «Recuerdos alterados» y Pluto aportó comentarios tras participar en las pruebas preliminares.
+
+En julio de 2023, タケ anunció que Ace Monorail ya tenía logotipo y pidió propuestas de nombres para las estaciones de la línea 1. [Anuncio del logotipo y convocatoria de nombres](https://discord.com/channels/737538781024092170/779569416438415421/1124669241182920714)
 
 En el verano de 2023, タケ anunció el festival del primer aniversario organizado por la compañía Ace Monorail Take y agradeció la colaboración en la ampliación de la línea. En 2024, también anunció el festival del segundo aniversario organizado por la compañía.
 
@@ -72,6 +96,8 @@ El anuncio de fin de año 2023–2024 presentó como organizador al equipo de Ac
 El 1 de enero de 2024, タケ informó de que había terminado la celebración de Año Nuevo y de que se habían repartido amuletos. [Informe de la celebración de Año Nuevo](https://discord.com/channels/737538781024092170/779569416438415421/1191037263002488872)
 
 En la primavera de 2024, sekisei anunció la hora de inicio y el contacto de Ace Guesser v2. En verano, Pluto anunció un evento de parkour.
+
+En el festival de verano del 17 de agosto de 2024, sekisei presentó las reglas y los equipos del concurso de pesca y anunció su comienzo. sh presentó la Gran Búsqueda de Objetos, explicó cómo participar y al día siguiente compartió un video de la retransmisión oficial. はっ explicó el funcionamiento y los equipos del juego de transmisión de mensajes por abstracción mínima.
 
 タケ creó el cartel del Ace Summer Festival de 2024. En el evento de fin de año «つなぐASF», taibon ayudó con el dispositivo de cuenta regresiva. タケ informó del fin de todas las actividades en enero de 2025. [Anuncio del cartel](https://discord.com/channels/737538781024092170/774152638450237460/1274157736015429744) [Anuncio de la cuenta regresiva](https://discord.com/channels/737538781024092170/774152638450237460/1319967701808189493) [Informe de cierre](https://discord.com/channels/737538781024092170/774152638450237460/1325487116419076129)
 
@@ -99,13 +125,25 @@ En agosto de 2026, sekisei y ふーや anunciaron un CTF conjunto de búsqueda d
 
 ## Construcción y proyectos en equipo
 
+En marzo de 2022, タケ pidió ayuda para nivelar el terreno de un dibujo sobre el suelo. El 1 de abril informó de que la obra estaba terminada y agradeció a quienes ayudaron a preparar el terreno o aportaron materiales. [Convocatoria para nivelar el terreno](https://discord.com/channels/737538781024092170/779569416438415421/957990944374927420) [Informe de finalización del dibujo](https://discord.com/channels/737538781024092170/779569416438415421/959368128943489085)
+
 En junio de 2022, yanyan_fafnir explicó cómo participar en el concurso de islas flotantes que dio paso a la construcción del antiguo vestíbulo y cómo se presentarían los proyectos ante el jurado. El anuncio indicó que はっ y los miembros con el rol de apoyo o superior serían los jueces. [Reglas del concurso](https://discord.com/channels/737538781024092170/774152638450237460/982990352422162482) [Anuncio de la presentación ante el jurado](https://discord.com/channels/737538781024092170/774152638450237460/986294242848669756)
 
 En julio de 2022, Maro dirigió la construcción del antiguo vestíbulo y anunció que había terminado. Los registros de la obra en el antiguo canal de Discord agradecieron a BM_yurikun la jardinería y a _BE_ChalkyMink87 la colocación de minerales en la base. KOTA-SAN habilitó un espacio para compartir avances de la obra.
 
-Entre octubre de 2022 y enero de 2023, varios jugadores drenaron un monumento oceánico, trabajaron en una instalación para guardianes y excavaron en paralelo para otra de esqueletos del Wither. Según los registros del antiguo canal de Discord, taka8621 abrió un canal de trabajo. Moon_666 organizó el drenaje y la excavación, repuso materiales y trabajó en una zona asignada. Yukke pidió ayuda con la excavación y preparó un paso hacia la fortaleza.
+El 4 de septiembre de 2022, NCGpotechi informó de que el exterior del castillo estaba terminado y podía visitarse. El interior seguía en construcción en ese momento. NCGpotechi agradeció a quienes donaron materiales. [Informe de finalización del exterior del castillo](https://discord.com/channels/737538781024092170/779569416438415421/1015951272916045934)
+
+Entre octubre de 2022 y enero de 2023, varios jugadores drenaron un monumento oceánico, trabajaron en una instalación para guardianes y excavaron en paralelo para otra de esqueletos del Wither. Según los registros del antiguo canal de Discord, taka8621 abrió un canal de trabajo. Moon_666 organizó el drenaje y la excavación, repuso materiales y trabajó en una zona asignada. Yukke pidió ayuda con la excavación y preparó un paso hacia la fortaleza. [Convocatoria para excavar en el Nether](https://discord.com/channels/737538781024092170/779569416438415421/1053305090922004560)
 
 taibon0727 preparó materiales como vidrio, un lugar para guardar botes de transporte y un dispositivo para trabajar con arena. SPdari aportó arena. UtaTheIrasutā ayudó a rellenar zonas con lava e instaló un puesto para elaborar pociones. nnn_percent colaboró con la arena para el relleno y あすたん ayudó a excavar. SPdari también agradeció a Buraki que orientara a los participantes.
+
+El 20 de octubre de 2022, ジェスター invitó a los recién llegados a solicitar gratis su antigua vivienda y objetos del juego. El 23 de octubre comunicó que había cerrado la oferta al no recibir solicitudes. [Convocatoria para la entrega](https://discord.com/channels/737538781024092170/779569416438415421/1032634176064725073) [Informe de cierre de la convocatoria](https://discord.com/channels/737538781024092170/779569416438415421/1033625009085743114)
+
+En noviembre de 2022, あすたん invitó a colaborar en la construcción del Reino de Asutan. [Convocatoria para construir el reino](https://discord.com/channels/737538781024092170/779569416438415421/1041014423223009372)
+
+En diciembre del mismo año, ジェスター (con el nombre de entonces Dōke Shinshi@Jester Sub) informó de que había construido con Buraki un cultivo de sandías al estilo de un complejo turístico, con playa. [Informe de la construcción del cultivo de sandías](https://discord.com/channels/737538781024092170/779569416438415421/1048866874760364042)
+
+Los registros del antiguo canal de Discord sobre la posada de aguas termales recogen que edamameRex_java, responsable del proyecto, buscó miembros y ゆり informó de cómo ayudar con la construcción o con materiales.
 
 A finales de diciembre de 2022, edamameRex_java informó de que había concluido la construcción de la posada de aguas termales, según los registros del proyecto.
 

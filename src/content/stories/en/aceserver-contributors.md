@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:412414ffe6264a4a1eb72735e0f2b25e37559393a7dd3cebd562ce94de8f9d5f
+sourceHash: sha256:099a9f24caab88c766d4aff807d70418d4641eede55ccb778490416d7b935aeb
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-21T00:00:00+09:00
 tags:
@@ -29,11 +29,29 @@ In August 2021, Gui said the server began so anyone could visit はっ and play 
 
 In August 2021, KOTA-SAN previewed a call for first-anniversary logo designs. In September, Mugi reported reorganizing Discord and opened submissions. In November, てぃあ announced that YM’s design had been selected and applied on Discord. [Call preview](https://discord.com/channels/737538781024092170/774152638450237460/881193662321684601) [Submissions open](https://discord.com/channels/737538781024092170/774152638450237460/882433940621758474) [Selected logo announcement](https://discord.com/channels/737538781024092170/774152638450237460/905830523761487872)
 
+## Communities and creative groups
+
+In an introduction posted to the old Discord by KOTA-SAN, the Aceserver Tourism Association listed MKOTA_SAN as its leader at the time. The introduction described the opening of a temple, an aquarium, and a casino district with facilities including a hotel and an art museum. It also covered contests and the joint development of the association’s bot Kutya.
+
+In March 2021, kuroneko229 introduced the Public Works Department, naming Kuro neko2229 as its leader at the time. In November 2022, kuroneko229 reported what the group, by then the Private Works Department, had worked on, including a subway, Nether roads, streetlights, a shopping district, and apartments.
+
+Mugi introduced the RS Circuit Engineering Club’s work and its leader, sousuke3018. Introductions to the SEGA Empire named segarikihiro as its leader at the time.
+
+The Amusement Park Group’s leader, kurenohachi (Hachi), reported choosing a site for the planned build with help from others. In a post about the Kuwa Kingdom, Yukke listed yukke40901 as its leader and invited players to help build its castle and capital. Nishikino Sega said that the Eirin-tai group would support the Kuwa Kingdom’s work.
+
+An introduction to the Ancient City Restoration Group named Golden Cocker as its leader at the time and Taibon and タケ as early participants. A call from the RPG Creation Group also listed Golden Cocker as leader and invited people to help make RPG-style towns and stories.
+
+As owner of A Yū (A-shō), ゆり (Yū) described the sale of materials and called for volunteers to build a play area.
+
 ## Promotion and events
 
 ### **2022 to the first half of 2023**
 
 In May 2022, キツネコ announced an alternative boat race using a course built by Hako_Otoko. [Original post](https://discord.com/channels/737538781024092170/774152638450237460/970291030152847390)
+
+Ahead of the New Summer Festival on August 21, 2022, ゆり asked for stalls and activities. On the day, ゆり confirmed the festival was going ahead and shared the program, which included fireworks, a preview of the promotional video, and closing events. [Festival-day announcement](https://discord.com/channels/737538781024092170/779569416438415421/1010817999575449610)
+
+edamameRex_java (Edamame) announced a stall. Moon_666 also shared what would be available at their stall, including a gacha. After the festival, Yukke shared impressions and thanked ゆり, Edamame, and the stallholders. [Edamame’s stall announcement](https://discord.com/channels/737538781024092170/779569416438415421/1010359403259641856) [Moon_666’s stall announcement](https://discord.com/channels/737538781024092170/779569416438415421/1010344489270923304) [Post-festival impressions and thanks](https://discord.com/channels/737538781024092170/779569416438415421/1010919818972631110)
 
 In November 2022, yanyan_fafnir reported that ゆり (Yū) had become a supporter after a recommendation from Sosuke. [Supporter appointment announcement](https://discord.com/channels/737538781024092170/774152638450237460/1043527218191663114)
 
@@ -43,7 +61,11 @@ For Ace Fest in Christmas Life in December 2022, ゆり shared the schedule, inc
 
 In early 2023, Taiyaki (taiyaki5190) announced PvP in the Sky as its organizer and invited competitors and stallholders to sign up. For the Wither Festival in February, edamameRex_java invited players to fight the Wither on the resource server, handled equipment loans and participation rewards, and thanked everyone who joined after the event.
 
+In August 2022, ゆり requested images from the old server for a promotional video in production. In March 2023, Yukke invited suggestions for places and buildings to feature in the official promotional video. [Call for old server images](https://discord.com/channels/737538781024092170/779569416438415421/1008524402922639390) [Call for filming locations](https://discord.com/channels/737538781024092170/779569416438415421/1085549170905059383)
+
 In March 2023, ゆり invited people to join filming for a server introduction video and shared the order for filming towns and worlds. [Original post](https://discord.com/channels/737538781024092170/774152638450237460/1087641197947932704)
+
+Old Discord records show that in March 2023, あすたん set up a place to discuss filming the promotional video. nnn_percent offered guidance on handling obstructions when filming n Castle.
 
 For Ace Fest Offline in spring 2023, Gui posted the official announcements and はっ shared where people who could not attend in person could join online. [Event announcement](https://discord.com/channels/737538781024092170/774152638450237460/1091302323298521181) [Participation announcement](https://discord.com/channels/737538781024092170/774152638450237460/1092392407229804544)
 
@@ -54,6 +76,8 @@ In May 2023, ゆり shared the publicity team’s plans to start running the You
 In July 2023, Inuneko announced a PvP event and reported afterward that dont_stop had won.
 
 In 2023, End&#12539;コッカー shared preparations for an RPG event and announced a postponement. In 2024, End&#12539;コッカー announced the RPG beta Disturbed Memories, and Pluto gave feedback after taking part in preliminary testing.
+
+In July 2023, タケ announced that Ace Monorail had adopted a logo and invited station name suggestions for Line 1. [Logo announcement and call for station names](https://discord.com/channels/737538781024092170/779569416438415421/1124669241182920714)
 
 In summer 2023, タケ announced the first anniversary festival organized by Ace Monorail Take Company and thanked the people who helped expand the line. In 2024, タケ announced the company’s second anniversary festival.
 
@@ -72,6 +96,8 @@ For the 2023–2024 New Year event, the Ace Monorail Take Company team (Take no 
 On January 1, 2024, タケ reported that the New Year’s celebration had ended and that good-luck charms had been handed out. [New Year celebration report](https://discord.com/channels/737538781024092170/779569416438415421/1191037263002488872)
 
 In spring 2024, sekisei announced the start time and contact details for Ace Guesser v2. In summer, Pluto announced a parkour event.
+
+At the summer festival on August 17, 2024, sekisei explained the fishing competition’s rules and team assignments and announced its start. sh introduced the Ultra Item Hunt and explained how to join, then shared a video of the official broadcast the next day. はっ explained how the Minimal Abstraction Message Relay game would run and how its teams were divided.
 
 タケ made the poster for Ace Summer Festival in 2024. For the year-end “つなぐASF” event, taibon helped with the New Year countdown device. タケ reported the end of the full program in January 2025. [Poster announcement](https://discord.com/channels/737538781024092170/774152638450237460/1274157736015429744) [Countdown announcement](https://discord.com/channels/737538781024092170/774152638450237460/1319967701808189493) [Closing report](https://discord.com/channels/737538781024092170/774152638450237460/1325487116419076129)
 
@@ -99,13 +125,25 @@ In August 2026, sekisei and ふーや announced a jointly hosted online CTF trea
 
 ## Building and joint projects
 
+In March 2022, タケ asked for help leveling the ground for a ground artwork. On April 1, タケ reported that the artwork was complete and thanked the people who helped level the ground or provided materials. [Call for help leveling the ground](https://discord.com/channels/737538781024092170/779569416438415421/957990944374927420) [Ground artwork completion report](https://discord.com/channels/737538781024092170/779569416438415421/959368128943489085)
+
 In June 2022, yanyan_fafnir explained how to enter the floating-island contest that led to work on the former lobby and how entries would be presented at judging. The announcement named はっ and members with the supporter role or above as judges. [Contest entry rules](https://discord.com/channels/737538781024092170/774152638450237460/982990352422162482) [Judging session announcement](https://discord.com/channels/737538781024092170/774152638450237460/986294242848669756)
 
 In July 2022, Maro led construction of the former lobby and reported its completion. The build logs from the old Discord channel thanked BM_yurikun for landscaping and _BE_ChalkyMink87 for embedding ore in the foundation. KOTA-SAN set up a place to share updates on the build.
 
-From October 2022 to January 2023, players worked on draining an ocean monument and building a guardian facility while also excavating for a wither skeleton facility. According to the old Discord work records, taka8621 opened a project channel. Moon_666 organized the drainage and excavation, replenished materials, and worked in an assigned area. Yukke called for help with the excavation and prepared a route to the fortress.
+On September 4, 2022, NCGpotechi reported that the castle’s exterior was complete and open to visitors. Work on the interior was still in progress at the time. NCGpotechi thanked the people who donated materials. [Castle exterior completion report](https://discord.com/channels/737538781024092170/779569416438415421/1015951272916045934)
+
+From October 2022 to January 2023, players worked on draining an ocean monument and building a guardian facility while also excavating for a wither skeleton facility. According to the old Discord work records, taka8621 opened a project channel. Moon_666 organized the drainage and excavation, replenished materials, and worked in an assigned area. Yukke called for help with the excavation and prepared a route to the fortress. [Call for Nether excavation volunteers](https://discord.com/channels/737538781024092170/779569416438415421/1053305090922004560)
 
 taibon0727 provided materials including glass, a place for travel boats, and equipment for working with sand. SPdari supplied sand. UtaTheIrasutā worked on filling in lava and set up a potion brewing station. nnn_percent helped with sand for filling, and あすたん helped excavate. SPdari also thanked Buraki for showing people how to help.
+
+On October 20, 2022, ジェスター invited newcomers to apply to receive a former in-game home and items for free. On October 23, ジェスター reported closing the offer after receiving no applications. [Giveaway invitation](https://discord.com/channels/737538781024092170/779569416438415421/1032634176064725073) [Closure of the offer](https://discord.com/channels/737538781024092170/779569416438415421/1033625009085743114)
+
+In November 2022, あすたん invited people to help build the Asutan Kingdom. [Call for help with the kingdom build](https://discord.com/channels/737538781024092170/779569416438415421/1041014423223009372)
+
+That December, ジェスター (then posting as Dōke Shinshi@Jester Sub) reported working with Buraki to build a resort-style watermelon farm with a beach. [Watermelon farm report](https://discord.com/channels/737538781024092170/779569416438415421/1048866874760364042)
+
+In the old Discord records for the hot-spring inn project, project leader edamameRex_java recruited members and ゆり announced opportunities to help with construction or materials.
 
 At the end of December 2022, edamameRex_java reported that construction of the hot-spring inn had finished, according to the original project records.
 
