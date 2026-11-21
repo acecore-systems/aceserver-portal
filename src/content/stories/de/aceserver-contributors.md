@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:679c60d2ef701cbc60e98c21107cac53e4767025c1863bd44f834a1f6f8b9394
+sourceHash: sha256:d381819698fb333a51c0522c75b6ac8cc71666e5eaf9e9a8f54b64ffdfdd65c3
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -191,7 +191,7 @@ Im Juli 2025 berichtete End&#12539;コッカー, einen Vorschlag für das Sommer
 
 In der Ankündigung zum Sommerfest 2025 wurde センチュリーズ für die Vorbereitung und Bereitstellung des Feuerwerks genannt. Der Dank nach der Veranstaltung nannte セガ, リンゴポン, あまぎ, 新人, ジェスター, ホステッチ und イザイザ für das Feuerwerk sowie コッカー und sh für die Gesamtkoordination. エント betreute den Rundkurs, moon und セキセイ das Golfspiel. ハルビィ, セキセイ und sh betreuten das Survival-PvP, はっ und sh das Sonderereignis. [Originalbeitrag](https://discord.com/channels/737538781024092170/774152638450237460/1408390549370572880) [Dank nach der Veranstaltung](https://discord.com/channels/737538781024092170/779569416438415421/1411394624026710166)
 
-Am 12. August 2025 teilte &#12415;&#12389;&#12364;&#12397; einen vorläufigen Streckenplan der vier Linien der &#34746;&#36794;-Bahn und bat um Namensvorschläge. &#12454;&#12455;&#12531;&#12486;&#12451; (Hosttech255) reichte Vorschläge ein. In den Ankündigungen am 30. August und 7. September nannte &#12415;&#12389;&#12364;&#12397; die Namen &#20959;&#20958;&#32218; (&#12392;&#12367;&#12365;&#12379;&#12435;), &#20116;&#12484;&#23798;&#25903;&#32218;, &#21512;&#27700;&#28304;&#25903;&#32218; und &#27700;&#26332;&#25903;&#32218;.
+Am 12. August 2025 bat &#12415;&#12389;&#12364;&#12397; um Namensvorschläge für vier Linien der &#34746;&#36794;-Bahn. Dazu teilte &#12415;&#12389;&#12364;&#12397; einen vorläufigen Streckenplan und vier Bilder, die die Linien anhand von Screenshots der Bahnhöfe und geplanter Bahnhofsstandorte vorstellten. &#12454;&#12455;&#12531;&#12486;&#12451; (Hosttech255) reichte Vorschläge ein. In den Ankündigungen am 30. August und 7. September nannte &#12415;&#12389;&#12364;&#12397; die Namen &#20959;&#20958;&#32218; (&#12392;&#12367;&#12365;&#12379;&#12435;), &#20116;&#12484;&#23798;&#25903;&#32218;, &#21512;&#27700;&#28304;&#25903;&#32218; und &#27700;&#26332;&#25903;&#32218;.
 
 Im September 2025 stellte End&#12539;コッカー die Arbeit der vier Bereiche Eisenbahn, Veranstaltungen, Bauen und gemeinsame Arbeiten vor und warb um Mitglieder für das Belebungskomitee von Aceserver.
 

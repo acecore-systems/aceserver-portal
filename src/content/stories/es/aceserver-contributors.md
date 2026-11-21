@@ -2,7 +2,7 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:679c60d2ef701cbc60e98c21107cac53e4767025c1863bd44f834a1f6f8b9394
+sourceHash: sha256:d381819698fb333a51c0522c75b6ac8cc71666e5eaf9e9a8f54b64ffdfdd65c3
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -191,7 +191,7 @@ En julio de 2025, End&#12539;コッカー informó de que había preparado una p
 
 El anuncio del festival de verano de 2025 mencionó a センチュリーズ por la preparación y provisión del espectáculo de fuegos artificiales. El agradecimiento posterior nombró a セガ, リンゴポン, あまぎ, 新人, ジェスター, ホステッチ e イザイザ por los fuegos artificiales, y a コッカー y sh por la coordinación general. エント se encargó del circuito y moon y セキセイ del golf. ハルビィ, セキセイ y sh se encargaron del PvP de supervivencia, y はっ y sh del evento especial. [Publicación original](https://discord.com/channels/737538781024092170/774152638450237460/1408390549370572880) [Agradecimiento posterior](https://discord.com/channels/737538781024092170/779569416438415421/1411394624026710166)
 
-El 12 de agosto de 2025, &#12415;&#12389;&#12364;&#12397; compartió un mapa provisional de las cuatro líneas del ferrocarril &#34746;&#36794; y pidió ideas de nombres. &#12454;&#12455;&#12531;&#12486;&#12451; (Hosttech255) propuso candidatos. En anuncios del 30 de agosto y del 7 de septiembre, &#12415;&#12389;&#12364;&#12397; presentó los nombres &#20959;&#20958;&#32218; (&#12392;&#12367;&#12365;&#12379;&#12435;), &#20116;&#12484;&#23798;&#25903;&#32218;, &#21512;&#27700;&#28304;&#25903;&#32218; y &#27700;&#26332;&#25903;&#32218;.
+El 12 de agosto de 2025, &#12415;&#12389;&#12364;&#12397; pidió propuestas de nombres para cuatro líneas del ferrocarril &#34746;&#36794;. La convocatoria incluía un mapa provisional de las líneas y cuatro imágenes que las presentaban con capturas de las estaciones y de los lugares previstos para construirlas. &#12454;&#12455;&#12531;&#12486;&#12451; (Hosttech255) propuso candidatos. En anuncios del 30 de agosto y del 7 de septiembre, &#12415;&#12389;&#12364;&#12397; presentó los nombres &#20959;&#20958;&#32218; (&#12392;&#12367;&#12365;&#12379;&#12435;), &#20116;&#12484;&#23798;&#25903;&#32218;, &#21512;&#27700;&#28304;&#25903;&#32218; y &#27700;&#26332;&#25903;&#32218;.
 
 En septiembre de 2025, End&#12539;コッカー presentó el trabajo de las cuatro áreas de ferrocarriles, eventos, construcción y trabajos compartidos e invitó a incorporarse al Comité de Revitalización de Aceserver.
 

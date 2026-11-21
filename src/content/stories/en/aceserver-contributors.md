@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:679c60d2ef701cbc60e98c21107cac53e4767025c1863bd44f834a1f6f8b9394
+sourceHash: sha256:d381819698fb333a51c0522c75b6ac8cc71666e5eaf9e9a8f54b64ffdfdd65c3
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -191,7 +191,7 @@ In July 2025, End&#12539;コッカー reported preparing a proposal for the summ
 
 The 2025 summer festival announcement named センチュリーズ for preparing and providing the fireworks display. The post-event thanks named セガ, リンゴポン, あまぎ, 新人, ジェスター, ホステッチ and イザイザ for the fireworks, and コッカー and sh for overall coordination. エント worked on the circuit, and moon and セキセイ on golf. ハルビィ, セキセイ and sh worked on survival PvP, and はっ and sh on the special event. [Original post](https://discord.com/channels/737538781024092170/774152638450237460/1408390549370572880) [Post-event thanks](https://discord.com/channels/737538781024092170/779569416438415421/1411394624026710166)
 
-On August 12, 2025, &#12415;&#12389;&#12364;&#12397; shared a provisional map for the four &#34746;&#36794; Railway lines and invited people to suggest names. &#12454;&#12455;&#12531;&#12486;&#12451; (Hosttech255) proposed candidates. In announcements on August 30 and September 7, &#12415;&#12389;&#12364;&#12397; named the lines &#20959;&#20958;&#32218; (&#12392;&#12367;&#12365;&#12379;&#12435;), &#20116;&#12484;&#23798;&#25903;&#32218;, &#21512;&#27700;&#28304;&#25903;&#32218;, and &#27700;&#26332;&#25903;&#32218;.
+On August 12, 2025, &#12415;&#12389;&#12364;&#12397; invited people to suggest names for four &#34746;&#36794; Railway lines. The call included a provisional route map and four images introducing the lines with screenshots of stations and planned station sites. &#12454;&#12455;&#12531;&#12486;&#12451; (Hosttech255) proposed candidates. In announcements on August 30 and September 7, &#12415;&#12389;&#12364;&#12397; named the lines &#20959;&#20958;&#32218; (&#12392;&#12367;&#12365;&#12379;&#12435;), &#20116;&#12484;&#23798;&#25903;&#32218;, &#21512;&#27700;&#28304;&#25903;&#32218;, and &#27700;&#26332;&#25903;&#32218;.
 
 In September 2025, End&#12539;コッカー introduced the work of four departments devoted to railways, events, building, and work projects, and invited people to join the Aceserver Revitalization Committee.
 
