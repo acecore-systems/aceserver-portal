@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:0283bb17ffaa0bf2c2a08816acb62244ed4358edc31afbc21dc212a3d2ea400f
+sourceHash: sha256:ef9019f491a0e3f628fc8641bff79de3765a243100c37058d4638c61a4a9a3de
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -201,6 +201,16 @@ For the concept server contest in autumn 2025, sekisei prepared a submission tem
 
 Other submissions included Mugi’s Curse You, Mythic and ATM, 山田’s robots, タケ’s Let’s Take the Ace Train, Defend Maikura City by &#12454;&#12455;&#12531;&#12486;&#12451; (Hosttech255), Moon\_666’s high-difficulty Ender Dragon battle, sekisei’s seasonal building, and sh’s Chef’s Whim Server.
 
+On January 17, 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; explained how to use the submission template and show support with reactions in the Discord channel for concept server proposals. [Proposal template and reactions guide](https://discord.com/channels/737538781024092170/1461900550768562206/1461900938460663880)
+
+- On January 20, End&#12539;コッカー proposed “Nc2”, combining currency, trade, and territory. [Original proposal](https://discord.com/channels/737538781024092170/1461900550768562206/1463071683639509026)
+- On February 16, sekisei proposed “&#12360;&#12540;&#39894;&#12452;&#12505;&#12531;&#12488;&#12524;&#12540;&#12473;”, a contest to complete the most tasks with a shared goal for everyone to work toward. [Original proposal](https://discord.com/channels/737538781024092170/1461900550768562206/1472807672754602147)
+- On March 6, &#12486;&#12451;&#12512;&#12540; proposed making minigame maps for Werewolf and Cops and Robbers. [Original proposal](https://discord.com/channels/737538781024092170/1461900550768562206/1479450138727682179)
+- On March 6, PillowKebap proposed “&#12450;&#12463;&#12525;&#12496;&#12483;&#12488;&#12473;&#12490;&#12452;&#12497;&#12540;&#12471;&#12540;&#12474;&#12531;&#50;”, a PvP concept with regular tournaments. [Original proposal](https://discord.com/channels/737538781024092170/1461900550768562206/1479472030058283292)
+- On April 2, &#26666;&#24335;&#20250;&#31038;&#24093;&#29579; proposed “&#12456;&#12452;&#12503;&#12522;&#12523;&#12501;&#12540;&#12523;&#50;&#48;&#50;&#54;”, a concept about living without an inventory. [Original proposal](https://discord.com/channels/737538781024092170/1461900550768562206/1489235862704230554)
+- On July 28, &#29792;&#22856; proposed “&#32076;&#28168;&#21270;&#12375;&#12383;&#65;&#99;&#101;”, combining town building and accumulating assets. [Original proposal](https://discord.com/channels/737538781024092170/1461900550768562206/1531476474219987094)
+- On August 1, &#29792;&#22856; proposed “&#12480;&#12502;&#12523;&#12524;&#12452;&#12489;&#12363;&#12425;&#26449;&#20154;&#12434;&#23432;&#12428;&#65281;”, a concept focused on protecting villagers from raids. [Original proposal](https://discord.com/channels/737538781024092170/1461900550768562206/1532951548991373332)
+
 In February and August 2026, sh introduced the Aceserver Revitalization Committee’s event planning and unofficial promotional activities and invited people to join.
 
 In February 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; asked players to submit photos for social media posts. LuMiSIA\_&#26376;&#31070;&#24736;&#33673;, &#35199;&#26408;&#37326;&#28716;&#36032;&#27663;, Amagi\_467, Moon\_666, CP-sinzin, Yukke, and あすたん submitted photos for consideration for social media posts.
@@ -380,5 +390,7 @@ In March 2026, あすたん posted the resource server rules. In July, sekisei p
 In July 2026, sekisei announced the first technical talk about servers and the Internet. [Technical talk announcement](https://discord.com/channels/737538781024092170/774152638450237460/1532641413500633108)
 
 From September to October 2026, End&#12539;コッカー organized the Minecraft joining guide of the time so players could find the rules, introductions, and connection resources. End&#12539;コッカー also listed where to check the rules for each world.
+
+On November 11, 2026, Gui directed players with connection, verification, or Discord linking problems to the official wiki’s FAQ and joining guide. If the problem persisted, Gui asked them to contact staff through the questions channel and include their device, whether they used Java or Bedrock Edition, the error, and the steps they had tried. [Troubleshooting and contacting staff](https://discord.com/channels/737538781024092170/1569771434945806476/1569771922676252713)
 
 These activities are only some of the contributions people have made. Thank you to everyone who has helped. For current joining instructions and contact information, visit the [joining guide](https://asv-wiki.acecore.net/article/in/) and [contact guide](https://asv-wiki.acecore.net/article/application-method/).

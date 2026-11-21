@@ -2,7 +2,7 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:0283bb17ffaa0bf2c2a08816acb62244ed4358edc31afbc21dc212a3d2ea400f
+sourceHash: sha256:ef9019f491a0e3f628fc8641bff79de3765a243100c37058d4638c61a4a9a3de
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -201,6 +201,16 @@ Para el concurso de servidores temáticos del otoño de 2025, sekisei preparó u
 
 Otras propuestas fueron Maldito Mythic y ATM de Mugi, los robots de 山田, Viajemos en el tren Ace de タケ, Defiende la ciudad de Maikura de &#12454;&#12455;&#12531;&#12486;&#12451; (Hosttech255), el combate de dificultad elevada contra el dragón del End de Moon\_666, la construcción por temporadas de sekisei y El servidor a capricho del chef de sh.
 
+El 17 de enero de 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; explicó cómo usar la plantilla de propuestas y mostrar apoyo mediante reacciones en el canal de Discord para propuestas de servidores temáticos. [Plantilla de propuestas y guía de reacciones](https://discord.com/channels/737538781024092170/1461900550768562206/1461900938460663880)
+
+- El 20 de enero, End&#12539;コッカー propuso «Nc2», que combinaba moneda, comercio y territorio. [Propuesta original](https://discord.com/channels/737538781024092170/1461900550768562206/1463071683639509026)
+- El 16 de febrero, sekisei propuso «&#12360;&#12540;&#39894;&#12452;&#12505;&#12531;&#12488;&#12524;&#12540;&#12473;», una competición por completar el mayor número de retos, con un objetivo común para todos. [Propuesta original](https://discord.com/channels/737538781024092170/1461900550768562206/1472807672754602147)
+- El 6 de marzo, &#12486;&#12451;&#12512;&#12540; propuso crear mapas de minijuegos para el Hombre Lobo y Policías y Ladrones. [Propuesta original](https://discord.com/channels/737538781024092170/1461900550768562206/1479450138727682179)
+- El 6 de marzo, PillowKebap propuso «&#12450;&#12463;&#12525;&#12496;&#12483;&#12488;&#12473;&#12490;&#12452;&#12497;&#12540;&#12471;&#12540;&#12474;&#12531;&#50;», un concepto de PvP con torneos periódicos. [Propuesta original](https://discord.com/channels/737538781024092170/1461900550768562206/1479472030058283292)
+- El 2 de abril, &#26666;&#24335;&#20250;&#31038;&#24093;&#29579; propuso «&#12456;&#12452;&#12503;&#12522;&#12523;&#12501;&#12540;&#12523;&#50;&#48;&#50;&#54;», un concepto de juego sin inventario. [Propuesta original](https://discord.com/channels/737538781024092170/1461900550768562206/1489235862704230554)
+- El 28 de julio, &#29792;&#22856; propuso «&#32076;&#28168;&#21270;&#12375;&#12383;&#65;&#99;&#101;», que combinaba la construcción de ciudades con la acumulación de activos. [Propuesta original](https://discord.com/channels/737538781024092170/1461900550768562206/1531476474219987094)
+- El 1 de agosto, &#29792;&#22856; propuso «&#12480;&#12502;&#12523;&#12524;&#12452;&#12489;&#12363;&#12425;&#26449;&#20154;&#12434;&#23432;&#12428;&#65281;», un concepto centrado en proteger a los aldeanos de las incursiones. [Propuesta original](https://discord.com/channels/737538781024092170/1461900550768562206/1532951548991373332)
+
 En febrero y agosto de 2026, sh presentó las actividades de organización de eventos y difusión no oficial del Comité de Revitalización de Aceserver, y buscó nuevos miembros.
 
 En febrero de 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; solicitó fotos para publicaciones promocionales en redes sociales. LuMiSIA\_&#26376;&#31070;&#24736;&#33673;, &#35199;&#26408;&#37326;&#28716;&#36032;&#27663;, Amagi\_467, Moon\_666, CP-sinzin, Yukke y あすたん enviaron fotos para que se consideraran para publicaciones promocionales en redes sociales.
@@ -380,5 +390,7 @@ En marzo de 2026, あすたん publicó las reglas del servidor de recursos. En 
 En julio de 2026, sekisei anunció la primera charla técnica sobre los servidores e Internet. [Anuncio de la charla técnica](https://discord.com/channels/737538781024092170/774152638450237460/1532641413500633108)
 
 Entre septiembre y octubre de 2026, End&#12539;コッカー organizó la guía de acceso a Minecraft de la época para que fuera más fácil encontrar las reglas, las presentaciones y los recursos de conexión. También reunió los lugares donde consultar las reglas de cada mundo.
+
+El 11 de noviembre de 2026, Gui remitió a los jugadores con problemas de conexión, verificación o vinculación con Discord a las preguntas frecuentes y la guía de acceso de la wiki oficial. Si el problema persistía, les indicó que acudieran al canal de preguntas al equipo e incluyeran el dispositivo, si usaban Java Edition o Bedrock Edition, el error y los pasos que habían probado. [Guía para problemas y consultas al equipo](https://discord.com/channels/737538781024092170/1569771434945806476/1569771922676252713)
 
 Estas actividades son solo una parte de las contribuciones recibidas. Gracias a todas las personas que han ayudado. Consulta la [guía para participar](https://asv-wiki.acecore.net/article/in/) y [guía de contacto](https://asv-wiki.acecore.net/article/application-method/) para conocer cómo participar y contactar actualmente.

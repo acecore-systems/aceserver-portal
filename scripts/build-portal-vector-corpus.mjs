@@ -125,7 +125,7 @@ export async function buildPortalVectorCorpus({
     chunks,
   }
 
-  const serializedCorpus = `${JSON.stringify(corpus, null, 2)}\n`
+  const serializedCorpus = `${JSON.stringify(corpus)}\n`
   const corpusBytes = Buffer.byteLength(serializedCorpus, 'utf8')
   if (corpusBytes > PORTAL_MAX_CORPUS_BYTES) {
     throw new Error(
