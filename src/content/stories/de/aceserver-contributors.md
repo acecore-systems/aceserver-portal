@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:b9ba4579880a4a676e15dca28c67d58bcd31ac085e5dfa0560a1ae7073763a08
+sourceHash: sha256:769049f3fd2d51e118802f4ac2eee46177180aa09203f850817bb22cecad8414
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-21T00:00:00+09:00
 tags:
@@ -123,6 +123,8 @@ Ende 2024 stellte タケ ein Ace-Monorail-Quiz und teilte den Abstimmungsschluss
 
 Im Januar 2025 wurden Wenti (Hosttech255), Pluto und あすたん als Unterstützer für Veranstaltungen vorgestellt. [Ankündigung zur Veranstaltungsunterstützung](https://discord.com/channels/737538781024092170/774152638450237460/1323911696237990039)
 
+Im März 2025 bat sh um Hilfe beim Schreiben und Schneiden eines Hochformatvideos über Aceserver. End&#12539;コッカー schlug einen Drehplan vor, der Bauwerke zeigen sollte, und entwarf einen Sprechertext.
+
 Im Sommer 2025 begann End&#12539;コッカー eine Diskussion über ein Among-Us-Turnier. Pluto schlug ein Format vor und sh31415 eine Möglichkeit, Teilnehmer zu gewinnen.
 
 In der Ankündigung zum Sommerfest 2025 wurde センチュリーズ für die Vorbereitung und Bereitstellung des Feuerwerks genannt. Der Dank nach der Veranstaltung nannte セガ, リンゴポン, あまぎ, 新人, ジェスター, ホステッチ und イザイザ für das Feuerwerk sowie コッカー und sh für die Gesamtkoordination. エント betreute den Rundkurs, moon und セキセイ das Golfspiel. ハルビィ, セキセイ und sh betreuten das Survival-PvP, はっ und sh das Sonderereignis. [Originalbeitrag](https://discord.com/channels/737538781024092170/774152638450237460/1408390549370572880) [Dank nach der Veranstaltung](https://discord.com/channels/737538781024092170/779569416438415421/1411394624026710166)
@@ -190,6 +192,10 @@ Im Juli 2023 schrieb und veröffentlichte あすたん Befehlsanleitungen für L
 Im September 2023 wurde bekannt gegeben, dass あすたん zum Serverteam kam und Taka die Systembetreuung übernahm. Im Mai 2024 kündigte はっ an, dass sh und sekisei den Nutzersupport für Systemfragen übernommen hatten. [Ernennungen von 2023](https://discord.com/channels/737538781024092170/774152638450237460/1151168895076548669) [Supportrollen von 2024](https://discord.com/channels/737538781024092170/774152638450237460/1236592686253867008)
 
 Im Januar 2024 erklärte あすたん die Teilnahmeregeln und das Einreichen von Rekorden im Ace Server Leaderboard Archive (ASLA), das Rekorde von Aceserver sammelte. あすたん veröffentlichte auch Listen zum Abbau, zu Statistiken und zu Barren. キツネコ, Feruno und Taiyaki reichten Statistiken im Beitragskanal ein. Tabekirareta Potechi schlug Kandidaten für Rekorde wie die erste Burg vor.
+
+Im Juli 2024 dokumentierte taka8621 das Vorgehen zum Zurücksetzen der Welt auf dem Ressourcenserver und teilte es mit dem Serverteam.
+
+Im Oktober 2024 erstellte sekisei eine Anleitung zur Nutzung des Portal-Plugins Advanced Portals mit Minecraft 1.21 und späteren Versionen. Im Dezember fasste sekisei zusammen, wo sich die Portale auf dem Server befanden.
 
 Von Ende Oktober bis Anfang November 2025 ordnete ゆり die Regeln und veröffentlichte sie als einzelne Beiträge im offiziellen Discord-Regelforum. Die Beiträge behandelten die allgemeinen Regeln, den Survival-Server, Inhalte, Saisons, die Einrichtung von Konzeptservern, die Community und Discord. [Beitrag zu den allgemeinen Regeln](https://discord.com/channels/737538781024092170/1433831969816449064/1433831969816449064) [Beitrag zu den Community-Regeln](https://discord.com/channels/737538781024092170/1433830521238061227/1433830521238061227) [Beitrag zu den Discord-Regeln](https://discord.com/channels/737538781024092170/1433957818674970654/1433957818674970654)
 
