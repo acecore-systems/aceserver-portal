@@ -2,7 +2,7 @@
 title: As pessoas que apoiaram o Aceserver
 description: Conheça quem ajudou o Aceserver pelos retratos de skins do Minecraft, relembre as atividades e confira o roteiro de eventos e propostas.
 translationOf: aceserver-contributors
-sourceHash: sha256:a8cef8b78f82364dc376a8cd6297476fcac520935088b89e2c59029034c3c6f7
+sourceHash: sha256:7d109a3016f02c3e5fe56219c7e895a4597eba7acb95a38b38c76d2517b87f25
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -279,7 +279,9 @@ Em julho de 2022, Maro liderou a construção do lobby antigo e informou sua con
 
 Em agosto de 2022, \_BE\_Kuten2021110 começou a delimitar com terra a área prevista para a praça provisoriamente chamada Ace e pediu ajuda na construção e no projeto do estádio. Também compartilhou um esboço à mão com um percurso ao redor da praça, estábulos para cavalos e espaço para barracas. Também preparou um projeto preliminar para os estábulos e compartilhou quatro capturas de tela mostrando o exterior e o interior. &#12525;&#12483;&#12463;&#12384;&#12424;&#12316; (BlissfulRook\_BE\_) mostrou uma foto de estábulos como referência e sugeriu um telhado triangular de ardósia. No dia seguinte, \_BE\_Kuten2021110 compartilhou uma imagem da estrutura que montou em um mundo de testes.
 
-Em agosto de 2022, Yukke informou que a sala de espera do antigo local da liga PvP estava quase pronta. ゆり informou que os assentos do terraço estavam concluídos e compartilhou uma foto.
+Em agosto de 2022, Yukke informou no antigo canal da liga PvP no Discord que a sala de espera estava quase pronta. Em 15 de agosto, KOTA-SAN usou o mesmo canal para convidar os participantes a dar opiniões sobre a liga PvP. Em 17 de agosto, informou que havia construído uma arena subterrânea. Em 24 de agosto, ゆり compartilhou quatro imagens do palco do LuMiSIA Dome e explicou como a posição das paredes e dos cactos mudava a maneira de se movimentar e jogar. Em 28 de agosto, ゆり informou que os assentos do terraço estavam concluídos e compartilhou uma foto mostrando fileiras de assentos cobertos.
+
+Em 16 de setembro, &#12450;&#12510;&#12484; informou que havia construído as estruturas básicas da entrada, do palco, da sala de espera dos jogadores, das arquibancadas, da cabine de narração e dos corredores, e que começaria a decorá-las.
 
 Em agosto de 2022, taka8621 reuniu em um guia as instalações e as pessoas responsáveis. O guia da época registrou as seguintes contribuições.
 

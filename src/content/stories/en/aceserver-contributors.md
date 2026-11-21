@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:a8cef8b78f82364dc376a8cd6297476fcac520935088b89e2c59029034c3c6f7
+sourceHash: sha256:7d109a3016f02c3e5fe56219c7e895a4597eba7acb95a38b38c76d2517b87f25
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -279,7 +279,9 @@ In July 2022, Maro led construction of the former lobby and reported its complet
 
 In August 2022, \_BE\_Kuten2021110 began marking out the site for the project tentatively called Ace Plaza with dirt and asked for help with construction and stadium design. They also shared a hand-drawn layout showing a course around the plaza, horse stables, and space for stalls. They also made a preliminary design for the stables and shared four screenshots showing the exterior and interior. &#12525;&#12483;&#12463;&#12384;&#12424;&#12316; (BlissfulRook\_BE\_) shared a photo of stables as a reference and suggested a triangular deepslate roof. The next day, \_BE\_Kuten2021110 shared an image of the framework they built in a test world.
 
-In August 2022, Yukke reported that the waiting room at the old PvP league venue was nearly complete. ゆり reported that the terrace seating was complete and shared a photo.
+In August 2022, Yukke reported in the former PvP league Discord channel that the waiting room was nearly complete. On August 15, KOTA-SAN used the same channel to invite feedback on the PvP league. On August 17, KOTA-SAN reported building an underground arena. On August 24, ゆり shared four images of the stage at LuMiSIA Dome and explained how the placement of walls and cacti changed how players moved and played. On August 28, ゆり reported that the terrace seating was complete and shared a photo showing rows of covered seats.
+
+On September 16, &#12450;&#12510;&#12484; reported building the basic structures for the entrance, stage, players’ waiting room, spectator seats, commentary booth, and corridors, with decoration to follow.
 
 In August 2022, taka8621 put together a guide to the facilities and the people responsible for them. It recorded the following contributions.
 

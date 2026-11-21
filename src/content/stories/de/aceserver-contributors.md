@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:a8cef8b78f82364dc376a8cd6297476fcac520935088b89e2c59029034c3c6f7
+sourceHash: sha256:7d109a3016f02c3e5fe56219c7e895a4597eba7acb95a38b38c76d2517b87f25
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -279,7 +279,9 @@ Im Juli 2022 leitete Maro den Bau der früheren Lobby und meldete den Abschluss.
 
 Im August 2022 begann \_BE\_Kuten2021110, das Gelände für den Platz mit dem Arbeitstitel Ace Plaza mit Erde abzustecken, und suchte Hilfe beim Bau und beim Entwurf des Stadions. Die Person teilte auch einen handgezeichneten Lageplan mit einer Strecke rund um den Platz, Pferdeställen und Platz für Verkaufsstände. Die Person erstellte außerdem einen vorläufigen Entwurf für die Ställe und teilte vier Screenshots von außen und innen. &#12525;&#12483;&#12463;&#12384;&#12424;&#12316; (BlissfulRook\_BE\_) zeigte ein Foto von Ställen als Vorlage und schlug ein dreieckiges Dach aus Tiefenschiefer vor. Am nächsten Tag teilte \_BE\_Kuten2021110 ein Bild des eigenen Grundgerüsts aus einer Testwelt.
 
-Im August 2022 berichtete Yukke, dass der Warteraum am früheren Austragungsort der PvP-Liga fast fertig war. ゆり meldete, dass die Terrassenplätze fertig waren, und teilte ein Foto.
+Im August 2022 berichtete Yukke im damaligen Discord-Kanal der PvP-Liga, dass der Warteraum fast fertig war. Am 15. August bat KOTA-SAN im selben Kanal um Rückmeldungen zur PvP-Liga. Am 17. August berichtete KOTA-SAN, eine unterirdische Arena gebaut zu haben. Am 24. August teilte ゆり vier Bilder der Bühne im LuMiSIA Dome und erklärte, wie die Anordnung der Wände und Kakteen die Laufwege und die Spielweise veränderte. Am 28. August meldete ゆり, dass die Terrassenplätze fertig waren, und teilte ein Foto mit Reihen überdachter Sitzplätze.
+
+Am 16. September berichtete &#12450;&#12510;&#12484;, die Grundstrukturen für den Eingang, die Bühne, den Warteraum der Spieler, die Zuschauerplätze, die Kommentatorenkabine und die Gänge gebaut zu haben. Als Nächstes wollte &#12450;&#12510;&#12484; mit der Dekoration beginnen.
 
 Im August 2022 stellte taka8621 die Einrichtungen und ihre Zuständigen in einem Leitfaden zusammen. Darin waren die folgenden Beiträge verzeichnet.
 

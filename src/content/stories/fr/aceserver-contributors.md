@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:a8cef8b78f82364dc376a8cd6297476fcac520935088b89e2c59029034c3c6f7
+sourceHash: sha256:7d109a3016f02c3e5fe56219c7e895a4597eba7acb95a38b38c76d2517b87f25
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -279,7 +279,9 @@ En juillet 2022, Maro a dirigé la construction de l’ancien hall d’accueil e
 
 En août 2022, \_BE\_Kuten2021110 a commencé à délimiter avec de la terre le site de la place provisoirement appelée Ace et a demandé de l’aide pour la construction et la conception du stade. \_BE\_Kuten2021110 a aussi partagé un plan dessiné à la main montrant un parcours autour de la place, des écuries et un espace pour les stands. Cette personne a aussi préparé un premier plan d’écuries et partagé quatre captures d’écran montrant l’extérieur et l’intérieur. &#12525;&#12483;&#12463;&#12384;&#12424;&#12316; (BlissfulRook\_BE\_) a montré une photo d’écuries comme référence et proposé un toit triangulaire en ardoise des abîmes. Le lendemain, \_BE\_Kuten2021110 a partagé une image de l’ossature que cette personne avait construite dans un monde de test.
 
-En août 2022, Yukke a indiqué que la salle d’attente de l’ancien site de la ligue PvP était presque terminée. ゆり a annoncé la fin de l’aménagement des places en terrasse et a partagé une photo.
+En août 2022, Yukke a indiqué dans l’ancien salon Discord de la ligue PvP que la salle d’attente était presque terminée. Le 15 août, KOTA-SAN a utilisé le même salon pour inviter les membres à donner leur avis sur la ligue PvP. Le 17 août, KOTA-SAN a annoncé avoir construit une arène souterraine. Le 24 août, ゆり a partagé quatre images de la scène du LuMiSIA Dome et expliqué comment la disposition des murs et des cactus modifiait les déplacements et la façon de jouer. Le 28 août, ゆり a annoncé la fin de l’aménagement des places en terrasse et partagé une photo montrant des rangées de sièges couverts.
+
+Le 16 septembre, &#12450;&#12510;&#12484; a indiqué avoir construit les structures de base de l’entrée, de la scène, de la salle d’attente des joueurs, des tribunes, de la cabine de commentaires et des couloirs. La décoration était la prochaine étape.
 
 En août 2022, taka8621 a dressé la liste des installations et des personnes qui en avaient la charge. Le guide de l’époque mentionnait les contributions suivantes.
 

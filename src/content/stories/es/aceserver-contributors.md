@@ -2,7 +2,7 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:a8cef8b78f82364dc376a8cd6297476fcac520935088b89e2c59029034c3c6f7
+sourceHash: sha256:7d109a3016f02c3e5fe56219c7e895a4597eba7acb95a38b38c76d2517b87f25
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -279,7 +279,9 @@ En julio de 2022, Maro dirigió la construcción del antiguo vestíbulo y anunci
 
 En agosto de 2022, \_BE\_Kuten2021110 empezó a marcar con tierra el perímetro del terreno previsto para la plaza provisionalmente llamada Ace e invitó a colaborar en la construcción y el diseño del estadio. También compartió un plano a mano alzada con un circuito alrededor de la plaza, establos para caballos y un espacio para puestos. También preparó un diseño preliminar para los establos y compartió cuatro capturas que mostraban el exterior y el interior. &#12525;&#12483;&#12463;&#12384;&#12424;&#12316; (BlissfulRook\_BE\_) mostró una foto de unos establos como referencia y propuso un tejado triangular de pizarra profunda. Al día siguiente, \_BE\_Kuten2021110 compartió una imagen de la estructura que había construido en un mundo de pruebas.
 
-En agosto de 2022, Yukke informó que la sala de espera del antiguo recinto de la liga PvP estaba casi terminada. ゆり informó que los asientos de la terraza estaban listos y compartió una foto.
+En agosto de 2022, Yukke informó en el antiguo canal de Discord de la liga PvP de que la sala de espera estaba casi terminada. El 15 de agosto, KOTA-SAN usó el mismo canal para invitar a enviar comentarios sobre la liga PvP. El 17 de agosto, informó que había construido una arena subterránea. El 24 de agosto, ゆり compartió cuatro imágenes del escenario del LuMiSIA Dome y explicó cómo la colocación de muros y cactus cambiaba la forma de moverse y jugar. El 28 de agosto, ゆり informó que los asientos de la terraza estaban listos y compartió una foto donde se veían filas de asientos cubiertos.
+
+El 16 de septiembre, &#12450;&#12510;&#12484; informó que había construido las estructuras básicas de la entrada, el escenario, la sala de espera de los jugadores, las gradas, la cabina de comentaristas y los pasillos, y que a continuación empezaría a decorarlas.
 
 En agosto de 2022, taka8621 reunió en una guía las instalaciones y las personas a cargo. En la guía de la época figuraban las siguientes contribuciones.
 
