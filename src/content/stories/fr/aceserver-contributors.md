@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:115a2ac3cdb0c8461404f113b844e0f3a9f15c534d80864e873a5a0fc3d95a4f
+sourceHash: sha256:8ebe59ae9ce0c0b381fd4e109c9c094967c6caa898cf22d540dfba91e8b509e9
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-21T00:00:00+09:00
 tags:
@@ -53,13 +53,21 @@ En octobre 2023, PetiteShelf7874 a présenté les activités et la carte du Vill
 
 En février 2021, Gui a demandé des captures d’écran pour faire connaître Aceserver. Dans l’ancien salon de contributions, kuroneko229 a photographié une construction réalisée par LibraI, qui a présenté l’œuvre en précisant les rôles de construction et de photographie.
 
-En mai 2021, KOTA-SAN a annoncé la fin du programme de deux jours de l’Ace Fest, lancé à son initiative, et a remercié キツネコ d’avoir assuré l’essentiel de l’installation du lieu, à la base des Ibaraki Overwatchers.
+En février 2021, KOTA-SAN a invité les joueurs à voter lors du premier Défi de construction sur un chunk. Les cinq participants étaient inscrits sous les noms &#12513;&#12525;&#12531;&#12497;&#12531;, &#12481;&#12540;&#12474;, &#12518;&#12461;, &#12486;&#12523; et KOTA-SAN. KOTA-SAN a annoncé la victoire de la construction de &#12518;&#12461; (Yuki\_0909).
+
+Le même mois, pour célébrer l’achèvement du musée d’art de LibraI, KOTA-SAN a invité les joueurs à participer au premier Concours de peinture. Le projet prévoyait d’exposer dans le musée des œuvres réalisées avec des bannières.
+
+En mai 2021, KOTA-SAN a annoncé la fin du programme de deux jours de l’Ace Fest, lancé à son initiative, et a remercié キツネコ d’avoir assuré l’essentiel de l’installation du lieu, à la base des Ibaraki Overwatchers. KOTA-SAN avait aussi créé et partagé la première affiche provisoire annonçant l’événement.
+
+En mai 2021, &#24535;&#19978;&#12495;&#12472;&#12513; a annoncé une diffusion en mode survie sur Aceserver à laquelle le public pouvait participer. Game\_Tokumei a annoncé prévoir une diffusion sur la construction d’un piège de fourmilion. En juillet, &#31070;&#30000;&#12495;&#12525;&#12453; a annoncé une diffusion consacrée à la construction de la tour de Raiponce.
 
 Dans les archives de l’ancien salon Discord d’E-ha Radio, KOTA-SAN a soutenu l’émission en 2021 en sollicitant des messages d’auditeurs et en présentant le contenu et les horaires. はっ a également annoncé la prochaine émission et le thème des messages.
 
 À l’automne 2021, てぃあ a aménagé un espace pour les décorations de Noël à côté de l’hôtel de ville, construit le sapin et invité les joueurs à participer à la décoration. YM a annoncé avoir construit une maison de Noël.
 
 ### **De 2022 au premier semestre 2023**
+
+En avril 2022, lors de la préparation du deuxième Ace Fest, KOTA-SAN a indiqué que キツネコ et d’autres personnes prépareraient le lieu et que Mugi réaliserait la vidéo d’annonce. キツネコ a annoncé avoir créé un nouveau gacha de potions.
 
 En mai 2022, キツネコ a annoncé une course de bateaux alternative sur un circuit construit par Hako_Otoko. [Message d’origine](https://discord.com/channels/737538781024092170/774152638450237460/970291030152847390)
 
@@ -149,9 +157,15 @@ Pour l’événement de fin 2025, ハルビィ, セキセイ et タケ ont aidé
 
 Une annonce de décembre 2025 indiquait comment participer à une séance photo prévue au sanctuaire Tōgenkyō pour créer une nouvelle image d’en-tête. [Invitation à la séance photo](https://discord.com/channels/737538781024092170/774152638450237460/1455820341988298905)
 
+En février 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673;, &#35199;&#26408;&#37326;&#28716;&#36032;&#27663;, Amagi\_467, Moon\_666, CP-sinzin, Yukke et あすたん ont proposé des photos pour des publications promotionnelles sur les réseaux sociaux.
+
 En août 2026, sekisei et ふーや ont annoncé un CTF commun sous forme de chasse au trésor en ligne, où des énigmes comme des codes permettent de trouver des drapeaux. Aceserver CTF2026 a débuté le 28 août. [Annonce de coorganisation](https://discord.com/channels/737538781024092170/774152638450237460/1541785510094184449) [Annonce du début](https://discord.com/channels/737538781024092170/779569416438415421/1542704904055824394)
 
 ## Construction et projets collectifs
+
+En décembre 2020, bamoshi4869 a indiqué dans l’ancien groupe de travaux que des travaux d’arasement de la montagne et d’excavation à ciel ouvert avaient eu lieu les 24 et 25 décembre. Le compte rendu précise que l’excavation à ciel ouvert avait été menée à terme jusqu’à l’altitude 5. Le compte rendu cite &#12400;&#12418;&#12375;, &#21311;&#21517;, &#12354;&#12363;&#12426;&#12435;, &#12356;&#12385;&#12398;&#12379;, jag., &#12513;&#12525;&#12531; et &#12504;&#12490;&#12509;&#12531; parmi les participants.
+
+Le 29 décembre de la même année, bamoshi4869 a signalé que l’assèchement d’un monument océanique avait été achevé dans le cadre d’un autre chantier. La liste des participants mentionnait &#12400;&#12418;&#12375;, &#21311;&#21517;, &#12354;&#12363;&#12426;&#12435;, J, &#12450;&#12474;, &#12504;&#12490;&#12509;&#12531;, &#12495;&#12488;&#12512;&#12462; et &#12371;&#12383;.
 
 En mars 2022, タケ a demandé de l’aide pour niveler le terrain destiné à une création au sol. Le 1er avril, タケ a annoncé que l’œuvre était terminée et remercié les personnes qui avaient préparé le terrain ou fourni des matériaux. [Appel à aider à préparer le terrain](https://discord.com/channels/737538781024092170/779569416438415421/957990944374927420) [Annonce de l’achèvement de la création au sol](https://discord.com/channels/737538781024092170/779569416438415421/959368128943489085)
 
@@ -186,6 +200,8 @@ En mars 2026, Merutak a annoncé la fin du drainage d’une vaste zone pour le p
 Le 30 mars, Merutak a annoncé la fin de la construction du monument océanique ×6. L’excavation à ciel ouvert était alors en cours. [Annonce de l’achèvement du monument](https://discord.com/channels/737538781024092170/779569416438415421/1488001468970827896)
 
 ## Technologie et soutien
+
+En avril 2021, KOTA-SAN a signalé avoir testé avec succès une méthode de connexion depuis une Nintendo Switch et a proposé de compléter le guide de jeu du site de l’époque.
 
 D’après les archives de l’ancien salon Discord, en août 2021, KOTA-SAN a indiqué avoir créé et mis en service Ace-kun, un bot qui envoyait automatiquement des consignes aux personnes qui venaient de rejoindre le hall. En janvier 2022, KOTA-SAN, l’un des créateurs d’Ace-kun et de Kutya, a annoncé la remise en service d’Ace-kun. En mai, KOTA-SAN a ajouté la publication automatique d’un modèle de présentation personnelle.
 

@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:115a2ac3cdb0c8461404f113b844e0f3a9f15c534d80864e873a5a0fc3d95a4f
+sourceHash: sha256:8ebe59ae9ce0c0b381fd4e109c9c094967c6caa898cf22d540dfba91e8b509e9
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-21T00:00:00+09:00
 tags:
@@ -53,13 +53,21 @@ In October 2023, PetiteShelf7874 introduced the activities and map of Small Hill
 
 In February 2021, Gui asked for screenshots to help promote Aceserver. In the old submissions channel, kuroneko229 photographed a build by LibraI, who introduced the work with credits for the build and the photography.
 
-In May 2021, KOTA-SAN reported that the Ace Fest they started had completed its two-day program. KOTA-SAN thanked キツネコ for leading the venue setup at the Ibaraki Overwatchers’ base.
+In February 2021, KOTA-SAN invited players to vote in the first One-Chunk Building Battle. The five entrants were listed as &#12513;&#12525;&#12531;&#12497;&#12531;, &#12481;&#12540;&#12474;, &#12518;&#12461;, &#12486;&#12523;, and KOTA-SAN. KOTA-SAN announced that the build by &#12518;&#12461; (Yuki\_0909) won.
+
+That same month, KOTA-SAN invited players to enter the first Painting Contest to celebrate the completion of LibraI’s art museum. The plan was to display artwork made from banners in the museum.
+
+In May 2021, KOTA-SAN reported that the Ace Fest they started had completed its two-day program. KOTA-SAN thanked キツネコ for leading the venue setup at the Ibaraki Overwatchers’ base. KOTA-SAN had also made and shared the first preliminary poster announcing the event.
+
+In May 2021, &#24535;&#19978;&#12495;&#12472;&#12513; announced an Aceserver survival stream that viewers could join, and Game\_Tokumei announced plans to stream an antlion pit build. In July, &#31070;&#30000;&#12495;&#12525;&#12453; announced a stream for building Rapunzel’s Tower.
 
 In the old Discord records for E-ha Radio, KOTA-SAN supported the show in 2021 by inviting listener messages and explaining the program and schedule. はっ also announced the next broadcast and its topic for listener messages.
 
 In autumn 2021, てぃあ prepared a spot for a Christmas display beside the town hall, built the tree, and invited people to help decorate. YM reported building a Christmas house.
 
 ### **2022 to the first half of 2023**
+
+In April 2022, during preparations for the second Ace Fest, KOTA-SAN named キツネコ and others as responsible for setting up the venue and Mugi as responsible for making the teaser video. キツネコ reported creating a new potion gacha.
 
 In May 2022, キツネコ announced an alternative boat race using a course built by Hako_Otoko. [Original post](https://discord.com/channels/737538781024092170/774152638450237460/970291030152847390)
 
@@ -149,9 +157,15 @@ For the event at the end of 2025, ハルビィ, セキセイ and タケ helped w
 
 A December 2025 announcement explained how players could join a planned photo shoot for a new header image at Tōgenkyō Shrine. [Photo shoot invitation](https://discord.com/channels/737538781024092170/774152638450237460/1455820341988298905)
 
+In February 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673;, &#35199;&#26408;&#37326;&#28716;&#36032;&#27663;, Amagi\_467, Moon\_666, CP-sinzin, Yukke, and あすたん submitted photos for consideration for social media posts.
+
 In August 2026, sekisei and ふーや announced a jointly hosted online CTF treasure hunt where players solve puzzles such as ciphers to find flags. Aceserver CTF2026 began on August 28. [Co-host announcement](https://discord.com/channels/737538781024092170/774152638450237460/1541785510094184449) [Opening report](https://discord.com/channels/737538781024092170/779569416438415421/1542704904055824394)
 
 ## Building and joint projects
+
+In December 2020, bamoshi4869 reported in the former work group that mountain clearing and open-pit excavation took place on December 24 and 25, and that the open-pit excavation was complete down to elevation 5. The report listed &#12400;&#12418;&#12375;, &#21311;&#21517;, &#12354;&#12363;&#12426;&#12435;, &#12356;&#12385;&#12398;&#12379;, jag., &#12513;&#12525;&#12531;, and &#12504;&#12490;&#12509;&#12531; as participants.
+
+On December 29 that year, bamoshi4869 reported that a separate project to drain an ocean monument was complete. It listed &#12400;&#12418;&#12375;, &#21311;&#21517;, &#12354;&#12363;&#12426;&#12435;, J, &#12450;&#12474;, &#12504;&#12490;&#12509;&#12531;, &#12495;&#12488;&#12512;&#12462;, and &#12371;&#12383; as participants.
 
 In March 2022, タケ asked for help leveling the ground for a ground artwork. On April 1, タケ reported that the artwork was complete and thanked the people who helped level the ground or provided materials. [Call for help leveling the ground](https://discord.com/channels/737538781024092170/779569416438415421/957990944374927420) [Ground artwork completion report](https://discord.com/channels/737538781024092170/779569416438415421/959368128943489085)
 
@@ -186,6 +200,8 @@ In March 2026, Merutak reported that drainage of a large area for the ×6 Ocean 
 On March 30, Merutak reported that the ×6 Ocean Monument build itself was complete. The open-pit excavation was still in progress at that point. [Ocean Monument completion report](https://discord.com/channels/737538781024092170/779569416438415421/1488001468970827896)
 
 ## Technology and support
+
+In April 2021, KOTA-SAN reported successfully testing a way to join from a Nintendo Switch and proposed adding guidance to the how-to-play page on the site at the time.
 
 According to old Discord records, in August 2021 KOTA-SAN reported creating and launching Ace-kun, a bot that automatically sent instructions to newcomers in the lobby. In January 2022, KOTA-SAN reported restoring Ace-kun as one of the co-creators of Ace-kun and Kutya. In May, KOTA-SAN added automatic posting of a self-introduction template.
 
