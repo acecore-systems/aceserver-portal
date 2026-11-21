@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:bef59e1840707c63ccbe22563996951a08601a76acb54e632f97d2cfe6c8000d
+sourceHash: sha256:8776d76afcdad23eb5e26ebeec687ddcbcad8e45f20c6fe9be6be0f429bb1825
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -46,6 +46,8 @@ Une présentation du groupe de restauration de la cité antique mentionnait Gold
 En tant que propriétaire d’A Yū (A-shō), ゆり (Yū) a présenté la vente de matériaux et demandé des volontaires pour construire un espace de loisirs.
 
 En 2022, s1nan0sub a présenté les règles d’utilisation du village d’Iroha et a annoncé que l’entrepôt commun du village d’Inaba était terminé.
+
+En janvier 2023, ゆり a structuré les préparatifs, les essais de plugins et les étapes de construction pour développer un serveur RPG. En février, ゆり a partagé les résultats des tests de connexion.
 
 En juillet 2023, ゆり a présenté, dans une annonce d’Ace Lab, l’alliance entre le Village du dieu de la Lune et le groupe de création RPG. L’annonce indiquait BM\_yurikun et \_BE\_golden\_cokka comme responsables à l’époque, et amya7238 et \_BE\_golden\_cokka parmi les premiers membres. La course de bateaux sur glace ACE1GP et la création de RPG figuraient parmi les activités envisagées.
 
@@ -102,6 +104,8 @@ En décembre 2022, &#12383;&#12356;&#12420;&#12365; (taiyaki5190) a ouvert deux 
 Pour l’Ace Fest in Christmas Life de décembre 2022, ゆり a présenté le programme, avec la cérémonie d’ouverture et la diffusion en direct, et expliqué comment s’inscrire à la troisième Coupe Ace. タケ a aussi annoncé le programme du réveillon 2022–2023 à Tōgenkyō. L’annonce présentait l’Association des chasseurs, dont faisaient partie タケ et コッカー, comme organisatrice et Taibon comme collaborateur.
 
 Début 2023, Taiyaki (taiyaki5190) a annoncé en tant qu’organisateur le PvP in the Sky et invité les concurrents et les responsables de stands à s’inscrire. Pour la fête du Wither en février, edamameRex_java a invité les joueurs à affronter le Wither sur le serveur de ressources, géré les prêts d’équipement et les récompenses de participation, puis remercié les participants après l’événement.
+
+En février 2023, ゆり a proposé des tours de démonstration et des courses après l’achèvement du Circuit international de l’Empire Sega.
 
 En août 2022, ゆり a demandé des images de l’ancien serveur pour une vidéo promotionnelle en préparation. En mars 2023, Yukke a sollicité des suggestions de lieux et de bâtiments à montrer dans la vidéo promotionnelle officielle. [Appel à fournir des images de l’ancien serveur](https://discord.com/channels/737538781024092170/779569416438415421/1008524402922639390) [Appel à proposer des lieux de tournage](https://discord.com/channels/737538781024092170/779569416438415421/1085549170905059383)
 
@@ -281,6 +285,8 @@ En mai 2022, Mugi a indiqué que Kutya pouvait lire à voix haute du morse japon
 
 En juin 2022, Mugi a mis à jour le bot de lecture vocale Kutya pour qu’il fonctionne avec le chat des salons vocaux. En mars 2023, Mugi a annoncé un bot qui permettait de transmettre des avis anonymes à l’équipe du serveur. [Mise à jour de Kutya](https://discord.com/channels/737538781024092170/774152638450237460/986439863937155122) [Annonce des avis anonymes](https://discord.com/channels/737538781024092170/774152638450237460/1087976366126927882)
 
+En août 2022, taka8621 a partagé une version testée d’un plugin contre le sabotage qui limitait ce que les joueurs pouvaient placer dans le jeu. En août et en octobre, taka8621 a aussi partagé des informations sur d’autres plugins, notamment leur utilité.
+
 En septembre 2022, Gui a annoncé une version de test du site. En octobre, Gui a indiqué que le blog et la documentation avaient été séparés et que plusieurs personnes pouvaient modifier les pages préparées. taka8621 a demandé des guides de commandes, des guides illustrés des installations et des cartes. yanyan a proposé des pages modifiables. En janvier 2023, &#33775;\*HAiNE a testé l’espace d’édition du wiki et soulevé la question du parcours des lecteurs si les guides étaient répartis entre plusieurs pages.
 
 Entre juillet et août 2022, KOTA-SAN a expliqué les règles de l’époque sur les demandes de construction et le nivellement de terrain. En octobre, taka8621 a expliqué comment étaient traitées les demandes de communautés et quelles règles s’appliquaient aux chargeurs de chunks.
@@ -291,11 +297,15 @@ En novembre 2022, キツネコ a proposé de publier les règles d’utilisation
 
 En décembre 2022, Mugi a indiqué que la fonction de dictionnaire de Kutya avait été rétablie.
 
+Le 14 janvier 2023, &#33775;\*HAiNE a rédigé le compte rendu d’une réunion de l’équipe du serveur et partagé une synthèse des points discutés sur les règles et des tâches à suivre. Le lendemain, はっ a aussi résumé la discussion sur l’organisation des règles et demandé aux membres de la relire.
+
 En janvier 2023, あすたん a publié des instructions illustrées pour se connecter avec Minecraft Java Edition et Bedrock Edition dans le guide d’accès de l’ancien Discord.
 
 Le 21 mars 2023, taka8621 a partagé sept images présentant les recettes personnalisées d’Aceserver à l’époque. Elles montraient des exemples utilisant de l’herbe ou des dalles de chêne pétrifié comme ingrédients, ainsi que des recettes de livres enchantés et d’équipements.
 
 En mai 2023, あすたん a préparé un guide sur le rôle de chaque serveur à l’époque et sur l’accès au wiki et à la carte du monde. Le guide montrait aussi en images les entrées du serveur principal et du serveur de ressources. Le même mois, あすたん a expliqué les fonctions de protection de CoreProtect et de LWC dans un guide distinct.
+
+En juin 2023, タケ a demandé dans le salon d’échange en anglais s’il existait un bot capable de traduire entre l’anglais et le japonais.
 
 En juillet 2023, Yukke a annoncé la création d’un nouveau monde sur le serveur de ressources. [Annonce du monde de ressources](https://discord.com/channels/737538781024092170/774152638450237460/1135574163080364103)
 

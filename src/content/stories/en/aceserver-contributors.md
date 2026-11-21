@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:bef59e1840707c63ccbe22563996951a08601a76acb54e632f97d2cfe6c8000d
+sourceHash: sha256:8776d76afcdad23eb5e26ebeec687ddcbcad8e45f20c6fe9be6be0f429bb1825
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -46,6 +46,8 @@ An introduction to the Ancient City Restoration Group named Golden Cocker as its
 As owner of A Yū (A-shō), ゆり (Yū) described the sale of materials and called for volunteers to build a play area.
 
 In 2022, s1nan0sub shared the rules for using Iroha Village and reported that Inaba Village’s shared storage facility was complete.
+
+In January 2023, ゆり outlined the groundwork, plugin testing, and building steps for developing an RPG server. In February, ゆり shared the results of connection tests.
 
 In July 2023, ゆり introduced an alliance between the Village of the Moon God and the RPG Creation Group in an Ace Lab announcement. It named BM\_yurikun and \_BE\_golden\_cokka as the leaders at the time, and amya7238 and \_BE\_golden\_cokka as early members. The activities outlined included ACE1GP ice boat racing and RPG creation.
 
@@ -102,6 +104,8 @@ In December 2022, &#12383;&#12356;&#12420;&#12365; (taiyaki5190) opened two subm
 For Ace Fest in Christmas Life in December 2022, ゆり shared the schedule, including the opening ceremony and livestream, and explained how to enter the third Ace Cup. タケ also announced New Year’s plans at Tōgenkyō for 2022–2023. The announcement named the Hunters’ Association, which included タケ and コッカー, as organizer and Taibon as a collaborator.
 
 In early 2023, Taiyaki (taiyaki5190) announced PvP in the Sky as its organizer and invited competitors and stallholders to sign up. For the Wither Festival in February, edamameRex_java invited players to fight the Wither on the resource server, handled equipment loans and participation rewards, and thanked everyone who joined after the event.
+
+In February 2023, ゆり proposed demonstration runs and races once the Sega Empire International Circuit was complete.
 
 In August 2022, ゆり requested images from the old server for a promotional video in production. In March 2023, Yukke invited suggestions for places and buildings to feature in the official promotional video. [Call for old server images](https://discord.com/channels/737538781024092170/779569416438415421/1008524402922639390) [Call for filming locations](https://discord.com/channels/737538781024092170/779569416438415421/1085549170905059383)
 
@@ -281,6 +285,8 @@ In May 2022, Mugi reported that Kutya could read Japanese Morse code aloud.
 
 In June 2022, Mugi updated the text-to-speech bot Kutya to support chat inside voice channels. In March 2023, Mugi announced a bot for sending anonymous feedback to the server team. [Kutya update](https://discord.com/channels/737538781024092170/774152638450237460/986439863937155122) [Anonymous feedback announcement](https://discord.com/channels/737538781024092170/774152638450237460/1087976366126927882)
 
+In August 2022, taka8621 shared a tested version of an anti-griefing plugin that limited what players could place in the game. In August and October, taka8621 also shared information about other plugins, including what they were for.
+
 In September 2022, Gui announced a test release of the site. In October, Gui reported separating the blog from the documentation and setting up pages that multiple people could edit. taka8621 requested command guides, illustrated guides to facilities, and maps. yanyan proposed editable pages. In January 2023, &#33775;\*HAiNE tried the wiki editing environment and raised a question about how readers would navigate if guidance were split across pages.
 
 From July to August 2022, KOTA-SAN explained the policies of the time for building applications and land clearing. In October, taka8621 explained how community applications and chunk loaders were handled.
@@ -291,11 +297,15 @@ In November 2022, キツネコ proposed putting the land-use rules on the wiki a
 
 In December 2022, Mugi reported that Kutya’s dictionary feature had been restored.
 
+On January 14, 2023, &#33775;\*HAiNE wrote up the minutes of a server team meeting and shared a summary of the points discussed about the rules and the tasks to follow up on. The next day, はっ also summarized what had been discussed about organizing the rules and asked members to review it.
+
 In January 2023, あすたん posted illustrated instructions for connecting with Minecraft Java Edition and Bedrock Edition in the Discord joining guide of the time.
 
 On March 21, 2023, taka8621 shared seven images of Aceserver’s custom recipes at the time. They showed examples using grass or petrified oak slabs as ingredients and recipes for enchanted books and equipment.
 
 In May 2023, あすたん put together a guide to what each server was for at the time and where to find the wiki and world map. The guide also showed the entrances to the main and resource servers with images. That month, あすたん explained the protection features of CoreProtect and LWC in a separate guide.
+
+In June 2023, タケ asked in the English chat channel whether there was a bot that could translate between English and Japanese.
 
 In July 2023, Yukke announced creating a new resource server world. [Resource world announcement](https://discord.com/channels/737538781024092170/774152638450237460/1135574163080364103)
 
