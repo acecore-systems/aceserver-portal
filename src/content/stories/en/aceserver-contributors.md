@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:f204dd596ae13180754c016f05cf7a35c677797b345127844b6740f0b13aecc1
+sourceHash: sha256:87a6762ab0bd44b3b6303f26f16688bc276738d99226402f6fc4f6dbe2917baf
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -67,6 +67,8 @@ In September 2024, sekisei introduced Mars (working title), a group for planning
 
 In November 2024, Nishikino Sega shared CENTURY'S plans for projects including a Japanese-style castle and a subway and invited people to take part.
 
+In July 2025, sekisei proposed merchandise using illustrations or in-game photos, including keychains that could double as acrylic stands. In October, End&#12539;コッカー proposed different designs depending on whether they were for use within the community or elsewhere.
+
 ## Promotion and events
 
 In December 2020, Rina\_desu announced on the old Discord that they had updated a post for the social media series about in-game homes and featured the home of 6nuts.
@@ -115,9 +117,13 @@ In February 2023, ゆり proposed demonstration runs and races once the Sega Emp
 
 In August 2022, ゆり requested images from the old server for a promotional video in production. In March 2023, Yukke invited suggestions for places and buildings to feature in the official promotional video. [Call for old server images](https://discord.com/channels/737538781024092170/779569416438415421/1008524402922639390) [Call for filming locations](https://discord.com/channels/737538781024092170/779569416438415421/1085549170905059383)
 
+Among the suggestions, taiyaki5190 proposed Sega Castle, Edamame (edamameRex_java) proposed the Ibaraki Overwatchers’ second base, and nnn_percent proposed the Chinese-style n Castle. [Suggested filming locations](https://discord.com/channels/737538781024092170/1085549186449154168)
+
 In March 2023, ゆり invited people to join filming for a server introduction video and shared the order for filming towns and worlds. [Original post](https://discord.com/channels/737538781024092170/774152638450237460/1087641197947932704)
 
-Old Discord records show that in March 2023, あすたん set up a place to discuss filming the promotional video. nnn_percent offered guidance on handling obstructions when filming n Castle.
+The plan ゆり put together on March 12, 2023 included a proposed filming route through locations such as the central district’s station, city hall, and market.
+
+On March 21, 2023, あすたん set up a place to discuss filming and shared a shooting order that also included the Ibaraki Overwatchers’ second base and Sega Castle. nnn_percent marked scaffolding, trees, and other features near n Castle on a map image and explained what to do if they got in the way of filming. [Discussion about filming the promo](https://discord.com/channels/737538781024092170/1087649463008497737)
 
 For Ace Fest Offline in spring 2023, Gui posted the official announcements and はっ shared where people who could not attend in person could join online. [Event announcement](https://discord.com/channels/737538781024092170/774152638450237460/1091302323298521181) [Participation announcement](https://discord.com/channels/737538781024092170/774152638450237460/1092392407229804544)
 
@@ -140,6 +146,8 @@ In the August 7, 2023 report on the first anniversary festival for Ace Monorail�
 On August 16, 2023, ゆり asked who was interested in a custom Apex Legends match. Mugi invited people interested in Rainbow Six Siege (R6S) to react, and PillowKebap did the same for League of Legends. [Apex Legends interest check](https://discord.com/channels/737538781024092170/882222121135251486/1141256368351891506) [Rainbow Six Siege interest check](https://discord.com/channels/737538781024092170/882222121135251486/1141265485644693524) [League of Legends interest check](https://discord.com/channels/737538781024092170/882222121135251486/1141272275816042497)
 
 On August 7, 2024, タケ reported that the second anniversary festival’s full program had concluded. The tour unveiled new station signage and introduced the Jiyūgaoka Line’s new station and extension. [Second anniversary festival report](https://discord.com/channels/737538781024092170/779569416438415421/1270424971667308565)
+
+The October 9, 2023 video “&#26032;A&#39894;PV&#25913;&#35330;&#29256;” is unlisted on the YouTube channel under ゆり’s name. A record of the video is also preserved in the old Discord.
 
 For the 2023 Hatt Harvest Festival, taiyaki5190 shared the rules and schedule. The planned date moved from October 15 to October 29. On October 28, Taiyaki confirmed the festival was due the following day and explained how to join. Posts after the event include information about participation rewards and comments from people who took part. [Date change announcement](https://discord.com/channels/737538781024092170/779569416438415421/1161919748074917900) [Participation announcement](https://discord.com/channels/737538781024092170/779569416438415421/1167836013142495353)
 

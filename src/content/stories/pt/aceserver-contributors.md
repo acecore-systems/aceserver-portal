@@ -2,7 +2,7 @@
 title: As pessoas que apoiaram o Aceserver
 description: Conheça quem ajudou o Aceserver pelos retratos de skins do Minecraft, relembre as atividades e confira o roteiro de eventos e propostas.
 translationOf: aceserver-contributors
-sourceHash: sha256:f204dd596ae13180754c016f05cf7a35c677797b345127844b6740f0b13aecc1
+sourceHash: sha256:87a6762ab0bd44b3b6303f26f16688bc276738d99226402f6fc4f6dbe2917baf
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -67,6 +67,8 @@ Em setembro de 2024, sekisei apresentou Mars (nome provisório), um grupo de pla
 
 Em novembro de 2024, Nishikino Sega apresentou na CENTURY'S planos como um castelo em estilo japonês e um metrô e convidou pessoas a participar.
 
+Em julho de 2025, sekisei sugeriu produtos com ilustrações ou imagens do jogo, como chaveiros que também poderiam servir de peças de acrílico com base. Em outubro, End&#12539;コッカー propôs designs diferentes para uso dentro e fora da comunidade.
+
 ## Divulgação e eventos
 
 Em dezembro de 2020, Rina\_desu avisou no antigo Discord que havia atualizado uma publicação da série nas redes sociais sobre casas dentro do jogo e apresentado a casa de 6nuts.
@@ -115,9 +117,13 @@ Em fevereiro de 2023, ゆり propôs voltas de demonstração e corridas após a
 
 Em agosto de 2022, ゆり pediu fotos do servidor antigo para um vídeo promocional em produção. Em março de 2023, Yukke pediu sugestões de lugares e construções para o vídeo promocional oficial. [Pedido de fotos do servidor antigo](https://discord.com/channels/737538781024092170/779569416438415421/1008524402922639390) [Pedido de sugestões de locais para a gravação](https://discord.com/channels/737538781024092170/779569416438415421/1085549170905059383)
 
+Entre as sugestões, taiyaki5190 indicou o Castelo de Sega, Edamame (edamameRex_java) indicou a segunda base dos Ibaraki Overwatchers e nnn_percent indicou o castelo n, em estilo chinês. [Locais sugeridos para a gravação](https://discord.com/channels/737538781024092170/1085549186449154168)
+
 Em março de 2023, ゆり convidou participantes para a gravação de um vídeo de apresentação e explicou a ordem de filmagem das cidades e dos mundos. [Publicação original](https://discord.com/channels/737538781024092170/774152638450237460/1087641197947932704)
 
-Os registros do antigo canal do Discord mostram que, em março de 2023, あすたん preparou um espaço para conversar sobre a gravação do vídeo promocional. nnn_percent explicou como lidar com obstáculos ao filmar o castelo n.
+O plano que ゆり preparou em 12 de março de 2023 incluía uma proposta de roteiro de filmagem pela estação do distrito central, a prefeitura, o mercado e outros locais.
+
+Em 21 de março de 2023, あすたん preparou um espaço para conversar sobre a gravação e apresentou uma ordem de filmagem que também incluía a segunda base dos Ibaraki Overwatchers e o Castelo de Sega. nnn_percent marcou em uma imagem do mapa os andaimes, árvores e outros elementos perto do castelo n e explicou o que fazer caso atrapalhassem a filmagem. [Conversas sobre a gravação do vídeo](https://discord.com/channels/737538781024092170/1087649463008497737)
 
 Para o Ace Fest Offline na primavera de 2023, Gui publicou os anúncios oficiais e はっ explicou onde quem não pudesse ir ao local poderia participar online. [Anúncio do evento](https://discord.com/channels/737538781024092170/774152638450237460/1091302323298521181) [Anúncio sobre a participação](https://discord.com/channels/737538781024092170/774152638450237460/1092392407229804544)
 
@@ -140,6 +146,8 @@ No relato de 7 de agosto de 2023 sobre a festa de um ano da inauguração da Ace
 Em 16 de agosto de 2023, ゆり procurou jogadores interessados em uma partida personalizada de Apex Legends. Mugi pediu que pessoas interessadas em Rainbow Six Siege (R6S) reagissem, e PillowKebap fez o mesmo para League of Legends. [Consulta de interesse em Apex Legends](https://discord.com/channels/737538781024092170/882222121135251486/1141256368351891506) [Consulta de interesse em Rainbow Six Siege](https://discord.com/channels/737538781024092170/882222121135251486/1141265485644693524) [Consulta de interesse em League of Legends](https://discord.com/channels/737538781024092170/882222121135251486/1141272275816042497)
 
 Em 7 de agosto de 2024, タケ informou que toda a programação da festa de dois anos havia terminado. O passeio apresentou a nova sinalização das estações, a nova estação e o trecho de extensão da linha Jiyūgaoka. [Relato da festa de dois anos](https://discord.com/channels/737538781024092170/779569416438415421/1270424971667308565)
+
+O vídeo “&#26032;A&#39894;PV&#25913;&#35330;&#29256;”, de 9 de outubro de 2023, está como não listado no canal do YouTube com o nome de ゆり. O antigo Discord também conserva um registro do vídeo.
 
 Para o Festival da Colheita de Hatt de 2023, taiyaki5190 divulgou as regras e a programação. A data prevista mudou de 15 para 29 de outubro. Em 28 de outubro, Taiyaki informou que o festival seria no dia seguinte e explicou como participar. Publicações posteriores incluem informações sobre as recompensas e comentários dos participantes. [Anúncio da mudança de data](https://discord.com/channels/737538781024092170/779569416438415421/1161919748074917900) [Anúncio sobre a participação](https://discord.com/channels/737538781024092170/779569416438415421/1167836013142495353)
 
