@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:591cdc6e2b449888008b696c70afdece536e5dabec6035ce7b2cb71fe34b5d7e
+sourceHash: sha256:fa17de977e3c6c659f0d5fa812fc1b14000bc8e3fab43c3b9d1e79708d79f232
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -255,6 +255,8 @@ On March 7, 2026, End&#12539;コッカー invited event ideas and volunteers, in
 
 In March 2026, &#12486;&#12451;&#12512;&#12540; asked people to submit ideas for a new icon and stories about happenings on the server for the Aceserver Revitalization Committee’s Aceserver Diary.
 
+On May 6, 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; drew up a proposal for a summer festival called “&#12360;&#65374;&#22799;&#31085;&#12426;” where new and longtime members could meet. The plan suggested participant-run stalls and a fireworks show. On May 19, they reported securing help from &#12475;&#12531;&#12481;&#12517;&#12522;&#12474; with the fireworks.
+
 On July 13, 2026, sekisei invited questions and explained how questions asking essentially the same thing would be counted and that Yuri-kun would answer in replies. On July 14, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; reported a total of 120 questions that day.
 
 In late July 2026, sekisei reported that plans for two activities were nearly ready, a Minecraft minigame and an activity outside Minecraft. They also asked what activities people wanted to see developed next.
@@ -399,7 +401,7 @@ On April 18, 2026, Moon\_666 reported that Woodland Mansion Apartments Nos. 1 to
 
 On September 17, 2026, タケ announced that the Aceserver Revitalization Committee had started redeveloping the central part of the old Century site. タケ also reported that several volunteers had made progress clearing the area. [Start of the old Century site redevelopment](https://discord.com/channels/737538781024092170/1437442902547759125/1550005135311110154)
 
-On September 28, 2026, あすたん considered adding fishing to the MMO under development.
+On September 28, 2026, あすたん considered adding fishing to the MMO under development. That same day, あすたん reported implementing fishing during a discussion about preparing the Content Server beta. On October 3, they announced the Content Server open beta test in the official Discord announcements and said players could try Duel, a one-on-one PvP mode, and Fishing. [Content Server open beta announcement (test ended)](https://discord.com/channels/737538781024092170/774152638450237460/1555731149119164427)
 
 On October 31, 2026, タケ announced that a new cactus farm had been installed on the survival server and that anyone could use it at the time. [New cactus farm announcement](https://discord.com/channels/737538781024092170/1437442902547759125/1565747261575790592)
 
@@ -500,6 +502,8 @@ In February 2026, Merutak reported creating two Discord roles for notices about 
 In March 2026, あすたん posted the resource server rules. In July, sekisei posted an update in the same thread. [Resource server rules post](https://discord.com/channels/737538781024092170/1486515511029268610/1486515511029268610) [Update post](https://discord.com/channels/737538781024092170/1486515511029268610/1531835894196080653)
 
 On March 12 and 13, 2026, sekisei asked who was interested in a beginner Java course and a refresher course that included making Minecraft mods and plugins.
+
+In May 2026, End&#12539;コッカー suggested improving the portal’s wording and how it displayed photos. In June, they reported asking &#35377;&#21487;&#12385;&#12419; to implement a way to swipe through images of Minecraft builds without interrupting browsing.
 
 In July 2026, sekisei announced the first technical talk about servers and the Internet. [Technical talk announcement](https://discord.com/channels/737538781024092170/774152638450237460/1532641413500633108)
 

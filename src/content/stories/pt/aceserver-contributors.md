@@ -2,7 +2,7 @@
 title: As pessoas que apoiaram o Aceserver
 description: Conheça quem ajudou o Aceserver pelos retratos de skins do Minecraft, relembre as atividades e confira o roteiro de eventos e propostas.
 translationOf: aceserver-contributors
-sourceHash: sha256:591cdc6e2b449888008b696c70afdece536e5dabec6035ce7b2cb71fe34b5d7e
+sourceHash: sha256:fa17de977e3c6c659f0d5fa812fc1b14000bc8e3fab43c3b9d1e79708d79f232
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -255,6 +255,8 @@ Em 7 de março de 2026, End&#12539;コッカー pediu ideias para eventos e volu
 
 Em março de 2026, &#12486;&#12451;&#12512;&#12540; pediu propostas de um novo ícone e relatos de acontecimentos no servidor para o Diário do Aceserver, do Comitê de Revitalização do Aceserver.
 
+Em 6 de maio de 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; preparou uma proposta para o festival de verão “&#12360;&#65374;&#22799;&#31085;&#12426;”, pensado como um espaço de convivência para participantes novos e antigos. A proposta incluía barracas organizadas pelos participantes e uma apresentação de fogos de artifício. Em 19 de maio, informou que havia conseguido a colaboração de &#12475;&#12531;&#12481;&#12517;&#12522;&#12474; para os fogos.
+
 Em 13 de julho de 2026, sekisei convidou as pessoas a enviar perguntas, explicou como seriam contadas as que perguntavam essencialmente a mesma coisa e informou que Yuri-kun responderia por meio das respostas às mensagens. Em 14 de julho, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; informou que naquele dia foram feitas 120 perguntas ao todo.
 
 No fim de julho de 2026, sekisei informou que os planos para duas atividades estavam quase prontos, um minijogo dentro do Minecraft e uma atividade fora dele. Também pediu sugestões de atividades que as pessoas gostariam de ver preparadas a seguir.
@@ -399,7 +401,7 @@ Em 18 de abril de 2026, Moon\_666 informou que os Apartamentos da Mansão da Flo
 
 Em 17 de setembro de 2026, タケ anunciou que o Comitê de Revitalização do Aceserver havia iniciado a revitalização da parte central da antiga área de Century. Também informou que várias pessoas haviam ajudado a limpar a área. [Início da revitalização da antiga área de Century](https://discord.com/channels/737538781024092170/1437442902547759125/1550005135311110154)
 
-Em 28 de setembro de 2026, あすたん considerou adicionar pesca ao MMO em desenvolvimento.
+Em 28 de setembro de 2026, あすたん considerou adicionar pesca ao MMO em desenvolvimento. No mesmo dia, ao discutir os preparativos para o teste beta do servidor de conteúdo, あすたん informou que havia implementado a pesca. Em 3 de outubro anunciou no canal oficial de avisos do Discord o início do teste beta aberto do servidor de conteúdo e informou que era possível jogar Duel, um modo PvP de um contra um, e Fishing. [Anúncio do teste beta aberto do servidor de conteúdo (teste encerrado)](https://discord.com/channels/737538781024092170/774152638450237460/1555731149119164427)
 
 Em 31 de outubro de 2026, タケ anunciou que uma nova fazenda de cactos havia sido instalada no servidor de sobrevivência e que qualquer pessoa podia usá-la na época. [Anúncio da nova fazenda de cactos](https://discord.com/channels/737538781024092170/1437442902547759125/1565747261575790592)
 
@@ -500,6 +502,8 @@ Em fevereiro de 2026, Merutak informou a criação de dois cargos no Discord par
 Em março de 2026, あすたん publicou as regras do servidor de recursos. Em julho, sekisei publicou uma atualização no mesmo tópico. [Publicação das regras do servidor de recursos](https://discord.com/channels/737538781024092170/1486515511029268610/1486515511029268610) [Publicação da atualização](https://discord.com/channels/737538781024092170/1486515511029268610/1531835894196080653)
 
 Em 12 e 13 de março de 2026, sekisei procurou pessoas interessadas em um curso de Java para iniciantes e em um curso de revisão que incluía a criação de mods e plugins para Minecraft.
+
+Em maio de 2026, End&#12539;コッカー sugeriu melhorar os textos do portal e a forma de exibir as fotos. Em junho, informou que havia pedido a &#35377;&#21487;&#12385;&#12419; que implementasse uma maneira de ver imagens de construções do Minecraft deslizando o dedo sem atrapalhar a navegação.
 
 Em julho de 2026, sekisei anunciou a primeira palestra técnica sobre servidores e Internet. [Anúncio da palestra técnica](https://discord.com/channels/737538781024092170/774152638450237460/1532641413500633108)
 
