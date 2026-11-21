@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:769049f3fd2d51e118802f4ac2eee46177180aa09203f850817bb22cecad8414
+sourceHash: sha256:0db79ea00dbc0dde6ceeb9ca1cc74cbd7f3a8cc5852fcbcbd0cd82cfb900d112
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-21T00:00:00+09:00
 tags:
@@ -31,11 +31,13 @@ In August 2021, KOTA-SAN previewed a call for first-anniversary logo designs. In
 
 ## Communities and creative groups
 
-In an introduction posted to the old Discord by KOTA-SAN, the Aceserver Tourism Association listed MKOTA_SAN as its leader at the time. The introduction described the opening of a temple, an aquarium, and a casino district with facilities including a hotel and an art museum. It also covered contests and the joint development of the association’s bot Kutya.
+In December 2020, Gui opened an activity channel for the Ace Railway Company, and oisiisyouyu invited people to join. In March 2021, oisiisyouyu announced that the group would focus on the subway.
+
+In an introduction posted to the old Discord by KOTA-SAN, the Aceserver Tourism Association listed MKOTA_SAN as its leader at the time. The introduction described the opening of a temple, an aquarium, and a casino district with facilities including a hotel and an art museum. It also covered contests and the joint development of the association’s bot Kutya. In March 2021, KOTA-SAN unveiled a slot machine in the association’s casino district and reported adding prizes the following day.
 
 In March 2021, kuroneko229 introduced the Public Works Department, naming Kuro neko2229 as its leader at the time. In November 2022, kuroneko229 reported what the group, by then the Private Works Department, had worked on, including a subway, Nether roads, streetlights, a shopping district, and apartments.
 
-Mugi introduced the RS Circuit Engineering Club’s work and its leader, sousuke3018. Introductions to the SEGA Empire named segarikihiro as its leader at the time.
+In December 2020, Mugi built the RS Circuit Engineering Club’s clubhouse and reported its completion. Mugi introduced the RS Circuit Engineering Club’s work and its leader, sousuke3018. Introductions to the SEGA Empire named segarikihiro as its leader at the time.
 
 The Amusement Park Group’s leader, kurenohachi (Hachi), reported choosing a site for the planned build with help from others. In a post about the Kuwa Kingdom, Yukke listed yukke40901 as its leader and invited players to help build its castle and capital. Nishikino Sega said that the Eirin-tai group would support the Kuwa Kingdom’s work.
 
@@ -49,6 +51,8 @@ In October 2023, PetiteShelf7874 introduced the activities and map of Small Hill
 
 ## Promotion and events
 
+In February 2021, Gui asked for screenshots to help promote Aceserver. In the old submissions channel, kuroneko229 photographed a build by LibraI, who introduced the work with credits for the build and the photography.
+
 In the old Discord records for E-ha Radio, KOTA-SAN supported the show in 2021 by inviting listener messages and explaining the program and schedule. はっ also announced the next broadcast and its topic for listener messages.
 
 ### **2022 to the first half of 2023**
@@ -58,6 +62,8 @@ In May 2022, キツネコ announced an alternative boat race using a course buil
 Ahead of the New Summer Festival on August 21, 2022, ゆり asked for stalls and activities. On the day, ゆり confirmed the festival was going ahead and shared the program, which included fireworks, a preview of the promotional video, and closing events. [Festival-day announcement](https://discord.com/channels/737538781024092170/779569416438415421/1010817999575449610)
 
 edamameRex_java (Edamame) announced a stall. Moon_666 also shared what would be available at their stall, including a gacha. After the festival, Yukke shared impressions and thanked ゆり, Edamame, and the stallholders. [Edamame’s stall announcement](https://discord.com/channels/737538781024092170/779569416438415421/1010359403259641856) [Moon_666’s stall announcement](https://discord.com/channels/737538781024092170/779569416438415421/1010344489270923304) [Post-festival impressions and thanks](https://discord.com/channels/737538781024092170/779569416438415421/1010919818972631110)
+
+In October 2022, nuu\_mink invited players to visit the casino and bar at POCKET ACES CASINO. In an announcement on October 30, nuu\_mink outlined a Halloween event planned for the bar.
 
 In November 2022, yanyan_fafnir reported that ゆり (Yū) had become a supporter after a recommendation from Sosuke. [Supporter appointment announcement](https://discord.com/channels/737538781024092170/774152638450237460/1043527218191663114)
 
@@ -182,6 +188,8 @@ According to old Discord records, in August 2021 KOTA-SAN reported creating and 
 In June 2022, Mugi updated the text-to-speech bot Kutya to support chat inside voice channels. In March 2023, Mugi announced a bot for sending anonymous feedback to the server team. [Kutya update](https://discord.com/channels/737538781024092170/774152638450237460/986439863937155122) [Anonymous feedback announcement](https://discord.com/channels/737538781024092170/774152638450237460/1087976366126927882)
 
 In September 2022, Gui announced a test release of the site. In October, Gui reported separating the blog from the documentation and setting up pages that multiple people could edit. taka8621 requested command guides, illustrated guides to facilities, and maps. yanyan proposed editable pages. In January 2023, &#33775;\*HAiNE tried the wiki editing environment and raised a question about how readers would navigate if guidance were split across pages.
+
+In October 2022, hana0c0haine reported reviewing every wiki page published at the time and correcting inconsistencies in terminology and Japanese phrasing. In March 2023, あすたん organized separate channels for wiki editors and provided guidance on writing in Markdown.
 
 In November 2022, キツネコ proposed putting the land-use rules on the wiki and using separate application templates for site leveling and open-pit excavation. Nishikino Sega asked about applying when construction would follow site leveling. In January 2023, taka8621 invited people to help organize the building and related rules, and &#33775;\*HAiNE proposed rules on underground excavation. A February post by taka8621 recorded suggestions Yukke had compiled on scenery and the use of villagers in traps.
 

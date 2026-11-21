@@ -2,7 +2,7 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:769049f3fd2d51e118802f4ac2eee46177180aa09203f850817bb22cecad8414
+sourceHash: sha256:0db79ea00dbc0dde6ceeb9ca1cc74cbd7f3a8cc5852fcbcbd0cd82cfb900d112
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-21T00:00:00+09:00
 tags:
@@ -31,11 +31,13 @@ En agosto de 2021, KOTA-SAN adelantó una convocatoria para el logotipo del prim
 
 ## Comunidades y grupos creativos
 
-En una presentación publicada por KOTA-SAN en el antiguo canal de Discord, la Asociación de Turismo de Aceserver nombraba a MKOTA_SAN como su responsable en aquel momento. La presentación recogía la apertura de un templo, un acuario y una zona de casino que incluía un hotel y un museo de arte. También mencionaba concursos y el desarrollo conjunto del bot Kutya de la asociación.
+En diciembre de 2020, Gui abrió un canal para las actividades de Ace Railway Company y oisiisyouyu invitó a participar. En marzo de 2021, oisiisyouyu anunció que el grupo centraría sus actividades en el metro.
+
+En una presentación publicada por KOTA-SAN en el antiguo canal de Discord, la Asociación de Turismo de Aceserver nombraba a MKOTA_SAN como su responsable en aquel momento. La presentación recogía la apertura de un templo, un acuario y una zona de casino que incluía un hotel y un museo de arte. También mencionaba concursos y el desarrollo conjunto del bot Kutya de la asociación. En marzo de 2021, KOTA-SAN presentó una máquina tragamonedas en la zona de casino de la asociación y al día siguiente informó de que había añadido premios.
 
 En marzo de 2021, kuroneko229 presentó el Departamento de Obras Públicas y señaló a Kuro neko2229 como su responsable en aquel momento. En noviembre de 2022, informó de los proyectos en los que había trabajado el grupo, ya llamado Departamento de Obras Privadas, como el metro, los caminos del Nether, el alumbrado, una zona comercial y apartamentos.
 
-Mugi presentó las actividades del Club de Circuitos RS y a su responsable, sousuke3018. En la presentación del Imperio SEGA figuraba segarikihiro como su responsable de entonces.
+En diciembre de 2020, Mugi construyó el local del Club de Circuitos RS e informó de que estaba terminado. Mugi presentó las actividades del Club de Circuitos RS y a su responsable, sousuke3018. En la presentación del Imperio SEGA figuraba segarikihiro como su responsable de entonces.
 
 kurenohachi (Hachi), responsable del Grupo del Parque de Atracciones, informó de que habían elegido un terreno para el proyecto con ayuda de otras personas. En una publicación sobre el Reino de Kuwa, Yukke indicó que el responsable era yukke40901 e invitó a colaborar en la construcción del castillo y la capital. Nishikino Sega anunció que el grupo Eirin-tai apoyaría las actividades del Reino de Kuwa.
 
@@ -49,6 +51,8 @@ En octubre de 2023, PetiteShelf7874 presentó las actividades y el mapa de la Al
 
 ## Difusión y eventos
 
+En febrero de 2021, Gui pidió capturas de pantalla para promocionar Aceserver. En el antiguo canal de aportaciones, kuroneko229 fotografió una construcción hecha por LibraI, que presentó la obra indicando quién se encargó de la construcción y quién tomó la imagen.
+
 En los registros del antiguo canal de Discord de E-ha Radio, KOTA-SAN colaboró con el programa en 2021 pidiendo mensajes a los oyentes y explicando los contenidos y el calendario. はっ también anunció la siguiente emisión y el tema de los mensajes.
 
 ### **2022 y primera mitad de 2023**
@@ -58,6 +62,8 @@ En mayo de 2022, キツネコ anunció una carrera de barcos alternativa en un c
 Antes del Nuevo Festival de Verano del 21 de agosto de 2022, ゆり pidió propuestas para puestos y actividades. El día del festival, confirmó que se celebraría y compartió el programa, que incluía fuegos artificiales, un adelanto del video promocional y la clausura. [Anuncio del día del festival](https://discord.com/channels/737538781024092170/779569416438415421/1010817999575449610)
 
 edamameRex_java (Edamame) anunció su puesto. Moon_666 presentó lo que habría en su puesto, incluido un gacha. Tras el festival, Yukke compartió sus impresiones y dio las gracias a ゆり, Edamame y los responsables de los puestos. [Anuncio del puesto de Edamame](https://discord.com/channels/737538781024092170/779569416438415421/1010359403259641856) [Anuncio del puesto de Moon_666](https://discord.com/channels/737538781024092170/779569416438415421/1010344489270923304) [Impresiones y agradecimientos tras el festival](https://discord.com/channels/737538781024092170/779569416438415421/1010919818972631110)
+
+En octubre de 2022, nuu\_mink invitó a los jugadores a visitar el casino y el bar de POCKET ACES CASINO. El 30 de octubre anunció un evento de Halloween previsto en el bar.
 
 En noviembre de 2022, yanyan_fafnir anunció que ゆり (Yū) había asumido un rol de apoyo por recomendación de Sosuke. [Anuncio del nombramiento](https://discord.com/channels/737538781024092170/774152638450237460/1043527218191663114)
 
@@ -182,6 +188,8 @@ Según los registros del antiguo canal de Discord, en agosto de 2021 KOTA-SAN in
 En junio de 2022, Mugi actualizó el bot de lectura Kutya para que funcionara con el chat dentro de los canales de voz. En marzo de 2023, anunció un bot para enviar comentarios anónimos al equipo del servidor. [Actualización de Kutya](https://discord.com/channels/737538781024092170/774152638450237460/986439863937155122) [Anuncio del canal de comentarios anónimos](https://discord.com/channels/737538781024092170/774152638450237460/1087976366126927882)
 
 En septiembre de 2022, Gui anunció una versión de prueba del sitio. En octubre informó de que había separado el blog de la documentación y preparado páginas que varias personas podían editar. taka8621 pidió guías de comandos, guías de instalaciones con imágenes y mapas. yanyan propuso páginas editables. En enero de 2023, &#33775;\*HAiNE probó el entorno de edición de la wiki y planteó cómo se orientarían los lectores si las guías quedaban repartidas entre distintas páginas.
+
+En octubre de 2022, hana0c0haine informó de que había revisado todas las páginas de la wiki que estaban publicadas y corregido inconsistencias en la terminología y en la redacción en japonés. En marzo de 2023, あすたん organizó canales separados para quienes editaban la wiki y explicó cómo redactar en Markdown.
 
 En noviembre de 2022, キツネコ propuso publicar las reglas de uso del suelo en la wiki y emplear plantillas de solicitud separadas para nivelar terrenos y excavar a cielo abierto. Nishikino Sega preguntó cómo solicitar permiso si se iba a construir después de nivelar el terreno. En enero de 2023, taka8621 pidió ayuda para ordenar las reglas de construcción y otras relacionadas, y &#33775;\*HAiNE propuso reglas sobre excavaciones subterráneas. En una publicación de febrero, taka8621 recogió las propuestas de Yukke sobre el paisaje y el uso de los aldeanos en trampas.
 
