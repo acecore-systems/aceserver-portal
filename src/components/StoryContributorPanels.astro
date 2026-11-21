@@ -1,0 +1,438 @@
+---
+import {
+  boatCourseCredit,
+  contributorProfiles,
+  festivalCredits,
+  roadmapCheckedDate,
+  roadmapEntries,
+  type ContributorStoryCopy,
+} from '../data/contributor-story'
+import { DATE_LOCALE_BY_LOCALE, type Locale } from '../i18n/config'
+import Icon from './Icon.astro'
+
+interface Props {
+  locale: Locale
+  copy: ContributorStoryCopy
+}
+
+const { locale, copy } = Astro.props
+const dateLocale = DATE_LOCALE_BY_LOCALE[locale]
+const monthFormat = new Intl.DateTimeFormat(dateLocale, {
+  year: 'numeric',
+  month: 'long',
+  timeZone: 'UTC',
+})
+const dateFormat = new Intl.DateTimeFormat(dateLocale, {
+  dateStyle: 'long',
+  timeZone: 'UTC',
+})
+const [checkedPrefix, checkedSuffix] = copy.checkedDate.split('{date}')
+const statusIcons = {
+  held: 'check',
+  announced: 'calendar-days',
+  proposals: 'message-square-plus',
+} as const
+---
+
+<section
+  id="contributors"
+  class="contributors"
+  aria-labelledby="contributors-title"
+>
+  <h2 id="contributors-title">{copy.contributors}</h2>
+  <ul class="profile-list" role="list">
+    {contributorProfiles.map((profile) => (
+      <li class="profile-card">
+        <div class="profile-identity">
+          <div class="skin-frame">
+            <img
+              src={profile.image}
+              alt={copy.skinAlt.replace('{name}', profile.name)}
+              width="64"
+              height="64"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div>
+            <h3>{profile.name}</h3>
+            <p class="minecraft-id">
+              {copy.playerName}
+              <span>{profile.playerName}</span>
+            </p>
+          </div>
+        </div>
+        <p>{copy.profileDetails[profile.id]}</p>
+        <div class="card-meta">
+          <time datetime={profile.month}>
+            {monthFormat.format(new Date(profile.month))}
+          </time>
+          <a href={profile.source}>
+            {copy.announceLink} <Icon name="arrow-up-right" />
+          </a>
+        </div>
+      </li>
+    ))}
+  </ul>
+  <ul class="additional-credits" role="list">
+    <li>
+      <span class="credit-icon">
+        <Icon name="pickaxe" />
+      </span>
+      <div>
+        <h3>{boatCourseCredit.name}</h3>
+        <p>{copy.boatCourse}</p>
+        <div class="card-meta">
+          <time datetime={boatCourseCredit.month}>
+            {monthFormat.format(new Date(boatCourseCredit.month))}
+          </time>
+          <a href={boatCourseCredit.source}>
+            {copy.announceLink} <Icon name="arrow-up-right" />
+          </a>
+        </div>
+      </div>
+    </li>
+    <li>
+      <span class="credit-icon">
+        <Icon name="party-popper" />
+      </span>
+      <div>
+        <h3>{copy.festival.title}</h3>
+        <p>{copy.festival.description}</p>
+        <div class="card-meta">
+          <time datetime={festivalCredits.year}>{festivalCredits.year}</time>
+          <a href={festivalCredits.source}>
+            {copy.festival.link} <Icon name="arrow-up-right" />
+          </a>
+        </div>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<section id="roadmap" class="roadmap" aria-labelledby="roadmap-title">
+  <header class="roadmap-heading">
+    <h2 id="roadmap-title">{copy.roadmap}</h2>
+    <p>
+      {checkedPrefix}
+      <time datetime={roadmapCheckedDate}>
+        {dateFormat.format(new Date(roadmapCheckedDate))}
+      </time>
+      {checkedSuffix}
+    </p>
+  </header>
+  <ul class="roadmap-list" role="list">
+    {roadmapEntries.map(({ id, state, date, source }) => {
+      const entry = copy.roadmapDetails[id]
+      return (
+        <li class="roadmap-item" data-state={state}>
+          <span class="roadmap-marker">
+            <Icon name={statusIcons[state]} />
+          </span>
+          <div class="roadmap-card">
+            <div class="roadmap-meta">
+              <span class="roadmap-state">{copy.status[state]}</span>
+              {date && (
+                <time datetime={date}>{dateFormat.format(new Date(date))}</time>
+              )}
+              {state === 'announced' && <span>{copy.unscheduled}</span>}
+            </div>
+            <h3>{entry.title}</h3>
+            <p>{entry.description}</p>
+            <a class="roadmap-source" href={source}>
+              {entry.link} <Icon name="arrow-up-right" />
+            </a>
+          </div>
+        </li>
+      )
+    })}
+  </ul>
+  <p class="discord-note">{copy.discordNote}</p>
+</section>
+
+<style>
+  .contributors,
+  .roadmap {
+    margin-top: clamp(28px, 5vw, 48px);
+    border: 2px solid #1e1710;
+    border-radius: 12px;
+    padding: clamp(16px, 3.6vw, 28px);
+    box-shadow: 0 5px 0 #1e171027;
+  }
+
+  .contributors {
+    border-top: 6px solid #74c54c;
+    background: #1b3523;
+    color: #fff8e6;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: clamp(1.45rem, 3.1vw, 2.15rem);
+    font-weight: 900;
+    line-height: 1.3;
+  }
+
+  h3 {
+    margin: 0;
+    font-size: 1.15rem;
+    font-weight: 900;
+    line-height: 1.4;
+  }
+
+  ul {
+    display: grid;
+    gap: 12px;
+    margin: 18px 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .profile-list,
+  .roadmap-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .profile-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid #a5be8d;
+    border-radius: 8px;
+    padding: 14px;
+    background: #fff8e6;
+    color: #1e1710;
+    box-shadow: 0 4px 0 #08170d;
+  }
+
+  .profile-identity {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: center;
+    gap: 12px;
+  }
+
+  .skin-frame {
+    align-self: start;
+    border: 1px solid #9fba79;
+    padding: 4px;
+    background: #e4efd0;
+    box-shadow: 0 2px 0 #c2d1a8;
+  }
+
+  .skin-frame img {
+    display: block;
+    width: 64px;
+    height: 64px;
+    max-width: none;
+    image-rendering: pixelated;
+  }
+
+  p {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.65;
+  }
+
+  .minecraft-id {
+    margin-top: 4px;
+    color: #475a37;
+    font-size: 0.74rem;
+    font-weight: 700;
+    line-height: 1.35;
+  }
+
+  .minecraft-id span {
+    display: block;
+    font-family: ui-monospace, monospace;
+    font-size: 0.83rem;
+  }
+
+  .card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0 10px;
+    color: #504b3d;
+    font-size: 0.79rem;
+    font-weight: 700;
+  }
+
+  .profile-card .card-meta {
+    margin-top: auto;
+  }
+
+  a {
+    display: inline-block;
+    padding-block: 4px;
+    color: #0756a8;
+    font-size: 0.82rem;
+    font-weight: 800;
+    text-decoration: underline;
+    text-underline-offset: 0.18em;
+  }
+
+  a:hover {
+    text-decoration-thickness: 2px;
+  }
+
+  .additional-credits {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .additional-credits li {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: start;
+    gap: 12px;
+    border: 1px solid #668663;
+    border-radius: 8px;
+    padding: 12px;
+    background: #284832;
+  }
+
+  .credit-icon,
+  .roadmap-marker {
+    display: grid;
+    width: 36px;
+    height: 36px;
+    place-items: center;
+    border: 2px solid currentColor;
+    border-radius: 6px;
+    font-size: 1.15rem;
+  }
+
+  .credit-icon {
+    color: #cdf197;
+  }
+
+  .additional-credits h3 {
+    font-size: 1rem;
+  }
+
+  .additional-credits p {
+    color: #eef5e7;
+  }
+
+  .additional-credits .card-meta {
+    color: #d0e3c7;
+  }
+
+  .additional-credits a {
+    color: #c5f1ff;
+  }
+
+  .discord-note {
+    margin: 14px 0 0;
+    color: #514331;
+    font-size: 0.78rem;
+  }
+
+  .roadmap {
+    border-top: 6px solid #477c33;
+    background: #f3f3dc;
+  }
+
+  .roadmap-heading {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 4px 16px;
+  }
+
+  .roadmap-heading p {
+    color: #514331;
+    font-size: 0.8rem;
+    font-weight: 800;
+  }
+
+  .roadmap-item {
+    position: relative;
+    display: grid;
+    grid-template-rows: 36px 1fr;
+    gap: 9px;
+    --status-ink: #285119;
+    --status-fill: #dff2c3;
+  }
+
+  .roadmap-item:not(:last-child)::before {
+    position: absolute;
+    top: 16px;
+    left: 18px;
+    width: calc(100% + 12px);
+    height: 3px;
+    background: #aeb795;
+    content: '';
+  }
+
+  .roadmap-item[data-state='announced'] {
+    --status-ink: #623c00;
+    --status-fill: #ffecaa;
+  }
+
+  .roadmap-item[data-state='proposals'] {
+    --status-ink: #15516c;
+    --status-fill: #d9f2f9;
+  }
+
+  .roadmap-marker {
+    position: relative;
+    background: var(--status-fill);
+    color: var(--status-ink);
+  }
+
+  .roadmap-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    border: 1px solid #a9ac90;
+    border-radius: 8px;
+    padding: 14px;
+    background: #fffdf5;
+  }
+
+  .roadmap-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px 8px;
+    color: #514331;
+    font-size: 0.76rem;
+    font-weight: 800;
+  }
+
+  .roadmap-state {
+    border-radius: 4px;
+    padding: 2px 7px;
+    background: var(--status-fill);
+    color: var(--status-ink);
+  }
+
+  .roadmap-source {
+    align-self: flex-start;
+    margin-top: auto;
+  }
+
+  @media (max-width: 740px) {
+    .profile-list,
+    .additional-credits,
+    .roadmap-list {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .roadmap-item {
+      grid-template-columns: 36px minmax(0, 1fr);
+      grid-template-rows: auto;
+      align-items: start;
+    }
+
+    .roadmap-item:not(:last-child)::before {
+      top: 18px;
+      left: 16px;
+      width: 3px;
+      height: calc(100% + 12px);
+    }
+  }
+</style>
