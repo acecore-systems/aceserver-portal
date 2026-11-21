@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:86bff087c6530f2f3a3411f39564a9e005070403dca6347a52136ed53a1491c0
+sourceHash: sha256:b9dec405fbc4458efd02cfc0402ecdd357f851cdccd5d04eda586fc64a2ee434
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -119,6 +119,8 @@ Les archives de l’ancien Discord montrent qu’en mars 2023, あすたん a mi
 
 Pour l’Ace Fest Offline du printemps 2023, Gui a publié les annonces officielles et はっ a indiqué où participer en ligne pour les personnes qui ne pouvaient pas venir sur place. [Annonce de l’événement](https://discord.com/channels/737538781024092170/774152638450237460/1091302323298521181) [Annonce sur la participation](https://discord.com/channels/737538781024092170/774152638450237460/1092392407229804544)
 
+Le 8 avril 2023, `Rina''` a invité les joueurs à participer à la rencontre en personne du printemps dans le salon Cantine Ace de l’époque. [Invitation à la rencontre du printemps](https://discord.com/channels/737538781024092170/840559799129210890/1094260207175094313)
+
 En mai 2023, ゆり a présenté le projet de l’équipe de communication pour animer régulièrement les comptes YouTube et Twitter. [Projet de l’équipe de communication](https://discord.com/channels/737538781024092170/774152638450237460/1110469768420532235)
 
 ### **Du second semestre 2023 à la fin de 2024**
@@ -187,6 +189,8 @@ En juillet 2025, End&#12539;コッカー a indiqué avoir préparé une proposit
 
 L’annonce du festival d’été 2025 citait センチュリーズ pour la préparation et la fourniture du feu d’artifice. Les remerciements après l’événement citaient セガ, リンゴポン, あまぎ, 新人, ジェスター, ホステッチ et イザイザ pour le feu d’artifice, ainsi que コッカー et sh pour la coordination générale. エント s’est occupé du circuit, et moon et セキセイ du golf. ハルビィ, セキセイ et sh ont assuré le PvP de survie, et はっ et sh l’événement spécial. [Message d’origine](https://discord.com/channels/737538781024092170/774152638450237460/1408390549370572880) [Remerciements après l’événement](https://discord.com/channels/737538781024092170/779569416438415421/1411394624026710166)
 
+Le 12 août 2025, &#12415;&#12389;&#12364;&#12397; a partagé une carte provisoire des quatre lignes du chemin de fer de &#34746;&#36794; et a lancé un appel à propositions de noms. &#12454;&#12455;&#12531;&#12486;&#12451; (Hosttech255) a proposé des noms. Dans ses annonces des 30 août et 7 septembre, &#12415;&#12389;&#12364;&#12397; a présenté les noms &#20959;&#20958;&#32218; (&#12392;&#12367;&#12365;&#12379;&#12435;), &#20116;&#12484;&#23798;&#25903;&#32218;, &#21512;&#27700;&#28304;&#25903;&#32218; et &#27700;&#26332;&#25903;&#32218;.
+
 En septembre 2025, End&#12539;コッカー a présenté les activités de quatre sections consacrées au rail, aux événements, à la construction et aux travaux collectifs, puis a invité des volontaires à rejoindre le comité de revitalisation d’Aceserver.
 
 Le 9 septembre 2025, 山田 a présenté le paysage ferroviaire et ses détails à l’aide d’une carte montrant une courbe des voies et un pont au-dessus de la mer, et d’une vue en jeu de la partie en pierre. [Carte montrant les voies et le pont](https://discord.com/channels/737538781024092170/1337748039317848137/1414913878097133629) [Vue en jeu de la partie en pierre](https://discord.com/channels/737538781024092170/1337748039317848137/1414914292750487623)
@@ -197,7 +201,13 @@ Le 26 octobre 2025, End&#12539;コッカー a remercié les personnes qui avaien
 
 En octobre 2025, sh a remercié les personnes qui avaient aidé à préparer les événements du comité de revitalisation d’Aceserver et a sollicité des idées pour la suite. En novembre, une annonce a présenté amagi_467 comme l’initiateur du premier tournoi de mahjong d’Aceserver, que le comité prévoyait d’organiser. [Remerciements et appel à idées](https://discord.com/channels/737538781024092170/774152638450237460/1432028687376715897) [Annonce du tournoi de mahjong](https://discord.com/channels/737538781024092170/774152638450237460/1442742157315149865)
 
+Entre novembre et décembre 2025, sh a invité les personnes qui n’avaient jamais joué au mahjong à suivre une séance d’initiation prévue le 13 décembre.
+
+Le 24 novembre 2025, タケ a invité les joueurs à proposer des noms pour l’événement de fin d’année. &#12356;&#12396;&#12397;&#12371; a proposé « &#24179;&#26041;&#25968;&#65;&#83;&#70; », タケ « &#12402;&#12425;&#12367;&#65;&#83;&#70; », End&#12539;コッカー « &#28783;&#12427;&#97;&#115;&#102; » et sekisei « &#12388;&#12367;&#12427;&#65;&#83;&#70; » le 30 novembre. タケ a annoncé un vote final le 14 décembre. À sa clôture le 15 décembre, « #&#12388;&#12367;&#12427;&#65;&#83;&#70; » est arrivé en tête avec 57 % des voix.
+
 Pour la fin de 2025, Pluto a annoncé Herobrine, un événement de parkour en neuf étapes.
+
+Le 1er décembre 2025, sekisei a annoncé des créneaux de 15 minutes pour des activités proposées par les joueurs lors de l’événement d’hiver. Il était possible de participer en proposant une activité, en partageant des tâches d’organisation ou en animant soi-même une activité. [Appel à projets pour l’événement d’hiver](https://discord.com/channels/737538781024092170/774152638450237460/1445002550951809085)
 
 En décembre 2025, en s’appuyant aussi sur l’idée de ゆり, sekisei a proposé de recruter un comité d’organisation chargé de planifier et de promouvoir les événements, de coordonner leur déroulement et d’en fixer le calendrier.
 
@@ -227,9 +237,15 @@ En février 2026, End&#12539;コッカー a annoncé le concours photo d’Acese
 
 En mars 2026, End&#12539;コッカー a partagé un essai de vidéo de présentation d’Aceserver. Merutak a relevé le rythme rapide de la première moitié. sekisei a suggéré de préciser l’objectif, le public et le message. あすたん a commenté la quantité d’informations à mettre dans une vidéo courte, et LuMiSIA\_&#26376;&#31070;&#24736;&#33673; a donné son avis sur la présentation du texte et des animations.
 
+Le 7 mars 2026, End&#12539;コッカー a sollicité des idées d’événements et des volontaires, y compris pour des activités en dehors du PvP.
+
 En mars 2026, &#12486;&#12451;&#12512;&#12540; a sollicité des idées pour une nouvelle icône et des récits sur ce qui se passait sur le serveur pour le Journal d’Aceserver du comité de revitalisation d’Aceserver.
 
+Le 29 juillet 2026, &#29792;&#22856; a proposé une course de bateaux sur glace où les joueurs recevraient une récompense s’ils terminaient dans le temps imparti.
+
 En août 2026, sekisei et ふーや ont annoncé un CTF commun sous forme de chasse au trésor en ligne, où des énigmes comme des codes permettent de trouver des drapeaux. Aceserver CTF2026 a débuté le 28 août. [Annonce de coorganisation](https://discord.com/channels/737538781024092170/774152638450237460/1541785510094184449) [Annonce du début](https://discord.com/channels/737538781024092170/779569416438415421/1542704904055824394)
+
+Les 6, 20 et 30 septembre 2026, End&#12539;コッカー a soumis des images et des textes sur des constructions, la menuiserie et l’immobilier dans l’End, ainsi que le chemin de fer, en vue d’une éventuelle publication sur les réseaux sociaux.
 
 ## Construction et projets collectifs
 
@@ -303,13 +319,19 @@ En novembre 2025, End&#12539;コッカー a annoncé l’installation de portail
 
 En novembre 2025, Moon\_666 a annoncé qu’une ferme à piglins zombifiés qui rapportait de l’or et des points d’expérience était terminée sur le serveur de saison. [Rapport d’achèvement sur le serveur de saison](https://discord.com/channels/737538781024092170/1437442961507090443/1440300609545965649)
 
+Le 17 janvier 2026, 山田 a cherché des personnes souhaitant emménager dans une grande zone résidentielle. Le 31 janvier, Amagi\_467 a cherché une personne pour diriger et développer un village lié au chemin de fer d’Amagi et a expliqué que le chemin de fer prendrait en charge les matériaux et les dépenses similaires.
+
 Le 11 mars 2026, Merutak a sollicité des idées pour le terrain et a cité comme option un monument océanique à six fois son échelle d’origine. Pluto a proposé d’autres constructions, notamment une immense bibliothèque. sekisei a suggéré d’utiliser les matériaux du monument d’origine uniquement à l’extérieur. [Appel à idées pour le terrain](https://discord.com/channels/737538781024092170/1476561093244620913/1481297210389041334) [Proposition sur les matériaux du monument océanique](https://discord.com/channels/737538781024092170/1476561093244620913/1481298053309661275)
 
 En mars 2026, Merutak a annoncé la fin du drainage d’une vaste zone pour le projet de monument océanique ×6 et d’excavation à ciel ouvert. Merutak a remercié sega, take, sekisei, harubie, hatt, timu, buraki, yukke, moon, sinzin et siu pour les matériaux et leur aide sur le chantier. [Compte rendu du drainage et remerciements](https://discord.com/channels/737538781024092170/779569416438415421/1483522273020215497)
 
 Le 30 mars, Merutak a annoncé la fin de la construction du monument océanique ×6. L’excavation à ciel ouvert était alors en cours. [Annonce de l’achèvement du monument](https://discord.com/channels/737538781024092170/779569416438415421/1488001468970827896)
 
+Le 8 avril 2026, 山田 a proposé de construire une ville éloignée du centre et d’y chercher des habitants. shiina a exprimé son intérêt et indiqué pouvoir aider à construire.
+
 Le 14 avril 2026, Moon\_666 a construit les Appartements du Manoir forestier sur le serveur de survie. Moon\_666 a aussi annoncé l’ouverture d’une voie de glace pour les bateaux reliant plusieurs zones, notamment du côté du marché central. [Compte rendu sur les appartements et la voie de glace](https://discord.com/channels/737538781024092170/1437442902547759125/1493580742066966651)
+
+Le 18 avril 2026, Moon\_666 a signalé que les Appartements du Manoir forestier numéros 1 à 3 étaient presque terminés et que les travaux dans les installations attenantes au numéro 2 se poursuivaient.
 
 Le 17 septembre 2026, タケ a annoncé que le comité de revitalisation d’Aceserver avait commencé à réaménager la partie centrale de l’ancien site de Century. タケ a aussi signalé que plusieurs personnes avaient aidé à dégager la zone. [Début du réaménagement de l’ancien site de Century](https://discord.com/channels/737538781024092170/1437442902547759125/1550005135311110154)
 
@@ -398,6 +420,8 @@ Le 26 février 2026, Merutak a demandé quels salons Discord pourraient être ar
 En février 2026, Merutak a annoncé la création de deux rôles Discord pour les avis de problèmes et d’arrêts du serveur. [Message d’origine](https://discord.com/channels/737538781024092170/774152638450237460/1477293143773810822)
 
 En mars 2026, あすたん a publié les règles du serveur de ressources. En juillet, sekisei a publié une mise à jour dans le même fil. [Publication des règles du serveur de ressources](https://discord.com/channels/737538781024092170/1486515511029268610/1486515511029268610) [Publication de la mise à jour](https://discord.com/channels/737538781024092170/1486515511029268610/1531835894196080653)
+
+Les 12 et 13 mars 2026, sekisei a cherché des personnes intéressées par un cours de Java pour débutants et par un cours de remise à niveau abordant la création de mods et de plugins Minecraft.
 
 En juillet 2026, sekisei a annoncé la première présentation technique sur les serveurs et Internet. [Annonce de la présentation technique](https://discord.com/channels/737538781024092170/774152638450237460/1532641413500633108)
 
