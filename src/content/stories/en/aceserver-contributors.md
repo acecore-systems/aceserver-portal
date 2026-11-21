@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:0ea114a91606288643203ec8587f0c7faa1bcaf295758d075375242e66a93bf2
+sourceHash: sha256:591cdc6e2b449888008b696c70afdece536e5dabec6035ce7b2cb71fe34b5d7e
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -485,6 +485,8 @@ In November 2025, a Minecraft and Discord chat integration made by あすたん 
 
 In November 2025, ゆり explained how to link Minecraft and Discord at the time and posted the general rules in the channel for acknowledging the rules. End&#12539;コッカー posted answers to common questions about confirming the rules and finding where to link Discord. [Minecraft and Discord linking guide](https://discord.com/channels/737538781024092170/1434155347832078398/1434158498148651008) [General rules in the rules confirmation channel](https://discord.com/channels/737538781024092170/1386851151428980856/1434162187475091529) [Rules confirmation and linking FAQ](https://discord.com/channels/737538781024092170/1104052367407718533/1438756485701173270)
 
+In November 2025, sekisei proposed an Ace Coin-linked shop for roles and cosmetic items, along with a feature for customizing profiles.
+
 In December 2025, sekisei posted a guide to using the Season Creative concept server. In January 2026, sekisei reported handing its management over to sh31415. [Season Creative guide](https://discord.com/channels/737538781024092170/1445004286793879602/1445004286793879602) [Management handover report](https://discord.com/channels/737538781024092170/1445004286793879602/1460090096475832425)
 
 On January 14, 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; explained to new players how joining differed between Minecraft Java Edition and Bedrock Edition. In a separate post in the same channel, they shared a single image showing the “Add Server” button and the server name and address fields side by side for the two editions. [Java and Bedrock connection guide](https://discord.com/channels/737538781024092170/1460983001809948744/1460983826439471380) [Java and Bedrock screens side by side](https://discord.com/channels/737538781024092170/1460983001809948744/1460983916172148859)
@@ -502,6 +504,8 @@ On March 12 and 13, 2026, sekisei asked who was interested in a beginner Java co
 In July 2026, sekisei announced the first technical talk about servers and the Internet. [Technical talk announcement](https://discord.com/channels/737538781024092170/774152638450237460/1532641413500633108)
 
 From September to October 2026, End&#12539;コッカー organized the Minecraft joining guide of the time so players could find the rules, introductions, and connection resources. End&#12539;コッカー also listed where to check the rules for each world.
+
+In October 2026, sekisei proposed that people arriving in the lobby for the first time pass through an introductory world before reaching the regular lobby. On October 21, End&#12539;コッカー reported that the introductory lobby was complete. Two images they posted that day showed a lectern displaying the rules and a gate.
 
 On November 11, 2026, Gui directed players with connection, verification, or Discord linking problems to the official wiki’s FAQ and joining guide. If the problem persisted, Gui asked them to contact staff through the questions channel and include their device, whether they used Java or Bedrock Edition, the error, and the steps they had tried. [Troubleshooting and contacting staff](https://discord.com/channels/737538781024092170/1569771434945806476/1569771922676252713)
 

@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:0ea114a91606288643203ec8587f0c7faa1bcaf295758d075375242e66a93bf2
+sourceHash: sha256:591cdc6e2b449888008b696c70afdece536e5dabec6035ce7b2cb71fe34b5d7e
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -485,6 +485,8 @@ Im November 2025 wurde ein von あすたん entwickeltes Chatsystem zur Verbindu
 
 Im November 2025 erklärte ゆり, wie man Minecraft und Discord damals verknüpfte, und veröffentlichte die allgemeinen Regeln im Kanal für die Regelbestätigung. End&#12539;コッカー veröffentlichte Antworten auf häufige Fragen zur Bestätigung der Regeln und dazu, wo die Verknüpfung mit Discord vorgenommen werden konnte. [Anleitung zur Verknüpfung von Minecraft und Discord](https://discord.com/channels/737538781024092170/1434155347832078398/1434158498148651008) [Allgemeine Regeln im Bestätigungskanal](https://discord.com/channels/737538781024092170/1386851151428980856/1434162187475091529) [Häufige Fragen zur Regelbestätigung und Verknüpfung](https://discord.com/channels/737538781024092170/1104052367407718533/1438756485701173270)
 
+Im November 2025 schlug sekisei einen an Ace Coins gekoppelten Shop für Rollen und kosmetische Gegenstände sowie eine Funktion zur Anpassung des Profils vor.
+
 Im Dezember 2025 veröffentlichte sekisei eine Anleitung zur Nutzung des Konzeptservers Season Creative. Im Januar 2026 meldete sekisei, die Verwaltung an sh31415 übergeben zu haben. [Anleitung zu Season Creative](https://discord.com/channels/737538781024092170/1445004286793879602/1445004286793879602) [Bericht zur Übergabe der Verwaltung](https://discord.com/channels/737538781024092170/1445004286793879602/1460090096475832425)
 
 Am 14. Januar 2026 erklärte LuMiSIA\_&#26376;&#31070;&#24736;&#33673; neuen Spielern, wie sich der Beitritt mit Minecraft Java Edition und Bedrock Edition unterschied. In einem weiteren Beitrag im selben Kanal teilte LuMiSIA ein Bild, das die Schaltfläche zum Hinzufügen eines Servers und die Felder für Servername und -adresse in beiden Editionen nebeneinander zeigte. [Verbindungsanleitung für Java und Bedrock](https://discord.com/channels/737538781024092170/1460983001809948744/1460983826439471380) [Java- und Bedrock-Bildschirme im Vergleich](https://discord.com/channels/737538781024092170/1460983001809948744/1460983916172148859)
@@ -502,6 +504,8 @@ Am 12. und 13. März 2026 suchte sekisei Interessierte für einen Java-Einsteige
 Im Juli 2026 kündigte sekisei den ersten technischen Vortrag über Server und das Internet an. [Ankündigung des technischen Vortrags](https://discord.com/channels/737538781024092170/774152638450237460/1532641413500633108)
 
 Von September bis Oktober 2026 strukturierte End&#12539;コッカー den damaligen Leitfaden für den Minecraft-Beitritt so, dass die Regeln, die Vorstellungsbereiche und die Hinweise zur Verbindung leichter zu finden waren. End&#12539;コッカー stellte auch zusammen, wo die Regeln der einzelnen Welten zu finden waren.
+
+Im Oktober 2026 schlug sekisei vor, dass Personen bei ihrem ersten Besuch in der Lobby zunächst eine Einführungswelt durchlaufen, bevor sie die reguläre Lobby erreichen. Am 21. Oktober meldete End&#12539;コッカー, dass die Einführungslobby fertig war. Zwei Bilder, die am selben Tag veröffentlicht wurden, zeigten ein Lesepult mit den Regeln und ein Tor.
 
 Am 11. November 2026 verwies Gui Spieler mit Problemen bei der Verbindung, Verifizierung oder Discord-Verknüpfung auf die FAQ und die Beitrittsanleitung im offiziellen Wiki. Falls das Problem weiter bestand, sollten sie sich im Fragenkanal an das Team wenden und ihr Gerät, Java Edition oder Bedrock Edition, die Fehlermeldung und die bereits versuchten Schritte angeben. [Hilfe bei Problemen und Fragen an das Team](https://discord.com/channels/737538781024092170/1569771434945806476/1569771922676252713)
 
