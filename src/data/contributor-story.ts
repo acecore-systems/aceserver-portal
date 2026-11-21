@@ -43,6 +43,26 @@ export const contributorProfiles = [
     playerName: 'Merutak',
     image: '/uploads/contributors/merutak.png',
   },
+  {
+    id: 'technicalLecture',
+    name: 'sekisei',
+    month: '2026-07',
+    source:
+      'https://discord.com/channels/737538781024092170/774152638450237460/1532641413500633108',
+    // https://mc-map-main.acecore.net/tiles/faces/8x8/sekisei0077.png
+    playerName: 'sekisei0077',
+    image: '/uploads/contributors/sekisei0077.png',
+  },
+  {
+    id: 'summerStall',
+    name: '枝豆',
+    month: '2022-08',
+    source:
+      'https://discord.com/channels/737538781024092170/779569416438415421/1010359403259641856',
+    // Java profile base and outer face, 2026-11-22.
+    playerName: 'edamameRex_java',
+    image: '/uploads/contributors/edamamerex_java.png',
+  },
 ] as const satisfies readonly ContributorProfile[]
 
 type ProfileId = (typeof contributorProfiles)[number]['id']
@@ -127,6 +147,9 @@ export const contributorStoryCopy: Record<Locale, ContributorStoryCopy> = {
       chatBridge: 'MinecraftとDiscordのチャットをつなぐ仕組みを作りました。',
       raceAnnounce: '代替のボートレースを告知し、使用する会場を案内しました。',
       discordRoles: 'トラブルやサーバー停止の連絡用Discordロールを作りました。',
+      technicalLecture:
+        'サーバーとインターネットをテーマにした第1回技術講座を案内しました。',
+      summerStall: '2022年の夏祭りに出店することを案内しました。',
     },
     boatCourse: '代替ボートレースの会場として案内されたレース場を作りました。',
     festival: {
@@ -174,6 +197,9 @@ export const contributorStoryCopy: Record<Locale, ContributorStoryCopy> = {
         'Announced the alternate boat race and introduced its venue.',
       discordRoles:
         'Created Discord roles for reporting problems and server outages.',
+      technicalLecture:
+        'Announced the first technical talk on servers and the internet.',
+      summerStall: 'Announced a stall at the 2022 Summer Festival.',
     },
     boatCourse:
       'Built the course announced as the venue for the alternate boat race.',
@@ -224,6 +250,8 @@ export const contributorStoryCopy: Record<Locale, ContributorStoryCopy> = {
       chatBridge: '制作了连接游戏内聊天与 Discord 的系统。',
       raceAnnounce: '发布了替代赛艇比赛的公告，并介绍了比赛场地。',
       discordRoles: '创建了用于通报故障和服务器停机的 Discord 身份组。',
+      technicalLecture: '发布了首场技术讲座的通知，主题是服务器和互联网。',
+      summerStall: '发布了将在 2022 年夏日祭摆摊的消息。',
     },
     boatCourse: '建造了公告中介绍的替代赛艇比赛场地。',
     festival: {
@@ -268,6 +296,10 @@ export const contributorStoryCopy: Record<Locale, ContributorStoryCopy> = {
         'Anunció la carrera de botes alternativa y presentó su recinto.',
       discordRoles:
         'Creó roles de Discord para avisar sobre problemas y caídas del servidor.',
+      technicalLecture:
+        'Anunció la primera charla técnica sobre servidores e Internet.',
+      summerStall:
+        'Anunció que tendría un puesto en el Festival de Verano de 2022.',
     },
     boatCourse:
       'Construyó el circuito anunciado como sede de la carrera de botes alternativa.',
@@ -321,6 +353,10 @@ export const contributorStoryCopy: Record<Locale, ContributorStoryCopy> = {
         'Anunciou a corrida alternativa de barcos e apresentou a pista.',
       discordRoles:
         'Criou cargos no Discord para avisar sobre problemas e quedas do servidor.',
+      technicalLecture:
+        'Anunciou a primeira palestra técnica sobre servidores e internet.',
+      summerStall:
+        'Anunciou que teria uma barraca no Festival de Verão de 2022.',
     },
     boatCourse:
       'Construiu a pista anunciada como local da corrida alternativa de barcos.',
@@ -374,6 +410,9 @@ export const contributorStoryCopy: Record<Locale, ContributorStoryCopy> = {
         'A annoncé la course de bateaux de remplacement et présenté son parcours.',
       discordRoles:
         'A créé des rôles Discord pour signaler les problèmes et les arrêts du serveur.',
+      technicalLecture:
+        'A annoncé la première présentation technique sur les serveurs et Internet.',
+      summerStall: 'A annoncé la tenue d’un stand au festival d’été de 2022.',
     },
     boatCourse:
       'A construit le parcours annoncé pour la course de bateaux de remplacement.',
@@ -424,6 +463,9 @@ export const contributorStoryCopy: Record<Locale, ContributorStoryCopy> = {
       chatBridge: '게임 안의 채팅과 Discord를 연동하는 시스템을 만들었습니다.',
       raceAnnounce: '대체 보트 경주를 공지하고 경기장을 안내했습니다.',
       discordRoles: '문제나 서버 중단을 알리는 Discord 역할을 만들었습니다.',
+      technicalLecture:
+        '서버와 인터넷을 주제로 한 첫 기술 강연을 안내했습니다.',
+      summerStall: '2022년 여름 축제에 부스를 연다고 안내했습니다.',
     },
     boatCourse: '대체 보트 경주의 경기장으로 안내된 코스를 지었습니다.',
     festival: {
@@ -476,6 +518,9 @@ export const contributorStoryCopy: Record<Locale, ContributorStoryCopy> = {
         'Kündigte das alternative Bootsrennen an und stellte die Strecke vor.',
       discordRoles:
         'Erstellte Discord-Rollen für Meldungen über Probleme und Serverausfälle.',
+      technicalLecture:
+        'Kündigte den ersten technischen Vortrag über Server und das Internet an.',
+      summerStall: 'Kündigte einen Stand auf dem Sommerfest 2022 an.',
     },
     boatCourse:
       'Baute die Strecke, die für das alternative Bootsrennen angekündigt wurde.',
@@ -529,6 +574,10 @@ export const contributorStoryCopy: Record<Locale, ContributorStoryCopy> = {
         'Объявил об альтернативной гонке на лодках и представил трассу.',
       discordRoles:
         'Создал роли Discord для сообщений о неполадках и остановках сервера.',
+      technicalLecture:
+        'Анонсировал первую техническую лекцию о серверах и Интернете.',
+      summerStall:
+        'Объявил об участии со своим прилавком на летнем фестивале 2022 года.',
     },
     boatCourse:
       'Построил трассу, которую объявили местом проведения альтернативной гонки на лодках.',
