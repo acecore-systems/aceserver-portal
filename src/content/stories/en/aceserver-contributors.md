@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:7d109a3016f02c3e5fe56219c7e895a4597eba7acb95a38b38c76d2517b87f25
+sourceHash: sha256:a1620a9dd3c960ef3929722e18706171e05bbc6ac580280e21905c1a0ab1677e
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -35,7 +35,9 @@ In August 2021, KOTA-SAN previewed a call for first-anniversary logo designs. In
 
 In December 2020, Gui opened an activity channel for the Ace Railway Company, and oisiisyouyu invited people to join. In March 2021, oisiisyouyu announced that the group would focus on the subway.
 
-In an introduction posted to the old Discord by KOTA-SAN, the Aceserver Tourism Association listed MKOTA_SAN as its leader at the time. The introduction described the opening of a temple, an aquarium, and a casino district with facilities including a hotel and an art museum. It also covered contests and the joint development of the association’s bot Kutya. In March 2021, KOTA-SAN unveiled a slot machine in the association’s casino district and reported adding prizes the following day.
+In an introduction posted to the old Discord by KOTA-SAN, the Aceserver Tourism Association listed MKOTA_SAN as its leader at the time. The introduction described the opening of a temple, an aquarium, and a casino district with facilities including a hotel and an art museum. It also covered contests and the joint development of the association’s bot Kutya. On January 26, 2021, KOTA-SAN reported that the building and flag for the piglin game area at the casino were complete and shared a photo. In March 2021, KOTA-SAN unveiled a slot machine in the association’s casino district and reported adding prizes the following day.
+
+On February 12, 2021, kuroneko229 reported that the section of track connecting Chika Teikoku Station and Kuroneko Shopping District Station was complete, with an in-game image of the tracks.
 
 In March 2021, kuroneko229 introduced the Public Works Department, naming Kuro neko2229 as its leader at the time. In November 2022, kuroneko229 reported what the group, by then the Private Works Department, had worked on, including a subway, Nether roads, streetlights, a shopping district, and apartments.
 
@@ -265,7 +267,13 @@ In January 2021, bamoshi4869 announced a plan to dismantle a Nether fortress. Th
 
 In February 2021, Jagdsolid reported that a drowned farm was complete. ninopan1122 reported making Coffin Dance with note blocks.
 
-In March 2021, Game\_Tokumei started a service called Odd Jobs, taking requests for work such as improving roads. In May, kuroneko229 announced that anyone could build in Development City at the time.
+On March 7, 2021, Jagdsolid described the work that went into curing villagers and selecting librarians for the Suke Village Library in the old world. On March 18, Jagdsolid reported that the exterior was nearly complete. On March 22, Jagdsolid shared a photo showing the space set aside to store contributed books.
+
+In March 2021, Game\_Tokumei started a service called Odd Jobs, taking requests for work such as improving roads.
+
+On April 5, 2021, KOTA-SAN reported that Takenoko no Sato Stadium in the lobby was complete and shared a photo showing rows of seats on both sides of the indoor venue.
+
+In May, kuroneko229 announced that anyone could build in Development City at the time.
 
 In June 2021, KOTA-SAN reported the launch of the collaborative building project Yasuragi no Mori and said they had planted a tree to mark its start. That month, KOTA-SAN also reported that a device for making invisible item frames had been built at Yasuragi no Mori.
 

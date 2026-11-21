@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:7d109a3016f02c3e5fe56219c7e895a4597eba7acb95a38b38c76d2517b87f25
+sourceHash: sha256:a1620a9dd3c960ef3929722e18706171e05bbc6ac580280e21905c1a0ab1677e
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -35,7 +35,9 @@ En août 2021, KOTA-SAN a annoncé un prochain appel à propositions de logo pou
 
 En décembre 2020, Gui a ouvert un salon pour les activités d’Ace Railway Company, et oisiisyouyu a sollicité des participants. En mars 2021, oisiisyouyu a indiqué que le groupe concentrerait ses activités sur le métro.
 
-Dans une présentation publiée par KOTA-SAN sur l’ancien Discord, l’association touristique d’Aceserver indiquait que MKOTA_SAN en était le responsable à l’époque. Le message décrivait l’ouverture d’un temple, d’un aquarium et d’un quartier du casino qui comprenait notamment un hôtel et un musée d’art. Il présentait aussi des concours et le développement commun du bot Kutya de l’association. En mars 2021, KOTA-SAN a présenté une machine à sous dans le quartier du casino de l’association et a annoncé le lendemain y avoir ajouté des prix.
+Dans une présentation publiée par KOTA-SAN sur l’ancien Discord, l’association touristique d’Aceserver indiquait que MKOTA_SAN en était le responsable à l’époque. Le message décrivait l’ouverture d’un temple, d’un aquarium et d’un quartier du casino qui comprenait notamment un hôtel et un musée d’art. Il présentait aussi des concours et le développement commun du bot Kutya de l’association. Le 26 janvier 2021, KOTA-SAN a annoncé que le bâtiment et le drapeau de l’espace de jeu avec des piglins du casino étaient terminés et a partagé une photo. En mars 2021, KOTA-SAN a présenté une machine à sous dans le quartier du casino de l’association et a annoncé le lendemain y avoir ajouté des prix.
+
+Le 12 février 2021, kuroneko229 a annoncé que le tronçon reliant la gare de Chika Teikoku à celle du quartier commerçant de Kuroneko était terminé et a partagé une image des voies dans le jeu.
 
 En mars 2021, kuroneko229 a présenté le service des travaux publics en indiquant que Kuro neko2229 en était alors le responsable. En novembre 2022, kuroneko229 a fait le point sur les réalisations du groupe, devenu le service des travaux privés, dont un métro, des routes dans le Nether, des lampadaires, un quartier commerçant et des appartements.
 
@@ -265,7 +267,13 @@ En janvier 2021, bamoshi4869 a préparé et annoncé le démantèlement d’une 
 
 En février 2021, Jagdsolid a signalé que la ferme à noyés était terminée. ninopan1122 a annoncé avoir recréé la Danse du cercueil avec des blocs musicaux.
 
-En mars 2021, Game\_Tokumei a lancé un service appelé « Tous travaux » et a annoncé accepter des demandes comme l’aménagement de routes. En mai, kuroneko229 a indiqué qu’à l’époque, tout le monde pouvait construire dans la Ville en développement.
+Le 7 mars 2021, Jagdsolid a décrit les efforts consacrés à soigner les villageois et à choisir les bibliothécaires pour la bibliothèque du village de Suke, dans l’ancien monde. Le 18 mars, Jagdsolid a indiqué que l’extérieur était presque terminé. Le 22 mars, Jagdsolid a partagé une photo de l’espace aménagé pour conserver les livres reçus.
+
+En mars 2021, Game\_Tokumei a lancé un service appelé « Tous travaux » et a annoncé accepter des demandes comme l’aménagement de routes.
+
+Le 5 avril 2021, KOTA-SAN a signalé que le stade Takenoko no Sato, dans le lobby, était terminé. La photo jointe montrait des rangées de sièges de part et d’autre de l’enceinte couverte.
+
+En mai, kuroneko229 a indiqué qu’à l’époque, tout le monde pouvait construire dans la Ville en développement.
 
 En juin 2021, KOTA-SAN a signalé le démarrage du projet de construction collective Yasuragi no Mori et indiqué avoir planté un arbre pour marquer le début des travaux. Le même mois, KOTA-SAN a aussi signalé qu’un dispositif pour fabriquer des cadres invisibles avait été construit à Yasuragi no Mori.
 

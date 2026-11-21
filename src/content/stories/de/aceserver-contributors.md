@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:7d109a3016f02c3e5fe56219c7e895a4597eba7acb95a38b38c76d2517b87f25
+sourceHash: sha256:a1620a9dd3c960ef3929722e18706171e05bbc6ac580280e21905c1a0ab1677e
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -35,7 +35,9 @@ Im August 2021 kündigte KOTA-SAN einen Logo-Aufruf zum ersten Jubiläum an. Im 
 
 Im Dezember 2020 eröffnete Gui einen Kanal für die Aktivitäten der Ace Railway Company, und oisiisyouyu suchte nach Mitwirkenden. Im März 2021 kündigte oisiisyouyu an, dass sich die Gruppe auf die U-Bahn konzentrieren würde.
 
-In einer Vorstellung von KOTA-SAN im früheren Discord-Kanal nannte der Tourismusverein von Aceserver MKOTA_SAN als damaligen Leiter. Der Beitrag beschrieb die Eröffnung eines Tempels, eines Aquariums und eines Casinoviertels mit unter anderem einem Hotel und einem Kunstmuseum. Er stellte auch Wettbewerbe und die gemeinsame Entwicklung des Vereinsbots Kutya vor. Im März 2021 stellte KOTA-SAN einen Spielautomaten im Casinoviertel des Vereins vor und meldete am nächsten Tag, dass Preise hinzugefügt worden waren.
+In einer Vorstellung von KOTA-SAN im früheren Discord-Kanal nannte der Tourismusverein von Aceserver MKOTA_SAN als damaligen Leiter. Der Beitrag beschrieb die Eröffnung eines Tempels, eines Aquariums und eines Casinoviertels mit unter anderem einem Hotel und einem Kunstmuseum. Er stellte auch Wettbewerbe und die gemeinsame Entwicklung des Vereinsbots Kutya vor. Am 26. Januar 2021 meldete KOTA-SAN, dass das Gebäude und die Flagge des Piglin-Spielbereichs im Casino fertig waren, und teilte ein Foto. Im März 2021 stellte KOTA-SAN einen Spielautomaten im Casinoviertel des Vereins vor und meldete am nächsten Tag, dass Preise hinzugefügt worden waren.
+
+Am 12. Februar 2021 berichtete kuroneko229, dass der Streckenabschnitt zwischen dem Bahnhof Chika Teikoku und dem Bahnhof des Kuroneko-Einkaufsviertels fertig war, und zeigte ein Bild der Gleise aus dem Spiel.
 
 Im März 2021 stellte kuroneko229 die Abteilung für öffentliche Bauprojekte vor und nannte Kuro neko2229 als damaligen Leiter. Im November 2022 berichtete kuroneko229 über die Arbeit der inzwischen als Abteilung für private Bauprojekte geführten Gruppe, etwa an einer U-Bahn, Wegen im Nether, Straßenlaternen, einem Einkaufsviertel und Wohnungen.
 
@@ -265,7 +267,13 @@ Im Januar 2021 kündigte bamoshi4869 an, eine Netherfestung abbauen zu wollen. I
 
 Im Februar 2021 berichtete Jagdsolid, dass eine Ertrunkenenfarm fertig war. ninopan1122 berichtete, den Sargtanz mit Notenblöcken nachgebaut zu haben.
 
-Im März 2021 startete Game\_Tokumei einen Dienst namens „Allerlei Aufträge“ und bot unter anderem die Ausbesserung von Wegen an. Im Mai erklärte kuroneko229, dass damals jeder in der Entwicklungsstadt bauen konnte.
+Am 7. März 2021 beschrieb Jagdsolid den Aufwand, Dorfbewohner zu heilen und Bibliothekare für die Bibliothek des Dorfes Suke in der alten Welt auszuwählen. Am 18. März meldete Jagdsolid, dass das Äußere fast fertig war. Am 22. März teilte Jagdsolid ein Foto des Bereichs, der für die eingereichten Bücher eingerichtet worden war.
+
+Im März 2021 startete Game\_Tokumei einen Dienst namens „Allerlei Aufträge“ und bot unter anderem die Ausbesserung von Wegen an.
+
+Am 5. April 2021 meldete KOTA-SAN, dass das Takenoko-no-Sato-Stadion in der Lobby fertig war, und teilte ein Foto mit Sitzreihen für das Publikum auf beiden Seiten der Halle.
+
+Im Mai erklärte kuroneko229, dass damals jeder in der Entwicklungsstadt bauen konnte.
 
 Im Juni 2021 berichtete KOTA-SAN vom Start des gemeinsamen Bauprojekts Yasuragi no Mori und davon, zum Beginn des Projekts einen Baum gepflanzt zu haben. Im selben Monat berichtete KOTA-SAN auch, dass in Yasuragi no Mori eine Vorrichtung zur Herstellung unsichtbarer Gegenstandsrahmen gebaut worden war.
 

@@ -2,7 +2,7 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:7d109a3016f02c3e5fe56219c7e895a4597eba7acb95a38b38c76d2517b87f25
+sourceHash: sha256:a1620a9dd3c960ef3929722e18706171e05bbc6ac580280e21905c1a0ab1677e
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -35,7 +35,9 @@ En agosto de 2021, KOTA-SAN adelantó una convocatoria para el logotipo del prim
 
 En diciembre de 2020, Gui abrió un canal para las actividades de Ace Railway Company y oisiisyouyu invitó a participar. En marzo de 2021, oisiisyouyu anunció que el grupo centraría sus actividades en el metro.
 
-En una presentación publicada por KOTA-SAN en el antiguo canal de Discord, la Asociación de Turismo de Aceserver nombraba a MKOTA_SAN como su responsable en aquel momento. La presentación recogía la apertura de un templo, un acuario y una zona de casino que incluía un hotel y un museo de arte. También mencionaba concursos y el desarrollo conjunto del bot Kutya de la asociación. En marzo de 2021, KOTA-SAN presentó una máquina tragamonedas en la zona de casino de la asociación y al día siguiente informó de que había añadido premios.
+En una presentación publicada por KOTA-SAN en el antiguo canal de Discord, la Asociación de Turismo de Aceserver nombraba a MKOTA_SAN como su responsable en aquel momento. La presentación recogía la apertura de un templo, un acuario y una zona de casino que incluía un hotel y un museo de arte. También mencionaba concursos y el desarrollo conjunto del bot Kutya de la asociación. El 26 de enero de 2021, KOTA-SAN informó que el edificio y la bandera de la zona de juegos de piglins del casino estaban terminados, y compartió una foto. En marzo de 2021, KOTA-SAN presentó una máquina tragamonedas en la zona de casino de la asociación y al día siguiente informó de que había añadido premios.
+
+El 12 de febrero de 2021, kuroneko229 informó que se había completado el tramo entre la estación Chika Teikoku y la estación de la zona comercial de Kuroneko, y compartió una captura de las vías en el juego.
 
 En marzo de 2021, kuroneko229 presentó el Departamento de Obras Públicas y señaló a Kuro neko2229 como su responsable en aquel momento. En noviembre de 2022, informó de los proyectos en los que había trabajado el grupo, ya llamado Departamento de Obras Privadas, como el metro, los caminos del Nether, el alumbrado, una zona comercial y apartamentos.
 
@@ -265,7 +267,13 @@ En enero de 2021, bamoshi4869 planificó y anunció el desmantelamiento de una f
 
 En febrero de 2021, Jagdsolid informó de que la granja de ahogados estaba terminada. ninopan1122 informó de que había recreado el Baile del ataúd con bloques musicales.
 
-En marzo de 2021, Game\_Tokumei puso en marcha un servicio llamado «Todo tipo de encargos» e indicó que aceptaba trabajos como el acondicionamiento de caminos. En mayo, kuroneko229 anunció que en aquel momento cualquiera podía construir en la Ciudad de Desarrollo.
+El 7 de marzo de 2021, Jagdsolid explicó el trabajo que supuso curar aldeanos y seleccionar bibliotecarios para la biblioteca de la aldea de Suke en el mundo anterior. El 18 de marzo, informó que el exterior estaba casi acabado. El 22 de marzo, compartió una foto del espacio que había habilitado para guardar los libros aportados.
+
+En marzo de 2021, Game\_Tokumei puso en marcha un servicio llamado «Todo tipo de encargos» e indicó que aceptaba trabajos como el acondicionamiento de caminos.
+
+El 5 de abril de 2021, KOTA-SAN informó que el estadio Takenoko no Sato del lobby estaba terminado y compartió una foto con filas de asientos para el público a ambos lados del recinto cubierto.
+
+En mayo, kuroneko229 anunció que en aquel momento cualquiera podía construir en la Ciudad de Desarrollo.
 
 En junio de 2021, KOTA-SAN informó del inicio del proyecto de construcción colaborativa Yasuragi no Mori y contó que había plantado un árbol para marcar el comienzo. Ese mismo mes también informó de que en Yasuragi no Mori se había construido un dispositivo para fabricar marcos invisibles para objetos.
 

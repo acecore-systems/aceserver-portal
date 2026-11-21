@@ -2,7 +2,7 @@
 title: As pessoas que apoiaram o Aceserver
 description: Conheça quem ajudou o Aceserver pelos retratos de skins do Minecraft, relembre as atividades e confira o roteiro de eventos e propostas.
 translationOf: aceserver-contributors
-sourceHash: sha256:7d109a3016f02c3e5fe56219c7e895a4597eba7acb95a38b38c76d2517b87f25
+sourceHash: sha256:a1620a9dd3c960ef3929722e18706171e05bbc6ac580280e21905c1a0ab1677e
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -35,7 +35,9 @@ Em agosto de 2021, KOTA-SAN adiantou que seriam aceitas propostas de logotipo pa
 
 Em dezembro de 2020, Gui abriu um canal para as atividades da Ace Railway Company, e oisiisyouyu convidou pessoas a participar. Em março de 2021, oisiisyouyu informou que o grupo concentraria suas atividades no metrô.
 
-Em uma apresentação de KOTA-SAN no antigo canal do Discord, a Associação de Turismo do Aceserver listou MKOTA_SAN como responsável na época. A apresentação registrou a abertura de um templo, um aquário e uma área de cassino com um hotel e um museu de arte, entre outras instalações. Também mencionou concursos e o desenvolvimento conjunto do bot Kutya da associação. Em março de 2021, KOTA-SAN apresentou uma máquina caça-níqueis na área de cassino da associação e, no dia seguinte, informou que havia acrescentado prêmios.
+Em uma apresentação de KOTA-SAN no antigo canal do Discord, a Associação de Turismo do Aceserver listou MKOTA_SAN como responsável na época. A apresentação registrou a abertura de um templo, um aquário e uma área de cassino com um hotel e um museu de arte, entre outras instalações. Também mencionou concursos e o desenvolvimento conjunto do bot Kutya da associação. Em 26 de janeiro de 2021, KOTA-SAN informou que o prédio e a bandeira da área de jogos com piglins do cassino estavam prontos e compartilhou uma foto. Em março de 2021, KOTA-SAN apresentou uma máquina caça-níqueis na área de cassino da associação e, no dia seguinte, informou que havia acrescentado prêmios.
+
+Em 12 de fevereiro de 2021, kuroneko229 informou que o trecho entre a estação Chika Teikoku e a estação do distrito comercial de Kuroneko estava concluído. O relato veio com uma imagem dos trilhos no jogo.
 
 Em março de 2021, kuroneko229 apresentou o Departamento de Obras Públicas, citando Kuro neko2229 como líder na época. Em novembro de 2022, relatou obras do grupo, que então se chamava Departamento de Obras Privadas, como metrô, estradas no Nether, iluminação pública, uma área comercial e apartamentos.
 
@@ -265,7 +267,13 @@ Em janeiro de 2021, bamoshi4869 planejou e anunciou a desmontagem de uma fortale
 
 Em fevereiro de 2021, Jagdsolid informou que a fazenda de afogados estava concluída. ninopan1122 informou que havia reproduzido a Dança do Caixão com blocos musicais.
 
-Em março de 2021, Game\_Tokumei abriu um serviço chamado «Faz-Tudo» e anunciou que aceitava pedidos como melhorias em estradas. Em maio, kuroneko229 informou que, na época, qualquer pessoa podia construir na Cidade em Desenvolvimento.
+Em 7 de março de 2021, Jagdsolid explicou o trabalho que deu curar aldeões e selecionar bibliotecários para a biblioteca da vila de Suke no mundo antigo. Em 18 de março, informou que o exterior estava quase pronto. Em 22 de março, compartilhou uma foto do espaço que havia preparado para guardar os livros recebidos.
+
+Em março de 2021, Game\_Tokumei abriu um serviço chamado «Faz-Tudo» e anunciou que aceitava pedidos como melhorias em estradas.
+
+Em 5 de abril de 2021, KOTA-SAN informou que o estádio Takenoko no Sato, no lobby, estava concluído e compartilhou uma foto com fileiras de assentos para o público nos dois lados do recinto coberto.
+
+Em maio, kuroneko229 informou que, na época, qualquer pessoa podia construir na Cidade em Desenvolvimento.
 
 Em junho de 2021, KOTA-SAN anunciou o início do projeto de construção coletiva Yasuragi no Mori e contou que havia plantado uma árvore para marcar o começo. No mesmo mês, também informou que um dispositivo para fazer molduras invisíveis havia sido construído em Yasuragi no Mori.
 
