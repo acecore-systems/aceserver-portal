@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:43c0aca449c70593756bc8fc40b5eb7f0bdc7005cc70d4a9b1379cc90bb4e72b
+sourceHash: sha256:0283bb17ffaa0bf2c2a08816acb62244ed4358edc31afbc21dc212a3d2ea400f
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -142,6 +142,8 @@ Im Winter 2023 suchte edamameRex_java nach Bauwerken für eine noch in Arbeit be
 Zum Jahreswechsel 2023–2024 wurde das Team der Ace Monorail Take Company (Take no Niwa, sekisei und Shino) als Veranstalter genannt, mit Unterstützung von Taibon (\_BE_taibon0727), あすたん und dem Aceserver-Team. タケ stellte die Veranstaltungswebsite vor und meldete die Korrektur eines Stempels in der Stempelrallye. Zu dieser Zeit wurde auch die Verschiebung von Aguesser vol2 bekannt gegeben.
 
 Am 1. Januar 2024 meldete タケ das Ende der Neujahrsfeier und die Verteilung von Glücksbringern. [Bericht zur Neujahrsfeier](https://discord.com/channels/737538781024092170/779569416438415421/1191037263002488872)
+
+Am 4. Februar 2024 berichtete ゆり, das offizielle Titellied von Aceserver komponiert zu haben. ゆり wies darauf hin, dass es sich um eine kurze Fassung handelte, und regte an, Vorschläge für den Liedtext zu sammeln. Später am selben Tag teilte ゆり eine vorläufige Fassung mit dem Titel „ACE&#12394;&#20882;&#38522;“. [Bericht zur Komposition des Titellieds](https://discord.com/channels/737538781024092170/882218642459205672/1203626958861377548) [Hinweis zur vorläufigen Fassung](https://discord.com/channels/737538781024092170/882218642459205672/1203659498804355072)
 
 Im Frühjahr 2024 teilte sekisei die Startzeit und die Kontaktstelle für Ace Guesser v2 mit. Im Sommer kündigte Pluto ein Parkour-Event an.
 
@@ -286,6 +288,14 @@ Im November 2025 meldete Moon\_666 die Fertigstellung einer Farm für zombifizie
 Im März 2026 berichtete Merutak, dass die Trockenlegung eines großen Gebiets für das Projekt ×6 Ozeanmonument und offener Aushub abgeschlossen war. Merutak dankte sega, take, sekisei, harubie, hatt, timu, buraki, yukke, moon, sinzin und siu für Material und Mithilfe. [Bericht über die Entwässerung und Dank](https://discord.com/channels/737538781024092170/779569416438415421/1483522273020215497)
 
 Am 30. März meldete Merutak die Fertigstellung des ×6-Ozeanmonuments. Der offene Aushub war zu diesem Zeitpunkt noch im Gange. [Bericht über die Fertigstellung des Monuments](https://discord.com/channels/737538781024092170/779569416438415421/1488001468970827896)
+
+Am 14. April 2026 baute Moon\_666 auf dem Überlebensserver die Wohnungen im Waldanwesen. Moon\_666 berichtete auch von der Eröffnung einer Eisbootstrecke, die mehrere Gebiete verband, darunter die Gegend in Richtung Zentralmarkt. [Bericht über die Wohnungen und die Eisbootstrecke](https://discord.com/channels/737538781024092170/1437442902547759125/1493580742066966651)
+
+Am 17. September 2026 kündigte タケ an, dass das Belebungskomitee von Aceserver mit der Neugestaltung des zentralen Bereichs des ehemaligen Century-Geländes begonnen hatte. タケ berichtete auch, dass mehrere Helfer beim Aufräumen vorangekommen waren. [Beginn der Neugestaltung des ehemaligen Century-Geländes](https://discord.com/channels/737538781024092170/1437442902547759125/1550005135311110154)
+
+Am 31. Oktober 2026 teilte タケ mit, dass auf dem Überlebensserver eine neue Kaktusfarm eingerichtet worden war und sie damals von allen genutzt werden konnte. [Ankündigung der neuen Kaktusfarm](https://discord.com/channels/737538781024092170/1437442902547759125/1565747261575790592)
+
+Am selben Tag bat タケ in einer Umfrage um Rückmeldungen zu Ideen für die Aceserver-Grundschule, darunter Aushänge, die Vorstellung von Einrichtungen und die Verteilung von Leitfäden. [Umfrage zur Aceserver-Grundschule](https://discord.com/channels/737538781024092170/1437442902547759125/1565988868879163453)
 
 ## Technik und Unterstützung
 

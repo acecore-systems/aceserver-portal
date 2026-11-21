@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:43c0aca449c70593756bc8fc40b5eb7f0bdc7005cc70d4a9b1379cc90bb4e72b
+sourceHash: sha256:0283bb17ffaa0bf2c2a08816acb62244ed4358edc31afbc21dc212a3d2ea400f
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -142,6 +142,8 @@ En novembre 2023, あすたん a annoncé l’ouverture du concours photo d’Ac
 Pour le réveillon 2023–2024, l’annonce présentait l’équipe d’Ace Monorail Take (Take no Niwa, sekisei et Shino) comme organisatrice, avec l’aide de Taibon (\_BE_taibon0727), あすたん et l’équipe d’Aceserver. タケ a partagé le site de l’événement et signalé la correction d’un tampon du rallye. Le report d’Aguesser vol2 a également été annoncé à cette période.
 
 Le 1er janvier 2024, タケ a annoncé la fin des festivités du Nouvel An et la distribution de porte-bonheur. [Compte rendu du réveillon](https://discord.com/channels/737538781024092170/779569416438415421/1191037263002488872)
+
+Le 4 février 2024, ゆり a indiqué avoir composé la chanson thème officielle d’Aceserver. ゆり a précisé qu’il s’agissait d’une version courte et a proposé d’inviter les joueurs à soumettre des paroles. Plus tard dans la journée, ゆり a partagé une version provisoire intitulée « ACE&#12394;&#20882;&#38522; ». [Annonce de la composition de la chanson thème](https://discord.com/channels/737538781024092170/882218642459205672/1203626958861377548) [Précision sur la version provisoire](https://discord.com/channels/737538781024092170/882218642459205672/1203659498804355072)
 
 Au printemps 2024, sekisei a annoncé l’heure de début d’Ace Guesser v2 et donné les coordonnées à utiliser. À l’été, Pluto a annoncé un événement de parkour.
 
@@ -286,6 +288,14 @@ En novembre 2025, Moon\_666 a annoncé qu’une ferme à piglins zombifiés qui 
 En mars 2026, Merutak a annoncé la fin du drainage d’une vaste zone pour le projet de monument océanique ×6 et d’excavation à ciel ouvert. Merutak a remercié sega, take, sekisei, harubie, hatt, timu, buraki, yukke, moon, sinzin et siu pour les matériaux et leur aide sur le chantier. [Compte rendu du drainage et remerciements](https://discord.com/channels/737538781024092170/779569416438415421/1483522273020215497)
 
 Le 30 mars, Merutak a annoncé la fin de la construction du monument océanique ×6. L’excavation à ciel ouvert était alors en cours. [Annonce de l’achèvement du monument](https://discord.com/channels/737538781024092170/779569416438415421/1488001468970827896)
+
+Le 14 avril 2026, Moon\_666 a construit les Appartements du Manoir forestier sur le serveur de survie. Moon\_666 a aussi annoncé l’ouverture d’une voie de glace pour les bateaux reliant plusieurs zones, notamment du côté du marché central. [Compte rendu sur les appartements et la voie de glace](https://discord.com/channels/737538781024092170/1437442902547759125/1493580742066966651)
+
+Le 17 septembre 2026, タケ a annoncé que le comité de revitalisation d’Aceserver avait commencé à réaménager la partie centrale de l’ancien site de Century. タケ a aussi signalé que plusieurs personnes avaient aidé à dégager la zone. [Début du réaménagement de l’ancien site de Century](https://discord.com/channels/737538781024092170/1437442902547759125/1550005135311110154)
+
+Le 31 octobre 2026, タケ a annoncé qu’une nouvelle ferme à cactus avait été installée sur le serveur de survie et que tout le monde pouvait l’utiliser à l’époque. [Annonce de la nouvelle ferme à cactus](https://discord.com/channels/737538781024092170/1437442902547759125/1565747261575790592)
+
+Le même jour, タケ a sollicité des avis par sondage sur des idées pour l’École primaire d’Aceserver, dont l’affichage d’annonces, la présentation d’installations et la distribution de guides. [Sondage sur l’École primaire d’Aceserver](https://discord.com/channels/737538781024092170/1437442902547759125/1565988868879163453)
 
 ## Technologie et soutien
 

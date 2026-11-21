@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:43c0aca449c70593756bc8fc40b5eb7f0bdc7005cc70d4a9b1379cc90bb4e72b
+sourceHash: sha256:0283bb17ffaa0bf2c2a08816acb62244ed4358edc31afbc21dc212a3d2ea400f
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -142,6 +142,8 @@ In winter 2023, edamameRex_java invited players to submit builds for a tag game 
 For the 2023–2024 New Year event, the Ace Monorail Take Company team (Take no Niwa, sekisei, and Shino) was named as organizer, with support from Taibon (\_BE_taibon0727), あすたん, and the Aceserver team. タケ shared the event website and reported fixing a stamp in the stamp rally. A postponement was also announced for Aguesser vol2 around that time.
 
 On January 1, 2024, タケ reported that the New Year’s celebration had ended and that good-luck charms had been handed out. [New Year celebration report](https://discord.com/channels/737538781024092170/779569416438415421/1191037263002488872)
+
+On February 4, 2024, ゆり reported composing Aceserver’s official theme song. ゆり noted that the version was short and suggested inviting people to submit lyrics. Later that day, ゆり shared a provisional version titled “ACE&#12394;&#20882;&#38522;”. [Theme song composition report](https://discord.com/channels/737538781024092170/882218642459205672/1203626958861377548) [Note on the provisional version](https://discord.com/channels/737538781024092170/882218642459205672/1203659498804355072)
 
 In spring 2024, sekisei announced the start time and contact details for Ace Guesser v2. In summer, Pluto announced a parkour event.
 
@@ -286,6 +288,14 @@ In November 2025, Moon\_666 reported that a zombified piglin farm for gold and e
 In March 2026, Merutak reported that drainage of a large area for the ×6 Ocean Monument and Open-Pit Excavation project was complete and thanked sega, take, sekisei, harubie, hatt, timu, buraki, yukke, moon, sinzin, and siu for materials and help with the work. [Drainage and acknowledgments](https://discord.com/channels/737538781024092170/779569416438415421/1483522273020215497)
 
 On March 30, Merutak reported that the ×6 Ocean Monument build itself was complete. The open-pit excavation was still in progress at that point. [Ocean Monument completion report](https://discord.com/channels/737538781024092170/779569416438415421/1488001468970827896)
+
+On April 14, 2026, Moon\_666 built the Woodland Mansion Apartments on the survival server. Moon\_666 also reported that an ice boat road had opened, providing a route toward the Central Market and other areas. [Apartments and ice boat road report](https://discord.com/channels/737538781024092170/1437442902547759125/1493580742066966651)
+
+On September 17, 2026, タケ announced that the Aceserver Revitalization Committee had started redeveloping the central part of the old Century site. タケ also reported that several volunteers had made progress clearing the area. [Start of the old Century site redevelopment](https://discord.com/channels/737538781024092170/1437442902547759125/1550005135311110154)
+
+On October 31, 2026, タケ announced that a new cactus farm had been installed on the survival server and that anyone could use it at the time. [New cactus farm announcement](https://discord.com/channels/737538781024092170/1437442902547759125/1565747261575790592)
+
+That same day, タケ invited feedback in a survey about ideas for the Aceserver Elementary School, including posting notices, introducing facilities, and distributing guidebooks. [Aceserver Elementary School survey](https://discord.com/channels/737538781024092170/1437442902547759125/1565988868879163453)
 
 ## Technology and support
 

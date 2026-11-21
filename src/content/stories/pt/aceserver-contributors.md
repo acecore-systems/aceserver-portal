@@ -2,7 +2,7 @@
 title: As pessoas que apoiaram o Aceserver
 description: Conheça quem ajudou o Aceserver pelos retratos de skins do Minecraft, relembre as atividades e confira o roteiro de eventos e propostas.
 translationOf: aceserver-contributors
-sourceHash: sha256:43c0aca449c70593756bc8fc40b5eb7f0bdc7005cc70d4a9b1379cc90bb4e72b
+sourceHash: sha256:0283bb17ffaa0bf2c2a08816acb62244ed4358edc31afbc21dc212a3d2ea400f
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -142,6 +142,8 @@ No fim de 2023, edamameRex_java pediu contribuições de construções para um m
 O anúncio da virada de 2023 para 2024 apresentou a equipe da Ace Monorail Take (Take no Niwa, sekisei e Shino) como organizadora, com apoio de Taibon (\_BE_taibon0727), あすたん e da equipe do Aceserver. タケ divulgou o site do evento e informou a correção de um carimbo no circuito de carimbos. Na mesma época, também foi anunciado o adiamento de Aguesser vol2.
 
 Em 1º de janeiro de 2024, タケ informou que a celebração da virada havia terminado e que amuletos haviam sido distribuídos. [Relato da celebração da virada](https://discord.com/channels/737538781024092170/779569416438415421/1191037263002488872)
+
+Em 4 de fevereiro de 2024, ゆり informou que havia composto a música-tema oficial do Aceserver. Explicou que a versão era curta e sugeriu abrir uma chamada para letras. No mesmo dia, compartilhou uma versão provisória intitulada «ACE&#12394;&#20882;&#38522;». [Relato sobre a composição da música-tema](https://discord.com/channels/737538781024092170/882218642459205672/1203626958861377548) [Observação sobre a versão provisória](https://discord.com/channels/737538781024092170/882218642459205672/1203659498804355072)
 
 Na primavera de 2024, sekisei informou o horário de início e o contato do Ace Guesser v2. No verão, Pluto anunciou um evento de parkour.
 
@@ -286,6 +288,14 @@ Em novembro de 2025, Moon\_666 informou que uma fazenda de piglins-zumbis que re
 Em março de 2026, Merutak informou que a drenagem de uma área extensa para o projeto do Monumento Oceânico ×6 e da escavação a céu aberto havia sido concluída. Agradeceu a sega, take, sekisei, harubie, hatt, timu, buraki, yukke, moon, sinzin e siu pelos materiais e pela ajuda no trabalho. [Relato da drenagem e agradecimentos](https://discord.com/channels/737538781024092170/779569416438415421/1483522273020215497)
 
 Em 30 de março, Merutak informou que a construção do Monumento Oceânico ×6 estava concluída. Naquele momento, a escavação a céu aberto ainda estava em andamento. [Relato da conclusão do monumento](https://discord.com/channels/737538781024092170/779569416438415421/1488001468970827896)
+
+Em 14 de abril de 2026, Moon\_666 construiu os Apartamentos da Mansão da Floresta no servidor de sobrevivência. Também informou que uma via de gelo para barcos havia sido aberta, ligando várias áreas, inclusive a região do Mercado Central. [Relato sobre os apartamentos e a via de gelo](https://discord.com/channels/737538781024092170/1437442902547759125/1493580742066966651)
+
+Em 17 de setembro de 2026, タケ anunciou que o Comitê de Revitalização do Aceserver havia iniciado a revitalização da parte central da antiga área de Century. Também informou que várias pessoas haviam ajudado a limpar a área. [Início da revitalização da antiga área de Century](https://discord.com/channels/737538781024092170/1437442902547759125/1550005135311110154)
+
+Em 31 de outubro de 2026, タケ anunciou que uma nova fazenda de cactos havia sido instalada no servidor de sobrevivência e que qualquer pessoa podia usá-la na época. [Anúncio da nova fazenda de cactos](https://discord.com/channels/737538781024092170/1437442902547759125/1565747261575790592)
+
+No mesmo dia, タケ pediu opiniões em uma pesquisa sobre ideias para a Escola Primária do Aceserver, como afixar avisos, apresentar instalações e distribuir guias. [Pesquisa sobre a Escola Primária do Aceserver](https://discord.com/channels/737538781024092170/1437442902547759125/1565988868879163453)
 
 ## Tecnologia e apoio
 

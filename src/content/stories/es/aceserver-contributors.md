@@ -2,7 +2,7 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:43c0aca449c70593756bc8fc40b5eb7f0bdc7005cc70d4a9b1379cc90bb4e72b
+sourceHash: sha256:0283bb17ffaa0bf2c2a08816acb62244ed4358edc31afbc21dc212a3d2ea400f
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -142,6 +142,8 @@ En el invierno de 2023, edamameRex_java pidió construcciones para un mapa de un
 El anuncio de fin de año 2023–2024 presentó como organizador al equipo de Ace Monorail Take (Take no Niwa, sekisei y Shino), con la colaboración de Taibon (\_BE_taibon0727), あすたん y el equipo de Aceserver. タケ compartió el sitio del evento e informó de que había corregido un sello del recorrido. En ese periodo también se anunció el aplazamiento de Aguesser vol2.
 
 El 1 de enero de 2024, タケ informó de que había terminado la celebración de Año Nuevo y de que se habían repartido amuletos. [Informe de la celebración de Año Nuevo](https://discord.com/channels/737538781024092170/779569416438415421/1191037263002488872)
+
+El 4 de febrero de 2024, ゆり informó de que había compuesto la canción temática oficial de Aceserver. Indicó que se trataba de una versión corta y propuso invitar a enviar letras. Ese mismo día, compartió una versión provisional titulada «ACE&#12394;&#20882;&#38522;». [Informe sobre la composición de la canción](https://discord.com/channels/737538781024092170/882218642459205672/1203626958861377548) [Aclaración sobre la versión provisional](https://discord.com/channels/737538781024092170/882218642459205672/1203659498804355072)
 
 En la primavera de 2024, sekisei anunció la hora de inicio y el contacto de Ace Guesser v2. En verano, Pluto anunció un evento de parkour.
 
@@ -286,6 +288,14 @@ En noviembre de 2025, Moon\_666 informó de que se había completado en el servi
 En marzo de 2026, Merutak informó de que había concluido el drenaje de una amplia zona para el proyecto del monumento oceánico ×6 y la excavación a cielo abierto. Dio las gracias a sega, take, sekisei, harubie, hatt, timu, buraki, yukke, moon, sinzin y siu por aportar materiales y ayuda con el trabajo. [Informe del drenaje y agradecimientos](https://discord.com/channels/737538781024092170/779569416438415421/1483522273020215497)
 
 El 30 de marzo, Merutak informó de que se había completado la construcción del monumento oceánico ×6. En ese momento continuaba la excavación a cielo abierto. [Informe de finalización del monumento](https://discord.com/channels/737538781024092170/779569416438415421/1488001468970827896)
+
+El 14 de abril de 2026, Moon\_666 construyó los Apartamentos de la Mansión del Bosque en el servidor de supervivencia. También informó de la apertura de una vía de hielo para barcos que conectaba varias zonas, incluida la del Mercado Central. [Informe sobre los apartamentos y la vía de hielo](https://discord.com/channels/737538781024092170/1437442902547759125/1493580742066966651)
+
+El 17 de septiembre de 2026, タケ anunció que el Comité de Revitalización de Aceserver había empezado a remodelar la parte central del antiguo emplazamiento de Century. También informó de que varias personas habían ayudado a despejar la zona. [Inicio de la remodelación del antiguo emplazamiento de Century](https://discord.com/channels/737538781024092170/1437442902547759125/1550005135311110154)
+
+El 31 de octubre de 2026, タケ anunció que se había instalado una nueva granja de cactus en el servidor de supervivencia y que cualquiera podía usarla en aquel momento. [Anuncio de la nueva granja de cactus](https://discord.com/channels/737538781024092170/1437442902547759125/1565747261575790592)
+
+Ese mismo día, タケ pidió opiniones en una encuesta sobre ideas para la Escuela Primaria de Aceserver, como publicar avisos, presentar instalaciones y repartir guías. [Encuesta sobre la Escuela Primaria de Aceserver](https://discord.com/channels/737538781024092170/1437442902547759125/1565988868879163453)
 
 ## Tecnología y apoyo
 
