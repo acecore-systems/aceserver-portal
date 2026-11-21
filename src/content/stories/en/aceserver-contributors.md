@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:b12607e9367dd013f1b30c48a35fd8fd1e80b360e9bfea61a0679b822fd250f0
+sourceHash: sha256:3b6900ede6a3855dab085308bab458491e32b1cff116112d6e37abd168d57141
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -49,11 +49,17 @@ In 2022, s1nan0sub shared the rules for using Iroha Village and reported that In
 
 In July 2023, ゆり introduced an alliance between the Village of the Moon God and the RPG Creation Group in an Ace Lab announcement. It named BM\_yurikun and \_BE\_golden\_cokka as the leaders at the time, and amya7238 and \_BE\_golden\_cokka as early members. The activities outlined included ACE1GP ice boat racing and RPG creation.
 
-In September 2023, タケ introduced the Ace Monorail Take Company, listing Take\_no\_niwa as leader and sekisei0077 and HeroTree as early members. The introduction also covered how the group operated and how to contact it.
+In July 2023, あすたん introduced Asutan Kingdom as a community that supplied materials and helped with land clearing and open-pit excavation. In August, Yukke shared photos of Kuwa Kingdom’s facilities and equipment and explained that members could use them.
 
-In October 2023, PetiteShelf7874 introduced the activities and map of Small Hill Village. The introduction listed PetiteShelf7874 as leader and yamaharu929, kacchan0706, bananakun315, and TK7K2 as early members.
+In September 2023, タケ introduced the Ace Monorail Take Company, listing Take\_no\_niwa as leader and sekisei0077 and HeroTree as early members. The introduction also covered how the group operated and how to contact it. タケ also announced that Ace Monorail had been recognized as a community at the time and explained how to use its services.
+
+In October 2023, PetiteShelf7874 introduced the activities and map of Small Hill Village. The introduction listed PetiteShelf7874 as leader and yamaharu929, kacchan0706, bananakun315, and TK7K2 as early members. PetiteShelf7874 reported opening an informational Discord server after Small Hill Village was recognized as a community.
+
+In April 2024, End&#12539;コッカー invited people through the Hunters Association to help create the RPG server.
 
 In September 2024, sekisei introduced Mars (working title), a group for planning and making minigames. The introduction listed sekisei0077 as leader and usualparrot and miin2000 as early members. sekisei described minigame ideas based on falling and Elytra and invited people to help build and develop them.
+
+In November 2024, Nishikino Sega shared CENTURY'S plans for projects including a Japanese-style castle and a subway and invited people to take part.
 
 ## Promotion and events
 
@@ -90,6 +96,8 @@ In October 2022, nuu\_mink invited players to visit the casino and bar at POCKET
 In November 2022, yanyan_fafnir reported that ゆり (Yū) had become a supporter after a recommendation from Sosuke. [Supporter appointment announcement](https://discord.com/channels/737538781024092170/774152638450237460/1043527218191663114)
 
 In December 2022, Yukke opened a channel for the Aceserver Photography Club. Records from the old Discord channel show that taibon0727 asked for photos of old and new worlds for an album. By January 2023, dont_stop had shared a photo commemorating an ascent of Saihate, PillowKebap had contributed from their saved photos, and nnn_percent had shared photos of builds.
+
+In December 2022, &#12383;&#12356;&#12420;&#12365; (taiyaki5190) opened two submission threads in the old Discord’s Letters Room, asking players to write in about topics such as what surprised them when they first joined.
 
 For Ace Fest in Christmas Life in December 2022, ゆり shared the schedule, including the opening ceremony and livestream, and explained how to enter the third Ace Cup. タケ also announced New Year’s plans at Tōgenkyō for 2022–2023. The announcement named the Hunters’ Association, which included タケ and コッカー, as organizer and Taibon as a collaborator.
 
@@ -169,6 +177,10 @@ For the event at the end of 2025, ハルビィ, セキセイ and タケ helped w
 
 A December 2025 announcement explained how players could join a planned photo shoot for a new header image at Tōgenkyō Shrine. [Photo shoot invitation](https://discord.com/channels/737538781024092170/774152638450237460/1455820341988298905)
 
+For the concept server contest in autumn 2025, sekisei prepared a submission template. At the end of December, sekisei presented four finalists and held a vote. The finalists were 山田’s liminal spaces, Mugi’s AceTechModPvP, Yukke’s creative server, and タケ’s old main server. In the January 3, 2026 tally, 山田’s liminal-space proposal received the most votes, at 38%.
+
+Other submissions included Mugi’s Curse You, Mythic and ATM, 山田’s robots, タケ’s Let’s Take the Ace Train, Defend Maikura City by &#12454;&#12455;&#12531;&#12486;&#12451; (Hosttech255), Moon\_666’s high-difficulty Ender Dragon battle, sekisei’s seasonal building, and sh’s Chef’s Whim Server.
+
 In February 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673;, &#35199;&#26408;&#37326;&#28716;&#36032;&#27663;, Amagi\_467, Moon\_666, CP-sinzin, Yukke, and あすたん submitted photos for consideration for social media posts.
 
 In February 2026, End&#12539;コッカー announced the Aceserver Photo Contest and listed February 16 to 28 as the submission period. End&#12539;コッカー provided sample submissions for both the general and staff categories. キツネコ entered a photo showing drainage work in progress. [2026 Photo Contest announcement](https://discord.com/channels/737538781024092170/774152638450237460/1471148847119208731)
@@ -235,6 +247,8 @@ On March 30, Merutak reported that the ×6 Ocean Monument build itself was compl
 
 ## Technology and support
 
+In March 2021, KOTA-SAN reported creating Kutya, a Discord text-to-speech bot. KOTA-SAN added a way to choose which text channel’s messages the bot read aloud and an explanation shown to new players. In May, KOTA-SAN added a list of facility coordinates.
+
 In April 2021, KOTA-SAN reported successfully testing a way to join from a Nintendo Switch and proposed adding guidance to the how-to-play page on the site at the time.
 
 In August 2021, てぃあ put together a guide to major facilities such as the town hall, trading hall, tree farm, and shared farm, and identified which places new players should be shown first. In February 2022, はっ added accommodation for newcomers to the shared facilities guide.
@@ -247,6 +261,8 @@ In May 2022, KOTA-SAN announced a trial of a plugin that expanded the features o
 
 In May 2022, はっ shared a list of in-game items for Azkaban.
 
+In May 2022, Mugi reported that Kutya could read Japanese Morse code aloud.
+
 In June 2022, Mugi updated the text-to-speech bot Kutya to support chat inside voice channels. In March 2023, Mugi announced a bot for sending anonymous feedback to the server team. [Kutya update](https://discord.com/channels/737538781024092170/774152638450237460/986439863937155122) [Anonymous feedback announcement](https://discord.com/channels/737538781024092170/774152638450237460/1087976366126927882)
 
 In September 2022, Gui announced a test release of the site. In October, Gui reported separating the blog from the documentation and setting up pages that multiple people could edit. taka8621 requested command guides, illustrated guides to facilities, and maps. yanyan proposed editable pages. In January 2023, &#33775;\*HAiNE tried the wiki editing environment and raised a question about how readers would navigate if guidance were split across pages.
@@ -254,6 +270,8 @@ In September 2022, Gui announced a test release of the site. In October, Gui rep
 In October 2022, hana0c0haine reported reviewing every wiki page published at the time and correcting inconsistencies in terminology and Japanese phrasing. In March 2023, あすたん organized separate channels for wiki editors and provided guidance on writing in Markdown.
 
 In November 2022, キツネコ proposed putting the land-use rules on the wiki and using separate application templates for site leveling and open-pit excavation. Nishikino Sega asked about applying when construction would follow site leveling. In January 2023, taka8621 invited people to help organize the building and related rules, and &#33775;\*HAiNE proposed rules on underground excavation. A February post by taka8621 recorded suggestions Yukke had compiled on scenery and the use of villagers in traps.
+
+In December 2022, Mugi reported that Kutya’s dictionary feature had been restored.
 
 In January 2023, あすたん posted illustrated instructions for connecting with Minecraft Java Edition and Bedrock Edition in the Discord joining guide of the time.
 

@@ -2,7 +2,7 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:b12607e9367dd013f1b30c48a35fd8fd1e80b360e9bfea61a0679b822fd250f0
+sourceHash: sha256:3b6900ede6a3855dab085308bab458491e32b1cff116112d6e37abd168d57141
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -49,11 +49,17 @@ En 2022, s1nan0sub explicó las normas de uso de la Aldea Iroha e informó que e
 
 En julio de 2023, ゆり presentó en un anuncio de Ace Lab la alianza entre la Aldea del Dios Lunar y el Grupo de Creación RPG. El anuncio nombró a BM\_yurikun y \_BE\_golden\_cokka como responsables de entonces, y a amya7238 y \_BE\_golden\_cokka como miembros iniciales. Entre las actividades propuestas figuraban las carreras de barcos sobre hielo ACE1GP y la creación de RPG.
 
-En septiembre de 2023, タケ presentó la Compañía Take del Monorraíl Ace e identificó a Take\_no\_niwa como responsable y a sekisei0077 y HeroTree como miembros iniciales. También explicó cómo funcionaba el grupo y cómo contactar con él.
+En julio de 2023, あすたん presentó el Reino de Asutan como una comunidad que suministraba materiales y ayudaba a preparar terrenos y excavar a cielo abierto. En agosto, Yukke mostró fotos de las instalaciones y los equipos del Reino de Kuwa e indicó que sus miembros podían usarlos.
 
-En octubre de 2023, PetiteShelf7874 presentó las actividades y el mapa de la Aldea de la Colina Pequeña. La presentación identificó a PetiteShelf7874 como responsable y a yamaharu929, kacchan0706, bananakun315 y TK7K2 como miembros iniciales.
+En septiembre de 2023, タケ presentó la Compañía Take del Monorraíl Ace e identificó a Take\_no\_niwa como responsable y a sekisei0077 y HeroTree como miembros iniciales. También explicó cómo funcionaba el grupo y cómo contactar con él. タケ también anunció que el Monorraíl Ace había obtenido el reconocimiento como comunidad y explicó cómo usar sus servicios.
+
+En octubre de 2023, PetiteShelf7874 presentó las actividades y el mapa de la Aldea de la Colina Pequeña. La presentación identificó a PetiteShelf7874 como responsable y a yamaharu929, kacchan0706, bananakun315 y TK7K2 como miembros iniciales. PetiteShelf7874 informó de que había abierto un servidor de Discord para ofrecer información tras el reconocimiento de la Aldea de la Colina Pequeña como comunidad.
+
+En abril de 2024, End&#12539;コッカー buscó en la Asociación de Cazadores a personas dispuestas a colaborar en la creación del servidor RPG.
 
 En septiembre de 2024, sekisei presentó Mars (nombre provisional), un grupo de diseño y producción de minijuegos. Presentó a sekisei0077 como responsable y a usualparrot y miin2000 como miembros iniciales. Expuso ideas de minijuegos basados en caídas y élitros e invitó a colaborar en la construcción y el desarrollo.
+
+En noviembre de 2024, Nishikino Sega dio a conocer en CENTURY'S proyectos como un castillo de estilo japonés y un metro, e invitó a participar.
 
 ## Difusión y eventos
 
@@ -90,6 +96,8 @@ En octubre de 2022, nuu\_mink invitó a los jugadores a visitar el casino y el b
 En noviembre de 2022, yanyan_fafnir anunció que ゆり (Yū) había asumido un rol de apoyo por recomendación de Sosuke. [Anuncio del nombramiento](https://discord.com/channels/737538781024092170/774152638450237460/1043527218191663114)
 
 En diciembre de 2022, Yukke abrió un canal para el club de fotografía de Aceserver. Según los registros del antiguo canal de Discord, taibon0727 pidió fotos de mundos nuevos y antiguos para un álbum. Para enero de 2023, dont_stop había compartido una foto conmemorativa del ascenso a Saihate, PillowKebap había aportado fotos que conservaba y nnn_percent había enviado fotos de construcciones.
+
+En diciembre de 2022, &#12383;&#12356;&#12420;&#12365; (taiyaki5190) abrió dos hilos para recibir mensajes en la sala de cartas del antiguo Discord. Invitó a contar, entre otros temas, qué les había sorprendido a los jugadores al entrar por primera vez.
 
 Para el Ace Fest in Christmas Life de diciembre de 2022, ゆり publicó el programa, con la inauguración y la transmisión en directo, y explicó cómo inscribirse en la tercera Copa Ace. タケ también anunció el plan de fin de año 2022–2023 en Tōgenkyō. El anuncio presentó como organizadora a la Asociación de Cazadores, de la que formaban parte タケ y コッカー, y a Taibon como colaborador.
 
@@ -169,6 +177,10 @@ En el evento de finales de 2025, ハルビィ, セキセイ y タケ ayudaron co
 
 Un anuncio de diciembre de 2025 explicó cómo sumarse a una sesión de fotos prevista en el santuario Tōgenkyō para crear una nueva imagen de cabecera. [Invitación a la sesión de fotos](https://discord.com/channels/737538781024092170/774152638450237460/1455820341988298905)
 
+Para el concurso de servidores temáticos del otoño de 2025, sekisei preparó una plantilla de inscripción. A finales de diciembre presentó cuatro finalistas y organizó la votación. Los finalistas fueron los espacios liminales de 山田, AceTechModPvP de Mugi, el servidor creativo de Yukke y el antiguo servidor principal de タケ. En el recuento del 3 de enero de 2026, el proyecto de espacios liminales de 山田 fue el más votado, con un 38%.
+
+Otras propuestas fueron Maldito Mythic y ATM de Mugi, los robots de 山田, Viajemos en el tren Ace de タケ, Defiende la ciudad de Maikura de &#12454;&#12455;&#12531;&#12486;&#12451; (Hosttech255), el combate de dificultad elevada contra el dragón del End de Moon\_666, la construcción por temporadas de sekisei y El servidor a capricho del chef de sh.
+
 En febrero de 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673;, &#35199;&#26408;&#37326;&#28716;&#36032;&#27663;, Amagi\_467, Moon\_666, CP-sinzin, Yukke y あすたん enviaron fotos para que se consideraran para publicaciones promocionales en redes sociales.
 
 En febrero de 2026, End&#12539;コッカー anunció el Concurso de Fotografía de Aceserver e indicó que las fotos podían enviarse del 16 al 28 de febrero. Preparó ejemplos de participación para las categorías general y del equipo de gestión. キツネコ presentó una foto de un trabajo de drenaje en curso. [Anuncio del Concurso de Fotografía de 2026](https://discord.com/channels/737538781024092170/774152638450237460/1471148847119208731)
@@ -235,6 +247,8 @@ El 30 de marzo, Merutak informó de que se había completado la construcción de
 
 ## Tecnología y apoyo
 
+En marzo de 2021, KOTA-SAN informó de que había creado Kutya, un bot de lectura de texto en voz alta para Discord. KOTA-SAN añadió la opción de elegir de qué canal de texto se leerían los mensajes en voz alta y de mostrar una explicación a los nuevos jugadores. En mayo añadió una lista de coordenadas de las instalaciones.
+
 En abril de 2021, KOTA-SAN informó de que había probado con éxito una forma de conectarse desde Nintendo Switch y propuso añadir la información a la guía de juego del sitio de entonces.
 
 En agosto de 2021, てぃあ reunió en una guía instalaciones importantes como el ayuntamiento, el centro de comercio, la granja de árboles y la granja compartida, e indicó cuáles convenía mostrar primero a los nuevos jugadores. En febrero de 2022, はっ añadió el alojamiento para nuevos jugadores a la guía de instalaciones compartidas.
@@ -247,6 +261,8 @@ En mayo de 2022, KOTA-SAN anunció la instalación a prueba de un plugin que amp
 
 En mayo de 2022, はっ compartió una lista de objetos del juego para Azkaban.
 
+En mayo de 2022, Mugi informó de que Kutya ya podía leer en voz alta código morse japonés.
+
 En junio de 2022, Mugi actualizó el bot de lectura Kutya para que funcionara con el chat dentro de los canales de voz. En marzo de 2023, anunció un bot para enviar comentarios anónimos al equipo del servidor. [Actualización de Kutya](https://discord.com/channels/737538781024092170/774152638450237460/986439863937155122) [Anuncio del canal de comentarios anónimos](https://discord.com/channels/737538781024092170/774152638450237460/1087976366126927882)
 
 En septiembre de 2022, Gui anunció una versión de prueba del sitio. En octubre informó de que había separado el blog de la documentación y preparado páginas que varias personas podían editar. taka8621 pidió guías de comandos, guías de instalaciones con imágenes y mapas. yanyan propuso páginas editables. En enero de 2023, &#33775;\*HAiNE probó el entorno de edición de la wiki y planteó cómo se orientarían los lectores si las guías quedaban repartidas entre distintas páginas.
@@ -254,6 +270,8 @@ En septiembre de 2022, Gui anunció una versión de prueba del sitio. En octubre
 En octubre de 2022, hana0c0haine informó de que había revisado todas las páginas de la wiki que estaban publicadas y corregido inconsistencias en la terminología y en la redacción en japonés. En marzo de 2023, あすたん organizó canales separados para quienes editaban la wiki y explicó cómo redactar en Markdown.
 
 En noviembre de 2022, キツネコ propuso publicar las reglas de uso del suelo en la wiki y emplear plantillas de solicitud separadas para nivelar terrenos y excavar a cielo abierto. Nishikino Sega preguntó cómo solicitar permiso si se iba a construir después de nivelar el terreno. En enero de 2023, taka8621 pidió ayuda para ordenar las reglas de construcción y otras relacionadas, y &#33775;\*HAiNE propuso reglas sobre excavaciones subterráneas. En una publicación de febrero, taka8621 recogió las propuestas de Yukke sobre el paisaje y el uso de los aldeanos en trampas.
+
+En diciembre de 2022, Mugi informó de que se había recuperado la función de diccionario de Kutya.
 
 En enero de 2023, あすたん publicó en la guía de acceso de Discord de la época instrucciones ilustradas para conectarse con Minecraft Java Edition y Bedrock Edition.
 
