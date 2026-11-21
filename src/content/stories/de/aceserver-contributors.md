@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:c54545e0d5c17a0cbebbdd5fe8dd4e1567e392664492c3f9760d48bf266e737e
+sourceHash: sha256:0ea114a91606288643203ec8587f0c7faa1bcaf295758d075375242e66a93bf2
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -458,6 +458,8 @@ Im Juli 2023 kündigte Yukke die Erstellung einer neuen Welt auf dem Ressourcens
 Im Juli 2023 schrieb und veröffentlichte あすたん Befehlsanleitungen für LWC, CoreProtect, Gsit und LunaChat. Im August erklärte taka8621, wie man mit dem Gras-Plugin hohes Gras erhalten und tauschen konnte. Im September ergänzte taka8621 Hinweise zur Verwendung des Gras-Tauschbefehls.
 
 Im September 2023 wurde bekannt gegeben, dass あすたん zum Serverteam kam und Taka die Systembetreuung übernahm. Im Mai 2024 kündigte はっ an, dass sh und sekisei den Nutzersupport für Systemfragen übernommen hatten. [Ernennungen von 2023](https://discord.com/channels/737538781024092170/774152638450237460/1151168895076548669) [Supportrollen von 2024](https://discord.com/channels/737538781024092170/774152638450237460/1236592686253867008)
+
+Ende September 2024 entwarf sekisei einen Vorschlag, um die damaligen Aufgaben im Nutzersupport zu ordnen. Dazu zählten Öffentlichkeitsarbeit, die Bearbeitung des Wikis, die Betreuung von Veranstaltungen auf dem Spielserver und deren Koordination in der Community.
 
 Am 4. Oktober 2023 berichtete あすたん, dass die Berechtigungen für Befehle zum Wechsel zwischen Servern eingerichtet waren.
 

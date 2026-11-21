@@ -2,7 +2,7 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:c54545e0d5c17a0cbebbdd5fe8dd4e1567e392664492c3f9760d48bf266e737e
+sourceHash: sha256:0ea114a91606288643203ec8587f0c7faa1bcaf295758d075375242e66a93bf2
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -458,6 +458,8 @@ En julio de 2023, Yukke anunció la creación de un nuevo mundo para el servidor
 En julio de 2023, あすたん redactó y publicó guías de comandos para LWC, CoreProtect, Gsit y LunaChat. En agosto, taka8621 explicó el funcionamiento del plugin de hierba para conseguir e intercambiar hierba alta. En septiembre, amplió las indicaciones sobre el uso del comando de intercambio de hierba.
 
 En septiembre de 2023 se anunció que あすたん se incorporaba al equipo de administración y que Taka se encargaría de sistemas. En mayo de 2024, はっ anunció que sh y sekisei pasaban a prestar apoyo técnico a los usuarios. [Nombramientos de 2023](https://discord.com/channels/737538781024092170/774152638450237460/1151168895076548669) [Roles de apoyo de 2024](https://discord.com/channels/737538781024092170/774152638450237460/1236592686253867008)
+
+A finales de septiembre de 2024, sekisei preparó una propuesta para organizar las responsabilidades de quienes prestaban apoyo a los usuarios. Incluía la difusión, la edición de la wiki, la atención de los eventos en el servidor de juego y la coordinación de su desarrollo en la comunidad.
 
 El 4 de octubre de 2023, あすたん informó de que había terminado la configuración de permisos de los comandos para moverse entre servidores.
 

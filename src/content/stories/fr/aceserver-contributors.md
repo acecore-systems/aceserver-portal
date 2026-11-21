@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:c54545e0d5c17a0cbebbdd5fe8dd4e1567e392664492c3f9760d48bf266e737e
+sourceHash: sha256:0ea114a91606288643203ec8587f0c7faa1bcaf295758d075375242e66a93bf2
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -458,6 +458,8 @@ En juillet 2023, Yukke a annoncé la création d’un nouveau monde sur le serve
 En juillet 2023, あすたん a rédigé et publié des guides de commandes pour LWC, CoreProtect, Gsit et LunaChat. En août, taka8621 a expliqué comment obtenir et échanger de l’herbe haute grâce au plugin dédié à l’herbe. En septembre, taka8621 a complété les explications sur l’utilisation de la commande d’échange d’herbe.
 
 En septembre 2023, une annonce a présenté l’arrivée de あすたん dans l’équipe d’administration et la nomination de Taka à la gestion des systèmes. En mai 2024, はっ a annoncé que sh et sekisei avaient pris des fonctions d’assistance technique aux utilisateurs. [Nominations de 2023](https://discord.com/channels/737538781024092170/774152638450237460/1151168895076548669) [Fonctions d’assistance de 2024](https://discord.com/channels/737538781024092170/774152638450237460/1236592686253867008)
+
+Fin septembre 2024, sekisei a rédigé une proposition pour organiser les responsabilités des personnes qui assuraient alors l’assistance aux utilisateurs. Elle abordait la communication, la modification du wiki, la gestion des événements sur le serveur de jeu et leur déroulement au sein de la communauté.
 
 Le 4 octobre 2023, あすたん a annoncé que la configuration des permissions des commandes de déplacement entre les serveurs était terminée.
 

@@ -2,7 +2,7 @@
 title: As pessoas que apoiaram o Aceserver
 description: Conheça quem ajudou o Aceserver pelos retratos de skins do Minecraft, relembre as atividades e confira o roteiro de eventos e propostas.
 translationOf: aceserver-contributors
-sourceHash: sha256:c54545e0d5c17a0cbebbdd5fe8dd4e1567e392664492c3f9760d48bf266e737e
+sourceHash: sha256:0ea114a91606288643203ec8587f0c7faa1bcaf295758d075375242e66a93bf2
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -458,6 +458,8 @@ Em julho de 2023, Yukke anunciou a criação de um novo mundo no servidor de rec
 Em julho de 2023, あすたん escreveu e publicou guias de comandos para LWC, CoreProtect, Gsit e LunaChat. Em agosto, taka8621 explicou como obter e trocar grama alta pelo plugin de grama. Em setembro, acrescentou orientações sobre o uso do comando de troca de grama.
 
 Em setembro de 2023, foi anunciado que あすたん passaria a integrar a administração e que Taka ficaria responsável pelos sistemas. Em maio de 2024, はっ anunciou que sh e sekisei passaram a apoiar os usuários em assuntos ligados aos sistemas. [Nomeações de 2023](https://discord.com/channels/737538781024092170/774152638450237460/1151168895076548669) [Funções de apoio de 2024](https://discord.com/channels/737538781024092170/774152638450237460/1236592686253867008)
+
+No fim de setembro de 2024, sekisei preparou uma proposta para organizar as responsabilidades de quem apoiava os usuários na época. A proposta incluía divulgação, edição da wiki, apoio aos eventos no servidor de jogo e coordenação das atividades na comunidade.
 
 Em 4 de outubro de 2023, あすたん informou que a configuração das permissões dos comandos de troca entre servidores tinha sido concluída.
 

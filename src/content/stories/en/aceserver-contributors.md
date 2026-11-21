@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:c54545e0d5c17a0cbebbdd5fe8dd4e1567e392664492c3f9760d48bf266e737e
+sourceHash: sha256:0ea114a91606288643203ec8587f0c7faa1bcaf295758d075375242e66a93bf2
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -458,6 +458,8 @@ In July 2023, Yukke announced creating a new resource server world. [Resource wo
 In July 2023, あすたん wrote and posted command guides for LWC, CoreProtect, Gsit, and LunaChat. In August, taka8621 explained how the grass plugin let players obtain and trade tall grass. In September, they added guidance on using the grass exchange command.
 
 In September 2023, Aceserver announced that あすたん had joined the operations team and that Taka would oversee systems. In May 2024, はっ announced that sh and sekisei had taken on user support roles covering systems. [2023 appointments](https://discord.com/channels/737538781024092170/774152638450237460/1151168895076548669) [2024 support roles](https://discord.com/channels/737538781024092170/774152638450237460/1236592686253867008)
+
+In late September 2024, sekisei drafted a proposal for organizing user support responsibilities at the time. It covered publicity, Wiki editing, handling events on the game server, and coordinating events within the community.
 
 On October 4, 2023, あすたん reported that the permissions for commands used to move between servers had been configured.
 
