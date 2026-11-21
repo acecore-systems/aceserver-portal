@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:85e1f81b145ef93c2c4a20d76ecb642df387e0e205ada042439be35d422cad11
+sourceHash: sha256:9aa0f10a68a6d6a371c6ce05b7b7bf379b336ccd690a11d931a08ee7e9f9570a
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -52,6 +52,8 @@ In July 2023, ゆり introduced an alliance between the Village of the Moon God 
 In October 2023, PetiteShelf7874 introduced the activities and map of Small Hill Village.
 
 ## Promotion and events
+
+In December 2020, Rina\_desu announced on the old Discord that they had updated a post for the social media series about in-game homes and featured the home of 6nuts.
 
 In February 2021, Gui asked for screenshots to help promote Aceserver. In the old submissions channel, kuroneko229 photographed a build by LibraI, who introduced the work with credits for the build and the photography.
 
@@ -213,7 +215,13 @@ On March 30, Merutak reported that the ×6 Ocean Monument build itself was compl
 
 In April 2021, KOTA-SAN reported successfully testing a way to join from a Nintendo Switch and proposed adding guidance to the how-to-play page on the site at the time.
 
+In August 2021, KOTA-SAN compiled a list of useful commands for the plugins installed at the time.
+
 According to old Discord records, in August 2021 KOTA-SAN reported creating and launching Ace-kun, a bot that automatically sent instructions to newcomers in the lobby. In January 2022, KOTA-SAN reported restoring Ace-kun as one of the co-creators of Ace-kun and Kutya. In May, KOTA-SAN added automatic posting of a self-introduction template.
+
+In May 2022, KOTA-SAN announced a trial of a plugin that expanded the features of signs. キツネコ (KITUNEKO0605) reported making an in-game book with a command list and other information.
+
+In May 2022, はっ shared a list of in-game items for Azkaban.
 
 In June 2022, Mugi updated the text-to-speech bot Kutya to support chat inside voice channels. In March 2023, Mugi announced a bot for sending anonymous feedback to the server team. [Kutya update](https://discord.com/channels/737538781024092170/774152638450237460/986439863937155122) [Anonymous feedback announcement](https://discord.com/channels/737538781024092170/774152638450237460/1087976366126927882)
 
@@ -225,17 +233,21 @@ In November 2022, キツネコ proposed putting the land-use rules on the wiki a
 
 In January 2023, あすたん posted illustrated instructions for connecting with Minecraft Java Edition and Bedrock Edition in the Discord joining guide of the time.
 
+In May 2023, あすたん put together a guide to what each server was for at the time and where to find the wiki and world map. The guide also showed the entrances to the main and resource servers with images. That month, あすたん explained the protection features of CoreProtect and LWC in a separate guide.
+
 In July 2023, Yukke announced creating a new resource server world. [Resource world announcement](https://discord.com/channels/737538781024092170/774152638450237460/1135574163080364103)
 
-In July 2023, あすたん wrote and posted command guides for LWC, CoreProtect, Gsit, and LunaChat. In September, taka8621 added guidance on using the grass exchange command.
+In July 2023, あすたん wrote and posted command guides for LWC, CoreProtect, Gsit, and LunaChat. In August, taka8621 explained how the grass plugin let players obtain and trade tall grass. In September, they added guidance on using the grass exchange command.
 
 In September 2023, Aceserver announced that あすたん had joined the operations team and that Taka would oversee systems. In May 2024, はっ announced that sh and sekisei had taken on user support roles covering systems. [2023 appointments](https://discord.com/channels/737538781024092170/774152638450237460/1151168895076548669) [2024 support roles](https://discord.com/channels/737538781024092170/774152638450237460/1236592686253867008)
 
-In January 2024, あすたん explained the participation rules and how to submit records to the Ace Server Leaderboard Archive (ASLA), which collected records from Aceserver. あすたん also posted lists covering mining, statistics, and ingots. キツネコ, Feruno, and Taiyaki sent statistics to the submissions channel, and Tabekirareta Potechi proposed candidates for records such as the first castle.
+In January 2024, あすたん opened a Discord server, the Ace Server Leaderboard Archive (ASLA), to collect records from Aceserver. They explained the participation rules and how to submit records. あすたん also posted lists covering mining, statistics, and ingots. キツネコ, Feruno, and Taiyaki sent statistics to the submissions channel, and Tabekirareta Potechi proposed candidates for records such as the first castle.
 
 In July 2024, taka8621 documented how to reset the resource server world and shared the procedure with the server team.
 
 In October 2024, sekisei prepared a guide to using the Advanced Portals plugin with Minecraft 1.21 and later versions. In December, sekisei compiled a summary of where portals were located on the server.
+
+In January 2025, sekisei announced that the grass crafting recipe was unavailable following an update.
 
 From late October to early November 2025, ゆり organized and posted separate sets of rules in the official Discord rules forum. The posts covered general rules, the survival server, content, seasons, setting up concept servers, the community, and Discord. [General rules post](https://discord.com/channels/737538781024092170/1433831969816449064/1433831969816449064) [Community rules post](https://discord.com/channels/737538781024092170/1433830521238061227/1433830521238061227) [Discord rules post](https://discord.com/channels/737538781024092170/1433957818674970654/1433957818674970654)
 

@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:85e1f81b145ef93c2c4a20d76ecb642df387e0e205ada042439be35d422cad11
+sourceHash: sha256:9aa0f10a68a6d6a371c6ce05b7b7bf379b336ccd690a11d931a08ee7e9f9570a
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -52,6 +52,8 @@ En juillet 2023, ゆり a présenté, dans une annonce d’Ace Lab, l’alliance
 En octobre 2023, PetiteShelf7874 a présenté les activités et la carte du Village de la Petite Colline.
 
 ## Communication et événements
+
+En décembre 2020, Rina\_desu a annoncé sur l’ancien Discord avoir mis à jour une publication de la série consacrée aux maisons en jeu sur les réseaux sociaux et y avoir présenté la maison de 6nuts.
 
 En février 2021, Gui a demandé des captures d’écran pour faire connaître Aceserver. Dans l’ancien salon de contributions, kuroneko229 a photographié une construction réalisée par LibraI, qui a présenté l’œuvre en précisant les rôles de construction et de photographie.
 
@@ -213,7 +215,13 @@ Le 30 mars, Merutak a annoncé la fin de la construction du monument océanique 
 
 En avril 2021, KOTA-SAN a signalé avoir testé avec succès une méthode de connexion depuis une Nintendo Switch et a proposé de compléter le guide de jeu du site de l’époque.
 
+En août 2021, KOTA-SAN a recensé des commandes utiles des plugins installés à l’époque.
+
 D’après les archives de l’ancien salon Discord, en août 2021, KOTA-SAN a indiqué avoir créé et mis en service Ace-kun, un bot qui envoyait automatiquement des consignes aux personnes qui venaient de rejoindre le hall. En janvier 2022, KOTA-SAN, l’un des créateurs d’Ace-kun et de Kutya, a annoncé la remise en service d’Ace-kun. En mai, KOTA-SAN a ajouté la publication automatique d’un modèle de présentation personnelle.
+
+En mai 2022, KOTA-SAN a annoncé la mise à l’essai d’un plugin qui étendait les fonctions des panneaux. キツネコ (KITUNEKO0605) a indiqué avoir créé un livre dans le jeu avec une liste de commandes et d’autres informations.
+
+En mai 2022, はっ a présenté une liste d’objets en jeu pour Azkaban.
 
 En juin 2022, Mugi a mis à jour le bot de lecture vocale Kutya pour qu’il fonctionne avec le chat des salons vocaux. En mars 2023, Mugi a annoncé un bot qui permettait de transmettre des avis anonymes à l’équipe du serveur. [Mise à jour de Kutya](https://discord.com/channels/737538781024092170/774152638450237460/986439863937155122) [Annonce des avis anonymes](https://discord.com/channels/737538781024092170/774152638450237460/1087976366126927882)
 
@@ -225,17 +233,21 @@ En novembre 2022, キツネコ a proposé de publier les règles d’utilisation
 
 En janvier 2023, あすたん a publié des instructions illustrées pour se connecter avec Minecraft Java Edition et Bedrock Edition dans le guide d’accès de l’ancien Discord.
 
+En mai 2023, あすたん a préparé un guide sur le rôle de chaque serveur à l’époque et sur l’accès au wiki et à la carte du monde. Le guide montrait aussi en images les entrées du serveur principal et du serveur de ressources. Le même mois, あすたん a expliqué les fonctions de protection de CoreProtect et de LWC dans un guide distinct.
+
 En juillet 2023, Yukke a annoncé la création d’un nouveau monde sur le serveur de ressources. [Annonce du monde de ressources](https://discord.com/channels/737538781024092170/774152638450237460/1135574163080364103)
 
-En juillet 2023, あすたん a rédigé et publié des guides de commandes pour LWC, CoreProtect, Gsit et LunaChat. En septembre, taka8621 a complété les explications sur l’utilisation de la commande d’échange d’herbe.
+En juillet 2023, あすたん a rédigé et publié des guides de commandes pour LWC, CoreProtect, Gsit et LunaChat. En août, taka8621 a expliqué comment obtenir et échanger de l’herbe haute grâce au plugin dédié à l’herbe. En septembre, taka8621 a complété les explications sur l’utilisation de la commande d’échange d’herbe.
 
 En septembre 2023, une annonce a présenté l’arrivée de あすたん dans l’équipe d’administration et la nomination de Taka à la gestion des systèmes. En mai 2024, はっ a annoncé que sh et sekisei avaient pris des fonctions d’assistance technique aux utilisateurs. [Nominations de 2023](https://discord.com/channels/737538781024092170/774152638450237460/1151168895076548669) [Fonctions d’assistance de 2024](https://discord.com/channels/737538781024092170/774152638450237460/1236592686253867008)
 
-En janvier 2024, あすたん a expliqué les règles de participation et la procédure de dépôt des records dans l’Ace Server Leaderboard Archive (ASLA), qui rassemblait les records d’Aceserver. あすたん a aussi publié des listes sur le minage, les statistiques et les lingots. キツネコ, Feruno et Taiyaki ont transmis des statistiques sur le salon des contributions, et Tabekirareta Potechi a proposé des entrées possibles pour des catégories comme celle du premier château.
+En janvier 2024, あすたん a ouvert le serveur Discord Ace Server Leaderboard Archive (ASLA) pour rassembler les records d’Aceserver. あすたん a présenté les règles de participation et la procédure de dépôt des records. あすたん a aussi publié des listes sur le minage, les statistiques et les lingots. キツネコ, Feruno et Taiyaki ont transmis des statistiques sur le salon des contributions, et Tabekirareta Potechi a proposé des entrées possibles pour des catégories comme celle du premier château.
 
 En juillet 2024, taka8621 a rédigé la procédure de réinitialisation du monde du serveur de ressources et l’a partagée avec l’équipe du serveur.
 
 En octobre 2024, sekisei a préparé un guide sur l’utilisation du plugin de portails Advanced Portals avec Minecraft 1.21 et les versions ultérieures. En décembre, sekisei a fait le point sur l’emplacement des portails du serveur.
+
+En janvier 2025, sekisei a annoncé que la recette de fabrication de l’herbe était indisponible à la suite d’une mise à jour.
 
 Entre la fin octobre et le début novembre 2025, ゆり a organisé et publié séparément les règles générales, celles du serveur de survie, du contenu et des saisons, de la création de serveurs thématiques, de la communauté et du Discord sur le forum des règles du Discord officiel. [Publication des règles générales](https://discord.com/channels/737538781024092170/1433831969816449064/1433831969816449064) [Publication des règles de la communauté](https://discord.com/channels/737538781024092170/1433830521238061227/1433830521238061227) [Publication des règles du Discord](https://discord.com/channels/737538781024092170/1433957818674970654/1433957818674970654)
 

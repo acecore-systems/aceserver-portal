@@ -2,7 +2,7 @@
 title: As pessoas que apoiaram o Aceserver
 description: Conheça quem ajudou o Aceserver pelos retratos de skins do Minecraft, relembre as atividades e confira o roteiro de eventos e propostas.
 translationOf: aceserver-contributors
-sourceHash: sha256:85e1f81b145ef93c2c4a20d76ecb642df387e0e205ada042439be35d422cad11
+sourceHash: sha256:9aa0f10a68a6d6a371c6ce05b7b7bf379b336ccd690a11d931a08ee7e9f9570a
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -52,6 +52,8 @@ Em julho de 2023, ゆり apresentou, em um anúncio da Ace Lab, a aliança entre
 Em outubro de 2023, PetiteShelf7874 apresentou as atividades e o mapa da Vila da Pequena Colina.
 
 ## Divulgação e eventos
+
+Em dezembro de 2020, Rina\_desu avisou no antigo Discord que havia atualizado uma publicação da série nas redes sociais sobre casas dentro do jogo e apresentado a casa de 6nuts.
 
 Em fevereiro de 2021, Gui pediu capturas de tela para divulgar o Aceserver. No antigo canal de contribuições, kuroneko229 fotografou uma construção feita por LibraI, que apresentou o trabalho com os créditos da construção e da fotografia.
 
@@ -213,7 +215,13 @@ Em 30 de março, Merutak informou que a construção do Monumento Oceânico ×6 
 
 Em abril de 2021, KOTA-SAN informou que havia testado com sucesso uma forma de entrar usando o Nintendo Switch e propôs acrescentar orientações à página sobre como jogar do site da época.
 
+Em agosto de 2021, KOTA-SAN reuniu comandos úteis dos plugins instalados na época.
+
 Segundo os registros do antigo canal do Discord, em agosto de 2021 KOTA-SAN informou que havia criado e colocado em funcionamento o Ace-kun, um bot que enviava orientações automaticamente a quem acabava de entrar no lobby. Em janeiro de 2022, como um dos criadores de Ace-kun e Kutya, KOTA-SAN informou que havia restaurado o Ace-kun. Em maio, adicionou a publicação automática de um modelo de apresentação pessoal.
+
+Em maio de 2022, KOTA-SAN anunciou a instalação em caráter de teste de um plugin que ampliava as funções das placas. キツネコ (KITUNEKO0605) informou que tinha criado um livro dentro do jogo com uma lista de comandos e outras informações.
+
+Em maio de 2022, はっ compartilhou uma lista de itens do jogo para Azkaban.
 
 Em junho de 2022, Mugi atualizou o bot de leitura Kutya para incluir o chat dos canais de voz. Em março de 2023, anunciou um bot para enviar comentários anônimos à equipe do servidor. [Atualização do Kutya](https://discord.com/channels/737538781024092170/774152638450237460/986439863937155122) [Anúncio do feedback anônimo](https://discord.com/channels/737538781024092170/774152638450237460/1087976366126927882)
 
@@ -225,17 +233,21 @@ Em novembro de 2022, キツネコ propôs publicar na wiki as regras de uso do t
 
 Em janeiro de 2023, あすたん publicou no guia de entrada do Discord da época instruções ilustradas para se conectar com Minecraft Java Edition e Bedrock Edition.
 
+Em maio de 2023, あすたん reuniu em um guia a finalidade de cada servidor na época e as orientações para encontrar a wiki e o mapa do mundo. O guia também mostrou com imagens as entradas do servidor principal e do servidor de recursos. Nesse mesmo mês, あすたん explicou os recursos de proteção do CoreProtect e do LWC em outro guia.
+
 Em julho de 2023, Yukke anunciou a criação de um novo mundo no servidor de recursos. [Anúncio do mundo de recursos](https://discord.com/channels/737538781024092170/774152638450237460/1135574163080364103)
 
-Em julho de 2023, あすたん escreveu e publicou guias de comandos para LWC, CoreProtect, Gsit e LunaChat. Em setembro, taka8621 acrescentou orientações sobre o uso do comando de troca de grama.
+Em julho de 2023, あすたん escreveu e publicou guias de comandos para LWC, CoreProtect, Gsit e LunaChat. Em agosto, taka8621 explicou como obter e trocar grama alta pelo plugin de grama. Em setembro, acrescentou orientações sobre o uso do comando de troca de grama.
 
 Em setembro de 2023, foi anunciado que あすたん passaria a integrar a administração e que Taka ficaria responsável pelos sistemas. Em maio de 2024, はっ anunciou que sh e sekisei passaram a apoiar os usuários em assuntos ligados aos sistemas. [Nomeações de 2023](https://discord.com/channels/737538781024092170/774152638450237460/1151168895076548669) [Funções de apoio de 2024](https://discord.com/channels/737538781024092170/774152638450237460/1236592686253867008)
 
-Em janeiro de 2024, あすたん explicou as regras de participação e como enviar registros para o Ace Server Leaderboard Archive (ASLA), que reunia registros do Aceserver. Também publicou listas de mineração, estatísticas e lingotes. キツネコ, Feruno e Taiyaki enviaram estatísticas ao canal de contribuições, e Tabekirareta Potechi sugeriu candidatos para registros como o primeiro castelo.
+Em janeiro de 2024, あすたん abriu o Ace Server Leaderboard Archive (ASLA), um servidor no Discord para reunir registros do Aceserver. Explicou as regras de participação e como enviar os registros. Também publicou listas de mineração, estatísticas e lingotes. キツネコ, Feruno e Taiyaki enviaram estatísticas ao canal de contribuições, e Tabekirareta Potechi sugeriu candidatos para registros como o primeiro castelo.
 
 Em julho de 2024, taka8621 documentou o procedimento de reinicialização do mundo do servidor de recursos e o compartilhou com a equipe do servidor.
 
 Em outubro de 2024, sekisei preparou um guia sobre o uso do plugin de portais Advanced Portals no Minecraft 1.21 e em versões posteriores. Em dezembro, reuniu informações sobre a localização dos portais no servidor.
+
+Em janeiro de 2025, sekisei informou que a receita de fabricação de grama estava indisponível após uma atualização.
 
 Entre o fim de outubro e o início de novembro de 2025, ゆり organizou e publicou separadamente as regras gerais, do servidor de sobrevivência, de conteúdo, de temporadas, de criação de servidores temáticos, da comunidade e do Discord, no fórum de regras do Discord oficial. [Publicação das regras gerais](https://discord.com/channels/737538781024092170/1433831969816449064/1433831969816449064) [Publicação das regras da comunidade](https://discord.com/channels/737538781024092170/1433830521238061227/1433830521238061227) [Publicação das regras do Discord](https://discord.com/channels/737538781024092170/1433957818674970654/1433957818674970654)
 

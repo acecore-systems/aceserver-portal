@@ -2,7 +2,7 @@
 title: 支持Aceserver的人们
 description: 通过 Minecraft 皮肤头像认识 Aceserver 的贡献者，回顾社区活动记录，并查看活动与玩家提案路线图。
 translationOf: aceserver-contributors
-sourceHash: sha256:85e1f81b145ef93c2c4a20d76ecb642df387e0e205ada042439be35d422cad11
+sourceHash: sha256:9aa0f10a68a6d6a371c6ce05b7b7bf379b336ccd690a11d931a08ee7e9f9570a
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -52,6 +52,8 @@ KOTA-SAN 在旧 Discord 发布的 Aceserver 观光协会介绍中，将 MKOTA_SA
 2023 年 10 月，PetiteShelf7874 介绍了小丘村的活动和地图。
 
 ## 宣传与活动
+
+2020年12月，Rina\_desu 在旧 Discord 中表示，自己已更新社交媒体上介绍游戏内住宅的栏目帖子，并介绍了 6nuts 的家。
 
 2021 年 2 月，Gui 征集可用于宣传 Aceserver 的游戏截图。在旧征集频道中，kuroneko229 拍摄了 LibraI 建造的作品，LibraI 在介绍作品时注明了建造和摄影人员。
 
@@ -213,7 +215,13 @@ taibon0727 准备了玻璃等物资、出行用船的停放处和处理沙子的
 
 2021 年 4 月，KOTA-SAN 报告称测试了用 Nintendo Switch 加入服务器的方法并成功连接，并建议在当时网站的玩法指南中补充相关说明。
 
+2021年8月，KOTA-SAN整理了当时已安装的插件中一些实用的命令。
+
 旧 Discord 记录显示，2021 年 8 月，KOTA-SAN 报告已制作并启用 Ace-kun，这个机器人会自动向新加入大厅的玩家发送指引。2022 年 1 月，KOTA-SAN 作为 Ace-kun 和 Kutya 的共同制作者之一，报告已恢复 Ace-kun 的运行。5 月，KOTA-SAN 添加了自动发布自我介绍模板的功能。
+
+2022年5月，KOTA-SAN宣布试用一款扩展告示牌功能的插件。キツネコ（KITUNEKO0605）报告说，自己制作了一本游戏内的书，收录了命令列表等资料。
+
+2022年5月，はっ介绍了阿兹卡班的游戏内物品清单。
 
 2022 年 6 月，Mugi 更新了文字转语音机器人 Kutya，使其能朗读语音频道内的聊天消息。2023 年 3 月，Mugi 宣布引入可向运营团队匿名反馈的机器人。 [Kutya 更新公告](https://discord.com/channels/737538781024092170/774152638450237460/986439863937155122) [匿名反馈公告](https://discord.com/channels/737538781024092170/774152638450237460/1087976366126927882)
 
@@ -225,17 +233,21 @@ taibon0727 准备了玻璃等物资、出行用船的停放处和处理沙子的
 
 2023年1月，あすたん在当时的 Discord 加入指南中发布了图文说明，介绍如何通过 Minecraft Java 版和基岩版连接服务器。
 
+2023年5月，あすたん整理了当时各服务器的用途，以及查找 Wiki 和世界地图的指引。指南还配图介绍了主服务器和资源服务器的入口。同月，あすたん还在另一份指南中介绍了 CoreProtect 和 LWC 的保护功能。
+
 2023年7月，Yukke宣布创建了资源服的新世界。 [资源世界公告](https://discord.com/channels/737538781024092170/774152638450237460/1135574163080364103)
 
-2023 年 7 月，あすたん 编写并发布了 LWC、CoreProtect、Gsit 和 LunaChat 的命令指南。9 月，taka8621 补充了草交换命令的使用说明。
+2023 年 7 月，あすたん 编写并发布了 LWC、CoreProtect、Gsit 和 LunaChat 的命令指南。8月，taka8621介绍了草插件中获取和交换高草丛的机制。9月又补充了草交换命令的使用说明。
 
 2023 年 9 月，公告介绍 あすたん 加入运营团队、Taka 接任系统工作。2024 年 5 月，はっ宣布 sh 和 sekisei 成为负责系统相关事务的用户支持者。 [2023 年任命公告](https://discord.com/channels/737538781024092170/774152638450237460/1151168895076548669) [2024 年支持者公告](https://discord.com/channels/737538781024092170/774152638450237460/1236592686253867008)
 
-2024 年 1 月，あすたん 在收集 Aceserver 游戏记录的 Ace Server Leaderboard Archive（ASLA）中介绍了参与规则和提交记录的方法，还发布了采矿、统计数据和金属锭的列表。キツネコ、Feruno 和 Taiyaki 在提交频道分享了统计记录，Tabekirareta Potechi 则提交了「首座城堡」等项目的候选记录。
+2024年1月，あすたん开设了 Discord 服务器 Ace Server Leaderboard Archive（ASLA），用于收集 Aceserver 内的游戏记录。あすたん介绍了参与规则和提交记录的方法，还发布了采矿、统计数据和金属锭的列表。キツネコ、Feruno 和 Taiyaki 在提交频道分享了统计记录，Tabekirareta Potechi 则提交了「首座城堡」等项目的候选记录。
 
 2024 年 7 月，taka8621 整理了资源服世界的重置流程，并在运营团队内部分享。
 
 2024 年 10 月，sekisei 编写了在 Minecraft 1.21 及后续版本中使用传送门插件 Advanced Portals 的指南。12 月，sekisei 汇总了服务器内传送门的分布情况。
+
+2025年1月，sekisei公告称，更新后草的合成配方当时无法使用。
 
 2025 年 10 月底至 11 月初，ゆり 在官方 Discord 规则论坛整理并分别发布了通用规则、生存服规则、内容规则、赛季规则、设立概念服的规则、社群规则和 Discord 规则。 [通用规则帖子](https://discord.com/channels/737538781024092170/1433831969816449064/1433831969816449064) [社群规则帖子](https://discord.com/channels/737538781024092170/1433830521238061227/1433830521238061227) [Discord 规则帖子](https://discord.com/channels/737538781024092170/1433957818674970654/1433957818674970654)
 
