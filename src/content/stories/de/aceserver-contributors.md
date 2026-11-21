@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:fa17de977e3c6c659f0d5fa812fc1b14000bc8e3fab43c3b9d1e79708d79f232
+sourceHash: sha256:cc3e1bf1b588666f85f37c890005f51942077c226883d5268bd61973146071d2
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -399,6 +399,8 @@ Am 14. April 2026 baute Moon\_666 auf dem Überlebensserver die Wohnungen im Wal
 
 Am 18. April 2026 berichtete Moon\_666, dass die Wohnungen im Waldanwesen Nr. 1 bis 3 fast fertig waren. Die Arbeiten an den Einrichtungen bei Nr. 2 liefen noch.
 
+Am 5. Juni 2026 entwarf あすたん ein MMO-Konzept, in dem Spieler eine Klasse wählen, im Level aufsteigen, Ausrüstung sammeln und durch klassenspezifische Fähigkeiten und das Verteilen von Punkten stärker werden sollten. Am 12. Juni berichtete あすたん, dass die Umsetzung der Grundfunktionen weit fortgeschritten sei. Texturen und Modelle, Fähigkeiten und die Spielwelt mussten unter anderem noch ausgearbeitet werden.
+
 Am 17. September 2026 kündigte タケ an, dass das Belebungskomitee von Aceserver mit der Neugestaltung des zentralen Bereichs des ehemaligen Century-Geländes begonnen hatte. タケ berichtete auch, dass mehrere Helfer beim Aufräumen vorangekommen waren. [Beginn der Neugestaltung des ehemaligen Century-Geländes](https://discord.com/channels/737538781024092170/1437442902547759125/1550005135311110154)
 
 Am 28. September 2026 erwog あすたん, das damals in Entwicklung befindliche MMO um Angeln zu ergänzen. Am selben Tag berichtete あすたん bei einem Austausch über die Vorbereitung des Betatests des Content-Servers, Angeln implementiert zu haben. Am 3. Oktober kündigte あすたん im offiziellen Discord-Ankündigungskanal den Start des offenen Betatests des Content-Servers an. Zu den spielbaren Angeboten zählten Duel, ein Eins-gegen-eins-PvP-Modus, und Fishing. [Ankündigung der offenen Beta des Content-Servers (Test beendet)](https://discord.com/channels/737538781024092170/774152638450237460/1555731149119164427)
@@ -506,6 +508,8 @@ Am 12. und 13. März 2026 suchte sekisei Interessierte für einen Java-Einsteige
 Im Mai 2026 schlug End&#12539;コッカー vor, die Texte des Portals und die Darstellung der Fotos zu verbessern. Im Juni berichtete End&#12539;コッカー, &#35377;&#21487;&#12385;&#12419; um eine Funktion gebeten zu haben, mit der sich Bilder von Bauwerken aus Minecraft per Wischgeste ansehen ließen, ohne die Seitennutzung zu stören.
 
 Im Juli 2026 kündigte sekisei den ersten technischen Vortrag über Server und das Internet an. [Ankündigung des technischen Vortrags](https://discord.com/channels/737538781024092170/774152638450237460/1532641413500633108)
+
+Im Juli 2026 wurde überlegt, die Spielwährung in den vom Serverteam betriebenen Handelsposten aufzunehmen. sekisei teilte die bisherigen Wechselkurse und berichtete, den direkten Tausch zwischen Gegenständen umgesetzt zu haben und einen Test zu planen. Merutak schlug vor, Smaragde für begrenzte Zeit gegen Spielwährung eintauschen zu können. あすたん regte an, in großen Mengen herstellbare Gegenstände vom Tausch auszunehmen. End&#12539;コッカー schlug vor, die Wechselkurse für den Verkauf von Gegenständen zu ordnen.
 
 Von September bis Oktober 2026 strukturierte End&#12539;コッカー den damaligen Leitfaden für den Minecraft-Beitritt so, dass die Regeln, die Vorstellungsbereiche und die Hinweise zur Verbindung leichter zu finden waren. End&#12539;コッカー stellte auch zusammen, wo die Regeln der einzelnen Welten zu finden waren.
 

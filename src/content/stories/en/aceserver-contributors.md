@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:fa17de977e3c6c659f0d5fa812fc1b14000bc8e3fab43c3b9d1e79708d79f232
+sourceHash: sha256:cc3e1bf1b588666f85f37c890005f51942077c226883d5268bd61973146071d2
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -399,6 +399,8 @@ On April 14, 2026, Moon\_666 built the Woodland Mansion Apartments on the surviv
 
 On April 18, 2026, Moon\_666 reported that Woodland Mansion Apartments Nos. 1 to 3 were nearly complete, with work still underway on the facilities alongside No. 2.
 
+On June 5, 2026, あすたん outlined an MMO in which players would choose a class, level up, collect equipment, and grow stronger through class-specific skills and point allocation. On June 12, they reported that much of the core functionality was in place, with textures and models, skills, and work on the world still to do.
+
 On September 17, 2026, タケ announced that the Aceserver Revitalization Committee had started redeveloping the central part of the old Century site. タケ also reported that several volunteers had made progress clearing the area. [Start of the old Century site redevelopment](https://discord.com/channels/737538781024092170/1437442902547759125/1550005135311110154)
 
 On September 28, 2026, あすたん considered adding fishing to the MMO under development. That same day, あすたん reported implementing fishing during a discussion about preparing the Content Server beta. On October 3, they announced the Content Server open beta test in the official Discord announcements and said players could try Duel, a one-on-one PvP mode, and Fishing. [Content Server open beta announcement (test ended)](https://discord.com/channels/737538781024092170/774152638450237460/1555731149119164427)
@@ -506,6 +508,8 @@ On March 12 and 13, 2026, sekisei asked who was interested in a beginner Java co
 In May 2026, End&#12539;コッカー suggested improving the portal’s wording and how it displayed photos. In June, they reported asking &#35377;&#21487;&#12385;&#12419; to implement a way to swipe through images of Minecraft builds without interrupting browsing.
 
 In July 2026, sekisei announced the first technical talk about servers and the Internet. [Technical talk announcement](https://discord.com/channels/737538781024092170/774152638450237460/1532641413500633108)
+
+In July 2026, while the team considered introducing in-game currency to the staff-run trading post, sekisei shared the previous exchange rates, reported implementing item-for-item trades, and said testing was planned. Merutak proposed letting players exchange emeralds for in-game currency for a limited time. あすたん suggested excluding items that could be produced in large quantities, and End&#12539;コッカー proposed organizing the exchange rates for selling items.
 
 From September to October 2026, End&#12539;コッカー organized the Minecraft joining guide of the time so players could find the rules, introductions, and connection resources. End&#12539;コッカー also listed where to check the rules for each world.
 

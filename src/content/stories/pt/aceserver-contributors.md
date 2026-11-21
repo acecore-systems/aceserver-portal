@@ -2,7 +2,7 @@
 title: As pessoas que apoiaram o Aceserver
 description: Conheça quem ajudou o Aceserver pelos retratos de skins do Minecraft, relembre as atividades e confira o roteiro de eventos e propostas.
 translationOf: aceserver-contributors
-sourceHash: sha256:fa17de977e3c6c659f0d5fa812fc1b14000bc8e3fab43c3b9d1e79708d79f232
+sourceHash: sha256:cc3e1bf1b588666f85f37c890005f51942077c226883d5268bd61973146071d2
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -399,6 +399,8 @@ Em 14 de abril de 2026, Moon\_666 construiu os Apartamentos da Mansão da Flores
 
 Em 18 de abril de 2026, Moon\_666 informou que os Apartamentos da Mansão da Floresta de n.º 1 a 3 estavam quase concluídos e que as instalações anexas ao n.º 2 ainda estavam em obras.
 
+Em 5 de junho de 2026, あすたん esboçou um MMO em que cada jogador escolheria uma classe, subiria de nível, reuniria equipamentos e ficaria mais forte com habilidades da classe e a distribuição de pontos. Em 12 de junho, informou que a implementação das funções básicas estava bem adiantada e que ainda faltava produzir as texturas e os modelos, as habilidades e o mundo, entre outros elementos.
+
 Em 17 de setembro de 2026, タケ anunciou que o Comitê de Revitalização do Aceserver havia iniciado a revitalização da parte central da antiga área de Century. Também informou que várias pessoas haviam ajudado a limpar a área. [Início da revitalização da antiga área de Century](https://discord.com/channels/737538781024092170/1437442902547759125/1550005135311110154)
 
 Em 28 de setembro de 2026, あすたん considerou adicionar pesca ao MMO em desenvolvimento. No mesmo dia, ao discutir os preparativos para o teste beta do servidor de conteúdo, あすたん informou que havia implementado a pesca. Em 3 de outubro anunciou no canal oficial de avisos do Discord o início do teste beta aberto do servidor de conteúdo e informou que era possível jogar Duel, um modo PvP de um contra um, e Fishing. [Anúncio do teste beta aberto do servidor de conteúdo (teste encerrado)](https://discord.com/channels/737538781024092170/774152638450237460/1555731149119164427)
@@ -506,6 +508,8 @@ Em 12 e 13 de março de 2026, sekisei procurou pessoas interessadas em um curso 
 Em maio de 2026, End&#12539;コッカー sugeriu melhorar os textos do portal e a forma de exibir as fotos. Em junho, informou que havia pedido a &#35377;&#21487;&#12385;&#12419; que implementasse uma maneira de ver imagens de construções do Minecraft deslizando o dedo sem atrapalhar a navegação.
 
 Em julho de 2026, sekisei anunciou a primeira palestra técnica sobre servidores e Internet. [Anúncio da palestra técnica](https://discord.com/channels/737538781024092170/774152638450237460/1532641413500633108)
+
+Em julho de 2026, durante a discussão sobre incluir a moeda do jogo no posto de trocas administrado pela equipe do servidor, sekisei compartilhou as taxas de troca anteriores, informou que havia implementado a troca direta de itens e disse que pretendia testá-la. Merutak propôs permitir a troca de esmeraldas pela moeda do jogo por tempo limitado. あすたん sugeriu excluir das trocas os itens que podiam ser produzidos em grandes quantidades, e End&#12539;コッカー propôs organizar as taxas de troca para a venda de itens.
 
 Entre setembro e outubro de 2026, End&#12539;コッカー organizou o guia de entrada no Minecraft da época para facilitar o acesso a regras, apresentações e materiais de referência sobre a conexão. Também reuniu os locais onde consultar as regras de cada mundo.
 
