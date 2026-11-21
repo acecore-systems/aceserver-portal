@@ -8,6 +8,7 @@ import { searchAcecore } from '../functions/api/alpha-acecore-search.ts'
 import { searchSchools } from '../functions/api/alpha-schools-search.ts'
 import { searchSystems } from '../functions/api/alpha-systems-search.ts'
 import { searchWorldFoundation } from '../functions/api/alpha-world-foundation-search.ts'
+import { PORTAL_MAX_CORPUS_BYTES } from '../scripts/build-portal-vector-corpus.mjs'
 
 const embedding = Array(1024).fill(0.1)
 const model = 'voyage-4-lite'
@@ -137,7 +138,8 @@ test('Productionの6つの検索bindingは同じVoyage世代を使う', async ()
   )
 })
 
-test('既存corpus識別と本文根拠を維持してVoyage検索結果を補完する', async () => {
+test('ポータルコーパスは生成時と同じUTF-8バイト上限で検索結果を補完する', async (t) => {
+  assert.equal(PORTAL_MAX_CORPUS_BYTES, 512_000)
   const env = environment(good)
   const metadata = {
     url: '/stories/sample/',
@@ -152,22 +154,48 @@ test('既存corpus識別と本文根拠を維持してVoyage検索結果を補�
       return { matches: [{ id: 'id', score: 0.9, metadata }] }
     },
   }
-  let hydrationSignal
-  const corpusFetcher = async (_url, init) => {
-    hydrationSignal = init.signal
-    return Response.json({
-      schemaVersion: 1,
-      embedding: { model: '@cf/baai/bge-m3', dimensions: 1024 },
-      chunks: [{ id: 'id', namespace: 'ja', metadata, text: '確認済み本文' }],
-    })
+  const corpus = {
+    schemaVersion: 1,
+    embedding: { model: '@cf/baai/bge-m3', dimensions: 1024 },
+    chunks: [{ id: 'id', namespace: 'ja', metadata, text: '確認済み本文' }],
+    padding: '',
   }
-  const entries = await searchAceserverPortal(
-    '検索について',
-    env,
-    undefined,
-    corpusFetcher,
-  )
+  const paddingBytes =
+    PORTAL_MAX_CORPUS_BYTES - Buffer.byteLength(JSON.stringify(corpus))
+  corpus.padding =
+    '日'.repeat(Math.floor(paddingBytes / 3)) + ' '.repeat(paddingBytes % 3)
+  const body = JSON.stringify(corpus)
+  assert.equal(Buffer.byteLength(body), PORTAL_MAX_CORPUS_BYTES)
+  assert.ok(body.length + 1 < PORTAL_MAX_CORPUS_BYTES)
+
+  const searchWithCorpus = (response) =>
+    searchAceserverPortal(
+      '検索について',
+      env,
+      undefined,
+      async (_url, init) => {
+        assert.ok(init.signal instanceof AbortSignal)
+        return response
+      },
+    )
+  const entries = await searchWithCorpus(new Response(body))
   assert.equal(entries.length, 1)
   assert.equal(entries[0].content, '確認済み本文')
-  assert.ok(hydrationSignal instanceof AbortSignal)
+
+  const errors = t.mock.method(console, 'error', () => {})
+  const oversizedBody = new Response(body + ' ')
+  assert.equal(oversizedBody.headers.get('Content-Length'), null)
+  const oversizedHeader = new Response(body, {
+    headers: { 'Content-Length': String(PORTAL_MAX_CORPUS_BYTES + 1) },
+  })
+  const { content, ...fallback } = entries[0]
+  assert.deepEqual(await searchWithCorpus(oversizedBody), [fallback])
+  assert.deepEqual(await searchWithCorpus(oversizedHeader), [fallback])
+  assert.equal(oversizedHeader.bodyUsed, false)
+  assert.deepEqual(
+    errors.mock.calls.map(
+      ({ arguments: [message] }) => JSON.parse(message).errorCode,
+    ),
+    ['PortalCorpusSizeError', 'PortalCorpusResponseError'],
+  )
 })
