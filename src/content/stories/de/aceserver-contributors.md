@@ -2,9 +2,9 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:8ebe59ae9ce0c0b381fd4e109c9c094967c6caa898cf22d540dfba91e8b509e9
+sourceHash: sha256:85e1f81b145ef93c2c4a20d76ecb642df387e0e205ada042439be35d422cad11
 date: 2026-11-14T00:00:00+09:00
-lastUpdated: 2026-11-21T00:00:00+09:00
+lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
   - Aceserver
   - Minecraft
@@ -45,6 +45,8 @@ Die Vorstellung der Gruppe zur Wiederbelebung der antiken Stadt nannte Golden Co
 
 Als Inhaber von A Yū (A-shō) informierte ゆり (Yū) über den Verkauf von Materialien und suchte Freiwillige für den Bau eines Spielbereichs.
 
+2022 stellte s1nan0sub die Nutzungsregeln für das Dorf Iroha vor und berichtete, dass das gemeinsame Lager des Dorfes Inaba fertiggestellt war.
+
 Im Juli 2023 stellte ゆり in einer Ankündigung von Ace Lab die Allianz zwischen dem Dorf des Mondgottes und der RPG-Baugruppe vor. Die Ankündigung nannte BM\_yurikun und \_BE\_golden\_cokka als damalige Leiter und amya7238 sowie \_BE\_golden\_cokka als frühe Mitglieder. Als geplante Aktivitäten wurden das Eisbootrennen ACE1GP und die RPG-Entwicklung genannt.
 
 Im Oktober 2023 stellte PetiteShelf7874 die Aktivitäten und die Karte des Dorfs am kleinen Hügel vor.
@@ -68,6 +70,8 @@ Im Herbst 2021 richtete てぃあ neben dem Rathaus einen Platz für Weihnachtss
 ### **2022 bis erstes Halbjahr 2023**
 
 Im April 2022, bei der Vorbereitung des zweiten Ace Fests, nannte KOTA-SAN キツネコ und weitere Beteiligte für die Vorbereitung des Veranstaltungsorts und Mugi für die Produktion des Vorschauvideos. キツネコ meldete, ein neues Trank-Gacha gebaut zu haben.
+
+Im April 2022 bereitete NCGpotechi sechs mögliche Standorte für den Bauwettbewerb in Yasuragi no Mori im Rahmen des zweiten Ace Fest vor. Im Mai kündigte KOTA-SAN an, dass die Abstimmung abgesagt wurde. Am 15. Mai meldete YM die Fertigstellung des eigenen Bauwerks und teilte ein Foto davon.
 
 Im Mai 2022 kündigte キツネコ ein alternatives Bootsrennen auf einer von Hako_Otoko gebauten Strecke an. [Originalbeitrag](https://discord.com/channels/737538781024092170/774152638450237460/970291030152847390)
 
@@ -147,6 +151,8 @@ Im Sommer 2025 begann End&#12539;コッカー eine Diskussion über ein Among-Us
 
 In der Ankündigung zum Sommerfest 2025 wurde センチュリーズ für die Vorbereitung und Bereitstellung des Feuerwerks genannt. Der Dank nach der Veranstaltung nannte セガ, リンゴポン, あまぎ, 新人, ジェスター, ホステッチ und イザイザ für das Feuerwerk sowie コッカー und sh für die Gesamtkoordination. エント betreute den Rundkurs, moon und セキセイ das Golfspiel. ハルビィ, セキセイ und sh betreuten das Survival-PvP, はっ und sh das Sonderereignis. [Originalbeitrag](https://discord.com/channels/737538781024092170/774152638450237460/1408390549370572880) [Dank nach der Veranstaltung](https://discord.com/channels/737538781024092170/779569416438415421/1411394624026710166)
 
+Im Oktober 2025 berichtete sekisei bei der Vorbereitung der Aceserver-Nachrichten, dass ein Rohschnitt des Videos über den Saisonserver vorlag.
+
 Am 26. Oktober 2025 dankte End&#12539;コッカー den Menschen, die beim Halloween-Dorf und dem Event geholfen hatten. [Dank für das Halloween-Dorf und das Event](https://discord.com/channels/737538781024092170/779569416438415421/1432012641571704905)
 
 Im Oktober 2025 dankte sh den Helfern bei den Veranstaltungen des Belebungskomitees von Aceserver und bat um Ideen für das nächste Projekt. Eine Ankündigung im November nannte amagi_467 als Initiator des ersten Mahjong-Turniers von Aceserver, das das Komitee ausrichten wollte. [Dank und Aufruf für Ideen](https://discord.com/channels/737538781024092170/774152638450237460/1432028687376715897) [Ankündigung des Mahjong-Turniers](https://discord.com/channels/737538781024092170/774152638450237460/1442742157315149865)
@@ -167,7 +173,11 @@ Im Dezember 2020 berichtete bamoshi4869 in der damaligen Arbeitsgruppe, dass am 
 
 Am 29. Dezember desselben Jahres berichtete bamoshi4869, dass bei einem separaten Projekt die Entwässerung eines Ozeanmonuments abgeschlossen war. Die Liste der Beteiligten nannte &#12400;&#12418;&#12375;, &#21311;&#21517;, &#12354;&#12363;&#12426;&#12435;, J, &#12450;&#12474;, &#12504;&#12490;&#12509;&#12531;, &#12495;&#12488;&#12512;&#12462; und &#12371;&#12383;.
 
+Im Juni 2021 berichtete KOTA-SAN vom Start des gemeinsamen Bauprojekts Yasuragi no Mori und davon, zum Beginn des Projekts einen Baum gepflanzt zu haben. Im selben Monat berichtete KOTA-SAN auch, dass in Yasuragi no Mori eine Vorrichtung zur Herstellung unsichtbarer Gegenstandsrahmen gebaut worden war.
+
 Im März 2022 bat タケ um Hilfe beim Einebnen des Geländes für ein Bodenbild. Am 1. April meldete タケ die Fertigstellung des Werks und dankte den Personen, die beim Einebnen geholfen oder Material bereitgestellt hatten. [Aufruf zur Mithilfe beim Einebnen](https://discord.com/channels/737538781024092170/779569416438415421/957990944374927420) [Bericht zur Fertigstellung des Bodenbilds](https://discord.com/channels/737538781024092170/779569416438415421/959368128943489085)
+
+Im April 2022 berichtete SPdari, dass das Fundament und das Dach der Hauptbasis in Sora no Yama fertig waren und der Außenbau fast abgeschlossen war. Im Innenbereich standen noch Arbeiten aus.
 
 Im Juni 2022 erklärte yanyan_fafnir die Teilnahmebedingungen für den Wettbewerb um schwebende Inseln, aus dem die frühere Lobby hervorging. Die Ankündigung beschrieb auch, wie die Beiträge bei der Bewertung vorgestellt werden sollten. はっ und Mitglieder mit der Rolle „Supporter“ oder höher sollten die Jury bilden. [Teilnahmebedingungen](https://discord.com/channels/737538781024092170/774152638450237460/982990352422162482) [Ankündigung des Jurytermins](https://discord.com/channels/737538781024092170/774152638450237460/986294242848669756)
 
@@ -212,6 +222,8 @@ Im September 2022 kündigte Gui eine Testversion der Website an. Im Oktober beri
 Im Oktober 2022 berichtete hana0c0haine, alle damals veröffentlichten Wiki-Seiten geprüft und uneinheitliche Begriffe sowie japanische Formulierungen korrigiert zu haben. Im März 2023 teilte あすたん die Kanäle für die Wiki-Redaktion auf und gab Hinweise zum Schreiben in Markdown.
 
 Im November 2022 schlug キツネコ vor, die Regeln zur Landnutzung ins Wiki aufzunehmen und getrennte Antragsvorlagen für das Einebnen und den offenen Aushub zu verwenden. Nishikino Sega fragte nach dem Antragsverfahren, wenn nach dem Einebnen gebaut werden sollte. Im Januar 2023 bat taka8621 um Mithilfe beim Ordnen der Bau- und ähnlicher Regeln, und &#33775;\*HAiNE schlug Regeln für unterirdische Ausgrabungen vor. Ein Beitrag von taka8621 aus dem Februar hielt die von Yukke gesammelten Vorschläge zum Landschaftsbild und zum Einsatz von Dorfbewohnern in Fallen fest.
+
+Im Januar 2023 veröffentlichte あすたん im damaligen Discord-Beitrittsleitfaden eine bebilderte Anleitung zur Verbindung mit Minecraft Java Edition und Bedrock Edition.
 
 Im Juli 2023 kündigte Yukke die Erstellung einer neuen Welt auf dem Ressourcenserver an. [Ankündigung der Ressourcenwelt](https://discord.com/channels/737538781024092170/774152638450237460/1135574163080364103)
 

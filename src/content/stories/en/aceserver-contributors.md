@@ -2,9 +2,9 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:8ebe59ae9ce0c0b381fd4e109c9c094967c6caa898cf22d540dfba91e8b509e9
+sourceHash: sha256:85e1f81b145ef93c2c4a20d76ecb642df387e0e205ada042439be35d422cad11
 date: 2026-11-14T00:00:00+09:00
-lastUpdated: 2026-11-21T00:00:00+09:00
+lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
   - Aceserver
   - Minecraft
@@ -45,6 +45,8 @@ An introduction to the Ancient City Restoration Group named Golden Cocker as its
 
 As owner of A Yū (A-shō), ゆり (Yū) described the sale of materials and called for volunteers to build a play area.
 
+In 2022, s1nan0sub shared the rules for using Iroha Village and reported that Inaba Village’s shared storage facility was complete.
+
 In July 2023, ゆり introduced an alliance between the Village of the Moon God and the RPG Creation Group in an Ace Lab announcement. It named BM\_yurikun and \_BE\_golden\_cokka as the leaders at the time, and amya7238 and \_BE\_golden\_cokka as early members. The activities outlined included ACE1GP ice boat racing and RPG creation.
 
 In October 2023, PetiteShelf7874 introduced the activities and map of Small Hill Village.
@@ -68,6 +70,8 @@ In autumn 2021, てぃあ prepared a spot for a Christmas display beside the tow
 ### **2022 to the first half of 2023**
 
 In April 2022, during preparations for the second Ace Fest, KOTA-SAN named キツネコ and others as responsible for setting up the venue and Mugi as responsible for making the teaser video. キツネコ reported creating a new potion gacha.
+
+In April 2022, NCGpotechi prepared six possible sites for the Yasuragi no Mori building contest associated with the second Ace Fest. In May, KOTA-SAN announced that voting had been canceled. On May 15, YM reported completing their own build and shared a photo of it.
 
 In May 2022, キツネコ announced an alternative boat race using a course built by Hako_Otoko. [Original post](https://discord.com/channels/737538781024092170/774152638450237460/970291030152847390)
 
@@ -147,6 +151,8 @@ In summer 2025, End&#12539;コッカー started a discussion about an Among Us t
 
 The 2025 summer festival announcement named センチュリーズ for preparing and providing the fireworks display. The post-event thanks named セガ, リンゴポン, あまぎ, 新人, ジェスター, ホステッチ and イザイザ for the fireworks, and コッカー and sh for overall coordination. エント worked on the circuit, and moon and セキセイ on golf. ハルビィ, セキセイ and sh worked on survival PvP, and はっ and sh on the special event. [Original post](https://discord.com/channels/737538781024092170/774152638450237460/1408390549370572880) [Post-event thanks](https://discord.com/channels/737538781024092170/779569416438415421/1411394624026710166)
 
+In October 2025, while preparing for Aceserver News Desk, sekisei reported that a rough cut of a video introducing the Season Server was ready.
+
 On October 26, 2025, End&#12539;コッカー thanked the people who helped with Halloween Town and the event. [Halloween Town and event acknowledgments](https://discord.com/channels/737538781024092170/779569416438415421/1432012641571704905)
 
 In October 2025, sh thanked the people who helped make events for the Aceserver Revitalization Committee and invited ideas for the next one. A November announcement named amagi_467 as the initiator of the first Aceserver Mahjong Tournament, which the committee planned to host. [Event thanks and call for ideas](https://discord.com/channels/737538781024092170/774152638450237460/1432028687376715897) [Mahjong tournament announcement](https://discord.com/channels/737538781024092170/774152638450237460/1442742157315149865)
@@ -167,7 +173,11 @@ In December 2020, bamoshi4869 reported in the former work group that mountain cl
 
 On December 29 that year, bamoshi4869 reported that a separate project to drain an ocean monument was complete. It listed &#12400;&#12418;&#12375;, &#21311;&#21517;, &#12354;&#12363;&#12426;&#12435;, J, &#12450;&#12474;, &#12504;&#12490;&#12509;&#12531;, &#12495;&#12488;&#12512;&#12462;, and &#12371;&#12383; as participants.
 
+In June 2021, KOTA-SAN reported the launch of the collaborative building project Yasuragi no Mori and said they had planted a tree to mark its start. That month, KOTA-SAN also reported that a device for making invisible item frames had been built at Yasuragi no Mori.
+
 In March 2022, タケ asked for help leveling the ground for a ground artwork. On April 1, タケ reported that the artwork was complete and thanked the people who helped level the ground or provided materials. [Call for help leveling the ground](https://discord.com/channels/737538781024092170/779569416438415421/957990944374927420) [Ground artwork completion report](https://discord.com/channels/737538781024092170/779569416438415421/959368128943489085)
+
+In April 2022, SPdari reported that the foundation and roof of the main base at Sora no Yama were in place and the exterior was nearly complete. Work still remained on the interior.
 
 In June 2022, yanyan_fafnir explained how to enter the floating-island contest that led to work on the former lobby and how entries would be presented at judging. The announcement named はっ and members with the supporter role or above as judges. [Contest entry rules](https://discord.com/channels/737538781024092170/774152638450237460/982990352422162482) [Judging session announcement](https://discord.com/channels/737538781024092170/774152638450237460/986294242848669756)
 
@@ -212,6 +222,8 @@ In September 2022, Gui announced a test release of the site. In October, Gui rep
 In October 2022, hana0c0haine reported reviewing every wiki page published at the time and correcting inconsistencies in terminology and Japanese phrasing. In March 2023, あすたん organized separate channels for wiki editors and provided guidance on writing in Markdown.
 
 In November 2022, キツネコ proposed putting the land-use rules on the wiki and using separate application templates for site leveling and open-pit excavation. Nishikino Sega asked about applying when construction would follow site leveling. In January 2023, taka8621 invited people to help organize the building and related rules, and &#33775;\*HAiNE proposed rules on underground excavation. A February post by taka8621 recorded suggestions Yukke had compiled on scenery and the use of villagers in traps.
+
+In January 2023, あすたん posted illustrated instructions for connecting with Minecraft Java Edition and Bedrock Edition in the Discord joining guide of the time.
 
 In July 2023, Yukke announced creating a new resource server world. [Resource world announcement](https://discord.com/channels/737538781024092170/774152638450237460/1135574163080364103)
 

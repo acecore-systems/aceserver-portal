@@ -2,9 +2,9 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:8ebe59ae9ce0c0b381fd4e109c9c094967c6caa898cf22d540dfba91e8b509e9
+sourceHash: sha256:85e1f81b145ef93c2c4a20d76ecb642df387e0e205ada042439be35d422cad11
 date: 2026-11-14T00:00:00+09:00
-lastUpdated: 2026-11-21T00:00:00+09:00
+lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
   - Aceserver
   - Minecraft
@@ -45,6 +45,8 @@ La presentación del Grupo de Restauración de la Ciudad Antigua nombraba a Gold
 
 Como titular de A Yū (A-shō), ゆり (Yū) informó de la venta de materiales y buscó voluntarios para construir una zona de juegos.
 
+En 2022, s1nan0sub explicó las normas de uso de la Aldea Iroha e informó que el almacén compartido de la Aldea Inaba estaba terminado.
+
 En julio de 2023, ゆり presentó en un anuncio de Ace Lab la alianza entre la Aldea del Dios Lunar y el Grupo de Creación RPG. El anuncio nombró a BM\_yurikun y \_BE\_golden\_cokka como responsables de entonces, y a amya7238 y \_BE\_golden\_cokka como miembros iniciales. Entre las actividades propuestas figuraban las carreras de barcos sobre hielo ACE1GP y la creación de RPG.
 
 En octubre de 2023, PetiteShelf7874 presentó las actividades y el mapa de la Aldea de la Colina Pequeña.
@@ -68,6 +70,8 @@ En otoño de 2021, てぃあ preparó un espacio para las decoraciones navideña
 ### **2022 y primera mitad de 2023**
 
 En abril de 2022, durante la preparación del segundo Ace Fest, KOTA-SAN indicó que キツネコ y otras personas se encargarían de preparar el recinto y que Mugi haría el video de adelanto. キツネコ informó de que había creado un nuevo gacha de pociones.
+
+En abril de 2022, NCGpotechi preparó seis posibles emplazamientos para el concurso de construcción de Yasuragi no Mori asociado al segundo Ace Fest. En mayo, KOTA-SAN anunció que se cancelaba la votación. El 15 de mayo, YM informó que había terminado su propia construcción y compartió una foto.
 
 En mayo de 2022, キツネコ anunció una carrera de barcos alternativa en un circuito construido por Hako_Otoko. [Publicación original](https://discord.com/channels/737538781024092170/774152638450237460/970291030152847390)
 
@@ -147,6 +151,8 @@ En el verano de 2025, End&#12539;コッカー abrió un debate sobre un torneo d
 
 El anuncio del festival de verano de 2025 mencionó a センチュリーズ por la preparación y provisión del espectáculo de fuegos artificiales. El agradecimiento posterior nombró a セガ, リンゴポン, あまぎ, 新人, ジェスター, ホステッチ e イザイザ por los fuegos artificiales, y a コッカー y sh por la coordinación general. エント se encargó del circuito y moon y セキセイ del golf. ハルビィ, セキセイ y sh se encargaron del PvP de supervivencia, y はっ y sh del evento especial. [Publicación original](https://discord.com/channels/737538781024092170/774152638450237460/1408390549370572880) [Agradecimiento posterior](https://discord.com/channels/737538781024092170/779569416438415421/1411394624026710166)
 
+En octubre de 2025, durante los preparativos del boletín de Aceserver, sekisei informó de que ya tenía un montaje preliminar del vídeo de presentación del servidor de temporada.
+
 El 26 de octubre de 2025, End&#12539;コッカー dio las gracias a quienes colaboraron con el pueblo de Halloween y con el evento. [Agradecimientos del pueblo de Halloween y del evento](https://discord.com/channels/737538781024092170/779569416438415421/1432012641571704905)
 
 En octubre de 2025, sh agradeció la ayuda en la preparación de eventos del Comité de Revitalización de Aceserver y pidió ideas para el siguiente. En noviembre, un anuncio presentó a amagi_467 como iniciador del primer torneo de mahjong de Aceserver, que el comité tenía previsto organizar. [Agradecimientos y convocatoria de ideas](https://discord.com/channels/737538781024092170/774152638450237460/1432028687376715897) [Anuncio del torneo de mahjong](https://discord.com/channels/737538781024092170/774152638450237460/1442742157315149865)
@@ -167,7 +173,11 @@ En diciembre de 2020, bamoshi4869 informó en el antiguo grupo de trabajo de que
 
 El 29 de diciembre de ese año, bamoshi4869 informó de que había terminado el drenaje de un monumento oceánico en otro proyecto. En la lista de participantes figuraban &#12400;&#12418;&#12375;, &#21311;&#21517;, &#12354;&#12363;&#12426;&#12435;, J, &#12450;&#12474;, &#12504;&#12490;&#12509;&#12531;, &#12495;&#12488;&#12512;&#12462; y &#12371;&#12383;.
 
+En junio de 2021, KOTA-SAN informó del inicio del proyecto de construcción colaborativa Yasuragi no Mori y contó que había plantado un árbol para marcar el comienzo. Ese mismo mes también informó de que en Yasuragi no Mori se había construido un dispositivo para fabricar marcos invisibles para objetos.
+
 En marzo de 2022, タケ pidió ayuda para nivelar el terreno de un dibujo sobre el suelo. El 1 de abril informó de que la obra estaba terminada y agradeció a quienes ayudaron a preparar el terreno o aportaron materiales. [Convocatoria para nivelar el terreno](https://discord.com/channels/737538781024092170/779569416438415421/957990944374927420) [Informe de finalización del dibujo](https://discord.com/channels/737538781024092170/779569416438415421/959368128943489085)
+
+En abril de 2022, SPdari informó de que los cimientos y el tejado de la base principal de Sora no Yama ya estaban hechos y de que el exterior estaba casi terminado. Aún quedaba trabajo en el interior.
 
 En junio de 2022, yanyan_fafnir explicó cómo participar en el concurso de islas flotantes que dio paso a la construcción del antiguo vestíbulo y cómo se presentarían los proyectos ante el jurado. El anuncio indicó que はっ y los miembros con el rol de apoyo o superior serían los jueces. [Reglas del concurso](https://discord.com/channels/737538781024092170/774152638450237460/982990352422162482) [Anuncio de la presentación ante el jurado](https://discord.com/channels/737538781024092170/774152638450237460/986294242848669756)
 
@@ -212,6 +222,8 @@ En septiembre de 2022, Gui anunció una versión de prueba del sitio. En octubre
 En octubre de 2022, hana0c0haine informó de que había revisado todas las páginas de la wiki que estaban publicadas y corregido inconsistencias en la terminología y en la redacción en japonés. En marzo de 2023, あすたん organizó canales separados para quienes editaban la wiki y explicó cómo redactar en Markdown.
 
 En noviembre de 2022, キツネコ propuso publicar las reglas de uso del suelo en la wiki y emplear plantillas de solicitud separadas para nivelar terrenos y excavar a cielo abierto. Nishikino Sega preguntó cómo solicitar permiso si se iba a construir después de nivelar el terreno. En enero de 2023, taka8621 pidió ayuda para ordenar las reglas de construcción y otras relacionadas, y &#33775;\*HAiNE propuso reglas sobre excavaciones subterráneas. En una publicación de febrero, taka8621 recogió las propuestas de Yukke sobre el paisaje y el uso de los aldeanos en trampas.
+
+En enero de 2023, あすたん publicó en la guía de acceso de Discord de la época instrucciones ilustradas para conectarse con Minecraft Java Edition y Bedrock Edition.
 
 En julio de 2023, Yukke anunció la creación de un nuevo mundo para el servidor de recursos. [Anuncio del mundo de recursos](https://discord.com/channels/737538781024092170/774152638450237460/1135574163080364103)
 
