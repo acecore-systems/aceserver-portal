@@ -2,7 +2,7 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:ef9019f491a0e3f628fc8641bff79de3765a243100c37058d4638c61a4a9a3de
+sourceHash: sha256:27b1dd136756dabc1fab44adeb717aa9462d3916cf900704f756c65ed5a7c5b8
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -105,6 +105,8 @@ En diciembre de 2022, &#12383;&#12356;&#12420;&#12365; (taiyaki5190) abrió dos 
 
 Para el Ace Fest in Christmas Life de diciembre de 2022, ゆり publicó el programa, con la inauguración y la transmisión en directo, y explicó cómo inscribirse en la tercera Copa Ace. タケ también anunció el plan de fin de año 2022–2023 en Tōgenkyō. El anuncio presentó como organizadora a la Asociación de Cazadores, de la que formaban parte タケ y コッカー, y a Taibon como colaborador.
 
+El 5 de enero de 2023, ジェスター propuso una partida personalizada de Apex Legends llamada Copa Aceserver para reunir a la comunidad fuera de Minecraft. [Propuesta de partida personalizada de Apex Legends](https://discord.com/channels/737538781024092170/882222121135251486/1060393114579259402)
+
 A principios de 2023, Taiyaki (taiyaki5190) anunció como organizador el evento PvP in the Sky e invitó a inscribirse a competidores y responsables de puestos. Para el Festival del Wither de febrero, edamameRex_java invitó a enfrentarse al Wither en el servidor de recursos, gestionó los préstamos de equipo y las recompensas de participación, y dio las gracias al terminar.
 
 En febrero de 2023, ゆり propuso organizar vueltas de exhibición y carreras una vez terminado el Circuito Internacional del Imperio Sega.
@@ -131,6 +133,8 @@ En el verano de 2023, タケ anunció el festival del primer aniversario organiz
 
 En el informe del 7 de agosto de 2023 sobre el festival del primer aniversario de la apertura de Ace Monorail, タケ dio las gracias a los visitantes BURAKI_UTALOVE\_, yukke_11, edamameRex_java, \_BE_nanashi91239 y mallosan_52, y a sekisei0077 por patrocinar el evento. El informe citó una torre aérea de criaturas, una granja de blazes y una granja de asaltos como fuentes de materiales. [Informe del festival del primer aniversario](https://discord.com/channels/737538781024092170/779569416438415421/1137777672425050163)
 
+El 16 de agosto de 2023, ゆり preguntó a quién le interesaba una partida personalizada de Apex Legends. Mugi pidió que reaccionara quien tuviera interés en Rainbow Six Siege (R6S), y PillowKebap hizo lo mismo para League of Legends. [Sondeo de interés en Apex Legends](https://discord.com/channels/737538781024092170/882222121135251486/1141256368351891506) [Sondeo de interés en Rainbow Six Siege](https://discord.com/channels/737538781024092170/882222121135251486/1141265485644693524) [Sondeo de interés en League of Legends](https://discord.com/channels/737538781024092170/882222121135251486/1141272275816042497)
+
 El 7 de agosto de 2024, タケ informó de que había concluido todo el programa del festival del segundo aniversario. En el recorrido se presentaron la nueva señalización de estaciones, la nueva estación y el tramo de ampliación de la línea Jiyūgaoka. [Informe del festival del segundo aniversario](https://discord.com/channels/737538781024092170/779569416438415421/1270424971667308565)
 
 Para el Festival de la Cosecha de Hatt de 2023, taiyaki5190 publicó las reglas y el calendario. La fecha prevista cambió del 15 al 29 de octubre. El 28 de octubre, Taiyaki anunció que el festival se celebraría al día siguiente y explicó cómo participar. En los mensajes posteriores figuran avisos sobre las recompensas de participación y comentarios de participantes. [Anuncio del cambio de fecha](https://discord.com/channels/737538781024092170/779569416438415421/1161919748074917900) [Anuncio de participación](https://discord.com/channels/737538781024092170/779569416438415421/1167836013142495353)
@@ -149,7 +153,9 @@ En la primavera de 2024, sekisei anunció la hora de inicio y el contacto de Ace
 
 En abril de 2024, ゆり anunció un episodio de E-ha Radio con Master y Yuri-kun en los créditos principales. Para el especial de agosto se anunció la participación de コタ y はっ. KOTA-SAN informó de que había preparado un estanque de pesca y anunció la cancelación de la transmisión prevista para aquel día.
 
-En el festival de verano del 17 de agosto de 2024, sekisei presentó las reglas y los equipos del concurso de pesca y anunció su comienzo. sh presentó la Gran Búsqueda de Objetos, explicó cómo participar y al día siguiente compartió un video de la retransmisión oficial. はっ explicó el funcionamiento y los equipos del juego de transmisión de mensajes por abstracción mínima. En los registros de preparación del festival, sh indicó que Ohagi había construido el edificio del mercadillo.
+En el festival de verano del 17 de agosto de 2024, sekisei presentó las reglas y los equipos del concurso de pesca y anunció su comienzo. sh presentó la Gran Búsqueda de Objetos, explicó cómo participar y al día siguiente compartió un video de la retransmisión oficial. En los registros de preparación del festival, sh indicó que Ohagi había construido el edificio del mercadillo. はっ explicó el funcionamiento y los equipos del juego de transmisión de mensajes por abstracción mínima. [Retransmisión oficial del juego de mensajes por abstracción mínima](https://www.youtube.com/live/Fy27JdYPero)
+
+El reparto de tareas del festival asignaba a Ohagi la organización del juego del pilla-pilla y la preparación de comandos, entre otras tareas. miin figuraba como apoyo para resolver problemas durante la búsqueda de objetos y el concurso de pesca. El reparto también asignaba a sekisei los cambios de servidor entre actividades durante todo el festival y el apoyo en el pilla-pilla y el PvP submarino, y a sh la organización y preparación del PvP submarino.
 
 タケ creó el cartel del Ace Summer Festival de 2024. En el evento de fin de año «つなぐASF», taibon ayudó con el dispositivo de cuenta regresiva. タケ informó del fin de todas las actividades en enero de 2025. [Anuncio del cartel](https://discord.com/channels/737538781024092170/774152638450237460/1274157736015429744) [Anuncio de la cuenta regresiva](https://discord.com/channels/737538781024092170/774152638450237460/1319967701808189493) [Informe de cierre](https://discord.com/channels/737538781024092170/774152638450237460/1325487116419076129)
 
@@ -295,6 +301,8 @@ En noviembre de 2025, End&#12539;コッカー informó de que había instalado p
 
 En noviembre de 2025, Moon\_666 informó de que se había completado en el servidor de temporada una granja de piglins zombificados que daba oro y experiencia. [Informe de finalización en el servidor de temporada](https://discord.com/channels/737538781024092170/1437442961507090443/1440300609545965649)
 
+El 11 de marzo de 2026, Merutak pidió ideas para el terreno e incluyó entre las opciones un monumento oceánico a seis veces su escala original. Pluto sugirió otras construcciones, como una biblioteca enorme. sekisei propuso usar los materiales del monumento original solo en el exterior. [Convocatoria de ideas para el terreno](https://discord.com/channels/737538781024092170/1476561093244620913/1481297210389041334) [Propuesta de materiales del monumento oceánico](https://discord.com/channels/737538781024092170/1476561093244620913/1481298053309661275)
+
 En marzo de 2026, Merutak informó de que había concluido el drenaje de una amplia zona para el proyecto del monumento oceánico ×6 y la excavación a cielo abierto. Dio las gracias a sega, take, sekisei, harubie, hatt, timu, buraki, yukke, moon, sinzin y siu por aportar materiales y ayuda con el trabajo. [Informe del drenaje y agradecimientos](https://discord.com/channels/737538781024092170/779569416438415421/1483522273020215497)
 
 El 30 de marzo, Merutak informó de que se había completado la construcción del monumento oceánico ×6. En ese momento continuaba la excavación a cielo abierto. [Informe de finalización del monumento](https://discord.com/channels/737538781024092170/779569416438415421/1488001468970827896)
@@ -382,6 +390,8 @@ En noviembre de 2025, ゆり explicó cómo se vinculaban Minecraft y Discord en
 En diciembre de 2025, sekisei explicó cómo usar Season Creative, un servidor temático. En enero de 2026, informó de que había traspasado su administración a sh31415. [Guía de Season Creative](https://discord.com/channels/737538781024092170/1445004286793879602/1445004286793879602) [Informe del traspaso de la administración](https://discord.com/channels/737538781024092170/1445004286793879602/1460090096475832425)
 
 En enero de 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; explicó a los nuevos jugadores las diferencias para conectarse desde Minecraft Java Edition y Bedrock Edition. En febrero, sekisei indicó cómo llegar a la guía de vinculación desde el paso de confirmación de las reglas. [Guía de conexión de Java y Bedrock](https://discord.com/channels/737538781024092170/1460983001809948744/1460983826439471380) [De la confirmación de las reglas a la guía de vinculación](https://discord.com/channels/737538781024092170/1386851151428980856/1467714894060060918)
+
+El 26 de febrero de 2026, Merutak preguntó qué canales de Discord se podían archivar. Mugi sugirió, entre otros, canales de eventos antiguos y propuso reutilizar los que ya había para reducir la necesidad de crear otros. [Convocatoria de propuestas de archivo](https://discord.com/channels/737538781024092170/1476561093244620913/1476567428610658457) [Propuesta de reutilización de canales](https://discord.com/channels/737538781024092170/1476561093244620913/1476568683689283686)
 
 En febrero de 2026, Merutak informó de la creación de dos roles de Discord para avisos de problemas y paradas del servidor. [Publicación original](https://discord.com/channels/737538781024092170/774152638450237460/1477293143773810822)
 

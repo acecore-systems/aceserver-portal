@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:ef9019f491a0e3f628fc8641bff79de3765a243100c37058d4638c61a4a9a3de
+sourceHash: sha256:27b1dd136756dabc1fab44adeb717aa9462d3916cf900704f756c65ed5a7c5b8
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -105,6 +105,8 @@ In December 2022, &#12383;&#12356;&#12420;&#12365; (taiyaki5190) opened two subm
 
 For Ace Fest in Christmas Life in December 2022, ゆり shared the schedule, including the opening ceremony and livestream, and explained how to enter the third Ace Cup. タケ also announced New Year’s plans at Tōgenkyō for 2022–2023. The announcement named the Hunters’ Association, which included タケ and コッカー, as organizer and Taibon as a collaborator.
 
+On January 5, 2023, ジェスター proposed a custom Apex Legends match called the Aceserver Cup as a way for the community to get together outside Minecraft. [Custom Apex Legends match proposal](https://discord.com/channels/737538781024092170/882222121135251486/1060393114579259402)
+
 In early 2023, Taiyaki (taiyaki5190) announced PvP in the Sky as its organizer and invited competitors and stallholders to sign up. For the Wither Festival in February, edamameRex_java invited players to fight the Wither on the resource server, handled equipment loans and participation rewards, and thanked everyone who joined after the event.
 
 In February 2023, ゆり proposed demonstration runs and races once the Sega Empire International Circuit was complete.
@@ -131,6 +133,8 @@ In summer 2023, タケ announced the first anniversary festival organized by Ace
 
 In the August 7, 2023 report on the first anniversary festival for Ace Monorail’s opening, タケ thanked visitors BURAKI_UTALOVE\_, yukke_11, edamameRex_java, \_BE_nanashi91239, and mallosan_52, as well as event sponsor sekisei0077. The report credited a sky mob tower, a blaze farm, and a raid farm for providing materials. [First anniversary festival report](https://discord.com/channels/737538781024092170/779569416438415421/1137777672425050163)
 
+On August 16, 2023, ゆり asked who was interested in a custom Apex Legends match. Mugi invited people interested in Rainbow Six Siege (R6S) to react, and PillowKebap did the same for League of Legends. [Apex Legends interest check](https://discord.com/channels/737538781024092170/882222121135251486/1141256368351891506) [Rainbow Six Siege interest check](https://discord.com/channels/737538781024092170/882222121135251486/1141265485644693524) [League of Legends interest check](https://discord.com/channels/737538781024092170/882222121135251486/1141272275816042497)
+
 On August 7, 2024, タケ reported that the second anniversary festival’s full program had concluded. The tour unveiled new station signage and introduced the Jiyūgaoka Line’s new station and extension. [Second anniversary festival report](https://discord.com/channels/737538781024092170/779569416438415421/1270424971667308565)
 
 For the 2023 Hatt Harvest Festival, taiyaki5190 shared the rules and schedule. The planned date moved from October 15 to October 29. On October 28, Taiyaki confirmed the festival was due the following day and explained how to join. Posts after the event include information about participation rewards and comments from people who took part. [Date change announcement](https://discord.com/channels/737538781024092170/779569416438415421/1161919748074917900) [Participation announcement](https://discord.com/channels/737538781024092170/779569416438415421/1167836013142495353)
@@ -149,7 +153,9 @@ In spring 2024, sekisei announced the start time and contact details for Ace Gue
 
 In April 2024, ゆり announced an E-ha Radio episode with “Master” and “Yuri-kun” listed in the lead credits. The August special was announced with appearances by コタ and はっ. KOTA-SAN reported setting up a fishing pond and announced that the stream scheduled for that day had been called off.
 
-At the summer festival on August 17, 2024, sekisei explained the fishing competition’s rules and team assignments and announced its start. sh introduced the Ultra Item Hunt and explained how to join, then shared a video of the official broadcast the next day. はっ explained how the Minimal Abstraction Message Relay game would run and how its teams were divided. In the festival preparation records, sh noted that Ohagi had built the flea market building.
+At the summer festival on August 17, 2024, sekisei explained the fishing competition’s rules and team assignments and announced its start. sh introduced the Ultra Item Hunt and explained how to join, then shared a video of the official broadcast the next day. In the festival preparation records, sh noted that Ohagi had built the flea market building. はっ explained how the Minimal Abstraction Message Relay game would run and how its teams were divided. [Official Minimal Abstraction Message Relay broadcast](https://www.youtube.com/live/Fy27JdYPero)
+
+The festival staffing schedule named Ohagi for running tag and preparing commands and other setup, and miin for troubleshooting support at the item hunt and fishing tournament. It also listed sekisei for switching servers between activities throughout the festival and assisting with tag and underwater PvP, and sh for running and preparing underwater PvP.
 
 タケ made the poster for Ace Summer Festival in 2024. For the year-end “つなぐASF” event, taibon helped with the New Year countdown device. タケ reported the end of the full program in January 2025. [Poster announcement](https://discord.com/channels/737538781024092170/774152638450237460/1274157736015429744) [Countdown announcement](https://discord.com/channels/737538781024092170/774152638450237460/1319967701808189493) [Closing report](https://discord.com/channels/737538781024092170/774152638450237460/1325487116419076129)
 
@@ -295,6 +301,8 @@ In November 2025, End&#12539;コッカー reported installing gates in eight dir
 
 In November 2025, Moon\_666 reported that a zombified piglin farm for gold and experience points was complete on the Season Server. [Season Server completion report](https://discord.com/channels/737538781024092170/1437442961507090443/1440300609545965649)
 
+On March 11, 2026, Merutak asked for ideas for the site, naming an ocean monument at six times its original scale as one option. Pluto suggested other builds, including a huge library. sekisei suggested using the original monument’s materials only for the exterior. [Call for ideas for the site](https://discord.com/channels/737538781024092170/1476561093244620913/1481297210389041334) [Ocean monument materials proposal](https://discord.com/channels/737538781024092170/1476561093244620913/1481298053309661275)
+
 In March 2026, Merutak reported that drainage of a large area for the ×6 Ocean Monument and Open-Pit Excavation project was complete and thanked sega, take, sekisei, harubie, hatt, timu, buraki, yukke, moon, sinzin, and siu for materials and help with the work. [Drainage and acknowledgments](https://discord.com/channels/737538781024092170/779569416438415421/1483522273020215497)
 
 On March 30, Merutak reported that the ×6 Ocean Monument build itself was complete. The open-pit excavation was still in progress at that point. [Ocean Monument completion report](https://discord.com/channels/737538781024092170/779569416438415421/1488001468970827896)
@@ -382,6 +390,8 @@ In November 2025, ゆり explained how to link Minecraft and Discord at the time
 In December 2025, sekisei posted a guide to using the Season Creative concept server. In January 2026, sekisei reported handing its management over to sh31415. [Season Creative guide](https://discord.com/channels/737538781024092170/1445004286793879602/1445004286793879602) [Management handover report](https://discord.com/channels/737538781024092170/1445004286793879602/1460090096475832425)
 
 In January 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; explained to new players how joining differed between Minecraft Java Edition and Bedrock Edition. In February, sekisei showed how to get from the rules confirmation step to the linking guide. [Java and Bedrock connection guide](https://discord.com/channels/737538781024092170/1460983001809948744/1460983826439471380) [From rules confirmation to the linking guide](https://discord.com/channels/737538781024092170/1386851151428980856/1467714894060060918)
+
+On February 26, 2026, Merutak asked which Discord channels could be archived. Mugi suggested older event channels, among others, and proposed reusing existing channels to limit the need for new ones. [Call for archiving suggestions](https://discord.com/channels/737538781024092170/1476561093244620913/1476567428610658457) [Proposal to reuse channels](https://discord.com/channels/737538781024092170/1476561093244620913/1476568683689283686)
 
 In February 2026, Merutak reported creating two Discord roles for notices about trouble and server outages. [Original post](https://discord.com/channels/737538781024092170/774152638450237460/1477293143773810822)
 
