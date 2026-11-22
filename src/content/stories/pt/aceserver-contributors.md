@@ -2,7 +2,7 @@
 title: As pessoas que apoiaram o Aceserver
 description: Conheça quem ajudou o Aceserver pelos retratos de skins do Minecraft, relembre as atividades e confira o roteiro de eventos e propostas.
 translationOf: aceserver-contributors
-sourceHash: sha256:fb79dc00fdeb205aa46dd79c4602c5ffcd4dba82796f92e7c60cccf1c488ea77
+sourceHash: sha256:dd40f00191a79008aae9473af90533314e2a54defc6bf562f5ed0c8d129a404a
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -345,6 +345,10 @@ Em uma atualização de setembro de 2022, taka8621 indicou Moon como responsáve
 
 Em 4 de setembro de 2022, NCGpotechi informou que o exterior do castelo estava concluído e aberto a visitas. Naquele momento, o interior ainda estava em construção. NCGpotechi agradeceu a quem doou materiais. [Relato da conclusão do exterior do castelo](https://discord.com/channels/737538781024092170/779569416438415421/1015951272916045934)
 
+Em 11 de setembro de 2022, taka8621 propôs liberar os portais de acesso do End derrotando o Dragão do End repetidas vezes, com uma meta de cerca de 20 vitórias. A ideia era então começar a construir na ilha principal do End e montar uma fazenda de endermans.
+
+Em 3 de outubro de 2022, yanyan propôs fazer a mudança para o novo lobby junto com a abertura do servidor de recursos. Gui respondeu que a mesma época seria adequada se as condições pudessem ser confirmadas.
+
 De outubro de 2022 a janeiro de 2023, jogadores trabalharam na drenagem de um monumento oceânico e em uma instalação para guardiões, enquanto também escavavam para uma instalação de esqueletos Wither. Segundo os registros do antigo canal do Discord, taka8621 abriu um canal de trabalho. Moon_666 organizou a drenagem e a escavação, repôs materiais e trabalhou em uma área definida. Yukke pediu ajuda na escavação e preparou uma passagem até a fortaleza. [Chamada para ajudar na escavação do Nether](https://discord.com/channels/737538781024092170/779569416438415421/1053305090922004560)
 
 taibon0727 preparou materiais como vidro, um local para guardar barcos de transporte e um dispositivo para trabalhar com areia. SPdari forneceu areia. UtaTheIrasutā trabalhou no aterramento de áreas com lava e montou um posto de preparo de poções. nnn_percent ajudou no trabalho com areia para o aterramento e あすたん ajudou na escavação. SPdari também agradeceu a Buraki por orientar os participantes.
@@ -450,6 +454,8 @@ Em dezembro de 2022, Mugi informou que a função de dicionário do Kutya havia 
 Em 14 de janeiro de 2023, &#33775;\*HAiNE redigiu a ata de uma reunião da equipe responsável pelo servidor e compartilhou um resumo dos pontos sobre as regras e das tarefas pendentes. No dia seguinte, はっ também resumiu a discussão sobre a organização das regras e pediu aos integrantes que a revisassem.
 
 Em janeiro de 2023, あすたん publicou no guia de entrada do Discord da época instruções ilustradas para se conectar com Minecraft Java Edition e Bedrock Edition.
+
+Em 11 de fevereiro de 2023, taka8621 compartilhou os dados do Dynmap gerados no servidor principal e pediu ajuda para disponibilizar o mapa para consulta.
 
 Em 6 de março de 2023, Gui fez uma migração de teste do banco de dados e relatou que ela levou menos tempo. Em 11 de maio, taka8621 explicou que usava um plugin para verificar a velocidade de processamento do servidor e a latência da rede.
 

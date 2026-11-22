@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:fb79dc00fdeb205aa46dd79c4602c5ffcd4dba82796f92e7c60cccf1c488ea77
+sourceHash: sha256:dd40f00191a79008aae9473af90533314e2a54defc6bf562f5ed0c8d129a404a
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -345,6 +345,10 @@ Im September 2022 ergänzte taka8621 den Leitfaden um Moon für die Lohenfarm un
 
 Am 4. September 2022 berichtete NCGpotechi, dass das Äußere der Burg fertiggestellt und für Besuche geöffnet war. Am Innenausbau wurde zu diesem Zeitpunkt noch gearbeitet. NCGpotechi dankte den Personen, die Material gespendet hatten. [Bericht zur Fertigstellung des Burgäußeren](https://discord.com/channels/737538781024092170/779569416438415421/1015951272916045934)
 
+Am 11. September 2022 schlug taka8621 vor, den Enderdrachen wiederholt zu besiegen und so die Endtransitportale freizuschalten. Als Richtwert nannte taka8621 rund 20 Siege. Anschließend sollte auf der Hauptinsel im Ende gebaut und eine Enderman-Farm eingerichtet werden.
+
+Am 3. Oktober 2022 schlug yanyan vor, den Wechsel zur neuen Lobby mit der Eröffnung des Ressourcenservers zu verbinden. Gui antwortete, dass sich derselbe Zeitpunkt anbiete, sofern sich die Voraussetzungen bestätigen ließen.
+
 Von Oktober 2022 bis Januar 2023 arbeiteten Spieler daran, ein Ozeanmonument trockenzulegen und eine Anlage für Wächter zu errichten. Parallel liefen Ausgrabungen für eine Anlage für Witherskelette. Den Aufzeichnungen aus dem früheren Discord-Kanal zufolge eröffnete taka8621 einen Arbeitskanal. Moon_666 organisierte die Entwässerung und die Ausgrabungen, füllte Materialvorräte auf und arbeitete in einem zugeteilten Bereich. Yukke bat um Hilfe bei den Ausgrabungen und richtete einen Weg zur Festung ein. [Aufruf zur Mithilfe bei den Ausgrabungen im Nether](https://discord.com/channels/737538781024092170/779569416438415421/1053305090922004560)
 
 taibon0727 stellte Materialien wie Glas, einen Platz für Transportboote und eine Vorrichtung für die Arbeit mit Sand bereit. SPdari lieferte Sand. UtaTheIrasutā half beim Verfüllen von Lavabereichen und richtete eine Braustation für Tränke ein. nnn_percent arbeitete mit Sand für die Verfüllung, und あすたん half beim Ausheben. SPdari dankte außerdem Buraki dafür, dass er den Beteiligten die Arbeit erklärt hatte.
@@ -450,6 +454,8 @@ Im Dezember 2022 berichtete Mugi, dass die Wörterbuchfunktion von Kutya wiederh
 Am 14. Januar 2023 schrieb &#33775;\*HAiNE das Protokoll einer damaligen Teamsitzung und teilte eine Zusammenfassung der diskutierten Regelthemen und der Aufgaben. Am nächsten Tag fasste auch はっ zusammen, was zur Überarbeitung der Regeln besprochen worden war, und bat die Mitglieder, es zu prüfen.
 
 Im Januar 2023 veröffentlichte あすたん im damaligen Discord-Beitrittsleitfaden eine bebilderte Anleitung zur Verbindung mit Minecraft Java Edition und Bedrock Edition.
+
+Am 11. Februar 2023 teilte taka8621 die auf dem Hauptserver erzeugten Dynmap-Daten und bat darum, die Karte zur Ansicht bereitzustellen.
 
 Am 6. März 2023 führte Gui eine Testmigration der Datenbank durch und berichtete, dass der Umzug weniger Zeit benötigte. Am 11. Mai erklärte taka8621, dass ein Plugin zur Prüfung der Verarbeitungsgeschwindigkeit des Servers und der Netzwerklatenz im Einsatz war.
 

@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:fb79dc00fdeb205aa46dd79c4602c5ffcd4dba82796f92e7c60cccf1c488ea77
+sourceHash: sha256:dd40f00191a79008aae9473af90533314e2a54defc6bf562f5ed0c8d129a404a
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -345,6 +345,10 @@ Dans une mise à jour de septembre 2022, taka8621 a crédité Moon pour la ferme
 
 Le 4 septembre 2022, NCGpotechi a annoncé que l’extérieur du château était terminé et pouvait être visité. L’intérieur était encore en construction à cette date. NCGpotechi a remercié les personnes qui avaient donné des matériaux. [Annonce de l’achèvement de l’extérieur du château](https://discord.com/channels/737538781024092170/779569416438415421/1015951272916045934)
 
+Le 11 septembre 2022, taka8621 a proposé de débloquer les passerelles de l’End en battant le dragon de l’End à plusieurs reprises, avec un objectif d’environ 20 victoires, puis de construire sur l’île principale de l’End et de créer une ferme à Endermen.
+
+Le 3 octobre 2022, yanyan a proposé de passer au nouveau lobby au moment de l’ouverture du serveur de ressources. Gui a répondu que ce serait le bon moment si les conditions pouvaient être vérifiées.
+
 D’octobre 2022 à janvier 2023, des joueurs ont travaillé à vider un monument océanique et à aménager une installation pour les gardiens tout en creusant pour une autre destinée aux squelettes Wither. Selon les archives de l’ancien salon Discord, taka8621 a ouvert un salon de travail. Moon_666 a organisé le drainage et le creusement, réapprovisionné les matériaux et travaillé dans une zone attribuée. Yukke a sollicité de l’aide pour le creusement et aménagé un passage vers la forteresse. [Appel à participer au creusement dans le Nether](https://discord.com/channels/737538781024092170/779569416438415421/1053305090922004560)
 
 taibon0727 a préparé des matériaux, dont du verre, un espace pour les bateaux de transport et un dispositif pour travailler avec le sable. SPdari a fourni du sable. UtaTheIrasutā a travaillé au remblayage des zones de lave et installé un poste de préparation de potions. nnn_percent a aidé à manipuler le sable pour le remblai, et あすたん a participé au creusement. SPdari a également remercié Buraki d’avoir orienté les participants.
@@ -450,6 +454,8 @@ En décembre 2022, Mugi a indiqué que la fonction de dictionnaire de Kutya avai
 Le 14 janvier 2023, &#33775;\*HAiNE a rédigé le compte rendu d’une réunion de l’équipe du serveur et partagé une synthèse des points discutés sur les règles et des tâches à suivre. Le lendemain, はっ a aussi résumé la discussion sur l’organisation des règles et demandé aux membres de la relire.
 
 En janvier 2023, あすたん a publié des instructions illustrées pour se connecter avec Minecraft Java Edition et Bedrock Edition dans le guide d’accès de l’ancien Discord.
+
+Le 11 février 2023, taka8621 a partagé les données Dynmap générées sur le serveur principal et a demandé de préparer la carte pour qu’elle puisse être consultée.
 
 Le 6 mars 2023, Gui a effectué une migration de test de la base de données et a indiqué que l’opération avait pris moins de temps. Le 11 mai, taka8621 a expliqué utiliser un plugin pour vérifier la vitesse de traitement du serveur et la latence du réseau.
 

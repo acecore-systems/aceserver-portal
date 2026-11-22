@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:fb79dc00fdeb205aa46dd79c4602c5ffcd4dba82796f92e7c60cccf1c488ea77
+sourceHash: sha256:dd40f00191a79008aae9473af90533314e2a54defc6bf562f5ed0c8d129a404a
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -345,6 +345,10 @@ In a September 2022 update, taka8621 listed Moon for the blaze farm and Moon and
 
 On September 4, 2022, NCGpotechi reported that the castle’s exterior was complete and open to visitors. Work on the interior was still in progress at the time. NCGpotechi thanked the people who donated materials. [Castle exterior completion report](https://discord.com/channels/737538781024092170/779569416438415421/1015951272916045934)
 
+On September 11, 2022, taka8621 proposed unlocking the End gateways by defeating the Ender Dragon repeatedly, with about 20 defeats as a target, then moving on to building on the End’s main island and making an Enderman farm.
+
+On October 3, 2022, yanyan proposed switching to the new lobby when the resource server opened. Gui replied that the timing made sense if the conditions could be confirmed.
+
 From October 2022 to January 2023, players worked on draining an ocean monument and building a guardian facility while also excavating for a wither skeleton facility. According to the old Discord work records, taka8621 opened a project channel. Moon_666 organized the drainage and excavation, replenished materials, and worked in an assigned area. Yukke called for help with the excavation and prepared a route to the fortress. [Call for Nether excavation volunteers](https://discord.com/channels/737538781024092170/779569416438415421/1053305090922004560)
 
 taibon0727 provided materials including glass, a place for travel boats, and equipment for working with sand. SPdari supplied sand. UtaTheIrasutā worked on filling in lava and set up a potion brewing station. nnn_percent helped with sand for filling, and あすたん helped excavate. SPdari also thanked Buraki for showing people how to help.
@@ -450,6 +454,8 @@ In December 2022, Mugi reported that Kutya’s dictionary feature had been resto
 On January 14, 2023, &#33775;\*HAiNE wrote up the minutes of a server team meeting and shared a summary of the points discussed about the rules and the tasks to follow up on. The next day, はっ also summarized what had been discussed about organizing the rules and asked members to review it.
 
 In January 2023, あすたん posted illustrated instructions for connecting with Minecraft Java Edition and Bedrock Edition in the Discord joining guide of the time.
+
+On February 11, 2023, taka8621 shared Dynmap data generated on the main server and asked for help making the map available to view.
 
 On March 6, 2023, Gui ran a trial database migration and reported that the migration took less time. On May 11, taka8621 explained that they were using a plugin to check server processing speed and network latency.
 
