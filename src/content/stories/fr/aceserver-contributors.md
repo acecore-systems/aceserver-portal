@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:c32b390e63ddb7b31bf9b5077988b6b87fe02f19020efc1a9301b3b65b10802c
+sourceHash: sha256:425061ab250664b01a0c8f464e2674ae6bf8c67aa07b7cf2509a41e9f7633e85
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -402,6 +402,8 @@ Le 5 septembre, End&#12539;コッカー a indiqué dans l’ancien salon Constru
 Le 11 septembre, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; a demandé combien de portails étaient prévus dans le projet. Le 22 septembre, Yukke a annoncé que le nom du salon était passé de Construction du hall à Création de cartes.
 
 En octobre 2025, End&#12539;コッカー a proposé une carte cylindrique pour Fall Battle ainsi qu’une zone dans laquelle les joueurs pourraient se déplacer.
+
+Le 20 octobre 2025, Nishikino Sega a présenté le projet de grande gare que le comité de revitalisation d’Aceserver préparait sur le serveur saisonnier. Nishikino Sega a indiqué qu’un bâtiment de type gare serait probablement construit et a proposé de l’utiliser si l’équipe du serveur décidait d’ouvrir un comptoir d’échange.
 
 En novembre 2025, End&#12539;コッカー a annoncé l’installation de portails dans huit directions pour atteindre les zones éloignées du serveur de survie. [Annonce de l’installation des portails](https://discord.com/channels/737538781024092170/774152638450237460/1434193495752704134)
 

@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:c32b390e63ddb7b31bf9b5077988b6b87fe02f19020efc1a9301b3b65b10802c
+sourceHash: sha256:425061ab250664b01a0c8f464e2674ae6bf8c67aa07b7cf2509a41e9f7633e85
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -402,6 +402,8 @@ On September 5, End&#12539;コッカー reported laying a foundation and asked f
 On September 11, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; asked how many portals the design would need. On September 22, Yukke announced that they had renamed the Lobby Building channel to Map Building.
 
 In October 2025, End&#12539;コッカー proposed a cylindrical map for Fall Battle and outlined the area players could move within.
+
+On October 20, 2025, Nishikino Sega described the Aceserver Revitalization Committee’s plans for a large station on the Season Server. They said the plans were likely to include a station-style building and suggested using it if the server team decided to set up a trading post.
 
 In November 2025, End&#12539;コッカー reported installing gates in eight directions to reach distant parts of the survival server. [Gate installation announcement](https://discord.com/channels/737538781024092170/774152638450237460/1434193495752704134)
 

@@ -2,7 +2,7 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:c32b390e63ddb7b31bf9b5077988b6b87fe02f19020efc1a9301b3b65b10802c
+sourceHash: sha256:425061ab250664b01a0c8f464e2674ae6bf8c67aa07b7cf2509a41e9f7633e85
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -402,6 +402,8 @@ El 5 de septiembre, End&#12539;コッカー informó en el antiguo canal Constru
 El 11 de septiembre, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; preguntó cuántos portales contemplaba el diseño. El 22 de septiembre, Yukke anunció que había cambiado el nombre del canal de Construcción del vestíbulo a Creación de mapas.
 
 En octubre de 2025, End&#12539;コッカー propuso un mapa cilíndrico para Fall Battle y planteó por qué zona podrían moverse los jugadores.
+
+El 20 de octubre de 2025, Nishikino Sega presentó el proyecto de una gran estación que el Comité de Revitalización de Aceserver estaba preparando en el servidor de temporada. Señaló que probablemente incluiría un edificio similar al de una estación y propuso aprovecharlo si el equipo del servidor decidía instalar un puesto de comercio.
 
 En noviembre de 2025, End&#12539;コッカー informó de que había instalado portales en ocho direcciones para llegar a zonas lejanas del servidor de supervivencia. [Anuncio de la instalación de portales](https://discord.com/channels/737538781024092170/774152638450237460/1434193495752704134)
 

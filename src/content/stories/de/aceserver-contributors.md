@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:c32b390e63ddb7b31bf9b5077988b6b87fe02f19020efc1a9301b3b65b10802c
+sourceHash: sha256:425061ab250664b01a0c8f464e2674ae6bf8c67aa07b7cf2509a41e9f7633e85
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -402,6 +402,8 @@ Am 5. September berichtete End&#12539;コッカー im früheren Kanal Lobby-Bau,
 Am 11. September fragte LuMiSIA\_&#26376;&#31070;&#24736;&#33673;, wie viele Portale der Entwurf vorsah. Am 22. September teilte Yukke mit, den Kanal von Lobby-Bau in Kartenbau umbenannt zu haben.
 
 Im Oktober 2025 schlug End&#12539;コッカー für Fall Battle eine zylindrische Karte vor und beschrieb den Bereich, in dem sich die Spieler bewegen könnten.
+
+Am 20. Oktober 2025 stellte Nishikino Sega das Vorhaben des Belebungskomitees von Aceserver für einen großen Bahnhof auf dem Saisonserver vor. Nishikino Sega rechnete mit einem Gebäude nach Art eines Bahnhofsgebäudes und schlug vor, es zu nutzen, falls das Serverteam einen Handelsplatz einrichten sollte.
 
 Im November 2025 meldete End&#12539;コッカー, dass Portale in acht Richtungen eingerichtet worden waren, die zu entfernten Bereichen des Survival-Servers führten. [Ankündigung zum Einbau der Portale](https://discord.com/channels/737538781024092170/774152638450237460/1434193495752704134)
 

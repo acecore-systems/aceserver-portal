@@ -2,7 +2,7 @@
 title: As pessoas que apoiaram o Aceserver
 description: Conheça quem ajudou o Aceserver pelos retratos de skins do Minecraft, relembre as atividades e confira o roteiro de eventos e propostas.
 translationOf: aceserver-contributors
-sourceHash: sha256:c32b390e63ddb7b31bf9b5077988b6b87fe02f19020efc1a9301b3b65b10802c
+sourceHash: sha256:425061ab250664b01a0c8f464e2674ae6bf8c67aa07b7cf2509a41e9f7633e85
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -402,6 +402,8 @@ Em 5 de setembro, End&#12539;コッカー informou no antigo canal Construção 
 Em 11 de setembro, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; perguntou quantos portais o projeto previa. Em 22 de setembro, Yukke informou que havia renomeado o canal de Construção do Lobby para Criação de Mapas.
 
 Em outubro de 2025, End&#12539;コッカー propôs um mapa cilíndrico para Fall Battle e a área em que os jogadores poderiam se movimentar.
+
+Em 20 de outubro de 2025, Nishikino Sega apresentou os planos do Comitê de Revitalização do Aceserver para uma estação de grande porte no servidor de temporada. Disse que a obra provavelmente incluiria um prédio no estilo de uma estação e sugeriu aproveitá-lo caso a equipe do servidor decidisse montar um posto de trocas.
 
 Em novembro de 2025, End&#12539;コッカー informou que havia instalado portais em oito direções para chegar a áreas distantes do servidor de sobrevivência. [Anúncio da instalação de portais](https://discord.com/channels/737538781024092170/774152638450237460/1434193495752704134)
 

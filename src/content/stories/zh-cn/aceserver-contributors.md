@@ -2,7 +2,7 @@
 title: 支持Aceserver的人们
 description: 通过 Minecraft 皮肤头像认识 Aceserver 的贡献者，回顾社区活动记录，并查看活动与玩家提案路线图。
 translationOf: aceserver-contributors
-sourceHash: sha256:c32b390e63ddb7b31bf9b5077988b6b87fe02f19020efc1a9301b3b65b10802c
+sourceHash: sha256:425061ab250664b01a0c8f464e2674ae6bf8c67aa07b7cf2509a41e9f7633e85
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -402,6 +402,8 @@ taibon0727 准备了玻璃等物资、出行用船的停放处和处理沙子的
 9月11日，LuMiSIA\_&#26376;&#31070;&#24736;&#33673;询问设计中预计需要多少个传送门。22日，Yukke宣布将频道名称从“大厅制作”改为“地图制作”。
 
 2025年10月，End&#12539;コッカー为 Fall Battle 提出了圆柱形地图和玩家可移动的范围。
+
+2025年10月20日，Nishikino Sega 介绍了 Aceserver 活力促进委员会当时在赛季服推进的大型车站计划。Nishikino Sega 说预计还会建造一座类似站楼的设施，并提议如果运营团队决定设立交易所，可以考虑使用这座设施。
 
 2025 年 11 月，End&#12539;コッカー报告已设置通往生存服远处的八个方位的传送门。 [传送门设置公告](https://discord.com/channels/737538781024092170/774152638450237460/1434193495752704134)
 
