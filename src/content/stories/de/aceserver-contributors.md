@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:425061ab250664b01a0c8f464e2674ae6bf8c67aa07b7cf2509a41e9f7633e85
+sourceHash: sha256:60b67f558f1df6d1c2edb9352c4e22373067b1c7f4ca8cde0e700d6260eb3e35
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -455,6 +455,8 @@ Im August 2021 stellte KOTA-SAN nützliche Befehle für die damals installierten
 
 Laut den Aufzeichnungen aus dem früheren Discord-Kanal berichtete KOTA-SAN im August 2021, den Bot Ace-kun erstellt und in Betrieb genommen zu haben. Der Bot schickte neuen Teilnehmern in der Lobby automatisch eine Anleitung. Im Januar 2022 meldete KOTA-SAN als einer der Mitentwickler von Ace-kun und Kutya, dass Ace-kun wieder lief. Im Mai ergänzte KOTA-SAN die automatische Veröffentlichung einer Vorlage für die persönliche Vorstellung.
 
+Am 24. Februar 2022 fragte ringoponn, ob Azkaban eine Welt zum Sammeln von Ressourcen sei. はっ erklärte, Azkaban solle als eigenständige Welt behandelt werden, und yanyan_fafnir beschrieb die Idee einer Welt, in der Spieler Risiken eingehen könnten, um Gegenstände und andere Belohnungen zu erhalten.
+
 Im Mai 2022 kündigte KOTA-SAN die testweise Einführung eines Plugins an, das die Funktionen von Schildern erweiterte. キツネコ (KITUNEKO0605) berichtete, ein Buch im Spiel mit einer Befehlsliste und weiteren Informationen erstellt zu haben.
 
 Im Mai 2022 stellte はっ eine Liste der Spielgegenstände für Askaban vor.
@@ -464,6 +466,8 @@ Im Mai 2022 berichtete Mugi, dass Kutya japanischen Morsecode vorlesen konnte.
 Im Juni 2022 aktualisierte Mugi den Vorlesebot Kutya für Textchats in Sprachkanälen. Im März 2023 kündigte Mugi einen Bot an, über den Spieler dem Serverteam anonym Rückmeldung geben konnten. [Kutya-Update](https://discord.com/channels/737538781024092170/774152638450237460/986439863937155122) [Ankündigung für anonymes Feedback](https://discord.com/channels/737538781024092170/774152638450237460/1087976366126927882)
 
 Am 25. und 26. Juni 2022 bat yanyan_fafnir die Spieler in einer Umfrage der Supporter um ihre Meinung dazu, die Testwelt Azkaban vorübergehend als Spielbereich zu öffnen. taibon0727 beschrieb die Idee als eine Art Demoversion, und sh wies darauf hin, dass die Öffnung für Spieler zugleich als Test dienen könnte. taka8621 schlug einen Ort vor, an dem Spieler ohne vorherigen Antrag Bauten und Schaltungen ausprobieren könnten.
+
+Am 2. August 2022 wurde darüber diskutiert, wie sich das Schlafengehen anderer Spieler auf die verfügbare Arbeitszeit in der Nacht auswirkte. PillowKebap wies darauf hin, dass Spielende bei nächtlichen Arbeiten von den Entscheidungen anderer abhängig waren, und schlug vor, das Überspringen der Nacht abzuschaffen.
 
 Im August 2022 bat taka8621 um Rückmeldungen zu einem Vorschlag, Gegenstände in Truhen und ähnlichen Behältern zu schützen, indem das Abbauen von Blöcken mit Inhalt eingeschränkt würde. taibon0727 fragte, ob Truhen und Fässer darunterfallen würden und wie viel der Schutz gegen Griefing ausrichten könnte.
 

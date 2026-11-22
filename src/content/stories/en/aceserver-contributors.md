@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:425061ab250664b01a0c8f464e2674ae6bf8c67aa07b7cf2509a41e9f7633e85
+sourceHash: sha256:60b67f558f1df6d1c2edb9352c4e22373067b1c7f4ca8cde0e700d6260eb3e35
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -455,6 +455,8 @@ In August 2021, KOTA-SAN compiled a list of useful commands for the plugins inst
 
 According to old Discord records, in August 2021 KOTA-SAN reported creating and launching Ace-kun, a bot that automatically sent instructions to newcomers in the lobby. In January 2022, KOTA-SAN reported restoring Ace-kun as one of the co-creators of Ace-kun and Kutya. In May, KOTA-SAN added automatic posting of a self-introduction template.
 
+On February 24, 2022, ringoponn asked whether Azkaban was a world for gathering resources. はっ explained that Azkaban was to be treated as a world in its own right, and yanyan_fafnir described the design idea of a world where players could take risks to obtain items and other rewards.
+
 In May 2022, KOTA-SAN announced a trial of a plugin that expanded the features of signs. キツネコ (KITUNEKO0605) reported making an in-game book with a command list and other information.
 
 In May 2022, はっ shared a list of in-game items for Azkaban.
@@ -464,6 +466,8 @@ In May 2022, Mugi reported that Kutya could read Japanese Morse code aloud.
 In June 2022, Mugi updated the text-to-speech bot Kutya to support chat inside voice channels. In March 2023, Mugi announced a bot for sending anonymous feedback to the server team. [Kutya update](https://discord.com/channels/737538781024092170/774152638450237460/986439863937155122) [Anonymous feedback announcement](https://discord.com/channels/737538781024092170/774152638450237460/1087976366126927882)
 
 On June 25 and 26, 2022, yanyan_fafnir asked players to weigh in through a supporter survey on opening the test world Azkaban as a temporary play area. taibon0727 described the idea as something like a demo, and sh pointed out that opening it to players could double as a test. taka8621 suggested a place where players could try building and experimenting with circuits without applying first.
+
+On August 2, 2022, players discussed how others going to bed could affect the time available to work at night. PillowKebap pointed out that this made people working at night depend on other players’ decisions and proposed removing the option to skip the night.
 
 In August 2022, taka8621 asked for feedback on a proposal to protect items stored in chests and similar containers by restricting the breaking of blocks that held items. taibon0727 asked whether chests and barrels would be covered and how much the protection would help prevent griefing.
 
