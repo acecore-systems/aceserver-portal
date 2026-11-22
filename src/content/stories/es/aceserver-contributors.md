@@ -2,7 +2,7 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:083d2592df8e189d3c4ebb6d8b6dda87e03c71a8a2ccedb8d2221dee14981f26
+sourceHash: sha256:eacc59e6f1e82eb1fea4e2e585a4d93c768614396808ca061d4be525d6324596
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -132,6 +132,8 @@ Para el Ace Fest Offline de primavera de 2023, Gui publicó los anuncios oficial
 El 8 de abril de 2023, `Rina''` invitó a participar en el encuentro presencial de primavera en el canal Comedor Ace de aquella época. [Invitación al encuentro de primavera](https://discord.com/channels/737538781024092170/840559799129210890/1094260207175094313)
 
 En mayo de 2023, ゆり presentó el plan del equipo de difusión para gestionar YouTube y Twitter de forma regular. [Planes de difusión](https://discord.com/channels/737538781024092170/774152638450237460/1110469768420532235)
+
+El 30 de junio de 2023, Yukke explicó cómo preparar un evento competitivo. Propuso decidir las reglas, el equipo, el formato de las partidas, el recinto y el calendario, y preparar el recinto, los premios y el equipo antes de convocar a los jugadores y anunciar el evento.
 
 ### **Segunda mitad de 2023 y 2024**
 
@@ -519,6 +521,8 @@ El 21 de marzo de 2023, taka8621 compartió siete imágenes con las recetas pers
 
 El 23 de marzo de 2023, NIkumatu514 consultó si se podía instalar un portal temporal desde el recinto del evento hasta el servidor de recursos.
 
+El 29 de marzo de 2023, &#12384;&#12426; propuso crear un canal para dar explicaciones más detalladas a los nuevos jugadores.
+
 El 31 de marzo de 2023, en un intercambio con Moon\_666, あすたん explicó que el mapa del mundo se veía más grande tras una actualización del código de la wiki.
 
 En abril de 2023, Yukke informó de que había añadido la pronunciación de «Hi» al diccionario de lectura en voz alta de la integración de chat que se usaba entonces.
@@ -528,6 +532,10 @@ En mayo de 2023, あすたん reunió en una guía la finalidad de cada servidor
 En junio de 2023, タケ preguntó en el canal de conversación en inglés si había algún bot capaz de traducir entre inglés y japonés.
 
 En julio de 2023, Yukke anunció la creación de un nuevo mundo para el servidor de recursos. [Anuncio del mundo de recursos](https://discord.com/channels/737538781024092170/774152638450237460/1135574163080364103)
+
+El 21 de julio de 2023, Moon\_666 señaló que la información básica figuraba en el canal de guías que tenía Aceserver por entonces. Ese mismo día, キツネコ (KITUNEKO0605) dijo que prepararía un libro guía dentro del juego.
+
+También el 21 de julio de 2023, Biwahoshi pidió consejo para orientar a los nuevos jugadores, y タケ propuso mostrarles lugares recomendados.
 
 En julio de 2023, あすたん redactó y publicó guías de comandos para LWC, CoreProtect, Gsit y LunaChat. En agosto, taka8621 explicó el funcionamiento del plugin de hierba para conseguir e intercambiar hierba alta. En septiembre, amplió las indicaciones sobre el uso del comando de intercambio de hierba.
 
