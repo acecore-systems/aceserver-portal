@@ -2,7 +2,7 @@
 title: As pessoas que apoiaram o Aceserver
 description: Conheça quem ajudou o Aceserver pelos retratos de skins do Minecraft, relembre as atividades e confira o roteiro de eventos e propostas.
 translationOf: aceserver-contributors
-sourceHash: sha256:7b666aa9e8d4ee2e1cf7f38d8c1d94d0dc9124783a77d35bbb46e20987cf8e76
+sourceHash: sha256:9ae354093a46ff6dfe9b84917f7abce9bc7362763f3ae5b61164fd62215cffcd
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -495,6 +495,8 @@ Em janeiro de 2024, あすたん abriu o Ace Server Leaderboard Archive (ASLA), 
 
 Em julho de 2024, taka8621 documentou o procedimento de reinicialização do mundo do servidor de recursos e o compartilhou com a equipe do servidor.
 
+Em 2 de novembro de 2024, タケ lembrou que, na época, o mundo do servidor de recursos passava por reinicializações regulares e orientou os jogadores a seguir projetos para a Edição Java ao construir mecanismos no jogo.
+
 Em outubro de 2024, sekisei preparou um guia sobre o uso do plugin de portais Advanced Portals no Minecraft 1.21 e em versões posteriores. Em dezembro, reuniu informações sobre a localização dos portais no servidor.
 
 Em janeiro de 2025, sekisei informou que a receita de fabricação de grama estava indisponível após uma atualização.
@@ -538,6 +540,8 @@ Em julho de 2026, durante a discussão sobre incluir a moeda do jogo no posto de
 Em agosto de 2026, あすたん informou que havia reformulado o painel web da moeda do jogo e pediu uma revisão. No fim de agosto, sekisei perguntou se o painel já havia sido testado. Em setembro, あすたん voltou a pedir uma revisão a sekisei.
 
 Entre setembro e outubro de 2026, End&#12539;コッカー organizou o guia de entrada no Minecraft da época para facilitar o acesso a regras, apresentações e materiais de referência sobre a conexão. Também reuniu os locais onde consultar as regras de cada mundo. Em 27 de setembro, propôs um canal dedicado a orientações, com tópicos separados sobre como entrar, os comandos e a localização das instalações.
+
+Em 1º de outubro de 2026, durante a discussão sobre um banco de dados para organizar materiais de solução de problemas, あすたん disse que primeiro era preciso decidir o nível de detalhe usado para registrar os sintomas. A proposta dividia os casos entre problemas dentro do Minecraft, problemas para entrar no servidor e outros.
 
 Em outubro de 2026, sekisei propôs que quem chegasse ao lobby pela primeira vez passasse por um mundo introdutório antes de seguir para o lobby normal. Em 21 de outubro, End&#12539;コッカー informou que o lobby introdutório estava pronto. Duas imagens que publicou naquele dia mostravam um púlpito com as regras e um portal.
 

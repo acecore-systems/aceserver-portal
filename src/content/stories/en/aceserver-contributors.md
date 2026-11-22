@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:7b666aa9e8d4ee2e1cf7f38d8c1d94d0dc9124783a77d35bbb46e20987cf8e76
+sourceHash: sha256:9ae354093a46ff6dfe9b84917f7abce9bc7362763f3ae5b61164fd62215cffcd
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -495,6 +495,8 @@ In January 2024, あすたん opened a Discord server, the Ace Server Leaderboar
 
 In July 2024, taka8621 documented how to reset the resource server world and shared the procedure with the server team.
 
+On November 2, 2024, タケ reminded players that the world on the resource server was reset regularly at the time and advised them to follow Java Edition designs when building in-game contraptions.
+
 In October 2024, sekisei prepared a guide to using the Advanced Portals plugin with Minecraft 1.21 and later versions. In December, sekisei compiled a summary of where portals were located on the server.
 
 In January 2025, sekisei announced that the grass crafting recipe was unavailable following an update.
@@ -538,6 +540,8 @@ In July 2026, while the team considered introducing in-game currency to the staf
 In August 2026, あすたん reported redesigning the web panel for the in-game currency and asked for a review. In late August, sekisei asked whether it had been tested. In September, あすたん asked sekisei again to review it.
 
 From September to October 2026, End&#12539;コッカー organized the Minecraft joining guide of the time so players could find the rules, introductions, and connection resources. End&#12539;コッカー also listed where to check the rules for each world. On September 27, they proposed putting joining instructions, commands, and facility locations in separate threads within a dedicated guide channel.
+
+On October 1, 2026, while discussing a database for troubleshooting resources, あすたん said the first step was to decide how much detail to record about symptoms. They proposed three categories for problems occurring in Minecraft, problems joining the server, and other issues.
 
 In October 2026, sekisei proposed that people arriving in the lobby for the first time pass through an introductory world before reaching the regular lobby. On October 21, End&#12539;コッカー reported that the introductory lobby was complete. Two images they posted that day showed a lectern displaying the rules and a gate.
 

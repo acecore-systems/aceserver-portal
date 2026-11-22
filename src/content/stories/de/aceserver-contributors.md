@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:7b666aa9e8d4ee2e1cf7f38d8c1d94d0dc9124783a77d35bbb46e20987cf8e76
+sourceHash: sha256:9ae354093a46ff6dfe9b84917f7abce9bc7362763f3ae5b61164fd62215cffcd
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -495,6 +495,8 @@ Im Januar 2024 eröffnete あすたん den Discord-Server Ace Server Leaderboard
 
 Im Juli 2024 dokumentierte taka8621 das Vorgehen zum Zurücksetzen der Welt auf dem Ressourcenserver und teilte es mit dem Serverteam.
 
+Am 2. November 2024 wies タケ darauf hin, dass die Welt auf dem Ressourcenserver damals regelmäßig zurückgesetzt wurde, und empfahl für Mechanismen im Spiel Bauweisen, die für die Java Edition geeignet waren.
+
 Im Oktober 2024 erstellte sekisei eine Anleitung zur Nutzung des Portal-Plugins Advanced Portals mit Minecraft 1.21 und späteren Versionen. Im Dezember fasste sekisei zusammen, wo sich die Portale auf dem Server befanden.
 
 Im Januar 2025 teilte sekisei mit, dass das Herstellungsrezept für Gras nach einem Update nicht verfügbar war.
@@ -538,6 +540,8 @@ Im Juli 2026 wurde überlegt, die Spielwährung in den vom Serverteam betriebene
 Im August 2026 berichtete あすたん, die Weboberfläche für die Spielwährung neu gestaltet zu haben, und bat um eine Durchsicht. Ende August fragte sekisei, ob die Oberfläche bereits getestet worden sei. Im September bat あすたん sekisei erneut um eine Durchsicht.
 
 Von September bis Oktober 2026 strukturierte End&#12539;コッカー den damaligen Leitfaden für den Minecraft-Beitritt so, dass die Regeln, die Vorstellungsbereiche und die Hinweise zur Verbindung leichter zu finden waren. End&#12539;コッカー stellte auch zusammen, wo die Regeln der einzelnen Welten zu finden waren. Am 27. September schlug End&#12539;コッカー vor, Hinweise zum Beitritt, Befehle und Standorte von Einrichtungen in getrennten Threads in einem eigenen Infokanal zu sammeln.
+
+Am 1. Oktober 2026 erklärte あすたん bei der Diskussion über eine Datenbank für Hilfsmaterialien zur Fehlerbehebung, dass zuerst festgelegt werden müsse, wie detailliert die Symptome erfasst werden sollten. Als Kategorien schlug あすたん Probleme in Minecraft, Probleme beim Beitritt zum Server und sonstige Probleme vor.
 
 Im Oktober 2026 schlug sekisei vor, dass Personen bei ihrem ersten Besuch in der Lobby zunächst eine Einführungswelt durchlaufen, bevor sie die reguläre Lobby erreichen. Am 21. Oktober meldete End&#12539;コッカー, dass die Einführungslobby fertig war. Zwei Bilder, die am selben Tag veröffentlicht wurden, zeigten ein Lesepult mit den Regeln und ein Tor.
 

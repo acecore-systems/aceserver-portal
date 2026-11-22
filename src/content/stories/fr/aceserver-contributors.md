@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:7b666aa9e8d4ee2e1cf7f38d8c1d94d0dc9124783a77d35bbb46e20987cf8e76
+sourceHash: sha256:9ae354093a46ff6dfe9b84917f7abce9bc7362763f3ae5b61164fd62215cffcd
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -495,6 +495,8 @@ En janvier 2024, あすたん a ouvert le serveur Discord Ace Server Leaderboard
 
 En juillet 2024, taka8621 a rédigé la procédure de réinitialisation du monde du serveur de ressources et l’a partagée avec l’équipe du serveur.
 
+Le 2 novembre 2024, タケ a rappelé que le monde du serveur de ressources était réinitialisé régulièrement à l’époque et a conseillé de suivre des méthodes adaptées à l’édition Java pour construire des mécanismes dans le jeu.
+
 En octobre 2024, sekisei a préparé un guide sur l’utilisation du plugin de portails Advanced Portals avec Minecraft 1.21 et les versions ultérieures. En décembre, sekisei a fait le point sur l’emplacement des portails du serveur.
 
 En janvier 2025, sekisei a annoncé que la recette de fabrication de l’herbe était indisponible à la suite d’une mise à jour.
@@ -538,6 +540,8 @@ En juillet 2026, lors d’une réflexion sur l’introduction de la monnaie du j
 En août 2026, あすたん a indiqué avoir repensé le panneau web de la monnaie du jeu et a demandé un avis sur le nouveau panneau. Fin août, sekisei a demandé si le panneau avait été testé. En septembre, あすたん a de nouveau demandé à sekisei de l’examiner.
 
 Entre septembre et octobre 2026, End&#12539;コッカー a réorganisé le guide d’accès à Minecraft de l’époque pour faciliter la recherche des règles, des présentations et des ressources sur la connexion. End&#12539;コッカー a aussi indiqué où consulter les règles de chaque monde. Le 27 septembre, End&#12539;コッカー a proposé de regrouper dans un salon consacré aux guides des fils distincts sur les modalités d’accès, les commandes et l’emplacement des installations.
+
+Le 1er octobre 2026, en réfléchissant à une base de données pour organiser la documentation de dépannage, あすたん a indiqué qu’il fallait d’abord décider avec quel niveau de détail consigner les symptômes. あすたん a proposé de distinguer les problèmes rencontrés dans Minecraft, les problèmes de connexion au serveur et les autres problèmes.
 
 En octobre 2026, sekisei a proposé de faire passer les personnes qui arrivaient pour la première fois par un monde d’accueil avant de les diriger vers le hall habituel. Le 21 octobre, End&#12539;コッカー a annoncé que le hall d’accueil était terminé. Deux images publiées le même jour montraient un pupitre où lire les règles et un portail.
 

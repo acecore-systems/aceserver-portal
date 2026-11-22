@@ -2,7 +2,7 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:7b666aa9e8d4ee2e1cf7f38d8c1d94d0dc9124783a77d35bbb46e20987cf8e76
+sourceHash: sha256:9ae354093a46ff6dfe9b84917f7abce9bc7362763f3ae5b61164fd62215cffcd
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -495,6 +495,8 @@ En enero de 2024, あすたん abrió el servidor de Discord Ace Server Leaderbo
 
 En julio de 2024, taka8621 documentó el procedimiento para reiniciar el mundo del servidor de recursos y compartió la guía con el equipo del servidor.
 
+El 2 de noviembre de 2024, タケ recordó que el mundo del servidor de recursos se reiniciaba periódicamente en aquel momento y recomendó seguir diseños para Java Edition al construir mecanismos dentro del juego.
+
 En octubre de 2024, sekisei preparó una guía sobre el uso del complemento de portales Advanced Portals con Minecraft 1.21 y versiones posteriores. En diciembre, sekisei recopiló un resumen de la ubicación de los portales en el servidor.
 
 En enero de 2025, sekisei anunció que la receta de fabricación de hierba no estaba disponible tras una actualización.
@@ -538,6 +540,8 @@ En julio de 2026, durante el estudio de cómo incorporar la moneda del juego al 
 En agosto de 2026, あすたん informó de que había rediseñado el panel web de la moneda del juego y pidió una revisión. A finales de agosto, sekisei preguntó si ya se había probado. En septiembre, あすたん volvió a pedir una revisión a sekisei.
 
 Entre septiembre y octubre de 2026, End&#12539;コッカー organizó la guía de acceso a Minecraft de la época para que fuera más fácil encontrar las reglas, las presentaciones y los recursos de conexión. También reunió los lugares donde consultar las reglas de cada mundo. El 27 de septiembre, propuso dedicar hilos separados a cómo entrar, los comandos y la ubicación de las instalaciones, y reunirlos en un canal de guías.
+
+El 1 de octubre de 2026, al estudiar una base de datos para organizar el material de resolución de problemas, あすたん señaló que primero había que decidir con qué nivel de detalle registrar los síntomas. Propuso distinguir entre problemas dentro de Minecraft, problemas para entrar al servidor y otros problemas.
 
 En octubre de 2026, sekisei propuso que quienes llegaran al vestíbulo por primera vez pasaran por un mundo de introducción antes de acceder al vestíbulo habitual. El 21 de octubre, End&#12539;コッカー informó de que el vestíbulo de introducción estaba terminado. Dos imágenes que publicó ese día mostraban un atril donde se podían consultar las reglas y un portal.
 
