@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:06f177f1fd913349260fd3210ab5ec43d565b9a4371491e66cb46d3e8a848c50
+sourceHash: sha256:c32b390e63ddb7b31bf9b5077988b6b87fe02f19020efc1a9301b3b65b10802c
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -509,7 +509,11 @@ On October 26, 2023, Syake checked the wiki and reported being unable to find wh
 
 In January 2024, あすたん opened a Discord server, the Ace Server Leaderboard Archive (ASLA), to collect records from Aceserver. They explained the participation rules and how to submit records. あすたん also posted lists covering mining, statistics, and ingots. キツネコ, Feruno, and Taiyaki sent statistics to the submissions channel, and Tabekirareta Potechi proposed candidates for records such as the first castle.
 
+On June 2 and 9, 2024, taka8621 shared plans for hands-on Minecraft plugin practice. The plans covered setting up a project and a test environment, running the plugin participants made, and creating and testing a custom command.
+
 In July 2024, taka8621 documented how to reset the resource server world and shared the procedure with the server team.
+
+On September 5, 2024, sekisei reported working on a minigame in which players would use snowballs to break the blocks beneath opponents and make them fall. The discussion also covered recreating other minigames and making new ones.
 
 On November 2, 2024, タケ reminded players that the world on the resource server was reset regularly at the time and advised them to follow Java Edition designs when building in-game contraptions.
 
@@ -517,9 +521,15 @@ In October 2024, sekisei prepared a guide to using the Advanced Portals plugin w
 
 In January 2025, sekisei announced that the grass crafting recipe was unavailable following an update.
 
+On March 26, 2025, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; shared an outline for reviewing proposals for the Discord and game server setup at a general meeting before starting work on the lobby and other preparations.
+
 On March 28, 2025, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; compiled and shared a draft in the old Discord thread for proposed rules. It included sections on cooperation and disputes between players.
 
+On June 8, 2025, sekisei proposed a shared points system to replace the previous system. The proposal covered playing on the different game servers, player-organized events, and activity on Discord.
+
 In July 2025, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; created and shared a diagram as a reference for discussing the system. That month, sekisei reported successfully connecting from Bedrock Edition.
+
+On September 7, 2025, sekisei proposed announcing the setup for the different servers early and inviting the wider community to help build lobbies for the Survival Server and other servers.
 
 In September 2025, sekisei outlined ideas for creating minigame rooms, joining them from the lobby, and configuring them. On September 11, あすたん proposed storing match records so players could look them up. On September 15, Yukke proposed recording and displaying wins, losses, and win streaks.
 
@@ -548,6 +558,8 @@ In February 2026, Merutak reported creating two Discord roles for notices about 
 In March 2026, あすたん posted the resource server rules. In July, sekisei posted an update in the same thread. [Resource server rules post](https://discord.com/channels/737538781024092170/1486515511029268610/1486515511029268610) [Update post](https://discord.com/channels/737538781024092170/1486515511029268610/1531835894196080653)
 
 On March 12 and 13, 2026, sekisei asked who was interested in a beginner Java course and a refresher course that included making Minecraft mods and plugins.
+
+On April 12, 2026, End&#12539;コッカー proposed using regular server team meetings to share topics that had come up and discussing major changes at separate meetings.
 
 In May 2026, End&#12539;コッカー suggested improving the portal’s wording and how it displayed photos. In June, they reported asking &#35377;&#21487;&#12385;&#12419; to implement a way to swipe through images of Minecraft builds without interrupting browsing.
 

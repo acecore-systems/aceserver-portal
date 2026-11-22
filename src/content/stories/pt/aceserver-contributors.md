@@ -2,7 +2,7 @@
 title: As pessoas que apoiaram o Aceserver
 description: Conheça quem ajudou o Aceserver pelos retratos de skins do Minecraft, relembre as atividades e confira o roteiro de eventos e propostas.
 translationOf: aceserver-contributors
-sourceHash: sha256:06f177f1fd913349260fd3210ab5ec43d565b9a4371491e66cb46d3e8a848c50
+sourceHash: sha256:c32b390e63ddb7b31bf9b5077988b6b87fe02f19020efc1a9301b3b65b10802c
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -509,7 +509,11 @@ Em 26 de outubro de 2023, Syake consultou a wiki e informou que não tinha encon
 
 Em janeiro de 2024, あすたん abriu o Ace Server Leaderboard Archive (ASLA), um servidor no Discord para reunir registros do Aceserver. Explicou as regras de participação e como enviar os registros. Também publicou listas de mineração, estatísticas e lingotes. キツネコ, Feruno e Taiyaki enviaram estatísticas ao canal de contribuições, e Tabekirareta Potechi sugeriu candidatos para registros como o primeiro castelo.
 
+Em 2 e 9 de junho de 2024, taka8621 compartilhou os planos de uma atividade prática sobre plugins para Minecraft. A ideia era preparar um projeto e um ambiente de testes, executar o plugin criado e criar e testar um comando personalizado.
+
 Em julho de 2024, taka8621 documentou o procedimento de reinicialização do mundo do servidor de recursos e o compartilhou com a equipe do servidor.
+
+Em 5 de setembro de 2024, sekisei informou que estava criando um minijogo em que os jogadores usariam bolas de neve para quebrar os blocos sob os adversários e fazê-los cair. Também foram discutidas propostas para recriar outros minijogos e desenvolver novos.
 
 Em 2 de novembro de 2024, タケ lembrou que, na época, o mundo do servidor de recursos passava por reinicializações regulares e orientou os jogadores a seguir projetos para a Edição Java ao construir mecanismos no jogo.
 
@@ -517,9 +521,15 @@ Em outubro de 2024, sekisei preparou um guia sobre o uso do plugin de portais Ad
 
 Em janeiro de 2025, sekisei informou que a receita de fabricação de grama estava indisponível após uma atualização.
 
+Em 26 de março de 2025, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; compartilhou um plano para analisar em uma reunião geral as propostas de organização do Discord e dos servidores de jogo antes de avançar com a preparação do lobby e de outros espaços.
+
 Em 28 de março de 2025, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; reuniu e compartilhou uma proposta no antigo tópico do Discord sobre regras. O texto incluía pontos sobre a cooperação e os conflitos entre jogadores.
 
+Em 8 de junho de 2025, sekisei propôs substituir o sistema anterior por um sistema comum de pontos. A proposta abrangia jogar nos diferentes servidores, eventos organizados pelos participantes e atividades no Discord.
+
 Em julho de 2025, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; criou e compartilhou um diagrama como referência para avaliar o sistema. No mesmo mês, sekisei informou que conseguiu se conectar pela Bedrock Edition.
+
+Em 7 de setembro de 2025, sekisei propôs anunciar cedo como os diferentes servidores seriam organizados e convidar a comunidade a ajudar a construir os lobbies do servidor de sobrevivência e de outros servidores.
 
 Em setembro de 2025, sekisei organizou propostas para criar salas de minijogos, entrar nelas pelo lobby e configurá-las. Em 11 de setembro, あすたん propôs guardar os resultados das partidas para consultas. No dia 15, Yukke propôs registrar e mostrar vitórias, derrotas e sequências de vitórias.
 
@@ -548,6 +558,8 @@ Em fevereiro de 2026, Merutak informou a criação de dois cargos no Discord par
 Em março de 2026, あすたん publicou as regras do servidor de recursos. Em julho, sekisei publicou uma atualização no mesmo tópico. [Publicação das regras do servidor de recursos](https://discord.com/channels/737538781024092170/1486515511029268610/1486515511029268610) [Publicação da atualização](https://discord.com/channels/737538781024092170/1486515511029268610/1531835894196080653)
 
 Em 12 e 13 de março de 2026, sekisei procurou pessoas interessadas em um curso de Java para iniciantes e em um curso de revisão que incluía a criação de mods e plugins para Minecraft.
+
+Em 12 de abril de 2026, End&#12539;コッカー propôs usar as reuniões regulares da equipe para compartilhar os assuntos que se acumulavam e tratar de mudanças importantes em reuniões separadas.
 
 Em maio de 2026, End&#12539;コッカー sugeriu melhorar os textos do portal e a forma de exibir as fotos. Em junho, informou que havia pedido a &#35377;&#21487;&#12385;&#12419; que implementasse uma maneira de ver imagens de construções do Minecraft deslizando o dedo sem atrapalhar a navegação.
 
