@@ -2,7 +2,7 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:03ea62ad5bc3107516b038a6cbac9c12660d904c64b1d2b1cef55d5ae334bcaf
+sourceHash: sha256:083d2592df8e189d3c4ebb6d8b6dda87e03c71a8a2ccedb8d2221dee14981f26
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -305,6 +305,12 @@ En mayo, kuroneko229 anunció que en aquel momento cualquiera podía construir e
 
 En junio de 2021, KOTA-SAN informó del inicio del proyecto de construcción colaborativa Yasuragi no Mori y contó que había plantado un árbol para marcar el comienzo. Ese mismo mes también informó de que en Yasuragi no Mori se había construido un dispositivo para fabricar marcos invisibles para objetos.
 
+El 22 de octubre de 2021, taiyaki5190 consultó si podía publicar en el tablón una guía del barrio residencial que había construido.
+
+El 30 de enero de 2022, \_BE\_kurenohachi dijo que contaba con personas dispuestas a ayudar y compartió su plan de construir un parque de atracciones bastante grande con un mecanismo para lanzar fuegos artificiales una sola vez de noche.
+
+El 1 de marzo de 2022, Tomiryo presentó un plan para construir un dispositivo para elaborar pociones cerca del cultivo comunitario. El día 2, はっ dio el visto bueno a la construcción e indicó un dispositivo existente que podía servir de referencia.
+
 En marzo de 2022, タケ pidió ayuda para nivelar el terreno de un dibujo sobre el suelo. El 1 de abril informó de que la obra estaba terminada y agradeció a quienes ayudaron a preparar el terreno o aportaron materiales. [Convocatoria para nivelar el terreno](https://discord.com/channels/737538781024092170/779569416438415421/957990944374927420) [Informe de finalización del dibujo](https://discord.com/channels/737538781024092170/779569416438415421/959368128943489085)
 
 En abril de 2022, SPdari informó de que los cimientos y el tejado de la base principal de Sora no Yama ya estaban hechos y de que el exterior estaba casi terminado. Aún quedaba trabajo en el interior.
@@ -312,6 +318,8 @@ En abril de 2022, SPdari informó de que los cimientos y el tejado de la base pr
 En junio de 2022, yanyan_fafnir explicó cómo participar en el concurso de islas flotantes que dio paso a la construcción del antiguo vestíbulo y cómo se presentarían los proyectos ante el jurado. El anuncio indicó que はっ y los miembros con el rol de apoyo o superior serían los jueces. [Reglas del concurso](https://discord.com/channels/737538781024092170/774152638450237460/982990352422162482) [Anuncio de la presentación ante el jurado](https://discord.com/channels/737538781024092170/774152638450237460/986294242848669756)
 
 El 5 de junio de 2022, taka8621 propuso un vestíbulo con niveles comunicados y portales en la zona central. Según la propuesta, los miembros que entonces tenían el rol de apoyo o superior construirían la zona central de cada nivel.
+
+El 7 de junio de 2022, Moon\_666 preguntó si se accedería a los distintos mundos desde el vestíbulo y si también habría que pasar por él al regresar. Señaló que esta estructura cambiaría las conexiones que existían entre los mundos.
 
 KOTA-SAN preparó un formulario para anotar el nombre del participante, la parcela preferida y el concepto, junto con un plano de las 36 parcelas. yanyan_fafnir compartió listados de parcelas con las inscripciones y los cambios dos veces el 6 de junio y una vez tanto el 8 como el 15 de junio.
 
@@ -338,6 +346,8 @@ En los mensajes de inscripción aparecían las siguientes ideas.
 taka8621 propuso inicialmente una roca y retiró la idea el 6 de junio.
 
 En julio de 2022, Maro dirigió la construcción del antiguo vestíbulo y anunció que había terminado. Los registros de la obra en el antiguo canal de Discord agradecieron a BM_yurikun la jardinería y a _BE_ChalkyMink87 la colocación de minerales en la base. KOTA-SAN habilitó un espacio para compartir avances de la obra.
+
+El 26 de julio de 2022, Moon\_666 informó de que había colocado un bloque de andamio en el vestíbulo para rescatar a otro jugador.
 
 En agosto de 2022, \_BE\_Kuten2021110 empezó a marcar con tierra el perímetro del terreno previsto para la plaza provisionalmente llamada Ace e invitó a colaborar en la construcción y el diseño del estadio. También compartió un plano a mano alzada con un circuito alrededor de la plaza, establos para caballos y un espacio para puestos. También preparó un diseño preliminar para los establos y compartió cuatro capturas que mostraban el exterior y el interior. &#12525;&#12483;&#12463;&#12384;&#12424;&#12316; (BlissfulRook\_BE\_) mostró una foto de unos establos como referencia y propuso un tejado triangular de pizarra profunda. Al día siguiente, \_BE\_Kuten2021110 compartió una imagen de la estructura que había construido en un mundo de pruebas.
 
@@ -463,7 +473,13 @@ En agosto de 2021, KOTA-SAN recopiló comandos útiles de los plugins que estaba
 
 Según los registros del antiguo canal de Discord, en agosto de 2021 KOTA-SAN informó de que había creado y puesto en marcha Ace-kun, un bot que enviaba instrucciones automáticamente a quienes acababan de entrar en el vestíbulo. En enero de 2022, como uno de los creadores de Ace-kun y Kutya, KOTA-SAN anunció el restablecimiento de Ace-kun. En mayo, añadió la publicación automática de una plantilla de presentación personal.
 
+En enero de 2022, YM informó de que había escrito un libro con instrucciones para nuevos jugadores. Sugirió colocarlo en un atril, en el vestíbulo o dentro del tren negro en el que aparecían los jugadores al entrar por primera vez en el servidor de supervivencia. También propuso incluir las instrucciones en el mensaje inicial de bienvenida. はっ respondió que lo del mensaje parecía viable y YM pidió seguir esa opción.
+
 El 24 de febrero de 2022, ringoponn preguntó si Azkaban era un mundo para reunir recursos. はっ explicó que se consideraría un mundo independiente, y yanyan_fafnir describió la idea de un mundo donde los jugadores podían asumir riesgos a cambio de objetos y otras recompensas.
+
+El 5 de marzo de 2022, \_BE\_NumberYapper propuso reorganizar la guía de instalaciones comunitarias que cualquiera podía usar. El 11 de abril sugirió colocar un libro guía o un atril en el vestíbulo o junto al primer portal para que los nuevos jugadores pudieran leer las instrucciones de acceso. El día 12, KOTA-SAN pidió el libro guía y que se cambiara la ubicación del portal por quienes entraban en Azkaban por error.
+
+El 21 de abril de 2022, &#12414;&#12356;&#12369;&#12427; propuso repartir la atención a quienes entraban por primera vez por franjas horarias. KOTA-SAN planteó dejar esa ayuda a la iniciativa de los propios jugadores.
 
 En mayo de 2022, KOTA-SAN anunció la instalación a prueba de un plugin que ampliaba las funciones de los carteles. キツネコ (KITUNEKO0605) informó que había creado un libro dentro del juego con una lista de comandos y otros datos.
 

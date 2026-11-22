@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:03ea62ad5bc3107516b038a6cbac9c12660d904c64b1d2b1cef55d5ae334bcaf
+sourceHash: sha256:083d2592df8e189d3c4ebb6d8b6dda87e03c71a8a2ccedb8d2221dee14981f26
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -305,6 +305,12 @@ Im Mai erklärte kuroneko229, dass damals jeder in der Entwicklungsstadt bauen k
 
 Im Juni 2021 berichtete KOTA-SAN vom Start des gemeinsamen Bauprojekts Yasuragi no Mori und davon, zum Beginn des Projekts einen Baum gepflanzt zu haben. Im selben Monat berichtete KOTA-SAN auch, dass in Yasuragi no Mori eine Vorrichtung zur Herstellung unsichtbarer Gegenstandsrahmen gebaut worden war.
 
+Am 22. Oktober 2021 fragte taiyaki5190, ob ein Wegweiser für das selbst gebaute Wohnviertel am Schwarzen Brett veröffentlicht werden könnte.
+
+Am 30. Januar 2022 sagte \_BE\_kurenohachi, dass einige Personen helfen wollten, und stellte einen Plan für einen größeren Vergnügungspark vor. Eine Vorrichtung sollte nachts einmal ein Feuerwerk auslösen.
+
+Am 1. März 2022 plante Tomiryo eine Vorrichtung zum Brauen von Tränken in der Nähe des Gemeinschaftsfeldes. Am 2. März stimmte はっ dem Bau zu und wies auf eine vorhandene Vorrichtung als Vorbild hin.
+
 Im März 2022 bat タケ um Hilfe beim Einebnen des Geländes für ein Bodenbild. Am 1. April meldete タケ die Fertigstellung des Werks und dankte den Personen, die beim Einebnen geholfen oder Material bereitgestellt hatten. [Aufruf zur Mithilfe beim Einebnen](https://discord.com/channels/737538781024092170/779569416438415421/957990944374927420) [Bericht zur Fertigstellung des Bodenbilds](https://discord.com/channels/737538781024092170/779569416438415421/959368128943489085)
 
 Im April 2022 berichtete SPdari, dass das Fundament und das Dach der Hauptbasis in Sora no Yama fertig waren und der Außenbau fast abgeschlossen war. Im Innenbereich standen noch Arbeiten aus.
@@ -312,6 +318,8 @@ Im April 2022 berichtete SPdari, dass das Fundament und das Dach der Hauptbasis 
 Im Juni 2022 erklärte yanyan_fafnir die Teilnahmebedingungen für den Wettbewerb um schwebende Inseln, aus dem die frühere Lobby hervorging. Die Ankündigung beschrieb auch, wie die Beiträge bei der Bewertung vorgestellt werden sollten. はっ und Mitglieder mit der Rolle „Supporter“ oder höher sollten die Jury bilden. [Teilnahmebedingungen](https://discord.com/channels/737538781024092170/774152638450237460/982990352422162482) [Ankündigung des Jurytermins](https://discord.com/channels/737538781024092170/774152638450237460/986294242848669756)
 
 Am 5. Juni 2022 schlug taka8621 eine Lobby vor, in der man zwischen den Ebenen wechseln könnte und die Portale in der Mitte lägen. Den zentralen Bereich jeder Ebene sollten nach dem Vorschlag Mitglieder bauen, die damals die Rolle „Supporter“ oder eine höhere Rolle hatten.
+
+Am 7. Juni 2022 fragte Moon\_666, ob Spieler mehrere Welten von der Lobby aus erreichen und auf dem Rückweg ebenfalls durch die Lobby gehen sollten. Die Anmerkung war, dass dadurch die bisherigen Verbindungen zwischen den Welten verändert würden.
 
 KOTA-SAN bereitete ein Anmeldeformular für den Namen, die Wunschparzelle und das Konzept sowie einen Plan mit 36 Parzellen vor. yanyan_fafnir teilte die Belegungslisten mit den Anmeldungen und Änderungen zweimal am 6. Juni sowie je einmal am 8. und 15. Juni.
 
@@ -338,6 +346,8 @@ In den Anmeldungen standen unter anderem folgende Ideen.
 taka8621 schlug zunächst einen Felsen vor und zog die Idee am 6. Juni zurück.
 
 Im Juli 2022 leitete Maro den Bau der früheren Lobby und meldete den Abschluss. Im alten Discord-Kanal wurde BM_yurikun für die Begrünung und _BE_ChalkyMink87 für das Einlassen von Erzen in das Fundament gedankt. KOTA-SAN richtete einen Ort ein, an dem der Baufortschritt geteilt werden konnte.
+
+Am 26. Juli 2022 meldete Moon\_666, einen Gerüstblock in der Lobby platziert zu haben, um einen anderen Teilnehmer zu retten.
 
 Im August 2022 begann \_BE\_Kuten2021110, das Gelände für den Platz mit dem Arbeitstitel Ace Plaza mit Erde abzustecken, und suchte Hilfe beim Bau und beim Entwurf des Stadions. Die Person teilte auch einen handgezeichneten Lageplan mit einer Strecke rund um den Platz, Pferdeställen und Platz für Verkaufsstände. Die Person erstellte außerdem einen vorläufigen Entwurf für die Ställe und teilte vier Screenshots von außen und innen. &#12525;&#12483;&#12463;&#12384;&#12424;&#12316; (BlissfulRook\_BE\_) zeigte ein Foto von Ställen als Vorlage und schlug ein dreieckiges Dach aus Tiefenschiefer vor. Am nächsten Tag teilte \_BE\_Kuten2021110 ein Bild des eigenen Grundgerüsts aus einer Testwelt.
 
@@ -463,7 +473,13 @@ Im August 2021 stellte KOTA-SAN nützliche Befehle für die damals installierten
 
 Laut den Aufzeichnungen aus dem früheren Discord-Kanal berichtete KOTA-SAN im August 2021, den Bot Ace-kun erstellt und in Betrieb genommen zu haben. Der Bot schickte neuen Teilnehmern in der Lobby automatisch eine Anleitung. Im Januar 2022 meldete KOTA-SAN als einer der Mitentwickler von Ace-kun und Kutya, dass Ace-kun wieder lief. Im Mai ergänzte KOTA-SAN die automatische Veröffentlichung einer Vorlage für die persönliche Vorstellung.
 
+Im Januar 2022 berichtete YM, ein Buch mit der Beitrittsanleitung für neue Spieler geschrieben zu haben. YM schlug vor, das Buch auf ein Lesepult in der Lobby oder im schwarzen Zug zu legen, in dem Spieler beim ersten Betreten des Survivalservers erschienen. Als weitere Möglichkeit nannte YM die Aufnahme der Anleitung in die erste Begrüßungsnachricht. はっ hielt die Nachricht für machbar, und YM bat darum, diesen Weg zu wählen.
+
 Am 24. Februar 2022 fragte ringoponn, ob Azkaban eine Welt zum Sammeln von Ressourcen sei. はっ erklärte, Azkaban solle als eigenständige Welt behandelt werden, und yanyan_fafnir beschrieb die Idee einer Welt, in der Spieler Risiken eingehen könnten, um Gegenstände und andere Belohnungen zu erhalten.
+
+Am 5. März 2022 schlug \_BE\_NumberYapper vor, den Leitfaden für die frei zugänglichen Gemeinschaftseinrichtungen neu zu ordnen. Am 11. April kam der Vorschlag hinzu, ein Anleitungsbuch oder ein Lesepult in der Lobby oder am ersten Portal aufzustellen, damit Neulinge die Beitrittsschritte nachlesen könnten. Am 12. April bat KOTA-SAN um das Anleitungsbuch und darum, das Portal wegen versehentlicher Eintritte in Azkaban zu verlegen.
+
+Am 21. April 2022 schlug &#12414;&#12356;&#12369;&#12427; vor, die Betreuung neuer Spieler auf Zeitfenster aufzuteilen. KOTA-SAN wollte es der Eigeninitiative der Teilnehmenden überlassen, ob sie bei der Orientierung halfen.
 
 Im Mai 2022 kündigte KOTA-SAN die testweise Einführung eines Plugins an, das die Funktionen von Schildern erweiterte. キツネコ (KITUNEKO0605) berichtete, ein Buch im Spiel mit einer Befehlsliste und weiteren Informationen erstellt zu haben.
 

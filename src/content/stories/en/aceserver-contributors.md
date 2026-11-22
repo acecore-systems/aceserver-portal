@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:03ea62ad5bc3107516b038a6cbac9c12660d904c64b1d2b1cef55d5ae334bcaf
+sourceHash: sha256:083d2592df8e189d3c4ebb6d8b6dda87e03c71a8a2ccedb8d2221dee14981f26
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -305,6 +305,12 @@ In May, kuroneko229 announced that anyone could build in Development City at the
 
 In June 2021, KOTA-SAN reported the launch of the collaborative building project Yasuragi no Mori and said they had planted a tree to mark its start. That month, KOTA-SAN also reported that a device for making invisible item frames had been built at Yasuragi no Mori.
 
+On October 22, 2021, taiyaki5190 asked whether a guide to the residential district they had built could be posted on the bulletin board.
+
+On January 30, 2022, \_BE\_kurenohachi said people had offered to help and shared a plan to build a sizable amusement park with a mechanism that would set off fireworks just once at night.
+
+On March 1, 2022, Tomiryo outlined a plan for a potion-brewing contraption near the shared farm. On March 2, はっ agreed to the build and pointed to an existing contraption as a reference.
+
 In March 2022, タケ asked for help leveling the ground for a ground artwork. On April 1, タケ reported that the artwork was complete and thanked the people who helped level the ground or provided materials. [Call for help leveling the ground](https://discord.com/channels/737538781024092170/779569416438415421/957990944374927420) [Ground artwork completion report](https://discord.com/channels/737538781024092170/779569416438415421/959368128943489085)
 
 In April 2022, SPdari reported that the foundation and roof of the main base at Sora no Yama were in place and the exterior was nearly complete. Work still remained on the interior.
@@ -312,6 +318,8 @@ In April 2022, SPdari reported that the foundation and roof of the main base at 
 In June 2022, yanyan_fafnir explained how to enter the floating-island contest that led to work on the former lobby and how entries would be presented at judging. The announcement named はっ and members with the supporter role or above as judges. [Contest entry rules](https://discord.com/channels/737538781024092170/774152638450237460/982990352422162482) [Judging session announcement](https://discord.com/channels/737538781024092170/774152638450237460/986294242848669756)
 
 On June 5, 2022, taka8621 proposed a lobby with connected levels and gates in the central area. Under the proposal, members with the supporter role or above at the time would build the central area of each level.
+
+On June 7, 2022, Moon\_666 asked whether players would reach different worlds from the lobby and also go through it on their way back. They pointed out that this would change the existing connections between worlds.
 
 KOTA-SAN prepared an entry form for the entrant’s name, preferred plot, and concept, along with a map of the 36 plots. yanyan_fafnir shared plot lists reflecting entries and changes twice on June 6, once on June 8, and once on June 15.
 
@@ -338,6 +346,8 @@ The entry posts included the following ideas.
 taka8621 initially proposed a rock theme and withdrew it on June 6.
 
 In July 2022, Maro led construction of the former lobby and reported its completion. The build logs from the old Discord channel thanked BM_yurikun for landscaping and _BE_ChalkyMink87 for embedding ore in the foundation. KOTA-SAN set up a place to share updates on the build.
+
+On July 26, 2022, Moon\_666 reported placing a scaffolding block in the lobby to rescue another player.
 
 In August 2022, \_BE\_Kuten2021110 began marking out the site for the project tentatively called Ace Plaza with dirt and asked for help with construction and stadium design. They also shared a hand-drawn layout showing a course around the plaza, horse stables, and space for stalls. They also made a preliminary design for the stables and shared four screenshots showing the exterior and interior. &#12525;&#12483;&#12463;&#12384;&#12424;&#12316; (BlissfulRook\_BE\_) shared a photo of stables as a reference and suggested a triangular deepslate roof. The next day, \_BE\_Kuten2021110 shared an image of the framework they built in a test world.
 
@@ -463,7 +473,13 @@ In August 2021, KOTA-SAN compiled a list of useful commands for the plugins inst
 
 According to old Discord records, in August 2021 KOTA-SAN reported creating and launching Ace-kun, a bot that automatically sent instructions to newcomers in the lobby. In January 2022, KOTA-SAN reported restoring Ace-kun as one of the co-creators of Ace-kun and Kutya. In May, KOTA-SAN added automatic posting of a self-introduction template.
 
+In January 2022, YM reported writing a book with joining instructions for new players. YM suggested placing the book on a lectern either in the lobby or inside the black train where players spawned when they first joined the survival server. Another option was to put the instructions in the initial welcome message. はっ said the message seemed feasible, and YM asked to use that approach.
+
 On February 24, 2022, ringoponn asked whether Azkaban was a world for gathering resources. はっ explained that Azkaban was to be treated as a world in its own right, and yanyan_fafnir described the design idea of a world where players could take risks to obtain items and other rewards.
+
+On March 5, 2022, \_BE\_NumberYapper proposed reorganizing the guide to shared facilities that anyone could use. On April 11, they suggested placing a guidebook or a lectern in the lobby or at the first gate so new players could read the joining instructions. On April 12, KOTA-SAN asked for the guidebook and for the gate to be moved for players who mistakenly entered Azkaban.
+
+On April 21, 2022, &#12414;&#12356;&#12369;&#12427; proposed dividing responsibility for helping new players get oriented by time slot. KOTA-SAN suggested leaving that help up to players who volunteered.
 
 In May 2022, KOTA-SAN announced a trial of a plugin that expanded the features of signs. キツネコ (KITUNEKO0605) reported making an in-game book with a command list and other information.
 
