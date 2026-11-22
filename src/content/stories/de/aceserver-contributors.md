@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:6dbcf472ade64b77f64fa08827b40135f0ed5f21541e8fc58860b2729fdf0ae4
+sourceHash: sha256:ad4e80b1197bbe6c7e77ecbb04564f59042641fa6c2b1ead8179d6ff496df975
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -435,6 +435,8 @@ Am 3. Juni 2026 skizzierte Pluto mehrere Klassen für das MMO, darunter Klassen 
 
 Am 5. Juni 2026 entwarf あすたん ein MMO-Konzept, in dem Spieler eine Klasse wählen, im Level aufsteigen, Ausrüstung sammeln und durch klassenspezifische Fähigkeiten und das Verteilen von Punkten stärker werden sollten. Am 12. Juni berichtete あすたん, dass die Umsetzung der Grundfunktionen weit fortgeschritten sei. Texturen und Modelle, Fähigkeiten und die Spielwelt mussten unter anderem noch ausgearbeitet werden.
 
+Am 11. August 2026 berichtete LuMiSIA\_&#26376;&#31070;&#24736;&#33673;, gemeinsam mit &#12486;&#12451;&#12512;&#12373;&#12435; den Untergrund des Sega-Imperiums erkundet zu haben. Dem Thread zu der Erkundung war ein Bild beigefügt.
+
 Am 17. September 2026 kündigte タケ an, dass das Belebungskomitee von Aceserver mit der Neugestaltung des zentralen Bereichs des ehemaligen Century-Geländes begonnen hatte. タケ berichtete auch, dass mehrere Helfer beim Aufräumen vorangekommen waren. [Beginn der Neugestaltung des ehemaligen Century-Geländes](https://discord.com/channels/737538781024092170/1437442902547759125/1550005135311110154)
 
 Am 28. September 2026 erwog あすたん, das damals in Entwicklung befindliche MMO um Angeln zu ergänzen. Am selben Tag berichtete あすたん bei einem Austausch über die Vorbereitung des Betatests des Content-Servers, Angeln implementiert zu haben. Am 3. Oktober kündigte あすたん im offiziellen Discord-Ankündigungskanal den Start des offenen Betatests des Content-Servers an. Zu den spielbaren Angeboten zählten Duel, ein Eins-gegen-eins-PvP-Modus, und Fishing. [Ankündigung der offenen Beta des Content-Servers (Test beendet)](https://discord.com/channels/737538781024092170/774152638450237460/1555731149119164427)
@@ -592,6 +594,8 @@ Von September bis Oktober 2026 strukturierte End&#12539;コッカー den damalig
 Am 1. Oktober 2026 erklärte あすたん bei der Diskussion über eine Datenbank für Hilfsmaterialien zur Fehlerbehebung, dass zuerst festgelegt werden müsse, wie detailliert die Symptome erfasst werden sollten. Als Kategorien schlug あすたん Probleme in Minecraft, Probleme beim Beitritt zum Server und sonstige Probleme vor.
 
 Im Oktober 2026 schlug sekisei vor, dass Personen bei ihrem ersten Besuch in der Lobby zunächst eine Einführungswelt durchlaufen, bevor sie die reguläre Lobby erreichen. Am 21. Oktober meldete End&#12539;コッカー, dass die Einführungslobby fertig war. Zwei Bilder, die am selben Tag veröffentlicht wurden, zeigten ein Lesepult mit den Regeln und ein Tor.
+
+Am 26. Oktober 2026 schlug End&#12539;コッカー vor, eine erste Fassung der Lobby-Nachricht zu erstellen und zu veröffentlichen und sie danach regelmäßig zu ergänzen und zu bearbeiten.
 
 Am 11. November 2026 verwies Gui Spieler mit Problemen bei der Verbindung, Verifizierung oder Discord-Verknüpfung auf die FAQ und die Beitrittsanleitung im offiziellen Wiki. Falls das Problem weiter bestand, sollten sie sich im Fragenkanal an das Team wenden und ihr Gerät, Java Edition oder Bedrock Edition, die Fehlermeldung und die bereits versuchten Schritte angeben. [Hilfe bei Problemen und Fragen an das Team](https://discord.com/channels/737538781024092170/1569771434945806476/1569771922676252713)
 

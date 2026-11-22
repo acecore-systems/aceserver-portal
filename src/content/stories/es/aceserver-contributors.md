@@ -2,7 +2,7 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:6dbcf472ade64b77f64fa08827b40135f0ed5f21541e8fc58860b2729fdf0ae4
+sourceHash: sha256:ad4e80b1197bbe6c7e77ecbb04564f59042641fa6c2b1ead8179d6ff496df975
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -435,6 +435,8 @@ El 3 de junio de 2026, Pluto planteó posibles clases para el MMO, entre ellas u
 
 El 5 de junio de 2026, あすたん preparó una propuesta para un MMO en el que se podría elegir una clase, subir de nivel, reunir equipo y mejorar mediante las habilidades de cada clase y el reparto de puntos. El 12 de junio, informó de que gran parte de las funciones básicas ya estaba implementada y que quedaba trabajar en las texturas y los modelos, las habilidades y el mundo, entre otros aspectos.
 
+El 11 de agosto de 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; informó de que había explorado el subsuelo del Imperio Sega junto a &#12486;&#12451;&#12512;&#12373;&#12435;. El hilo sobre la exploración incluía una imagen adjunta.
+
 El 17 de septiembre de 2026, タケ anunció que el Comité de Revitalización de Aceserver había empezado a remodelar la parte central del antiguo emplazamiento de Century. También informó de que varias personas habían ayudado a despejar la zona. [Inicio de la remodelación del antiguo emplazamiento de Century](https://discord.com/channels/737538781024092170/1437442902547759125/1550005135311110154)
 
 El 28 de septiembre de 2026, あすたん estudió la posibilidad de añadir pesca al MMO que estaba en desarrollo. Ese mismo día, al hablar de los preparativos de la beta del servidor de contenidos, あすたん informó de que había implementado la pesca. El 3 de octubre anunció en el canal oficial de avisos de Discord el inicio de la beta abierta del servidor de contenidos e indicó que se podía jugar a Duel, un modo PvP de uno contra uno, y a Fishing. [Anuncio de la beta abierta del servidor de contenidos (prueba finalizada)](https://discord.com/channels/737538781024092170/774152638450237460/1555731149119164427)
@@ -592,6 +594,8 @@ Entre septiembre y octubre de 2026, End&#12539;コッカー organizó la guía d
 El 1 de octubre de 2026, al estudiar una base de datos para organizar el material de resolución de problemas, あすたん señaló que primero había que decidir con qué nivel de detalle registrar los síntomas. Propuso distinguir entre problemas dentro de Minecraft, problemas para entrar al servidor y otros problemas.
 
 En octubre de 2026, sekisei propuso que quienes llegaran al vestíbulo por primera vez pasaran por un mundo de introducción antes de acceder al vestíbulo habitual. El 21 de octubre, End&#12539;コッカー informó de que el vestíbulo de introducción estaba terminado. Dos imágenes que publicó ese día mostraban un atril donde se podían consultar las reglas y un portal.
+
+El 26 de octubre de 2026, End&#12539;コッカー propuso preparar y publicar una primera versión del mensaje del vestíbulo para luego ampliarlo y editarlo periódicamente.
 
 El 11 de noviembre de 2026, Gui remitió a los jugadores con problemas de conexión, verificación o vinculación con Discord a las preguntas frecuentes y la guía de acceso de la wiki oficial. Si el problema persistía, les indicó que acudieran al canal de preguntas al equipo e incluyeran el dispositivo, si usaban Java Edition o Bedrock Edition, el error y los pasos que habían probado. [Guía para problemas y consultas al equipo](https://discord.com/channels/737538781024092170/1569771434945806476/1569771922676252713)
 

@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:6dbcf472ade64b77f64fa08827b40135f0ed5f21541e8fc58860b2729fdf0ae4
+sourceHash: sha256:ad4e80b1197bbe6c7e77ecbb04564f59042641fa6c2b1ead8179d6ff496df975
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -435,6 +435,8 @@ On June 3, 2026, Pluto outlined possible MMO classes for sword users, archers, m
 
 On June 5, 2026, あすたん outlined an MMO in which players would choose a class, level up, collect equipment, and grow stronger through class-specific skills and point allocation. On June 12, they reported that much of the core functionality was in place, with textures and models, skills, and work on the world still to do.
 
+On August 11, 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; reported exploring the underground area of the Sega Empire with &#12486;&#12451;&#12512;&#12373;&#12435;. The thread about the exploration included an image attachment.
+
 On September 17, 2026, タケ announced that the Aceserver Revitalization Committee had started redeveloping the central part of the old Century site. タケ also reported that several volunteers had made progress clearing the area. [Start of the old Century site redevelopment](https://discord.com/channels/737538781024092170/1437442902547759125/1550005135311110154)
 
 On September 28, 2026, あすたん considered adding fishing to the MMO under development. That same day, あすたん reported implementing fishing during a discussion about preparing the Content Server beta. On October 3, they announced the Content Server open beta test in the official Discord announcements and said players could try Duel, a one-on-one PvP mode, and Fishing. [Content Server open beta announcement (test ended)](https://discord.com/channels/737538781024092170/774152638450237460/1555731149119164427)
@@ -592,6 +594,8 @@ From September to October 2026, End&#12539;コッカー organized the Minecraft 
 On October 1, 2026, while discussing a database for troubleshooting resources, あすたん said the first step was to decide how much detail to record about symptoms. They proposed three categories for problems occurring in Minecraft, problems joining the server, and other issues.
 
 In October 2026, sekisei proposed that people arriving in the lobby for the first time pass through an introductory world before reaching the regular lobby. On October 21, End&#12539;コッカー reported that the introductory lobby was complete. Two images they posted that day showed a lectern displaying the rules and a gate.
+
+On October 26, 2026, End&#12539;コッカー proposed preparing and publishing an initial version of the lobby message, then adding to and editing it regularly.
 
 On November 11, 2026, Gui directed players with connection, verification, or Discord linking problems to the official wiki’s FAQ and joining guide. If the problem persisted, Gui asked them to contact staff through the questions channel and include their device, whether they used Java or Bedrock Edition, the error, and the steps they had tried. [Troubleshooting and contacting staff](https://discord.com/channels/737538781024092170/1569771434945806476/1569771922676252713)
 

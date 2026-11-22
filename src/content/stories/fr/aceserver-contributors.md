@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:6dbcf472ade64b77f64fa08827b40135f0ed5f21541e8fc58860b2729fdf0ae4
+sourceHash: sha256:ad4e80b1197bbe6c7e77ecbb04564f59042641fa6c2b1ead8179d6ff496df975
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -435,6 +435,8 @@ Le 3 juin 2026, Pluto a proposé des classes pour le MMO, notamment des combatta
 
 Le 5 juin 2026, あすたん a décrit un projet de MMO où les joueurs choisiraient une classe, gagneraient des niveaux, réuniraient de l’équipement et se renforceraient grâce aux compétences propres à leur classe et à la répartition des points. Le 12 juin, あすたん a indiqué que la mise en place des fonctions de base était bien avancée et qu’il restait notamment à créer les textures et les modèles, les compétences et le monde.
 
+Le 11 août 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; a indiqué avoir exploré le sous-sol de l’Empire Sega avec &#12486;&#12451;&#12512;&#12373;&#12435;. Le fil consacré à l’exploration contenait une image jointe.
+
 Le 17 septembre 2026, タケ a annoncé que le comité de revitalisation d’Aceserver avait commencé à réaménager la partie centrale de l’ancien site de Century. タケ a aussi signalé que plusieurs personnes avaient aidé à dégager la zone. [Début du réaménagement de l’ancien site de Century](https://discord.com/channels/737538781024092170/1437442902547759125/1550005135311110154)
 
 Le 28 septembre 2026, あすたん a envisagé d’ajouter la pêche au MMO alors en cours de développement. Le même jour, lors d’un échange sur la préparation du test bêta du serveur de contenu, あすたん a signalé avoir implémenté la pêche. Le 3 octobre, あすたん a annoncé dans le salon officiel des annonces Discord le lancement du test bêta ouvert du serveur de contenu. L’annonce indiquait qu’on pouvait y essayer Duel, un mode PvP en un contre un, et Fishing. [Annonce de la bêta ouverte du serveur de contenu (test terminé)](https://discord.com/channels/737538781024092170/774152638450237460/1555731149119164427)
@@ -592,6 +594,8 @@ Entre septembre et octobre 2026, End&#12539;コッカー a réorganisé le guide
 Le 1er octobre 2026, en réfléchissant à une base de données pour organiser la documentation de dépannage, あすたん a indiqué qu’il fallait d’abord décider avec quel niveau de détail consigner les symptômes. あすたん a proposé de distinguer les problèmes rencontrés dans Minecraft, les problèmes de connexion au serveur et les autres problèmes.
 
 En octobre 2026, sekisei a proposé de faire passer les personnes qui arrivaient pour la première fois par un monde d’accueil avant de les diriger vers le hall habituel. Le 21 octobre, End&#12539;コッカー a annoncé que le hall d’accueil était terminé. Deux images publiées le même jour montraient un pupitre où lire les règles et un portail.
+
+Le 26 octobre 2026, End&#12539;コッカー a proposé de préparer et de publier une première version du message du hall, puis de la compléter et de la modifier régulièrement.
 
 Le 11 novembre 2026, Gui a orienté les joueurs qui rencontraient des difficultés de connexion, de vérification ou de liaison avec Discord vers la FAQ et le guide d’accès du wiki officiel. Si le problème persistait, Gui leur a conseillé d’utiliser le salon de questions à l’équipe et d’indiquer leur appareil, s’ils utilisaient Java Edition ou Bedrock Edition, le message d’erreur et les étapes déjà essayées. [Aide et questions à l’équipe](https://discord.com/channels/737538781024092170/1569771434945806476/1569771922676252713)
 

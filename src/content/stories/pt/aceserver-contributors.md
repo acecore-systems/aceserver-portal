@@ -2,7 +2,7 @@
 title: As pessoas que apoiaram o Aceserver
 description: Conheça quem ajudou o Aceserver pelos retratos de skins do Minecraft, relembre as atividades e confira o roteiro de eventos e propostas.
 translationOf: aceserver-contributors
-sourceHash: sha256:6dbcf472ade64b77f64fa08827b40135f0ed5f21541e8fc58860b2729fdf0ae4
+sourceHash: sha256:ad4e80b1197bbe6c7e77ecbb04564f59042641fa6c2b1ead8179d6ff496df975
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -435,6 +435,8 @@ Em 3 de junho de 2026, Pluto apresentou ideias de classes para o MMO, como usuá
 
 Em 5 de junho de 2026, あすたん esboçou um MMO em que cada jogador escolheria uma classe, subiria de nível, reuniria equipamentos e ficaria mais forte com habilidades da classe e a distribuição de pontos. Em 12 de junho, informou que a implementação das funções básicas estava bem adiantada e que ainda faltava produzir as texturas e os modelos, as habilidades e o mundo, entre outros elementos.
 
+Em 11 de agosto de 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; informou que havia explorado o subsolo do Império Sega junto com &#12486;&#12451;&#12512;&#12373;&#12435;. O tópico sobre a exploração incluía uma imagem anexada.
+
 Em 17 de setembro de 2026, タケ anunciou que o Comitê de Revitalização do Aceserver havia iniciado a revitalização da parte central da antiga área de Century. Também informou que várias pessoas haviam ajudado a limpar a área. [Início da revitalização da antiga área de Century](https://discord.com/channels/737538781024092170/1437442902547759125/1550005135311110154)
 
 Em 28 de setembro de 2026, あすたん considerou adicionar pesca ao MMO em desenvolvimento. No mesmo dia, ao discutir os preparativos para o teste beta do servidor de conteúdo, あすたん informou que havia implementado a pesca. Em 3 de outubro anunciou no canal oficial de avisos do Discord o início do teste beta aberto do servidor de conteúdo e informou que era possível jogar Duel, um modo PvP de um contra um, e Fishing. [Anúncio do teste beta aberto do servidor de conteúdo (teste encerrado)](https://discord.com/channels/737538781024092170/774152638450237460/1555731149119164427)
@@ -592,6 +594,8 @@ Entre setembro e outubro de 2026, End&#12539;コッカー organizou o guia de en
 Em 1º de outubro de 2026, durante a discussão sobre um banco de dados para organizar materiais de solução de problemas, あすたん disse que primeiro era preciso decidir o nível de detalhe usado para registrar os sintomas. A proposta dividia os casos entre problemas dentro do Minecraft, problemas para entrar no servidor e outros.
 
 Em outubro de 2026, sekisei propôs que quem chegasse ao lobby pela primeira vez passasse por um mundo introdutório antes de seguir para o lobby normal. Em 21 de outubro, End&#12539;コッカー informou que o lobby introdutório estava pronto. Duas imagens que publicou naquele dia mostravam um púlpito com as regras e um portal.
+
+Em 26 de outubro de 2026, End&#12539;コッカー propôs preparar e publicar uma versão inicial da mensagem do lobby e depois fazer acréscimos e edições periódicas.
 
 Em 11 de novembro de 2026, Gui indicou as perguntas frequentes e o guia de entrada da wiki oficial para quem tinha problemas de conexão, verificação ou vinculação com o Discord. Se o problema persistisse, orientou a usar o canal de perguntas à equipe e informar o dispositivo, se usava Java Edition ou Bedrock Edition, o erro e os passos já tentados. [Como pedir ajuda à equipe](https://discord.com/channels/737538781024092170/1569771434945806476/1569771922676252713)
 
