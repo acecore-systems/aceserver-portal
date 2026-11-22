@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:ffdf4e6494a791a748a80b1cb6cffc613fb9a8dc2440362845e2cdf5c3205e5e
+sourceHash: sha256:7b666aa9e8d4ee2e1cf7f38d8c1d94d0dc9124783a77d35bbb46e20987cf8e76
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -411,6 +411,8 @@ On April 14, 2026, Moon\_666 built the Woodland Mansion Apartments on the surviv
 
 On April 18, 2026, Moon\_666 reported that Woodland Mansion Apartments Nos. 1 to 3 were nearly complete, with work still underway on the facilities alongside No. 2.
 
+On June 3, 2026, Pluto outlined possible MMO classes for sword users, archers, mages, and shield users, among others, along with an 11-tier system for upgrading equipment. On June 5, Pluto proposed a dungeon with multiple floors.
+
 On June 5, 2026, あすたん outlined an MMO in which players would choose a class, level up, collect equipment, and grow stronger through class-specific skills and point allocation. On June 12, they reported that much of the core functionality was in place, with textures and models, skills, and work on the world still to do.
 
 On September 17, 2026, タケ announced that the Aceserver Revitalization Committee had started redeveloping the central part of the old Century site. タケ also reported that several volunteers had made progress clearing the area. [Start of the old Century site redevelopment](https://discord.com/channels/737538781024092170/1437442902547759125/1550005135311110154)
@@ -433,6 +435,8 @@ In March 2021, KOTA-SAN explained changes to the rules and etiquette for communi
 
 In August 2021, てぃあ put together a guide to major facilities such as the town hall, trading hall, tree farm, and shared farm, and identified which places new players should be shown first. In February 2022, はっ added accommodation for newcomers to the shared facilities guide.
 
+On September 3, 2021, てぃあ explained that the guidance for new players had asked them to check first before building near large structures. On October 9, てぃあ said that adding images to posts showing where facilities were located had been an idea since the guide channel was created.
+
 In August 2021, KOTA-SAN compiled a list of useful commands for the plugins installed at the time.
 
 According to old Discord records, in August 2021 KOTA-SAN reported creating and launching Ace-kun, a bot that automatically sent instructions to newcomers in the lobby. In January 2022, KOTA-SAN reported restoring Ace-kun as one of the co-creators of Ace-kun and Kutya. In May, KOTA-SAN added automatic posting of a self-introduction template.
@@ -444,6 +448,10 @@ In May 2022, はっ shared a list of in-game items for Azkaban.
 In May 2022, Mugi reported that Kutya could read Japanese Morse code aloud.
 
 In June 2022, Mugi updated the text-to-speech bot Kutya to support chat inside voice channels. In March 2023, Mugi announced a bot for sending anonymous feedback to the server team. [Kutya update](https://discord.com/channels/737538781024092170/774152638450237460/986439863937155122) [Anonymous feedback announcement](https://discord.com/channels/737538781024092170/774152638450237460/1087976366126927882)
+
+On June 25 and 26, 2022, yanyan_fafnir asked players to weigh in through a supporter survey on opening the test world Azkaban as a temporary play area. taibon0727 described the idea as something like a demo, and sh pointed out that opening it to players could double as a test. taka8621 suggested a place where players could try building and experimenting with circuits without applying first.
+
+In August 2022, taka8621 asked for feedback on a proposal to protect items stored in chests and similar containers by restricting the breaking of blocks that held items. taibon0727 asked whether chests and barrels would be covered and how much the protection would help prevent griefing.
 
 In August 2022, taka8621 shared a tested version of an anti-griefing plugin that limited what players could place in the game. In August and October, taka8621 also shared information about other plugins, including what they were for.
 

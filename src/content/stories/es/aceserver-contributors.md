@@ -2,7 +2,7 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:ffdf4e6494a791a748a80b1cb6cffc613fb9a8dc2440362845e2cdf5c3205e5e
+sourceHash: sha256:7b666aa9e8d4ee2e1cf7f38d8c1d94d0dc9124783a77d35bbb46e20987cf8e76
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -411,6 +411,8 @@ El 14 de abril de 2026, Moon\_666 construyó los Apartamentos de la Mansión del
 
 El 18 de abril de 2026, Moon\_666 informó de que los Apartamentos de la Mansión del Bosque n.º 1 a 3 estaban casi terminados y que las instalaciones anexas al n.º 2 seguían en obras.
 
+El 3 de junio de 2026, Pluto planteó posibles clases para el MMO, entre ellas usuarios de espada y arco, magos y usuarios de escudo, además de un sistema de mejora del equipo en 11 etapas. El 5 de junio, Pluto propuso una mazmorra con varios pisos.
+
 El 5 de junio de 2026, あすたん preparó una propuesta para un MMO en el que se podría elegir una clase, subir de nivel, reunir equipo y mejorar mediante las habilidades de cada clase y el reparto de puntos. El 12 de junio, informó de que gran parte de las funciones básicas ya estaba implementada y que quedaba trabajar en las texturas y los modelos, las habilidades y el mundo, entre otros aspectos.
 
 El 17 de septiembre de 2026, タケ anunció que el Comité de Revitalización de Aceserver había empezado a remodelar la parte central del antiguo emplazamiento de Century. También informó de que varias personas habían ayudado a despejar la zona. [Inicio de la remodelación del antiguo emplazamiento de Century](https://discord.com/channels/737538781024092170/1437442902547759125/1550005135311110154)
@@ -433,6 +435,8 @@ En marzo de 2021, KOTA-SAN explicó los cambios en las normas de comunicación y
 
 En agosto de 2021, てぃあ reunió en una guía instalaciones importantes como el ayuntamiento, el centro de comercio, la granja de árboles y la granja compartida, e indicó cuáles convenía mostrar primero a los nuevos jugadores. En febrero de 2022, はっ añadió el alojamiento para nuevos jugadores a la guía de instalaciones compartidas.
 
+El 3 de septiembre de 2021, てぃあ explicó que en la guía para nuevos jugadores les había pedido que consultaran antes de construir cerca de edificios grandes. El 9 de octubre explicó que, desde que se abrió el canal de guías, había considerado adjuntar imágenes a las publicaciones que indicaban la ubicación de las instalaciones.
+
 En agosto de 2021, KOTA-SAN recopiló comandos útiles de los plugins que estaban instalados en ese momento.
 
 Según los registros del antiguo canal de Discord, en agosto de 2021 KOTA-SAN informó de que había creado y puesto en marcha Ace-kun, un bot que enviaba instrucciones automáticamente a quienes acababan de entrar en el vestíbulo. En enero de 2022, como uno de los creadores de Ace-kun y Kutya, KOTA-SAN anunció el restablecimiento de Ace-kun. En mayo, añadió la publicación automática de una plantilla de presentación personal.
@@ -444,6 +448,10 @@ En mayo de 2022, はっ compartió una lista de objetos del juego para Azkaban.
 En mayo de 2022, Mugi informó de que Kutya ya podía leer en voz alta código morse japonés.
 
 En junio de 2022, Mugi actualizó el bot de lectura Kutya para que funcionara con el chat dentro de los canales de voz. En marzo de 2023, anunció un bot para enviar comentarios anónimos al equipo del servidor. [Actualización de Kutya](https://discord.com/channels/737538781024092170/774152638450237460/986439863937155122) [Anuncio del canal de comentarios anónimos](https://discord.com/channels/737538781024092170/774152638450237460/1087976366126927882)
+
+Entre el 25 y el 26 de junio de 2022, yanyan_fafnir pidió a los jugadores su opinión en una encuesta del equipo de apoyo sobre la idea de abrir temporalmente el mundo de pruebas Azkaban como zona de juego. taibon0727 explicó que sería algo parecido a una versión de demostración, y sh señaló que abrirlo a los jugadores también serviría como prueba. taka8621 propuso un lugar donde probar construcciones y circuitos sin presentar una solicitud previa.
+
+En agosto de 2022, taka8621 pidió opiniones sobre una propuesta para proteger los objetos guardados en cofres y otros recipientes limitando la rotura de bloques que contuvieran objetos. taibon0727 preguntó si la medida se aplicaría a cofres y barriles y cuánto ayudaría a prevenir el vandalismo en el juego.
 
 En agosto de 2022, taka8621 compartió una versión probada de un plugin contra el vandalismo que limitaba lo que los jugadores podían colocar en el juego. En agosto y octubre, también compartió información sobre otros plugins, incluida su finalidad.
 

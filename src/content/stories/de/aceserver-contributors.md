@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:ffdf4e6494a791a748a80b1cb6cffc613fb9a8dc2440362845e2cdf5c3205e5e
+sourceHash: sha256:7b666aa9e8d4ee2e1cf7f38d8c1d94d0dc9124783a77d35bbb46e20987cf8e76
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -411,6 +411,8 @@ Am 14. April 2026 baute Moon\_666 auf dem Überlebensserver die Wohnungen im Wal
 
 Am 18. April 2026 berichtete Moon\_666, dass die Wohnungen im Waldanwesen Nr. 1 bis 3 fast fertig waren. Die Arbeiten an den Einrichtungen bei Nr. 2 liefen noch.
 
+Am 3. Juni 2026 skizzierte Pluto mehrere Klassen für das MMO, darunter Klassen für Schwert, Bogen, Magie und Schild, sowie ein System mit elf Stufen zur Verbesserung der Ausrüstung. Am 5. Juni schlug Pluto einen Dungeon mit mehreren Ebenen vor.
+
 Am 5. Juni 2026 entwarf あすたん ein MMO-Konzept, in dem Spieler eine Klasse wählen, im Level aufsteigen, Ausrüstung sammeln und durch klassenspezifische Fähigkeiten und das Verteilen von Punkten stärker werden sollten. Am 12. Juni berichtete あすたん, dass die Umsetzung der Grundfunktionen weit fortgeschritten sei. Texturen und Modelle, Fähigkeiten und die Spielwelt mussten unter anderem noch ausgearbeitet werden.
 
 Am 17. September 2026 kündigte タケ an, dass das Belebungskomitee von Aceserver mit der Neugestaltung des zentralen Bereichs des ehemaligen Century-Geländes begonnen hatte. タケ berichtete auch, dass mehrere Helfer beim Aufräumen vorangekommen waren. [Beginn der Neugestaltung des ehemaligen Century-Geländes](https://discord.com/channels/737538781024092170/1437442902547759125/1550005135311110154)
@@ -433,6 +435,8 @@ Im März 2021 erläuterte KOTA-SAN die Änderungen an den damaligen Kommunikatio
 
 Im August 2021 stellte てぃあ wichtige Einrichtungen wie das Rathaus, die Handelshalle, die Baumfarm und die Gemeinschaftsfarm zusammen und hielt fest, welche Orte neuen Spielern zuerst gezeigt werden sollten. Im Februar 2022 ergänzte はっ den Leitfaden zu gemeinsamen Einrichtungen um eine Unterkunft für neue Spieler.
 
+Am 3. September 2021 erklärte てぃあ, neuen Spielern in der Einführung geraten zu haben, vor dem Bauen in der Nähe großer Gebäude nachzufragen. Am 9. Oktober erklärte てぃあ, seit der Einrichtung des Infokanals darüber nachgedacht zu haben, Beiträge über die Standorte von Einrichtungen mit Bildern zu versehen.
+
 Im August 2021 stellte KOTA-SAN nützliche Befehle für die damals installierten Plugins zusammen.
 
 Laut den Aufzeichnungen aus dem früheren Discord-Kanal berichtete KOTA-SAN im August 2021, den Bot Ace-kun erstellt und in Betrieb genommen zu haben. Der Bot schickte neuen Teilnehmern in der Lobby automatisch eine Anleitung. Im Januar 2022 meldete KOTA-SAN als einer der Mitentwickler von Ace-kun und Kutya, dass Ace-kun wieder lief. Im Mai ergänzte KOTA-SAN die automatische Veröffentlichung einer Vorlage für die persönliche Vorstellung.
@@ -444,6 +448,10 @@ Im Mai 2022 stellte はっ eine Liste der Spielgegenstände für Askaban vor.
 Im Mai 2022 berichtete Mugi, dass Kutya japanischen Morsecode vorlesen konnte.
 
 Im Juni 2022 aktualisierte Mugi den Vorlesebot Kutya für Textchats in Sprachkanälen. Im März 2023 kündigte Mugi einen Bot an, über den Spieler dem Serverteam anonym Rückmeldung geben konnten. [Kutya-Update](https://discord.com/channels/737538781024092170/774152638450237460/986439863937155122) [Ankündigung für anonymes Feedback](https://discord.com/channels/737538781024092170/774152638450237460/1087976366126927882)
+
+Am 25. und 26. Juni 2022 bat yanyan_fafnir die Spieler in einer Umfrage der Supporter um ihre Meinung dazu, die Testwelt Azkaban vorübergehend als Spielbereich zu öffnen. taibon0727 beschrieb die Idee als eine Art Demoversion, und sh wies darauf hin, dass die Öffnung für Spieler zugleich als Test dienen könnte. taka8621 schlug einen Ort vor, an dem Spieler ohne vorherigen Antrag Bauten und Schaltungen ausprobieren könnten.
+
+Im August 2022 bat taka8621 um Rückmeldungen zu einem Vorschlag, Gegenstände in Truhen und ähnlichen Behältern zu schützen, indem das Abbauen von Blöcken mit Inhalt eingeschränkt würde. taibon0727 fragte, ob Truhen und Fässer darunterfallen würden und wie viel der Schutz gegen Griefing ausrichten könnte.
 
 Im August 2022 teilte taka8621 eine getestete Version eines Anti-Griefing-Plugins, das einschränkte, was Spieler im Spiel platzieren konnten. Im August und Oktober teilte taka8621 außerdem Informationen über andere Plugins und deren Zweck.
 
