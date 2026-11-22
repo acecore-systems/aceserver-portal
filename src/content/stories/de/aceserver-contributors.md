@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:60b67f558f1df6d1c2edb9352c4e22373067b1c7f4ca8cde0e700d6260eb3e35
+sourceHash: sha256:8e6a3a5cf86c3697a055af64873c7002c5503fb272dd2b922660e170584c929d
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -405,6 +405,8 @@ Im Oktober 2025 schlug End&#12539;コッカー für Fall Battle eine zylindrisch
 
 Am 20. Oktober 2025 stellte Nishikino Sega das Vorhaben des Belebungskomitees von Aceserver für einen großen Bahnhof auf dem Saisonserver vor. Nishikino Sega rechnete mit einem Gebäude nach Art eines Bahnhofsgebäudes und schlug vor, es zu nutzen, falls das Serverteam einen Handelsplatz einrichten sollte.
 
+Am 1. November 2025 berichtete End&#12539;コッカー, ein Portal für die Rückkehr in die Lobby verbunden und dort Schilder mit Einblicken in die Entstehung aufgestellt zu haben.
+
 Im November 2025 meldete End&#12539;コッカー, dass Portale in acht Richtungen eingerichtet worden waren, die zu entfernten Bereichen des Survival-Servers führten. [Ankündigung zum Einbau der Portale](https://discord.com/channels/737538781024092170/774152638450237460/1434193495752704134)
 
 Im November 2025 meldete Moon\_666 die Fertigstellung einer Farm für zombifizierte Piglins auf dem Saisonserver, die Gold und Erfahrungspunkte lieferte. [Bericht zur Fertigstellung auf dem Saisonserver](https://discord.com/channels/737538781024092170/1437442961507090443/1440300609545965649)
@@ -492,6 +494,10 @@ Am 11. Februar 2023 teilte taka8621 die auf dem Hauptserver erzeugten Dynmap-Dat
 Am 6. März 2023 führte Gui eine Testmigration der Datenbank durch und berichtete, dass der Umzug weniger Zeit benötigte. Am 11. Mai erklärte taka8621, dass ein Plugin zur Prüfung der Verarbeitungsgeschwindigkeit des Servers und der Netzwerklatenz im Einsatz war.
 
 Am 21. März 2023 teilte taka8621 sieben Bilder mit den damaligen eigenen Rezepten von Aceserver. Sie zeigten Beispiele mit Gras oder versteinerten Eichenholzstufen als Zutaten sowie Rezepte für verzauberte Bücher und Ausrüstung.
+
+Am 23. März 2023 fragte NIkumatu514, ob ein vorübergehendes Portal vom Veranstaltungsort zum Ressourcenserver eingerichtet werden könnte.
+
+Am 31. März 2023 erklärte あすたん im Austausch mit Moon\_666, dass ein Update des Wiki-Codes die Weltkarte in der Anzeige vergrößert hatte.
 
 Im April 2023 berichtete Yukke, die Aussprache von „Hi“ ins Vorlesewörterbuch der damaligen Chat-Verknüpfung aufgenommen zu haben.
 

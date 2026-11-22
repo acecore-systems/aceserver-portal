@@ -2,7 +2,7 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:60b67f558f1df6d1c2edb9352c4e22373067b1c7f4ca8cde0e700d6260eb3e35
+sourceHash: sha256:8e6a3a5cf86c3697a055af64873c7002c5503fb272dd2b922660e170584c929d
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -405,6 +405,8 @@ En octubre de 2025, End&#12539;コッカー propuso un mapa cilíndrico para Fal
 
 El 20 de octubre de 2025, Nishikino Sega presentó el proyecto de una gran estación que el Comité de Revitalización de Aceserver estaba preparando en el servidor de temporada. Señaló que probablemente incluiría un edificio similar al de una estación y propuso aprovecharlo si el equipo del servidor decidía instalar un puesto de comercio.
 
+El 1 de noviembre de 2025, End&#12539;コッカー informó de que había conectado un portal de regreso al vestíbulo y añadido allí carteles con detalles entre bastidores sobre la construcción.
+
 En noviembre de 2025, End&#12539;コッカー informó de que había instalado portales en ocho direcciones para llegar a zonas lejanas del servidor de supervivencia. [Anuncio de la instalación de portales](https://discord.com/channels/737538781024092170/774152638450237460/1434193495752704134)
 
 En noviembre de 2025, Moon\_666 informó de que se había completado en el servidor de temporada una granja de piglins zombificados que daba oro y experiencia. [Informe de finalización en el servidor de temporada](https://discord.com/channels/737538781024092170/1437442961507090443/1440300609545965649)
@@ -492,6 +494,10 @@ El 11 de febrero de 2023, taka8621 compartió los datos de Dynmap generados en e
 El 6 de marzo de 2023, Gui hizo una migración de prueba de la base de datos e informó que había tardado menos. El 11 de mayo, taka8621 explicó que estaba usando un complemento para comprobar la velocidad de procesamiento del servidor y la latencia de la red.
 
 El 21 de marzo de 2023, taka8621 compartió siete imágenes con las recetas personalizadas que tenía Aceserver por entonces. Mostraban ejemplos con hierba o losas de roble petrificado como ingredientes y recetas para fabricar libros encantados y equipamiento.
+
+El 23 de marzo de 2023, NIkumatu514 consultó si se podía instalar un portal temporal desde el recinto del evento hasta el servidor de recursos.
+
+El 31 de marzo de 2023, en un intercambio con Moon\_666, あすたん explicó que el mapa del mundo se veía más grande tras una actualización del código de la wiki.
 
 En abril de 2023, Yukke informó de que había añadido la pronunciación de «Hi» al diccionario de lectura en voz alta de la integración de chat que se usaba entonces.
 

@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:60b67f558f1df6d1c2edb9352c4e22373067b1c7f4ca8cde0e700d6260eb3e35
+sourceHash: sha256:8e6a3a5cf86c3697a055af64873c7002c5503fb272dd2b922660e170584c929d
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -405,6 +405,8 @@ In October 2025, End&#12539;コッカー proposed a cylindrical map for Fall Bat
 
 On October 20, 2025, Nishikino Sega described the Aceserver Revitalization Committee’s plans for a large station on the Season Server. They said the plans were likely to include a station-style building and suggested using it if the server team decided to set up a trading post.
 
+On November 1, 2025, End&#12539;コッカー reported connecting a gate back to the lobby and adding signs in the lobby with behind-the-scenes notes about the build.
+
 In November 2025, End&#12539;コッカー reported installing gates in eight directions to reach distant parts of the survival server. [Gate installation announcement](https://discord.com/channels/737538781024092170/774152638450237460/1434193495752704134)
 
 In November 2025, Moon\_666 reported that a zombified piglin farm for gold and experience points was complete on the Season Server. [Season Server completion report](https://discord.com/channels/737538781024092170/1437442961507090443/1440300609545965649)
@@ -492,6 +494,10 @@ On February 11, 2023, taka8621 shared Dynmap data generated on the main server a
 On March 6, 2023, Gui ran a trial database migration and reported that the migration took less time. On May 11, taka8621 explained that they were using a plugin to check server processing speed and network latency.
 
 On March 21, 2023, taka8621 shared seven images of Aceserver’s custom recipes at the time. They showed examples using grass or petrified oak slabs as ingredients and recipes for enchanted books and equipment.
+
+On March 23, 2023, NIkumatu514 asked whether a temporary portal could be set up from the event venue to the resource server.
+
+On March 31, 2023, in an exchange with Moon\_666, あすたん explained that an update to the wiki’s code had made the world map display larger.
 
 In April 2023, Yukke reported adding a pronunciation entry for “Hi” to the read-aloud dictionary of the chat integration used at the time.
 

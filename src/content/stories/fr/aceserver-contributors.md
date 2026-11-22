@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:60b67f558f1df6d1c2edb9352c4e22373067b1c7f4ca8cde0e700d6260eb3e35
+sourceHash: sha256:8e6a3a5cf86c3697a055af64873c7002c5503fb272dd2b922660e170584c929d
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -405,6 +405,8 @@ En octobre 2025, End&#12539;コッカー a proposé une carte cylindrique pour F
 
 Le 20 octobre 2025, Nishikino Sega a présenté le projet de grande gare que le comité de revitalisation d’Aceserver préparait sur le serveur saisonnier. Nishikino Sega a indiqué qu’un bâtiment de type gare serait probablement construit et a proposé de l’utiliser si l’équipe du serveur décidait d’ouvrir un comptoir d’échange.
 
+Le 1er novembre 2025, End&#12539;コッカー a annoncé avoir relié un portail de retour au hall et ajouté dans le hall des panneaux sur les coulisses de la réalisation.
+
 En novembre 2025, End&#12539;コッカー a annoncé l’installation de portails dans huit directions pour atteindre les zones éloignées du serveur de survie. [Annonce de l’installation des portails](https://discord.com/channels/737538781024092170/774152638450237460/1434193495752704134)
 
 En novembre 2025, Moon\_666 a annoncé qu’une ferme à piglins zombifiés qui rapportait de l’or et des points d’expérience était terminée sur le serveur de saison. [Rapport d’achèvement sur le serveur de saison](https://discord.com/channels/737538781024092170/1437442961507090443/1440300609545965649)
@@ -492,6 +494,10 @@ Le 11 février 2023, taka8621 a partagé les données Dynmap générées sur le 
 Le 6 mars 2023, Gui a effectué une migration de test de la base de données et a indiqué que l’opération avait pris moins de temps. Le 11 mai, taka8621 a expliqué utiliser un plugin pour vérifier la vitesse de traitement du serveur et la latence du réseau.
 
 Le 21 mars 2023, taka8621 a partagé sept images présentant les recettes personnalisées d’Aceserver à l’époque. Elles montraient des exemples utilisant de l’herbe ou des dalles de chêne pétrifié comme ingrédients, ainsi que des recettes de livres enchantés et d’équipements.
+
+Le 23 mars 2023, NIkumatu514 a demandé s’il serait possible d’installer un portail temporaire reliant le lieu de l’événement au serveur de ressources.
+
+Le 31 mars 2023, lors d’un échange avec Moon\_666, あすたん a expliqué qu’une mise à jour du code du wiki avait agrandi l’affichage de la carte du monde.
 
 En avril 2023, Yukke a indiqué avoir ajouté la prononciation de « Hi » au dictionnaire de lecture à voix haute de l’intégration du chat de l’époque.
 
