@@ -2,7 +2,7 @@
 title: As pessoas que apoiaram o Aceserver
 description: Conheça quem ajudou o Aceserver pelos retratos de skins do Minecraft, relembre as atividades e confira o roteiro de eventos e propostas.
 translationOf: aceserver-contributors
-sourceHash: sha256:9ae354093a46ff6dfe9b84917f7abce9bc7362763f3ae5b61164fd62215cffcd
+sourceHash: sha256:0aadd367f375daff23236ff847fdc53e9b18c555e2b9046048a7deb9a943b319
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -62,6 +62,8 @@ Em setembro de 2023, タケ apresentou a Companhia Take do Monotrilho Ace, com T
 Em outubro de 2023, PetiteShelf7874 apresentou as atividades e o mapa da Vila da Pequena Colina. A apresentação identificou PetiteShelf7874 como líder e yamaharu929, kacchan0706, bananakun315 e TK7K2 como membros iniciais. PetiteShelf7874 informou que abriu um servidor no Discord para divulgar orientações depois que a Vila da Pequena Colina foi reconhecida como comunidade.
 
 Em abril de 2024, End&#12539;コッカー convidou pessoas na Associação dos Caçadores a colaborar na criação do servidor de RPG.
+
+Em 22 de julho de 2024, End&#12539;コッカー procurou ajuda com as construções no servidor de RPG e propôs oferecer oficinas de construção cerca de duas vezes por mês para quem quisesse aprender e colaborar.
 
 Em setembro de 2024, sekisei apresentou Mars (nome provisório), um grupo de planejamento e produção de minijogos. A apresentação listou sekisei0077 como líder e usualparrot e miin2000 como membros iniciais. sekisei descreveu ideias de minijogos sobre quedas e élitros e convidou pessoas a colaborar na construção e na produção.
 
@@ -374,6 +376,8 @@ Em fevereiro de 2023, あすたん explicou como organizar uma escavação conju
 Em abril de 2023, あすたん explicou quais informações eram necessárias na época para solicitar grandes construções, e ゆり compartilhou um modelo de solicitação. ゆり também apresentou o plano de construir um túnel no trecho do Circuito Internacional do Reino de Kuwa que passava por uma montanha.
 
 Em uma inscrição no concurso de fotografia de novembro de 2023, Yukke relembrou a escavação de 256 chunks para a instalação de esqueletos Wither e as medidas para impedir o surgimento de criaturas. Em dezembro, あすたん descreveu como usou a instalação de Yukke para derrotar Withers com outros jogadores e criar um arco-íris com mais de 200 sinalizadores.
+
+Em 4 de maio de 2024, sh informou ter criado um monumento no jogo dedicado a um jogador e pediu sugestões de quem poderia ser tema do próximo.
 
 Em maio de 2024, PillowKebap apresentou um pedido para um projeto de arte em mapas em grande escala. Em agosto, Amagi\_467 apresentou um plano de uma fazenda de golens para instalações públicas. Em novembro, タケ solicitou a construção de estruturas como um pátio ferroviário e depósitos.
 

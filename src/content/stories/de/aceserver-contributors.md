@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:9ae354093a46ff6dfe9b84917f7abce9bc7362763f3ae5b61164fd62215cffcd
+sourceHash: sha256:0aadd367f375daff23236ff847fdc53e9b18c555e2b9046048a7deb9a943b319
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -62,6 +62,8 @@ Im September 2023 stellte タケ die Ace-Monorail-Gesellschaft Take vor. In der 
 Im Oktober 2023 stellte PetiteShelf7874 die Aktivitäten und die Karte des Dorfs am kleinen Hügel vor. In der Vorstellung standen PetiteShelf7874 als Leiter sowie yamaharu929, kacchan0706, bananakun315 und TK7K2 als frühe Mitglieder. PetiteShelf7874 berichtete, nach der Anerkennung des Dorfs am kleinen Hügel als Gemeinschaft einen Discord-Server mit Informationen eröffnet zu haben.
 
 Im April 2024 suchte End&#12539;コッカー in der Jägervereinigung nach Freiwilligen für die Entwicklung des RPG-Servers.
+
+Am 22. Juli 2024 suchte End&#12539;コッカー Helfer für Bauarbeiten auf dem RPG-Server und schlug für Freiwillige, die das Bauen lernen wollten, etwa zwei Bauworkshops pro Monat vor.
 
 Im September 2024 stellte sekisei Mars (Arbeitstitel) vor, eine Gruppe zur Planung und Entwicklung von Minispielen. In der Vorstellung standen sekisei0077 als Leiter sowie usualparrot und miin2000 als frühe Mitglieder. sekisei beschrieb Ideen für Minispiele rund um das Fallen und die Elytren und warb um Hilfe beim Bauen und Entwickeln.
 
@@ -374,6 +376,8 @@ Im Februar 2023 erklärte あすたん, wie die gemeinsamen Ausgrabungen für ei
 Im April 2023 erklärte あすたん, welche Angaben damals für Anträge auf größere Bauvorhaben nötig waren. ゆり teilte eine Antragsvorlage und erläuterte außerdem den Plan für einen Tunnel auf dem Abschnitt der internationalen Rennstrecke des Königreichs Kuwa, der durch einen Berg führen sollte.
 
 In einem Fotowettbewerbsbeitrag vom November 2023 erinnerte sich Yukke daran, 256 Chunks für die Witherskelettanlage ausgehoben und Maßnahmen gegen das Spawnen getroffen zu haben. In einem Beitrag vom Dezember beschrieb あすたん, wie die Gruppe in Yukkes Anlage Wither besiegte und mit mehr als 200 Leuchtfeuern einen Regenbogen baute.
+
+Am 4. Mai 2024 berichtete sh, im Spiel ein Denkmal für einen Spieler gebaut zu haben, und bat um Vorschläge, wem das nächste gewidmet werden könnte.
 
 Im Mai 2024 reichte PillowKebap einen Antrag für ein großes Kartenkunstprojekt ein. Im August legte Amagi\_467 einen Plan für eine Golemfarm für öffentliche Einrichtungen vor. Im November beantragte タケ den Bau von Einrichtungen wie einem Bahnbetriebshof und Lagerhäusern.
 

@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:9ae354093a46ff6dfe9b84917f7abce9bc7362763f3ae5b61164fd62215cffcd
+sourceHash: sha256:0aadd367f375daff23236ff847fdc53e9b18c555e2b9046048a7deb9a943b319
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -62,6 +62,8 @@ En septembre 2023, タケ a présenté la Compagnie Take du monorail Ace. La pr�
 En octobre 2023, PetiteShelf7874 a présenté les activités et la carte du Village de la Petite Colline. La présentation indiquait PetiteShelf7874 comme responsable et yamaharu929, kacchan0706, bananakun315 et TK7K2 comme premiers membres. PetiteShelf7874 a annoncé avoir ouvert un serveur Discord d’information après la reconnaissance du Village de la Petite Colline comme communauté.
 
 En avril 2024, End&#12539;コッカー a fait appel à des volontaires au sein de l’Association des chasseurs pour participer à la création du serveur RPG.
+
+Le 22 juillet 2024, End&#12539;コッカー a cherché des volontaires pour construire sur le serveur RPG et a proposé des ateliers de construction environ deux fois par mois pour les personnes souhaitant apprendre.
 
 En septembre 2024, sekisei a présenté Mars (nom provisoire), un groupe de conception et de création de mini-jeux. La présentation indiquait sekisei0077 comme responsable et usualparrot et miin2000 comme premiers membres. sekisei a décrit des idées de mini-jeux autour de la chute et des élytres et a fait appel à des volontaires pour la construction et la création.
 
@@ -374,6 +376,8 @@ En février 2023, あすたん a expliqué comment organiser le creusement colle
 En avril 2023, あすたん a expliqué quelles informations étaient alors requises pour demander l’autorisation d’une construction de grande ampleur, et ゆり a partagé un modèle de demande. ゆり a aussi présenté le projet de faire passer dans un tunnel le tronçon montagneux du Circuit international du royaume de Kuwa.
 
 Dans sa participation au concours photo de novembre 2023, Yukke est revenu sur l’excavation de 256 chunks pour l’installation de squelettes Wither et sur les mesures prises contre l’apparition de créatures. En décembre, あすたん a expliqué avoir utilisé l’installation de Yukke pour vaincre des Withers avec d’autres joueurs et créer un arc-en-ciel avec plus de 200 balises.
+
+Le 4 mai 2024, sh a annoncé avoir créé dans le jeu un monument consacré à un joueur et a demandé de proposer des joueurs à qui consacrer le prochain.
 
 En mai 2024, PillowKebap a déposé une demande pour un grand projet d’art sur carte. En août, Amagi\_467 a présenté un projet de ferme à golems pour les installations publiques. En novembre, タケ a demandé à construire des installations dont un dépôt ferroviaire et des entrepôts.
 

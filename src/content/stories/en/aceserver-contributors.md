@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:9ae354093a46ff6dfe9b84917f7abce9bc7362763f3ae5b61164fd62215cffcd
+sourceHash: sha256:0aadd367f375daff23236ff847fdc53e9b18c555e2b9046048a7deb9a943b319
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -62,6 +62,8 @@ In September 2023, タケ introduced the Ace Monorail Take Company, listing Take
 In October 2023, PetiteShelf7874 introduced the activities and map of Small Hill Village. The introduction listed PetiteShelf7874 as leader and yamaharu929, kacchan0706, bananakun315, and TK7K2 as early members. PetiteShelf7874 reported opening an informational Discord server after Small Hill Village was recognized as a community.
 
 In April 2024, End&#12539;コッカー invited people through the Hunters Association to help create the RPG server.
+
+On July 22, 2024, End&#12539;コッカー sought help with building on the RPG server and proposed holding building workshops about twice a month for volunteers who wanted to learn.
 
 In September 2024, sekisei introduced Mars (working title), a group for planning and making minigames. The introduction listed sekisei0077 as leader and usualparrot and miin2000 as early members. sekisei described minigame ideas based on falling and Elytra and invited people to help build and develop them.
 
@@ -374,6 +376,8 @@ In February 2023, あすたん shared how to organize a group excavation for a z
 In April 2023, あすたん explained what information was needed to apply for large builds at the time, and ゆり shared an application template. ゆり also outlined a plan for a tunnel where the course at the Kuwa Kingdom International Circuit crossed a mountain.
 
 In a November 2023 photo contest entry, Yukke looked back on excavating 256 chunks for the wither skeleton facility and taking measures to prevent spawns. In a December entry, あすたん described using Yukke’s facility to defeat Withers with other players and make a rainbow with more than 200 beacons.
+
+On May 4, 2024, sh reported creating an in-game monument dedicated to a player and asked for suggestions of players to feature in the next one.
 
 In May 2024, PillowKebap applied for a large map art project. In August, Amagi\_467 submitted a plan for a golem farm for public facilities. In November, タケ applied to build facilities including a rail depot and warehouses.
 
