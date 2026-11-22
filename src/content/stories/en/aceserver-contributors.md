@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:8e6a3a5cf86c3697a055af64873c7002c5503fb272dd2b922660e170584c929d
+sourceHash: sha256:6dbcf472ade64b77f64fa08827b40135f0ed5f21541e8fc58860b2729fdf0ae4
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -215,6 +215,8 @@ On October 18, 2025, End&#12539;コッカー shared a chart comparing several Mi
 
 On October 26, 2025, End&#12539;コッカー thanked the people who helped with Halloween Town and the event. [Halloween Town and event acknowledgments](https://discord.com/channels/737538781024092170/779569416438415421/1432012641571704905)
 
+On October 28, 2025, sekisei proposed holding regular meetups and events once participants had come together, and using a shared game server as another place for people to connect.
+
 In October 2025, sh thanked the people who helped make events for the Aceserver Revitalization Committee and invited ideas for the next one. A November announcement named amagi_467 as the initiator of the first Aceserver Mahjong Tournament, which the committee planned to host. [Event thanks and call for ideas](https://discord.com/channels/737538781024092170/774152638450237460/1432028687376715897) [Mahjong tournament announcement](https://discord.com/channels/737538781024092170/774152638450237460/1442742157315149865)
 
 From November to December 2025, sh invited people who had never played mahjong to a beginner lesson scheduled for December 13.
@@ -395,6 +397,8 @@ On June 22, 2025, End&#12539;コッカー reported building on an island that Yu
 
 On September 1, 2025, End&#12539;コッカー proposed using creations by regular players as facilities on the Content Server.
 
+On September 1, 2025, End&#12539;コッカー shared an image illustrating a proposal to use facade walls to give the lobby its exterior appearance.
+
 On September 2, 2025, Yukke shared two reference screenshots of combat gear from another server while exploring the Duel concept.
 
 On September 5, End&#12539;コッカー reported laying a foundation and asked for help with the build in the old Lobby Building channel. On September 7, they suggested relocating the minigame server’s stairs and adding stalls. On September 9, they asked Yukke for feedback and shared three work-in-progress images showing the plaza’s fountain and stalls, as well as a sailing ship.
@@ -546,6 +550,8 @@ On September 7, 2025, sekisei proposed announcing the setup for the different se
 In September 2025, sekisei outlined ideas for creating minigame rooms, joining them from the lobby, and configuring them. On September 11, あすたん proposed storing match records so players could look them up. On September 15, Yukke proposed recording and displaying wins, losses, and win streaks.
 
 On September 12, 2025, Yukke shared a draft plan for in-game currency. It proposed using Ace Coins in the lobby and in minigames, among other places, and keeping the existing Grass Points on the Survival and Season Servers.
+
+On October 1, 2025, Pluto proposed adding a feature to the lobby that could reset player progress.
 
 On October 6 and 27, 2025, あすたん reported setting up a way to review the minigame settings together on screen.
 

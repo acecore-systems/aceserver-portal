@@ -2,7 +2,7 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:8e6a3a5cf86c3697a055af64873c7002c5503fb272dd2b922660e170584c929d
+sourceHash: sha256:6dbcf472ade64b77f64fa08827b40135f0ed5f21541e8fc58860b2729fdf0ae4
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -215,6 +215,8 @@ El 18 de octubre de 2025, End&#12539;コッカー compartió un gráfico que com
 
 El 26 de octubre de 2025, End&#12539;コッカー dio las gracias a quienes colaboraron con el pueblo de Halloween y con el evento. [Agradecimientos del pueblo de Halloween y del evento](https://discord.com/channels/737538781024092170/779569416438415421/1432012641571704905)
 
+El 28 de octubre de 2025, sekisei propuso organizar encuentros y eventos periódicos una vez reunidos los participantes y usar también un servidor de juego compartido para facilitar el contacto entre ellos.
+
 En octubre de 2025, sh agradeció la ayuda en la preparación de eventos del Comité de Revitalización de Aceserver y pidió ideas para el siguiente. En noviembre, un anuncio presentó a amagi_467 como iniciador del primer torneo de mahjong de Aceserver, que el comité tenía previsto organizar. [Agradecimientos y convocatoria de ideas](https://discord.com/channels/737538781024092170/774152638450237460/1432028687376715897) [Anuncio del torneo de mahjong](https://discord.com/channels/737538781024092170/774152638450237460/1442742157315149865)
 
 Entre noviembre y diciembre de 2025, sh invitó a quienes nunca habían jugado al mahjong a una clase de iniciación prevista para el 13 de diciembre.
@@ -395,6 +397,8 @@ El 22 de junio de 2025, End&#12539;コッカー informó de que estaba construye
 
 El 1 de septiembre de 2025, End&#12539;コッカー propuso incorporar creaciones de jugadores de la comunidad como instalaciones del servidor de contenidos.
 
+El 1 de septiembre de 2025, End&#12539;コッカー compartió con una imagen la idea de usar paredes de fachada para dar forma al exterior del vestíbulo.
+
 El 2 de septiembre de 2025, mientras estudiaba la idea de Duelo, Yukke compartió como referencia dos capturas del equipo de combate de otro servidor.
 
 El 5 de septiembre, End&#12539;コッカー informó en el antiguo canal Construcción del vestíbulo de que había preparado una base y pidió ayuda para construir. El 7 de septiembre propuso trasladar las escaleras del servidor de minijuegos y añadir puestos. El 9 compartió tres imágenes del trabajo en curso que mostraban la fuente y los puestos de la plaza, además de un velero, y pidió la opinión de Yukke.
@@ -546,6 +550,8 @@ El 7 de septiembre de 2025, sekisei propuso anunciar pronto la organización de 
 En septiembre de 2025, sekisei reunió propuestas sobre cómo crear salas de minijuegos, cómo acceder a ellas desde el vestíbulo y cómo configurarlas. El 11 de septiembre, あすたん propuso guardar los resultados de las partidas para poder consultarlos. El 15, Yukke propuso registrar y mostrar victorias, derrotas y rachas de victorias.
 
 El 12 de septiembre de 2025, Yukke compartió un borrador sobre la moneda del juego. Propuso usar Ace Coins en el vestíbulo, los minijuegos y otros espacios, y mantener los puntos de hierba que ya existían en los servidores de supervivencia y de temporada.
+
+El 1 de octubre de 2025, Pluto propuso añadir al vestíbulo una función para restablecer el progreso de los jugadores.
 
 El 6 y el 27 de octubre de 2025, あすたん informó de que había preparado un sistema para reunir y consultar los ajustes de los minijuegos en pantalla.
 

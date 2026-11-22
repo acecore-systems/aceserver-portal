@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:8e6a3a5cf86c3697a055af64873c7002c5503fb272dd2b922660e170584c929d
+sourceHash: sha256:6dbcf472ade64b77f64fa08827b40135f0ed5f21541e8fc58860b2729fdf0ae4
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -215,6 +215,8 @@ Am 18. Oktober 2025 teilte End&#12539;コッカー ein Schaubild, das mehrere Mi
 
 Am 26. Oktober 2025 dankte End&#12539;コッカー den Menschen, die beim Halloween-Dorf und dem Event geholfen hatten. [Dank für das Halloween-Dorf und das Event](https://discord.com/channels/737538781024092170/779569416438415421/1432012641571704905)
 
+Am 28. Oktober 2025 schlug sekisei vor, regelmäßige Treffen und Veranstaltungen abzuhalten, sobald sich Teilnehmende zusammengefunden hätten, und den Austausch auch über einen gemeinsamen Spielserver zu fördern.
+
 Im Oktober 2025 dankte sh den Helfern bei den Veranstaltungen des Belebungskomitees von Aceserver und bat um Ideen für das nächste Projekt. Eine Ankündigung im November nannte amagi_467 als Initiator des ersten Mahjong-Turniers von Aceserver, das das Komitee ausrichten wollte. [Dank und Aufruf für Ideen](https://discord.com/channels/737538781024092170/774152638450237460/1432028687376715897) [Ankündigung des Mahjong-Turniers](https://discord.com/channels/737538781024092170/774152638450237460/1442742157315149865)
 
 Von November bis Dezember 2025 lud sh Menschen ohne Mahjong-Erfahrung zu einem Einsteigerkurs ein, der für den 13. Dezember vorgesehen war.
@@ -395,6 +397,8 @@ Am 22. Juni 2025 berichtete End&#12539;コッカー, auf einer von Yukke angeleg
 
 Am 1. September 2025 schlug End&#12539;コッカー vor, Werke von Spielern aus der Community als Einrichtungen auf dem Content-Server zu übernehmen.
 
+Am 1. September 2025 teilte End&#12539;コッカー einen bebilderten Vorschlag, Fassadenwände für die Außengestaltung der Lobby zu verwenden.
+
 Am 2. September 2025 teilte Yukke beim Ausarbeiten der Idee Duell als Referenz zwei Screenshots mit Kampfausrüstung von einem anderen Server.
 
 Am 5. September berichtete End&#12539;コッカー im früheren Kanal Lobby-Bau, ein Fundament angelegt zu haben, und bat um Hilfe beim Bauen. Am 7. September schlug End&#12539;コッカー vor, die Treppen des Minispielservers zu versetzen und Stände aufzustellen. Am 9. September zeigte End&#12539;コッカー drei Bilder vom Zwischenstand mit dem Brunnen und den Ständen auf dem Platz sowie einem Segelschiff und bat Yukke um Rückmeldung.
@@ -546,6 +550,8 @@ Am 7. September 2025 schlug sekisei vor, den Aufbau der verschiedenen Server fr�
 Im September 2025 fasste sekisei Ideen zum Erstellen von Minispielräumen, zum Beitritt aus der Lobby und zu den Einstellungen zusammen. Am 11. September schlug あすたん vor, Spielergebnisse zu speichern und abrufbar zu machen. Am 15. September schlug Yukke vor, Siege, Niederlagen und Siegesserien zu erfassen und anzuzeigen.
 
 Am 12. September 2025 teilte Yukke einen Entwurf für die Währung im Spiel. Im Entwurf waren Ace Coins unter anderem für die Lobby und Minispiele vorgesehen. Auf dem Survival- und dem Saisonserver sollten die bestehenden Graspunkte weiterverwendet werden.
+
+Am 1. Oktober 2025 schlug Pluto eine Funktion in der Lobby vor, mit der sich der Fortschritt von Spielern zurücksetzen ließe.
 
 Am 6. und am 27. Oktober 2025 berichtete あすたん, eine Möglichkeit eingerichtet zu haben, die Minispieleinstellungen auf dem Bildschirm zu bündeln und einzusehen.
 

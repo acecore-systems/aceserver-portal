@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:8e6a3a5cf86c3697a055af64873c7002c5503fb272dd2b922660e170584c929d
+sourceHash: sha256:6dbcf472ade64b77f64fa08827b40135f0ed5f21541e8fc58860b2729fdf0ae4
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -215,6 +215,8 @@ Le 18 octobre 2025, End&#12539;コッカー a partagé un graphique comparant pl
 
 Le 26 octobre 2025, End&#12539;コッカー a remercié les personnes qui avaient aidé à préparer le village d’Halloween et l’événement. [Remerciements pour le village d’Halloween et l’événement](https://discord.com/channels/737538781024092170/779569416438415421/1432012641571704905)
 
+Le 28 octobre 2025, sekisei a proposé d’organiser des rencontres et des événements réguliers une fois les participants réunis, ainsi que d’utiliser un serveur de jeu commun pour multiplier les occasions d’échanger.
+
 En octobre 2025, sh a remercié les personnes qui avaient aidé à préparer les événements du comité de revitalisation d’Aceserver et a sollicité des idées pour la suite. En novembre, une annonce a présenté amagi_467 comme l’initiateur du premier tournoi de mahjong d’Aceserver, que le comité prévoyait d’organiser. [Remerciements et appel à idées](https://discord.com/channels/737538781024092170/774152638450237460/1432028687376715897) [Annonce du tournoi de mahjong](https://discord.com/channels/737538781024092170/774152638450237460/1442742157315149865)
 
 Entre novembre et décembre 2025, sh a invité les personnes qui n’avaient jamais joué au mahjong à suivre une séance d’initiation prévue le 13 décembre.
@@ -395,6 +397,8 @@ Le 22 juin 2025, End&#12539;コッカー a indiqué travailler à une constructi
 
 Le 1er septembre 2025, End&#12539;コッカー a proposé d’intégrer des créations réalisées par des joueurs de la communauté comme installations du serveur de contenu.
 
+Le 1er septembre 2025, End&#12539;コッカー a partagé, image à l’appui, une proposition pour donner au hall son apparence extérieure avec des murs de façade.
+
 Le 2 septembre 2025, Yukke a partagé deux captures de l’équipement de combat d’un autre serveur pour prendre des idées en réfléchissant au projet Duel.
 
 Le 5 septembre, End&#12539;コッカー a indiqué dans l’ancien salon Construction du hall avoir préparé une base et a demandé de l’aide pour la construction. Le 7 septembre, End&#12539;コッカー a suggéré de déplacer les escaliers du serveur de mini-jeux et d’ajouter des stands. Le 9 septembre, End&#12539;コッカー a demandé l’avis de Yukke et a partagé trois images du chantier montrant la fontaine et les stands de la place ainsi qu’un voilier.
@@ -546,6 +550,8 @@ Le 7 septembre 2025, sekisei a proposé d’annoncer tôt l’organisation des d
 En septembre 2025, sekisei a rassemblé des idées pour créer des salles de mini-jeux, y accéder depuis le hall et les configurer. Le 11 septembre, あすたん a proposé d’enregistrer les résultats pour pouvoir les consulter. Le 15 septembre, Yukke a proposé d’enregistrer et d’afficher les victoires, les défaites et les séries de victoires.
 
 Le 12 septembre 2025, Yukke a partagé une ébauche sur la monnaie du jeu. La proposition prévoyait d’utiliser les Ace Coins dans le hall, les mini-jeux et d’autres espaces, et de conserver les points d’herbe déjà utilisés sur les serveurs de survie et saisonniers.
+
+Le 1er octobre 2025, Pluto a proposé d’ajouter au hall une fonction permettant de réinitialiser la progression des joueurs.
 
 Les 6 et 27 octobre 2025, あすたん a signalé avoir mis en place un moyen de regrouper et de consulter les réglages des mini-jeux à l’écran.
 
