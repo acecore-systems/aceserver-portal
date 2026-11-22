@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:0aadd367f375daff23236ff847fdc53e9b18c555e2b9046048a7deb9a943b319
+sourceHash: sha256:ab3478f5525bfce2936b107c666d3daa0c62adeb3e9da5d48e867ac31253fb04
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -493,7 +493,11 @@ En septembre 2023, une annonce a présenté l’arrivée de あすたん dans l�
 
 Fin septembre 2024, sekisei a rédigé une proposition pour organiser les responsabilités des personnes qui assuraient alors l’assistance aux utilisateurs. Elle abordait la communication, la modification du wiki, la gestion des événements sur le serveur de jeu et leur déroulement au sein de la communauté.
 
+Le 13 septembre 2023, Mugi a partagé un projet de règlement Ē-hō et a suggéré de supprimer une phrase expliquant l’organisation de ses dispositions.
+
 Le 4 octobre 2023, あすたん a annoncé que la configuration des permissions des commandes de déplacement entre les serveurs était terminée.
+
+Le 26 octobre 2023, Syake a consulté le wiki et a indiqué ne pas avoir trouvé les versions de Minecraft prises en charge par le serveur.
 
 En janvier 2024, あすたん a ouvert le serveur Discord Ace Server Leaderboard Archive (ASLA) pour rassembler les records d’Aceserver. あすたん a présenté les règles de participation et la procédure de dépôt des records. あすたん a aussi publié des listes sur le minage, les statistiques et les lingots. キツネコ, Feruno et Taiyaki ont transmis des statistiques sur le salon des contributions, et Tabekirareta Potechi a proposé des entrées possibles pour des catégories comme celle du premier château.
 

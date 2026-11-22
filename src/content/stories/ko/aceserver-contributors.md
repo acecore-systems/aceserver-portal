@@ -2,7 +2,7 @@
 title: 에이스서버를 함께 만들어 온 사람들
 description: Minecraft 스킨 얼굴과 함께 에이스서버를 도운 사람들을 만나고, 활동 기록과 이벤트 및 플레이어 제안 로드맵을 확인하세요.
 translationOf: aceserver-contributors
-sourceHash: sha256:0aadd367f375daff23236ff847fdc53e9b18c555e2b9046048a7deb9a943b319
+sourceHash: sha256:ab3478f5525bfce2936b107c666d3daa0c62adeb3e9da5d48e867ac31253fb04
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -493,7 +493,11 @@ taibon0727은 유리 등 자재와 이동용 보트를 보관할 곳, 모래 작
 
 2024년 9월 하순, sekisei는 당시 사용자 지원 담당자의 역할을 정리하는 안을 마련했습니다. 홍보와 위키 편집, 게임 서버에서의 이벤트 대응과 커뮤니티에서의 이벤트 진행 등을 항목으로 들었습니다.
 
+2023년 9월 13일, Mugi는 Ē-hō 규정의 초안을 공유하고 항의 구성을 설명하는 한 문장을 빼자고 제안했습니다.
+
 2023년 10월 4일, あすたん은 서버 사이를 이동하는 데 쓰는 명령어의 권한 설정이 완료됐다고 보고했습니다.
+
+2023년 10월 26일, Syake는 위키를 확인한 뒤 서버가 지원하는 Minecraft 버전에 대한 안내를 찾지 못했다고 전했습니다.
 
 2024년 1월, あすたん은 에이스서버의 기록을 모으는 Discord 서버 Ace Server Leaderboard Archive(ASLA)를 열고 참여 규칙과 기록 신청 방법을 안내했습니다. 채굴, 통계, 주괴 목록도 게시했습니다. キツネコ, Feruno, Taiyaki는 신청 채널에 통계 기록을 보냈고, Tabekirareta Potechi는 첫 번째 성 등 기록 후보를 올렸습니다.
 

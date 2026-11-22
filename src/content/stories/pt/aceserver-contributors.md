@@ -2,7 +2,7 @@
 title: As pessoas que apoiaram o Aceserver
 description: Conheça quem ajudou o Aceserver pelos retratos de skins do Minecraft, relembre as atividades e confira o roteiro de eventos e propostas.
 translationOf: aceserver-contributors
-sourceHash: sha256:0aadd367f375daff23236ff847fdc53e9b18c555e2b9046048a7deb9a943b319
+sourceHash: sha256:ab3478f5525bfce2936b107c666d3daa0c62adeb3e9da5d48e867ac31253fb04
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -493,7 +493,11 @@ Em setembro de 2023, foi anunciado que あすたん passaria a integrar a admini
 
 No fim de setembro de 2024, sekisei preparou uma proposta para organizar as responsabilidades de quem apoiava os usuários na época. A proposta incluía divulgação, edição da wiki, apoio aos eventos no servidor de jogo e coordenação das atividades na comunidade.
 
+Em 13 de setembro de 2023, Mugi compartilhou um rascunho das regras Ē-hō e sugeriu omitir uma frase que explicava como os itens estavam organizados.
+
 Em 4 de outubro de 2023, あすたん informou que a configuração das permissões dos comandos de troca entre servidores tinha sido concluída.
+
+Em 26 de outubro de 2023, Syake consultou a wiki e informou que não tinha encontrado a indicação de quais versões do Minecraft o servidor aceitava.
 
 Em janeiro de 2024, あすたん abriu o Ace Server Leaderboard Archive (ASLA), um servidor no Discord para reunir registros do Aceserver. Explicou as regras de participação e como enviar os registros. Também publicou listas de mineração, estatísticas e lingotes. キツネコ, Feruno e Taiyaki enviaram estatísticas ao canal de contribuições, e Tabekirareta Potechi sugeriu candidatos para registros como o primeiro castelo.
 

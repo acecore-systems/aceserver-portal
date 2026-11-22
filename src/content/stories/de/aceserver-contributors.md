@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:0aadd367f375daff23236ff847fdc53e9b18c555e2b9046048a7deb9a943b319
+sourceHash: sha256:ab3478f5525bfce2936b107c666d3daa0c62adeb3e9da5d48e867ac31253fb04
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -493,7 +493,11 @@ Im September 2023 wurde bekannt gegeben, dass あすたん zum Serverteam kam un
 
 Ende September 2024 entwarf sekisei einen Vorschlag, um die damaligen Aufgaben im Nutzersupport zu ordnen. Dazu zählten Öffentlichkeitsarbeit, die Bearbeitung des Wikis, die Betreuung von Veranstaltungen auf dem Spielserver und deren Koordination in der Community.
 
+Am 13. September 2023 teilte Mugi einen Entwurf des Regelwerks Ē-hō und schlug vor, einen Satz zum Aufbau der einzelnen Absätze wegzulassen.
+
 Am 4. Oktober 2023 berichtete あすたん, dass die Berechtigungen für Befehle zum Wechsel zwischen Servern eingerichtet waren.
+
+Am 26. Oktober 2023 prüfte Syake das Wiki und berichtete, keine Angaben zu den vom Server unterstützten Minecraft-Versionen gefunden zu haben.
 
 Im Januar 2024 eröffnete あすたん den Discord-Server Ace Server Leaderboard Archive (ASLA), um Rekorde von Aceserver zu sammeln. あすたん erklärte die Teilnahmeregeln und wie man Rekorde einreichen konnte. あすたん veröffentlichte auch Listen zum Abbau, zu Statistiken und zu Barren. キツネコ, Feruno und Taiyaki reichten Statistiken im Beitragskanal ein. Tabekirareta Potechi schlug Kandidaten für Rekorde wie die erste Burg vor.
 

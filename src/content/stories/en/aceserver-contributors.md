@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:0aadd367f375daff23236ff847fdc53e9b18c555e2b9046048a7deb9a943b319
+sourceHash: sha256:ab3478f5525bfce2936b107c666d3daa0c62adeb3e9da5d48e867ac31253fb04
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -493,7 +493,11 @@ In September 2023, Aceserver announced that あすたん had joined the operatio
 
 In late September 2024, sekisei drafted a proposal for organizing user support responsibilities at the time. It covered publicity, Wiki editing, handling events on the game server, and coordinating events within the community.
 
+On September 13, 2023, Mugi shared a draft of the Ē-hō rules and suggested leaving out a sentence explaining how the clauses were organized.
+
 On October 4, 2023, あすたん reported that the permissions for commands used to move between servers had been configured.
+
+On October 26, 2023, Syake checked the wiki and reported being unable to find which Minecraft versions the server supported.
 
 In January 2024, あすたん opened a Discord server, the Ace Server Leaderboard Archive (ASLA), to collect records from Aceserver. They explained the participation rules and how to submit records. あすたん also posted lists covering mining, statistics, and ingots. キツネコ, Feruno, and Taiyaki sent statistics to the submissions channel, and Tabekirareta Potechi proposed candidates for records such as the first castle.
 

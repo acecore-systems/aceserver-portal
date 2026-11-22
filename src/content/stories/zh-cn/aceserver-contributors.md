@@ -2,7 +2,7 @@
 title: 支持Aceserver的人们
 description: 通过 Minecraft 皮肤头像认识 Aceserver 的贡献者，回顾社区活动记录，并查看活动与玩家提案路线图。
 translationOf: aceserver-contributors
-sourceHash: sha256:0aadd367f375daff23236ff847fdc53e9b18c555e2b9046048a7deb9a943b319
+sourceHash: sha256:ab3478f5525bfce2936b107c666d3daa0c62adeb3e9da5d48e867ac31253fb04
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -493,7 +493,11 @@ taibon0727 准备了玻璃等物资、出行用船的停放处和处理沙子的
 
 2024年9月下旬，sekisei整理了一份划分当时用户支持者职责的提案。提案列出的事项包括宣传、编辑 Wiki、在游戏服务器上协助活动，以及在社群中协调活动的进行。
 
+2023年9月13日，Mugi 分享了 Ē-hō 规则草案，并提议删去一句解释各款结构的话。
+
 2023年10月4日，あすたん报告称，服务器间切换命令的权限设置已经完成。
+
+2023年10月26日，Syake 查阅了 Wiki，并表示没有找到服务器支持哪些 Minecraft 版本的说明。
 
 2024年1月，あすたん开设了 Discord 服务器 Ace Server Leaderboard Archive（ASLA），用于收集 Aceserver 内的游戏记录。あすたん介绍了参与规则和提交记录的方法，还发布了采矿、统计数据和金属锭的列表。キツネコ、Feruno 和 Taiyaki 在提交频道分享了统计记录，Tabekirareta Potechi 则提交了「首座城堡」等项目的候选记录。
 
