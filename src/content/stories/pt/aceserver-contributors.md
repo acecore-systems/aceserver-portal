@@ -2,7 +2,7 @@
 title: As pessoas que apoiaram o Aceserver
 description: Conheça quem ajudou o Aceserver pelos retratos de skins do Minecraft, relembre as atividades e confira o roteiro de eventos e propostas.
 translationOf: aceserver-contributors
-sourceHash: sha256:dd40f00191a79008aae9473af90533314e2a54defc6bf562f5ed0c8d129a404a
+sourceHash: sha256:ffdf4e6494a791a748a80b1cb6cffc613fb9a8dc2440362845e2cdf5c3205e5e
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -167,7 +167,7 @@ Em abril de 2024, ゆり anunciou um episódio da E-ha Radio com Master e Yuri-k
 
 No festival de verão de 17 de agosto de 2024, sekisei explicou as regras e a divisão das equipes do torneio de pesca e anunciou seu início. sh apresentou a Busca Ultra por Itens e explicou como participar. No dia seguinte, compartilhou um vídeo da transmissão oficial. Nos registros de preparação do festival, sh informou que Ohagi havia construído o prédio do mercado de pulgas. はっ explicou o andamento e a divisão das equipes do jogo de repasse de mensagens por abstração mínima. [Transmissão oficial do jogo de mensagens por abstração mínima](https://www.youtube.com/live/Fy27JdYPero)
 
-A escala do festival indicava Ohagi para coordenar o pega-pega e preparar comandos e outros recursos, e miin para ajudar a resolver problemas na busca por itens e na competição de pesca. A escala também indicava sekisei para trocar de servidor entre as atividades ao longo do festival e auxiliar no pega-pega e no PvP subaquático, e sh para coordenar e preparar o PvP subaquático.
+A escala do festival indicava Ohagi para coordenar o pega-pega e preparar comandos e outros recursos, e miin para ajudar a resolver problemas na busca por itens e na competição de pesca. A escala também indicava sekisei para trocar de servidor entre as atividades ao longo do festival e auxiliar no pega-pega e no PvP subaquático, e sh para coordenar e preparar o PvP subaquático. Em 4 de outubro de 2024, sh31415 informou onde retirar os prêmios do festival de verão.
 
 タケ criou o cartaz do Ace Summer Festival de 2024. No evento de fim de ano 「つなぐASF」, taibon ajudou com o dispositivo de contagem regressiva. タケ informou o encerramento de toda a programação em janeiro de 2025. [Anúncio do cartaz](https://discord.com/channels/737538781024092170/774152638450237460/1274157736015429744) [Anúncio da contagem regressiva](https://discord.com/channels/737538781024092170/774152638450237460/1319967701808189493) [Relato de encerramento](https://discord.com/channels/737538781024092170/774152638450237460/1325487116419076129)
 
@@ -193,7 +193,7 @@ Em janeiro de 2025, sh propôs divulgar o servidor com YouTube Shorts. LuMiSIA\_
 
 Em fevereiro de 2025, タケ anunciou planos para abrir uma nova estação na linha principal de &#26628;&#38920;. Em agosto, anunciou a reforma prevista da Estação Coliseu de Ibaraki e a suspensão parcial do serviço da linha 1 do Monotrilho Ace. Em dezembro, anunciou a distribuição de presentes de Natal do Monotrilho Ace.
 
-Em março de 2025, sh pediu ajuda para escrever o roteiro e editar um vídeo vertical de apresentação do Aceserver. End&#12539;コッカー propôs um plano de gravação para mostrar as construções e um rascunho da narração.
+Em março de 2025, sh pediu ajuda para escrever o roteiro e editar um vídeo vertical de apresentação do Aceserver. End&#12539;コッカー propôs um plano de gravação para mostrar as construções e um rascunho da narração. Em 9 de março, End&#12539;コッカー informou que havia gravado construções e sugeriu as de Minku-san e Amatsu-san como possíveis cenários para um vídeo no YouTube.
 
 No verão de 2025, End&#12539;コッカー abriu uma discussão sobre um torneio de Among Us. Pluto sugeriu um formato e sh31415 propôs como recrutar participantes.
 
@@ -269,6 +269,8 @@ Em agosto de 2026, sekisei e ふーや anunciaram um CTF conjunto de caça ao te
 
 Em 6, 20 e 30 de setembro de 2026, End&#12539;コッカー enviou imagens e textos sobre construções, carpintaria e imóveis no End e ferrovias para possível uso nas redes sociais.
 
+Em 1º de novembro de 2026, End&#12539;コッカー anunciou Trick-or-run, um evento de outono em que os jogadores competiriam entregando itens temáticos de Halloween. Em 8 de novembro, pediu que os participantes se reunissem no lobby antes do início e, no dia 9, divulgou os resultados. [Anúncio do evento](https://discord.com/channels/737538781024092170/774152638450237460/1566426431301357681) [Resultados do evento](https://discord.com/channels/737538781024092170/774152638450237460/1569004504991531160)
+
 ## Construção e projetos em equipe
 
 Em dezembro de 2020, bamoshi4869 convidou jogadores para ajudar na preparação de terrenos e em outras tarefas coletivas. &#12365;&#12383;&#12422;&#12358; se ofereceu para ajudar, e Gui sugeriu criar um canal para coordenar o trabalho. bamoshi4869 também pediu ajuda para drenar um monumento oceânico.
@@ -285,6 +287,8 @@ Em 7 de março de 2021, Jagdsolid explicou o trabalho que deu curar aldeões e s
 
 Em março de 2021, Game\_Tokumei abriu um serviço chamado «Faz-Tudo» e anunciou que aceitava pedidos como melhorias em estradas.
 
+Em 24 de março de 2021, Game\_Tokumei construiu no servidor criativo uma masmorra onde apareciam muitos monstros e solicitou a transferência para o servidor de sobrevivência. As duas imagens anexadas mostravam o interior escuro e a grande parede externa. KOTA-SAN explicou como as transferências eram avaliadas na época e orientou a esperar pela decisão de Gui.
+
 Em 5 de abril de 2021, KOTA-SAN informou que o estádio Takenoko no Sato, no lobby, estava concluído e compartilhou uma foto com fileiras de assentos para o público nos dois lados do recinto coberto.
 
 Em maio, kuroneko229 informou que, na época, qualquer pessoa podia construir na Cidade em Desenvolvimento.
@@ -296,6 +300,8 @@ Em março de 2022, タケ pediu ajuda para nivelar o terreno onde seria feita um
 Em abril de 2022, SPdari informou que a fundação e o telhado da base principal de Sora no Yama já estavam prontos e que o exterior estava quase concluído. Ainda faltava trabalho no interior.
 
 Em junho de 2022, yanyan_fafnir explicou as regras para participar do concurso de ilhas flutuantes que deu origem à construção do antigo lobby e como os projetos seriam apresentados para avaliação. O anúncio indicou que はっ e membros com cargo de apoiador ou superior fariam parte do júri. [Regras de inscrição](https://discord.com/channels/737538781024092170/774152638450237460/982990352422162482) [Anúncio da sessão de avaliação](https://discord.com/channels/737538781024092170/774152638450237460/986294242848669756)
+
+Em 5 de junho de 2022, taka8621 propôs um lobby com acesso entre os níveis e portais na área central. Pela proposta, quem tinha o cargo de apoiador ou superior na época construiria a área central de cada nível.
 
 KOTA-SAN preparou um formulário com o nome do participante, o lote de preferência e o conceito, além de um mapa dos 36 lotes. yanyan_fafnir compartilhou listas de lotes com as inscrições e as alterações duas vezes em 6 de junho e uma vez em cada uma das datas de 8 e 15 de junho.
 

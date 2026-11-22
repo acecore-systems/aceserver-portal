@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:dd40f00191a79008aae9473af90533314e2a54defc6bf562f5ed0c8d129a404a
+sourceHash: sha256:ffdf4e6494a791a748a80b1cb6cffc613fb9a8dc2440362845e2cdf5c3205e5e
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -167,7 +167,7 @@ In April 2024, ゆり announced an E-ha Radio episode with “Master” and “Y
 
 At the summer festival on August 17, 2024, sekisei explained the fishing competition’s rules and team assignments and announced its start. sh introduced the Ultra Item Hunt and explained how to join, then shared a video of the official broadcast the next day. In the festival preparation records, sh noted that Ohagi had built the flea market building. はっ explained how the Minimal Abstraction Message Relay game would run and how its teams were divided. [Official Minimal Abstraction Message Relay broadcast](https://www.youtube.com/live/Fy27JdYPero)
 
-The festival staffing schedule named Ohagi for running tag and preparing commands and other setup, and miin for troubleshooting support at the item hunt and fishing tournament. It also listed sekisei for switching servers between activities throughout the festival and assisting with tag and underwater PvP, and sh for running and preparing underwater PvP.
+The festival staffing schedule named Ohagi for running tag and preparing commands and other setup, and miin for troubleshooting support at the item hunt and fishing tournament. It also listed sekisei for switching servers between activities throughout the festival and assisting with tag and underwater PvP, and sh for running and preparing underwater PvP. On October 4, 2024, sh31415 told participants where to collect their summer festival prizes.
 
 タケ made the poster for Ace Summer Festival in 2024. For the year-end “つなぐASF” event, taibon helped with the New Year countdown device. タケ reported the end of the full program in January 2025. [Poster announcement](https://discord.com/channels/737538781024092170/774152638450237460/1274157736015429744) [Countdown announcement](https://discord.com/channels/737538781024092170/774152638450237460/1319967701808189493) [Closing report](https://discord.com/channels/737538781024092170/774152638450237460/1325487116419076129)
 
@@ -193,7 +193,7 @@ In January 2025, sh proposed using YouTube Shorts to promote the server. LuMiSIA
 
 In February 2025, タケ announced plans to open a new station on the &#26628;&#38920; Main Line. In August, タケ announced plans to renovate Ibaraki Colosseum Station and suspend service on part of Ace Monorail Line 1. In December, タケ announced the Ace Monorail Christmas gift distribution.
 
-In March 2025, sh asked for help writing and editing a vertical video introducing Aceserver. End&#12539;コッカー proposed a filming plan that would showcase builds and drafted narration.
+In March 2025, sh asked for help writing and editing a vertical video introducing Aceserver. End&#12539;コッカー proposed a filming plan that would showcase builds and drafted narration. On March 9, End&#12539;コッカー reported filming builds and suggested using builds by Minku-san and Amatsu-san as backgrounds for a YouTube video.
 
 In summer 2025, End&#12539;コッカー started a discussion about an Among Us tournament, Pluto suggested a format, and sh31415 proposed a way to recruit players.
 
@@ -269,6 +269,8 @@ In August 2026, sekisei and ふーや announced a jointly hosted online CTF trea
 
 On September 6, 20, and 30, 2026, End&#12539;コッカー submitted images and copy about builds, carpentry and real estate in the End, and railways for consideration for social media posts.
 
+On November 1, 2026, End&#12539;コッカー announced Trick-or-run, a fall event in which players would compete by delivering Halloween-themed items. On November 8, they asked participants to gather in the lobby before the start and reported the results on November 9. [Event announcement](https://discord.com/channels/737538781024092170/774152638450237460/1566426431301357681) [Event results](https://discord.com/channels/737538781024092170/774152638450237460/1569004504991531160)
+
 ## Building and joint projects
 
 In December 2020, bamoshi4869 invited players to help with land clearing and other shared work. &#12365;&#12383;&#12422;&#12358; offered to help, and Gui suggested setting up a channel to coordinate the work. bamoshi4869 also invited people to help drain an ocean monument.
@@ -285,6 +287,8 @@ On March 7, 2021, Jagdsolid described the work that went into curing villagers a
 
 In March 2021, Game\_Tokumei started a service called Odd Jobs, taking requests for work such as improving roads.
 
+On March 24, 2021, Game\_Tokumei built a dungeon where large numbers of monsters spawned on the creative server and requested a transfer to the survival server. Two attached images showed its dark interior and large outer wall. KOTA-SAN explained how transfers were considered at the time and advised waiting for Gui’s decision.
+
 On April 5, 2021, KOTA-SAN reported that Takenoko no Sato Stadium in the lobby was complete and shared a photo showing rows of seats on both sides of the indoor venue.
 
 In May, kuroneko229 announced that anyone could build in Development City at the time.
@@ -296,6 +300,8 @@ In March 2022, タケ asked for help leveling the ground for a ground artwork. O
 In April 2022, SPdari reported that the foundation and roof of the main base at Sora no Yama were in place and the exterior was nearly complete. Work still remained on the interior.
 
 In June 2022, yanyan_fafnir explained how to enter the floating-island contest that led to work on the former lobby and how entries would be presented at judging. The announcement named はっ and members with the supporter role or above as judges. [Contest entry rules](https://discord.com/channels/737538781024092170/774152638450237460/982990352422162482) [Judging session announcement](https://discord.com/channels/737538781024092170/774152638450237460/986294242848669756)
+
+On June 5, 2022, taka8621 proposed a lobby with connected levels and gates in the central area. Under the proposal, members with the supporter role or above at the time would build the central area of each level.
 
 KOTA-SAN prepared an entry form for the entrant’s name, preferred plot, and concept, along with a map of the 36 plots. yanyan_fafnir shared plot lists reflecting entries and changes twice on June 6, once on June 8, and once on June 15.
 
