@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:ab3478f5525bfce2936b107c666d3daa0c62adeb3e9da5d48e867ac31253fb04
+sourceHash: sha256:06f177f1fd913349260fd3210ab5ec43d565b9a4371491e66cb46d3e8a848c50
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -251,6 +251,10 @@ Im Februar 2026 bat LuMiSIA\_&#26376;&#31070;&#24736;&#33673; um Fotos für Werb
 
 Im Februar 2026 kündigte End&#12539;コッカー den Aceserver-Fotowettbewerb an und gab den 16. bis 28. Februar als Einreichungszeitraum an. End&#12539;コッカー bereitete Beispiele für die allgemeine Kategorie und die Kategorie für das Serverteam vor. キツネコ reichte ein Foto von laufenden Entwässerungsarbeiten ein. [Ankündigung des Fotowettbewerbs 2026](https://discord.com/channels/737538781024092170/774152638450237460/1471148847119208731)
 
+Am 19. Februar 2026 teilte End&#12539;コッカー einen Text, der zur Mithilfe beim Filmen eines Fangspiels in der Lobby für die Öffentlichkeitsarbeit von Aceserver auf YouTube aufrief.
+
+Am 20. und 21. Februar 2026 schlug sekisei vor, die Themen vor einer offenen Besprechung in einer allgemeinen Sitzung abzustimmen, teilte den Vorschlag für die offene Besprechung und bat um Rückmeldungen.
+
 Im März 2026 teilte End&#12539;コッカー eine Probeversion eines Videos über Aceserver. Merutak wies auf das schnelle Tempo in der ersten Hälfte hin. sekisei schlug vor, Ziel, Publikum und Aussage klarer zu bestimmen. あすたん kommentierte, wie viele Informationen in ein kurzes Video passen, und LuMiSIA\_&#26376;&#31070;&#24736;&#33673; gab Rückmeldung zur Gestaltung von Text und Animationen.
 
 Am 6. März 2026 schlug sekisei vor, regelmäßige offene Treffen der Informationsstelle abzuhalten, um Themen des Serverteams zu teilen. Außerdem schlug sekisei eine lockere Gruppe vor, in der Teilnehmer ohne Antrag für ihre Aktivitäten werben könnten. Am 11. März teilte End&#12539;コッカー sieben Folien für die Besprechung. Sie behandelten den Status als Stammspieler als mögliches Ziel, die Spielmöglichkeiten auf dem Content- und dem Survival-Server, Veranstaltungsvideos, Öffentlichkeitsarbeit auf X und die Anleitungen im Portal und im Wiki.
@@ -260,6 +264,8 @@ Am 7. März 2026 bat End&#12539;コッカー um Veranstaltungsideen und Mithilfe
 Im März 2026 bat &#12486;&#12451;&#12512;&#12540; für das Aceserver-Tagebuch des Belebungskomitees von Aceserver um Ideen für ein neues Symbol und um Beiträge zu Ereignissen auf dem Server.
 
 Am 6. Mai 2026 entwarf LuMiSIA\_&#26376;&#31070;&#24736;&#33673; einen Vorschlag für das Sommerfest „&#12360;&#65374;&#22799;&#31085;&#12426;“, bei dem neue und langjährige Teilnehmer zusammenkommen könnten. Der Vorschlag umfasste Stände der Teilnehmer und ein Feuerwerk. Am 19. Mai berichtete LuMiSIA\_&#26376;&#31070;&#24736;&#33673;, Unterstützung von &#12475;&#12531;&#12481;&#12517;&#12522;&#12474; für das Feuerwerk gewonnen zu haben.
+
+Am 7. Juli 2026 teilte End&#12539;コッカー den Entwurf einer Ankündigung für ein Bauspiel nach dem Staffellaufprinzip. Geplant waren zwei Teams in der Lobby. Die erste Person sollte ein Thema bekommen und das Bauwerk an die nächste weitergeben.
 
 Am 13. Juli 2026 bat sekisei um Fragen und erläuterte, wie ähnliche Fragen gezählt würden und dass Yuri-kun direkt auf die Nachrichten antworten würde. Am 14. Juli meldete LuMiSIA\_&#26376;&#31070;&#24736;&#33673; für diesen Tag insgesamt 120 Fragen.
 
@@ -403,6 +409,8 @@ Im November 2025 meldete Moon\_666 die Fertigstellung einer Farm für zombifizie
 
 Am 17. Januar 2026 suchte 山田 Interessierte, die in ein großes Wohngebiet ziehen wollten. Am 31. Januar suchte Amagi\_467 eine Person, die als Dorfvorsteher ein Dorf der Amagi-Bahn entwickeln würde, und erklärte, dass die Bahn für Materialien und ähnliche Kosten aufkommen würde.
 
+Am 2. Februar 2026 schlug Merutak vor, das Bauwerk aus der früheren Lobby zu erhalten, deren Bau Maro 2022 geleitet hatte. Dazu sollte es in die damals genutzte Lobby verlegt werden.
+
 Am 11. März 2026 bat Merutak um Ideen für das Gelände und nannte ein Ozeanmonument im sechsfachen Maßstab als Möglichkeit. Pluto schlug andere Bauwerke vor, darunter eine riesige Bibliothek. sekisei regte an, nur für die Außenseite die Materialien des ursprünglichen Ozeanmonuments zu verwenden. [Aufruf zu Ideen für das Gelände](https://discord.com/channels/737538781024092170/1476561093244620913/1481297210389041334) [Materialvorschlag für das Ozeanmonument](https://discord.com/channels/737538781024092170/1476561093244620913/1481298053309661275)
 
 Im März 2026 berichtete Merutak, dass die Trockenlegung eines großen Gebiets für das Projekt ×6 Ozeanmonument und offener Aushub abgeschlossen war. Merutak dankte sega, take, sekisei, harubie, hatt, timu, buraki, yukke, moon, sinzin und siu für Material und Mithilfe. [Bericht über die Entwässerung und Dank](https://discord.com/channels/737538781024092170/779569416438415421/1483522273020215497)
@@ -514,6 +522,8 @@ Am 28. März 2025 stellte LuMiSIA\_&#26376;&#31070;&#24736;&#33673; einen Regele
 Im Juli 2025 erstellte und teilte LuMiSIA\_&#26376;&#31070;&#24736;&#33673; ein Schaubild als Grundlage für die Diskussion über das System. Im selben Monat meldete sekisei eine erfolgreiche Verbindung mit Bedrock Edition.
 
 Im September 2025 fasste sekisei Ideen zum Erstellen von Minispielräumen, zum Beitritt aus der Lobby und zu den Einstellungen zusammen. Am 11. September schlug あすたん vor, Spielergebnisse zu speichern und abrufbar zu machen. Am 15. September schlug Yukke vor, Siege, Niederlagen und Siegesserien zu erfassen und anzuzeigen.
+
+Am 12. September 2025 teilte Yukke einen Entwurf für die Währung im Spiel. Im Entwurf waren Ace Coins unter anderem für die Lobby und Minispiele vorgesehen. Auf dem Survival- und dem Saisonserver sollten die bestehenden Graspunkte weiterverwendet werden.
 
 Am 6. und am 27. Oktober 2025 berichtete あすたん, eine Möglichkeit eingerichtet zu haben, die Minispieleinstellungen auf dem Bildschirm zu bündeln und einzusehen.
 

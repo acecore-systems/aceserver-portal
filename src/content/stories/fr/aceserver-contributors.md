@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:ab3478f5525bfce2936b107c666d3daa0c62adeb3e9da5d48e867ac31253fb04
+sourceHash: sha256:06f177f1fd913349260fd3210ab5ec43d565b9a4371491e66cb46d3e8a848c50
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -251,6 +251,10 @@ En février 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; a sollicité des pho
 
 En février 2026, End&#12539;コッカー a annoncé le concours photo d’Aceserver et indiqué que les candidatures étaient prévues du 16 au 28 février. Des exemples ont été préparés par End&#12539;コッカー pour la catégorie générale et celle de l’équipe de gestion. キツネコ a présenté une photo de travaux de drainage en cours. [Annonce du concours photo de 2026](https://discord.com/channels/737538781024092170/774152638450237460/1471148847119208731)
 
+Le 19 février 2026, End&#12539;コッカー a partagé un texte appelant à aider à filmer une partie de chat dans le hall pour promouvoir Aceserver sur YouTube.
+
+Les 20 et 21 février 2026, sekisei a proposé de s’accorder sur les sujets en réunion générale avant une réunion ouverte, a partagé le projet de réunion ouverte et a demandé des avis.
+
 En mars 2026, End&#12539;コッカー a partagé un essai de vidéo de présentation d’Aceserver. Merutak a relevé le rythme rapide de la première moitié. sekisei a suggéré de préciser l’objectif, le public et le message. あすたん a commenté la quantité d’informations à mettre dans une vidéo courte, et LuMiSIA\_&#26376;&#31070;&#24736;&#33673; a donné son avis sur la présentation du texte et des animations.
 
 Le 6 mars 2026, sekisei a proposé d’organiser des réunions ouvertes régulières du Bureau d’information pour partager les sujets de l’équipe du serveur. Une autre idée était de créer un groupe souple où les participants pourraient faire connaître leurs activités sans déposer de demande. Le 11 mars, End&#12539;コッカー a partagé sept diapositives de réunion sur le statut de membre régulier comme objectif pour les participants, les façons de jouer sur les serveurs de contenu et de survie, les vidéos d’événements, la communication sur X et les guides du portail et du wiki.
@@ -260,6 +264,8 @@ Le 7 mars 2026, End&#12539;コッカー a sollicité des idées d’événements
 En mars 2026, &#12486;&#12451;&#12512;&#12540; a sollicité des idées pour une nouvelle icône et des récits sur ce qui se passait sur le serveur pour le Journal d’Aceserver du comité de revitalisation d’Aceserver.
 
 Le 6 mai 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; a préparé une proposition pour le festival d’été « &#12360;&#65374;&#22799;&#31085;&#12426; », pensé comme un lieu de rencontre entre nouveaux membres et habitués. Le projet prévoyait des stands tenus par les participants et un feu d’artifice. Le 19 mai, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; a indiqué avoir obtenu l’aide de &#12475;&#12531;&#12481;&#12517;&#12522;&#12474; pour le feu d’artifice.
+
+Le 7 juillet 2026, End&#12539;コッカー a partagé un projet d’annonce pour un jeu de construction en relais. Le projet prévoyait deux équipes dans le hall. La première personne recevrait un thème, puis passerait la construction à la personne suivante.
 
 Le 13 juillet 2026, sekisei a invité les membres à poser des questions, a expliqué comment les questions qui revenaient au même seraient comptées et a indiqué que Yuri-kun répondrait directement aux messages. Le 14 juillet, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; a annoncé un total de 120 questions pour la journée.
 
@@ -403,6 +409,8 @@ En novembre 2025, Moon\_666 a annoncé qu’une ferme à piglins zombifiés qui 
 
 Le 17 janvier 2026, 山田 a cherché des personnes souhaitant emménager dans une grande zone résidentielle. Le 31 janvier, Amagi\_467 a cherché une personne pour diriger et développer un village lié au chemin de fer d’Amagi et a expliqué que le chemin de fer prendrait en charge les matériaux et les dépenses similaires.
 
+Le 2 février 2026, Merutak a proposé de préserver la construction de l’ancien hall, dont Maro avait dirigé les travaux en 2022, en la déplaçant vers le hall utilisé à l’époque.
+
 Le 11 mars 2026, Merutak a sollicité des idées pour le terrain et a cité comme option un monument océanique à six fois son échelle d’origine. Pluto a proposé d’autres constructions, notamment une immense bibliothèque. sekisei a suggéré d’utiliser les matériaux du monument d’origine uniquement à l’extérieur. [Appel à idées pour le terrain](https://discord.com/channels/737538781024092170/1476561093244620913/1481297210389041334) [Proposition sur les matériaux du monument océanique](https://discord.com/channels/737538781024092170/1476561093244620913/1481298053309661275)
 
 En mars 2026, Merutak a annoncé la fin du drainage d’une vaste zone pour le projet de monument océanique ×6 et d’excavation à ciel ouvert. Merutak a remercié sega, take, sekisei, harubie, hatt, timu, buraki, yukke, moon, sinzin et siu pour les matériaux et leur aide sur le chantier. [Compte rendu du drainage et remerciements](https://discord.com/channels/737538781024092170/779569416438415421/1483522273020215497)
@@ -514,6 +522,8 @@ Le 28 mars 2025, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; a préparé et partag
 En juillet 2025, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; a réalisé et partagé un schéma pour servir de référence dans la réflexion sur le système. Le même mois, sekisei a indiqué avoir réussi à se connecter depuis Bedrock Edition.
 
 En septembre 2025, sekisei a rassemblé des idées pour créer des salles de mini-jeux, y accéder depuis le hall et les configurer. Le 11 septembre, あすたん a proposé d’enregistrer les résultats pour pouvoir les consulter. Le 15 septembre, Yukke a proposé d’enregistrer et d’afficher les victoires, les défaites et les séries de victoires.
+
+Le 12 septembre 2025, Yukke a partagé une ébauche sur la monnaie du jeu. La proposition prévoyait d’utiliser les Ace Coins dans le hall, les mini-jeux et d’autres espaces, et de conserver les points d’herbe déjà utilisés sur les serveurs de survie et saisonniers.
 
 Les 6 et 27 octobre 2025, あすたん a signalé avoir mis en place un moyen de regrouper et de consulter les réglages des mini-jeux à l’écran.
 

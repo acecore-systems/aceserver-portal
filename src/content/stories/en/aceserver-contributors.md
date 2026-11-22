@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:ab3478f5525bfce2936b107c666d3daa0c62adeb3e9da5d48e867ac31253fb04
+sourceHash: sha256:06f177f1fd913349260fd3210ab5ec43d565b9a4371491e66cb46d3e8a848c50
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -251,6 +251,10 @@ In February 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; asked players to sub
 
 In February 2026, End&#12539;コッカー announced the Aceserver Photo Contest and listed February 16 to 28 as the submission period. End&#12539;コッカー provided sample submissions for both the general and staff categories. キツネコ entered a photo showing drainage work in progress. [2026 Photo Contest announcement](https://discord.com/channels/737538781024092170/774152638450237460/1471148847119208731)
 
+On February 19, 2026, End&#12539;コッカー shared wording for a call for help filming a game of tag in the lobby to promote Aceserver on YouTube.
+
+On February 20 and 21, 2026, sekisei outlined a way to agree on topics at a general meeting before an open meeting, shared the open meeting proposal, and invited feedback.
+
 In March 2026, End&#12539;コッカー shared a draft video introducing Aceserver. Merutak noted that the first half moved quickly. sekisei suggested clarifying the purpose, audience, and message. あすたん commented on how much information to include in a short video, while LuMiSIA\_&#26376;&#31070;&#24736;&#33673; offered feedback on the presentation of text and animation.
 
 On March 6, 2026, sekisei proposed holding regular open meetings for the Information Bureau to share updates from the server team. They also proposed an informal group where members could promote their activities without having to apply. On March 11, End&#12539;コッカー shared seven meeting slides covering Regular status as something members could work toward, ways to play on the Content and Survival Servers, event videos, promotion on X, and guidance through the portal and Wiki.
@@ -260,6 +264,8 @@ On March 7, 2026, End&#12539;コッカー invited event ideas and volunteers, in
 In March 2026, &#12486;&#12451;&#12512;&#12540; asked people to submit ideas for a new icon and stories about happenings on the server for the Aceserver Revitalization Committee’s Aceserver Diary.
 
 On May 6, 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; drew up a proposal for a summer festival called “&#12360;&#65374;&#22799;&#31085;&#12426;” where new and longtime members could meet. The plan suggested participant-run stalls and a fireworks show. On May 19, they reported securing help from &#12475;&#12531;&#12481;&#12517;&#12522;&#12474; with the fireworks.
+
+On July 7, 2026, End&#12539;コッカー shared a draft announcement for a building relay. The plan called for two teams in the lobby, with the first player receiving a prompt and handing the build to the next player.
 
 On July 13, 2026, sekisei invited questions and explained how questions asking essentially the same thing would be counted and that Yuri-kun would answer in replies. On July 14, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; reported a total of 120 questions that day.
 
@@ -403,6 +409,8 @@ In November 2025, Moon\_666 reported that a zombified piglin farm for gold and e
 
 On January 17, 2026, 山田 invited people interested in moving into a large residential area. On January 31, Amagi\_467 sought a mayor to develop a village associated with Amagi Railway and explained that the railway would cover materials and similar costs.
 
+On February 2, 2026, Merutak proposed preserving the build from the former lobby, whose construction Maro led in 2022, by moving it to the lobby in use at the time.
+
 On March 11, 2026, Merutak asked for ideas for the site, naming an ocean monument at six times its original scale as one option. Pluto suggested other builds, including a huge library. sekisei suggested using the original monument’s materials only for the exterior. [Call for ideas for the site](https://discord.com/channels/737538781024092170/1476561093244620913/1481297210389041334) [Ocean monument materials proposal](https://discord.com/channels/737538781024092170/1476561093244620913/1481298053309661275)
 
 In March 2026, Merutak reported that drainage of a large area for the ×6 Ocean Monument and Open-Pit Excavation project was complete and thanked sega, take, sekisei, harubie, hatt, timu, buraki, yukke, moon, sinzin, and siu for materials and help with the work. [Drainage and acknowledgments](https://discord.com/channels/737538781024092170/779569416438415421/1483522273020215497)
@@ -514,6 +522,8 @@ On March 28, 2025, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; compiled and shared
 In July 2025, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; created and shared a diagram as a reference for discussing the system. That month, sekisei reported successfully connecting from Bedrock Edition.
 
 In September 2025, sekisei outlined ideas for creating minigame rooms, joining them from the lobby, and configuring them. On September 11, あすたん proposed storing match records so players could look them up. On September 15, Yukke proposed recording and displaying wins, losses, and win streaks.
+
+On September 12, 2025, Yukke shared a draft plan for in-game currency. It proposed using Ace Coins in the lobby and in minigames, among other places, and keeping the existing Grass Points on the Survival and Season Servers.
 
 On October 6 and 27, 2025, あすたん reported setting up a way to review the minigame settings together on screen.
 

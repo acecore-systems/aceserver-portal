@@ -2,7 +2,7 @@
 title: As pessoas que apoiaram o Aceserver
 description: Conheça quem ajudou o Aceserver pelos retratos de skins do Minecraft, relembre as atividades e confira o roteiro de eventos e propostas.
 translationOf: aceserver-contributors
-sourceHash: sha256:ab3478f5525bfce2936b107c666d3daa0c62adeb3e9da5d48e867ac31253fb04
+sourceHash: sha256:06f177f1fd913349260fd3210ab5ec43d565b9a4371491e66cb46d3e8a848c50
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -251,6 +251,10 @@ Em fevereiro de 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; pediu fotos para
 
 Em fevereiro de 2026, End&#12539;コッカー anunciou o Concurso de Fotografia do Aceserver e informou que o período de envio era de 16 a 28 de fevereiro. Preparou exemplos de inscrições para a categoria geral e para a equipe de gestão. キツネコ enviou uma foto de um trabalho de drenagem em andamento. [Anúncio do Concurso de Fotografia de 2026](https://discord.com/channels/737538781024092170/774152638450237460/1471148847119208731)
 
+Em 19 de fevereiro de 2026, End&#12539;コッカー compartilhou um texto para pedir ajuda na gravação de uma partida de pega-pega no lobby a fim de divulgar o Aceserver no YouTube.
+
+Em 20 e 21 de fevereiro de 2026, sekisei sugeriu acertar os assuntos em uma reunião geral antes de uma reunião aberta, compartilhou a proposta da reunião aberta e pediu opiniões.
+
 Em março de 2026, End&#12539;コッカー compartilhou uma versão de teste de um vídeo de apresentação do Aceserver. Merutak observou que a primeira metade avançava rápido. sekisei sugeriu esclarecer o objetivo, o público e a mensagem. あすたん comentou a quantidade de informação em um vídeo curto, e LuMiSIA\_&#26376;&#31070;&#24736;&#33673; deu sugestões sobre a apresentação de textos e animações.
 
 Em 6 de março de 2026, sekisei propôs reuniões abertas periódicas do Departamento de Informações para compartilhar assuntos da equipe do servidor. Também sugeriu um grupo informal em que os participantes pudessem divulgar suas atividades sem precisar fazer uma solicitação. Em 11 de março, End&#12539;コッカー compartilhou sete slides para a reunião, sobre o status de participante regular como uma meta, as formas de jogar nos servidores de conteúdo e sobrevivência, os vídeos de eventos, a divulgação no X e as orientações do portal e da wiki.
@@ -260,6 +264,8 @@ Em 7 de março de 2026, End&#12539;コッカー pediu ideias para eventos e volu
 Em março de 2026, &#12486;&#12451;&#12512;&#12540; pediu propostas de um novo ícone e relatos de acontecimentos no servidor para o Diário do Aceserver, do Comitê de Revitalização do Aceserver.
 
 Em 6 de maio de 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; preparou uma proposta para o festival de verão “&#12360;&#65374;&#22799;&#31085;&#12426;”, pensado como um espaço de convivência para participantes novos e antigos. A proposta incluía barracas organizadas pelos participantes e uma apresentação de fogos de artifício. Em 19 de maio, informou que havia conseguido a colaboração de &#12475;&#12531;&#12481;&#12517;&#12522;&#12474; para os fogos.
+
+Em 7 de julho de 2026, End&#12539;コッカー compartilhou um rascunho de anúncio para um jogo de construção em revezamento. A ideia era dividir os participantes em duas equipes no lobby, passar um tema à primeira pessoa e entregar a construção à pessoa seguinte.
 
 Em 13 de julho de 2026, sekisei convidou as pessoas a enviar perguntas, explicou como seriam contadas as que perguntavam essencialmente a mesma coisa e informou que Yuri-kun responderia por meio das respostas às mensagens. Em 14 de julho, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; informou que naquele dia foram feitas 120 perguntas ao todo.
 
@@ -403,6 +409,8 @@ Em novembro de 2025, Moon\_666 informou que uma fazenda de piglins-zumbis que re
 
 Em 17 de janeiro de 2026, 山田 procurou pessoas interessadas em morar em uma grande área residencial. No dia 31, Amagi\_467 procurou um líder para desenvolver uma vila da Ferrovia Amagi e explicou que a ferrovia arcaria com os materiais e custos semelhantes.
 
+Em 2 de fevereiro de 2026, Merutak propôs preservar a construção do antigo lobby, cuja obra Maro liderou em 2022, transferindo-a para o lobby em uso na época.
+
 Em 11 de março de 2026, Merutak pediu ideias para o terreno e apresentou um monumento oceânico em escala de seis para um como uma das opções. Pluto sugeriu outras construções, como uma biblioteca enorme. sekisei sugeriu usar os materiais do monumento original só no exterior. [Convite para sugerir usos para o terreno](https://discord.com/channels/737538781024092170/1476561093244620913/1481297210389041334) [Proposta de materiais do monumento oceânico](https://discord.com/channels/737538781024092170/1476561093244620913/1481298053309661275)
 
 Em março de 2026, Merutak informou que a drenagem de uma área extensa para o projeto do Monumento Oceânico ×6 e da escavação a céu aberto havia sido concluída. Agradeceu a sega, take, sekisei, harubie, hatt, timu, buraki, yukke, moon, sinzin e siu pelos materiais e pela ajuda no trabalho. [Relato da drenagem e agradecimentos](https://discord.com/channels/737538781024092170/779569416438415421/1483522273020215497)
@@ -514,6 +522,8 @@ Em 28 de março de 2025, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; reuniu e comp
 Em julho de 2025, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; criou e compartilhou um diagrama como referência para avaliar o sistema. No mesmo mês, sekisei informou que conseguiu se conectar pela Bedrock Edition.
 
 Em setembro de 2025, sekisei organizou propostas para criar salas de minijogos, entrar nelas pelo lobby e configurá-las. Em 11 de setembro, あすたん propôs guardar os resultados das partidas para consultas. No dia 15, Yukke propôs registrar e mostrar vitórias, derrotas e sequências de vitórias.
+
+Em 12 de setembro de 2025, Yukke compartilhou um esboço sobre a moeda do jogo. A proposta era usar Ace Coins no lobby, nos minijogos e em outros espaços e manter os pontos de grama que já existiam nos servidores de sobrevivência e de temporada.
 
 Em 6 e 27 de outubro de 2025, あすたん informou que havia preparado um sistema para reunir e conferir as configurações dos minijogos na tela.
 
