@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:ad4e80b1197bbe6c7e77ecbb04564f59042641fa6c2b1ead8179d6ff496df975
+sourceHash: sha256:03ea62ad5bc3107516b038a6cbac9c12660d904c64b1d2b1cef55d5ae334bcaf
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -435,7 +435,7 @@ Am 3. Juni 2026 skizzierte Pluto mehrere Klassen für das MMO, darunter Klassen 
 
 Am 5. Juni 2026 entwarf あすたん ein MMO-Konzept, in dem Spieler eine Klasse wählen, im Level aufsteigen, Ausrüstung sammeln und durch klassenspezifische Fähigkeiten und das Verteilen von Punkten stärker werden sollten. Am 12. Juni berichtete あすたん, dass die Umsetzung der Grundfunktionen weit fortgeschritten sei. Texturen und Modelle, Fähigkeiten und die Spielwelt mussten unter anderem noch ausgearbeitet werden.
 
-Am 11. August 2026 berichtete LuMiSIA\_&#26376;&#31070;&#24736;&#33673;, gemeinsam mit &#12486;&#12451;&#12512;&#12373;&#12435; den Untergrund des Sega-Imperiums erkundet zu haben. Dem Thread zu der Erkundung war ein Bild beigefügt.
+Am 11. August 2026 berichtete LuMiSIA\_&#26376;&#31070;&#24736;&#33673;, gemeinsam mit &#12486;&#12451;&#12512;&#12373;&#12435; den Untergrund des Sega-Imperiums erkundet zu haben. Im damaligen Thread sind Bilder vom Inhalt einer Shulkerkiste und von den Detailansichten der Ausrüstung erhalten.
 
 Am 17. September 2026 kündigte タケ an, dass das Belebungskomitee von Aceserver mit der Neugestaltung des zentralen Bereichs des ehemaligen Century-Geländes begonnen hatte. タケ berichtete auch, dass mehrere Helfer beim Aufräumen vorangekommen waren. [Beginn der Neugestaltung des ehemaligen Century-Geländes](https://discord.com/channels/737538781024092170/1437442902547759125/1550005135311110154)
 

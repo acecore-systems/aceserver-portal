@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:ad4e80b1197bbe6c7e77ecbb04564f59042641fa6c2b1ead8179d6ff496df975
+sourceHash: sha256:03ea62ad5bc3107516b038a6cbac9c12660d904c64b1d2b1cef55d5ae334bcaf
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -435,7 +435,7 @@ Le 3 juin 2026, Pluto a proposé des classes pour le MMO, notamment des combatta
 
 Le 5 juin 2026, あすたん a décrit un projet de MMO où les joueurs choisiraient une classe, gagneraient des niveaux, réuniraient de l’équipement et se renforceraient grâce aux compétences propres à leur classe et à la répartition des points. Le 12 juin, あすたん a indiqué que la mise en place des fonctions de base était bien avancée et qu’il restait notamment à créer les textures et les modèles, les compétences et le monde.
 
-Le 11 août 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; a indiqué avoir exploré le sous-sol de l’Empire Sega avec &#12486;&#12451;&#12512;&#12373;&#12435;. Le fil consacré à l’exploration contenait une image jointe.
+Le 11 août 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; a indiqué avoir exploré le sous-sol de l’Empire Sega avec &#12486;&#12451;&#12512;&#12373;&#12435;. Le fil de l’époque contient des images montrant le contenu d’une boîte de Shulker et les écrans détaillant l’équipement.
 
 Le 17 septembre 2026, タケ a annoncé que le comité de revitalisation d’Aceserver avait commencé à réaménager la partie centrale de l’ancien site de Century. タケ a aussi signalé que plusieurs personnes avaient aidé à dégager la zone. [Début du réaménagement de l’ancien site de Century](https://discord.com/channels/737538781024092170/1437442902547759125/1550005135311110154)
 

@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:ad4e80b1197bbe6c7e77ecbb04564f59042641fa6c2b1ead8179d6ff496df975
+sourceHash: sha256:03ea62ad5bc3107516b038a6cbac9c12660d904c64b1d2b1cef55d5ae334bcaf
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -435,7 +435,7 @@ On June 3, 2026, Pluto outlined possible MMO classes for sword users, archers, m
 
 On June 5, 2026, あすたん outlined an MMO in which players would choose a class, level up, collect equipment, and grow stronger through class-specific skills and point allocation. On June 12, they reported that much of the core functionality was in place, with textures and models, skills, and work on the world still to do.
 
-On August 11, 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; reported exploring the underground area of the Sega Empire with &#12486;&#12451;&#12512;&#12373;&#12435;. The thread about the exploration included an image attachment.
+On August 11, 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; reported exploring the underground area of the Sega Empire with &#12486;&#12451;&#12512;&#12373;&#12435;. Images in the original thread show the contents of a shulker box and the equipment detail screens.
 
 On September 17, 2026, タケ announced that the Aceserver Revitalization Committee had started redeveloping the central part of the old Century site. タケ also reported that several volunteers had made progress clearing the area. [Start of the old Century site redevelopment](https://discord.com/channels/737538781024092170/1437442902547759125/1550005135311110154)
 

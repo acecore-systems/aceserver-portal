@@ -2,7 +2,7 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:ad4e80b1197bbe6c7e77ecbb04564f59042641fa6c2b1ead8179d6ff496df975
+sourceHash: sha256:03ea62ad5bc3107516b038a6cbac9c12660d904c64b1d2b1cef55d5ae334bcaf
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-22T00:00:00+09:00
 tags:
@@ -435,7 +435,7 @@ El 3 de junio de 2026, Pluto planteó posibles clases para el MMO, entre ellas u
 
 El 5 de junio de 2026, あすたん preparó una propuesta para un MMO en el que se podría elegir una clase, subir de nivel, reunir equipo y mejorar mediante las habilidades de cada clase y el reparto de puntos. El 12 de junio, informó de que gran parte de las funciones básicas ya estaba implementada y que quedaba trabajar en las texturas y los modelos, las habilidades y el mundo, entre otros aspectos.
 
-El 11 de agosto de 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; informó de que había explorado el subsuelo del Imperio Sega junto a &#12486;&#12451;&#12512;&#12373;&#12435;. El hilo sobre la exploración incluía una imagen adjunta.
+El 11 de agosto de 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; informó de que había explorado el subsuelo del Imperio Sega junto a &#12486;&#12451;&#12512;&#12373;&#12435;. En el hilo de la exploración se conservan imágenes del contenido de una caja de shulker y de las pantallas de detalles del equipo.
 
 El 17 de septiembre de 2026, タケ anunció que el Comité de Revitalización de Aceserver había empezado a remodelar la parte central del antiguo emplazamiento de Century. También informó de que varias personas habían ayudado a despejar la zona. [Inicio de la remodelación del antiguo emplazamiento de Century](https://discord.com/channels/737538781024092170/1437442902547759125/1550005135311110154)
 
