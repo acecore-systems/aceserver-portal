@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:56bad63ca97a09c87ede5849189f7f4a1dfc5aac24bd1f773a35e37d07991c4e
+sourceHash: sha256:e30d4f15459a879e89b650547b8f3d68794f775aca5d32daeb22de3a798c2c29
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-24T00:00:00+09:00
 tags:
@@ -607,7 +607,7 @@ Im Februar 2026 meldete Merutak die Erstellung von zwei Discord-Rollen für Meld
 
 Im März 2026 veröffentlichte あすたん die Regeln für den Ressourcenserver. Im Juli veröffentlichte sekisei eine Aktualisierung im selben Thread. [Beitrag zu den Regeln des Ressourcenservers](https://discord.com/channels/737538781024092170/1486515511029268610/1486515511029268610) [Beitrag zur Aktualisierung](https://discord.com/channels/737538781024092170/1486515511029268610/1531835894196080653)
 
-Am 12. und 13. März 2026 suchte sekisei Interessierte für einen Java-Einsteigerkurs und einen Auffrischungskurs, der auch das Erstellen von Minecraft-Mods und -Plugins umfasste.
+Am 12. und 13. März 2026 suchte sekisei Interessierte für einen Java-Einsteigerkurs und einen Auffrischungskurs, der auch das Erstellen von Minecraft-Mods und -Plugins umfasste. Am 13. März entwarf sekisei einen fünftägigen Kursplan zur Einrichtung der Entwicklungsumgebung, zu Java-Grundlagen sowie zur Erstellung, Installation und Erprobung von Minecraft-Plugins, mit einer freiwilligen Zusatzeinheit zur objektorientierten Programmierung am letzten Tag.
 
 Am 12. April 2026 schlug End&#12539;コッカー vor, in den regelmäßigen Sitzungen des Serverteams die angesammelten Themen zur Sprache zu bringen und größere Änderungen in separaten Sitzungen zu besprechen.
 

@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:56bad63ca97a09c87ede5849189f7f4a1dfc5aac24bd1f773a35e37d07991c4e
+sourceHash: sha256:e30d4f15459a879e89b650547b8f3d68794f775aca5d32daeb22de3a798c2c29
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-24T00:00:00+09:00
 tags:
@@ -607,7 +607,7 @@ In February 2026, Merutak reported creating two Discord roles for notices about 
 
 In March 2026, あすたん posted the resource server rules. In July, sekisei posted an update in the same thread. [Resource server rules post](https://discord.com/channels/737538781024092170/1486515511029268610/1486515511029268610) [Update post](https://discord.com/channels/737538781024092170/1486515511029268610/1531835894196080653)
 
-On March 12 and 13, 2026, sekisei asked who was interested in a beginner Java course and a refresher course that included making Minecraft mods and plugins.
+On March 12 and 13, 2026, sekisei asked who was interested in a beginner Java course and a refresher course that included making Minecraft mods and plugins. On March 13, sekisei outlined a plan for a five-day course covering development environment setup, Java fundamentals, and creating, installing, and testing Minecraft plugins, with an optional final day on object-oriented programming.
 
 On April 12, 2026, End&#12539;コッカー proposed using regular server team meetings to share topics that had come up and discussing major changes at separate meetings.
 

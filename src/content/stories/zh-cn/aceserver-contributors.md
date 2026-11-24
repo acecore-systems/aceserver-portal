@@ -2,7 +2,7 @@
 title: 支持Aceserver的人们
 description: 通过 Minecraft 皮肤头像认识 Aceserver 的贡献者，回顾社区活动记录，并查看活动与玩家提案路线图。
 translationOf: aceserver-contributors
-sourceHash: sha256:56bad63ca97a09c87ede5849189f7f4a1dfc5aac24bd1f773a35e37d07991c4e
+sourceHash: sha256:e30d4f15459a879e89b650547b8f3d68794f775aca5d32daeb22de3a798c2c29
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-24T00:00:00+09:00
 tags:
@@ -607,7 +607,7 @@ taibon0727 准备了玻璃等物资、出行用船的停放处和处理沙子的
 
 2026 年 3 月，あすたん 发布了资源服规则。7 月，sekisei 在同一主题中发布了更新内容。 [资源服规则帖子](https://discord.com/channels/737538781024092170/1486515511029268610/1486515511029268610) [更新内容帖子](https://discord.com/channels/737538781024092170/1486515511029268610/1531835894196080653)
 
-2026年3月12日和13日，sekisei征集有意参加 Java 入门课程和复习课程的人。复习课程包括制作 Minecraft 模组和插件。
+2026年3月12日和13日，sekisei征集有意参加 Java 入门课程和复习课程的人。复习课程包括制作 Minecraft 模组和插件。3 月 13 日，sekisei 拟定了五天的课程计划，涵盖开发环境配置、Java 基础，以及 Minecraft 插件的制作、安装和测试，最后一天安排可选的面向对象编程补充课。
 
 2026年4月12日，End&#12539;コッカー 提议在运营团队例会上交流积累下来的议题，把重大改动留到另外的会议讨论。
 

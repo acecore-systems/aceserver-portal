@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:56bad63ca97a09c87ede5849189f7f4a1dfc5aac24bd1f773a35e37d07991c4e
+sourceHash: sha256:e30d4f15459a879e89b650547b8f3d68794f775aca5d32daeb22de3a798c2c29
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-24T00:00:00+09:00
 tags:
@@ -607,7 +607,7 @@ En février 2026, Merutak a annoncé la création de deux rôles Discord pour le
 
 En mars 2026, あすたん a publié les règles du serveur de ressources. En juillet, sekisei a publié une mise à jour dans le même fil. [Publication des règles du serveur de ressources](https://discord.com/channels/737538781024092170/1486515511029268610/1486515511029268610) [Publication de la mise à jour](https://discord.com/channels/737538781024092170/1486515511029268610/1531835894196080653)
 
-Les 12 et 13 mars 2026, sekisei a cherché des personnes intéressées par un cours de Java pour débutants et par un cours de remise à niveau abordant la création de mods et de plugins Minecraft.
+Les 12 et 13 mars 2026, sekisei a cherché des personnes intéressées par un cours de Java pour débutants et par un cours de remise à niveau abordant la création de mods et de plugins Minecraft. Le 13 mars, sekisei a préparé un programme sur cinq jours couvrant la configuration de l’environnement de développement, les bases de Java et la création, l’installation et les tests de plugins Minecraft, avec une dernière journée facultative consacrée à la programmation orientée objet.
 
 Le 12 avril 2026, End&#12539;コッカー a proposé de consacrer les réunions régulières de l’équipe aux sujets qui s’étaient accumulés et de réserver des réunions distinctes aux changements importants.
 
