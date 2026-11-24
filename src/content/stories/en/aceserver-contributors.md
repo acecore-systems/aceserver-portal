@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:52c2b80fd777156b9015f5aa2dea7a05f395ef3aca9eea743799c5f6c96e13cc
+sourceHash: sha256:cfef144b51a098cc547231ba8d97a33c9003ccef5e0e9486818327d8b4bdb490
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -160,6 +160,8 @@ On August 7, 2024, タケ reported that the second anniversary festival’s full
 The October 9, 2023 video “&#26032;A&#39894;PV&#25913;&#35330;&#29256;” is unlisted on the YouTube channel under ゆり’s name. A record of the video is also preserved in the old Discord.
 
 For the 2023 Hatt Harvest Festival, taiyaki5190 shared the rules and schedule. The planned date moved from October 15 to October 29. On October 28, Taiyaki confirmed the festival was due the following day and explained how to join. Posts after the event include information about participation rewards and comments from people who took part. [Date change announcement](https://discord.com/channels/737538781024092170/779569416438415421/1161919748074917900) [Participation announcement](https://discord.com/channels/737538781024092170/779569416438415421/1167836013142495353)
+
+On October 19, 2023, PillowKebap called for PvP testers. [Call for PvP testers](https://discord.com/channels/737538781024092170/773171457487929344/1164527658013569135)
 
 In November 2023, あすたん invited entries to the Aceserver Photo Contest and Hatto was named as a judge. Biwahoshi was among the people who entered work. [Photo contest announcement](https://discord.com/channels/737538781024092170/774152638450237460/1174938045674438749)
 
@@ -421,6 +423,8 @@ In February 2023, あすたん shared how to organize a group excavation for a z
 
 In April 2023, あすたん explained what information was needed to apply for large builds at the time, and ゆり shared an application template. ゆり also outlined a plan for a tunnel where the course at the Kuwa Kingdom International Circuit crossed a mountain.
 
+On May 2, 2023, KOTA-SAN announced plans to start building the provisionally named Ace Prison the following day. [Announced plans to build Ace Prison](https://discord.com/channels/737538781024092170/773171457487929344/1102965633592852560)
+
 In a November 2023 photo contest entry, Yukke looked back on excavating 256 chunks for the wither skeleton facility and taking measures to prevent spawns. In a December entry, あすたん described using Yukke’s facility to defeat Withers with other players and make a rainbow with more than 200 beacons.
 
 On May 4, 2024, sh reported creating an in-game monument dedicated to a player and asked for suggestions of players to feature in the next one.
@@ -564,6 +568,8 @@ In May 2023, あすたん put together a guide to what each server was for at th
 On June 9, 2023, new and longtime players were invited to suggest questions for the FAQ channel. Suggestions included how to view the world map and how to switch to the resource world’s map. [Call for FAQ suggestions](https://discord.com/channels/737538781024092170/1116503107619266590/1116503111893258250) [Suggested map questions](https://discord.com/channels/737538781024092170/1116503107619266590/1116511197781561354)
 
 In June 2023, タケ asked in the English chat channel whether there was a bot that could translate between English and Japanese.
+
+On June 24, 2023, タケ reported that the game tended to crash when they entered the staff-run trading post on Nintendo Switch. [Nintendo Switch crash report](https://discord.com/channels/737538781024092170/773171457487929344/1122011036246097970)
 
 In July 2023, Yukke announced creating a new resource server world. [Resource world announcement](https://discord.com/channels/737538781024092170/774152638450237460/1135574163080364103)
 

@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:52c2b80fd777156b9015f5aa2dea7a05f395ef3aca9eea743799c5f6c96e13cc
+sourceHash: sha256:cfef144b51a098cc547231ba8d97a33c9003ccef5e0e9486818327d8b4bdb490
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -160,6 +160,8 @@ Am 7. August 2024 meldete タケ den Abschluss des gesamten Programms zum zweite
 Das Video „&#26032;A&#39894;PV&#25913;&#35330;&#29256;“ vom 9. Oktober 2023 ist auf dem YouTube-Kanal unter dem Namen ゆり als nicht gelistet gekennzeichnet. Im früheren Discord ist ebenfalls ein Eintrag dazu erhalten.
 
 Für das Hatt-Erntefest 2023 stellte taiyaki5190 Regeln und Zeitplan vor. Der geplante Termin wurde vom 15. auf den 29. Oktober verschoben. Am 28. Oktober kündigte Taiyaki das Fest für den folgenden Tag an und erläuterte die Teilnahme. Beiträge nach dem Fest enthalten Hinweise zu den Teilnahmebelohnungen und Eindrücke von Teilnehmern. [Ankündigung des neuen Termins](https://discord.com/channels/737538781024092170/779569416438415421/1161919748074917900) [Ankündigung zur Teilnahme](https://discord.com/channels/737538781024092170/779569416438415421/1167836013142495353)
+
+Am 19. Oktober 2023 suchte PillowKebap nach Testspielern für PvP. [Aufruf zum PvP-Test](https://discord.com/channels/737538781024092170/773171457487929344/1164527658013569135)
 
 Im November 2023 rief あすたん zu Einsendungen für den Aceserver-Fotowettbewerb auf und Hatto wurde als Jurymitglied genannt. Biwahoshi gehörte zu den Teilnehmern, die ein Werk einreichten. [Ankündigung des Fotowettbewerbs](https://discord.com/channels/737538781024092170/774152638450237460/1174938045674438749)
 
@@ -421,6 +423,8 @@ Im Februar 2023 erklärte あすたん, wie die gemeinsamen Ausgrabungen für ei
 
 Im April 2023 erklärte あすたん, welche Angaben damals für Anträge auf größere Bauvorhaben nötig waren. ゆり teilte eine Antragsvorlage und erläuterte außerdem den Plan für einen Tunnel auf dem Abschnitt der internationalen Rennstrecke des Königreichs Kuwa, der durch einen Berg führen sollte.
 
+Am 2. Mai 2023 kündigte KOTA-SAN an, am nächsten Tag mit dem Bau des Gefängnisses „Ace Prison“ zu beginnen. Der Name war vorläufig. [Ankündigung des geplanten Gefängnisbaus](https://discord.com/channels/737538781024092170/773171457487929344/1102965633592852560)
+
 In einem Fotowettbewerbsbeitrag vom November 2023 erinnerte sich Yukke daran, 256 Chunks für die Witherskelettanlage ausgehoben und Maßnahmen gegen das Spawnen getroffen zu haben. In einem Beitrag vom Dezember beschrieb あすたん, wie die Gruppe in Yukkes Anlage Wither besiegte und mit mehr als 200 Leuchtfeuern einen Regenbogen baute.
 
 Am 4. Mai 2024 berichtete sh, im Spiel ein Denkmal für einen Spieler gebaut zu haben, und bat um Vorschläge, wem das nächste gewidmet werden könnte.
@@ -564,6 +568,8 @@ Im Mai 2023 fasste あすたん zusammen, welchen Zweck die einzelnen Server dam
 Am 9. Juni 2023 wurden neue und langjährige Spieler um Vorschläge für Fragen für den FAQ-Kanal gebeten. Als mögliche Fragen wurden der Aufruf der Weltkarte und der Wechsel zur Karte der Ressourcenwelt genannt. [Aufruf zu Fragen für den FAQ-Kanal](https://discord.com/channels/737538781024092170/1116503107619266590/1116503111893258250) [Vorschläge zu den Karten](https://discord.com/channels/737538781024092170/1116503107619266590/1116511197781561354)
 
 Im Juni 2023 fragte タケ im Kanal für den englischsprachigen Austausch, ob es einen Bot für Übersetzungen zwischen Englisch und Japanisch gab.
+
+Am 24. Juni 2023 berichtete タケ, dass das Spiel auf der Nintendo Switch beim Betreten des Handelspostens des Serverteams zum Absturz neigte. [Bericht über Abstürze auf der Nintendo Switch](https://discord.com/channels/737538781024092170/773171457487929344/1122011036246097970)
 
 Im Juli 2023 kündigte Yukke die Erstellung einer neuen Welt auf dem Ressourcenserver an. [Ankündigung der Ressourcenwelt](https://discord.com/channels/737538781024092170/774152638450237460/1135574163080364103)
 

@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:52c2b80fd777156b9015f5aa2dea7a05f395ef3aca9eea743799c5f6c96e13cc
+sourceHash: sha256:cfef144b51a098cc547231ba8d97a33c9003ccef5e0e9486818327d8b4bdb490
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -160,6 +160,8 @@ Le 7 août 2024, タケ a annoncé la fin de l’ensemble du programme de la fê
 La vidéo « &#26032;A&#39894;PV&#25913;&#35330;&#29256; », datée du 9 octobre 2023, est non répertoriée sur la chaîne YouTube au nom de ゆり. L’ancien Discord conserve aussi une trace de cette vidéo.
 
 Pour la fête des récoltes de Hatt en 2023, taiyaki5190 a présenté les règles et le programme. La date prévue a été déplacée du 15 au 29 octobre. Le 28 octobre, Taiyaki a annoncé la tenue de l’événement le lendemain et expliqué comment participer. Des messages publiés après la fête évoquent les récompenses de participation et les impressions de participants. [Annonce du changement de date](https://discord.com/channels/737538781024092170/779569416438415421/1161919748074917900) [Annonce de participation](https://discord.com/channels/737538781024092170/779569416438415421/1167836013142495353)
+
+Le 19 octobre 2023, PillowKebap a fait appel à des testeurs pour le PvP. [Appel à des testeurs pour le PvP](https://discord.com/channels/737538781024092170/773171457487929344/1164527658013569135)
 
 En novembre 2023, あすたん a annoncé l’ouverture du concours photo d’Aceserver, dans lequel Hatto était présenté comme membre du jury. Biwahoshi figurait parmi les personnes qui ont proposé des œuvres. [Annonce du concours photo](https://discord.com/channels/737538781024092170/774152638450237460/1174938045674438749)
 
@@ -421,6 +423,8 @@ En février 2023, あすたん a expliqué comment organiser le creusement colle
 
 En avril 2023, あすたん a expliqué quelles informations étaient alors requises pour demander l’autorisation d’une construction de grande ampleur, et ゆり a partagé un modèle de demande. ゆり a aussi présenté le projet de faire passer dans un tunnel le tronçon montagneux du Circuit international du royaume de Kuwa.
 
+Le 2 mai 2023, KOTA-SAN a annoncé prévoir de commencer le lendemain la construction d’une prison provisoirement nommée « Prison Ace ». [Annonce du projet de construction de la Prison Ace](https://discord.com/channels/737538781024092170/773171457487929344/1102965633592852560)
+
 Dans sa participation au concours photo de novembre 2023, Yukke est revenu sur l’excavation de 256 chunks pour l’installation de squelettes Wither et sur les mesures prises contre l’apparition de créatures. En décembre, あすたん a expliqué avoir utilisé l’installation de Yukke pour vaincre des Withers avec d’autres joueurs et créer un arc-en-ciel avec plus de 200 balises.
 
 Le 4 mai 2024, sh a annoncé avoir créé dans le jeu un monument consacré à un joueur et a demandé de proposer des joueurs à qui consacrer le prochain.
@@ -564,6 +568,8 @@ En mai 2023, あすたん a préparé un guide sur le rôle de chaque serveur à
 Le 9 juin 2023, les nouveaux joueurs comme les habitués ont été invités à proposer des questions pour le salon de la FAQ. Parmi les suggestions figuraient la consultation de la carte du monde et le passage à la carte du monde de ressources. [Appel à proposer des questions pour la FAQ](https://discord.com/channels/737538781024092170/1116503107619266590/1116503111893258250) [Questions proposées sur les cartes](https://discord.com/channels/737538781024092170/1116503107619266590/1116511197781561354)
 
 En juin 2023, タケ a demandé dans le salon d’échange en anglais s’il existait un bot capable de traduire entre l’anglais et le japonais.
+
+Le 24 juin 2023, タケ a signalé que le jeu avait tendance à planter sur Nintendo Switch en entrant dans le comptoir d’échange de l’équipe du serveur. [Signalement de plantages sur Nintendo Switch](https://discord.com/channels/737538781024092170/773171457487929344/1122011036246097970)
 
 En juillet 2023, Yukke a annoncé la création d’un nouveau monde sur le serveur de ressources. [Annonce du monde de ressources](https://discord.com/channels/737538781024092170/774152638450237460/1135574163080364103)
 
