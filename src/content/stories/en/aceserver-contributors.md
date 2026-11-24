@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:c8fa2ff2bd6b6d78f964e11474b6517c005c76f7952b80a077fe6ff62b2656c0
+sourceHash: sha256:83903b8454c80937c685b5eb4daf02dccdf05409a3ca99b5ef7ebfc0bc23f5ae
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -95,7 +95,13 @@ In the old Discord records for E-ha Radio, KOTA-SAN supported the show in 2021 b
 
 In autumn 2021, てぃあ prepared a spot for a Christmas display beside the town hall, built the tree, and invited people to help decorate. YM reported building a Christmas house.
 
+On November 24, 2021, Game\_Tokumei suggested holding a social event. [Social event proposal](https://discord.com/channels/737538781024092170/773171457487929344/912960327329656832)
+
 ### **2022 to the first half of 2023**
+
+On February 18, 2022, Kfemoka\_kfe wrote promotional text for Aceserver and asked people to help spread the word in places that allowed promotion, including Discord servers. [Promotional text and request for help spreading the word](https://discord.com/channels/737538781024092170/773171457487929344/944159265260732486)
+
+On February 25, 2022, Gui recalled having the impression that icons made by volunteers had been adopted in various places connected with Aceserver. [Recollection about volunteer-made icons](https://discord.com/channels/737538781024092170/773171457487929344/946673256465825843)
 
 In April 2022, during preparations for the second Ace Fest, KOTA-SAN named キツネコ and others as responsible for setting up the venue and Mugi as responsible for making the teaser video. キツネコ reported creating a new potion gacha.
 
@@ -335,6 +341,8 @@ On October 22, 2021, taiyaki5190 asked whether a guide to the residential distri
 
 On January 30, 2022, \_BE\_kurenohachi said people had offered to help and shared a plan to build a sizable amusement park with a mechanism that would set off fireworks just once at night.
 
+On February 20, 2022, &#12414;&#12356;&#12369;&#12427; asked for help leveling the ground for a maze. [Call for help preparing the maze site](https://discord.com/channels/737538781024092170/773171457487929344/944771522348843008)
+
 On March 1, 2022, Tomiryo outlined a plan for a potion-brewing contraption near the shared farm. On March 2, はっ agreed to the build and pointed to an existing contraption as a reference.
 
 In March 2022, タケ asked for help leveling the ground for a ground artwork. On April 1, タケ reported that the artwork was complete and thanked the people who helped level the ground or provided materials. [Call for help leveling the ground](https://discord.com/channels/737538781024092170/779569416438415421/957990944374927420) [Ground artwork completion report](https://discord.com/channels/737538781024092170/779569416438415421/959368128943489085)
@@ -508,6 +516,10 @@ On September 3, 2021, てぃあ explained that the guidance for new players had 
 In August 2021, KOTA-SAN compiled a list of useful commands for the plugins installed at the time.
 
 According to old Discord records, in August 2021 KOTA-SAN reported creating and launching Ace-kun, a bot that automatically sent instructions to newcomers in the lobby. In January 2022, KOTA-SAN reported restoring Ace-kun as one of the co-creators of Ace-kun and Kutya. In May, KOTA-SAN added automatic posting of a self-introduction template.
+
+On September 26, 2021, てぃあ explained that linking with Discord was required to enter the world at the time and outlined the process starting with joining Discord. [Joining and linking with Discord at the time](https://discord.com/channels/737538781024092170/773171457487929344/891626480537325618)
+
+On October 1, 2021, KOTA-SAN said they could still pass questions along to the server team after stepping away from their role on it. [Notice about passing questions to the server team](https://discord.com/channels/737538781024092170/773171457487929344/893335023158173729)
 
 In January 2022, YM reported writing a book with joining instructions for new players. YM suggested placing the book on a lectern either in the lobby or inside the black train where players spawned when they first joined the survival server. Another option was to put the instructions in the initial welcome message. はっ said the message seemed feasible, and YM asked to use that approach.
 

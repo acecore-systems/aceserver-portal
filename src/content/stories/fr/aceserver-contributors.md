@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:c8fa2ff2bd6b6d78f964e11474b6517c005c76f7952b80a077fe6ff62b2656c0
+sourceHash: sha256:83903b8454c80937c685b5eb4daf02dccdf05409a3ca99b5ef7ebfc0bc23f5ae
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -95,7 +95,13 @@ Dans les archives de l’ancien salon Discord d’E-ha Radio, KOTA-SAN a soutenu
 
 À l’automne 2021, てぃあ a aménagé un espace pour les décorations de Noël à côté de l’hôtel de ville, construit le sapin et invité les joueurs à participer à la décoration. YM a annoncé avoir construit une maison de Noël.
 
+Le 24 novembre 2021, Game\_Tokumei a proposé d’organiser une rencontre entre participants. [Proposition de rencontre entre participants](https://discord.com/channels/737538781024092170/773171457487929344/912960327329656832)
+
 ### **De 2022 au premier semestre 2023**
+
+Le 18 février 2022, Kfemoka\_kfe a rédigé un texte pour faire connaître Aceserver et a demandé de l’aide pour le diffuser dans les espaces où la promotion était autorisée, notamment sur des serveurs Discord. [Texte de présentation et appel à aider à sa diffusion](https://discord.com/channels/737538781024092170/773171457487929344/944159265260732486)
+
+Le 25 février 2022, Gui a dit avoir l’impression que des icônes créées par des bénévoles avaient été adoptées dans différents espaces liés à Aceserver. [Souvenir au sujet des icônes créées par des bénévoles](https://discord.com/channels/737538781024092170/773171457487929344/946673256465825843)
 
 En avril 2022, lors de la préparation du deuxième Ace Fest, KOTA-SAN a indiqué que キツネコ et d’autres personnes prépareraient le lieu et que Mugi réaliserait la vidéo d’annonce. キツネコ a annoncé avoir créé un nouveau gacha de potions.
 
@@ -335,6 +341,8 @@ Le 22 octobre 2021, taiyaki5190 a demandé s’il était possible de publier sur
 
 Le 30 janvier 2022, \_BE\_kurenohachi a dit que des personnes étaient disposées à aider et a partagé un projet de parc d’attractions assez grand, avec un mécanisme qui tirerait des feux d’artifice une seule fois la nuit.
 
+Le 20 février 2022, &#12414;&#12356;&#12369;&#12427; a demandé de l’aide pour niveler le terrain destiné à un labyrinthe. [Appel à préparer le terrain du labyrinthe](https://discord.com/channels/737538781024092170/773171457487929344/944771522348843008)
+
 Le 1er mars 2022, Tomiryo a présenté un plan pour installer un dispositif de préparation de potions près du potager commun. Le 2 mars, はっ a donné son accord pour la construction et indiqué un dispositif existant à prendre comme référence.
 
 En mars 2022, タケ a demandé de l’aide pour niveler le terrain destiné à une création au sol. Le 1er avril, タケ a annoncé que l’œuvre était terminée et remercié les personnes qui avaient préparé le terrain ou fourni des matériaux. [Appel à aider à préparer le terrain](https://discord.com/channels/737538781024092170/779569416438415421/957990944374927420) [Annonce de l’achèvement de la création au sol](https://discord.com/channels/737538781024092170/779569416438415421/959368128943489085)
@@ -508,6 +516,10 @@ Le 3 septembre 2021, てぃあ a expliqué que le guide invitait les nouveaux jo
 En août 2021, KOTA-SAN a recensé des commandes utiles des plugins installés à l’époque.
 
 D’après les archives de l’ancien salon Discord, en août 2021, KOTA-SAN a indiqué avoir créé et mis en service Ace-kun, un bot qui envoyait automatiquement des consignes aux personnes qui venaient de rejoindre le hall. En janvier 2022, KOTA-SAN, l’un des créateurs d’Ace-kun et de Kutya, a annoncé la remise en service d’Ace-kun. En mai, KOTA-SAN a ajouté la publication automatique d’un modèle de présentation personnelle.
+
+Le 26 septembre 2021, てぃあ a expliqué qu’il fallait alors une liaison avec Discord pour entrer dans le monde et a présenté la marche à suivre à partir de l’arrivée sur Discord. [Marche à suivre pour l’accès et la liaison avec Discord à l’époque](https://discord.com/channels/737538781024092170/773171457487929344/891626480537325618)
+
+Le 1er octobre 2021, KOTA-SAN a indiqué pouvoir encore transmettre des questions à l’équipe du serveur après avoir quitté son rôle au sein de celle-ci. [Message sur la transmission des questions à l’équipe du serveur](https://discord.com/channels/737538781024092170/773171457487929344/893335023158173729)
 
 En janvier 2022, YM a indiqué avoir rédigé un livre expliquant aux nouveaux joueurs comment rejoindre le serveur. YM a proposé de poser le livre sur un pupitre dans le hall ou à l’intérieur du train noir où les joueurs apparaissaient à leur première arrivée sur le serveur de survie. Une autre idée était d’inclure les instructions dans le premier message de bienvenue. はっ a estimé que le message semblait faisable, et YM a demandé de retenir cette solution.
 
