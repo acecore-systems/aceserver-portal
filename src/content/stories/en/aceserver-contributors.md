@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:f7242c01eb4facb2e4610d70e23af3b8325337d309179cf98f7671a136f27877
+sourceHash: sha256:6e73a561fd250952a1db03516059c4bf056524d0c7cf615d69b4b6402ea08db0
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -162,6 +162,8 @@ In July 2023, タケ announced that Ace Monorail had adopted a logo and invited 
 In summer 2023, タケ announced the first anniversary festival organized by Ace Monorail Take Company and thanked the people who helped expand the line. In 2024, タケ announced the company’s second anniversary festival.
 
 In the August 7, 2023 report on the first anniversary festival for Ace Monorail’s opening, タケ thanked visitors BURAKI_UTALOVE\_, yukke_11, edamameRex_java, \_BE_nanashi91239, and mallosan_52, as well as event sponsor sekisei0077. The report credited a sky mob tower, a blaze farm, and a raid farm for providing materials. [First anniversary festival report](https://discord.com/channels/737538781024092170/779569416438415421/1137777672425050163)
+
+On July 23, 2023, タケ reported that Ace Monorail Line 1 had been completed as a loop. On August 7, タケ announced the completion of the rail depot and shared that it had hosted the first anniversary festival fireworks. [Line 1 loop completion](https://discord.com/channels/737538781024092170/779569416438415421/1132502826476634202) [Rail depot completion report](https://discord.com/channels/737538781024092170/779569416438415421/1137779370627453038)
 
 On August 16, 2023, ゆり asked who was interested in a custom Apex Legends match. Mugi invited people interested in Rainbow Six Siege (R6S) to react, and PillowKebap did the same for League of Legends. [Apex Legends interest check](https://discord.com/channels/737538781024092170/882222121135251486/1141256368351891506) [Rainbow Six Siege interest check](https://discord.com/channels/737538781024092170/882222121135251486/1141265485644693524) [League of Legends interest check](https://discord.com/channels/737538781024092170/882222121135251486/1141272275816042497)
 
@@ -440,6 +442,10 @@ In the old Discord records for the hot-spring inn project, project leader edamam
 At the end of December 2022, edamameRex_java reported that construction of the hot-spring inn had finished, according to the original project records.
 
 In February 2023, あすたん shared how to organize a group excavation for a zombified piglin facility.
+
+On February 4, 2023, AGE_inari reported completing a build of Gundam Barbatos in its fourth form, the first model by the Gundam Corporation group, and invited visitors to see it. [Barbatos completion report](https://discord.com/channels/737538781024092170/779569416438415421/1071438739072630854)
+
+On February 12, NCGpotechi reported that the castle at sea was finished inside and thanked everyone who helped. The interior opened to visitors, including the arena and the spectator and commentary areas. On February 14, &#12450;&#12510;&#12484; announced that the desert gate renovation was complete inside and out and that players could use the facility. [Opening of the castle interior](https://discord.com/channels/737538781024092170/779569416438415421/1074162305874542643) [Desert gate renovation report](https://discord.com/channels/737538781024092170/779569416438415421/1074735358262136834)
 
 In April 2023, あすたん explained what information was needed to apply for large builds at the time, and ゆり shared an application template. ゆり also outlined a plan for a tunnel where the course at the Kuwa Kingdom International Circuit crossed a mountain.
 

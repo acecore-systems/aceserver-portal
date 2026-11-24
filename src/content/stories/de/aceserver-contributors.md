@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:f7242c01eb4facb2e4610d70e23af3b8325337d309179cf98f7671a136f27877
+sourceHash: sha256:6e73a561fd250952a1db03516059c4bf056524d0c7cf615d69b4b6402ea08db0
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -162,6 +162,8 @@ Im Juli 2023 gab タケ bekannt, dass Ace Monorail ein Logo festgelegt hatte, un
 Im Sommer 2023 kündigte タケ das erste Jubiläumsfest der Ace Monorail Take Company an und bedankte sich bei den Helfern beim Streckenausbau. 2024 kündigte タケ das zweite Jubiläumsfest des Unternehmens an.
 
 Im Bericht vom 7. August 2023 über das Fest zum ersten Jahrestag der Eröffnung von Ace Monorail dankte タケ den Gästen BURAKI_UTALOVE\_, yukke_11, edamameRex_java, \_BE_nanashi91239 und mallosan_52 sowie sekisei0077 für die Unterstützung als Sponsor. Der Bericht nannte einen Mob-Turm in der Höhe, eine Lohenfarm und eine Überfallfarm für ihre Materialbeiträge. [Bericht zum ersten Jubiläumsfest](https://discord.com/channels/737538781024092170/779569416438415421/1137777672425050163)
+
+Am 23. Juli 2023 meldete タケ, dass die Linie 1 der Ace Monorail als Ringlinie fertiggestellt war. Am 7. August meldete タケ auch die Fertigstellung des Betriebswerks und erklärte, dass dort das Feuerwerk zum ersten Jubiläum stattgefunden hatte. [Fertigstellung der Ringlinie](https://discord.com/channels/737538781024092170/779569416438415421/1132502826476634202) [Fertigstellung des Betriebswerks](https://discord.com/channels/737538781024092170/779569416438415421/1137779370627453038)
 
 Am 16. August 2023 suchte ゆり nach Interessierten für eine benutzerdefinierte Partie in Apex Legends. Mugi bat Interessierte an Rainbow Six Siege (R6S) um eine Reaktion, und PillowKebap tat dasselbe für League of Legends. [Interessenabfrage für Apex Legends](https://discord.com/channels/737538781024092170/882222121135251486/1141256368351891506) [Interessenabfrage für Rainbow Six Siege](https://discord.com/channels/737538781024092170/882222121135251486/1141265485644693524) [Interessenabfrage für League of Legends](https://discord.com/channels/737538781024092170/882222121135251486/1141272275816042497)
 
@@ -440,6 +442,10 @@ Den Aufzeichnungen aus dem früheren Discord-Kanal zum Bau des Gasthauses an den
 Ende Dezember 2022 meldete edamameRex_java laut den Aufzeichnungen des Bauprojekts, dass das Gasthaus an den heißen Quellen fertiggestellt war.
 
 Im Februar 2023 erklärte あすたん, wie die gemeinsamen Ausgrabungen für eine Anlage für zombifizierte Piglins ablaufen sollten.
+
+Am 4. Februar 2023 meldete AGE_inari die Fertigstellung eines Bauwerks nach dem Vorbild des Gundam Barbatos in seiner vierten Form. Es war das erste Modell der Gruppe Gundam Corporation. AGE_inari lud zur Besichtigung ein. [Fertigstellung des Barbatos](https://discord.com/channels/737538781024092170/779569416438415421/1071438739072630854)
+
+Am 12. Februar meldete NCGpotechi, dass der Innenausbau der Burg auf dem Meer fertig war, und bedankte sich bei allen, die geholfen hatten. Die Burg öffnete auch ihre Innenräume mit Arena sowie Plätzen für Zuschauer und Kommentatoren. Am 14. Februar meldete &#12450;&#12510;&#12484;, dass der Umbau des Wüstentors innen und außen abgeschlossen war und die Anlage genutzt werden konnte. [Öffnung der Burgräume](https://discord.com/channels/737538781024092170/779569416438415421/1074162305874542643) [Umbau des Wüstentors](https://discord.com/channels/737538781024092170/779569416438415421/1074735358262136834)
 
 Im April 2023 erklärte あすたん, welche Angaben damals für Anträge auf größere Bauvorhaben nötig waren. ゆり teilte eine Antragsvorlage und erläuterte außerdem den Plan für einen Tunnel auf dem Abschnitt der internationalen Rennstrecke des Königreichs Kuwa, der durch einen Berg führen sollte.
 

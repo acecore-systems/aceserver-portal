@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:f7242c01eb4facb2e4610d70e23af3b8325337d309179cf98f7671a136f27877
+sourceHash: sha256:6e73a561fd250952a1db03516059c4bf056524d0c7cf615d69b4b6402ea08db0
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -162,6 +162,8 @@ En juillet 2023, タケ a annoncé l’adoption d’un logo pour Ace Monorail et
 À l’été 2023, タケ a annoncé la fête du premier anniversaire organisée par la compagnie Ace Monorail Take et remercié les personnes qui avaient aidé à prolonger la ligne. En 2024, タケ a annoncé la fête du deuxième anniversaire organisée par la compagnie.
 
 Dans le compte rendu du 7 août 2023 sur la fête du premier anniversaire de l’ouverture d’Ace Monorail, タケ a remercié les visiteurs BURAKI_UTALOVE\_, yukke_11, edamameRex_java, \_BE_nanashi91239 et mallosan_52, ainsi que sekisei0077 pour son parrainage. Le compte rendu cite une tour à créatures en altitude, une ferme à blazes et une ferme à raids pour l’apport de matériaux. [Compte rendu du premier anniversaire](https://discord.com/channels/737538781024092170/779569416438415421/1137777672425050163)
+
+Le 23 juillet 2023, タケ a annoncé que la ligne 1 du monorail Ace était achevée et formait une boucle. Le 7 août, タケ a également annoncé que le dépôt ferroviaire était terminé et précisé que le feu d’artifice du premier anniversaire avait eu lieu à cet endroit. [Achèvement de la boucle de la ligne 1](https://discord.com/channels/737538781024092170/779569416438415421/1132502826476634202) [Annonce de l’achèvement du dépôt](https://discord.com/channels/737538781024092170/779569416438415421/1137779370627453038)
 
 Le 16 août 2023, ゆり a cherché des personnes intéressées par une partie personnalisée d’Apex Legends. Mugi a invité les personnes intéressées par Rainbow Six Siege (R6S) à réagir, et PillowKebap a fait de même pour League of Legends. [Appel aux joueurs intéressés par Apex Legends](https://discord.com/channels/737538781024092170/882222121135251486/1141256368351891506) [Appel aux joueurs intéressés par Rainbow Six Siege](https://discord.com/channels/737538781024092170/882222121135251486/1141265485644693524) [Appel aux joueurs intéressés par League of Legends](https://discord.com/channels/737538781024092170/882222121135251486/1141272275816042497)
 
@@ -440,6 +442,10 @@ Les archives de l’ancien Discord sur l’auberge thermale indiquent qu’edama
 Fin décembre 2022, edamameRex_java a annoncé l’achèvement de la construction de l’auberge thermale, d’après les archives du projet.
 
 En février 2023, あすたん a expliqué comment organiser le creusement collectif pour une installation destinée aux piglins zombifiés.
+
+Le 4 février 2023, AGE_inari a annoncé avoir terminé une construction représentant le Gundam Barbatos dans sa quatrième forme, le premier modèle du groupe Gundam Corporation, et a invité les joueurs à venir le voir. [Annonce de l’achèvement du Barbatos](https://discord.com/channels/737538781024092170/779569416438415421/1071438739072630854)
+
+Le 12 février, NCGpotechi a annoncé que l’intérieur du château en mer était terminé et a remercié les personnes qui avaient aidé. L’intérieur a ouvert aux visiteurs, avec notamment une arène et des espaces pour le public et les commentateurs. Le 14 février, &#12450;&#12510;&#12484; a annoncé que la porte du désert avait été rénovée à l’intérieur comme à l’extérieur et que les joueurs pouvaient l’utiliser. [Ouverture de l’intérieur du château](https://discord.com/channels/737538781024092170/779569416438415421/1074162305874542643) [Annonce de la rénovation de la porte du désert](https://discord.com/channels/737538781024092170/779569416438415421/1074735358262136834)
 
 En avril 2023, あすたん a expliqué quelles informations étaient alors requises pour demander l’autorisation d’une construction de grande ampleur, et ゆり a partagé un modèle de demande. ゆり a aussi présenté le projet de faire passer dans un tunnel le tronçon montagneux du Circuit international du royaume de Kuwa.
 

@@ -2,7 +2,7 @@
 title: As pessoas que apoiaram o Aceserver
 description: Conheça quem ajudou o Aceserver pelos retratos de skins do Minecraft, relembre as atividades e confira o roteiro de eventos e propostas.
 translationOf: aceserver-contributors
-sourceHash: sha256:f7242c01eb4facb2e4610d70e23af3b8325337d309179cf98f7671a136f27877
+sourceHash: sha256:6e73a561fd250952a1db03516059c4bf056524d0c7cf615d69b4b6402ea08db0
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -162,6 +162,8 @@ Em julho de 2023, タケ informou que a Ace Monorail havia adotado um logotipo e
 No verão de 2023, タケ anunciou a festa de um ano organizada pela empresa Ace Monorail Take e agradeceu a quem ajudou na expansão da linha. Em 2024, também anunciou a festa de dois anos organizada pela empresa.
 
 No relato de 7 de agosto de 2023 sobre a festa de um ano da inauguração da Ace Monorail, タケ agradeceu aos visitantes BURAKI_UTALOVE\_, yukke_11, edamameRex_java, \_BE_nanashi91239 e mallosan_52, e a sekisei0077 pelo patrocínio. O relato citou uma torre aérea de criaturas, uma fazenda de blazes e uma fazenda de invasões como fontes de materiais. [Relato da festa de um ano](https://discord.com/channels/737538781024092170/779569416438415421/1137777672425050163)
+
+Em 23 de julho de 2023, タケ anunciou que a linha 1 do Monotrilho Ace estava concluída como linha circular. Em 7 de agosto, タケ também anunciou a conclusão do pátio ferroviário e informou que a queima de fogos da festa de primeiro aniversário havia ocorrido ali. [Conclusão da linha circular](https://discord.com/channels/737538781024092170/779569416438415421/1132502826476634202) [Anúncio da conclusão do pátio ferroviário](https://discord.com/channels/737538781024092170/779569416438415421/1137779370627453038)
 
 Em 16 de agosto de 2023, ゆり procurou jogadores interessados em uma partida personalizada de Apex Legends. Mugi pediu que pessoas interessadas em Rainbow Six Siege (R6S) reagissem, e PillowKebap fez o mesmo para League of Legends. [Consulta de interesse em Apex Legends](https://discord.com/channels/737538781024092170/882222121135251486/1141256368351891506) [Consulta de interesse em Rainbow Six Siege](https://discord.com/channels/737538781024092170/882222121135251486/1141265485644693524) [Consulta de interesse em League of Legends](https://discord.com/channels/737538781024092170/882222121135251486/1141272275816042497)
 
@@ -440,6 +442,10 @@ Os registros do antigo canal do Discord sobre a pousada de águas termais inform
 No fim de dezembro de 2022, edamameRex_java informou que a construção da pousada de águas termais havia terminado, conforme consta nos registros do projeto.
 
 Em fevereiro de 2023, あすたん explicou como organizar uma escavação conjunta para uma instalação de piglins-zumbis.
+
+Em 4 de fevereiro de 2023, AGE_inari anunciou que havia concluído a construção do Gundam Barbatos em sua quarta forma, o primeiro modelo do grupo Gundam Corporation, e convidou os jogadores a visitá-lo. [Anúncio da conclusão do Barbatos](https://discord.com/channels/737538781024092170/779569416438415421/1071438739072630854)
+
+Em 12 de fevereiro, NCGpotechi anunciou que o interior do castelo no mar estava pronto e agradeceu a quem ajudou. O interior foi aberto à visitação, com arena e espaços para espectadores e narradores. Em 14 de fevereiro, &#12450;&#12510;&#12484; anunciou que a reforma interna e externa do portão do deserto estava concluída e que os jogadores podiam usar o local. [Abertura do interior do castelo](https://discord.com/channels/737538781024092170/779569416438415421/1074162305874542643) [Anúncio da reforma do portão do deserto](https://discord.com/channels/737538781024092170/779569416438415421/1074735358262136834)
 
 Em abril de 2023, あすたん explicou quais informações eram necessárias na época para solicitar grandes construções, e ゆり compartilhou um modelo de solicitação. ゆり também apresentou o plano de construir um túnel no trecho do Circuito Internacional do Reino de Kuwa que passava por uma montanha.
 

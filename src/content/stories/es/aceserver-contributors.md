@@ -2,7 +2,7 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:f7242c01eb4facb2e4610d70e23af3b8325337d309179cf98f7671a136f27877
+sourceHash: sha256:6e73a561fd250952a1db03516059c4bf056524d0c7cf615d69b4b6402ea08db0
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -162,6 +162,8 @@ En julio de 2023, タケ anunció que Ace Monorail ya tenía logotipo y pidió p
 En el verano de 2023, タケ anunció el festival del primer aniversario organizado por la compañía Ace Monorail Take y agradeció la colaboración en la ampliación de la línea. En 2024, también anunció el festival del segundo aniversario organizado por la compañía.
 
 En el informe del 7 de agosto de 2023 sobre el festival del primer aniversario de la apertura de Ace Monorail, タケ dio las gracias a los visitantes BURAKI_UTALOVE\_, yukke_11, edamameRex_java, \_BE_nanashi91239 y mallosan_52, y a sekisei0077 por patrocinar el evento. El informe citó una torre aérea de criaturas, una granja de blazes y una granja de asaltos como fuentes de materiales. [Informe del festival del primer aniversario](https://discord.com/channels/737538781024092170/779569416438415421/1137777672425050163)
+
+El 23 de julio de 2023, タケ anunció que la línea 1 del Monorraíl Ace se había completado como línea circular. El 7 de agosto anunció también que el depósito ferroviario estaba terminado y explicó que allí se habían celebrado los fuegos artificiales del festival del primer aniversario. [Finalización de la línea circular](https://discord.com/channels/737538781024092170/779569416438415421/1132502826476634202) [Anuncio de la finalización del depósito](https://discord.com/channels/737538781024092170/779569416438415421/1137779370627453038)
 
 El 16 de agosto de 2023, ゆり preguntó a quién le interesaba una partida personalizada de Apex Legends. Mugi pidió que reaccionara quien tuviera interés en Rainbow Six Siege (R6S), y PillowKebap hizo lo mismo para League of Legends. [Sondeo de interés en Apex Legends](https://discord.com/channels/737538781024092170/882222121135251486/1141256368351891506) [Sondeo de interés en Rainbow Six Siege](https://discord.com/channels/737538781024092170/882222121135251486/1141265485644693524) [Sondeo de interés en League of Legends](https://discord.com/channels/737538781024092170/882222121135251486/1141272275816042497)
 
@@ -440,6 +442,10 @@ Los registros del antiguo canal de Discord sobre la posada de aguas termales rec
 A finales de diciembre de 2022, edamameRex_java informó de que había concluido la construcción de la posada de aguas termales, según los registros del proyecto.
 
 En febrero de 2023, あすたん explicó cómo coordinar la excavación colectiva para una instalación de piglins zombificados.
+
+El 4 de febrero de 2023, AGE_inari anunció que había terminado la construcción del Gundam Barbatos en su cuarta forma, el primer modelo del grupo Gundam Corporation, e invitó a visitarla. [Anuncio de la finalización del Barbatos](https://discord.com/channels/737538781024092170/779569416438415421/1071438739072630854)
+
+El 12 de febrero, NCGpotechi anunció que el interior del castillo en el mar estaba terminado y agradeció a quienes colaboraron. El interior se abrió al público, con una arena y espacios para espectadores y comentaristas. El 14 de febrero, &#12450;&#12510;&#12484; anunció que la remodelación interior y exterior de la puerta del desierto había terminado y que se podía utilizar la instalación. [Apertura del interior del castillo](https://discord.com/channels/737538781024092170/779569416438415421/1074162305874542643) [Anuncio de la remodelación de la puerta del desierto](https://discord.com/channels/737538781024092170/779569416438415421/1074735358262136834)
 
 En abril de 2023, あすたん explicó qué información se pedía entonces para solicitar permiso para grandes construcciones, y ゆり compartió una plantilla de solicitud. ゆり también presentó el plan de hacer un túnel en el tramo del Circuito Internacional del Reino de Kuwa que atravesaba una montaña.
 
