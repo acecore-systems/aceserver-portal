@@ -2,9 +2,9 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:eacc59e6f1e82eb1fea4e2e585a4d93c768614396808ca061d4be525d6324596
+sourceHash: sha256:c9893040886ed5420e1fde0d017bec41883688defe2cf963bc3e6a5b998c5bd4
 date: 2026-11-14T00:00:00+09:00
-lastUpdated: 2026-11-22T00:00:00+09:00
+lastUpdated: 2026-11-24T00:00:00+09:00
 tags:
   - Aceserver
   - Minecraft
@@ -30,6 +30,8 @@ Laut den Berichten aus dem früheren Discord-Kanal von Between Tower meldete Pil
 Im August 2021 erklärte Gui, dass der Server begann, damit alle die Welt von はっ besuchen und darin spielen konnten. Gui kündigte auch an, dass コタ vorerst die Entscheidungen zum Betrieb übernehmen würde. コタ bestätigte die Übernahme. [Guis Ankündigung](https://discord.com/channels/737538781024092170/774152638450237460/880745650009047080) [コタs Ankündigung](https://discord.com/channels/737538781024092170/774152638450237460/880760188351705178)
 
 Im August 2021 kündigte KOTA-SAN einen Logo-Aufruf zum ersten Jubiläum an. Im September berichtete Mugi über die Neuordnung des Discord-Servers und startete die Einreichungsphase. Am 2. Oktober eröffnete Mugi die Abstimmung über fünf Entwürfe. Am 4. November gab てぃあ bekannt, dass der Entwurf von YM ausgewählt und auf Discord eingesetzt worden war, und dankte YM, J&#27663;, Mea und Café Mocha für ihre Arbeiten. [Vorankündigung des Aufrufs](https://discord.com/channels/737538781024092170/774152638450237460/881193662321684601) [Start der Einreichungsphase](https://discord.com/channels/737538781024092170/774152638450237460/882433940621758474) [Ankündigung des Abstimmungsstarts](https://discord.com/channels/737538781024092170/882218927055331369/893689014039765053) [Auswahlergebnis und Dank](https://discord.com/channels/737538781024092170/882218927055331369/905494118606725131) [Bekanntgabe des ausgewählten Logos](https://discord.com/channels/737538781024092170/774152638450237460/905830523761487872)
+
+Am 8. Mai 2021 richtete KOTA-SAN eine eigene Kategorie für Fragen zu Discord ein und bot an, sie zu beantworten. Am 8. Oktober gab てぃあ die Einrichtung des „Raums für Haiku und Senryū“ bekannt.
 
 ## Gemeinschaften und Baugruppen
 
@@ -97,7 +99,7 @@ Im April 2022 bereitete NCGpotechi sechs mögliche Standorte für den Bauwettbew
 
 Im Mai 2022 kündigte キツネコ ein alternatives Bootsrennen auf einer von Hako_Otoko gebauten Strecke an. [Originalbeitrag](https://discord.com/channels/737538781024092170/774152638450237460/970291030152847390)
 
-Für das Neue Sommerfest am 21. August 2022 suchte ゆり nach Ständen und Programmpunkten. Am Veranstaltungstag kündigte ゆり die Durchführung an und stellte das Programm vor, darunter Feuerwerk, eine Vorschau des Werbevideos und der Abschluss. [Ankündigung am Festtag](https://discord.com/channels/737538781024092170/779569416438415421/1010817999575449610)
+Für das Neue Sommerfest am 21. August 2022 suchte ゆり nach Ständen und Programmpunkten. Am 15. August berichtete ゆり, einen Lagerplatz für das Feuerwerk eingerichtet zu haben. Am Veranstaltungstag kündigte ゆり die Durchführung an und stellte das Programm vor, darunter Feuerwerk, eine Vorschau des Werbevideos und der Abschluss. [Ankündigung am Festtag](https://discord.com/channels/737538781024092170/779569416438415421/1010817999575449610)
 
 edamameRex_java (Edamame) kündigte einen eigenen Stand an. Moon_666 stellte das Angebot am eigenen Stand vor, darunter ein Gacha. Nach dem Fest teilte Yukke Eindrücke und dankte ゆり, Edamame und den Standbetreibern. [Ankündigung von Edamames Stand](https://discord.com/channels/737538781024092170/779569416438415421/1010359403259641856) [Ankündigung von Moon_666s Stand](https://discord.com/channels/737538781024092170/779569416438415421/1010344489270923304) [Eindrücke und Dank nach dem Fest](https://discord.com/channels/737538781024092170/779569416438415421/1010919818972631110)
 
@@ -305,7 +307,7 @@ Am 5. April 2021 meldete KOTA-SAN, dass das Takenoko-no-Sato-Stadion in der Lobb
 
 Im Mai erklärte kuroneko229, dass damals jeder in der Entwicklungsstadt bauen konnte.
 
-Im Juni 2021 berichtete KOTA-SAN vom Start des gemeinsamen Bauprojekts Yasuragi no Mori und davon, zum Beginn des Projekts einen Baum gepflanzt zu haben. Im selben Monat berichtete KOTA-SAN auch, dass in Yasuragi no Mori eine Vorrichtung zur Herstellung unsichtbarer Gegenstandsrahmen gebaut worden war.
+Im Juni 2021 berichtete KOTA-SAN vom Start des gemeinsamen Bauprojekts Yasuragi no Mori und davon, zum Beginn des Projekts einen Baum gepflanzt zu haben. Im selben Monat berichtete KOTA-SAN auch, dass in Yasuragi no Mori eine Vorrichtung zur Herstellung unsichtbarer Gegenstandsrahmen gebaut worden war. Am 29. Oktober 2022 berichtete KOTA-SAN, eine Ausgabestelle für unsichtbare Gegenstandsrahmen eingerichtet zu haben.
 
 Am 22. Oktober 2021 fragte taiyaki5190, ob ein Wegweiser für das selbst gebaute Wohnviertel am Schwarzen Brett veröffentlicht werden könnte.
 

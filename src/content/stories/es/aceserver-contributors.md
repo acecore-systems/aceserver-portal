@@ -2,9 +2,9 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:eacc59e6f1e82eb1fea4e2e585a4d93c768614396808ca061d4be525d6324596
+sourceHash: sha256:c9893040886ed5420e1fde0d017bec41883688defe2cf963bc3e6a5b998c5bd4
 date: 2026-11-14T00:00:00+09:00
-lastUpdated: 2026-11-22T00:00:00+09:00
+lastUpdated: 2026-11-24T00:00:00+09:00
 tags:
   - Aceserver
   - Minecraft
@@ -30,6 +30,8 @@ En los informes de Between Tower del antiguo canal de Discord, PillowKebap anunc
 En agosto de 2021, Gui explicó que el servidor comenzó para que cualquiera pudiera visitar y jugar en el mundo de はっ. También anunció que コタ asumiría las decisiones de gestión por el momento. コタ confirmó que aceptaba. [Anuncio de Gui](https://discord.com/channels/737538781024092170/774152638450237460/880745650009047080) [Anuncio de コタ](https://discord.com/channels/737538781024092170/774152638450237460/880760188351705178)
 
 En agosto de 2021, KOTA-SAN adelantó una convocatoria para el logotipo del primer aniversario. En septiembre, Mugi informó de la reorganización de Discord y abrió la convocatoria. El 2 de octubre, Mugi abrió la votación entre cinco diseños candidatos. El 4 de noviembre, てぃあ anunció que se había elegido el diseño de YM y que ya se usaba en Discord, y agradeció las aportaciones de YM, J&#27663;, Mea y Café Mocha. [Avance de la convocatoria](https://discord.com/channels/737538781024092170/774152638450237460/881193662321684601) [Apertura de la convocatoria](https://discord.com/channels/737538781024092170/774152638450237460/882433940621758474) [Anuncio del inicio de la votación](https://discord.com/channels/737538781024092170/882218927055331369/893689014039765053) [Resultado de la selección y agradecimientos](https://discord.com/channels/737538781024092170/882218927055331369/905494118606725131) [Anuncio del logotipo elegido](https://discord.com/channels/737538781024092170/774152638450237460/905830523761487872)
+
+El 8 de mayo de 2021, KOTA-SAN creó una categoría específica para preguntas sobre Discord y se ofreció a responderlas. El 8 de octubre, てぃあ anunció la creación de la «Sala de haiku y senryū».
 
 ## Comunidades y grupos creativos
 
@@ -97,7 +99,7 @@ En abril de 2022, NCGpotechi preparó seis posibles emplazamientos para el concu
 
 En mayo de 2022, キツネコ anunció una carrera de barcos alternativa en un circuito construido por Hako_Otoko. [Publicación original](https://discord.com/channels/737538781024092170/774152638450237460/970291030152847390)
 
-Antes del Nuevo Festival de Verano del 21 de agosto de 2022, ゆり pidió propuestas para puestos y actividades. El día del festival, confirmó que se celebraría y compartió el programa, que incluía fuegos artificiales, un adelanto del video promocional y la clausura. [Anuncio del día del festival](https://discord.com/channels/737538781024092170/779569416438415421/1010817999575449610)
+Antes del Nuevo Festival de Verano del 21 de agosto de 2022, ゆり pidió propuestas para puestos y actividades. El 15 de agosto, ゆり informó de que había preparado un lugar para guardar los fuegos artificiales. El día del festival, confirmó que se celebraría y compartió el programa, que incluía fuegos artificiales, un adelanto del video promocional y la clausura. [Anuncio del día del festival](https://discord.com/channels/737538781024092170/779569416438415421/1010817999575449610)
 
 edamameRex_java (Edamame) anunció su puesto. Moon_666 presentó lo que habría en su puesto, incluido un gacha. Tras el festival, Yukke compartió sus impresiones y dio las gracias a ゆり, Edamame y los responsables de los puestos. [Anuncio del puesto de Edamame](https://discord.com/channels/737538781024092170/779569416438415421/1010359403259641856) [Anuncio del puesto de Moon_666](https://discord.com/channels/737538781024092170/779569416438415421/1010344489270923304) [Impresiones y agradecimientos tras el festival](https://discord.com/channels/737538781024092170/779569416438415421/1010919818972631110)
 
@@ -305,7 +307,7 @@ El 5 de abril de 2021, KOTA-SAN informó que el estadio Takenoko no Sato del lob
 
 En mayo, kuroneko229 anunció que en aquel momento cualquiera podía construir en la Ciudad de Desarrollo.
 
-En junio de 2021, KOTA-SAN informó del inicio del proyecto de construcción colaborativa Yasuragi no Mori y contó que había plantado un árbol para marcar el comienzo. Ese mismo mes también informó de que en Yasuragi no Mori se había construido un dispositivo para fabricar marcos invisibles para objetos.
+En junio de 2021, KOTA-SAN informó del inicio del proyecto de construcción colaborativa Yasuragi no Mori y contó que había plantado un árbol para marcar el comienzo. Ese mismo mes también informó de que en Yasuragi no Mori se había construido un dispositivo para fabricar marcos invisibles para objetos. El 29 de octubre de 2022, KOTA-SAN informó de que había construido un punto de distribución de marcos invisibles para objetos.
 
 El 22 de octubre de 2021, taiyaki5190 consultó si podía publicar en el tablón una guía del barrio residencial que había construido.
 

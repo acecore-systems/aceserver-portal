@@ -2,9 +2,9 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:eacc59e6f1e82eb1fea4e2e585a4d93c768614396808ca061d4be525d6324596
+sourceHash: sha256:c9893040886ed5420e1fde0d017bec41883688defe2cf963bc3e6a5b998c5bd4
 date: 2026-11-14T00:00:00+09:00
-lastUpdated: 2026-11-22T00:00:00+09:00
+lastUpdated: 2026-11-24T00:00:00+09:00
 tags:
   - Aceserver
   - Minecraft
@@ -30,6 +30,8 @@ In Between Tower’s old Discord reports, PillowKebap announced the completion o
 In August 2021, Gui said the server began so anyone could visit はっ and play in their world. Gui also announced that コタ would take over operational decisions for the time being. コタ confirmed accepting the role. [Gui’s announcement](https://discord.com/channels/737538781024092170/774152638450237460/880745650009047080) [コタ’s announcement](https://discord.com/channels/737538781024092170/774152638450237460/880760188351705178)
 
 In August 2021, KOTA-SAN previewed a call for first-anniversary logo designs. In September, Mugi reported reorganizing Discord and opened submissions. On October 2, Mugi opened voting on five candidate designs. On November 4, てぃあ announced that YM’s design had been selected and applied on Discord, and thanked YM, J&#27663;, Mea, and Café Mocha for their work. [Call preview](https://discord.com/channels/737538781024092170/774152638450237460/881193662321684601) [Submissions open](https://discord.com/channels/737538781024092170/774152638450237460/882433940621758474) [Voting announcement](https://discord.com/channels/737538781024092170/882218927055331369/893689014039765053) [Selection and thanks to the designers](https://discord.com/channels/737538781024092170/882218927055331369/905494118606725131) [Selected logo announcement](https://discord.com/channels/737538781024092170/774152638450237460/905830523761487872)
+
+On May 8, 2021, KOTA-SAN created a dedicated category for questions about Discord and offered to answer them. On October 8, てぃあ announced the opening of the “Haiku and Senryū Room.”
 
 ## Communities and creative groups
 
@@ -97,7 +99,7 @@ In April 2022, NCGpotechi prepared six possible sites for the Yasuragi no Mori b
 
 In May 2022, キツネコ announced an alternative boat race using a course built by Hako_Otoko. [Original post](https://discord.com/channels/737538781024092170/774152638450237460/970291030152847390)
 
-Ahead of the New Summer Festival on August 21, 2022, ゆり asked for stalls and activities. On the day, ゆり confirmed the festival was going ahead and shared the program, which included fireworks, a preview of the promotional video, and closing events. [Festival-day announcement](https://discord.com/channels/737538781024092170/779569416438415421/1010817999575449610)
+Ahead of the New Summer Festival on August 21, 2022, ゆり asked for stalls and activities. On August 15, ゆり reported setting up a place to store fireworks. On the day, ゆり confirmed the festival was going ahead and shared the program, which included fireworks, a preview of the promotional video, and closing events. [Festival-day announcement](https://discord.com/channels/737538781024092170/779569416438415421/1010817999575449610)
 
 edamameRex_java (Edamame) announced a stall. Moon_666 also shared what would be available at their stall, including a gacha. After the festival, Yukke shared impressions and thanked ゆり, Edamame, and the stallholders. [Edamame’s stall announcement](https://discord.com/channels/737538781024092170/779569416438415421/1010359403259641856) [Moon_666’s stall announcement](https://discord.com/channels/737538781024092170/779569416438415421/1010344489270923304) [Post-festival impressions and thanks](https://discord.com/channels/737538781024092170/779569416438415421/1010919818972631110)
 
@@ -305,7 +307,7 @@ On April 5, 2021, KOTA-SAN reported that Takenoko no Sato Stadium in the lobby w
 
 In May, kuroneko229 announced that anyone could build in Development City at the time.
 
-In June 2021, KOTA-SAN reported the launch of the collaborative building project Yasuragi no Mori and said they had planted a tree to mark its start. That month, KOTA-SAN also reported that a device for making invisible item frames had been built at Yasuragi no Mori.
+In June 2021, KOTA-SAN reported the launch of the collaborative building project Yasuragi no Mori and said they had planted a tree to mark its start. That month, KOTA-SAN also reported that a device for making invisible item frames had been built at Yasuragi no Mori. On October 29, 2022, KOTA-SAN reported building a distribution station for invisible item frames.
 
 On October 22, 2021, taiyaki5190 asked whether a guide to the residential district they had built could be posted on the bulletin board.
 
