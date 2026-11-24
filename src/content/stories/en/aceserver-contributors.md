@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:9b08b42c5b31f0d48b923042d399a0ffff0086f334f9a95c32c3cd1d40e97216
+sourceHash: sha256:0e90281e61927ca67731393cad65dcbd8c16895c60ab3be719a1f453c8a2e77a
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -54,6 +54,8 @@ As owner of A Yū (A-shō), ゆり (Yū) described the sale of materials and cal
 On January 16, 2022, はっ asked in the product development thread what new items players wanted &#20844;&#30410;&#25152; to sell. KOTA-SAN took notes on the sales ideas raised in voice chat. [Call for suggestions for new items](https://discord.com/channels/737538781024092170/932084170392494080/932084170392494080) [Notes on the sales ideas](https://discord.com/channels/737538781024092170/932084170392494080/932114105228206100)
 
 In 2022, s1nan0sub shared the rules for using Iroha Village and reported that Inaba Village’s shared storage facility was complete.
+
+On May 11, 2022, KOTA-SAN asked players what additional items they wanted available for trading. [Call for trading item suggestions](https://discord.com/channels/737538781024092170/973722800294596608/973722800294596608)
 
 In January 2023, ゆり outlined the groundwork, plugin testing, and building steps for developing an RPG server. In February, ゆり shared the results of connection tests.
 
@@ -331,6 +333,8 @@ In April 2022, SPdari reported that the foundation and roof of the main base at 
 
 In June 2022, yanyan_fafnir explained how to enter the floating-island contest that led to work on the former lobby and how entries would be presented at judging. The announcement named はっ and members with the supporter role or above as judges. [Contest entry rules](https://discord.com/channels/737538781024092170/774152638450237460/982990352422162482) [Judging session announcement](https://discord.com/channels/737538781024092170/774152638450237460/986294242848669756)
 
+In June 2022, はっ shared a lobby concept in a thread about the build. edamameRex_java suggested building multiple lobbies, as in the earlier setup. [Lobby concept](https://discord.com/channels/737538781024092170/981569254031769700/981569389306466354) [Suggestion to build multiple lobbies](https://discord.com/channels/737538781024092170/981569254031769700/981572980993847466)
+
 On June 5, 2022, taka8621 proposed a lobby with connected levels and gates in the central area. Under the proposal, members with the supporter role or above at the time would build the central area of each level.
 
 On June 7, 2022, Moon\_666 asked whether players would reach different worlds from the lobby and also go through it on their way back. They pointed out that this would change the existing connections between worlds.
@@ -505,6 +509,8 @@ In May 2022, Mugi reported that Kutya could read Japanese Morse code aloud.
 
 In June 2022, Mugi updated the text-to-speech bot Kutya to support chat inside voice channels. In March 2023, Mugi announced a bot for sending anonymous feedback to the server team. [Kutya update](https://discord.com/channels/737538781024092170/774152638450237460/986439863937155122) [Anonymous feedback announcement](https://discord.com/channels/737538781024092170/774152638450237460/1087976366126927882)
 
+On June 4, 2022, はっ created a Discord thread for public meetings. [Public meeting thread](https://discord.com/channels/737538781024092170/982599800375623740/982599800375623740)
+
 On June 25 and 26, 2022, yanyan_fafnir asked players to weigh in through a supporter survey on opening the test world Azkaban as a temporary play area. taibon0727 described the idea as something like a demo, and sh pointed out that opening it to players could double as a test. taka8621 suggested a place where players could try building and experimenting with circuits without applying first.
 
 On August 2, 2022, players discussed how others going to bed could affect the time available to work at night. PillowKebap pointed out that this made people working at night depend on other players’ decisions and proposed removing the option to skip the night.
@@ -566,6 +572,8 @@ On September 13, 2023, Mugi shared a draft of the Ē-hō rules and suggested lea
 On October 4, 2023, あすたん reported that the permissions for commands used to move between servers had been configured.
 
 On October 26, 2023, Syake checked the wiki and reported being unable to find which Minecraft versions the server supported.
+
+In December 2023, after winning a PvP competition, taiyaki5190 asked for ideas for new Azkaban items. Barrel2next proposed armor and a sword that would produce an effect when used together. nnn\_percent proposed a consumable item that would let players pass through blocks temporarily. [Call for item ideas](https://discord.com/channels/737538781024092170/1183387092395495505/1183387096975679518) [Armor and sword proposal](https://discord.com/channels/737538781024092170/1183387092395495505/1183447073572519998) [Proposal for an item that lets players pass through blocks](https://discord.com/channels/737538781024092170/1183387092395495505/1183688251878420480)
 
 In January 2024, あすたん opened a Discord server, the Ace Server Leaderboard Archive (ASLA), to collect records from Aceserver. They explained the participation rules and how to submit records. あすたん also posted lists covering mining, statistics, and ingots. キツネコ, Feruno, and Taiyaki sent statistics to the submissions channel, and Tabekirareta Potechi proposed candidates for records such as the first castle.
 

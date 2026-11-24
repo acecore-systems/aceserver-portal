@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:9b08b42c5b31f0d48b923042d399a0ffff0086f334f9a95c32c3cd1d40e97216
+sourceHash: sha256:0e90281e61927ca67731393cad65dcbd8c16895c60ab3be719a1f453c8a2e77a
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -54,6 +54,8 @@ En tant que propriétaire d’A Yū (A-shō), ゆり (Yū) a présenté la vente
 Le 16 janvier 2022, はっ a demandé dans le fil consacré au développement de produits quels nouveaux articles les joueurs souhaitaient voir à la vente chez &#20844;&#30410;&#25152;. KOTA-SAN a pris des notes sur les idées de vente évoquées dans le salon vocal. [Appel à proposer de nouveaux articles](https://discord.com/channels/737538781024092170/932084170392494080/932084170392494080) [Notes sur les idées de vente](https://discord.com/channels/737538781024092170/932084170392494080/932114105228206100)
 
 En 2022, s1nan0sub a présenté les règles d’utilisation du village d’Iroha et a annoncé que l’entrepôt commun du village d’Inaba était terminé.
+
+Le 11 mai 2022, KOTA-SAN a demandé quels articles les joueurs souhaitaient voir ajoutés aux échanges. [Appel à proposer de nouveaux articles à échanger](https://discord.com/channels/737538781024092170/973722800294596608/973722800294596608)
 
 En janvier 2023, ゆり a structuré les préparatifs, les essais de plugins et les étapes de construction pour développer un serveur RPG. En février, ゆり a partagé les résultats des tests de connexion.
 
@@ -331,6 +333,8 @@ En avril 2022, SPdari a signalé que les fondations et le toit de la base princi
 
 En juin 2022, yanyan_fafnir a expliqué comment participer au concours d’îles flottantes qui a mené à la construction de l’ancien hall et comment les projets seraient présentés au jury. L’annonce nommait はっ et les membres ayant le rôle de soutien ou un rôle supérieur parmi les juges. [Règles du concours](https://discord.com/channels/737538781024092170/774152638450237460/982990352422162482) [Annonce de la séance du jury](https://discord.com/channels/737538781024092170/774152638450237460/986294242848669756)
 
+En juin 2022, はっ a présenté son idée dans un fil consacré à la conception du hall. edamameRex_java a proposé de construire plusieurs halls, comme dans l’ancienne configuration. [Concept pour la construction du hall](https://discord.com/channels/737538781024092170/981569254031769700/981569389306466354) [Proposition de construire plusieurs halls](https://discord.com/channels/737538781024092170/981569254031769700/981572980993847466)
+
 Le 5 juin 2022, taka8621 a proposé un hall dont les niveaux seraient reliés et les portails placés dans la zone centrale. Selon cette proposition, les membres ayant alors le rôle de soutien ou un rôle supérieur construiraient la zone centrale de chaque niveau.
 
 Le 7 juin 2022, Moon\_666 a demandé si l’accès à plusieurs mondes et le retour se feraient via le hall. Moon\_666 a relevé que cette organisation modifierait les liaisons existantes entre les mondes.
@@ -505,6 +509,8 @@ En mai 2022, Mugi a indiqué que Kutya pouvait lire à voix haute du morse japon
 
 En juin 2022, Mugi a mis à jour le bot de lecture vocale Kutya pour qu’il fonctionne avec le chat des salons vocaux. En mars 2023, Mugi a annoncé un bot qui permettait de transmettre des avis anonymes à l’équipe du serveur. [Mise à jour de Kutya](https://discord.com/channels/737538781024092170/774152638450237460/986439863937155122) [Annonce des avis anonymes](https://discord.com/channels/737538781024092170/774152638450237460/1087976366126927882)
 
+Le 4 juin 2022, はっ a créé sur Discord un fil consacré aux réunions publiques. [Fil pour les réunions publiques](https://discord.com/channels/737538781024092170/982599800375623740/982599800375623740)
+
 Les 25 et 26 juin 2022, yanyan_fafnir a sollicité l’avis des joueurs dans un sondage des membres de soutien sur l’ouverture temporaire du monde de test Azkaban comme espace de jeu. taibon0727 a expliqué que l’idée s’apparentait à une version de démonstration, et sh a relevé que l’ouverture aux joueurs pourrait aussi servir de test. taka8621 a proposé un espace où les joueurs pourraient essayer des constructions et des circuits sans demande préalable.
 
 Le 2 août 2022, la discussion a porté sur l’effet du sommeil des autres joueurs sur le temps disponible pour travailler la nuit. PillowKebap a relevé que les personnes travaillant la nuit dépendaient des décisions des autres joueurs et a proposé de supprimer la possibilité de passer la nuit.
@@ -566,6 +572,8 @@ Le 13 septembre 2023, Mugi a partagé un projet de règlement Ē-hō et a suggé
 Le 4 octobre 2023, あすたん a annoncé que la configuration des permissions des commandes de déplacement entre les serveurs était terminée.
 
 Le 26 octobre 2023, Syake a consulté le wiki et a indiqué ne pas avoir trouvé les versions de Minecraft prises en charge par le serveur.
+
+En décembre 2023, après avoir remporté une compétition PvP, taiyaki5190 a demandé des idées de nouveaux objets pour Azkaban. Barrel2next a proposé une armure et une épée dont l’utilisation conjointe produirait un effet. nnn\_percent a proposé un consommable qui permettrait de traverser les blocs temporairement. [Appel à proposer des objets](https://discord.com/channels/737538781024092170/1183387092395495505/1183387096975679518) [Proposition d’une armure et d’une épée](https://discord.com/channels/737538781024092170/1183387092395495505/1183447073572519998) [Proposition d’un objet pour traverser les blocs](https://discord.com/channels/737538781024092170/1183387092395495505/1183688251878420480)
 
 En janvier 2024, あすたん a ouvert le serveur Discord Ace Server Leaderboard Archive (ASLA) pour rassembler les records d’Aceserver. あすたん a présenté les règles de participation et la procédure de dépôt des records. あすたん a aussi publié des listes sur le minage, les statistiques et les lingots. キツネコ, Feruno et Taiyaki ont transmis des statistiques sur le salon des contributions, et Tabekirareta Potechi a proposé des entrées possibles pour des catégories comme celle du premier château.
 

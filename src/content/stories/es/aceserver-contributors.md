@@ -2,7 +2,7 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:9b08b42c5b31f0d48b923042d399a0ffff0086f334f9a95c32c3cd1d40e97216
+sourceHash: sha256:0e90281e61927ca67731393cad65dcbd8c16895c60ab3be719a1f453c8a2e77a
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -54,6 +54,8 @@ Como titular de A Yū (A-shō), ゆり (Yū) informó de la venta de materiales 
 El 16 de enero de 2022, はっ pidió en el hilo de desarrollo de productos que los jugadores propusieran nuevos artículos para vender en &#20844;&#30410;&#25152;. KOTA-SAN tomó nota de las ideas de venta que surgieron en el chat de voz. [Solicitud de propuestas de nuevos productos](https://discord.com/channels/737538781024092170/932084170392494080/932084170392494080) [Notas sobre las ideas de venta](https://discord.com/channels/737538781024092170/932084170392494080/932114105228206100)
 
 En 2022, s1nan0sub explicó las normas de uso de la Aldea Iroha e informó que el almacén compartido de la Aldea Inaba estaba terminado.
+
+El 11 de mayo de 2022, KOTA-SAN pidió sugerencias sobre qué artículos se podrían añadir al comercio. [Solicitud de sugerencias para artículos de comercio](https://discord.com/channels/737538781024092170/973722800294596608/973722800294596608)
 
 En enero de 2023, ゆり organizó los preparativos, las pruebas de plugins y el proceso de construcción para desarrollar un servidor RPG. En febrero, compartió los resultados de las pruebas de conexión.
 
@@ -331,6 +333,8 @@ En abril de 2022, SPdari informó de que los cimientos y el tejado de la base pr
 
 En junio de 2022, yanyan_fafnir explicó cómo participar en el concurso de islas flotantes que dio paso a la construcción del antiguo vestíbulo y cómo se presentarían los proyectos ante el jurado. El anuncio indicó que はっ y los miembros con el rol de apoyo o superior serían los jueces. [Reglas del concurso](https://discord.com/channels/737538781024092170/774152638450237460/982990352422162482) [Anuncio de la presentación ante el jurado](https://discord.com/channels/737538781024092170/774152638450237460/986294242848669756)
 
+En junio de 2022, はっ compartió su idea en un hilo dedicado al diseño del vestíbulo. edamameRex_java propuso construir varios vestíbulos, siguiendo la configuración anterior. [Propuesta de diseño del vestíbulo](https://discord.com/channels/737538781024092170/981569254031769700/981569389306466354) [Propuesta de construir varios vestíbulos](https://discord.com/channels/737538781024092170/981569254031769700/981572980993847466)
+
 El 5 de junio de 2022, taka8621 propuso un vestíbulo con niveles comunicados y portales en la zona central. Según la propuesta, los miembros que entonces tenían el rol de apoyo o superior construirían la zona central de cada nivel.
 
 El 7 de junio de 2022, Moon\_666 preguntó si se accedería a los distintos mundos desde el vestíbulo y si también habría que pasar por él al regresar. Señaló que esta estructura cambiaría las conexiones que existían entre los mundos.
@@ -505,6 +509,8 @@ En mayo de 2022, Mugi informó de que Kutya ya podía leer en voz alta código m
 
 En junio de 2022, Mugi actualizó el bot de lectura Kutya para que funcionara con el chat dentro de los canales de voz. En marzo de 2023, anunció un bot para enviar comentarios anónimos al equipo del servidor. [Actualización de Kutya](https://discord.com/channels/737538781024092170/774152638450237460/986439863937155122) [Anuncio del canal de comentarios anónimos](https://discord.com/channels/737538781024092170/774152638450237460/1087976366126927882)
 
+El 4 de junio de 2022, はっ creó un hilo para reuniones públicas en Discord. [Hilo para reuniones públicas](https://discord.com/channels/737538781024092170/982599800375623740/982599800375623740)
+
 Entre el 25 y el 26 de junio de 2022, yanyan_fafnir pidió a los jugadores su opinión en una encuesta del equipo de apoyo sobre la idea de abrir temporalmente el mundo de pruebas Azkaban como zona de juego. taibon0727 explicó que sería algo parecido a una versión de demostración, y sh señaló que abrirlo a los jugadores también serviría como prueba. taka8621 propuso un lugar donde probar construcciones y circuitos sin presentar una solicitud previa.
 
 El 2 de agosto de 2022, se debatió cómo el hecho de que otros jugadores durmieran afectaba al tiempo disponible para trabajar de noche. PillowKebap señaló que quienes trabajaban de noche dependían de las decisiones ajenas y propuso eliminar la opción de saltarse la noche.
@@ -566,6 +572,8 @@ El 13 de septiembre de 2023, Mugi compartió un borrador de las reglas Ē-hō y 
 El 4 de octubre de 2023, あすたん informó de que había terminado la configuración de permisos de los comandos para moverse entre servidores.
 
 El 26 de octubre de 2023, Syake revisó la wiki y dijo que no había encontrado qué versiones de Minecraft admitía el servidor.
+
+En diciembre de 2023, tras ganar una competición PvP, taiyaki5190 pidió ideas para nuevos objetos de Azkaban. Barrel2next propuso una armadura y una espada que producirían un efecto al usarlas juntas. nnn\_percent propuso un objeto consumible que permitiría atravesar bloques temporalmente. [Solicitud de ideas para objetos](https://discord.com/channels/737538781024092170/1183387092395495505/1183387096975679518) [Propuesta de armadura y espada](https://discord.com/channels/737538781024092170/1183387092395495505/1183447073572519998) [Propuesta de objeto para atravesar bloques](https://discord.com/channels/737538781024092170/1183387092395495505/1183688251878420480)
 
 En enero de 2024, あすたん abrió el servidor de Discord Ace Server Leaderboard Archive (ASLA) para recopilar registros de Aceserver. Explicó las reglas de participación y cómo enviar los registros. También publicó listas de minería, estadísticas y lingotes. キツネコ, Feruno y Taiyaki enviaron estadísticas al canal de aportaciones, y Tabekirareta Potechi propuso candidatos para registros como el primer castillo.
 
