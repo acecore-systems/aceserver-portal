@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:72648a3c1d44d8b9ab5c969f15f67b9f09f9f8e054ada9f854ff7640599dd59b
+sourceHash: sha256:52c2b80fd777156b9015f5aa2dea7a05f395ef3aca9eea743799c5f6c96e13cc
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -177,7 +177,13 @@ Au printemps 2024, sekisei a annoncé l’heure de début d’Ace Guesser v2 et 
 
 En avril 2024, ゆり a annoncé un épisode d’E-ha Radio dont la distribution principale indiquait Master et Yuri-kun. La participation de コタ et はっ a été annoncée pour l’émission spéciale d’août. KOTA-SAN a indiqué avoir aménagé un étang de pêche et annoncé l’annulation de la diffusion prévue ce jour-là.
 
+Le 10 juin 2024, KOTA-SAN a annoncé que l’Ace Fest était prévu et a demandé des idées pour les activités. [Discussion sur la préparation de l’Ace Fest](https://discord.com/channels/737538781024092170/773171457487929344/1249691382365421640)
+
+Le 14 juillet 2024, タケ a recommandé un monde téléchargeable vaste et détaillé pour donner une ambiance adaptée à un événement et a cité « &#20304;&#23665;&#30476; » comme exemple qui pourrait convenir à un cache-cache. Le 4 août, タケ a évoqué les préparatifs et la décoration d’un événement dans un autre message. [Proposition de monde téléchargeable](https://discord.com/channels/737538781024092170/773171457487929344/1262046391820353576) [Compte rendu des préparatifs et de la décoration](https://discord.com/channels/737538781024092170/773171457487929344/1269342768443031552)
+
 Lors de la fête d’été du 17 août 2024, sekisei a expliqué les règles et la répartition des équipes du concours de pêche, puis en a annoncé le début. sh a présenté l’Ultra Chasse aux objets et indiqué comment y participer, puis a partagé le lendemain une vidéo de la diffusion officielle. Dans les archives de la préparation de la fête, sh a indiqué qu’Ohagi avait construit le bâtiment du marché aux puces. はっ a expliqué le déroulement et la formation des équipes du jeu de transmission de messages par abstraction minimale. [Diffusion officielle du jeu de messages par abstraction minimale](https://www.youtube.com/live/Fy27JdYPero)
+
+Le 17 août 2024, Pluto a suggéré de recruter des équipes pour le concours de pêche. [Proposition de recrutement d’équipes pour la pêche](https://discord.com/channels/737538781024092170/773171457487929344/1274205080710545459)
 
 Le tableau de répartition des tâches du festival prévoyait qu’Ohagi organise le jeu du chat et prépare les commandes, entre autres, et que miin aide à résoudre les problèmes pendant la chasse aux objets et le concours de pêche. Il attribuait aussi à sekisei les changements de serveur entre les activités tout au long de la fête et l’appui au jeu du chat et au PvP sous-marin, et à sh l’organisation et la préparation du PvP sous-marin. Le 4 octobre 2024, sh31415 a indiqué où récupérer les prix du festival d’été.
 
@@ -569,6 +575,8 @@ En juillet 2023, あすたん a rédigé et publié des guides de commandes pour
 
 En septembre 2023, une annonce a présenté l’arrivée de あすたん dans l’équipe d’administration et la nomination de Taka à la gestion des systèmes. En mai 2024, はっ a annoncé que sh et sekisei avaient pris des fonctions d’assistance technique aux utilisateurs. [Nominations de 2023](https://discord.com/channels/737538781024092170/774152638450237460/1151168895076548669) [Fonctions d’assistance de 2024](https://discord.com/channels/737538781024092170/774152638450237460/1236592686253867008)
 
+Le 25 août 2024, un message a demandé de l’aide pour créer des icônes destinées aux personnes chargées de l’assistance. [Appel à créer des icônes pour l’équipe d’assistance](https://discord.com/channels/737538781024092170/773171457487929344/1276960877014417418)
+
 Fin septembre 2024, sekisei a rédigé une proposition pour organiser les responsabilités des personnes qui assuraient alors l’assistance aux utilisateurs. Elle abordait la communication, la modification du wiki, la gestion des événements sur le serveur de jeu et leur déroulement au sein de la communauté.
 
 Le 13 septembre 2023, Mugi a partagé un projet de règlement Ē-hō et a suggéré de supprimer une phrase expliquant l’organisation de ses dispositions.
@@ -581,7 +589,11 @@ En décembre 2023, après avoir remporté une compétition PvP, taiyaki5190 a de
 
 En janvier 2024, あすたん a ouvert le serveur Discord Ace Server Leaderboard Archive (ASLA) pour rassembler les records d’Aceserver. あすたん a présenté les règles de participation et la procédure de dépôt des records. あすたん a aussi publié des listes sur le minage, les statistiques et les lingots. キツネコ, Feruno et Taiyaki ont transmis des statistiques sur le salon des contributions, et Tabekirareta Potechi a proposé des entrées possibles pour des catégories comme celle du premier château.
 
+Le 26 mars 2024, Mugi a expliqué qu’à l’époque, les personnes chargées de l’assistance aidaient l’équipe du serveur et guidaient les nouveaux venus. [Rôle de l’assistance à l’époque](https://discord.com/channels/737538781024092170/773171457487929344/1222193389349372005)
+
 Le 4 avril 2024, un message a appelé les joueurs à suggérer des installations communes utiles et des sites à visiter pour le salon d’information, en indiquant les coordonnées et une description. [Appel à proposer des lieux à présenter](https://discord.com/channels/737538781024092170/1225371645196107906/1225371648023072820)
+
+Le 2 mai 2024, taka8621 a fait part de ses inquiétudes quant à la concentration de constructions au comptoir d’échange géré par l’équipe du serveur. Moon\_666 a proposé de conserver le comptoir et d’y ajouter des livres enchantés. [Inquiétude sur la concentration des constructions](https://discord.com/channels/737538781024092170/773171457487929344/1235256015130202267) [Proposition sur le comptoir et les livres enchantés](https://discord.com/channels/737538781024092170/773171457487929344/1235254526353735743)
 
 Les 2 et 9 juin 2024, taka8621 a partagé un programme d’exercices pratiques sur les plugins Minecraft. Il était prévu de préparer un projet et un environnement de test, de lancer le plugin créé et de créer puis tester une commande personnalisée.
 

@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:72648a3c1d44d8b9ab5c969f15f67b9f09f9f8e054ada9f854ff7640599dd59b
+sourceHash: sha256:52c2b80fd777156b9015f5aa2dea7a05f395ef3aca9eea743799c5f6c96e13cc
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -177,7 +177,13 @@ In spring 2024, sekisei announced the start time and contact details for Ace Gue
 
 In April 2024, ゆり announced an E-ha Radio episode with “Master” and “Yuri-kun” listed in the lead credits. The August special was announced with appearances by コタ and はっ. KOTA-SAN reported setting up a fishing pond and announced that the stream scheduled for that day had been called off.
 
+On June 10, 2024, KOTA-SAN announced plans for Ace Fest and asked for input on what activities to include. [Ace Fest planning discussion](https://discord.com/channels/737538781024092170/773171457487929344/1249691382365421640)
+
+On July 14, 2024, タケ recommended a large, detailed downloadable world to set the mood for an event and mentioned “&#20304;&#23665;&#30476;” as a map that might work for hide-and-seek. On August 4, タケ reported on event preparations and decoration in a separate post. [Downloadable world suggestion](https://discord.com/channels/737538781024092170/773171457487929344/1262046391820353576) [Event preparation and decoration report](https://discord.com/channels/737538781024092170/773171457487929344/1269342768443031552)
+
 At the summer festival on August 17, 2024, sekisei explained the fishing competition’s rules and team assignments and announced its start. sh introduced the Ultra Item Hunt and explained how to join, then shared a video of the official broadcast the next day. In the festival preparation records, sh noted that Ohagi had built the flea market building. はっ explained how the Minimal Abstraction Message Relay game would run and how its teams were divided. [Official Minimal Abstraction Message Relay broadcast](https://www.youtube.com/live/Fy27JdYPero)
+
+On August 17, 2024, Pluto suggested inviting people to form teams for the fishing competition. [Proposal to recruit fishing teams](https://discord.com/channels/737538781024092170/773171457487929344/1274205080710545459)
 
 The festival staffing schedule named Ohagi for running tag and preparing commands and other setup, and miin for troubleshooting support at the item hunt and fishing tournament. It also listed sekisei for switching servers between activities throughout the festival and assisting with tag and underwater PvP, and sh for running and preparing underwater PvP. On October 4, 2024, sh31415 told participants where to collect their summer festival prizes.
 
@@ -569,6 +575,8 @@ In July 2023, あすたん wrote and posted command guides for LWC, CoreProtect,
 
 In September 2023, Aceserver announced that あすたん had joined the operations team and that Taka would oversee systems. In May 2024, はっ announced that sh and sekisei had taken on user support roles covering systems. [2023 appointments](https://discord.com/channels/737538781024092170/774152638450237460/1151168895076548669) [2024 support roles](https://discord.com/channels/737538781024092170/774152638450237460/1236592686253867008)
 
+On August 25, 2024, a post called for help making icons for supporters. [Call for help making supporter icons](https://discord.com/channels/737538781024092170/773171457487929344/1276960877014417418)
+
 In late September 2024, sekisei drafted a proposal for organizing user support responsibilities at the time. It covered publicity, Wiki editing, handling events on the game server, and coordinating events within the community.
 
 On September 13, 2023, Mugi shared a draft of the Ē-hō rules and suggested leaving out a sentence explaining how the clauses were organized.
@@ -581,7 +589,11 @@ In December 2023, after winning a PvP competition, taiyaki5190 asked for ideas f
 
 In January 2024, あすたん opened a Discord server, the Ace Server Leaderboard Archive (ASLA), to collect records from Aceserver. They explained the participation rules and how to submit records. あすたん also posted lists covering mining, statistics, and ingots. キツネコ, Feruno, and Taiyaki sent statistics to the submissions channel, and Tabekirareta Potechi proposed candidates for records such as the first castle.
 
+On March 26, 2024, Mugi explained that supporters at the time helped the server team and guided newcomers. [Supporter responsibilities at the time](https://discord.com/channels/737538781024092170/773171457487929344/1222193389349372005)
+
 On April 4, 2024, a post asked players to suggest useful shared facilities and places to visit for the guide channel, with coordinates and a description. [Call for facility suggestions](https://discord.com/channels/737538781024092170/1225371645196107906/1225371648023072820)
+
+On May 2, 2024, taka8621 raised concerns about builds clustering at the staff-run trading post. Moon\_666 suggested keeping the trading post and adding enchanted books. [Concern about builds clustering](https://discord.com/channels/737538781024092170/773171457487929344/1235256015130202267) [Trading post and enchanted book proposal](https://discord.com/channels/737538781024092170/773171457487929344/1235254526353735743)
 
 On June 2 and 9, 2024, taka8621 shared plans for hands-on Minecraft plugin practice. The plans covered setting up a project and a test environment, running the plugin participants made, and creating and testing a custom command.
 

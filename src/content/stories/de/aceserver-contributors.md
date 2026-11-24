@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:72648a3c1d44d8b9ab5c969f15f67b9f09f9f8e054ada9f854ff7640599dd59b
+sourceHash: sha256:52c2b80fd777156b9015f5aa2dea7a05f395ef3aca9eea743799c5f6c96e13cc
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -177,7 +177,13 @@ Im Frühjahr 2024 teilte sekisei die Startzeit und die Kontaktstelle für Ace Gu
 
 Im April 2024 kündigte ゆり eine Folge von E-ha Radio mit Master und Yuri-kun in der angekündigten Hauptbesetzung an. Für die Sondersendung im August wurden Auftritte von コタ und はっ angekündigt. KOTA-SAN berichtete, einen Angelteich vorbereitet zu haben, und sagte den für diesen Tag geplanten Stream ab.
 
+Am 10. Juni 2024 teilte KOTA-SAN mit, dass das Ace Fest geplant war, und bat um Ideen für das Programm. [Planung und Programmideen für das Ace Fest](https://discord.com/channels/737538781024092170/773171457487929344/1249691382365421640)
+
+Am 14. Juli 2024 empfahl タケ eine große, detailliert gestaltete Welt zum Herunterladen, um eine passende Atmosphäre für eine Veranstaltung zu schaffen. Als mögliches Beispiel für ein Versteckspiel nannte タケ „&#20304;&#23665;&#30476;“. Am 4. August berichtete タケ in einem anderen Beitrag über Vorbereitungen und Dekoration für eine Veranstaltung. [Vorschlag für eine Welt zum Herunterladen](https://discord.com/channels/737538781024092170/773171457487929344/1262046391820353576) [Bericht über Vorbereitungen und Dekoration](https://discord.com/channels/737538781024092170/773171457487929344/1269342768443031552)
+
 Beim Sommerfest am 17. August 2024 erläuterte sekisei die Regeln und die Teameinteilung des Angelwettbewerbs und gab den Start bekannt. sh stellte die Ultra-Gegenstandssuche vor, erklärte die Teilnahme und teilte am nächsten Tag ein Video der offiziellen Übertragung. In den Aufzeichnungen zur Vorbereitung des Sommerfests erwähnte sh, dass Ohagi das Gebäude für den Flohmarkt gebaut hatte. はっ erläuterte den Ablauf und die Teameinteilung des Nachrichtenstaffelspiels mit minimaler Abstraktion. [Offizielle Übertragung des Nachrichtenstaffelspiels mit minimaler Abstraktion](https://www.youtube.com/live/Fy27JdYPero)
+
+Am 17. August 2024 schlug Pluto vor, nach Teams für den Angelwettbewerb zu suchen. [Vorschlag zur Suche nach Teams für den Angelwettbewerb](https://discord.com/channels/737538781024092170/773171457487929344/1274205080710545459)
 
 Laut Aufgabenplan war Ohagi für die Leitung des Fangspiels und die Vorbereitung von Befehlen und weiteren Dingen vorgesehen. miin sollte bei Problemen während der Gegenstandssuche und des Angelwettbewerbs helfen. Der Plan sah außerdem sekisei für die Serverwechsel zwischen den Programmpunkten während des gesamten Fests und die Unterstützung beim Fangspiel und Unterwasser-PvP vor und sh für die Leitung und Vorbereitung des Unterwasser-PvP. Am 4. Oktober 2024 erklärte sh31415, wo die Preise des Sommerfests abgeholt werden konnten.
 
@@ -569,6 +575,8 @@ Im Juli 2023 schrieb und veröffentlichte あすたん Befehlsanleitungen für L
 
 Im September 2023 wurde bekannt gegeben, dass あすたん zum Serverteam kam und Taka die Systembetreuung übernahm. Im Mai 2024 kündigte はっ an, dass sh und sekisei den Nutzersupport für Systemfragen übernommen hatten. [Ernennungen von 2023](https://discord.com/channels/737538781024092170/774152638450237460/1151168895076548669) [Supportrollen von 2024](https://discord.com/channels/737538781024092170/774152638450237460/1236592686253867008)
 
+Am 25. August 2024 wurde zur Mithilfe bei der Gestaltung von Symbolen für Supporter aufgerufen. [Aufruf zur Gestaltung von Supporter-Symbolen](https://discord.com/channels/737538781024092170/773171457487929344/1276960877014417418)
+
 Ende September 2024 entwarf sekisei einen Vorschlag, um die damaligen Aufgaben im Nutzersupport zu ordnen. Dazu zählten Öffentlichkeitsarbeit, die Bearbeitung des Wikis, die Betreuung von Veranstaltungen auf dem Spielserver und deren Koordination in der Community.
 
 Am 13. September 2023 teilte Mugi einen Entwurf des Regelwerks Ē-hō und schlug vor, einen Satz zum Aufbau der einzelnen Absätze wegzulassen.
@@ -581,7 +589,11 @@ Im Dezember 2023 bat taiyaki5190 nach einem PvP-Sieg um Ideen für neue Gegenst�
 
 Im Januar 2024 eröffnete あすたん den Discord-Server Ace Server Leaderboard Archive (ASLA), um Rekorde von Aceserver zu sammeln. あすたん erklärte die Teilnahmeregeln und wie man Rekorde einreichen konnte. あすたん veröffentlichte auch Listen zum Abbau, zu Statistiken und zu Barren. キツネコ, Feruno und Taiyaki reichten Statistiken im Beitragskanal ein. Tabekirareta Potechi schlug Kandidaten für Rekorde wie die erste Burg vor.
 
+Am 26. März 2024 erklärte Mugi, dass die Supporter damals das Serverteam unterstützten und neue Teilnehmer anleiteten. [Aufgaben der Supporter zu dieser Zeit](https://discord.com/channels/737538781024092170/773171457487929344/1222193389349372005)
+
 Am 4. April 2024 wurde um Hinweise auf nützliche Gemeinschaftseinrichtungen und Sehenswürdigkeiten für den Infokanal gebeten. Die Vorschläge sollten Koordinaten und eine Beschreibung enthalten. [Aufruf zu Hinweisen auf Einrichtungen](https://discord.com/channels/737538781024092170/1225371645196107906/1225371648023072820)
+
+Am 2. Mai 2024 äußerte taka8621 Bedenken, dass sich Bauwerke am Handelsposten des Serverteams konzentrieren könnten. Moon\_666 schlug vor, den Handelsposten beizubehalten und verzauberte Bücher hinzuzufügen. [Bedenken wegen der Konzentration von Bauwerken](https://discord.com/channels/737538781024092170/773171457487929344/1235256015130202267) [Vorschlag zum Handelsposten und zu verzauberten Büchern](https://discord.com/channels/737538781024092170/773171457487929344/1235254526353735743)
 
 Am 2. und 9. Juni 2024 teilte taka8621 Pläne für praktische Übungen mit Minecraft-Plugins. Vorgesehen war, ein Projekt und eine Testumgebung einzurichten, das erstellte Plugin auszuführen und einen eigenen Befehl zu erstellen und zu testen.
 

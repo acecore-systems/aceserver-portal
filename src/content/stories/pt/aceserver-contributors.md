@@ -2,7 +2,7 @@
 title: As pessoas que apoiaram o Aceserver
 description: Conheça quem ajudou o Aceserver pelos retratos de skins do Minecraft, relembre as atividades e confira o roteiro de eventos e propostas.
 translationOf: aceserver-contributors
-sourceHash: sha256:72648a3c1d44d8b9ab5c969f15f67b9f09f9f8e054ada9f854ff7640599dd59b
+sourceHash: sha256:52c2b80fd777156b9015f5aa2dea7a05f395ef3aca9eea743799c5f6c96e13cc
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -177,7 +177,13 @@ Na primavera de 2024, sekisei informou o horário de início e o contato do Ace 
 
 Em abril de 2024, ゆり anunciou um episódio da E-ha Radio com Master e Yuri-kun no elenco principal divulgado. Para o especial de agosto, foi anunciada a participação de コタ e はっ. KOTA-SAN informou que havia preparado um lago para pesca e anunciou o cancelamento da transmissão prevista para aquele dia.
 
+Em 10 de junho de 2024, KOTA-SAN informou que o Ace Fest estava previsto e pediu sugestões de atividades. [Discussão sobre o planejamento do Ace Fest](https://discord.com/channels/737538781024092170/773171457487929344/1249691382365421640)
+
+Em 14 de julho de 2024, タケ recomendou um mundo para download amplo e bem detalhado para dar clima ao evento, citando “&#20304;&#23665;&#30476;” como exemplo que poderia servir para brincar de esconde-esconde. Em 4 de agosto, タケ relatou os preparativos e a decoração de um evento em outra publicação. [Sugestão de mundo para download](https://discord.com/channels/737538781024092170/773171457487929344/1262046391820353576) [Relato sobre os preparativos e a decoração](https://discord.com/channels/737538781024092170/773171457487929344/1269342768443031552)
+
 No festival de verão de 17 de agosto de 2024, sekisei explicou as regras e a divisão das equipes do torneio de pesca e anunciou seu início. sh apresentou a Busca Ultra por Itens e explicou como participar. No dia seguinte, compartilhou um vídeo da transmissão oficial. Nos registros de preparação do festival, sh informou que Ohagi havia construído o prédio do mercado de pulgas. はっ explicou o andamento e a divisão das equipes do jogo de repasse de mensagens por abstração mínima. [Transmissão oficial do jogo de mensagens por abstração mínima](https://www.youtube.com/live/Fy27JdYPero)
+
+Em 17 de agosto de 2024, Pluto sugeriu chamar equipes para o torneio de pesca. [Proposta de chamar equipes para a pesca](https://discord.com/channels/737538781024092170/773171457487929344/1274205080710545459)
 
 A escala do festival indicava Ohagi para coordenar o pega-pega e preparar comandos e outros recursos, e miin para ajudar a resolver problemas na busca por itens e na competição de pesca. A escala também indicava sekisei para trocar de servidor entre as atividades ao longo do festival e auxiliar no pega-pega e no PvP subaquático, e sh para coordenar e preparar o PvP subaquático. Em 4 de outubro de 2024, sh31415 informou onde retirar os prêmios do festival de verão.
 
@@ -569,6 +575,8 @@ Em julho de 2023, あすたん escreveu e publicou guias de comandos para LWC, C
 
 Em setembro de 2023, foi anunciado que あすたん passaria a integrar a administração e que Taka ficaria responsável pelos sistemas. Em maio de 2024, はっ anunciou que sh e sekisei passaram a apoiar os usuários em assuntos ligados aos sistemas. [Nomeações de 2023](https://discord.com/channels/737538781024092170/774152638450237460/1151168895076548669) [Funções de apoio de 2024](https://discord.com/channels/737538781024092170/774152638450237460/1236592686253867008)
 
+Em 25 de agosto de 2024, uma publicação pediu ajuda para criar ícones para os apoiadores. [Pedido de ajuda para criar ícones para apoiadores](https://discord.com/channels/737538781024092170/773171457487929344/1276960877014417418)
+
 No fim de setembro de 2024, sekisei preparou uma proposta para organizar as responsabilidades de quem apoiava os usuários na época. A proposta incluía divulgação, edição da wiki, apoio aos eventos no servidor de jogo e coordenação das atividades na comunidade.
 
 Em 13 de setembro de 2023, Mugi compartilhou um rascunho das regras Ē-hō e sugeriu omitir uma frase que explicava como os itens estavam organizados.
@@ -581,7 +589,11 @@ Em dezembro de 2023, depois de vencer uma competição PvP, taiyaki5190 pediu id
 
 Em janeiro de 2024, あすたん abriu o Ace Server Leaderboard Archive (ASLA), um servidor no Discord para reunir registros do Aceserver. Explicou as regras de participação e como enviar os registros. Também publicou listas de mineração, estatísticas e lingotes. キツネコ, Feruno e Taiyaki enviaram estatísticas ao canal de contribuições, e Tabekirareta Potechi sugeriu candidatos para registros como o primeiro castelo.
 
+Em 26 de março de 2024, Mugi explicou que, na época, os apoiadores ajudavam a equipe do servidor e orientavam novos participantes. [Funções dos apoiadores na época](https://discord.com/channels/737538781024092170/773171457487929344/1222193389349372005)
+
 Em 4 de abril de 2024, uma publicação pediu sugestões de instalações compartilhadas úteis e pontos turísticos para o canal de informações, com coordenadas e uma descrição. [Pedido de informações sobre instalações](https://discord.com/channels/737538781024092170/1225371645196107906/1225371648023072820)
+
+Em 2 de maio de 2024, taka8621 demonstrou preocupação com a concentração de construções no posto de trocas administrado pela equipe do servidor. Moon\_666 propôs manter o posto e acrescentar livros encantados. [Preocupação com a concentração de construções](https://discord.com/channels/737538781024092170/773171457487929344/1235256015130202267) [Proposta sobre o posto de trocas e os livros encantados](https://discord.com/channels/737538781024092170/773171457487929344/1235254526353735743)
 
 Em 2 e 9 de junho de 2024, taka8621 compartilhou os planos de uma atividade prática sobre plugins para Minecraft. A ideia era preparar um projeto e um ambiente de testes, executar o plugin criado e criar e testar um comando personalizado.
 

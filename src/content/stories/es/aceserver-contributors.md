@@ -2,7 +2,7 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:72648a3c1d44d8b9ab5c969f15f67b9f09f9f8e054ada9f854ff7640599dd59b
+sourceHash: sha256:52c2b80fd777156b9015f5aa2dea7a05f395ef3aca9eea743799c5f6c96e13cc
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -177,7 +177,13 @@ En la primavera de 2024, sekisei anunció la hora de inicio y el contacto de Ace
 
 En abril de 2024, ゆり anunció un episodio de E-ha Radio con Master y Yuri-kun en los créditos principales. Para el especial de agosto se anunció la participación de コタ y はっ. KOTA-SAN informó de que había preparado un estanque de pesca y anunció la cancelación de la transmisión prevista para aquel día.
 
+El 10 de junio de 2024, KOTA-SAN anunció que se planeaba celebrar el Ace Fest y pidió ideas para las actividades. [Consulta sobre la programación del Ace Fest](https://discord.com/channels/737538781024092170/773171457487929344/1249691382365421640)
+
+El 14 de julio de 2024, タケ recomendó un mundo descargable amplio y detallado para ambientar un evento y puso «&#20304;&#23665;&#30476;» como ejemplo que podría servir para jugar al escondite. El 4 de agosto, タケ informó en otra publicación sobre los preparativos y la decoración de un evento. [Propuesta de un mundo descargable](https://discord.com/channels/737538781024092170/773171457487929344/1262046391820353576) [Informe de los preparativos y la decoración](https://discord.com/channels/737538781024092170/773171457487929344/1269342768443031552)
+
 En el festival de verano del 17 de agosto de 2024, sekisei presentó las reglas y los equipos del concurso de pesca y anunció su comienzo. sh presentó la Gran Búsqueda de Objetos, explicó cómo participar y al día siguiente compartió un video de la retransmisión oficial. En los registros de preparación del festival, sh indicó que Ohagi había construido el edificio del mercadillo. はっ explicó el funcionamiento y los equipos del juego de transmisión de mensajes por abstracción mínima. [Retransmisión oficial del juego de mensajes por abstracción mínima](https://www.youtube.com/live/Fy27JdYPero)
+
+El 17 de agosto de 2024, Pluto sugirió convocar equipos para el concurso de pesca. [Propuesta de convocatoria de equipos de pesca](https://discord.com/channels/737538781024092170/773171457487929344/1274205080710545459)
 
 El reparto de tareas del festival asignaba a Ohagi la organización del juego del pilla-pilla y la preparación de comandos, entre otras tareas. miin figuraba como apoyo para resolver problemas durante la búsqueda de objetos y el concurso de pesca. El reparto también asignaba a sekisei los cambios de servidor entre actividades durante todo el festival y el apoyo en el pilla-pilla y el PvP submarino, y a sh la organización y preparación del PvP submarino. El 4 de octubre de 2024, sh31415 indicó dónde recoger los premios del festival de verano.
 
@@ -569,6 +575,8 @@ En julio de 2023, あすたん redactó y publicó guías de comandos para LWC, 
 
 En septiembre de 2023 se anunció que あすたん se incorporaba al equipo de administración y que Taka se encargaría de sistemas. En mayo de 2024, はっ anunció que sh y sekisei pasaban a prestar apoyo técnico a los usuarios. [Nombramientos de 2023](https://discord.com/channels/737538781024092170/774152638450237460/1151168895076548669) [Roles de apoyo de 2024](https://discord.com/channels/737538781024092170/774152638450237460/1236592686253867008)
 
+El 25 de agosto de 2024 se pidió ayuda para crear iconos para quienes prestaban apoyo al servidor. [Convocatoria para crear iconos para el equipo de apoyo](https://discord.com/channels/737538781024092170/773171457487929344/1276960877014417418)
+
 A finales de septiembre de 2024, sekisei preparó una propuesta para organizar las responsabilidades de quienes prestaban apoyo a los usuarios. Incluía la difusión, la edición de la wiki, la atención de los eventos en el servidor de juego y la coordinación de su desarrollo en la comunidad.
 
 El 13 de septiembre de 2023, Mugi compartió un borrador de las reglas Ē-hō y propuso omitir una frase que explicaba cómo se organizaban sus apartados.
@@ -581,7 +589,11 @@ En diciembre de 2023, tras ganar una competición PvP, taiyaki5190 pidió ideas 
 
 En enero de 2024, あすたん abrió el servidor de Discord Ace Server Leaderboard Archive (ASLA) para recopilar registros de Aceserver. Explicó las reglas de participación y cómo enviar los registros. También publicó listas de minería, estadísticas y lingotes. キツネコ, Feruno y Taiyaki enviaron estadísticas al canal de aportaciones, y Tabekirareta Potechi propuso candidatos para registros como el primer castillo.
 
+El 26 de marzo de 2024, Mugi explicó que, en aquel momento, quienes prestaban apoyo al servidor ayudaban al equipo y orientaban a los nuevos participantes. [Funciones de apoyo en aquel momento](https://discord.com/channels/737538781024092170/773171457487929344/1222193389349372005)
+
 El 4 de abril de 2024 se pidieron sugerencias de instalaciones compartidas útiles y lugares de interés para el canal de información, con coordenadas y una descripción. [Solicitud de información sobre instalaciones](https://discord.com/channels/737538781024092170/1225371645196107906/1225371648023072820)
+
+El 2 de mayo de 2024, taka8621 expresó su preocupación por la concentración de construcciones en el puesto comercial del equipo del servidor. Moon\_666 propuso conservar el puesto e incorporar libros encantados. [Preocupación por la concentración de construcciones](https://discord.com/channels/737538781024092170/773171457487929344/1235256015130202267) [Propuesta sobre el puesto comercial y los libros encantados](https://discord.com/channels/737538781024092170/773171457487929344/1235254526353735743)
 
 Los días 2 y 9 de junio de 2024, taka8621 compartió los planes para una práctica de desarrollo de complementos de Minecraft. La propuesta incluía preparar un proyecto y un entorno de pruebas, ejecutar el complemento creado y crear y probar un comando personalizado.
 
