@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:5e1e292050305c33bbbd6156c1b9a29d38de139e6d8199eb195ea98e4e48a00a
+sourceHash: sha256:924df3a7c01225a7c5ab1d6355e5c5611d3f209c093f98e3e0bd6d31673a8205
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -537,6 +537,8 @@ In August 2022, taka8621 asked for feedback on a proposal to protect items store
 
 In August 2022, taka8621 shared a tested version of an anti-griefing plugin that limited what players could place in the game. In August and October, taka8621 also shared information about other plugins, including what they were for.
 
+On September 5, 2022, sh offered to help with restoring the old server and Azkaban if anyone needed a hand. [Offer to help with restoration](https://discord.com/channels/737538781024092170/773171457487929344/1016001002085818428)
+
 In September 2022, Gui announced a test release of the site. In October, Gui reported separating the blog from the documentation and setting up pages that multiple people could edit. taka8621 requested command guides, illustrated guides to facilities, and maps. yanyan proposed editable pages. In January 2023, &#33775;\*HAiNE tried the wiki editing environment and raised a question about how readers would navigate if guidance were split across pages.
 
 From July to August 2022, KOTA-SAN explained the policies of the time for building applications and land clearing. In October, taka8621 explained how community applications and chunk loaders were handled.
@@ -544,6 +546,8 @@ From July to August 2022, KOTA-SAN explained the policies of the time for buildi
 In October 2022, hana0c0haine reported reviewing every wiki page published at the time and correcting inconsistencies in terminology and Japanese phrasing. In March 2023, あすたん organized separate channels for wiki editors and provided guidance on writing in Markdown.
 
 In November 2022, キツネコ proposed putting the land-use rules on the wiki and using separate application templates for site leveling and open-pit excavation. Nishikino Sega asked about applying when construction would follow site leveling. In January 2023, taka8621 invited people to help organize the building and related rules, and &#33775;\*HAiNE proposed rules on underground excavation. A February post by taka8621 recorded suggestions Yukke had compiled on scenery and the use of villagers in traps.
+
+On November 30, 2022, Nishikino Sega described the supporter and server team setup at the time as similar to a volunteer organization. [Description of the supporter and server team setup at the time](https://discord.com/channels/737538781024092170/773171457487929344/1047408144877371423)
 
 In December 2022, Mugi reported that Kutya’s dictionary feature had been restored.
 

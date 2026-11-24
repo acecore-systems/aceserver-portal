@@ -2,7 +2,7 @@
 title: As pessoas que apoiaram o Aceserver
 description: Conheça quem ajudou o Aceserver pelos retratos de skins do Minecraft, relembre as atividades e confira o roteiro de eventos e propostas.
 translationOf: aceserver-contributors
-sourceHash: sha256:5e1e292050305c33bbbd6156c1b9a29d38de139e6d8199eb195ea98e4e48a00a
+sourceHash: sha256:924df3a7c01225a7c5ab1d6355e5c5611d3f209c093f98e3e0bd6d31673a8205
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -537,6 +537,8 @@ Em agosto de 2022, taka8621 pediu opiniões sobre uma proposta para proteger ite
 
 Em agosto de 2022, taka8621 compartilhou uma versão testada de um plugin contra vandalismo que limitava o que os jogadores podiam colocar no jogo. Em agosto e outubro, também compartilhou informações sobre outros plugins, incluindo para que serviam.
 
+Em 5 de setembro de 2022, sh se ofereceu para ajudar a restaurar o servidor antigo e Azkaban caso precisassem de apoio. [Oferta de ajuda na restauração](https://discord.com/channels/737538781024092170/773171457487929344/1016001002085818428)
+
 Em setembro de 2022, Gui anunciou uma versão de teste do site. Em outubro, informou que havia separado o blog da documentação e preparado páginas que várias pessoas podiam editar. taka8621 pediu guias de comandos, guias ilustrados das instalações e mapas. yanyan sugeriu páginas editáveis. Em janeiro de 2023, &#33775;\*HAiNE testou o ambiente de edição da wiki e levantou a questão de como os leitores encontrariam as informações se os guias ficassem em páginas separadas.
 
 Entre julho e agosto de 2022, KOTA-SAN explicou as diretrizes da época para solicitar construções e preparar terrenos. Em outubro, taka8621 explicou como eram tratados os pedidos de comunidades e os carregadores de chunks.
@@ -544,6 +546,8 @@ Entre julho e agosto de 2022, KOTA-SAN explicou as diretrizes da época para sol
 Em outubro de 2022, hana0c0haine informou que havia revisado todas as páginas da wiki que estavam publicadas e corrigido diferenças na grafia dos termos e na redação em japonês. Em março de 2023, あすたん separou os canais para quem editava a wiki e orientou a redação em Markdown.
 
 Em novembro de 2022, キツネコ propôs publicar na wiki as regras de uso do terreno e adotar modelos de solicitação separados para nivelamento e escavação a céu aberto. Nishikino Sega perguntou como pedir autorização para construir depois de nivelar o terreno. Em janeiro de 2023, taka8621 pediu ajuda para organizar as regras de construção e outras relacionadas, e &#33775;\*HAiNE apresentou uma proposta sobre escavações subterrâneas. Uma publicação de fevereiro de taka8621 registrou as sugestões reunidas por Yukke sobre a paisagem e o uso de aldeões em armadilhas.
+
+Em 30 de novembro de 2022, Nishikino Sega explicou que, na época, os apoiadores e a equipe do servidor funcionavam de modo semelhante a uma organização de voluntariado. [Descrição da organização dos apoiadores e da equipe na época](https://discord.com/channels/737538781024092170/773171457487929344/1047408144877371423)
 
 Em dezembro de 2022, Mugi informou que a função de dicionário do Kutya havia voltado.
 

@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:5e1e292050305c33bbbd6156c1b9a29d38de139e6d8199eb195ea98e4e48a00a
+sourceHash: sha256:924df3a7c01225a7c5ab1d6355e5c5611d3f209c093f98e3e0bd6d31673a8205
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -537,6 +537,8 @@ Im August 2022 bat taka8621 um Rückmeldungen zu einem Vorschlag, Gegenstände i
 
 Im August 2022 teilte taka8621 eine getestete Version eines Anti-Griefing-Plugins, das einschränkte, was Spieler im Spiel platzieren konnten. Im August und Oktober teilte taka8621 außerdem Informationen über andere Plugins und deren Zweck.
 
+Am 5. September 2022 bot sh an, bei der Wiederherstellung des alten Servers und von Azkaban zu helfen, falls Unterstützung gebraucht würde. [Angebot, bei der Wiederherstellung zu helfen](https://discord.com/channels/737538781024092170/773171457487929344/1016001002085818428)
+
 Im September 2022 kündigte Gui eine Testversion der Website an. Im Oktober berichtete Gui, dass Blog und Dokumentation getrennt und Seiten für die Bearbeitung durch mehrere Personen eingerichtet worden waren. taka8621 bat um Befehlsanleitungen, bebilderte Anleitungen zu Einrichtungen und Karten. yanyan schlug bearbeitbare Seiten vor. Im Januar 2023 probierte &#33775;\*HAiNE die Bearbeitungsumgebung des Wikis aus und sprach an, wie Leser sich zurechtfinden würden, wenn Anleitungen auf mehrere Seiten verteilt wären.
 
 Von Juli bis August 2022 erläuterte KOTA-SAN die damaligen Vorgaben für Bauanträge und Geländevorbereitung. Im Oktober erklärte taka8621, wie Anträge für Gemeinschaften und der Umgang mit Chunkloadern geregelt waren.
@@ -544,6 +546,8 @@ Von Juli bis August 2022 erläuterte KOTA-SAN die damaligen Vorgaben für Bauant
 Im Oktober 2022 berichtete hana0c0haine, alle damals veröffentlichten Wiki-Seiten geprüft und uneinheitliche Begriffe sowie japanische Formulierungen korrigiert zu haben. Im März 2023 teilte あすたん die Kanäle für die Wiki-Redaktion auf und gab Hinweise zum Schreiben in Markdown.
 
 Im November 2022 schlug キツネコ vor, die Regeln zur Landnutzung ins Wiki aufzunehmen und getrennte Antragsvorlagen für das Einebnen und den offenen Aushub zu verwenden. Nishikino Sega fragte nach dem Antragsverfahren, wenn nach dem Einebnen gebaut werden sollte. Im Januar 2023 bat taka8621 um Mithilfe beim Ordnen der Bau- und ähnlicher Regeln, und &#33775;\*HAiNE schlug Regeln für unterirdische Ausgrabungen vor. Ein Beitrag von taka8621 aus dem Februar hielt die von Yukke gesammelten Vorschläge zum Landschaftsbild und zum Einsatz von Dorfbewohnern in Fallen fest.
+
+Am 30. November 2022 beschrieb Nishikino Sega die damalige Zusammenarbeit der Supporter und des Serverteams als eine Struktur, die einer ehrenamtlichen Organisation ähnelte. [Beschreibung der damaligen Rollen und Organisation](https://discord.com/channels/737538781024092170/773171457487929344/1047408144877371423)
 
 Im Dezember 2022 berichtete Mugi, dass die Wörterbuchfunktion von Kutya wiederhergestellt worden war.
 
