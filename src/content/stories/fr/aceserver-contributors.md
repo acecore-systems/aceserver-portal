@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:cfef144b51a098cc547231ba8d97a33c9003ccef5e0e9486818327d8b4bdb490
+sourceHash: sha256:5e1e292050305c33bbbd6156c1b9a29d38de139e6d8199eb195ea98e4e48a00a
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -115,7 +115,9 @@ En décembre 2022, Yukke a ouvert un salon pour le club photo d’Aceserver. D�
 
 En décembre 2022, &#12383;&#12356;&#12420;&#12365; (taiyaki5190) a ouvert deux fils de discussion dans le salon du courrier de l’ancien Discord. Les joueurs étaient invités à écrire sur des sujets comme ce qui les avait surpris à leur arrivée.
 
-Pour l’Ace Fest in Christmas Life de décembre 2022, ゆり a présenté le programme, avec la cérémonie d’ouverture et la diffusion en direct, et expliqué comment s’inscrire à la troisième Coupe Ace. タケ a aussi annoncé le programme du réveillon 2022–2023 à Tōgenkyō. L’annonce présentait l’Association des chasseurs, dont faisaient partie タケ et コッカー, comme organisatrice et Taibon comme collaborateur.
+Pour l’Ace Fest in Christmas Life de décembre 2022, ゆり a présenté le programme, avec la cérémonie d’ouverture et la diffusion en direct, et expliqué comment s’inscrire à la troisième Coupe Ace. Dans l’annonce du 24 décembre, ゆり a indiqué comme site principal le stade Edamame et les environs du comptoir d’échange de l’équipe du serveur. Le dôme LuMiSIA était annoncé pour la ligue de qualification de la Coupe Ace. [Annonce des lieux de l’événement](https://discord.com/channels/737538781024092170/773171457487929344/1056124142275018872)
+
+タケ a aussi annoncé le programme du réveillon 2022–2023 à Tōgenkyō. L’annonce présentait l’Association des chasseurs, dont faisaient partie タケ et コッカー, comme organisatrice et Taibon comme collaborateur.
 
 Le 5 janvier 2023, ジェスター a proposé une partie personnalisée d’Apex Legends sous le nom de Coupe Aceserver afin de réunir la communauté en dehors de Minecraft. [Proposition de partie personnalisée d’Apex Legends](https://discord.com/channels/737538781024092170/882222121135251486/1060393114579259402)
 
@@ -544,6 +546,10 @@ En octobre 2022, hana0c0haine a indiqué avoir relu toutes les pages du wiki alo
 En novembre 2022, キツネコ a proposé de publier les règles d’utilisation des terrains sur le wiki et d’utiliser des modèles de demande distincts pour le nivellement et l’excavation à ciel ouvert. Nishikino Sega a demandé comment déposer une demande lorsque la construction devait suivre le nivellement. En janvier 2023, taka8621 a invité les membres à organiser les règles de construction et celles qui s’y rapportaient, et &#33775;\*HAiNE a proposé des règles pour l’excavation souterraine. Un message de février de taka8621 reprenait les propositions rassemblées par Yukke sur le paysage et l’utilisation des villageois dans les pièges.
 
 En décembre 2022, Mugi a indiqué que la fonction de dictionnaire de Kutya avait été rétablie.
+
+Le 11 décembre 2022, asutarisucu a expliqué comment rejoindre le serveur à l’époque. La marche à suivre consistait à ajouter Aceserver à la liste des serveurs, à se connecter, puis à rejoindre le hall. [Indications de connexion de l’époque](https://discord.com/channels/737538781024092170/773171457487929344/1051173223628296253)
+
+Le 28 décembre 2022, asutarisucu a signalé des ralentissements près du portail du Nether le plus proche du comptoir d’échange de l’équipe du serveur. SPdari en a aussi constaté à l’intérieur du comptoir. Dans le même échange, Moon\_666 a signalé la présence de nombreux animaux d’élevage du côté nord du comptoir. [Signalement de ralentissements près du portail du Nether](https://discord.com/channels/737538781024092170/773171457487929344/1057515450092761128) [Signalement de ralentissements dans le comptoir d’échange](https://discord.com/channels/737538781024092170/773171457487929344/1057515873667141692) [Précision sur le côté nord du comptoir](https://discord.com/channels/737538781024092170/773171457487929344/1057516955705290782)
 
 Le 14 janvier 2023, &#33775;\*HAiNE a rédigé le compte rendu d’une réunion de l’équipe du serveur et partagé une synthèse des points discutés sur les règles et des tâches à suivre. Le lendemain, はっ a aussi résumé la discussion sur l’organisation des règles et demandé aux membres de la relire.
 

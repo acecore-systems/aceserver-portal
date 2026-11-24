@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:cfef144b51a098cc547231ba8d97a33c9003ccef5e0e9486818327d8b4bdb490
+sourceHash: sha256:5e1e292050305c33bbbd6156c1b9a29d38de139e6d8199eb195ea98e4e48a00a
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -115,7 +115,9 @@ In December 2022, Yukke opened a channel for the Aceserver Photography Club. Rec
 
 In December 2022, &#12383;&#12356;&#12420;&#12365; (taiyaki5190) opened two submission threads in the old Discord’s Letters Room, asking players to write in about topics such as what surprised them when they first joined.
 
-For Ace Fest in Christmas Life in December 2022, ゆり shared the schedule, including the opening ceremony and livestream, and explained how to enter the third Ace Cup. タケ also announced New Year’s plans at Tōgenkyō for 2022–2023. The announcement named the Hunters’ Association, which included タケ and コッカー, as organizer and Taibon as a collaborator.
+For Ace Fest in Christmas Life in December 2022, ゆり shared the schedule, including the opening ceremony and livestream, and explained how to enter the third Ace Cup. In the December 24 announcement, ゆり listed Edamame Stadium and the area around the staff-run trading post as the main venue, and the LuMiSIA Dome for the Ace Cup qualifying league. [Venue announcement](https://discord.com/channels/737538781024092170/773171457487929344/1056124142275018872)
+
+タケ also announced New Year’s plans at Tōgenkyō for 2022–2023. The announcement named the Hunters’ Association, which included タケ and コッカー, as organizer and Taibon as a collaborator.
 
 On January 5, 2023, ジェスター proposed a custom Apex Legends match called the Aceserver Cup as a way for the community to get together outside Minecraft. [Custom Apex Legends match proposal](https://discord.com/channels/737538781024092170/882222121135251486/1060393114579259402)
 
@@ -544,6 +546,10 @@ In October 2022, hana0c0haine reported reviewing every wiki page published at th
 In November 2022, キツネコ proposed putting the land-use rules on the wiki and using separate application templates for site leveling and open-pit excavation. Nishikino Sega asked about applying when construction would follow site leveling. In January 2023, taka8621 invited people to help organize the building and related rules, and &#33775;\*HAiNE proposed rules on underground excavation. A February post by taka8621 recorded suggestions Yukke had compiled on scenery and the use of villagers in traps.
 
 In December 2022, Mugi reported that Kutya’s dictionary feature had been restored.
+
+On December 11, 2022, asutarisucu described how players joined at the time. They could add Aceserver to the server list, connect, and then go to the lobby. [Joining instructions at the time](https://discord.com/channels/737538781024092170/773171457487929344/1051173223628296253)
+
+On December 28, 2022, asutarisucu reported sluggish performance near the Nether portal closest to the staff-run trading post. SPdari reported noticing lag inside the post as well. In the same discussion, Moon\_666 noted that there were many farm animals on the post’s north side. [Performance report near the Nether portal](https://discord.com/channels/737538781024092170/773171457487929344/1057515450092761128) [Performance report inside the trading post](https://discord.com/channels/737538781024092170/773171457487929344/1057515873667141692) [Note about the north side of the trading post](https://discord.com/channels/737538781024092170/773171457487929344/1057516955705290782)
 
 On January 14, 2023, &#33775;\*HAiNE wrote up the minutes of a server team meeting and shared a summary of the points discussed about the rules and the tasks to follow up on. The next day, はっ also summarized what had been discussed about organizing the rules and asked members to review it.
 

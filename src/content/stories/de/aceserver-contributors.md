@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:cfef144b51a098cc547231ba8d97a33c9003ccef5e0e9486818327d8b4bdb490
+sourceHash: sha256:5e1e292050305c33bbbd6156c1b9a29d38de139e6d8199eb195ea98e4e48a00a
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -115,7 +115,9 @@ Im Dezember 2022 eröffnete Yukke einen Kanal für den Fotoclub von Aceserver. L
 
 Im Dezember 2022 eröffnete &#12383;&#12356;&#12420;&#12365; (taiyaki5190) im Briefraum des damaligen Discord-Servers zwei Threads für Zuschriften. Gefragt waren unter anderem Erlebnisse, die Spieler bei ihrem ersten Besuch überrascht hatten.
 
-Für das Ace Fest in Christmas Life im Dezember 2022 stellte ゆり den Ablauf mit Eröffnung und Livestream vor und erklärte die Anmeldung zum dritten Ace Cup. タケ kündigte außerdem die Pläne für den Jahreswechsel 2022–2023 in Tōgenkyō an. Die Ankündigung nannte den Jägerverband, zu dem タケ und コッカー gehörten, als Veranstalter und Taibon als Helfer.
+Für das Ace Fest in Christmas Life im Dezember 2022 stellte ゆり den Ablauf mit Eröffnung und Livestream vor und erklärte die Anmeldung zum dritten Ace Cup. In der Ankündigung vom 24. Dezember nannte ゆり das Edamame-Stadion und das Umfeld des Handelspostens des Serverteams als Hauptschauplatz. Für die Vorrunde des Ace Cup war der LuMiSIA Dome genannt. [Veranstaltungsorte laut Ankündigung](https://discord.com/channels/737538781024092170/773171457487929344/1056124142275018872)
+
+タケ kündigte außerdem die Pläne für den Jahreswechsel 2022–2023 in Tōgenkyō an. Die Ankündigung nannte den Jägerverband, zu dem タケ und コッカー gehörten, als Veranstalter und Taibon als Helfer.
 
 Am 5. Januar 2023 schlug ジェスター eine benutzerdefinierte Partie in Apex Legends unter dem Namen Aceserver Cup vor, um die Community auch außerhalb von Minecraft zusammenzubringen. [Vorschlag für eine benutzerdefinierte Partie in Apex Legends](https://discord.com/channels/737538781024092170/882222121135251486/1060393114579259402)
 
@@ -544,6 +546,10 @@ Im Oktober 2022 berichtete hana0c0haine, alle damals veröffentlichten Wiki-Seit
 Im November 2022 schlug キツネコ vor, die Regeln zur Landnutzung ins Wiki aufzunehmen und getrennte Antragsvorlagen für das Einebnen und den offenen Aushub zu verwenden. Nishikino Sega fragte nach dem Antragsverfahren, wenn nach dem Einebnen gebaut werden sollte. Im Januar 2023 bat taka8621 um Mithilfe beim Ordnen der Bau- und ähnlicher Regeln, und &#33775;\*HAiNE schlug Regeln für unterirdische Ausgrabungen vor. Ein Beitrag von taka8621 aus dem Februar hielt die von Yukke gesammelten Vorschläge zum Landschaftsbild und zum Einsatz von Dorfbewohnern in Fallen fest.
 
 Im Dezember 2022 berichtete Mugi, dass die Wörterbuchfunktion von Kutya wiederhergestellt worden war.
+
+Am 11. Dezember 2022 erklärte asutarisucu, wie man damals beitrat. Man fügte Aceserver zur Serverliste hinzu, stellte eine Verbindung her und ging danach zur Lobby. [Hinweise zum damaligen Beitritt](https://discord.com/channels/737538781024092170/773171457487929344/1051173223628296253)
+
+Am 28. Dezember 2022 berichtete asutarisucu von Verzögerungen in der Nähe des Netherportals, das dem Handelsposten des Serverteams am nächsten lag. SPdari meldete auch Verzögerungen im Handelsposten. Im selben Austausch wies Moon\_666 auf viele Nutztiere an dessen Nordseite hin. [Bericht über Verzögerungen am Netherportal](https://discord.com/channels/737538781024092170/773171457487929344/1057515450092761128) [Bericht über Verzögerungen im Handelsposten](https://discord.com/channels/737538781024092170/773171457487929344/1057515873667141692) [Ergänzung zur Nordseite des Handelspostens](https://discord.com/channels/737538781024092170/773171457487929344/1057516955705290782)
 
 Am 14. Januar 2023 schrieb &#33775;\*HAiNE das Protokoll einer damaligen Teamsitzung und teilte eine Zusammenfassung der diskutierten Regelthemen und der Aufgaben. Am nächsten Tag fasste auch はっ zusammen, was zur Überarbeitung der Regeln besprochen worden war, und bat die Mitglieder, es zu prüfen.
 

@@ -2,7 +2,7 @@
 title: As pessoas que apoiaram o Aceserver
 description: Conheça quem ajudou o Aceserver pelos retratos de skins do Minecraft, relembre as atividades e confira o roteiro de eventos e propostas.
 translationOf: aceserver-contributors
-sourceHash: sha256:cfef144b51a098cc547231ba8d97a33c9003ccef5e0e9486818327d8b4bdb490
+sourceHash: sha256:5e1e292050305c33bbbd6156c1b9a29d38de139e6d8199eb195ea98e4e48a00a
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -115,7 +115,9 @@ Em dezembro de 2022, Yukke abriu um canal para o clube de fotografia do Aceserve
 
 Em dezembro de 2022, &#12383;&#12356;&#12420;&#12365; (taiyaki5190) abriu dois tópicos de envio na sala de cartas do antigo Discord e pediu mensagens sobre assuntos como o que surpreendeu os jogadores quando entraram pela primeira vez.
 
-Para o Ace Fest in Christmas Life de dezembro de 2022, ゆり divulgou a programação, com a abertura e a transmissão ao vivo, e explicou como se inscrever na terceira Copa Ace. タケ também anunciou a programação da virada de 2022 para 2023 em Tōgenkyō. O aviso apresentou a Associação de Caçadores, que incluía タケ e コッカー, como organizadora e Taibon como colaborador.
+Para o Ace Fest in Christmas Life de dezembro de 2022, ゆり divulgou a programação, com a abertura e a transmissão ao vivo, e explicou como se inscrever na terceira Copa Ace. No aviso de 24 de dezembro, ゆり indicou o Estádio Edamame e os arredores do posto de trocas da equipe do servidor como local principal, e o Domo LuMiSIA como local da fase classificatória da Copa Ace. [Aviso sobre os locais do evento](https://discord.com/channels/737538781024092170/773171457487929344/1056124142275018872)
+
+タケ também anunciou a programação da virada de 2022 para 2023 em Tōgenkyō. O aviso apresentou a Associação de Caçadores, que incluía タケ e コッカー, como organizadora e Taibon como colaborador.
 
 Em 5 de janeiro de 2023, ジェスター propôs uma partida personalizada de Apex Legends chamada Copa Aceserver para reunir a comunidade fora do Minecraft. [Proposta de partida personalizada de Apex Legends](https://discord.com/channels/737538781024092170/882222121135251486/1060393114579259402)
 
@@ -544,6 +546,10 @@ Em outubro de 2022, hana0c0haine informou que havia revisado todas as páginas d
 Em novembro de 2022, キツネコ propôs publicar na wiki as regras de uso do terreno e adotar modelos de solicitação separados para nivelamento e escavação a céu aberto. Nishikino Sega perguntou como pedir autorização para construir depois de nivelar o terreno. Em janeiro de 2023, taka8621 pediu ajuda para organizar as regras de construção e outras relacionadas, e &#33775;\*HAiNE apresentou uma proposta sobre escavações subterrâneas. Uma publicação de fevereiro de taka8621 registrou as sugestões reunidas por Yukke sobre a paisagem e o uso de aldeões em armadilhas.
 
 Em dezembro de 2022, Mugi informou que a função de dicionário do Kutya havia voltado.
+
+Em 11 de dezembro de 2022, asutarisucu explicou como entrar na época. A orientação era adicionar o Aceserver à lista de servidores, conectar-se e depois ir para o lobby. [Instruções de entrada da época](https://discord.com/channels/737538781024092170/773171457487929344/1051173223628296253)
+
+Em 28 de dezembro de 2022, asutarisucu relatou lentidão perto do portal do Nether mais próximo do posto de trocas da equipe do servidor. SPdari também notou lentidão dentro do posto. Na mesma conversa, Moon\_666 acrescentou que havia muitos animais de criação no lado norte do posto. [Relato de lentidão perto do portal do Nether](https://discord.com/channels/737538781024092170/773171457487929344/1057515450092761128) [Relato de lentidão dentro do posto de trocas](https://discord.com/channels/737538781024092170/773171457487929344/1057515873667141692) [Observação sobre o lado norte do posto](https://discord.com/channels/737538781024092170/773171457487929344/1057516955705290782)
 
 Em 14 de janeiro de 2023, &#33775;\*HAiNE redigiu a ata de uma reunião da equipe responsável pelo servidor e compartilhou um resumo dos pontos sobre as regras e das tarefas pendentes. No dia seguinte, はっ também resumiu a discussão sobre a organização das regras e pediu aos integrantes que a revisassem.
 

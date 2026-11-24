@@ -2,7 +2,7 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:cfef144b51a098cc547231ba8d97a33c9003ccef5e0e9486818327d8b4bdb490
+sourceHash: sha256:5e1e292050305c33bbbd6156c1b9a29d38de139e6d8199eb195ea98e4e48a00a
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -115,7 +115,9 @@ En diciembre de 2022, Yukke abrió un canal para el club de fotografía de Acese
 
 En diciembre de 2022, &#12383;&#12356;&#12420;&#12365; (taiyaki5190) abrió dos hilos para recibir mensajes en la sala de cartas del antiguo Discord. Invitó a contar, entre otros temas, qué les había sorprendido a los jugadores al entrar por primera vez.
 
-Para el Ace Fest in Christmas Life de diciembre de 2022, ゆり publicó el programa, con la inauguración y la transmisión en directo, y explicó cómo inscribirse en la tercera Copa Ace. タケ también anunció el plan de fin de año 2022–2023 en Tōgenkyō. El anuncio presentó como organizadora a la Asociación de Cazadores, de la que formaban parte タケ y コッカー, y a Taibon como colaborador.
+Para el Ace Fest in Christmas Life de diciembre de 2022, ゆり publicó el programa, con la inauguración y la transmisión en directo, y explicó cómo inscribirse en la tercera Copa Ace. En el anuncio del 24 de diciembre, ゆり indicó que la sede principal comprendía el estadio Edamame y los alrededores del puesto comercial del equipo del servidor, y que la liguilla de clasificación de la Copa Ace tendría lugar en el domo LuMiSIA. [Anuncio de las sedes](https://discord.com/channels/737538781024092170/773171457487929344/1056124142275018872)
+
+タケ también anunció el plan de fin de año 2022–2023 en Tōgenkyō. El anuncio presentó como organizadora a la Asociación de Cazadores, de la que formaban parte タケ y コッカー, y a Taibon como colaborador.
 
 El 5 de enero de 2023, ジェスター propuso una partida personalizada de Apex Legends llamada Copa Aceserver para reunir a la comunidad fuera de Minecraft. [Propuesta de partida personalizada de Apex Legends](https://discord.com/channels/737538781024092170/882222121135251486/1060393114579259402)
 
@@ -544,6 +546,10 @@ En octubre de 2022, hana0c0haine informó de que había revisado todas las pági
 En noviembre de 2022, キツネコ propuso publicar las reglas de uso del suelo en la wiki y emplear plantillas de solicitud separadas para nivelar terrenos y excavar a cielo abierto. Nishikino Sega preguntó cómo solicitar permiso si se iba a construir después de nivelar el terreno. En enero de 2023, taka8621 pidió ayuda para ordenar las reglas de construcción y otras relacionadas, y &#33775;\*HAiNE propuso reglas sobre excavaciones subterráneas. En una publicación de febrero, taka8621 recogió las propuestas de Yukke sobre el paisaje y el uso de los aldeanos en trampas.
 
 En diciembre de 2022, Mugi informó de que se había recuperado la función de diccionario de Kutya.
+
+El 11 de diciembre de 2022, asutarisucu explicó cómo entrar en aquel momento. Indicó que se podía añadir Aceserver a la lista de servidores, conectarse y luego ir al vestíbulo. [Instrucciones de acceso de la época](https://discord.com/channels/737538781024092170/773171457487929344/1051173223628296253)
+
+El 28 de diciembre de 2022, asutarisucu informó de que el juego iba lento cerca del portal del Nether más próximo al puesto comercial del equipo del servidor. SPdari también notó lentitud dentro del puesto. En el mismo intercambio, Moon\_666 señaló que había muchos animales de granja en el lado norte del puesto. [Informe de lentitud cerca del portal](https://discord.com/channels/737538781024092170/773171457487929344/1057515450092761128) [Informe de lentitud dentro del puesto comercial](https://discord.com/channels/737538781024092170/773171457487929344/1057515873667141692) [Nota sobre el lado norte del puesto comercial](https://discord.com/channels/737538781024092170/773171457487929344/1057516955705290782)
 
 El 14 de enero de 2023, &#33775;\*HAiNE redactó el acta de una reunión del equipo de gestión y compartió un resumen de los puntos sobre las reglas y las tareas pendientes. Al día siguiente, はっ resumió lo que se había discutido sobre la organización de las reglas y pidió al equipo que lo revisara.
 
