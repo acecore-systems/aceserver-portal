@@ -2,7 +2,7 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:adef7f6632fad1d8e51455ee1e1f6efac61f5b96e69f85491ca113b79fcc2d92
+sourceHash: sha256:56bad63ca97a09c87ede5849189f7f4a1dfc5aac24bd1f773a35e37d07991c4e
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-24T00:00:00+09:00
 tags:
@@ -613,7 +613,7 @@ El 12 de abril de 2026, End&#12539;コッカー propuso compartir en las reunion
 
 En mayo de 2026, End&#12539;コッカー propuso mejorar los textos del portal y la forma de mostrar las fotos. En junio informó de que había pedido a &#35377;&#21487;&#12385;&#12419; implementar una forma de recorrer con un gesto las imágenes de construcciones de Minecraft sin interrumpir la navegación.
 
-En julio de 2026, sekisei anunció la primera charla técnica sobre los servidores e Internet. El 31 de julio, sekisei remitió a los participantes a un vídeo con los pasos de preparación, y End&#12539;コッカー compartió el recordatorio. [Anuncio de la charla técnica](https://discord.com/channels/737538781024092170/774152638450237460/1532641413500633108)
+El 23 de julio de 2026, sekisei presentó tres temas previstos para las charlas técnicas. Incluían una introducción a Java orientada a crear complementos de Minecraft, una charla sobre Internet y servidores para ejecutar un servidor de Minecraft en Linux y proyectos de electrónica para el estudio independiente. El 31 de julio, sekisei anunció la primera charla sobre servidores e Internet y remitió a los participantes a un vídeo con los pasos de preparación. End&#12539;コッカー compartió el recordatorio. [Temas previstos para las charlas](https://discord.com/channels/737538781024092170/779569416438415421/1529527913395781672) [Anuncio de la charla técnica](https://discord.com/channels/737538781024092170/774152638450237460/1532641413500633108)
 
 En julio de 2026, durante el estudio de cómo incorporar la moneda del juego al puesto de intercambio administrado por el equipo del servidor, sekisei compartió los tipos de cambio anteriores e informó de que había implementado el intercambio de objetos por otros objetos y que pensaba probarlo. Merutak propuso permitir por tiempo limitado cambiar esmeraldas por moneda del juego. あすたん sugirió excluir del intercambio los objetos que podían producirse en grandes cantidades y End&#12539;コッカー propuso poner en orden los tipos de cambio para la venta de objetos.
 

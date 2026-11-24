@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:adef7f6632fad1d8e51455ee1e1f6efac61f5b96e69f85491ca113b79fcc2d92
+sourceHash: sha256:56bad63ca97a09c87ede5849189f7f4a1dfc5aac24bd1f773a35e37d07991c4e
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-24T00:00:00+09:00
 tags:
@@ -613,7 +613,7 @@ On April 12, 2026, End&#12539;コッカー proposed using regular server team me
 
 In May 2026, End&#12539;コッカー suggested improving the portal’s wording and how it displayed photos. In June, they reported asking &#35377;&#21487;&#12385;&#12419; to implement a way to swipe through images of Minecraft builds without interrupting browsing.
 
-In July 2026, sekisei announced the first technical talk about servers and the Internet. On July 31, sekisei pointed participants to a video showing the preparation steps, and End&#12539;コッカー shared the reminder. [Technical talk announcement](https://discord.com/channels/737538781024092170/774152638450237460/1532641413500633108)
+On July 23, 2026, sekisei outlined three planned topics for the technical talks. They included an introduction to Java for making Minecraft plugins, internet and server instruction aimed at running a Minecraft server on Linux, and hands-on electronics projects for independent study. On July 31, sekisei announced the first talk on servers and the internet and pointed participants to a video showing the preparation steps. End&#12539;コッカー shared the reminder. [Planned talk topics](https://discord.com/channels/737538781024092170/779569416438415421/1529527913395781672) [Technical talk announcement](https://discord.com/channels/737538781024092170/774152638450237460/1532641413500633108)
 
 In July 2026, while the team considered introducing in-game currency to the staff-run trading post, sekisei shared the previous exchange rates, reported implementing item-for-item trades, and said testing was planned. Merutak proposed letting players exchange emeralds for in-game currency for a limited time. あすたん suggested excluding items that could be produced in large quantities, and End&#12539;コッカー proposed organizing the exchange rates for selling items.
 

@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:adef7f6632fad1d8e51455ee1e1f6efac61f5b96e69f85491ca113b79fcc2d92
+sourceHash: sha256:56bad63ca97a09c87ede5849189f7f4a1dfc5aac24bd1f773a35e37d07991c4e
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-24T00:00:00+09:00
 tags:
@@ -613,7 +613,7 @@ Am 12. April 2026 schlug End&#12539;コッカー vor, in den regelmäßigen Sitz
 
 Im Mai 2026 schlug End&#12539;コッカー vor, die Texte des Portals und die Darstellung der Fotos zu verbessern. Im Juni berichtete End&#12539;コッカー, &#35377;&#21487;&#12385;&#12419; um eine Funktion gebeten zu haben, mit der sich Bilder von Bauwerken aus Minecraft per Wischgeste ansehen ließen, ohne die Seitennutzung zu stören.
 
-Im Juli 2026 kündigte sekisei den ersten technischen Vortrag über Server und das Internet an. Am 31. Juli verwies sekisei die Teilnehmenden auf ein Video, das die Vorbereitungsschritte zeigte, und End&#12539;コッカー teilte den Hinweis erneut. [Ankündigung des technischen Vortrags](https://discord.com/channels/737538781024092170/774152638450237460/1532641413500633108)
+Am 23. Juli 2026 nannte sekisei die geplanten Themen für die Technikvorträge. Dazu zählten eine Einführung in Java zum Entwickeln von Minecraft-Plugins, eine Einführung in Internet und Server zum Betreiben eines Minecraft-Servers unter Linux sowie Elektronikprojekte für selbstständiges Lernen. Am 31. Juli kündigte sekisei den ersten Vortrag über Server und das Internet an und verwies die Teilnehmenden auf ein Video mit den Vorbereitungsschritten. End&#12539;コッカー teilte den Hinweis erneut. [Geplante Vortragsthemen](https://discord.com/channels/737538781024092170/779569416438415421/1529527913395781672) [Ankündigung des technischen Vortrags](https://discord.com/channels/737538781024092170/774152638450237460/1532641413500633108)
 
 Im Juli 2026 wurde überlegt, die Spielwährung in den vom Serverteam betriebenen Handelsposten aufzunehmen. sekisei teilte die bisherigen Wechselkurse und berichtete, den direkten Tausch zwischen Gegenständen umgesetzt zu haben und einen Test zu planen. Merutak schlug vor, Smaragde für begrenzte Zeit gegen Spielwährung eintauschen zu können. あすたん regte an, in großen Mengen herstellbare Gegenstände vom Tausch auszunehmen. End&#12539;コッカー schlug vor, die Wechselkurse für den Verkauf von Gegenständen zu ordnen.
 
