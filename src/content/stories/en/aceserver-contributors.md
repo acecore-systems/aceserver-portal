@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:0f1789a31488b23ef85ef24f2d549c3b5f57e582e6964605e1460cf00aac4bf7
+sourceHash: sha256:0b727796f97558e24e7b67198fd55fffbe43a18b23a573046e0fce4ce211e536
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -18,6 +18,8 @@ From the early Wiki to planning events and linking chats, these are some of the 
 ## The early days
 
 In November 2020, てぃあ proposed a themed home-building contest with voting at a venue laid out in plots. In December, てぃあ reported creating a channel for railway construction applications.
+
+On November 19, 2020, Mugi pointed out that without nighttime, villagers could not sleep, which would stop iron golem farms from working. Mugi also warned that villagers at trading halls would stop restocking. Gui acknowledged the report. The next day, when a player asked how the server had been set up, Gui explained that multiplayer was hosted on a rented server.
 
 In December 2020, てぃあ coordinated early railway construction and explained the application process builders were asked to follow at the time. [Railway construction announcement](https://discord.com/channels/737538781024092170/774152638450237460/783543829676556349)
 
@@ -332,6 +334,8 @@ In March 2021, Game\_Tokumei started a service called Odd Jobs, taking requests 
 On March 24, 2021, Game\_Tokumei built a dungeon where large numbers of monsters spawned on the creative server and requested a transfer to the survival server. Two attached images showed its dark interior and large outer wall. KOTA-SAN explained how transfers were considered at the time and advised waiting for Gui’s decision.
 
 On April 5, 2021, KOTA-SAN reported that Takenoko no Sato Stadium in the lobby was complete and shared a photo showing rows of seats on both sides of the indoor venue.
+
+On July 7, 2021, KOTA-SAN answered a question about the lobby stadium, explaining that it was built for events and was closed at the time because no use was planned. That day, KOTA-SAN also announced the closure of the dedicated railway application channel and asked players to check in the questions channel before starting any large build.
 
 In May, kuroneko229 announced that anyone could build in Development City at the time.
 

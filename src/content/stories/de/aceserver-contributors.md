@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:0f1789a31488b23ef85ef24f2d549c3b5f57e582e6964605e1460cf00aac4bf7
+sourceHash: sha256:0b727796f97558e24e7b67198fd55fffbe43a18b23a573046e0fce4ce211e536
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -18,6 +18,8 @@ Vom frühen Wiki über die Planung von Events bis zur Chat-Verknüpfung. Wir bli
 ## Die Anfänge
 
 Im November 2020 schlug てぃあ einen Wettbewerb für den Bau von Wohnhäusern auf vorbereiteten Grundstücken vor, mit einem Thema und einer Abstimmung. Im Dezember berichtete てぃあ, einen Kanal für Anträge zum Eisenbahnbau eingerichtet zu haben.
+
+Am 19. November 2020 wies Mugi darauf hin, dass Dorfbewohner ohne Nacht nicht schlafen könnten und Eisengolemfarmen dadurch ausfallen würden. Auch die Handelsangebote der Dorfbewohner würden sich dann nicht mehr auffüllen. Gui nahm den Hinweis auf. Am nächsten Tag beantwortete Gui eine Frage zur Einrichtung des Servers und erklärte, dass der Mehrspielermodus auf einem gemieteten Server lief.
 
 Im Dezember 2020 koordinierte てぃあ den frühen Eisenbahnbau und erklärte, wie Bauvorhaben zu dieser Zeit im Voraus anzumelden waren. [Ankündigung zum Eisenbahnbau](https://discord.com/channels/737538781024092170/774152638450237460/783543829676556349)
 
@@ -332,6 +334,8 @@ Im März 2021 startete Game\_Tokumei einen Dienst namens „Allerlei Aufträge�
 Am 24. März 2021 baute Game\_Tokumei auf dem Kreativserver einen Dungeon, in dem viele Monster erschienen, und beantragte die Übertragung auf den Survivalserver. Zwei beigefügte Bilder zeigten den dunklen Innenraum und die große Außenmauer. KOTA-SAN erklärte, wie solche Anträge damals behandelt wurden, und riet dazu, Guis Entscheidung abzuwarten.
 
 Am 5. April 2021 meldete KOTA-SAN, dass das Takenoko-no-Sato-Stadion in der Lobby fertig war, und teilte ein Foto mit Sitzreihen für das Publikum auf beiden Seiten der Halle.
+
+Am 7. Juli 2021 beantwortete KOTA-SAN eine Frage zum Stadion in der Lobby. KOTA-SAN erklärte, es für Veranstaltungen gebaut und geschlossen zu haben, weil damals keine Nutzung geplant war. Am selben Tag gab KOTA-SAN die Schließung des eigenen Antragskanals für Eisenbahnen bekannt und bat darum, jedes größere Bauvorhaben vorher im Fragenkanal abzuklären.
 
 Im Mai erklärte kuroneko229, dass damals jeder in der Entwicklungsstadt bauen konnte.
 

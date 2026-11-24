@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:0f1789a31488b23ef85ef24f2d549c3b5f57e582e6964605e1460cf00aac4bf7
+sourceHash: sha256:0b727796f97558e24e7b67198fd55fffbe43a18b23a573046e0fce4ce211e536
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -18,6 +18,8 @@ Des débuts du Wiki à l’organisation d’événements et à l’intégration 
 ## Les débuts
 
 En novembre 2020, てぃあ a proposé un concours de construction de maisons sur un terrain divisé en parcelles, avec un thème et un vote. En décembre, てぃあ a annoncé avoir créé un salon pour les demandes de construction de voies ferrées.
+
+Le 19 novembre 2020, Mugi a signalé que sans nuit, les villageois ne pourraient pas dormir et que les fermes à golems de fer cesseraient de fonctionner. Les villageois des salles de commerce ne réapprovisionneraient pas non plus leurs offres. Gui a accusé réception du signalement. Le lendemain, en réponse à une question sur la mise en place du serveur, Gui a expliqué que le multijoueur fonctionnait sur un serveur loué.
 
 En décembre 2020, てぃあ a coordonné les premiers travaux ferroviaires et expliqué la démarche à suivre à l’époque pour demander l’autorisation de construire. [Annonce sur la construction ferroviaire](https://discord.com/channels/737538781024092170/774152638450237460/783543829676556349)
 
@@ -332,6 +334,8 @@ En mars 2021, Game\_Tokumei a lancé un service appelé « Tous travaux » et a 
 Le 24 mars 2021, Game\_Tokumei a construit sur le serveur créatif un donjon où apparaissaient de nombreux monstres et a demandé son transfert vers le serveur de survie. Les deux images jointes montraient l’intérieur sombre et le grand mur extérieur. KOTA-SAN a expliqué comment les demandes de transfert étaient examinées à l’époque et a conseillé d’attendre la décision de Gui.
 
 Le 5 avril 2021, KOTA-SAN a signalé que le stade Takenoko no Sato, dans le lobby, était terminé. La photo jointe montrait des rangées de sièges de part et d’autre de l’enceinte couverte.
+
+Le 7 juillet 2021, KOTA-SAN a répondu à une question sur le stade du lobby. Il a expliqué l’avoir construit pour des événements et l’avoir fermé faute d’utilisation prévue à l’époque. Le même jour, il a annoncé la fermeture du canal de demandes réservé aux voies ferrées et a invité les joueurs à consulter le canal des questions avant tout chantier important.
 
 En mai, kuroneko229 a indiqué qu’à l’époque, tout le monde pouvait construire dans la Ville en développement.
 

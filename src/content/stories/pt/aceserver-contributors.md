@@ -2,7 +2,7 @@
 title: As pessoas que apoiaram o Aceserver
 description: Conheça quem ajudou o Aceserver pelos retratos de skins do Minecraft, relembre as atividades e confira o roteiro de eventos e propostas.
 translationOf: aceserver-contributors
-sourceHash: sha256:0f1789a31488b23ef85ef24f2d549c3b5f57e582e6964605e1460cf00aac4bf7
+sourceHash: sha256:0b727796f97558e24e7b67198fd55fffbe43a18b23a573046e0fce4ce211e536
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -18,6 +18,8 @@ Da primeira Wiki à organização de eventos e à integração dos chats, relemb
 ## Os primeiros dias
 
 Em novembro de 2020, てぃあ propôs um concurso de construção de casas, com um tema e votação, em um local dividido em lotes. Em dezembro, informou que havia criado um canal para pedidos de construção de ferrovias.
+
+Em 19 de novembro de 2020, Mugi alertou que, sem noite, os aldeões não poderiam dormir, as farms de golens de ferro deixariam de funcionar e as ofertas dos aldeões nos centros de comércio não seriam repostas. Gui respondeu ao aviso. No dia seguinte, ao responder como o servidor havia sido montado, Gui explicou que o modo multijogador rodava em um servidor alugado.
 
 Em dezembro de 2020, てぃあ coordenou as primeiras obras da ferrovia e explicou o procedimento de solicitação exigido antes de construir naquela época. [Anúncio sobre a construção da ferrovia](https://discord.com/channels/737538781024092170/774152638450237460/783543829676556349)
 
@@ -332,6 +334,8 @@ Em março de 2021, Game\_Tokumei abriu um serviço chamado «Faz-Tudo» e anunci
 Em 24 de março de 2021, Game\_Tokumei construiu no servidor criativo uma masmorra onde apareciam muitos monstros e solicitou a transferência para o servidor de sobrevivência. As duas imagens anexadas mostravam o interior escuro e a grande parede externa. KOTA-SAN explicou como as transferências eram avaliadas na época e orientou a esperar pela decisão de Gui.
 
 Em 5 de abril de 2021, KOTA-SAN informou que o estádio Takenoko no Sato, no lobby, estava concluído e compartilhou uma foto com fileiras de assentos para o público nos dois lados do recinto coberto.
+
+Em 7 de julho de 2021, KOTA-SAN respondeu a uma pergunta sobre o estádio do lobby. Explicou que o havia construído para eventos e que estava fechado na época porque não havia planos de usá-lo. No mesmo dia, anunciou o fechamento do canal de solicitações de ferrovias e orientou os jogadores a consultar o canal de perguntas antes de iniciar qualquer construção de grande porte.
 
 Em maio, kuroneko229 informou que, na época, qualquer pessoa podia construir na Cidade em Desenvolvimento.
 
