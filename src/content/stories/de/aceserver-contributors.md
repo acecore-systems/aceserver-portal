@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:c9893040886ed5420e1fde0d017bec41883688defe2cf963bc3e6a5b998c5bd4
+sourceHash: sha256:6f69c2b51e5a97eaa40147585572ba7646305c9a25037c1c71cc6d721e429cc7
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-24T00:00:00+09:00
 tags:
@@ -269,6 +269,8 @@ Am 7. März 2026 bat End&#12539;コッカー um Veranstaltungsideen und Mithilfe
 
 Im März 2026 bat &#12486;&#12451;&#12512;&#12540; für das Aceserver-Tagebuch des Belebungskomitees von Aceserver um Ideen für ein neues Symbol und um Beiträge zu Ereignissen auf dem Server.
 
+Am 25. April 2026 fasste &#12450;&#12510;&#12484; die Bauvorgaben für ein Belagerungsevent in Minecraft zusammen. Eine Burg war das vorgegebene Thema, und für Baustil und Farbgebung waren eigene Felder vorgesehen. Am 10. Mai schlug &#12450;&#12510;&#12484; vor, in welcher Reihenfolge das Bauwerk entstehen und auf das Veranstaltungsgelände kopiert werden sollte.
+
 Am 6. Mai 2026 entwarf LuMiSIA\_&#26376;&#31070;&#24736;&#33673; einen Vorschlag für das Sommerfest „&#12360;&#65374;&#22799;&#31085;&#12426;“, bei dem neue und langjährige Teilnehmer zusammenkommen könnten. Der Vorschlag umfasste Stände der Teilnehmer und ein Feuerwerk. Am 19. Mai berichtete LuMiSIA\_&#26376;&#31070;&#24736;&#33673;, Unterstützung von &#12475;&#12531;&#12481;&#12517;&#12522;&#12474; für das Feuerwerk gewonnen zu haben.
 
 Am 7. Juli 2026 teilte End&#12539;コッカー den Entwurf einer Ankündigung für ein Bauspiel nach dem Staffellaufprinzip. Geplant waren zwei Teams in der Lobby. Die erste Person sollte ein Thema bekommen und das Bauwerk an die nächste weitergeben.
@@ -316,6 +318,8 @@ Am 30. Januar 2022 sagte \_BE\_kurenohachi, dass einige Personen helfen wollten,
 Am 1. März 2022 plante Tomiryo eine Vorrichtung zum Brauen von Tränken in der Nähe des Gemeinschaftsfeldes. Am 2. März stimmte はっ dem Bau zu und wies auf eine vorhandene Vorrichtung als Vorbild hin.
 
 Im März 2022 bat タケ um Hilfe beim Einebnen des Geländes für ein Bodenbild. Am 1. April meldete タケ die Fertigstellung des Werks und dankte den Personen, die beim Einebnen geholfen oder Material bereitgestellt hatten. [Aufruf zur Mithilfe beim Einebnen](https://discord.com/channels/737538781024092170/779569416438415421/957990944374927420) [Bericht zur Fertigstellung des Bodenbilds](https://discord.com/channels/737538781024092170/779569416438415421/959368128943489085)
+
+Am 24. April bat タケ im Namen der Bodenbildgruppe um Hilfe bei einem Poster, das als Bodenbild in Minecraft entstehen sollte. Das meiste Material war laut タケ bereits vorbereitet. [Aufruf zur Mithilfe beim Poster](https://discord.com/channels/737538781024092170/779569416438415421/967605541411098685)
 
 Im April 2022 berichtete SPdari, dass das Fundament und das Dach der Hauptbasis in Sora no Yama fertig waren und der Außenbau fast abgeschlossen war. Im Innenbereich standen noch Arbeiten aus.
 

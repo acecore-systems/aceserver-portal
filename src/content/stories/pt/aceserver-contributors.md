@@ -2,7 +2,7 @@
 title: As pessoas que apoiaram o Aceserver
 description: Conheça quem ajudou o Aceserver pelos retratos de skins do Minecraft, relembre as atividades e confira o roteiro de eventos e propostas.
 translationOf: aceserver-contributors
-sourceHash: sha256:c9893040886ed5420e1fde0d017bec41883688defe2cf963bc3e6a5b998c5bd4
+sourceHash: sha256:6f69c2b51e5a97eaa40147585572ba7646305c9a25037c1c71cc6d721e429cc7
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-24T00:00:00+09:00
 tags:
@@ -269,6 +269,8 @@ Em 7 de março de 2026, End&#12539;コッカー pediu ideias para eventos e volu
 
 Em março de 2026, &#12486;&#12451;&#12512;&#12540; pediu propostas de um novo ícone e relatos de acontecimentos no servidor para o Diário do Aceserver, do Comitê de Revitalização do Aceserver.
 
+Em 25 de abril de 2026, &#12450;&#12510;&#12484; resumiu as orientações de construção para um evento de cerco no Minecraft. As orientações definiam o castelo como tema e incluíam campos para indicar o estilo arquitetônico e a paleta de cores. Em 10 de maio, &#12450;&#12510;&#12484; propôs uma ordem de trabalho para construir a estrutura e copiá-la para o terreno do evento.
+
 Em 6 de maio de 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; preparou uma proposta para o festival de verão “&#12360;&#65374;&#22799;&#31085;&#12426;”, pensado como um espaço de convivência para participantes novos e antigos. A proposta incluía barracas organizadas pelos participantes e uma apresentação de fogos de artifício. Em 19 de maio, informou que havia conseguido a colaboração de &#12475;&#12531;&#12481;&#12517;&#12522;&#12474; para os fogos.
 
 Em 7 de julho de 2026, End&#12539;コッカー compartilhou um rascunho de anúncio para um jogo de construção em revezamento. A ideia era dividir os participantes em duas equipes no lobby, passar um tema à primeira pessoa e entregar a construção à pessoa seguinte.
@@ -316,6 +318,8 @@ Em 30 de janeiro de 2022, \_BE\_kurenohachi disse que tinha pessoas dispostas a 
 Em 1º de março de 2022, Tomiryo apresentou um plano para montar um dispositivo de preparo de poções perto da plantação comunitária. No dia 2, はっ concordou com a construção e indicou um dispositivo já existente como referência.
 
 Em março de 2022, タケ pediu ajuda para nivelar o terreno onde seria feita uma arte no chão. Em 1º de abril, informou que a obra estava concluída e agradeceu a quem ajudou a nivelar o terreno ou forneceu materiais. [Pedido de ajuda para nivelar o terreno](https://discord.com/channels/737538781024092170/779569416438415421/957990944374927420) [Relato da conclusão da arte no chão](https://discord.com/channels/737538781024092170/779569416438415421/959368128943489085)
+
+Em 24 de abril, タケ pediu ajuda em nome do grupo de arte no chão para criar um pôster no chão do Minecraft. タケ informou que a maior parte dos materiais já estava pronta. [Pedido de ajuda para criar o pôster](https://discord.com/channels/737538781024092170/779569416438415421/967605541411098685)
 
 Em abril de 2022, SPdari informou que a fundação e o telhado da base principal de Sora no Yama já estavam prontos e que o exterior estava quase concluído. Ainda faltava trabalho no interior.
 

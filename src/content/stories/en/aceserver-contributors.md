@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:c9893040886ed5420e1fde0d017bec41883688defe2cf963bc3e6a5b998c5bd4
+sourceHash: sha256:6f69c2b51e5a97eaa40147585572ba7646305c9a25037c1c71cc6d721e429cc7
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-24T00:00:00+09:00
 tags:
@@ -269,6 +269,8 @@ On March 7, 2026, End&#12539;コッカー invited event ideas and volunteers, in
 
 In March 2026, &#12486;&#12451;&#12512;&#12540; asked people to submit ideas for a new icon and stories about happenings on the server for the Aceserver Revitalization Committee’s Aceserver Diary.
 
+On April 25, 2026, &#12450;&#12510;&#12484; summarized the building brief for a Minecraft siege event. The brief set a castle theme and included fields for the architectural style and color scheme. On May 10, &#12450;&#12510;&#12484; proposed the order for building the structure and copying it onto the event terrain.
+
 On May 6, 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; drew up a proposal for a summer festival called “&#12360;&#65374;&#22799;&#31085;&#12426;” where new and longtime members could meet. The plan suggested participant-run stalls and a fireworks show. On May 19, they reported securing help from &#12475;&#12531;&#12481;&#12517;&#12522;&#12474; with the fireworks.
 
 On July 7, 2026, End&#12539;コッカー shared a draft announcement for a building relay. The plan called for two teams in the lobby, with the first player receiving a prompt and handing the build to the next player.
@@ -316,6 +318,8 @@ On January 30, 2022, \_BE\_kurenohachi said people had offered to help and share
 On March 1, 2022, Tomiryo outlined a plan for a potion-brewing contraption near the shared farm. On March 2, はっ agreed to the build and pointed to an existing contraption as a reference.
 
 In March 2022, タケ asked for help leveling the ground for a ground artwork. On April 1, タケ reported that the artwork was complete and thanked the people who helped level the ground or provided materials. [Call for help leveling the ground](https://discord.com/channels/737538781024092170/779569416438415421/957990944374927420) [Ground artwork completion report](https://discord.com/channels/737538781024092170/779569416438415421/959368128943489085)
+
+On April 24, タケ asked for help on behalf of the ground-art group to make a poster as ground art in Minecraft. タケ said most of the materials were already prepared. [Call for help making the poster](https://discord.com/channels/737538781024092170/779569416438415421/967605541411098685)
 
 In April 2022, SPdari reported that the foundation and roof of the main base at Sora no Yama were in place and the exterior was nearly complete. Work still remained on the interior.
 
