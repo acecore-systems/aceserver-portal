@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:0b727796f97558e24e7b67198fd55fffbe43a18b23a573046e0fce4ce211e536
+sourceHash: sha256:cc371cd663f6e5b2fe8452a257c05ee301a11e77abca45f7c142f77e9a2d972c
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -534,6 +534,8 @@ En janvier 2022, YM a indiqué avoir rédigé un livre expliquant aux nouveaux j
 Le 24 février 2022, ringoponn a demandé si Azkaban était un monde destiné à la collecte de ressources. はっ a expliqué qu’Azkaban serait considéré comme un monde à part entière, et yanyan_fafnir a présenté l’idée d’un monde où les joueurs pourraient prendre des risques pour obtenir des objets et d’autres récompenses.
 
 Le 5 mars 2022, \_BE\_NumberYapper a proposé de réorganiser le guide des installations communes accessibles à tous. Le 11 avril, \_BE\_NumberYapper a suggéré de placer un livre ou un pupitre dans le hall ou au premier portail pour que les nouveaux joueurs puissent lire les instructions. Le 12 avril, KOTA-SAN a demandé d’ajouter le livre et de déplacer le portail pour les personnes qui entraient par erreur dans Azkaban.
+
+Le 31 mars 2022, lors de l’essai d’un objet à Azkaban, taibon852 a indiqué que son utilisation nécessitait de la poudre de blaze. Master_Yinfe a constaté que l’objet orientait le regard du joueur vers une créature infernale et semblait fonctionner au-delà de la distance à laquelle la barre du boss s’affichait.
 
 Le 21 avril 2022, &#12414;&#12356;&#12369;&#12427; a proposé de se répartir par créneaux l’accueil des nouveaux joueurs. KOTA-SAN a suggéré de laisser cet accueil à l’initiative des participants.
 

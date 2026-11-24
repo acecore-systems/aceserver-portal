@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:0b727796f97558e24e7b67198fd55fffbe43a18b23a573046e0fce4ce211e536
+sourceHash: sha256:cc371cd663f6e5b2fe8452a257c05ee301a11e77abca45f7c142f77e9a2d972c
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -534,6 +534,8 @@ In January 2022, YM reported writing a book with joining instructions for new pl
 On February 24, 2022, ringoponn asked whether Azkaban was a world for gathering resources. はっ explained that Azkaban was to be treated as a world in its own right, and yanyan_fafnir described the design idea of a world where players could take risks to obtain items and other rewards.
 
 On March 5, 2022, \_BE\_NumberYapper proposed reorganizing the guide to shared facilities that anyone could use. On April 11, they suggested placing a guidebook or a lectern in the lobby or at the first gate so new players could read the joining instructions. On April 12, KOTA-SAN asked for the guidebook and for the gate to be moved for players who mistakenly entered Azkaban.
+
+On March 31, 2022, while testing an item in Azkaban, taibon852 reported that it required blaze powder. Master_Yinfe found that it turned the player’s view toward an Infernal Mob and seemed to work from farther away than the distance at which the boss bar appeared.
 
 On April 21, 2022, &#12414;&#12356;&#12369;&#12427; proposed dividing responsibility for helping new players get oriented by time slot. KOTA-SAN suggested leaving that help up to players who volunteered.
 

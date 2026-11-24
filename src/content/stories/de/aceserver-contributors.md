@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:0b727796f97558e24e7b67198fd55fffbe43a18b23a573046e0fce4ce211e536
+sourceHash: sha256:cc371cd663f6e5b2fe8452a257c05ee301a11e77abca45f7c142f77e9a2d972c
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -534,6 +534,8 @@ Im Januar 2022 berichtete YM, ein Buch mit der Beitrittsanleitung für neue Spie
 Am 24. Februar 2022 fragte ringoponn, ob Azkaban eine Welt zum Sammeln von Ressourcen sei. はっ erklärte, Azkaban solle als eigenständige Welt behandelt werden, und yanyan_fafnir beschrieb die Idee einer Welt, in der Spieler Risiken eingehen könnten, um Gegenstände und andere Belohnungen zu erhalten.
 
 Am 5. März 2022 schlug \_BE\_NumberYapper vor, den Leitfaden für die frei zugänglichen Gemeinschaftseinrichtungen neu zu ordnen. Am 11. April kam der Vorschlag hinzu, ein Anleitungsbuch oder ein Lesepult in der Lobby oder am ersten Portal aufzustellen, damit Neulinge die Beitrittsschritte nachlesen könnten. Am 12. April bat KOTA-SAN um das Anleitungsbuch und darum, das Portal wegen versehentlicher Eintritte in Azkaban zu verlegen.
+
+Am 31. März 2022 berichtete taibon852 beim Test eines Gegenstands in Azkaban, dass man dafür Lohenstaub benötigte. Master_Yinfe stellte fest, dass der Gegenstand den Blick des Spielers in Richtung eines Infernal Mobs lenkte und offenbar aus größerer Entfernung wirkte, als die Bossleiste angezeigt wurde.
 
 Am 21. April 2022 schlug &#12414;&#12356;&#12369;&#12427; vor, die Betreuung neuer Spieler auf Zeitfenster aufzuteilen. KOTA-SAN wollte es der Eigeninitiative der Teilnehmenden überlassen, ob sie bei der Orientierung halfen.
 

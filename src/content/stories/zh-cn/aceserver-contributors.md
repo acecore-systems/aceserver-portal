@@ -2,7 +2,7 @@
 title: 支持Aceserver的人们
 description: 通过 Minecraft 皮肤头像认识 Aceserver 的贡献者，回顾社区活动记录，并查看活动与玩家提案路线图。
 translationOf: aceserver-contributors
-sourceHash: sha256:0b727796f97558e24e7b67198fd55fffbe43a18b23a573046e0fce4ce211e536
+sourceHash: sha256:cc371cd663f6e5b2fe8452a257c05ee301a11e77abca45f7c142f77e9a2d972c
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -534,6 +534,8 @@ taibon0727 准备了玻璃等物资、出行用船的停放处和处理沙子的
 2022年2月24日，ringoponn 询问阿兹卡班是否是用来收集资源的世界。はっ 解释说，阿兹卡班会作为一个独立世界看待。yanyan_fafnir 介绍了设计思路，即玩家可以冒一定的风险来获得物品等奖励。
 
 2022年3月5日，\_BE\_NumberYapper 提议重新整理所有人都能使用的共用设施指南。4月11日，\_BE\_NumberYapper 建议在大厅或第一个经过的传送门放置指南书或讲台，让新玩家可以阅读加入方法。4月12日，KOTA-SAN 除了提出放置指南书，也提出移动传送门，以免玩家误入阿兹卡班。
+
+2022 年 3 月 31 日，在阿兹卡班测试道具时，taibon852 指出使用它需要烈焰粉。Master_Yinfe 发现，道具会将玩家的视线转向Infernal Mob所在的方向，而且似乎在超出首领血条显示距离的位置也能生效。
 
 2022年4月21日，&#12414;&#12356;&#12369;&#12427; 提议按时段分工引导新玩家。KOTA-SAN 则提出让玩家自愿提供引导。
 

@@ -2,7 +2,7 @@
 title: As pessoas que apoiaram o Aceserver
 description: Conheça quem ajudou o Aceserver pelos retratos de skins do Minecraft, relembre as atividades e confira o roteiro de eventos e propostas.
 translationOf: aceserver-contributors
-sourceHash: sha256:0b727796f97558e24e7b67198fd55fffbe43a18b23a573046e0fce4ce211e536
+sourceHash: sha256:cc371cd663f6e5b2fe8452a257c05ee301a11e77abca45f7c142f77e9a2d972c
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -534,6 +534,8 @@ Em janeiro de 2022, YM informou que havia escrito um livro com instruções para
 Em 24 de fevereiro de 2022, ringoponn perguntou se Azkaban era um mundo para coletar recursos. はっ explicou que Azkaban seria tratado como um mundo independente, e yanyan_fafnir descreveu a ideia de um mundo onde os jogadores poderiam correr riscos em troca de itens e outras recompensas.
 
 Em 5 de março de 2022, \_BE\_NumberYapper propôs reorganizar o guia das instalações compartilhadas que qualquer pessoa podia usar. Em 11 de abril, sugeriu colocar um livro de instruções ou um púlpito no lobby ou no primeiro portal para que novos jogadores pudessem ler como participar. No dia 12, KOTA-SAN pediu o livro e a mudança de lugar do portal por causa de quem entrava em Azkaban por engano.
+
+Em 31 de março de 2022, durante o teste de um item em Azkaban, taibon852 informou que era preciso pó de blaze para usá-lo. Master_Yinfe observou que o item voltava a visão do jogador para um mob infernal e parecia funcionar a uma distância maior do que aquela em que a barra do chefe aparecia.
 
 Em 21 de abril de 2022, &#12414;&#12356;&#12369;&#12427; propôs organizar por faixas de horário a orientação aos novos jogadores. KOTA-SAN sugeriu deixar essa ajuda a cargo de quem se oferecesse.
 
