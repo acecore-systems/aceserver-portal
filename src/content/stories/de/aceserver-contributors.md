@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:d1b28990f791d2617dee5dfc6553dcdc884c2b86db1ad3bb6fc4f2e26c6c824d
+sourceHash: sha256:c8fa2ff2bd6b6d78f964e11474b6517c005c76f7952b80a077fe6ff62b2656c0
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -516,6 +516,8 @@ Am 24. Februar 2022 fragte ringoponn, ob Azkaban eine Welt zum Sammeln von Resso
 Am 5. März 2022 schlug \_BE\_NumberYapper vor, den Leitfaden für die frei zugänglichen Gemeinschaftseinrichtungen neu zu ordnen. Am 11. April kam der Vorschlag hinzu, ein Anleitungsbuch oder ein Lesepult in der Lobby oder am ersten Portal aufzustellen, damit Neulinge die Beitrittsschritte nachlesen könnten. Am 12. April bat KOTA-SAN um das Anleitungsbuch und darum, das Portal wegen versehentlicher Eintritte in Azkaban zu verlegen.
 
 Am 21. April 2022 schlug &#12414;&#12356;&#12369;&#12427; vor, die Betreuung neuer Spieler auf Zeitfenster aufzuteilen. KOTA-SAN wollte es der Eigeninitiative der Teilnehmenden überlassen, ob sie bei der Orientierung halfen.
+
+Am 9. Mai 2022 äußerte KOTA-SAN die Ansicht, dass die Zugehörigkeit zum Serverteam oder die Rolle als Supporter oder Stammspieler allein niemanden dazu verpflichtete, etwas beizutragen. [Aussage zu Rollen und Beiträgen](https://discord.com/channels/737538781024092170/773171457487929344/972983565832843334)
 
 Im Mai 2022 kündigte KOTA-SAN die testweise Einführung eines Plugins an, das die Funktionen von Schildern erweiterte. キツネコ (KITUNEKO0605) berichtete, ein Buch im Spiel mit einer Befehlsliste und weiteren Informationen erstellt zu haben.
 

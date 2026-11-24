@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:d1b28990f791d2617dee5dfc6553dcdc884c2b86db1ad3bb6fc4f2e26c6c824d
+sourceHash: sha256:c8fa2ff2bd6b6d78f964e11474b6517c005c76f7952b80a077fe6ff62b2656c0
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -516,6 +516,8 @@ On February 24, 2022, ringoponn asked whether Azkaban was a world for gathering 
 On March 5, 2022, \_BE\_NumberYapper proposed reorganizing the guide to shared facilities that anyone could use. On April 11, they suggested placing a guidebook or a lectern in the lobby or at the first gate so new players could read the joining instructions. On April 12, KOTA-SAN asked for the guidebook and for the gate to be moved for players who mistakenly entered Azkaban.
 
 On April 21, 2022, &#12414;&#12356;&#12369;&#12427; proposed dividing responsibility for helping new players get oriented by time slot. KOTA-SAN suggested leaving that help up to players who volunteered.
+
+On May 9, 2022, KOTA-SAN expressed the view that serving on the server team or holding the Supporter or Regular role did not by itself obligate anyone to contribute. [Comment on roles and contributions](https://discord.com/channels/737538781024092170/773171457487929344/972983565832843334)
 
 In May 2022, KOTA-SAN announced a trial of a plugin that expanded the features of signs. キツネコ (KITUNEKO0605) reported making an in-game book with a command list and other information.
 

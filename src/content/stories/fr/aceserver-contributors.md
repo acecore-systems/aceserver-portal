@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:d1b28990f791d2617dee5dfc6553dcdc884c2b86db1ad3bb6fc4f2e26c6c824d
+sourceHash: sha256:c8fa2ff2bd6b6d78f964e11474b6517c005c76f7952b80a077fe6ff62b2656c0
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -516,6 +516,8 @@ Le 24 février 2022, ringoponn a demandé si Azkaban était un monde destiné à
 Le 5 mars 2022, \_BE\_NumberYapper a proposé de réorganiser le guide des installations communes accessibles à tous. Le 11 avril, \_BE\_NumberYapper a suggéré de placer un livre ou un pupitre dans le hall ou au premier portail pour que les nouveaux joueurs puissent lire les instructions. Le 12 avril, KOTA-SAN a demandé d’ajouter le livre et de déplacer le portail pour les personnes qui entraient par erreur dans Azkaban.
 
 Le 21 avril 2022, &#12414;&#12356;&#12369;&#12427; a proposé de se répartir par créneaux l’accueil des nouveaux joueurs. KOTA-SAN a suggéré de laisser cet accueil à l’initiative des participants.
+
+Le 9 mai 2022, KOTA-SAN a estimé que faire partie de l’équipe du serveur, avoir un rôle d’assistance ou avoir le statut de membre régulier n’imposait pas en soi de contribuer. [Commentaire sur les rôles et les contributions](https://discord.com/channels/737538781024092170/773171457487929344/972983565832843334)
 
 En mai 2022, KOTA-SAN a annoncé la mise à l’essai d’un plugin qui étendait les fonctions des panneaux. キツネコ (KITUNEKO0605) a indiqué avoir créé un livre dans le jeu avec une liste de commandes et d’autres informations.
 

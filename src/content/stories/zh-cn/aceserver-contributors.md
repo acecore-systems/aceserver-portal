@@ -2,7 +2,7 @@
 title: 支持Aceserver的人们
 description: 通过 Minecraft 皮肤头像认识 Aceserver 的贡献者，回顾社区活动记录，并查看活动与玩家提案路线图。
 translationOf: aceserver-contributors
-sourceHash: sha256:d1b28990f791d2617dee5dfc6553dcdc884c2b86db1ad3bb6fc4f2e26c6c824d
+sourceHash: sha256:c8fa2ff2bd6b6d78f964e11474b6517c005c76f7952b80a077fe6ff62b2656c0
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -516,6 +516,8 @@ taibon0727 准备了玻璃等物资、出行用船的停放处和处理沙子的
 2022年3月5日，\_BE\_NumberYapper 提议重新整理所有人都能使用的共用设施指南。4月11日，\_BE\_NumberYapper 建议在大厅或第一个经过的传送门放置指南书或讲台，让新玩家可以阅读加入方法。4月12日，KOTA-SAN 除了提出放置指南书，也提出移动传送门，以免玩家误入阿兹卡班。
 
 2022年4月21日，&#12414;&#12356;&#12369;&#12427; 提议按时段分工引导新玩家。KOTA-SAN 则提出让玩家自愿提供引导。
+
+2022 年 5 月 9 日，KOTA-SAN 表示，担任运营团队成员、支持者或常驻成员，本身并不意味着有义务作出贡献。 [关于角色与贡献的发言](https://discord.com/channels/737538781024092170/773171457487929344/972983565832843334)
 
 2022年5月，KOTA-SAN宣布试用一款扩展告示牌功能的插件。キツネコ（KITUNEKO0605）报告说，自己制作了一本游戏内的书，收录了命令列表等资料。
 
