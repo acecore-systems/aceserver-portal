@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:5e48549bba5d371a0837e396ea18cbd919900868a7913842f1a2c2a24805e04c
+sourceHash: sha256:dc114f2ce4f6c635149b9ebac02d9b3cef5d74aba2f6e1ec026d46c2de965271
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -279,7 +279,7 @@ Am 25. April 2026 fasste &#12450;&#12510;&#12484; die Bauvorgaben für ein Belag
 
 Am 6. Mai 2026 entwarf LuMiSIA\_&#26376;&#31070;&#24736;&#33673; einen Vorschlag für das Sommerfest „&#12360;&#65374;&#22799;&#31085;&#12426;“, bei dem neue und langjährige Teilnehmer zusammenkommen könnten. Der Vorschlag umfasste Stände der Teilnehmer und ein Feuerwerk. Am 19. Mai berichtete LuMiSIA\_&#26376;&#31070;&#24736;&#33673;, Unterstützung von &#12475;&#12531;&#12481;&#12517;&#12522;&#12474; für das Feuerwerk gewonnen zu haben.
 
-Am 7. Juli 2026 teilte End&#12539;コッカー den Entwurf einer Ankündigung für ein Bauspiel nach dem Staffellaufprinzip. Geplant waren zwei Teams in der Lobby. Die erste Person sollte ein Thema bekommen und das Bauwerk an die nächste weitergeben.
+Am 7. Juli 2026 teilte End&#12539;コッカー den Entwurf einer Ankündigung für ein Bauspiel nach dem Staffellaufprinzip. Geplant waren zwei Teams in der Lobby. Die erste Person sollte ein Thema bekommen und das Bauwerk an die nächste weitergeben. Zur Startzeit am 11. Juli wies End&#12539;コッカー darauf hin, dass man auch nach dem Start noch über die Lobby einsteigen könne. [Hinweis zum späteren Einstieg](https://discord.com/channels/737538781024092170/773171457487929344/1525479803644542998)
 
 Am 13. Juli 2026 bat sekisei um Fragen und erläuterte, wie ähnliche Fragen gezählt würden und dass Yuri-kun direkt auf die Nachrichten antworten würde. Am 14. Juli meldete LuMiSIA\_&#26376;&#31070;&#24736;&#33673; für diesen Tag insgesamt 120 Fragen.
 

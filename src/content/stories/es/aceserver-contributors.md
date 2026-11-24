@@ -2,7 +2,7 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:5e48549bba5d371a0837e396ea18cbd919900868a7913842f1a2c2a24805e04c
+sourceHash: sha256:dc114f2ce4f6c635149b9ebac02d9b3cef5d74aba2f6e1ec026d46c2de965271
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -279,7 +279,7 @@ El 25 de abril de 2026, &#12450;&#12510;&#12484; resumió las pautas de construc
 
 El 6 de mayo de 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; preparó una propuesta para el festival de verano «&#12360;&#65374;&#22799;&#31085;&#12426;», pensado como un lugar de encuentro para participantes nuevos y veteranos. La propuesta incluía puestos a cargo de los participantes y un espectáculo de fuegos artificiales. El 19 de mayo, informó de que había conseguido la colaboración de &#12475;&#12531;&#12481;&#12517;&#12522;&#12474; para los fuegos artificiales.
 
-El 7 de julio de 2026, End&#12539;コッカー compartió un borrador de anuncio para un juego de construcción por relevos. La idea era formar dos equipos en el vestíbulo, dar un tema a la primera persona y pasar la construcción a la siguiente.
+El 7 de julio de 2026, End&#12539;コッカー compartió un borrador de anuncio para un juego de construcción por relevos. La idea era formar dos equipos en el vestíbulo, dar un tema a la primera persona y pasar la construcción a la siguiente. A la hora de inicio del 11 de julio, End&#12539;コッカー avisó de que los jugadores también podían incorporarse desde el vestíbulo una vez comenzado el evento. [Aviso para incorporarse durante el evento](https://discord.com/channels/737538781024092170/773171457487929344/1525479803644542998)
 
 El 13 de julio de 2026, sekisei invitó a enviar preguntas y explicó cómo se contarían las que planteaban básicamente lo mismo y que Yuri-kun contestaría mediante respuestas a los mensajes. El 14 de julio, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; informó de que ese día se habían recibido 120 preguntas en total.
 

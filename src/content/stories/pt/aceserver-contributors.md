@@ -2,7 +2,7 @@
 title: As pessoas que apoiaram o Aceserver
 description: Conheça quem ajudou o Aceserver pelos retratos de skins do Minecraft, relembre as atividades e confira o roteiro de eventos e propostas.
 translationOf: aceserver-contributors
-sourceHash: sha256:5e48549bba5d371a0837e396ea18cbd919900868a7913842f1a2c2a24805e04c
+sourceHash: sha256:dc114f2ce4f6c635149b9ebac02d9b3cef5d74aba2f6e1ec026d46c2de965271
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -279,7 +279,7 @@ Em 25 de abril de 2026, &#12450;&#12510;&#12484; resumiu as orientações de con
 
 Em 6 de maio de 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; preparou uma proposta para o festival de verão “&#12360;&#65374;&#22799;&#31085;&#12426;”, pensado como um espaço de convivência para participantes novos e antigos. A proposta incluía barracas organizadas pelos participantes e uma apresentação de fogos de artifício. Em 19 de maio, informou que havia conseguido a colaboração de &#12475;&#12531;&#12481;&#12517;&#12522;&#12474; para os fogos.
 
-Em 7 de julho de 2026, End&#12539;コッカー compartilhou um rascunho de anúncio para um jogo de construção em revezamento. A ideia era dividir os participantes em duas equipes no lobby, passar um tema à primeira pessoa e entregar a construção à pessoa seguinte.
+Em 7 de julho de 2026, End&#12539;コッカー compartilhou um rascunho de anúncio para um jogo de construção em revezamento. A ideia era dividir os participantes em duas equipes no lobby, passar um tema à primeira pessoa e entregar a construção à pessoa seguinte. No horário de início em 11 de julho, End&#12539;コッカー avisou que também seria possível entrar pelo lobby com o evento em andamento. [Aviso de entrada com o evento em andamento](https://discord.com/channels/737538781024092170/773171457487929344/1525479803644542998)
 
 Em 13 de julho de 2026, sekisei convidou as pessoas a enviar perguntas, explicou como seriam contadas as que perguntavam essencialmente a mesma coisa e informou que Yuri-kun responderia por meio das respostas às mensagens. Em 14 de julho, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; informou que naquele dia foram feitas 120 perguntas ao todo.
 

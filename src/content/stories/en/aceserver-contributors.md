@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:5e48549bba5d371a0837e396ea18cbd919900868a7913842f1a2c2a24805e04c
+sourceHash: sha256:dc114f2ce4f6c635149b9ebac02d9b3cef5d74aba2f6e1ec026d46c2de965271
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -279,7 +279,7 @@ On April 25, 2026, &#12450;&#12510;&#12484; summarized the building brief for a 
 
 On May 6, 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; drew up a proposal for a summer festival called “&#12360;&#65374;&#22799;&#31085;&#12426;” where new and longtime members could meet. The plan suggested participant-run stalls and a fireworks show. On May 19, they reported securing help from &#12475;&#12531;&#12481;&#12517;&#12522;&#12474; with the fireworks.
 
-On July 7, 2026, End&#12539;コッカー shared a draft announcement for a building relay. The plan called for two teams in the lobby, with the first player receiving a prompt and handing the build to the next player.
+On July 7, 2026, End&#12539;コッカー shared a draft announcement for a building relay. The plan called for two teams in the lobby, with the first player receiving a prompt and handing the build to the next player. At the start time on July 11, End&#12539;コッカー said players could also join the event in progress from the lobby. [Notice about joining in progress](https://discord.com/channels/737538781024092170/773171457487929344/1525479803644542998)
 
 On July 13, 2026, sekisei invited questions and explained how questions asking essentially the same thing would be counted and that Yuri-kun would answer in replies. On July 14, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; reported a total of 120 questions that day.
 

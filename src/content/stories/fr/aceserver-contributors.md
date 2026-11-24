@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:5e48549bba5d371a0837e396ea18cbd919900868a7913842f1a2c2a24805e04c
+sourceHash: sha256:dc114f2ce4f6c635149b9ebac02d9b3cef5d74aba2f6e1ec026d46c2de965271
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -279,7 +279,7 @@ Le 25 avril 2026, &#12450;&#12510;&#12484; a résumé les consignes de construct
 
 Le 6 mai 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; a préparé une proposition pour le festival d’été « &#12360;&#65374;&#22799;&#31085;&#12426; », pensé comme un lieu de rencontre entre nouveaux membres et habitués. Le projet prévoyait des stands tenus par les participants et un feu d’artifice. Le 19 mai, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; a indiqué avoir obtenu l’aide de &#12475;&#12531;&#12481;&#12517;&#12522;&#12474; pour le feu d’artifice.
 
-Le 7 juillet 2026, End&#12539;コッカー a partagé un projet d’annonce pour un jeu de construction en relais. Le projet prévoyait deux équipes dans le hall. La première personne recevrait un thème, puis passerait la construction à la personne suivante.
+Le 7 juillet 2026, End&#12539;コッカー a partagé un projet d’annonce pour un jeu de construction en relais. Le projet prévoyait deux équipes dans le hall. La première personne recevrait un thème, puis passerait la construction à la personne suivante. À l’heure de début le 11 juillet, End&#12539;コッカー a indiqué qu’il était aussi possible de rejoindre l’événement en cours depuis le hall. [Annonce sur la participation en cours d’événement](https://discord.com/channels/737538781024092170/773171457487929344/1525479803644542998)
 
 Le 13 juillet 2026, sekisei a invité les membres à poser des questions, a expliqué comment les questions qui revenaient au même seraient comptées et a indiqué que Yuri-kun répondrait directement aux messages. Le 14 juillet, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; a annoncé un total de 120 questions pour la journée.
 
