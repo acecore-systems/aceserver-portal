@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:cc371cd663f6e5b2fe8452a257c05ee301a11e77abca45f7c142f77e9a2d972c
+sourceHash: sha256:f7242c01eb4facb2e4610d70e23af3b8325337d309179cf98f7671a136f27877
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -356,6 +356,8 @@ Am 24. April bat タケ im Namen der Bodenbildgruppe um Hilfe bei einem Poster, 
 Im April 2022 berichtete SPdari, dass das Fundament und das Dach der Hauptbasis in Sora no Yama fertig waren und der Außenbau fast abgeschlossen war. Im Innenbereich standen noch Arbeiten aus.
 
 Am 24. Mai 2022 berichtete Moon\_666, eine Farm für zombifizierte Piglins für die Java Edition gebaut zu haben. Moon\_666 wollte auch eine Farm für die Bedrock Edition bauen.
+
+Im Juni 2022 zeigte taiyaki5190 im Thread zu Aceserver-Landschaften Screenshots vom ersten größeren Haus, das taiyaki5190 auf dem Server baute, und von einem weiteren Haus, das taiyaki5190 auf Anfrage baute. Für das Eirin-Team errichtete taiyaki5190 allein eine Handelshalle und zeigte deren Außenansicht und die Stände der Dorfbewohner am roten Teppich im Inneren. Außerdem teilte taiyaki5190 Aufnahmen der Hikakin-Statue des Teams im Bau und nach ihrer Fertigstellung. Dari zeigte die Außenansicht des ersten eigenen Hauses auf Aceserver. [Erstes Haus](https://discord.com/channels/737538781024092170/981561783707906118/981682997579374592) [Auf Anfrage gebautes Haus](https://discord.com/channels/737538781024092170/981561783707906118/981685214591979560) [Handelshalle von außen und innen](https://discord.com/channels/737538781024092170/981561783707906118/981684994659483721) [Statue im Bau und nach der Fertigstellung](https://discord.com/channels/737538781024092170/981561783707906118/981684089885192252) [Daris erstes Haus](https://discord.com/channels/737538781024092170/981561783707906118/982178632241909790)
 
 Im Juni 2022 erklärte yanyan_fafnir die Teilnahmebedingungen für den Wettbewerb um schwebende Inseln, aus dem die frühere Lobby hervorging. Die Ankündigung beschrieb auch, wie die Beiträge bei der Bewertung vorgestellt werden sollten. はっ und Mitglieder mit der Rolle „Supporter“ oder höher sollten die Jury bilden. [Teilnahmebedingungen](https://discord.com/channels/737538781024092170/774152638450237460/982990352422162482) [Ankündigung des Jurytermins](https://discord.com/channels/737538781024092170/774152638450237460/986294242848669756)
 

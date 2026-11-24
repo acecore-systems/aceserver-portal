@@ -2,7 +2,7 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:cc371cd663f6e5b2fe8452a257c05ee301a11e77abca45f7c142f77e9a2d972c
+sourceHash: sha256:f7242c01eb4facb2e4610d70e23af3b8325337d309179cf98f7671a136f27877
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -356,6 +356,8 @@ El 24 de abril, タケ pidió ayuda en nombre del grupo de arte sobre el suelo p
 En abril de 2022, SPdari informó de que los cimientos y el tejado de la base principal de Sora no Yama ya estaban hechos y de que el exterior estaba casi terminado. Aún quedaba trabajo en el interior.
 
 El 24 de mayo de 2022, Moon\_666 informó que había construido una granja de piglins zombificados para Java Edition y expresó su intención de construir otra para Bedrock Edition.
+
+En junio de 2022, taiyaki5190 compartió en el hilo de paisajes de Aceserver imágenes de la primera casa importante que construyó en el servidor y de otra que hizo por encargo. También construyó sin ayuda un centro de comercio para el equipo Eirin y mostró el exterior y los puestos de aldeanos alineados junto a la alfombra roja del interior. Compartió además imágenes de la estatua de Hikakin que había en la zona del equipo durante la construcción y una vez terminada. Dari publicó una imagen del exterior de su primera casa en Aceserver. [Primera casa](https://discord.com/channels/737538781024092170/981561783707906118/981682997579374592) [Casa construida por encargo](https://discord.com/channels/737538781024092170/981561783707906118/981685214591979560) [Exterior e interior del centro de comercio](https://discord.com/channels/737538781024092170/981561783707906118/981684994659483721) [Estatua durante y después de la construcción](https://discord.com/channels/737538781024092170/981561783707906118/981684089885192252) [Primera casa de Dari](https://discord.com/channels/737538781024092170/981561783707906118/982178632241909790)
 
 En junio de 2022, yanyan_fafnir explicó cómo participar en el concurso de islas flotantes que dio paso a la construcción del antiguo vestíbulo y cómo se presentarían los proyectos ante el jurado. El anuncio indicó que はっ y los miembros con el rol de apoyo o superior serían los jueces. [Reglas del concurso](https://discord.com/channels/737538781024092170/774152638450237460/982990352422162482) [Anuncio de la presentación ante el jurado](https://discord.com/channels/737538781024092170/774152638450237460/986294242848669756)
 

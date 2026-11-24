@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:cc371cd663f6e5b2fe8452a257c05ee301a11e77abca45f7c142f77e9a2d972c
+sourceHash: sha256:f7242c01eb4facb2e4610d70e23af3b8325337d309179cf98f7671a136f27877
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -356,6 +356,8 @@ On April 24, タケ asked for help on behalf of the ground-art group to make a p
 In April 2022, SPdari reported that the foundation and roof of the main base at Sora no Yama were in place and the exterior was nearly complete. Work still remained on the interior.
 
 On May 24, 2022, Moon\_666 reported building a zombified piglin farm for Java Edition and said they would like to build one for Bedrock Edition as well.
+
+In June 2022, taiyaki5190 shared screenshots in the Aceserver Landscapes thread of the first substantial home they built on the server and another they built by request. They also built a trading hall on their own for the Eirin Team and showed its exterior and the villager stalls lining a red carpet inside. They shared screenshots of the Hikakin statue in the team’s area during construction and after completion. Dari posted the exterior of their first house on Aceserver. [First home](https://discord.com/channels/737538781024092170/981561783707906118/981682997579374592) [House built by request](https://discord.com/channels/737538781024092170/981561783707906118/981685214591979560) [Trading hall exterior and interior](https://discord.com/channels/737538781024092170/981561783707906118/981684994659483721) [Statue during and after construction](https://discord.com/channels/737538781024092170/981561783707906118/981684089885192252) [Dari’s first house](https://discord.com/channels/737538781024092170/981561783707906118/982178632241909790)
 
 In June 2022, yanyan_fafnir explained how to enter the floating-island contest that led to work on the former lobby and how entries would be presented at judging. The announcement named はっ and members with the supporter role or above as judges. [Contest entry rules](https://discord.com/channels/737538781024092170/774152638450237460/982990352422162482) [Judging session announcement](https://discord.com/channels/737538781024092170/774152638450237460/986294242848669756)
 

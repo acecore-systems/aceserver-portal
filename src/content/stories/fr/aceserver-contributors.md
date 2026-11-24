@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:cc371cd663f6e5b2fe8452a257c05ee301a11e77abca45f7c142f77e9a2d972c
+sourceHash: sha256:f7242c01eb4facb2e4610d70e23af3b8325337d309179cf98f7671a136f27877
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -356,6 +356,8 @@ Le 24 avril, タケ a demandé de l’aide au nom du groupe de créations au sol
 En avril 2022, SPdari a signalé que les fondations et le toit de la base principale de Sora no Yama étaient en place et que l’extérieur était presque terminé. Il restait du travail à l’intérieur.
 
 Le 24 mai 2022, Moon\_666 a annoncé avoir construit une ferme à piglins zombifiés pour l’édition Java et a dit souhaiter en construire une pour l’édition Bedrock.
+
+En juin 2022, taiyaki5190 a partagé dans le fil des paysages d’Aceserver des captures de la première maison d’envergure que taiyaki5190 a construite sur le serveur et d’une autre réalisée sur demande. taiyaki5190 a aussi construit en solo une salle de commerce pour l’équipe Eirin et montré l’extérieur ainsi que les comptoirs de villageois qui bordent le tapis rouge à l’intérieur. Le fil contient aussi ses captures de la statue de Hikakin qui se trouvait dans la zone de l’équipe, en cours de construction puis terminée. Dari a publié une vue extérieure de sa première maison sur Aceserver. [Première maison](https://discord.com/channels/737538781024092170/981561783707906118/981682997579374592) [Maison construite sur demande](https://discord.com/channels/737538781024092170/981561783707906118/981685214591979560) [Extérieur et intérieur de la salle de commerce](https://discord.com/channels/737538781024092170/981561783707906118/981684994659483721) [Statue en construction puis terminée](https://discord.com/channels/737538781024092170/981561783707906118/981684089885192252) [Première maison de Dari](https://discord.com/channels/737538781024092170/981561783707906118/982178632241909790)
 
 En juin 2022, yanyan_fafnir a expliqué comment participer au concours d’îles flottantes qui a mené à la construction de l’ancien hall et comment les projets seraient présentés au jury. L’annonce nommait はっ et les membres ayant le rôle de soutien ou un rôle supérieur parmi les juges. [Règles du concours](https://discord.com/channels/737538781024092170/774152638450237460/982990352422162482) [Annonce de la séance du jury](https://discord.com/channels/737538781024092170/774152638450237460/986294242848669756)
 

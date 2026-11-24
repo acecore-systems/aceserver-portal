@@ -2,7 +2,7 @@
 title: As pessoas que apoiaram o Aceserver
 description: Conheça quem ajudou o Aceserver pelos retratos de skins do Minecraft, relembre as atividades e confira o roteiro de eventos e propostas.
 translationOf: aceserver-contributors
-sourceHash: sha256:cc371cd663f6e5b2fe8452a257c05ee301a11e77abca45f7c142f77e9a2d972c
+sourceHash: sha256:f7242c01eb4facb2e4610d70e23af3b8325337d309179cf98f7671a136f27877
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -356,6 +356,8 @@ Em 24 de abril, タケ pediu ajuda em nome do grupo de arte no chão para criar 
 Em abril de 2022, SPdari informou que a fundação e o telhado da base principal de Sora no Yama já estavam prontos e que o exterior estava quase concluído. Ainda faltava trabalho no interior.
 
 Em 24 de maio de 2022, Moon\_666 informou ter construído uma farm de piglins zumbificados para Java Edition e disse que gostaria de construir outra para Bedrock Edition.
+
+Em junho de 2022, taiyaki5190 compartilhou na discussão de paisagens do Aceserver imagens da primeira casa de porte que construiu no servidor e de outra que fez a pedido de alguém. Também construiu por conta própria um centro de comércio para a equipe Eirin e mostrou o exterior e os balcões dos aldeões alinhados junto ao tapete vermelho do interior. Compartilhou ainda imagens da estátua de Hikakin que ficava na área da equipe durante a obra e depois de concluída. Dari publicou uma imagem da fachada de sua primeira casa no Aceserver. [Primeira casa](https://discord.com/channels/737538781024092170/981561783707906118/981682997579374592) [Casa construída a pedido](https://discord.com/channels/737538781024092170/981561783707906118/981685214591979560) [Exterior e interior do centro de comércio](https://discord.com/channels/737538781024092170/981561783707906118/981684994659483721) [Estátua durante e depois da construção](https://discord.com/channels/737538781024092170/981561783707906118/981684089885192252) [Primeira casa de Dari](https://discord.com/channels/737538781024092170/981561783707906118/982178632241909790)
 
 Em junho de 2022, yanyan_fafnir explicou as regras para participar do concurso de ilhas flutuantes que deu origem à construção do antigo lobby e como os projetos seriam apresentados para avaliação. O anúncio indicou que はっ e membros com cargo de apoiador ou superior fariam parte do júri. [Regras de inscrição](https://discord.com/channels/737538781024092170/774152638450237460/982990352422162482) [Anúncio da sessão de avaliação](https://discord.com/channels/737538781024092170/774152638450237460/986294242848669756)
 
