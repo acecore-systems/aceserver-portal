@@ -1,4 +1,6 @@
 import test from 'node:test'
+import modelConfig from '../config/ai-models.generated.json' with { type: 'json' }
+import skinBridge from '../cloudflare/skin-openai/worker.ts'
 import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
 import { DatabaseSync } from 'node:sqlite'
@@ -245,6 +247,107 @@ test('SQL atomically caps per-minute, daily client and global reservations', () 
   )
   assert.ok(reserve('next', 90000, '2026-09-08'))
   db.close()
+})
+
+test('中央の設計モデルがPortalとブリッジを通り、明示モデルと拒否条件を保つ', async (t) => {
+  const stored = modelConfig.features['skin.design']
+  const original = { ...stored }
+  t.after(() => Object.assign(stored, original))
+  const db = database()
+  t.after(() => db.close())
+
+  stored.api_model_id = 'fixture-meta-design-v2'
+  const upstreamModels = []
+  t.mock.method(globalThis, 'fetch', async (url, request) => {
+    if (url === 'https://challenges.cloudflare.com/turnstile/v0/siteverify') {
+      return Response.json({
+        success: true,
+        hostname: 'asv.acecore.net',
+        action: 'skin-maker',
+      })
+    }
+    assert.equal(url, 'https://api.meta.ai/v1/chat/completions')
+    const body = JSON.parse(request.body)
+    upstreamModels.push(body.model)
+    assert.equal(body.reasoning_effort, 'medium')
+    assert.equal(body.max_completion_tokens, 12000)
+    assert.equal(body.store, false)
+    assert.equal(body.stream, false)
+    return Response.json({
+      choices: [
+        {
+          finish_reason: 'stop',
+          message: { content: JSON.stringify(design()) },
+        },
+      ],
+    })
+  })
+
+  const bridgeEnv = { META_API_KEY_STORE: { get: async () => 'synthetic' } }
+  const service = {
+    fetch: (url, request) =>
+      skinBridge.fetch(new Request(url, request), bridgeEnv),
+  }
+  const env = {
+    SKIN_MAKER_ENABLED: 'true',
+    SKIN_TURNSTILE_SECRET: 'synthetic',
+    SKIN_QUOTA_SALT: 'synthetic-salt',
+    SKIN_TURNSTILE_SITE_KEY: 'fixture',
+    SKIN_OPENAI_SERVICE: service,
+    SEARCH_RATE_LIMIT_DB: {
+      prepare(sql) {
+        return {
+          bind(...args) {
+            return {
+              first: async () => db.prepare(sql).get(...args),
+              run: async () => db.prepare(sql).run(...args),
+            }
+          },
+        }
+      },
+    },
+  }
+  const request = (method, override = {}) =>
+    onRequest({
+      env: { ...env, ...override },
+      request: new Request('https://asv.acecore.net/api/skin-maker', {
+        method,
+        headers: {
+          origin: 'https://asv.acecore.net',
+          'content-type': 'application/json',
+          'cf-connecting-ip': '192.0.2.1',
+        },
+        ...(method === 'POST' ? { body: JSON.stringify(create()) } : {}),
+      }),
+    })
+
+  const status = await request('GET')
+  assert.equal((await status.json()).enabled, true)
+  assert.equal((await request('POST')).status, 200)
+  assert.deepEqual(upstreamModels, ['fixture-meta-design-v2'])
+
+  const legacy = await service.fetch('https://skin-openai.internal/v1/chat', {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify({ model: 'muse-ember-1.0', ...modelInput(create()) }),
+  })
+  assert.equal(legacy.status, 200)
+  const invalid = await service.fetch('https://skin-openai.internal/v1/chat', {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify({
+      model: 'fixture-unapproved-model',
+      ...modelInput(create()),
+    }),
+  })
+  assert.equal(invalid.status, 400)
+
+  stored.provider = 'openai'
+  const unavailable = await request('GET')
+  assert.equal((await unavailable.json()).enabled, false)
+  const pinned = await request('GET', { SKIN_AI_MODEL: 'muse-ember-1.0' })
+  assert.equal((await pinned.json()).enabled, true)
+  assert.deepEqual(upstreamModels, ['fixture-meta-design-v2', 'muse-ember-1.0'])
 })
 
 test('API fails closed, verifies hostname/action and does not spend on invalid or over-quota requests', async () => {
