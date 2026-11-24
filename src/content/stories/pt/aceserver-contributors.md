@@ -2,7 +2,7 @@
 title: As pessoas que apoiaram o Aceserver
 description: Conheça quem ajudou o Aceserver pelos retratos de skins do Minecraft, relembre as atividades e confira o roteiro de eventos e propostas.
 translationOf: aceserver-contributors
-sourceHash: sha256:83903b8454c80937c685b5eb4daf02dccdf05409a3ca99b5ef7ebfc0bc23f5ae
+sourceHash: sha256:d7fa2cc7a4ff8dcbb41d4b2694c601b3eadf7683977e9f945ff4cf6dfac8c4be
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -353,7 +353,7 @@ Em abril de 2022, SPdari informou que a fundação e o telhado da base principal
 
 Em junho de 2022, yanyan_fafnir explicou as regras para participar do concurso de ilhas flutuantes que deu origem à construção do antigo lobby e como os projetos seriam apresentados para avaliação. O anúncio indicou que はっ e membros com cargo de apoiador ou superior fariam parte do júri. [Regras de inscrição](https://discord.com/channels/737538781024092170/774152638450237460/982990352422162482) [Anúncio da sessão de avaliação](https://discord.com/channels/737538781024092170/774152638450237460/986294242848669756)
 
-Em junho de 2022, はっ compartilhou uma ideia em uma discussão sobre a construção do lobby. edamameRex_java propôs um layout inspirado no lobby anterior. [Conceito para a construção do lobby](https://discord.com/channels/737538781024092170/981569254031769700/981569389306466354) [Proposta inspirada no lobby anterior](https://discord.com/channels/737538781024092170/981569254031769700/981572980993847466)
+Em junho de 2022, はっ compartilhou uma ideia em uma discussão sobre a construção do lobby. edamameRex_java propôs um layout inspirado no lobby anterior. Em 3 de junho, taka8621 propôs incorporar a própria mudança para o novo lobby ao cenário ou recriar lobbies de épocas anteriores. [Conceito para a construção do lobby](https://discord.com/channels/737538781024092170/981569254031769700/981569389306466354) [Proposta inspirada no lobby anterior](https://discord.com/channels/737538781024092170/981569254031769700/981572980993847466) [Propostas para a mudança de lobby e os lobbies anteriores](https://discord.com/channels/737538781024092170/981569254031769700/982223863800823808)
 
 Em 5 de junho de 2022, taka8621 propôs um lobby com acesso entre os níveis e portais na área central. Pela proposta, quem tinha o cargo de apoiador ou superior na época construiria a área central de cada nível.
 

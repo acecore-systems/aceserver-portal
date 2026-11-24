@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:83903b8454c80937c685b5eb4daf02dccdf05409a3ca99b5ef7ebfc0bc23f5ae
+sourceHash: sha256:d7fa2cc7a4ff8dcbb41d4b2694c601b3eadf7683977e9f945ff4cf6dfac8c4be
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -353,7 +353,7 @@ En avril 2022, SPdari a signalé que les fondations et le toit de la base princi
 
 En juin 2022, yanyan_fafnir a expliqué comment participer au concours d’îles flottantes qui a mené à la construction de l’ancien hall et comment les projets seraient présentés au jury. L’annonce nommait はっ et les membres ayant le rôle de soutien ou un rôle supérieur parmi les juges. [Règles du concours](https://discord.com/channels/737538781024092170/774152638450237460/982990352422162482) [Annonce de la séance du jury](https://discord.com/channels/737538781024092170/774152638450237460/986294242848669756)
 
-En juin 2022, はっ a présenté son idée dans un fil consacré à la conception du hall. edamameRex_java a proposé un agencement inspiré du hall précédent. [Concept pour la construction du hall](https://discord.com/channels/737538781024092170/981569254031769700/981569389306466354) [Proposition inspirée du hall précédent](https://discord.com/channels/737538781024092170/981569254031769700/981572980993847466)
+En juin 2022, はっ a présenté son idée dans un fil consacré à la conception du hall. edamameRex_java a proposé un agencement inspiré du hall précédent. Le 3 juin, taka8621 a proposé d’intégrer le passage au nouveau hall dans son scénario, ou de recréer les halls d’époques précédentes. [Concept pour la construction du hall](https://discord.com/channels/737538781024092170/981569254031769700/981569389306466354) [Proposition inspirée du hall précédent](https://discord.com/channels/737538781024092170/981569254031769700/981572980993847466) [Propositions sur le passage au nouveau hall et les anciens halls](https://discord.com/channels/737538781024092170/981569254031769700/982223863800823808)
 
 Le 5 juin 2022, taka8621 a proposé un hall dont les niveaux seraient reliés et les portails placés dans la zone centrale. Selon cette proposition, les membres ayant alors le rôle de soutien ou un rôle supérieur construiraient la zone centrale de chaque niveau.
 

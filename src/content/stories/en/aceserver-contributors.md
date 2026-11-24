@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:83903b8454c80937c685b5eb4daf02dccdf05409a3ca99b5ef7ebfc0bc23f5ae
+sourceHash: sha256:d7fa2cc7a4ff8dcbb41d4b2694c601b3eadf7683977e9f945ff4cf6dfac8c4be
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -353,7 +353,7 @@ In April 2022, SPdari reported that the foundation and roof of the main base at 
 
 In June 2022, yanyan_fafnir explained how to enter the floating-island contest that led to work on the former lobby and how entries would be presented at judging. The announcement named はっ and members with the supporter role or above as judges. [Contest entry rules](https://discord.com/channels/737538781024092170/774152638450237460/982990352422162482) [Judging session announcement](https://discord.com/channels/737538781024092170/774152638450237460/986294242848669756)
 
-In June 2022, はっ shared a lobby concept in a thread about the build. edamameRex_java suggested a layout inspired by the earlier lobby. [Lobby concept](https://discord.com/channels/737538781024092170/981569254031769700/981569389306466354) [Proposal inspired by the earlier lobby](https://discord.com/channels/737538781024092170/981569254031769700/981572980993847466)
+In June 2022, はっ shared a lobby concept in a thread about the build. edamameRex_java suggested a layout inspired by the earlier lobby. On June 3, taka8621 suggested making the move to the new lobby part of its premise or recreating lobbies from earlier periods. [Lobby concept](https://discord.com/channels/737538781024092170/981569254031769700/981569389306466354) [Proposal inspired by the earlier lobby](https://discord.com/channels/737538781024092170/981569254031769700/981572980993847466) [Proposals for the new lobby and earlier lobbies](https://discord.com/channels/737538781024092170/981569254031769700/982223863800823808)
 
 On June 5, 2022, taka8621 proposed a lobby with connected levels and gates in the central area. Under the proposal, members with the supporter role or above at the time would build the central area of each level.
 

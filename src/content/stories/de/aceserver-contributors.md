@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:83903b8454c80937c685b5eb4daf02dccdf05409a3ca99b5ef7ebfc0bc23f5ae
+sourceHash: sha256:d7fa2cc7a4ff8dcbb41d4b2694c601b3eadf7683977e9f945ff4cf6dfac8c4be
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -353,7 +353,7 @@ Im April 2022 berichtete SPdari, dass das Fundament und das Dach der Hauptbasis 
 
 Im Juni 2022 erklärte yanyan_fafnir die Teilnahmebedingungen für den Wettbewerb um schwebende Inseln, aus dem die frühere Lobby hervorging. Die Ankündigung beschrieb auch, wie die Beiträge bei der Bewertung vorgestellt werden sollten. はっ und Mitglieder mit der Rolle „Supporter“ oder höher sollten die Jury bilden. [Teilnahmebedingungen](https://discord.com/channels/737538781024092170/774152638450237460/982990352422162482) [Ankündigung des Jurytermins](https://discord.com/channels/737538781024092170/774152638450237460/986294242848669756)
 
-Im Juni 2022 stellte はっ in einem Thread ein Konzept für den Lobbybau vor. edamameRex_java schlug eine Anordnung nach dem Vorbild der früheren Lobby vor. [Konzept für den Lobbybau](https://discord.com/channels/737538781024092170/981569254031769700/981569389306466354) [Vorschlag nach dem Vorbild der früheren Lobby](https://discord.com/channels/737538781024092170/981569254031769700/981572980993847466)
+Im Juni 2022 stellte はっ in einem Thread ein Konzept für den Lobbybau vor. edamameRex_java schlug eine Anordnung nach dem Vorbild der früheren Lobby vor. Am 3. Juni schlug taka8621 vor, den Wechsel zur neuen Lobby selbst in das Szenario einzubauen. Als Alternative nannte taka8621 den Nachbau früherer Lobbys. [Konzept für den Lobbybau](https://discord.com/channels/737538781024092170/981569254031769700/981569389306466354) [Vorschlag nach dem Vorbild der früheren Lobby](https://discord.com/channels/737538781024092170/981569254031769700/981572980993847466) [Vorschläge zum Lobbywechsel und zu früheren Lobbys](https://discord.com/channels/737538781024092170/981569254031769700/982223863800823808)
 
 Am 5. Juni 2022 schlug taka8621 eine Lobby vor, in der man zwischen den Ebenen wechseln könnte und die Portale in der Mitte lägen. Den zentralen Bereich jeder Ebene sollten nach dem Vorschlag Mitglieder bauen, die damals die Rolle „Supporter“ oder eine höhere Rolle hatten.
 

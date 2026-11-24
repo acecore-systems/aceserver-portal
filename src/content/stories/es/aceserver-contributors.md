@@ -2,7 +2,7 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:83903b8454c80937c685b5eb4daf02dccdf05409a3ca99b5ef7ebfc0bc23f5ae
+sourceHash: sha256:d7fa2cc7a4ff8dcbb41d4b2694c601b3eadf7683977e9f945ff4cf6dfac8c4be
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -353,7 +353,7 @@ En abril de 2022, SPdari informó de que los cimientos y el tejado de la base pr
 
 En junio de 2022, yanyan_fafnir explicó cómo participar en el concurso de islas flotantes que dio paso a la construcción del antiguo vestíbulo y cómo se presentarían los proyectos ante el jurado. El anuncio indicó que はっ y los miembros con el rol de apoyo o superior serían los jueces. [Reglas del concurso](https://discord.com/channels/737538781024092170/774152638450237460/982990352422162482) [Anuncio de la presentación ante el jurado](https://discord.com/channels/737538781024092170/774152638450237460/986294242848669756)
 
-En junio de 2022, はっ compartió su idea en un hilo dedicado al diseño del vestíbulo. edamameRex_java propuso un diseño inspirado en el vestíbulo anterior. [Propuesta de diseño del vestíbulo](https://discord.com/channels/737538781024092170/981569254031769700/981569389306466354) [Propuesta inspirada en el vestíbulo anterior](https://discord.com/channels/737538781024092170/981569254031769700/981572980993847466)
+En junio de 2022, はっ compartió su idea en un hilo dedicado al diseño del vestíbulo. edamameRex_java propuso un diseño inspirado en el vestíbulo anterior. El 3 de junio, taka8621 sugirió integrar el traslado al nuevo vestíbulo en la ambientación o recrear vestíbulos de etapas anteriores. [Propuesta de diseño del vestíbulo](https://discord.com/channels/737538781024092170/981569254031769700/981569389306466354) [Propuesta inspirada en el vestíbulo anterior](https://discord.com/channels/737538781024092170/981569254031769700/981572980993847466) [Propuestas sobre el traslado y los vestíbulos anteriores](https://discord.com/channels/737538781024092170/981569254031769700/982223863800823808)
 
 El 5 de junio de 2022, taka8621 propuso un vestíbulo con niveles comunicados y portales en la zona central. Según la propuesta, los miembros que entonces tenían el rol de apoyo o superior construirían la zona central de cada nivel.
 
