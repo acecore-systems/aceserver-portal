@@ -21,7 +21,7 @@
     "sync:youtube": "node scripts/sync-youtube-atom.mjs",
     "test:alpha": "node --experimental-strip-types --test tests/alpha-chat.test.mjs tests/alpha-chat-service-adapter.test.mjs tests/alpha-diary-service-adapter.test.mjs tests/alpha-diary-metrics.test.mjs tests/alpha-diary-ui.test.mjs tests/alpha-diary-wait.test.mjs",
     "test:portal-vectorize": "node --experimental-strip-types --test tests/portal-vectorize.test.mjs tests/portal-sync-receipt.test.mjs",
-    "test:search": "node --experimental-strip-types --test tests/search-api.test.mjs tests/network-search-contract.test.mjs tests/alpha-search-embedding.test.mjs",
+    "test:search": "node --experimental-strip-types --test tests/search-api.test.mjs tests/network-search-contract.test.mjs tests/alpha-search-embedding.test.mjs tests/embedding-policy.test.mjs",
     "test:cms": "node --experimental-strip-types --import=./scripts/json-module-loader.mjs --test --test-concurrency=1 --test-isolation=none tests/cms-*.test.mjs",
     "test:discord-cta": "node --experimental-strip-types --test tests/discord-cta-metrics.test.mjs",
     "test:content": "node --test tests/content-validation.test.mjs tests/story-source-metadata.test.mjs",
