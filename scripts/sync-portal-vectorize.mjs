@@ -3,7 +3,10 @@ import { readFile } from 'node:fs/promises'
 import { resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
-import { extractWorkersAiEmbeddingData } from '../functions/api/alpha-search-embedding.ts'
+import {
+  extractWorkersAiEmbeddingData,
+  requireVoyageEmbeddingModel,
+} from '../functions/api/alpha-search-embedding.ts'
 import {
   PORTAL_CORPUS_SCHEMA_VERSION,
   PORTAL_DISTANCE_METRIC,
@@ -73,6 +76,8 @@ export async function syncPortalVectorize({
   randomImpl = Math.random,
   logger = console,
 } = {}) {
+  const voyageModel =
+    indexName === VOYAGE_INDEX_NAME ? requireVoyageEmbeddingModel() : null
   const corpus = JSON.parse(await readFile(corpusFile, 'utf8'))
   validatePortalCorpus(corpus)
   validateIndexName(indexName, { required: !dryRun })
@@ -100,7 +105,7 @@ export async function syncPortalVectorize({
     )
   }
 
-  if (indexName === VOYAGE_INDEX_NAME && !voyageApiKey?.trim())
+  if (voyageModel && !voyageApiKey?.trim())
     throw new Error('VOYAGE_API_KEY is required for Voyage sync.')
 
   const client = createCloudflareClient({
@@ -172,14 +177,14 @@ export async function syncPortalVectorize({
   const mutationIds = []
   let queryCanary = null
   for (const chunkBatch of batches(chunksToUpsert, EMBEDDING_BATCH_SIZE)) {
-    const embeddings =
-      indexName === VOYAGE_INDEX_NAME
-        ? await createVoyageEmbeddings(chunkBatch, {
-            apiKey: voyageApiKey,
-            fetchImpl,
-            requestTimeoutMs,
-          })
-        : await createEmbeddings(client, chunkBatch)
+    const embeddings = voyageModel
+      ? await createVoyageEmbeddings(chunkBatch, {
+          model: voyageModel,
+          apiKey: voyageApiKey,
+          fetchImpl,
+          requestTimeoutMs,
+        })
+      : await createEmbeddings(client, chunkBatch)
     queryCanary ??= {
       id: chunkBatch[0].id,
       namespace: chunkBatch[0].namespace,
@@ -742,19 +747,21 @@ export async function probeVoyageDocument({
   voyageApiKey = process.env.VOYAGE_API_KEY,
   fetchImpl = globalThis.fetch,
 } = {}) {
+  const model = requireVoyageEmbeddingModel()
   if (!voyageApiKey?.trim())
     throw new Error('VOYAGE_API_KEY is not configured.')
   await createVoyageEmbeddings([{ text: 'これは検索用の合成文書です。' }], {
+    model,
     apiKey: voyageApiKey,
     fetchImpl,
     requestTimeoutMs: REQUEST_TIMEOUT_MS,
   })
-  return { model: 'voyage-4-lite', dimensions: 1024 }
+  return { model, dimensions: 1024 }
 }
 
 async function createVoyageEmbeddings(
   chunks,
-  { apiKey, fetchImpl, requestTimeoutMs },
+  { model, apiKey, fetchImpl, requestTimeoutMs },
 ) {
   let response
   try {
@@ -765,7 +772,7 @@ async function createVoyageEmbeddings(
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        model: 'voyage-4-lite',
+        model,
         input: chunks.map(({ text }) => text),
         input_type: 'document',
         output_dimension: 1024,
@@ -784,7 +791,7 @@ async function createVoyageEmbeddings(
   }
   const payload = await readJsonResponse(response)
   if (
-    payload?.model !== 'voyage-4-lite' ||
+    payload?.model !== model ||
     !Array.isArray(payload.data) ||
     payload.data.length !== chunks.length
   )

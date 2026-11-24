@@ -107,6 +107,8 @@ Cloudflare Pages のproduction / previewでは、build前に `public/admin/runti
 
 Portal固有の `/api/search` はチャットとは別機能で、`PORTAL_SEARCH_INDEX` と共有Workerの `VoyageEmbedding` service bindingを使って公開ページを検索します。Productionのqueryは `voyage-4-lite` / 1024次元で、Previewは検索を無効化します。失敗時に別の埋め込みモデルへ切り替えません。
 
+Voyageの検索クエリ・文書同期・同期プローブでは、`config/ai-models.generated.json` の `search.embedding` を参照します。既存索引はVoyage 4 Lite・1,024次元です。配布設定が互換条件を満たさない場合は埋め込み送信前に停止します。モデル変更時は新しいモデルで文書を再埋め込みした索引を準備し、共有Workerと呼び出し元の参照先を合わせて切り替えます。既存のコーパスIDとBGE-M3索引の同期には従来の契約を使います。
+
 `npm run build` は `dist/vector-corpus.json` まで生成します。同期先はBGEとVoyageの許可済み索引に限定し、`--confirm-production`、管理ID、corpusと削除計画を検証します。20%超の削除は対象indexとcorpusを含む承認済みplan SHA-256が一致した場合だけ許可します。複数索引を同期する際は `approved_plan_target` で承認対象を指定します。
 
 `.github/workflows/sync-portal-vectorize.yml` は公開commitとcorpus versionを照合し、Productionの候補索引へ同期します。Repository Variable `ACESERVER_PORTAL_VECTORIZE_SYNC_ENABLED=true` に加え、Voyage側は `PORTAL_VOYAGE_SYNC_ENABLED=true` とGitHub Environment `cloudflare-portal-search-production` の `VOYAGE_API_KEY` が必要です。BGE同期は既定で継続し、依存が解消した後に `PORTAL_BGE_SYNC_ENABLED=false` で停止できます。BGEのみ・両方・Voyageのみのreceiptを分け、別構成の完了を流用しません。候補索引と公開corpusの一致、検索品質、共有bindingを確認してから切り替えます。障害時は検索modelと6索引のbindingを一緒にrevertし、旧索引は保持します。
