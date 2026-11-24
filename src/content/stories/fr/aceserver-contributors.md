@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:6f69c2b51e5a97eaa40147585572ba7646305c9a25037c1c71cc6d721e429cc7
+sourceHash: sha256:adef7f6632fad1d8e51455ee1e1f6efac61f5b96e69f85491ca113b79fcc2d92
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-24T00:00:00+09:00
 tags:
@@ -613,7 +613,7 @@ Le 12 avril 2026, End&#12539;コッカー a proposé de consacrer les réunions 
 
 En mai 2026, End&#12539;コッカー a proposé d’améliorer les textes du portail et la présentation des photos. En juin, End&#12539;コッカー a indiqué avoir demandé à &#35377;&#21487;&#12385;&#12419; de mettre en place un moyen de faire défiler d’un geste les images de constructions Minecraft sans gêner la navigation.
 
-En juillet 2026, sekisei a annoncé la première présentation technique sur les serveurs et Internet. [Annonce de la présentation technique](https://discord.com/channels/737538781024092170/774152638450237460/1532641413500633108)
+En juillet 2026, sekisei a annoncé la première présentation technique sur les serveurs et Internet. Le 31 juillet, sekisei a orienté les participants vers une vidéo montrant les étapes de préparation, et End&#12539;コッカー a relayé le rappel. [Annonce de la présentation technique](https://discord.com/channels/737538781024092170/774152638450237460/1532641413500633108)
 
 En juillet 2026, lors d’une réflexion sur l’introduction de la monnaie du jeu au comptoir d’échange géré par l’équipe du serveur, sekisei a partagé les anciens taux d’échange. sekisei a signalé avoir développé l’échange d’objets contre d’autres objets et prévu de le tester. Merutak a proposé de permettre l’échange d’émeraudes contre de la monnaie du jeu pour une durée limitée. あすたん a suggéré d’exclure des échanges les objets qu’on pouvait produire en grande quantité, et End&#12539;コッカー a proposé de revoir l’organisation des taux d’échange à la vente.
 

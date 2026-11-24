@@ -2,7 +2,7 @@
 title: As pessoas que apoiaram o Aceserver
 description: Conheça quem ajudou o Aceserver pelos retratos de skins do Minecraft, relembre as atividades e confira o roteiro de eventos e propostas.
 translationOf: aceserver-contributors
-sourceHash: sha256:6f69c2b51e5a97eaa40147585572ba7646305c9a25037c1c71cc6d721e429cc7
+sourceHash: sha256:adef7f6632fad1d8e51455ee1e1f6efac61f5b96e69f85491ca113b79fcc2d92
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-24T00:00:00+09:00
 tags:
@@ -613,7 +613,7 @@ Em 12 de abril de 2026, End&#12539;コッカー propôs usar as reuniões regula
 
 Em maio de 2026, End&#12539;コッカー sugeriu melhorar os textos do portal e a forma de exibir as fotos. Em junho, informou que havia pedido a &#35377;&#21487;&#12385;&#12419; que implementasse uma maneira de ver imagens de construções do Minecraft deslizando o dedo sem atrapalhar a navegação.
 
-Em julho de 2026, sekisei anunciou a primeira palestra técnica sobre servidores e Internet. [Anúncio da palestra técnica](https://discord.com/channels/737538781024092170/774152638450237460/1532641413500633108)
+Em julho de 2026, sekisei anunciou a primeira palestra técnica sobre servidores e Internet. Em 31 de julho, sekisei indicou aos participantes um vídeo que mostrava as etapas de preparação, e End&#12539;コッカー compartilhou o lembrete. [Anúncio da palestra técnica](https://discord.com/channels/737538781024092170/774152638450237460/1532641413500633108)
 
 Em julho de 2026, durante a discussão sobre incluir a moeda do jogo no posto de trocas administrado pela equipe do servidor, sekisei compartilhou as taxas de troca anteriores, informou que havia implementado a troca direta de itens e disse que pretendia testá-la. Merutak propôs permitir a troca de esmeraldas pela moeda do jogo por tempo limitado. あすたん sugeriu excluir das trocas os itens que podiam ser produzidos em grandes quantidades, e End&#12539;コッカー propôs organizar as taxas de troca para a venda de itens.
 
