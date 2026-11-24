@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:0e90281e61927ca67731393cad65dcbd8c16895c60ab3be719a1f453c8a2e77a
+sourceHash: sha256:5e48549bba5d371a0837e396ea18cbd919900868a7913842f1a2c2a24805e04c
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -333,7 +333,7 @@ Im April 2022 berichtete SPdari, dass das Fundament und das Dach der Hauptbasis 
 
 Im Juni 2022 erklärte yanyan_fafnir die Teilnahmebedingungen für den Wettbewerb um schwebende Inseln, aus dem die frühere Lobby hervorging. Die Ankündigung beschrieb auch, wie die Beiträge bei der Bewertung vorgestellt werden sollten. はっ und Mitglieder mit der Rolle „Supporter“ oder höher sollten die Jury bilden. [Teilnahmebedingungen](https://discord.com/channels/737538781024092170/774152638450237460/982990352422162482) [Ankündigung des Jurytermins](https://discord.com/channels/737538781024092170/774152638450237460/986294242848669756)
 
-Im Juni 2022 stellte はっ in einem Thread ein Konzept für den Lobbybau vor. edamameRex_java schlug vor, wie bei der früheren Lösung mehrere Lobbys zu bauen. [Konzept für den Lobbybau](https://discord.com/channels/737538781024092170/981569254031769700/981569389306466354) [Vorschlag für mehrere Lobbys](https://discord.com/channels/737538781024092170/981569254031769700/981572980993847466)
+Im Juni 2022 stellte はっ in einem Thread ein Konzept für den Lobbybau vor. edamameRex_java schlug eine Anordnung nach dem Vorbild der früheren Lobby vor. [Konzept für den Lobbybau](https://discord.com/channels/737538781024092170/981569254031769700/981569389306466354) [Vorschlag nach dem Vorbild der früheren Lobby](https://discord.com/channels/737538781024092170/981569254031769700/981572980993847466)
 
 Am 5. Juni 2022 schlug taka8621 eine Lobby vor, in der man zwischen den Ebenen wechseln könnte und die Portale in der Mitte lägen. Den zentralen Bereich jeder Ebene sollten nach dem Vorschlag Mitglieder bauen, die damals die Rolle „Supporter“ oder eine höhere Rolle hatten.
 

@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:0e90281e61927ca67731393cad65dcbd8c16895c60ab3be719a1f453c8a2e77a
+sourceHash: sha256:5e48549bba5d371a0837e396ea18cbd919900868a7913842f1a2c2a24805e04c
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -333,7 +333,7 @@ In April 2022, SPdari reported that the foundation and roof of the main base at 
 
 In June 2022, yanyan_fafnir explained how to enter the floating-island contest that led to work on the former lobby and how entries would be presented at judging. The announcement named はっ and members with the supporter role or above as judges. [Contest entry rules](https://discord.com/channels/737538781024092170/774152638450237460/982990352422162482) [Judging session announcement](https://discord.com/channels/737538781024092170/774152638450237460/986294242848669756)
 
-In June 2022, はっ shared a lobby concept in a thread about the build. edamameRex_java suggested building multiple lobbies, as in the earlier setup. [Lobby concept](https://discord.com/channels/737538781024092170/981569254031769700/981569389306466354) [Suggestion to build multiple lobbies](https://discord.com/channels/737538781024092170/981569254031769700/981572980993847466)
+In June 2022, はっ shared a lobby concept in a thread about the build. edamameRex_java suggested a layout inspired by the earlier lobby. [Lobby concept](https://discord.com/channels/737538781024092170/981569254031769700/981569389306466354) [Proposal inspired by the earlier lobby](https://discord.com/channels/737538781024092170/981569254031769700/981572980993847466)
 
 On June 5, 2022, taka8621 proposed a lobby with connected levels and gates in the central area. Under the proposal, members with the supporter role or above at the time would build the central area of each level.
 

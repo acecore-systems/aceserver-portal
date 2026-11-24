@@ -2,7 +2,7 @@
 title: As pessoas que apoiaram o Aceserver
 description: Conheça quem ajudou o Aceserver pelos retratos de skins do Minecraft, relembre as atividades e confira o roteiro de eventos e propostas.
 translationOf: aceserver-contributors
-sourceHash: sha256:0e90281e61927ca67731393cad65dcbd8c16895c60ab3be719a1f453c8a2e77a
+sourceHash: sha256:5e48549bba5d371a0837e396ea18cbd919900868a7913842f1a2c2a24805e04c
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -333,7 +333,7 @@ Em abril de 2022, SPdari informou que a fundação e o telhado da base principal
 
 Em junho de 2022, yanyan_fafnir explicou as regras para participar do concurso de ilhas flutuantes que deu origem à construção do antigo lobby e como os projetos seriam apresentados para avaliação. O anúncio indicou que はっ e membros com cargo de apoiador ou superior fariam parte do júri. [Regras de inscrição](https://discord.com/channels/737538781024092170/774152638450237460/982990352422162482) [Anúncio da sessão de avaliação](https://discord.com/channels/737538781024092170/774152638450237460/986294242848669756)
 
-Em junho de 2022, はっ compartilhou uma ideia em uma discussão sobre a construção do lobby. edamameRex_java propôs construir vários lobbies, seguindo a configuração anterior. [Conceito para a construção do lobby](https://discord.com/channels/737538781024092170/981569254031769700/981569389306466354) [Proposta de construir vários lobbies](https://discord.com/channels/737538781024092170/981569254031769700/981572980993847466)
+Em junho de 2022, はっ compartilhou uma ideia em uma discussão sobre a construção do lobby. edamameRex_java propôs um layout inspirado no lobby anterior. [Conceito para a construção do lobby](https://discord.com/channels/737538781024092170/981569254031769700/981569389306466354) [Proposta inspirada no lobby anterior](https://discord.com/channels/737538781024092170/981569254031769700/981572980993847466)
 
 Em 5 de junho de 2022, taka8621 propôs um lobby com acesso entre os níveis e portais na área central. Pela proposta, quem tinha o cargo de apoiador ou superior na época construiria a área central de cada nível.
 

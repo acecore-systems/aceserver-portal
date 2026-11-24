@@ -2,7 +2,7 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:0e90281e61927ca67731393cad65dcbd8c16895c60ab3be719a1f453c8a2e77a
+sourceHash: sha256:5e48549bba5d371a0837e396ea18cbd919900868a7913842f1a2c2a24805e04c
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -333,7 +333,7 @@ En abril de 2022, SPdari informó de que los cimientos y el tejado de la base pr
 
 En junio de 2022, yanyan_fafnir explicó cómo participar en el concurso de islas flotantes que dio paso a la construcción del antiguo vestíbulo y cómo se presentarían los proyectos ante el jurado. El anuncio indicó que はっ y los miembros con el rol de apoyo o superior serían los jueces. [Reglas del concurso](https://discord.com/channels/737538781024092170/774152638450237460/982990352422162482) [Anuncio de la presentación ante el jurado](https://discord.com/channels/737538781024092170/774152638450237460/986294242848669756)
 
-En junio de 2022, はっ compartió su idea en un hilo dedicado al diseño del vestíbulo. edamameRex_java propuso construir varios vestíbulos, siguiendo la configuración anterior. [Propuesta de diseño del vestíbulo](https://discord.com/channels/737538781024092170/981569254031769700/981569389306466354) [Propuesta de construir varios vestíbulos](https://discord.com/channels/737538781024092170/981569254031769700/981572980993847466)
+En junio de 2022, はっ compartió su idea en un hilo dedicado al diseño del vestíbulo. edamameRex_java propuso un diseño inspirado en el vestíbulo anterior. [Propuesta de diseño del vestíbulo](https://discord.com/channels/737538781024092170/981569254031769700/981569389306466354) [Propuesta inspirada en el vestíbulo anterior](https://discord.com/channels/737538781024092170/981569254031769700/981572980993847466)
 
 El 5 de junio de 2022, taka8621 propuso un vestíbulo con niveles comunicados y portales en la zona central. Según la propuesta, los miembros que entonces tenían el rol de apoyo o superior construirían la zona central de cada nivel.
 

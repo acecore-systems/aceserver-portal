@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:0e90281e61927ca67731393cad65dcbd8c16895c60ab3be719a1f453c8a2e77a
+sourceHash: sha256:5e48549bba5d371a0837e396ea18cbd919900868a7913842f1a2c2a24805e04c
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -333,7 +333,7 @@ En avril 2022, SPdari a signalé que les fondations et le toit de la base princi
 
 En juin 2022, yanyan_fafnir a expliqué comment participer au concours d’îles flottantes qui a mené à la construction de l’ancien hall et comment les projets seraient présentés au jury. L’annonce nommait はっ et les membres ayant le rôle de soutien ou un rôle supérieur parmi les juges. [Règles du concours](https://discord.com/channels/737538781024092170/774152638450237460/982990352422162482) [Annonce de la séance du jury](https://discord.com/channels/737538781024092170/774152638450237460/986294242848669756)
 
-En juin 2022, はっ a présenté son idée dans un fil consacré à la conception du hall. edamameRex_java a proposé de construire plusieurs halls, comme dans l’ancienne configuration. [Concept pour la construction du hall](https://discord.com/channels/737538781024092170/981569254031769700/981569389306466354) [Proposition de construire plusieurs halls](https://discord.com/channels/737538781024092170/981569254031769700/981572980993847466)
+En juin 2022, はっ a présenté son idée dans un fil consacré à la conception du hall. edamameRex_java a proposé un agencement inspiré du hall précédent. [Concept pour la construction du hall](https://discord.com/channels/737538781024092170/981569254031769700/981569389306466354) [Proposition inspirée du hall précédent](https://discord.com/channels/737538781024092170/981569254031769700/981572980993847466)
 
 Le 5 juin 2022, taka8621 a proposé un hall dont les niveaux seraient reliés et les portails placés dans la zone centrale. Selon cette proposition, les membres ayant alors le rôle de soutien ou un rôle supérieur construiraient la zone centrale de chaque niveau.
 
