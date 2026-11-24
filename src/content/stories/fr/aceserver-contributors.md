@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:d7fa2cc7a4ff8dcbb41d4b2694c601b3eadf7683977e9f945ff4cf6dfac8c4be
+sourceHash: sha256:b4ea6c1ecfb1d579143567f01d6288cd6d30b64ac083e8866e30df6fa0cebcc8
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -539,7 +539,9 @@ En mai 2022, Mugi a indiqué que Kutya pouvait lire à voix haute du morse japon
 
 En juin 2022, Mugi a mis à jour le bot de lecture vocale Kutya pour qu’il fonctionne avec le chat des salons vocaux. En mars 2023, Mugi a annoncé un bot qui permettait de transmettre des avis anonymes à l’équipe du serveur. [Mise à jour de Kutya](https://discord.com/channels/737538781024092170/774152638450237460/986439863937155122) [Annonce des avis anonymes](https://discord.com/channels/737538781024092170/774152638450237460/1087976366126927882)
 
-Le 4 juin 2022, はっ a créé sur Discord un fil consacré aux réunions publiques. [Fil pour les réunions publiques](https://discord.com/channels/737538781024092170/982599800375623740/982599800375623740)
+Le 2 juin, pendant la discussion sur le mode de construction du lobby, Moon\_666 a proposé de confier les zones principales à plusieurs personnes choisies par l’équipe, qui les construiraient en mode Créatif. [Proposition de construire en mode Créatif](https://discord.com/channels/737538781024092170/981568975387365466/981580332581138502)
+
+Le 4 juin 2022, はっ a ouvert sur Discord un fil pour une réunion publique. Pour le nouveau lobby, edamameRex_java a notamment proposé des îles flottantes, une ville sous-marine et une île volcanique. taiyaki5190 a fait remarquer que si le parkour était le seul moyen de circuler entre les îles, certains joueurs ne pourraient pas les traverser. KITUNEKO0605 a regroupé les idées selon trois milieux, l’eau, la terre et le ciel. YM a proposé de conserver des parties de grandes constructions issues des anciens lobbys et de l’ancien monde Survie. はっ a dressé la liste des idées évoquées pendant la réunion. [Fil de la réunion publique](https://discord.com/channels/737538781024092170/982599800375623740/982599800375623740) [Idées de terrain d’edamameRex_java](https://discord.com/channels/737538781024092170/982599800375623740/982604466471718982) [Remarque sur les déplacements entre îles](https://discord.com/channels/737538781024092170/982599800375623740/982605844204101712) [Idées pour l’eau, la terre et le ciel](https://discord.com/channels/737538781024092170/982599800375623740/982608900295622686) [Proposition de préserver des constructions anciennes](https://discord.com/channels/737538781024092170/982599800375623740/982606978952101909) [Liste des idées de la réunion](https://discord.com/channels/737538781024092170/982599800375623740/982612891154915401)
 
 Les 25 et 26 juin 2022, yanyan_fafnir a sollicité l’avis des joueurs dans un sondage des membres de soutien sur l’ouverture temporaire du monde de test Azkaban comme espace de jeu. taibon0727 a expliqué que l’idée s’apparentait à une version de démonstration, et sh a relevé que l’ouverture aux joueurs pourrait aussi servir de test. taka8621 a proposé un espace où les joueurs pourraient essayer des constructions et des circuits sans demande préalable.
 

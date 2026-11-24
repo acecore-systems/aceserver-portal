@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:d7fa2cc7a4ff8dcbb41d4b2694c601b3eadf7683977e9f945ff4cf6dfac8c4be
+sourceHash: sha256:b4ea6c1ecfb1d579143567f01d6288cd6d30b64ac083e8866e30df6fa0cebcc8
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -539,7 +539,9 @@ In May 2022, Mugi reported that Kutya could read Japanese Morse code aloud.
 
 In June 2022, Mugi updated the text-to-speech bot Kutya to support chat inside voice channels. In March 2023, Mugi announced a bot for sending anonymous feedback to the server team. [Kutya update](https://discord.com/channels/737538781024092170/774152638450237460/986439863937155122) [Anonymous feedback announcement](https://discord.com/channels/737538781024092170/774152638450237460/1087976366126927882)
 
-On June 4, 2022, はっ created a Discord thread for public meetings. [Public meeting thread](https://discord.com/channels/737538781024092170/982599800375623740/982599800375623740)
+On June 2, while players discussed which mode to use for building the lobby, Moon\_666 suggested that several people selected by the staff build the key areas in Creative mode. [Creative mode building proposal](https://discord.com/channels/737538781024092170/981568975387365466/981580332581138502)
+
+On June 4, 2022, はっ opened a Discord thread for a public meeting. For the new lobby, edamameRex_java suggested floating islands, an underwater city, and a volcanic island, among other ideas. taiyaki5190 pointed out that some players might be unable to travel between islands if parkour were the only route. KITUNEKO0605 grouped the ideas into water, land, and sky. YM proposed preserving parts of large builds from earlier lobbies and the old survival world. はっ compiled the meeting’s ideas. [Public meeting thread](https://discord.com/channels/737538781024092170/982599800375623740/982599800375623740) [edamameRex_java’s terrain ideas](https://discord.com/channels/737538781024092170/982599800375623740/982604466471718982) [Feedback on travel between islands](https://discord.com/channels/737538781024092170/982599800375623740/982605844204101712) [Water, land, and sky ideas](https://discord.com/channels/737538781024092170/982599800375623740/982608900295622686) [Proposal to preserve earlier builds](https://discord.com/channels/737538781024092170/982599800375623740/982606978952101909) [List of meeting ideas](https://discord.com/channels/737538781024092170/982599800375623740/982612891154915401)
 
 On June 25 and 26, 2022, yanyan_fafnir asked players to weigh in through a supporter survey on opening the test world Azkaban as a temporary play area. taibon0727 described the idea as something like a demo, and sh pointed out that opening it to players could double as a test. taka8621 suggested a place where players could try building and experimenting with circuits without applying first.
 

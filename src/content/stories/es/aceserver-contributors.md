@@ -2,7 +2,7 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:d7fa2cc7a4ff8dcbb41d4b2694c601b3eadf7683977e9f945ff4cf6dfac8c4be
+sourceHash: sha256:b4ea6c1ecfb1d579143567f01d6288cd6d30b64ac083e8866e30df6fa0cebcc8
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -539,7 +539,9 @@ En mayo de 2022, Mugi informó de que Kutya ya podía leer en voz alta código m
 
 En junio de 2022, Mugi actualizó el bot de lectura Kutya para que funcionara con el chat dentro de los canales de voz. En marzo de 2023, anunció un bot para enviar comentarios anónimos al equipo del servidor. [Actualización de Kutya](https://discord.com/channels/737538781024092170/774152638450237460/986439863937155122) [Anuncio del canal de comentarios anónimos](https://discord.com/channels/737538781024092170/774152638450237460/1087976366126927882)
 
-El 4 de junio de 2022, はっ creó un hilo para reuniones públicas en Discord. [Hilo para reuniones públicas](https://discord.com/channels/737538781024092170/982599800375623740/982599800375623740)
+El 2 de junio, mientras se debatía en qué modo construir el vestíbulo, Moon\_666 propuso que varias personas elegidas por el equipo de administración construyeran las zonas principales en modo creativo. [Propuesta para construir en modo creativo](https://discord.com/channels/737538781024092170/981568975387365466/981580332581138502)
+
+El 4 de junio de 2022, はっ abrió en Discord un hilo para una reunión pública. Para el nuevo vestíbulo, edamameRex_java sugirió islas flotantes, una ciudad submarina y una isla volcánica, entre otras ideas. taiyaki5190 señaló que, si el parkour era la única ruta entre islas, habría quienes no pudieran cruzar. KITUNEKO0605 agrupó las propuestas en agua, tierra y aire. YM propuso conservar partes de grandes construcciones de vestíbulos anteriores y del antiguo mundo de supervivencia. はっ recopiló las ideas de la reunión. [Hilo de la reunión pública](https://discord.com/channels/737538781024092170/982599800375623740/982599800375623740) [Ideas de terreno de edamameRex_java](https://discord.com/channels/737538781024092170/982599800375623740/982604466471718982) [Observación sobre el paso entre islas](https://discord.com/channels/737538781024092170/982599800375623740/982605844204101712) [Ideas de agua, tierra y aire](https://discord.com/channels/737538781024092170/982599800375623740/982608900295622686) [Propuesta para conservar construcciones anteriores](https://discord.com/channels/737538781024092170/982599800375623740/982606978952101909) [Lista de ideas de la reunión](https://discord.com/channels/737538781024092170/982599800375623740/982612891154915401)
 
 Entre el 25 y el 26 de junio de 2022, yanyan_fafnir pidió a los jugadores su opinión en una encuesta del equipo de apoyo sobre la idea de abrir temporalmente el mundo de pruebas Azkaban como zona de juego. taibon0727 explicó que sería algo parecido a una versión de demostración, y sh señaló que abrirlo a los jugadores también serviría como prueba. taka8621 propuso un lugar donde probar construcciones y circuitos sin presentar una solicitud previa.
 

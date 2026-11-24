@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:d7fa2cc7a4ff8dcbb41d4b2694c601b3eadf7683977e9f945ff4cf6dfac8c4be
+sourceHash: sha256:b4ea6c1ecfb1d579143567f01d6288cd6d30b64ac083e8866e30df6fa0cebcc8
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -539,7 +539,9 @@ Im Mai 2022 berichtete Mugi, dass Kutya japanischen Morsecode vorlesen konnte.
 
 Im Juni 2022 aktualisierte Mugi den Vorlesebot Kutya für Textchats in Sprachkanälen. Im März 2023 kündigte Mugi einen Bot an, über den Spieler dem Serverteam anonym Rückmeldung geben konnten. [Kutya-Update](https://discord.com/channels/737538781024092170/774152638450237460/986439863937155122) [Ankündigung für anonymes Feedback](https://discord.com/channels/737538781024092170/774152638450237460/1087976366126927882)
 
-Am 4. Juni 2022 erstellte はっ auf Discord einen Thread für öffentliche Besprechungen. [Thread für öffentliche Besprechungen](https://discord.com/channels/737538781024092170/982599800375623740/982599800375623740)
+Am 2. Juni wurde darüber gesprochen, in welchem Modus die Lobby gebaut werden sollte. Moon\_666 schlug vor, dass mehrere vom Team ausgewählte Personen die wichtigsten Bereiche im Kreativmodus bauen. [Vorschlag zum Bauen im Kreativmodus](https://discord.com/channels/737538781024092170/981568975387365466/981580332581138502)
+
+Am 4. Juni 2022 eröffnete はっ auf Discord einen Thread für eine öffentliche Besprechung. Für die neue Lobby schlug edamameRex_java unter anderem schwebende Inseln, eine Unterwasserstadt und eine Vulkaninsel vor. taiyaki5190 wies darauf hin, dass manche Spieler die Inseln möglicherweise nicht erreichen könnten, wenn es zwischen ihnen nur Parkour-Strecken gäbe. KITUNEKO0605 ordnete die Vorschläge den Bereichen Wasser, Land und Himmel zu. YM schlug vor, Teile großer Bauwerke aus früheren Lobbys und der alten Überlebenswelt zu erhalten. はっ fasste die Ideen der Besprechung in einer Liste zusammen. [Thread der öffentlichen Besprechung](https://discord.com/channels/737538781024092170/982599800375623740/982599800375623740) [Geländeideen von edamameRex_java](https://discord.com/channels/737538781024092170/982599800375623740/982604466471718982) [Hinweis zu Wegen zwischen den Inseln](https://discord.com/channels/737538781024092170/982599800375623740/982605844204101712) [Ideen für Wasser, Land und Himmel](https://discord.com/channels/737538781024092170/982599800375623740/982608900295622686) [Vorschlag zum Erhalt früherer Bauwerke](https://discord.com/channels/737538781024092170/982599800375623740/982606978952101909) [Liste der Ideen aus der Besprechung](https://discord.com/channels/737538781024092170/982599800375623740/982612891154915401)
 
 Am 25. und 26. Juni 2022 bat yanyan_fafnir die Spieler in einer Umfrage der Supporter um ihre Meinung dazu, die Testwelt Azkaban vorübergehend als Spielbereich zu öffnen. taibon0727 beschrieb die Idee als eine Art Demoversion, und sh wies darauf hin, dass die Öffnung für Spieler zugleich als Test dienen könnte. taka8621 schlug einen Ort vor, an dem Spieler ohne vorherigen Antrag Bauten und Schaltungen ausprobieren könnten.
 

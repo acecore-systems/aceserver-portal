@@ -2,7 +2,7 @@
 title: As pessoas que apoiaram o Aceserver
 description: Conheça quem ajudou o Aceserver pelos retratos de skins do Minecraft, relembre as atividades e confira o roteiro de eventos e propostas.
 translationOf: aceserver-contributors
-sourceHash: sha256:d7fa2cc7a4ff8dcbb41d4b2694c601b3eadf7683977e9f945ff4cf6dfac8c4be
+sourceHash: sha256:b4ea6c1ecfb1d579143567f01d6288cd6d30b64ac083e8866e30df6fa0cebcc8
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -539,7 +539,9 @@ Em maio de 2022, Mugi informou que o Kutya passou a ler código Morse japonês e
 
 Em junho de 2022, Mugi atualizou o bot de leitura Kutya para incluir o chat dos canais de voz. Em março de 2023, anunciou um bot para enviar comentários anônimos à equipe do servidor. [Atualização do Kutya](https://discord.com/channels/737538781024092170/774152638450237460/986439863937155122) [Anúncio do feedback anônimo](https://discord.com/channels/737538781024092170/774152638450237460/1087976366126927882)
 
-Em 4 de junho de 2022, はっ criou no Discord uma discussão para reuniões públicas. [Discussão para reuniões públicas](https://discord.com/channels/737538781024092170/982599800375623740/982599800375623740)
+Em 2 de junho, durante a discussão sobre o modo de jogo para construir o lobby, Moon\_666 propôs que algumas pessoas escolhidas pela equipe construíssem as áreas principais no modo Criativo. [Proposta de construção no modo Criativo](https://discord.com/channels/737538781024092170/981568975387365466/981580332581138502)
+
+Em 4 de junho de 2022, はっ abriu uma discussão no Discord para uma reunião pública. Para o novo lobby, edamameRex_java sugeriu ilhas flutuantes, uma cidade submersa e uma ilha vulcânica, entre outras ideias. taiyaki5190 observou que, se o parkour fosse a única rota entre as ilhas, alguns jogadores talvez não conseguissem atravessar. KITUNEKO0605 agrupou as ideias em água, terra e céu. YM propôs preservar partes de grandes construções dos lobbies anteriores e do antigo mundo de sobrevivência. はっ reuniu as ideias da reunião em uma lista. [Discussão da reunião pública](https://discord.com/channels/737538781024092170/982599800375623740/982599800375623740) [Ideias de terreno de edamameRex_java](https://discord.com/channels/737538781024092170/982599800375623740/982604466471718982) [Observação sobre a passagem entre as ilhas](https://discord.com/channels/737538781024092170/982599800375623740/982605844204101712) [Ideias para água, terra e céu](https://discord.com/channels/737538781024092170/982599800375623740/982608900295622686) [Proposta de preservar construções antigas](https://discord.com/channels/737538781024092170/982599800375623740/982606978952101909) [Lista das ideias da reunião](https://discord.com/channels/737538781024092170/982599800375623740/982612891154915401)
 
 Em 25 e 26 de junho de 2022, yanyan_fafnir consultou os jogadores por meio de uma enquete dos apoiadores sobre abrir temporariamente o mundo de testes Azkaban como área de jogo. taibon0727 explicou que a ideia se parecia com uma versão de demonstração, e sh observou que a abertura aos jogadores também serviria como teste. taka8621 propôs um espaço onde fosse possível experimentar construções e circuitos sem fazer um pedido prévio.
 
