@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:3827eb2ddb44f6725dbceaad6441a702951d8331304e7177263a6a042e44e5cb
+sourceHash: sha256:232d6be042c1ddd5988275e4d514c5b5ad794b166d48aa216410d9cc561432a5
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -50,6 +50,8 @@ Der Leiter der Vergnügungsparkgruppe, kurenohachi (Hachi), berichtete, dass mit
 Die Vorstellung der Gruppe zur Wiederbelebung der antiken Stadt nannte Golden Cocker als damaligen Leiter und Taibon und タケ als frühe Beteiligte. In einem Aufruf der RPG-Baugruppe wurde Golden Cocker ebenfalls als Leiter genannt. Der Aufruf lud zur Mitarbeit an Städten und Geschichten im RPG-Stil ein.
 
 Als Inhaber von A Yū (A-shō) informierte ゆり (Yū) über den Verkauf von Materialien und suchte Freiwillige für den Bau eines Spielbereichs.
+
+Am 16. Januar 2022 fragte はっ im Thread zur Produktentwicklung, welche neuen Waren sich die Spieler für das Angebot von &#20844;&#30410;&#25152; wünschten. KOTA-SAN hielt die Verkaufsvorschläge aus dem Sprachchat schriftlich fest. [Aufruf zu Vorschlägen für neue Waren](https://discord.com/channels/737538781024092170/932084170392494080/932084170392494080) [Notizen zu den Verkaufsvorschlägen](https://discord.com/channels/737538781024092170/932084170392494080/932114105228206100)
 
 2022 stellte s1nan0sub die Nutzungsregeln für das Dorf Iroha vor und berichtete, dass das gemeinsame Lager des Dorfes Inaba fertiggestellt war.
 
@@ -283,6 +285,8 @@ Ende Juli 2026 berichtete sekisei, dass die Pläne für zwei Aktivitäten fast f
 
 Am 29. Juli 2026 schlug &#29792;&#22856; ein Eisbootrennen vor, bei dem Spieler eine Belohnung erhalten würden, wenn sie das Ziel innerhalb der vorgegebenen Zeit erreichten.
 
+Am 4. August 2026, dem ersten Tag des „VALORANT&#12360;&#12540;&#39894;CUP“, erklärte Merutak die Regeln für die Partien des Eins-gegen-eins-Turniers. Merutak kündigte auch an, als Zuschauer das Spielgeschehen im Sprachkanal der Veranstaltung zeigen zu wollen. [Spielregeln am ersten Turniertag](https://discord.com/channels/737538781024092170/1533997135127777450/1534000223372705793)
+
 Im August 2026 kündigten sekisei und ふーや gemeinsam einen Online-CTF-Wettbewerb als Schatzsuche an, bei dem Rätsel wie Geheimschriften zu Flaggen führen. Aceserver CTF2026 begann am 28. August. [Ankündigung der gemeinsamen Veranstaltung](https://discord.com/channels/737538781024092170/774152638450237460/1541785510094184449) [Bericht zum Start](https://discord.com/channels/737538781024092170/779569416438415421/1542704904055824394)
 
 Am 6., 20. und 30. September 2026 reichte End&#12539;コッカー Bilder und Texte zu Bauwerken, zu Zimmerei und Immobilien im Ende und zur Eisenbahn für eine mögliche Veröffentlichung in sozialen Medien ein.
@@ -503,6 +507,8 @@ Am 25. und 26. Juni 2022 bat yanyan_fafnir die Spieler in einer Umfrage der Supp
 
 Am 2. August 2022 wurde darüber diskutiert, wie sich das Schlafengehen anderer Spieler auf die verfügbare Arbeitszeit in der Nacht auswirkte. PillowKebap wies darauf hin, dass Spielende bei nächtlichen Arbeiten von den Entscheidungen anderer abhängig waren, und schlug vor, das Überspringen der Nacht abzuschaffen.
 
+Am 3. August 2022 erklärte ゆり im Thread zu den Schildbefehlen, wie man damals einen weiteren Spieler auf einem Schild für den Schutz hinzufügen konnte. [Anleitung zu Schildern für den Schutz](https://discord.com/channels/737538781024092170/1004370637856460921/1004370641593565295)
+
 Im August 2022 bat taka8621 um Rückmeldungen zu einem Vorschlag, Gegenstände in Truhen und ähnlichen Behältern zu schützen, indem das Abbauen von Blöcken mit Inhalt eingeschränkt würde. taibon0727 fragte, ob Truhen und Fässer darunterfallen würden und wie viel der Schutz gegen Griefing ausrichten könnte.
 
 Im August 2022 teilte taka8621 eine getestete Version eines Anti-Griefing-Plugins, das einschränkte, was Spieler im Spiel platzieren konnten. Im August und Oktober teilte taka8621 außerdem Informationen über andere Plugins und deren Zweck.
@@ -558,6 +564,8 @@ Am 4. Oktober 2023 berichtete あすたん, dass die Berechtigungen für Befehle
 Am 26. Oktober 2023 prüfte Syake das Wiki und berichtete, keine Angaben zu den vom Server unterstützten Minecraft-Versionen gefunden zu haben.
 
 Im Januar 2024 eröffnete あすたん den Discord-Server Ace Server Leaderboard Archive (ASLA), um Rekorde von Aceserver zu sammeln. あすたん erklärte die Teilnahmeregeln und wie man Rekorde einreichen konnte. あすたん veröffentlichte auch Listen zum Abbau, zu Statistiken und zu Barren. キツネコ, Feruno und Taiyaki reichten Statistiken im Beitragskanal ein. Tabekirareta Potechi schlug Kandidaten für Rekorde wie die erste Burg vor.
+
+Am 4. April 2024 wurde um Hinweise auf nützliche Gemeinschaftseinrichtungen und Sehenswürdigkeiten für den Infokanal gebeten. Die Vorschläge sollten Koordinaten und eine Beschreibung enthalten. [Aufruf zu Hinweisen auf Einrichtungen](https://discord.com/channels/737538781024092170/1225371645196107906/1225371648023072820)
 
 Am 2. und 9. Juni 2024 teilte taka8621 Pläne für praktische Übungen mit Minecraft-Plugins. Vorgesehen war, ein Projekt und eine Testumgebung einzurichten, das erstellte Plugin auszuführen und einen eigenen Befehl zu erstellen und zu testen.
 

@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:3827eb2ddb44f6725dbceaad6441a702951d8331304e7177263a6a042e44e5cb
+sourceHash: sha256:232d6be042c1ddd5988275e4d514c5b5ad794b166d48aa216410d9cc561432a5
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -50,6 +50,8 @@ Le responsable du groupe du parc d’attractions, kurenohachi (Hachi), a annonc�
 Une présentation du groupe de restauration de la cité antique mentionnait Golden Cocker comme responsable de l’époque, ainsi que Taibon et タケ parmi les premiers participants. Un appel du groupe de création RPG indiquait aussi Golden Cocker comme responsable et proposait d’aider à créer des villes et des histoires de style RPG.
 
 En tant que propriétaire d’A Yū (A-shō), ゆり (Yū) a présenté la vente de matériaux et demandé des volontaires pour construire un espace de loisirs.
+
+Le 16 janvier 2022, はっ a demandé dans le fil consacré au développement de produits quels nouveaux articles les joueurs souhaitaient voir à la vente chez &#20844;&#30410;&#25152;. KOTA-SAN a pris des notes sur les idées de vente évoquées dans le salon vocal. [Appel à proposer de nouveaux articles](https://discord.com/channels/737538781024092170/932084170392494080/932084170392494080) [Notes sur les idées de vente](https://discord.com/channels/737538781024092170/932084170392494080/932114105228206100)
 
 En 2022, s1nan0sub a présenté les règles d’utilisation du village d’Iroha et a annoncé que l’entrepôt commun du village d’Inaba était terminé.
 
@@ -283,6 +285,8 @@ Fin juillet 2026, sekisei a indiqué que les projets de mini-jeu dans Minecraft 
 
 Le 29 juillet 2026, &#29792;&#22856; a proposé une course de bateaux sur glace où les joueurs recevraient une récompense s’ils terminaient dans le temps imparti.
 
+Le 4 août 2026, premier jour de « VALORANT&#12360;&#12540;&#39894;CUP », Merutak a expliqué les règles des matchs du tournoi en un contre un. Merutak prévoyait aussi de partager l’écran des matchs dans le salon vocal de l’événement en tant que spectateur. [Règles des matchs du premier jour](https://discord.com/channels/737538781024092170/1533997135127777450/1534000223372705793)
+
 En août 2026, sekisei et ふーや ont annoncé un CTF commun sous forme de chasse au trésor en ligne, où des énigmes comme des codes permettent de trouver des drapeaux. Aceserver CTF2026 a débuté le 28 août. [Annonce de coorganisation](https://discord.com/channels/737538781024092170/774152638450237460/1541785510094184449) [Annonce du début](https://discord.com/channels/737538781024092170/779569416438415421/1542704904055824394)
 
 Les 6, 20 et 30 septembre 2026, End&#12539;コッカー a soumis des images et des textes sur des constructions, la menuiserie et l’immobilier dans l’End, ainsi que le chemin de fer, en vue d’une éventuelle publication sur les réseaux sociaux.
@@ -503,6 +507,8 @@ Les 25 et 26 juin 2022, yanyan_fafnir a sollicité l’avis des joueurs dans un 
 
 Le 2 août 2022, la discussion a porté sur l’effet du sommeil des autres joueurs sur le temps disponible pour travailler la nuit. PillowKebap a relevé que les personnes travaillant la nuit dépendaient des décisions des autres joueurs et a proposé de supprimer la possibilité de passer la nuit.
 
+Le 3 août 2022, ゆり a expliqué dans le fil des commandes de pancartes comment ajouter un autre joueur à une pancarte de protection selon la procédure de l’époque. [Guide sur les pancartes de protection](https://discord.com/channels/737538781024092170/1004370637856460921/1004370641593565295)
+
 En août 2022, taka8621 a demandé des avis sur une proposition visant à protéger les objets rangés dans des coffres et autres contenants en limitant la destruction des blocs qui contenaient des objets. taibon0727 a demandé si les coffres et les tonneaux seraient concernés et dans quelle mesure cette protection aiderait à prévenir le vandalisme en jeu.
 
 En août 2022, taka8621 a partagé une version testée d’un plugin contre le sabotage qui limitait ce que les joueurs pouvaient placer dans le jeu. En août et en octobre, taka8621 a aussi partagé des informations sur d’autres plugins, notamment leur utilité.
@@ -558,6 +564,8 @@ Le 4 octobre 2023, あすたん a annoncé que la configuration des permissions 
 Le 26 octobre 2023, Syake a consulté le wiki et a indiqué ne pas avoir trouvé les versions de Minecraft prises en charge par le serveur.
 
 En janvier 2024, あすたん a ouvert le serveur Discord Ace Server Leaderboard Archive (ASLA) pour rassembler les records d’Aceserver. あすたん a présenté les règles de participation et la procédure de dépôt des records. あすたん a aussi publié des listes sur le minage, les statistiques et les lingots. キツネコ, Feruno et Taiyaki ont transmis des statistiques sur le salon des contributions, et Tabekirareta Potechi a proposé des entrées possibles pour des catégories comme celle du premier château.
+
+Le 4 avril 2024, un message a appelé les joueurs à suggérer des installations communes utiles et des sites à visiter pour le salon d’information, en indiquant les coordonnées et une description. [Appel à proposer des lieux à présenter](https://discord.com/channels/737538781024092170/1225371645196107906/1225371648023072820)
 
 Les 2 et 9 juin 2024, taka8621 a partagé un programme d’exercices pratiques sur les plugins Minecraft. Il était prévu de préparer un projet et un environnement de test, de lancer le plugin créé et de créer puis tester une commande personnalisée.
 

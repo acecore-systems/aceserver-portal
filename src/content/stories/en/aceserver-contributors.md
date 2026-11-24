@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:3827eb2ddb44f6725dbceaad6441a702951d8331304e7177263a6a042e44e5cb
+sourceHash: sha256:232d6be042c1ddd5988275e4d514c5b5ad794b166d48aa216410d9cc561432a5
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -50,6 +50,8 @@ The Amusement Park Group’s leader, kurenohachi (Hachi), reported choosing a si
 An introduction to the Ancient City Restoration Group named Golden Cocker as its leader at the time and Taibon and タケ as early participants. A call from the RPG Creation Group also listed Golden Cocker as leader and invited people to help make RPG-style towns and stories.
 
 As owner of A Yū (A-shō), ゆり (Yū) described the sale of materials and called for volunteers to build a play area.
+
+On January 16, 2022, はっ asked in the product development thread what new items players wanted &#20844;&#30410;&#25152; to sell. KOTA-SAN took notes on the sales ideas raised in voice chat. [Call for suggestions for new items](https://discord.com/channels/737538781024092170/932084170392494080/932084170392494080) [Notes on the sales ideas](https://discord.com/channels/737538781024092170/932084170392494080/932114105228206100)
 
 In 2022, s1nan0sub shared the rules for using Iroha Village and reported that Inaba Village’s shared storage facility was complete.
 
@@ -283,6 +285,8 @@ In late July 2026, sekisei reported that plans for two activities were nearly re
 
 On July 29, 2026, &#29792;&#22856; proposed an ice boat race in which players would earn a reward for reaching the finish within their allotted time.
 
+On August 4, 2026, the opening day of “VALORANT&#12360;&#12540;&#39894;CUP”, Merutak explained the match rules for the one-on-one tournament. Merutak also said they planned to share the match screen in the event voice channel as a spectator. [Opening-day match rules](https://discord.com/channels/737538781024092170/1533997135127777450/1534000223372705793)
+
 In August 2026, sekisei and ふーや announced a jointly hosted online CTF treasure hunt where players solve puzzles such as ciphers to find flags. Aceserver CTF2026 began on August 28. [Co-host announcement](https://discord.com/channels/737538781024092170/774152638450237460/1541785510094184449) [Opening report](https://discord.com/channels/737538781024092170/779569416438415421/1542704904055824394)
 
 On September 6, 20, and 30, 2026, End&#12539;コッカー submitted images and copy about builds, carpentry and real estate in the End, and railways for consideration for social media posts.
@@ -503,6 +507,8 @@ On June 25 and 26, 2022, yanyan_fafnir asked players to weigh in through a suppo
 
 On August 2, 2022, players discussed how others going to bed could affect the time available to work at night. PillowKebap pointed out that this made people working at night depend on other players’ decisions and proposed removing the option to skip the night.
 
+On August 3, 2022, ゆり posted instructions in the sign commands thread for adding another player to a protection sign under the system used at the time. [Guide to protection signs](https://discord.com/channels/737538781024092170/1004370637856460921/1004370641593565295)
+
 In August 2022, taka8621 asked for feedback on a proposal to protect items stored in chests and similar containers by restricting the breaking of blocks that held items. taibon0727 asked whether chests and barrels would be covered and how much the protection would help prevent griefing.
 
 In August 2022, taka8621 shared a tested version of an anti-griefing plugin that limited what players could place in the game. In August and October, taka8621 also shared information about other plugins, including what they were for.
@@ -558,6 +564,8 @@ On October 4, 2023, あすたん reported that the permissions for commands used
 On October 26, 2023, Syake checked the wiki and reported being unable to find which Minecraft versions the server supported.
 
 In January 2024, あすたん opened a Discord server, the Ace Server Leaderboard Archive (ASLA), to collect records from Aceserver. They explained the participation rules and how to submit records. あすたん also posted lists covering mining, statistics, and ingots. キツネコ, Feruno, and Taiyaki sent statistics to the submissions channel, and Tabekirareta Potechi proposed candidates for records such as the first castle.
+
+On April 4, 2024, a post asked players to suggest useful shared facilities and places to visit for the guide channel, with coordinates and a description. [Call for facility suggestions](https://discord.com/channels/737538781024092170/1225371645196107906/1225371648023072820)
 
 On June 2 and 9, 2024, taka8621 shared plans for hands-on Minecraft plugin practice. The plans covered setting up a project and a test environment, running the plugin participants made, and creating and testing a custom command.
 
