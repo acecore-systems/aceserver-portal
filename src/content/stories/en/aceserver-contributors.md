@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:dc114f2ce4f6c635149b9ebac02d9b3cef5d74aba2f6e1ec026d46c2de965271
+sourceHash: sha256:929d8f70148865162e21ffdc6ce11b76d39264eeec6d62caac1fc0b971bbedcf
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -622,6 +622,8 @@ In December 2025, sekisei posted a guide to using the Season Creative concept se
 On January 14, 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; explained to new players how joining differed between Minecraft Java Edition and Bedrock Edition. In a separate post in the same channel, they shared a single image showing the “Add Server” button and the server name and address fields side by side for the two editions. [Java and Bedrock connection guide](https://discord.com/channels/737538781024092170/1460983001809948744/1460983826439471380) [Java and Bedrock screens side by side](https://discord.com/channels/737538781024092170/1460983001809948744/1460983916172148859)
 
 In February, sekisei showed how to get from the rules confirmation step to the linking guide. [From rules confirmation to the linking guide](https://discord.com/channels/737538781024092170/1386851151428980856/1467714894060060918)
+
+On February 12, 2026, sekisei outlined work still to do for a full rollout of the in-game currency system. It included migrating from the old currency and implementing a purchase feature on the Survival Server, as well as making use of Ace Coins. [Preparations for the currency system](https://discord.com/channels/737538781024092170/773171457487929344/1471334013443506228)
 
 On February 26, 2026, Merutak asked which Discord channels could be archived. Mugi suggested older event channels, among others, and proposed reusing existing channels to limit the need for new ones. [Call for archiving suggestions](https://discord.com/channels/737538781024092170/1476561093244620913/1476567428610658457) [Proposal to reuse channels](https://discord.com/channels/737538781024092170/1476561093244620913/1476568683689283686)
 

@@ -2,7 +2,7 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:dc114f2ce4f6c635149b9ebac02d9b3cef5d74aba2f6e1ec026d46c2de965271
+sourceHash: sha256:929d8f70148865162e21ffdc6ce11b76d39264eeec6d62caac1fc0b971bbedcf
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -622,6 +622,8 @@ En diciembre de 2025, sekisei explicó cómo usar Season Creative, un servidor t
 El 14 de enero de 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; explicó a los nuevos jugadores las diferencias para conectarse desde Minecraft Java Edition y Bedrock Edition. En otro mensaje del mismo canal, compartió una imagen que ponía lado a lado, para ambas ediciones, el botón para añadir un servidor y los campos para escribir su nombre y dirección. [Guía de conexión de Java y Bedrock](https://discord.com/channels/737538781024092170/1460983001809948744/1460983826439471380) [Pantallas de Java y Bedrock lado a lado](https://discord.com/channels/737538781024092170/1460983001809948744/1460983916172148859)
 
 En febrero, sekisei indicó cómo llegar a la guía de vinculación desde el paso de confirmación de las reglas. [De la confirmación de las reglas a la guía de vinculación](https://discord.com/channels/737538781024092170/1386851151428980856/1467714894060060918)
+
+El 12 de febrero de 2026, sekisei resumió el trabajo pendiente para la puesta en marcha completa del sistema de moneda del juego. Incluía migrar desde la moneda anterior e implementar una función de compra en el servidor de supervivencia, además de aprovechar los Ace Coins. [Preparativos del sistema de moneda](https://discord.com/channels/737538781024092170/773171457487929344/1471334013443506228)
 
 El 26 de febrero de 2026, Merutak preguntó qué canales de Discord se podían archivar. Mugi sugirió, entre otros, canales de eventos antiguos y propuso reutilizar los que ya había para reducir la necesidad de crear otros. [Convocatoria de propuestas de archivo](https://discord.com/channels/737538781024092170/1476561093244620913/1476567428610658457) [Propuesta de reutilización de canales](https://discord.com/channels/737538781024092170/1476561093244620913/1476568683689283686)
 

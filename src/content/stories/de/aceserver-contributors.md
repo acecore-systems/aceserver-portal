@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:dc114f2ce4f6c635149b9ebac02d9b3cef5d74aba2f6e1ec026d46c2de965271
+sourceHash: sha256:929d8f70148865162e21ffdc6ce11b76d39264eeec6d62caac1fc0b971bbedcf
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -622,6 +622,8 @@ Im Dezember 2025 veröffentlichte sekisei eine Anleitung zur Nutzung des Konzept
 Am 14. Januar 2026 erklärte LuMiSIA\_&#26376;&#31070;&#24736;&#33673; neuen Spielern, wie sich der Beitritt mit Minecraft Java Edition und Bedrock Edition unterschied. In einem weiteren Beitrag im selben Kanal teilte LuMiSIA ein Bild, das die Schaltfläche zum Hinzufügen eines Servers und die Felder für Servername und -adresse in beiden Editionen nebeneinander zeigte. [Verbindungsanleitung für Java und Bedrock](https://discord.com/channels/737538781024092170/1460983001809948744/1460983826439471380) [Java- und Bedrock-Bildschirme im Vergleich](https://discord.com/channels/737538781024092170/1460983001809948744/1460983916172148859)
 
 Im Februar zeigte sekisei, wie man von der Regelbestätigung zur Anleitung für die Verknüpfung gelangte. [Von der Regelbestätigung zur Verknüpfungsanleitung](https://discord.com/channels/737538781024092170/1386851151428980856/1467714894060060918)
+
+Am 12. Februar 2026 fasste sekisei zusammen, was vor der vollständigen Einführung des Währungssystems im Spiel noch zu tun war. Dazu zählten die Umstellung von der alten Währung und die Umsetzung einer Kauffunktion auf dem Survival-Server sowie der Einsatz von Ace Coins. [Vorbereitungen für das Währungssystem](https://discord.com/channels/737538781024092170/773171457487929344/1471334013443506228)
 
 Am 26. Februar 2026 fragte Merutak, welche Discord-Kanäle archiviert werden könnten. Mugi nannte unter anderem alte Veranstaltungskanäle und schlug vor, bestehende Kanäle wiederzuverwenden, um den Bedarf an neuen Kanälen zu begrenzen. [Aufruf zu Archivierungsvorschlägen](https://discord.com/channels/737538781024092170/1476561093244620913/1476567428610658457) [Vorschlag zur Wiederverwendung von Kanälen](https://discord.com/channels/737538781024092170/1476561093244620913/1476568683689283686)
 

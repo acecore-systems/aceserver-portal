@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:dc114f2ce4f6c635149b9ebac02d9b3cef5d74aba2f6e1ec026d46c2de965271
+sourceHash: sha256:929d8f70148865162e21ffdc6ce11b76d39264eeec6d62caac1fc0b971bbedcf
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -622,6 +622,8 @@ En décembre 2025, sekisei a publié un guide pour utiliser le serveur thématiq
 Le 14 janvier 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; a expliqué aux nouveaux joueurs les différences de connexion entre Minecraft Java Edition et Bedrock Edition. Dans un autre message du même salon, LuMiSIA a partagé un visuel montrant côte à côte, pour les deux éditions, le bouton d’ajout de serveur et les champs du nom et de l’adresse. [Guide de connexion pour Java et Bedrock](https://discord.com/channels/737538781024092170/1460983001809948744/1460983826439471380) [Écrans de Java et Bedrock côte à côte](https://discord.com/channels/737538781024092170/1460983001809948744/1460983916172148859)
 
 En février, sekisei a indiqué comment accéder au guide de liaison depuis l’étape de validation des règles. [De la validation des règles au guide de liaison](https://discord.com/channels/737538781024092170/1386851151428980856/1467714894060060918)
+
+Le 12 février 2026, sekisei a récapitulé les tâches à mener avant la mise en service complète du système de monnaie du jeu. Il s’agissait de migrer depuis l’ancienne monnaie et de mettre en place une fonction d’achat sur le serveur de survie, ainsi que d’utiliser les Ace Coins. [Préparatifs du système de monnaie](https://discord.com/channels/737538781024092170/773171457487929344/1471334013443506228)
 
 Le 26 février 2026, Merutak a demandé quels salons Discord pourraient être archivés. Mugi a proposé notamment d’anciens salons d’événements et a suggéré de réutiliser des salons existants pour limiter les nouvelles créations. [Appel à suggestions de salons à archiver](https://discord.com/channels/737538781024092170/1476561093244620913/1476567428610658457) [Proposition de réutilisation des salons](https://discord.com/channels/737538781024092170/1476561093244620913/1476568683689283686)
 

@@ -2,7 +2,7 @@
 title: As pessoas que apoiaram o Aceserver
 description: Conheça quem ajudou o Aceserver pelos retratos de skins do Minecraft, relembre as atividades e confira o roteiro de eventos e propostas.
 translationOf: aceserver-contributors
-sourceHash: sha256:dc114f2ce4f6c635149b9ebac02d9b3cef5d74aba2f6e1ec026d46c2de965271
+sourceHash: sha256:929d8f70148865162e21ffdc6ce11b76d39264eeec6d62caac1fc0b971bbedcf
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -622,6 +622,8 @@ Em dezembro de 2025, sekisei publicou orientações para usar o servidor temáti
 Em 14 de janeiro de 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; explicou aos novos jogadores as diferenças para se conectar pelo Minecraft Java Edition e Bedrock Edition. Em outra mensagem no mesmo canal, compartilhou uma única imagem que mostrava, lado a lado nas duas edições, o botão para adicionar um servidor e os campos de nome e endereço. [Guia de conexão para Java e Bedrock](https://discord.com/channels/737538781024092170/1460983001809948744/1460983826439471380) [Telas de Java e Bedrock lado a lado](https://discord.com/channels/737538781024092170/1460983001809948744/1460983916172148859)
 
 Em fevereiro, sekisei mostrou como chegar ao guia de vinculação a partir da etapa de confirmação das regras. [Da confirmação das regras ao guia de vinculação](https://discord.com/channels/737538781024092170/1386851151428980856/1467714894060060918)
+
+Em 12 de fevereiro de 2026, sekisei organizou as tarefas pendentes para colocar o sistema de moeda do jogo em pleno funcionamento. Entre elas estavam a migração da moeda antiga e a implementação de uma função de compra no servidor de sobrevivência, além do uso de Ace Coins. [Preparativos do sistema de moeda](https://discord.com/channels/737538781024092170/773171457487929344/1471334013443506228)
 
 Em 26 de fevereiro de 2026, Merutak pediu sugestões de canais do Discord que poderiam ser arquivados. Mugi indicou canais de eventos antigos, entre outros, e propôs reaproveitar os canais existentes para reduzir a necessidade de criar outros. [Pedido de sugestões para arquivamento](https://discord.com/channels/737538781024092170/1476561093244620913/1476567428610658457) [Proposta de reaproveitamento de canais](https://discord.com/channels/737538781024092170/1476561093244620913/1476568683689283686)
 
