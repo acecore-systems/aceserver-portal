@@ -1,4 +1,4 @@
-import modelConfig from './ai-models.generated.json' with { type: 'json' }
+import modelConfig from './ai-models.cjs'
 
 export function selectedSkinDesignModel(): string | null {
   const selection = modelConfig.features?.['skin.design']

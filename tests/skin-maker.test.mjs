@@ -1,5 +1,5 @@
 import test from 'node:test'
-import modelConfig from '../config/ai-models.generated.json' with { type: 'json' }
+import modelConfig from '../config/ai-models.cjs'
 import skinBridge from '../cloudflare/skin-openai/worker.ts'
 import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
