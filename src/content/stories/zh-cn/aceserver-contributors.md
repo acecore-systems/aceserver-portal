@@ -2,9 +2,9 @@
 title: 支持Aceserver的人们
 description: 通过 Minecraft 皮肤头像认识 Aceserver 的贡献者，回顾社区活动记录，并查看活动与玩家提案路线图。
 translationOf: aceserver-contributors
-sourceHash: sha256:e30d4f15459a879e89b650547b8f3d68794f775aca5d32daeb22de3a798c2c29
+sourceHash: sha256:3827eb2ddb44f6725dbceaad6441a702951d8331304e7177263a6a042e44e5cb
 date: 2026-11-14T00:00:00+09:00
-lastUpdated: 2026-11-24T00:00:00+09:00
+lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
   - Aceserver
   - Minecraft
@@ -166,6 +166,8 @@ edamameRex_java（Edamame）介绍了自己的摊位，Moon_666 也公布了摊�
 2024 年 1 月 1 日，タケ报告跨年庆祝活动结束，并已发放护身符。 [跨年庆祝活动结束报告](https://discord.com/channels/737538781024092170/779569416438415421/1191037263002488872)
 
 2024年2月4日，ゆり报告称，已完成 Aceserver 官方主题曲的谱曲。ゆり说明这是一个简短版本，也提出了征歌词的建议。同一天，ゆり分享了题为《ACE&#12394;&#20882;&#38522;》的暂定版本。 [主题曲作曲报告](https://discord.com/channels/737538781024092170/882218642459205672/1203626958861377548) [暂定版本说明](https://discord.com/channels/737538781024092170/882218642459205672/1203659498804355072)
+
+2024 年 3 月 12 日，Discord 上发布了 Harubie 制作的可下载 PvE 地图的公告，同日公开了 2.0 版本。 [PvE 地图发布公告](https://discord.com/channels/737538781024092170/1216934048719442030)
 
 2024 年春天，sekisei 公布了 Ace Guesser v2 的开始时间和联系方式。夏天，Pluto 发布了跑酷活动公告。
 

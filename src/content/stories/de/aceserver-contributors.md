@@ -2,9 +2,9 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:e30d4f15459a879e89b650547b8f3d68794f775aca5d32daeb22de3a798c2c29
+sourceHash: sha256:3827eb2ddb44f6725dbceaad6441a702951d8331304e7177263a6a042e44e5cb
 date: 2026-11-14T00:00:00+09:00
-lastUpdated: 2026-11-24T00:00:00+09:00
+lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
   - Aceserver
   - Minecraft
@@ -166,6 +166,8 @@ Zum Jahreswechsel 2023–2024 wurde das Team der Ace Monorail Take Company (Take
 Am 1. Januar 2024 meldete タケ das Ende der Neujahrsfeier und die Verteilung von Glücksbringern. [Bericht zur Neujahrsfeier](https://discord.com/channels/737538781024092170/779569416438415421/1191037263002488872)
 
 Am 4. Februar 2024 berichtete ゆり, das offizielle Titellied von Aceserver komponiert zu haben. ゆり wies darauf hin, dass es sich um eine kurze Fassung handelte, und regte an, Vorschläge für den Liedtext zu sammeln. Später am selben Tag teilte ゆり eine vorläufige Fassung mit dem Titel „ACE&#12394;&#20882;&#38522;“. [Bericht zur Komposition des Titellieds](https://discord.com/channels/737538781024092170/882218642459205672/1203626958861377548) [Hinweis zur vorläufigen Fassung](https://discord.com/channels/737538781024092170/882218642459205672/1203659498804355072)
+
+Am 12. März 2024 wurde eine von Harubie erstellte PvE-Karte auf Discord zum Download angekündigt. Version 2.0 erschien noch am selben Tag. [Ankündigung der PvE-Karte](https://discord.com/channels/737538781024092170/1216934048719442030)
 
 Im Frühjahr 2024 teilte sekisei die Startzeit und die Kontaktstelle für Ace Guesser v2 mit. Im Sommer kündigte Pluto ein Parkour-Event an.
 

@@ -2,9 +2,9 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:e30d4f15459a879e89b650547b8f3d68794f775aca5d32daeb22de3a798c2c29
+sourceHash: sha256:3827eb2ddb44f6725dbceaad6441a702951d8331304e7177263a6a042e44e5cb
 date: 2026-11-14T00:00:00+09:00
-lastUpdated: 2026-11-24T00:00:00+09:00
+lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
   - Aceserver
   - Minecraft
@@ -166,6 +166,8 @@ El anuncio de fin de año 2023–2024 presentó como organizador al equipo de Ac
 El 1 de enero de 2024, タケ informó de que había terminado la celebración de Año Nuevo y de que se habían repartido amuletos. [Informe de la celebración de Año Nuevo](https://discord.com/channels/737538781024092170/779569416438415421/1191037263002488872)
 
 El 4 de febrero de 2024, ゆり informó de que había compuesto la canción temática oficial de Aceserver. Indicó que se trataba de una versión corta y propuso invitar a enviar letras. Ese mismo día, compartió una versión provisional titulada «ACE&#12394;&#20882;&#38522;». [Informe sobre la composición de la canción](https://discord.com/channels/737538781024092170/882218642459205672/1203626958861377548) [Aclaración sobre la versión provisional](https://discord.com/channels/737538781024092170/882218642459205672/1203659498804355072)
+
+El 12 de marzo de 2024 se anunció en Discord un mapa PvE descargable creado por Harubie y ese mismo día se publicó la versión 2.0. [Anuncio del mapa PvE](https://discord.com/channels/737538781024092170/1216934048719442030)
 
 En la primavera de 2024, sekisei anunció la hora de inicio y el contacto de Ace Guesser v2. En verano, Pluto anunció un evento de parkour.
 
