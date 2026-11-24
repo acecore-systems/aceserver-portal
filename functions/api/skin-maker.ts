@@ -1,4 +1,8 @@
 import {
+  isMetaSkinDesignModel,
+  selectedSkinDesignModel,
+} from '../../config/skin-design-model.ts'
+import {
   failureCode,
   skinDiagnostics,
   type SkinStage,
@@ -15,7 +19,6 @@ import {
   buildPrompt,
   decodePixels,
   encodePixels,
-  MODEL,
   isWorkersSkinModel,
   requestSchema,
   validateEdit,
@@ -33,7 +36,7 @@ type SkinEnv = Env & {
 const MAX_BODY = 450_000
 export const MAX_TOKENS = 12_000
 function configuredModel(value: string | undefined): string {
-  return value?.trim() ?? ''
+  return value?.trim() || selectedSkinDesignModel() || ''
 }
 function json(value: unknown, status = 200) {
   return Response.json(value, {
@@ -53,7 +56,7 @@ function available(env: SkinEnv) {
     !!env.SKIN_QUOTA_SALT &&
     (isWorkersSkinModel(model)
       ? !!env.AI
-      : model === MODEL && !!env.SKIN_OPENAI_SERVICE) &&
+      : isMetaSkinDesignModel(model) && !!env.SKIN_OPENAI_SERVICE) &&
     !!env.SEARCH_RATE_LIMIT_DB &&
     !!env.SKIN_TURNSTILE_SITE_KEY
   )
@@ -75,7 +78,7 @@ async function generateDesign(
       signal: AbortSignal.timeout(240_000),
     })
   }
-  if (model !== MODEL || !env.SKIN_OPENAI_SERVICE)
+  if (!isMetaSkinDesignModel(model) || !env.SKIN_OPENAI_SERVICE)
     throw new Error('ai_configuration')
   const response = await env.SKIN_OPENAI_SERVICE.fetch(
     'https://skin-openai.internal/v1/chat',
