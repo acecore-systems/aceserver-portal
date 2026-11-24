@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:924df3a7c01225a7c5ab1d6355e5c5611d3f209c093f98e3e0bd6d31673a8205
+sourceHash: sha256:d1b28990f791d2617dee5dfc6553dcdc884c2b86db1ad3bb6fc4f2e26c6c824d
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -529,6 +529,8 @@ Am 4. Juni 2022 erstellte はっ auf Discord einen Thread für öffentliche Besp
 
 Am 25. und 26. Juni 2022 bat yanyan_fafnir die Spieler in einer Umfrage der Supporter um ihre Meinung dazu, die Testwelt Azkaban vorübergehend als Spielbereich zu öffnen. taibon0727 beschrieb die Idee als eine Art Demoversion, und sh wies darauf hin, dass die Öffnung für Spieler zugleich als Test dienen könnte. taka8621 schlug einen Ort vor, an dem Spieler ohne vorherigen Antrag Bauten und Schaltungen ausprobieren könnten.
 
+Am 15. Juli 2022 berichtete &#12450;&#12510;&#12484;, dass die Unterstützung der damals neuesten Version durch die Plugins noch ausstand und ein neuer Server aufgebaut wurde. [Damals gemeldeter Stand der Servervorbereitung](https://discord.com/channels/737538781024092170/773171457487929344/997280482607771780)
+
 Am 2. August 2022 wurde darüber diskutiert, wie sich das Schlafengehen anderer Spieler auf die verfügbare Arbeitszeit in der Nacht auswirkte. PillowKebap wies darauf hin, dass Spielende bei nächtlichen Arbeiten von den Entscheidungen anderer abhängig waren, und schlug vor, das Überspringen der Nacht abzuschaffen.
 
 Am 3. August 2022 erklärte ゆり im Thread zu den Schildbefehlen, wie man damals einen weiteren Spieler auf einem Schild für den Schutz hinzufügen konnte. [Anleitung zu Schildern für den Schutz](https://discord.com/channels/737538781024092170/1004370637856460921/1004370641593565295)
@@ -536,6 +538,8 @@ Am 3. August 2022 erklärte ゆり im Thread zu den Schildbefehlen, wie man dama
 Im August 2022 bat taka8621 um Rückmeldungen zu einem Vorschlag, Gegenstände in Truhen und ähnlichen Behältern zu schützen, indem das Abbauen von Blöcken mit Inhalt eingeschränkt würde. taibon0727 fragte, ob Truhen und Fässer darunterfallen würden und wie viel der Schutz gegen Griefing ausrichten könnte.
 
 Im August 2022 teilte taka8621 eine getestete Version eines Anti-Griefing-Plugins, das einschränkte, was Spieler im Spiel platzieren konnten. Im August und Oktober teilte taka8621 außerdem Informationen über andere Plugins und deren Zweck.
+
+Am 21. August 2022 schrieb KOTA-SAN, selbst eine Sitzung des Serverteams einberufen zu haben. [Beitrag zur Einberufung der Teamsitzung](https://discord.com/channels/737538781024092170/773171457487929344/1010637852788408320)
 
 Am 5. September 2022 bot sh an, bei der Wiederherstellung des alten Servers und von Azkaban zu helfen, falls Unterstützung gebraucht würde. [Angebot, bei der Wiederherstellung zu helfen](https://discord.com/channels/737538781024092170/773171457487929344/1016001002085818428)
 

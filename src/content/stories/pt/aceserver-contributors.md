@@ -2,7 +2,7 @@
 title: As pessoas que apoiaram o Aceserver
 description: Conheça quem ajudou o Aceserver pelos retratos de skins do Minecraft, relembre as atividades e confira o roteiro de eventos e propostas.
 translationOf: aceserver-contributors
-sourceHash: sha256:924df3a7c01225a7c5ab1d6355e5c5611d3f209c093f98e3e0bd6d31673a8205
+sourceHash: sha256:d1b28990f791d2617dee5dfc6553dcdc884c2b86db1ad3bb6fc4f2e26c6c824d
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -529,6 +529,8 @@ Em 4 de junho de 2022, はっ criou no Discord uma discussão para reuniões pú
 
 Em 25 e 26 de junho de 2022, yanyan_fafnir consultou os jogadores por meio de uma enquete dos apoiadores sobre abrir temporariamente o mundo de testes Azkaban como área de jogo. taibon0727 explicou que a ideia se parecia com uma versão de demonstração, e sh observou que a abertura aos jogadores também serviria como teste. taka8621 propôs um espaço onde fosse possível experimentar construções e circuitos sem fazer um pedido prévio.
 
+Em 15 de julho de 2022, &#12450;&#12510;&#12484; informou que ainda se aguardava a compatibilidade dos plugins com a versão mais recente da época e que um novo servidor estava sendo preparado. [Situação da preparação do servidor na época](https://discord.com/channels/737538781024092170/773171457487929344/997280482607771780)
+
 Em 2 de agosto de 2022, discutiu-se como o sono de outros jogadores afetava o tempo disponível para trabalhar à noite. PillowKebap observou que quem trabalhava à noite ficava sujeito às decisões dos demais jogadores e propôs retirar a opção de pular a noite.
 
 Em 3 de agosto de 2022, ゆり explicou na discussão sobre comandos de placas como adicionar outro jogador a uma placa de proteção pelo procedimento da época. [Guia de placas de proteção](https://discord.com/channels/737538781024092170/1004370637856460921/1004370641593565295)
@@ -536,6 +538,8 @@ Em 3 de agosto de 2022, ゆり explicou na discussão sobre comandos de placas c
 Em agosto de 2022, taka8621 pediu opiniões sobre uma proposta para proteger itens guardados em baús e outros recipientes, restringindo a quebra de blocos que contivessem itens. taibon0727 perguntou se baús e barris estariam incluídos e até que ponto essa proteção ajudaria a evitar o vandalismo no jogo.
 
 Em agosto de 2022, taka8621 compartilhou uma versão testada de um plugin contra vandalismo que limitava o que os jogadores podiam colocar no jogo. Em agosto e outubro, também compartilhou informações sobre outros plugins, incluindo para que serviam.
+
+Em 21 de agosto de 2022, KOTA-SAN escreveu que havia convocado pessoalmente uma reunião da equipe do servidor. [Publicação sobre a convocação da reunião](https://discord.com/channels/737538781024092170/773171457487929344/1010637852788408320)
 
 Em 5 de setembro de 2022, sh se ofereceu para ajudar a restaurar o servidor antigo e Azkaban caso precisassem de apoio. [Oferta de ajuda na restauração](https://discord.com/channels/737538781024092170/773171457487929344/1016001002085818428)
 

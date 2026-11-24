@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:924df3a7c01225a7c5ab1d6355e5c5611d3f209c093f98e3e0bd6d31673a8205
+sourceHash: sha256:d1b28990f791d2617dee5dfc6553dcdc884c2b86db1ad3bb6fc4f2e26c6c824d
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -529,6 +529,8 @@ On June 4, 2022, はっ created a Discord thread for public meetings. [Public me
 
 On June 25 and 26, 2022, yanyan_fafnir asked players to weigh in through a supporter survey on opening the test world Azkaban as a temporary play area. taibon0727 described the idea as something like a demo, and sh pointed out that opening it to players could double as a test. taka8621 suggested a place where players could try building and experimenting with circuits without applying first.
 
+On July 15, 2022, &#12450;&#12510;&#12484; said plugin support for the then-latest version was still pending and a new server was being built. [Server preparations at the time](https://discord.com/channels/737538781024092170/773171457487929344/997280482607771780)
+
 On August 2, 2022, players discussed how others going to bed could affect the time available to work at night. PillowKebap pointed out that this made people working at night depend on other players’ decisions and proposed removing the option to skip the night.
 
 On August 3, 2022, ゆり posted instructions in the sign commands thread for adding another player to a protection sign under the system used at the time. [Guide to protection signs](https://discord.com/channels/737538781024092170/1004370637856460921/1004370641593565295)
@@ -536,6 +538,8 @@ On August 3, 2022, ゆり posted instructions in the sign commands thread for ad
 In August 2022, taka8621 asked for feedback on a proposal to protect items stored in chests and similar containers by restricting the breaking of blocks that held items. taibon0727 asked whether chests and barrels would be covered and how much the protection would help prevent griefing.
 
 In August 2022, taka8621 shared a tested version of an anti-griefing plugin that limited what players could place in the game. In August and October, taka8621 also shared information about other plugins, including what they were for.
+
+On August 21, 2022, KOTA-SAN wrote that they had called a meeting of the server team themselves. [Post about calling the server team meeting](https://discord.com/channels/737538781024092170/773171457487929344/1010637852788408320)
 
 On September 5, 2022, sh offered to help with restoring the old server and Azkaban if anyone needed a hand. [Offer to help with restoration](https://discord.com/channels/737538781024092170/773171457487929344/1016001002085818428)
 

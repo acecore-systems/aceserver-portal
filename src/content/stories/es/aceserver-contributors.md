@@ -2,7 +2,7 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:924df3a7c01225a7c5ab1d6355e5c5611d3f209c093f98e3e0bd6d31673a8205
+sourceHash: sha256:d1b28990f791d2617dee5dfc6553dcdc884c2b86db1ad3bb6fc4f2e26c6c824d
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -529,6 +529,8 @@ El 4 de junio de 2022, はっ creó un hilo para reuniones públicas en Discord.
 
 Entre el 25 y el 26 de junio de 2022, yanyan_fafnir pidió a los jugadores su opinión en una encuesta del equipo de apoyo sobre la idea de abrir temporalmente el mundo de pruebas Azkaban como zona de juego. taibon0727 explicó que sería algo parecido a una versión de demostración, y sh señaló que abrirlo a los jugadores también serviría como prueba. taka8621 propuso un lugar donde probar construcciones y circuitos sin presentar una solicitud previa.
 
+El 15 de julio de 2022, &#12450;&#12510;&#12484; indicó que aún se esperaba la compatibilidad de los complementos con la versión más reciente de entonces y que se estaba preparando un nuevo servidor. [Estado de los preparativos del servidor en aquel momento](https://discord.com/channels/737538781024092170/773171457487929344/997280482607771780)
+
 El 2 de agosto de 2022, se debatió cómo el hecho de que otros jugadores durmieran afectaba al tiempo disponible para trabajar de noche. PillowKebap señaló que quienes trabajaban de noche dependían de las decisiones ajenas y propuso eliminar la opción de saltarse la noche.
 
 El 3 de agosto de 2022, ゆり explicó en el hilo de comandos de carteles cómo se añadía entonces a otro jugador a un cartel de protección. [Guía sobre los carteles de protección](https://discord.com/channels/737538781024092170/1004370637856460921/1004370641593565295)
@@ -536,6 +538,8 @@ El 3 de agosto de 2022, ゆり explicó en el hilo de comandos de carteles cómo
 En agosto de 2022, taka8621 pidió opiniones sobre una propuesta para proteger los objetos guardados en cofres y otros recipientes limitando la rotura de bloques que contuvieran objetos. taibon0727 preguntó si la medida se aplicaría a cofres y barriles y cuánto ayudaría a prevenir el vandalismo en el juego.
 
 En agosto de 2022, taka8621 compartió una versión probada de un plugin contra el vandalismo que limitaba lo que los jugadores podían colocar en el juego. En agosto y octubre, también compartió información sobre otros plugins, incluida su finalidad.
+
+El 21 de agosto de 2022, KOTA-SAN escribió que había convocado personalmente una reunión del equipo del servidor. [Publicación sobre la convocatoria de la reunión](https://discord.com/channels/737538781024092170/773171457487929344/1010637852788408320)
 
 El 5 de septiembre de 2022, sh se ofreció a ayudar con la recuperación del servidor anterior y de Azkaban si hacía falta. [Ofrecimiento de ayuda para la recuperación](https://discord.com/channels/737538781024092170/773171457487929344/1016001002085818428)
 

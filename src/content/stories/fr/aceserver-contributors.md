@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:924df3a7c01225a7c5ab1d6355e5c5611d3f209c093f98e3e0bd6d31673a8205
+sourceHash: sha256:d1b28990f791d2617dee5dfc6553dcdc884c2b86db1ad3bb6fc4f2e26c6c824d
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -529,6 +529,8 @@ Le 4 juin 2022, はっ a créé sur Discord un fil consacré aux réunions publi
 
 Les 25 et 26 juin 2022, yanyan_fafnir a sollicité l’avis des joueurs dans un sondage des membres de soutien sur l’ouverture temporaire du monde de test Azkaban comme espace de jeu. taibon0727 a expliqué que l’idée s’apparentait à une version de démonstration, et sh a relevé que l’ouverture aux joueurs pourrait aussi servir de test. taka8621 a proposé un espace où les joueurs pourraient essayer des constructions et des circuits sans demande préalable.
 
+Le 15 juillet 2022, &#12450;&#12510;&#12484; a indiqué que la compatibilité des plugins avec la version la plus récente à l’époque était encore attendue et qu’un nouveau serveur était en préparation. [État de la préparation du serveur à l’époque](https://discord.com/channels/737538781024092170/773171457487929344/997280482607771780)
+
 Le 2 août 2022, la discussion a porté sur l’effet du sommeil des autres joueurs sur le temps disponible pour travailler la nuit. PillowKebap a relevé que les personnes travaillant la nuit dépendaient des décisions des autres joueurs et a proposé de supprimer la possibilité de passer la nuit.
 
 Le 3 août 2022, ゆり a expliqué dans le fil des commandes de pancartes comment ajouter un autre joueur à une pancarte de protection selon la procédure de l’époque. [Guide sur les pancartes de protection](https://discord.com/channels/737538781024092170/1004370637856460921/1004370641593565295)
@@ -536,6 +538,8 @@ Le 3 août 2022, ゆり a expliqué dans le fil des commandes de pancartes comme
 En août 2022, taka8621 a demandé des avis sur une proposition visant à protéger les objets rangés dans des coffres et autres contenants en limitant la destruction des blocs qui contenaient des objets. taibon0727 a demandé si les coffres et les tonneaux seraient concernés et dans quelle mesure cette protection aiderait à prévenir le vandalisme en jeu.
 
 En août 2022, taka8621 a partagé une version testée d’un plugin contre le sabotage qui limitait ce que les joueurs pouvaient placer dans le jeu. En août et en octobre, taka8621 a aussi partagé des informations sur d’autres plugins, notamment leur utilité.
+
+Le 21 août 2022, KOTA-SAN a écrit avoir personnellement convoqué une réunion de l’équipe du serveur. [Message sur la convocation de la réunion](https://discord.com/channels/737538781024092170/773171457487929344/1010637852788408320)
 
 Le 5 septembre 2022, sh a proposé d’aider à rétablir l’ancien serveur et Azkaban si un coup de main était nécessaire. [Proposition d’aide au rétablissement](https://discord.com/channels/737538781024092170/773171457487929344/1016001002085818428)
 
