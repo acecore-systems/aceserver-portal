@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:b4ea6c1ecfb1d579143567f01d6288cd6d30b64ac083e8866e30df6fa0cebcc8
+sourceHash: sha256:0f1789a31488b23ef85ef24f2d549c3b5f57e582e6964605e1460cf00aac4bf7
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -351,6 +351,8 @@ On April 24, タケ asked for help on behalf of the ground-art group to make a p
 
 In April 2022, SPdari reported that the foundation and roof of the main base at Sora no Yama were in place and the exterior was nearly complete. Work still remained on the interior.
 
+On May 24, 2022, Moon\_666 reported building a zombified piglin farm for Java Edition and said they would like to build one for Bedrock Edition as well.
+
 In June 2022, yanyan_fafnir explained how to enter the floating-island contest that led to work on the former lobby and how entries would be presented at judging. The announcement named はっ and members with the supporter role or above as judges. [Contest entry rules](https://discord.com/channels/737538781024092170/774152638450237460/982990352422162482) [Judging session announcement](https://discord.com/channels/737538781024092170/774152638450237460/986294242848669756)
 
 In June 2022, はっ shared a lobby concept in a thread about the build. edamameRex_java suggested a layout inspired by the earlier lobby. On June 3, taka8621 suggested making the move to the new lobby part of its premise or recreating lobbies from earlier periods. [Lobby concept](https://discord.com/channels/737538781024092170/981569254031769700/981569389306466354) [Proposal inspired by the earlier lobby](https://discord.com/channels/737538781024092170/981569254031769700/981572980993847466) [Proposals for the new lobby and earlier lobbies](https://discord.com/channels/737538781024092170/981569254031769700/982223863800823808)
@@ -386,6 +388,8 @@ taka8621 initially proposed a rock theme and withdrew it on June 6.
 In July 2022, Maro led construction of the former lobby and reported its completion. The build logs from the old Discord channel thanked BM_yurikun for landscaping and _BE_ChalkyMink87 for embedding ore in the foundation. KOTA-SAN set up a place to share updates on the build.
 
 On July 26, 2022, Moon\_666 reported placing a scaffolding block in the lobby to rescue another player.
+
+On August 2, 2022, Yukke reported adding a junction to the path leading to a mob farm.
 
 In August 2022, \_BE\_Kuten2021110 began marking out the site for the project tentatively called Ace Plaza with dirt and asked for help with construction and stadium design. They also shared a hand-drawn layout showing a course around the plaza, horse stables, and space for stalls. They also made a preliminary design for the stables and shared four screenshots showing the exterior and interior. &#12525;&#12483;&#12463;&#12384;&#12424;&#12316; (BlissfulRook\_BE\_) shared a photo of stables as a reference and suggested a triangular deepslate roof. The next day, \_BE\_Kuten2021110 shared an image of the framework they built in a test world.
 
@@ -546,6 +550,8 @@ On June 4, 2022, はっ opened a Discord thread for a public meeting. For the ne
 On June 25 and 26, 2022, yanyan_fafnir asked players to weigh in through a supporter survey on opening the test world Azkaban as a temporary play area. taibon0727 described the idea as something like a demo, and sh pointed out that opening it to players could double as a test. taka8621 suggested a place where players could try building and experimenting with circuits without applying first.
 
 On July 15, 2022, &#12450;&#12510;&#12484; said plugin support for the then-latest version was still pending and a new server was being built. [Server preparations at the time](https://discord.com/channels/737538781024092170/773171457487929344/997280482607771780)
+
+On July 23, 2022, a player asked why they could not join the main server from Bedrock Edition. yanyan_fafnir explained that the lobby connection issue had been resolved and the main server had yet to open.
 
 On August 2, 2022, players discussed how others going to bed could affect the time available to work at night. PillowKebap pointed out that this made people working at night depend on other players’ decisions and proposed removing the option to skip the night.
 

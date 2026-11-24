@@ -2,7 +2,7 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:b4ea6c1ecfb1d579143567f01d6288cd6d30b64ac083e8866e30df6fa0cebcc8
+sourceHash: sha256:0f1789a31488b23ef85ef24f2d549c3b5f57e582e6964605e1460cf00aac4bf7
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -351,6 +351,8 @@ El 24 de abril, タケ pidió ayuda en nombre del grupo de arte sobre el suelo p
 
 En abril de 2022, SPdari informó de que los cimientos y el tejado de la base principal de Sora no Yama ya estaban hechos y de que el exterior estaba casi terminado. Aún quedaba trabajo en el interior.
 
+El 24 de mayo de 2022, Moon\_666 informó que había construido una granja de piglins zombificados para Java Edition y expresó su intención de construir otra para Bedrock Edition.
+
 En junio de 2022, yanyan_fafnir explicó cómo participar en el concurso de islas flotantes que dio paso a la construcción del antiguo vestíbulo y cómo se presentarían los proyectos ante el jurado. El anuncio indicó que はっ y los miembros con el rol de apoyo o superior serían los jueces. [Reglas del concurso](https://discord.com/channels/737538781024092170/774152638450237460/982990352422162482) [Anuncio de la presentación ante el jurado](https://discord.com/channels/737538781024092170/774152638450237460/986294242848669756)
 
 En junio de 2022, はっ compartió su idea en un hilo dedicado al diseño del vestíbulo. edamameRex_java propuso un diseño inspirado en el vestíbulo anterior. El 3 de junio, taka8621 sugirió integrar el traslado al nuevo vestíbulo en la ambientación o recrear vestíbulos de etapas anteriores. [Propuesta de diseño del vestíbulo](https://discord.com/channels/737538781024092170/981569254031769700/981569389306466354) [Propuesta inspirada en el vestíbulo anterior](https://discord.com/channels/737538781024092170/981569254031769700/981572980993847466) [Propuestas sobre el traslado y los vestíbulos anteriores](https://discord.com/channels/737538781024092170/981569254031769700/982223863800823808)
@@ -386,6 +388,8 @@ taka8621 propuso inicialmente una roca y retiró la idea el 6 de junio.
 En julio de 2022, Maro dirigió la construcción del antiguo vestíbulo y anunció que había terminado. Los registros de la obra en el antiguo canal de Discord agradecieron a BM_yurikun la jardinería y a _BE_ChalkyMink87 la colocación de minerales en la base. KOTA-SAN habilitó un espacio para compartir avances de la obra.
 
 El 26 de julio de 2022, Moon\_666 informó de que había colocado un bloque de andamio en el vestíbulo para rescatar a otro jugador.
+
+El 2 de agosto de 2022, Yukke informó que había añadido una bifurcación al camino hacia una granja de criaturas.
 
 En agosto de 2022, \_BE\_Kuten2021110 empezó a marcar con tierra el perímetro del terreno previsto para la plaza provisionalmente llamada Ace e invitó a colaborar en la construcción y el diseño del estadio. También compartió un plano a mano alzada con un circuito alrededor de la plaza, establos para caballos y un espacio para puestos. También preparó un diseño preliminar para los establos y compartió cuatro capturas que mostraban el exterior y el interior. &#12525;&#12483;&#12463;&#12384;&#12424;&#12316; (BlissfulRook\_BE\_) mostró una foto de unos establos como referencia y propuso un tejado triangular de pizarra profunda. Al día siguiente, \_BE\_Kuten2021110 compartió una imagen de la estructura que había construido en un mundo de pruebas.
 
@@ -546,6 +550,8 @@ El 4 de junio de 2022, はっ abrió en Discord un hilo para una reunión públi
 Entre el 25 y el 26 de junio de 2022, yanyan_fafnir pidió a los jugadores su opinión en una encuesta del equipo de apoyo sobre la idea de abrir temporalmente el mundo de pruebas Azkaban como zona de juego. taibon0727 explicó que sería algo parecido a una versión de demostración, y sh señaló que abrirlo a los jugadores también serviría como prueba. taka8621 propuso un lugar donde probar construcciones y circuitos sin presentar una solicitud previa.
 
 El 15 de julio de 2022, &#12450;&#12510;&#12484; indicó que aún se esperaba la compatibilidad de los complementos con la versión más reciente de entonces y que se estaba preparando un nuevo servidor. [Estado de los preparativos del servidor en aquel momento](https://discord.com/channels/737538781024092170/773171457487929344/997280482607771780)
+
+El 23 de julio de 2022, un jugador preguntó por qué no podía entrar al servidor principal desde Bedrock Edition. yanyan_fafnir explicó que el problema de conexión con el vestíbulo se había resuelto y que el servidor principal aún no se había abierto.
 
 El 2 de agosto de 2022, se debatió cómo el hecho de que otros jugadores durmieran afectaba al tiempo disponible para trabajar de noche. PillowKebap señaló que quienes trabajaban de noche dependían de las decisiones ajenas y propuso eliminar la opción de saltarse la noche.
 

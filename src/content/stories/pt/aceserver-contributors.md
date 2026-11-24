@@ -2,7 +2,7 @@
 title: As pessoas que apoiaram o Aceserver
 description: Conheça quem ajudou o Aceserver pelos retratos de skins do Minecraft, relembre as atividades e confira o roteiro de eventos e propostas.
 translationOf: aceserver-contributors
-sourceHash: sha256:b4ea6c1ecfb1d579143567f01d6288cd6d30b64ac083e8866e30df6fa0cebcc8
+sourceHash: sha256:0f1789a31488b23ef85ef24f2d549c3b5f57e582e6964605e1460cf00aac4bf7
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -351,6 +351,8 @@ Em 24 de abril, タケ pediu ajuda em nome do grupo de arte no chão para criar 
 
 Em abril de 2022, SPdari informou que a fundação e o telhado da base principal de Sora no Yama já estavam prontos e que o exterior estava quase concluído. Ainda faltava trabalho no interior.
 
+Em 24 de maio de 2022, Moon\_666 informou ter construído uma farm de piglins zumbificados para Java Edition e disse que gostaria de construir outra para Bedrock Edition.
+
 Em junho de 2022, yanyan_fafnir explicou as regras para participar do concurso de ilhas flutuantes que deu origem à construção do antigo lobby e como os projetos seriam apresentados para avaliação. O anúncio indicou que はっ e membros com cargo de apoiador ou superior fariam parte do júri. [Regras de inscrição](https://discord.com/channels/737538781024092170/774152638450237460/982990352422162482) [Anúncio da sessão de avaliação](https://discord.com/channels/737538781024092170/774152638450237460/986294242848669756)
 
 Em junho de 2022, はっ compartilhou uma ideia em uma discussão sobre a construção do lobby. edamameRex_java propôs um layout inspirado no lobby anterior. Em 3 de junho, taka8621 propôs incorporar a própria mudança para o novo lobby ao cenário ou recriar lobbies de épocas anteriores. [Conceito para a construção do lobby](https://discord.com/channels/737538781024092170/981569254031769700/981569389306466354) [Proposta inspirada no lobby anterior](https://discord.com/channels/737538781024092170/981569254031769700/981572980993847466) [Propostas para a mudança de lobby e os lobbies anteriores](https://discord.com/channels/737538781024092170/981569254031769700/982223863800823808)
@@ -386,6 +388,8 @@ taka8621 propôs inicialmente uma rocha e retirou a ideia em 6 de junho.
 Em julho de 2022, Maro liderou a construção do lobby antigo e informou sua conclusão. Os registros da obra no antigo canal do Discord agradeceram a BM_yurikun pelo paisagismo e a _BE_ChalkyMink87 por embutir minérios na base. KOTA-SAN preparou um espaço para compartilhar o andamento da obra.
 
 Em 26 de julho de 2022, Moon\_666 informou que havia colocado um bloco de andaime no lobby para resgatar outro jogador.
+
+Em 2 de agosto de 2022, Yukke informou ter acrescentado uma bifurcação ao caminho que levava a uma farm de criaturas.
 
 Em agosto de 2022, \_BE\_Kuten2021110 começou a delimitar com terra a área prevista para a praça provisoriamente chamada Ace e pediu ajuda na construção e no projeto do estádio. Também compartilhou um esboço à mão com um percurso ao redor da praça, estábulos para cavalos e espaço para barracas. Também preparou um projeto preliminar para os estábulos e compartilhou quatro capturas de tela mostrando o exterior e o interior. &#12525;&#12483;&#12463;&#12384;&#12424;&#12316; (BlissfulRook\_BE\_) mostrou uma foto de estábulos como referência e sugeriu um telhado triangular de ardósia. No dia seguinte, \_BE\_Kuten2021110 compartilhou uma imagem da estrutura que montou em um mundo de testes.
 
@@ -546,6 +550,8 @@ Em 4 de junho de 2022, はっ abriu uma discussão no Discord para uma reunião 
 Em 25 e 26 de junho de 2022, yanyan_fafnir consultou os jogadores por meio de uma enquete dos apoiadores sobre abrir temporariamente o mundo de testes Azkaban como área de jogo. taibon0727 explicou que a ideia se parecia com uma versão de demonstração, e sh observou que a abertura aos jogadores também serviria como teste. taka8621 propôs um espaço onde fosse possível experimentar construções e circuitos sem fazer um pedido prévio.
 
 Em 15 de julho de 2022, &#12450;&#12510;&#12484; informou que ainda se aguardava a compatibilidade dos plugins com a versão mais recente da época e que um novo servidor estava sendo preparado. [Situação da preparação do servidor na época](https://discord.com/channels/737538781024092170/773171457487929344/997280482607771780)
+
+Em 23 de julho de 2022, um jogador perguntou por que não conseguia entrar no servidor principal pela Bedrock Edition. yanyan_fafnir explicou que o problema de conexão com o lobby havia sido resolvido e que o servidor principal ainda não tinha sido aberto.
 
 Em 2 de agosto de 2022, discutiu-se como o sono de outros jogadores afetava o tempo disponível para trabalhar à noite. PillowKebap observou que quem trabalhava à noite ficava sujeito às decisões dos demais jogadores e propôs retirar a opção de pular a noite.
 

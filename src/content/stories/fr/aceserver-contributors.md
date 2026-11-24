@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:b4ea6c1ecfb1d579143567f01d6288cd6d30b64ac083e8866e30df6fa0cebcc8
+sourceHash: sha256:0f1789a31488b23ef85ef24f2d549c3b5f57e582e6964605e1460cf00aac4bf7
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -351,6 +351,8 @@ Le 24 avril, タケ a demandé de l’aide au nom du groupe de créations au sol
 
 En avril 2022, SPdari a signalé que les fondations et le toit de la base principale de Sora no Yama étaient en place et que l’extérieur était presque terminé. Il restait du travail à l’intérieur.
 
+Le 24 mai 2022, Moon\_666 a annoncé avoir construit une ferme à piglins zombifiés pour l’édition Java et a dit souhaiter en construire une pour l’édition Bedrock.
+
 En juin 2022, yanyan_fafnir a expliqué comment participer au concours d’îles flottantes qui a mené à la construction de l’ancien hall et comment les projets seraient présentés au jury. L’annonce nommait はっ et les membres ayant le rôle de soutien ou un rôle supérieur parmi les juges. [Règles du concours](https://discord.com/channels/737538781024092170/774152638450237460/982990352422162482) [Annonce de la séance du jury](https://discord.com/channels/737538781024092170/774152638450237460/986294242848669756)
 
 En juin 2022, はっ a présenté son idée dans un fil consacré à la conception du hall. edamameRex_java a proposé un agencement inspiré du hall précédent. Le 3 juin, taka8621 a proposé d’intégrer le passage au nouveau hall dans son scénario, ou de recréer les halls d’époques précédentes. [Concept pour la construction du hall](https://discord.com/channels/737538781024092170/981569254031769700/981569389306466354) [Proposition inspirée du hall précédent](https://discord.com/channels/737538781024092170/981569254031769700/981572980993847466) [Propositions sur le passage au nouveau hall et les anciens halls](https://discord.com/channels/737538781024092170/981569254031769700/982223863800823808)
@@ -386,6 +388,8 @@ taka8621 a d’abord proposé un rocher, puis a retiré cette idée le 6 juin.
 En juillet 2022, Maro a dirigé la construction de l’ancien hall d’accueil et en a annoncé l’achèvement. Le suivi des travaux dans l’ancien salon Discord a remercié BM_yurikun pour les aménagements paysagers et _BE_ChalkyMink87 pour l’intégration de minerais dans la base. KOTA-SAN a préparé un espace pour partager l’avancement des travaux.
 
 Le 26 juillet 2022, Moon\_666 a signalé avoir posé un bloc d’échafaudage dans le hall afin de secourir un autre joueur.
+
+Le 2 août 2022, Yukke a indiqué avoir ajouté un embranchement au chemin qui menait à une ferme à créatures.
 
 En août 2022, \_BE\_Kuten2021110 a commencé à délimiter avec de la terre le site de la place provisoirement appelée Ace et a demandé de l’aide pour la construction et la conception du stade. \_BE\_Kuten2021110 a aussi partagé un plan dessiné à la main montrant un parcours autour de la place, des écuries et un espace pour les stands. Cette personne a aussi préparé un premier plan d’écuries et partagé quatre captures d’écran montrant l’extérieur et l’intérieur. &#12525;&#12483;&#12463;&#12384;&#12424;&#12316; (BlissfulRook\_BE\_) a montré une photo d’écuries comme référence et proposé un toit triangulaire en ardoise des abîmes. Le lendemain, \_BE\_Kuten2021110 a partagé une image de l’ossature que cette personne avait construite dans un monde de test.
 
@@ -546,6 +550,8 @@ Le 4 juin 2022, はっ a ouvert sur Discord un fil pour une réunion publique. P
 Les 25 et 26 juin 2022, yanyan_fafnir a sollicité l’avis des joueurs dans un sondage des membres de soutien sur l’ouverture temporaire du monde de test Azkaban comme espace de jeu. taibon0727 a expliqué que l’idée s’apparentait à une version de démonstration, et sh a relevé que l’ouverture aux joueurs pourrait aussi servir de test. taka8621 a proposé un espace où les joueurs pourraient essayer des constructions et des circuits sans demande préalable.
 
 Le 15 juillet 2022, &#12450;&#12510;&#12484; a indiqué que la compatibilité des plugins avec la version la plus récente à l’époque était encore attendue et qu’un nouveau serveur était en préparation. [État de la préparation du serveur à l’époque](https://discord.com/channels/737538781024092170/773171457487929344/997280482607771780)
+
+Le 23 juillet 2022, un joueur a demandé pourquoi il ne pouvait pas rejoindre le serveur principal depuis l’édition Bedrock. yanyan_fafnir lui a expliqué que le problème de connexion au lobby avait été résolu et que le serveur principal n’avait pas encore ouvert.
 
 Le 2 août 2022, la discussion a porté sur l’effet du sommeil des autres joueurs sur le temps disponible pour travailler la nuit. PillowKebap a relevé que les personnes travaillant la nuit dépendaient des décisions des autres joueurs et a proposé de supprimer la possibilité de passer la nuit.
 

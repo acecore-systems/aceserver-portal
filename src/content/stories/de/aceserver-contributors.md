@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:b4ea6c1ecfb1d579143567f01d6288cd6d30b64ac083e8866e30df6fa0cebcc8
+sourceHash: sha256:0f1789a31488b23ef85ef24f2d549c3b5f57e582e6964605e1460cf00aac4bf7
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -351,6 +351,8 @@ Am 24. April bat タケ im Namen der Bodenbildgruppe um Hilfe bei einem Poster, 
 
 Im April 2022 berichtete SPdari, dass das Fundament und das Dach der Hauptbasis in Sora no Yama fertig waren und der Außenbau fast abgeschlossen war. Im Innenbereich standen noch Arbeiten aus.
 
+Am 24. Mai 2022 berichtete Moon\_666, eine Farm für zombifizierte Piglins für die Java Edition gebaut zu haben. Moon\_666 wollte auch eine Farm für die Bedrock Edition bauen.
+
 Im Juni 2022 erklärte yanyan_fafnir die Teilnahmebedingungen für den Wettbewerb um schwebende Inseln, aus dem die frühere Lobby hervorging. Die Ankündigung beschrieb auch, wie die Beiträge bei der Bewertung vorgestellt werden sollten. はっ und Mitglieder mit der Rolle „Supporter“ oder höher sollten die Jury bilden. [Teilnahmebedingungen](https://discord.com/channels/737538781024092170/774152638450237460/982990352422162482) [Ankündigung des Jurytermins](https://discord.com/channels/737538781024092170/774152638450237460/986294242848669756)
 
 Im Juni 2022 stellte はっ in einem Thread ein Konzept für den Lobbybau vor. edamameRex_java schlug eine Anordnung nach dem Vorbild der früheren Lobby vor. Am 3. Juni schlug taka8621 vor, den Wechsel zur neuen Lobby selbst in das Szenario einzubauen. Als Alternative nannte taka8621 den Nachbau früherer Lobbys. [Konzept für den Lobbybau](https://discord.com/channels/737538781024092170/981569254031769700/981569389306466354) [Vorschlag nach dem Vorbild der früheren Lobby](https://discord.com/channels/737538781024092170/981569254031769700/981572980993847466) [Vorschläge zum Lobbywechsel und zu früheren Lobbys](https://discord.com/channels/737538781024092170/981569254031769700/982223863800823808)
@@ -386,6 +388,8 @@ taka8621 schlug zunächst einen Felsen vor und zog die Idee am 6. Juni zurück.
 Im Juli 2022 leitete Maro den Bau der früheren Lobby und meldete den Abschluss. Im alten Discord-Kanal wurde BM_yurikun für die Begrünung und _BE_ChalkyMink87 für das Einlassen von Erzen in das Fundament gedankt. KOTA-SAN richtete einen Ort ein, an dem der Baufortschritt geteilt werden konnte.
 
 Am 26. Juli 2022 meldete Moon\_666, einen Gerüstblock in der Lobby platziert zu haben, um einen anderen Teilnehmer zu retten.
+
+Am 2. August 2022 berichtete Yukke, eine Abzweigung auf dem Weg zu einer Monsterfarm angelegt zu haben.
 
 Im August 2022 begann \_BE\_Kuten2021110, das Gelände für den Platz mit dem Arbeitstitel Ace Plaza mit Erde abzustecken, und suchte Hilfe beim Bau und beim Entwurf des Stadions. Die Person teilte auch einen handgezeichneten Lageplan mit einer Strecke rund um den Platz, Pferdeställen und Platz für Verkaufsstände. Die Person erstellte außerdem einen vorläufigen Entwurf für die Ställe und teilte vier Screenshots von außen und innen. &#12525;&#12483;&#12463;&#12384;&#12424;&#12316; (BlissfulRook\_BE\_) zeigte ein Foto von Ställen als Vorlage und schlug ein dreieckiges Dach aus Tiefenschiefer vor. Am nächsten Tag teilte \_BE\_Kuten2021110 ein Bild des eigenen Grundgerüsts aus einer Testwelt.
 
@@ -546,6 +550,8 @@ Am 4. Juni 2022 eröffnete はっ auf Discord einen Thread für eine öffentlich
 Am 25. und 26. Juni 2022 bat yanyan_fafnir die Spieler in einer Umfrage der Supporter um ihre Meinung dazu, die Testwelt Azkaban vorübergehend als Spielbereich zu öffnen. taibon0727 beschrieb die Idee als eine Art Demoversion, und sh wies darauf hin, dass die Öffnung für Spieler zugleich als Test dienen könnte. taka8621 schlug einen Ort vor, an dem Spieler ohne vorherigen Antrag Bauten und Schaltungen ausprobieren könnten.
 
 Am 15. Juli 2022 berichtete &#12450;&#12510;&#12484;, dass die Unterstützung der damals neuesten Version durch die Plugins noch ausstand und ein neuer Server aufgebaut wurde. [Damals gemeldeter Stand der Servervorbereitung](https://discord.com/channels/737538781024092170/773171457487929344/997280482607771780)
+
+Am 23. Juli 2022 fragte ein Spieler, warum er den Hauptserver mit der Bedrock Edition nicht betreten konnte. yanyan_fafnir erklärte, dass das Verbindungsproblem mit der Lobby behoben sei und der Hauptserver noch nicht geöffnet sei.
 
 Am 2. August 2022 wurde darüber diskutiert, wie sich das Schlafengehen anderer Spieler auf die verfügbare Arbeitszeit in der Nacht auswirkte. PillowKebap wies darauf hin, dass Spielende bei nächtlichen Arbeiten von den Entscheidungen anderer abhängig waren, und schlug vor, das Überspringen der Nacht abzuschaffen.
 
