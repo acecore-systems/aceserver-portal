@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:232d6be042c1ddd5988275e4d514c5b5ad794b166d48aa216410d9cc561432a5
+sourceHash: sha256:9b08b42c5b31f0d48b923042d399a0ffff0086f334f9a95c32c3cd1d40e97216
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -399,6 +399,8 @@ In November 2022, あすたん invited people to help build the Asutan Kingdom. 
 
 That December, ジェスター (then posting as Dōke Shinshi@Jester Sub) reported working with Buraki to build a resort-style watermelon farm with a beach. [Watermelon farm report](https://discord.com/channels/737538781024092170/779569416438415421/1048866874760364042)
 
+On December 12, 2022, ゆり said they wanted to build a town hall on the new server and asked for ideas, including suggestions for the building’s theme. [Call for town hall ideas](https://discord.com/channels/737538781024092170/1051846941211885639/1051846941211885639)
+
 In the old Discord records for the hot-spring inn project, project leader edamameRex_java recruited members and ゆり announced opportunities to help with construction or materials.
 
 At the end of December 2022, edamameRex_java reported that construction of the hot-spring inn had finished, according to the original project records.
@@ -542,6 +544,8 @@ On March 31, 2023, in an exchange with Moon\_666, あすたん explained that an
 In April 2023, Yukke reported adding a pronunciation entry for “Hi” to the read-aloud dictionary of the chat integration used at the time.
 
 In May 2023, あすたん put together a guide to what each server was for at the time and where to find the wiki and world map. The guide also showed the entrances to the main and resource servers with images. That month, あすたん explained the protection features of CoreProtect and LWC in a separate guide.
+
+On June 9, 2023, new and longtime players were invited to suggest questions for the FAQ channel. Suggestions included how to view the world map and how to switch to the resource world’s map. [Call for FAQ suggestions](https://discord.com/channels/737538781024092170/1116503107619266590/1116503111893258250) [Suggested map questions](https://discord.com/channels/737538781024092170/1116503107619266590/1116511197781561354)
 
 In June 2023, タケ asked in the English chat channel whether there was a bot that could translate between English and Japanese.
 

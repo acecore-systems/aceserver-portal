@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:232d6be042c1ddd5988275e4d514c5b5ad794b166d48aa216410d9cc561432a5
+sourceHash: sha256:9b08b42c5b31f0d48b923042d399a0ffff0086f334f9a95c32c3cd1d40e97216
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -399,6 +399,8 @@ Im November 2022 bat あすたん um Mithilfe beim Bau des Königreichs Asutan. 
 
 Im Dezember desselben Jahres berichtete ジェスター (unter dem damaligen Namen Dōke Shinshi@Jester Sub), gemeinsam mit Buraki einen Melonenanbau im Stil einer Ferienanlage mit Strand gebaut zu haben. [Bericht zum Bau des Melonenanbaus](https://discord.com/channels/737538781024092170/779569416438415421/1048866874760364042)
 
+Am 12. Dezember 2022 kündigte ゆり an, auf dem neuen Server ein Rathaus bauen zu wollen, und bat um Ideen unter anderem zum Thema des Gebäudes. [Aufruf zu Ideen für das Rathaus](https://discord.com/channels/737538781024092170/1051846941211885639/1051846941211885639)
+
 Den Aufzeichnungen aus dem früheren Discord-Kanal zum Bau des Gasthauses an den heißen Quellen zufolge suchte Projektleiter edamameRex_java nach Mitgliedern. ゆり erklärte, wie man mit Baumaterial oder bei den Bauarbeiten helfen konnte.
 
 Ende Dezember 2022 meldete edamameRex_java laut den Aufzeichnungen des Bauprojekts, dass das Gasthaus an den heißen Quellen fertiggestellt war.
@@ -542,6 +544,8 @@ Am 31. März 2023 erklärte あすたん im Austausch mit Moon\_666, dass ein Up
 Im April 2023 berichtete Yukke, die Aussprache von „Hi“ ins Vorlesewörterbuch der damaligen Chat-Verknüpfung aufgenommen zu haben.
 
 Im Mai 2023 fasste あすたん zusammen, welchen Zweck die einzelnen Server damals hatten und wo das Wiki und die Weltkarte zu finden waren. Der Leitfaden zeigte auch Bilder von den Zugängen zum Hauptserver und zum Ressourcenserver. Im selben Monat erklärte あすたん in einer separaten Anleitung die Schutzfunktionen von CoreProtect und LWC.
+
+Am 9. Juni 2023 wurden neue und langjährige Spieler um Vorschläge für Fragen für den FAQ-Kanal gebeten. Als mögliche Fragen wurden der Aufruf der Weltkarte und der Wechsel zur Karte der Ressourcenwelt genannt. [Aufruf zu Fragen für den FAQ-Kanal](https://discord.com/channels/737538781024092170/1116503107619266590/1116503111893258250) [Vorschläge zu den Karten](https://discord.com/channels/737538781024092170/1116503107619266590/1116511197781561354)
 
 Im Juni 2023 fragte タケ im Kanal für den englischsprachigen Austausch, ob es einen Bot für Übersetzungen zwischen Englisch und Japanisch gab.
 

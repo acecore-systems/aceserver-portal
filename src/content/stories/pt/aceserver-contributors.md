@@ -2,7 +2,7 @@
 title: As pessoas que apoiaram o Aceserver
 description: Conheça quem ajudou o Aceserver pelos retratos de skins do Minecraft, relembre as atividades e confira o roteiro de eventos e propostas.
 translationOf: aceserver-contributors
-sourceHash: sha256:232d6be042c1ddd5988275e4d514c5b5ad794b166d48aa216410d9cc561432a5
+sourceHash: sha256:9b08b42c5b31f0d48b923042d399a0ffff0086f334f9a95c32c3cd1d40e97216
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -399,6 +399,8 @@ Em novembro de 2022, あすたん convidou jogadores a ajudar na construção do
 
 Em dezembro do mesmo ano, ジェスター (que publicava como Dōke Shinshi@Jester Sub) informou que construiu com Buraki um cultivo de melancias em estilo de resort, com praia. [Relato da construção do cultivo de melancias](https://discord.com/channels/737538781024092170/779569416438415421/1048866874760364042)
 
+Em 12 de dezembro de 2022, ゆり disse que queria construir uma prefeitura no novo servidor e pediu ideias, inclusive para o tema do edifício. [Pedido de ideias para a prefeitura](https://discord.com/channels/737538781024092170/1051846941211885639/1051846941211885639)
+
 Os registros do antigo canal do Discord sobre a pousada de águas termais informam que edamameRex_java, líder do projeto, recrutou membros e que ゆり anunciou como colaborar com a construção ou os materiais.
 
 No fim de dezembro de 2022, edamameRex_java informou que a construção da pousada de águas termais havia terminado, conforme consta nos registros do projeto.
@@ -542,6 +544,8 @@ Em 31 de março de 2023, em uma conversa com Moon\_666, あすたん explicou qu
 Em abril de 2023, Yukke informou que havia adicionado a pronúncia de «Hi» ao dicionário de leitura em voz alta da integração de chat usada na época.
 
 Em maio de 2023, あすたん reuniu em um guia a finalidade de cada servidor na época e as orientações para encontrar a wiki e o mapa do mundo. O guia também mostrou com imagens as entradas do servidor principal e do servidor de recursos. Nesse mesmo mês, あすたん explicou os recursos de proteção do CoreProtect e do LWC em outro guia.
+
+Em 9 de junho de 2023, jogadores novos e veteranos foram convidados a sugerir perguntas para o canal de perguntas frequentes. Entre as sugestões estavam como consultar o mapa do mundo e como mudar para o mapa do mundo de recursos. [Pedido de sugestões para as perguntas frequentes](https://discord.com/channels/737538781024092170/1116503107619266590/1116503111893258250) [Perguntas sugeridas sobre os mapas](https://discord.com/channels/737538781024092170/1116503107619266590/1116511197781561354)
 
 Em junho de 2023, タケ perguntou no canal de conversa em inglês se havia um bot que pudesse traduzir entre inglês e japonês.
 

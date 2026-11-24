@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:232d6be042c1ddd5988275e4d514c5b5ad794b166d48aa216410d9cc561432a5
+sourceHash: sha256:9b08b42c5b31f0d48b923042d399a0ffff0086f334f9a95c32c3cd1d40e97216
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -399,6 +399,8 @@ En novembre 2022, あすたん a invité les joueurs à participer à la constru
 
 En décembre de la même année, ジェスター (qui publiait sous le nom Dōke Shinshi@Jester Sub) a annoncé avoir créé avec Buraki une culture de pastèques dans le style d’un complexe balnéaire, avec une plage. [Compte rendu de la construction de la culture de pastèques](https://discord.com/channels/737538781024092170/779569416438415421/1048866874760364042)
 
+Le 12 décembre 2022, ゆり a indiqué vouloir construire un hôtel de ville sur le nouveau serveur et a demandé des idées, notamment pour le thème du bâtiment. [Appel à idées pour l’hôtel de ville](https://discord.com/channels/737538781024092170/1051846941211885639/1051846941211885639)
+
 Les archives de l’ancien Discord sur l’auberge thermale indiquent qu’edamameRex_java a recruté des membres en tant que responsable et que ゆり a expliqué comment aider à la construction ou fournir des matériaux.
 
 Fin décembre 2022, edamameRex_java a annoncé l’achèvement de la construction de l’auberge thermale, d’après les archives du projet.
@@ -542,6 +544,8 @@ Le 31 mars 2023, lors d’un échange avec Moon\_666, あすたん a expliqué q
 En avril 2023, Yukke a indiqué avoir ajouté la prononciation de « Hi » au dictionnaire de lecture à voix haute de l’intégration du chat de l’époque.
 
 En mai 2023, あすたん a préparé un guide sur le rôle de chaque serveur à l’époque et sur l’accès au wiki et à la carte du monde. Le guide montrait aussi en images les entrées du serveur principal et du serveur de ressources. Le même mois, あすたん a expliqué les fonctions de protection de CoreProtect et de LWC dans un guide distinct.
+
+Le 9 juin 2023, les nouveaux joueurs comme les habitués ont été invités à proposer des questions pour le salon de la FAQ. Parmi les suggestions figuraient la consultation de la carte du monde et le passage à la carte du monde de ressources. [Appel à proposer des questions pour la FAQ](https://discord.com/channels/737538781024092170/1116503107619266590/1116503111893258250) [Questions proposées sur les cartes](https://discord.com/channels/737538781024092170/1116503107619266590/1116511197781561354)
 
 En juin 2023, タケ a demandé dans le salon d’échange en anglais s’il existait un bot capable de traduire entre l’anglais et le japonais.
 
