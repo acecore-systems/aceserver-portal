@@ -2,7 +2,7 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:a9e73adfe6a9c72368b520f72bf9d0ecd8ea5fec9ce94a970c907da5cf726614
+sourceHash: sha256:72648a3c1d44d8b9ab5c969f15f67b9f09f9f8e054ada9f854ff7640599dd59b
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -421,7 +421,7 @@ El 4 de mayo de 2024, sh informó de que había creado dentro del juego un monum
 
 En mayo de 2024, PillowKebap presentó una solicitud para un proyecto de arte en mapas a gran escala. En agosto, Amagi\_467 presentó un plan para una granja de gólems destinada a las instalaciones públicas. En noviembre, タケ solicitó construir instalaciones como un depósito ferroviario y almacenes.
 
-En abril de 2025, Moon\_666 presentó un proyecto de granja de incursiones que cualquiera podría usar.
+En abril de 2025, Moon\_666 presentó un proyecto de granja de incursiones que cualquiera podría usar. El 15 de abril, Moon\_666 informó de que había terminado la granja de incursiones compatible con Minecraft 1.21 y señaló que cualquiera podía usarla. [Informe de finalización de la granja de incursiones](https://discord.com/channels/737538781024092170/773171457487929344/1361635002839990406)
 
 En mayo de 2025, End&#12539;コッカー compartió ideas para un RPG. Propuso que los jugadores obtuvieran Salmos de la memoria al derrotar enemigos y los canjearan por objetos especiales, y planteó una historia sobre un gran árbol en una isla aislada. Para otro concepto, Supervivencia a la deriva, barajó usar aldeanos hostiles como piratas y estudió el tamaño del mapa.
 
@@ -589,11 +589,17 @@ En julio de 2024, taka8621 documentó el procedimiento para reiniciar el mundo d
 
 El 5 de septiembre de 2024, sekisei informó de que trabajaba en un minijuego en el que se usarían bolas de nieve para romper los bloques bajo los rivales y hacerlos caer. También se habló de recrear otros minijuegos y crear otros nuevos.
 
+El 8 de septiembre de 2024, sekisei habló de un minijuego que estaba desarrollando como proyecto personal. Quería ofrecerlo primero por tiempo limitado en el servidor de eventos y permitir más adelante que se pudiera entrar en cualquier momento. [Planes de publicación del minijuego](https://discord.com/channels/737538781024092170/773171457487929344/1281994129416523786)
+
 El 2 de noviembre de 2024, タケ recordó que el mundo del servidor de recursos se reiniciaba periódicamente en aquel momento y recomendó seguir diseños para Java Edition al construir mecanismos dentro del juego.
 
 En octubre de 2024, sekisei preparó una guía sobre el uso del complemento de portales Advanced Portals con Minecraft 1.21 y versiones posteriores. En diciembre, sekisei recopiló un resumen de la ubicación de los portales en el servidor.
 
+El 24 de diciembre de 2024, asutarisucu propuso una revisión a fondo de los complementos existentes de Aceserver. Al día siguiente explicó que el entorno Paper de entonces usaba la versión como complemento del mod que se estaba comentando. [Propuesta de revisión de complementos](https://discord.com/channels/737538781024092170/773171457487929344/1321107837891383317) [Explicación sobre la versión que se usaba entonces](https://discord.com/channels/737538781024092170/773171457487929344/1321352642907078706)
+
 En enero de 2025, sekisei anunció que la receta de fabricación de hierba no estaba disponible tras una actualización.
+
+El 11 de marzo de 2025, End&#12539;コッカー redactó un borrador de guía para nuevos jugadores que abarcaba la consulta del sitio oficial y la wiki, la entrada a Discord y la vinculación con Minecraft. [Borrador de guía para nuevos jugadores](https://discord.com/channels/737538781024092170/773171457487929344/1348935788095737869)
 
 El 26 de marzo de 2025, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; compartió un plan para revisar en una reunión general las propuestas sobre la organización de Discord y los servidores de juego antes de pasar a preparar el vestíbulo y otros espacios.
 

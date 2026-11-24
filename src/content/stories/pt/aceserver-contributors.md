@@ -2,7 +2,7 @@
 title: As pessoas que apoiaram o Aceserver
 description: Conheça quem ajudou o Aceserver pelos retratos de skins do Minecraft, relembre as atividades e confira o roteiro de eventos e propostas.
 translationOf: aceserver-contributors
-sourceHash: sha256:a9e73adfe6a9c72368b520f72bf9d0ecd8ea5fec9ce94a970c907da5cf726614
+sourceHash: sha256:72648a3c1d44d8b9ab5c969f15f67b9f09f9f8e054ada9f854ff7640599dd59b
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -421,7 +421,7 @@ Em 4 de maio de 2024, sh informou ter criado um monumento no jogo dedicado a um 
 
 Em maio de 2024, PillowKebap apresentou um pedido para um projeto de arte em mapas em grande escala. Em agosto, Amagi\_467 apresentou um plano de uma fazenda de golens para instalações públicas. Em novembro, タケ solicitou a construção de estruturas como um pátio ferroviário e depósitos.
 
-Em abril de 2025, Moon\_666 apresentou o plano de uma fazenda de invasões que qualquer jogador poderia usar.
+Em abril de 2025, Moon\_666 apresentou o plano de uma fazenda de invasões que qualquer jogador poderia usar. Em 15 de abril, Moon\_666 informou que a fazenda de invasões compatível com o Minecraft 1.21 estava pronta e que qualquer jogador poderia usá-la. [Relato da conclusão da fazenda de invasões](https://discord.com/channels/737538781024092170/773171457487929344/1361635002839990406)
 
 Em maio de 2025, End&#12539;コッカー compartilhou ideias para um RPG. A proposta incluía trocar por itens especiais os Salmos da Memória obtidos ao derrotar inimigos, além de uma história sobre uma grande árvore em uma ilha isolada. Em outra ideia, Sobrevivência à Deriva, considerou usar aldeões hostis como piratas e discutiu o tamanho do mapa.
 
@@ -589,11 +589,17 @@ Em julho de 2024, taka8621 documentou o procedimento de reinicialização do mun
 
 Em 5 de setembro de 2024, sekisei informou que estava criando um minijogo em que os jogadores usariam bolas de neve para quebrar os blocos sob os adversários e fazê-los cair. Também foram discutidas propostas para recriar outros minijogos e desenvolver novos.
 
+Em 8 de setembro de 2024, sekisei falou sobre um minijogo que estava desenvolvendo como projeto pessoal. A ideia era disponibilizá-lo primeiro por tempo limitado no servidor de eventos e, mais adiante, permitir que os jogadores entrassem a qualquer momento. [Planos de lançamento do minijogo](https://discord.com/channels/737538781024092170/773171457487929344/1281994129416523786)
+
 Em 2 de novembro de 2024, タケ lembrou que, na época, o mundo do servidor de recursos passava por reinicializações regulares e orientou os jogadores a seguir projetos para a Edição Java ao construir mecanismos no jogo.
 
 Em outubro de 2024, sekisei preparou um guia sobre o uso do plugin de portais Advanced Portals no Minecraft 1.21 e em versões posteriores. Em dezembro, reuniu informações sobre a localização dos portais no servidor.
 
+Em 24 de dezembro de 2024, asutarisucu propôs uma revisão ampla dos plugins existentes do Aceserver. No dia seguinte, explicou que o ambiente Paper da época usava a versão em plugin do mod em discussão. [Proposta de revisão dos plugins](https://discord.com/channels/737538781024092170/773171457487929344/1321107837891383317) [Explicação sobre a versão em plugin usada na época](https://discord.com/channels/737538781024092170/773171457487929344/1321352642907078706)
+
 Em janeiro de 2025, sekisei informou que a receita de fabricação de grama estava indisponível após uma atualização.
+
+Em 11 de março de 2025, End&#12539;コッカー preparou um rascunho de guia para novos jogadores, incluindo como consultar o site oficial e a wiki, entrar no Discord e fazer a vinculação com o Minecraft. [Rascunho do guia para novos jogadores](https://discord.com/channels/737538781024092170/773171457487929344/1348935788095737869)
 
 Em 26 de março de 2025, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; compartilhou um plano para analisar em uma reunião geral as propostas de organização do Discord e dos servidores de jogo antes de avançar com a preparação do lobby e de outros espaços.
 

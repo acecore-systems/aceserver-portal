@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:a9e73adfe6a9c72368b520f72bf9d0ecd8ea5fec9ce94a970c907da5cf726614
+sourceHash: sha256:72648a3c1d44d8b9ab5c969f15f67b9f09f9f8e054ada9f854ff7640599dd59b
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -421,7 +421,7 @@ On May 4, 2024, sh reported creating an in-game monument dedicated to a player a
 
 In May 2024, PillowKebap applied for a large map art project. In August, Amagi\_467 submitted a plan for a golem farm for public facilities. In November, タケ applied to build facilities including a rail depot and warehouses.
 
-In April 2025, Moon\_666 submitted a proposal for a raid farm that anyone could use.
+In April 2025, Moon\_666 submitted a proposal for a raid farm that anyone could use. On April 15, Moon\_666 reported completing the Minecraft 1.21-compatible raid farm and said it was open for anyone to use. [Raid farm completion report](https://discord.com/channels/737538781024092170/773171457487929344/1361635002839990406)
 
 In May 2025, End&#12539;コッカー shared RPG ideas for trading Psalms of Memory earned by defeating enemies for special items, and for a story about a great tree on an isolated island. For a separate Castaway Survival concept, they considered using illagers as pirates and discussed how large the map could be.
 
@@ -589,11 +589,17 @@ In July 2024, taka8621 documented how to reset the resource server world and sha
 
 On September 5, 2024, sekisei reported working on a minigame in which players would use snowballs to break the blocks beneath opponents and make them fall. The discussion also covered recreating other minigames and making new ones.
 
+On September 8, 2024, sekisei discussed a minigame they were developing as a personal project. They wanted to make it available on the event server for a limited time at first and eventually let players join whenever they wanted. [Minigame release plans](https://discord.com/channels/737538781024092170/773171457487929344/1281994129416523786)
+
 On November 2, 2024, タケ reminded players that the world on the resource server was reset regularly at the time and advised them to follow Java Edition designs when building in-game contraptions.
 
 In October 2024, sekisei prepared a guide to using the Advanced Portals plugin with Minecraft 1.21 and later versions. In December, sekisei compiled a summary of where portals were located on the server.
 
+On December 24, 2024, asutarisucu proposed a major revision of Aceserver’s existing plugins. The next day, they explained that the setup running Paper at the time used the plugin version of the mod under discussion. [Proposal to review the plugins](https://discord.com/channels/737538781024092170/773171457487929344/1321107837891383317) [Explanation of the plugin version used at the time](https://discord.com/channels/737538781024092170/773171457487929344/1321352642907078706)
+
 In January 2025, sekisei announced that the grass crafting recipe was unavailable following an update.
+
+On March 11, 2025, End&#12539;コッカー drafted a guide for first-time players that covered visiting the official website and wiki, joining Discord, and linking it with Minecraft. [Draft guide for first-time players](https://discord.com/channels/737538781024092170/773171457487929344/1348935788095737869)
 
 On March 26, 2025, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; shared an outline for reviewing proposals for the Discord and game server setup at a general meeting before starting work on the lobby and other preparations.
 

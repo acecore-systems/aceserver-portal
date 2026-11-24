@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:a9e73adfe6a9c72368b520f72bf9d0ecd8ea5fec9ce94a970c907da5cf726614
+sourceHash: sha256:72648a3c1d44d8b9ab5c969f15f67b9f09f9f8e054ada9f854ff7640599dd59b
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -421,7 +421,7 @@ Am 4. Mai 2024 berichtete sh, im Spiel ein Denkmal für einen Spieler gebaut zu 
 
 Im Mai 2024 reichte PillowKebap einen Antrag für ein großes Kartenkunstprojekt ein. Im August legte Amagi\_467 einen Plan für eine Golemfarm für öffentliche Einrichtungen vor. Im November beantragte タケ den Bau von Einrichtungen wie einem Bahnbetriebshof und Lagerhäusern.
 
-Im April 2025 reichte Moon\_666 einen Plan für eine Raidfarm ein, die alle nutzen könnten.
+Im April 2025 reichte Moon\_666 einen Plan für eine Raidfarm ein, die alle nutzen könnten. Am 15. April meldete Moon\_666 die Fertigstellung der mit Minecraft 1.21 kompatiblen Raidfarm und wies darauf hin, dass alle sie nutzen konnten. [Bericht zur Fertigstellung der Raidfarm](https://discord.com/channels/737538781024092170/773171457487929344/1361635002839990406)
 
 Im Mai 2025 teilte End&#12539;コッカー Ideen für ein Rollenspiel. Die beim Besiegen von Gegnern erhaltenen Psalmen der Erinnerung sollten sich gegen besondere Gegenstände eintauschen lassen. Als Handlung schlug End&#12539;コッカー eine Geschichte um einen großen Baum auf einer abgelegenen Insel vor. Für das separate Konzept Überleben auf See zog End&#12539;コッカー feindliche Dorfbewohner als Piraten in Betracht und überlegte, wie groß die Karte sein sollte.
 
@@ -589,11 +589,17 @@ Im Juli 2024 dokumentierte taka8621 das Vorgehen zum Zurücksetzen der Welt auf 
 
 Am 5. September 2024 berichtete sekisei von der Arbeit an einem Minispiel, in dem Spieler mit Schneebällen die Blöcke unter ihren Gegnern zerstören und sie so zu Fall bringen sollten. Auch der Nachbau anderer Minispiele und die Entwicklung neuer Minispiele wurden besprochen.
 
+Am 8. September 2024 sprach sekisei über ein Minispiel, das als eigenes Projekt in Entwicklung war. sekisei wollte es zunächst zeitlich begrenzt auf dem Eventserver anbieten und später jederzeit zugänglich machen. [Pläne zur Veröffentlichung des Minispiels](https://discord.com/channels/737538781024092170/773171457487929344/1281994129416523786)
+
 Am 2. November 2024 wies タケ darauf hin, dass die Welt auf dem Ressourcenserver damals regelmäßig zurückgesetzt wurde, und empfahl für Mechanismen im Spiel Bauweisen, die für die Java Edition geeignet waren.
 
 Im Oktober 2024 erstellte sekisei eine Anleitung zur Nutzung des Portal-Plugins Advanced Portals mit Minecraft 1.21 und späteren Versionen. Im Dezember fasste sekisei zusammen, wo sich die Portale auf dem Server befanden.
 
+Am 24. Dezember 2024 schlug asutarisucu vor, die bestehenden Plugins von Aceserver grundlegend zu überarbeiten. Am 25. Dezember erklärte asutarisucu zu der besprochenen Mod, dass in der damaligen Paper-Umgebung die Plugin-Version verwendet wurde. [Vorschlag zur Überarbeitung der Plugins](https://discord.com/channels/737538781024092170/773171457487929344/1321107837891383317) [Erklärung zur damaligen Plugin-Version](https://discord.com/channels/737538781024092170/773171457487929344/1321352642907078706)
+
 Im Januar 2025 teilte sekisei mit, dass das Herstellungsrezept für Gras nach einem Update nicht verfügbar war.
+
+Am 11. März 2025 entwarf End&#12539;コッカー eine Anleitung für neue Spieler, die den Besuch der offiziellen Website und des Wikis, den Beitritt zu Discord und die Verknüpfung mit Minecraft abdeckte. [Entwurf der Anleitung für neue Spieler](https://discord.com/channels/737538781024092170/773171457487929344/1348935788095737869)
 
 Am 26. März 2025 teilte LuMiSIA\_&#26376;&#31070;&#24736;&#33673; einen Ablaufplan, nach dem in einer allgemeinen Sitzung zunächst die Vorschläge für den Aufbau von Discord und der Spielserver geprüft werden sollten, bevor die Vorbereitungen für die Lobby und andere Bereiche beginnen würden.
 

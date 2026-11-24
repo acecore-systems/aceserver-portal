@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:a9e73adfe6a9c72368b520f72bf9d0ecd8ea5fec9ce94a970c907da5cf726614
+sourceHash: sha256:72648a3c1d44d8b9ab5c969f15f67b9f09f9f8e054ada9f854ff7640599dd59b
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -421,7 +421,7 @@ Le 4 mai 2024, sh a annoncé avoir créé dans le jeu un monument consacré à u
 
 En mai 2024, PillowKebap a déposé une demande pour un grand projet d’art sur carte. En août, Amagi\_467 a présenté un projet de ferme à golems pour les installations publiques. En novembre, タケ a demandé à construire des installations dont un dépôt ferroviaire et des entrepôts.
 
-En avril 2025, Moon\_666 a déposé un projet de ferme à raids ouverte à tous.
+En avril 2025, Moon\_666 a déposé un projet de ferme à raids ouverte à tous. Le 15 avril, Moon\_666 a annoncé l’achèvement de la ferme à raids compatible avec Minecraft 1.21 et a indiqué que tout le monde pouvait l’utiliser. [Annonce de l’achèvement de la ferme à raids](https://discord.com/channels/737538781024092170/773171457487929344/1361635002839990406)
 
 En mai 2025, End&#12539;コッカー a présenté des idées pour un RPG. Le projet permettrait d’échanger contre des objets spéciaux les Psaumes de la mémoire obtenus en battant des ennemis. Un scénario mettait en scène un grand arbre sur une île isolée. Pour un autre projet, Survie à la dérive, End&#12539;コッカー a envisagé de donner le rôle des pirates à des villageois hostiles et a réfléchi à la taille de la carte.
 
@@ -589,11 +589,17 @@ En juillet 2024, taka8621 a rédigé la procédure de réinitialisation du monde
 
 Le 5 septembre 2024, sekisei a indiqué travailler sur un mini-jeu où les joueurs utiliseraient des boules de neige pour casser les blocs sous leurs adversaires et les faire tomber. La discussion a aussi porté sur la recréation d’autres mini-jeux et la création de nouveaux.
 
+Le 8 septembre 2024, sekisei a évoqué un mini-jeu en cours de développement à titre personnel. L’idée était de le rendre d’abord accessible pour une durée limitée sur le serveur d’événements, puis de permettre aux joueurs de rejoindre la partie à tout moment. [Projet de mise à disposition du mini-jeu](https://discord.com/channels/737538781024092170/773171457487929344/1281994129416523786)
+
 Le 2 novembre 2024, タケ a rappelé que le monde du serveur de ressources était réinitialisé régulièrement à l’époque et a conseillé de suivre des méthodes adaptées à l’édition Java pour construire des mécanismes dans le jeu.
 
 En octobre 2024, sekisei a préparé un guide sur l’utilisation du plugin de portails Advanced Portals avec Minecraft 1.21 et les versions ultérieures. En décembre, sekisei a fait le point sur l’emplacement des portails du serveur.
 
+Le 24 décembre 2024, asutarisucu a proposé de revoir en profondeur les plugins existants d’Aceserver. Le lendemain, asutarisucu a expliqué que l’environnement Paper de l’époque utilisait la version sous forme de plugin du mod dont il était question. [Proposition de révision des plugins](https://discord.com/channels/737538781024092170/773171457487929344/1321107837891383317) [Explication sur la version du plugin utilisée à l’époque](https://discord.com/channels/737538781024092170/773171457487929344/1321352642907078706)
+
 En janvier 2025, sekisei a annoncé que la recette de fabrication de l’herbe était indisponible à la suite d’une mise à jour.
+
+Le 11 mars 2025, End&#12539;コッカー a rédigé un projet de guide pour les nouveaux joueurs, de la consultation du site officiel et du wiki à l’arrivée sur Discord et à la liaison avec Minecraft. [Projet de guide pour les nouveaux joueurs](https://discord.com/channels/737538781024092170/773171457487929344/1348935788095737869)
 
 Le 26 mars 2025, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; a partagé un plan pour examiner en réunion générale les propositions d’organisation de Discord et des serveurs de jeu, avant de passer à la préparation du hall et d’autres espaces.
 
