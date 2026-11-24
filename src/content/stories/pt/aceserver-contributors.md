@@ -2,7 +2,7 @@
 title: As pessoas que apoiaram o Aceserver
 description: Conheça quem ajudou o Aceserver pelos retratos de skins do Minecraft, relembre as atividades e confira o roteiro de eventos e propostas.
 translationOf: aceserver-contributors
-sourceHash: sha256:929d8f70148865162e21ffdc6ce11b76d39264eeec6d62caac1fc0b971bbedcf
+sourceHash: sha256:a9e73adfe6a9c72368b520f72bf9d0ecd8ea5fec9ce94a970c907da5cf726614
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -229,6 +229,8 @@ Em 28 de outubro de 2025, sekisei propôs realizar encontros e eventos regulares
 
 Em outubro de 2025, sh agradeceu a quem ajudou a preparar eventos do Comitê de Revitalização do Aceserver e pediu ideias para o próximo. Em novembro, um anúncio apresentou amagi_467 como idealizador do primeiro torneio de mahjong do Aceserver, que o comitê planejava organizar. [Agradecimentos e pedido de ideias](https://discord.com/channels/737538781024092170/774152638450237460/1432028687376715897) [Anúncio do torneio de mahjong](https://discord.com/channels/737538781024092170/774152638450237460/1442742157315149865)
 
+Em 8 de novembro de 2025, End&#12539;コッカー sugeriu um encontro informal em que os participantes fariam um passeio e sugeririam destinos ao longo da visita. [Proposta de encontro para um passeio](https://discord.com/channels/737538781024092170/773171457487929344/1436565950622077009)
+
 De novembro a dezembro de 2025, sh convidou pessoas sem experiência em mahjong para uma aula de iniciação prevista para 13 de dezembro.
 
 Em 24 de novembro de 2025, タケ abriu uma chamada de sugestões para o nome do evento de fim de ano. &#12356;&#12396;&#12397;&#12371; propôs «&#24179;&#26041;&#25968;&#65;&#83;&#70;», タケ propôs «&#12402;&#12425;&#12367;&#65;&#83;&#70;», End&#12539;コッカー propôs «&#28783;&#12427;&#97;&#115;&#102;» e, em 30 de novembro, sekisei propôs «&#12388;&#12367;&#12427;&#65;&#83;&#70;». タケ anunciou a votação final em 14 de dezembro. Quando ela terminou no dia 15, «#&#12388;&#12367;&#12427;&#65;&#83;&#70;» foi a opção mais votada, com 57%.
@@ -425,6 +427,8 @@ Em maio de 2025, End&#12539;コッカー compartilhou ideias para um RPG. A prop
 
 Em 22 de junho de 2025, End&#12539;コッカー informou que estava construindo em uma ilha feita por Yukke.
 
+Em 22 de julho de 2025, &#12415;&#12389;&#12364;&#12397; pediu contribuições para construções em dois locais. Os interessados podiam enviar apenas ideias ou se oferecer para construir pessoalmente. [Pedido de contribuições para construções em dois locais](https://discord.com/channels/737538781024092170/773171457487929344/1397091645744349236)
+
 Em 1º de setembro de 2025, End&#12539;コッカー propôs incorporar criações de jogadores da comunidade como instalações do servidor de conteúdo.
 
 Em 1º de setembro de 2025, End&#12539;コッカー compartilhou, com uma imagem, a ideia de usar paredes de fachada para dar forma à parte externa do lobby.
@@ -607,6 +611,8 @@ Em 12 de setembro de 2025, Yukke compartilhou um esboço sobre a moeda do jogo. 
 
 Em 1º de outubro de 2025, Pluto propôs adicionar ao lobby um recurso para redefinir o progresso dos jogadores.
 
+Em 5 de outubro de 2025, sekisei apontou questões a esclarecer sobre a proposta de estrutura dos servidores e de moeda. Entre elas estavam como consultar os Ace Coins, como salvar os dados dos mundos e se seria possível realizar eventos no servidor principal. [Questões sobre a estrutura dos servidores e a moeda](https://discord.com/channels/737538781024092170/773171457487929344/1424077696555815053)
+
 Em 6 e 27 de outubro de 2025, あすたん informou que havia preparado um sistema para reunir e conferir as configurações dos minijogos na tela.
 
 Entre o fim de outubro e o início de novembro de 2025, ゆり organizou e publicou separadamente as regras gerais, do servidor de sobrevivência, de conteúdo, de temporadas, de criação de servidores temáticos, da comunidade e do Discord, no fórum de regras do Discord oficial. [Publicação das regras gerais](https://discord.com/channels/737538781024092170/1433831969816449064/1433831969816449064) [Publicação das regras da comunidade](https://discord.com/channels/737538781024092170/1433830521238061227/1433830521238061227) [Publicação das regras do Discord](https://discord.com/channels/737538781024092170/1433957818674970654/1433957818674970654)
@@ -618,6 +624,8 @@ Em novembro de 2025, ゆり explicou como vincular Minecraft e Discord na época
 Em novembro de 2025, sekisei propôs uma loja vinculada às Ace Coins para cargos e itens cosméticos, além de um recurso para personalizar perfis.
 
 Em dezembro de 2025, sekisei publicou orientações para usar o servidor temático Season Creative. Em janeiro de 2026, informou que havia transferido a gestão do servidor para sh31415. [Guia do Season Creative](https://discord.com/channels/737538781024092170/1445004286793879602/1445004286793879602) [Relato da transferência da gestão](https://discord.com/channels/737538781024092170/1445004286793879602/1460090096475832425)
+
+Em 14 de dezembro de 2025, sekisei propôs que o servidor anteriormente sugerido para o mapa da temporada também funcionasse como lobby. [Proposta para o servidor do mapa da temporada e o lobby](https://discord.com/channels/737538781024092170/773171457487929344/1449615766927314956)
 
 Em 14 de janeiro de 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; explicou aos novos jogadores as diferenças para se conectar pelo Minecraft Java Edition e Bedrock Edition. Em outra mensagem no mesmo canal, compartilhou uma única imagem que mostrava, lado a lado nas duas edições, o botão para adicionar um servidor e os campos de nome e endereço. [Guia de conexão para Java e Bedrock](https://discord.com/channels/737538781024092170/1460983001809948744/1460983826439471380) [Telas de Java e Bedrock lado a lado](https://discord.com/channels/737538781024092170/1460983001809948744/1460983916172148859)
 
