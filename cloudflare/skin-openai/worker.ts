@@ -1,3 +1,5 @@
+import { isMetaSkinDesignModel } from '../../config/skin-design-model.ts'
+
 type Env = { META_API_KEY_STORE?: { get(): Promise<string> } }
 
 const MAX_BODY_BYTES = 1_000_000
@@ -40,7 +42,7 @@ function isSkinRequest(value: unknown): value is Record<string, unknown> {
         'stream',
       ].includes(key),
     ) &&
-    body.model === 'muse-ember-1.0' &&
+    isMetaSkinDesignModel(body.model) &&
     body.max_completion_tokens === 12_000 &&
     body.reasoning_effort === 'medium' &&
     body.store === false &&
@@ -90,11 +92,7 @@ export default {
           Authorization: `Bearer ${apiKey}`,
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-          ...parsed,
-          model: 'muse-ember-1.0',
-          reasoning_effort: 'medium',
-        }),
+        body: JSON.stringify(parsed),
         signal: AbortSignal.timeout(240_000),
       })
       if (!response.ok) {

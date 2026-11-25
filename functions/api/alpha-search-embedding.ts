@@ -1,7 +1,29 @@
+import modelConfig from '../../config/ai-models.cjs'
+
 export const ALPHA_SEARCH_EMBEDDING_MODEL = '@cf/baai/bge-m3'
 export const ALPHA_SEARCH_EMBEDDING_DIMENSIONS = 1024
 
-export const VOYAGE_SEARCH_EMBEDDING_MODEL = 'voyage-4-lite'
+// The bound Voyage indexes were built in this model's embedding space.
+const VOYAGE_INDEX_MODEL = 'voyage-4-lite'
+const selection = modelConfig?.features?.['search.embedding']
+
+export const VOYAGE_SEARCH_EMBEDDING_MODEL =
+  modelConfig?.schema_version === 1 &&
+  selection?.profile === 'embedding.default' &&
+  selection.provider === 'mongodb' &&
+  selection.execution_mode === 'realtime' &&
+  selection.api_model_id === VOYAGE_INDEX_MODEL
+    ? selection.api_model_id
+    : null
+
+export function requireVoyageEmbeddingModel(): string {
+  if (!VOYAGE_SEARCH_EMBEDDING_MODEL) {
+    throw new Error(
+      'The shared embedding policy is incompatible with the existing Voyage index. Rebuild the index and coordinate the model switch.',
+    )
+  }
+  return VOYAGE_SEARCH_EMBEDDING_MODEL
+}
 
 export function canUseAlphaSearchEmbedding(env) {
   const model = env?.SEARCH_EMBEDDING_MODEL || ALPHA_SEARCH_EMBEDDING_MODEL
