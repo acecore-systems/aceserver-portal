@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:30941d86ad9952ae443f117745d458397e433cb6341e2733c89e4302ec8642ed
+sourceHash: sha256:12ea8cf93c4b0cc837c628b9f38b29b5bad8578bf16df9df8a1e2e63377c7236
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -319,7 +319,7 @@ Le 7 mars 2026, End&#12539;コッカー a sollicité des idées d’événements
 
 En mars 2026, &#12486;&#12451;&#12512;&#12540; a sollicité des idées pour une nouvelle icône et des récits sur ce qui se passait sur le serveur pour le Journal d’Aceserver du comité de revitalisation d’Aceserver.
 
-Le 25 avril 2026, &#12450;&#12510;&#12484; a résumé les consignes de construction pour un événement de siège dans Minecraft. Le thème du château était fixé et des champs permettaient de préciser le style architectural et la palette de couleurs. Le 10 mai, &#12450;&#12510;&#12484; a proposé un ordre de travail pour construire le bâtiment puis le copier sur le terrain de l’événement.
+Le 25 avril 2026, &#12450;&#12510;&#12484; a résumé les consignes de construction pour un événement de siège dans Minecraft. Le thème du château était fixé et des champs permettaient de préciser le style architectural et la palette de couleurs. Le 5 mai, &#12450;&#12510;&#12484; a annoncé avoir construit une base provisoire et a partagé une capture d’écran du jeu. Le 10 mai, &#12450;&#12510;&#12484; a proposé un ordre de travail pour construire le bâtiment puis le copier sur le terrain de l’événement.
 
 Le 6 mai 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; a préparé une proposition pour le festival d’été « &#12360;&#65374;&#22799;&#31085;&#12426; », pensé comme un lieu de rencontre entre nouveaux membres et habitués. Le projet prévoyait des stands tenus par les participants et un feu d’artifice. Le 19 mai, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; a indiqué avoir obtenu l’aide de &#12475;&#12531;&#12481;&#12517;&#12522;&#12474; pour le feu d’artifice.
 

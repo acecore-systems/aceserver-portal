@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:30941d86ad9952ae443f117745d458397e433cb6341e2733c89e4302ec8642ed
+sourceHash: sha256:12ea8cf93c4b0cc837c628b9f38b29b5bad8578bf16df9df8a1e2e63377c7236
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -319,7 +319,7 @@ On March 7, 2026, End&#12539;コッカー invited event ideas and volunteers, in
 
 In March 2026, &#12486;&#12451;&#12512;&#12540; asked people to submit ideas for a new icon and stories about happenings on the server for the Aceserver Revitalization Committee’s Aceserver Diary.
 
-On April 25, 2026, &#12450;&#12510;&#12484; summarized the building brief for a Minecraft siege event. The brief set a castle theme and included fields for the architectural style and color scheme. On May 10, &#12450;&#12510;&#12484; proposed the order for building the structure and copying it onto the event terrain.
+On April 25, 2026, &#12450;&#12510;&#12484; summarized the building brief for a Minecraft siege event. The brief set a castle theme and included fields for the architectural style and color scheme. On May 5, &#12450;&#12510;&#12484; reported building a temporary base and shared an in-game screenshot. On May 10, &#12450;&#12510;&#12484; proposed the order for building the structure and copying it onto the event terrain.
 
 On May 6, 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; drew up a proposal for a summer festival called “&#12360;&#65374;&#22799;&#31085;&#12426;” where new and longtime members could meet. The plan suggested participant-run stalls and a fireworks show. On May 19, they reported securing help from &#12475;&#12531;&#12481;&#12517;&#12522;&#12474; with the fireworks.
 

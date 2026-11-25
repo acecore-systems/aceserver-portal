@@ -2,7 +2,7 @@
 title: As pessoas que apoiaram o Aceserver
 description: Conheça quem ajudou o Aceserver pelos retratos de skins do Minecraft, relembre as atividades e confira o roteiro de eventos e propostas.
 translationOf: aceserver-contributors
-sourceHash: sha256:30941d86ad9952ae443f117745d458397e433cb6341e2733c89e4302ec8642ed
+sourceHash: sha256:12ea8cf93c4b0cc837c628b9f38b29b5bad8578bf16df9df8a1e2e63377c7236
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -319,7 +319,7 @@ Em 7 de março de 2026, End&#12539;コッカー pediu ideias para eventos e volu
 
 Em março de 2026, &#12486;&#12451;&#12512;&#12540; pediu propostas de um novo ícone e relatos de acontecimentos no servidor para o Diário do Aceserver, do Comitê de Revitalização do Aceserver.
 
-Em 25 de abril de 2026, &#12450;&#12510;&#12484; resumiu as orientações de construção para um evento de cerco no Minecraft. As orientações definiam o castelo como tema e incluíam campos para indicar o estilo arquitetônico e a paleta de cores. Em 10 de maio, &#12450;&#12510;&#12484; propôs uma ordem de trabalho para construir a estrutura e copiá-la para o terreno do evento.
+Em 25 de abril de 2026, &#12450;&#12510;&#12484; resumiu as orientações de construção para um evento de cerco no Minecraft. As orientações definiam o castelo como tema e incluíam campos para indicar o estilo arquitetônico e a paleta de cores. Em 5 de maio, &#12450;&#12510;&#12484; relatou que havia construído uma base provisória e compartilhou uma captura de tela do jogo. Em 10 de maio, &#12450;&#12510;&#12484; propôs uma ordem de trabalho para construir a estrutura e copiá-la para o terreno do evento.
 
 Em 6 de maio de 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; preparou uma proposta para o festival de verão “&#12360;&#65374;&#22799;&#31085;&#12426;”, pensado como um espaço de convivência para participantes novos e antigos. A proposta incluía barracas organizadas pelos participantes e uma apresentação de fogos de artifício. Em 19 de maio, informou que havia conseguido a colaboração de &#12475;&#12531;&#12481;&#12517;&#12522;&#12474; para os fogos.
 
