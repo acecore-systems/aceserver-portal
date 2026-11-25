@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:b9b96e62c27a3f85f5a1ff7a9ac217e9cbcd4016857f00943926c9a12c1a3bc6
+sourceHash: sha256:6ae2d97a0ebc512be686acd1cfcdf084b84e8b2cad1681117326fb35875c7886
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -199,7 +199,7 @@ On January 1, 2024, タケ reported that the New Year’s celebration had ended 
 
 On February 4, 2024, ゆり reported composing Aceserver’s official theme song. ゆり noted that the version was short and suggested inviting people to submit lyrics. Later that day, ゆり shared a provisional version titled “ACE&#12394;&#20882;&#38522;”. [Theme song composition report](https://discord.com/channels/737538781024092170/882218642459205672/1203626958861377548) [Note on the provisional version](https://discord.com/channels/737538781024092170/882218642459205672/1203659498804355072)
 
-On March 12, 2024, a downloadable PvE map made by Harubie was announced on Discord, and version 2.0 was released the same day. [PvE map announcement](https://discord.com/channels/737538781024092170/1216934048719442030)
+On March 12, 2024, a downloadable PvE map made by Harubie was announced on Discord, and version 2.0 was released the same day. The version 2.0 download contained world data in the Java Edition format. [PvE map announcement](https://discord.com/channels/737538781024092170/1216934048719442030) [Version 2.0 download post](https://discord.com/channels/737538781024092170/1216934048719442030/1216934770957750464)
 
 In the version 3.0 post, Pluto said that a resource pack was included for the world and recommended groups of about three to five players. Version 3.1 added to the instructions and fixed bugs. The notes for versions 3.2 and 3.3 reported difficulty adjustments and map improvements. The version 3.3 download contained the world data for “&#12473;&#12479;&#12531;&#12500;&#12540;&#12489;” (Stampede) and its resource pack. [Version 3.0 announcement](https://discord.com/channels/737538781024092170/1216934048719442030/1217705674666938378) [Changes in version 3.1](https://discord.com/channels/737538781024092170/1216934048719442030/1217972784563749005) [Changes in version 3.2](https://discord.com/channels/737538781024092170/1216934048719442030/1218107358295887933) [Changes in version 3.3](https://discord.com/channels/737538781024092170/1216934048719442030/1218131501774798898)
 

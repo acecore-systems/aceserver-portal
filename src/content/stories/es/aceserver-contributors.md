@@ -2,7 +2,7 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:b9b96e62c27a3f85f5a1ff7a9ac217e9cbcd4016857f00943926c9a12c1a3bc6
+sourceHash: sha256:6ae2d97a0ebc512be686acd1cfcdf084b84e8b2cad1681117326fb35875c7886
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -199,7 +199,7 @@ El 1 de enero de 2024, タケ informó de que había terminado la celebración d
 
 El 4 de febrero de 2024, ゆり informó de que había compuesto la canción temática oficial de Aceserver. Indicó que se trataba de una versión corta y propuso invitar a enviar letras. Ese mismo día, compartió una versión provisional titulada «ACE&#12394;&#20882;&#38522;». [Informe sobre la composición de la canción](https://discord.com/channels/737538781024092170/882218642459205672/1203626958861377548) [Aclaración sobre la versión provisional](https://discord.com/channels/737538781024092170/882218642459205672/1203659498804355072)
 
-El 12 de marzo de 2024 se anunció en Discord un mapa PvE descargable creado por Harubie y ese mismo día se publicó la versión 2.0. [Anuncio del mapa PvE](https://discord.com/channels/737538781024092170/1216934048719442030)
+El 12 de marzo de 2024 se anunció en Discord un mapa PvE descargable creado por Harubie y ese mismo día se publicó la versión 2.0. La descarga de la versión 2.0 incluía los datos del mundo en el formato de Java Edition. [Anuncio del mapa PvE](https://discord.com/channels/737538781024092170/1216934048719442030) [Publicación de descarga de la versión 2.0](https://discord.com/channels/737538781024092170/1216934048719442030/1216934770957750464)
 
 En la publicación de la versión 3.0, Pluto anunció que el mundo incluía un paquete de recursos y recomendó grupos de unas tres a cinco personas. La versión 3.1 amplió las instrucciones y corrigió errores. Las publicaciones de las versiones 3.2 y 3.3 informaron de ajustes de dificultad y mejoras del mapa. La descarga de la versión 3.3 incluía los datos del mundo «&#12473;&#12479;&#12531;&#12500;&#12540;&#12489;» y su paquete de recursos. [Anuncio de la versión 3.0](https://discord.com/channels/737538781024092170/1216934048719442030/1217705674666938378) [Cambios en la versión 3.1](https://discord.com/channels/737538781024092170/1216934048719442030/1217972784563749005) [Cambios en la versión 3.2](https://discord.com/channels/737538781024092170/1216934048719442030/1218107358295887933) [Cambios en la versión 3.3](https://discord.com/channels/737538781024092170/1216934048719442030/1218131501774798898)
 
