@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:fd17de6bdd9738965da820297b2dffa821a904221d5058bf2fe795a207ffe9e6
+sourceHash: sha256:dee59cf5ad44a97fa4fec18c8b3e8d4d9bc8d4f7e00c8785169e3ae528329b7c
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -32,6 +32,8 @@ In Between Tower’s old Discord reports, PillowKebap announced the completion o
 In August 2021, Gui said the server began so anyone could visit はっ and play in their world. Gui also announced that コタ would take over operational decisions for the time being. コタ confirmed accepting the role. [Gui’s announcement](https://discord.com/channels/737538781024092170/774152638450237460/880745650009047080) [コタ’s announcement](https://discord.com/channels/737538781024092170/774152638450237460/880760188351705178)
 
 In August 2021, KOTA-SAN previewed a call for first-anniversary logo designs. In September, Mugi reported reorganizing Discord and opened submissions. On October 2, Mugi opened voting on five candidate designs. On November 4, てぃあ announced that YM’s design had been selected and applied on Discord, and thanked YM, J&#27663;, Mea, and Café Mocha for their work. [Call preview](https://discord.com/channels/737538781024092170/774152638450237460/881193662321684601) [Submissions open](https://discord.com/channels/737538781024092170/774152638450237460/882433940621758474) [Voting announcement](https://discord.com/channels/737538781024092170/882218927055331369/893689014039765053) [Selection and thanks to the designers](https://discord.com/channels/737538781024092170/882218927055331369/905494118606725131) [Selected logo announcement](https://discord.com/channels/737538781024092170/774152638450237460/905830523761487872)
+
+On August 30, 2021, &#38646; asked for players who could take pandas and foxes home in the game on their own. KOTA-SAN backed the call on behalf of the server staff. [&#38646;’s call for adopters](https://discord.com/channels/737538781024092170/881827499074539611/882286204320624671) [KOTA-SAN’s call](https://discord.com/channels/737538781024092170/881827499074539611/882286206757535826)
 
 On May 8, 2021, KOTA-SAN created a dedicated category for questions about Discord and offered to answer them. On October 8, てぃあ announced the opening of the “Haiku and Senryū Room.”
 
@@ -198,6 +200,8 @@ On January 1, 2024, タケ reported that the New Year’s celebration had ended 
 On February 4, 2024, ゆり reported composing Aceserver’s official theme song. ゆり noted that the version was short and suggested inviting people to submit lyrics. Later that day, ゆり shared a provisional version titled “ACE&#12394;&#20882;&#38522;”. [Theme song composition report](https://discord.com/channels/737538781024092170/882218642459205672/1203626958861377548) [Note on the provisional version](https://discord.com/channels/737538781024092170/882218642459205672/1203659498804355072)
 
 On March 12, 2024, a downloadable PvE map made by Harubie was announced on Discord, and version 2.0 was released the same day. [PvE map announcement](https://discord.com/channels/737538781024092170/1216934048719442030)
+
+In the version 3.0 post, Pluto said that a resource pack was included for the world and recommended groups of about three to five players. Version 3.1 added to the instructions and fixed bugs. The notes for versions 3.2 and 3.3 reported difficulty adjustments and map improvements. [Version 3.0 announcement](https://discord.com/channels/737538781024092170/1216934048719442030/1217705674666938378) [Changes in version 3.1](https://discord.com/channels/737538781024092170/1216934048719442030/1217972784563749005) [Changes in version 3.2](https://discord.com/channels/737538781024092170/1216934048719442030/1218107358295887933) [Changes in version 3.3](https://discord.com/channels/737538781024092170/1216934048719442030/1218131501774798898)
 
 In spring 2024, sekisei announced the start time and contact details for Ace Guesser v2. In summer, Pluto announced a parkour event.
 
@@ -642,6 +646,10 @@ In May 2022, Mugi reported that Kutya could read Japanese Morse code aloud.
 In June 2022, Mugi updated the text-to-speech bot Kutya to support chat inside voice channels. In March 2023, Mugi announced a bot for sending anonymous feedback to the server team. [Kutya update](https://discord.com/channels/737538781024092170/774152638450237460/986439863937155122) [Anonymous feedback announcement](https://discord.com/channels/737538781024092170/774152638450237460/1087976366126927882)
 
 On June 2, while players discussed which mode to use for building the lobby, Moon\_666 suggested that several people selected by the staff build the key areas in Creative mode. [Creative mode building proposal](https://discord.com/channels/737538781024092170/981568975387365466/981580332581138502)
+
+During the discussion, &#12399;&#12387; compared Survival’s appeal and longer build time with Creative’s faster building and the potential damage from griefing. SPdari pointed out that either mode would still need assigned roles. \_BE\_NumberYapper supported Creative because builders could focus on construction. [&#12399;&#12387;’s comparison of the modes](https://discord.com/channels/737538781024092170/981568975387365466/981571059008548905) [SPdari’s proposal to assign roles](https://discord.com/channels/737538781024092170/981568975387365466/981570116800106580) [Argument for Creative mode](https://discord.com/channels/737538781024092170/981568975387365466/981576997874569266)
+
+&#35199;&#26408;&#37326;&#28716;&#36032;&#27663; proposed a path lined with landmarks from the server that would lead to a gate. A history textbook cover served as a reference for arranging buildings along both sides of the path. [Proposal for a path through the server’s history](https://discord.com/channels/737538781024092170/981568975387365466/981584387193831525) [Reference image for the layout](https://discord.com/channels/737538781024092170/981568975387365466/981585534533128282)
 
 On June 4, 2022, はっ opened a Discord thread for a public meeting. For the new lobby, edamameRex_java suggested floating islands, an underwater city, and a volcanic island, among other ideas. taiyaki5190 pointed out that some players might be unable to travel between islands if parkour were the only route. KITUNEKO0605 grouped the ideas into water, land, and sky. YM proposed preserving parts of large builds from earlier lobbies and the old survival world. はっ compiled the meeting’s ideas. [Public meeting thread](https://discord.com/channels/737538781024092170/982599800375623740/982599800375623740) [edamameRex_java’s terrain ideas](https://discord.com/channels/737538781024092170/982599800375623740/982604466471718982) [Feedback on travel between islands](https://discord.com/channels/737538781024092170/982599800375623740/982605844204101712) [Water, land, and sky ideas](https://discord.com/channels/737538781024092170/982599800375623740/982608900295622686) [Proposal to preserve earlier builds](https://discord.com/channels/737538781024092170/982599800375623740/982606978952101909) [List of meeting ideas](https://discord.com/channels/737538781024092170/982599800375623740/982612891154915401)
 
