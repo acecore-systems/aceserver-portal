@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:dee59cf5ad44a97fa4fec18c8b3e8d4d9bc8d4f7e00c8785169e3ae528329b7c
+sourceHash: sha256:b89cabbae4100c1da077f0c255cbf638173ffbd956687b227c12edaa49d8c1a8
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -658,6 +658,8 @@ At the same meeting, Moon_666 suggested giving each portal a different atmospher
 YM suggested making room for feedback on the meeting’s outcome and rotating lobbies from time to time. &#12496;&#12523;&#12469;&#12511;&#12467;&#37218;&#37240; proposed miniature versions of old lobbies, and Yukke suggested sky islands that players could jump from to reach an Azkaban entrance in a Nether-like area. [Feedback and lobby rotation proposal](https://discord.com/channels/737538781024092170/982599800375623740/982611453066510396) [Miniatures of previous lobbies](https://discord.com/channels/737538781024092170/982599800375623740/982618056184459294) [Sky lobby proposal](https://discord.com/channels/737538781024092170/982599800375623740/982621769766699008)
 
 &#32313;&#28218;?&#24385; shared Minecraft screenshots of an underwater glass structure and the upper deck of the Chamomile as references for the lobby. edamameRex_java also shared a screenshot of a glass build underwater. [Underwater build screenshot](https://discord.com/channels/737538781024092170/982599800375623740/982605304795648000) [edamameRex_java’s underwater screenshot](https://discord.com/channels/737538781024092170/982599800375623740/982605357115387924) [Chamomile screenshot](https://discord.com/channels/737538781024092170/982599800375623740/982617364954751026)
+
+&#32313;&#28218;?&#24385; also shared the first episode of &#12395;&#12371;&#12383;&#12414;’s Minecraft series Ningyo Yamemasu as a reference for imagining an underwater city. [Discord post sharing the video](https://discord.com/channels/737538781024092170/982599800375623740/982620667499388958) [Reference video by &#12395;&#12371;&#12383;&#12414;](https://www.youtube.com/watch?v=WtGk1GEcQdo)
 
 &#12356;&#12396;&#12397;&#12371; and KOTA-SAN shared photographs of torii gates, and NCGpotechi offered a Minecraft screenshot of a timber-and-stone building as a reference. [Reference photo from Inuneko](https://discord.com/channels/737538781024092170/982599800375623740/982606024265596958) [Reference photo from KOTA-SAN](https://discord.com/channels/737538781024092170/982599800375623740/982611313811390484) [Building reference from NCGpotechi](https://discord.com/channels/737538781024092170/982599800375623740/982626931876958228)
 

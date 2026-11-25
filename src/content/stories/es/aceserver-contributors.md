@@ -2,7 +2,7 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:dee59cf5ad44a97fa4fec18c8b3e8d4d9bc8d4f7e00c8785169e3ae528329b7c
+sourceHash: sha256:b89cabbae4100c1da077f0c255cbf638173ffbd956687b227c12edaa49d8c1a8
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -658,6 +658,8 @@ En la misma reunión, Moon_666 propuso dar un ambiente distinto a cada portal y 
 YM sugirió abrir un espacio para opinar sobre el resultado de la reunión y cambiar de vestíbulo de vez en cuando. &#12496;&#12523;&#12469;&#12511;&#12467;&#37218;&#37240; propuso recrear en miniatura los vestíbulos anteriores. Yukke propuso unas islas en el cielo desde las que se pudiera saltar hasta una entrada a Azkaban en una zona parecida al Nether. [Propuesta para recoger opiniones y alternar vestíbulos](https://discord.com/channels/737538781024092170/982599800375623740/982611453066510396) [Miniaturas de vestíbulos anteriores](https://discord.com/channels/737538781024092170/982599800375623740/982618056184459294) [Propuesta de vestíbulo en el cielo](https://discord.com/channels/737538781024092170/982599800375623740/982621769766699008)
 
 &#32313;&#28218;?&#24385; compartió capturas de Minecraft de una estructura de cristal bajo el agua y de la cubierta superior del Chamomile como referencias para el vestíbulo. edamameRex_java también compartió una captura de una construcción submarina de cristal. [Captura de la construcción submarina](https://discord.com/channels/737538781024092170/982599800375623740/982605304795648000) [Captura submarina de edamameRex_java](https://discord.com/channels/737538781024092170/982599800375623740/982605357115387924) [Captura del Chamomile](https://discord.com/channels/737538781024092170/982599800375623740/982617364954751026)
+
+&#32313;&#28218;?&#24385; también compartió el primer episodio de la serie de Minecraft Ningyo Yamemasu, de &#12395;&#12371;&#12383;&#12414;, como referencia para imaginar una ciudad submarina. [Publicación de Discord con el vídeo](https://discord.com/channels/737538781024092170/982599800375623740/982620667499388958) [Vídeo de referencia de &#12395;&#12371;&#12383;&#12414;](https://www.youtube.com/watch?v=WtGk1GEcQdo)
 
 &#12356;&#12396;&#12397;&#12371; y KOTA-SAN compartieron fotos de puertas torii. NCGpotechi mostró como referencia una construcción de madera y piedra en Minecraft. [Foto de referencia de Inuneko](https://discord.com/channels/737538781024092170/982599800375623740/982606024265596958) [Foto de referencia de KOTA-SAN](https://discord.com/channels/737538781024092170/982599800375623740/982611313811390484) [Ejemplo de construcción de NCGpotechi](https://discord.com/channels/737538781024092170/982599800375623740/982626931876958228)
 

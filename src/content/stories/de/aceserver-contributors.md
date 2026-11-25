@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:dee59cf5ad44a97fa4fec18c8b3e8d4d9bc8d4f7e00c8785169e3ae528329b7c
+sourceHash: sha256:b89cabbae4100c1da077f0c255cbf638173ffbd956687b227c12edaa49d8c1a8
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -658,6 +658,8 @@ In derselben Sitzung schlug Moon_666 vor, jedem Portal eine eigene Atmosphäre z
 YM schlug vor, Rückmeldungen zum Ergebnis der Sitzung zu ermöglichen und die Lobbys gelegentlich zu wechseln. &#12496;&#12523;&#12469;&#12511;&#12467;&#37218;&#37240; regte Miniaturversionen früherer Lobbys an. Yukke schlug Himmelsinseln vor, von denen man zu einem Askaban-Eingang in einem Nether-ähnlichen Bereich springen könnte. [Vorschlag für Rückmeldungen und Lobbywechsel](https://discord.com/channels/737538781024092170/982599800375623740/982611453066510396) [Miniaturen früherer Lobbys](https://discord.com/channels/737538781024092170/982599800375623740/982618056184459294) [Vorschlag für eine Himmelslobby](https://discord.com/channels/737538781024092170/982599800375623740/982621769766699008)
 
 &#32313;&#28218;?&#24385; teilte Minecraft-Bilder eines Glasbaus unter Wasser und vom Oberdeck der Chamomile als Anregungen für die Lobby. Auch edamameRex_java zeigte einen Glasbau unter Wasser. [Bild des Unterwasserbaus](https://discord.com/channels/737538781024092170/982599800375623740/982605304795648000) [Unterwasserbild von edamameRex_java](https://discord.com/channels/737538781024092170/982599800375623740/982605357115387924) [Bild der Chamomile](https://discord.com/channels/737538781024092170/982599800375623740/982617364954751026)
+
+&#32313;&#28218;?&#24385; teilte auch die erste Folge von &#12395;&#12371;&#12383;&#12414;s Minecraft-Reihe Ningyo Yamemasu als Anregung für eine Unterwasserstadt. [Discord-Beitrag zum Video](https://discord.com/channels/737538781024092170/982599800375623740/982620667499388958) [Referenzvideo von &#12395;&#12371;&#12383;&#12414;](https://www.youtube.com/watch?v=WtGk1GEcQdo)
 
 &#12356;&#12396;&#12397;&#12371; und KOTA-SAN teilten Fotos von Torii-Toren. NCGpotechi zeigte als Vorbild ein Gebäude aus Holz und Stein in Minecraft. [Referenzfoto von Inuneko](https://discord.com/channels/737538781024092170/982599800375623740/982606024265596958) [Referenzfoto von KOTA-SAN](https://discord.com/channels/737538781024092170/982599800375623740/982611313811390484) [Baubeispiel von NCGpotechi](https://discord.com/channels/737538781024092170/982599800375623740/982626931876958228)
 

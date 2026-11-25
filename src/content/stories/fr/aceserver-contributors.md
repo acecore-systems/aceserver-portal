@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:dee59cf5ad44a97fa4fec18c8b3e8d4d9bc8d4f7e00c8785169e3ae528329b7c
+sourceHash: sha256:b89cabbae4100c1da077f0c255cbf638173ffbd956687b227c12edaa49d8c1a8
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -658,6 +658,8 @@ Lors de la même réunion, Moon_666 a proposé de donner une ambiance différent
 YM a suggéré de prévoir un espace pour donner son avis sur le résultat de la réunion et d’alterner les halls de temps en temps. &#12496;&#12523;&#12469;&#12511;&#12467;&#37218;&#37240; a proposé des versions miniatures des anciens halls. Yukke a suggéré des îles dans le ciel d’où l’on pourrait sauter pour atteindre une entrée d’Azkaban dans un espace rappelant le Nether. [Proposition de retours et de rotation des halls](https://discord.com/channels/737538781024092170/982599800375623740/982611453066510396) [Miniatures des anciens halls](https://discord.com/channels/737538781024092170/982599800375623740/982618056184459294) [Proposition de hall dans le ciel](https://discord.com/channels/737538781024092170/982599800375623740/982621769766699008)
 
 &#32313;&#28218;?&#24385; a partagé des captures de Minecraft d’une structure de verre sous l’eau et du pont supérieur du Chamomile comme références pour le hall. edamameRex_java a également partagé une capture d’une construction sous-marine en verre. [Capture de la construction sous-marine](https://discord.com/channels/737538781024092170/982599800375623740/982605304795648000) [Capture sous-marine d’edamameRex_java](https://discord.com/channels/737538781024092170/982599800375623740/982605357115387924) [Capture du Chamomile](https://discord.com/channels/737538781024092170/982599800375623740/982617364954751026)
+
+&#32313;&#28218;?&#24385; a également partagé le premier épisode de Ningyo Yamemasu, une série Minecraft de &#12395;&#12371;&#12383;&#12414;, pour donner une idée de la ville sous-marine. [Message Discord partageant la vidéo](https://discord.com/channels/737538781024092170/982599800375623740/982620667499388958) [Vidéo de référence de &#12395;&#12371;&#12383;&#12414;](https://www.youtube.com/watch?v=WtGk1GEcQdo)
 
 &#12356;&#12396;&#12397;&#12371; et KOTA-SAN ont partagé des photos de portiques torii. NCGpotechi a présenté comme référence un bâtiment de bois et de pierre dans Minecraft. [Photo de référence d’Inuneko](https://discord.com/channels/737538781024092170/982599800375623740/982606024265596958) [Photo de référence de KOTA-SAN](https://discord.com/channels/737538781024092170/982599800375623740/982611313811390484) [Exemple de construction de NCGpotechi](https://discord.com/channels/737538781024092170/982599800375623740/982626931876958228)
 

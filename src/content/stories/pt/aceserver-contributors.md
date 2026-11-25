@@ -2,7 +2,7 @@
 title: As pessoas que apoiaram o Aceserver
 description: Conheça quem ajudou o Aceserver pelos retratos de skins do Minecraft, relembre as atividades e confira o roteiro de eventos e propostas.
 translationOf: aceserver-contributors
-sourceHash: sha256:dee59cf5ad44a97fa4fec18c8b3e8d4d9bc8d4f7e00c8785169e3ae528329b7c
+sourceHash: sha256:b89cabbae4100c1da077f0c255cbf638173ffbd956687b227c12edaa49d8c1a8
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -658,6 +658,8 @@ Na mesma reunião, Moon_666 sugeriu dar um ambiente diferente a cada portal, e &
 YM sugeriu abrir um espaço para receber opiniões sobre o resultado da reunião e alternar os lobbies de vez em quando. &#12496;&#12523;&#12469;&#12511;&#12467;&#37218;&#37240; propôs miniaturas dos lobbies anteriores. Yukke sugeriu ilhas no céu de onde seria possível saltar até uma entrada de Azkaban em uma área parecida com o Nether. [Proposta para ouvir opiniões e alternar lobbies](https://discord.com/channels/737538781024092170/982599800375623740/982611453066510396) [Miniaturas dos lobbies anteriores](https://discord.com/channels/737538781024092170/982599800375623740/982618056184459294) [Proposta de lobby no céu](https://discord.com/channels/737538781024092170/982599800375623740/982621769766699008)
 
 &#32313;&#28218;?&#24385; compartilhou capturas de Minecraft de uma estrutura de vidro submersa e da parte superior do Chamomile como referências para o lobby. edamameRex_java também compartilhou uma captura de uma construção de vidro debaixo d’água. [Captura da construção submersa](https://discord.com/channels/737538781024092170/982599800375623740/982605304795648000) [Captura submersa de edamameRex_java](https://discord.com/channels/737538781024092170/982599800375623740/982605357115387924) [Captura do Chamomile](https://discord.com/channels/737538781024092170/982599800375623740/982617364954751026)
+
+&#32313;&#28218;?&#24385; também compartilhou o primeiro episódio de Ningyo Yamemasu, série de Minecraft de &#12395;&#12371;&#12383;&#12414;, como referência para imaginar uma cidade subaquática. [Publicação no Discord com o vídeo](https://discord.com/channels/737538781024092170/982599800375623740/982620667499388958) [Vídeo de referência de &#12395;&#12371;&#12383;&#12414;](https://www.youtube.com/watch?v=WtGk1GEcQdo)
 
 &#12356;&#12396;&#12397;&#12371; e KOTA-SAN compartilharam fotos de portais torii. NCGpotechi apresentou como referência uma construção de madeira e pedra no Minecraft. [Foto de referência de Inuneko](https://discord.com/channels/737538781024092170/982599800375623740/982606024265596958) [Foto de referência de KOTA-SAN](https://discord.com/channels/737538781024092170/982599800375623740/982611313811390484) [Exemplo de construção de NCGpotechi](https://discord.com/channels/737538781024092170/982599800375623740/982626931876958228)
 
