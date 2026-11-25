@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:0ad9ed88137841759aaf641695fe0dd06dc682b8327369d91cd571ddfd1f0fff
+sourceHash: sha256:30941d86ad9952ae443f117745d458397e433cb6341e2733c89e4302ec8642ed
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -175,7 +175,7 @@ En juillet 2023, タケ a annoncé l’adoption d’un logo pour Ace Monorail et
 
 Dans le compte rendu du 7 août 2023 sur la fête du premier anniversaire de l’ouverture d’Ace Monorail, タケ a remercié les visiteurs BURAKI_UTALOVE\_, yukke_11, edamameRex_java, \_BE_nanashi91239 et mallosan_52, ainsi que sekisei0077 pour son parrainage. Le compte rendu cite une tour à créatures en altitude, une ferme à blazes et une ferme à raids pour l’apport de matériaux. [Compte rendu du premier anniversaire](https://discord.com/channels/737538781024092170/779569416438415421/1137777672425050163)
 
-Dans le fil archivé consacré au nom de la gare, ゆり a proposé « Mur Maria et paix », Edamame (edamameRex_java) a proposé « Gare de Katto Cake » et CP-sinzin a proposé « Gare de Bunke ». タケ a joint deux images à l’appel à propositions. [Proposition de Yuri](https://discord.com/channels/737538781024092170/1124669938293035008/1128663441306042448) [Proposition d’Edamame](https://discord.com/channels/737538781024092170/1124669938293035008/1128668925975085157) [Proposition de CP-sinzin](https://discord.com/channels/737538781024092170/1124669938293035008/1131000303383224352) [Images jointes à l’appel](https://discord.com/channels/737538781024092170/1124669938293035008/1124671167811305594)
+Dans le fil archivé consacré au nom de la gare, ゆり a proposé « Mur Maria et paix », Edamame (edamameRex_java) a proposé « Gare de Katto Cake » et CP-sinzin a proposé « Gare de Bunke ». Dans son appel, タケ a indiqué qu’il s’agissait alors de la seule gare de bifurcation de la ligne 1 et a joint des images de l’extérieur et de la vue sur la mer depuis le quai. [Appel à propositions](https://discord.com/channels/737538781024092170/1124669938293035008/1124669944966152245) [Proposition de Yuri](https://discord.com/channels/737538781024092170/1124669938293035008/1128663441306042448) [Proposition d’Edamame](https://discord.com/channels/737538781024092170/1124669938293035008/1128668925975085157) [Proposition de CP-sinzin](https://discord.com/channels/737538781024092170/1124669938293035008/1131000303383224352) [Images jointes à l’appel](https://discord.com/channels/737538781024092170/1124669938293035008/1124671167811305594)
 
 Le 23 juillet 2023, タケ a annoncé que la ligne 1 du monorail Ace formait désormais une boucle et que la nouvelle gare portait le nom « Kattoke », inspiré de la proposition « Katto Cake » d’Edamame. Le 7 août, タケ a également annoncé que le dépôt ferroviaire était terminé et précisé que le feu d’artifice du premier anniversaire avait eu lieu à cet endroit. [Achèvement de la boucle de la ligne 1](https://discord.com/channels/737538781024092170/779569416438415421/1132502826476634202) [Annonce de l’achèvement du dépôt](https://discord.com/channels/737538781024092170/779569416438415421/1137779370627453038)
 

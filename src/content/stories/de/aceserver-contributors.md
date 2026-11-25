@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:0ad9ed88137841759aaf641695fe0dd06dc682b8327369d91cd571ddfd1f0fff
+sourceHash: sha256:30941d86ad9952ae443f117745d458397e433cb6341e2733c89e4302ec8642ed
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -175,7 +175,7 @@ Im Sommer 2023 kündigte タケ das erste Jubiläumsfest der Ace Monorail Take C
 
 Im Bericht vom 7. August 2023 über das Fest zum ersten Jahrestag der Eröffnung von Ace Monorail dankte タケ den Gästen BURAKI_UTALOVE\_, yukke_11, edamameRex_java, \_BE_nanashi91239 und mallosan_52 sowie sekisei0077 für die Unterstützung als Sponsor. Der Bericht nannte einen Mob-Turm in der Höhe, eine Lohenfarm und eine Überfallfarm für ihre Materialbeiträge. [Bericht zum ersten Jubiläumsfest](https://discord.com/channels/737538781024092170/779569416438415421/1137777672425050163)
 
-Im archivierten Aufruf zur Namenssuche schlug ゆり „Wall Maria und Frieden“ vor. Edamame (edamameRex_java) schlug „Katto Cake“ und CP-sinzin „Bunke“ vor. タケ fügte dem Aufruf zwei Bilder bei. [Vorschlag von ゆり](https://discord.com/channels/737538781024092170/1124669938293035008/1128663441306042448) [Vorschlag von Edamame](https://discord.com/channels/737538781024092170/1124669938293035008/1128668925975085157) [Vorschlag von CP-sinzin](https://discord.com/channels/737538781024092170/1124669938293035008/1131000303383224352) [Bilder zum Aufruf](https://discord.com/channels/737538781024092170/1124669938293035008/1124671167811305594)
+Im archivierten Aufruf zur Namenssuche schlug ゆり „Wall Maria und Frieden“ vor. Edamame (edamameRex_java) schlug „Katto Cake“ und CP-sinzin „Bunke“ vor. タケ beschrieb die Station im Aufruf als den damals einzigen Abzweigbahnhof der Linie 1 und zeigte das Bahnhofsgebäude sowie den Blick vom Bahnsteig aufs Meer. [Aufruf zur Namenssuche](https://discord.com/channels/737538781024092170/1124669938293035008/1124669944966152245) [Vorschlag von ゆり](https://discord.com/channels/737538781024092170/1124669938293035008/1128663441306042448) [Vorschlag von Edamame](https://discord.com/channels/737538781024092170/1124669938293035008/1128668925975085157) [Vorschlag von CP-sinzin](https://discord.com/channels/737538781024092170/1124669938293035008/1131000303383224352) [Bilder zum Aufruf](https://discord.com/channels/737538781024092170/1124669938293035008/1124671167811305594)
 
 Am 23. Juli 2023 meldete タケ, dass die Linie 1 der Ace Monorail als Ringlinie fertiggestellt war und die neue Station nach Edamames Vorschlag „Katto Cake“ den Namen „Kattoke“ erhielt. Am 7. August meldete タケ auch die Fertigstellung des Betriebswerks und erklärte, dass dort das Feuerwerk zum ersten Jubiläum stattgefunden hatte. [Fertigstellung der Ringlinie](https://discord.com/channels/737538781024092170/779569416438415421/1132502826476634202) [Fertigstellung des Betriebswerks](https://discord.com/channels/737538781024092170/779569416438415421/1137779370627453038)
 

@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:0ad9ed88137841759aaf641695fe0dd06dc682b8327369d91cd571ddfd1f0fff
+sourceHash: sha256:30941d86ad9952ae443f117745d458397e433cb6341e2733c89e4302ec8642ed
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -175,7 +175,7 @@ In summer 2023, タケ announced the first anniversary festival organized by Ace
 
 In the August 7, 2023 report on the first anniversary festival for Ace Monorail’s opening, タケ thanked visitors BURAKI_UTALOVE\_, yukke_11, edamameRex_java, \_BE_nanashi91239, and mallosan_52, as well as event sponsor sekisei0077. The report credited a sky mob tower, a blaze farm, and a raid farm for providing materials. [First anniversary festival report](https://discord.com/channels/737538781024092170/779569416438415421/1137777672425050163)
 
-In the archived station naming thread, ゆり proposed “Wall Maria and Peace,” Edamame (edamameRex_java) proposed “Katto Cake Station,” and CP-sinzin proposed “Bunke Station.” タケ shared two images with the call for suggestions. [Yuri’s proposal](https://discord.com/channels/737538781024092170/1124669938293035008/1128663441306042448) [Edamame’s proposal](https://discord.com/channels/737538781024092170/1124669938293035008/1128668925975085157) [CP-sinzin’s proposal](https://discord.com/channels/737538781024092170/1124669938293035008/1131000303383224352) [Images shared with the call](https://discord.com/channels/737538781024092170/1124669938293035008/1124671167811305594)
+In the archived station naming thread, ゆり proposed “Wall Maria and Peace,” Edamame (edamameRex_java) proposed “Katto Cake Station,” and CP-sinzin proposed “Bunke Station.” In the call for suggestions, タケ described it as the only junction station on Line 1 at the time and shared views of the station exterior and of the sea from the platform. [Call for station names](https://discord.com/channels/737538781024092170/1124669938293035008/1124669944966152245) [Yuri’s proposal](https://discord.com/channels/737538781024092170/1124669938293035008/1128663441306042448) [Edamame’s proposal](https://discord.com/channels/737538781024092170/1124669938293035008/1128668925975085157) [CP-sinzin’s proposal](https://discord.com/channels/737538781024092170/1124669938293035008/1131000303383224352) [Images shared with the call](https://discord.com/channels/737538781024092170/1124669938293035008/1124671167811305594)
 
 On July 23, 2023, タケ reported that Ace Monorail Line 1 was complete as a loop and that the new station was named “Kattoke” after Edamame’s “Katto Cake” proposal. On August 7, タケ announced the completion of the rail depot and shared that it had hosted the first anniversary festival fireworks. [Line 1 loop completion](https://discord.com/channels/737538781024092170/779569416438415421/1132502826476634202) [Rail depot completion report](https://discord.com/channels/737538781024092170/779569416438415421/1137779370627453038)
 

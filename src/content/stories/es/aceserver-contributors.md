@@ -2,7 +2,7 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:0ad9ed88137841759aaf641695fe0dd06dc682b8327369d91cd571ddfd1f0fff
+sourceHash: sha256:30941d86ad9952ae443f117745d458397e433cb6341e2733c89e4302ec8642ed
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -175,7 +175,7 @@ En el verano de 2023, タケ anunció el festival del primer aniversario organiz
 
 En el informe del 7 de agosto de 2023 sobre el festival del primer aniversario de la apertura de Ace Monorail, タケ dio las gracias a los visitantes BURAKI_UTALOVE\_, yukke_11, edamameRex_java, \_BE_nanashi91239 y mallosan_52, y a sekisei0077 por patrocinar el evento. El informe citó una torre aérea de criaturas, una granja de blazes y una granja de asaltos como fuentes de materiales. [Informe del festival del primer aniversario](https://discord.com/channels/737538781024092170/779569416438415421/1137777672425050163)
 
-En el hilo archivado para elegir el nombre de la estación, ゆり propuso «Muralla María y paz», Edamame (edamameRex_java) propuso «Estación Katto Cake» y CP-sinzin propuso «Estación Bunke». タケ adjuntó dos imágenes a la convocatoria. [Propuesta de Yuri](https://discord.com/channels/737538781024092170/1124669938293035008/1128663441306042448) [Propuesta de Edamame](https://discord.com/channels/737538781024092170/1124669938293035008/1128668925975085157) [Propuesta de CP-sinzin](https://discord.com/channels/737538781024092170/1124669938293035008/1131000303383224352) [Imágenes de la convocatoria](https://discord.com/channels/737538781024092170/1124669938293035008/1124671167811305594)
+En el hilo archivado para elegir el nombre de la estación, ゆり propuso «Muralla María y paz», Edamame (edamameRex_java) propuso «Estación Katto Cake» y CP-sinzin propuso «Estación Bunke». En la convocatoria, タケ explicó que por entonces era la única estación de bifurcación de la línea 1 y compartió imágenes del exterior y de la vista al mar desde el andén. [Convocatoria para elegir el nombre](https://discord.com/channels/737538781024092170/1124669938293035008/1124669944966152245) [Propuesta de Yuri](https://discord.com/channels/737538781024092170/1124669938293035008/1128663441306042448) [Propuesta de Edamame](https://discord.com/channels/737538781024092170/1124669938293035008/1128668925975085157) [Propuesta de CP-sinzin](https://discord.com/channels/737538781024092170/1124669938293035008/1131000303383224352) [Imágenes de la convocatoria](https://discord.com/channels/737538781024092170/1124669938293035008/1124671167811305594)
 
 El 23 de julio de 2023, タケ anunció que la línea 1 del Monorraíl Ace se había completado como línea circular y que la nueva estación se llamaría «Kattoke», a partir de la propuesta «Katto Cake» de Edamame. El 7 de agosto anunció también que el depósito ferroviario estaba terminado y explicó que allí se habían celebrado los fuegos artificiales del festival del primer aniversario. [Finalización de la línea circular](https://discord.com/channels/737538781024092170/779569416438415421/1132502826476634202) [Anuncio de la finalización del depósito](https://discord.com/channels/737538781024092170/779569416438415421/1137779370627453038)
 
