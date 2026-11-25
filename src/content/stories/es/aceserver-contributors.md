@@ -2,7 +2,7 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:d6409c23145fbe27681ef5665d7ad26fd6ee29096f069142e51b839867a080ef
+sourceHash: sha256:1d4cdc1d8add6961855b292ca0e76d415c847586f5f563d95a556ea9f8a1c86d
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -163,7 +163,9 @@ En el verano de 2023, タケ anunció el festival del primer aniversario organiz
 
 En el informe del 7 de agosto de 2023 sobre el festival del primer aniversario de la apertura de Ace Monorail, タケ dio las gracias a los visitantes BURAKI_UTALOVE\_, yukke_11, edamameRex_java, \_BE_nanashi91239 y mallosan_52, y a sekisei0077 por patrocinar el evento. El informe citó una torre aérea de criaturas, una granja de blazes y una granja de asaltos como fuentes de materiales. [Informe del festival del primer aniversario](https://discord.com/channels/737538781024092170/779569416438415421/1137777672425050163)
 
-El 23 de julio de 2023, タケ anunció que la línea 1 del Monorraíl Ace se había completado como línea circular. El 7 de agosto anunció también que el depósito ferroviario estaba terminado y explicó que allí se habían celebrado los fuegos artificiales del festival del primer aniversario. [Finalización de la línea circular](https://discord.com/channels/737538781024092170/779569416438415421/1132502826476634202) [Anuncio de la finalización del depósito](https://discord.com/channels/737538781024092170/779569416438415421/1137779370627453038)
+En el hilo archivado para elegir el nombre de la estación, ゆり propuso «Muralla María y paz», Edamame (edamameRex_java) propuso «Estación Katto Cake» y CP-sinzin propuso «Estación Bunke». タケ adjuntó dos imágenes a la convocatoria. [Propuesta de Yuri](https://discord.com/channels/737538781024092170/1124669938293035008/1128663441306042448) [Propuesta de Edamame](https://discord.com/channels/737538781024092170/1124669938293035008/1128668925975085157) [Propuesta de CP-sinzin](https://discord.com/channels/737538781024092170/1124669938293035008/1131000303383224352) [Imágenes de la convocatoria](https://discord.com/channels/737538781024092170/1124669938293035008/1124671167811305594)
+
+El 23 de julio de 2023, タケ anunció que la línea 1 del Monorraíl Ace se había completado como línea circular y que la nueva estación se llamaría «Kattoke», a partir de la propuesta «Katto Cake» de Edamame. El 7 de agosto anunció también que el depósito ferroviario estaba terminado y explicó que allí se habían celebrado los fuegos artificiales del festival del primer aniversario. [Finalización de la línea circular](https://discord.com/channels/737538781024092170/779569416438415421/1132502826476634202) [Anuncio de la finalización del depósito](https://discord.com/channels/737538781024092170/779569416438415421/1137779370627453038)
 
 El 16 de agosto de 2023, ゆり preguntó a quién le interesaba una partida personalizada de Apex Legends. Mugi pidió que reaccionara quien tuviera interés en Rainbow Six Siege (R6S), y PillowKebap hizo lo mismo para League of Legends. [Sondeo de interés en Apex Legends](https://discord.com/channels/737538781024092170/882222121135251486/1141256368351891506) [Sondeo de interés en Rainbow Six Siege](https://discord.com/channels/737538781024092170/882222121135251486/1141265485644693524) [Sondeo de interés en League of Legends](https://discord.com/channels/737538781024092170/882222121135251486/1141272275816042497)
 

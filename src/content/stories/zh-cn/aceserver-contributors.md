@@ -2,7 +2,7 @@
 title: 支持Aceserver的人们
 description: 通过 Minecraft 皮肤头像认识 Aceserver 的贡献者，回顾社区活动记录，并查看活动与玩家提案路线图。
 translationOf: aceserver-contributors
-sourceHash: sha256:d6409c23145fbe27681ef5665d7ad26fd6ee29096f069142e51b839867a080ef
+sourceHash: sha256:1d4cdc1d8add6961855b292ca0e76d415c847586f5f563d95a556ea9f8a1c86d
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -163,7 +163,9 @@ edamameRex_java（Edamame）介绍了自己的摊位，Moon_666 也公布了摊�
 
 在 2023 年 8 月 7 日发布的 Ace 单轨开通一周年庆典结束报告中，タケ向到场的 BURAKI_UTALOVE\_、yukke_11、edamameRex_java、\_BE_nanashi91239、mallosan_52 和赞助活动的 sekisei0077 致谢。报告还列出了提供物资的空中刷怪塔、烈焰人刷怪设施和袭击怪物陷阱。 [一周年庆典结束报告](https://discord.com/channels/737538781024092170/779569416438415421/1137777672425050163)
 
-2023年7月23日，タケ 报告 Ace 单轨铁路 1 号线已建成环线。8月7日，タケ 又宣布车辆基地完工，并说明一周年庆典的烟花表演就在该基地举行。[1 号线环线建成报告](https://discord.com/channels/737538781024092170/779569416438415421/1132502826476634202) [车辆基地完工报告](https://discord.com/channels/737538781024092170/779569416438415421/1137779370627453038)
+在车站命名征集的旧讨论串中，ゆり 提议「玛利亚之墙与和平」，枝豆（edamameRex_java）提议「Katto Cake 站」，CP-sinzin 提议「Bunke 站」。タケ 在征集帖里附上了两张图片。[ゆり的提议](https://discord.com/channels/737538781024092170/1124669938293035008/1128663441306042448) [枝豆的提议](https://discord.com/channels/737538781024092170/1124669938293035008/1128668925975085157) [CP-sinzin 的提议](https://discord.com/channels/737538781024092170/1124669938293035008/1131000303383224352) [征集帖的配图](https://discord.com/channels/737538781024092170/1124669938293035008/1124671167811305594)
+
+2023年7月23日，タケ 报告 Ace 单轨铁路 1 号线已建成环线，新站以枝豆的「Katto Cake」提议为灵感，命名为「Kattoke 站」。8月7日，タケ 又宣布车辆基地完工，并说明一周年庆典的烟花表演就在该基地举行。[1 号线环线建成报告](https://discord.com/channels/737538781024092170/779569416438415421/1132502826476634202) [车辆基地完工报告](https://discord.com/channels/737538781024092170/779569416438415421/1137779370627453038)
 
 2023年8月16日，ゆり征集对 Apex Legends 自定义对局有兴趣的玩家。Mugi邀请对 Rainbow Six Siege（R6S）有兴趣的人作出回应，PillowKebap也为 League of Legends 征求回应。 [Apex Legends 意向征集](https://discord.com/channels/737538781024092170/882222121135251486/1141256368351891506) [Rainbow Six Siege 意向征集](https://discord.com/channels/737538781024092170/882222121135251486/1141265485644693524) [League of Legends 意向征集](https://discord.com/channels/737538781024092170/882222121135251486/1141272275816042497)
 

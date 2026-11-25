@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:d6409c23145fbe27681ef5665d7ad26fd6ee29096f069142e51b839867a080ef
+sourceHash: sha256:1d4cdc1d8add6961855b292ca0e76d415c847586f5f563d95a556ea9f8a1c86d
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -163,7 +163,9 @@ Im Sommer 2023 kündigte タケ das erste Jubiläumsfest der Ace Monorail Take C
 
 Im Bericht vom 7. August 2023 über das Fest zum ersten Jahrestag der Eröffnung von Ace Monorail dankte タケ den Gästen BURAKI_UTALOVE\_, yukke_11, edamameRex_java, \_BE_nanashi91239 und mallosan_52 sowie sekisei0077 für die Unterstützung als Sponsor. Der Bericht nannte einen Mob-Turm in der Höhe, eine Lohenfarm und eine Überfallfarm für ihre Materialbeiträge. [Bericht zum ersten Jubiläumsfest](https://discord.com/channels/737538781024092170/779569416438415421/1137777672425050163)
 
-Am 23. Juli 2023 meldete タケ, dass die Linie 1 der Ace Monorail als Ringlinie fertiggestellt war. Am 7. August meldete タケ auch die Fertigstellung des Betriebswerks und erklärte, dass dort das Feuerwerk zum ersten Jubiläum stattgefunden hatte. [Fertigstellung der Ringlinie](https://discord.com/channels/737538781024092170/779569416438415421/1132502826476634202) [Fertigstellung des Betriebswerks](https://discord.com/channels/737538781024092170/779569416438415421/1137779370627453038)
+Im archivierten Aufruf zur Namenssuche schlug ゆり „Wall Maria und Frieden“ vor. Edamame (edamameRex_java) schlug „Katto Cake“ und CP-sinzin „Bunke“ vor. タケ fügte dem Aufruf zwei Bilder bei. [Vorschlag von ゆり](https://discord.com/channels/737538781024092170/1124669938293035008/1128663441306042448) [Vorschlag von Edamame](https://discord.com/channels/737538781024092170/1124669938293035008/1128668925975085157) [Vorschlag von CP-sinzin](https://discord.com/channels/737538781024092170/1124669938293035008/1131000303383224352) [Bilder zum Aufruf](https://discord.com/channels/737538781024092170/1124669938293035008/1124671167811305594)
+
+Am 23. Juli 2023 meldete タケ, dass die Linie 1 der Ace Monorail als Ringlinie fertiggestellt war und die neue Station nach Edamames Vorschlag „Katto Cake“ den Namen „Kattoke“ erhielt. Am 7. August meldete タケ auch die Fertigstellung des Betriebswerks und erklärte, dass dort das Feuerwerk zum ersten Jubiläum stattgefunden hatte. [Fertigstellung der Ringlinie](https://discord.com/channels/737538781024092170/779569416438415421/1132502826476634202) [Fertigstellung des Betriebswerks](https://discord.com/channels/737538781024092170/779569416438415421/1137779370627453038)
 
 Am 16. August 2023 suchte ゆり nach Interessierten für eine benutzerdefinierte Partie in Apex Legends. Mugi bat Interessierte an Rainbow Six Siege (R6S) um eine Reaktion, und PillowKebap tat dasselbe für League of Legends. [Interessenabfrage für Apex Legends](https://discord.com/channels/737538781024092170/882222121135251486/1141256368351891506) [Interessenabfrage für Rainbow Six Siege](https://discord.com/channels/737538781024092170/882222121135251486/1141265485644693524) [Interessenabfrage für League of Legends](https://discord.com/channels/737538781024092170/882222121135251486/1141272275816042497)
 
