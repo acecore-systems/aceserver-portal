@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:74c4e8da02389b5feabb9dc390ddfce8f08e90b96d4ba5775adf27bee343663f
+sourceHash: sha256:baa37976c8a52e11e50eb5dc0b559e95867bff1b59c2d34d1c23c6f177ce6529
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -201,7 +201,7 @@ Am 4. Februar 2024 berichtete ゆり, das offizielle Titellied von Aceserver kom
 
 Am 12. März 2024 wurde eine von Harubie erstellte PvE-Karte auf Discord zum Download angekündigt. Version 2.0 erschien noch am selben Tag. [Ankündigung der PvE-Karte](https://discord.com/channels/737538781024092170/1216934048719442030)
 
-Im Beitrag zu Version 3.0 teilte Pluto mit, dass ein Ressourcenpaket für die Welt enthalten sei, und empfahl Gruppen von etwa drei bis fünf Personen. Version 3.1 erweiterte die Anleitung und behob Fehler. In den Beiträgen zu Version 3.2 und 3.3 wurden Anpassungen am Schwierigkeitsgrad und Verbesserungen der Karte genannt. [Ankündigung von Version 3.0](https://discord.com/channels/737538781024092170/1216934048719442030/1217705674666938378) [Änderungen in Version 3.1](https://discord.com/channels/737538781024092170/1216934048719442030/1217972784563749005) [Änderungen in Version 3.2](https://discord.com/channels/737538781024092170/1216934048719442030/1218107358295887933) [Änderungen in Version 3.3](https://discord.com/channels/737538781024092170/1216934048719442030/1218131501774798898)
+Im Beitrag zu Version 3.0 teilte Pluto mit, dass ein Ressourcenpaket für die Welt enthalten sei, und empfahl Gruppen von etwa drei bis fünf Personen. Version 3.1 erweiterte die Anleitung und behob Fehler. In den Beiträgen zu Version 3.2 und 3.3 wurden Anpassungen am Schwierigkeitsgrad und Verbesserungen der Karte genannt. Die herunterladbare Version 3.3 enthielt die Weltdaten für „&#12473;&#12479;&#12531;&#12500;&#12540;&#12489;“ und das Ressourcenpaket für diese Welt. [Ankündigung von Version 3.0](https://discord.com/channels/737538781024092170/1216934048719442030/1217705674666938378) [Änderungen in Version 3.1](https://discord.com/channels/737538781024092170/1216934048719442030/1217972784563749005) [Änderungen in Version 3.2](https://discord.com/channels/737538781024092170/1216934048719442030/1218107358295887933) [Änderungen in Version 3.3](https://discord.com/channels/737538781024092170/1216934048719442030/1218131501774798898)
 
 Im Frühjahr 2024 teilte sekisei die Startzeit und die Kontaktstelle für Ace Guesser v2 mit. Im Sommer kündigte Pluto ein Parkour-Event an.
 

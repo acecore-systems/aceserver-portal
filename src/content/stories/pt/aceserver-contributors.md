@@ -2,7 +2,7 @@
 title: As pessoas que apoiaram o Aceserver
 description: Conheça quem ajudou o Aceserver pelos retratos de skins do Minecraft, relembre as atividades e confira o roteiro de eventos e propostas.
 translationOf: aceserver-contributors
-sourceHash: sha256:74c4e8da02389b5feabb9dc390ddfce8f08e90b96d4ba5775adf27bee343663f
+sourceHash: sha256:baa37976c8a52e11e50eb5dc0b559e95867bff1b59c2d34d1c23c6f177ce6529
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -201,7 +201,7 @@ Em 4 de fevereiro de 2024, ゆり informou que havia composto a música-tema ofi
 
 Em 12 de março de 2024, um mapa PvE criado por Harubie foi anunciado no Discord para download. A versão 2.0 foi publicada no mesmo dia. [Anúncio do mapa PvE](https://discord.com/channels/737538781024092170/1216934048719442030)
 
-Na publicação da versão 3.0, Pluto informou que o mundo incluía um pacote de recursos e recomendou grupos de cerca de três a cinco jogadores. A versão 3.1 complementou as instruções e corrigiu erros. As notas das versões 3.2 e 3.3 relataram ajustes de dificuldade e melhorias no mapa. [Anúncio da versão 3.0](https://discord.com/channels/737538781024092170/1216934048719442030/1217705674666938378) [Alterações da versão 3.1](https://discord.com/channels/737538781024092170/1216934048719442030/1217972784563749005) [Alterações da versão 3.2](https://discord.com/channels/737538781024092170/1216934048719442030/1218107358295887933) [Alterações da versão 3.3](https://discord.com/channels/737538781024092170/1216934048719442030/1218131501774798898)
+Na publicação da versão 3.0, Pluto informou que o mundo incluía um pacote de recursos e recomendou grupos de cerca de três a cinco jogadores. A versão 3.1 complementou as instruções e corrigiu erros. As notas das versões 3.2 e 3.3 relataram ajustes de dificuldade e melhorias no mapa. O download da versão 3.3 incluía os dados do mundo “&#12473;&#12479;&#12531;&#12500;&#12540;&#12489;” e seu pacote de recursos. [Anúncio da versão 3.0](https://discord.com/channels/737538781024092170/1216934048719442030/1217705674666938378) [Alterações da versão 3.1](https://discord.com/channels/737538781024092170/1216934048719442030/1217972784563749005) [Alterações da versão 3.2](https://discord.com/channels/737538781024092170/1216934048719442030/1218107358295887933) [Alterações da versão 3.3](https://discord.com/channels/737538781024092170/1216934048719442030/1218131501774798898)
 
 Na primavera de 2024, sekisei informou o horário de início e o contato do Ace Guesser v2. No verão, Pluto anunciou um evento de parkour.
 
