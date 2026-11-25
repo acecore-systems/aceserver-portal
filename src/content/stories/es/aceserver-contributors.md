@@ -2,7 +2,7 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:721f22bbab74e9cd2ccf6acd6b18e9fb41a91390b781cea744450e5ac3a748c4
+sourceHash: sha256:31d832c333129002542e7cb7ab5cf3ae4741d2850cb7fd6e9604556b587f369b
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -133,6 +133,8 @@ A principios de 2023, Taiyaki (taiyaki5190) anunció como organizador el evento 
 
 En febrero de 2023, ゆり propuso organizar vueltas de exhibición y carreras una vez terminado el Circuito Internacional del Imperio Sega.
 
+En octubre de 2022, &#12422;&#12426; informó de que se había terminado la superficie de hielo de un circuito y de que ya se había hecho una prueba de conducción. En enero de 2023, Moon_666 propuso dejar los bordes de la pista a la misma altura para hacer la conducción más técnica. En febrero, &#12422;&#12426; nombró al Imperio Sega y al Reino de &#12354;&#12377;&#12383;&#12435; como patrocinadores principales de un circuito. [Informe de la prueba de conducción](https://discord.com/channels/737538781024092170/779569416438415421/1031140077822300200) [Propuesta para el trazado](https://discord.com/channels/737538781024092170/779569416438415421/1064057801447587932) [Anuncio de patrocinadores](https://discord.com/channels/737538781024092170/779569416438415421/1078683022020333698)
+
 En agosto de 2022, ゆり pidió fotos del servidor antiguo para un video promocional en producción. En marzo de 2023, Yukke pidió sugerencias de lugares y edificios para el video promocional oficial. [Convocatoria de fotos del servidor antiguo](https://discord.com/channels/737538781024092170/779569416438415421/1008524402922639390) [Convocatoria de lugares para la filmación](https://discord.com/channels/737538781024092170/779569416438415421/1085549170905059383)
 
 Entre las propuestas, taiyaki5190 sugirió el castillo de Sega, Edamame (edamameRex_java) la segunda base de Ibaraki Overwatchers y nnn_percent el castillo n de estilo chino. [Lugares propuestos para la filmación](https://discord.com/channels/737538781024092170/1085549186449154168)
@@ -146,6 +148,8 @@ El 21 de marzo de 2023, あすたん habilitó un espacio para hablar de la film
 Para el Ace Fest Offline de primavera de 2023, Gui publicó los anuncios oficiales y はっ indicó dónde podían participar en línea quienes no pudieran acudir en persona. [Anuncio del evento](https://discord.com/channels/737538781024092170/774152638450237460/1091302323298521181) [Anuncio de participación](https://discord.com/channels/737538781024092170/774152638450237460/1092392407229804544)
 
 El 8 de abril de 2023, `Rina''` invitó a participar en el encuentro presencial de primavera en el canal Comedor Ace de aquella época. [Invitación al encuentro de primavera](https://discord.com/channels/737538781024092170/840559799129210890/1094260207175094313)
+
+En marzo de 2023, Yukke explicó cómo reservar localidades VIP para espectadores y qué incluían. En abril, en un hilo archivado del tablón, entoYamKalRZO64 comentó varios trazados propuestos y señaló cuál se parecía más a un circuito y cuál destacaba por su forma inusual. [Instrucciones sobre las localidades VIP](https://discord.com/channels/737538781024092170/1089540183373906001/1089541186819211394) [Comentario sobre un trazado propuesto](https://discord.com/channels/737538781024092170/1102238180104749116/1102240233724051616)
 
 En mayo de 2023, ゆり presentó el plan del equipo de difusión para gestionar YouTube y Twitter de forma regular. [Planes de difusión](https://discord.com/channels/737538781024092170/774152638450237460/1110469768420532235)
 
@@ -235,7 +239,7 @@ En el verano de 2025, End&#12539;コッカー abrió un debate sobre un torneo d
 
 En julio de 2025, End&#12539;コッカー informó de que había preparado una propuesta para el festival de verano.
 
-El anuncio del festival de verano de 2025 mencionó a センチュリーズ por la preparación y provisión del espectáculo de fuegos artificiales. El agradecimiento posterior nombró a セガ, リンゴポン, あまぎ, 新人, ジェスター, ホステッチ e イザイザ por los fuegos artificiales, y a コッカー y sh por la coordinación general. エント se encargó del circuito y moon y セキセイ del golf. ハルビィ, セキセイ y sh se encargaron del PvP de supervivencia, y はっ y sh del evento especial. [Publicación original](https://discord.com/channels/737538781024092170/774152638450237460/1408390549370572880) [Agradecimiento posterior](https://discord.com/channels/737538781024092170/779569416438415421/1411394624026710166)
+El anuncio del festival de verano de 2025 mencionó a センチュリーズ por la preparación y provisión del espectáculo de fuegos artificiales. El agradecimiento posterior nombró a セガ, リンゴポン, あまぎ, 新人, ジェスター, ホステッチ e イザイザ por los fuegos artificiales, y a コッカー y sh por la coordinación general. エント se encargó del circuito y moon y セキセイ del golf. ハルビィ, セキセイ y sh se encargaron del PvP de supervivencia, y &#12495;&#12483;&#12469;&#12531; y sh del evento Hassan. [Publicación original](https://discord.com/channels/737538781024092170/774152638450237460/1408390549370572880) [Agradecimiento posterior](https://discord.com/channels/737538781024092170/779569416438415421/1411394624026710166)
 
 El 12 de agosto de 2025, &#12415;&#12389;&#12364;&#12397; pidió propuestas de nombres para cuatro líneas del ferrocarril &#34746;&#36794;. La convocatoria incluía un mapa provisional de las líneas y cuatro imágenes que las presentaban con capturas de las estaciones y de los lugares previstos para construirlas. &#12454;&#12455;&#12531;&#12486;&#12451; (Hosttech255) propuso candidatos. En anuncios del 30 de agosto y del 7 de septiembre, &#12415;&#12389;&#12364;&#12397; presentó los nombres &#20959;&#20958;&#32218; (&#12392;&#12367;&#12365;&#12379;&#12435;), &#20116;&#12484;&#23798;&#25903;&#32218;, &#21512;&#27700;&#28304;&#25903;&#32218; y &#27700;&#26332;&#25903;&#32218;.
 
@@ -312,6 +316,8 @@ El 7 de julio de 2026, End&#12539;コッカー compartió un borrador de anuncio
 El 13 de julio de 2026, sekisei invitó a enviar preguntas y explicó cómo se contarían las que planteaban básicamente lo mismo y que Yuri-kun contestaría mediante respuestas a los mensajes. El 14 de julio, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; informó de que ese día se habían recibido 120 preguntas en total.
 
 A finales de julio de 2026, sekisei informó de que los planes de dos actividades estaban casi listos, un minijuego dentro de Minecraft y una actividad fuera de Minecraft. También pidió opiniones sobre qué actividades les gustaría que se prepararan después.
+
+El 26 de julio de 2026, &#12422;&#12426; anunció en nombre de Mobility Resort LuMiSIA que se habían renovado los carriles de boxes de tres circuitos. [Anuncio de la renovación de los carriles de boxes](https://discord.com/channels/737538781024092170/779569416438415421/1530931917497696447)
 
 El 29 de julio de 2026, &#29792;&#22856; propuso una carrera de barcos sobre hielo con una recompensa para quienes llegaran a la meta dentro del tiempo asignado.
 

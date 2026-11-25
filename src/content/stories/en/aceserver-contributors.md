@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:721f22bbab74e9cd2ccf6acd6b18e9fb41a91390b781cea744450e5ac3a748c4
+sourceHash: sha256:31d832c333129002542e7cb7ab5cf3ae4741d2850cb7fd6e9604556b587f369b
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -133,6 +133,8 @@ In early 2023, Taiyaki (taiyaki5190) announced PvP in the Sky as its organizer a
 
 In February 2023, ゆり proposed demonstration runs and races once the Sega Empire International Circuit was complete.
 
+In October 2022, &#12422;&#12426; reported that the ice surface on a race circuit was finished and the course had been test-driven. In January 2023, Moon_666 suggested leaving the sides of the track level to make driving more technical. In February, &#12422;&#12426; named the Sega Empire and &#12354;&#12377;&#12383;&#12435; Kingdom as the main sponsors of a circuit. [Test-drive report](https://discord.com/channels/737538781024092170/779569416438415421/1031140077822300200) [Track design suggestion](https://discord.com/channels/737538781024092170/779569416438415421/1064057801447587932) [Sponsor announcement](https://discord.com/channels/737538781024092170/779569416438415421/1078683022020333698)
+
 In August 2022, ゆり requested images from the old server for a promotional video in production. In March 2023, Yukke invited suggestions for places and buildings to feature in the official promotional video. [Call for old server images](https://discord.com/channels/737538781024092170/779569416438415421/1008524402922639390) [Call for filming locations](https://discord.com/channels/737538781024092170/779569416438415421/1085549170905059383)
 
 Among the suggestions, taiyaki5190 proposed Sega Castle, Edamame (edamameRex_java) proposed the Ibaraki Overwatchers’ second base, and nnn_percent proposed the Chinese-style n Castle. [Suggested filming locations](https://discord.com/channels/737538781024092170/1085549186449154168)
@@ -146,6 +148,8 @@ On March 21, 2023, あすたん set up a place to discuss filming and shared a s
 For Ace Fest Offline in spring 2023, Gui posted the official announcements and はっ shared where people who could not attend in person could join online. [Event announcement](https://discord.com/channels/737538781024092170/774152638450237460/1091302323298521181) [Participation announcement](https://discord.com/channels/737538781024092170/774152638450237460/1092392407229804544)
 
 On April 8, 2023, `Rina''` invited people to join the spring meetup in the Ace Cafeteria channel. [Invitation to the spring meetup](https://discord.com/channels/737538781024092170/840559799129210890/1094260207175094313)
+
+In March 2023, Yukke posted instructions for reserving VIP spectator seats and explained what they included. In April, in an archived bulletin-board thread, entoYamKalRZO64 commented on proposed layouts, including which looked most like a circuit and which stood out for its unusual shape. [VIP seating instructions](https://discord.com/channels/737538781024092170/1089540183373906001/1089541186819211394) [Comments on a proposed layout](https://discord.com/channels/737538781024092170/1102238180104749116/1102240233724051616)
 
 In May 2023, ゆり shared the publicity team’s plans to start running the YouTube and Twitter accounts on a regular basis. [Publicity plans](https://discord.com/channels/737538781024092170/774152638450237460/1110469768420532235)
 
@@ -235,7 +239,7 @@ In summer 2025, End&#12539;コッカー started a discussion about an Among Us t
 
 In July 2025, End&#12539;コッカー reported preparing a proposal for the summer festival.
 
-The 2025 summer festival announcement named センチュリーズ for preparing and providing the fireworks display. The post-event thanks named セガ, リンゴポン, あまぎ, 新人, ジェスター, ホステッチ and イザイザ for the fireworks, and コッカー and sh for overall coordination. エント worked on the circuit, and moon and セキセイ on golf. ハルビィ, セキセイ and sh worked on survival PvP, and はっ and sh on the special event. [Original post](https://discord.com/channels/737538781024092170/774152638450237460/1408390549370572880) [Post-event thanks](https://discord.com/channels/737538781024092170/779569416438415421/1411394624026710166)
+The 2025 summer festival announcement named センチュリーズ for preparing and providing the fireworks display. The post-event thanks named セガ, リンゴポン, あまぎ, 新人, ジェスター, ホステッチ and イザイザ for the fireworks, and コッカー and sh for overall coordination. エント worked on the circuit, and moon and セキセイ on golf. ハルビィ, セキセイ and sh worked on survival PvP, and &#12495;&#12483;&#12469;&#12531; and sh on the Hassan event. [Original post](https://discord.com/channels/737538781024092170/774152638450237460/1408390549370572880) [Post-event thanks](https://discord.com/channels/737538781024092170/779569416438415421/1411394624026710166)
 
 On August 12, 2025, &#12415;&#12389;&#12364;&#12397; invited people to suggest names for four &#34746;&#36794; Railway lines. The call included a provisional route map and four images introducing the lines with screenshots of stations and planned station sites. &#12454;&#12455;&#12531;&#12486;&#12451; (Hosttech255) proposed candidates. In announcements on August 30 and September 7, &#12415;&#12389;&#12364;&#12397; named the lines &#20959;&#20958;&#32218; (&#12392;&#12367;&#12365;&#12379;&#12435;), &#20116;&#12484;&#23798;&#25903;&#32218;, &#21512;&#27700;&#28304;&#25903;&#32218;, and &#27700;&#26332;&#25903;&#32218;.
 
@@ -312,6 +316,8 @@ On July 7, 2026, End&#12539;コッカー shared a draft announcement for a build
 On July 13, 2026, sekisei invited questions and explained how questions asking essentially the same thing would be counted and that Yuri-kun would answer in replies. On July 14, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; reported a total of 120 questions that day.
 
 In late July 2026, sekisei reported that plans for two activities were nearly ready, a Minecraft minigame and an activity outside Minecraft. They also asked what activities people wanted to see developed next.
+
+On July 26, 2026, &#12422;&#12426; announced on behalf of Mobility Resort LuMiSIA that the pit lanes at three circuits had been renovated. [Pit lane renovation announcement](https://discord.com/channels/737538781024092170/779569416438415421/1530931917497696447)
 
 On July 29, 2026, &#29792;&#22856; proposed an ice boat race in which players would earn a reward for reaching the finish within their allotted time.
 
