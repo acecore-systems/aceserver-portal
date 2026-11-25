@@ -2,7 +2,7 @@
 title: As pessoas que apoiaram o Aceserver
 description: Conheça quem ajudou o Aceserver pelos retratos de skins do Minecraft, relembre as atividades e confira o roteiro de eventos e propostas.
 translationOf: aceserver-contributors
-sourceHash: sha256:ee56f27cc37cdad5855ee5b05eff2309c9e686afce54664782163e9b4d797e3d
+sourceHash: sha256:fd17de6bdd9738965da820297b2dffa821a904221d5058bf2fe795a207ffe9e6
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -419,6 +419,10 @@ Em junho de 2022, yanyan_fafnir explicou as regras para participar do concurso d
 
 Em junho de 2022, はっ compartilhou uma ideia em uma discussão sobre a construção do lobby. edamameRex_java propôs um layout inspirado no lobby anterior. Em 3 de junho, taka8621 propôs incorporar a própria mudança para o novo lobby ao cenário ou recriar lobbies de épocas anteriores. [Conceito para a construção do lobby](https://discord.com/channels/737538781024092170/981569254031769700/981569389306466354) [Proposta inspirada no lobby anterior](https://discord.com/channels/737538781024092170/981569254031769700/981572980993847466) [Propostas para a mudança de lobby e os lobbies anteriores](https://discord.com/channels/737538781024092170/981569254031769700/982223863800823808)
 
+&#32313;&#28218;?&#24385; compartilhou um esboço de uma ilha flutuante dentro de uma cúpula submersa, e edamameRex_java acrescentou uma imagem do jogo com uma estrutura de vidro debaixo d’água. Moon_666 compartilhou duas imagens de aquários como referência, e &#12356;&#12396;&#12397;&#12371; compartilhou referências de ilhas flutuantes nevadas e de uma torre em espiral. [Esboço da cúpula submersa](https://discord.com/channels/737538781024092170/981569254031769700/981586163057963018) [Estrutura de vidro debaixo d’água](https://discord.com/channels/737538781024092170/981569254031769700/981592501246890065) [Imagens de aquários como referência](https://discord.com/channels/737538781024092170/981569254031769700/982240799070760980) [Ilhas flutuantes nevadas](https://discord.com/channels/737538781024092170/981569254031769700/981857714810552341) [Imagem de referência da torre](https://discord.com/channels/737538781024092170/981569254031769700/982612514149924925)
+
+NCGpotechi sugeriu um lobby compacto com parkour e propôs uma cidade com o navio Chamomile, um porto e um grande portal central para o novo servidor principal. Também sugeriu deixar as letras ACE ou o logotipo flutuando sobre o lobby. [Proposta de lobby compacto](https://discord.com/channels/737538781024092170/981569254031769700/981662738612908102) [Proposta de porto e portal central](https://discord.com/channels/737538781024092170/981569254031769700/982267925983559750) [Ideia de um logotipo flutuante](https://discord.com/channels/737538781024092170/981569254031769700/982607826545442846)
+
 Em 5 de junho de 2022, taka8621 propôs um lobby com acesso entre os níveis e portais na área central. Pela proposta, quem tinha o cargo de apoiador ou superior na época construiria a área central de cada nível.
 
 Em 7 de junho de 2022, Moon\_666 perguntou se os jogadores acessariam vários mundos pelo lobby e também passariam por ele na volta. A observação foi que isso mudaria as conexões existentes entre os mundos.
@@ -494,6 +498,8 @@ Em 26 de novembro de 2022, taibon852 anunciou que o salão de trocas de Taibon f
 Em dezembro do mesmo ano, ジェスター (que publicava como Dōke Shinshi@Jester Sub) informou que construiu com Buraki um cultivo de melancias em estilo de resort, com praia. [Relato da construção do cultivo de melancias](https://discord.com/channels/737538781024092170/779569416438415421/1048866874760364042)
 
 Em 12 de dezembro de 2022, ゆり disse que queria construir uma prefeitura no novo servidor e pediu ideias, inclusive para o tema do edifício. [Pedido de ideias para a prefeitura](https://discord.com/channels/737538781024092170/1051846941211885639/1051846941211885639)
+
+&#12383;&#12356;&#12420;&#12365; convidou as pessoas a dar suas ideias no tópico, preferiu a arquitetura ocidental e contou que estava construindo um protótipo da prefeitura. Outra pessoa compartilhou um esboço de um prédio em forma de muffin e sugeriu uma recepção no térreo e um salão no último andar. &#12422;&#12426; compartilhou uma captura do jogo com vários prédios arredondados. [Pedido de ideias de &#12383;&#12356;&#12420;&#12365;](https://discord.com/channels/737538781024092170/1051846941211885639/1051847985081876600) [Comentário sobre a arquitetura ocidental](https://discord.com/channels/737538781024092170/1051846941211885639/1052916577160413194) [Atualização do protótipo de &#12383;&#12356;&#12420;&#12365;](https://discord.com/channels/737538781024092170/1051846941211885639/1053247700428128256) [Esboço em forma de muffin](https://discord.com/channels/737538781024092170/1051846941211885639/1051851138036670527) [Captura do jogo compartilhada por &#12422;&#12426;](https://discord.com/channels/737538781024092170/1051846941211885639/1052587034751021086)
 
 Os registros do antigo canal do Discord sobre a pousada de águas termais informam que edamameRex_java, líder do projeto, recrutou membros e que ゆり anunciou como colaborar com a construção ou os materiais.
 

@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:ee56f27cc37cdad5855ee5b05eff2309c9e686afce54664782163e9b4d797e3d
+sourceHash: sha256:fd17de6bdd9738965da820297b2dffa821a904221d5058bf2fe795a207ffe9e6
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -419,6 +419,10 @@ In June 2022, yanyan_fafnir explained how to enter the floating-island contest t
 
 In June 2022, はっ shared a lobby concept in a thread about the build. edamameRex_java suggested a layout inspired by the earlier lobby. On June 3, taka8621 suggested making the move to the new lobby part of its premise or recreating lobbies from earlier periods. [Lobby concept](https://discord.com/channels/737538781024092170/981569254031769700/981569389306466354) [Proposal inspired by the earlier lobby](https://discord.com/channels/737538781024092170/981569254031769700/981572980993847466) [Proposals for the new lobby and earlier lobbies](https://discord.com/channels/737538781024092170/981569254031769700/982223863800823808)
 
+&#32313;&#28218;?&#24385; shared a sketch of a floating island under a submerged dome, and edamameRex_java added an in-game picture of an underwater glass structure. Moon_666 shared two aquarium reference images, and &#12356;&#12396;&#12397;&#12371; shared references showing snowy floating islands and a spiral tower. [Underwater dome sketch](https://discord.com/channels/737538781024092170/981569254031769700/981586163057963018) [Underwater glass structure](https://discord.com/channels/737538781024092170/981569254031769700/981592501246890065) [Aquarium reference images](https://discord.com/channels/737538781024092170/981569254031769700/982240799070760980) [Snowy floating islands](https://discord.com/channels/737538781024092170/981569254031769700/981857714810552341) [Tower reference image](https://discord.com/channels/737538781024092170/981569254031769700/982612514149924925)
+
+NCGpotechi suggested a compact lobby with parkour and proposed a town with the Chamomile ship, a harbor, and a large central gate leading to the new main server. NCGpotechi also suggested floating the ACE lettering or logo above the lobby. [Compact lobby proposal](https://discord.com/channels/737538781024092170/981569254031769700/981662738612908102) [Harbor and central gate proposal](https://discord.com/channels/737538781024092170/981569254031769700/982267925983559750) [Floating logo idea](https://discord.com/channels/737538781024092170/981569254031769700/982607826545442846)
+
 On June 5, 2022, taka8621 proposed a lobby with connected levels and gates in the central area. Under the proposal, members with the supporter role or above at the time would build the central area of each level.
 
 On June 7, 2022, Moon\_666 asked whether players would reach different worlds from the lobby and also go through it on their way back. They pointed out that this would change the existing connections between worlds.
@@ -494,6 +498,8 @@ On November 26, 2022, taibon852 announced that Taibon’s trading hall would clo
 That December, ジェスター (then posting as Dōke Shinshi@Jester Sub) reported working with Buraki to build a resort-style watermelon farm with a beach. [Watermelon farm report](https://discord.com/channels/737538781024092170/779569416438415421/1048866874760364042)
 
 On December 12, 2022, ゆり said they wanted to build a town hall on the new server and asked for ideas, including suggestions for the building’s theme. [Call for town hall ideas](https://discord.com/channels/737538781024092170/1051846941211885639/1051846941211885639)
+
+&#12383;&#12356;&#12420;&#12365; invited ideas in the thread, favored Western-style architecture, and reported building a city hall prototype. Another participant shared a sketch of a muffin-shaped building and suggested reception on the ground floor and a hall at the top. &#12422;&#12426; shared an in-game screenshot showing several rounded buildings. [&#12383;&#12356;&#12420;&#12365;’s call for ideas](https://discord.com/channels/737538781024092170/1051846941211885639/1051847985081876600) [Comment on Western-style architecture](https://discord.com/channels/737538781024092170/1051846941211885639/1052916577160413194) [&#12383;&#12356;&#12420;&#12365;’s prototype update](https://discord.com/channels/737538781024092170/1051846941211885639/1053247700428128256) [Muffin-shaped sketch](https://discord.com/channels/737538781024092170/1051846941211885639/1051851138036670527) [In-game screenshot shared by &#12422;&#12426;](https://discord.com/channels/737538781024092170/1051846941211885639/1052587034751021086)
 
 In the old Discord records for the hot-spring inn project, project leader edamameRex_java recruited members and ゆり announced opportunities to help with construction or materials.
 

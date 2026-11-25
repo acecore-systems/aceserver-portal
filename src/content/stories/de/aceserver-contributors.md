@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:ee56f27cc37cdad5855ee5b05eff2309c9e686afce54664782163e9b4d797e3d
+sourceHash: sha256:fd17de6bdd9738965da820297b2dffa821a904221d5058bf2fe795a207ffe9e6
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -419,6 +419,10 @@ Im Juni 2022 erklärte yanyan_fafnir die Teilnahmebedingungen für den Wettbewer
 
 Im Juni 2022 stellte はっ in einem Thread ein Konzept für den Lobbybau vor. edamameRex_java schlug eine Anordnung nach dem Vorbild der früheren Lobby vor. Am 3. Juni schlug taka8621 vor, den Wechsel zur neuen Lobby selbst in das Szenario einzubauen. Als Alternative nannte taka8621 den Nachbau früherer Lobbys. [Konzept für den Lobbybau](https://discord.com/channels/737538781024092170/981569254031769700/981569389306466354) [Vorschlag nach dem Vorbild der früheren Lobby](https://discord.com/channels/737538781024092170/981569254031769700/981572980993847466) [Vorschläge zum Lobbywechsel und zu früheren Lobbys](https://discord.com/channels/737538781024092170/981569254031769700/982223863800823808)
 
+&#32313;&#28218;?&#24385; teilte eine Skizze einer schwebenden Insel in einer Unterwasserkuppel, und edamameRex_java ergänzte ein Bild aus dem Spiel mit einem Glasbau unter Wasser. Moon_666 teilte zwei Aquariumbilder als Anregung. &#12356;&#12396;&#12397;&#12371; steuerte Bilder mit verschneiten schwebenden Inseln und einem spiralförmigen Turm bei. [Skizze der Unterwasserkuppel](https://discord.com/channels/737538781024092170/981569254031769700/981586163057963018) [Glasbau unter Wasser](https://discord.com/channels/737538781024092170/981569254031769700/981592501246890065) [Aquariumbilder als Anregung](https://discord.com/channels/737538781024092170/981569254031769700/982240799070760980) [Verschneite schwebende Inseln](https://discord.com/channels/737538781024092170/981569254031769700/981857714810552341) [Turmbild als Anregung](https://discord.com/channels/737538781024092170/981569254031769700/982612514149924925)
+
+NCGpotechi regte eine kleine Lobby mit Parkour an und schlug eine Stadt mit dem Schiff Chamomile, einem Hafen und einem großen Tor in der Mitte zum neuen Hauptserver vor. Außerdem kam von NCGpotechi die Idee, den ACE-Schriftzug oder das Logo schweben zu lassen. [Vorschlag für eine kleine Lobby](https://discord.com/channels/737538781024092170/981569254031769700/981662738612908102) [Vorschlag für Hafen und zentrales Tor](https://discord.com/channels/737538781024092170/981569254031769700/982267925983559750) [Idee für ein schwebendes Logo](https://discord.com/channels/737538781024092170/981569254031769700/982607826545442846)
+
 Am 5. Juni 2022 schlug taka8621 eine Lobby vor, in der man zwischen den Ebenen wechseln könnte und die Portale in der Mitte lägen. Den zentralen Bereich jeder Ebene sollten nach dem Vorschlag Mitglieder bauen, die damals die Rolle „Supporter“ oder eine höhere Rolle hatten.
 
 Am 7. Juni 2022 fragte Moon\_666, ob Spieler mehrere Welten von der Lobby aus erreichen und auf dem Rückweg ebenfalls durch die Lobby gehen sollten. Die Anmerkung war, dass dadurch die bisherigen Verbindungen zwischen den Welten verändert würden.
@@ -494,6 +498,8 @@ Am 26. November 2022 kündigte taibon852 an, Taibons Handelshalle am nächsten T
 Im Dezember desselben Jahres berichtete ジェスター (unter dem damaligen Namen Dōke Shinshi@Jester Sub), gemeinsam mit Buraki einen Melonenanbau im Stil einer Ferienanlage mit Strand gebaut zu haben. [Bericht zum Bau des Melonenanbaus](https://discord.com/channels/737538781024092170/779569416438415421/1048866874760364042)
 
 Am 12. Dezember 2022 kündigte ゆり an, auf dem neuen Server ein Rathaus bauen zu wollen, und bat um Ideen unter anderem zum Thema des Gebäudes. [Aufruf zu Ideen für das Rathaus](https://discord.com/channels/737538781024092170/1051846941211885639/1051846941211885639)
+
+&#12383;&#12356;&#12420;&#12365; bat im Thread um Ideen, sprach sich für westliche Architektur aus und berichtete vom Bau eines Rathausprototyps. Ein weiterer Beitrag enthielt eine Skizze eines Gebäudes in Muffinform und schlug einen Empfang im Erdgeschoss sowie einen Saal ganz oben vor. &#12422;&#12426; teilte ein Bild aus dem Spiel mit mehreren abgerundeten Gebäuden. [Aufruf von &#12383;&#12356;&#12420;&#12365;](https://discord.com/channels/737538781024092170/1051846941211885639/1051847985081876600) [Anmerkung zur westlichen Architektur](https://discord.com/channels/737538781024092170/1051846941211885639/1052916577160413194) [Bericht von &#12383;&#12356;&#12420;&#12365; zum Prototyp](https://discord.com/channels/737538781024092170/1051846941211885639/1053247700428128256) [Skizze in Muffinform](https://discord.com/channels/737538781024092170/1051846941211885639/1051851138036670527) [Spielbild von &#12422;&#12426;](https://discord.com/channels/737538781024092170/1051846941211885639/1052587034751021086)
 
 Den Aufzeichnungen aus dem früheren Discord-Kanal zum Bau des Gasthauses an den heißen Quellen zufolge suchte Projektleiter edamameRex_java nach Mitgliedern. ゆり erklärte, wie man mit Baumaterial oder bei den Bauarbeiten helfen konnte.
 

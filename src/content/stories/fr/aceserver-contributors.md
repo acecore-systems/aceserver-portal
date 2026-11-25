@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:ee56f27cc37cdad5855ee5b05eff2309c9e686afce54664782163e9b4d797e3d
+sourceHash: sha256:fd17de6bdd9738965da820297b2dffa821a904221d5058bf2fe795a207ffe9e6
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -419,6 +419,10 @@ En juin 2022, yanyan_fafnir a expliqué comment participer au concours d’îles
 
 En juin 2022, はっ a présenté son idée dans un fil consacré à la conception du hall. edamameRex_java a proposé un agencement inspiré du hall précédent. Le 3 juin, taka8621 a proposé d’intégrer le passage au nouveau hall dans son scénario, ou de recréer les halls d’époques précédentes. [Concept pour la construction du hall](https://discord.com/channels/737538781024092170/981569254031769700/981569389306466354) [Proposition inspirée du hall précédent](https://discord.com/channels/737538781024092170/981569254031769700/981572980993847466) [Propositions sur le passage au nouveau hall et les anciens halls](https://discord.com/channels/737538781024092170/981569254031769700/982223863800823808)
 
+&#32313;&#28218;?&#24385; a partagé un croquis d’île flottante sous un dôme immergé, et edamameRex_java a ajouté une capture d’une structure de verre sous l’eau. Moon_666 a partagé deux références d’aquariums, et &#12356;&#12396;&#12397;&#12371; des images d’îles flottantes enneigées et d’une tour en spirale. [Croquis du dôme immergé](https://discord.com/channels/737538781024092170/981569254031769700/981586163057963018) [Structure de verre sous l’eau](https://discord.com/channels/737538781024092170/981569254031769700/981592501246890065) [Images d’aquariums servant de référence](https://discord.com/channels/737538781024092170/981569254031769700/982240799070760980) [Îles flottantes enneigées](https://discord.com/channels/737538781024092170/981569254031769700/981857714810552341) [Image de référence pour la tour](https://discord.com/channels/737538781024092170/981569254031769700/982612514149924925)
+
+NCGpotechi a proposé un petit hall d’accueil avec du parkour et une ville avec le navire Chamomile, un port et un grand portail central menant au nouveau serveur principal. NCGpotechi a aussi suggéré de faire flotter le logo ou les lettres ACE au-dessus du hall. [Proposition de petit hall d’accueil](https://discord.com/channels/737538781024092170/981569254031769700/981662738612908102) [Proposition de port et de portail central](https://discord.com/channels/737538781024092170/981569254031769700/982267925983559750) [Idée de logo flottant](https://discord.com/channels/737538781024092170/981569254031769700/982607826545442846)
+
 Le 5 juin 2022, taka8621 a proposé un hall dont les niveaux seraient reliés et les portails placés dans la zone centrale. Selon cette proposition, les membres ayant alors le rôle de soutien ou un rôle supérieur construiraient la zone centrale de chaque niveau.
 
 Le 7 juin 2022, Moon\_666 a demandé si l’accès à plusieurs mondes et le retour se feraient via le hall. Moon\_666 a relevé que cette organisation modifierait les liaisons existantes entre les mondes.
@@ -494,6 +498,8 @@ Le 26 novembre 2022, taibon852 a annoncé que le comptoir de Taibon fermerait le
 En décembre de la même année, ジェスター (qui publiait sous le nom Dōke Shinshi@Jester Sub) a annoncé avoir créé avec Buraki une culture de pastèques dans le style d’un complexe balnéaire, avec une plage. [Compte rendu de la construction de la culture de pastèques](https://discord.com/channels/737538781024092170/779569416438415421/1048866874760364042)
 
 Le 12 décembre 2022, ゆり a indiqué vouloir construire un hôtel de ville sur le nouveau serveur et a demandé des idées, notamment pour le thème du bâtiment. [Appel à idées pour l’hôtel de ville](https://discord.com/channels/737538781024092170/1051846941211885639/1051846941211885639)
+
+&#12383;&#12356;&#12420;&#12365; a demandé des idées dans le fil, exprimé une préférence pour l’architecture occidentale et indiqué travailler à un prototype de mairie. Un autre message proposait un bâtiment en forme de muffin avec un accueil au rez-de-chaussée et une salle au dernier étage, croquis à l’appui. &#12422;&#12426; a partagé une capture du jeu montrant plusieurs bâtiments arrondis. [Appel à idées de &#12383;&#12356;&#12420;&#12365;](https://discord.com/channels/737538781024092170/1051846941211885639/1051847985081876600) [Avis sur l’architecture occidentale](https://discord.com/channels/737538781024092170/1051846941211885639/1052916577160413194) [Message de &#12383;&#12356;&#12420;&#12365; sur le prototype](https://discord.com/channels/737538781024092170/1051846941211885639/1053247700428128256) [Croquis en forme de muffin](https://discord.com/channels/737538781024092170/1051846941211885639/1051851138036670527) [Capture du jeu partagée par &#12422;&#12426;](https://discord.com/channels/737538781024092170/1051846941211885639/1052587034751021086)
 
 Les archives de l’ancien Discord sur l’auberge thermale indiquent qu’edamameRex_java a recruté des membres en tant que responsable et que ゆり a expliqué comment aider à la construction ou fournir des matériaux.
 

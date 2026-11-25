@@ -2,7 +2,7 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:ee56f27cc37cdad5855ee5b05eff2309c9e686afce54664782163e9b4d797e3d
+sourceHash: sha256:fd17de6bdd9738965da820297b2dffa821a904221d5058bf2fe795a207ffe9e6
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -419,6 +419,10 @@ En junio de 2022, yanyan_fafnir explicó cómo participar en el concurso de isla
 
 En junio de 2022, はっ compartió su idea en un hilo dedicado al diseño del vestíbulo. edamameRex_java propuso un diseño inspirado en el vestíbulo anterior. El 3 de junio, taka8621 sugirió integrar el traslado al nuevo vestíbulo en la ambientación o recrear vestíbulos de etapas anteriores. [Propuesta de diseño del vestíbulo](https://discord.com/channels/737538781024092170/981569254031769700/981569389306466354) [Propuesta inspirada en el vestíbulo anterior](https://discord.com/channels/737538781024092170/981569254031769700/981572980993847466) [Propuestas sobre el traslado y los vestíbulos anteriores](https://discord.com/channels/737538781024092170/981569254031769700/982223863800823808)
 
+&#32313;&#28218;?&#24385; compartió un boceto de una isla flotante dentro de una cúpula submarina, y edamameRex_java añadió una captura de una estructura de cristal bajo el agua. Moon_666 compartió dos imágenes de acuarios como referencia, e &#12356;&#12396;&#12397;&#12371; aportó imágenes de islas flotantes nevadas y de una torre en espiral. [Boceto de la cúpula submarina](https://discord.com/channels/737538781024092170/981569254031769700/981586163057963018) [Estructura de cristal bajo el agua](https://discord.com/channels/737538781024092170/981569254031769700/981592501246890065) [Imágenes de acuarios como referencia](https://discord.com/channels/737538781024092170/981569254031769700/982240799070760980) [Islas flotantes nevadas](https://discord.com/channels/737538781024092170/981569254031769700/981857714810552341) [Imagen de referencia de una torre](https://discord.com/channels/737538781024092170/981569254031769700/982612514149924925)
+
+NCGpotechi propuso un vestíbulo pequeño con parkour y una ciudad con el barco Chamomile, un puerto y un gran portal central hacia el nuevo servidor principal. También sugirió colocar las letras de ACE o el logotipo flotando en el aire. [Propuesta de vestíbulo pequeño](https://discord.com/channels/737538781024092170/981569254031769700/981662738612908102) [Propuesta de puerto y portal central](https://discord.com/channels/737538781024092170/981569254031769700/982267925983559750) [Idea de un logotipo flotante](https://discord.com/channels/737538781024092170/981569254031769700/982607826545442846)
+
 El 5 de junio de 2022, taka8621 propuso un vestíbulo con niveles comunicados y portales en la zona central. Según la propuesta, los miembros que entonces tenían el rol de apoyo o superior construirían la zona central de cada nivel.
 
 El 7 de junio de 2022, Moon\_666 preguntó si se accedería a los distintos mundos desde el vestíbulo y si también habría que pasar por él al regresar. Señaló que esta estructura cambiaría las conexiones que existían entre los mundos.
@@ -494,6 +498,8 @@ El 26 de noviembre de 2022, taibon852 anunció que el salón de comercio de Taib
 En diciembre del mismo año, ジェスター (con el nombre de entonces Dōke Shinshi@Jester Sub) informó de que había construido con Buraki un cultivo de sandías al estilo de un complejo turístico, con playa. [Informe de la construcción del cultivo de sandías](https://discord.com/channels/737538781024092170/779569416438415421/1048866874760364042)
 
 El 12 de diciembre de 2022, ゆり dijo que quería construir un ayuntamiento en el nuevo servidor y pidió ideas, entre ellas propuestas para el tema del edificio. [Convocatoria de ideas para el ayuntamiento](https://discord.com/channels/737538781024092170/1051846941211885639/1051846941211885639)
+
+&#12383;&#12356;&#12420;&#12365; pidió ideas en el hilo, se decantó por la arquitectura occidental y contó que estaba construyendo un prototipo del ayuntamiento. Otra persona compartió un boceto de un edificio con forma de magdalena y propuso una recepción abajo y un salón en la última planta. &#12422;&#12426; compartió una captura del juego con varios edificios de formas redondeadas. [Petición de ideas de &#12383;&#12356;&#12420;&#12365;](https://discord.com/channels/737538781024092170/1051846941211885639/1051847985081876600) [Comentario sobre la arquitectura occidental](https://discord.com/channels/737538781024092170/1051846941211885639/1052916577160413194) [Avance del prototipo de &#12383;&#12356;&#12420;&#12365;](https://discord.com/channels/737538781024092170/1051846941211885639/1053247700428128256) [Boceto con forma de magdalena](https://discord.com/channels/737538781024092170/1051846941211885639/1051851138036670527) [Captura del juego compartida por &#12422;&#12426;](https://discord.com/channels/737538781024092170/1051846941211885639/1052587034751021086)
 
 Los registros del antiguo canal de Discord sobre la posada de aguas termales recogen que edamameRex_java, responsable del proyecto, buscó miembros y ゆり informó de cómo ayudar con la construcción o con materiales.
 
