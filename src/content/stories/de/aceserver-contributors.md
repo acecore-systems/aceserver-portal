@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:6ae2d97a0ebc512be686acd1cfcdf084b84e8b2cad1681117326fb35875c7886
+sourceHash: sha256:f4834f90e986ade1ff6bfbebe0ef611cf5b6360a6d0879a2d1980a8a2f69ad84
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -181,6 +181,8 @@ Am 23. Juli 2023 meldete タケ, dass die Linie 1 der Ace Monorail als Ringlinie
 
 Am 16. August 2023 suchte ゆり nach Interessierten für eine benutzerdefinierte Partie in Apex Legends. Mugi bat Interessierte an Rainbow Six Siege (R6S) um eine Reaktion, und PillowKebap tat dasselbe für League of Legends. [Interessenabfrage für Apex Legends](https://discord.com/channels/737538781024092170/882222121135251486/1141256368351891506) [Interessenabfrage für Rainbow Six Siege](https://discord.com/channels/737538781024092170/882222121135251486/1141265485644693524) [Interessenabfrage für League of Legends](https://discord.com/channels/737538781024092170/882222121135251486/1141272275816042497)
 
+Am 25. September 2023 teilte Pluto Version 2.0 der Minecraft-Karte Only Up und veröffentlichte noch am selben Tag Version 2.1 mit Fehlerkorrekturen. Der Download für Version 2.1 enthielt Weltdaten im Format der Java Edition. Am folgenden Tag teilte Pluto Version 2.2 mit Änderungen an der Route und Version 2.3 mit Änderungen am Schwierigkeitsgrad.
+
 Am 7. August 2024 meldete タケ den Abschluss des gesamten Programms zum zweiten Jubiläumsfest. Die Tour stellte die neue Stationsbeschilderung sowie den neuen Bahnhof und die Verlängerung der Jiyūgaoka-Linie vor. [Bericht zum zweiten Jubiläumsfest](https://discord.com/channels/737538781024092170/779569416438415421/1270424971667308565)
 
 Das Video „&#26032;A&#39894;PV&#25913;&#35330;&#29256;“ vom 9. Oktober 2023 ist auf dem YouTube-Kanal unter dem Namen ゆり als nicht gelistet gekennzeichnet. Im früheren Discord ist ebenfalls ein Eintrag dazu erhalten. Das Video zeigt Ace Town, das Rathaus, das frühere Sega-Reich und den westlich geprägten Bezirk von Eirin-tai. Am Ende sind Gruppenbilder und eine Karte der alten Welt zu sehen.
@@ -250,6 +252,8 @@ Im Sommer 2025 begann End&#12539;コッカー eine Diskussion über ein Among-Us
 Im Juli 2025 berichtete End&#12539;コッカー, einen Vorschlag für das Sommerfest ausgearbeitet zu haben.
 
 In der Ankündigung zum Sommerfest 2025 wurde センチュリーズ für die Vorbereitung und Bereitstellung des Feuerwerks genannt. Der Dank nach der Veranstaltung nannte セガ, リンゴポン, あまぎ, 新人, ジェスター, ホステッチ und イザイザ für das Feuerwerk sowie コッカー und sh für die Gesamtkoordination. エント betreute den Rundkurs, moon und セキセイ das Golfspiel. ハルビィ, セキセイ und sh betreuten das Survival-PvP, &#12495;&#12483;&#12469;&#12531; und sh das Hassan-Event. [Originalbeitrag](https://discord.com/channels/737538781024092170/774152638450237460/1408390549370572880) [Dank nach der Veranstaltung](https://discord.com/channels/737538781024092170/779569416438415421/1411394624026710166)
+
+Am 29. August 2025 erklärte End&#12539;コッカー anhand von zehn Screenshots aus dem Spiel, wie man zur Rennstrecke gelangt. Die Anleitung zeigte nacheinander den Weg an der Oberfläche, Netherportale und Durchgänge im Nether.
 
 Am 28. Juli 2025 teilte &#12486;&#12451;&#12512;&#12540; einen Screenshot aus dem Spiel. Darauf sind Gleise jenseits eines Flusses und einer Grasfläche zu sehen. &#12415;&#12389;&#12364;&#12397; antwortete, gerade selbst an dieser Bahnstrecke zu arbeiten. [Screenshot der Gleise von &#12486;&#12451;&#12512;&#12540;](https://discord.com/channels/737538781024092170/1395970979754278942/1399166418544623808) [Bericht zum Bau von &#12415;&#12389;&#12364;&#12397;](https://discord.com/channels/737538781024092170/1395970979754278942/1399191150597767238)
 

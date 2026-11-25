@@ -2,7 +2,7 @@
 title: As pessoas que apoiaram o Aceserver
 description: Conheça quem ajudou o Aceserver pelos retratos de skins do Minecraft, relembre as atividades e confira o roteiro de eventos e propostas.
 translationOf: aceserver-contributors
-sourceHash: sha256:6ae2d97a0ebc512be686acd1cfcdf084b84e8b2cad1681117326fb35875c7886
+sourceHash: sha256:f4834f90e986ade1ff6bfbebe0ef611cf5b6360a6d0879a2d1980a8a2f69ad84
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -181,6 +181,8 @@ Em 23 de julho de 2023, タケ anunciou que a linha 1 do Monotrilho Ace estava c
 
 Em 16 de agosto de 2023, ゆり procurou jogadores interessados em uma partida personalizada de Apex Legends. Mugi pediu que pessoas interessadas em Rainbow Six Siege (R6S) reagissem, e PillowKebap fez o mesmo para League of Legends. [Consulta de interesse em Apex Legends](https://discord.com/channels/737538781024092170/882222121135251486/1141256368351891506) [Consulta de interesse em Rainbow Six Siege](https://discord.com/channels/737538781024092170/882222121135251486/1141265485644693524) [Consulta de interesse em League of Legends](https://discord.com/channels/737538781024092170/882222121135251486/1141272275816042497)
 
+A 25 de setembro de 2023, Pluto partilhou a versão 2.0 do mapa de Minecraft Only Up e publicou, no mesmo dia, a versão 2.1 com correções de erros. O ficheiro da versão 2.1 incluía os dados do mundo no formato da Java Edition. No dia seguinte, Pluto partilhou a versão 2.2 com alterações ao percurso e a versão 2.3 com ajustes à dificuldade.
+
 Em 7 de agosto de 2024, タケ informou que toda a programação da festa de dois anos havia terminado. O passeio apresentou a nova sinalização das estações, a nova estação e o trecho de extensão da linha Jiyūgaoka. [Relato da festa de dois anos](https://discord.com/channels/737538781024092170/779569416438415421/1270424971667308565)
 
 O vídeo “&#26032;A&#39894;PV&#25913;&#35330;&#29256;”, de 9 de outubro de 2023, está como não listado no canal do YouTube com o nome de ゆり. O antigo Discord também conserva um registro do vídeo. O vídeo mostra Ace Town, a prefeitura, o antigo Império Sega e o distrito de estilo ocidental de Eirin-tai. O trecho final inclui fotos de grupo e um mapa do mundo antigo.
@@ -250,6 +252,8 @@ No verão de 2025, End&#12539;コッカー abriu uma discussão sobre um torneio
 Em julho de 2025, End&#12539;コッカー informou que havia elaborado uma proposta para o festival de verão.
 
 O anúncio do festival de verão de 2025 citou センチュリーズ pela preparação e pelo fornecimento do espetáculo de fogos. O agradecimento após o evento citou セガ, リンゴポン, あまぎ, 新人, ジェスター, ホステッチ e イザイザ pelos fogos, e コッカー e sh pela coordenação geral. エント cuidou do circuito, e moon e セキセイ do golfe. ハルビィ, セキセイ e sh cuidaram do PvP de sobrevivência, e &#12495;&#12483;&#12469;&#12531; e sh do evento Hassan. [Publicação original](https://discord.com/channels/737538781024092170/774152638450237460/1408390549370572880) [Agradecimento após o evento](https://discord.com/channels/737538781024092170/779569416438415421/1411394624026710166)
+
+A 29 de agosto de 2025, End&#12539;コッカー explicou como chegar ao circuito com dez capturas de ecrã do jogo. O guia mostrava, por ordem, o caminho à superfície, os portais do Nether e as passagens pelo Nether.
 
 Em 28 de julho de 2025, &#12486;&#12451;&#12512;&#12540; compartilhou uma captura do jogo em que se veem trilhos além de um rio e de um terreno gramado. &#12415;&#12389;&#12364;&#12397; respondeu que estava construindo aquela ferrovia. [Captura dos trilhos compartilhada por &#12486;&#12451;&#12512;&#12540;](https://discord.com/channels/737538781024092170/1395970979754278942/1399166418544623808) [Registro da construção por &#12415;&#12389;&#12364;&#12397;](https://discord.com/channels/737538781024092170/1395970979754278942/1399191150597767238)
 

@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:6ae2d97a0ebc512be686acd1cfcdf084b84e8b2cad1681117326fb35875c7886
+sourceHash: sha256:f4834f90e986ade1ff6bfbebe0ef611cf5b6360a6d0879a2d1980a8a2f69ad84
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -181,6 +181,8 @@ On July 23, 2023, タケ reported that Ace Monorail Line 1 was complete as a loo
 
 On August 16, 2023, ゆり asked who was interested in a custom Apex Legends match. Mugi invited people interested in Rainbow Six Siege (R6S) to react, and PillowKebap did the same for League of Legends. [Apex Legends interest check](https://discord.com/channels/737538781024092170/882222121135251486/1141256368351891506) [Rainbow Six Siege interest check](https://discord.com/channels/737538781024092170/882222121135251486/1141265485644693524) [League of Legends interest check](https://discord.com/channels/737538781024092170/882222121135251486/1141272275816042497)
 
+On September 25, 2023, Pluto shared version 2.0 of the Minecraft map Only Up and released version 2.1 with bug fixes the same day. The version 2.1 download included world data in the Java Edition format. The following day, Pluto shared version 2.2 with changes to the route and version 2.3 with changes to the difficulty.
+
 On August 7, 2024, タケ reported that the second anniversary festival’s full program had concluded. The tour unveiled new station signage and introduced the Jiyūgaoka Line’s new station and extension. [Second anniversary festival report](https://discord.com/channels/737538781024092170/779569416438415421/1270424971667308565)
 
 The October 9, 2023 video “&#26032;A&#39894;PV&#25913;&#35330;&#29256;” is unlisted on the YouTube channel under ゆり’s name. A record of the video is also preserved in the old Discord. The video visits Ace Town, city hall, the former Sega Empire, and Eirin-tai’s Western-style district. Its closing section includes group pictures and a map of the old world.
@@ -250,6 +252,8 @@ In summer 2025, End&#12539;コッカー started a discussion about an Among Us t
 In July 2025, End&#12539;コッカー reported preparing a proposal for the summer festival.
 
 The 2025 summer festival announcement named センチュリーズ for preparing and providing the fireworks display. The post-event thanks named セガ, リンゴポン, あまぎ, 新人, ジェスター, ホステッチ and イザイザ for the fireworks, and コッカー and sh for overall coordination. エント worked on the circuit, and moon and セキセイ on golf. ハルビィ, セキセイ and sh worked on survival PvP, and &#12495;&#12483;&#12469;&#12531; and sh on the Hassan event. [Original post](https://discord.com/channels/737538781024092170/774152638450237460/1408390549370572880) [Post-event thanks](https://discord.com/channels/737538781024092170/779569416438415421/1411394624026710166)
+
+On August 29, 2025, End&#12539;コッカー explained how to reach the circuit using ten in-game screenshots. The guide showed the path on the surface, Nether portals, and passages through the Nether in order.
 
 On July 28, 2025, &#12486;&#12451;&#12512;&#12540; shared an in-game screenshot of railway tracks across a river and grassy terrain. &#12415;&#12389;&#12364;&#12397; replied that they were building the railway. [Screenshot of the tracks shared by &#12486;&#12451;&#12512;&#12540;](https://discord.com/channels/737538781024092170/1395970979754278942/1399166418544623808) [Railway construction update from &#12415;&#12389;&#12364;&#12397;](https://discord.com/channels/737538781024092170/1395970979754278942/1399191150597767238)
 
