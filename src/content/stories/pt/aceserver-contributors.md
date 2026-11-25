@@ -2,7 +2,7 @@
 title: As pessoas que apoiaram o Aceserver
 description: Conheça quem ajudou o Aceserver pelos retratos de skins do Minecraft, relembre as atividades e confira o roteiro de eventos e propostas.
 translationOf: aceserver-contributors
-sourceHash: sha256:aad42f4f0370808766b4e95101c7f9d36f27fb4ba446803e0a7b94d01ef21030
+sourceHash: sha256:0efa8a46586e5152821f64d08a06368d8d59f5447219c4a93e50f89d24f5f196
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -504,6 +504,8 @@ Em 20 de outubro de 2025, Nishikino Sega apresentou os planos do Comitê de Revi
 Em 1º de novembro de 2025, End&#12539;コッカー informou que havia conectado um portal de volta ao lobby e acrescentado placas no lobby com detalhes dos bastidores da criação.
 
 Em novembro de 2025, End&#12539;コッカー informou que havia instalado portais em oito direções para chegar a áreas distantes do servidor de sobrevivência. [Anúncio da instalação de portais](https://discord.com/channels/737538781024092170/774152638450237460/1434193495752704134)
+
+Em 4 de novembro de 2025, &#12479;&#12465; publicou um guia para explorar a região sudeste do servidor. O guia indicava as coordenadas de nove biomas, como cerejeiras, bambuzais e terras áridas, e mencionava os biomas que apareciam no caminho a partir do ponto inicial. [Guia dos biomas do sudeste](https://discord.com/channels/737538781024092170/779569416438415421/1435272329025294377)
 
 Em novembro de 2025, Moon\_666 informou que uma fazenda de piglins-zumbis que rendia ouro e experiência estava concluída no servidor de temporada. [Relato de conclusão no servidor de temporada](https://discord.com/channels/737538781024092170/1437442961507090443/1440300609545965649)
 

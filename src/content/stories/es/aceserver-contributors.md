@@ -2,7 +2,7 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:aad42f4f0370808766b4e95101c7f9d36f27fb4ba446803e0a7b94d01ef21030
+sourceHash: sha256:0efa8a46586e5152821f64d08a06368d8d59f5447219c4a93e50f89d24f5f196
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -504,6 +504,8 @@ El 20 de octubre de 2025, Nishikino Sega presentó el proyecto de una gran estac
 El 1 de noviembre de 2025, End&#12539;コッカー informó de que había conectado un portal de regreso al vestíbulo y añadido allí carteles con detalles entre bastidores sobre la construcción.
 
 En noviembre de 2025, End&#12539;コッカー informó de que había instalado portales en ocho direcciones para llegar a zonas lejanas del servidor de supervivencia. [Anuncio de la instalación de portales](https://discord.com/channels/737538781024092170/774152638450237460/1434193495752704134)
+
+El 4 de noviembre de 2025, &#12479;&#12465; publicó una guía para explorar el sureste del servidor. Incluyó las coordenadas de nueve biomas, entre ellos los cerezales, los bosques de bambú y las tierras baldías, y señaló cuáles podían encontrarse de camino desde el punto de aparición. [Guía de los biomas del sureste](https://discord.com/channels/737538781024092170/779569416438415421/1435272329025294377)
 
 En noviembre de 2025, Moon\_666 informó de que se había completado en el servidor de temporada una granja de piglins zombificados que daba oro y experiencia. [Informe de finalización en el servidor de temporada](https://discord.com/channels/737538781024092170/1437442961507090443/1440300609545965649)
 

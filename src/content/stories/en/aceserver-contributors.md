@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:aad42f4f0370808766b4e95101c7f9d36f27fb4ba446803e0a7b94d01ef21030
+sourceHash: sha256:0efa8a46586e5152821f64d08a06368d8d59f5447219c4a93e50f89d24f5f196
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -504,6 +504,8 @@ On October 20, 2025, Nishikino Sega described the Aceserver Revitalization Commi
 On November 1, 2025, End&#12539;コッカー reported connecting a gate back to the lobby and adding signs in the lobby with behind-the-scenes notes about the build.
 
 In November 2025, End&#12539;コッカー reported installing gates in eight directions to reach distant parts of the survival server. [Gate installation announcement](https://discord.com/channels/737538781024092170/774152638450237460/1434193495752704134)
+
+On November 4, 2025, &#12479;&#12465; posted an exploration guide to the server’s southeast region. It listed coordinates for nine biomes, including cherry groves, bamboo forests, and badlands, and noted which biomes players could find on the way from spawn. [Guide to the southeast region’s biomes](https://discord.com/channels/737538781024092170/779569416438415421/1435272329025294377)
 
 In November 2025, Moon\_666 reported that a zombified piglin farm for gold and experience points was complete on the Season Server. [Season Server completion report](https://discord.com/channels/737538781024092170/1437442961507090443/1440300609545965649)
 

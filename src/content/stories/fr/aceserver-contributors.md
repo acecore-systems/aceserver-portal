@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:aad42f4f0370808766b4e95101c7f9d36f27fb4ba446803e0a7b94d01ef21030
+sourceHash: sha256:0efa8a46586e5152821f64d08a06368d8d59f5447219c4a93e50f89d24f5f196
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -504,6 +504,8 @@ Le 20 octobre 2025, Nishikino Sega a présenté le projet de grande gare que le 
 Le 1er novembre 2025, End&#12539;コッカー a annoncé avoir relié un portail de retour au hall et ajouté dans le hall des panneaux sur les coulisses de la réalisation.
 
 En novembre 2025, End&#12539;コッカー a annoncé l’installation de portails dans huit directions pour atteindre les zones éloignées du serveur de survie. [Annonce de l’installation des portails](https://discord.com/channels/737538781024092170/774152638450237460/1434193495752704134)
+
+Le 4 novembre 2025, &#12479;&#12465; a publié un guide d’exploration du sud-est du serveur. Il donnait les coordonnées de neuf biomes, dont les cerisaies, les forêts de bambous et les badlands, et indiquait quels biomes on pouvait rencontrer en venant du point d’apparition. [Guide des biomes du sud-est](https://discord.com/channels/737538781024092170/779569416438415421/1435272329025294377)
 
 En novembre 2025, Moon\_666 a annoncé qu’une ferme à piglins zombifiés qui rapportait de l’or et des points d’expérience était terminée sur le serveur de saison. [Rapport d’achèvement sur le serveur de saison](https://discord.com/channels/737538781024092170/1437442961507090443/1440300609545965649)
 

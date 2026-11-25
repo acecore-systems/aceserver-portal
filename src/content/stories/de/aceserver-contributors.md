@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:aad42f4f0370808766b4e95101c7f9d36f27fb4ba446803e0a7b94d01ef21030
+sourceHash: sha256:0efa8a46586e5152821f64d08a06368d8d59f5447219c4a93e50f89d24f5f196
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -504,6 +504,8 @@ Am 20. Oktober 2025 stellte Nishikino Sega das Vorhaben des Belebungskomitees vo
 Am 1. November 2025 berichtete End&#12539;コッカー, ein Portal für die Rückkehr in die Lobby verbunden und dort Schilder mit Einblicken in die Entstehung aufgestellt zu haben.
 
 Im November 2025 meldete End&#12539;コッカー, dass Portale in acht Richtungen eingerichtet worden waren, die zu entfernten Bereichen des Survival-Servers führten. [Ankündigung zum Einbau der Portale](https://discord.com/channels/737538781024092170/774152638450237460/1434193495752704134)
+
+Am 4. November 2025 veröffentlichte &#12479;&#12465; einen Erkundungsführer für die Südostregion des Servers. Er enthielt die Koordinaten von neun Biomen, darunter Kirschhaine, Bambuswälder und Tafelberge, und nannte weitere Biome auf dem Weg vom Startpunkt. [Leitfaden zu den Biomen der Südostregion](https://discord.com/channels/737538781024092170/779569416438415421/1435272329025294377)
 
 Im November 2025 meldete Moon\_666 die Fertigstellung einer Farm für zombifizierte Piglins auf dem Saisonserver, die Gold und Erfahrungspunkte lieferte. [Bericht zur Fertigstellung auf dem Saisonserver](https://discord.com/channels/737538781024092170/1437442961507090443/1440300609545965649)
 
