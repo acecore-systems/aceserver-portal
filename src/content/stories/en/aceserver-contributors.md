@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:bd5ff69767a9a7269d19c226f303c9d8618ff9af5b262cf1a372860f4b380e4c
+sourceHash: sha256:aba52e76f55e05c9b750038efe6bcbfa0633b3928495fb4cd0811c649c2e445f
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -391,9 +391,11 @@ PillowKebap shared a wooden house against the mesa cliffs and a gathering of pla
 
 &#12399;&#12387; shared players gathered at a window marked with an emerald. dont_stop showed a player in a room lined with chests, and &#12414;&#12429; posted a group picture beside a monument made with wither skeleton skulls. [Players gathered at the window](https://discord.com/channels/737538781024092170/981561783707906118/981564324109774849) [Room lined with chests](https://discord.com/channels/737538781024092170/981561783707906118/981564578313937006) [Group picture by the monument](https://discord.com/channels/737538781024092170/981561783707906118/981851600735854612)
 
-The gallery preserves exterior and interior views of the hot-spring inn that BURRAKI showed a visitor. Other posts document places reached through the portals beneath city hall and a room a player stayed in at &#31481;&#26360;&#25151;. [Tour of the hot-spring inn](https://discord.com/channels/737538781024092170/981561783707906118/982088648629567498) [Portals beneath city hall and their destinations](https://discord.com/channels/737538781024092170/981561783707906118/982087677048422432) [A room where a player stayed](https://discord.com/channels/737538781024092170/981561783707906118/982089728549597224)
+The gallery preserves exterior and interior views of the hot-spring inn that BURRAKI showed a visitor. Other posts document places reached through the portals beneath city hall and a room a player stayed in at &#31481;&#26360;&#25151;. &#12384;&#12426; also documented Buraki helping carry supplies for their home. The name BURAKI03 is visible in both the supply and hot-spring inn pictures. [Tour of the hot-spring inn](https://discord.com/channels/737538781024092170/981561783707906118/982088648629567498) [Portals beneath city hall and their destinations](https://discord.com/channels/737538781024092170/981561783707906118/982087677048422432) [A room where a player stayed](https://discord.com/channels/737538781024092170/981561783707906118/982089728549597224) [Help carrying supplies](https://discord.com/channels/737538781024092170/981561783707906118/982181022106021938)
 
 taiyaki5190 also shared a screenshot from bringing back mooshrooms with &#12399;&#12420;. &#12384;&#12426; shared a map of the area near the amusement park and screenshots of Nether rails and portals and the shared housing area. [Bringing back mooshrooms](https://discord.com/channels/737538781024092170/981561783707906118/981683668424740944) [Map and pictures near the amusement park](https://discord.com/channels/737538781024092170/981561783707906118/982174520121110560) [Nether rails and portals](https://discord.com/channels/737538781024092170/981561783707906118/982175875778879548) [Shared housing pictures](https://discord.com/channels/737538781024092170/981561783707906118/982175911099125810)
+
+&#12384;&#12426; also shared exterior and interior views of the Eirin-tai trading hall in Creative mode and a screenshot of a hoe displayed on stone as an offering to the Kuwa Kingdom. [Trading hall in Creative mode](https://discord.com/channels/737538781024092170/981561783707906118/982180365861003324) [Offering to the Kuwa Kingdom](https://discord.com/channels/737538781024092170/981561783707906118/982181587208769547)
 
 In June 2022, yanyan_fafnir explained how to enter the floating-island contest that led to work on the former lobby and how entries would be presented at judging. The announcement named はっ and members with the supporter role or above as judges. [Contest entry rules](https://discord.com/channels/737538781024092170/774152638450237460/982990352422162482) [Judging session announcement](https://discord.com/channels/737538781024092170/774152638450237460/986294242848669756)
 
