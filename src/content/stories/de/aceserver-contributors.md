@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:1855bc33932ca90910ac0000e03e8cf470e283db0102c5b9458e541a43131300
+sourceHash: sha256:c96602be40044c20ac1f79ba12a5aebf791ed006584bd254ac0c5a0b33e1f1ce
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -545,6 +545,8 @@ Im April 2025 reichte Moon\_666 einen Plan für eine Raidfarm ein, die alle nutz
 
 Im Mai 2025 teilte End&#12539;コッカー Ideen für ein Rollenspiel. Die beim Besiegen von Gegnern erhaltenen Psalmen der Erinnerung sollten sich gegen besondere Gegenstände eintauschen lassen. Als Handlung schlug End&#12539;コッカー eine Geschichte um einen großen Baum auf einer abgelegenen Insel vor. Für das separate Konzept Überleben auf See zog End&#12539;コッカー feindliche Dorfbewohner als Piraten in Betracht und überlegte, wie groß die Karte sein sollte.
 
+Am 13. Mai erinnerte End&#12539;コッカー an den früheren Zugang zum RPG-Server, der mit dem Rathaus verbunden war, und teilte ein Bild der Umgebung aus dem Spiel. Yukke schlug vor, den Zugang zum RPG-Server in der geplanten neuen Lobby neben dem Hauptserver und den anderen Servern zu platzieren.
+
 Am 22. Juni 2025 berichtete End&#12539;コッカー, auf einer von Yukke angelegten Insel zu bauen.
 
 Am 22. Juli 2025 rief &#12415;&#12389;&#12364;&#12397; dazu auf, sich an Bauprojekten an zwei Orten zu beteiligen. Interessierte konnten eine Idee einreichen oder anbieten, selbst zu bauen. [Aufruf zur Mithilfe an zwei Bauorten](https://discord.com/channels/737538781024092170/773171457487929344/1397091645744349236)
@@ -553,7 +555,7 @@ Am 1. September 2025 schlug End&#12539;コッカー vor, Werke von Spielern aus 
 
 Am 1. September 2025 teilte End&#12539;コッカー einen bebilderten Vorschlag, Fassadenwände für die Außengestaltung der Lobby zu verwenden.
 
-Am 2. September 2025 teilte Yukke beim Ausarbeiten der Idee Duell als Referenz zwei Screenshots mit Kampfausrüstung von einem anderen Server.
+Am 2. September 2025 teilte Yukke für die Planung des Duell-Modus vier Bilder eines anderen Servers. Sie zeigten Kampfausrüstung und die Bearbeitung von Ausrüstungssets. Yukke verwies auch auf eine PvP-Rangliste und auf Kampfvideos.
 
 Am 5. September berichtete End&#12539;コッカー im früheren Kanal Lobby-Bau, ein Fundament angelegt zu haben, und bat um Hilfe beim Bauen. Am 7. September schlug End&#12539;コッカー vor, die Treppen des Minispielservers zu versetzen und Stände aufzustellen. Am 9. September zeigte End&#12539;コッカー drei Bilder vom Zwischenstand mit dem Brunnen und den Ständen auf dem Platz sowie einem Segelschiff und bat Yukke um Rückmeldung.
 
@@ -599,7 +601,7 @@ Am 11. August 2026 berichtete LuMiSIA\_&#26376;&#31070;&#24736;&#33673;, gemeins
 
 Am 17. September 2026 kündigte タケ an, dass das Belebungskomitee von Aceserver mit der Neugestaltung des zentralen Bereichs des ehemaligen Century-Geländes begonnen hatte. タケ berichtete auch, dass mehrere Helfer beim Aufräumen vorangekommen waren. [Beginn der Neugestaltung des ehemaligen Century-Geländes](https://discord.com/channels/737538781024092170/1437442902547759125/1550005135311110154)
 
-Am 28. September 2026 erwog あすたん, das damals in Entwicklung befindliche MMO um Angeln zu ergänzen. Am selben Tag berichtete あすたん bei einem Austausch über die Vorbereitung des Betatests des Content-Servers, Angeln implementiert zu haben. Am 3. Oktober kündigte あすたん im offiziellen Discord-Ankündigungskanal den Start des offenen Betatests des Content-Servers an. Zu den spielbaren Angeboten zählten Duel, ein Eins-gegen-eins-PvP-Modus, und Fishing. [Ankündigung der offenen Beta des Content-Servers (Test beendet)](https://discord.com/channels/737538781024092170/774152638450237460/1555731149119164427)
+Am 28. September 2026 erwog あすたん, das damals in Entwicklung befindliche MMO um Angeln zu ergänzen. Am selben Tag berichtete あすたん bei einem Austausch über die Vorbereitung des Betatests des Content-Servers, Angeln implementiert zu haben. Noch am selben Tag teilte あすたん eine Aufnahme eines Angeltests im Spiel. Am 3. Oktober kündigte あすたん im offiziellen Discord-Ankündigungskanal den Start des offenen Betatests des Content-Servers an. Zu den spielbaren Angeboten zählten Duel, ein Eins-gegen-eins-PvP-Modus, und Fishing. [Ankündigung der offenen Beta des Content-Servers (Test beendet)](https://discord.com/channels/737538781024092170/774152638450237460/1555731149119164427)
 
 Am 31. Oktober 2026 teilte タケ mit, dass auf dem Überlebensserver eine neue Kaktusfarm eingerichtet worden war und sie damals von allen genutzt werden konnte. [Ankündigung der neuen Kaktusfarm](https://discord.com/channels/737538781024092170/1437442902547759125/1565747261575790592)
 

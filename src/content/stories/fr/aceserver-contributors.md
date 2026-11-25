@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:1855bc33932ca90910ac0000e03e8cf470e283db0102c5b9458e541a43131300
+sourceHash: sha256:c96602be40044c20ac1f79ba12a5aebf791ed006584bd254ac0c5a0b33e1f1ce
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -545,6 +545,8 @@ En avril 2025, Moon\_666 a déposé un projet de ferme à raids ouverte à tous.
 
 En mai 2025, End&#12539;コッカー a présenté des idées pour un RPG. Le projet permettrait d’échanger contre des objets spéciaux les Psaumes de la mémoire obtenus en battant des ennemis. Un scénario mettait en scène un grand arbre sur une île isolée. Pour un autre projet, Survie à la dérive, End&#12539;コッカー a envisagé de donner le rôle des pirates à des villageois hostiles et a réfléchi à la taille de la carte.
 
+Le 13 mai, End&#12539;コッカー a évoqué l’ancien accès au serveur RPG, qui était relié à la mairie, et a partagé une vue des environs dans le jeu. Yukke a proposé de placer l’accès au serveur RPG aux côtés du serveur principal et des autres serveurs dans le nouveau hall prévu.
+
 Le 22 juin 2025, End&#12539;コッカー a indiqué travailler à une construction sur une île créée par Yukke.
 
 Le 22 juillet 2025, &#12415;&#12389;&#12364;&#12397; a lancé un appel à contributions pour construire sur deux sites. Les personnes pouvaient simplement soumettre une idée ou proposer de construire elles-mêmes. [Appel à contributions pour deux sites de construction](https://discord.com/channels/737538781024092170/773171457487929344/1397091645744349236)
@@ -553,7 +555,7 @@ Le 1er septembre 2025, End&#12539;コッカー a proposé d’intégrer des cré
 
 Le 1er septembre 2025, End&#12539;コッカー a partagé, image à l’appui, une proposition pour donner au hall son apparence extérieure avec des murs de façade.
 
-Le 2 septembre 2025, Yukke a partagé deux captures de l’équipement de combat d’un autre serveur pour prendre des idées en réfléchissant au projet Duel.
+Le 2 septembre 2025, Yukke a partagé quatre captures comme références pour Duel. Elles montraient des équipements de combat et l’éditeur de kits d’un autre serveur. Yukke a aussi signalé un classement PvP et des vidéos de parties.
 
 Le 5 septembre, End&#12539;コッカー a indiqué dans l’ancien salon Construction du hall avoir préparé une base et a demandé de l’aide pour la construction. Le 7 septembre, End&#12539;コッカー a suggéré de déplacer les escaliers du serveur de mini-jeux et d’ajouter des stands. Le 9 septembre, End&#12539;コッカー a demandé l’avis de Yukke et a partagé trois images du chantier montrant la fontaine et les stands de la place ainsi qu’un voilier.
 
@@ -599,7 +601,7 @@ Le 11 août 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; a indiqué avoir exp
 
 Le 17 septembre 2026, タケ a annoncé que le comité de revitalisation d’Aceserver avait commencé à réaménager la partie centrale de l’ancien site de Century. タケ a aussi signalé que plusieurs personnes avaient aidé à dégager la zone. [Début du réaménagement de l’ancien site de Century](https://discord.com/channels/737538781024092170/1437442902547759125/1550005135311110154)
 
-Le 28 septembre 2026, あすたん a envisagé d’ajouter la pêche au MMO alors en cours de développement. Le même jour, lors d’un échange sur la préparation du test bêta du serveur de contenu, あすたん a signalé avoir implémenté la pêche. Le 3 octobre, あすたん a annoncé dans le salon officiel des annonces Discord le lancement du test bêta ouvert du serveur de contenu. L’annonce indiquait qu’on pouvait y essayer Duel, un mode PvP en un contre un, et Fishing. [Annonce de la bêta ouverte du serveur de contenu (test terminé)](https://discord.com/channels/737538781024092170/774152638450237460/1555731149119164427)
+Le 28 septembre 2026, あすたん a envisagé d’ajouter la pêche au MMO alors en cours de développement. Le même jour, lors d’un échange sur la préparation du test bêta du serveur de contenu, あすたん a signalé avoir implémenté la pêche. Le même jour, あすたん a également partagé une capture d’un essai de pêche dans le jeu. Le 3 octobre, あすたん a annoncé dans le salon officiel des annonces Discord le lancement du test bêta ouvert du serveur de contenu. L’annonce indiquait qu’on pouvait y essayer Duel, un mode PvP en un contre un, et Fishing. [Annonce de la bêta ouverte du serveur de contenu (test terminé)](https://discord.com/channels/737538781024092170/774152638450237460/1555731149119164427)
 
 Le 31 octobre 2026, タケ a annoncé qu’une nouvelle ferme à cactus avait été installée sur le serveur de survie et que tout le monde pouvait l’utiliser à l’époque. [Annonce de la nouvelle ferme à cactus](https://discord.com/channels/737538781024092170/1437442902547759125/1565747261575790592)
 

@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:1855bc33932ca90910ac0000e03e8cf470e283db0102c5b9458e541a43131300
+sourceHash: sha256:c96602be40044c20ac1f79ba12a5aebf791ed006584bd254ac0c5a0b33e1f1ce
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -545,6 +545,8 @@ In April 2025, Moon\_666 submitted a proposal for a raid farm that anyone could 
 
 In May 2025, End&#12539;コッカー shared RPG ideas for trading Psalms of Memory earned by defeating enemies for special items, and for a story about a great tree on an isolated island. For a separate Castaway Survival concept, they considered using illagers as pirates and discussed how large the map could be.
 
+On May 13, End&#12539;コッカー recalled the old RPG server entrance that had been connected to City Hall and shared an in-game view of the area. Yukke proposed placing the RPG server entrance alongside the main and other servers in the planned new lobby.
+
 On June 22, 2025, End&#12539;コッカー reported building on an island that Yukke had made.
 
 On July 22, 2025, &#12415;&#12389;&#12364;&#12397; invited contributions for builds at two locations, accepting both ideas on their own and offers from applicants to do the building themselves. [Call for builds at two locations](https://discord.com/channels/737538781024092170/773171457487929344/1397091645744349236)
@@ -553,7 +555,7 @@ On September 1, 2025, End&#12539;コッカー proposed using creations by regula
 
 On September 1, 2025, End&#12539;コッカー shared an image illustrating a proposal to use facade walls to give the lobby its exterior appearance.
 
-On September 2, 2025, Yukke shared two reference screenshots of combat gear from another server while exploring the Duel concept.
+On September 2, 2025, Yukke shared four reference screenshots for Duel, showing combat gear and the kit editor on another server. Yukke also pointed to PvP rankings and gameplay videos.
 
 On September 5, End&#12539;コッカー reported laying a foundation and asked for help with the build in the old Lobby Building channel. On September 7, they suggested relocating the minigame server’s stairs and adding stalls. On September 9, they asked Yukke for feedback and shared three work-in-progress images showing the plaza’s fountain and stalls, as well as a sailing ship.
 
@@ -599,7 +601,7 @@ On August 11, 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; reported exploring
 
 On September 17, 2026, タケ announced that the Aceserver Revitalization Committee had started redeveloping the central part of the old Century site. タケ also reported that several volunteers had made progress clearing the area. [Start of the old Century site redevelopment](https://discord.com/channels/737538781024092170/1437442902547759125/1550005135311110154)
 
-On September 28, 2026, あすたん considered adding fishing to the MMO under development. That same day, あすたん reported implementing fishing during a discussion about preparing the Content Server beta. On October 3, they announced the Content Server open beta test in the official Discord announcements and said players could try Duel, a one-on-one PvP mode, and Fishing. [Content Server open beta announcement (test ended)](https://discord.com/channels/737538781024092170/774152638450237460/1555731149119164427)
+On September 28, 2026, あすたん considered adding fishing to the MMO under development. That same day, あすたん reported implementing fishing during a discussion about preparing the Content Server beta. That day, they also shared a screenshot from an in-game fishing test. On October 3, they announced the Content Server open beta test in the official Discord announcements and said players could try Duel, a one-on-one PvP mode, and Fishing. [Content Server open beta announcement (test ended)](https://discord.com/channels/737538781024092170/774152638450237460/1555731149119164427)
 
 On October 31, 2026, タケ announced that a new cactus farm had been installed on the survival server and that anyone could use it at the time. [New cactus farm announcement](https://discord.com/channels/737538781024092170/1437442902547759125/1565747261575790592)
 
