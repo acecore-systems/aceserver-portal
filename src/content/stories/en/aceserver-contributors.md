@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:0efa8a46586e5152821f64d08a06368d8d59f5447219c4a93e50f89d24f5f196
+sourceHash: sha256:b93f36d85185851b72da560cb4739563b66aa3d4c681ee98fb61e47d2b32c06a
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -357,6 +357,8 @@ In June 2021, KOTA-SAN reported the launch of the collaborative building project
 
 On October 22, 2021, taiyaki5190 asked whether a guide to the residential district they had built could be posted on the bulletin board.
 
+On September 12, 2021, JagdFeind(jp) said renovation had begun on the elevated mob farm in Suke Village and invited suggestions for block choices and designs for its spawning and water collection floors. [Call for mob farm designs](https://discord.com/channels/737538781024092170/779569416438415421/886428347884798012)
+
 On January 30, 2022, \_BE\_kurenohachi said people had offered to help and shared a plan to build a sizable amusement park with a mechanism that would set off fireworks just once at night.
 
 On February 20, 2022, &#12414;&#12356;&#12369;&#12427; asked for help leveling the ground for a maze. [Call for help preparing the maze site](https://discord.com/channels/737538781024092170/773171457487929344/944771522348843008)
@@ -475,9 +477,13 @@ On July 30, 2023, sinragi\_lce\_1019 shared photos of a finished home and thanke
 
 In a November 2023 photo contest entry, Yukke looked back on excavating 256 chunks for the wither skeleton facility and taking measures to prevent spawns. In a December entry, あすたん described using Yukke’s facility to defeat Withers with other players and make a rainbow with more than 200 beacons.
 
+On January 17, 2024, KITUNEKO0605 reported recreating an earlier version of Aceserver and told players they could visit through a gateway on the End’s main island. On March 23, &#12479;&#12465; suggested making map art away from busy areas and using a glass pane to lock and preserve the finished map. [Recreation and visitor directions](https://discord.com/channels/737538781024092170/779569416438415421/1197088107082821662) [Map art advice](https://discord.com/channels/737538781024092170/779569416438415421/1221082086954504202)
+
 On May 4, 2024, sh reported creating an in-game monument dedicated to a player and asked for suggestions of players to feature in the next one.
 
 In May 2024, PillowKebap applied for a large map art project. In August, Amagi\_467 submitted a plan for a golem farm for public facilities. In November, タケ applied to build facilities including a rail depot and warehouses.
+
+On December 29, 2024, sh31415 invited players to help build a town from scratch on a remote End island. Another bulletin-board post that day called for players interested in founding a country in the End and welcoming residents. [Invitation to help build a town in the End](https://discord.com/channels/737538781024092170/779569416438415421/1322737207856988241) [Call for prospective founders](https://discord.com/channels/737538781024092170/779569416438415421/1322756768585089105)
 
 In April 2025, Moon\_666 submitted a proposal for a raid farm that anyone could use. On April 15, Moon\_666 reported completing the Minecraft 1.21-compatible raid farm and said it was open for anyone to use. [Raid farm completion report](https://discord.com/channels/737538781024092170/773171457487929344/1361635002839990406)
 
@@ -530,6 +536,8 @@ On April 18, 2026, Moon\_666 reported that Woodland Mansion Apartments Nos. 1 to
 On June 3, 2026, Pluto outlined possible MMO classes for sword users, archers, mages, and shield users, among others, along with an 11-tier system for upgrading equipment. On June 5, Pluto proposed a dungeon with multiple floors.
 
 On June 5, 2026, あすたん outlined an MMO in which players would choose a class, level up, collect equipment, and grow stronger through class-specific skills and point allocation. On June 12, they reported that much of the core functionality was in place, with textures and models, skills, and work on the world still to do.
+
+On August 2, 2026, sh31415 reported building a commercial building in the End. [Commercial building report](https://discord.com/channels/737538781024092170/779569416438415421/1533144809206845482)
 
 On August 11, 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; reported exploring the underground area of the Sega Empire with &#12486;&#12451;&#12512;&#12373;&#12435;. Images in the original thread show the contents of a shulker box and the equipment detail screens.
 

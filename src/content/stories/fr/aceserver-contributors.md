@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:0efa8a46586e5152821f64d08a06368d8d59f5447219c4a93e50f89d24f5f196
+sourceHash: sha256:b93f36d85185851b72da560cb4739563b66aa3d4c681ee98fb61e47d2b32c06a
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -357,6 +357,8 @@ En juin 2021, KOTA-SAN a signalé le démarrage du projet de construction collec
 
 Le 22 octobre 2021, taiyaki5190 a demandé s’il était possible de publier sur le tableau d’affichage un guide du quartier résidentiel qu’avait construit taiyaki5190.
 
+Le 12 septembre 2021, JagdFeind(jp) a annoncé le début de la rénovation de la ferme à monstres surélevée du village de Suke et a sollicité des idées de blocs et d’aménagement pour les étages d’apparition et de collecte par l’eau. [Appel à idées pour la ferme à monstres](https://discord.com/channels/737538781024092170/779569416438415421/886428347884798012)
+
 Le 30 janvier 2022, \_BE\_kurenohachi a dit que des personnes étaient disposées à aider et a partagé un projet de parc d’attractions assez grand, avec un mécanisme qui tirerait des feux d’artifice une seule fois la nuit.
 
 Le 20 février 2022, &#12414;&#12356;&#12369;&#12427; a demandé de l’aide pour niveler le terrain destiné à un labyrinthe. [Appel à préparer le terrain du labyrinthe](https://discord.com/channels/737538781024092170/773171457487929344/944771522348843008)
@@ -475,9 +477,13 @@ Le 30 juillet 2023, sinragi\_lce\_1019 a partagé des photos d’une maison term
 
 Dans sa participation au concours photo de novembre 2023, Yukke est revenu sur l’excavation de 256 chunks pour l’installation de squelettes Wither et sur les mesures prises contre l’apparition de créatures. En décembre, あすたん a expliqué avoir utilisé l’installation de Yukke pour vaincre des Withers avec d’autres joueurs et créer un arc-en-ciel avec plus de 200 balises.
 
+Le 17 janvier 2024, KITUNEKO0605 a annoncé avoir recréé une ancienne version d’Aceserver, accessible par une passerelle sur l’île principale de l’End. Le 23 mars, &#12479;&#12465; a conseillé de créer les dessins pour cartes dans des endroits peu fréquentés, puis de verrouiller la carte terminée avec une vitre pour la conserver. [Reconstitution et accès pour les visites](https://discord.com/channels/737538781024092170/779569416438415421/1197088107082821662) [Conseils pour dessiner sur des cartes](https://discord.com/channels/737538781024092170/779569416438415421/1221082086954504202)
+
 Le 4 mai 2024, sh a annoncé avoir créé dans le jeu un monument consacré à un joueur et a demandé de proposer des joueurs à qui consacrer le prochain.
 
 En mai 2024, PillowKebap a déposé une demande pour un grand projet d’art sur carte. En août, Amagi\_467 a présenté un projet de ferme à golems pour les installations publiques. En novembre, タケ a demandé à construire des installations dont un dépôt ferroviaire et des entrepôts.
+
+Le 29 décembre 2024, sh31415 a invité les joueurs à partir de zéro pour bâtir une ville sur une île isolée de l’End. Une autre publication le même jour recherchait des personnes souhaitant fonder un pays dans l’End et accueillir des habitants. [Invitation à bâtir une ville dans l’End](https://discord.com/channels/737538781024092170/779569416438415421/1322737207856988241) [Appel aux personnes souhaitant fonder un pays](https://discord.com/channels/737538781024092170/779569416438415421/1322756768585089105)
 
 En avril 2025, Moon\_666 a déposé un projet de ferme à raids ouverte à tous. Le 15 avril, Moon\_666 a annoncé l’achèvement de la ferme à raids compatible avec Minecraft 1.21 et a indiqué que tout le monde pouvait l’utiliser. [Annonce de l’achèvement de la ferme à raids](https://discord.com/channels/737538781024092170/773171457487929344/1361635002839990406)
 
@@ -530,6 +536,8 @@ Le 18 avril 2026, Moon\_666 a signalé que les Appartements du Manoir forestier 
 Le 3 juin 2026, Pluto a proposé des classes pour le MMO, notamment des combattants à l’épée ou à l’arc, des mages et des combattants au bouclier. Pluto a aussi décrit un système d’amélioration de l’équipement en 11 paliers. Le 5 juin, Pluto a proposé un donjon à plusieurs étages.
 
 Le 5 juin 2026, あすたん a décrit un projet de MMO où les joueurs choisiraient une classe, gagneraient des niveaux, réuniraient de l’équipement et se renforceraient grâce aux compétences propres à leur classe et à la répartition des points. Le 12 juin, あすたん a indiqué que la mise en place des fonctions de base était bien avancée et qu’il restait notamment à créer les textures et les modèles, les compétences et le monde.
+
+Le 2 août 2026, sh31415 a indiqué avoir construit un immeuble commercial dans l’End. [Annonce de l’immeuble commercial](https://discord.com/channels/737538781024092170/779569416438415421/1533144809206845482)
 
 Le 11 août 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; a indiqué avoir exploré le sous-sol de l’Empire Sega avec &#12486;&#12451;&#12512;&#12373;&#12435;. Le fil de l’époque contient des images montrant le contenu d’une boîte de Shulker et les écrans détaillant l’équipement.
 

@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:0efa8a46586e5152821f64d08a06368d8d59f5447219c4a93e50f89d24f5f196
+sourceHash: sha256:b93f36d85185851b72da560cb4739563b66aa3d4c681ee98fb61e47d2b32c06a
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -357,6 +357,8 @@ Im Juni 2021 berichtete KOTA-SAN vom Start des gemeinsamen Bauprojekts Yasuragi 
 
 Am 22. Oktober 2021 fragte taiyaki5190, ob ein Wegweiser für das selbst gebaute Wohnviertel am Schwarzen Brett veröffentlicht werden könnte.
 
+Am 12. September 2021 meldete JagdFeind(jp), dass der Umbau der erhöhten Monsterfarm im Dorf Suke begonnen hatte, und bat um Vorschläge für Blöcke und die Gestaltung der Spawn- und Sammelbereiche mit Wasser. [Aufruf zur Gestaltung der Monsterfarm](https://discord.com/channels/737538781024092170/779569416438415421/886428347884798012)
+
 Am 30. Januar 2022 sagte \_BE\_kurenohachi, dass einige Personen helfen wollten, und stellte einen Plan für einen größeren Vergnügungspark vor. Eine Vorrichtung sollte nachts einmal ein Feuerwerk auslösen.
 
 Am 20. Februar 2022 bat &#12414;&#12356;&#12369;&#12427; um Hilfe beim Einebnen des Geländes für ein Labyrinth. [Aufruf zur Mithilfe bei der Vorbereitung des Labyrinthgeländes](https://discord.com/channels/737538781024092170/773171457487929344/944771522348843008)
@@ -475,9 +477,13 @@ Am 30. Juli 2023 meldete sinragi\_lce\_1019 die Fertigstellung eines Hauses mit 
 
 In einem Fotowettbewerbsbeitrag vom November 2023 erinnerte sich Yukke daran, 256 Chunks für die Witherskelettanlage ausgehoben und Maßnahmen gegen das Spawnen getroffen zu haben. In einem Beitrag vom Dezember beschrieb あすたん, wie die Gruppe in Yukkes Anlage Wither besiegte und mit mehr als 200 Leuchtfeuern einen Regenbogen baute.
 
+Am 17. Januar 2024 meldete KITUNEKO0605 den Nachbau eines früheren Aceservers und erklärte, dass man ihn durch ein Portal auf der Hauptinsel im Ende besuchen konnte. Am 23. März empfahl &#12479;&#12465;, Kartenkunst abseits viel besuchter Orte zu bauen und die fertige Karte mit einer Glasscheibe zu sperren und zu erhalten. [Nachbau und Wegbeschreibung](https://discord.com/channels/737538781024092170/779569416438415421/1197088107082821662) [Tipps für Kartenkunst](https://discord.com/channels/737538781024092170/779569416438415421/1221082086954504202)
+
 Am 4. Mai 2024 berichtete sh, im Spiel ein Denkmal für einen Spieler gebaut zu haben, und bat um Vorschläge, wem das nächste gewidmet werden könnte.
 
 Im Mai 2024 reichte PillowKebap einen Antrag für ein großes Kartenkunstprojekt ein. Im August legte Amagi\_467 einen Plan für eine Golemfarm für öffentliche Einrichtungen vor. Im November beantragte タケ den Bau von Einrichtungen wie einem Bahnbetriebshof und Lagerhäusern.
+
+Am 29. Dezember 2024 lud sh31415 dazu ein, auf einer abgelegenen Insel im Ende gemeinsam eine Stadt von Grund auf zu bauen. Ein weiterer Beitrag an diesem Tag suchte Personen, die im Ende ein Land gründen und dort Bewohner aufnehmen wollten. [Einladung zum Städtebau im Ende](https://discord.com/channels/737538781024092170/779569416438415421/1322737207856988241) [Aufruf an Interessierte für eine Landesgründung](https://discord.com/channels/737538781024092170/779569416438415421/1322756768585089105)
 
 Im April 2025 reichte Moon\_666 einen Plan für eine Raidfarm ein, die alle nutzen könnten. Am 15. April meldete Moon\_666 die Fertigstellung der mit Minecraft 1.21 kompatiblen Raidfarm und wies darauf hin, dass alle sie nutzen konnten. [Bericht zur Fertigstellung der Raidfarm](https://discord.com/channels/737538781024092170/773171457487929344/1361635002839990406)
 
@@ -530,6 +536,8 @@ Am 18. April 2026 berichtete Moon\_666, dass die Wohnungen im Waldanwesen Nr. 1 
 Am 3. Juni 2026 skizzierte Pluto mehrere Klassen für das MMO, darunter Klassen für Schwert, Bogen, Magie und Schild, sowie ein System mit elf Stufen zur Verbesserung der Ausrüstung. Am 5. Juni schlug Pluto einen Dungeon mit mehreren Ebenen vor.
 
 Am 5. Juni 2026 entwarf あすたん ein MMO-Konzept, in dem Spieler eine Klasse wählen, im Level aufsteigen, Ausrüstung sammeln und durch klassenspezifische Fähigkeiten und das Verteilen von Punkten stärker werden sollten. Am 12. Juni berichtete あすたん, dass die Umsetzung der Grundfunktionen weit fortgeschritten sei. Texturen und Modelle, Fähigkeiten und die Spielwelt mussten unter anderem noch ausgearbeitet werden.
+
+Am 2. August 2026 meldete sh31415 den Bau eines Geschäftsgebäudes im Ende. [Bericht zum Geschäftsgebäude](https://discord.com/channels/737538781024092170/779569416438415421/1533144809206845482)
 
 Am 11. August 2026 berichtete LuMiSIA\_&#26376;&#31070;&#24736;&#33673;, gemeinsam mit &#12486;&#12451;&#12512;&#12373;&#12435; den Untergrund des Sega-Imperiums erkundet zu haben. Im damaligen Thread sind Bilder vom Inhalt einer Shulkerkiste und von den Detailansichten der Ausrüstung erhalten.
 

@@ -2,7 +2,7 @@
 title: As pessoas que apoiaram o Aceserver
 description: Conheça quem ajudou o Aceserver pelos retratos de skins do Minecraft, relembre as atividades e confira o roteiro de eventos e propostas.
 translationOf: aceserver-contributors
-sourceHash: sha256:0efa8a46586e5152821f64d08a06368d8d59f5447219c4a93e50f89d24f5f196
+sourceHash: sha256:b93f36d85185851b72da560cb4739563b66aa3d4c681ee98fb61e47d2b32c06a
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -357,6 +357,8 @@ Em junho de 2021, KOTA-SAN anunciou o início do projeto de construção coletiv
 
 Em 22 de outubro de 2021, taiyaki5190 perguntou se poderia publicar no mural um guia do bairro residencial que havia construído.
 
+Em 12 de setembro de 2021, JagdFeind(jp) informou que havia começado a reformar a fazenda elevada de monstros da Vila Suke e pediu ideias de blocos e designs para os andares de surgimento e coleta por água. [Chamada de ideias para a fazenda de monstros](https://discord.com/channels/737538781024092170/779569416438415421/886428347884798012)
+
 Em 30 de janeiro de 2022, \_BE\_kurenohachi disse que tinha pessoas dispostas a ajudar e compartilhou o plano de construir um parque de diversões de porte considerável com um mecanismo para soltar fogos de artifício uma única vez à noite.
 
 Em 20 de fevereiro de 2022, &#12414;&#12356;&#12369;&#12427; pediu ajuda para nivelar o terreno para um labirinto. [Pedido de ajuda para preparar o terreno do labirinto](https://discord.com/channels/737538781024092170/773171457487929344/944771522348843008)
@@ -475,9 +477,13 @@ Em 30 de julho de 2023, sinragi\_lce\_1019 compartilhou fotos da casa pronta e a
 
 Em uma inscrição no concurso de fotografia de novembro de 2023, Yukke relembrou a escavação de 256 chunks para a instalação de esqueletos Wither e as medidas para impedir o surgimento de criaturas. Em dezembro, あすたん descreveu como usou a instalação de Yukke para derrotar Withers com outros jogadores e criar um arco-íris com mais de 200 sinalizadores.
 
+Em 17 de janeiro de 2024, KITUNEKO0605 informou que havia recriado uma versão antiga do Aceserver e explicou que era possível visitá-la por um portal na ilha principal do End. Em 23 de março, &#12479;&#12465; sugeriu fazer arte para mapas em lugares pouco movimentados e travar o mapa pronto com um painel de vidro para preservá-lo. [Recriação e orientações para visita](https://discord.com/channels/737538781024092170/779569416438415421/1197088107082821662) [Dicas de arte para mapas](https://discord.com/channels/737538781024092170/779569416438415421/1221082086954504202)
+
 Em 4 de maio de 2024, sh informou ter criado um monumento no jogo dedicado a um jogador e pediu sugestões de quem poderia ser tema do próximo.
 
 Em maio de 2024, PillowKebap apresentou um pedido para um projeto de arte em mapas em grande escala. Em agosto, Amagi\_467 apresentou um plano de uma fazenda de golens para instalações públicas. Em novembro, タケ solicitou a construção de estruturas como um pátio ferroviário e depósitos.
+
+Em 29 de dezembro de 2024, sh31415 convidou jogadores a construir uma cidade do zero numa ilha remota do End. Outra publicação daquele dia procurou pessoas interessadas em fundar um país no End e receber moradores. [Convite para construir uma cidade no End](https://discord.com/channels/737538781024092170/779569416438415421/1322737207856988241) [Chamada para quem queria fundar um país](https://discord.com/channels/737538781024092170/779569416438415421/1322756768585089105)
 
 Em abril de 2025, Moon\_666 apresentou o plano de uma fazenda de invasões que qualquer jogador poderia usar. Em 15 de abril, Moon\_666 informou que a fazenda de invasões compatível com o Minecraft 1.21 estava pronta e que qualquer jogador poderia usá-la. [Relato da conclusão da fazenda de invasões](https://discord.com/channels/737538781024092170/773171457487929344/1361635002839990406)
 
@@ -530,6 +536,8 @@ Em 18 de abril de 2026, Moon\_666 informou que os Apartamentos da Mansão da Flo
 Em 3 de junho de 2026, Pluto apresentou ideias de classes para o MMO, como usuários de espada e arco, magos e usuários de escudo, além de um sistema de melhoria de equipamentos em 11 etapas. Em 5 de junho, Pluto propôs uma masmorra com vários andares.
 
 Em 5 de junho de 2026, あすたん esboçou um MMO em que cada jogador escolheria uma classe, subiria de nível, reuniria equipamentos e ficaria mais forte com habilidades da classe e a distribuição de pontos. Em 12 de junho, informou que a implementação das funções básicas estava bem adiantada e que ainda faltava produzir as texturas e os modelos, as habilidades e o mundo, entre outros elementos.
+
+Em 2 de agosto de 2026, sh31415 informou que havia construído um edifício comercial no End. [Registro do edifício comercial](https://discord.com/channels/737538781024092170/779569416438415421/1533144809206845482)
 
 Em 11 de agosto de 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; informou que havia explorado o subsolo do Império Sega junto com &#12486;&#12451;&#12512;&#12373;&#12435;. No tópico da exploração, ficaram registradas imagens do conteúdo de uma caixa de shulker e das telas de detalhes dos equipamentos.
 
