@@ -2,7 +2,7 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:1b81ce01a4c43dd9d9d676e9deaeed86f81bca4fdd6cc7380a7e90018c6802a8
+sourceHash: sha256:b9b96e62c27a3f85f5a1ff7a9ac217e9cbcd4016857f00943926c9a12c1a3bc6
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -844,6 +844,8 @@ En agosto de 2026, あすたん informó de que había rediseñado el panel web 
 Entre septiembre y octubre de 2026, End&#12539;コッカー organizó la guía de acceso a Minecraft de la época para que fuera más fácil encontrar las reglas, las presentaciones y los recursos de conexión. También reunió los lugares donde consultar las reglas de cada mundo. El 27 de septiembre, propuso dedicar hilos separados a cómo entrar, los comandos y la ubicación de las instalaciones, y reunirlos en un canal de guías.
 
 El 1 de octubre de 2026, al estudiar una base de datos para organizar el material de resolución de problemas, あすたん señaló que primero había que decidir con qué nivel de detalle registrar los síntomas. Propuso distinguir entre problemas dentro de Minecraft, problemas para entrar al servidor y otros problemas.
+
+El 30 de septiembre de 2026, End&#12539;コッカー compartió un vídeo de terceros para ayudar a quienes querían unirse a una partida multijugador en la edición de Minecraft para Nintendo Switch. [Guía en vídeo para Switch compartida entonces](https://www.youtube.com/watch?v=1ndsOexBJIk)
 
 En octubre de 2026, sekisei propuso que quienes llegaran al vestíbulo por primera vez pasaran por un mundo de introducción antes de acceder al vestíbulo habitual. End&#12539;コッカー compartió el [mapa oficial del mundo](/es/world-map/) para consultar el servidor de supervivencia y otros mundos y propuso explicar los comandos, la terminología y Shop en la guía. El 21 de octubre, End&#12539;コッカー informó de que el vestíbulo de introducción estaba terminado. Dos imágenes que publicó ese día mostraban un atril donde se podían consultar las reglas y un portal.
 

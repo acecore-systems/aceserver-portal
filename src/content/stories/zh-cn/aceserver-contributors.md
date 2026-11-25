@@ -2,7 +2,7 @@
 title: 支持Aceserver的人们
 description: 通过 Minecraft 皮肤头像认识 Aceserver 的贡献者，回顾社区活动记录，并查看活动与玩家提案路线图。
 translationOf: aceserver-contributors
-sourceHash: sha256:1b81ce01a4c43dd9d9d676e9deaeed86f81bca4fdd6cc7380a7e90018c6802a8
+sourceHash: sha256:b9b96e62c27a3f85f5a1ff7a9ac217e9cbcd4016857f00943926c9a12c1a3bc6
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -844,6 +844,8 @@ YM画了一张把浮岛、地面、地下与水下区域结合起来的折衷方
 2026年9月至10月，End&#12539;コッカー整理了当时的 Minecraft 加入指南，方便玩家找到规则、自我介绍和连接参考资料，并汇总了各世界规则的查阅位置。9月27日，End&#12539;コッカー提议把加入方法、命令和设施位置分别放在不同的讨论串里，并集中到专门的指南频道。
 
 2026年10月1日，在讨论用于整理故障排查资料的数据库时，あすたん 表示应先确定故障现象要记录到多细。あすたん 提议分为 Minecraft 内发生的问题、无法进入服务器的问题和其他问题。
+
+2026年9月30日，End&#12539;コッカー 为想在 Nintendo Switch 版 Minecraft 中加入多人游戏的玩家分享了一段第三方教程视频。 [当时分享的 Switch 版教程视频](https://www.youtube.com/watch?v=1ndsOexBJIk)
 
 2026年10月，sekisei提议让首次来到大厅的玩家先经过一个引导世界，再进入普通大厅。End&#12539;コッカー 分享了可以查看生活服及其他世界的[官方世界地图](/zh-cn/world-map/)，并提出在指南中介绍指令、服务器术语和 Shop。10月21日，End&#12539;コッカー报告引导大厅已经完成。当天发布的两张图片中可以看到可以阅读规则的讲台和一道门。
 

@@ -2,7 +2,7 @@
 title: As pessoas que apoiaram o Aceserver
 description: Conheça quem ajudou o Aceserver pelos retratos de skins do Minecraft, relembre as atividades e confira o roteiro de eventos e propostas.
 translationOf: aceserver-contributors
-sourceHash: sha256:1b81ce01a4c43dd9d9d676e9deaeed86f81bca4fdd6cc7380a7e90018c6802a8
+sourceHash: sha256:b9b96e62c27a3f85f5a1ff7a9ac217e9cbcd4016857f00943926c9a12c1a3bc6
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -844,6 +844,8 @@ Em agosto de 2026, あすたん informou que havia reformulado o painel web da m
 Entre setembro e outubro de 2026, End&#12539;コッカー organizou o guia de entrada no Minecraft da época para facilitar o acesso a regras, apresentações e materiais de referência sobre a conexão. Também reuniu os locais onde consultar as regras de cada mundo. Em 27 de setembro, propôs um canal dedicado a orientações, com tópicos separados sobre como entrar, os comandos e a localização das instalações.
 
 Em 1º de outubro de 2026, durante a discussão sobre um banco de dados para organizar materiais de solução de problemas, あすたん disse que primeiro era preciso decidir o nível de detalhe usado para registrar os sintomas. A proposta dividia os casos entre problemas dentro do Minecraft, problemas para entrar no servidor e outros.
+
+Em 30 de setembro de 2026, End&#12539;コッカー partilhou um vídeo de terceiros para ajudar quem queria participar no modo multijogador da versão de Minecraft para Nintendo Switch. [Vídeo de orientação para Switch partilhado na época](https://www.youtube.com/watch?v=1ndsOexBJIk)
 
 Em outubro de 2026, sekisei propôs que quem chegasse ao lobby pela primeira vez passasse por um mundo introdutório antes de seguir para o lobby normal. End&#12539;コッカー compartilhou o [mapa oficial dos mundos](/pt/world-map/) para consultar o servidor de sobrevivência e outros mundos e propôs explicar os comandos, a terminologia do servidor e Shop no guia. Em 21 de outubro, End&#12539;コッカー informou que o lobby introdutório estava pronto. Duas imagens que publicou naquele dia mostravam um púlpito com as regras e um portal.
 

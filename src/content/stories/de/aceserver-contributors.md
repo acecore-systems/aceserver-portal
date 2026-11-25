@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:1b81ce01a4c43dd9d9d676e9deaeed86f81bca4fdd6cc7380a7e90018c6802a8
+sourceHash: sha256:b9b96e62c27a3f85f5a1ff7a9ac217e9cbcd4016857f00943926c9a12c1a3bc6
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -844,6 +844,8 @@ Im August 2026 berichtete あすたん, die Weboberfläche für die Spielwährun
 Von September bis Oktober 2026 strukturierte End&#12539;コッカー den damaligen Leitfaden für den Minecraft-Beitritt so, dass die Regeln, die Vorstellungsbereiche und die Hinweise zur Verbindung leichter zu finden waren. End&#12539;コッカー stellte auch zusammen, wo die Regeln der einzelnen Welten zu finden waren. Am 27. September schlug End&#12539;コッカー vor, Hinweise zum Beitritt, Befehle und Standorte von Einrichtungen in getrennten Threads in einem eigenen Infokanal zu sammeln.
 
 Am 1. Oktober 2026 erklärte あすたん bei der Diskussion über eine Datenbank für Hilfsmaterialien zur Fehlerbehebung, dass zuerst festgelegt werden müsse, wie detailliert die Symptome erfasst werden sollten. Als Kategorien schlug あすたん Probleme in Minecraft, Probleme beim Beitritt zum Server und sonstige Probleme vor.
+
+Am 30. September 2026 teilte End&#12539;コッカー ein externes Anleitungsvideo für alle, die in der Nintendo-Switch-Version von Minecraft dem Mehrspielermodus beitreten wollten. [Damals geteilte Videoanleitung für Switch](https://www.youtube.com/watch?v=1ndsOexBJIk)
 
 Im Oktober 2026 schlug sekisei vor, dass Personen bei ihrem ersten Besuch in der Lobby zunächst eine Einführungswelt durchlaufen, bevor sie die reguläre Lobby erreichen. End&#12539;コッカー teilte die [offizielle Weltkarte](/de/world-map/) mit Blick auf den Survival-Server und weitere Welten. Für den Leitfaden waren auch Erläuterungen zu Befehlen, Begriffen und Shop vorgesehen. Am 21. Oktober meldete End&#12539;コッカー, dass die Einführungslobby fertig war. Zwei Bilder, die am selben Tag veröffentlicht wurden, zeigten ein Lesepult mit den Regeln und ein Tor.
 

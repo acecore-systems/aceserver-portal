@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:1b81ce01a4c43dd9d9d676e9deaeed86f81bca4fdd6cc7380a7e90018c6802a8
+sourceHash: sha256:b9b96e62c27a3f85f5a1ff7a9ac217e9cbcd4016857f00943926c9a12c1a3bc6
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -844,6 +844,8 @@ In August 2026, あすたん reported redesigning the web panel for the in-game 
 From September to October 2026, End&#12539;コッカー organized the Minecraft joining guide of the time so players could find the rules, introductions, and connection resources. End&#12539;コッカー also listed where to check the rules for each world. On September 27, they proposed putting joining instructions, commands, and facility locations in separate threads within a dedicated guide channel.
 
 On October 1, 2026, while discussing a database for troubleshooting resources, あすたん said the first step was to decide how much detail to record about symptoms. They proposed three categories for problems occurring in Minecraft, problems joining the server, and other issues.
+
+On September 30, 2026, End&#12539;コッカー shared a third-party video guide for people joining multiplayer in the Nintendo Switch edition of Minecraft. [Switch guide shared at the time](https://www.youtube.com/watch?v=1ndsOexBJIk)
 
 In October 2026, sekisei proposed that people arriving in the lobby for the first time pass through an introductory world before reaching the regular lobby. End&#12539;コッカー shared the [official world map](/en/world-map/) for viewing the Survival Server and other worlds and proposed covering commands, server terminology, and Shop in the guide. On October 21, End&#12539;コッカー reported that the introductory lobby was complete. Two images they posted that day showed a lectern displaying the rules and a gate.
 

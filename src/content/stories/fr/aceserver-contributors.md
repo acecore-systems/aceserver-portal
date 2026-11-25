@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:1b81ce01a4c43dd9d9d676e9deaeed86f81bca4fdd6cc7380a7e90018c6802a8
+sourceHash: sha256:b9b96e62c27a3f85f5a1ff7a9ac217e9cbcd4016857f00943926c9a12c1a3bc6
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -844,6 +844,8 @@ En août 2026, あすたん a indiqué avoir repensé le panneau web de la monna
 Entre septembre et octobre 2026, End&#12539;コッカー a réorganisé le guide d’accès à Minecraft de l’époque pour faciliter la recherche des règles, des présentations et des ressources sur la connexion. End&#12539;コッカー a aussi indiqué où consulter les règles de chaque monde. Le 27 septembre, End&#12539;コッカー a proposé de regrouper dans un salon consacré aux guides des fils distincts sur les modalités d’accès, les commandes et l’emplacement des installations.
 
 Le 1er octobre 2026, en réfléchissant à une base de données pour organiser la documentation de dépannage, あすたん a indiqué qu’il fallait d’abord décider avec quel niveau de détail consigner les symptômes. あすたん a proposé de distinguer les problèmes rencontrés dans Minecraft, les problèmes de connexion au serveur et les autres problèmes.
+
+Le 30 septembre 2026, End&#12539;コッカー a partagé un tutoriel vidéo tiers destiné aux personnes souhaitant rejoindre une partie multijoueur dans la version Nintendo Switch de Minecraft. [Tutoriel vidéo pour Switch partagé à l’époque](https://www.youtube.com/watch?v=1ndsOexBJIk)
 
 En octobre 2026, sekisei a proposé de faire passer les personnes qui arrivaient pour la première fois par un monde d’accueil avant de les diriger vers le hall habituel. End&#12539;コッカー a partagé la [carte officielle des mondes](/fr/world-map/) pour découvrir le serveur de survie et les autres mondes et a proposé d’expliquer les commandes, les termes du serveur et Shop dans le guide. Le 21 octobre, End&#12539;コッカー a annoncé que le hall d’accueil était terminé. Deux images publiées le même jour montraient un pupitre où lire les règles et un portail.
 
