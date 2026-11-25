@@ -2,7 +2,7 @@
 title: As pessoas que apoiaram o Aceserver
 description: Conheça quem ajudou o Aceserver pelos retratos de skins do Minecraft, relembre as atividades e confira o roteiro de eventos e propostas.
 translationOf: aceserver-contributors
-sourceHash: sha256:db31840097f0ba4685a9a47b6883a56083eabda2461b7c2205529f8a78283900
+sourceHash: sha256:d6409c23145fbe27681ef5665d7ad26fd6ee29096f069142e51b839867a080ef
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -435,6 +435,8 @@ taibon0727 preparou materiais como vidro, um local para guardar barcos de transp
 
 Em 20 de outubro de 2022, ジェスター convidou recém-chegados a se candidatar para receber gratuitamente sua antiga casa do jogo e itens. Em 23 de outubro, informou que a oferta havia sido encerrada sem receber candidaturas. [Anúncio da doação](https://discord.com/channels/737538781024092170/779569416438415421/1032634176064725073) [Relato do encerramento da oferta](https://discord.com/channels/737538781024092170/779569416438415421/1033625009085743114)
 
+Em 29 de outubro de 2022, Moon\_666 anunciou a conclusão de várias cabanas destinadas a estadias curtas de novos jogadores. [Anúncio da conclusão das cabanas](https://discord.com/channels/737538781024092170/779569416438415421/1035908871044210708)
+
 Em novembro de 2022, あすたん convidou jogadores a ajudar na construção do Reino de Asutan. [Convite para ajudar a construir o reino](https://discord.com/channels/737538781024092170/779569416438415421/1041014423223009372)
 
 Em dezembro do mesmo ano, ジェスター (que publicava como Dōke Shinshi@Jester Sub) informou que construiu com Buraki um cultivo de melancias em estilo de resort, com praia. [Relato da construção do cultivo de melancias](https://discord.com/channels/737538781024092170/779569416438415421/1048866874760364042)
@@ -450,6 +452,8 @@ Em fevereiro de 2023, あすたん explicou como organizar uma escavação conju
 Em 4 de fevereiro de 2023, AGE_inari anunciou que havia concluído a construção do Gundam Barbatos em sua quarta forma, o primeiro modelo do grupo Gundam Corporation, e convidou os jogadores a visitá-lo. [Anúncio da conclusão do Barbatos](https://discord.com/channels/737538781024092170/779569416438415421/1071438739072630854)
 
 Em 12 de fevereiro, NCGpotechi anunciou que o interior do castelo no mar estava pronto e agradeceu a quem ajudou. O interior foi aberto à visitação, com arena e espaços para espectadores e narradores. Em 14 de fevereiro, &#12450;&#12510;&#12484; anunciou que a reforma interna e externa do portão do deserto estava concluída e que os jogadores podiam usar o local. [Abertura do interior do castelo](https://discord.com/channels/737538781024092170/779569416438415421/1074162305874542643) [Anúncio da reforma do portão do deserto](https://discord.com/channels/737538781024092170/779569416438415421/1074735358262136834)
+
+Em 13 de março de 2023, Yukke anunciou a conclusão da farm de esqueletos Wither e agradeceu a quem ajudou na escavação. A farm ficaria aberta a todos depois da apresentação prevista para aquele dia. Em 25 de março, Moon\_666 informou que um alojamento para novos jogadores estava concluído e compartilhou uma foto. [Anúncio da conclusão da farm](https://discord.com/channels/737538781024092170/779569416438415421/1084675055700688937) [Foto do alojamento concluído](https://discord.com/channels/737538781024092170/779569416438415421/1089135055798022184)
 
 Em abril de 2023, あすたん explicou quais informações eram necessárias na época para solicitar grandes construções, e ゆり compartilhou um modelo de solicitação. ゆり também apresentou o plano de construir um túnel no trecho do Circuito Internacional do Reino de Kuwa que passava por uma montanha.
 

@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:db31840097f0ba4685a9a47b6883a56083eabda2461b7c2205529f8a78283900
+sourceHash: sha256:d6409c23145fbe27681ef5665d7ad26fd6ee29096f069142e51b839867a080ef
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -435,6 +435,8 @@ taibon0727 stellte Materialien wie Glas, einen Platz für Transportboote und ein
 
 Am 20. Oktober 2022 lud ジェスター Neulinge ein, sich um das frühere Haus im Spiel und Gegenstände als Geschenk zu bewerben. Am 23. Oktober meldete ジェスター, dass das Angebot ohne Bewerbungen beendet worden war. [Angebot für Neulinge](https://discord.com/channels/737538781024092170/779569416438415421/1032634176064725073) [Meldung zum Ende des Angebots](https://discord.com/channels/737538781024092170/779569416438415421/1033625009085743114)
 
+Am 29. Oktober 2022 meldete Moon\_666, dass mehrere Hütten für kurze Aufenthalte von neuen Spielern fertiggestellt waren. [Fertigstellung der Hütten](https://discord.com/channels/737538781024092170/779569416438415421/1035908871044210708)
+
 Im November 2022 bat あすたん um Mithilfe beim Bau des Königreichs Asutan. [Aufruf zur Mithilfe beim Bau des Königreichs](https://discord.com/channels/737538781024092170/779569416438415421/1041014423223009372)
 
 Im Dezember desselben Jahres berichtete ジェスター (unter dem damaligen Namen Dōke Shinshi@Jester Sub), gemeinsam mit Buraki einen Melonenanbau im Stil einer Ferienanlage mit Strand gebaut zu haben. [Bericht zum Bau des Melonenanbaus](https://discord.com/channels/737538781024092170/779569416438415421/1048866874760364042)
@@ -450,6 +452,8 @@ Im Februar 2023 erklärte あすたん, wie die gemeinsamen Ausgrabungen für ei
 Am 4. Februar 2023 meldete AGE_inari die Fertigstellung eines Bauwerks nach dem Vorbild des Gundam Barbatos in seiner vierten Form. Es war das erste Modell der Gruppe Gundam Corporation. AGE_inari lud zur Besichtigung ein. [Fertigstellung des Barbatos](https://discord.com/channels/737538781024092170/779569416438415421/1071438739072630854)
 
 Am 12. Februar meldete NCGpotechi, dass der Innenausbau der Burg auf dem Meer fertig war, und bedankte sich bei allen, die geholfen hatten. Die Burg öffnete auch ihre Innenräume mit Arena sowie Plätzen für Zuschauer und Kommentatoren. Am 14. Februar meldete &#12450;&#12510;&#12484;, dass der Umbau des Wüstentors innen und außen abgeschlossen war und die Anlage genutzt werden konnte. [Öffnung der Burgräume](https://discord.com/channels/737538781024092170/779569416438415421/1074162305874542643) [Umbau des Wüstentors](https://discord.com/channels/737538781024092170/779569416438415421/1074735358262136834)
+
+Am 13. März 2023 meldete Yukke die Fertigstellung der Witherskelett-Farm und bedankte sich bei allen, die bei den Ausgrabungen geholfen hatten. Nach der für denselben Tag angekündigten Vorstellung sollten alle die Anlage nutzen können. Am 25. März meldete Moon\_666 mit einem Foto die Fertigstellung einer Unterkunft für neue Spieler. [Fertigstellung der Witherskelett-Farm](https://discord.com/channels/737538781024092170/779569416438415421/1084675055700688937) [Foto der fertigen Unterkunft](https://discord.com/channels/737538781024092170/779569416438415421/1089135055798022184)
 
 Im April 2023 erklärte あすたん, welche Angaben damals für Anträge auf größere Bauvorhaben nötig waren. ゆり teilte eine Antragsvorlage und erläuterte außerdem den Plan für einen Tunnel auf dem Abschnitt der internationalen Rennstrecke des Königreichs Kuwa, der durch einen Berg führen sollte.
 

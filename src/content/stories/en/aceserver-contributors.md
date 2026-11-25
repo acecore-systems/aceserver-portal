@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:db31840097f0ba4685a9a47b6883a56083eabda2461b7c2205529f8a78283900
+sourceHash: sha256:d6409c23145fbe27681ef5665d7ad26fd6ee29096f069142e51b839867a080ef
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -435,6 +435,8 @@ taibon0727 provided materials including glass, a place for travel boats, and equ
 
 On October 20, 2022, ジェスター invited newcomers to apply to receive a former in-game home and items for free. On October 23, ジェスター reported closing the offer after receiving no applications. [Giveaway invitation](https://discord.com/channels/737538781024092170/779569416438415421/1032634176064725073) [Closure of the offer](https://discord.com/channels/737538781024092170/779569416438415421/1033625009085743114)
 
+On October 29, 2022, Moon\_666 reported that several cottages for short stays by new players were complete. [Cottage completion report](https://discord.com/channels/737538781024092170/779569416438415421/1035908871044210708)
+
 In November 2022, あすたん invited people to help build the Asutan Kingdom. [Call for help with the kingdom build](https://discord.com/channels/737538781024092170/779569416438415421/1041014423223009372)
 
 That December, ジェスター (then posting as Dōke Shinshi@Jester Sub) reported working with Buraki to build a resort-style watermelon farm with a beach. [Watermelon farm report](https://discord.com/channels/737538781024092170/779569416438415421/1048866874760364042)
@@ -450,6 +452,8 @@ In February 2023, あすたん shared how to organize a group excavation for a z
 On February 4, 2023, AGE_inari reported completing a build of Gundam Barbatos in its fourth form, the first model by the Gundam Corporation group, and invited visitors to see it. [Barbatos completion report](https://discord.com/channels/737538781024092170/779569416438415421/1071438739072630854)
 
 On February 12, NCGpotechi reported that the castle at sea was finished inside and thanked everyone who helped. The interior opened to visitors, including the arena and the spectator and commentary areas. On February 14, &#12450;&#12510;&#12484; announced that the desert gate renovation was complete inside and out and that players could use the facility. [Opening of the castle interior](https://discord.com/channels/737538781024092170/779569416438415421/1074162305874542643) [Desert gate renovation report](https://discord.com/channels/737538781024092170/779569416438415421/1074735358262136834)
+
+On March 13, 2023, Yukke announced that the wither skeleton farm was complete and thanked the players who helped excavate the site. Yukke said the farm would be open for anyone to use after the unveiling planned for that day. On March 25, Moon\_666 reported that a lodging facility for new players was complete and shared a photo. [Wither skeleton farm completion report](https://discord.com/channels/737538781024092170/779569416438415421/1084675055700688937) [Photo of the finished lodging facility](https://discord.com/channels/737538781024092170/779569416438415421/1089135055798022184)
 
 In April 2023, あすたん explained what information was needed to apply for large builds at the time, and ゆり shared an application template. ゆり also outlined a plan for a tunnel where the course at the Kuwa Kingdom International Circuit crossed a mountain.
 
