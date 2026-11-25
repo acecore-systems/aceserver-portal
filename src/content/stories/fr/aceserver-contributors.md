@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:75ec9758ff83d60ceb4d8d0242a1730b610a750d1e46feb994872632c3242f61
+sourceHash: sha256:1855bc33932ca90910ac0000e03e8cf470e283db0102c5b9458e541a43131300
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -239,7 +239,7 @@ En janvier 2025, une annonce a présenté Wenti (Hosttech255), Pluto et あす�
 
 Le 12 janvier 2025, sekisei a sollicité des idées de sujets de discussion quotidiens. Pluto a proposé les plats préférés et le sport, タケ les villes, gasawara les genres de jeux vidéo et de musique, et Merutak les biomes de Minecraft. Le 20 janvier, Merutak a ouvert un fil pour conserver les anciens sujets, auquel Pluto a aussi ajouté des entrées.
 
-En janvier 2025, sh a proposé de faire connaître le serveur avec des YouTube Shorts. LuMiSIA\_&#26376;&#31070;&#24736;&#33673; a décrit les étapes, du scénario au tournage, au montage, à la publication et à l’annonce, et a proposé d’aider au tournage.
+En janvier 2025, sh a proposé de faire connaître le serveur avec des YouTube Shorts. LuMiSIA\_&#26376;&#31070;&#24736;&#33673; a décrit les étapes, du scénario au tournage, au montage, à la publication et à l’annonce, et a proposé d’aider au tournage. Le 2 janvier, sekisei a partagé un document de six pages contenant le scénario d’une vidéo de présentation du serveur et des images de référence pour les scènes.
 
 En février 2025, タケ a annoncé l’ouverture prévue d’une nouvelle gare sur la ligne principale de &#26628;&#38920;. En août, タケ a présenté le projet de rénovation de la station Colisée d’Ibaraki et l’interruption partielle prévue du service sur la ligne 1 du monorail Ace. En décembre, タケ a annoncé la distribution des cadeaux de Noël du monorail Ace.
 

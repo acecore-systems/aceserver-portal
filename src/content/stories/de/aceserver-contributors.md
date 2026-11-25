@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:75ec9758ff83d60ceb4d8d0242a1730b610a750d1e46feb994872632c3242f61
+sourceHash: sha256:1855bc33932ca90910ac0000e03e8cf470e283db0102c5b9458e541a43131300
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -239,7 +239,7 @@ Im Januar 2025 wurden Wenti (Hosttech255), Pluto und あすたん als Unterstüt
 
 Am 12. Januar 2025 bat sekisei um Vorschläge für täglich wechselnde Gesprächsthemen. Pluto schlug Lieblingsgerichte und Sport vor, タケ Städte und Orte, gasawara Spiel- und Musikgenres und Merutak Minecraft-Biome. Am 20. Januar eröffnete Merutak einen Thread für frühere Themen, in dem Pluto weitere Einträge ergänzte.
 
-Im Januar 2025 schlug sh vor, den Server mit YouTube Shorts bekannter zu machen. LuMiSIA\_&#26376;&#31070;&#24736;&#33673; skizzierte die Schritte vom Drehbuch über Aufnahmen und Schnitt bis zur Veröffentlichung und Ankündigung und bot Hilfe bei den Aufnahmen an.
+Im Januar 2025 schlug sh vor, den Server mit YouTube Shorts bekannter zu machen. LuMiSIA\_&#26376;&#31070;&#24736;&#33673; skizzierte die Schritte vom Drehbuch über Aufnahmen und Schnitt bis zur Veröffentlichung und Ankündigung und bot Hilfe bei den Aufnahmen an. Am 2. Januar teilte sekisei ein sechsseitiges Dokument mit dem Drehbuch für ein Vorstellungsvideo des Servers und Referenzbildern für die einzelnen Szenen.
 
 Im Februar 2025 kündigte タケ die geplante Eröffnung einer neuen Station an der Hauptstrecke von &#26628;&#38920; an. Im August informierte タケ über die geplante Renovierung der Station Ibaraki-Kolosseum und die teilweise Unterbrechung des Betriebs auf Linie 1 der Ace-Monorail. Im Dezember kündigte タケ die Verteilung der Weihnachtsgeschenke der Ace-Monorail an.
 

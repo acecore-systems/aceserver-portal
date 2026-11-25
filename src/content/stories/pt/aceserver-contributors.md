@@ -2,7 +2,7 @@
 title: As pessoas que apoiaram o Aceserver
 description: Conheça quem ajudou o Aceserver pelos retratos de skins do Minecraft, relembre as atividades e confira o roteiro de eventos e propostas.
 translationOf: aceserver-contributors
-sourceHash: sha256:75ec9758ff83d60ceb4d8d0242a1730b610a750d1e46feb994872632c3242f61
+sourceHash: sha256:1855bc33932ca90910ac0000e03e8cf470e283db0102c5b9458e541a43131300
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -239,7 +239,7 @@ Em janeiro de 2025, foi anunciado que Wenti (Hosttech255), Pluto e あすたん 
 
 Em 12 de janeiro de 2025, sekisei pediu sugestões de temas para as conversas do dia. Pluto sugeriu comidas preferidas e esportes, タケ sugeriu cidades e vilas, gasawara sugeriu gêneros de jogos e de música, e Merutak sugeriu biomas do Minecraft. Em 20 de janeiro, Merutak abriu um tópico para registrar os temas anteriores, e Pluto também acrescentou itens.
 
-Em janeiro de 2025, sh propôs divulgar o servidor com YouTube Shorts. LuMiSIA\_&#26376;&#31070;&#24736;&#33673; descreveu o processo desde a criação do roteiro até a gravação, a edição, a publicação e a divulgação, e se ofereceu para ajudar na gravação.
+Em janeiro de 2025, sh propôs divulgar o servidor com YouTube Shorts. LuMiSIA\_&#26376;&#31070;&#24736;&#33673; descreveu o processo desde a criação do roteiro até a gravação, a edição, a publicação e a divulgação, e se ofereceu para ajudar na gravação. Em 2 de janeiro, sekisei compartilhou um documento de seis páginas com o roteiro de um vídeo de apresentação do servidor e imagens de referência para as cenas.
 
 Em fevereiro de 2025, タケ anunciou planos para abrir uma nova estação na linha principal de &#26628;&#38920;. Em agosto, anunciou a reforma prevista da Estação Coliseu de Ibaraki e a suspensão parcial do serviço da linha 1 do Monotrilho Ace. Em dezembro, anunciou a distribuição de presentes de Natal do Monotrilho Ace.
 

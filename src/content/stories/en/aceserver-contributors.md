@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:75ec9758ff83d60ceb4d8d0242a1730b610a750d1e46feb994872632c3242f61
+sourceHash: sha256:1855bc33932ca90910ac0000e03e8cf470e283db0102c5b9458e541a43131300
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -239,7 +239,7 @@ In January 2025, Aceserver announced that Wenti (Hosttech255), Pluto, and あす
 
 On January 12, 2025, sekisei invited suggestions for a daily discussion topic. Pluto suggested favorite foods and sports, タケ suggested towns and cities, gasawara suggested game and music genres, and Merutak suggested Minecraft biomes. On January 20, Merutak opened a thread to keep track of past topics, and Pluto added entries.
 
-In January 2025, sh proposed using YouTube Shorts to promote the server. LuMiSIA\_&#26376;&#31070;&#24736;&#33673; laid out the steps from scripting through filming, editing, posting, and promotion, and offered to help with filming.
+In January 2025, sh proposed using YouTube Shorts to promote the server. LuMiSIA\_&#26376;&#31070;&#24736;&#33673; laid out the steps from scripting through filming, editing, posting, and promotion, and offered to help with filming. On January 2, sekisei shared a six-page document with a script for a server introduction video and reference images for the scenes.
 
 In February 2025, タケ announced plans to open a new station on the &#26628;&#38920; Main Line. In August, タケ announced plans to renovate Ibaraki Colosseum Station and suspend service on part of Ace Monorail Line 1. In December, タケ announced the Ace Monorail Christmas gift distribution.
 

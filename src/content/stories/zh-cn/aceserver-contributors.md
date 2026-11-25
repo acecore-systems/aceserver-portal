@@ -2,7 +2,7 @@
 title: 支持Aceserver的人们
 description: 通过 Minecraft 皮肤头像认识 Aceserver 的贡献者，回顾社区活动记录，并查看活动与玩家提案路线图。
 translationOf: aceserver-contributors
-sourceHash: sha256:75ec9758ff83d60ceb4d8d0242a1730b610a750d1e46feb994872632c3242f61
+sourceHash: sha256:1855bc33932ca90910ac0000e03e8cf470e283db0102c5b9458e541a43131300
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -239,7 +239,7 @@ edamameRex_java（Edamame）介绍了自己的摊位，Moon_666 也公布了摊�
 
 2025年1月12日，sekisei征集每日聊天话题。Pluto提议聊喜欢的食物和运动，タケ提议聊城镇和城市，gasawara提议聊游戏和音乐的类型，Merutak则提议聊 Minecraft 的生物群系等。20日，Merutak创建了一个记录往期话题的讨论串，Pluto也补充了条目。
 
-2025年1月，sh提出利用 YouTube Shorts 做宣传。LuMiSIA\_&#26376;&#31070;&#24736;&#33673;梳理了从编写脚本到拍摄、剪辑、发布和宣传的流程，并主动提出协助拍摄。
+2025年1月，sh提出利用 YouTube Shorts 做宣传。LuMiSIA\_&#26376;&#31070;&#24736;&#33673;梳理了从编写脚本到拍摄、剪辑、发布和宣传的流程，并主动提出协助拍摄。1 月 2 日，sekisei 分享了一份六页的资料，其中包括服务器介绍视频的脚本和各个场景的参考图片。
 
 2025年2月，タケ公布了&#26628;&#38920;本线新站的开通计划。8月，タケ介绍了茨城斗兽场站的改造计划和 Ace 单轨铁路1号线部分区段的停运安排。12月，タケ发布了 Ace 单轨铁路发放圣诞礼物的通知。
 

@@ -2,7 +2,7 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:75ec9758ff83d60ceb4d8d0242a1730b610a750d1e46feb994872632c3242f61
+sourceHash: sha256:1855bc33932ca90910ac0000e03e8cf470e283db0102c5b9458e541a43131300
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -239,7 +239,7 @@ En enero de 2025 se anunció que Wenti (Hosttech255), Pluto y あすたん asum�
 
 El 12 de enero de 2025, sekisei pidió sugerencias para los temas de conversación diarios. Pluto propuso comidas favoritas y deportes, タケ propuso pueblos y ciudades, gasawara propuso géneros de videojuegos y de música, y Merutak propuso biomas de Minecraft. El 20 de enero, Merutak abrió un hilo para guardar los temas anteriores, al que Pluto también añadió entradas.
 
-En enero de 2025, sh propuso promocionar el servidor con YouTube Shorts. LuMiSIA\_&#26376;&#31070;&#24736;&#33673; describió el proceso desde el guion hasta la grabación, la edición, la publicación y la difusión, y se ofreció a ayudar con la grabación.
+En enero de 2025, sh propuso promocionar el servidor con YouTube Shorts. LuMiSIA\_&#26376;&#31070;&#24736;&#33673; describió el proceso desde el guion hasta la grabación, la edición, la publicación y la difusión, y se ofreció a ayudar con la grabación. El 2 de enero, sekisei compartió un documento de seis páginas con el guion de un vídeo de presentación del servidor e imágenes de referencia para las escenas.
 
 En febrero de 2025, タケ anunció los planes para abrir una estación en la línea principal de &#26628;&#38920;. En agosto, anunció la reforma prevista en la estación Coliseo de Ibaraki y la suspensión parcial del servicio de la línea 1 del Monorraíl Ace. En diciembre, anunció el reparto navideño de regalos del Monorraíl Ace.
 
