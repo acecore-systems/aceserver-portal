@@ -2,7 +2,7 @@
 title: As pessoas que apoiaram o Aceserver
 description: Conheça quem ajudou o Aceserver pelos retratos de skins do Minecraft, relembre as atividades e confira o roteiro de eventos e propostas.
 translationOf: aceserver-contributors
-sourceHash: sha256:1d4cdc1d8add6961855b292ca0e76d415c847586f5f563d95a556ea9f8a1c86d
+sourceHash: sha256:6c9799648c59ecc2e2473469f2844e48e831caab81860016562e45de5ea0cada
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -457,9 +457,13 @@ Em 12 de fevereiro, NCGpotechi anunciou que o interior do castelo no mar estava 
 
 Em 13 de março de 2023, Yukke anunciou a conclusão da farm de esqueletos Wither e agradeceu a quem ajudou na escavação. A farm ficaria aberta a todos depois da apresentação prevista para aquele dia. Em 25 de março, Moon\_666 informou que um alojamento para novos jogadores estava concluído e compartilhou uma foto. [Anúncio da conclusão da farm](https://discord.com/channels/737538781024092170/779569416438415421/1084675055700688937) [Foto do alojamento concluído](https://discord.com/channels/737538781024092170/779569416438415421/1089135055798022184)
 
+Em 31 de março de 2023, sh31415 contou que estava construindo uma masmorra com Asterisk, taibon, Nanashi, Yukke e MOON e pediu ajuda para escavar uma área de 100 por 100. [Projeto da masmorra e pedido de ajuda para a escavação](https://discord.com/channels/737538781024092170/779569416438415421/1091317917146153030)
+
 Em abril de 2023, あすたん explicou quais informações eram necessárias na época para solicitar grandes construções, e ゆり compartilhou um modelo de solicitação. ゆり também apresentou o plano de construir um túnel no trecho do Circuito Internacional do Reino de Kuwa que passava por uma montanha.
 
 Em 2 de maio de 2023, KOTA-SAN anunciou que pretendia começar no dia seguinte a construção da prisão provisoriamente chamada “Prisão Ace”. [Anúncio dos planos de construção da Prisão Ace](https://discord.com/channels/737538781024092170/773171457487929344/1102965633592852560)
+
+Em 30 de julho de 2023, sinragi\_lce\_1019 compartilhou fotos da casa pronta e agradeceu a quem ajudou a reunir os materiais e com outras tarefas. [Fotos da casa pronta e agradecimentos](https://discord.com/channels/737538781024092170/779569416438415421/1135139794280775741)
 
 Em uma inscrição no concurso de fotografia de novembro de 2023, Yukke relembrou a escavação de 256 chunks para a instalação de esqueletos Wither e as medidas para impedir o surgimento de criaturas. Em dezembro, あすたん descreveu como usou a instalação de Yukke para derrotar Withers com outros jogadores e criar um arco-íris com mais de 200 sinalizadores.
 
@@ -500,6 +504,8 @@ Em 17 de janeiro de 2026, 山田 procurou pessoas interessadas em morar em uma g
 Em 2 de fevereiro de 2026, Merutak propôs preservar a construção do antigo lobby, cuja obra Maro liderou em 2022, transferindo-a para o lobby em uso na época.
 
 Em 11 de março de 2026, Merutak pediu ideias para o terreno e apresentou um monumento oceânico em escala de seis para um como uma das opções. Pluto sugeriu outras construções, como uma biblioteca enorme. sekisei sugeriu usar os materiais do monumento original só no exterior. [Convite para sugerir usos para o terreno](https://discord.com/channels/737538781024092170/1476561093244620913/1481297210389041334) [Proposta de materiais do monumento oceânico](https://discord.com/channels/737538781024092170/1476561093244620913/1481298053309661275)
+
+Em 16 de março de 2026, Merutak compartilhou fotos e informou que a posição das fundações do monumento oceânico havia sido demarcada. Merutak mencionou a ajuda de Harubie e Timū. [Marcação das fundações e agradecimentos](https://discord.com/channels/737538781024092170/779569416438415421/1483047092296482897)
 
 Em março de 2026, Merutak informou que a drenagem de uma área extensa para o projeto do Monumento Oceânico ×6 e da escavação a céu aberto havia sido concluída. Agradeceu a sega, take, sekisei, harubie, hatt, timu, buraki, yukke, moon, sinzin e siu pelos materiais e pela ajuda no trabalho. [Relato da drenagem e agradecimentos](https://discord.com/channels/737538781024092170/779569416438415421/1483522273020215497)
 

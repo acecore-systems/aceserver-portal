@@ -2,7 +2,7 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:1d4cdc1d8add6961855b292ca0e76d415c847586f5f563d95a556ea9f8a1c86d
+sourceHash: sha256:6c9799648c59ecc2e2473469f2844e48e831caab81860016562e45de5ea0cada
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -457,9 +457,13 @@ El 12 de febrero, NCGpotechi anunció que el interior del castillo en el mar est
 
 El 13 de marzo de 2023, Yukke anunció que la granja de esqueletos del Wither estaba terminada y agradeció a quienes ayudaron a excavar. La granja se podría usar libremente tras la presentación prevista para ese día. El 25 de marzo, Moon\_666 comunicó que un alojamiento para nuevos jugadores estaba terminado y compartió una foto. [Anuncio de la finalización de la granja](https://discord.com/channels/737538781024092170/779569416438415421/1084675055700688937) [Foto del alojamiento terminado](https://discord.com/channels/737538781024092170/779569416438415421/1089135055798022184)
 
+El 31 de marzo de 2023, sh31415 contó que estaba construyendo una mazmorra junto con Asterisk, taibon, Nanashi, Yukke y MOON, y pidió ayuda para excavar una zona de 100 por 100. [Proyecto de la mazmorra y solicitud de ayuda](https://discord.com/channels/737538781024092170/779569416438415421/1091317917146153030)
+
 En abril de 2023, あすたん explicó qué información se pedía entonces para solicitar permiso para grandes construcciones, y ゆり compartió una plantilla de solicitud. ゆり también presentó el plan de hacer un túnel en el tramo del Circuito Internacional del Reino de Kuwa que atravesaba una montaña.
 
 El 2 de mayo de 2023, KOTA-SAN anunció que planeaba iniciar al día siguiente la construcción de una prisión con el nombre provisional «Prisión Ace». [Anuncio de los planes de construcción de la Prisión Ace](https://discord.com/channels/737538781024092170/773171457487929344/1102965633592852560)
+
+El 30 de julio de 2023, sinragi\_lce\_1019 compartió fotos de una casa terminada y agradeció a quienes ayudaron a reunir materiales y con otras tareas. [Fotos de la casa terminada y agradecimientos](https://discord.com/channels/737538781024092170/779569416438415421/1135139794280775741)
 
 En una entrada del concurso de fotografía de noviembre de 2023, Yukke recordó la excavación de 256 chunks para la instalación de esqueletos del Wither y las medidas para impedir la aparición de criaturas. En diciembre, あすたん describió en su propuesta cómo usó la instalación de Yukke para derrotar Withers junto con otros jugadores y crear un arcoíris con más de 200 balizas.
 
@@ -500,6 +504,8 @@ El 17 de enero de 2026, 山田 buscó a personas interesadas en mudarse a una gr
 El 2 de febrero de 2026, Merutak propuso conservar la construcción del antiguo vestíbulo, que Maro había dirigido en 2022, trasladándola al vestíbulo que se usaba entonces.
 
 El 11 de marzo de 2026, Merutak pidió ideas para el terreno e incluyó entre las opciones un monumento oceánico a seis veces su escala original. Pluto sugirió otras construcciones, como una biblioteca enorme. sekisei propuso usar los materiales del monumento original solo en el exterior. [Convocatoria de ideas para el terreno](https://discord.com/channels/737538781024092170/1476561093244620913/1481297210389041334) [Propuesta de materiales del monumento oceánico](https://discord.com/channels/737538781024092170/1476561093244620913/1481298053309661275)
+
+El 16 de marzo de 2026, Merutak compartió fotos y anunció que se había terminado de marcar la posición de los cimientos del monumento oceánico. Merutak dio las gracias a Harubie y Timū por su ayuda. [Ubicación de los cimientos y agradecimientos](https://discord.com/channels/737538781024092170/779569416438415421/1483047092296482897)
 
 En marzo de 2026, Merutak informó de que había concluido el drenaje de una amplia zona para el proyecto del monumento oceánico ×6 y la excavación a cielo abierto. Dio las gracias a sega, take, sekisei, harubie, hatt, timu, buraki, yukke, moon, sinzin y siu por aportar materiales y ayuda con el trabajo. [Informe del drenaje y agradecimientos](https://discord.com/channels/737538781024092170/779569416438415421/1483522273020215497)
 

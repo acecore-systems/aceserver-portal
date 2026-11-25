@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:1d4cdc1d8add6961855b292ca0e76d415c847586f5f563d95a556ea9f8a1c86d
+sourceHash: sha256:6c9799648c59ecc2e2473469f2844e48e831caab81860016562e45de5ea0cada
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -457,9 +457,13 @@ Am 12. Februar meldete NCGpotechi, dass der Innenausbau der Burg auf dem Meer fe
 
 Am 13. März 2023 meldete Yukke die Fertigstellung der Witherskelett-Farm und bedankte sich bei allen, die bei den Ausgrabungen geholfen hatten. Nach der für denselben Tag angekündigten Vorstellung sollten alle die Anlage nutzen können. Am 25. März meldete Moon\_666 mit einem Foto die Fertigstellung einer Unterkunft für neue Spieler. [Fertigstellung der Witherskelett-Farm](https://discord.com/channels/737538781024092170/779569416438415421/1084675055700688937) [Foto der fertigen Unterkunft](https://discord.com/channels/737538781024092170/779569416438415421/1089135055798022184)
 
+Am 31. März 2023 berichtete sh31415, gemeinsam mit Asterisk, taibon, Nanashi, Yukke und MOON an einem Dungeon zu arbeiten. Für die Ausgrabung eines Bereichs von 100 × 100 wurde Hilfe gesucht. [Dungeonbau und Aufruf zur Hilfe beim Ausgraben](https://discord.com/channels/737538781024092170/779569416438415421/1091317917146153030)
+
 Im April 2023 erklärte あすたん, welche Angaben damals für Anträge auf größere Bauvorhaben nötig waren. ゆり teilte eine Antragsvorlage und erläuterte außerdem den Plan für einen Tunnel auf dem Abschnitt der internationalen Rennstrecke des Königreichs Kuwa, der durch einen Berg führen sollte.
 
 Am 2. Mai 2023 kündigte KOTA-SAN an, am nächsten Tag mit dem Bau des Gefängnisses „Ace Prison“ zu beginnen. Der Name war vorläufig. [Ankündigung des geplanten Gefängnisbaus](https://discord.com/channels/737538781024092170/773171457487929344/1102965633592852560)
+
+Am 30. Juli 2023 meldete sinragi\_lce\_1019 die Fertigstellung eines Hauses mit Fotos und bedankte sich bei allen, die beim Sammeln von Materialien oder bei anderen Arbeiten geholfen hatten. [Fotos des fertigen Hauses und Danksagung](https://discord.com/channels/737538781024092170/779569416438415421/1135139794280775741)
 
 In einem Fotowettbewerbsbeitrag vom November 2023 erinnerte sich Yukke daran, 256 Chunks für die Witherskelettanlage ausgehoben und Maßnahmen gegen das Spawnen getroffen zu haben. In einem Beitrag vom Dezember beschrieb あすたん, wie die Gruppe in Yukkes Anlage Wither besiegte und mit mehr als 200 Leuchtfeuern einen Regenbogen baute.
 
@@ -500,6 +504,8 @@ Am 17. Januar 2026 suchte 山田 Interessierte, die in ein großes Wohngebiet zi
 Am 2. Februar 2026 schlug Merutak vor, das Bauwerk aus der früheren Lobby zu erhalten, deren Bau Maro 2022 geleitet hatte. Dazu sollte es in die damals genutzte Lobby verlegt werden.
 
 Am 11. März 2026 bat Merutak um Ideen für das Gelände und nannte ein Ozeanmonument im sechsfachen Maßstab als Möglichkeit. Pluto schlug andere Bauwerke vor, darunter eine riesige Bibliothek. sekisei regte an, nur für die Außenseite die Materialien des ursprünglichen Ozeanmonuments zu verwenden. [Aufruf zu Ideen für das Gelände](https://discord.com/channels/737538781024092170/1476561093244620913/1481297210389041334) [Materialvorschlag für das Ozeanmonument](https://discord.com/channels/737538781024092170/1476561093244620913/1481298053309661275)
+
+Am 16. März 2026 berichtete Merutak mit Fotos, dass die Lage der Fundamente des Ozeanmonuments festgelegt war. Merutak erwähnte dabei die Hilfe von Harubie und Timū. [Bericht zum Fundament und zur Mithilfe](https://discord.com/channels/737538781024092170/779569416438415421/1483047092296482897)
 
 Im März 2026 berichtete Merutak, dass die Trockenlegung eines großen Gebiets für das Projekt ×6 Ozeanmonument und offener Aushub abgeschlossen war. Merutak dankte sega, take, sekisei, harubie, hatt, timu, buraki, yukke, moon, sinzin und siu für Material und Mithilfe. [Bericht über die Entwässerung und Dank](https://discord.com/channels/737538781024092170/779569416438415421/1483522273020215497)
 

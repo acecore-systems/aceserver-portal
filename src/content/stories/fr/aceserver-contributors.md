@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:1d4cdc1d8add6961855b292ca0e76d415c847586f5f563d95a556ea9f8a1c86d
+sourceHash: sha256:6c9799648c59ecc2e2473469f2844e48e831caab81860016562e45de5ea0cada
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -457,9 +457,13 @@ Le 12 février, NCGpotechi a annoncé que l’intérieur du château en mer éta
 
 Le 13 mars 2023, Yukke a annoncé que la ferme à squelettes Wither était terminée et a remercié les personnes qui avaient aidé à creuser. La ferme devait être accessible à tous après la présentation prévue le jour même. Le 25 mars, Moon\_666 a annoncé, photo à l’appui, que l’hébergement destiné aux nouveaux joueurs était terminé. [Annonce de l’achèvement de la ferme](https://discord.com/channels/737538781024092170/779569416438415421/1084675055700688937) [Photo de l’hébergement terminé](https://discord.com/channels/737538781024092170/779569416438415421/1089135055798022184)
 
+Le 31 mars 2023, sh31415 a indiqué travailler à la création d’un donjon avec Asterisk, taibon, Nanashi, Yukke et MOON. sh31415 a demandé de l’aide pour creuser une zone de 100 sur 100. [Projet de donjon et appel à aider au creusement](https://discord.com/channels/737538781024092170/779569416438415421/1091317917146153030)
+
 En avril 2023, あすたん a expliqué quelles informations étaient alors requises pour demander l’autorisation d’une construction de grande ampleur, et ゆり a partagé un modèle de demande. ゆり a aussi présenté le projet de faire passer dans un tunnel le tronçon montagneux du Circuit international du royaume de Kuwa.
 
 Le 2 mai 2023, KOTA-SAN a annoncé prévoir de commencer le lendemain la construction d’une prison provisoirement nommée « Prison Ace ». [Annonce du projet de construction de la Prison Ace](https://discord.com/channels/737538781024092170/773171457487929344/1102965633592852560)
+
+Le 30 juillet 2023, sinragi\_lce\_1019 a partagé des photos d’une maison terminée et a remercié celles et ceux qui avaient aidé à rassembler les matériaux et à effectuer d’autres tâches. [Photos de la maison terminée et remerciements](https://discord.com/channels/737538781024092170/779569416438415421/1135139794280775741)
 
 Dans sa participation au concours photo de novembre 2023, Yukke est revenu sur l’excavation de 256 chunks pour l’installation de squelettes Wither et sur les mesures prises contre l’apparition de créatures. En décembre, あすたん a expliqué avoir utilisé l’installation de Yukke pour vaincre des Withers avec d’autres joueurs et créer un arc-en-ciel avec plus de 200 balises.
 
@@ -500,6 +504,8 @@ Le 17 janvier 2026, 山田 a cherché des personnes souhaitant emménager dans u
 Le 2 février 2026, Merutak a proposé de préserver la construction de l’ancien hall, dont Maro avait dirigé les travaux en 2022, en la déplaçant vers le hall utilisé à l’époque.
 
 Le 11 mars 2026, Merutak a sollicité des idées pour le terrain et a cité comme option un monument océanique à six fois son échelle d’origine. Pluto a proposé d’autres constructions, notamment une immense bibliothèque. sekisei a suggéré d’utiliser les matériaux du monument d’origine uniquement à l’extérieur. [Appel à idées pour le terrain](https://discord.com/channels/737538781024092170/1476561093244620913/1481297210389041334) [Proposition sur les matériaux du monument océanique](https://discord.com/channels/737538781024092170/1476561093244620913/1481298053309661275)
+
+Le 16 mars 2026, Merutak a annoncé avec des photos que l’emplacement des fondations du monument océanique avait été marqué. Merutak a mentionné l’aide apportée par Harubie et Timū. [Implantation des fondations et remerciements](https://discord.com/channels/737538781024092170/779569416438415421/1483047092296482897)
 
 En mars 2026, Merutak a annoncé la fin du drainage d’une vaste zone pour le projet de monument océanique ×6 et d’excavation à ciel ouvert. Merutak a remercié sega, take, sekisei, harubie, hatt, timu, buraki, yukke, moon, sinzin et siu pour les matériaux et leur aide sur le chantier. [Compte rendu du drainage et remerciements](https://discord.com/channels/737538781024092170/779569416438415421/1483522273020215497)
 

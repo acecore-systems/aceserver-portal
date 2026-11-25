@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:1d4cdc1d8add6961855b292ca0e76d415c847586f5f563d95a556ea9f8a1c86d
+sourceHash: sha256:6c9799648c59ecc2e2473469f2844e48e831caab81860016562e45de5ea0cada
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -457,9 +457,13 @@ On February 12, NCGpotechi reported that the castle at sea was finished inside a
 
 On March 13, 2023, Yukke announced that the wither skeleton farm was complete and thanked the players who helped excavate the site. Yukke said the farm would be open for anyone to use after the unveiling planned for that day. On March 25, Moon\_666 reported that a lodging facility for new players was complete and shared a photo. [Wither skeleton farm completion report](https://discord.com/channels/737538781024092170/779569416438415421/1084675055700688937) [Photo of the finished lodging facility](https://discord.com/channels/737538781024092170/779569416438415421/1089135055798022184)
 
+On March 31, 2023, sh31415 reported building a dungeon with Asterisk, taibon, Nanashi, Yukke, and MOON and asked for help excavating a 100 by 100 area. [Dungeon project and call for excavation help](https://discord.com/channels/737538781024092170/779569416438415421/1091317917146153030)
+
 In April 2023, あすたん explained what information was needed to apply for large builds at the time, and ゆり shared an application template. ゆり also outlined a plan for a tunnel where the course at the Kuwa Kingdom International Circuit crossed a mountain.
 
 On May 2, 2023, KOTA-SAN announced plans to start building the provisionally named Ace Prison the following day. [Announced plans to build Ace Prison](https://discord.com/channels/737538781024092170/773171457487929344/1102965633592852560)
+
+On July 30, 2023, sinragi\_lce\_1019 shared photos of a finished home and thanked the players who helped gather materials and with other work. [Photos of the finished home and acknowledgments](https://discord.com/channels/737538781024092170/779569416438415421/1135139794280775741)
 
 In a November 2023 photo contest entry, Yukke looked back on excavating 256 chunks for the wither skeleton facility and taking measures to prevent spawns. In a December entry, あすたん described using Yukke’s facility to defeat Withers with other players and make a rainbow with more than 200 beacons.
 
@@ -500,6 +504,8 @@ On January 17, 2026, 山田 invited people interested in moving into a large res
 On February 2, 2026, Merutak proposed preserving the build from the former lobby, whose construction Maro led in 2022, by moving it to the lobby in use at the time.
 
 On March 11, 2026, Merutak asked for ideas for the site, naming an ocean monument at six times its original scale as one option. Pluto suggested other builds, including a huge library. sekisei suggested using the original monument’s materials only for the exterior. [Call for ideas for the site](https://discord.com/channels/737538781024092170/1476561093244620913/1481297210389041334) [Ocean monument materials proposal](https://discord.com/channels/737538781024092170/1476561093244620913/1481298053309661275)
+
+On March 16, 2026, Merutak shared photos and reported that the position of the ocean monument’s foundations had been marked out. Merutak credited Harubie and Timū with helping with the work. [Foundation layout and acknowledgments](https://discord.com/channels/737538781024092170/779569416438415421/1483047092296482897)
 
 In March 2026, Merutak reported that drainage of a large area for the ×6 Ocean Monument and Open-Pit Excavation project was complete and thanked sega, take, sekisei, harubie, hatt, timu, buraki, yukke, moon, sinzin, and siu for materials and help with the work. [Drainage and acknowledgments](https://discord.com/channels/737538781024092170/779569416438415421/1483522273020215497)
 
