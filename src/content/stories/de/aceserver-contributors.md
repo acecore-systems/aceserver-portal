@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:d257b541af53e5bb348885af676ac3c270d6053f738a0f24ab498c45dac7e38d
+sourceHash: sha256:563d683a0d382b9a0f4cae3f17a2e2745bb3e1a28ea6c177e55041c6e5c616d6
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -60,6 +60,8 @@ Am 16. Januar 2022 fragte はっ im Thread zur Produktentwicklung, welche neuen 
 Am 11. Mai 2022 bat KOTA-SAN um Vorschläge für zusätzliche Handelswaren. [Aufruf zu Vorschlägen für Handelswaren](https://discord.com/channels/737538781024092170/973722800294596608/973722800294596608)
 
 Im Januar 2023 ordnete ゆり die Vorbereitungen, Plugin-Tests und Bauschritte für die Entwicklung eines RPG-Servers. Im Februar teilte ゆり die Ergebnisse der Verbindungstests.
+
+Am 5. Februar 2023 schlug b9d08b vor, das RPG in kurzen Kapiteln zu entwickeln, damit Spielende zwischen dem RPG und dem Hauptserver wechseln können. ゆり erklärte, dass sich das Serverteam und die Beteiligten darauf einigen müssten, was sie umsetzen wollen. [Vorschlag für ein RPG in kurzen Kapiteln](https://discord.com/channels/737538781024092170/1071731995375308840/1071734174098137159) [Erläuterung von ゆり zur Abstimmung](https://discord.com/channels/737538781024092170/1071731995375308840/1071737376860291153)
 
 Im Juli 2023 stellte ゆり in einer Ankündigung von Ace Lab die Allianz zwischen dem Dorf des Mondgottes und der RPG-Baugruppe vor. Die Ankündigung nannte BM\_yurikun und \_BE\_golden\_cokka als damalige Leiter und amya7238 sowie \_BE\_golden\_cokka als frühe Mitglieder. Als geplante Aktivitäten wurden das Eisbootrennen ACE1GP und die RPG-Entwicklung genannt.
 
@@ -240,6 +242,8 @@ Im Sommer 2025 begann End&#12539;コッカー eine Diskussion über ein Among-Us
 Im Juli 2025 berichtete End&#12539;コッカー, einen Vorschlag für das Sommerfest ausgearbeitet zu haben.
 
 In der Ankündigung zum Sommerfest 2025 wurde センチュリーズ für die Vorbereitung und Bereitstellung des Feuerwerks genannt. Der Dank nach der Veranstaltung nannte セガ, リンゴポン, あまぎ, 新人, ジェスター, ホステッチ und イザイザ für das Feuerwerk sowie コッカー und sh für die Gesamtkoordination. エント betreute den Rundkurs, moon und セキセイ das Golfspiel. ハルビィ, セキセイ und sh betreuten das Survival-PvP, &#12495;&#12483;&#12469;&#12531; und sh das Hassan-Event. [Originalbeitrag](https://discord.com/channels/737538781024092170/774152638450237460/1408390549370572880) [Dank nach der Veranstaltung](https://discord.com/channels/737538781024092170/779569416438415421/1411394624026710166)
+
+Am 28. Juli 2025 teilte &#12486;&#12451;&#12512;&#12540; einen Screenshot aus dem Spiel. Darauf sind Gleise jenseits eines Flusses und einer Grasfläche zu sehen. &#12415;&#12389;&#12364;&#12397; antwortete, gerade selbst an dieser Bahnstrecke zu arbeiten. [Screenshot der Gleise von &#12486;&#12451;&#12512;&#12540;](https://discord.com/channels/737538781024092170/1395970979754278942/1399166418544623808) [Bericht zum Bau von &#12415;&#12389;&#12364;&#12397;](https://discord.com/channels/737538781024092170/1395970979754278942/1399191150597767238)
 
 Am 12. August 2025 bat &#12415;&#12389;&#12364;&#12397; um Namensvorschläge für vier Linien der &#34746;&#36794;-Bahn. Dazu teilte &#12415;&#12389;&#12364;&#12397; einen vorläufigen Streckenplan und vier Bilder, die die Linien anhand von Screenshots der Bahnhöfe und geplanter Bahnhofsstandorte vorstellten. &#12454;&#12455;&#12531;&#12486;&#12451; (Hosttech255) reichte Vorschläge ein. In den Ankündigungen am 30. August und 7. September nannte &#12415;&#12389;&#12364;&#12397; die Namen &#20959;&#20958;&#32218; (&#12392;&#12367;&#12365;&#12379;&#12435;), &#20116;&#12484;&#23798;&#25903;&#32218;, &#21512;&#27700;&#28304;&#25903;&#32218; und &#27700;&#26332;&#25903;&#32218;.
 

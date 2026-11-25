@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:d257b541af53e5bb348885af676ac3c270d6053f738a0f24ab498c45dac7e38d
+sourceHash: sha256:563d683a0d382b9a0f4cae3f17a2e2745bb3e1a28ea6c177e55041c6e5c616d6
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -60,6 +60,8 @@ In 2022, s1nan0sub shared the rules for using Iroha Village and reported that In
 On May 11, 2022, KOTA-SAN asked players what additional items they wanted available for trading. [Call for trading item suggestions](https://discord.com/channels/737538781024092170/973722800294596608/973722800294596608)
 
 In January 2023, ゆり outlined the groundwork, plugin testing, and building steps for developing an RPG server. In February, ゆり shared the results of connection tests.
+
+On February 5, 2023, b9d08b proposed developing the RPG in short chapters so players could alternate between it and the main server. ゆり explained that the server staff and the creators would need to agree on what to make. [Proposal to develop the RPG in chapters](https://discord.com/channels/737538781024092170/1071731995375308840/1071734174098137159) [ゆり’s explanation of how projects would be agreed](https://discord.com/channels/737538781024092170/1071731995375308840/1071737376860291153)
 
 In July 2023, ゆり introduced an alliance between the Village of the Moon God and the RPG Creation Group in an Ace Lab announcement. It named BM\_yurikun and \_BE\_golden\_cokka as the leaders at the time, and amya7238 and \_BE\_golden\_cokka as early members. The activities outlined included ACE1GP ice boat racing and RPG creation.
 
@@ -240,6 +242,8 @@ In summer 2025, End&#12539;コッカー started a discussion about an Among Us t
 In July 2025, End&#12539;コッカー reported preparing a proposal for the summer festival.
 
 The 2025 summer festival announcement named センチュリーズ for preparing and providing the fireworks display. The post-event thanks named セガ, リンゴポン, あまぎ, 新人, ジェスター, ホステッチ and イザイザ for the fireworks, and コッカー and sh for overall coordination. エント worked on the circuit, and moon and セキセイ on golf. ハルビィ, セキセイ and sh worked on survival PvP, and &#12495;&#12483;&#12469;&#12531; and sh on the Hassan event. [Original post](https://discord.com/channels/737538781024092170/774152638450237460/1408390549370572880) [Post-event thanks](https://discord.com/channels/737538781024092170/779569416438415421/1411394624026710166)
+
+On July 28, 2025, &#12486;&#12451;&#12512;&#12540; shared an in-game screenshot of railway tracks across a river and grassy terrain. &#12415;&#12389;&#12364;&#12397; replied that they were building the railway. [Screenshot of the tracks shared by &#12486;&#12451;&#12512;&#12540;](https://discord.com/channels/737538781024092170/1395970979754278942/1399166418544623808) [Railway construction update from &#12415;&#12389;&#12364;&#12397;](https://discord.com/channels/737538781024092170/1395970979754278942/1399191150597767238)
 
 On August 12, 2025, &#12415;&#12389;&#12364;&#12397; invited people to suggest names for four &#34746;&#36794; Railway lines. The call included a provisional route map and four images introducing the lines with screenshots of stations and planned station sites. &#12454;&#12455;&#12531;&#12486;&#12451; (Hosttech255) proposed candidates. In announcements on August 30 and September 7, &#12415;&#12389;&#12364;&#12397; named the lines &#20959;&#20958;&#32218; (&#12392;&#12367;&#12365;&#12379;&#12435;), &#20116;&#12484;&#23798;&#25903;&#32218;, &#21512;&#27700;&#28304;&#25903;&#32218;, and &#27700;&#26332;&#25903;&#32218;.
 

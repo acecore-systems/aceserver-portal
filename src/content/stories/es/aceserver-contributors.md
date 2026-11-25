@@ -2,7 +2,7 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:d257b541af53e5bb348885af676ac3c270d6053f738a0f24ab498c45dac7e38d
+sourceHash: sha256:563d683a0d382b9a0f4cae3f17a2e2745bb3e1a28ea6c177e55041c6e5c616d6
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -60,6 +60,8 @@ En 2022, s1nan0sub explicó las normas de uso de la Aldea Iroha e informó que e
 El 11 de mayo de 2022, KOTA-SAN pidió sugerencias sobre qué artículos se podrían añadir al comercio. [Solicitud de sugerencias para artículos de comercio](https://discord.com/channels/737538781024092170/973722800294596608/973722800294596608)
 
 En enero de 2023, ゆり organizó los preparativos, las pruebas de plugins y el proceso de construcción para desarrollar un servidor RPG. En febrero, compartió los resultados de las pruebas de conexión.
+
+El 5 de febrero de 2023, b9d08b propuso desarrollar el RPG en capítulos cortos para que los jugadores pudieran alternar entre el RPG y el servidor principal. ゆり explicó que el equipo del servidor y quienes crearan el contenido tendrían que acordar qué hacer. [Propuesta de un RPG por capítulos](https://discord.com/channels/737538781024092170/1071731995375308840/1071734174098137159) [Explicación de ゆり sobre cómo acordar los contenidos](https://discord.com/channels/737538781024092170/1071731995375308840/1071737376860291153)
 
 En julio de 2023, ゆり presentó en un anuncio de Ace Lab la alianza entre la Aldea del Dios Lunar y el Grupo de Creación RPG. El anuncio nombró a BM\_yurikun y \_BE\_golden\_cokka como responsables de entonces, y a amya7238 y \_BE\_golden\_cokka como miembros iniciales. Entre las actividades propuestas figuraban las carreras de barcos sobre hielo ACE1GP y la creación de RPG.
 
@@ -240,6 +242,8 @@ En el verano de 2025, End&#12539;コッカー abrió un debate sobre un torneo d
 En julio de 2025, End&#12539;コッカー informó de que había preparado una propuesta para el festival de verano.
 
 El anuncio del festival de verano de 2025 mencionó a センチュリーズ por la preparación y provisión del espectáculo de fuegos artificiales. El agradecimiento posterior nombró a セガ, リンゴポン, あまぎ, 新人, ジェスター, ホステッチ e イザイザ por los fuegos artificiales, y a コッカー y sh por la coordinación general. エント se encargó del circuito y moon y セキセイ del golf. ハルビィ, セキセイ y sh se encargaron del PvP de supervivencia, y &#12495;&#12483;&#12469;&#12531; y sh del evento Hassan. [Publicación original](https://discord.com/channels/737538781024092170/774152638450237460/1408390549370572880) [Agradecimiento posterior](https://discord.com/channels/737538781024092170/779569416438415421/1411394624026710166)
+
+El 28 de julio de 2025, &#12486;&#12451;&#12512;&#12540; compartió una captura del juego en la que se ven vías al otro lado de un río, en un paisaje de hierba. &#12415;&#12389;&#12364;&#12397; respondió que estaba construyendo esa línea. [Captura de las vías compartida por &#12486;&#12451;&#12512;&#12540;](https://discord.com/channels/737538781024092170/1395970979754278942/1399166418544623808) [Informe de construcción de &#12415;&#12389;&#12364;&#12397;](https://discord.com/channels/737538781024092170/1395970979754278942/1399191150597767238)
 
 El 12 de agosto de 2025, &#12415;&#12389;&#12364;&#12397; pidió propuestas de nombres para cuatro líneas del ferrocarril &#34746;&#36794;. La convocatoria incluía un mapa provisional de las líneas y cuatro imágenes que las presentaban con capturas de las estaciones y de los lugares previstos para construirlas. &#12454;&#12455;&#12531;&#12486;&#12451; (Hosttech255) propuso candidatos. En anuncios del 30 de agosto y del 7 de septiembre, &#12415;&#12389;&#12364;&#12397; presentó los nombres &#20959;&#20958;&#32218; (&#12392;&#12367;&#12365;&#12379;&#12435;), &#20116;&#12484;&#23798;&#25903;&#32218;, &#21512;&#27700;&#28304;&#25903;&#32218; y &#27700;&#26332;&#25903;&#32218;.
 
