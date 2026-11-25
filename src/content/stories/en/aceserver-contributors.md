@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:bb5ba49afbd464f7cc9458a145b7a3a889648d520e340ffe447c597b0ab29f16
+sourceHash: sha256:74c4e8da02389b5feabb9dc390ddfce8f08e90b96d4ba5775adf27bee343663f
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -313,7 +313,7 @@ On February 20 and 21, 2026, sekisei outlined a way to agree on topics at a gene
 
 In March 2026, End&#12539;コッカー shared a draft video introducing Aceserver. Merutak noted that the first half moved quickly. sekisei suggested clarifying the purpose, audience, and message. あすたん commented on how much information to include in a short video, while LuMiSIA\_&#26376;&#31070;&#24736;&#33673; offered feedback on the presentation of text and animation.
 
-On March 6, 2026, sekisei proposed holding regular open meetings for the Information Bureau to share updates from the server team. They also proposed an informal group where members could promote their activities without having to apply. On March 11, End&#12539;コッカー shared seven meeting slides covering Regular status as something members could work toward, ways to play on the Content and Survival Servers, event videos, promotion on X, and guidance through the portal and Wiki.
+On March 6, 2026, sekisei proposed holding regular open meetings for the Information Bureau to share updates from the server team. They also proposed an informal group where members could promote their activities without having to apply. On March 11, End&#12539;コッカー shared seven meeting slides covering Regular status as something members could work toward, ways to play on the Content and Survival Servers, event videos, promotion on X, and guidance through the portal and Wiki. End&#12539;コッカー also shared tables for tracking agenda items, their status, proposed improvements, and progress.
 
 On March 7, 2026, End&#12539;コッカー invited event ideas and volunteers, including ideas for activities beyond PvP.
 
@@ -835,7 +835,7 @@ In May 2026, End&#12539;コッカー suggested improving the portal’s wording 
 
 On July 23, 2026, sekisei outlined three planned topics for the technical talks. They included an introduction to Java for making Minecraft plugins, internet and server instruction aimed at running a Minecraft server on Linux, and hands-on electronics projects for independent study. On July 31, sekisei announced the first talk on servers and the internet and pointed participants to a video showing the preparation steps. End&#12539;コッカー shared the reminder. [Planned talk topics](https://discord.com/channels/737538781024092170/779569416438415421/1529527913395781672) [Technical talk announcement](https://discord.com/channels/737538781024092170/774152638450237460/1532641413500633108)
 
-In July 2026, while the team considered introducing in-game currency to the staff-run trading post, sekisei shared the previous exchange rates, reported implementing item-for-item trades, and said testing was planned. Merutak proposed letting players exchange emeralds for in-game currency for a limited time. あすたん suggested excluding items that could be produced in large quantities, and End&#12539;コッカー proposed organizing the exchange rates for selling items.
+In July 2026, while the team considered introducing in-game currency to the staff-run trading post, sekisei shared the previous exchange rates, reported implementing item-for-item trades, and said testing was planned. Merutak proposed letting players exchange emeralds for in-game currency for a limited time. あすたん suggested excluding items that could be produced in large quantities, and End&#12539;コッカー proposed organizing the exchange rates for selling items. End&#12539;コッカー also shared a table listing the required quantity and sale price for each trade item.
 
 In August 2026, あすたん reported redesigning the web panel for the in-game currency and asked for a review. In late August, sekisei asked whether it had been tested. In September, あすたん asked sekisei again to review it.
 
@@ -843,7 +843,7 @@ From September to October 2026, End&#12539;コッカー organized the Minecraft 
 
 On October 1, 2026, while discussing a database for troubleshooting resources, あすたん said the first step was to decide how much detail to record about symptoms. They proposed three categories for problems occurring in Minecraft, problems joining the server, and other issues.
 
-In October 2026, sekisei proposed that people arriving in the lobby for the first time pass through an introductory world before reaching the regular lobby. On October 21, End&#12539;コッカー reported that the introductory lobby was complete. Two images they posted that day showed a lectern displaying the rules and a gate.
+In October 2026, sekisei proposed that people arriving in the lobby for the first time pass through an introductory world before reaching the regular lobby. End&#12539;コッカー shared the [official world map](/en/world-map/) for viewing the Survival Server and other worlds and proposed covering commands, server terminology, and Shop in the guide. On October 21, End&#12539;コッカー reported that the introductory lobby was complete. Two images they posted that day showed a lectern displaying the rules and a gate.
 
 On October 26, 2026, End&#12539;コッカー proposed preparing and publishing an initial version of the lobby message, then adding to and editing it regularly.
 

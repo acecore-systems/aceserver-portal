@@ -2,7 +2,7 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:bb5ba49afbd464f7cc9458a145b7a3a889648d520e340ffe447c597b0ab29f16
+sourceHash: sha256:74c4e8da02389b5feabb9dc390ddfce8f08e90b96d4ba5775adf27bee343663f
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -313,7 +313,7 @@ Los días 20 y 21 de febrero de 2026, sekisei planteó acordar los temas en una 
 
 En marzo de 2026, End&#12539;コッカー compartió una versión de prueba de un vídeo de presentación de Aceserver. Merutak señaló que la primera mitad avanzaba rápido. sekisei propuso aclarar el objetivo, el público y el mensaje. あすたん comentó cuánta información incluir en un vídeo corto y LuMiSIA\_&#26376;&#31070;&#24736;&#33673; opinó sobre cómo presentar el texto y las animaciones.
 
-El 6 de marzo de 2026, sekisei propuso celebrar reuniones abiertas periódicas de la Oficina de Información para compartir novedades del equipo del servidor. También propuso un grupo informal en el que los participantes pudieran difundir sus actividades sin presentar una solicitud. El 11 de marzo, End&#12539;コッカー compartió siete diapositivas para la reunión sobre el estatus de miembro habitual como meta para los participantes, las formas de jugar en los servidores de contenidos y supervivencia, los vídeos de eventos, la difusión en X y las orientaciones del portal y la wiki.
+El 6 de marzo de 2026, sekisei propuso celebrar reuniones abiertas periódicas de la Oficina de Información para compartir novedades del equipo del servidor. También propuso un grupo informal en el que los participantes pudieran difundir sus actividades sin presentar una solicitud. El 11 de marzo, End&#12539;コッカー compartió siete diapositivas para la reunión sobre el estatus de miembro habitual como meta para los participantes, las formas de jugar en los servidores de contenidos y supervivencia, los vídeos de eventos, la difusión en X y las orientaciones del portal y la wiki. End&#12539;コッカー también compartió tablas para consultar los temas, su estado, las mejoras propuestas y el progreso.
 
 El 7 de marzo de 2026, End&#12539;コッカー pidió ideas para eventos y voluntarios, y también animó a proponer actividades aparte del PvP.
 
@@ -835,7 +835,7 @@ En mayo de 2026, End&#12539;コッカー propuso mejorar los textos del portal y
 
 El 23 de julio de 2026, sekisei presentó tres temas previstos para las charlas técnicas. Incluían una introducción a Java orientada a crear complementos de Minecraft, una charla sobre Internet y servidores para ejecutar un servidor de Minecraft en Linux y proyectos de electrónica para el estudio independiente. El 31 de julio, sekisei anunció la primera charla sobre servidores e Internet y remitió a los participantes a un vídeo con los pasos de preparación. End&#12539;コッカー compartió el recordatorio. [Temas previstos para las charlas](https://discord.com/channels/737538781024092170/779569416438415421/1529527913395781672) [Anuncio de la charla técnica](https://discord.com/channels/737538781024092170/774152638450237460/1532641413500633108)
 
-En julio de 2026, durante el estudio de cómo incorporar la moneda del juego al puesto de intercambio administrado por el equipo del servidor, sekisei compartió los tipos de cambio anteriores e informó de que había implementado el intercambio de objetos por otros objetos y que pensaba probarlo. Merutak propuso permitir por tiempo limitado cambiar esmeraldas por moneda del juego. あすたん sugirió excluir del intercambio los objetos que podían producirse en grandes cantidades y End&#12539;コッカー propuso poner en orden los tipos de cambio para la venta de objetos.
+En julio de 2026, durante el estudio de cómo incorporar la moneda del juego al puesto de intercambio administrado por el equipo del servidor, sekisei compartió los tipos de cambio anteriores e informó de que había implementado el intercambio de objetos por otros objetos y que pensaba probarlo. Merutak propuso permitir por tiempo limitado cambiar esmeraldas por moneda del juego. あすたん sugirió excluir del intercambio los objetos que podían producirse en grandes cantidades y End&#12539;コッカー propuso poner en orden los tipos de cambio para la venta de objetos. End&#12539;コッカー compartió además una tabla con la cantidad necesaria y el precio de venta de cada objeto de intercambio.
 
 En agosto de 2026, あすたん informó de que había rediseñado el panel web de la moneda del juego y pidió una revisión. A finales de agosto, sekisei preguntó si ya se había probado. En septiembre, あすたん volvió a pedir una revisión a sekisei.
 
@@ -843,7 +843,7 @@ Entre septiembre y octubre de 2026, End&#12539;コッカー organizó la guía d
 
 El 1 de octubre de 2026, al estudiar una base de datos para organizar el material de resolución de problemas, あすたん señaló que primero había que decidir con qué nivel de detalle registrar los síntomas. Propuso distinguir entre problemas dentro de Minecraft, problemas para entrar al servidor y otros problemas.
 
-En octubre de 2026, sekisei propuso que quienes llegaran al vestíbulo por primera vez pasaran por un mundo de introducción antes de acceder al vestíbulo habitual. El 21 de octubre, End&#12539;コッカー informó de que el vestíbulo de introducción estaba terminado. Dos imágenes que publicó ese día mostraban un atril donde se podían consultar las reglas y un portal.
+En octubre de 2026, sekisei propuso que quienes llegaran al vestíbulo por primera vez pasaran por un mundo de introducción antes de acceder al vestíbulo habitual. End&#12539;コッカー compartió el [mapa oficial del mundo](/es/world-map/) para consultar el servidor de supervivencia y otros mundos y propuso explicar los comandos, la terminología y Shop en la guía. El 21 de octubre, End&#12539;コッカー informó de que el vestíbulo de introducción estaba terminado. Dos imágenes que publicó ese día mostraban un atril donde se podían consultar las reglas y un portal.
 
 El 26 de octubre de 2026, End&#12539;コッカー propuso preparar y publicar una primera versión del mensaje del vestíbulo para luego ampliarlo y editarlo periódicamente.
 

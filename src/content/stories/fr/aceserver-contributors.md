@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:bb5ba49afbd464f7cc9458a145b7a3a889648d520e340ffe447c597b0ab29f16
+sourceHash: sha256:74c4e8da02389b5feabb9dc390ddfce8f08e90b96d4ba5775adf27bee343663f
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -313,7 +313,7 @@ Les 20 et 21 février 2026, sekisei a proposé de s’accorder sur les sujets en
 
 En mars 2026, End&#12539;コッカー a partagé un essai de vidéo de présentation d’Aceserver. Merutak a relevé le rythme rapide de la première moitié. sekisei a suggéré de préciser l’objectif, le public et le message. あすたん a commenté la quantité d’informations à mettre dans une vidéo courte, et LuMiSIA\_&#26376;&#31070;&#24736;&#33673; a donné son avis sur la présentation du texte et des animations.
 
-Le 6 mars 2026, sekisei a proposé d’organiser des réunions ouvertes régulières du Bureau d’information pour partager les sujets de l’équipe du serveur. Une autre idée était de créer un groupe souple où les participants pourraient faire connaître leurs activités sans déposer de demande. Le 11 mars, End&#12539;コッカー a partagé sept diapositives de réunion sur le statut de membre régulier comme objectif pour les participants, les façons de jouer sur les serveurs de contenu et de survie, les vidéos d’événements, la communication sur X et les guides du portail et du wiki.
+Le 6 mars 2026, sekisei a proposé d’organiser des réunions ouvertes régulières du Bureau d’information pour partager les sujets de l’équipe du serveur. Une autre idée était de créer un groupe souple où les participants pourraient faire connaître leurs activités sans déposer de demande. Le 11 mars, End&#12539;コッカー a partagé sept diapositives de réunion sur le statut de membre régulier comme objectif pour les participants, les façons de jouer sur les serveurs de contenu et de survie, les vidéos d’événements, la communication sur X et les guides du portail et du wiki. End&#12539;コッカー a aussi partagé des tableaux pour suivre les sujets, leur état, les améliorations proposées et leur avancement.
 
 Le 7 mars 2026, End&#12539;コッカー a sollicité des idées d’événements et des volontaires, y compris pour des activités en dehors du PvP.
 
@@ -835,7 +835,7 @@ En mai 2026, End&#12539;コッカー a proposé d’améliorer les textes du por
 
 Le 23 juillet 2026, sekisei a présenté trois thèmes prévus pour les présentations techniques. Le programme comprenait une initiation à Java pour créer des extensions Minecraft, une présentation sur Internet et les serveurs pour faire fonctionner un serveur Minecraft sous Linux, et des projets d’électronique pour un travail de recherche autonome. Le 31 juillet, sekisei a annoncé la première présentation sur les serveurs et Internet et a orienté les participants vers une vidéo montrant les étapes de préparation. End&#12539;コッカー a relayé le rappel. [Thèmes prévus des présentations](https://discord.com/channels/737538781024092170/779569416438415421/1529527913395781672) [Annonce de la présentation technique](https://discord.com/channels/737538781024092170/774152638450237460/1532641413500633108)
 
-En juillet 2026, lors d’une réflexion sur l’introduction de la monnaie du jeu au comptoir d’échange géré par l’équipe du serveur, sekisei a partagé les anciens taux d’échange. sekisei a signalé avoir développé l’échange d’objets contre d’autres objets et prévu de le tester. Merutak a proposé de permettre l’échange d’émeraudes contre de la monnaie du jeu pour une durée limitée. あすたん a suggéré d’exclure des échanges les objets qu’on pouvait produire en grande quantité, et End&#12539;コッカー a proposé de revoir l’organisation des taux d’échange à la vente.
+En juillet 2026, lors d’une réflexion sur l’introduction de la monnaie du jeu au comptoir d’échange géré par l’équipe du serveur, sekisei a partagé les anciens taux d’échange. sekisei a signalé avoir développé l’échange d’objets contre d’autres objets et prévu de le tester. Merutak a proposé de permettre l’échange d’émeraudes contre de la monnaie du jeu pour une durée limitée. あすたん a suggéré d’exclure des échanges les objets qu’on pouvait produire en grande quantité, et End&#12539;コッカー a proposé de revoir l’organisation des taux d’échange à la vente. End&#12539;コッカー a également partagé un tableau indiquant la quantité requise et le prix de vente de chaque objet échangé.
 
 En août 2026, あすたん a indiqué avoir repensé le panneau web de la monnaie du jeu et a demandé un avis sur le nouveau panneau. Fin août, sekisei a demandé si le panneau avait été testé. En septembre, あすたん a de nouveau demandé à sekisei de l’examiner.
 
@@ -843,7 +843,7 @@ Entre septembre et octobre 2026, End&#12539;コッカー a réorganisé le guide
 
 Le 1er octobre 2026, en réfléchissant à une base de données pour organiser la documentation de dépannage, あすたん a indiqué qu’il fallait d’abord décider avec quel niveau de détail consigner les symptômes. あすたん a proposé de distinguer les problèmes rencontrés dans Minecraft, les problèmes de connexion au serveur et les autres problèmes.
 
-En octobre 2026, sekisei a proposé de faire passer les personnes qui arrivaient pour la première fois par un monde d’accueil avant de les diriger vers le hall habituel. Le 21 octobre, End&#12539;コッカー a annoncé que le hall d’accueil était terminé. Deux images publiées le même jour montraient un pupitre où lire les règles et un portail.
+En octobre 2026, sekisei a proposé de faire passer les personnes qui arrivaient pour la première fois par un monde d’accueil avant de les diriger vers le hall habituel. End&#12539;コッカー a partagé la [carte officielle des mondes](/fr/world-map/) pour découvrir le serveur de survie et les autres mondes et a proposé d’expliquer les commandes, les termes du serveur et Shop dans le guide. Le 21 octobre, End&#12539;コッカー a annoncé que le hall d’accueil était terminé. Deux images publiées le même jour montraient un pupitre où lire les règles et un portail.
 
 Le 26 octobre 2026, End&#12539;コッカー a proposé de préparer et de publier une première version du message du hall, puis de la compléter et de la modifier régulièrement.
 

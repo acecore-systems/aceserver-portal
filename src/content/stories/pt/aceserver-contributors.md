@@ -2,7 +2,7 @@
 title: As pessoas que apoiaram o Aceserver
 description: Conheça quem ajudou o Aceserver pelos retratos de skins do Minecraft, relembre as atividades e confira o roteiro de eventos e propostas.
 translationOf: aceserver-contributors
-sourceHash: sha256:bb5ba49afbd464f7cc9458a145b7a3a889648d520e340ffe447c597b0ab29f16
+sourceHash: sha256:74c4e8da02389b5feabb9dc390ddfce8f08e90b96d4ba5775adf27bee343663f
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -313,7 +313,7 @@ Em 20 e 21 de fevereiro de 2026, sekisei sugeriu acertar os assuntos em uma reun
 
 Em março de 2026, End&#12539;コッカー compartilhou uma versão de teste de um vídeo de apresentação do Aceserver. Merutak observou que a primeira metade avançava rápido. sekisei sugeriu esclarecer o objetivo, o público e a mensagem. あすたん comentou a quantidade de informação em um vídeo curto, e LuMiSIA\_&#26376;&#31070;&#24736;&#33673; deu sugestões sobre a apresentação de textos e animações.
 
-Em 6 de março de 2026, sekisei propôs reuniões abertas periódicas do Departamento de Informações para compartilhar assuntos da equipe do servidor. Também sugeriu um grupo informal em que os participantes pudessem divulgar suas atividades sem precisar fazer uma solicitação. Em 11 de março, End&#12539;コッカー compartilhou sete slides para a reunião, sobre o status de participante regular como uma meta, as formas de jogar nos servidores de conteúdo e sobrevivência, os vídeos de eventos, a divulgação no X e as orientações do portal e da wiki.
+Em 6 de março de 2026, sekisei propôs reuniões abertas periódicas do Departamento de Informações para compartilhar assuntos da equipe do servidor. Também sugeriu um grupo informal em que os participantes pudessem divulgar suas atividades sem precisar fazer uma solicitação. Em 11 de março, End&#12539;コッカー compartilhou sete slides para a reunião, sobre o status de participante regular como uma meta, as formas de jogar nos servidores de conteúdo e sobrevivência, os vídeos de eventos, a divulgação no X e as orientações do portal e da wiki. End&#12539;コッカー também compartilhou tabelas para acompanhar os assuntos da reunião, a situação atual, as melhorias propostas e o andamento.
 
 Em 7 de março de 2026, End&#12539;コッカー pediu ideias para eventos e voluntários, incluindo sugestões de atividades além de PvP.
 
@@ -835,7 +835,7 @@ Em maio de 2026, End&#12539;コッカー sugeriu melhorar os textos do portal e 
 
 Em 23 de julho de 2026, sekisei apresentou três temas previstos para as palestras técnicas. A lista incluía uma introdução a Java para criar plugins de Minecraft, uma palestra sobre internet e servidores para rodar um servidor de Minecraft no Linux e projetos de eletrônica para estudo independente. Em 31 de julho, sekisei anunciou a primeira palestra sobre servidores e internet e indicou aos participantes um vídeo com as etapas de preparação. End&#12539;コッカー compartilhou o lembrete. [Temas previstos para as palestras](https://discord.com/channels/737538781024092170/779569416438415421/1529527913395781672) [Anúncio da palestra técnica](https://discord.com/channels/737538781024092170/774152638450237460/1532641413500633108)
 
-Em julho de 2026, durante a discussão sobre incluir a moeda do jogo no posto de trocas administrado pela equipe do servidor, sekisei compartilhou as taxas de troca anteriores, informou que havia implementado a troca direta de itens e disse que pretendia testá-la. Merutak propôs permitir a troca de esmeraldas pela moeda do jogo por tempo limitado. あすたん sugeriu excluir das trocas os itens que podiam ser produzidos em grandes quantidades, e End&#12539;コッカー propôs organizar as taxas de troca para a venda de itens.
+Em julho de 2026, durante a discussão sobre incluir a moeda do jogo no posto de trocas administrado pela equipe do servidor, sekisei compartilhou as taxas de troca anteriores, informou que havia implementado a troca direta de itens e disse que pretendia testá-la. Merutak propôs permitir a troca de esmeraldas pela moeda do jogo por tempo limitado. あすたん sugeriu excluir das trocas os itens que podiam ser produzidos em grandes quantidades, e End&#12539;コッカー propôs organizar as taxas de troca para a venda de itens. End&#12539;コッカー também compartilhou uma tabela com as quantidades necessárias e os preços de venda de cada item de troca.
 
 Em agosto de 2026, あすたん informou que havia reformulado o painel web da moeda do jogo e pediu uma revisão. No fim de agosto, sekisei perguntou se o painel já havia sido testado. Em setembro, あすたん voltou a pedir uma revisão a sekisei.
 
@@ -843,7 +843,7 @@ Entre setembro e outubro de 2026, End&#12539;コッカー organizou o guia de en
 
 Em 1º de outubro de 2026, durante a discussão sobre um banco de dados para organizar materiais de solução de problemas, あすたん disse que primeiro era preciso decidir o nível de detalhe usado para registrar os sintomas. A proposta dividia os casos entre problemas dentro do Minecraft, problemas para entrar no servidor e outros.
 
-Em outubro de 2026, sekisei propôs que quem chegasse ao lobby pela primeira vez passasse por um mundo introdutório antes de seguir para o lobby normal. Em 21 de outubro, End&#12539;コッカー informou que o lobby introdutório estava pronto. Duas imagens que publicou naquele dia mostravam um púlpito com as regras e um portal.
+Em outubro de 2026, sekisei propôs que quem chegasse ao lobby pela primeira vez passasse por um mundo introdutório antes de seguir para o lobby normal. End&#12539;コッカー compartilhou o [mapa oficial dos mundos](/pt/world-map/) para consultar o servidor de sobrevivência e outros mundos e propôs explicar os comandos, a terminologia do servidor e Shop no guia. Em 21 de outubro, End&#12539;コッカー informou que o lobby introdutório estava pronto. Duas imagens que publicou naquele dia mostravam um púlpito com as regras e um portal.
 
 Em 26 de outubro de 2026, End&#12539;コッカー propôs preparar e publicar uma versão inicial da mensagem do lobby e depois fazer acréscimos e edições periódicas.
 

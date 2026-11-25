@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:bb5ba49afbd464f7cc9458a145b7a3a889648d520e340ffe447c597b0ab29f16
+sourceHash: sha256:74c4e8da02389b5feabb9dc390ddfce8f08e90b96d4ba5775adf27bee343663f
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -313,7 +313,7 @@ Am 20. und 21. Februar 2026 schlug sekisei vor, die Themen vor einer offenen Bes
 
 Im März 2026 teilte End&#12539;コッカー eine Probeversion eines Videos über Aceserver. Merutak wies auf das schnelle Tempo in der ersten Hälfte hin. sekisei schlug vor, Ziel, Publikum und Aussage klarer zu bestimmen. あすたん kommentierte, wie viele Informationen in ein kurzes Video passen, und LuMiSIA\_&#26376;&#31070;&#24736;&#33673; gab Rückmeldung zur Gestaltung von Text und Animationen.
 
-Am 6. März 2026 schlug sekisei vor, regelmäßige offene Treffen der Informationsstelle abzuhalten, um Themen des Serverteams zu teilen. Außerdem schlug sekisei eine lockere Gruppe vor, in der Teilnehmer ohne Antrag für ihre Aktivitäten werben könnten. Am 11. März teilte End&#12539;コッカー sieben Folien für die Besprechung. Sie behandelten den Status als Stammspieler als mögliches Ziel, die Spielmöglichkeiten auf dem Content- und dem Survival-Server, Veranstaltungsvideos, Öffentlichkeitsarbeit auf X und die Anleitungen im Portal und im Wiki.
+Am 6. März 2026 schlug sekisei vor, regelmäßige offene Treffen der Informationsstelle abzuhalten, um Themen des Serverteams zu teilen. Außerdem schlug sekisei eine lockere Gruppe vor, in der Teilnehmer ohne Antrag für ihre Aktivitäten werben könnten. Am 11. März teilte End&#12539;コッカー sieben Folien für die Besprechung. Sie behandelten den Status als Stammspieler als mögliches Ziel, die Spielmöglichkeiten auf dem Content- und dem Survival-Server, Veranstaltungsvideos, Öffentlichkeitsarbeit auf X und die Anleitungen im Portal und im Wiki. End&#12539;コッカー teilte außerdem Tabellen mit den Themen, dem aktuellen Stand, möglichen Verbesserungen und dem Fortschritt.
 
 Am 7. März 2026 bat End&#12539;コッカー um Veranstaltungsideen und Mithilfe und rief auch zu Vorschlägen jenseits von PvP auf.
 
@@ -835,7 +835,7 @@ Im Mai 2026 schlug End&#12539;コッカー vor, die Texte des Portals und die Da
 
 Am 23. Juli 2026 nannte sekisei die geplanten Themen für die Technikvorträge. Dazu zählten eine Einführung in Java zum Entwickeln von Minecraft-Plugins, eine Einführung in Internet und Server zum Betreiben eines Minecraft-Servers unter Linux sowie Elektronikprojekte für selbstständiges Lernen. Am 31. Juli kündigte sekisei den ersten Vortrag über Server und das Internet an und verwies die Teilnehmenden auf ein Video mit den Vorbereitungsschritten. End&#12539;コッカー teilte den Hinweis erneut. [Geplante Vortragsthemen](https://discord.com/channels/737538781024092170/779569416438415421/1529527913395781672) [Ankündigung des technischen Vortrags](https://discord.com/channels/737538781024092170/774152638450237460/1532641413500633108)
 
-Im Juli 2026 wurde überlegt, die Spielwährung in den vom Serverteam betriebenen Handelsposten aufzunehmen. sekisei teilte die bisherigen Wechselkurse und berichtete, den direkten Tausch zwischen Gegenständen umgesetzt zu haben und einen Test zu planen. Merutak schlug vor, Smaragde für begrenzte Zeit gegen Spielwährung eintauschen zu können. あすたん regte an, in großen Mengen herstellbare Gegenstände vom Tausch auszunehmen. End&#12539;コッカー schlug vor, die Wechselkurse für den Verkauf von Gegenständen zu ordnen.
+Im Juli 2026 wurde überlegt, die Spielwährung in den vom Serverteam betriebenen Handelsposten aufzunehmen. sekisei teilte die bisherigen Wechselkurse und berichtete, den direkten Tausch zwischen Gegenständen umgesetzt zu haben und einen Test zu planen. Merutak schlug vor, Smaragde für begrenzte Zeit gegen Spielwährung eintauschen zu können. あすたん regte an, in großen Mengen herstellbare Gegenstände vom Tausch auszunehmen. End&#12539;コッカー schlug vor, die Wechselkurse für den Verkauf von Gegenständen zu ordnen. End&#12539;コッカー teilte auch eine Tabelle mit den erforderlichen Mengen und Verkaufspreisen der einzelnen Handelsgegenstände.
 
 Im August 2026 berichtete あすたん, die Weboberfläche für die Spielwährung neu gestaltet zu haben, und bat um eine Durchsicht. Ende August fragte sekisei, ob die Oberfläche bereits getestet worden sei. Im September bat あすたん sekisei erneut um eine Durchsicht.
 
@@ -843,7 +843,7 @@ Von September bis Oktober 2026 strukturierte End&#12539;コッカー den damalig
 
 Am 1. Oktober 2026 erklärte あすたん bei der Diskussion über eine Datenbank für Hilfsmaterialien zur Fehlerbehebung, dass zuerst festgelegt werden müsse, wie detailliert die Symptome erfasst werden sollten. Als Kategorien schlug あすたん Probleme in Minecraft, Probleme beim Beitritt zum Server und sonstige Probleme vor.
 
-Im Oktober 2026 schlug sekisei vor, dass Personen bei ihrem ersten Besuch in der Lobby zunächst eine Einführungswelt durchlaufen, bevor sie die reguläre Lobby erreichen. Am 21. Oktober meldete End&#12539;コッカー, dass die Einführungslobby fertig war. Zwei Bilder, die am selben Tag veröffentlicht wurden, zeigten ein Lesepult mit den Regeln und ein Tor.
+Im Oktober 2026 schlug sekisei vor, dass Personen bei ihrem ersten Besuch in der Lobby zunächst eine Einführungswelt durchlaufen, bevor sie die reguläre Lobby erreichen. End&#12539;コッカー teilte die [offizielle Weltkarte](/de/world-map/) mit Blick auf den Survival-Server und weitere Welten. Für den Leitfaden waren auch Erläuterungen zu Befehlen, Begriffen und Shop vorgesehen. Am 21. Oktober meldete End&#12539;コッカー, dass die Einführungslobby fertig war. Zwei Bilder, die am selben Tag veröffentlicht wurden, zeigten ein Lesepult mit den Regeln und ein Tor.
 
 Am 26. Oktober 2026 schlug End&#12539;コッカー vor, eine erste Fassung der Lobby-Nachricht zu erstellen und zu veröffentlichen und sie danach regelmäßig zu ergänzen und zu bearbeiten.
 
