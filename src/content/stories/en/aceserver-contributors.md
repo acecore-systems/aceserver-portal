@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:563d683a0d382b9a0f4cae3f17a2e2745bb3e1a28ea6c177e55041c6e5c616d6
+sourceHash: sha256:befdf1ffdc763d619a622350a4958bcfe3f2f4c974ed058a43a86eb5b21b4c4c
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -58,6 +58,10 @@ On January 16, 2022, はっ asked in the product development thread what new ite
 In 2022, s1nan0sub shared the rules for using Iroha Village and reported that Inaba Village’s shared storage facility was complete.
 
 On May 11, 2022, KOTA-SAN asked players what additional items they wanted available for trading. [Call for trading item suggestions](https://discord.com/channels/737538781024092170/973722800294596608/973722800294596608)
+
+&#26666;&#24335;&#20250;&#31038;&#24093;&#29579; requested an ocelot spawn egg. taibon0727 asked for extended-duration Arrows of Slow Falling, Dragon’s Breath, and copper. nnn_percent suggested creeper heads and skeleton skulls for decoration, and SPdari requested a powder snow bucket, amethyst buds, a trident, and mob heads. [Ocelot spawn egg request](https://discord.com/channels/737538781024092170/973722800294596608/973774824432341013) [Slow Falling arrows and Dragon’s Breath request](https://discord.com/channels/737538781024092170/973722800294596608/973785399505846282) [Copper request](https://discord.com/channels/737538781024092170/973722800294596608/973806665327599676) [Request for decorative heads](https://discord.com/channels/737538781024092170/973722800294596608/973802086414315572) [SPdari’s requests](https://discord.com/channels/737538781024092170/973722800294596608/973872001750020106)
+
+taka8621 pointed out that gravel could be obtained by bartering with piglins. KOTA-SAN said most of the requested items would be considered, and はっ replied that the missing arrows would be added to the trades. [How to obtain gravel](https://discord.com/channels/737538781024092170/973722800294596608/973784342348328971) [KOTA-SAN’s reply](https://discord.com/channels/737538781024092170/973722800294596608/973803543788134410) [はっ’s reply](https://discord.com/channels/737538781024092170/973722800294596608/973929434266628097)
 
 In January 2023, ゆり outlined the groundwork, plugin testing, and building steps for developing an RPG server. In February, ゆり shared the results of connection tests.
 

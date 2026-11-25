@@ -2,7 +2,7 @@
 title: As pessoas que apoiaram o Aceserver
 description: Conheça quem ajudou o Aceserver pelos retratos de skins do Minecraft, relembre as atividades e confira o roteiro de eventos e propostas.
 translationOf: aceserver-contributors
-sourceHash: sha256:563d683a0d382b9a0f4cae3f17a2e2745bb3e1a28ea6c177e55041c6e5c616d6
+sourceHash: sha256:befdf1ffdc763d619a622350a4958bcfe3f2f4c974ed058a43a86eb5b21b4c4c
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -58,6 +58,10 @@ Em 16 de janeiro de 2022, はっ perguntou na discussão sobre desenvolvimento d
 Em 2022, s1nan0sub divulgou as regras de uso da Vila Iroha e informou que o depósito compartilhado da Vila Inaba estava concluído.
 
 Em 11 de maio de 2022, KOTA-SAN pediu sugestões de novos itens para acrescentar às trocas. [Pedido de sugestões de itens para troca](https://discord.com/channels/737538781024092170/973722800294596608/973722800294596608)
+
+&#26666;&#24335;&#20250;&#31038;&#24093;&#29579; pediu um ovo gerador de jaguatirica. taibon0727 solicitou flechas de queda lenta com efeito prolongado, bafo de dragão e cobre. nnn_percent sugeriu cabeças de creeper e crânios de esqueleto para decoração. SPdari pediu um balde de neve fofa, brotos de ametista, um tridente e cabeças de criaturas. [Pedido de ovo de jaguatirica](https://discord.com/channels/737538781024092170/973722800294596608/973774824432341013) [Pedido de flechas de queda lenta e bafo de dragão](https://discord.com/channels/737538781024092170/973722800294596608/973785399505846282) [Pedido de cobre](https://discord.com/channels/737538781024092170/973722800294596608/973806665327599676) [Pedido de cabeças para decoração](https://discord.com/channels/737538781024092170/973722800294596608/973802086414315572) [Itens pedidos por SPdari](https://discord.com/channels/737538781024092170/973722800294596608/973872001750020106)
+
+taka8621 lembrou que o cascalho podia ser obtido por meio de trocas com piglins. KOTA-SAN disse que a inclusão da maioria dos itens solicitados seria considerada, e はっ respondeu que as flechas que faltavam seriam adicionadas às trocas. [Como obter cascalho](https://discord.com/channels/737538781024092170/973722800294596608/973784342348328971) [Resposta de KOTA-SAN](https://discord.com/channels/737538781024092170/973722800294596608/973803543788134410) [Resposta de はっ](https://discord.com/channels/737538781024092170/973722800294596608/973929434266628097)
 
 Em janeiro de 2023, ゆり estruturou os preparativos, os testes de plugins e as etapas de construção para desenvolver um servidor de RPG. Em fevereiro, compartilhou os resultados dos testes de conexão.
 

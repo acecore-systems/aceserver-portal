@@ -2,7 +2,7 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:563d683a0d382b9a0f4cae3f17a2e2745bb3e1a28ea6c177e55041c6e5c616d6
+sourceHash: sha256:befdf1ffdc763d619a622350a4958bcfe3f2f4c974ed058a43a86eb5b21b4c4c
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -58,6 +58,10 @@ El 16 de enero de 2022, はっ pidió en el hilo de desarrollo de productos que 
 En 2022, s1nan0sub explicó las normas de uso de la Aldea Iroha e informó que el almacén compartido de la Aldea Inaba estaba terminado.
 
 El 11 de mayo de 2022, KOTA-SAN pidió sugerencias sobre qué artículos se podrían añadir al comercio. [Solicitud de sugerencias para artículos de comercio](https://discord.com/channels/737538781024092170/973722800294596608/973722800294596608)
+
+&#26666;&#24335;&#20250;&#31038;&#24093;&#29579; pidió un huevo generador de ocelote. taibon0727 solicitó flechas de caída lenta de duración extendida, aliento de dragón y cobre. nnn_percent propuso cabezas de creeper y cráneos de esqueleto para decorar. SPdari pidió un cubo de nieve en polvo, brotes de amatista, un tridente y cabezas de criaturas. [Solicitud de un huevo de ocelote](https://discord.com/channels/737538781024092170/973722800294596608/973774824432341013) [Petición de flechas de caída lenta y aliento de dragón](https://discord.com/channels/737538781024092170/973722800294596608/973785399505846282) [Petición de cobre](https://discord.com/channels/737538781024092170/973722800294596608/973806665327599676) [Propuesta de cabezas decorativas](https://discord.com/channels/737538781024092170/973722800294596608/973802086414315572) [Solicitudes de SPdari](https://discord.com/channels/737538781024092170/973722800294596608/973872001750020106)
+
+taka8621 señaló que se podía conseguir grava mediante el trueque con piglins. KOTA-SAN dijo que se estudiaría la incorporación de la mayoría de los objetos propuestos, y はっ respondió que se añadirían las flechas que faltaban. [Cómo conseguir grava](https://discord.com/channels/737538781024092170/973722800294596608/973784342348328971) [Respuesta de KOTA-SAN](https://discord.com/channels/737538781024092170/973722800294596608/973803543788134410) [Respuesta de はっ](https://discord.com/channels/737538781024092170/973722800294596608/973929434266628097)
 
 En enero de 2023, ゆり organizó los preparativos, las pruebas de plugins y el proceso de construcción para desarrollar un servidor RPG. En febrero, compartió los resultados de las pruebas de conexión.
 

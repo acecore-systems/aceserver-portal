@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:563d683a0d382b9a0f4cae3f17a2e2745bb3e1a28ea6c177e55041c6e5c616d6
+sourceHash: sha256:befdf1ffdc763d619a622350a4958bcfe3f2f4c974ed058a43a86eb5b21b4c4c
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -58,6 +58,10 @@ Am 16. Januar 2022 fragte はっ im Thread zur Produktentwicklung, welche neuen 
 2022 stellte s1nan0sub die Nutzungsregeln für das Dorf Iroha vor und berichtete, dass das gemeinsame Lager des Dorfes Inaba fertiggestellt war.
 
 Am 11. Mai 2022 bat KOTA-SAN um Vorschläge für zusätzliche Handelswaren. [Aufruf zu Vorschlägen für Handelswaren](https://discord.com/channels/737538781024092170/973722800294596608/973722800294596608)
+
+&#26666;&#24335;&#20250;&#31038;&#24093;&#29579; wünschte sich ein Ozelot-Spawn-Ei. taibon0727 bat um Pfeile des sanften Falls mit verlängerter Wirkung, Drachenatem und Kupfer. nnn_percent schlug Creeperköpfe und Skelettschädel zur Dekoration vor. SPdari nannte einen Pulverschneeeimer, Amethystknospen, einen Dreizack und Mobköpfe. [Wunsch nach einem Ozelot-Spawn-Ei](https://discord.com/channels/737538781024092170/973722800294596608/973774824432341013) [Vorschlag für Pfeile des sanften Falls und Drachenatem](https://discord.com/channels/737538781024092170/973722800294596608/973785399505846282) [Vorschlag für Kupfer](https://discord.com/channels/737538781024092170/973722800294596608/973806665327599676) [Vorschlag für Köpfe zur Dekoration](https://discord.com/channels/737538781024092170/973722800294596608/973802086414315572) [Wünsche von SPdari](https://discord.com/channels/737538781024092170/973722800294596608/973872001750020106)
+
+taka8621 wies darauf hin, dass sich Kies durch Tauschhandel mit Piglins beschaffen ließ. KOTA-SAN kündigte an, die meisten Wünsche wohlwollend zu prüfen. はっ antwortete, die fehlenden Pfeile würden zum Handelsangebot hinzugefügt. [Hinweis zur Beschaffung von Kies](https://discord.com/channels/737538781024092170/973722800294596608/973784342348328971) [Antwort von KOTA-SAN](https://discord.com/channels/737538781024092170/973722800294596608/973803543788134410) [Antwort von はっ](https://discord.com/channels/737538781024092170/973722800294596608/973929434266628097)
 
 Im Januar 2023 ordnete ゆり die Vorbereitungen, Plugin-Tests und Bauschritte für die Entwicklung eines RPG-Servers. Im Februar teilte ゆり die Ergebnisse der Verbindungstests.
 

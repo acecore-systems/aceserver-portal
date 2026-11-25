@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:563d683a0d382b9a0f4cae3f17a2e2745bb3e1a28ea6c177e55041c6e5c616d6
+sourceHash: sha256:befdf1ffdc763d619a622350a4958bcfe3f2f4c974ed058a43a86eb5b21b4c4c
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -58,6 +58,10 @@ Le 16 janvier 2022, はっ a demandé dans le fil consacré au développement de
 En 2022, s1nan0sub a présenté les règles d’utilisation du village d’Iroha et a annoncé que l’entrepôt commun du village d’Inaba était terminé.
 
 Le 11 mai 2022, KOTA-SAN a demandé quels articles les joueurs souhaitaient voir ajoutés aux échanges. [Appel à proposer de nouveaux articles à échanger](https://discord.com/channels/737538781024092170/973722800294596608/973722800294596608)
+
+&#26666;&#24335;&#20250;&#31038;&#24093;&#29579; a demandé un œuf d’apparition d’ocelot. taibon0727 a proposé des flèches de chute lente à effet prolongé, du souffle de dragon et du cuivre. nnn_percent souhaitait des têtes de creeper et des crânes de squelette pour la décoration. SPdari a demandé un seau de neige poudreuse, des bourgeons d’améthyste, un trident et des têtes de créatures. [Demande d’un œuf d’ocelot](https://discord.com/channels/737538781024092170/973722800294596608/973774824432341013) [Demande de flèches de chute lente et de souffle de dragon](https://discord.com/channels/737538781024092170/973722800294596608/973785399505846282) [Demande de cuivre](https://discord.com/channels/737538781024092170/973722800294596608/973806665327599676) [Demande de têtes décoratives](https://discord.com/channels/737538781024092170/973722800294596608/973802086414315572) [Objets demandés par SPdari](https://discord.com/channels/737538781024092170/973722800294596608/973872001750020106)
+
+taka8621 a rappelé que le gravier pouvait s’obtenir en faisant du troc avec les piglins. KOTA-SAN a indiqué que l’ajout de la plupart des objets serait envisagé, et はっ a répondu que les flèches manquantes seraient ajoutées aux échanges. [Moyen d’obtenir du gravier](https://discord.com/channels/737538781024092170/973722800294596608/973784342348328971) [Réponse de KOTA-SAN](https://discord.com/channels/737538781024092170/973722800294596608/973803543788134410) [Réponse de はっ](https://discord.com/channels/737538781024092170/973722800294596608/973929434266628097)
 
 En janvier 2023, ゆり a structuré les préparatifs, les essais de plugins et les étapes de construction pour développer un serveur RPG. En février, ゆり a partagé les résultats des tests de connexion.
 
