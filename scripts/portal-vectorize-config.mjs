@@ -5,5 +5,6 @@ export const PORTAL_DISTANCE_METRIC = 'cosine'
 export const PORTAL_VECTOR_LIMIT = 500
 export const PORTAL_MIN_SOURCE_COUNT = 10
 export const PORTAL_MIN_VECTOR_COUNT = 10
-export const PORTAL_MAX_CORPUS_BYTES = 256_000
 export const PORTAL_SEARCH_NAMESPACE = 'ja'
+
+export { PORTAL_MAX_CORPUS_BYTES } from '../src/lib/portal-search-corpus.ts'

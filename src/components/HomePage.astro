@@ -2,6 +2,7 @@
 import type { LinkItem, PortalPage, PortalSection } from '../types'
 import { getSkinMakerUi } from '../data/skin-maker-ui'
 import { PORTAL_DISCORD_INVITE } from '../data/discord'
+import { contributorStoryCopy } from '../data/contributor-story'
 import { localizePath, type Locale } from '../i18n/config'
 import { getUi } from '../i18n/translations'
 import { externalLinkAttrs } from '../utils/links'
@@ -115,6 +116,7 @@ const contributorLabels: Record<Locale, string> = {
   de: 'Die Menschen hinter Aceserver kennenlernen',
   ru: 'Узнать о людях, поддержавших Aceserver',
 }
+const contributorPath = localizePath(locale, '/stories/aceserver-contributors/')
 const alphaLogo = '/uploads/alpha-kun.png'
 const multiplayerGuidePath = localizePath(
   locale,
@@ -188,11 +190,12 @@ const multiplayerGuidePath = localizePath(
         {ui.homeMultiplayerGuide}
         <Icon name="chevron-right" />
       </a>
-      <a
-        class="crossplay-guide"
-        href={localizePath(locale, '/stories/aceserver-contributors/')}
-      >
+      <a class="crossplay-guide" href={contributorPath}>
         {contributorLabels[locale]}
+        <Icon name="chevron-right" />
+      </a>
+      <a class="crossplay-guide" href={`${contributorPath}#roadmap`}>
+        {contributorStoryCopy[locale].roadmap}
         <Icon name="chevron-right" />
       </a>
     </div>

@@ -1,0 +1,1 @@
+export const PORTAL_MAX_CORPUS_BYTES = 512_000

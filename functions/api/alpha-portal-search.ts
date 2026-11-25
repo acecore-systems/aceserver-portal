@@ -1,3 +1,4 @@
+import { PORTAL_MAX_CORPUS_BYTES } from '../../src/lib/portal-search-corpus.ts'
 import {
   ALPHA_SEARCH_EMBEDDING_DIMENSIONS,
   ALPHA_SEARCH_EMBEDDING_MODEL,
@@ -16,7 +17,6 @@ const PORTAL_GROUNDING_LIMIT = 3
 const DEFAULT_PORTAL_SEARCH_MIN_SCORE = 0.5
 const PORTAL_CORPUS_TIMEOUT_MS = 2_000
 const PORTAL_CORPUS_CACHE_TTL_SECONDS = 300
-const MAX_PORTAL_CORPUS_BYTES = 256_000
 const MAX_PORTAL_CORPUS_CHUNKS = 500
 const MAX_PORTAL_CHUNK_CONTENT_LENGTH = 1_400
 const MAX_METADATA_TITLE_LENGTH = 240
@@ -199,16 +199,16 @@ async function fetchPortalCorpus(
     if (
       !response.ok ||
       (Number.isFinite(contentLength) &&
-        contentLength > MAX_PORTAL_CORPUS_BYTES)
+        contentLength > PORTAL_MAX_CORPUS_BYTES)
     ) {
       throw namedError('PortalCorpusResponseError')
     }
 
-    const body = await response.text()
-    if (body.length > MAX_PORTAL_CORPUS_BYTES) {
+    const body = await response.arrayBuffer()
+    if (body.byteLength > PORTAL_MAX_CORPUS_BYTES) {
       throw namedError('PortalCorpusSizeError')
     }
-    return JSON.parse(body)
+    return JSON.parse(new TextDecoder().decode(body))
   } finally {
     clearTimeout(timeout)
   }

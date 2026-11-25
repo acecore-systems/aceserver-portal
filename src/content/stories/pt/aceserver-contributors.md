@@ -1,9 +1,10 @@
 ---
 title: As pessoas que apoiaram o Aceserver
-description: Conheça algumas contribuições ao Aceserver, dos primeiros dias aos eventos e à tecnologia.
+description: Conheça quem ajudou o Aceserver pelos retratos de skins do Minecraft, relembre as atividades e confira o roteiro de eventos e propostas.
 translationOf: aceserver-contributors
-sourceHash: sha256:3d5142d89ba5137b30a24edc3a729dc1bb0171d001adb76f6b3ba012fca59bff
+sourceHash: sha256:b0a68bd27d67a61b182d7dc6bb58d60d44c317be502b84aafa129f408a3714ff
 date: 2026-11-14T00:00:00+09:00
+lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
   - Aceserver
   - Minecraft
@@ -12,32 +13,850 @@ image: /uploads/current-world-city-20261015.jpg
 imageAlt: Cidade do mundo principal de Aceserver, capturada no mapa público em outubro de 2026
 ---
 
-Muitas pessoas apoiaram o Aceserver de maneiras diferentes. Apresentamos algumas atividades a partir dos anúncios oficiais no Discord. É necessário entrar no Discord oficial para ver as publicações originais.
+Da primeira Wiki à organização de eventos e à integração dos chats, relembramos contribuições ao Aceserver documentadas em anúncios, relatos e registros de canais antigos do Discord oficial.
 
 ## Os primeiros dias
 
+Em novembro de 2020, てぃあ propôs um concurso de construção de casas, com um tema e votação, em um local dividido em lotes. Em dezembro, informou que havia criado um canal para pedidos de construção de ferrovias.
+
+Em 19 de novembro de 2020, Mugi alertou que, sem noite, os aldeões não poderiam dormir, as farms de golens de ferro deixariam de funcionar e as ofertas dos aldeões nos centros de comércio não seriam repostas. Gui respondeu ao aviso. No dia seguinte, ao responder como o servidor havia sido montado, Gui explicou que o modo multijogador rodava em um servidor alugado.
+
+Em dezembro de 2020, てぃあ coordenou as primeiras obras da ferrovia e explicou o procedimento de solicitação exigido antes de construir naquela época. [Anúncio sobre a construção da ferrovia](https://discord.com/channels/737538781024092170/774152638450237460/783543829676556349)
+
 Em dezembro de 2020, てぃあ anunciou a abertura de uma Wiki inicial com as regras. [Publicação original](https://discord.com/channels/737538781024092170/774152638450237460/784929714296193034)
+
+Em janeiro de 2021, Gui apresentou dois grupos. A Associação de Turismo do Aceserver, liderada por KotaMizuno, construía pontos turísticos, e o Between Tower, liderado por Master_Yinfe, se dedicava à arte em pixels. O anúncio também citou 6nuts, \_Dont_Stop\_, none_violet, taisa68 e Flare1011 entre os primeiros participantes. [Anúncio dos grupos](https://discord.com/channels/737538781024092170/774152638450237460/798378478293614643)
+
+Nos registros do antigo canal do Between Tower no Discord, PillowKebap anunciou em janeiro de 2021 a conclusão da primeira obra em pixels, “Apicultor”, e, em agosto, a segunda, com cerca de 65 mil blocos. Agradeceu a ajuda de quem reuniu e colocou os materiais. dont_stop relatou o terceiro projeto em nome do grupo. Em 2022, izaiza forneceu blocos de argila, e em março naop5 e Ivalaidea se tornaram membros oficiais em reconhecimento a suas contribuições. Em abril, PillowKebap anunciou a abertura de uma exposição de arte em mapas no museu.
 
 Em agosto de 2021, Gui contou que o servidor começou para que qualquer pessoa pudesse visitar e jogar no mundo de はっ. Gui também anunciou que コタ assumiria as decisões de operação por enquanto. コタ confirmou que aceitou. [Anúncio de Gui](https://discord.com/channels/737538781024092170/774152638450237460/880745650009047080) [Anúncio de コタ](https://discord.com/channels/737538781024092170/774152638450237460/880760188351705178)
 
+Em agosto de 2021, KOTA-SAN adiantou que seriam aceitas propostas de logotipo para o primeiro aniversário. Em setembro, Mugi informou sobre a reorganização do Discord e abriu as inscrições. Em 2 de outubro, Mugi abriu a votação entre cinco propostas de design. Em 4 de novembro, てぃあ anunciou que o trabalho de YM havia sido escolhido e já estava em uso no Discord, e agradeceu pelos trabalhos de YM, J&#27663;, Mea e Café Mocha. [Prévia da chamada](https://discord.com/channels/737538781024092170/774152638450237460/881193662321684601) [Abertura das inscrições](https://discord.com/channels/737538781024092170/774152638450237460/882433940621758474) [Anúncio da abertura da votação](https://discord.com/channels/737538781024092170/882218927055331369/893689014039765053) [Resultado da seleção e agradecimentos](https://discord.com/channels/737538781024092170/882218927055331369/905494118606725131) [Anúncio do logotipo escolhido](https://discord.com/channels/737538781024092170/774152638450237460/905830523761487872)
+
+Em 30 de agosto de 2021, &#38646; procurou jogadores que pudessem levar pandas e raposas por conta própria dentro do jogo. KOTA-SAN apoiou o chamado em nome da equipe do servidor. [Chamado de &#38646; para adoção](https://discord.com/channels/737538781024092170/881827499074539611/882286204320624671) [Chamado de KOTA-SAN](https://discord.com/channels/737538781024092170/881827499074539611/882286206757535826)
+
+Em 8 de maio de 2021, KOTA-SAN criou uma categoria dedicada a perguntas sobre o Discord e se ofereceu para respondê-las. Em 8 de outubro, てぃあ anunciou a criação da “Sala de Haicai e Senryū”.
+
+## Comunidades e grupos criativos
+
+Em dezembro de 2020, Gui abriu um canal para as atividades da Ace Railway Company, e oisiisyouyu convidou pessoas a participar. Em março de 2021, oisiisyouyu informou que o grupo concentraria suas atividades no metrô.
+
+Em uma apresentação de KOTA-SAN no antigo canal do Discord, a Associação de Turismo do Aceserver listou MKOTA_SAN como responsável na época. A apresentação registrou a abertura de um templo, um aquário e uma área de cassino com um hotel e um museu de arte, entre outras instalações. Também mencionou concursos e o desenvolvimento conjunto do bot Kutya da associação. Em 26 de janeiro de 2021, KOTA-SAN informou que o prédio e a bandeira da área de jogos com piglins do cassino estavam prontos e compartilhou uma foto. Em março de 2021, KOTA-SAN apresentou uma máquina caça-níqueis na área de cassino da associação e, no dia seguinte, informou que havia acrescentado prêmios.
+
+Em 12 de fevereiro de 2021, kuroneko229 informou que o trecho entre a estação Chika Teikoku e a estação do distrito comercial de Kuroneko estava concluído. O relato veio com uma imagem dos trilhos no jogo.
+
+Em março de 2021, kuroneko229 apresentou o Departamento de Obras Públicas, citando Kuro neko2229 como líder na época. Em novembro de 2022, relatou obras do grupo, que então se chamava Departamento de Obras Privadas, como metrô, estradas no Nether, iluminação pública, uma área comercial e apartamentos.
+
+Em dezembro de 2020, Mugi construiu a sede do Clube Técnico de Circuitos RS e informou que a obra estava concluída. Mugi apresentou as atividades do Clube Técnico de Circuitos RS e seu líder, sousuke3018. Na apresentação do Império SEGA, segarikihiro foi citado como líder na época.
+
+O líder do Grupo do Parque de Diversões, kurenohachi (Hachi), informou que o terreno para o projeto havia sido escolhido com a ajuda de outras pessoas. Em uma publicação sobre o Reino de Kuwa, Yukke citou yukke40901 como líder e convidou jogadores a participar da construção do castelo e da capital. Nishikino Sega anunciou que o grupo Eirin-tai apoiaria as atividades do Reino de Kuwa.
+
+A apresentação do Grupo de Restauração da Cidade Antiga citou Golden Cocker como líder na época e Taibon e タケ entre os primeiros participantes. Em uma chamada do Grupo de Criação de RPG, Golden Cocker também foi apresentado na liderança, com um convite para construir cidades e criar histórias no estilo RPG.
+
+Como titular da A Yū (A-shō), ゆり (Yū) apresentou a venda de materiais e pediu voluntários para construir uma área de lazer.
+
+Em 16 de janeiro de 2022, はっ perguntou na discussão sobre desenvolvimento de produtos que novos itens os jogadores queriam ver à venda no &#20844;&#30410;&#25152;. KOTA-SAN anotou as ideias de venda levantadas no bate-papo por voz. KOTA-SAN também indicou o açougue do hipódromo. Caruna pediu melancias para poções, e tanto sugeriu oferecer livros encantados com Infinidade e trocar netherrack por esmeraldas. [Pedido de sugestões para novos itens](https://discord.com/channels/737538781024092170/932084170392494080/932084170392494080) [Anotações das ideias de venda](https://discord.com/channels/737538781024092170/932084170392494080/932114105228206100) [Açougue do hipódromo](https://discord.com/channels/737538781024092170/932084170392494080/932224727060185139) [Sugestão de Caruna](https://discord.com/channels/737538781024092170/932084170392494080/932258447657955458) [Sugestão de livros com Infinidade](https://discord.com/channels/737538781024092170/932084170392494080/933396231147905096) [Troca proposta por tanto](https://discord.com/channels/737538781024092170/932084170392494080/935898978816524389)
+
+Em 2022, s1nan0sub divulgou as regras de uso da Vila Iroha e informou que o depósito compartilhado da Vila Inaba estava concluído.
+
+Em 11 de maio de 2022, KOTA-SAN pediu sugestões de novos itens para acrescentar às trocas. [Pedido de sugestões de itens para troca](https://discord.com/channels/737538781024092170/973722800294596608/973722800294596608)
+
+&#26666;&#24335;&#20250;&#31038;&#24093;&#29579; pediu um ovo gerador de jaguatirica. taibon0727 solicitou flechas de queda lenta com efeito prolongado, bafo de dragão e cobre. nnn_percent sugeriu cabeças de creeper e crânios de esqueleto para decoração. SPdari pediu um balde de neve fofa, brotos de ametista, um tridente e cabeças de criaturas. [Pedido de ovo de jaguatirica](https://discord.com/channels/737538781024092170/973722800294596608/973774824432341013) [Pedido de flechas de queda lenta e bafo de dragão](https://discord.com/channels/737538781024092170/973722800294596608/973785399505846282) [Pedido de cobre](https://discord.com/channels/737538781024092170/973722800294596608/973806665327599676) [Pedido de cabeças para decoração](https://discord.com/channels/737538781024092170/973722800294596608/973802086414315572) [Itens pedidos por SPdari](https://discord.com/channels/737538781024092170/973722800294596608/973872001750020106)
+
+taka8621 lembrou que o cascalho podia ser obtido por meio de trocas com piglins. KOTA-SAN disse que a inclusão da maioria dos itens solicitados seria considerada, e はっ respondeu que as flechas que faltavam seriam adicionadas às trocas. [Como obter cascalho](https://discord.com/channels/737538781024092170/973722800294596608/973784342348328971) [Resposta de KOTA-SAN](https://discord.com/channels/737538781024092170/973722800294596608/973803543788134410) [Resposta de はっ](https://discord.com/channels/737538781024092170/973722800294596608/973929434266628097)
+
+Em janeiro de 2023, ゆり estruturou os preparativos, os testes de plugins e as etapas de construção para desenvolver um servidor de RPG. Em fevereiro, compartilhou os resultados dos testes de conexão.
+
+Em 5 de fevereiro de 2023, b9d08b propôs desenvolver o RPG em capítulos curtos para que os jogadores pudessem alternar entre o RPG e o servidor principal. ゆり explicou que a equipe do servidor e as pessoas que fariam o conteúdo precisariam concordar sobre o que criar. [Proposta de RPG em capítulos](https://discord.com/channels/737538781024092170/1071731995375308840/1071734174098137159) [Explicação de ゆり sobre a definição do conteúdo](https://discord.com/channels/737538781024092170/1071731995375308840/1071737376860291153)
+
+Em julho de 2023, ゆり apresentou, em um anúncio da Ace Lab, a aliança entre a Vila do Deus da Lua e o Grupo de Criação de RPG. O anúncio citou BM\_yurikun e \_BE\_golden\_cokka como líderes na época, e amya7238 e \_BE\_golden\_cokka como membros iniciais. Entre as atividades propostas estavam as corridas de barco no gelo ACE1GP e a criação de RPG.
+
+Em julho de 2023, あすたん apresentou o Reino de Asutan como uma comunidade que fornecia materiais e ajudava na preparação do terreno e em escavações a céu aberto. Em agosto, Yukke mostrou fotos das instalações e dos equipamentos do Reino de Kuwa e informou que os membros podiam usá-los.
+
+Em setembro de 2023, タケ apresentou a Companhia Take do Monotrilho Ace, com Take\_no\_niwa como líder e sekisei0077 e HeroTree como membros iniciais. Também explicou como o grupo funcionava e como entrar em contato. タケ também anunciou o reconhecimento do Monotrilho Ace como comunidade na época e orientou como usar seus serviços.
+
+Em outubro de 2023, PetiteShelf7874 apresentou as atividades e o mapa da Vila da Pequena Colina. A apresentação identificou PetiteShelf7874 como líder e yamaharu929, kacchan0706, bananakun315 e TK7K2 como membros iniciais. PetiteShelf7874 informou que abriu um servidor no Discord para divulgar orientações depois que a Vila da Pequena Colina foi reconhecida como comunidade.
+
+Em abril de 2024, End&#12539;コッカー convidou pessoas na Associação dos Caçadores a colaborar na criação do servidor de RPG.
+
+Em 22 de julho de 2024, End&#12539;コッカー procurou ajuda com as construções no servidor de RPG e propôs oferecer oficinas de construção cerca de duas vezes por mês para quem quisesse aprender e colaborar.
+
+Em setembro de 2024, sekisei apresentou Mars (nome provisório), um grupo de planejamento e produção de minijogos. A apresentação listou sekisei0077 como líder e usualparrot e miin2000 como membros iniciais. sekisei descreveu ideias de minijogos sobre quedas e élitros e convidou pessoas a colaborar na construção e na produção. Em 5 de setembro, sekisei relatou que estava criando um minijogo em que os jogadores arremessam bolas de neve para quebrar o chão sob os pés.
+
+Em novembro de 2024, Nishikino Sega apresentou na CENTURY'S planos como um castelo em estilo japonês e um metrô e convidou pessoas a participar.
+
+Em julho de 2025, sekisei sugeriu produtos com ilustrações ou imagens do jogo, como chaveiros que também poderiam servir de peças de acrílico com base. Em outubro, End&#12539;コッカー propôs designs diferentes para uso dentro e fora da comunidade.
+
 ## Divulgação e eventos
+
+Em dezembro de 2020, Rina\_desu avisou no antigo Discord que havia atualizado uma publicação da série nas redes sociais sobre casas dentro do jogo e apresentado a casa de 6nuts.
+
+Em fevereiro de 2021, Gui pediu capturas de tela para divulgar o Aceserver. No antigo canal de contribuições, kuroneko229 fotografou uma construção feita por LibraI, que apresentou o trabalho com os créditos da construção e da fotografia.
+
+Em fevereiro de 2021, KOTA-SAN convidou os jogadores a votar na primeira Batalha de Construção em um Chunk. Os cinco participantes foram registrados como &#12513;&#12525;&#12531;&#12497;&#12531;, &#12481;&#12540;&#12474;, &#12518;&#12461;, &#12486;&#12523; e KOTA-SAN. KOTA-SAN anunciou que a construção de &#12518;&#12461; (Yuki\_0909) venceu.
+
+No mesmo mês, para comemorar a conclusão do museu de arte de LibraI, KOTA-SAN convidou os jogadores a participar do primeiro Concurso de Pintura. A ideia era expor no museu obras feitas com estandartes.
+
+Em maio de 2021, KOTA-SAN informou que o Ace Fest que havia lançado tinha concluído a programação de dois dias. Agradeceu a キツネコ, que ficou à frente da preparação do local, na base dos Ibaraki Overwatchers. KOTA-SAN também havia criado e compartilhado o primeiro cartaz preliminar do evento.
+
+Em maio de 2021, &#24535;&#19978;&#12495;&#12472;&#12513; anunciou uma transmissão de sobrevivência no Aceserver com participação dos espectadores. Game\_Tokumei anunciou que planejava transmitir a construção de um fosso de formiga-leão. Em julho, &#31070;&#30000;&#12495;&#12525;&#12453; anunciou uma transmissão para construir a Torre da Rapunzel.
+
+A 17 de junho de 2021, KOTA-SAN propôs um concurso de capturas de ecrã para assinalar a abertura de uma conta no Instagram.
+
+Nos registros do antigo canal do Discord da E-ha Radio, KOTA-SAN apoiou o programa em 2021 pedindo mensagens dos ouvintes e explicando o conteúdo e a programação. はっ também anunciou a próxima transmissão e o tema das mensagens.
+
+No outono de 2021, てぃあ preparou um espaço ao lado da prefeitura para as decorações de Natal, construiu a árvore e convidou pessoas a ajudar na decoração. YM informou que havia construído uma casa de Natal.
+
+Em 24 de novembro de 2021, Game\_Tokumei sugeriu realizar um encontro para os participantes interagirem. [Proposta de encontro entre participantes](https://discord.com/channels/737538781024092170/773171457487929344/912960327329656832)
+
+### **2022 e primeiro semestre de 2023**
+
+Em 18 de fevereiro de 2022, Kfemoka\_kfe escreveu um texto de divulgação do Aceserver e pediu ajuda para compartilhá-lo em locais onde a divulgação era permitida, incluindo servidores do Discord. [Texto de divulgação e pedido de ajuda para compartilhá-lo](https://discord.com/channels/737538781024092170/773171457487929344/944159265260732486)
+
+Em 25 de fevereiro de 2022, Gui disse ter a impressão de que ícones feitos por voluntários haviam sido adotados em vários espaços relacionados ao Aceserver. [Lembrança sobre ícones feitos por voluntários](https://discord.com/channels/737538781024092170/773171457487929344/946673256465825843)
+
+Em abril de 2022, durante a preparação do segundo Ace Fest, KOTA-SAN indicou キツネコ e outras pessoas como responsáveis pela montagem do local e Mugi pela produção do vídeo de prévia. キツネコ informou que havia criado um novo gacha de poções.
+
+Em abril de 2022, NCGpotechi preparou seis locais para consideração no concurso de construção de Yasuragi no Mori, ligado ao segundo Ace Fest. Em maio, KOTA-SAN anunciou o cancelamento da votação. Em 15 de maio, YM informou que havia terminado sua própria construção e compartilhou uma foto.
 
 Em maio de 2022, キツネコ anunciou uma corrida alternativa de barcos em uma pista construída por Hako_Otoko. [Publicação original](https://discord.com/channels/737538781024092170/774152638450237460/970291030152847390)
 
+Antes do Novo Festival de Verão de 21 de agosto de 2022, ゆり pediu propostas de barracas e atividades. Em 15 de agosto, ゆり informou que havia preparado um local para guardar os fogos de artifício. No dia, confirmou a realização e divulgou a programação, que incluía fogos de artifício, uma prévia do vídeo promocional e o encerramento. [Anúncio no dia do festival](https://discord.com/channels/737538781024092170/779569416438415421/1010817999575449610)
+
+edamameRex_java (Edamame) anunciou sua barraca. Moon_666 informou o que teria na sua, incluindo um gacha. Depois do festival, Yukke compartilhou suas impressões e agradeceu a ゆり, Edamame e quem montou barracas. [Anúncio da barraca de Edamame](https://discord.com/channels/737538781024092170/779569416438415421/1010359403259641856) [Anúncio da barraca de Moon_666](https://discord.com/channels/737538781024092170/779569416438415421/1010344489270923304) [Impressões e agradecimentos após o festival](https://discord.com/channels/737538781024092170/779569416438415421/1010919818972631110)
+
+Em outubro de 2022, nuu\_mink convidou os jogadores a visitar o cassino e o bar do POCKET ACES CASINO. Em 30 de outubro, anunciou uma atividade de Halloween prevista para o bar.
+
+Em novembro de 2022, yanyan_fafnir informou que ゆり (Yū) havia se tornado apoiador após uma indicação de Sosuke. [Anúncio da nomeação](https://discord.com/channels/737538781024092170/774152638450237460/1043527218191663114)
+
+Em dezembro de 2022, Yukke abriu um canal para o clube de fotografia do Aceserver. Segundo os registros do antigo canal do Discord, taibon0727 pediu fotos de mundos novos e antigos para um álbum. Até janeiro de 2023, dont\_stop havia contribuído com uma foto tirada na fronteira do mundo para comemorar a subida a Saihate. PillowKebap havia enviado cinco fotos que ainda guardava, com criações, instalações e cenas de jogadores dentro do jogo. nnn\_percent havia enviado uma foto de um edifício com pilares vermelhos e telhado laranja. taibon0727 descreveu o edifício como de estilo chinês.
+
+Em dezembro de 2022, &#12383;&#12356;&#12420;&#12365; (taiyaki5190) abriu dois tópicos de envio na sala de cartas do antigo Discord e pediu mensagens sobre assuntos como o que surpreendeu os jogadores quando entraram pela primeira vez.
+
+Para o Ace Fest in Christmas Life de dezembro de 2022, ゆり divulgou a programação, com a abertura e a transmissão ao vivo, e explicou como se inscrever na terceira Copa Ace. No aviso de 24 de dezembro, ゆり indicou o Estádio Edamame e os arredores do posto de trocas da equipe do servidor como local principal, e o Domo LuMiSIA como local da fase classificatória da Copa Ace. [Aviso sobre os locais do evento](https://discord.com/channels/737538781024092170/773171457487929344/1056124142275018872)
+
+タケ também anunciou a programação da virada de 2022 para 2023 em Tōgenkyō. O aviso apresentou a Associação de Caçadores, que incluía タケ e コッカー, como organizadora e Taibon como colaborador.
+
+Em 5 de janeiro de 2023, ジェスター propôs uma partida personalizada de Apex Legends chamada Copa Aceserver para reunir a comunidade fora do Minecraft. [Proposta de partida personalizada de Apex Legends](https://discord.com/channels/737538781024092170/882222121135251486/1060393114579259402)
+
+No início de 2023, Taiyaki (taiyaki5190) anunciou como organizador o evento PvP in the Sky e convidou competidores e responsáveis por barracas a se inscrever. Para o Festival do Wither em fevereiro, edamameRex_java convidou jogadores a enfrentar o Wither no servidor de recursos, cuidou dos empréstimos de equipamentos e das recompensas de participação e agradeceu aos participantes após o evento.
+
+Em fevereiro de 2023, ゆり propôs voltas de demonstração e corridas após a conclusão do Circuito Internacional do Império Sega.
+
+Em outubro de 2022, &#12422;&#12426; informou que a superfície de gelo de um circuito estava pronta e que a pista já havia sido testada. Em janeiro de 2023, Moon_666 sugeriu deixar as laterais da pista no mesmo nível para tornar a pilotagem mais técnica. Em fevereiro, &#12422;&#12426; apresentou o Império Sega e o Reino de &#12354;&#12377;&#12383;&#12435; como os principais patrocinadores de um circuito. [Relato do teste na pista](https://discord.com/channels/737538781024092170/779569416438415421/1031140077822300200) [Sugestão para a pista](https://discord.com/channels/737538781024092170/779569416438415421/1064057801447587932) [Anúncio dos patrocinadores](https://discord.com/channels/737538781024092170/779569416438415421/1078683022020333698)
+
+Em agosto de 2022, ゆり pediu fotos do servidor antigo para um vídeo promocional em produção. Em março de 2023, Yukke pediu sugestões de lugares e construções para o vídeo promocional oficial. [Pedido de fotos do servidor antigo](https://discord.com/channels/737538781024092170/779569416438415421/1008524402922639390) [Pedido de sugestões de locais para a gravação](https://discord.com/channels/737538781024092170/779569416438415421/1085549170905059383)
+
+Entre as sugestões, taiyaki5190 indicou o Castelo de Sega, Edamame (edamameRex_java) indicou a segunda base dos Ibaraki Overwatchers e nnn_percent indicou o castelo n, em estilo chinês. [Locais sugeridos para a gravação](https://discord.com/channels/737538781024092170/1085549186449154168)
+
 Em março de 2023, ゆり convidou participantes para a gravação de um vídeo de apresentação e explicou a ordem de filmagem das cidades e dos mundos. [Publicação original](https://discord.com/channels/737538781024092170/774152638450237460/1087641197947932704)
+
+O plano que ゆり preparou em 12 de março de 2023 incluía uma proposta de roteiro de filmagem pela estação do distrito central, a prefeitura, o mercado e outros locais.
+
+Em 21 de março de 2023, あすたん preparou um espaço para conversar sobre a gravação e apresentou uma ordem de filmagem que também incluía a segunda base dos Ibaraki Overwatchers e o Castelo de Sega. nnn_percent marcou em uma imagem do mapa os andaimes, árvores e outros elementos perto do castelo n e explicou o que fazer caso atrapalhassem a filmagem. [Conversas sobre a gravação do vídeo](https://discord.com/channels/737538781024092170/1087649463008497737) [Ordem de filmagem compartilhada por Asutan](https://discord.com/channels/737538781024092170/1087649463008497737/1087649958418718720) [Mapa compartilhado por nnn_percent](https://discord.com/channels/737538781024092170/1087649463008497737/1087658590686429224)
+
+Para o Ace Fest Offline na primavera de 2023, Gui publicou os anúncios oficiais e はっ explicou onde quem não pudesse ir ao local poderia participar online. [Anúncio do evento](https://discord.com/channels/737538781024092170/774152638450237460/1091302323298521181) [Anúncio sobre a participação](https://discord.com/channels/737538781024092170/774152638450237460/1092392407229804544)
+
+Em 8 de abril de 2023, `Rina''` convidou as pessoas a participar do encontro presencial de primavera no canal Refeitório Ace da época. [Convite para o encontro de primavera](https://discord.com/channels/737538781024092170/840559799129210890/1094260207175094313)
+
+Em março de 2023, Yukke explicou como reservar lugares VIP para assistir e quais benefícios estavam incluídos. Em abril, num tópico arquivado do mural, entoYamKalRZO64 comentou os traçados propostos e indicou qual se parecia mais com um circuito e qual se destacava pelo formato incomum. entoYamKalRZO64 compartilhou dez traçados desenhados sobre um mapa do terreno, além de um mapa-base para desenhar outras propostas. [Orientações sobre os lugares VIP](https://discord.com/channels/737538781024092170/1089540183373906001/1089541186819211394) [Comentário sobre um traçado proposto](https://discord.com/channels/737538781024092170/1102238180104749116/1102240233724051616) [Mapa-base para novos traçados](https://discord.com/channels/737538781024092170/1102238180104749116/1102238555490758656) [Comentário sobre um traçado incomum](https://discord.com/channels/737538781024092170/1102238180104749116/1102240332457984091)
+
+Em maio de 2023, ゆり apresentou os planos da equipe de divulgação para administrar os canais no YouTube e no Twitter regularmente. [Planos de divulgação](https://discord.com/channels/737538781024092170/774152638450237460/1110469768420532235)
+
+Em 30 de junho de 2023, Yukke apresentou um roteiro para preparar um evento competitivo. A proposta era definir as regras, os equipamentos, o formato das partidas, o local e o calendário, e preparar o local, os prêmios e os equipamentos antes de recrutar competidores e anunciar o evento.
+
+### **Segundo semestre de 2023 e 2024**
+
+Em julho de 2023, Inuneko anunciou um evento de PvP e depois informou que dont_stop havia vencido.
+
+Em 2023, End&#12539;コッカー divulgou a preparação de um evento de RPG e informou o adiamento. Em 2024, End&#12539;コッカー anunciou a beta de RPG Memórias Alteradas. Pluto participou dos testes preliminares e enviou comentários.
+
+Em julho de 2023, タケ informou que a Ace Monorail havia adotado um logotipo e pediu sugestões de nomes para as estações da linha 1. [Anúncio do logotipo e pedido de nomes](https://discord.com/channels/737538781024092170/779569416438415421/1124669241182920714)
+
+No verão de 2023, タケ anunciou a festa de um ano organizada pela empresa Ace Monorail Take e agradeceu a quem ajudou na expansão da linha. Em 2024, também anunciou a festa de dois anos organizada pela empresa.
+
+No relato de 7 de agosto de 2023 sobre a festa de um ano da inauguração da Ace Monorail, タケ agradeceu aos visitantes BURAKI_UTALOVE\_, yukke_11, edamameRex_java, \_BE_nanashi91239 e mallosan_52, e a sekisei0077 pelo patrocínio. O relato citou uma torre aérea de criaturas, uma fazenda de blazes e uma fazenda de invasões como fontes de materiais. [Relato da festa de um ano](https://discord.com/channels/737538781024092170/779569416438415421/1137777672425050163)
+
+No tópico arquivado sobre o nome da estação, ゆり sugeriu “Muralha Maria e Paz”, Edamame (edamameRex_java) sugeriu “Estação Katto Cake” e CP-sinzin sugeriu “Estação Bunke”. Na chamada, タケ explicou que era a única estação de bifurcação da linha 1 na época e compartilhou imagens do exterior e da vista para o mar a partir da plataforma. [Chamada para dar nome à estação](https://discord.com/channels/737538781024092170/1124669938293035008/1124669944966152245) [Sugestão de Yuri](https://discord.com/channels/737538781024092170/1124669938293035008/1128663441306042448) [Sugestão de Edamame](https://discord.com/channels/737538781024092170/1124669938293035008/1128668925975085157) [Sugestão de CP-sinzin](https://discord.com/channels/737538781024092170/1124669938293035008/1131000303383224352) [Imagens da chamada](https://discord.com/channels/737538781024092170/1124669938293035008/1124671167811305594)
+
+Em 23 de julho de 2023, タケ anunciou que a linha 1 do Monotrilho Ace estava concluída como linha circular e que a nova estação recebeu o nome “Kattoke”, inspirado na sugestão “Katto Cake” de Edamame. Em 7 de agosto, タケ também anunciou a conclusão do pátio ferroviário e informou que a queima de fogos da festa de primeiro aniversário havia ocorrido ali. [Conclusão da linha circular](https://discord.com/channels/737538781024092170/779569416438415421/1132502826476634202) [Anúncio da conclusão do pátio ferroviário](https://discord.com/channels/737538781024092170/779569416438415421/1137779370627453038)
+
+Em 16 de agosto de 2023, ゆり procurou jogadores interessados em uma partida personalizada de Apex Legends. Mugi pediu que pessoas interessadas em Rainbow Six Siege (R6S) reagissem, e PillowKebap fez o mesmo para League of Legends. [Consulta de interesse em Apex Legends](https://discord.com/channels/737538781024092170/882222121135251486/1141256368351891506) [Consulta de interesse em Rainbow Six Siege](https://discord.com/channels/737538781024092170/882222121135251486/1141265485644693524) [Consulta de interesse em League of Legends](https://discord.com/channels/737538781024092170/882222121135251486/1141272275816042497)
+
+A 25 de setembro de 2023, Pluto partilhou a versão 2.0 do mapa de Minecraft Only Up e publicou, no mesmo dia, a versão 2.1 com correções de erros. O ficheiro da versão 2.1 incluía os dados do mundo no formato da Java Edition. No dia seguinte, Pluto partilhou a versão 2.2 com alterações ao percurso e a versão 2.3 com ajustes à dificuldade.
+
+Em 7 de agosto de 2024, タケ informou que toda a programação da festa de dois anos havia terminado. O passeio apresentou a nova sinalização das estações, a nova estação e o trecho de extensão da linha Jiyūgaoka. [Relato da festa de dois anos](https://discord.com/channels/737538781024092170/779569416438415421/1270424971667308565)
+
+O vídeo “&#26032;A&#39894;PV&#25913;&#35330;&#29256;”, de 9 de outubro de 2023, está como não listado no canal do YouTube com o nome de ゆり. O antigo Discord também conserva um registro do vídeo. O vídeo mostra Ace Town, a prefeitura, o antigo Império Sega e o distrito de estilo ocidental de Eirin-tai. O trecho final inclui fotos de grupo e um mapa do mundo antigo.
+
+Para o Festival da Colheita de Hatt de 2023, taiyaki5190 divulgou as regras e a programação. A data prevista mudou de 15 para 29 de outubro. Em 28 de outubro, Taiyaki informou que o festival seria no dia seguinte e explicou como participar. Publicações posteriores incluem informações sobre as recompensas e comentários dos participantes. [Anúncio da mudança de data](https://discord.com/channels/737538781024092170/779569416438415421/1161919748074917900) [Anúncio sobre a participação](https://discord.com/channels/737538781024092170/779569416438415421/1167836013142495353)
+
+Em 19 de outubro de 2023, PillowKebap procurou pessoas para testar o PvP. [Pedido de participantes para testar o PvP](https://discord.com/channels/737538781024092170/773171457487929344/1164527658013569135)
+
+Em novembro de 2023, あすたん abriu as inscrições do concurso de fotografia do Aceserver e Hatto foi anunciado como jurado. Biwahoshi esteve entre os jogadores que enviaram trabalhos. [Anúncio do concurso de fotografia](https://discord.com/channels/737538781024092170/774152638450237460/1174938045674438749)
+
+No fim de 2023, edamameRex_java pediu contribuições de construções para um mapa de pega-pega em desenvolvimento. Na mesma época, foi anunciado o adiamento de Aceserver em Fuga.
+
+O anúncio da virada de 2023 para 2024 apresentou a equipe da Ace Monorail Take (Take no Niwa, sekisei e Shino) como organizadora, com apoio de Taibon (\_BE_taibon0727), あすたん e da equipe do Aceserver. タケ divulgou o site do evento e informou a correção de um carimbo no circuito de carimbos. Na mesma época, também foi anunciado o adiamento de Aguesser vol2.
+
+Em 1º de janeiro de 2024, タケ informou que a celebração da virada havia terminado e que amuletos haviam sido distribuídos. [Relato da celebração da virada](https://discord.com/channels/737538781024092170/779569416438415421/1191037263002488872)
+
+Em 4 de fevereiro de 2024, ゆり informou que havia composto a música-tema oficial do Aceserver. Explicou que a versão era curta e sugeriu abrir uma chamada para letras. No mesmo dia, compartilhou uma versão provisória intitulada «ACE&#12394;&#20882;&#38522;». [Relato sobre a composição da música-tema](https://discord.com/channels/737538781024092170/882218642459205672/1203626958861377548) [Observação sobre a versão provisória](https://discord.com/channels/737538781024092170/882218642459205672/1203659498804355072)
+
+Em 12 de março de 2024, um mapa PvE criado por Harubie foi anunciado no Discord para download. A versão 2.0 foi publicada no mesmo dia. O ficheiro da versão 2.0 continha os dados do mundo no formato da Java Edition. [Anúncio do mapa PvE](https://discord.com/channels/737538781024092170/1216934048719442030) [Publicação de distribuição da versão 2.0](https://discord.com/channels/737538781024092170/1216934048719442030/1216934770957750464)
+
+Na publicação da versão 3.0, Pluto informou que o mundo incluía um pacote de recursos e recomendou grupos de cerca de três a cinco jogadores. A versão 3.1 complementou as instruções e corrigiu erros. As notas das versões 3.2 e 3.3 relataram ajustes de dificuldade e melhorias no mapa. O download da versão 3.3 incluía os dados do mundo “&#12473;&#12479;&#12531;&#12500;&#12540;&#12489;” e seu pacote de recursos. [Anúncio da versão 3.0](https://discord.com/channels/737538781024092170/1216934048719442030/1217705674666938378) [Alterações da versão 3.1](https://discord.com/channels/737538781024092170/1216934048719442030/1217972784563749005) [Alterações da versão 3.2](https://discord.com/channels/737538781024092170/1216934048719442030/1218107358295887933) [Alterações da versão 3.3](https://discord.com/channels/737538781024092170/1216934048719442030/1218131501774798898)
+
+Na primavera de 2024, sekisei informou o horário de início e o contato do Ace Guesser v2. No verão, Pluto anunciou um evento de parkour.
+
+Em abril de 2024, ゆり anunciou um episódio da E-ha Radio com Master e Yuri-kun no elenco principal divulgado. Para o especial de agosto, foi anunciada a participação de コタ e はっ. KOTA-SAN informou que havia preparado um lago para pesca e anunciou o cancelamento da transmissão prevista para aquele dia.
+
+Em 10 de junho de 2024, KOTA-SAN informou que o Ace Fest estava previsto e pediu sugestões de atividades. [Discussão sobre o planejamento do Ace Fest](https://discord.com/channels/737538781024092170/773171457487929344/1249691382365421640)
+
+Em 14 de julho de 2024, タケ recomendou um mundo para download amplo e bem detalhado para dar clima ao evento, citando “&#20304;&#23665;&#30476;” como exemplo que poderia servir para brincar de esconde-esconde. Em 4 de agosto, タケ relatou os preparativos e a decoração de um evento em outra publicação. [Sugestão de mundo para download](https://discord.com/channels/737538781024092170/773171457487929344/1262046391820353576) [Relato sobre os preparativos e a decoração](https://discord.com/channels/737538781024092170/773171457487929344/1269342768443031552)
+
+Em julho de 2024, タケ pediu no mural imagens de construções do servidor. Com o nome Golden Cocker Sub, uma pessoa compartilhou uma imagem de cada local — Hitotoki no Sato, Deai no Restaurant e Tōgenkyō. [Pedido de imagens](https://discord.com/channels/737538781024092170/1264608467927302188/1265475520519340052) [Hitotoki no Sato](https://discord.com/channels/737538781024092170/1264608467927302188/1265927096719642624) [Deai no Restaurant](https://discord.com/channels/737538781024092170/1264608467927302188/1265927525008150589) [Tōgenkyō](https://discord.com/channels/737538781024092170/1264608467927302188/1265927832513675328)
+
+No festival de verão de 17 de agosto de 2024, sekisei explicou as regras e a divisão das equipes do torneio de pesca e anunciou seu início. sh apresentou a Busca Ultra por Itens e explicou como participar. No dia seguinte, compartilhou um vídeo da transmissão oficial. Nos registros de preparação do festival, sh informou que Ohagi havia construído o prédio do mercado de pulgas. はっ explicou o andamento e a divisão das equipes do jogo de repasse de mensagens por abstração mínima. [Transmissão oficial do jogo de mensagens por abstração mínima](https://www.youtube.com/live/Fy27JdYPero)
+
+Em 17 de agosto de 2024, Pluto sugeriu chamar equipes para o torneio de pesca. [Proposta de chamar equipes para a pesca](https://discord.com/channels/737538781024092170/773171457487929344/1274205080710545459)
+
+A escala do festival indicava Ohagi para coordenar o pega-pega e preparar comandos e outros recursos, e miin para ajudar a resolver problemas na busca por itens e na competição de pesca. A escala também indicava sekisei para trocar de servidor entre as atividades ao longo do festival e auxiliar no pega-pega e no PvP subaquático, e sh para coordenar e preparar o PvP subaquático. Em 4 de outubro de 2024, sh31415 informou onde retirar os prêmios do festival de verão.
 
 タケ criou o cartaz do Ace Summer Festival de 2024. No evento de fim de ano 「つなぐASF」, taibon ajudou com o dispositivo de contagem regressiva. タケ informou o encerramento de toda a programação em janeiro de 2025. [Anúncio do cartaz](https://discord.com/channels/737538781024092170/774152638450237460/1274157736015429744) [Anúncio da contagem regressiva](https://discord.com/channels/737538781024092170/774152638450237460/1319967701808189493) [Relato de encerramento](https://discord.com/channels/737538781024092170/774152638450237460/1325487116419076129)
 
-O anúncio do festival de verão de 2025 citou センチュリーズ pela preparação e pelo fornecimento do espetáculo de fogos. O agradecimento após o evento citou セガ, リンゴポン, あまぎ, 新人, ジェスター, ホステッチ e イザイザ pelos fogos, e コッカー e sh pela coordenação geral. エント cuidou do circuito, e moon e セキセイ do golfe. ハルビィ, セキセイ e sh cuidaram do PvP de sobrevivência, e はっ e sh do evento especial. [Publicação original](https://discord.com/channels/737538781024092170/774152638450237460/1408390549370572880) [Agradecimento após o evento](https://discord.com/channels/737538781024092170/779569416438415421/1411394624026710166)
+Em setembro de 2024, Yukke pediu ao clube de fotografia do Aceserver sugestões de locais para fotografar e indicou onde publicar as contribuições ao álbum. Em 27 de setembro, taibon852 publicou fotos e matérias sobre o lobby, a prefeitura e o POCKET ACES CASINO.
+
+O álbum apresentou o **lobby** como uma nova versão de um trabalho selecionado no concurso de junho de 2022. Creditou a construção a mallooo052, BM\_tsukiyurikun\_ e \_BE\_Minksecond87, a fotografia a mallooo052 e a edição a Take\_no\_niwa.
+
+Para a **prefeitura**, o álbum creditou a construção a BM\_yurikun, \_BE\_golden\_cokka e taiyaki5190, a fotografia a yukyaa e a edição a Harubie.
+
+Para o **POCKET ACES CASINO**, o álbum creditou a construção a \_BE\_StrangeDownp, \_BE\_Minksecond87, mallooo052, KITUNEKO0605, yukke\_11, \_BE\_Zakk893 e \_BE\_taibon0727, a fotografia a Lopila e a edição a taibon0727.
+
+No fim de 2024, タケ lançou um quiz da Ace Monorail e informou o prazo da votação. Yukke divulgou as inscrições de competidores para a Copa Ace de PvP.
+
+Em dezembro de 2024, Pluto propôs uma área chamada Zona de Parkour e informou que a primeira fase estava pronta.
+
+### **2025 e 2026**
+
+Em janeiro de 2025, foi anunciado que Wenti (Hosttech255), Pluto e あすたん passariam a apoiar os eventos. [Anúncio sobre o apoio aos eventos](https://discord.com/channels/737538781024092170/774152638450237460/1323911696237990039)
+
+Em 12 de janeiro de 2025, sekisei pediu sugestões de temas para as conversas do dia. Pluto sugeriu comidas preferidas e esportes, タケ sugeriu cidades e vilas, gasawara sugeriu gêneros de jogos e de música, e Merutak sugeriu biomas do Minecraft. Em 20 de janeiro, Merutak abriu um tópico para registrar os temas anteriores, e Pluto também acrescentou itens.
+
+Em janeiro de 2025, sh propôs divulgar o servidor com YouTube Shorts. LuMiSIA\_&#26376;&#31070;&#24736;&#33673; descreveu o processo desde a criação do roteiro até a gravação, a edição, a publicação e a divulgação, e se ofereceu para ajudar na gravação. Em 2 de janeiro, sekisei compartilhou um documento de seis páginas com o roteiro de um vídeo de apresentação do servidor e imagens de referência para as cenas.
+
+Em fevereiro de 2025, タケ anunciou planos para abrir uma nova estação na linha principal de &#26628;&#38920;. Em agosto, anunciou a reforma prevista da Estação Coliseu de Ibaraki e a suspensão parcial do serviço da linha 1 do Monotrilho Ace. Em dezembro, anunciou a distribuição de presentes de Natal do Monotrilho Ace.
+
+Em março de 2025, sh pediu ajuda para escrever o roteiro e editar um vídeo vertical de apresentação do Aceserver. End&#12539;コッカー propôs um plano de gravação para mostrar as construções e um rascunho da narração. Em 9 de março, End&#12539;コッカー informou que havia gravado construções e sugeriu as de Minku-san e Amatsu-san como possíveis cenários para um vídeo no YouTube.
+
+No verão de 2025, End&#12539;コッカー abriu uma discussão sobre um torneio de Among Us. Pluto sugeriu um formato e sh31415 propôs como recrutar participantes.
+
+Em julho de 2025, End&#12539;コッカー informou que havia elaborado uma proposta para o festival de verão.
+
+O anúncio do festival de verão de 2025 citou センチュリーズ pela preparação e pelo fornecimento do espetáculo de fogos. O agradecimento após o evento citou セガ, リンゴポン, あまぎ, 新人, ジェスター, ホステッチ e イザイザ pelos fogos, e コッカー e sh pela coordenação geral. エント cuidou do circuito, e moon e セキセイ do golfe. ハルビィ, セキセイ e sh cuidaram do PvP de sobrevivência, e &#12495;&#12483;&#12469;&#12531; e sh do evento Hassan. [Publicação original](https://discord.com/channels/737538781024092170/774152638450237460/1408390549370572880) [Agradecimento após o evento](https://discord.com/channels/737538781024092170/779569416438415421/1411394624026710166)
+
+A 29 de agosto de 2025, End&#12539;コッカー explicou como chegar ao circuito com dez capturas de ecrã do jogo. O guia mostrava, por ordem, o caminho à superfície, os portais do Nether e as passagens pelo Nether.
+
+Em 28 de julho de 2025, &#12486;&#12451;&#12512;&#12540; compartilhou uma captura do jogo em que se veem trilhos além de um rio e de um terreno gramado. &#12415;&#12389;&#12364;&#12397; respondeu que estava construindo aquela ferrovia. [Captura dos trilhos compartilhada por &#12486;&#12451;&#12512;&#12540;](https://discord.com/channels/737538781024092170/1395970979754278942/1399166418544623808) [Registro da construção por &#12415;&#12389;&#12364;&#12397;](https://discord.com/channels/737538781024092170/1395970979754278942/1399191150597767238)
+
+Em 12 de agosto de 2025, &#12415;&#12389;&#12364;&#12397; pediu sugestões de nomes para quatro linhas da ferrovia &#34746;&#36794;. O pedido veio acompanhado de um mapa provisório e quatro imagens que apresentavam as linhas com capturas de tela das estações e dos locais previstos para elas. &#12454;&#12455;&#12531;&#12486;&#12451; (Hosttech255) propôs candidatos. Nos avisos de 30 de agosto e 7 de setembro, &#12415;&#12389;&#12364;&#12397; anunciou os nomes &#20959;&#20958;&#32218; (&#12392;&#12367;&#12365;&#12379;&#12435;), &#20116;&#12484;&#23798;&#25903;&#32218;, &#21512;&#27700;&#28304;&#25903;&#32218; e &#27700;&#26332;&#25903;&#32218;.
+
+Em setembro de 2025, End&#12539;コッカー apresentou as atividades de quatro áreas, ferrovias, eventos, construção e trabalhos coletivos, e convidou pessoas a participar do Comitê de Revitalização do Aceserver.
+
+Em 9 de setembro de 2025, 山田 apresentou a paisagem e os detalhes da ferrovia com uma imagem de mapa mostrando uma curva dos trilhos e uma ponte sobre o mar, e uma vista da parte de pedra dentro do jogo. [Mapa mostrando os trilhos e a ponte](https://discord.com/channels/737538781024092170/1337748039317848137/1414913878097133629) [Vista da parte de pedra dentro do jogo](https://discord.com/channels/737538781024092170/1337748039317848137/1414914292750487623)
+
+Em outubro de 2025, durante a preparação do boletim do Aceserver, sekisei informou que uma montagem preliminar do vídeo de apresentação do servidor de temporada estava pronta.
+
+Em 18 de outubro de 2025, End&#12539;コッカー compartilhou um gráfico que comparava vários servidores de Minecraft pela proximidade com o jogo original e pela liberdade de escolher como jogar. O gráfico foi usado para avaliar onde o Aceserver se encaixava naquela época.
+
+Em 26 de outubro de 2025, End&#12539;コッカー agradeceu a quem colaborou com a Vila de Halloween e com o evento. [Agradecimentos da Vila de Halloween e do evento](https://discord.com/channels/737538781024092170/779569416438415421/1432012641571704905)
+
+Em 28 de outubro de 2025, sekisei propôs realizar encontros e eventos regulares depois que os participantes se reunissem e usar também um servidor de jogo compartilhado para ampliar a convivência.
+
+Em outubro de 2025, sh agradeceu a quem ajudou a preparar eventos do Comitê de Revitalização do Aceserver e pediu ideias para o próximo. Em novembro, um anúncio apresentou amagi_467 como idealizador do primeiro torneio de mahjong do Aceserver, que o comitê planejava organizar. [Agradecimentos e pedido de ideias](https://discord.com/channels/737538781024092170/774152638450237460/1432028687376715897) [Anúncio do torneio de mahjong](https://discord.com/channels/737538781024092170/774152638450237460/1442742157315149865)
+
+Em 8 de novembro de 2025, End&#12539;コッカー sugeriu um encontro informal em que os participantes fariam um passeio e sugeririam destinos ao longo da visita. [Proposta de encontro para um passeio](https://discord.com/channels/737538781024092170/773171457487929344/1436565950622077009)
+
+De novembro a dezembro de 2025, sh convidou pessoas sem experiência em mahjong para uma aula de iniciação prevista para 13 de dezembro.
+
+Em 24 de novembro de 2025, タケ abriu uma chamada de sugestões para o nome do evento de fim de ano. &#12356;&#12396;&#12397;&#12371; propôs «&#24179;&#26041;&#25968;&#65;&#83;&#70;», タケ propôs «&#12402;&#12425;&#12367;&#65;&#83;&#70;», End&#12539;コッカー propôs «&#28783;&#12427;&#97;&#115;&#102;» e, em 30 de novembro, sekisei propôs «&#12388;&#12367;&#12427;&#65;&#83;&#70;». タケ anunciou a votação final em 14 de dezembro. Quando ela terminou no dia 15, «#&#12388;&#12367;&#12427;&#65;&#83;&#70;» foi a opção mais votada, com 57%.
+
+Para o fim de 2025, Pluto anunciou Herobrine, um evento de parkour de nove etapas.
+
+Em 1.º de dezembro de 2025, sekisei anunciou espaços de 15 minutos para atividades propostas pelos jogadores no evento de inverno. Era possível participar sugerindo uma atividade, dividindo tarefas de organização ou conduzindo a atividade. [Chamada de atividades de inverno dos jogadores](https://discord.com/channels/737538781024092170/774152638450237460/1445002550951809085)
+
+Em dezembro de 2025, levando em conta também a proposta de ゆり, sekisei sugeriu recrutar membros para um comitê organizador de eventos responsável pelo planejamento, pela divulgação, pela coordenação no dia e pelo calendário.
 
 No evento do fim de 2025, ハルビィ, セキセイ e タケ ajudaram na corrida na montanha nevada. セキセイ desenvolveu o plugin de batalha de bolas de neve PvP. 山田 construiu o espaço e ゆり ajudou na narração ao vivo e na condução do evento. Participantes também ajudaram no ensaio. [Publicação original](https://discord.com/channels/737538781024092170/774152638450237460/1454846975227854859)
 
+Um anúncio de dezembro de 2025 explicou como participar de uma sessão de fotos prevista no santuário Tōgenkyō para criar uma nova imagem de cabeçalho. [Convite para a sessão de fotos](https://discord.com/channels/737538781024092170/774152638450237460/1455820341988298905)
+
+Para o concurso de servidores temáticos no outono de 2025, sekisei preparou um modelo de inscrição. No fim de dezembro, apresentou quatro propostas finalistas e realizou a votação. As finalistas foram os espaços liminares de 山田, o AceTechModPvP de Mugi, o servidor criativo de Yukke e o antigo servidor principal de タケ. Na apuração de 3 de janeiro de 2026, a proposta de espaços liminares de 山田 recebeu o maior número de votos, com 38%.
+
+Outras propostas incluíram Maldito Mythic e ATM, de Mugi, os robôs de 山田, Vamos de trem Ace, de タケ, Defenda a cidade de Maikura, de &#12454;&#12455;&#12531;&#12486;&#12451; (Hosttech255), o combate de alta dificuldade contra o dragão do End, de Moon\_666, as construções sazonais de sekisei e o Servidor ao capricho do chef, de sh.
+
+Em 17 de janeiro de 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; explicou como usar o modelo de propostas e demonstrar apoio com reações no canal do Discord para propostas de servidores temáticos. [Modelo de propostas e guia de reações](https://discord.com/channels/737538781024092170/1461900550768562206/1461900938460663880)
+
+- Em 20 de janeiro, End&#12539;コッカー propôs «Nc2», reunindo moeda, comércio e território. [Proposta original](https://discord.com/channels/737538781024092170/1461900550768562206/1463071683639509026)
+- Em 16 de fevereiro, sekisei propôs «&#12360;&#12540;&#39894;&#12452;&#12505;&#12531;&#12488;&#12524;&#12540;&#12473;», uma competição pela maior quantidade de tarefas concluídas, com uma meta coletiva. [Proposta original](https://discord.com/channels/737538781024092170/1461900550768562206/1472807672754602147)
+- Em 6 de março, &#12486;&#12451;&#12512;&#12540; propôs criar mapas de minijogos para Lobisomem e Polícia e Ladrão. [Proposta original](https://discord.com/channels/737538781024092170/1461900550768562206/1479450138727682179)
+- Em 6 de março, PillowKebap propôs «&#12450;&#12463;&#12525;&#12496;&#12483;&#12488;&#12473;&#12490;&#12452;&#12497;&#12540;&#12471;&#12540;&#12474;&#12531;&#50;», uma ideia de PvP com torneios periódicos. [Proposta original](https://discord.com/channels/737538781024092170/1461900550768562206/1479472030058283292)
+- Em 2 de abril, &#26666;&#24335;&#20250;&#31038;&#24093;&#29579; propôs «&#12456;&#12452;&#12503;&#12522;&#12523;&#12501;&#12540;&#12523;&#50;&#48;&#50;&#54;», uma ideia de jogar sem inventário. [Proposta original](https://discord.com/channels/737538781024092170/1461900550768562206/1489235862704230554)
+- Em 28 de julho, &#29792;&#22856; propôs «&#32076;&#28168;&#21270;&#12375;&#12383;&#65;&#99;&#101;», combinando construção de cidades e formação de patrimônio. [Proposta original](https://discord.com/channels/737538781024092170/1461900550768562206/1531476474219987094)
+- Em 1.º de agosto, &#29792;&#22856; propôs «&#12480;&#12502;&#12523;&#12524;&#12452;&#12489;&#12363;&#12425;&#26449;&#20154;&#12434;&#23432;&#12428;&#65281;», uma ideia de proteger aldeões das invasões. [Proposta original](https://discord.com/channels/737538781024092170/1461900550768562206/1532951548991373332)
+
+Em fevereiro e agosto de 2026, sh apresentou as atividades de planejamento de eventos e divulgação não oficial do Comitê de Revitalização do Aceserver e convidou pessoas a se juntar ao grupo.
+
+Em fevereiro de 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; pediu fotos para publicações de divulgação nas redes sociais. LuMiSIA\_&#26376;&#31070;&#24736;&#33673;, &#35199;&#26408;&#37326;&#28716;&#36032;&#27663;, Amagi\_467, Moon\_666, CP-sinzin, Yukke e あすたん enviaram fotos para possível uso em publicações de divulgação nas redes sociais.
+
+Em fevereiro de 2026, End&#12539;コッカー anunciou o Concurso de Fotografia do Aceserver e informou que o período de envio era de 16 a 28 de fevereiro. Preparou exemplos de inscrições para a categoria geral e para a equipe de gestão. キツネコ enviou uma foto de um trabalho de drenagem em andamento. [Anúncio do Concurso de Fotografia de 2026](https://discord.com/channels/737538781024092170/774152638450237460/1471148847119208731)
+
+Em 28 de março de 2026, no tópico de imagens para redes sociais, sh31415 sugeriu uma publicação que desse a entender que algo estava prestes a começar no End e anexou uma imagem. A imagem mostrava plataformas de vidro e lanternas suspensas. [Sugestão de publicação para redes sociais](https://discord.com/channels/737538781024092170/1480060237141508268/1487246454161543250) [Imagem anexada à sugestão](https://discord.com/channels/737538781024092170/1480060237141508268/1487246486428324012)
+
+Em 19 de fevereiro de 2026, End&#12539;コッカー compartilhou um texto para pedir ajuda na gravação de uma partida de pega-pega no lobby a fim de divulgar o Aceserver no YouTube.
+
+Em 20 e 21 de fevereiro de 2026, sekisei sugeriu acertar os assuntos em uma reunião geral antes de uma reunião aberta, compartilhou a proposta da reunião aberta e pediu opiniões.
+
+Em março de 2026, End&#12539;コッカー compartilhou uma versão de teste de um vídeo de apresentação do Aceserver. Merutak observou que a primeira metade avançava rápido. sekisei sugeriu esclarecer o objetivo, o público e a mensagem. あすたん comentou a quantidade de informação em um vídeo curto, e LuMiSIA\_&#26376;&#31070;&#24736;&#33673; deu sugestões sobre a apresentação de textos e animações.
+
+Em 6 de março de 2026, sekisei propôs reuniões abertas periódicas do Departamento de Informações para compartilhar assuntos da equipe do servidor. Também sugeriu um grupo informal em que os participantes pudessem divulgar suas atividades sem precisar fazer uma solicitação. Em 11 de março, End&#12539;コッカー compartilhou sete slides para a reunião, sobre o status de participante regular como uma meta, as formas de jogar nos servidores de conteúdo e sobrevivência, os vídeos de eventos, a divulgação no X e as orientações do portal e da wiki. End&#12539;コッカー também compartilhou tabelas para acompanhar os assuntos da reunião, a situação atual, as melhorias propostas e o andamento.
+
+Em 7 de março de 2026, End&#12539;コッカー pediu ideias para eventos e voluntários, incluindo sugestões de atividades além de PvP.
+
+Em março de 2026, &#12486;&#12451;&#12512;&#12540; pediu propostas de um novo ícone e relatos de acontecimentos no servidor para o Diário do Aceserver, do Comitê de Revitalização do Aceserver.
+
+Em 25 de abril de 2026, &#12450;&#12510;&#12484; resumiu as orientações de construção para um evento de cerco no Minecraft. As orientações definiam o castelo como tema e incluíam campos para indicar o estilo arquitetônico e a paleta de cores. Em 5 de maio, &#12450;&#12510;&#12484; relatou que havia construído uma base provisória e compartilhou uma captura de tela do jogo. Em 10 de maio, &#12450;&#12510;&#12484; propôs uma ordem de trabalho para construir a estrutura e copiá-la para o terreno do evento.
+
+Para o mesmo evento de cerco, &#35199;&#26408;&#37326;&#28716;&#36032;&#27663; se ofereceu para ajudar a reunir materiais. Em 12 de maio, End&#12539;コッカー compartilhou uma vista aérea do terreno. Em 16 de maio, Pluto compartilhou a mesma imagem com áreas demarcadas e propôs um percurso pelas ilhas.
+
+Em 6 de maio de 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; preparou uma proposta para o festival de verão “&#12360;&#65374;&#22799;&#31085;&#12426;”, pensado como um espaço de convivência para participantes novos e antigos. A proposta incluía barracas organizadas pelos participantes e uma apresentação de fogos de artifício. Em 19 de maio, informou que havia conseguido a colaboração de &#12475;&#12531;&#12481;&#12517;&#12522;&#12474; para os fogos.
+
+Em 7 de julho de 2026, End&#12539;コッカー compartilhou um rascunho de anúncio para um jogo de construção em revezamento. A ideia era dividir os participantes em duas equipes no lobby, passar um tema à primeira pessoa e entregar a construção à pessoa seguinte. No horário de início em 11 de julho, End&#12539;コッカー avisou que também seria possível entrar pelo lobby com o evento em andamento. [Aviso de entrada com o evento em andamento](https://discord.com/channels/737538781024092170/773171457487929344/1525479803644542998)
+
+Em 13 de julho de 2026, sekisei convidou as pessoas a enviar perguntas, explicou como seriam contadas as que perguntavam essencialmente a mesma coisa e informou que Yuri-kun responderia por meio das respostas às mensagens. Em 14 de julho, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; informou que naquele dia foram feitas 120 perguntas ao todo.
+
+No fim de julho de 2026, sekisei informou que os planos para duas atividades estavam quase prontos, um minijogo dentro do Minecraft e uma atividade fora dele. Também pediu sugestões de atividades que as pessoas gostariam de ver preparadas a seguir.
+
+Em 26 de julho de 2026, &#12422;&#12426; anunciou em nome da Mobility Resort LuMiSIA que as vias de acesso aos boxes de três circuitos haviam sido reformadas. [Anúncio da reforma das vias de acesso aos boxes](https://discord.com/channels/737538781024092170/779569416438415421/1530931917497696447)
+
+Em 29 de julho de 2026, &#29792;&#22856; propôs uma corrida de barcos sobre gelo com recompensa para quem chegasse à meta dentro do tempo reservado.
+
+Em 4 de agosto de 2026, primeiro dia do “VALORANT&#12360;&#12540;&#39894;CUP”, Merutak explicou as regras das partidas do torneio um contra um. Merutak também anunciou que pretendia compartilhar a tela das partidas no canal de voz do evento como espectador. [Regras das partidas do primeiro dia](https://discord.com/channels/737538781024092170/1533997135127777450/1534000223372705793)
+
+Merutak divulgou a chave, as pontuações parciais e os resultados finais. A chave final registra horomaru em primeiro e sya_ri em segundo. Em 5 de agosto, Merutak anunciou a divisão das equipes e depois informou a mudança para três contra três. [Chave do primeiro dia](https://discord.com/channels/737538781024092170/1533997135127777450/1533997901838024714) [Resultado final do primeiro dia](https://discord.com/channels/737538781024092170/1533997135127777450/1534178493150265415) [Equipes do segundo dia](https://discord.com/channels/737538781024092170/1534400353414414377/1534456642316271616) [Anúncio de três contra três](https://discord.com/channels/737538781024092170/1534400353414414377/1534490983121817690)
+
 Em agosto de 2026, sekisei e ふーや anunciaram um CTF conjunto de caça ao tesouro on-line, com enigmas como cifras para encontrar bandeiras. Aceserver CTF2026 começou em 28 de agosto. [Anúncio da organização conjunta](https://discord.com/channels/737538781024092170/774152638450237460/1541785510094184449) [Relato de abertura](https://discord.com/channels/737538781024092170/779569416438415421/1542704904055824394)
+
+Em 6, 20 e 30 de setembro de 2026, End&#12539;コッカー enviou imagens e textos sobre construções, carpintaria e imóveis no End e ferrovias para possível uso nas redes sociais.
+
+Em 1º de novembro de 2026, End&#12539;コッカー anunciou Trick-or-run, um evento de outono em que os jogadores competiriam entregando itens temáticos de Halloween. Em 8 de novembro, pediu que os participantes se reunissem no lobby antes do início e, no dia 9, divulgou os resultados. [Anúncio do evento](https://discord.com/channels/737538781024092170/774152638450237460/1566426431301357681) [Resultados do evento](https://discord.com/channels/737538781024092170/774152638450237460/1569004504991531160)
+
+## Construção e projetos em equipe
+
+Em dezembro de 2020, bamoshi4869 convidou jogadores para ajudar na preparação de terrenos e em outras tarefas coletivas. &#12365;&#12383;&#12422;&#12358; se ofereceu para ajudar, e Gui sugeriu criar um canal para coordenar o trabalho. bamoshi4869 também pediu ajuda para drenar um monumento oceânico.
+
+Em dezembro de 2020, bamoshi4869 informou no antigo grupo de trabalho que houve desmonte da montanha e escavação a céu aberto nos dias 24 e 25 de dezembro, e que a escavação foi concluída até a cota 5. O relatório listou &#12400;&#12418;&#12375;, &#21311;&#21517;, &#12354;&#12363;&#12426;&#12435;, &#12356;&#12385;&#12398;&#12379;, jag., &#12513;&#12525;&#12531; e &#12504;&#12490;&#12509;&#12531; como participantes.
+
+Em 29 de dezembro daquele ano, bamoshi4869 informou que a drenagem de um monumento oceânico em outro projeto estava concluída. Na lista de participantes constavam &#12400;&#12418;&#12375;, &#21311;&#21517;, &#12354;&#12363;&#12426;&#12435;, J, &#12450;&#12474;, &#12504;&#12490;&#12509;&#12531;, &#12495;&#12488;&#12512;&#12462; e &#12371;&#12383;. No mesmo relatório, bamoshi4869 também agradeceu a ajuda de &#12371;&#12383;, que acabara de entrar no grupo. [Relatório do grupo sobre a drenagem](https://discord.com/channels/737538781024092170/779569416438415421/793490071394189374)
+
+Em janeiro de 2021, bamoshi4869 planejou e anunciou a desmontagem de uma fortaleza do Nether. No mesmo mês, yizu\_TrPf fez um protótipo de uma casa com mecanismos no modo Criativo e também reuniu materiais.
+
+Em fevereiro de 2021, Jagdsolid informou que a fazenda de afogados estava concluída. ninopan1122 informou que havia reproduzido a Dança do Caixão com blocos musicais.
+
+Em 7 de março de 2021, Jagdsolid explicou o trabalho que deu curar aldeões e selecionar bibliotecários para a biblioteca da vila de Suke no mundo antigo. Em 18 de março, informou que o exterior estava quase pronto. Em 22 de março, compartilhou uma foto do espaço que havia preparado para guardar os livros recebidos.
+
+Em março de 2021, Game\_Tokumei abriu um serviço chamado «Faz-Tudo» e anunciou que aceitava pedidos como melhorias em estradas.
+
+Em 24 de março de 2021, Game\_Tokumei construiu no servidor criativo uma masmorra onde apareciam muitos monstros e solicitou a transferência para o servidor de sobrevivência. As duas imagens anexadas mostravam o interior escuro e a grande parede externa. KOTA-SAN explicou como as transferências eram avaliadas na época e orientou a esperar pela decisão de Gui.
+
+Em 5 de abril de 2021, KOTA-SAN informou que o estádio Takenoko no Sato, no lobby, estava concluído e compartilhou uma foto com fileiras de assentos para o público nos dois lados do recinto coberto.
+
+Em 7 de julho de 2021, KOTA-SAN respondeu a uma pergunta sobre o estádio do lobby. Explicou que o havia construído para eventos e que estava fechado na época porque não havia planos de usá-lo. No mesmo dia, anunciou o fechamento do canal de solicitações de ferrovias e orientou os jogadores a consultar o canal de perguntas antes de iniciar qualquer construção de grande porte.
+
+Em maio, kuroneko229 informou que, na época, qualquer pessoa podia construir na Cidade em Desenvolvimento.
+
+Em junho de 2021, KOTA-SAN anunciou o início do projeto de construção coletiva Yasuragi no Mori e contou que havia plantado uma árvore para marcar o começo. No mesmo mês, também informou que um dispositivo para fazer molduras invisíveis havia sido construído em Yasuragi no Mori. Em 29 de outubro de 2022, KOTA-SAN informou que havia construído um ponto de distribuição de molduras invisíveis.
+
+Em 16 de julho de 2021, shu8 procurou pessoas para ajudar em uma construção de 2.000 por 2.000 blocos que já estava em andamento no modo criativo. [Recrutamento para a construção](https://discord.com/channels/737538781024092170/779569416438415421/865557677844725760)
+
+Em 22 de outubro de 2021, taiyaki5190 perguntou se poderia publicar no mural um guia do bairro residencial que havia construído.
+
+Em 12 de setembro de 2021, JagdFeind(jp) informou que havia começado a reformar a fazenda elevada de monstros da Vila Suke e pediu ideias de blocos e designs para os andares de surgimento e coleta por água. [Chamada de ideias para a fazenda de monstros](https://discord.com/channels/737538781024092170/779569416438415421/886428347884798012)
+
+Em 30 de janeiro de 2022, \_BE\_kurenohachi disse que tinha pessoas dispostas a ajudar e compartilhou o plano de construir um parque de diversões de porte considerável com um mecanismo para soltar fogos de artifício uma única vez à noite.
+
+Em 20 de fevereiro de 2022, &#12414;&#12356;&#12369;&#12427; pediu ajuda para nivelar o terreno para um labirinto. [Pedido de ajuda para preparar o terreno do labirinto](https://discord.com/channels/737538781024092170/773171457487929344/944771522348843008)
+
+Em 1º de março de 2022, Tomiryo apresentou um plano para montar um dispositivo de preparo de poções perto da plantação comunitária. No dia 2, はっ concordou com a construção e indicou um dispositivo já existente como referência.
+
+Em março de 2022, タケ pediu ajuda para nivelar o terreno onde seria feita uma arte no chão. Em 1º de abril, informou que a obra estava concluída e agradeceu a quem ajudou a nivelar o terreno ou forneceu materiais. [Pedido de ajuda para nivelar o terreno](https://discord.com/channels/737538781024092170/779569416438415421/957990944374927420) [Relato da conclusão da arte no chão](https://discord.com/channels/737538781024092170/779569416438415421/959368128943489085)
+
+Em 19 de março de 2022, foi divulgado o andamento da construção de &#35199;&#26408;&#37326;&#28716;&#36032;&#27663;, e &#38609;&#12387;&#21306; disse que vinha ajudando aos poucos. Em 27 de março, após um pedido de ajuda para reparar ferramentas, Taibon contou que Buraki havia ajudado no trabalho. Em 4 de abril, Teiō se ofereceu para ajudar na escavação a céu aberto de Taibon, que depois agradeceu a colaboração. [Andamento da obra de Nishikino Sega](https://discord.com/channels/737538781024092170/779569416438415421/954708825829703720) [Ajuda de Zakku](https://discord.com/channels/737538781024092170/779569416438415421/954717365927571516) [Ajuda de Buraki](https://discord.com/channels/737538781024092170/779569416438415421/957575859303223297) [Oferta de ajuda de Teiō](https://discord.com/channels/737538781024092170/779569416438415421/960436243148185631) [Agradecimento de Taibon](https://discord.com/channels/737538781024092170/779569416438415421/960509732894933032)
+
+Em 24 de abril, タケ pediu ajuda em nome do grupo de arte no chão para criar um pôster no chão do Minecraft. タケ informou que a maior parte dos materiais já estava pronta. [Pedido de ajuda para criar o pôster](https://discord.com/channels/737538781024092170/779569416438415421/967605541411098685)
+
+Em abril de 2022, SPdari informou que a fundação e o telhado da base principal de Sora no Yama já estavam prontos e que o exterior estava quase concluído. Ainda faltava trabalho no interior.
+
+Em 24 de maio de 2022, Moon\_666 informou ter construído uma farm de piglins zumbificados para Java Edition e disse que gostaria de construir outra para Bedrock Edition.
+
+Em junho de 2022, taiyaki5190 compartilhou na discussão de paisagens do Aceserver imagens da primeira casa de porte que construiu no servidor e de outra que fez a pedido de alguém. Também construiu por conta própria um centro de comércio para a equipe Eirin e mostrou o exterior e os balcões dos aldeões alinhados junto ao tapete vermelho do interior. Compartilhou ainda imagens da estátua de Hikakin que ficava na área da equipe durante a obra e depois de concluída. Dari publicou uma imagem da fachada de sua primeira casa no Aceserver. [Primeira casa](https://discord.com/channels/737538781024092170/981561783707906118/981682997579374592) [Casa construída a pedido](https://discord.com/channels/737538781024092170/981561783707906118/981685214591979560) [Exterior e interior do centro de comércio](https://discord.com/channels/737538781024092170/981561783707906118/981684994659483721) [Estátua durante e depois da construção](https://discord.com/channels/737538781024092170/981561783707906118/981684089885192252) [Primeira casa de Dari](https://discord.com/channels/737538781024092170/981561783707906118/982178632241909790)
+
+No mesmo tópico, taiyaki5190 compartilhou duas imagens dos fogos do festival Iroha. edamameRex_java publicou uma imagem das criaturas com nome no parque de diversões, e Moon_666 mostrou o transporte de pandas em um barco. [Fogos do festival Iroha](https://discord.com/channels/737538781024092170/981561783707906118/981683137941753856) [Criaturas do parque de diversões](https://discord.com/channels/737538781024092170/981561783707906118/982139778055176242) [Transporte dos pandas](https://discord.com/channels/737538781024092170/981561783707906118/982171718628032512)
+
+Yukke compartilhou dez capturas, incluindo construções e autorretratos no jogo. As imagens de taka8621 incluíam um espaço envidraçado e uma grande construção ao anoitecer. [Capturas de Yukke](https://discord.com/channels/737538781024092170/981561783707906118/982172370791981096) [Construções nas imagens de taka8621](https://discord.com/channels/737538781024092170/981561783707906118/981566467818553415)
+
+&#12384;&#12426; publicou fotos dos arredores de Ace Town, do lobby antigo, da área da equipe Eirin e de uma luta em grupo contra o Wither, organizadas por local ou atividade. [Arredores de Ace Town](https://discord.com/channels/737538781024092170/981561783707906118/982174866646106124) [Lobby antigo](https://discord.com/channels/737538781024092170/981561783707906118/982176359059181629) [Capturas da equipe Eirin](https://discord.com/channels/737538781024092170/981561783707906118/982178105919701012) [Luta em grupo contra o Wither](https://discord.com/channels/737538781024092170/981561783707906118/982176954478366780)
+
+Em 4 de junho de 2022, &#12414;&#12356;&#12369;&#12427; compartilhou a vista de casa depois de impedir o surgimento de monstros no setor FYG do conjunto habitacional comunitário. No mesmo dia, compartilhou uma imagem do segundo andar do local de comércio. Em outubro de 2024, &#12479;&#12465; acrescentou ao tópico imagens de ruas, uma fonte e prédios altos. [FYG após impedir o surgimento de monstros](https://discord.com/channels/737538781024092170/981561783707906118/982617540125675540) [Segundo andar do local de comércio](https://discord.com/channels/737538781024092170/981561783707906118/982617100961067059) [Imagens da cidade compartilhadas por Take](https://discord.com/channels/737538781024092170/981561783707906118/1291056986695401537)
+
+Em uma imagem da mina comunitária compartilhada por Tomiryo, uma placa identifica yanyan como criador e mostra a data de 24 de junho de 2021. &#65425;&#65399;&#65438; compartilhou imagens de uma escavação a céu aberto e dos canteiros dentro dela. [Placa da mina comunitária](https://discord.com/channels/737538781024092170/981561783707906118/981825742679732244) [Escavação a céu aberto e canteiros](https://discord.com/channels/737538781024092170/981561783707906118/981564779074301962)
+
+PillowKebap compartilhou uma casa de madeira junto às falésias da mesa e uma reunião de jogadores à noite. KITUNEKO0605 mostrou um prédio de madeira e pedra, &#26862;&#30000; uma árvore gigante com salas suspensas nos galhos e &#35199;&#26408;&#37326;&#28716;&#36032;&#27663; Eirindō com seus pináculos vermelhos. [Casa de madeira na mesa](https://discord.com/channels/737538781024092170/981561783707906118/981563677490675732) [Foto de grupo à noite](https://discord.com/channels/737538781024092170/981561783707906118/981565221913133116) [Prédio de madeira e pedra](https://discord.com/channels/737538781024092170/981561783707906118/981565422287601714) [Árvore com salas suspensas](https://discord.com/channels/737538781024092170/981561783707906118/981600780299677737) [Prédio com pináculos vermelhos](https://discord.com/channels/737538781024092170/981561783707906118/981581153347719189) [Eirindō na imagem de Dari](https://discord.com/channels/737538781024092170/981561783707906118/982179619492999168)
+
+Em 19 de abril de 2022, &#35199;&#26408;&#37326;&#28716;&#36032;&#27663; recrutou novos membros como líder de Eirin-tai e apresentou Eirindō como a base do grupo. [Recrutamento de membros e localização da base](https://discord.com/channels/737538781024092170/779569416438415421/965924885580894249)
+
+\_BE\_NumberYapper compartilhou uma casa de madeira e uma estrada de gelo subterrânea. &#38609;&#12387;&#21306; mostrou um caminho de tijolos de pedra e &#12422;&#12426;, uma instalação com fileiras de cactos. taibon0727 compartilhou um prédio com pináculos e um jogador em voo. &#32313;&#28218;&#63;&#24385; mostrou à noite uma construção em forma de locomotiva. [Casa e estrada de gelo subterrânea](https://discord.com/channels/737538781024092170/981561783707906118/981570279622996018) [Caminho de tijolos de pedra](https://discord.com/channels/737538781024092170/981561783707906118/981566677995102219) [Instalação de cactos](https://discord.com/channels/737538781024092170/981561783707906118/981911364488527882) [Prédio com pináculos e jogador em voo](https://discord.com/channels/737538781024092170/981561783707906118/982619031049744454) [Construção em forma de locomotiva](https://discord.com/channels/737538781024092170/981561783707906118/1031236868785852516)
+
+&#12399;&#12387; compartilhou uma imagem de jogadores reunidos em uma janela marcada com uma esmeralda. dont_stop mostrou um jogador em uma sala cheia de baús e &#12414;&#12429; compartilhou uma foto de grupo perto de um monumento feito com crânios de esqueletos wither. [Jogadores reunidos na janela](https://discord.com/channels/737538781024092170/981561783707906118/981564324109774849) [Sala cheia de baús](https://discord.com/channels/737538781024092170/981561783707906118/981564578313937006) [Foto de grupo perto do monumento](https://discord.com/channels/737538781024092170/981561783707906118/981851600735854612)
+
+A galeria preserva imagens externas e internas da pousada de águas termais que BURRAKI mostrou durante uma visita. Outras publicações registram os destinos dos portais sob a prefeitura e um quarto onde alguém ficou em &#31481;&#26360;&#25151;. &#12384;&#12426; também registrou a ajuda de Buraki para levar materiais para sua casa. O nome BURAKI03 aparece tanto na imagem do transporte quanto na da pousada de águas termais. [Visita à pousada de águas termais](https://discord.com/channels/737538781024092170/981561783707906118/982088648629567498) [Portais sob a prefeitura e seus destinos](https://discord.com/channels/737538781024092170/981561783707906118/982087677048422432) [Quarto usado por um jogador](https://discord.com/channels/737538781024092170/981561783707906118/982089728549597224) [Ajuda no transporte de materiais](https://discord.com/channels/737538781024092170/981561783707906118/982181022106021938)
+
+taiyaki5190 também compartilhou uma imagem de quando trouxe vacogumelos com &#12399;&#12420;. &#12384;&#12426; compartilhou um mapa dos arredores do parque de diversões e imagens dos trilhos e portais do Nether e do conjunto habitacional comunitário. [Transporte dos vacogumelos](https://discord.com/channels/737538781024092170/981561783707906118/981683668424740944) [Mapa e imagens perto do parque de diversões](https://discord.com/channels/737538781024092170/981561783707906118/982174520121110560) [Trilhos e portais do Nether](https://discord.com/channels/737538781024092170/981561783707906118/982175875778879548) [Imagens do conjunto habitacional comunitário](https://discord.com/channels/737538781024092170/981561783707906118/982175911099125810)
+
+&#12384;&#12426; também compartilhou imagens externas e internas do local de comércio de Eirin-tai no modo criativo e de uma enxada exposta sobre pedra como oferenda ao Reino de Kuwa. [Local de comércio no modo criativo](https://discord.com/channels/737538781024092170/981561783707906118/982180365861003324) [Oferenda ao Reino de Kuwa](https://discord.com/channels/737538781024092170/981561783707906118/982181587208769547)
+
+&#12384;&#12426; também compartilhou uma imagem de uma loja de conveniência recriada no prédio de &#31481;&#26360;&#25151;. Em outra publicação, intitulada “FamilyMart”, uma placa interna traz a assinatura de Hako_Otoko. &#12414;&#12356;&#12369;&#12427; mostrou como ficou o terreno depois do aterro, e Moon\_666 compartilhou imagens dos mapas da Superfície, do End e do Nether após a destruição. [Loja no prédio](https://discord.com/channels/737538781024092170/981561783707906118/982180642286616626) [Placa dentro da loja](https://discord.com/channels/737538781024092170/981561783707906118/982175162705252382) [Foto depois do aterro](https://discord.com/channels/737538781024092170/981561783707906118/982616635158442045) [Mapa da Superfície](https://discord.com/channels/737538781024092170/981561783707906118/982170908720496690) [Mapas do End e do Nether](https://discord.com/channels/737538781024092170/981561783707906118/982183198253527120)
+
+Em junho de 2022, yanyan_fafnir explicou as regras para participar do concurso de ilhas flutuantes que deu origem à construção do antigo lobby e como os projetos seriam apresentados para avaliação. O anúncio indicou que はっ e membros com cargo de apoiador ou superior fariam parte do júri. [Regras de inscrição](https://discord.com/channels/737538781024092170/774152638450237460/982990352422162482) [Anúncio da sessão de avaliação](https://discord.com/channels/737538781024092170/774152638450237460/986294242848669756)
+
+Em junho de 2022, はっ compartilhou uma ideia em uma discussão sobre a construção do lobby. edamameRex_java propôs um layout inspirado no lobby anterior. Em 3 de junho, taka8621 propôs incorporar a própria mudança para o novo lobby ao cenário ou recriar lobbies de épocas anteriores. [Conceito para a construção do lobby](https://discord.com/channels/737538781024092170/981569254031769700/981569389306466354) [Proposta inspirada no lobby anterior](https://discord.com/channels/737538781024092170/981569254031769700/981572980993847466) [Propostas para a mudança de lobby e os lobbies anteriores](https://discord.com/channels/737538781024092170/981569254031769700/982223863800823808)
+
+&#32313;&#28218;?&#24385; compartilhou um esboço de uma ilha flutuante dentro de uma cúpula submersa, e edamameRex_java acrescentou uma imagem do jogo com uma estrutura de vidro debaixo d’água. Moon_666 compartilhou duas imagens de aquários como referência, e &#12356;&#12396;&#12397;&#12371; compartilhou referências de ilhas flutuantes nevadas e de uma torre em espiral. [Esboço da cúpula submersa](https://discord.com/channels/737538781024092170/981569254031769700/981586163057963018) [Estrutura de vidro debaixo d’água](https://discord.com/channels/737538781024092170/981569254031769700/981592501246890065) [Imagens de aquários como referência](https://discord.com/channels/737538781024092170/981569254031769700/982240799070760980) [Ilhas flutuantes nevadas](https://discord.com/channels/737538781024092170/981569254031769700/981857714810552341) [Imagem de referência da torre](https://discord.com/channels/737538781024092170/981569254031769700/982612514149924925)
+
+NCGpotechi sugeriu um lobby compacto com parkour e propôs uma cidade com o navio Chamomile, um porto e um grande portal central para o novo servidor principal. Também sugeriu deixar as letras ACE ou o logotipo flutuando sobre o lobby. [Proposta de lobby compacto](https://discord.com/channels/737538781024092170/981569254031769700/981662738612908102) [Proposta de porto e portal central](https://discord.com/channels/737538781024092170/981569254031769700/982267925983559750) [Ideia de um logotipo flutuante](https://discord.com/channels/737538781024092170/981569254031769700/982607826545442846)
+
+Em 5 de junho de 2022, taka8621 propôs um lobby com acesso entre os níveis e portais na área central. Pela proposta, quem tinha o cargo de apoiador ou superior na época construiria a área central de cada nível.
+
+Em 7 de junho de 2022, Moon\_666 perguntou se os jogadores acessariam vários mundos pelo lobby e também passariam por ele na volta. A observação foi que isso mudaria as conexões existentes entre os mundos.
+
+KOTA-SAN preparou um formulário com o nome do participante, o lote de preferência e o conceito, além de um mapa dos 36 lotes. yanyan_fafnir compartilhou listas de lotes com as inscrições e as alterações duas vezes em 6 de junho e uma vez em cada uma das datas de 8 e 15 de junho.
+
+As mensagens de inscrição incluíam as seguintes ideias.
+
+- **&#12384;&#12426;** – Estação
+- **YM** – Idade Média, com possibilidade de mudança
+- **&#26666;&#24335;&#20250;&#31038;&#24093;&#29579;** – Mar e praia de areia
+- **Kaji** – Floresta, provisório
+- **&#12461;&#12484;&#12493;&#12467;** – Árvore
+- **Ne1Ne10104** – Fantasia de estilo japonês
+- **&#12479;&#12465;** – Viagem
+- **&#26525;&#35910;** – Fortaleza
+- **&#12450;&#12510;&#12484;** – Construção de cabeça para baixo
+- **nuu_mink** – Templo
+- **nnn_percent** – Uma casa acima das nuvens
+- **PillowKebap** – &#26087;&#19990;&#30028;&#12392;&#26032;&#12398;&#25161; (o mundo antigo e uma porta para o novo)
+- **Moon_666** – Rime of the Ancient Mariner, provisório
+- **NCGpotechi** – Uma combinação de lobbies de minijogos de servidores existentes e consoles
+- **ErnFern** – Um projeto inspirado em ruínas
+- **taiyaki5190** – O End
+- **MC kiri 4649** – Um cruzamento no estilo de Shibuya
+
+taka8621 propôs inicialmente uma rocha e retirou a ideia em 6 de junho.
+
+Em julho de 2022, Maro liderou a construção do lobby antigo e informou sua conclusão. Os registros da obra no antigo canal do Discord agradeceram a BM_yurikun pelo paisagismo e a _BE_ChalkyMink87 por embutir minérios na base. KOTA-SAN preparou um espaço para compartilhar o andamento da obra.
+
+Em 26 de julho de 2022, Moon\_666 informou que havia colocado um bloco de andaime no lobby para resgatar outro jogador.
+
+Em 2 de agosto de 2022, Yukke informou ter acrescentado uma bifurcação ao caminho que levava a uma farm de criaturas.
+
+Em agosto de 2022, \_BE\_Kuten2021110 começou a delimitar com terra a área prevista para a praça provisoriamente chamada Ace e pediu ajuda na construção e no projeto do estádio. Também compartilhou um esboço à mão com um percurso ao redor da praça, estábulos para cavalos e espaço para barracas. Também preparou um projeto preliminar para os estábulos e compartilhou quatro capturas de tela mostrando o exterior e o interior. &#12525;&#12483;&#12463;&#12384;&#12424;&#12316; (BlissfulRook\_BE\_) mostrou uma foto de estábulos como referência e sugeriu um telhado triangular de ardósia. No dia seguinte, \_BE\_Kuten2021110 compartilhou uma imagem da estrutura que montou em um mundo de testes.
+
+Em agosto de 2022, Yukke informou no antigo canal da liga PvP no Discord que a sala de espera estava quase pronta. Em 15 de agosto, KOTA-SAN usou o mesmo canal para convidar os participantes a dar opiniões sobre a liga PvP. Em 17 de agosto, informou que havia construído uma arena subterrânea. Em 24 de agosto, ゆり compartilhou quatro imagens do palco do LuMiSIA Dome e explicou como a posição das paredes e dos cactos mudava a maneira de se movimentar e jogar. Em 28 de agosto, ゆり informou que os assentos do terraço estavam concluídos e compartilhou uma foto mostrando fileiras de assentos cobertos.
+
+Em 16 de setembro, &#12450;&#12510;&#12484; informou que havia construído as estruturas básicas da entrada, do palco, da sala de espera dos jogadores, das arquibancadas, da cabine de narração e dos corredores, e que começaria a decorá-las.
+
+Em agosto de 2022, taka8621 reuniu em um guia as instalações e as pessoas responsáveis. O guia da época registrou as seguintes contribuições.
+
+- **タケ** — Fazenda de cactos. [Anúncio da fazenda de cactos](https://discord.com/channels/737538781024092170/779569416438415421/1001883117402984459)
+- **&#12422;&#12387;&#12369;&#12539;&#12383;&#12356;&#12420;&#12365;** — Responsabilidade compartilhada pela fazenda aérea de experiência. &#12422;&#12387;&#12369; também ficou a cargo do gerador de argila, e &#12383;&#12356;&#12420;&#12365;, da fazenda automática de abóboras e melancias e da loja de animais.
+- **taibon** — Centro de trocas compartilhado.
+- **&#12525;&#12483;&#12463;** — Fazenda automática de lã.
+- **&#12450;&#12510;&#12484;** — Descoberta de biomas de deserto, mesa, mar com corais e flores.
+- **&#12426;&#12435;&#12372;** — Fazenda de golens e centro de trocas de grande porte.
+- **Moon** — Fazenda aérea de experiência, sala aérea de bibliotecários e fazenda de guardiões.
+- **Minku** — Bar.
+- **&#26525;&#35910;** — Segundo projeto do Coliseu.
+
+Em uma atualização de setembro de 2022, taka8621 indicou Moon como responsável pela fazenda de blazes, e Moon e sh31415 como responsáveis pela fazenda de luz de sapo. sh31415 ficou a cargo do empréstimo gratuito de picaretas para novos jogadores. sh informou que disponibilizou picaretas de diamante e que houve outras doações. [Anúncio do empréstimo de picaretas](https://discord.com/channels/737538781024092170/779569416438415421/1015550548914733106)
+
+Em 4 de setembro de 2022, NCGpotechi informou que o exterior do castelo estava concluído e aberto a visitas. Naquele momento, o interior ainda estava em construção. NCGpotechi agradeceu a quem doou materiais. [Relato da conclusão do exterior do castelo](https://discord.com/channels/737538781024092170/779569416438415421/1015951272916045934)
+
+Em 11 de setembro de 2022, taka8621 propôs liberar os portais de acesso do End derrotando o Dragão do End repetidas vezes, com uma meta de cerca de 20 vitórias. A ideia era então começar a construir na ilha principal do End e montar uma fazenda de endermans.
+
+Em 3 de outubro de 2022, yanyan propôs fazer a mudança para o novo lobby junto com a abertura do servidor de recursos. Gui respondeu que a mesma época seria adequada se as condições pudessem ser confirmadas.
+
+De outubro de 2022 a janeiro de 2023, jogadores trabalharam na drenagem de um monumento oceânico e em uma instalação para guardiões, enquanto também escavavam para uma instalação de esqueletos Wither. Segundo os registros do antigo canal do Discord, taka8621 abriu um canal de trabalho. Moon_666 organizou a drenagem e a escavação, repôs materiais e trabalhou em uma área definida. Yukke pediu ajuda na escavação e preparou uma passagem até a fortaleza. [Chamada para ajudar na escavação do Nether](https://discord.com/channels/737538781024092170/779569416438415421/1053305090922004560)
+
+taibon0727 preparou materiais como vidro, um local para guardar barcos de transporte e um dispositivo para trabalhar com areia. SPdari forneceu areia. UtaTheIrasutā trabalhou no aterramento de áreas com lava e montou um posto de preparo de poções. nnn_percent ajudou no trabalho com areia para o aterramento e あすたん ajudou na escavação. SPdari também agradeceu a Buraki por orientar os participantes.
+
+Em 20 de outubro de 2022, ジェスター convidou recém-chegados a se candidatar para receber gratuitamente sua antiga casa do jogo e itens. Em 23 de outubro, informou que a oferta havia sido encerrada sem receber candidaturas. [Anúncio da doação](https://discord.com/channels/737538781024092170/779569416438415421/1032634176064725073) [Relato do encerramento da oferta](https://discord.com/channels/737538781024092170/779569416438415421/1033625009085743114)
+
+Em 29 de outubro de 2022, Moon\_666 anunciou a conclusão de várias cabanas destinadas a estadias curtas de novos jogadores. [Anúncio da conclusão das cabanas](https://discord.com/channels/737538781024092170/779569416438415421/1035908871044210708)
+
+Em novembro de 2022, あすたん convidou jogadores a ajudar na construção do Reino de Asutan. [Convite para ajudar a construir o reino](https://discord.com/channels/737538781024092170/779569416438415421/1041014423223009372)
+
+Em 26 de novembro de 2022, taibon852 anunciou que o salão de trocas de Taibon fecharia no dia seguinte. No início do servidor, taibon852 havia preparado trocas com aldeões bibliotecários para ajudar os jogadores a conseguir bons encantamentos. A publicação agradeceu a Hayakun e &#33775; pela ajuda na escolha das trocas e incluiu três imagens. [Anúncio de fechamento do salão e agradecimentos](https://discord.com/channels/737538781024092170/779569416438415421/1045990792168226846)
+
+Em dezembro do mesmo ano, ジェスター (que publicava como Dōke Shinshi@Jester Sub) informou que construiu com Buraki um cultivo de melancias em estilo de resort, com praia. [Relato da construção do cultivo de melancias](https://discord.com/channels/737538781024092170/779569416438415421/1048866874760364042)
+
+Em 12 de dezembro de 2022, ゆり disse que queria construir uma prefeitura no novo servidor e pediu ideias, inclusive para o tema do edifício. [Pedido de ideias para a prefeitura](https://discord.com/channels/737538781024092170/1051846941211885639/1051846941211885639)
+
+&#12383;&#12356;&#12420;&#12365; convidou as pessoas a dar suas ideias no tópico, preferiu a arquitetura ocidental e contou que estava construindo um protótipo da prefeitura. Outra pessoa compartilhou um esboço de um prédio em forma de muffin e sugeriu uma recepção no térreo e um salão no último andar. &#12422;&#12426; compartilhou uma captura do jogo com vários prédios arredondados. [Pedido de ideias de &#12383;&#12356;&#12420;&#12365;](https://discord.com/channels/737538781024092170/1051846941211885639/1051847985081876600) [Comentário sobre a arquitetura ocidental](https://discord.com/channels/737538781024092170/1051846941211885639/1052916577160413194) [Atualização do protótipo de &#12383;&#12356;&#12420;&#12365;](https://discord.com/channels/737538781024092170/1051846941211885639/1053247700428128256) [Esboço em forma de muffin](https://discord.com/channels/737538781024092170/1051846941211885639/1051851138036670527) [Captura do jogo compartilhada por &#12422;&#12426;](https://discord.com/channels/737538781024092170/1051846941211885639/1052587034751021086)
+
+Os registros do antigo canal do Discord sobre a pousada de águas termais informam que edamameRex_java, líder do projeto, recrutou membros e que ゆり anunciou como colaborar com a construção ou os materiais.
+
+No fim de dezembro de 2022, edamameRex_java informou que a construção da pousada de águas termais havia terminado, conforme consta nos registros do projeto.
+
+Em fevereiro de 2023, あすたん explicou como organizar uma escavação conjunta para uma instalação de piglins-zumbis.
+
+Em 4 de fevereiro de 2023, AGE_inari anunciou que havia concluído a construção do Gundam Barbatos em sua quarta forma, o primeiro modelo do grupo Gundam Corporation, e convidou os jogadores a visitá-lo. [Anúncio da conclusão do Barbatos](https://discord.com/channels/737538781024092170/779569416438415421/1071438739072630854)
+
+Em 12 de fevereiro, NCGpotechi anunciou que o interior do castelo no mar estava pronto e agradeceu a quem ajudou. O interior foi aberto à visitação, com arena e espaços para espectadores e narradores. Em 14 de fevereiro, &#12450;&#12510;&#12484; anunciou que a reforma interna e externa do portão do deserto estava concluída e que os jogadores podiam usar o local. [Abertura do interior do castelo](https://discord.com/channels/737538781024092170/779569416438415421/1074162305874542643) [Anúncio da reforma do portão do deserto](https://discord.com/channels/737538781024092170/779569416438415421/1074735358262136834)
+
+Em 16 de janeiro de 2023, Yukke informou que a escavação para a fazenda de esqueletos wither havia terminado e agradeceu a quem escavou ou forneceu materiais. [Fim da escavação e agradecimentos](https://discord.com/channels/737538781024092170/779569416438415421/1064539860737740830)
+
+Em 13 de março de 2023, Yukke anunciou a conclusão da farm de esqueletos Wither e agradeceu a quem ajudou na escavação. A farm ficaria aberta a todos depois da apresentação prevista para aquele dia. Em 25 de março, Moon\_666 informou que um alojamento para novos jogadores estava concluído e compartilhou uma foto. [Anúncio da conclusão da farm](https://discord.com/channels/737538781024092170/779569416438415421/1084675055700688937) [Foto do alojamento concluído](https://discord.com/channels/737538781024092170/779569416438415421/1089135055798022184)
+
+Em maio de 2023, edamameRex_java pediu ajuda para construir a Catedral Central. Em julho, End Cocker pediu ajuda com as construções do grupo de RPG e ofereceu moldes de ferraria e outros itens a quem colaborasse. Em julho de 2024, &#12422;&#12426; pediu ajuda para construir uma cidade ao redor do castelo. [Recrutamento para a Catedral Central](https://discord.com/channels/737538781024092170/779569416438415421/1110479305760329738) [Recrutamento do grupo de RPG](https://discord.com/channels/737538781024092170/779569416438415421/1128980475218772008) [Ajuda para construir a cidade](https://discord.com/channels/737538781024092170/779569416438415421/1262210786621784064)
+
+Em 31 de março de 2023, sh31415 contou que estava construindo uma masmorra com Asterisk, taibon, Nanashi, Yukke e MOON e pediu ajuda para escavar uma área de 100 por 100. [Projeto da masmorra e pedido de ajuda para a escavação](https://discord.com/channels/737538781024092170/779569416438415421/1091317917146153030)
+
+Em abril de 2023, あすたん explicou quais informações eram necessárias na época para solicitar grandes construções, e ゆり compartilhou um modelo de solicitação. ゆり também apresentou o plano de construir um túnel no trecho do Circuito Internacional do Reino de Kuwa que passava por uma montanha.
+
+Em 2 de maio de 2023, KOTA-SAN anunciou que pretendia começar no dia seguinte a construção da prisão provisoriamente chamada “Prisão Ace”. [Anúncio dos planos de construção da Prisão Ace](https://discord.com/channels/737538781024092170/773171457487929344/1102965633592852560)
+
+Em 30 de julho de 2023, sinragi\_lce\_1019 compartilhou fotos da casa pronta e agradeceu a quem ajudou a reunir os materiais e com outras tarefas. [Fotos da casa pronta e agradecimentos](https://discord.com/channels/737538781024092170/779569416438415421/1135139794280775741)
+
+Em uma inscrição no concurso de fotografia de novembro de 2023, Yukke relembrou a escavação de 256 chunks para a instalação de esqueletos Wither e as medidas para impedir o surgimento de criaturas. Em dezembro, あすたん descreveu como usou a instalação de Yukke para derrotar Withers com outros jogadores e criar um arco-íris com mais de 200 sinalizadores.
+
+Em 17 de janeiro de 2024, KITUNEKO0605 informou que havia recriado uma versão antiga do Aceserver e explicou que era possível visitá-la por um portal na ilha principal do End. Em 23 de março, &#12479;&#12465; sugeriu fazer arte para mapas em lugares pouco movimentados e travar o mapa pronto com um painel de vidro para preservá-lo. [Recriação e orientações para visita](https://discord.com/channels/737538781024092170/779569416438415421/1197088107082821662) [Dicas de arte para mapas](https://discord.com/channels/737538781024092170/779569416438415421/1221082086954504202)
+
+Em 4 de maio de 2024, sh informou ter criado um monumento no jogo dedicado a um jogador e pediu sugestões de quem poderia ser tema do próximo.
+
+Em maio de 2024, PillowKebap apresentou um pedido para um projeto de arte em mapas em grande escala. Em agosto, Amagi\_467 apresentou um plano de uma fazenda de golens para instalações públicas. Em novembro, タケ solicitou a construção de estruturas como um pátio ferroviário e depósitos.
+
+Em 29 de dezembro de 2024, sh31415 convidou jogadores a construir uma cidade do zero numa ilha remota do End. Outra publicação daquele dia procurou pessoas interessadas em fundar um país no End e receber moradores. [Convite para construir uma cidade no End](https://discord.com/channels/737538781024092170/779569416438415421/1322737207856988241) [Chamada para quem queria fundar um país](https://discord.com/channels/737538781024092170/779569416438415421/1322756768585089105)
+
+Em abril de 2025, Moon\_666 apresentou o plano de uma fazenda de invasões que qualquer jogador poderia usar. Em 15 de abril, Moon\_666 informou que a fazenda de invasões compatível com o Minecraft 1.21 estava pronta e que qualquer jogador poderia usá-la. [Relato da conclusão da fazenda de invasões](https://discord.com/channels/737538781024092170/773171457487929344/1361635002839990406)
+
+Em maio de 2025, End&#12539;コッカー compartilhou ideias para um RPG. A proposta incluía trocar por itens especiais os Salmos da Memória obtidos ao derrotar inimigos, além de uma história sobre uma grande árvore em uma ilha isolada. Em outra ideia, Sobrevivência à Deriva, considerou usar aldeões hostis como piratas e discutiu o tamanho do mapa.
+
+Em 13 de maio, End&#12539;コッカー relembrou a antiga entrada do servidor de RPG, que era ligada à prefeitura, e compartilhou uma imagem do local dentro do jogo. Yukke sugeriu colocar a entrada do servidor de RPG ao lado do servidor principal e dos demais no novo lobby planejado.
+
+Em 22 de junho de 2025, End&#12539;コッカー informou que estava construindo em uma ilha feita por Yukke.
+
+Em 22 de julho de 2025, &#12415;&#12389;&#12364;&#12397; pediu contribuições para construções em dois locais. Os interessados podiam enviar apenas ideias ou se oferecer para construir pessoalmente. [Pedido de contribuições para construções em dois locais](https://discord.com/channels/737538781024092170/773171457487929344/1397091645744349236)
+
+Em 1º de setembro de 2025, End&#12539;コッカー propôs incorporar criações de jogadores da comunidade como instalações do servidor de conteúdo.
+
+Em 1º de setembro de 2025, End&#12539;コッカー compartilhou, com uma imagem, a ideia de usar paredes de fachada para dar forma à parte externa do lobby.
+
+Em 2 de setembro de 2025, Yukke compartilhou quatro capturas como referência para Duelo. As imagens mostravam equipamentos de combate e o editor de kits de outro servidor. Yukke também indicou um ranking de PvP e vídeos de partidas.
+
+Em 5 de setembro, End&#12539;コッカー informou no antigo canal Construção do Lobby que havia montado uma base e pediu ajuda na construção. No dia 7, sugeriu mudar as escadas do servidor de minijogos de lugar e adicionar barracas. No dia 9, compartilhou três imagens do trabalho em andamento, com a fonte e as barracas da praça e um veleiro, e pediu a opinião de Yukke.
+
+Em 11 de setembro, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; perguntou quantos portais o projeto previa. Em 22 de setembro, Yukke informou que havia renomeado o canal de Construção do Lobby para Criação de Mapas.
+
+Em outubro de 2025, End&#12539;コッカー propôs um mapa cilíndrico para Fall Battle e a área em que os jogadores poderiam se movimentar.
+
+Em 20 de outubro de 2025, Nishikino Sega apresentou os planos do Comitê de Revitalização do Aceserver para uma estação de grande porte no servidor de temporada. Disse que a obra provavelmente incluiria um prédio no estilo de uma estação e sugeriu aproveitá-lo caso a equipe do servidor decidisse montar um posto de trocas.
+
+Em 1º de novembro de 2025, End&#12539;コッカー informou que havia conectado um portal de volta ao lobby e acrescentado placas no lobby com detalhes dos bastidores da criação.
+
+Em novembro de 2025, End&#12539;コッカー informou que havia instalado portais em oito direções para chegar a áreas distantes do servidor de sobrevivência. [Anúncio da instalação de portais](https://discord.com/channels/737538781024092170/774152638450237460/1434193495752704134)
+
+Em 4 de novembro de 2025, &#12479;&#12465; publicou um guia para explorar a região sudeste do servidor. O guia indicava as coordenadas de nove biomas, como cerejeiras, bambuzais e terras áridas, e mencionava os biomas que apareciam no caminho a partir do ponto inicial. [Guia dos biomas do sudeste](https://discord.com/channels/737538781024092170/779569416438415421/1435272329025294377)
+
+Em novembro de 2025, Moon\_666 informou que uma fazenda de piglins-zumbis que rendia ouro e experiência estava concluída no servidor de temporada. [Relato de conclusão no servidor de temporada](https://discord.com/channels/737538781024092170/1437442961507090443/1440300609545965649)
+
+Em 17 de janeiro de 2026, 山田 procurou pessoas interessadas em morar em uma grande área residencial. No dia 31, Amagi\_467 procurou um líder para desenvolver uma vila da Ferrovia Amagi e explicou que a ferrovia arcaria com os materiais e custos semelhantes.
+
+Em 2 de fevereiro de 2026, Merutak propôs preservar a construção do antigo lobby, cuja obra Maro liderou em 2022, transferindo-a para o lobby em uso na época.
+
+Em 11 de março de 2026, Merutak pediu ideias para o terreno e apresentou um monumento oceânico em escala de seis para um como uma das opções. Pluto sugeriu outras construções, como uma biblioteca enorme. sekisei sugeriu usar os materiais do monumento original só no exterior. [Convite para sugerir usos para o terreno](https://discord.com/channels/737538781024092170/1476561093244620913/1481297210389041334) [Proposta de materiais do monumento oceânico](https://discord.com/channels/737538781024092170/1476561093244620913/1481298053309661275)
+
+Em 16 de março de 2026, Merutak compartilhou fotos e informou que a posição das fundações do monumento oceânico havia sido demarcada. Merutak mencionou a ajuda de Harubie e Timū. [Marcação das fundações e agradecimentos](https://discord.com/channels/737538781024092170/779569416438415421/1483047092296482897)
+
+Em março de 2026, Merutak informou que a drenagem de uma área extensa para o projeto do Monumento Oceânico ×6 e da escavação a céu aberto havia sido concluída. Agradeceu a sega, take, sekisei, harubie, hatt, timu, buraki, yukke, moon, sinzin e siu pelos materiais e pela ajuda no trabalho. [Relato da drenagem e agradecimentos](https://discord.com/channels/737538781024092170/779569416438415421/1483522273020215497)
+
+Em 30 de março, Merutak informou que a construção do Monumento Oceânico ×6 estava concluída. Naquele momento, a escavação a céu aberto ainda estava em andamento. [Relato da conclusão do monumento](https://discord.com/channels/737538781024092170/779569416438415421/1488001468970827896)
+
+Em 8 de abril de 2026, 山田 propôs construir uma cidade afastada do centro e procurar moradores. shiina demonstrou interesse e disse que poderia ajudar a construir.
+
+Em 14 de abril de 2026, Moon\_666 construiu os Apartamentos da Mansão da Floresta no servidor de sobrevivência. Também informou que uma via de gelo para barcos havia sido aberta, ligando várias áreas, inclusive a região do Mercado Central. [Relato sobre os apartamentos e a via de gelo](https://discord.com/channels/737538781024092170/1437442902547759125/1493580742066966651)
+
+Em 18 de abril de 2026, Moon\_666 informou que os Apartamentos da Mansão da Floresta de n.º 1 a 3 estavam quase concluídos e que as instalações anexas ao n.º 2 ainda estavam em obras.
+
+Em 3 de junho de 2026, Pluto apresentou ideias de classes para o MMO, como usuários de espada e arco, magos e usuários de escudo, além de um sistema de melhoria de equipamentos em 11 etapas. Em 5 de junho, Pluto propôs uma masmorra com vários andares.
+
+Em 5 de junho de 2026, あすたん esboçou um MMO em que cada jogador escolheria uma classe, subiria de nível, reuniria equipamentos e ficaria mais forte com habilidades da classe e a distribuição de pontos. Em 12 de junho, informou que a implementação das funções básicas estava bem adiantada e que ainda faltava produzir as texturas e os modelos, as habilidades e o mundo, entre outros elementos.
+
+Em 2 de agosto de 2026, sh31415 informou que havia construído um edifício comercial no End. [Registro do edifício comercial](https://discord.com/channels/737538781024092170/779569416438415421/1533144809206845482)
+
+Em 11 de agosto de 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; informou que havia explorado o subsolo do Império Sega junto com &#12486;&#12451;&#12512;&#12373;&#12435;. No tópico da exploração, ficaram registradas imagens do conteúdo de uma caixa de shulker e das telas de detalhes dos equipamentos.
+
+Em 17 de setembro de 2026, タケ anunciou que o Comitê de Revitalização do Aceserver havia iniciado a revitalização da parte central da antiga área de Century. Também informou que várias pessoas haviam ajudado a limpar a área. [Início da revitalização da antiga área de Century](https://discord.com/channels/737538781024092170/1437442902547759125/1550005135311110154)
+
+Em 28 de setembro de 2026, あすたん considerou adicionar pesca ao MMO em desenvolvimento. No mesmo dia, ao discutir os preparativos para o teste beta do servidor de conteúdo, あすたん informou que havia implementado a pesca. Naquele mesmo dia, também compartilhou uma captura de um teste de pesca dentro do jogo. Em 3 de outubro anunciou no canal oficial de avisos do Discord o início do teste beta aberto do servidor de conteúdo e informou que era possível jogar Duel, um modo PvP de um contra um, e Fishing. [Anúncio do teste beta aberto do servidor de conteúdo (teste encerrado)](https://discord.com/channels/737538781024092170/774152638450237460/1555731149119164427)
+
+Em 31 de outubro de 2026, タケ anunciou que uma nova fazenda de cactos havia sido instalada no servidor de sobrevivência e que qualquer pessoa podia usá-la na época. [Anúncio da nova fazenda de cactos](https://discord.com/channels/737538781024092170/1437442902547759125/1565747261575790592)
+
+No mesmo dia, タケ pediu opiniões em uma pesquisa sobre ideias para a Escola Primária do Aceserver, como afixar avisos, apresentar instalações e distribuir guias. [Pesquisa sobre a Escola Primária do Aceserver](https://discord.com/channels/737538781024092170/1437442902547759125/1565988868879163453)
 
 ## Tecnologia e apoio
 
-Em julho de 2023, Yukke anunciou a criação de um novo mundo no servidor de recursos. Em novembro de 2025, foi introduzido um sistema de integração de chat entre Minecraft e Discord feito por あすたん. [Anúncio do mundo de recursos](https://discord.com/channels/737538781024092170/774152638450237460/1135574163080364103) [Anúncio da integração de chat](https://discord.com/channels/737538781024092170/774152638450237460/1437973211961622670)
+Em fevereiro de 2021, sya\_ri propôs uma configuração para entrar em vários servidores por uma entrada compartilhada e sugeriu formas de se conectar com Minecraft Java Edition e Bedrock Edition.
+
+Em março de 2021, KOTA-SAN informou que havia criado o Kutya, um bot de leitura em voz alta para o Discord. KOTA-SAN adicionou a opção de escolher de qual canal de texto o bot leria as mensagens e uma explicação para novos jogadores. Em maio, acrescentou uma lista de coordenadas das instalações.
+
+Em abril de 2021, KOTA-SAN informou que havia testado com sucesso uma forma de entrar usando o Nintendo Switch e propôs acrescentar orientações à página sobre como jogar do site da época.
+
+Em março de 2021, KOTA-SAN explicou as mudanças nas regras e na etiqueta de comunicação da época. Em maio, kuroneko229 publicou orientações sobre como agir e relatar atos de vandalismo no jogo ao presenciá-los. Em julho, てぃあ apresentou medidas de combate a esse tipo de vandalismo.
+
+Em agosto de 2021, てぃあ reuniu em um guia instalações importantes como a prefeitura, o centro de trocas, a plantação de árvores e a fazenda compartilhada, e indicou quais locais deveriam ser apresentados primeiro aos novos jogadores. Em fevereiro de 2022, はっ acrescentou hospedagem para novos jogadores ao guia de instalações compartilhadas.
+
+Em 3 de setembro de 2021, てぃあ explicou que o guia para novos jogadores recomendava consultar antes de construir perto de edifícios grandes. Em 9 de outubro, contou que, desde a criação do canal de guias, pensava em incluir imagens nas publicações que mostravam onde ficavam as instalações.
+
+Em agosto de 2021, KOTA-SAN reuniu comandos úteis dos plugins instalados na época.
+
+Segundo os registros do antigo canal do Discord, em agosto de 2021 KOTA-SAN informou que havia criado e colocado em funcionamento o Ace-kun, um bot que enviava orientações automaticamente a quem acabava de entrar no lobby. Em janeiro de 2022, como um dos criadores de Ace-kun e Kutya, KOTA-SAN informou que havia restaurado o Ace-kun. Em maio, adicionou a publicação automática de um modelo de apresentação pessoal.
+
+Em 26 de setembro de 2021, てぃあ explicou que, na época, era preciso fazer a vinculação com o Discord para entrar no mundo e descreveu o processo a partir da entrada no Discord. [Entrada e vinculação com o Discord na época](https://discord.com/channels/737538781024092170/773171457487929344/891626480537325618)
+
+Em 1º de outubro de 2021, KOTA-SAN informou que ainda poderia encaminhar dúvidas à equipe do servidor após deixar sua função nela. [Aviso sobre o encaminhamento de dúvidas](https://discord.com/channels/737538781024092170/773171457487929344/893335023158173729)
+
+Em janeiro de 2022, YM informou que havia escrito um livro com instruções para novos jogadores. Sugeriu colocar o livro em um púlpito no lobby ou dentro do trem preto em que os jogadores apareciam ao entrar no servidor de sobrevivência pela primeira vez. Outra proposta era incluir as instruções na mensagem inicial de boas-vindas. はっ disse que a opção da mensagem parecia viável, e YM pediu que seguissem com ela.
+
+Em 24 de fevereiro de 2022, ringoponn perguntou se Azkaban era um mundo para coletar recursos. はっ explicou que Azkaban seria tratado como um mundo independente, e yanyan_fafnir descreveu a ideia de um mundo onde os jogadores poderiam correr riscos em troca de itens e outras recompensas.
+
+Em 5 de março de 2022, \_BE\_NumberYapper propôs reorganizar o guia das instalações compartilhadas que qualquer pessoa podia usar. Em 11 de abril, sugeriu colocar um livro de instruções ou um púlpito no lobby ou no primeiro portal para que novos jogadores pudessem ler como participar. No dia 12, KOTA-SAN pediu o livro e a mudança de lugar do portal por causa de quem entrava em Azkaban por engano.
+
+Em 31 de março de 2022, durante o teste de um item em Azkaban, taibon852 informou que era preciso pó de blaze para usá-lo. Master_Yinfe observou que o item voltava a visão do jogador para um mob infernal e parecia funcionar a uma distância maior do que aquela em que a barra do chefe aparecia.
+
+Em 21 de abril de 2022, &#12414;&#12356;&#12369;&#12427; propôs organizar por faixas de horário a orientação aos novos jogadores. KOTA-SAN sugeriu deixar essa ajuda a cargo de quem se oferecesse.
+
+Em 9 de maio de 2022, KOTA-SAN expressou a opinião de que fazer parte da equipe do servidor, ter a função de apoiador ou ser participante regular não criava, por si só, a obrigação de contribuir. [Comentário sobre funções e contribuições](https://discord.com/channels/737538781024092170/773171457487929344/972983565832843334)
+
+Em maio de 2022, KOTA-SAN anunciou a instalação em caráter de teste de um plugin que ampliava as funções das placas. キツネコ (KITUNEKO0605) informou que tinha criado um livro dentro do jogo com uma lista de comandos e outras informações.
+
+Em maio de 2022, はっ compartilhou uma lista de itens do jogo para Azkaban.
+
+Em maio de 2022, Mugi informou que o Kutya passou a ler código Morse japonês em voz alta.
+
+Em junho de 2022, Mugi atualizou o bot de leitura Kutya para incluir o chat dos canais de voz. Em março de 2023, anunciou um bot para enviar comentários anônimos à equipe do servidor. [Atualização do Kutya](https://discord.com/channels/737538781024092170/774152638450237460/986439863937155122) [Anúncio do feedback anônimo](https://discord.com/channels/737538781024092170/774152638450237460/1087976366126927882)
+
+Em 2 de junho, durante a discussão sobre o modo de jogo para construir o lobby, Moon\_666 propôs que algumas pessoas escolhidas pela equipe construíssem as áreas principais no modo Criativo. [Proposta de construção no modo Criativo](https://discord.com/channels/737538781024092170/981568975387365466/981580332581138502)
+
+Na discussão, &#12399;&#12387; comparou a diversão da exploração e a construção mais demorada no modo Sobrevivência com a construção mais rápida e os danos que atos de vandalismo poderiam causar no Criativo. SPdari observou que seria preciso distribuir as tarefas em qualquer modo. \_BE\_NumberYapper apoiou o Criativo para que a equipe pudesse se concentrar na construção. [Comparação de modos feita por &#12399;&#12387;](https://discord.com/channels/737538781024092170/981568975387365466/981571059008548905) [Proposta de SPdari para distribuir tarefas](https://discord.com/channels/737538781024092170/981568975387365466/981570116800106580) [Argumento a favor do modo Criativo](https://discord.com/channels/737538781024092170/981568975387365466/981576997874569266)
+
+&#35199;&#26408;&#37326;&#28716;&#36032;&#27663; propôs um caminho cercado de construções emblemáticas do servidor que levasse a um portal. A capa de um livro escolar de história serviu de referência para organizar os prédios nos dois lados do caminho. [Proposta de caminho pela história do servidor](https://discord.com/channels/737538781024092170/981568975387365466/981584387193831525) [Imagem de referência para a disposição](https://discord.com/channels/737538781024092170/981568975387365466/981585534533128282)
+
+Em 4 de junho de 2022, はっ abriu uma discussão no Discord para uma reunião pública. Para o novo lobby, edamameRex_java sugeriu ilhas flutuantes, uma cidade submersa e uma ilha vulcânica, entre outras ideias. taiyaki5190 observou que, se o parkour fosse a única rota entre as ilhas, alguns jogadores talvez não conseguissem atravessar. KITUNEKO0605 agrupou as ideias em água, terra e céu. YM propôs preservar partes de grandes construções dos lobbies anteriores e do antigo mundo de sobrevivência. はっ reuniu as ideias da reunião em uma lista. [Discussão da reunião pública](https://discord.com/channels/737538781024092170/982599800375623740/982599800375623740) [Ideias de terreno de edamameRex_java](https://discord.com/channels/737538781024092170/982599800375623740/982604466471718982) [Observação sobre a passagem entre as ilhas](https://discord.com/channels/737538781024092170/982599800375623740/982605844204101712) [Ideias para água, terra e céu](https://discord.com/channels/737538781024092170/982599800375623740/982608900295622686) [Proposta de preservar construções antigas](https://discord.com/channels/737538781024092170/982599800375623740/982606978952101909) [Lista das ideias da reunião](https://discord.com/channels/737538781024092170/982599800375623740/982612891154915401)
+
+Na mesma reunião, Moon_666 sugeriu dar um ambiente diferente a cada portal, e &#12450;&#12510;&#12484; propôs um lobby sobre um grande lago no topo de uma montanha. &#38738;&#12367;&#12394;&#12387;&#12383;&#12376;&#12419;&#12364;&#12356;&#12418;&#65288;wawawa&#65289; propôs ligar ilhas flutuantes a edifícios em terra, com uma margem, construções da história do servidor e elementos de Azkaban debaixo d’água. [Proposta para os portais](https://discord.com/channels/737538781024092170/982599800375623740/982610376850030623) [Proposta do lago na montanha](https://discord.com/channels/737538781024092170/982599800375623740/982611106323386398) [Proposta de ilhas flutuantes, terra e áreas submersas](https://discord.com/channels/737538781024092170/982599800375623740/982611638790275115)
+
+YM sugeriu abrir um espaço para receber opiniões sobre o resultado da reunião e alternar os lobbies de vez em quando. &#12496;&#12523;&#12469;&#12511;&#12467;&#37218;&#37240; propôs miniaturas dos lobbies anteriores. Yukke sugeriu ilhas no céu de onde seria possível saltar até uma entrada de Azkaban em uma área parecida com o Nether. [Proposta para ouvir opiniões e alternar lobbies](https://discord.com/channels/737538781024092170/982599800375623740/982611453066510396) [Miniaturas dos lobbies anteriores](https://discord.com/channels/737538781024092170/982599800375623740/982618056184459294) [Proposta de lobby no céu](https://discord.com/channels/737538781024092170/982599800375623740/982621769766699008)
+
+&#32313;&#28218;?&#24385; compartilhou capturas de Minecraft de uma estrutura de vidro submersa e da parte superior do Chamomile como referências para o lobby. edamameRex_java também compartilhou uma captura de uma construção de vidro debaixo d’água. [Captura da construção submersa](https://discord.com/channels/737538781024092170/982599800375623740/982605304795648000) [Captura submersa de edamameRex_java](https://discord.com/channels/737538781024092170/982599800375623740/982605357115387924) [Captura do Chamomile](https://discord.com/channels/737538781024092170/982599800375623740/982617364954751026)
+
+&#32313;&#28218;?&#24385; também compartilhou o primeiro episódio de Ningyo Yamemasu, série de Minecraft de &#12395;&#12371;&#12383;&#12414;, como referência para imaginar uma cidade subaquática. [Publicação no Discord com o vídeo](https://discord.com/channels/737538781024092170/982599800375623740/982620667499388958) [Vídeo de referência de &#12395;&#12371;&#12383;&#12414;](https://www.youtube.com/watch?v=WtGk1GEcQdo)
+
+&#12356;&#12396;&#12397;&#12371; e KOTA-SAN compartilharam fotos de portais torii. NCGpotechi apresentou como referência uma construção de madeira e pedra no Minecraft. [Foto de referência de Inuneko](https://discord.com/channels/737538781024092170/982599800375623740/982606024265596958) [Foto de referência de KOTA-SAN](https://discord.com/channels/737538781024092170/982599800375623740/982611313811390484) [Exemplo de construção de NCGpotechi](https://discord.com/channels/737538781024092170/982599800375623740/982626931876958228)
+
+YM esboçou um projeto com ilhas flutuantes e áreas na superfície, no subsolo e debaixo d’água. &#12422;&#12426; desenhou uma torre que colocava um aquário, o Chamomile e outros elementos em andares distintos. &#12479;&#12465; reuniu parte das ideias em cinco esboços e depois compartilhou um desenho revisado com uma ligação vertical entre uma ilha flutuante e o subsolo. [Projeto integrado de YM](https://discord.com/channels/737538781024092170/982599800375623740/982610491480358943) [Desenho da torre de Yuri](https://discord.com/channels/737538781024092170/982599800375623740/982613773254811658) [Cinco esboços de Take](https://discord.com/channels/737538781024092170/982599800375623740/982614311694385152) [Desenho revisado de Take](https://discord.com/channels/737538781024092170/982599800375623740/982627482018652290)
+
+Em 25 e 26 de junho de 2022, yanyan_fafnir consultou os jogadores por meio de uma enquete dos apoiadores sobre abrir temporariamente o mundo de testes Azkaban como área de jogo. taibon0727 explicou que a ideia se parecia com uma versão de demonstração, e sh observou que a abertura aos jogadores também serviria como teste. taka8621 propôs um espaço onde fosse possível experimentar construções e circuitos sem fazer um pedido prévio.
+
+Em 15 de julho de 2022, &#12450;&#12510;&#12484; informou que ainda se aguardava a compatibilidade dos plugins com a versão mais recente da época e que um novo servidor estava sendo preparado. [Situação da preparação do servidor na época](https://discord.com/channels/737538781024092170/773171457487929344/997280482607771780)
+
+Em 23 de julho de 2022, um jogador perguntou por que não conseguia entrar no servidor principal pela Bedrock Edition. yanyan_fafnir explicou que o problema de conexão com o lobby havia sido resolvido e que o servidor principal ainda não tinha sido aberto.
+
+Em 2 de agosto de 2022, discutiu-se como o sono de outros jogadores afetava o tempo disponível para trabalhar à noite. PillowKebap observou que quem trabalhava à noite ficava sujeito às decisões dos demais jogadores e propôs retirar a opção de pular a noite.
+
+&#26666;&#24335;&#20250;&#31038;&#24093;&#29579; sugeriu alternar dias em que bastava uma pessoa dormir para amanhecer e dias em que a noite não poderia ser pulada. PillowKebap também propôs pular a noite apenas quando todas as pessoas dormissem. yanyan_fafnir informou que o dia e a noite deveriam seguir uma regra fixa e que a configuração ou o desenvolvimento poderia levar tempo. [Proposta de dias alternados de &#26666;&#24335;&#20250;&#31038;&#24093;&#29579;](https://discord.com/channels/737538781024092170/1003809673008386088/1003822015590957159) [Proposta de PillowKebap para que todos durmam](https://discord.com/channels/737538781024092170/1003809673008386088/1003825382610452521) [Direção anunciada por yanyan_fafnir](https://discord.com/channels/737538781024092170/1003809673008386088/1003842889727615086)
+
+Em 3 de agosto de 2022, ゆり explicou na discussão sobre comandos de placas como adicionar outro jogador a uma placa de proteção pelo procedimento da época. Uma mensagem posterior credita as instruções a &#12420;&#12435;&#12420;&#12435;. [Guia de placas de proteção](https://discord.com/channels/737538781024092170/1004370637856460921/1004370641593565295) [Crédito das instruções](https://discord.com/channels/737538781024092170/1004370637856460921/1004370700406104064)
+
+Em agosto de 2022, ゆり resumiu as questões em torno do uso dos élitros, como as diferenças entre jogadores, a carga do servidor, a resposta a acidentes e as regras de voo. Entre as ideias estavam um sistema semelhante a passagens aéreas e limites para os foguetes de artifício e as áreas de voo. taka8621 explicou que carregar muitos chunks rapidamente podia sobrecarregar o servidor. [Questões resumidas por ゆり](https://discord.com/channels/737538781024092170/1006189958006063134/1006198248257626152) [Ideias de passagens e limites](https://discord.com/channels/737538781024092170/1006189958006063134/1006200716022517800) [Explicação de taka8621 sobre a carga do servidor](https://discord.com/channels/737538781024092170/1006189958006063134/1006192987505709086)
+
+タケ sugeriu usar os élitros para trajetos curtos. PillowKebap propôs uma zona de voo com limites próprios, independentes da borda do mundo. edamameRex_java destacou a necessidade de obter pedra do End, e SPdari pediu acesso aos recursos encontrados apenas no End. [Proposta de trajetos curtos de タケ](https://discord.com/channels/737538781024092170/1006189958006063134/1006194237622210621) [Zona de voo proposta por PillowKebap](https://discord.com/channels/737538781024092170/1006189958006063134/1006194801873518612) [Observação de edamameRex_java sobre a pedra do End](https://discord.com/channels/737538781024092170/1006189958006063134/1006192301695045632) [Pedido de SPdari para abrir o End](https://discord.com/channels/737538781024092170/1006189958006063134/1006352258553876650)
+
+Em agosto de 2022, taka8621 pediu opiniões sobre uma proposta para proteger itens guardados em baús e outros recipientes, restringindo a quebra de blocos que contivessem itens. taibon0727 perguntou se baús e barris estariam incluídos e até que ponto essa proteção ajudaria a evitar o vandalismo no jogo.
+
+Em agosto de 2022, taka8621 compartilhou uma versão testada de um plugin contra vandalismo que limitava o que os jogadores podiam colocar no jogo. Em agosto e outubro, também compartilhou informações sobre outros plugins, incluindo para que serviam.
+
+Em 21 de agosto de 2022, KOTA-SAN escreveu que havia convocado pessoalmente uma reunião da equipe do servidor. [Publicação sobre a convocação da reunião](https://discord.com/channels/737538781024092170/773171457487929344/1010637852788408320)
+
+Em 5 de setembro de 2022, sh se ofereceu para ajudar a restaurar o servidor antigo e Azkaban caso precisassem de apoio. [Oferta de ajuda na restauração](https://discord.com/channels/737538781024092170/773171457487929344/1016001002085818428)
+
+Em setembro de 2022, Gui anunciou uma versão de teste do site. Em outubro, informou que havia separado o blog da documentação e preparado páginas que várias pessoas podiam editar. taka8621 pediu guias de comandos, guias ilustrados das instalações e mapas. yanyan sugeriu páginas editáveis. Em janeiro de 2023, &#33775;\*HAiNE testou o ambiente de edição da wiki e levantou a questão de como os leitores encontrariam as informações se os guias ficassem em páginas separadas.
+
+Entre julho e agosto de 2022, KOTA-SAN explicou as diretrizes da época para solicitar construções e preparar terrenos. Em outubro, taka8621 explicou como eram tratados os pedidos de comunidades e os carregadores de chunks.
+
+Em outubro de 2022, hana0c0haine informou que havia revisado todas as páginas da wiki que estavam publicadas e corrigido diferenças na grafia dos termos e na redação em japonês. Em março de 2023, あすたん separou os canais para quem editava a wiki e orientou a redação em Markdown.
+
+Em novembro de 2022, キツネコ propôs publicar na wiki as regras de uso do terreno e adotar modelos de solicitação separados para nivelamento e escavação a céu aberto. Nishikino Sega perguntou como pedir autorização para construir depois de nivelar o terreno. Em janeiro de 2023, taka8621 pediu ajuda para organizar as regras de construção e outras relacionadas, e &#33775;\*HAiNE apresentou uma proposta sobre escavações subterrâneas. Uma publicação de fevereiro de taka8621 registrou as sugestões reunidas por Yukke sobre a paisagem e o uso de aldeões em armadilhas.
+
+Em 30 de novembro de 2022, Nishikino Sega explicou que, na época, os apoiadores e a equipe do servidor funcionavam de modo semelhante a uma organização de voluntariado. [Descrição da organização dos apoiadores e da equipe na época](https://discord.com/channels/737538781024092170/773171457487929344/1047408144877371423)
+
+Em dezembro de 2022, Mugi informou que a função de dicionário do Kutya havia voltado.
+
+Em 11 de dezembro de 2022, asutarisucu explicou como entrar na época. A orientação era adicionar o Aceserver à lista de servidores, conectar-se e depois ir para o lobby. [Instruções de entrada da época](https://discord.com/channels/737538781024092170/773171457487929344/1051173223628296253)
+
+Em 28 de dezembro de 2022, asutarisucu relatou lentidão perto do portal do Nether mais próximo do posto de trocas da equipe do servidor. SPdari também notou lentidão dentro do posto. Na mesma conversa, Moon\_666 acrescentou que havia muitos animais de criação no lado norte do posto. [Relato de lentidão perto do portal do Nether](https://discord.com/channels/737538781024092170/773171457487929344/1057515450092761128) [Relato de lentidão dentro do posto de trocas](https://discord.com/channels/737538781024092170/773171457487929344/1057515873667141692) [Observação sobre o lado norte do posto](https://discord.com/channels/737538781024092170/773171457487929344/1057516955705290782)
+
+Em 14 de janeiro de 2023, &#33775;\*HAiNE redigiu a ata de uma reunião da equipe responsável pelo servidor e compartilhou um resumo dos pontos sobre as regras e das tarefas pendentes. No dia seguinte, はっ também resumiu a discussão sobre a organização das regras e pediu aos integrantes que a revisassem.
+
+Em janeiro de 2023, あすたん publicou no guia de entrada do Discord da época instruções ilustradas para se conectar com Minecraft Java Edition e Bedrock Edition.
+
+Em 11 de fevereiro de 2023, taka8621 compartilhou os dados do Dynmap gerados no servidor principal e pediu ajuda para disponibilizar o mapa para consulta.
+
+Em 6 de março de 2023, Gui fez uma migração de teste do banco de dados e relatou que ela levou menos tempo. Em 11 de maio, taka8621 explicou que usava um plugin para verificar a velocidade de processamento do servidor e a latência da rede.
+
+Em 21 de março de 2023, taka8621 compartilhou sete imagens com as receitas personalizadas que o Aceserver tinha na época. Elas mostravam exemplos que usavam grama ou lajes de carvalho petrificado como ingredientes e receitas de livros encantados e equipamentos.
+
+Em 23 de março de 2023, NIkumatu514 perguntou se seria possível instalar um portal temporário do local do evento até o servidor de recursos.
+
+Em 29 de março de 2023, &#12384;&#12426; propôs criar um canal para dar orientações mais detalhadas aos novos jogadores.
+
+Em 31 de março de 2023, em uma conversa com Moon\_666, あすたん explicou que uma atualização do código da wiki havia aumentado o tamanho em que o mapa do mundo era exibido.
+
+Em abril de 2023, Yukke informou que havia adicionado a pronúncia de «Hi» ao dicionário de leitura em voz alta da integração de chat usada na época.
+
+Em maio de 2023, あすたん reuniu em um guia a finalidade de cada servidor na época e as orientações para encontrar a wiki e o mapa do mundo. O guia também mostrou com imagens as entradas do servidor principal e do servidor de recursos. Nesse mesmo mês, あすたん explicou os recursos de proteção do CoreProtect e do LWC em outro guia.
+
+Em 9 de junho de 2023, jogadores novos e veteranos foram convidados a sugerir perguntas para o canal de perguntas frequentes. Entre as sugestões estavam como consultar o mapa do mundo e como mudar para o mapa do mundo de recursos. [Pedido de sugestões para as perguntas frequentes](https://discord.com/channels/737538781024092170/1116503107619266590/1116503111893258250) [Perguntas sugeridas sobre os mapas](https://discord.com/channels/737538781024092170/1116503107619266590/1116511197781561354)
+
+Em junho de 2023, タケ perguntou no canal de conversa em inglês se havia um bot que pudesse traduzir entre inglês e japonês.
+
+Em 24 de junho de 2023, タケ relatou que o jogo costumava fechar ao entrar, pelo Nintendo Switch, no posto de trocas administrado pela equipe do servidor. [Relato de falha no Nintendo Switch](https://discord.com/channels/737538781024092170/773171457487929344/1122011036246097970)
+
+Em julho de 2023, Yukke anunciou a criação de um novo mundo no servidor de recursos. [Anúncio do mundo de recursos](https://discord.com/channels/737538781024092170/774152638450237460/1135574163080364103)
+
+Em 21 de julho de 2023, Moon\_666 informou que as informações básicas estavam no canal de guias que o Aceserver tinha na época. Nesse mesmo dia, キツネコ (KITUNEKO0605) disse que faria um livro de instruções dentro do jogo.
+
+Também em 21 de julho de 2023, Biwahoshi perguntou como poderia orientar os novos jogadores, e タケ sugeriu mostrar locais recomendados.
+
+Em julho de 2023, あすたん escreveu e publicou guias de comandos para LWC, CoreProtect, Gsit e LunaChat. Em agosto, taka8621 explicou como obter e trocar grama alta pelo plugin de grama. Em setembro, acrescentou orientações sobre o uso do comando de troca de grama.
+
+Em setembro de 2023, foi anunciado que あすたん passaria a integrar a administração e que Taka ficaria responsável pelos sistemas. Em maio de 2024, はっ anunciou que sh e sekisei passaram a apoiar os usuários em assuntos ligados aos sistemas. [Nomeações de 2023](https://discord.com/channels/737538781024092170/774152638450237460/1151168895076548669) [Funções de apoio de 2024](https://discord.com/channels/737538781024092170/774152638450237460/1236592686253867008)
+
+Em 25 de agosto de 2024, uma publicação pediu ajuda para criar ícones para os apoiadores. [Pedido de ajuda para criar ícones para apoiadores](https://discord.com/channels/737538781024092170/773171457487929344/1276960877014417418)
+
+No fim de setembro de 2024, sekisei preparou uma proposta para organizar as responsabilidades de quem apoiava os usuários na época. A proposta incluía divulgação, edição da wiki, apoio aos eventos no servidor de jogo e coordenação das atividades na comunidade.
+
+Em 13 de setembro de 2023, Mugi compartilhou um rascunho das regras Ē-hō e sugeriu omitir uma frase que explicava como os itens estavam organizados.
+
+Em 4 de outubro de 2023, あすたん informou que a configuração das permissões dos comandos de troca entre servidores tinha sido concluída.
+
+Em 26 de outubro de 2023, Syake consultou a wiki e informou que não tinha encontrado a indicação de quais versões do Minecraft o servidor aceitava.
+
+Em dezembro de 2023, depois de vencer uma competição PvP, taiyaki5190 pediu ideias para novos itens de Azkaban. Barrel2next sugeriu uma armadura e uma espada que produziriam um efeito quando usadas juntas. nnn\_percent propôs um item consumível que permitiria atravessar blocos temporariamente. [Pedido de ideias para itens](https://discord.com/channels/737538781024092170/1183387092395495505/1183387096975679518) [Proposta de armadura e espada](https://discord.com/channels/737538781024092170/1183387092395495505/1183447073572519998) [Proposta de item para atravessar blocos](https://discord.com/channels/737538781024092170/1183387092395495505/1183688251878420480)
+
+Em janeiro de 2024, あすたん abriu o Ace Server Leaderboard Archive (ASLA), um servidor no Discord para reunir registros do Aceserver. Explicou as regras de participação e como enviar os registros. Também publicou listas de mineração, estatísticas e lingotes. キツネコ, Feruno e Taiyaki enviaram estatísticas ao canal de contribuições, e Tabekirareta Potechi sugeriu candidatos para registros como o primeiro castelo.
+
+Em 26 de março de 2024, Mugi explicou que, na época, os apoiadores ajudavam a equipe do servidor e orientavam novos participantes. [Funções dos apoiadores na época](https://discord.com/channels/737538781024092170/773171457487929344/1222193389349372005)
+
+Em 4 de abril de 2024, uma publicação pediu sugestões de instalações compartilhadas úteis e pontos turísticos para o canal de informações, com coordenadas e uma descrição. [Pedido de informações sobre instalações](https://discord.com/channels/737538781024092170/1225371645196107906/1225371648023072820)
+
+Em 2 de maio de 2024, taka8621 demonstrou preocupação com a concentração de construções no posto de trocas administrado pela equipe do servidor. Moon\_666 propôs manter o posto e acrescentar livros encantados. [Preocupação com a concentração de construções](https://discord.com/channels/737538781024092170/773171457487929344/1235256015130202267) [Proposta sobre o posto de trocas e os livros encantados](https://discord.com/channels/737538781024092170/773171457487929344/1235254526353735743)
+
+Em 2 e 9 de junho de 2024, taka8621 compartilhou os planos de uma atividade prática sobre plugins para Minecraft. A ideia era preparar um projeto e um ambiente de testes, executar o plugin criado e criar e testar um comando personalizado.
+
+Em julho de 2024, taka8621 documentou o procedimento de reinicialização do mundo do servidor de recursos e o compartilhou com a equipe do servidor.
+
+Em 5 de setembro de 2024, sekisei informou que estava criando um minijogo em que os jogadores usariam bolas de neve para quebrar os blocos sob os adversários e fazê-los cair. Também foram discutidas propostas para recriar outros minijogos e desenvolver novos.
+
+Em 8 de setembro de 2024, sekisei falou sobre um minijogo que estava desenvolvendo como projeto pessoal. A ideia era disponibilizá-lo primeiro por tempo limitado no servidor de eventos e, mais adiante, permitir que os jogadores entrassem a qualquer momento. [Planos de lançamento do minijogo](https://discord.com/channels/737538781024092170/773171457487929344/1281994129416523786)
+
+Em 2 de novembro de 2024, タケ lembrou que, na época, o mundo do servidor de recursos passava por reinicializações regulares e orientou os jogadores a seguir projetos para a Edição Java ao construir mecanismos no jogo.
+
+Em outubro de 2024, sekisei preparou um guia sobre o uso do plugin de portais Advanced Portals no Minecraft 1.21 e em versões posteriores. Em dezembro, reuniu informações sobre a localização dos portais no servidor.
+
+Em 24 de dezembro de 2024, asutarisucu propôs uma revisão ampla dos plugins existentes do Aceserver. No dia seguinte, explicou que o ambiente Paper da época usava a versão em plugin do mod em discussão. [Proposta de revisão dos plugins](https://discord.com/channels/737538781024092170/773171457487929344/1321107837891383317) [Explicação sobre a versão em plugin usada na época](https://discord.com/channels/737538781024092170/773171457487929344/1321352642907078706)
+
+Em janeiro de 2025, sekisei informou que a receita de fabricação de grama estava indisponível após uma atualização.
+
+Em 11 de março de 2025, End&#12539;コッカー preparou um rascunho de guia para novos jogadores, incluindo como consultar o site oficial e a wiki, entrar no Discord e fazer a vinculação com o Minecraft. [Rascunho do guia para novos jogadores](https://discord.com/channels/737538781024092170/773171457487929344/1348935788095737869)
+
+Em 11 e 12 de março de 2025, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; indicou a filosofia do servidor na wiki como referência durante as conversas sobre seus rumos. Também compartilhou um diagrama do modelo de comunidade do Aceserver que mostrava a relação entre os jogadores, o lobby e os diferentes servidores. [Filosofia do servidor na wiki oficial](https://asv-wiki.acecore.net/article/rinen/)
+
+Em 26 de março de 2025, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; compartilhou um plano para analisar em uma reunião geral as propostas de organização do Discord e dos servidores de jogo antes de avançar com a preparação do lobby e de outros espaços.
+
+Em 28 de março de 2025, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; reuniu e compartilhou uma proposta no antigo tópico do Discord sobre regras. O texto incluía pontos sobre a cooperação e os conflitos entre jogadores.
+
+Em 8 de junho de 2025, sekisei propôs substituir o sistema anterior por um sistema comum de pontos. A proposta abrangia jogar nos diferentes servidores, eventos organizados pelos participantes e atividades no Discord.
+
+Em julho de 2025, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; criou e compartilhou um diagrama como referência para avaliar o sistema. No mesmo mês, sekisei informou que conseguiu se conectar pela Bedrock Edition.
+
+Em 7 de setembro de 2025, sekisei propôs anunciar cedo como os diferentes servidores seriam organizados e convidar a comunidade a ajudar a construir os lobbies do servidor de sobrevivência e de outros servidores.
+
+Em setembro de 2025, sekisei organizou propostas para criar salas de minijogos, entrar nelas pelo lobby e configurá-las. Em 11 de setembro, あすたん propôs guardar os resultados das partidas para consultas. No dia 15, Yukke propôs registrar e mostrar vitórias, derrotas e sequências de vitórias.
+
+Em 12 de setembro de 2025, Yukke compartilhou um esboço sobre a moeda do jogo. A proposta era usar Ace Coins no lobby, nos minijogos e em outros espaços e manter os pontos de grama que já existiam nos servidores de sobrevivência e de temporada.
+
+Em 1º de outubro de 2025, Pluto propôs adicionar ao lobby um recurso para redefinir o progresso dos jogadores.
+
+Em 5 de outubro de 2025, sekisei apontou questões a esclarecer sobre a proposta de estrutura dos servidores e de moeda. Entre elas estavam como consultar os Ace Coins, como salvar os dados dos mundos e se seria possível realizar eventos no servidor principal. [Questões sobre a estrutura dos servidores e a moeda](https://discord.com/channels/737538781024092170/773171457487929344/1424077696555815053)
+
+Em 6 e 27 de outubro de 2025, あすたん informou que havia preparado um sistema para reunir e conferir as configurações dos minijogos na tela.
+
+Entre o fim de outubro e o início de novembro de 2025, ゆり organizou e publicou separadamente as regras gerais, do servidor de sobrevivência, de conteúdo, de temporadas, de criação de servidores temáticos, da comunidade e do Discord, no fórum de regras do Discord oficial. [Publicação das regras gerais](https://discord.com/channels/737538781024092170/1433831969816449064/1433831969816449064) [Publicação das regras da comunidade](https://discord.com/channels/737538781024092170/1433830521238061227/1433830521238061227) [Publicação das regras do Discord](https://discord.com/channels/737538781024092170/1433957818674970654/1433957818674970654)
+
+Em novembro de 2025, foi introduzido um sistema de integração de chat entre Minecraft e Discord feito por あすたん. [Anúncio da integração de chat](https://discord.com/channels/737538781024092170/774152638450237460/1437973211961622670)
+
+Em novembro de 2025, ゆり explicou como vincular Minecraft e Discord na época e publicou as regras gerais no canal destinado à confirmação delas. End&#12539;コッカー publicou perguntas frequentes para quem tinha dúvidas sobre a confirmação das regras ou onde concluir a vinculação com o Discord. [Guia de vinculação de Minecraft e Discord](https://discord.com/channels/737538781024092170/1434155347832078398/1434158498148651008) [Regras gerais no canal de confirmação](https://discord.com/channels/737538781024092170/1386851151428980856/1434162187475091529) [Perguntas frequentes sobre regras e vinculação](https://discord.com/channels/737538781024092170/1104052367407718533/1438756485701173270)
+
+Em novembro de 2025, sekisei propôs uma loja vinculada às Ace Coins para cargos e itens cosméticos, além de um recurso para personalizar perfis.
+
+Em dezembro de 2025, sekisei publicou orientações para usar o servidor temático Season Creative. Em janeiro de 2026, informou que havia transferido a gestão do servidor para sh31415. [Guia do Season Creative](https://discord.com/channels/737538781024092170/1445004286793879602/1445004286793879602) [Relato da transferência da gestão](https://discord.com/channels/737538781024092170/1445004286793879602/1460090096475832425)
+
+Em 14 de dezembro de 2025, sekisei propôs que o servidor anteriormente sugerido para o mapa da temporada também funcionasse como lobby. [Proposta para o servidor do mapa da temporada e o lobby](https://discord.com/channels/737538781024092170/773171457487929344/1449615766927314956)
+
+Em 14 de janeiro de 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; explicou aos novos jogadores as diferenças para se conectar pelo Minecraft Java Edition e Bedrock Edition. Em outra mensagem no mesmo canal, compartilhou uma única imagem que mostrava, lado a lado nas duas edições, o botão para adicionar um servidor e os campos de nome e endereço. [Guia de conexão para Java e Bedrock](https://discord.com/channels/737538781024092170/1460983001809948744/1460983826439471380) [Telas de Java e Bedrock lado a lado](https://discord.com/channels/737538781024092170/1460983001809948744/1460983916172148859)
+
+Em fevereiro, sekisei mostrou como chegar ao guia de vinculação a partir da etapa de confirmação das regras. [Da confirmação das regras ao guia de vinculação](https://discord.com/channels/737538781024092170/1386851151428980856/1467714894060060918)
+
+Em 12 de fevereiro de 2026, sekisei organizou as tarefas pendentes para colocar o sistema de moeda do jogo em pleno funcionamento. Entre elas estavam a migração da moeda antiga e a implementação de uma função de compra no servidor de sobrevivência, além do uso de Ace Coins. [Preparativos do sistema de moeda](https://discord.com/channels/737538781024092170/773171457487929344/1471334013443506228)
+
+Em 26 de fevereiro de 2026, Merutak pediu sugestões de canais do Discord que poderiam ser arquivados. Mugi indicou canais de eventos antigos, entre outros, e propôs reaproveitar os canais existentes para reduzir a necessidade de criar outros. [Pedido de sugestões para arquivamento](https://discord.com/channels/737538781024092170/1476561093244620913/1476567428610658457) [Proposta de reaproveitamento de canais](https://discord.com/channels/737538781024092170/1476561093244620913/1476568683689283686)
 
 Em fevereiro de 2026, Merutak informou a criação de dois cargos no Discord para avisos sobre problemas e interrupções do servidor. [Publicação original](https://discord.com/channels/737538781024092170/774152638450237460/1477293143773810822)
+
+Em março de 2026, あすたん publicou as regras do servidor de recursos. Em julho, sekisei publicou uma atualização no mesmo tópico. [Publicação das regras do servidor de recursos](https://discord.com/channels/737538781024092170/1486515511029268610/1486515511029268610) [Publicação da atualização](https://discord.com/channels/737538781024092170/1486515511029268610/1531835894196080653)
+
+Em 12 e 13 de março de 2026, sekisei procurou pessoas interessadas em um curso de Java para iniciantes e em um curso de revisão que incluía a criação de mods e plugins para Minecraft. Em 13 de março, sekisei esboçou um curso de cinco dias sobre a configuração do ambiente de desenvolvimento, os fundamentos de Java e a criação, instalação e teste de plugins para Minecraft, com um último dia opcional sobre programação orientada a objetos.
+
+Em 12 de abril de 2026, End&#12539;コッカー propôs usar as reuniões regulares da equipe para compartilhar os assuntos que se acumulavam e tratar de mudanças importantes em reuniões separadas.
+
+Em maio de 2026, End&#12539;コッカー sugeriu melhorar os textos do portal e a forma de exibir as fotos. Em junho, informou que havia pedido a &#35377;&#21487;&#12385;&#12419; que implementasse uma maneira de ver imagens de construções do Minecraft deslizando o dedo sem atrapalhar a navegação.
+
+Em 23 de julho de 2026, sekisei apresentou três temas previstos para as palestras técnicas. A lista incluía uma introdução a Java para criar plugins de Minecraft, uma palestra sobre internet e servidores para rodar um servidor de Minecraft no Linux e projetos de eletrônica para estudo independente. Em 31 de julho, sekisei anunciou a primeira palestra sobre servidores e internet e indicou aos participantes um vídeo com as etapas de preparação. End&#12539;コッカー compartilhou o lembrete. [Temas previstos para as palestras](https://discord.com/channels/737538781024092170/779569416438415421/1529527913395781672) [Anúncio da palestra técnica](https://discord.com/channels/737538781024092170/774152638450237460/1532641413500633108)
+
+Em julho de 2026, durante a discussão sobre incluir a moeda do jogo no posto de trocas administrado pela equipe do servidor, sekisei compartilhou as taxas de troca anteriores, informou que havia implementado a troca direta de itens e disse que pretendia testá-la. Merutak propôs permitir a troca de esmeraldas pela moeda do jogo por tempo limitado. あすたん sugeriu excluir das trocas os itens que podiam ser produzidos em grandes quantidades, e End&#12539;コッカー propôs organizar as taxas de troca para a venda de itens. End&#12539;コッカー também compartilhou uma tabela com as quantidades necessárias e os preços de venda de cada item de troca.
+
+Em agosto de 2026, あすたん informou que havia reformulado o painel web da moeda do jogo e pediu uma revisão. No fim de agosto, sekisei perguntou se o painel já havia sido testado. Em setembro, あすたん voltou a pedir uma revisão a sekisei.
+
+Entre setembro e outubro de 2026, End&#12539;コッカー organizou o guia de entrada no Minecraft da época para facilitar o acesso a regras, apresentações e materiais de referência sobre a conexão. Também reuniu os locais onde consultar as regras de cada mundo. Em 27 de setembro, propôs um canal dedicado a orientações, com tópicos separados sobre como entrar, os comandos e a localização das instalações.
+
+Em 1º de outubro de 2026, durante a discussão sobre um banco de dados para organizar materiais de solução de problemas, あすたん disse que primeiro era preciso decidir o nível de detalhe usado para registrar os sintomas. A proposta dividia os casos entre problemas dentro do Minecraft, problemas para entrar no servidor e outros.
+
+Em 30 de setembro de 2026, End&#12539;コッカー partilhou um vídeo de terceiros para ajudar quem queria participar no modo multijogador da versão de Minecraft para Nintendo Switch. [Vídeo de orientação para Switch partilhado na época](https://www.youtube.com/watch?v=1ndsOexBJIk)
+
+Em outubro de 2026, sekisei propôs que quem chegasse ao lobby pela primeira vez passasse por um mundo introdutório antes de seguir para o lobby normal. End&#12539;コッカー compartilhou o [mapa oficial dos mundos](/pt/world-map/) para consultar o servidor de sobrevivência e outros mundos e propôs explicar os comandos, a terminologia do servidor e Shop no guia. Em 21 de outubro, End&#12539;コッカー informou que o lobby introdutório estava pronto. Duas imagens que publicou naquele dia mostravam um púlpito com as regras e um portal.
+
+Em 26 de outubro de 2026, End&#12539;コッカー propôs preparar e publicar uma versão inicial da mensagem do lobby e depois fazer acréscimos e edições periódicas.
+
+Em 11 de novembro de 2026, Gui indicou as perguntas frequentes e o guia de entrada da wiki oficial para quem tinha problemas de conexão, verificação ou vinculação com o Discord. Se o problema persistisse, orientou a usar o canal de perguntas à equipe e informar o dispositivo, se usava Java Edition ou Bedrock Edition, o erro e os passos já tentados. [Como pedir ajuda à equipe](https://discord.com/channels/737538781024092170/1569771434945806476/1569771922676252713)
 
 Estas atividades são apenas parte das contribuições recebidas. Agradecemos a todas as pessoas que ajudaram. Para informações atuais sobre participação e contato, consulte o [guia de participação](https://asv-wiki.acecore.net/article/in/) e [guia de contato](https://asv-wiki.acecore.net/article/application-method/).

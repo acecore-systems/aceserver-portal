@@ -10,6 +10,9 @@ import {
 } from '../i18n/config'
 import { getUi } from '../i18n/translations'
 import BaseLayout from '../layouts/BaseLayout.astro'
+import { contributorStoryCopy } from '../data/contributor-story'
+import Icon from './Icon.astro'
+import StoryContributorPanels from './StoryContributorPanels.astro'
 import '../styles/article-diagrams.css'
 
 interface Props {
@@ -41,6 +44,8 @@ const updatedLabelByLocale: Record<Locale, string> = {
 }
 const { Content } = await render(story)
 const storySlug = story.id.split('/').at(-1) ?? story.id
+const contributorCopy =
+  storySlug === 'aceserver-contributors' ? contributorStoryCopy[locale] : null
 const allStories = await getCollection('stories')
 const relationSource =
   allStories.find((candidate) => candidate.id === storySlug) ?? story
@@ -167,7 +172,7 @@ const breadcrumbJsonLd = serializeJsonForHtmlScript({
   <script type="application/ld+json" set:html={articleJsonLd} />
   <script type="application/ld+json" set:html={breadcrumbJsonLd} />
   <article data-discord-cta="story">
-    <div class="story-shell">
+    <div class:list={['story-shell', contributorCopy && 'contributor-story']}>
       <nav class="story-breadcrumb" aria-label={ui.breadcrumbLabel}>
         <ol>
           <li>
@@ -201,6 +206,22 @@ const breadcrumbJsonLd = serializeJsonForHtmlScript({
           )}
           <span>{ui.byAuthor.replace('{author}', story.data.author)}</span>
         </div>
+        {contributorCopy && (
+          <nav class="story-panel-nav" aria-label={contributorCopy.navigation}>
+            <a href="#contributors">
+              <Icon name="users-round" />
+              {contributorCopy.contributors}
+            </a>
+            <a href="#roadmap">
+              <Icon name="map" />
+              {contributorCopy.roadmap}
+            </a>
+            <a href="#activity-record">
+              <Icon name="scroll-text" />
+              {contributorCopy.history}
+            </a>
+          </nav>
+        )}
       </header>
       {story.data.image && (
         <figure class="story-cover" data-story-cover>
@@ -212,7 +233,13 @@ const breadcrumbJsonLd = serializeJsonForHtmlScript({
           />
         </figure>
       )}
-      <div class="story-body">
+      {contributorCopy && (
+        <StoryContributorPanels locale={locale} copy={contributorCopy} />
+      )}
+      <div
+        class="story-body"
+        id={contributorCopy ? 'activity-record' : undefined}
+      >
         <Content />
       </div>
       {relatedContent.length > 0 && (
@@ -338,6 +365,53 @@ const breadcrumbJsonLd = serializeJsonForHtmlScript({
     margin-top: 24px;
     font-size: 0.9rem;
     font-weight: 800;
+  }
+
+  .story-panel-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+  }
+
+  .story-panel-nav a {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    min-height: 44px;
+    border: 1px solid #8ca47d;
+    border-radius: 6px;
+    padding: 6px 12px;
+    background: #f0f8df;
+    color: #25431c;
+    font-size: 0.88rem;
+    font-weight: 800;
+    line-height: 1.45;
+    text-decoration: none;
+  }
+
+  .story-panel-nav a:hover {
+    background: #ddfacb;
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+  }
+
+  .contributor-story :global(:is(#contributors, #roadmap, #activity-record)) {
+    scroll-margin-top: var(--contributor-anchor-offset, 5.75rem);
+  }
+
+  /* The desktop header stacks its navigation below the brand at these widths. */
+  @media (768px <= width < 1400px) {
+    .contributor-story {
+      --contributor-anchor-offset: 8.5rem;
+    }
+  }
+
+  /* Longer localized navigation labels can wrap onto another row. */
+  @media (768px <= width < 900px) {
+    .contributor-story {
+      --contributor-anchor-offset: 11.25rem;
+    }
   }
 
   .story-body {
