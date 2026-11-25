@@ -2,7 +2,7 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:3c4acdad20e9d77e4c585e44f05c37d71dbf9b0b8bc1ba2bd45c159d991ee8f7
+sourceHash: sha256:38e3e711356fb28f3763fe9a98473e7cf369233792b758f6582ee8154425d433
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -175,7 +175,7 @@ El 16 de agosto de 2023, ゆり preguntó a quién le interesaba una partida per
 
 El 7 de agosto de 2024, タケ informó de que había concluido todo el programa del festival del segundo aniversario. En el recorrido se presentaron la nueva señalización de estaciones, la nueva estación y el tramo de ampliación de la línea Jiyūgaoka. [Informe del festival del segundo aniversario](https://discord.com/channels/737538781024092170/779569416438415421/1270424971667308565)
 
-El video «&#26032;A&#39894;PV&#25913;&#35330;&#29256;», fechado el 9 de octubre de 2023, figura como no listado en el canal de YouTube a nombre de ゆり. En el antiguo Discord también se conserva un registro del video.
+El video «&#26032;A&#39894;PV&#25913;&#35330;&#29256;», fechado el 9 de octubre de 2023, figura como no listado en el canal de YouTube a nombre de ゆり. En el antiguo Discord también se conserva un registro del video. El video recorre Ace Town, el ayuntamiento, el antiguo Imperio Sega y el distrito de estilo occidental de Eirin-tai. Al final aparecen fotos de grupo y un mapa del mundo anterior.
 
 Para el Festival de la Cosecha de Hatt de 2023, taiyaki5190 publicó las reglas y el calendario. La fecha prevista cambió del 15 al 29 de octubre. El 28 de octubre, Taiyaki anunció que el festival se celebraría al día siguiente y explicó cómo participar. En los mensajes posteriores figuran avisos sobre las recompensas de participación y comentarios de participantes. [Anuncio del cambio de fecha](https://discord.com/channels/737538781024092170/779569416438415421/1161919748074917900) [Anuncio de participación](https://discord.com/channels/737538781024092170/779569416438415421/1167836013142495353)
 
@@ -335,7 +335,7 @@ En diciembre de 2020, bamoshi4869 invitó a colaborar en la nivelación de terre
 
 En diciembre de 2020, bamoshi4869 informó en el antiguo grupo de trabajo de que los días 24 y 25 de diciembre se trabajó en el rebaje de la montaña y en la excavación a cielo abierto. Según el informe, la excavación a cielo abierto se completó hasta la cota 5. En el informe figuraban como participantes &#12400;&#12418;&#12375;, &#21311;&#21517;, &#12354;&#12363;&#12426;&#12435;, &#12356;&#12385;&#12398;&#12379;, jag., &#12513;&#12525;&#12531; y &#12504;&#12490;&#12509;&#12531;.
 
-El 29 de diciembre de ese año, bamoshi4869 informó de que había terminado el drenaje de un monumento oceánico en otro proyecto. En la lista de participantes figuraban &#12400;&#12418;&#12375;, &#21311;&#21517;, &#12354;&#12363;&#12426;&#12435;, J, &#12450;&#12474;, &#12504;&#12490;&#12509;&#12531;, &#12495;&#12488;&#12512;&#12462; y &#12371;&#12383;.
+El 29 de diciembre de ese año, bamoshi4869 informó de que había terminado el drenaje de un monumento oceánico en otro proyecto. En la lista de participantes figuraban &#12400;&#12418;&#12375;, &#21311;&#21517;, &#12354;&#12363;&#12426;&#12435;, J, &#12450;&#12474;, &#12504;&#12490;&#12509;&#12531;, &#12495;&#12488;&#12512;&#12462; y &#12371;&#12383;. En el mismo informe, bamoshi4869 también agradeció la ayuda de &#12371;&#12383;, que se acababa de incorporar al grupo. [Informe del grupo sobre el drenaje](https://discord.com/channels/737538781024092170/779569416438415421/793490071394189374)
 
 En enero de 2021, bamoshi4869 planificó y anunció el desmantelamiento de una fortaleza del Nether. Ese mes, yizu\_TrPf hizo un prototipo de una casa con mecanismos en modo creativo y también reunió materiales.
 
@@ -355,6 +355,8 @@ En mayo, kuroneko229 anunció que en aquel momento cualquiera podía construir e
 
 En junio de 2021, KOTA-SAN informó del inicio del proyecto de construcción colaborativa Yasuragi no Mori y contó que había plantado un árbol para marcar el comienzo. Ese mismo mes también informó de que en Yasuragi no Mori se había construido un dispositivo para fabricar marcos invisibles para objetos. El 29 de octubre de 2022, KOTA-SAN informó de que había construido un punto de distribución de marcos invisibles para objetos.
 
+El 16 de julio de 2021, shu8 buscó gente para ayudar con una construcción de 2.000 por 2.000 bloques que ya estaba en marcha en modo creativo. [Solicitud de ayuda para la construcción](https://discord.com/channels/737538781024092170/779569416438415421/865557677844725760)
+
 El 22 de octubre de 2021, taiyaki5190 consultó si podía publicar en el tablón una guía del barrio residencial que había construido.
 
 El 12 de septiembre de 2021, JagdFeind(jp) informó de que había empezado a remodelar la granja elevada de criaturas de la aldea Suke y pidió ideas de bloques y diseños para los pisos de aparición y recogida por corrientes de agua. [Convocatoria de diseños para la granja de criaturas](https://discord.com/channels/737538781024092170/779569416438415421/886428347884798012)
@@ -366,6 +368,8 @@ El 20 de febrero de 2022, &#12414;&#12356;&#12369;&#12427; pidió ayuda para niv
 El 1 de marzo de 2022, Tomiryo presentó un plan para construir un dispositivo para elaborar pociones cerca del cultivo comunitario. El día 2, はっ dio el visto bueno a la construcción e indicó un dispositivo existente que podía servir de referencia.
 
 En marzo de 2022, タケ pidió ayuda para nivelar el terreno de un dibujo sobre el suelo. El 1 de abril informó de que la obra estaba terminada y agradeció a quienes ayudaron a preparar el terreno o aportaron materiales. [Convocatoria para nivelar el terreno](https://discord.com/channels/737538781024092170/779569416438415421/957990944374927420) [Informe de finalización del dibujo](https://discord.com/channels/737538781024092170/779569416438415421/959368128943489085)
+
+El 19 de marzo de 2022 se compartieron los avances de una construcción de &#35199;&#26408;&#37326;&#28716;&#36032;&#27663;, y &#38609;&#12387;&#21306; dijo que había ayudado poco a poco. El 27 de marzo, tras pedir ayuda para reparar herramientas, Taibon contó que Buraki había colaborado con el trabajo. El 4 de abril, Teiō se ofreció a ayudar en la excavación a cielo abierto de Taibon, quien más tarde le dio las gracias. [Avances de la obra de Nishikino Sega](https://discord.com/channels/737538781024092170/779569416438415421/954708825829703720) [Ayuda de Zakku](https://discord.com/channels/737538781024092170/779569416438415421/954717365927571516) [Ayuda de Buraki](https://discord.com/channels/737538781024092170/779569416438415421/957575859303223297) [Ofrecimiento de Teiō](https://discord.com/channels/737538781024092170/779569416438415421/960436243148185631) [Agradecimiento de Taibon](https://discord.com/channels/737538781024092170/779569416438415421/960509732894933032)
 
 El 24 de abril, タケ pidió ayuda en nombre del grupo de arte sobre el suelo para crear en Minecraft un cartel en forma de dibujo sobre el terreno. Indicó que la mayoría de los materiales ya estaban preparados. [Convocatoria para colaborar en el cartel](https://discord.com/channels/737538781024092170/779569416438415421/967605541411098685)
 
@@ -386,6 +390,8 @@ El 4 de junio de 2022, &#12414;&#12356;&#12369;&#12427; compartió una vista des
 En una captura de la mina comunitaria compartida por Tomiryo, un cartel atribuye la creación a yanyan y lleva la fecha del 24 de junio de 2021. &#65425;&#65399;&#65438; compartió imágenes de una excavación a cielo abierto y de las parcelas de cultivo en su interior. [Cartel de la mina comunitaria](https://discord.com/channels/737538781024092170/981561783707906118/981825742679732244) [Excavación y parcelas de cultivo](https://discord.com/channels/737538781024092170/981561783707906118/981564779074301962)
 
 PillowKebap compartió una casa de madera al pie de los riscos de la meseta y una reunión nocturna de jugadores. KITUNEKO0605 mostró un edificio de madera y piedra, &#26862;&#30000; un árbol gigante con habitaciones suspendidas de sus ramas y &#35199;&#26408;&#37326;&#28716;&#36032;&#27663; Eirindō, con sus agujas rojas. [Casa de madera en la meseta](https://discord.com/channels/737538781024092170/981561783707906118/981563677490675732) [Foto nocturna de grupo](https://discord.com/channels/737538781024092170/981561783707906118/981565221913133116) [Edificio de madera y piedra](https://discord.com/channels/737538781024092170/981561783707906118/981565422287601714) [Árbol con habitaciones suspendidas](https://discord.com/channels/737538781024092170/981561783707906118/981600780299677737) [Edificio con agujas rojas](https://discord.com/channels/737538781024092170/981561783707906118/981581153347719189) [Eirindō en la foto de Dari](https://discord.com/channels/737538781024092170/981561783707906118/982179619492999168)
+
+El 19 de abril de 2022, &#35199;&#26408;&#37326;&#28716;&#36032;&#27663; reclutó a nuevos miembros como líder de Eirin-tai e indicó que Eirindō era su base. [Convocatoria de miembros y ubicación de la base](https://discord.com/channels/737538781024092170/779569416438415421/965924885580894249)
 
 \_BE\_NumberYapper compartió una casa de madera y un camino subterráneo de hielo. &#38609;&#12387;&#21306; mostró un camino de ladrillos de piedra y &#12422;&#12426; una instalación con hileras de cactus. taibon0727 compartió imágenes de un edificio con agujas y de un jugador en vuelo. &#32313;&#28218;&#63;&#24385; mostró una construcción con forma de locomotora de noche. [Casa y camino subterráneo de hielo](https://discord.com/channels/737538781024092170/981561783707906118/981570279622996018) [Camino de ladrillos de piedra](https://discord.com/channels/737538781024092170/981561783707906118/981566677995102219) [Instalación de cactus](https://discord.com/channels/737538781024092170/981561783707906118/981911364488527882) [Edificio con agujas y jugador en vuelo](https://discord.com/channels/737538781024092170/981561783707906118/982619031049744454) [Construcción con forma de locomotora](https://discord.com/channels/737538781024092170/981561783707906118/1031236868785852516)
 
@@ -489,7 +495,11 @@ El 4 de febrero de 2023, AGE_inari anunció que había terminado la construcció
 
 El 12 de febrero, NCGpotechi anunció que el interior del castillo en el mar estaba terminado y agradeció a quienes colaboraron. El interior se abrió al público, con una arena y espacios para espectadores y comentaristas. El 14 de febrero, &#12450;&#12510;&#12484; anunció que la remodelación interior y exterior de la puerta del desierto había terminado y que se podía utilizar la instalación. [Apertura del interior del castillo](https://discord.com/channels/737538781024092170/779569416438415421/1074162305874542643) [Anuncio de la remodelación de la puerta del desierto](https://discord.com/channels/737538781024092170/779569416438415421/1074735358262136834)
 
+El 16 de enero de 2023, Yukke anunció que había terminado la excavación de la granja de esqueletos del Wither y dio las gracias a quienes excavaron o aportaron materiales. [Fin de la excavación y agradecimientos](https://discord.com/channels/737538781024092170/779569416438415421/1064539860737740830)
+
 El 13 de marzo de 2023, Yukke anunció que la granja de esqueletos del Wither estaba terminada y agradeció a quienes ayudaron a excavar. La granja se podría usar libremente tras la presentación prevista para ese día. El 25 de marzo, Moon\_666 comunicó que un alojamiento para nuevos jugadores estaba terminado y compartió una foto. [Anuncio de la finalización de la granja](https://discord.com/channels/737538781024092170/779569416438415421/1084675055700688937) [Foto del alojamiento terminado](https://discord.com/channels/737538781024092170/779569416438415421/1089135055798022184)
+
+En mayo de 2023, edamameRex_java pidió ayuda para construir la Catedral Central. En julio, End Cocker buscó ayuda para las construcciones del grupo de RPG y ofreció plantillas de herrería y otros objetos a quienes colaboraran. En julio de 2024, &#12422;&#12426; pidió ayuda para construir una ciudad junto al castillo. [Convocatoria de la Catedral Central](https://discord.com/channels/737538781024092170/779569416438415421/1110479305760329738) [Convocatoria del grupo de RPG](https://discord.com/channels/737538781024092170/779569416438415421/1128980475218772008) [Ayuda para construir la ciudad](https://discord.com/channels/737538781024092170/779569416438415421/1262210786621784064)
 
 El 31 de marzo de 2023, sh31415 contó que estaba construyendo una mazmorra junto con Asterisk, taibon, Nanashi, Yukke y MOON, y pidió ayuda para excavar una zona de 100 por 100. [Proyecto de la mazmorra y solicitud de ayuda](https://discord.com/channels/737538781024092170/779569416438415421/1091317917146153030)
 

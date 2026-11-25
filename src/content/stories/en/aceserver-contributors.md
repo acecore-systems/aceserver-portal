@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:3c4acdad20e9d77e4c585e44f05c37d71dbf9b0b8bc1ba2bd45c159d991ee8f7
+sourceHash: sha256:38e3e711356fb28f3763fe9a98473e7cf369233792b758f6582ee8154425d433
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -175,7 +175,7 @@ On August 16, 2023, ゆり asked who was interested in a custom Apex Legends mat
 
 On August 7, 2024, タケ reported that the second anniversary festival’s full program had concluded. The tour unveiled new station signage and introduced the Jiyūgaoka Line’s new station and extension. [Second anniversary festival report](https://discord.com/channels/737538781024092170/779569416438415421/1270424971667308565)
 
-The October 9, 2023 video “&#26032;A&#39894;PV&#25913;&#35330;&#29256;” is unlisted on the YouTube channel under ゆり’s name. A record of the video is also preserved in the old Discord.
+The October 9, 2023 video “&#26032;A&#39894;PV&#25913;&#35330;&#29256;” is unlisted on the YouTube channel under ゆり’s name. A record of the video is also preserved in the old Discord. The video visits Ace Town, city hall, the former Sega Empire, and Eirin-tai’s Western-style district. Its closing section includes group pictures and a map of the old world.
 
 For the 2023 Hatt Harvest Festival, taiyaki5190 shared the rules and schedule. The planned date moved from October 15 to October 29. On October 28, Taiyaki confirmed the festival was due the following day and explained how to join. Posts after the event include information about participation rewards and comments from people who took part. [Date change announcement](https://discord.com/channels/737538781024092170/779569416438415421/1161919748074917900) [Participation announcement](https://discord.com/channels/737538781024092170/779569416438415421/1167836013142495353)
 
@@ -335,7 +335,7 @@ In December 2020, bamoshi4869 invited players to help with land clearing and oth
 
 In December 2020, bamoshi4869 reported in the former work group that mountain clearing and open-pit excavation took place on December 24 and 25, and that the open-pit excavation was complete down to elevation 5. The report listed &#12400;&#12418;&#12375;, &#21311;&#21517;, &#12354;&#12363;&#12426;&#12435;, &#12356;&#12385;&#12398;&#12379;, jag., &#12513;&#12525;&#12531;, and &#12504;&#12490;&#12509;&#12531; as participants.
 
-On December 29 that year, bamoshi4869 reported that a separate project to drain an ocean monument was complete. It listed &#12400;&#12418;&#12375;, &#21311;&#21517;, &#12354;&#12363;&#12426;&#12435;, J, &#12450;&#12474;, &#12504;&#12490;&#12509;&#12531;, &#12495;&#12488;&#12512;&#12462;, and &#12371;&#12383; as participants.
+On December 29 that year, bamoshi4869 reported that a separate project to drain an ocean monument was complete. It listed &#12400;&#12418;&#12375;, &#21311;&#21517;, &#12354;&#12363;&#12426;&#12435;, J, &#12450;&#12474;, &#12504;&#12490;&#12509;&#12531;, &#12495;&#12488;&#12512;&#12462;, and &#12371;&#12383; as participants. In the same report, bamoshi4869 also thanked newcomer &#12371;&#12383; for helping. [Work group’s drainage report](https://discord.com/channels/737538781024092170/779569416438415421/793490071394189374)
 
 In January 2021, bamoshi4869 announced a plan to dismantle a Nether fortress. That month, yizu\_TrPf prototyped a house with mechanical contraptions in Creative mode and also gathered materials.
 
@@ -355,6 +355,8 @@ In May, kuroneko229 announced that anyone could build in Development City at the
 
 In June 2021, KOTA-SAN reported the launch of the collaborative building project Yasuragi no Mori and said they had planted a tree to mark its start. That month, KOTA-SAN also reported that a device for making invisible item frames had been built at Yasuragi no Mori. On October 29, 2022, KOTA-SAN reported building a distribution station for invisible item frames.
 
+On July 16, 2021, shu8 invited others to join a 2,000-by-2,000 build already underway in Creative mode. [Call for help with the large build](https://discord.com/channels/737538781024092170/779569416438415421/865557677844725760)
+
 On October 22, 2021, taiyaki5190 asked whether a guide to the residential district they had built could be posted on the bulletin board.
 
 On September 12, 2021, JagdFeind(jp) said renovation had begun on the elevated mob farm in Suke Village and invited suggestions for block choices and designs for its spawning and water collection floors. [Call for mob farm designs](https://discord.com/channels/737538781024092170/779569416438415421/886428347884798012)
@@ -366,6 +368,8 @@ On February 20, 2022, &#12414;&#12356;&#12369;&#12427; asked for help leveling t
 On March 1, 2022, Tomiryo outlined a plan for a potion-brewing contraption near the shared farm. On March 2, はっ agreed to the build and pointed to an existing contraption as a reference.
 
 In March 2022, タケ asked for help leveling the ground for a ground artwork. On April 1, タケ reported that the artwork was complete and thanked the people who helped level the ground or provided materials. [Call for help leveling the ground](https://discord.com/channels/737538781024092170/779569416438415421/957990944374927420) [Ground artwork completion report](https://discord.com/channels/737538781024092170/779569416438415421/959368128943489085)
+
+On March 19, 2022, players shared an update on &#35199;&#26408;&#37326;&#28716;&#36032;&#27663;’s build, and &#38609;&#12387;&#21306; said they had been helping a little at a time. On March 27, in a discussion following a request for help repairing tools, Taibon reported that Buraki had helped with the work. On April 4, Teiō offered to help with Taibon’s open-pit excavation, and Taibon later thanked them for the help. [Progress on Nishikino Sega’s build](https://discord.com/channels/737538781024092170/779569416438415421/954708825829703720) [Help from Zakku](https://discord.com/channels/737538781024092170/779569416438415421/954717365927571516) [Help from Buraki](https://discord.com/channels/737538781024092170/779569416438415421/957575859303223297) [Teiō’s offer to help](https://discord.com/channels/737538781024092170/779569416438415421/960436243148185631) [Taibon’s thanks](https://discord.com/channels/737538781024092170/779569416438415421/960509732894933032)
 
 On April 24, タケ asked for help on behalf of the ground-art group to make a poster as ground art in Minecraft. タケ said most of the materials were already prepared. [Call for help making the poster](https://discord.com/channels/737538781024092170/779569416438415421/967605541411098685)
 
@@ -386,6 +390,8 @@ On June 4, 2022, &#12414;&#12356;&#12369;&#12427; shared a view from their house
 In a screenshot Tomiryo shared of the communal mine, a sign credits yanyan as its creator and bears the date June 24, 2021. &#65425;&#65399;&#65438; shared pictures of an open pit and the farm plots within the excavation. [Communal mine sign](https://discord.com/channels/737538781024092170/981561783707906118/981825742679732244) [Open pit and farm plots](https://discord.com/channels/737538781024092170/981561783707906118/981564779074301962)
 
 PillowKebap shared a wooden house against the mesa cliffs and a gathering of players at night. KITUNEKO0605 posted a wood-and-stone building, &#26862;&#30000; showed a huge tree with rooms suspended from its branches, and &#35199;&#26408;&#37326;&#28716;&#36032;&#27663; shared a picture of Eirindō and its red spires. [Wooden house in the mesa](https://discord.com/channels/737538781024092170/981561783707906118/981563677490675732) [Nighttime group picture](https://discord.com/channels/737538781024092170/981561783707906118/981565221913133116) [Wood-and-stone building](https://discord.com/channels/737538781024092170/981561783707906118/981565422287601714) [Tree with suspended rooms](https://discord.com/channels/737538781024092170/981561783707906118/981600780299677737) [Building with red spires](https://discord.com/channels/737538781024092170/981561783707906118/981581153347719189) [Eirindō in Dari’s picture](https://discord.com/channels/737538781024092170/981561783707906118/982179619492999168)
+
+On April 19, 2022, &#35199;&#26408;&#37326;&#28716;&#36032;&#27663; recruited new members as the leader of Eirin-tai and identified Eirindō as its base. [Recruitment notice and location of the base](https://discord.com/channels/737538781024092170/779569416438415421/965924885580894249)
 
 \_BE\_NumberYapper shared pictures of a wooden house and an underground ice road. &#38609;&#12387;&#21306; showed a stone-brick road and &#12422;&#12426; posted a facility lined with cacti. taibon0727 shared a building with spires and a player in flight, while &#32313;&#28218;&#63;&#24385; posted a nighttime view of a locomotive-shaped build. [House and underground ice road](https://discord.com/channels/737538781024092170/981561783707906118/981570279622996018) [Stone-brick road](https://discord.com/channels/737538781024092170/981561783707906118/981566677995102219) [Cactus facility](https://discord.com/channels/737538781024092170/981561783707906118/981911364488527882) [Spired building and player in flight](https://discord.com/channels/737538781024092170/981561783707906118/982619031049744454) [Locomotive-shaped build](https://discord.com/channels/737538781024092170/981561783707906118/1031236868785852516)
 
@@ -489,7 +495,11 @@ On February 4, 2023, AGE_inari reported completing a build of Gundam Barbatos in
 
 On February 12, NCGpotechi reported that the castle at sea was finished inside and thanked everyone who helped. The interior opened to visitors, including the arena and the spectator and commentary areas. On February 14, &#12450;&#12510;&#12484; announced that the desert gate renovation was complete inside and out and that players could use the facility. [Opening of the castle interior](https://discord.com/channels/737538781024092170/779569416438415421/1074162305874542643) [Desert gate renovation report](https://discord.com/channels/737538781024092170/779569416438415421/1074735358262136834)
 
+On January 16, 2023, Yukke reported that excavation for the wither skeleton farm was finished and thanked everyone who helped dig or provided supplies. [Excavation completed and contributors thanked](https://discord.com/channels/737538781024092170/779569416438415421/1064539860737740830)
+
 On March 13, 2023, Yukke announced that the wither skeleton farm was complete and thanked the players who helped excavate the site. Yukke said the farm would be open for anyone to use after the unveiling planned for that day. On March 25, Moon\_666 reported that a lodging facility for new players was complete and shared a photo. [Wither skeleton farm completion report](https://discord.com/channels/737538781024092170/779569416438415421/1084675055700688937) [Photo of the finished lodging facility](https://discord.com/channels/737538781024092170/779569416438415421/1089135055798022184)
+
+In May 2023, edamameRex_java asked for help building Central Cathedral. In July, End Cocker invited players to help build for the RPG group and offered smithing templates and other items to helpers. In July 2024, &#12422;&#12426; asked players to help build a castle town. [Central Cathedral recruitment](https://discord.com/channels/737538781024092170/779569416438415421/1110479305760329738) [Call for help building for the RPG group](https://discord.com/channels/737538781024092170/779569416438415421/1128980475218772008) [Castle town recruitment](https://discord.com/channels/737538781024092170/779569416438415421/1262210786621784064)
 
 On March 31, 2023, sh31415 reported building a dungeon with Asterisk, taibon, Nanashi, Yukke, and MOON and asked for help excavating a 100 by 100 area. [Dungeon project and call for excavation help](https://discord.com/channels/737538781024092170/779569416438415421/1091317917146153030)
 

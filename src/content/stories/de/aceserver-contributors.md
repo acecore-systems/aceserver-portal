@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:3c4acdad20e9d77e4c585e44f05c37d71dbf9b0b8bc1ba2bd45c159d991ee8f7
+sourceHash: sha256:38e3e711356fb28f3763fe9a98473e7cf369233792b758f6582ee8154425d433
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -175,7 +175,7 @@ Am 16. August 2023 suchte ゆり nach Interessierten für eine benutzerdefiniert
 
 Am 7. August 2024 meldete タケ den Abschluss des gesamten Programms zum zweiten Jubiläumsfest. Die Tour stellte die neue Stationsbeschilderung sowie den neuen Bahnhof und die Verlängerung der Jiyūgaoka-Linie vor. [Bericht zum zweiten Jubiläumsfest](https://discord.com/channels/737538781024092170/779569416438415421/1270424971667308565)
 
-Das Video „&#26032;A&#39894;PV&#25913;&#35330;&#29256;“ vom 9. Oktober 2023 ist auf dem YouTube-Kanal unter dem Namen ゆり als nicht gelistet gekennzeichnet. Im früheren Discord ist ebenfalls ein Eintrag dazu erhalten.
+Das Video „&#26032;A&#39894;PV&#25913;&#35330;&#29256;“ vom 9. Oktober 2023 ist auf dem YouTube-Kanal unter dem Namen ゆり als nicht gelistet gekennzeichnet. Im früheren Discord ist ebenfalls ein Eintrag dazu erhalten. Das Video zeigt Ace Town, das Rathaus, das frühere Sega-Reich und den westlich geprägten Bezirk von Eirin-tai. Am Ende sind Gruppenbilder und eine Karte der alten Welt zu sehen.
 
 Für das Hatt-Erntefest 2023 stellte taiyaki5190 Regeln und Zeitplan vor. Der geplante Termin wurde vom 15. auf den 29. Oktober verschoben. Am 28. Oktober kündigte Taiyaki das Fest für den folgenden Tag an und erläuterte die Teilnahme. Beiträge nach dem Fest enthalten Hinweise zu den Teilnahmebelohnungen und Eindrücke von Teilnehmern. [Ankündigung des neuen Termins](https://discord.com/channels/737538781024092170/779569416438415421/1161919748074917900) [Ankündigung zur Teilnahme](https://discord.com/channels/737538781024092170/779569416438415421/1167836013142495353)
 
@@ -335,7 +335,7 @@ Im Dezember 2020 suchte bamoshi4869 Freiwillige für die Geländevorbereitung un
 
 Im Dezember 2020 berichtete bamoshi4869 in der damaligen Arbeitsgruppe, dass am 24. und 25. Dezember Arbeiten am Abtrag eines Berges und an einer Aushebung im Tagebau stattfanden. Dem Bericht zufolge war die Aushebung im Tagebau bis auf Höhe 5 abgeschlossen. Als Beteiligte wurden &#12400;&#12418;&#12375;, &#21311;&#21517;, &#12354;&#12363;&#12426;&#12435;, &#12356;&#12385;&#12398;&#12379;, jag., &#12513;&#12525;&#12531; und &#12504;&#12490;&#12509;&#12531; genannt.
 
-Am 29. Dezember desselben Jahres berichtete bamoshi4869, dass bei einem separaten Projekt die Entwässerung eines Ozeanmonuments abgeschlossen war. Die Liste der Beteiligten nannte &#12400;&#12418;&#12375;, &#21311;&#21517;, &#12354;&#12363;&#12426;&#12435;, J, &#12450;&#12474;, &#12504;&#12490;&#12509;&#12531;, &#12495;&#12488;&#12512;&#12462; und &#12371;&#12383;.
+Am 29. Dezember desselben Jahres berichtete bamoshi4869, dass bei einem separaten Projekt die Entwässerung eines Ozeanmonuments abgeschlossen war. Die Liste der Beteiligten nannte &#12400;&#12418;&#12375;, &#21311;&#21517;, &#12354;&#12363;&#12426;&#12435;, J, &#12450;&#12474;, &#12504;&#12490;&#12509;&#12531;, &#12495;&#12488;&#12512;&#12462; und &#12371;&#12383;. Im selben Bericht bedankte sich bamoshi4869 auch bei dem neu hinzugekommenen Mitglied &#12371;&#12383; für die Hilfe. [Bericht der Arbeitsgruppe über die Entwässerung](https://discord.com/channels/737538781024092170/779569416438415421/793490071394189374)
 
 Im Januar 2021 kündigte bamoshi4869 an, eine Netherfestung abbauen zu wollen. Im selben Monat entwarf yizu\_TrPf im Kreativmodus einen Prototyp für ein Haus mit Mechanismen und sammelte auch Materialien.
 
@@ -355,6 +355,8 @@ Im Mai erklärte kuroneko229, dass damals jeder in der Entwicklungsstadt bauen k
 
 Im Juni 2021 berichtete KOTA-SAN vom Start des gemeinsamen Bauprojekts Yasuragi no Mori und davon, zum Beginn des Projekts einen Baum gepflanzt zu haben. Im selben Monat berichtete KOTA-SAN auch, dass in Yasuragi no Mori eine Vorrichtung zur Herstellung unsichtbarer Gegenstandsrahmen gebaut worden war. Am 29. Oktober 2022 berichtete KOTA-SAN, eine Ausgabestelle für unsichtbare Gegenstandsrahmen eingerichtet zu haben.
 
+Am 16. Juli 2021 suchte shu8 Mitstreiter für ein im Kreativmodus begonnenes Bauvorhaben mit einer Fläche von 2.000 mal 2.000 Blöcken. [Aufruf zur Mithilfe am Bau](https://discord.com/channels/737538781024092170/779569416438415421/865557677844725760)
+
 Am 22. Oktober 2021 fragte taiyaki5190, ob ein Wegweiser für das selbst gebaute Wohnviertel am Schwarzen Brett veröffentlicht werden könnte.
 
 Am 12. September 2021 meldete JagdFeind(jp), dass der Umbau der erhöhten Monsterfarm im Dorf Suke begonnen hatte, und bat um Vorschläge für Blöcke und die Gestaltung der Spawn- und Sammelbereiche mit Wasser. [Aufruf zur Gestaltung der Monsterfarm](https://discord.com/channels/737538781024092170/779569416438415421/886428347884798012)
@@ -366,6 +368,8 @@ Am 20. Februar 2022 bat &#12414;&#12356;&#12369;&#12427; um Hilfe beim Einebnen 
 Am 1. März 2022 plante Tomiryo eine Vorrichtung zum Brauen von Tränken in der Nähe des Gemeinschaftsfeldes. Am 2. März stimmte はっ dem Bau zu und wies auf eine vorhandene Vorrichtung als Vorbild hin.
 
 Im März 2022 bat タケ um Hilfe beim Einebnen des Geländes für ein Bodenbild. Am 1. April meldete タケ die Fertigstellung des Werks und dankte den Personen, die beim Einebnen geholfen oder Material bereitgestellt hatten. [Aufruf zur Mithilfe beim Einebnen](https://discord.com/channels/737538781024092170/779569416438415421/957990944374927420) [Bericht zur Fertigstellung des Bodenbilds](https://discord.com/channels/737538781024092170/779569416438415421/959368128943489085)
+
+Am 19. März 2022 wurde ein Zwischenstand zum Bau von &#35199;&#26408;&#37326;&#28716;&#36032;&#27663; geteilt. &#38609;&#12387;&#21306; schrieb, nach und nach mitgeholfen zu haben. Am 27. März meldete Taibon nach einem Aufruf zur Werkzeugreparatur, dass Buraki bei der Arbeit geholfen hatte. Am 4. April bot Teiō Unterstützung bei Taibons Tagebau an. Taibon bedankte sich später dafür. [Fortschritt bei Nishikino Segas Bau](https://discord.com/channels/737538781024092170/779569416438415421/954708825829703720) [Mithilfe von Zakku](https://discord.com/channels/737538781024092170/779569416438415421/954717365927571516) [Mithilfe von Buraki](https://discord.com/channels/737538781024092170/779569416438415421/957575859303223297) [Hilfsangebot von Teiō](https://discord.com/channels/737538781024092170/779569416438415421/960436243148185631) [Taibons Dank](https://discord.com/channels/737538781024092170/779569416438415421/960509732894933032)
 
 Am 24. April bat タケ im Namen der Bodenbildgruppe um Hilfe bei einem Poster, das als Bodenbild in Minecraft entstehen sollte. Das meiste Material war laut タケ bereits vorbereitet. [Aufruf zur Mithilfe beim Poster](https://discord.com/channels/737538781024092170/779569416438415421/967605541411098685)
 
@@ -386,6 +390,8 @@ Am 4. Juni 2022 teilte &#12414;&#12356;&#12369;&#12427; den Blick vom eigenen Ha
 Auf dem von Tomiryo geteilten Bild der Gemeinschaftsmine nennt ein Schild yanyan als Ersteller und trägt das Datum 24. Juni 2021. &#65425;&#65399;&#65438; teilte Bilder von einer offenen Grube und den Anbauflächen darin. [Schild an der Gemeinschaftsmine](https://discord.com/channels/737538781024092170/981561783707906118/981825742679732244) [Offene Grube und Anbauflächen](https://discord.com/channels/737538781024092170/981561783707906118/981564779074301962)
 
 PillowKebap teilte Bilder von einem Holzhaus vor den Mesa-Klippen und von einer Spielergruppe bei Nacht. KITUNEKO0605 zeigte ein Gebäude aus Holz und Stein, &#26862;&#30000; einen riesigen Baum mit Räumen, die von den Ästen hängen, und &#35199;&#26408;&#37326;&#28716;&#36032;&#27663; Eirindō mit seinen roten Turmspitzen. [Holzhaus in der Mesa](https://discord.com/channels/737538781024092170/981561783707906118/981563677490675732) [Gruppenbild bei Nacht](https://discord.com/channels/737538781024092170/981561783707906118/981565221913133116) [Gebäude aus Holz und Stein](https://discord.com/channels/737538781024092170/981561783707906118/981565422287601714) [Baum mit hängenden Räumen](https://discord.com/channels/737538781024092170/981561783707906118/981600780299677737) [Gebäude mit roten Turmspitzen](https://discord.com/channels/737538781024092170/981561783707906118/981581153347719189) [Eirindō auf Daris Bild](https://discord.com/channels/737538781024092170/981561783707906118/982179619492999168)
+
+Am 19. April 2022 warb &#35199;&#26408;&#37326;&#28716;&#36032;&#27663; als Leiter von Eirin-tai um neue Mitglieder und nannte Eirindō als Stützpunkt. [Mitgliedersuche und Stützpunkt](https://discord.com/channels/737538781024092170/779569416438415421/965924885580894249)
 
 \_BE\_NumberYapper zeigte ein Holzhaus und eine unterirdische Eisstraße, &#38609;&#12387;&#21306; eine Straße aus Steinziegeln und &#12422;&#12426; eine Anlage mit Kakteen. taibon0727 teilte Aufnahmen eines Gebäudes mit Türmen und einer fliegenden Spielfigur. &#32313;&#28218;&#63;&#24385; zeigte einen Bau in Form einer Lokomotive bei Nacht. [Haus und unterirdische Eisstraße](https://discord.com/channels/737538781024092170/981561783707906118/981570279622996018) [Straße aus Steinziegeln](https://discord.com/channels/737538781024092170/981561783707906118/981566677995102219) [Kakteenanlage](https://discord.com/channels/737538781024092170/981561783707906118/981911364488527882) [Türme und fliegende Spielfigur](https://discord.com/channels/737538781024092170/981561783707906118/982619031049744454) [Bau in Form einer Lokomotive](https://discord.com/channels/737538781024092170/981561783707906118/1031236868785852516)
 
@@ -489,7 +495,11 @@ Am 4. Februar 2023 meldete AGE_inari die Fertigstellung eines Bauwerks nach dem 
 
 Am 12. Februar meldete NCGpotechi, dass der Innenausbau der Burg auf dem Meer fertig war, und bedankte sich bei allen, die geholfen hatten. Die Burg öffnete auch ihre Innenräume mit Arena sowie Plätzen für Zuschauer und Kommentatoren. Am 14. Februar meldete &#12450;&#12510;&#12484;, dass der Umbau des Wüstentors innen und außen abgeschlossen war und die Anlage genutzt werden konnte. [Öffnung der Burgräume](https://discord.com/channels/737538781024092170/779569416438415421/1074162305874542643) [Umbau des Wüstentors](https://discord.com/channels/737538781024092170/779569416438415421/1074735358262136834)
 
+Am 16. Januar 2023 meldete Yukke, dass die Grabungsarbeiten für die Witherskelett-Farm abgeschlossen waren, und dankte allen, die gegraben oder Material beigesteuert hatten. [Abschluss der Grabungsarbeiten und Dank](https://discord.com/channels/737538781024092170/779569416438415421/1064539860737740830)
+
 Am 13. März 2023 meldete Yukke die Fertigstellung der Witherskelett-Farm und bedankte sich bei allen, die bei den Ausgrabungen geholfen hatten. Nach der für denselben Tag angekündigten Vorstellung sollten alle die Anlage nutzen können. Am 25. März meldete Moon\_666 mit einem Foto die Fertigstellung einer Unterkunft für neue Spieler. [Fertigstellung der Witherskelett-Farm](https://discord.com/channels/737538781024092170/779569416438415421/1084675055700688937) [Foto der fertigen Unterkunft](https://discord.com/channels/737538781024092170/779569416438415421/1089135055798022184)
+
+Im Mai 2023 bat edamameRex_java um Hilfe beim Bau der Zentralkathedrale. Im Juli suchte End Cocker Unterstützung für Bauten der RPG-Gruppe und stellte den Helfern Schmiedevorlagen und weitere Gegenstände in Aussicht. Im Juli 2024 bat &#12422;&#12426; um Mithilfe beim Bau einer Burgstadt. [Mithilfe an der Zentralkathedrale](https://discord.com/channels/737538781024092170/779569416438415421/1110479305760329738) [Bauhelfer für die RPG-Gruppe](https://discord.com/channels/737538781024092170/779569416438415421/1128980475218772008) [Mithilfe beim Bau der Burgstadt](https://discord.com/channels/737538781024092170/779569416438415421/1262210786621784064)
 
 Am 31. März 2023 berichtete sh31415, gemeinsam mit Asterisk, taibon, Nanashi, Yukke und MOON an einem Dungeon zu arbeiten. Für die Ausgrabung eines Bereichs von 100 × 100 wurde Hilfe gesucht. [Dungeonbau und Aufruf zur Hilfe beim Ausgraben](https://discord.com/channels/737538781024092170/779569416438415421/1091317917146153030)
 
