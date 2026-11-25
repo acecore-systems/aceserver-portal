@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:6c9799648c59ecc2e2473469f2844e48e831caab81860016562e45de5ea0cada
+sourceHash: sha256:721f22bbab74e9cd2ccf6acd6b18e9fb41a91390b781cea744450e5ac3a748c4
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -440,6 +440,8 @@ On October 20, 2022, ジェスター invited newcomers to apply to receive a for
 On October 29, 2022, Moon\_666 reported that several cottages for short stays by new players were complete. [Cottage completion report](https://discord.com/channels/737538781024092170/779569416438415421/1035908871044210708)
 
 In November 2022, あすたん invited people to help build the Asutan Kingdom. [Call for help with the kingdom build](https://discord.com/channels/737538781024092170/779569416438415421/1041014423223009372)
+
+On November 26, 2022, taibon852 announced that Taibon’s trading hall would close the following day. The post recalled setting up librarian trades near the server’s start so players could get good enchantments. taibon852 thanked Hayakun and &#33775; for helping select the trades and shared three images. [Trading hall closure announcement and acknowledgments](https://discord.com/channels/737538781024092170/779569416438415421/1045990792168226846)
 
 That December, ジェスター (then posting as Dōke Shinshi@Jester Sub) reported working with Buraki to build a resort-style watermelon farm with a beach. [Watermelon farm report](https://discord.com/channels/737538781024092170/779569416438415421/1048866874760364042)
 

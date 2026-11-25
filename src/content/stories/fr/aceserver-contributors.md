@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:6c9799648c59ecc2e2473469f2844e48e831caab81860016562e45de5ea0cada
+sourceHash: sha256:721f22bbab74e9cd2ccf6acd6b18e9fb41a91390b781cea744450e5ac3a748c4
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -440,6 +440,8 @@ Le 20 octobre 2022, ジェスター a invité les nouveaux joueurs à se porter 
 Le 29 octobre 2022, Moon\_666 a annoncé que plusieurs chalets destinés aux courts séjours des nouveaux joueurs étaient terminés. [Annonce de l’achèvement des chalets](https://discord.com/channels/737538781024092170/779569416438415421/1035908871044210708)
 
 En novembre 2022, あすたん a invité les joueurs à participer à la construction du royaume d’Asutan. [Appel à contribuer à la construction du royaume](https://discord.com/channels/737538781024092170/779569416438415421/1041014423223009372)
+
+Le 26 novembre 2022, taibon852 a annoncé que le comptoir de Taibon fermerait le lendemain. Dès les débuts du serveur, taibon852 y avait préparé des échanges avec des villageois bibliothécaires pour que les joueurs puissent obtenir de bons enchantements. Le message remercie Hayakun et &#33775; pour leur aide dans le choix des échanges et contient trois images. [Annonce de fermeture du comptoir et remerciements](https://discord.com/channels/737538781024092170/779569416438415421/1045990792168226846)
 
 En décembre de la même année, ジェスター (qui publiait sous le nom Dōke Shinshi@Jester Sub) a annoncé avoir créé avec Buraki une culture de pastèques dans le style d’un complexe balnéaire, avec une plage. [Compte rendu de la construction de la culture de pastèques](https://discord.com/channels/737538781024092170/779569416438415421/1048866874760364042)
 

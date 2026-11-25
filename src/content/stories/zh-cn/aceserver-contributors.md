@@ -2,7 +2,7 @@
 title: 支持Aceserver的人们
 description: 通过 Minecraft 皮肤头像认识 Aceserver 的贡献者，回顾社区活动记录，并查看活动与玩家提案路线图。
 translationOf: aceserver-contributors
-sourceHash: sha256:6c9799648c59ecc2e2473469f2844e48e831caab81860016562e45de5ea0cada
+sourceHash: sha256:721f22bbab74e9cd2ccf6acd6b18e9fb41a91390b781cea744450e5ac3a748c4
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -440,6 +440,8 @@ taibon0727 准备了玻璃等物资、出行用船的停放处和处理沙子的
 2022年10月29日，Moon\_666 报告已建成数间供新玩家短期住宿的小屋。[小屋完工报告](https://discord.com/channels/737538781024092170/779569416438415421/1035908871044210708)
 
 2022 年 11 月，あすたん 邀请大家协助建造 Asutan 王国。 [王国建设协作招募](https://discord.com/channels/737538781024092170/779569416438415421/1041014423223009372)
+
+2022年11月26日，taibon852 宣布泰邦交易所将在次日关闭，并回顾了服务器开服初期为方便玩家获得优质附魔而整理图书管理员交易的过程。taibon852 感谢帮助挑选交易项目的 Hayakun 和 &#33775;，并附上三张图片。[交易所关闭公告与致谢](https://discord.com/channels/737538781024092170/779569416438415421/1045990792168226846)
 
 同年 12 月，ジェスター（当时的发帖名为 Dōke Shinshi@Jester Sub）报告称，与 Buraki 一起建造了带海滩的度假风西瓜农场。 [西瓜农场建造报告](https://discord.com/channels/737538781024092170/779569416438415421/1048866874760364042)
 

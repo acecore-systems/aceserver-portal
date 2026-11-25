@@ -2,7 +2,7 @@
 title: As pessoas que apoiaram o Aceserver
 description: Conheça quem ajudou o Aceserver pelos retratos de skins do Minecraft, relembre as atividades e confira o roteiro de eventos e propostas.
 translationOf: aceserver-contributors
-sourceHash: sha256:6c9799648c59ecc2e2473469f2844e48e831caab81860016562e45de5ea0cada
+sourceHash: sha256:721f22bbab74e9cd2ccf6acd6b18e9fb41a91390b781cea744450e5ac3a748c4
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -440,6 +440,8 @@ Em 20 de outubro de 2022, ジェスター convidou recém-chegados a se candidat
 Em 29 de outubro de 2022, Moon\_666 anunciou a conclusão de várias cabanas destinadas a estadias curtas de novos jogadores. [Anúncio da conclusão das cabanas](https://discord.com/channels/737538781024092170/779569416438415421/1035908871044210708)
 
 Em novembro de 2022, あすたん convidou jogadores a ajudar na construção do Reino de Asutan. [Convite para ajudar a construir o reino](https://discord.com/channels/737538781024092170/779569416438415421/1041014423223009372)
+
+Em 26 de novembro de 2022, taibon852 anunciou que o salão de trocas de Taibon fecharia no dia seguinte. No início do servidor, taibon852 havia preparado trocas com aldeões bibliotecários para ajudar os jogadores a conseguir bons encantamentos. A publicação agradeceu a Hayakun e &#33775; pela ajuda na escolha das trocas e incluiu três imagens. [Anúncio de fechamento do salão e agradecimentos](https://discord.com/channels/737538781024092170/779569416438415421/1045990792168226846)
 
 Em dezembro do mesmo ano, ジェスター (que publicava como Dōke Shinshi@Jester Sub) informou que construiu com Buraki um cultivo de melancias em estilo de resort, com praia. [Relato da construção do cultivo de melancias](https://discord.com/channels/737538781024092170/779569416438415421/1048866874760364042)
 

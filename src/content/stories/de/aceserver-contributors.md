@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:6c9799648c59ecc2e2473469f2844e48e831caab81860016562e45de5ea0cada
+sourceHash: sha256:721f22bbab74e9cd2ccf6acd6b18e9fb41a91390b781cea744450e5ac3a748c4
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -440,6 +440,8 @@ Am 20. Oktober 2022 lud ジェスター Neulinge ein, sich um das frühere Haus 
 Am 29. Oktober 2022 meldete Moon\_666, dass mehrere Hütten für kurze Aufenthalte von neuen Spielern fertiggestellt waren. [Fertigstellung der Hütten](https://discord.com/channels/737538781024092170/779569416438415421/1035908871044210708)
 
 Im November 2022 bat あすたん um Mithilfe beim Bau des Königreichs Asutan. [Aufruf zur Mithilfe beim Bau des Königreichs](https://discord.com/channels/737538781024092170/779569416438415421/1041014423223009372)
+
+Am 26. November 2022 kündigte taibon852 an, Taibons Handelshalle am nächsten Tag zu schließen. Zum Start des Servers hatte taibon852 dort Angebote der Bibliothekare eingerichtet, damit alle an gute Verzauberungen kommen konnten. Im Beitrag dankte taibon852 Hayakun und &#33775; für ihre Hilfe bei der Auswahl der Angebote und fügte drei Bilder bei. [Schließungsankündigung und Danksagung](https://discord.com/channels/737538781024092170/779569416438415421/1045990792168226846)
 
 Im Dezember desselben Jahres berichtete ジェスター (unter dem damaligen Namen Dōke Shinshi@Jester Sub), gemeinsam mit Buraki einen Melonenanbau im Stil einer Ferienanlage mit Strand gebaut zu haben. [Bericht zum Bau des Melonenanbaus](https://discord.com/channels/737538781024092170/779569416438415421/1048866874760364042)
 

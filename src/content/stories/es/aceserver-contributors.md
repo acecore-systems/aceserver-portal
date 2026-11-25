@@ -2,7 +2,7 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:6c9799648c59ecc2e2473469f2844e48e831caab81860016562e45de5ea0cada
+sourceHash: sha256:721f22bbab74e9cd2ccf6acd6b18e9fb41a91390b781cea744450e5ac3a748c4
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -440,6 +440,8 @@ El 20 de octubre de 2022, ジェスター invitó a los recién llegados a solic
 El 29 de octubre de 2022, Moon\_666 anunció que se habían terminado varias cabañas para estancias cortas de jugadores recién llegados. [Anuncio de la finalización de las cabañas](https://discord.com/channels/737538781024092170/779569416438415421/1035908871044210708)
 
 En noviembre de 2022, あすたん invitó a colaborar en la construcción del Reino de Asutan. [Convocatoria para construir el reino](https://discord.com/channels/737538781024092170/779569416438415421/1041014423223009372)
+
+El 26 de noviembre de 2022, taibon852 anunció que el salón de comercio de Taibon cerraría al día siguiente. Recordó que al inicio del servidor había preparado los intercambios con aldeanos bibliotecarios para que los jugadores pudieran conseguir buenos encantamientos. Agradeció a Hayakun y &#33775; su ayuda al seleccionar los intercambios y adjuntó tres imágenes. [Anuncio de cierre del salón y agradecimientos](https://discord.com/channels/737538781024092170/779569416438415421/1045990792168226846)
 
 En diciembre del mismo año, ジェスター (con el nombre de entonces Dōke Shinshi@Jester Sub) informó de que había construido con Buraki un cultivo de sandías al estilo de un complejo turístico, con playa. [Informe de la construcción del cultivo de sandías](https://discord.com/channels/737538781024092170/779569416438415421/1048866874760364042)
 
