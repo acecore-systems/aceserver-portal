@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:0c13dc4bc77e7936869f0abaf0520ae44f24b5da771e4a6f8f180f5433bc32d8
+sourceHash: sha256:bd5ff69767a9a7269d19c226f303c9d8618ff9af5b262cf1a372860f4b380e4c
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -390,6 +390,10 @@ PillowKebap shared a wooden house against the mesa cliffs and a gathering of pla
 \_BE\_NumberYapper shared pictures of a wooden house and an underground ice road. &#38609;&#12387;&#21306; showed a stone-brick road and &#12422;&#12426; posted a facility lined with cacti. taibon0727 shared a building with spires and a player in flight, while &#32313;&#28218;&#63;&#24385; posted a nighttime view of a locomotive-shaped build. [House and underground ice road](https://discord.com/channels/737538781024092170/981561783707906118/981570279622996018) [Stone-brick road](https://discord.com/channels/737538781024092170/981561783707906118/981566677995102219) [Cactus facility](https://discord.com/channels/737538781024092170/981561783707906118/981911364488527882) [Spired building and player in flight](https://discord.com/channels/737538781024092170/981561783707906118/982619031049744454) [Locomotive-shaped build](https://discord.com/channels/737538781024092170/981561783707906118/1031236868785852516)
 
 &#12399;&#12387; shared players gathered at a window marked with an emerald. dont_stop showed a player in a room lined with chests, and &#12414;&#12429; posted a group picture beside a monument made with wither skeleton skulls. [Players gathered at the window](https://discord.com/channels/737538781024092170/981561783707906118/981564324109774849) [Room lined with chests](https://discord.com/channels/737538781024092170/981561783707906118/981564578313937006) [Group picture by the monument](https://discord.com/channels/737538781024092170/981561783707906118/981851600735854612)
+
+The gallery preserves exterior and interior views of the hot-spring inn that BURRAKI showed a visitor. Other posts document places reached through the portals beneath city hall and a room a player stayed in at &#31481;&#26360;&#25151;. [Tour of the hot-spring inn](https://discord.com/channels/737538781024092170/981561783707906118/982088648629567498) [Portals beneath city hall and their destinations](https://discord.com/channels/737538781024092170/981561783707906118/982087677048422432) [A room where a player stayed](https://discord.com/channels/737538781024092170/981561783707906118/982089728549597224)
+
+taiyaki5190 also shared a screenshot from bringing back mooshrooms with &#12399;&#12420;. &#12384;&#12426; shared a map of the area near the amusement park and screenshots of Nether rails and portals and the shared housing area. [Bringing back mooshrooms](https://discord.com/channels/737538781024092170/981561783707906118/981683668424740944) [Map and pictures near the amusement park](https://discord.com/channels/737538781024092170/981561783707906118/982174520121110560) [Nether rails and portals](https://discord.com/channels/737538781024092170/981561783707906118/982175875778879548) [Shared housing pictures](https://discord.com/channels/737538781024092170/981561783707906118/982175911099125810)
 
 In June 2022, yanyan_fafnir explained how to enter the floating-island contest that led to work on the former lobby and how entries would be presented at judging. The announcement named はっ and members with the supporter role or above as judges. [Contest entry rules](https://discord.com/channels/737538781024092170/774152638450237460/982990352422162482) [Judging session announcement](https://discord.com/channels/737538781024092170/774152638450237460/986294242848669756)
 
