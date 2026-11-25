@@ -2,7 +2,7 @@
 title: As pessoas que apoiaram o Aceserver
 description: Conheça quem ajudou o Aceserver pelos retratos de skins do Minecraft, relembre as atividades e confira o roteiro de eventos e propostas.
 translationOf: aceserver-contributors
-sourceHash: sha256:6e73a561fd250952a1db03516059c4bf056524d0c7cf615d69b4b6402ea08db0
+sourceHash: sha256:db31840097f0ba4685a9a47b6883a56083eabda2461b7c2205529f8a78283900
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -195,6 +195,8 @@ Em 10 de junho de 2024, KOTA-SAN informou que o Ace Fest estava previsto e pediu
 
 Em 14 de julho de 2024, タケ recomendou um mundo para download amplo e bem detalhado para dar clima ao evento, citando “&#20304;&#23665;&#30476;” como exemplo que poderia servir para brincar de esconde-esconde. Em 4 de agosto, タケ relatou os preparativos e a decoração de um evento em outra publicação. [Sugestão de mundo para download](https://discord.com/channels/737538781024092170/773171457487929344/1262046391820353576) [Relato sobre os preparativos e a decoração](https://discord.com/channels/737538781024092170/773171457487929344/1269342768443031552)
 
+Em julho de 2024, タケ pediu no mural imagens de construções do servidor. Com o nome Golden Cocker Sub, uma pessoa compartilhou uma imagem de cada local — Hitotoki no Sato, Deai no Restaurant e Tōgenkyō. [Pedido de imagens](https://discord.com/channels/737538781024092170/1264608467927302188/1265475520519340052) [Hitotoki no Sato](https://discord.com/channels/737538781024092170/1264608467927302188/1265927096719642624) [Deai no Restaurant](https://discord.com/channels/737538781024092170/1264608467927302188/1265927525008150589) [Tōgenkyō](https://discord.com/channels/737538781024092170/1264608467927302188/1265927832513675328)
+
 No festival de verão de 17 de agosto de 2024, sekisei explicou as regras e a divisão das equipes do torneio de pesca e anunciou seu início. sh apresentou a Busca Ultra por Itens e explicou como participar. No dia seguinte, compartilhou um vídeo da transmissão oficial. Nos registros de preparação do festival, sh informou que Ohagi havia construído o prédio do mercado de pulgas. はっ explicou o andamento e a divisão das equipes do jogo de repasse de mensagens por abstração mínima. [Transmissão oficial do jogo de mensagens por abstração mínima](https://www.youtube.com/live/Fy27JdYPero)
 
 Em 17 de agosto de 2024, Pluto sugeriu chamar equipes para o torneio de pesca. [Proposta de chamar equipes para a pesca](https://discord.com/channels/737538781024092170/773171457487929344/1274205080710545459)
@@ -284,6 +286,8 @@ Em fevereiro e agosto de 2026, sh apresentou as atividades de planejamento de ev
 Em fevereiro de 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; pediu fotos para publicações de divulgação nas redes sociais. LuMiSIA\_&#26376;&#31070;&#24736;&#33673;, &#35199;&#26408;&#37326;&#28716;&#36032;&#27663;, Amagi\_467, Moon\_666, CP-sinzin, Yukke e あすたん enviaram fotos para possível uso em publicações de divulgação nas redes sociais.
 
 Em fevereiro de 2026, End&#12539;コッカー anunciou o Concurso de Fotografia do Aceserver e informou que o período de envio era de 16 a 28 de fevereiro. Preparou exemplos de inscrições para a categoria geral e para a equipe de gestão. キツネコ enviou uma foto de um trabalho de drenagem em andamento. [Anúncio do Concurso de Fotografia de 2026](https://discord.com/channels/737538781024092170/774152638450237460/1471148847119208731)
+
+Em 28 de março de 2026, no tópico de imagens para redes sociais, sh31415 sugeriu uma publicação que desse a entender que algo estava prestes a começar no End e anexou uma imagem. [Sugestão de publicação para redes sociais](https://discord.com/channels/737538781024092170/1480060237141508268/1487246454161543250) [Imagem anexada à sugestão](https://discord.com/channels/737538781024092170/1480060237141508268/1487246486428324012)
 
 Em 19 de fevereiro de 2026, End&#12539;コッカー compartilhou um texto para pedir ajuda na gravação de uma partida de pega-pega no lobby a fim de divulgar o Aceserver no YouTube.
 

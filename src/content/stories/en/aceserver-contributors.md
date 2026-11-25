@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:6e73a561fd250952a1db03516059c4bf056524d0c7cf615d69b4b6402ea08db0
+sourceHash: sha256:db31840097f0ba4685a9a47b6883a56083eabda2461b7c2205529f8a78283900
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -195,6 +195,8 @@ On June 10, 2024, KOTA-SAN announced plans for Ace Fest and asked for input on w
 
 On July 14, 2024, タケ recommended a large, detailed downloadable world to set the mood for an event and mentioned “&#20304;&#23665;&#30476;” as a map that might work for hide-and-seek. On August 4, タケ reported on event preparations and decoration in a separate post. [Downloadable world suggestion](https://discord.com/channels/737538781024092170/773171457487929344/1262046391820353576) [Event preparation and decoration report](https://discord.com/channels/737538781024092170/773171457487929344/1269342768443031552)
 
+In July 2024, タケ asked for pictures of server builds on the bulletin board. Under the name Golden Cocker Sub, a contributor shared one picture each of Hitotoki no Sato, Deai no Restaurant, and Tōgenkyō. [Call for pictures](https://discord.com/channels/737538781024092170/1264608467927302188/1265475520519340052) [Hitotoki no Sato](https://discord.com/channels/737538781024092170/1264608467927302188/1265927096719642624) [Deai no Restaurant](https://discord.com/channels/737538781024092170/1264608467927302188/1265927525008150589) [Tōgenkyō](https://discord.com/channels/737538781024092170/1264608467927302188/1265927832513675328)
+
 At the summer festival on August 17, 2024, sekisei explained the fishing competition’s rules and team assignments and announced its start. sh introduced the Ultra Item Hunt and explained how to join, then shared a video of the official broadcast the next day. In the festival preparation records, sh noted that Ohagi had built the flea market building. はっ explained how the Minimal Abstraction Message Relay game would run and how its teams were divided. [Official Minimal Abstraction Message Relay broadcast](https://www.youtube.com/live/Fy27JdYPero)
 
 On August 17, 2024, Pluto suggested inviting people to form teams for the fishing competition. [Proposal to recruit fishing teams](https://discord.com/channels/737538781024092170/773171457487929344/1274205080710545459)
@@ -284,6 +286,8 @@ In February and August 2026, sh introduced the Aceserver Revitalization Committe
 In February 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; asked players to submit photos for social media posts. LuMiSIA\_&#26376;&#31070;&#24736;&#33673;, &#35199;&#26408;&#37326;&#28716;&#36032;&#27663;, Amagi\_467, Moon\_666, CP-sinzin, Yukke, and あすたん submitted photos for consideration for social media posts.
 
 In February 2026, End&#12539;コッカー announced the Aceserver Photo Contest and listed February 16 to 28 as the submission period. End&#12539;コッカー provided sample submissions for both the general and staff categories. キツネコ entered a photo showing drainage work in progress. [2026 Photo Contest announcement](https://discord.com/channels/737538781024092170/774152638450237460/1471148847119208731)
+
+On March 28, 2026, sh31415 used the thread for social media images to suggest a post hinting that something was about to begin in the End, and shared an image with the suggestion. [Suggested social media post](https://discord.com/channels/737538781024092170/1480060237141508268/1487246454161543250) [Image shared with the suggestion](https://discord.com/channels/737538781024092170/1480060237141508268/1487246486428324012)
 
 On February 19, 2026, End&#12539;コッカー shared wording for a call for help filming a game of tag in the lobby to promote Aceserver on YouTube.
 

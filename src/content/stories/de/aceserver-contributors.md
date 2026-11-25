@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:6e73a561fd250952a1db03516059c4bf056524d0c7cf615d69b4b6402ea08db0
+sourceHash: sha256:db31840097f0ba4685a9a47b6883a56083eabda2461b7c2205529f8a78283900
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -195,6 +195,8 @@ Am 10. Juni 2024 teilte KOTA-SAN mit, dass das Ace Fest geplant war, und bat um 
 
 Am 14. Juli 2024 empfahl タケ eine große, detailliert gestaltete Welt zum Herunterladen, um eine passende Atmosphäre für eine Veranstaltung zu schaffen. Als mögliches Beispiel für ein Versteckspiel nannte タケ „&#20304;&#23665;&#30476;“. Am 4. August berichtete タケ in einem anderen Beitrag über Vorbereitungen und Dekoration für eine Veranstaltung. [Vorschlag für eine Welt zum Herunterladen](https://discord.com/channels/737538781024092170/773171457487929344/1262046391820353576) [Bericht über Vorbereitungen und Dekoration](https://discord.com/channels/737538781024092170/773171457487929344/1269342768443031552)
 
+Im Juli 2024 bat タケ am Schwarzen Brett um Bilder von Bauwerken auf dem Server. Unter dem Namen Golden Cocker Sub wurde je ein Bild von Hitotoki no Sato, Deai no Restaurant und Tōgenkyō veröffentlicht. [Aufruf zur Einsendung von Bildern](https://discord.com/channels/737538781024092170/1264608467927302188/1265475520519340052) [Hitotoki no Sato](https://discord.com/channels/737538781024092170/1264608467927302188/1265927096719642624) [Deai no Restaurant](https://discord.com/channels/737538781024092170/1264608467927302188/1265927525008150589) [Tōgenkyō](https://discord.com/channels/737538781024092170/1264608467927302188/1265927832513675328)
+
 Beim Sommerfest am 17. August 2024 erläuterte sekisei die Regeln und die Teameinteilung des Angelwettbewerbs und gab den Start bekannt. sh stellte die Ultra-Gegenstandssuche vor, erklärte die Teilnahme und teilte am nächsten Tag ein Video der offiziellen Übertragung. In den Aufzeichnungen zur Vorbereitung des Sommerfests erwähnte sh, dass Ohagi das Gebäude für den Flohmarkt gebaut hatte. はっ erläuterte den Ablauf und die Teameinteilung des Nachrichtenstaffelspiels mit minimaler Abstraktion. [Offizielle Übertragung des Nachrichtenstaffelspiels mit minimaler Abstraktion](https://www.youtube.com/live/Fy27JdYPero)
 
 Am 17. August 2024 schlug Pluto vor, nach Teams für den Angelwettbewerb zu suchen. [Vorschlag zur Suche nach Teams für den Angelwettbewerb](https://discord.com/channels/737538781024092170/773171457487929344/1274205080710545459)
@@ -284,6 +286,8 @@ Im Februar und im August 2026 stellte sh die Veranstaltungsplanung und die inoff
 Im Februar 2026 bat LuMiSIA\_&#26376;&#31070;&#24736;&#33673; um Fotos für Werbebeiträge in sozialen Medien. LuMiSIA\_&#26376;&#31070;&#24736;&#33673;, &#35199;&#26408;&#37326;&#28716;&#36032;&#27663;, Amagi\_467, Moon\_666, CP-sinzin, Yukke und あすたん reichten Fotos zur Auswahl für Werbebeiträge in den sozialen Medien ein.
 
 Im Februar 2026 kündigte End&#12539;コッカー den Aceserver-Fotowettbewerb an und gab den 16. bis 28. Februar als Einreichungszeitraum an. End&#12539;コッカー bereitete Beispiele für die allgemeine Kategorie und die Kategorie für das Serverteam vor. キツネコ reichte ein Foto von laufenden Entwässerungsarbeiten ein. [Ankündigung des Fotowettbewerbs 2026](https://discord.com/channels/737538781024092170/774152638450237460/1471148847119208731)
+
+Am 28. März 2026 schlug sh31415 im Thread für Social-Media-Bilder einen Beitrag vor, der andeuten sollte, dass im Ende etwas beginnt. Dem Vorschlag fügte sh31415 ein Bild bei. [Vorschlag für einen Social-Media-Beitrag](https://discord.com/channels/737538781024092170/1480060237141508268/1487246454161543250) [Bild zum Vorschlag](https://discord.com/channels/737538781024092170/1480060237141508268/1487246486428324012)
 
 Am 19. Februar 2026 teilte End&#12539;コッカー einen Text, der zur Mithilfe beim Filmen eines Fangspiels in der Lobby für die Öffentlichkeitsarbeit von Aceserver auf YouTube aufrief.
 

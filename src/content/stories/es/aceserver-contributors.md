@@ -2,7 +2,7 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:6e73a561fd250952a1db03516059c4bf056524d0c7cf615d69b4b6402ea08db0
+sourceHash: sha256:db31840097f0ba4685a9a47b6883a56083eabda2461b7c2205529f8a78283900
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -195,6 +195,8 @@ El 10 de junio de 2024, KOTA-SAN anunció que se planeaba celebrar el Ace Fest y
 
 El 14 de julio de 2024, タケ recomendó un mundo descargable amplio y detallado para ambientar un evento y puso «&#20304;&#23665;&#30476;» como ejemplo que podría servir para jugar al escondite. El 4 de agosto, タケ informó en otra publicación sobre los preparativos y la decoración de un evento. [Propuesta de un mundo descargable](https://discord.com/channels/737538781024092170/773171457487929344/1262046391820353576) [Informe de los preparativos y la decoración](https://discord.com/channels/737538781024092170/773171457487929344/1269342768443031552)
 
+En julio de 2024, タケ pidió en el tablón imágenes de construcciones del servidor. Con el nombre Golden Cocker Sub, una persona compartió una imagen de Hitotoki no Sato, otra de Deai no Restaurant y otra de Tōgenkyō. [Convocatoria para enviar imágenes](https://discord.com/channels/737538781024092170/1264608467927302188/1265475520519340052) [Hitotoki no Sato](https://discord.com/channels/737538781024092170/1264608467927302188/1265927096719642624) [Deai no Restaurant](https://discord.com/channels/737538781024092170/1264608467927302188/1265927525008150589) [Tōgenkyō](https://discord.com/channels/737538781024092170/1264608467927302188/1265927832513675328)
+
 En el festival de verano del 17 de agosto de 2024, sekisei presentó las reglas y los equipos del concurso de pesca y anunció su comienzo. sh presentó la Gran Búsqueda de Objetos, explicó cómo participar y al día siguiente compartió un video de la retransmisión oficial. En los registros de preparación del festival, sh indicó que Ohagi había construido el edificio del mercadillo. はっ explicó el funcionamiento y los equipos del juego de transmisión de mensajes por abstracción mínima. [Retransmisión oficial del juego de mensajes por abstracción mínima](https://www.youtube.com/live/Fy27JdYPero)
 
 El 17 de agosto de 2024, Pluto sugirió convocar equipos para el concurso de pesca. [Propuesta de convocatoria de equipos de pesca](https://discord.com/channels/737538781024092170/773171457487929344/1274205080710545459)
@@ -284,6 +286,8 @@ En febrero y agosto de 2026, sh presentó las actividades de organización de ev
 En febrero de 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; solicitó fotos para publicaciones promocionales en redes sociales. LuMiSIA\_&#26376;&#31070;&#24736;&#33673;, &#35199;&#26408;&#37326;&#28716;&#36032;&#27663;, Amagi\_467, Moon\_666, CP-sinzin, Yukke y あすたん enviaron fotos para que se consideraran para publicaciones promocionales en redes sociales.
 
 En febrero de 2026, End&#12539;コッカー anunció el Concurso de Fotografía de Aceserver e indicó que las fotos podían enviarse del 16 al 28 de febrero. Preparó ejemplos de participación para las categorías general y del equipo de gestión. キツネコ presentó una foto de un trabajo de drenaje en curso. [Anuncio del Concurso de Fotografía de 2026](https://discord.com/channels/737538781024092170/774152638450237460/1471148847119208731)
+
+El 28 de marzo de 2026, sh31415 propuso en el hilo de imágenes para redes sociales una publicación que insinuara que algo estaba a punto de empezar en el End, y adjuntó una imagen. [Propuesta de publicación para redes sociales](https://discord.com/channels/737538781024092170/1480060237141508268/1487246454161543250) [Imagen adjunta a la propuesta](https://discord.com/channels/737538781024092170/1480060237141508268/1487246486428324012)
 
 El 19 de febrero de 2026, End&#12539;コッカー compartió un texto para pedir ayuda con la grabación de una partida de pilla-pilla en el vestíbulo, con vistas a promocionar Aceserver en YouTube.
 

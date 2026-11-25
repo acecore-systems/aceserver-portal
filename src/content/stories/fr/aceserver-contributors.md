@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:6e73a561fd250952a1db03516059c4bf056524d0c7cf615d69b4b6402ea08db0
+sourceHash: sha256:db31840097f0ba4685a9a47b6883a56083eabda2461b7c2205529f8a78283900
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -195,6 +195,8 @@ Le 10 juin 2024, KOTA-SAN a annoncé que l’Ace Fest était prévu et a demand�
 
 Le 14 juillet 2024, タケ a recommandé un monde téléchargeable vaste et détaillé pour donner une ambiance adaptée à un événement et a cité « &#20304;&#23665;&#30476; » comme exemple qui pourrait convenir à un cache-cache. Le 4 août, タケ a évoqué les préparatifs et la décoration d’un événement dans un autre message. [Proposition de monde téléchargeable](https://discord.com/channels/737538781024092170/773171457487929344/1262046391820353576) [Compte rendu des préparatifs et de la décoration](https://discord.com/channels/737538781024092170/773171457487929344/1269342768443031552)
 
+En juillet 2024, タケ a demandé sur le panneau d’affichage des images de constructions du serveur. Sous le nom Golden Cocker Sub, une personne a partagé une image de chacun des lieux suivants, Hitotoki no Sato, Deai no Restaurant et Tōgenkyō. [Appel à partager des images](https://discord.com/channels/737538781024092170/1264608467927302188/1265475520519340052) [Hitotoki no Sato](https://discord.com/channels/737538781024092170/1264608467927302188/1265927096719642624) [Deai no Restaurant](https://discord.com/channels/737538781024092170/1264608467927302188/1265927525008150589) [Tōgenkyō](https://discord.com/channels/737538781024092170/1264608467927302188/1265927832513675328)
+
 Lors de la fête d’été du 17 août 2024, sekisei a expliqué les règles et la répartition des équipes du concours de pêche, puis en a annoncé le début. sh a présenté l’Ultra Chasse aux objets et indiqué comment y participer, puis a partagé le lendemain une vidéo de la diffusion officielle. Dans les archives de la préparation de la fête, sh a indiqué qu’Ohagi avait construit le bâtiment du marché aux puces. はっ a expliqué le déroulement et la formation des équipes du jeu de transmission de messages par abstraction minimale. [Diffusion officielle du jeu de messages par abstraction minimale](https://www.youtube.com/live/Fy27JdYPero)
 
 Le 17 août 2024, Pluto a suggéré de recruter des équipes pour le concours de pêche. [Proposition de recrutement d’équipes pour la pêche](https://discord.com/channels/737538781024092170/773171457487929344/1274205080710545459)
@@ -284,6 +286,8 @@ En février et en août 2026, sh a présenté les activités de préparation d�
 En février 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; a sollicité des photos pour des publications promotionnelles sur les réseaux sociaux. LuMiSIA\_&#26376;&#31070;&#24736;&#33673;, &#35199;&#26408;&#37326;&#28716;&#36032;&#27663;, Amagi\_467, Moon\_666, CP-sinzin, Yukke et あすたん ont proposé des photos pour des publications promotionnelles sur les réseaux sociaux.
 
 En février 2026, End&#12539;コッカー a annoncé le concours photo d’Aceserver et indiqué que les candidatures étaient prévues du 16 au 28 février. Des exemples ont été préparés par End&#12539;コッカー pour la catégorie générale et celle de l’équipe de gestion. キツネコ a présenté une photo de travaux de drainage en cours. [Annonce du concours photo de 2026](https://discord.com/channels/737538781024092170/774152638450237460/1471148847119208731)
+
+Le 28 mars 2026, dans le fil consacré aux images pour les réseaux sociaux, sh31415 a proposé une publication laissant entendre que quelque chose allait commencer dans l’End et a joint une image. [Proposition de publication pour les réseaux sociaux](https://discord.com/channels/737538781024092170/1480060237141508268/1487246454161543250) [Image jointe à la proposition](https://discord.com/channels/737538781024092170/1480060237141508268/1487246486428324012)
 
 Le 19 février 2026, End&#12539;コッカー a partagé un texte appelant à aider à filmer une partie de chat dans le hall pour promouvoir Aceserver sur YouTube.
 
