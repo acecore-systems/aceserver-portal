@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:c96602be40044c20ac1f79ba12a5aebf791ed006584bd254ac0c5a0b33e1f1ce
+sourceHash: sha256:bb5ba49afbd464f7cc9458a145b7a3a889648d520e340ffe447c597b0ab29f16
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -81,7 +81,7 @@ En avril 2024, End&#12539;コッカー a fait appel à des volontaires au sein d
 
 Le 22 juillet 2024, End&#12539;コッカー a cherché des volontaires pour construire sur le serveur RPG et a proposé des ateliers de construction environ deux fois par mois pour les personnes souhaitant apprendre.
 
-En septembre 2024, sekisei a présenté Mars (nom provisoire), un groupe de conception et de création de mini-jeux. La présentation indiquait sekisei0077 comme responsable et usualparrot et miin2000 comme premiers membres. sekisei a décrit des idées de mini-jeux autour de la chute et des élytres et a fait appel à des volontaires pour la construction et la création.
+En septembre 2024, sekisei a présenté Mars (nom provisoire), un groupe de conception et de création de mini-jeux. La présentation indiquait sekisei0077 comme responsable et usualparrot et miin2000 comme premiers membres. sekisei a décrit des idées de mini-jeux autour de la chute et des élytres et a fait appel à des volontaires pour la construction et la création. Le 5 septembre, sekisei a indiqué travailler sur un mini-jeu où les joueurs lancent des boules de neige pour briser le sol sous leurs pieds.
 
 En novembre 2024, Nishikino Sega a présenté au sein de CENTURY'S des projets dont un château de style japonais et un métro, et a invité les joueurs à participer.
 

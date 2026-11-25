@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:c96602be40044c20ac1f79ba12a5aebf791ed006584bd254ac0c5a0b33e1f1ce
+sourceHash: sha256:bb5ba49afbd464f7cc9458a145b7a3a889648d520e340ffe447c597b0ab29f16
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -81,7 +81,7 @@ In April 2024, End&#12539;コッカー invited people through the Hunters Associ
 
 On July 22, 2024, End&#12539;コッカー sought help with building on the RPG server and proposed holding building workshops about twice a month for volunteers who wanted to learn.
 
-In September 2024, sekisei introduced Mars (working title), a group for planning and making minigames. The introduction listed sekisei0077 as leader and usualparrot and miin2000 as early members. sekisei described minigame ideas based on falling and Elytra and invited people to help build and develop them.
+In September 2024, sekisei introduced Mars (working title), a group for planning and making minigames. The introduction listed sekisei0077 as leader and usualparrot and miin2000 as early members. sekisei described minigame ideas based on falling and Elytra and invited people to help build and develop them. On September 5, sekisei reported working on a minigame in which players throw snowballs to break the floor beneath their feet.
 
 In November 2024, Nishikino Sega shared CENTURY'S plans for projects including a Japanese-style castle and a subway and invited people to take part.
 

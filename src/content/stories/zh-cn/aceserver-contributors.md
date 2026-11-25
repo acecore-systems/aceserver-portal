@@ -2,7 +2,7 @@
 title: 支持Aceserver的人们
 description: 通过 Minecraft 皮肤头像认识 Aceserver 的贡献者，回顾社区活动记录，并查看活动与玩家提案路线图。
 translationOf: aceserver-contributors
-sourceHash: sha256:c96602be40044c20ac1f79ba12a5aebf791ed006584bd254ac0c5a0b33e1f1ce
+sourceHash: sha256:bb5ba49afbd464f7cc9458a145b7a3a889648d520e340ffe447c597b0ab29f16
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -81,7 +81,7 @@ taka8621 提醒大家可以通过与猪灵以物易物获得沙砾。KOTA-SAN �
 
 2024年7月22日，End&#12539;コッカー 招募协助 RPG 服务器建造的玩家，并提议为想学习建造的志愿者每月举办约两次建造课程。
 
-2024年9月，sekisei介绍了策划和制作小游戏的团队 Mars（暂名），并列出负责人 sekisei0077 和初期成员 usualparrot、miin2000。sekisei介绍了以坠落和鞘翅为主题的小游戏构想，并招募参与建筑和制作的人。
+2024年9月，sekisei介绍了策划和制作小游戏的团队 Mars（暂名），并列出负责人 sekisei0077 和初期成员 usualparrot、miin2000。sekisei介绍了以坠落和鞘翅为主题的小游戏构想，并招募参与建筑和制作的人。9 月 5 日，sekisei 表示正在制作一款投掷雪球破坏脚下地板的小游戏。
 
 2024年11月，Nishikino Sega介绍了 CENTURY'S 的日式城堡、地铁等计划，并邀请大家参与。
 

@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:c96602be40044c20ac1f79ba12a5aebf791ed006584bd254ac0c5a0b33e1f1ce
+sourceHash: sha256:bb5ba49afbd464f7cc9458a145b7a3a889648d520e340ffe447c597b0ab29f16
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -81,7 +81,7 @@ Im April 2024 suchte End&#12539;コッカー in der Jägervereinigung nach Freiw
 
 Am 22. Juli 2024 suchte End&#12539;コッカー Helfer für Bauarbeiten auf dem RPG-Server und schlug für Freiwillige, die das Bauen lernen wollten, etwa zwei Bauworkshops pro Monat vor.
 
-Im September 2024 stellte sekisei Mars (Arbeitstitel) vor, eine Gruppe zur Planung und Entwicklung von Minispielen. In der Vorstellung standen sekisei0077 als Leiter sowie usualparrot und miin2000 als frühe Mitglieder. sekisei beschrieb Ideen für Minispiele rund um das Fallen und die Elytren und warb um Hilfe beim Bauen und Entwickeln.
+Im September 2024 stellte sekisei Mars (Arbeitstitel) vor, eine Gruppe zur Planung und Entwicklung von Minispielen. In der Vorstellung standen sekisei0077 als Leiter sowie usualparrot und miin2000 als frühe Mitglieder. sekisei beschrieb Ideen für Minispiele rund um das Fallen und die Elytren und warb um Hilfe beim Bauen und Entwickeln. Am 5. September berichtete sekisei, an einem Minispiel zu arbeiten, bei dem die Spieler den Boden unter ihren Füßen mit Schneebällen zerstören.
 
 Im November 2024 stellte Nishikino Sega bei CENTURY'S Pläne für eine Burg im japanischen Stil, eine U-Bahn und weitere Vorhaben vor und lud zur Mitarbeit ein.
 

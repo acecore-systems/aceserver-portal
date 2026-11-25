@@ -2,7 +2,7 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:c96602be40044c20ac1f79ba12a5aebf791ed006584bd254ac0c5a0b33e1f1ce
+sourceHash: sha256:bb5ba49afbd464f7cc9458a145b7a3a889648d520e340ffe447c597b0ab29f16
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -81,7 +81,7 @@ En abril de 2024, End&#12539;コッカー buscó en la Asociación de Cazadores 
 
 El 22 de julio de 2024, End&#12539;コッカー buscó ayuda para construir en el servidor de RPG y propuso ofrecer talleres de construcción unas dos veces al mes a los colaboradores que quisieran aprender.
 
-En septiembre de 2024, sekisei presentó Mars (nombre provisional), un grupo de diseño y producción de minijuegos. Presentó a sekisei0077 como responsable y a usualparrot y miin2000 como miembros iniciales. Expuso ideas de minijuegos basados en caídas y élitros e invitó a colaborar en la construcción y el desarrollo.
+En septiembre de 2024, sekisei presentó Mars (nombre provisional), un grupo de diseño y producción de minijuegos. Presentó a sekisei0077 como responsable y a usualparrot y miin2000 como miembros iniciales. Expuso ideas de minijuegos basados en caídas y élitros e invitó a colaborar en la construcción y el desarrollo. El 5 de septiembre, sekisei contó que estaba creando un minijuego en el que se lanzan bolas de nieve para romper el suelo bajo los pies de los jugadores.
 
 En noviembre de 2024, Nishikino Sega dio a conocer en CENTURY'S proyectos como un castillo de estilo japonés y un metro, e invitó a participar.
 
