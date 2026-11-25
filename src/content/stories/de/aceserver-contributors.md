@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:38e3e711356fb28f3763fe9a98473e7cf369233792b758f6582ee8154425d433
+sourceHash: sha256:d257b541af53e5bb348885af676ac3c270d6053f738a0f24ab498c45dac7e38d
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -53,7 +53,7 @@ Die Vorstellung der Gruppe zur Wiederbelebung der antiken Stadt nannte Golden Co
 
 Als Inhaber von A Yū (A-shō) informierte ゆり (Yū) über den Verkauf von Materialien und suchte Freiwillige für den Bau eines Spielbereichs.
 
-Am 16. Januar 2022 fragte はっ im Thread zur Produktentwicklung, welche neuen Waren sich die Spieler für das Angebot von &#20844;&#30410;&#25152; wünschten. KOTA-SAN hielt die Verkaufsvorschläge aus dem Sprachchat schriftlich fest. [Aufruf zu Vorschlägen für neue Waren](https://discord.com/channels/737538781024092170/932084170392494080/932084170392494080) [Notizen zu den Verkaufsvorschlägen](https://discord.com/channels/737538781024092170/932084170392494080/932114105228206100)
+Am 16. Januar 2022 fragte はっ im Thread zur Produktentwicklung, welche neuen Waren sich die Spieler für das Angebot von &#20844;&#30410;&#25152; wünschten. KOTA-SAN hielt die Verkaufsvorschläge aus dem Sprachchat schriftlich fest. KOTA-SAN wies außerdem auf den Fleischerladen an der Rennbahn hin. Caruna wünschte sich Melonen für Tränke. tanto schlug verzauberte Bücher mit Unendlichkeit und einen Tausch von Netherrack gegen Smaragde vor. [Aufruf zu Vorschlägen für neue Waren](https://discord.com/channels/737538781024092170/932084170392494080/932084170392494080) [Notizen zu den Verkaufsvorschlägen](https://discord.com/channels/737538781024092170/932084170392494080/932114105228206100) [Fleischerladen an der Rennbahn](https://discord.com/channels/737538781024092170/932084170392494080/932224727060185139) [Carunas Vorschlag](https://discord.com/channels/737538781024092170/932084170392494080/932258447657955458) [Vorschlag für Bücher mit Unendlichkeit](https://discord.com/channels/737538781024092170/932084170392494080/933396231147905096) [tantos Tauschvorschlag](https://discord.com/channels/737538781024092170/932084170392494080/935898978816524389)
 
 2022 stellte s1nan0sub die Nutzungsregeln für das Dorf Iroha vor und berichtete, dass das gemeinsame Lager des Dorfes Inaba fertiggestellt war.
 
@@ -149,7 +149,7 @@ Für das Ace Fest Offline im Frühjahr 2023 veröffentlichte Gui die offiziellen
 
 Am 8. April 2023 lud `Rina''` im damaligen Kanal Ace-Kantine zum persönlichen Frühlingstreffen ein. [Einladung zum Frühlingstreffen](https://discord.com/channels/737538781024092170/840559799129210890/1094260207175094313)
 
-Im März 2023 erklärte Yukke, wie VIP-Zuschauerplätze reserviert werden konnten und was sie umfassten. Im April kommentierte entoYamKalRZO64 in einem archivierten Thread an der Pinnwand mehrere Streckenentwürfe und beschrieb, welcher am ehesten wie eine Rennstrecke aussah und welcher durch seine ungewöhnliche Form auffiel. [Hinweise zu den VIP-Plätzen](https://discord.com/channels/737538781024092170/1089540183373906001/1089541186819211394) [Kommentar zu einem Streckenentwurf](https://discord.com/channels/737538781024092170/1102238180104749116/1102240233724051616)
+Im März 2023 erklärte Yukke, wie VIP-Zuschauerplätze reserviert werden konnten und was sie umfassten. Im April kommentierte entoYamKalRZO64 in einem archivierten Thread an der Pinnwand mehrere Streckenentwürfe und beschrieb, welcher am ehesten wie eine Rennstrecke aussah und welcher durch seine ungewöhnliche Form auffiel. entoYamKalRZO64 teilte zehn Entwürfe auf einer Geländekarte und eine Vorlage, auf der andere weitere Entwürfe einzeichnen konnten. [Hinweise zu den VIP-Plätzen](https://discord.com/channels/737538781024092170/1089540183373906001/1089541186819211394) [Kommentar zu einem Streckenentwurf](https://discord.com/channels/737538781024092170/1102238180104749116/1102240233724051616) [Vorlage für neue Entwürfe](https://discord.com/channels/737538781024092170/1102238180104749116/1102238555490758656) [Kommentar zu einer ungewöhnlichen Streckenführung](https://discord.com/channels/737538781024092170/1102238180104749116/1102240332457984091)
 
 Im Mai 2023 stellte ゆり für das Team für Öffentlichkeitsarbeit die Pläne zur regelmäßigen Betreuung der YouTube- und Twitter-Kanäle vor. [Pläne für die Öffentlichkeitsarbeit](https://discord.com/channels/737538781024092170/774152638450237460/1110469768420532235)
 
@@ -322,6 +322,8 @@ Am 26. Juli 2026 gab &#12422;&#12426; im Namen von Mobility Resort LuMiSIA bekan
 Am 29. Juli 2026 schlug &#29792;&#22856; ein Eisbootrennen vor, bei dem Spieler eine Belohnung erhalten würden, wenn sie das Ziel innerhalb der vorgegebenen Zeit erreichten.
 
 Am 4. August 2026, dem ersten Tag des „VALORANT&#12360;&#12540;&#39894;CUP“, erklärte Merutak die Regeln für die Partien des Eins-gegen-eins-Turniers. Merutak kündigte auch an, als Zuschauer das Spielgeschehen im Sprachkanal der Veranstaltung zeigen zu wollen. [Spielregeln am ersten Turniertag](https://discord.com/channels/737538781024092170/1533997135127777450/1534000223372705793)
+
+Merutak veröffentlichte den Turnierbaum, Zwischenergebnisse und das Endergebnis. Laut der Abschlusstabelle gewann horomaru vor sya_ri. Am 5. August gab Merutak die Teamaufstellung bekannt und kündigte danach den Wechsel zu Drei gegen Drei an. [Turnierbaum des ersten Tages](https://discord.com/channels/737538781024092170/1533997135127777450/1533997901838024714) [Endergebnis des ersten Tages](https://discord.com/channels/737538781024092170/1533997135127777450/1534178493150265415) [Teams für den zweiten Tag](https://discord.com/channels/737538781024092170/1534400353414414377/1534456642316271616) [Ankündigung von Drei gegen Drei](https://discord.com/channels/737538781024092170/1534400353414414377/1534490983121817690)
 
 Im August 2026 kündigten sekisei und ふーや gemeinsam einen Online-CTF-Wettbewerb als Schatzsuche an, bei dem Rätsel wie Geheimschriften zu Flaggen führen. Aceserver CTF2026 begann am 28. August. [Ankündigung der gemeinsamen Veranstaltung](https://discord.com/channels/737538781024092170/774152638450237460/1541785510094184449) [Bericht zum Start](https://discord.com/channels/737538781024092170/779569416438415421/1542704904055824394)
 
@@ -647,7 +649,7 @@ Am 23. Juli 2022 fragte ein Spieler, warum er den Hauptserver mit der Bedrock Ed
 
 Am 2. August 2022 wurde darüber diskutiert, wie sich das Schlafengehen anderer Spieler auf die verfügbare Arbeitszeit in der Nacht auswirkte. PillowKebap wies darauf hin, dass Spielende bei nächtlichen Arbeiten von den Entscheidungen anderer abhängig waren, und schlug vor, das Überspringen der Nacht abzuschaffen.
 
-Am 3. August 2022 erklärte ゆり im Thread zu den Schildbefehlen, wie man damals einen weiteren Spieler auf einem Schild für den Schutz hinzufügen konnte. [Anleitung zu Schildern für den Schutz](https://discord.com/channels/737538781024092170/1004370637856460921/1004370641593565295)
+Am 3. August 2022 erklärte ゆり im Thread zu den Schildbefehlen, wie man damals einen weiteren Spieler auf einem Schild für den Schutz hinzufügen konnte. Eine Folgenachricht nennt &#12420;&#12435;&#12420;&#12435; als Quelle der Anleitung. [Anleitung zu Schildern für den Schutz](https://discord.com/channels/737538781024092170/1004370637856460921/1004370641593565295) [Quelle der Anleitung](https://discord.com/channels/737538781024092170/1004370637856460921/1004370700406104064)
 
 Im August 2022 bat taka8621 um Rückmeldungen zu einem Vorschlag, Gegenstände in Truhen und ähnlichen Behältern zu schützen, indem das Abbauen von Blöcken mit Inhalt eingeschränkt würde. taibon0727 fragte, ob Truhen und Fässer darunterfallen würden und wie viel der Schutz gegen Griefing ausrichten könnte.
 

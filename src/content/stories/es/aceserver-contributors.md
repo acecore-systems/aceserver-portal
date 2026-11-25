@@ -2,7 +2,7 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:38e3e711356fb28f3763fe9a98473e7cf369233792b758f6582ee8154425d433
+sourceHash: sha256:d257b541af53e5bb348885af676ac3c270d6053f738a0f24ab498c45dac7e38d
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -53,7 +53,7 @@ La presentación del Grupo de Restauración de la Ciudad Antigua nombraba a Gold
 
 Como titular de A Yū (A-shō), ゆり (Yū) informó de la venta de materiales y buscó voluntarios para construir una zona de juegos.
 
-El 16 de enero de 2022, はっ pidió en el hilo de desarrollo de productos que los jugadores propusieran nuevos artículos para vender en &#20844;&#30410;&#25152;. KOTA-SAN tomó nota de las ideas de venta que surgieron en el chat de voz. [Solicitud de propuestas de nuevos productos](https://discord.com/channels/737538781024092170/932084170392494080/932084170392494080) [Notas sobre las ideas de venta](https://discord.com/channels/737538781024092170/932084170392494080/932114105228206100)
+El 16 de enero de 2022, はっ pidió en el hilo de desarrollo de productos que los jugadores propusieran nuevos artículos para vender en &#20844;&#30410;&#25152;. KOTA-SAN tomó nota de las ideas de venta que surgieron en el chat de voz. KOTA-SAN también indicó que había una carnicería en el hipódromo. Caruna pidió sandías para hacer pociones, y tanto propuso vender libros encantados con Infinidad e intercambiar netherrack por esmeraldas. [Solicitud de propuestas de nuevos productos](https://discord.com/channels/737538781024092170/932084170392494080/932084170392494080) [Notas sobre las ideas de venta](https://discord.com/channels/737538781024092170/932084170392494080/932114105228206100) [Carnicería del hipódromo](https://discord.com/channels/737538781024092170/932084170392494080/932224727060185139) [Sugerencia de Caruna](https://discord.com/channels/737538781024092170/932084170392494080/932258447657955458) [Propuesta de libros con Infinidad](https://discord.com/channels/737538781024092170/932084170392494080/933396231147905096) [Intercambio propuesto por tanto](https://discord.com/channels/737538781024092170/932084170392494080/935898978816524389)
 
 En 2022, s1nan0sub explicó las normas de uso de la Aldea Iroha e informó que el almacén compartido de la Aldea Inaba estaba terminado.
 
@@ -149,7 +149,7 @@ Para el Ace Fest Offline de primavera de 2023, Gui publicó los anuncios oficial
 
 El 8 de abril de 2023, `Rina''` invitó a participar en el encuentro presencial de primavera en el canal Comedor Ace de aquella época. [Invitación al encuentro de primavera](https://discord.com/channels/737538781024092170/840559799129210890/1094260207175094313)
 
-En marzo de 2023, Yukke explicó cómo reservar localidades VIP para espectadores y qué incluían. En abril, en un hilo archivado del tablón, entoYamKalRZO64 comentó varios trazados propuestos y señaló cuál se parecía más a un circuito y cuál destacaba por su forma inusual. [Instrucciones sobre las localidades VIP](https://discord.com/channels/737538781024092170/1089540183373906001/1089541186819211394) [Comentario sobre un trazado propuesto](https://discord.com/channels/737538781024092170/1102238180104749116/1102240233724051616)
+En marzo de 2023, Yukke explicó cómo reservar localidades VIP para espectadores y qué incluían. En abril, en un hilo archivado del tablón, entoYamKalRZO64 comentó varios trazados propuestos y señaló cuál se parecía más a un circuito y cuál destacaba por su forma inusual. entoYamKalRZO64 compartió diez trazados dibujados sobre un mapa del terreno y un mapa base en el que se podían dibujar otros recorridos. [Instrucciones sobre las localidades VIP](https://discord.com/channels/737538781024092170/1089540183373906001/1089541186819211394) [Comentario sobre un trazado propuesto](https://discord.com/channels/737538781024092170/1102238180104749116/1102240233724051616) [Mapa base para otros recorridos](https://discord.com/channels/737538781024092170/1102238180104749116/1102238555490758656) [Comentario sobre un trazado inusual](https://discord.com/channels/737538781024092170/1102238180104749116/1102240332457984091)
 
 En mayo de 2023, ゆり presentó el plan del equipo de difusión para gestionar YouTube y Twitter de forma regular. [Planes de difusión](https://discord.com/channels/737538781024092170/774152638450237460/1110469768420532235)
 
@@ -322,6 +322,8 @@ El 26 de julio de 2026, &#12422;&#12426; anunció en nombre de Mobility Resort L
 El 29 de julio de 2026, &#29792;&#22856; propuso una carrera de barcos sobre hielo con una recompensa para quienes llegaran a la meta dentro del tiempo asignado.
 
 El 4 de agosto de 2026, primer día de «VALORANT&#12360;&#12540;&#39894;CUP», Merutak explicó las reglas de los enfrentamientos del torneo uno contra uno. También anunció que planeaba compartir la pantalla de las partidas en el canal de voz del evento como espectador. [Reglas de los enfrentamientos del primer día](https://discord.com/channels/737538781024092170/1533997135127777450/1534000223372705793)
+
+Merutak compartió el cuadro, los marcadores intermedios y el resultado final. El cuadro final registra a horomaru como campeón y a sya_ri en segundo lugar. El 5 de agosto, Merutak anunció los equipos y después comunicó el cambio a un formato de tres contra tres. [Cuadro del primer día](https://discord.com/channels/737538781024092170/1533997135127777450/1533997901838024714) [Resultado final del primer día](https://discord.com/channels/737538781024092170/1533997135127777450/1534178493150265415) [Equipos del segundo día](https://discord.com/channels/737538781024092170/1534400353414414377/1534456642316271616) [Anuncio del formato de tres contra tres](https://discord.com/channels/737538781024092170/1534400353414414377/1534490983121817690)
 
 En agosto de 2026, sekisei y ふーや anunciaron un CTF conjunto de búsqueda del tesoro en línea, con acertijos como criptogramas para encontrar banderas. Aceserver CTF2026 comenzó el 28 de agosto. [Anuncio de organización conjunta](https://discord.com/channels/737538781024092170/774152638450237460/1541785510094184449) [Informe de apertura](https://discord.com/channels/737538781024092170/779569416438415421/1542704904055824394)
 
@@ -647,7 +649,7 @@ El 23 de julio de 2022, un jugador preguntó por qué no podía entrar al servid
 
 El 2 de agosto de 2022, se debatió cómo el hecho de que otros jugadores durmieran afectaba al tiempo disponible para trabajar de noche. PillowKebap señaló que quienes trabajaban de noche dependían de las decisiones ajenas y propuso eliminar la opción de saltarse la noche.
 
-El 3 de agosto de 2022, ゆり explicó en el hilo de comandos de carteles cómo se añadía entonces a otro jugador a un cartel de protección. [Guía sobre los carteles de protección](https://discord.com/channels/737538781024092170/1004370637856460921/1004370641593565295)
+El 3 de agosto de 2022, ゆり explicó en el hilo de comandos de carteles cómo se añadía entonces a otro jugador a un cartel de protección. Un mensaje posterior atribuye las instrucciones a &#12420;&#12435;&#12420;&#12435;. [Guía sobre los carteles de protección](https://discord.com/channels/737538781024092170/1004370637856460921/1004370641593565295) [Crédito de las instrucciones](https://discord.com/channels/737538781024092170/1004370637856460921/1004370700406104064)
 
 En agosto de 2022, taka8621 pidió opiniones sobre una propuesta para proteger los objetos guardados en cofres y otros recipientes limitando la rotura de bloques que contuvieran objetos. taibon0727 preguntó si la medida se aplicaría a cofres y barriles y cuánto ayudaría a prevenir el vandalismo en el juego.
 

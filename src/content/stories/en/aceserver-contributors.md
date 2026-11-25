@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:38e3e711356fb28f3763fe9a98473e7cf369233792b758f6582ee8154425d433
+sourceHash: sha256:d257b541af53e5bb348885af676ac3c270d6053f738a0f24ab498c45dac7e38d
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -53,7 +53,7 @@ An introduction to the Ancient City Restoration Group named Golden Cocker as its
 
 As owner of A Yū (A-shō), ゆり (Yū) described the sale of materials and called for volunteers to build a play area.
 
-On January 16, 2022, はっ asked in the product development thread what new items players wanted &#20844;&#30410;&#25152; to sell. KOTA-SAN took notes on the sales ideas raised in voice chat. [Call for suggestions for new items](https://discord.com/channels/737538781024092170/932084170392494080/932084170392494080) [Notes on the sales ideas](https://discord.com/channels/737538781024092170/932084170392494080/932114105228206100)
+On January 16, 2022, はっ asked in the product development thread what new items players wanted &#20844;&#30410;&#25152; to sell. KOTA-SAN took notes on the sales ideas raised in voice chat. KOTA-SAN also pointed players to the butcher at the racecourse. Caruna asked for melons to make potions, and tanto suggested offering Infinity enchanted books and an exchange of netherrack for emeralds. [Call for suggestions for new items](https://discord.com/channels/737538781024092170/932084170392494080/932084170392494080) [Notes on the sales ideas](https://discord.com/channels/737538781024092170/932084170392494080/932114105228206100) [Racecourse butcher](https://discord.com/channels/737538781024092170/932084170392494080/932224727060185139) [Caruna’s suggestion](https://discord.com/channels/737538781024092170/932084170392494080/932258447657955458) [Suggestion for Infinity books](https://discord.com/channels/737538781024092170/932084170392494080/933396231147905096) [tanto’s proposed trade](https://discord.com/channels/737538781024092170/932084170392494080/935898978816524389)
 
 In 2022, s1nan0sub shared the rules for using Iroha Village and reported that Inaba Village’s shared storage facility was complete.
 
@@ -149,7 +149,7 @@ For Ace Fest Offline in spring 2023, Gui posted the official announcements and �
 
 On April 8, 2023, `Rina''` invited people to join the spring meetup in the Ace Cafeteria channel. [Invitation to the spring meetup](https://discord.com/channels/737538781024092170/840559799129210890/1094260207175094313)
 
-In March 2023, Yukke posted instructions for reserving VIP spectator seats and explained what they included. In April, in an archived bulletin-board thread, entoYamKalRZO64 commented on proposed layouts, including which looked most like a circuit and which stood out for its unusual shape. [VIP seating instructions](https://discord.com/channels/737538781024092170/1089540183373906001/1089541186819211394) [Comments on a proposed layout](https://discord.com/channels/737538781024092170/1102238180104749116/1102240233724051616)
+In March 2023, Yukke posted instructions for reserving VIP spectator seats and explained what they included. In April, in an archived bulletin-board thread, entoYamKalRZO64 commented on proposed layouts, including which looked most like a circuit and which stood out for its unusual shape. entoYamKalRZO64 shared ten layouts drawn on a map of the terrain, along with a base map that others could draw on. [VIP seating instructions](https://discord.com/channels/737538781024092170/1089540183373906001/1089541186819211394) [Comments on a proposed layout](https://discord.com/channels/737538781024092170/1102238180104749116/1102240233724051616) [Base map for new layouts](https://discord.com/channels/737538781024092170/1102238180104749116/1102238555490758656) [Comments on an unusual layout](https://discord.com/channels/737538781024092170/1102238180104749116/1102240332457984091)
 
 In May 2023, ゆり shared the publicity team’s plans to start running the YouTube and Twitter accounts on a regular basis. [Publicity plans](https://discord.com/channels/737538781024092170/774152638450237460/1110469768420532235)
 
@@ -322,6 +322,8 @@ On July 26, 2026, &#12422;&#12426; announced on behalf of Mobility Resort LuMiSI
 On July 29, 2026, &#29792;&#22856; proposed an ice boat race in which players would earn a reward for reaching the finish within their allotted time.
 
 On August 4, 2026, the opening day of “VALORANT&#12360;&#12540;&#39894;CUP”, Merutak explained the match rules for the one-on-one tournament. Merutak also said they planned to share the match screen in the event voice channel as a spectator. [Opening-day match rules](https://discord.com/channels/737538781024092170/1533997135127777450/1534000223372705793)
+
+Merutak posted the bracket, intermediate scores, and final results. The final bracket lists horomaru as the winner and sya_ri as runner-up. On August 5, Merutak announced the team assignments and then said the plan had changed to three-on-three. [Opening-day bracket](https://discord.com/channels/737538781024092170/1533997135127777450/1533997901838024714) [Final results on day one](https://discord.com/channels/737538781024092170/1533997135127777450/1534178493150265415) [Day-two teams](https://discord.com/channels/737538781024092170/1534400353414414377/1534456642316271616) [Three-on-three announcement](https://discord.com/channels/737538781024092170/1534400353414414377/1534490983121817690)
 
 In August 2026, sekisei and ふーや announced a jointly hosted online CTF treasure hunt where players solve puzzles such as ciphers to find flags. Aceserver CTF2026 began on August 28. [Co-host announcement](https://discord.com/channels/737538781024092170/774152638450237460/1541785510094184449) [Opening report](https://discord.com/channels/737538781024092170/779569416438415421/1542704904055824394)
 
@@ -647,7 +649,7 @@ On July 23, 2022, a player asked why they could not join the main server from Be
 
 On August 2, 2022, players discussed how others going to bed could affect the time available to work at night. PillowKebap pointed out that this made people working at night depend on other players’ decisions and proposed removing the option to skip the night.
 
-On August 3, 2022, ゆり posted instructions in the sign commands thread for adding another player to a protection sign under the system used at the time. [Guide to protection signs](https://discord.com/channels/737538781024092170/1004370637856460921/1004370641593565295)
+On August 3, 2022, ゆり posted instructions in the sign commands thread for adding another player to a protection sign under the system used at the time. A follow-up message credits &#12420;&#12435;&#12420;&#12435; as the source of the instructions. [Guide to protection signs](https://discord.com/channels/737538781024092170/1004370637856460921/1004370641593565295) [Credit for the instructions](https://discord.com/channels/737538781024092170/1004370637856460921/1004370700406104064)
 
 In August 2022, taka8621 asked for feedback on a proposal to protect items stored in chests and similar containers by restricting the breaking of blocks that held items. taibon0727 asked whether chests and barrels would be covered and how much the protection would help prevent griefing.
 
