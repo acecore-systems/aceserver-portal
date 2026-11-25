@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:31d832c333129002542e7cb7ab5cf3ae4741d2850cb7fd6e9604556b587f369b
+sourceHash: sha256:aad42f4f0370808766b4e95101c7f9d36f27fb4ba446803e0a7b94d01ef21030
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -584,6 +584,10 @@ In June 2022, Mugi updated the text-to-speech bot Kutya to support chat inside v
 On June 2, while players discussed which mode to use for building the lobby, Moon\_666 suggested that several people selected by the staff build the key areas in Creative mode. [Creative mode building proposal](https://discord.com/channels/737538781024092170/981568975387365466/981580332581138502)
 
 On June 4, 2022, はっ opened a Discord thread for a public meeting. For the new lobby, edamameRex_java suggested floating islands, an underwater city, and a volcanic island, among other ideas. taiyaki5190 pointed out that some players might be unable to travel between islands if parkour were the only route. KITUNEKO0605 grouped the ideas into water, land, and sky. YM proposed preserving parts of large builds from earlier lobbies and the old survival world. はっ compiled the meeting’s ideas. [Public meeting thread](https://discord.com/channels/737538781024092170/982599800375623740/982599800375623740) [edamameRex_java’s terrain ideas](https://discord.com/channels/737538781024092170/982599800375623740/982604466471718982) [Feedback on travel between islands](https://discord.com/channels/737538781024092170/982599800375623740/982605844204101712) [Water, land, and sky ideas](https://discord.com/channels/737538781024092170/982599800375623740/982608900295622686) [Proposal to preserve earlier builds](https://discord.com/channels/737538781024092170/982599800375623740/982606978952101909) [List of meeting ideas](https://discord.com/channels/737538781024092170/982599800375623740/982612891154915401)
+
+At the same meeting, Moon_666 suggested giving each portal a different atmosphere, and &#12450;&#12510;&#12484; proposed a lobby above a large lake at a mountain summit. &#38738;&#12367;&#12394;&#12387;&#12383;&#12376;&#12419;&#12364;&#12356;&#12418;&#65288;wawawa&#65289; proposed connecting floating islands with buildings on the ground, with a shoreline, buildings from the server’s history, and Azkaban-themed features underwater. [Portal design suggestion](https://discord.com/channels/737538781024092170/982599800375623740/982610376850030623) [Mountain lake proposal](https://discord.com/channels/737538781024092170/982599800375623740/982611106323386398) [Floating islands, ground and underwater proposal](https://discord.com/channels/737538781024092170/982599800375623740/982611638790275115)
+
+YM suggested making room for feedback on the meeting’s outcome and rotating lobbies from time to time. &#12496;&#12523;&#12469;&#12511;&#12467;&#37218;&#37240; proposed miniature versions of old lobbies, and Yukke suggested sky islands that players could jump from to reach an Azkaban entrance in a Nether-like area. [Feedback and lobby rotation proposal](https://discord.com/channels/737538781024092170/982599800375623740/982611453066510396) [Miniatures of previous lobbies](https://discord.com/channels/737538781024092170/982599800375623740/982618056184459294) [Sky lobby proposal](https://discord.com/channels/737538781024092170/982599800375623740/982621769766699008)
 
 On June 25 and 26, 2022, yanyan_fafnir asked players to weigh in through a supporter survey on opening the test world Azkaban as a temporary play area. taibon0727 described the idea as something like a demo, and sh pointed out that opening it to players could double as a test. taka8621 suggested a place where players could try building and experimenting with circuits without applying first.
 
