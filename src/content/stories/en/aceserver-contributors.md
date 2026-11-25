@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:befdf1ffdc763d619a622350a4958bcfe3f2f4c974ed058a43a86eb5b21b4c4c
+sourceHash: sha256:ee56f27cc37cdad5855ee5b05eff2309c9e686afce54664782163e9b4d797e3d
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -658,6 +658,10 @@ On July 23, 2022, a player asked why they could not join the main server from Be
 On August 2, 2022, players discussed how others going to bed could affect the time available to work at night. PillowKebap pointed out that this made people working at night depend on other players’ decisions and proposed removing the option to skip the night.
 
 On August 3, 2022, ゆり posted instructions in the sign commands thread for adding another player to a protection sign under the system used at the time. A follow-up message credits &#12420;&#12435;&#12420;&#12435; as the source of the instructions. [Guide to protection signs](https://discord.com/channels/737538781024092170/1004370637856460921/1004370641593565295) [Credit for the instructions](https://discord.com/channels/737538781024092170/1004370637856460921/1004370700406104064)
+
+In August 2022, ゆり outlined concerns about elytra use, including disparities between players, server load, how staff would handle accidents, and rules for flying. The ideas raised included a ticket-like system and limits on firework rockets and where players could fly. taka8621 explained that loading many chunks quickly could strain the server. [Issues outlined by ゆり](https://discord.com/channels/737538781024092170/1006189958006063134/1006198248257626152) [Ideas for tickets and limits](https://discord.com/channels/737538781024092170/1006189958006063134/1006200716022517800) [taka8621’s explanation of server load](https://discord.com/channels/737538781024092170/1006189958006063134/1006192987505709086)
+
+タケ suggested using elytra for short trips, and PillowKebap proposed a flight zone with its own limits separate from the world border. edamameRex_java pointed to the need to obtain end stone, and SPdari asked for access to resources found only in the End. [タケ’s short-distance proposal](https://discord.com/channels/737538781024092170/1006189958006063134/1006194237622210621) [PillowKebap’s flight zone proposal](https://discord.com/channels/737538781024092170/1006189958006063134/1006194801873518612) [edamameRex_java’s comment on end stone](https://discord.com/channels/737538781024092170/1006189958006063134/1006192301695045632) [SPdari’s request to open the End](https://discord.com/channels/737538781024092170/1006189958006063134/1006352258553876650)
 
 In August 2022, taka8621 asked for feedback on a proposal to protect items stored in chests and similar containers by restricting the breaking of blocks that held items. taibon0727 asked whether chests and barrels would be covered and how much the protection would help prevent griefing.
 

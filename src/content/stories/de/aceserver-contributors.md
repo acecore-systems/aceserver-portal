@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:befdf1ffdc763d619a622350a4958bcfe3f2f4c974ed058a43a86eb5b21b4c4c
+sourceHash: sha256:ee56f27cc37cdad5855ee5b05eff2309c9e686afce54664782163e9b4d797e3d
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -658,6 +658,10 @@ Am 23. Juli 2022 fragte ein Spieler, warum er den Hauptserver mit der Bedrock Ed
 Am 2. August 2022 wurde darüber diskutiert, wie sich das Schlafengehen anderer Spieler auf die verfügbare Arbeitszeit in der Nacht auswirkte. PillowKebap wies darauf hin, dass Spielende bei nächtlichen Arbeiten von den Entscheidungen anderer abhängig waren, und schlug vor, das Überspringen der Nacht abzuschaffen.
 
 Am 3. August 2022 erklärte ゆり im Thread zu den Schildbefehlen, wie man damals einen weiteren Spieler auf einem Schild für den Schutz hinzufügen konnte. Eine Folgenachricht nennt &#12420;&#12435;&#12420;&#12435; als Quelle der Anleitung. [Anleitung zu Schildern für den Schutz](https://discord.com/channels/737538781024092170/1004370637856460921/1004370641593565295) [Quelle der Anleitung](https://discord.com/channels/737538781024092170/1004370637856460921/1004370700406104064)
+
+Im August 2022 nannte ゆり bei der Diskussion um Elytren die Unterschiede zwischen Spielern, die Serverlast, den Umgang des Teams mit Unfällen und die Regeln fürs Fliegen. Zu den Ideen gehörten ein System ähnlich wie bei Flugtickets sowie Beschränkungen für Feuerwerksraketen und Flugbereiche. taka8621 erklärte, dass das schnelle Laden vieler Chunks den Server belasten könne. [Von ゆり zusammengefasste Fragen](https://discord.com/channels/737538781024092170/1006189958006063134/1006198248257626152) [Ideen für Tickets und Beschränkungen](https://discord.com/channels/737538781024092170/1006189958006063134/1006200716022517800) [taka8621 zur Serverlast](https://discord.com/channels/737538781024092170/1006189958006063134/1006192987505709086)
+
+タケ schlug vor, Elytren auf kurze Strecken zu beschränken. PillowKebap regte ein Fluggebiet mit eigenen Grenzen unabhängig von der Weltgrenze an. edamameRex_java wies auf den Bedarf an Endstein hin, und SPdari plädierte für den Zugang zu Ressourcen, die es nur im Ende gibt. [Vorschlag von タケ für kurze Strecken](https://discord.com/channels/737538781024092170/1006189958006063134/1006194237622210621) [PillowKebaps Vorschlag für ein Fluggebiet](https://discord.com/channels/737538781024092170/1006189958006063134/1006194801873518612) [edamameRex_java zu Endstein](https://discord.com/channels/737538781024092170/1006189958006063134/1006192301695045632) [SPdaris Bitte um Zugang zum Ende](https://discord.com/channels/737538781024092170/1006189958006063134/1006352258553876650)
 
 Im August 2022 bat taka8621 um Rückmeldungen zu einem Vorschlag, Gegenstände in Truhen und ähnlichen Behältern zu schützen, indem das Abbauen von Blöcken mit Inhalt eingeschränkt würde. taibon0727 fragte, ob Truhen und Fässer darunterfallen würden und wie viel der Schutz gegen Griefing ausrichten könnte.
 

@@ -2,7 +2,7 @@
 title: As pessoas que apoiaram o Aceserver
 description: Conheça quem ajudou o Aceserver pelos retratos de skins do Minecraft, relembre as atividades e confira o roteiro de eventos e propostas.
 translationOf: aceserver-contributors
-sourceHash: sha256:befdf1ffdc763d619a622350a4958bcfe3f2f4c974ed058a43a86eb5b21b4c4c
+sourceHash: sha256:ee56f27cc37cdad5855ee5b05eff2309c9e686afce54664782163e9b4d797e3d
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -658,6 +658,10 @@ Em 23 de julho de 2022, um jogador perguntou por que não conseguia entrar no se
 Em 2 de agosto de 2022, discutiu-se como o sono de outros jogadores afetava o tempo disponível para trabalhar à noite. PillowKebap observou que quem trabalhava à noite ficava sujeito às decisões dos demais jogadores e propôs retirar a opção de pular a noite.
 
 Em 3 de agosto de 2022, ゆり explicou na discussão sobre comandos de placas como adicionar outro jogador a uma placa de proteção pelo procedimento da época. Uma mensagem posterior credita as instruções a &#12420;&#12435;&#12420;&#12435;. [Guia de placas de proteção](https://discord.com/channels/737538781024092170/1004370637856460921/1004370641593565295) [Crédito das instruções](https://discord.com/channels/737538781024092170/1004370637856460921/1004370700406104064)
+
+Em agosto de 2022, ゆり resumiu as questões em torno do uso dos élitros, como as diferenças entre jogadores, a carga do servidor, a resposta a acidentes e as regras de voo. Entre as ideias estavam um sistema semelhante a passagens aéreas e limites para os foguetes de artifício e as áreas de voo. taka8621 explicou que carregar muitos chunks rapidamente podia sobrecarregar o servidor. [Questões resumidas por ゆり](https://discord.com/channels/737538781024092170/1006189958006063134/1006198248257626152) [Ideias de passagens e limites](https://discord.com/channels/737538781024092170/1006189958006063134/1006200716022517800) [Explicação de taka8621 sobre a carga do servidor](https://discord.com/channels/737538781024092170/1006189958006063134/1006192987505709086)
+
+タケ sugeriu usar os élitros para trajetos curtos. PillowKebap propôs uma zona de voo com limites próprios, independentes da borda do mundo. edamameRex_java destacou a necessidade de obter pedra do End, e SPdari pediu acesso aos recursos encontrados apenas no End. [Proposta de trajetos curtos de タケ](https://discord.com/channels/737538781024092170/1006189958006063134/1006194237622210621) [Zona de voo proposta por PillowKebap](https://discord.com/channels/737538781024092170/1006189958006063134/1006194801873518612) [Observação de edamameRex_java sobre a pedra do End](https://discord.com/channels/737538781024092170/1006189958006063134/1006192301695045632) [Pedido de SPdari para abrir o End](https://discord.com/channels/737538781024092170/1006189958006063134/1006352258553876650)
 
 Em agosto de 2022, taka8621 pediu opiniões sobre uma proposta para proteger itens guardados em baús e outros recipientes, restringindo a quebra de blocos que contivessem itens. taibon0727 perguntou se baús e barris estariam incluídos e até que ponto essa proteção ajudaria a evitar o vandalismo no jogo.
 

@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:befdf1ffdc763d619a622350a4958bcfe3f2f4c974ed058a43a86eb5b21b4c4c
+sourceHash: sha256:ee56f27cc37cdad5855ee5b05eff2309c9e686afce54664782163e9b4d797e3d
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -658,6 +658,10 @@ Le 23 juillet 2022, un joueur a demandé pourquoi il ne pouvait pas rejoindre le
 Le 2 août 2022, la discussion a porté sur l’effet du sommeil des autres joueurs sur le temps disponible pour travailler la nuit. PillowKebap a relevé que les personnes travaillant la nuit dépendaient des décisions des autres joueurs et a proposé de supprimer la possibilité de passer la nuit.
 
 Le 3 août 2022, ゆり a expliqué dans le fil des commandes de pancartes comment ajouter un autre joueur à une pancarte de protection selon la procédure de l’époque. Un message suivant indique que les instructions viennent de &#12420;&#12435;&#12420;&#12435;. [Guide sur les pancartes de protection](https://discord.com/channels/737538781024092170/1004370637856460921/1004370641593565295) [Source des instructions](https://discord.com/channels/737538781024092170/1004370637856460921/1004370700406104064)
+
+En août 2022, ゆり a résumé les questions soulevées par l’usage des élytres, notamment les écarts entre joueurs, la charge du serveur, la gestion des accidents et les règles de vol. Parmi les idées figuraient un système de billets et des limites pour les fusées de feu d’artifice ainsi que pour les zones de vol. taka8621 a expliqué que le chargement rapide de nombreux tronçons pouvait solliciter le serveur. [Points soulevés par ゆり](https://discord.com/channels/737538781024092170/1006189958006063134/1006198248257626152) [Idées de billets et de restrictions](https://discord.com/channels/737538781024092170/1006189958006063134/1006200716022517800) [Explication de taka8621 sur la charge](https://discord.com/channels/737538781024092170/1006189958006063134/1006192987505709086)
+
+タケ a proposé de réserver les élytres aux trajets courts. PillowKebap a suggéré une zone de vol délimitée indépendamment de la bordure du monde. edamameRex_java a évoqué l’accès à la pierre de l’End, et SPdari a insisté sur l’accès aux ressources propres à l’End. [Trajets courts proposés par タケ](https://discord.com/channels/737538781024092170/1006189958006063134/1006194237622210621) [Zone de vol proposée par PillowKebap](https://discord.com/channels/737538781024092170/1006189958006063134/1006194801873518612) [Remarque de edamameRex_java sur la pierre de l’End](https://discord.com/channels/737538781024092170/1006189958006063134/1006192301695045632) [Demande de SPdari pour ouvrir l’End](https://discord.com/channels/737538781024092170/1006189958006063134/1006352258553876650)
 
 En août 2022, taka8621 a demandé des avis sur une proposition visant à protéger les objets rangés dans des coffres et autres contenants en limitant la destruction des blocs qui contenaient des objets. taibon0727 a demandé si les coffres et les tonneaux seraient concernés et dans quelle mesure cette protection aiderait à prévenir le vandalisme en jeu.
 
