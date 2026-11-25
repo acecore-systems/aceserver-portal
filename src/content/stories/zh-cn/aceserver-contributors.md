@@ -2,7 +2,7 @@
 title: 支持Aceserver的人们
 description: 通过 Minecraft 皮肤头像认识 Aceserver 的贡献者，回顾社区活动记录，并查看活动与玩家提案路线图。
 translationOf: aceserver-contributors
-sourceHash: sha256:baa37976c8a52e11e50eb5dc0b559e95867bff1b59c2d34d1c23c6f177ce6529
+sourceHash: sha256:1b81ce01a4c43dd9d9d676e9deaeed86f81bca4fdd6cc7380a7e90018c6802a8
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -782,6 +782,8 @@ YM画了一张把浮岛、地面、地下与水下区域结合起来的折衷方
 2025年1月，sekisei公告称，更新后草的合成配方当时无法使用。
 
 2025 年 3 月 11 日，End&#12539;コッカー 拟定了面向新玩家的指南草稿，涵盖查看官方网站和 Wiki、加入 Discord，以及与 Minecraft 进行关联。 [新玩家指南草稿](https://discord.com/channels/737538781024092170/773171457487929344/1348935788095737869)
+
+2025 年 3 月 11 日至 12 日，LuMiSIA\_&#26376;&#31070;&#24736;&#33673; 在讨论运营方向时，将 Wiki 上的服务器理念作为参考，还分享了 Aceserver 社区模型图，说明玩家、大厅与各服务器之间的关系。 [官方 Wiki 的服务器理念](https://asv-wiki.acecore.net/article/rinen/)
 
 2025年3月26日，LuMiSIA\_&#26376;&#31070;&#24736;&#33673; 汇总并分享了筹备安排，提议先在全体会议上审议 Discord 和游戏服务器的架构方案，再着手准备大厅等空间。
 

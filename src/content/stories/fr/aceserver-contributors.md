@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:baa37976c8a52e11e50eb5dc0b559e95867bff1b59c2d34d1c23c6f177ce6529
+sourceHash: sha256:1b81ce01a4c43dd9d9d676e9deaeed86f81bca4fdd6cc7380a7e90018c6802a8
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -782,6 +782,8 @@ Le 24 décembre 2024, asutarisucu a proposé de revoir en profondeur les plugins
 En janvier 2025, sekisei a annoncé que la recette de fabrication de l’herbe était indisponible à la suite d’une mise à jour.
 
 Le 11 mars 2025, End&#12539;コッカー a rédigé un projet de guide pour les nouveaux joueurs, de la consultation du site officiel et du wiki à l’arrivée sur Discord et à la liaison avec Minecraft. [Projet de guide pour les nouveaux joueurs](https://discord.com/channels/737538781024092170/773171457487929344/1348935788095737869)
+
+Les 11 et 12 mars 2025, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; a cité la philosophie du serveur présentée dans le wiki lors des échanges sur son orientation. LuMiSIA\_&#26376;&#31070;&#24736;&#33673; a aussi partagé un schéma du modèle communautaire d’Aceserver montrant les liens entre les joueurs, le hall et les différents serveurs. [Philosophie du serveur dans le wiki officiel](https://asv-wiki.acecore.net/article/rinen/)
 
 Le 26 mars 2025, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; a partagé un plan pour examiner en réunion générale les propositions d’organisation de Discord et des serveurs de jeu, avant de passer à la préparation du hall et d’autres espaces.
 

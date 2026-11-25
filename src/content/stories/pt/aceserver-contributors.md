@@ -2,7 +2,7 @@
 title: As pessoas que apoiaram o Aceserver
 description: Conheça quem ajudou o Aceserver pelos retratos de skins do Minecraft, relembre as atividades e confira o roteiro de eventos e propostas.
 translationOf: aceserver-contributors
-sourceHash: sha256:baa37976c8a52e11e50eb5dc0b559e95867bff1b59c2d34d1c23c6f177ce6529
+sourceHash: sha256:1b81ce01a4c43dd9d9d676e9deaeed86f81bca4fdd6cc7380a7e90018c6802a8
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -782,6 +782,8 @@ Em 24 de dezembro de 2024, asutarisucu propôs uma revisão ampla dos plugins ex
 Em janeiro de 2025, sekisei informou que a receita de fabricação de grama estava indisponível após uma atualização.
 
 Em 11 de março de 2025, End&#12539;コッカー preparou um rascunho de guia para novos jogadores, incluindo como consultar o site oficial e a wiki, entrar no Discord e fazer a vinculação com o Minecraft. [Rascunho do guia para novos jogadores](https://discord.com/channels/737538781024092170/773171457487929344/1348935788095737869)
+
+Em 11 e 12 de março de 2025, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; indicou a filosofia do servidor na wiki como referência durante as conversas sobre seus rumos. Também compartilhou um diagrama do modelo de comunidade do Aceserver que mostrava a relação entre os jogadores, o lobby e os diferentes servidores. [Filosofia do servidor na wiki oficial](https://asv-wiki.acecore.net/article/rinen/)
 
 Em 26 de março de 2025, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; compartilhou um plano para analisar em uma reunião geral as propostas de organização do Discord e dos servidores de jogo antes de avançar com a preparação do lobby e de outros espaços.
 

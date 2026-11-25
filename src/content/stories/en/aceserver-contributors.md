@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:baa37976c8a52e11e50eb5dc0b559e95867bff1b59c2d34d1c23c6f177ce6529
+sourceHash: sha256:1b81ce01a4c43dd9d9d676e9deaeed86f81bca4fdd6cc7380a7e90018c6802a8
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -782,6 +782,8 @@ On December 24, 2024, asutarisucu proposed a major revision of Aceserver’s exi
 In January 2025, sekisei announced that the grass crafting recipe was unavailable following an update.
 
 On March 11, 2025, End&#12539;コッカー drafted a guide for first-time players that covered visiting the official website and wiki, joining Discord, and linking it with Minecraft. [Draft guide for first-time players](https://discord.com/channels/737538781024092170/773171457487929344/1348935788095737869)
+
+On March 11 and 12, 2025, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; pointed to the Wiki’s server philosophy during discussions about the server’s direction and shared an Aceserver community model diagram showing how players, the lobby, and the different servers connect. [Server philosophy in the official Wiki](https://asv-wiki.acecore.net/article/rinen/)
 
 On March 26, 2025, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; shared an outline for reviewing proposals for the Discord and game server setup at a general meeting before starting work on the lobby and other preparations.
 

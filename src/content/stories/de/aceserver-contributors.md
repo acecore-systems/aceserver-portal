@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:baa37976c8a52e11e50eb5dc0b559e95867bff1b59c2d34d1c23c6f177ce6529
+sourceHash: sha256:1b81ce01a4c43dd9d9d676e9deaeed86f81bca4fdd6cc7380a7e90018c6802a8
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -782,6 +782,8 @@ Am 24. Dezember 2024 schlug asutarisucu vor, die bestehenden Plugins von Aceserv
 Im Januar 2025 teilte sekisei mit, dass das Herstellungsrezept für Gras nach einem Update nicht verfügbar war.
 
 Am 11. März 2025 entwarf End&#12539;コッカー eine Anleitung für neue Spieler, die den Besuch der offiziellen Website und des Wikis, den Beitritt zu Discord und die Verknüpfung mit Minecraft abdeckte. [Entwurf der Anleitung für neue Spieler](https://discord.com/channels/737538781024092170/773171457487929344/1348935788095737869)
+
+Am 11. und 12. März 2025 verwies LuMiSIA\_&#26376;&#31070;&#24736;&#33673; bei der Diskussion über die Ausrichtung des Servers auf die Ziele im Wiki. Außerdem teilte LuMiSIA\_&#26376;&#31070;&#24736;&#33673; ein Schaubild zum Aceserver-Community-Modell, das die Beziehungen zwischen den Spielern, der Lobby und den einzelnen Servern darstellte. [Ziele des Servers im offiziellen Wiki](https://asv-wiki.acecore.net/article/rinen/)
 
 Am 26. März 2025 teilte LuMiSIA\_&#26376;&#31070;&#24736;&#33673; einen Ablaufplan, nach dem in einer allgemeinen Sitzung zunächst die Vorschläge für den Aufbau von Discord und der Spielserver geprüft werden sollten, bevor die Vorbereitungen für die Lobby und andere Bereiche beginnen würden.
 

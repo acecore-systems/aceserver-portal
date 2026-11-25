@@ -2,7 +2,7 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:baa37976c8a52e11e50eb5dc0b559e95867bff1b59c2d34d1c23c6f177ce6529
+sourceHash: sha256:1b81ce01a4c43dd9d9d676e9deaeed86f81bca4fdd6cc7380a7e90018c6802a8
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -782,6 +782,8 @@ El 24 de diciembre de 2024, asutarisucu propuso una revisión a fondo de los com
 En enero de 2025, sekisei anunció que la receta de fabricación de hierba no estaba disponible tras una actualización.
 
 El 11 de marzo de 2025, End&#12539;コッカー redactó un borrador de guía para nuevos jugadores que abarcaba la consulta del sitio oficial y la wiki, la entrada a Discord y la vinculación con Minecraft. [Borrador de guía para nuevos jugadores](https://discord.com/channels/737538781024092170/773171457487929344/1348935788095737869)
+
+El 11 y 12 de marzo de 2025, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; señaló la filosofía del servidor recogida en la wiki durante las conversaciones sobre su rumbo. También compartió un esquema del modelo de comunidad de Aceserver que mostraba cómo se relacionaban los jugadores, el vestíbulo y los distintos servidores. [Filosofía del servidor en la wiki oficial](https://asv-wiki.acecore.net/article/rinen/)
 
 El 26 de marzo de 2025, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; compartió un plan para revisar en una reunión general las propuestas sobre la organización de Discord y los servidores de juego antes de pasar a preparar el vestíbulo y otros espacios.
 
