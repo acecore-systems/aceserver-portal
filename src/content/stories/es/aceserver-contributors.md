@@ -2,7 +2,7 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:12ea8cf93c4b0cc837c628b9f38b29b5bad8578bf16df9df8a1e2e63377c7236
+sourceHash: sha256:75ec9758ff83d60ceb4d8d0242a1730b610a750d1e46feb994872632c3242f61
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -320,6 +320,8 @@ El 7 de marzo de 2026, End&#12539;コッカー pidió ideas para eventos y volun
 En marzo de 2026, &#12486;&#12451;&#12512;&#12540; solicitó ideas para un nuevo icono y relatos de sucesos en el servidor para el Diario de Aceserver del Comité de Revitalización de Aceserver.
 
 El 25 de abril de 2026, &#12450;&#12510;&#12484; resumió las pautas de construcción para un evento de asedio en Minecraft. Las pautas fijaban el castillo como tema y reservaban campos para indicar el estilo arquitectónico y la combinación de colores. El 5 de mayo, &#12450;&#12510;&#12484; informó de que había construido una base provisional y compartió una captura del juego. El 10 de mayo, &#12450;&#12510;&#12484; propuso el orden de trabajo para construir la estructura y copiarla al terreno del evento.
+
+Para el mismo evento de asedio, &#35199;&#26408;&#37326;&#28716;&#36032;&#27663; se ofreció a ayudar a reunir materiales. El 12 de mayo, End&#12539;コッカー compartió una vista aérea del terreno. El 16 de mayo, Pluto compartió la misma imagen con varias zonas señaladas y propuso un recorrido por las islas.
 
 El 6 de mayo de 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; preparó una propuesta para el festival de verano «&#12360;&#65374;&#22799;&#31085;&#12426;», pensado como un lugar de encuentro para participantes nuevos y veteranos. La propuesta incluía puestos a cargo de los participantes y un espectáculo de fuegos artificiales. El 19 de mayo, informó de que había conseguido la colaboración de &#12475;&#12531;&#12481;&#12517;&#12522;&#12474; para los fuegos artificiales.
 

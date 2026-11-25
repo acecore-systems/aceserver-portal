@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:12ea8cf93c4b0cc837c628b9f38b29b5bad8578bf16df9df8a1e2e63377c7236
+sourceHash: sha256:75ec9758ff83d60ceb4d8d0242a1730b610a750d1e46feb994872632c3242f61
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -320,6 +320,8 @@ Am 7. März 2026 bat End&#12539;コッカー um Veranstaltungsideen und Mithilfe
 Im März 2026 bat &#12486;&#12451;&#12512;&#12540; für das Aceserver-Tagebuch des Belebungskomitees von Aceserver um Ideen für ein neues Symbol und um Beiträge zu Ereignissen auf dem Server.
 
 Am 25. April 2026 fasste &#12450;&#12510;&#12484; die Bauvorgaben für ein Belagerungsevent in Minecraft zusammen. Eine Burg war das vorgegebene Thema, und für Baustil und Farbgebung waren eigene Felder vorgesehen. Am 5. Mai berichtete &#12450;&#12510;&#12484;, eine provisorische Basis gebaut zu haben, und teilte dazu einen Screenshot aus dem Spiel. Am 10. Mai schlug &#12450;&#12510;&#12484; vor, in welcher Reihenfolge das Bauwerk entstehen und auf das Veranstaltungsgelände kopiert werden sollte.
+
+Für dasselbe Belagerungsevent bot &#35199;&#26408;&#37326;&#28716;&#36032;&#27663; an, beim Sammeln von Baumaterial zu helfen. Am 12. Mai teilte End&#12539;コッカー eine Luftaufnahme des Geländes. Am 16. Mai teilte Pluto dieselbe Aufnahme mit markierten Bereichen und schlug eine Route über mehrere Inseln vor.
 
 Am 6. Mai 2026 entwarf LuMiSIA\_&#26376;&#31070;&#24736;&#33673; einen Vorschlag für das Sommerfest „&#12360;&#65374;&#22799;&#31085;&#12426;“, bei dem neue und langjährige Teilnehmer zusammenkommen könnten. Der Vorschlag umfasste Stände der Teilnehmer und ein Feuerwerk. Am 19. Mai berichtete LuMiSIA\_&#26376;&#31070;&#24736;&#33673;, Unterstützung von &#12475;&#12531;&#12481;&#12517;&#12522;&#12474; für das Feuerwerk gewonnen zu haben.
 
