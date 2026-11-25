@@ -2,7 +2,7 @@
 title: As pessoas que apoiaram o Aceserver
 description: Conheça quem ajudou o Aceserver pelos retratos de skins do Minecraft, relembre as atividades e confira o roteiro de eventos e propostas.
 translationOf: aceserver-contributors
-sourceHash: sha256:f4834f90e986ade1ff6bfbebe0ef611cf5b6360a6d0879a2d1980a8a2f69ad84
+sourceHash: sha256:b0a68bd27d67a61b182d7dc6bb58d60d44c317be502b84aafa129f408a3714ff
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -100,6 +100,8 @@ No mesmo mês, para comemorar a conclusão do museu de arte de LibraI, KOTA-SAN 
 Em maio de 2021, KOTA-SAN informou que o Ace Fest que havia lançado tinha concluído a programação de dois dias. Agradeceu a キツネコ, que ficou à frente da preparação do local, na base dos Ibaraki Overwatchers. KOTA-SAN também havia criado e compartilhado o primeiro cartaz preliminar do evento.
 
 Em maio de 2021, &#24535;&#19978;&#12495;&#12472;&#12513; anunciou uma transmissão de sobrevivência no Aceserver com participação dos espectadores. Game\_Tokumei anunciou que planejava transmitir a construção de um fosso de formiga-leão. Em julho, &#31070;&#30000;&#12495;&#12525;&#12453; anunciou uma transmissão para construir a Torre da Rapunzel.
+
+A 17 de junho de 2021, KOTA-SAN propôs um concurso de capturas de ecrã para assinalar a abertura de uma conta no Instagram.
 
 Nos registros do antigo canal do Discord da E-ha Radio, KOTA-SAN apoiou o programa em 2021 pedindo mensagens dos ouvintes e explicando o conteúdo e a programação. はっ também anunciou a próxima transmissão e o tema das mensagens.
 
@@ -309,7 +311,7 @@ Em fevereiro de 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; pediu fotos para
 
 Em fevereiro de 2026, End&#12539;コッカー anunciou o Concurso de Fotografia do Aceserver e informou que o período de envio era de 16 a 28 de fevereiro. Preparou exemplos de inscrições para a categoria geral e para a equipe de gestão. キツネコ enviou uma foto de um trabalho de drenagem em andamento. [Anúncio do Concurso de Fotografia de 2026](https://discord.com/channels/737538781024092170/774152638450237460/1471148847119208731)
 
-Em 28 de março de 2026, no tópico de imagens para redes sociais, sh31415 sugeriu uma publicação que desse a entender que algo estava prestes a começar no End e anexou uma imagem. [Sugestão de publicação para redes sociais](https://discord.com/channels/737538781024092170/1480060237141508268/1487246454161543250) [Imagem anexada à sugestão](https://discord.com/channels/737538781024092170/1480060237141508268/1487246486428324012)
+Em 28 de março de 2026, no tópico de imagens para redes sociais, sh31415 sugeriu uma publicação que desse a entender que algo estava prestes a começar no End e anexou uma imagem. A imagem mostrava plataformas de vidro e lanternas suspensas. [Sugestão de publicação para redes sociais](https://discord.com/channels/737538781024092170/1480060237141508268/1487246454161543250) [Imagem anexada à sugestão](https://discord.com/channels/737538781024092170/1480060237141508268/1487246486428324012)
 
 Em 19 de fevereiro de 2026, End&#12539;コッカー compartilhou um texto para pedir ajuda na gravação de uma partida de pega-pega no lobby a fim de divulgar o Aceserver no YouTube.
 

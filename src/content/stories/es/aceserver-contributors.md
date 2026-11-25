@@ -2,7 +2,7 @@
 title: Las personas que han apoyado Aceserver
 description: Conoce a los colaboradores de Aceserver por sus skins de Minecraft, revisa el historial y consulta la hoja de ruta de eventos y propuestas.
 translationOf: aceserver-contributors
-sourceHash: sha256:f4834f90e986ade1ff6bfbebe0ef611cf5b6360a6d0879a2d1980a8a2f69ad84
+sourceHash: sha256:b0a68bd27d67a61b182d7dc6bb58d60d44c317be502b84aafa129f408a3714ff
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -100,6 +100,8 @@ Ese mismo mes, KOTA-SAN invitó a participar en el primer Concurso de Pintura pa
 En mayo de 2021, KOTA-SAN informó de que el Ace Fest que había puesto en marcha había completado su programa de dos días. Dio las gracias a キツネコ, que se encargó principalmente de preparar el recinto en la base de Ibaraki Overwatchers. KOTA-SAN también había preparado y compartido el primer cartel preliminar del evento.
 
 En mayo de 2021, &#24535;&#19978;&#12495;&#12472;&#12513; anunció una transmisión de supervivencia en Aceserver en la que podían participar los espectadores. Game\_Tokumei anunció que planeaba retransmitir la construcción de un foso de hormiga león. En julio, &#31070;&#30000;&#12495;&#12525;&#12453; anunció una transmisión para construir la Torre de Rapunzel.
+
+El 17 de junio de 2021, KOTA-SAN propuso un concurso de capturas de pantalla para celebrar la apertura de una cuenta de Instagram.
 
 En los registros del antiguo canal de Discord de E-ha Radio, KOTA-SAN colaboró con el programa en 2021 pidiendo mensajes a los oyentes y explicando los contenidos y el calendario. はっ también anunció la siguiente emisión y el tema de los mensajes.
 
@@ -309,7 +311,7 @@ En febrero de 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; solicitó fotos pa
 
 En febrero de 2026, End&#12539;コッカー anunció el Concurso de Fotografía de Aceserver e indicó que las fotos podían enviarse del 16 al 28 de febrero. Preparó ejemplos de participación para las categorías general y del equipo de gestión. キツネコ presentó una foto de un trabajo de drenaje en curso. [Anuncio del Concurso de Fotografía de 2026](https://discord.com/channels/737538781024092170/774152638450237460/1471148847119208731)
 
-El 28 de marzo de 2026, sh31415 propuso en el hilo de imágenes para redes sociales una publicación que insinuara que algo estaba a punto de empezar en el End, y adjuntó una imagen. [Propuesta de publicación para redes sociales](https://discord.com/channels/737538781024092170/1480060237141508268/1487246454161543250) [Imagen adjunta a la propuesta](https://discord.com/channels/737538781024092170/1480060237141508268/1487246486428324012)
+El 28 de marzo de 2026, sh31415 propuso en el hilo de imágenes para redes sociales una publicación que insinuara que algo estaba a punto de empezar en el End, y adjuntó una imagen. La imagen mostraba plataformas de cristal y faroles colgantes. [Propuesta de publicación para redes sociales](https://discord.com/channels/737538781024092170/1480060237141508268/1487246454161543250) [Imagen adjunta a la propuesta](https://discord.com/channels/737538781024092170/1480060237141508268/1487246486428324012)
 
 El 19 de febrero de 2026, End&#12539;コッカー compartió un texto para pedir ayuda con la grabación de una partida de pilla-pilla en el vestíbulo, con vistas a promocionar Aceserver en YouTube.
 

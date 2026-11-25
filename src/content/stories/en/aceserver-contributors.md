@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:f4834f90e986ade1ff6bfbebe0ef611cf5b6360a6d0879a2d1980a8a2f69ad84
+sourceHash: sha256:b0a68bd27d67a61b182d7dc6bb58d60d44c317be502b84aafa129f408a3714ff
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -100,6 +100,8 @@ That same month, KOTA-SAN invited players to enter the first Painting Contest to
 In May 2021, KOTA-SAN reported that the Ace Fest they started had completed its two-day program. KOTA-SAN thanked キツネコ for leading the venue setup at the Ibaraki Overwatchers’ base. KOTA-SAN had also made and shared the first preliminary poster announcing the event.
 
 In May 2021, &#24535;&#19978;&#12495;&#12472;&#12513; announced an Aceserver survival stream that viewers could join, and Game\_Tokumei announced plans to stream an antlion pit build. In July, &#31070;&#30000;&#12495;&#12525;&#12453; announced a stream for building Rapunzel’s Tower.
+
+On June 17, 2021, KOTA-SAN proposed a screenshot contest to mark the launch of an Instagram account.
 
 In the old Discord records for E-ha Radio, KOTA-SAN supported the show in 2021 by inviting listener messages and explaining the program and schedule. はっ also announced the next broadcast and its topic for listener messages.
 
@@ -309,7 +311,7 @@ In February 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; asked players to sub
 
 In February 2026, End&#12539;コッカー announced the Aceserver Photo Contest and listed February 16 to 28 as the submission period. End&#12539;コッカー provided sample submissions for both the general and staff categories. キツネコ entered a photo showing drainage work in progress. [2026 Photo Contest announcement](https://discord.com/channels/737538781024092170/774152638450237460/1471148847119208731)
 
-On March 28, 2026, sh31415 used the thread for social media images to suggest a post hinting that something was about to begin in the End, and shared an image with the suggestion. [Suggested social media post](https://discord.com/channels/737538781024092170/1480060237141508268/1487246454161543250) [Image shared with the suggestion](https://discord.com/channels/737538781024092170/1480060237141508268/1487246486428324012)
+On March 28, 2026, sh31415 used the thread for social media images to suggest a post hinting that something was about to begin in the End, and shared an image with the suggestion. The image showed glass platforms and hanging lanterns. [Suggested social media post](https://discord.com/channels/737538781024092170/1480060237141508268/1487246454161543250) [Image shared with the suggestion](https://discord.com/channels/737538781024092170/1480060237141508268/1487246486428324012)
 
 On February 19, 2026, End&#12539;コッカー shared wording for a call for help filming a game of tag in the lobby to promote Aceserver on YouTube.
 

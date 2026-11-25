@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:f4834f90e986ade1ff6bfbebe0ef611cf5b6360a6d0879a2d1980a8a2f69ad84
+sourceHash: sha256:b0a68bd27d67a61b182d7dc6bb58d60d44c317be502b84aafa129f408a3714ff
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -100,6 +100,8 @@ Le même mois, pour célébrer l’achèvement du musée d’art de LibraI, KOTA
 En mai 2021, KOTA-SAN a annoncé la fin du programme de deux jours de l’Ace Fest, lancé à son initiative, et a remercié キツネコ d’avoir assuré l’essentiel de l’installation du lieu, à la base des Ibaraki Overwatchers. KOTA-SAN avait aussi créé et partagé la première affiche provisoire annonçant l’événement.
 
 En mai 2021, &#24535;&#19978;&#12495;&#12472;&#12513; a annoncé une diffusion en mode survie sur Aceserver à laquelle le public pouvait participer. Game\_Tokumei a annoncé prévoir une diffusion sur la construction d’un piège de fourmilion. En juillet, &#31070;&#30000;&#12495;&#12525;&#12453; a annoncé une diffusion consacrée à la construction de la tour de Raiponce.
+
+Le 17 juin 2021, KOTA-SAN a proposé un concours de captures d’écran pour marquer l’ouverture d’un compte Instagram.
 
 Dans les archives de l’ancien salon Discord d’E-ha Radio, KOTA-SAN a soutenu l’émission en 2021 en sollicitant des messages d’auditeurs et en présentant le contenu et les horaires. はっ a également annoncé la prochaine émission et le thème des messages.
 
@@ -309,7 +311,7 @@ En février 2026, LuMiSIA\_&#26376;&#31070;&#24736;&#33673; a sollicité des pho
 
 En février 2026, End&#12539;コッカー a annoncé le concours photo d’Aceserver et indiqué que les candidatures étaient prévues du 16 au 28 février. Des exemples ont été préparés par End&#12539;コッカー pour la catégorie générale et celle de l’équipe de gestion. キツネコ a présenté une photo de travaux de drainage en cours. [Annonce du concours photo de 2026](https://discord.com/channels/737538781024092170/774152638450237460/1471148847119208731)
 
-Le 28 mars 2026, dans le fil consacré aux images pour les réseaux sociaux, sh31415 a proposé une publication laissant entendre que quelque chose allait commencer dans l’End et a joint une image. [Proposition de publication pour les réseaux sociaux](https://discord.com/channels/737538781024092170/1480060237141508268/1487246454161543250) [Image jointe à la proposition](https://discord.com/channels/737538781024092170/1480060237141508268/1487246486428324012)
+Le 28 mars 2026, dans le fil consacré aux images pour les réseaux sociaux, sh31415 a proposé une publication laissant entendre que quelque chose allait commencer dans l’End et a joint une image. L’image montrait des plateformes en verre et des lanternes suspendues. [Proposition de publication pour les réseaux sociaux](https://discord.com/channels/737538781024092170/1480060237141508268/1487246454161543250) [Image jointe à la proposition](https://discord.com/channels/737538781024092170/1480060237141508268/1487246486428324012)
 
 Le 19 février 2026, End&#12539;コッカー a partagé un texte appelant à aider à filmer une partie de chat dans le hall pour promouvoir Aceserver sur YouTube.
 
