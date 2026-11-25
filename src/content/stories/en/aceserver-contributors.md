@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:b89cabbae4100c1da077f0c255cbf638173ffbd956687b227c12edaa49d8c1a8
+sourceHash: sha256:0ad9ed88137841759aaf641695fe0dd06dc682b8327369d91cd571ddfd1f0fff
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -151,7 +151,7 @@ In March 2023, ゆり invited people to join filming for a server introduction v
 
 The plan ゆり put together on March 12, 2023 included a proposed filming route through locations such as the central district’s station, city hall, and market.
 
-On March 21, 2023, あすたん set up a place to discuss filming and shared a shooting order that also included the Ibaraki Overwatchers’ second base and Sega Castle. nnn_percent marked scaffolding, trees, and other features near n Castle on a map image and explained what to do if they got in the way of filming. [Discussion about filming the promo](https://discord.com/channels/737538781024092170/1087649463008497737)
+On March 21, 2023, あすたん set up a place to discuss filming and shared a shooting order that also included the Ibaraki Overwatchers’ second base and Sega Castle. nnn_percent marked scaffolding, trees, and other features near n Castle on a map image and explained what to do if they got in the way of filming. [Discussion about filming the promo](https://discord.com/channels/737538781024092170/1087649463008497737) [Filming order shared by Asutan](https://discord.com/channels/737538781024092170/1087649463008497737/1087649958418718720) [Map shared by nnn_percent](https://discord.com/channels/737538781024092170/1087649463008497737/1087658590686429224)
 
 For Ace Fest Offline in spring 2023, Gui posted the official announcements and はっ shared where people who could not attend in person could join online. [Event announcement](https://discord.com/channels/737538781024092170/774152638450237460/1091302323298521181) [Participation announcement](https://discord.com/channels/737538781024092170/774152638450237460/1092392407229804544)
 
@@ -672,6 +672,8 @@ On July 15, 2022, &#12450;&#12510;&#12484; said plugin support for the then-late
 On July 23, 2022, a player asked why they could not join the main server from Bedrock Edition. yanyan_fafnir explained that the lobby connection issue had been resolved and the main server had yet to open.
 
 On August 2, 2022, players discussed how others going to bed could affect the time available to work at night. PillowKebap pointed out that this made people working at night depend on other players’ decisions and proposed removing the option to skip the night.
+
+&#26666;&#24335;&#20250;&#31038;&#24093;&#29579; suggested alternating days when one person sleeping would bring morning with days when night could not be skipped. PillowKebap also proposed allowing the skip only if everyone slept. yanyan_fafnir said day and night should follow a regular rule and that configuring or developing it might take time. [&#26666;&#24335;&#20250;&#31038;&#24093;&#29579;’s alternating-day proposal](https://discord.com/channels/737538781024092170/1003809673008386088/1003822015590957159) [PillowKebap’s proposal to require everyone to sleep](https://discord.com/channels/737538781024092170/1003809673008386088/1003825382610452521) [Direction announced by yanyan_fafnir](https://discord.com/channels/737538781024092170/1003809673008386088/1003842889727615086)
 
 On August 3, 2022, ゆり posted instructions in the sign commands thread for adding another player to a protection sign under the system used at the time. A follow-up message credits &#12420;&#12435;&#12420;&#12435; as the source of the instructions. [Guide to protection signs](https://discord.com/channels/737538781024092170/1004370637856460921/1004370641593565295) [Credit for the instructions](https://discord.com/channels/737538781024092170/1004370637856460921/1004370700406104064)
 

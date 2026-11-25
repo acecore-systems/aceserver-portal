@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:b89cabbae4100c1da077f0c255cbf638173ffbd956687b227c12edaa49d8c1a8
+sourceHash: sha256:0ad9ed88137841759aaf641695fe0dd06dc682b8327369d91cd571ddfd1f0fff
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -151,7 +151,7 @@ Im März 2023 lud ゆり zur Aufnahme eines Servervorstellungsvideos ein und erl
 
 Der Plan, den ゆり am 12. März 2023 erstellte, enthielt eine vorgeschlagene Reihenfolge für Aufnahmen am Bahnhof im zentralen Bezirk, am Rathaus, am Markt und an weiteren Orten.
 
-Am 21. März 2023 richtete あすたん einen Ort für Absprachen zum Dreh ein und stellte eine Reihenfolge vor, in der auch der zweite Stützpunkt der Ibaraki Overwatchers und die Sega-Burg vorkamen. nnn_percent markierte Gerüste, Bäume und weitere Objekte in der Nähe der Burg n auf einem Kartenbild und erläuterte, was zu tun sei, wenn sie beim Filmen störten. [Absprachen zu den Aufnahmen](https://discord.com/channels/737538781024092170/1087649463008497737)
+Am 21. März 2023 richtete あすたん einen Ort für Absprachen zum Dreh ein und stellte eine Reihenfolge vor, in der auch der zweite Stützpunkt der Ibaraki Overwatchers und die Sega-Burg vorkamen. nnn_percent markierte Gerüste, Bäume und weitere Objekte in der Nähe der Burg n auf einem Kartenbild und erläuterte, was zu tun sei, wenn sie beim Filmen störten. [Absprachen zu den Aufnahmen](https://discord.com/channels/737538781024092170/1087649463008497737) [Drehreihenfolge von Asutan](https://discord.com/channels/737538781024092170/1087649463008497737/1087649958418718720) [Von nnn_percent geteilte Karte](https://discord.com/channels/737538781024092170/1087649463008497737/1087658590686429224)
 
 Für das Ace Fest Offline im Frühjahr 2023 veröffentlichte Gui die offiziellen Ankündigungen. はっ erklärte, wo Menschen online teilnehmen konnten, die nicht vor Ort sein konnten. [Ankündigung des Fests](https://discord.com/channels/737538781024092170/774152638450237460/1091302323298521181) [Ankündigung zur Teilnahme](https://discord.com/channels/737538781024092170/774152638450237460/1092392407229804544)
 
@@ -672,6 +672,8 @@ Am 15. Juli 2022 berichtete &#12450;&#12510;&#12484;, dass die Unterstützung de
 Am 23. Juli 2022 fragte ein Spieler, warum er den Hauptserver mit der Bedrock Edition nicht betreten konnte. yanyan_fafnir erklärte, dass das Verbindungsproblem mit der Lobby behoben sei und der Hauptserver noch nicht geöffnet sei.
 
 Am 2. August 2022 wurde darüber diskutiert, wie sich das Schlafengehen anderer Spieler auf die verfügbare Arbeitszeit in der Nacht auswirkte. PillowKebap wies darauf hin, dass Spielende bei nächtlichen Arbeiten von den Entscheidungen anderer abhängig waren, und schlug vor, das Überspringen der Nacht abzuschaffen.
+
+&#26666;&#24335;&#20250;&#31038;&#24093;&#29579; schlug vor, Tage abzuwechseln, an denen eine schlafende Person den Morgen auslöst, und Tage, an denen die Nacht bestehen bleibt. PillowKebap regte außerdem an, die Nacht nur zu überspringen, wenn alle schlafen. yanyan_fafnir wollte Tag und Nacht nach einer festen Regel wechseln lassen und wies darauf hin, dass Einrichtung und Entwicklung Zeit brauchen könnten. [Vorschlag von &#26666;&#24335;&#20250;&#31038;&#24093;&#29579; für wechselnde Tage](https://discord.com/channels/737538781024092170/1003809673008386088/1003822015590957159) [PillowKebaps Vorschlag, alle schlafen zu lassen](https://discord.com/channels/737538781024092170/1003809673008386088/1003825382610452521) [Von yanyan_fafnir beschriebener Ansatz](https://discord.com/channels/737538781024092170/1003809673008386088/1003842889727615086)
 
 Am 3. August 2022 erklärte ゆり im Thread zu den Schildbefehlen, wie man damals einen weiteren Spieler auf einem Schild für den Schutz hinzufügen konnte. Eine Folgenachricht nennt &#12420;&#12435;&#12420;&#12435; als Quelle der Anleitung. [Anleitung zu Schildern für den Schutz](https://discord.com/channels/737538781024092170/1004370637856460921/1004370641593565295) [Quelle der Anleitung](https://discord.com/channels/737538781024092170/1004370637856460921/1004370700406104064)
 

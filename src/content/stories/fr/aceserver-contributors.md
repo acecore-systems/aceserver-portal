@@ -2,7 +2,7 @@
 title: Les personnes qui ont soutenu Aceserver
 description: Découvrez les contributeurs d’Aceserver à travers leurs skins Minecraft, l’historique des activités et la feuille de route des événements et propositions.
 translationOf: aceserver-contributors
-sourceHash: sha256:b89cabbae4100c1da077f0c255cbf638173ffbd956687b227c12edaa49d8c1a8
+sourceHash: sha256:0ad9ed88137841759aaf641695fe0dd06dc682b8327369d91cd571ddfd1f0fff
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -151,7 +151,7 @@ En mars 2023, ゆり a invité les joueurs à participer au tournage d’une vid
 
 Le plan préparé par ゆり le 12 mars 2023 prévoyait un itinéraire de tournage passant notamment par la gare du quartier central, l’hôtel de ville et le marché.
 
-Le 21 mars 2023, あすたん a ouvert un espace pour discuter du tournage et a proposé un ordre de tournage incluant aussi la deuxième base des Ibaraki Overwatchers et le château de Sega. nnn_percent a signalé les échafaudages, les arbres et d’autres éléments près du château n sur une image de la carte et a expliqué quoi faire s’ils gênaient le tournage. [Discussion sur le tournage de la vidéo](https://discord.com/channels/737538781024092170/1087649463008497737)
+Le 21 mars 2023, あすたん a ouvert un espace pour discuter du tournage et a proposé un ordre de tournage incluant aussi la deuxième base des Ibaraki Overwatchers et le château de Sega. nnn_percent a signalé les échafaudages, les arbres et d’autres éléments près du château n sur une image de la carte et a expliqué quoi faire s’ils gênaient le tournage. [Discussion sur le tournage de la vidéo](https://discord.com/channels/737538781024092170/1087649463008497737) [Ordre de tournage partagé par Asutan](https://discord.com/channels/737538781024092170/1087649463008497737/1087649958418718720) [Carte partagée par nnn_percent](https://discord.com/channels/737538781024092170/1087649463008497737/1087658590686429224)
 
 Pour l’Ace Fest Offline du printemps 2023, Gui a publié les annonces officielles et はっ a indiqué où participer en ligne pour les personnes qui ne pouvaient pas venir sur place. [Annonce de l’événement](https://discord.com/channels/737538781024092170/774152638450237460/1091302323298521181) [Annonce sur la participation](https://discord.com/channels/737538781024092170/774152638450237460/1092392407229804544)
 
@@ -672,6 +672,8 @@ Le 15 juillet 2022, &#12450;&#12510;&#12484; a indiqué que la compatibilité de
 Le 23 juillet 2022, un joueur a demandé pourquoi il ne pouvait pas rejoindre le serveur principal depuis l’édition Bedrock. yanyan_fafnir lui a expliqué que le problème de connexion au lobby avait été résolu et que le serveur principal n’avait pas encore ouvert.
 
 Le 2 août 2022, la discussion a porté sur l’effet du sommeil des autres joueurs sur le temps disponible pour travailler la nuit. PillowKebap a relevé que les personnes travaillant la nuit dépendaient des décisions des autres joueurs et a proposé de supprimer la possibilité de passer la nuit.
+
+&#26666;&#24335;&#20250;&#31038;&#24093;&#29579; a proposé d’alterner les jours où une personne endormie ferait venir le matin avec ceux où la nuit ne pourrait pas être passée. PillowKebap a aussi suggéré de ne passer la nuit que lorsque tout le monde dormirait. yanyan_fafnir a annoncé que le jour et la nuit devaient suivre une règle fixe et que sa configuration ou son développement pourrait prendre du temps. [Proposition d’alternance de &#26666;&#24335;&#20250;&#31038;&#24093;&#29579;](https://discord.com/channels/737538781024092170/1003809673008386088/1003822015590957159) [Proposition de PillowKebap pour faire dormir tout le monde](https://discord.com/channels/737538781024092170/1003809673008386088/1003825382610452521) [Orientation annoncée par yanyan_fafnir](https://discord.com/channels/737538781024092170/1003809673008386088/1003842889727615086)
 
 Le 3 août 2022, ゆり a expliqué dans le fil des commandes de pancartes comment ajouter un autre joueur à une pancarte de protection selon la procédure de l’époque. Un message suivant indique que les instructions viennent de &#12420;&#12435;&#12420;&#12435;. [Guide sur les pancartes de protection](https://discord.com/channels/737538781024092170/1004370637856460921/1004370641593565295) [Source des instructions](https://discord.com/channels/737538781024092170/1004370637856460921/1004370700406104064)
 

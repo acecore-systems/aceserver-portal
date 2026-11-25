@@ -2,7 +2,7 @@
 title: As pessoas que apoiaram o Aceserver
 description: Conheça quem ajudou o Aceserver pelos retratos de skins do Minecraft, relembre as atividades e confira o roteiro de eventos e propostas.
 translationOf: aceserver-contributors
-sourceHash: sha256:b89cabbae4100c1da077f0c255cbf638173ffbd956687b227c12edaa49d8c1a8
+sourceHash: sha256:0ad9ed88137841759aaf641695fe0dd06dc682b8327369d91cd571ddfd1f0fff
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -151,7 +151,7 @@ Em março de 2023, ゆり convidou participantes para a gravação de um vídeo 
 
 O plano que ゆり preparou em 12 de março de 2023 incluía uma proposta de roteiro de filmagem pela estação do distrito central, a prefeitura, o mercado e outros locais.
 
-Em 21 de março de 2023, あすたん preparou um espaço para conversar sobre a gravação e apresentou uma ordem de filmagem que também incluía a segunda base dos Ibaraki Overwatchers e o Castelo de Sega. nnn_percent marcou em uma imagem do mapa os andaimes, árvores e outros elementos perto do castelo n e explicou o que fazer caso atrapalhassem a filmagem. [Conversas sobre a gravação do vídeo](https://discord.com/channels/737538781024092170/1087649463008497737)
+Em 21 de março de 2023, あすたん preparou um espaço para conversar sobre a gravação e apresentou uma ordem de filmagem que também incluía a segunda base dos Ibaraki Overwatchers e o Castelo de Sega. nnn_percent marcou em uma imagem do mapa os andaimes, árvores e outros elementos perto do castelo n e explicou o que fazer caso atrapalhassem a filmagem. [Conversas sobre a gravação do vídeo](https://discord.com/channels/737538781024092170/1087649463008497737) [Ordem de filmagem compartilhada por Asutan](https://discord.com/channels/737538781024092170/1087649463008497737/1087649958418718720) [Mapa compartilhado por nnn_percent](https://discord.com/channels/737538781024092170/1087649463008497737/1087658590686429224)
 
 Para o Ace Fest Offline na primavera de 2023, Gui publicou os anúncios oficiais e はっ explicou onde quem não pudesse ir ao local poderia participar online. [Anúncio do evento](https://discord.com/channels/737538781024092170/774152638450237460/1091302323298521181) [Anúncio sobre a participação](https://discord.com/channels/737538781024092170/774152638450237460/1092392407229804544)
 
@@ -672,6 +672,8 @@ Em 15 de julho de 2022, &#12450;&#12510;&#12484; informou que ainda se aguardava
 Em 23 de julho de 2022, um jogador perguntou por que não conseguia entrar no servidor principal pela Bedrock Edition. yanyan_fafnir explicou que o problema de conexão com o lobby havia sido resolvido e que o servidor principal ainda não tinha sido aberto.
 
 Em 2 de agosto de 2022, discutiu-se como o sono de outros jogadores afetava o tempo disponível para trabalhar à noite. PillowKebap observou que quem trabalhava à noite ficava sujeito às decisões dos demais jogadores e propôs retirar a opção de pular a noite.
+
+&#26666;&#24335;&#20250;&#31038;&#24093;&#29579; sugeriu alternar dias em que bastava uma pessoa dormir para amanhecer e dias em que a noite não poderia ser pulada. PillowKebap também propôs pular a noite apenas quando todas as pessoas dormissem. yanyan_fafnir informou que o dia e a noite deveriam seguir uma regra fixa e que a configuração ou o desenvolvimento poderia levar tempo. [Proposta de dias alternados de &#26666;&#24335;&#20250;&#31038;&#24093;&#29579;](https://discord.com/channels/737538781024092170/1003809673008386088/1003822015590957159) [Proposta de PillowKebap para que todos durmam](https://discord.com/channels/737538781024092170/1003809673008386088/1003825382610452521) [Direção anunciada por yanyan_fafnir](https://discord.com/channels/737538781024092170/1003809673008386088/1003842889727615086)
 
 Em 3 de agosto de 2022, ゆり explicou na discussão sobre comandos de placas como adicionar outro jogador a uma placa de proteção pelo procedimento da época. Uma mensagem posterior credita as instruções a &#12420;&#12435;&#12420;&#12435;. [Guia de placas de proteção](https://discord.com/channels/737538781024092170/1004370637856460921/1004370641593565295) [Crédito das instruções](https://discord.com/channels/737538781024092170/1004370637856460921/1004370700406104064)
 
