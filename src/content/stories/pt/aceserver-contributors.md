@@ -2,7 +2,7 @@
 title: As pessoas que apoiaram o Aceserver
 description: Conheça quem ajudou o Aceserver pelos retratos de skins do Minecraft, relembre as atividades e confira o roteiro de eventos e propostas.
 translationOf: aceserver-contributors
-sourceHash: sha256:efc159edf3ea061e56df2148a740dbe07716c89f658f28728c7137409610cc07
+sourceHash: sha256:11e2986e00df55ae63ae939e6bce5fe6f30b16ac4b83a45469e691261df51ac1
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -374,6 +374,14 @@ Em abril de 2022, SPdari informou que a fundação e o telhado da base principal
 Em 24 de maio de 2022, Moon\_666 informou ter construído uma farm de piglins zumbificados para Java Edition e disse que gostaria de construir outra para Bedrock Edition.
 
 Em junho de 2022, taiyaki5190 compartilhou na discussão de paisagens do Aceserver imagens da primeira casa de porte que construiu no servidor e de outra que fez a pedido de alguém. Também construiu por conta própria um centro de comércio para a equipe Eirin e mostrou o exterior e os balcões dos aldeões alinhados junto ao tapete vermelho do interior. Compartilhou ainda imagens da estátua de Hikakin que ficava na área da equipe durante a obra e depois de concluída. Dari publicou uma imagem da fachada de sua primeira casa no Aceserver. [Primeira casa](https://discord.com/channels/737538781024092170/981561783707906118/981682997579374592) [Casa construída a pedido](https://discord.com/channels/737538781024092170/981561783707906118/981685214591979560) [Exterior e interior do centro de comércio](https://discord.com/channels/737538781024092170/981561783707906118/981684994659483721) [Estátua durante e depois da construção](https://discord.com/channels/737538781024092170/981561783707906118/981684089885192252) [Primeira casa de Dari](https://discord.com/channels/737538781024092170/981561783707906118/982178632241909790)
+
+No mesmo tópico, taiyaki5190 compartilhou duas imagens dos fogos do festival Iroha. edamameRex_java publicou uma imagem das criaturas com nome no parque de diversões, e Moon_666 mostrou o transporte de pandas em um barco. [Fogos do festival Iroha](https://discord.com/channels/737538781024092170/981561783707906118/981683137941753856) [Criaturas do parque de diversões](https://discord.com/channels/737538781024092170/981561783707906118/982139778055176242) [Transporte dos pandas](https://discord.com/channels/737538781024092170/981561783707906118/982171718628032512)
+
+Yukke compartilhou dez capturas, incluindo construções e autorretratos no jogo. As imagens de taka8621 incluíam um espaço envidraçado e uma grande construção ao anoitecer. [Capturas de Yukke](https://discord.com/channels/737538781024092170/981561783707906118/982172370791981096) [Construções nas imagens de taka8621](https://discord.com/channels/737538781024092170/981561783707906118/981566467818553415)
+
+&#12384;&#12426; publicou fotos dos arredores de Ace Town, do lobby antigo, da área da equipe Eirin e de uma luta em grupo contra o Wither, organizadas por local ou atividade. [Arredores de Ace Town](https://discord.com/channels/737538781024092170/981561783707906118/982174866646106124) [Lobby antigo](https://discord.com/channels/737538781024092170/981561783707906118/982176359059181629) [Capturas da equipe Eirin](https://discord.com/channels/737538781024092170/981561783707906118/982178105919701012) [Luta em grupo contra o Wither](https://discord.com/channels/737538781024092170/981561783707906118/982176954478366780)
+
+Em 4 de junho de 2022, &#12414;&#12356;&#12369;&#12427; compartilhou a vista de casa depois de impedir o surgimento de monstros no setor FYG do conjunto habitacional comunitário. No mesmo dia, compartilhou uma imagem do segundo andar do local de comércio. Em outubro de 2024, &#12479;&#12465; acrescentou ao tópico imagens de ruas, uma fonte e prédios altos. [FYG após impedir o surgimento de monstros](https://discord.com/channels/737538781024092170/981561783707906118/982617540125675540) [Segundo andar do local de comércio](https://discord.com/channels/737538781024092170/981561783707906118/982617100961067059) [Imagens da cidade compartilhadas por Take](https://discord.com/channels/737538781024092170/981561783707906118/1291056986695401537)
 
 Em junho de 2022, yanyan_fafnir explicou as regras para participar do concurso de ilhas flutuantes que deu origem à construção do antigo lobby e como os projetos seriam apresentados para avaliação. O anúncio indicou que はっ e membros com cargo de apoiador ou superior fariam parte do júri. [Regras de inscrição](https://discord.com/channels/737538781024092170/774152638450237460/982990352422162482) [Anúncio da sessão de avaliação](https://discord.com/channels/737538781024092170/774152638450237460/986294242848669756)
 

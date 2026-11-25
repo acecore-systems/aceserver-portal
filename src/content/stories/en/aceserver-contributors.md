@@ -2,7 +2,7 @@
 title: People who have supported Aceserver
 description: Meet Aceserver contributors through their Minecraft skin portraits, explore the activity record, and see the roadmap for events and player proposals.
 translationOf: aceserver-contributors
-sourceHash: sha256:efc159edf3ea061e56df2148a740dbe07716c89f658f28728c7137409610cc07
+sourceHash: sha256:11e2986e00df55ae63ae939e6bce5fe6f30b16ac4b83a45469e691261df51ac1
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -374,6 +374,14 @@ In April 2022, SPdari reported that the foundation and roof of the main base at 
 On May 24, 2022, Moon\_666 reported building a zombified piglin farm for Java Edition and said they would like to build one for Bedrock Edition as well.
 
 In June 2022, taiyaki5190 shared screenshots in the Aceserver Landscapes thread of the first substantial home they built on the server and another they built by request. They also built a trading hall on their own for the Eirin Team and showed its exterior and the villager stalls lining a red carpet inside. They shared screenshots of the Hikakin statue in the team’s area during construction and after completion. Dari posted the exterior of their first house on Aceserver. [First home](https://discord.com/channels/737538781024092170/981561783707906118/981682997579374592) [House built by request](https://discord.com/channels/737538781024092170/981561783707906118/981685214591979560) [Trading hall exterior and interior](https://discord.com/channels/737538781024092170/981561783707906118/981684994659483721) [Statue during and after construction](https://discord.com/channels/737538781024092170/981561783707906118/981684089885192252) [Dari’s first house](https://discord.com/channels/737538781024092170/981561783707906118/982178632241909790)
+
+In the same thread, taiyaki5190 shared two screenshots of fireworks from the Iroha Festival. edamameRex_java posted a picture of named mobs at the amusement park, and Moon_666 shared a picture of pandas being transported by boat. [Fireworks at the Iroha Festival](https://discord.com/channels/737538781024092170/981561783707906118/981683137941753856) [Mobs at the amusement park](https://discord.com/channels/737538781024092170/981561783707906118/982139778055176242) [Pandas being transported](https://discord.com/channels/737538781024092170/981561783707906118/982171718628032512)
+
+Yukke shared ten screenshots, including buildings and in-game selfies. The images taka8621 contributed included a glass-enclosed space and a large building at sunset. [Screenshots shared by Yukke](https://discord.com/channels/737538781024092170/981561783707906118/982172370791981096) [Build screenshots shared by taka8621](https://discord.com/channels/737538781024092170/981561783707906118/981566467818553415)
+
+&#12384;&#12426; posted pictures of the Ace Town area, the old lobby, the Eirin Team’s area, and a group Wither fight, grouping them by place or activity. [Around Ace Town](https://discord.com/channels/737538781024092170/981561783707906118/982174866646106124) [The old lobby](https://discord.com/channels/737538781024092170/981561783707906118/982176359059181629) [Eirin Team screenshots](https://discord.com/channels/737538781024092170/981561783707906118/982178105919701012) [Group Wither fight](https://discord.com/channels/737538781024092170/981561783707906118/982176954478366780)
+
+On June 4, 2022, &#12414;&#12356;&#12369;&#12427; shared a view from their house after making the FYG section of the shared housing area safe from mob spawns. The same day, they shared a picture of the trading hall’s second floor. In October 2024, &#12479;&#12465; contributed screenshots of streets, a fountain, and tall buildings to the thread. [FYG after spawn-proofing](https://discord.com/channels/737538781024092170/981561783707906118/982617540125675540) [Second floor of the trading hall](https://discord.com/channels/737538781024092170/981561783707906118/982617100961067059) [Town screenshots shared by Take](https://discord.com/channels/737538781024092170/981561783707906118/1291056986695401537)
 
 In June 2022, yanyan_fafnir explained how to enter the floating-island contest that led to work on the former lobby and how entries would be presented at judging. The announcement named はっ and members with the supporter role or above as judges. [Contest entry rules](https://discord.com/channels/737538781024092170/774152638450237460/982990352422162482) [Judging session announcement](https://discord.com/channels/737538781024092170/774152638450237460/986294242848669756)
 

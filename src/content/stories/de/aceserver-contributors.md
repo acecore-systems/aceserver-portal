@@ -2,7 +2,7 @@
 title: Die Menschen hinter Aceserver
 description: Lerne Mitwirkende von Aceserver anhand ihrer Minecraft-Skins kennen und entdecke die Chronik und die Roadmap für Events und Spielervorschläge.
 translationOf: aceserver-contributors
-sourceHash: sha256:efc159edf3ea061e56df2148a740dbe07716c89f658f28728c7137409610cc07
+sourceHash: sha256:11e2986e00df55ae63ae939e6bce5fe6f30b16ac4b83a45469e691261df51ac1
 date: 2026-11-14T00:00:00+09:00
 lastUpdated: 2026-11-25T00:00:00+09:00
 tags:
@@ -374,6 +374,14 @@ Im April 2022 berichtete SPdari, dass das Fundament und das Dach der Hauptbasis 
 Am 24. Mai 2022 berichtete Moon\_666, eine Farm für zombifizierte Piglins für die Java Edition gebaut zu haben. Moon\_666 wollte auch eine Farm für die Bedrock Edition bauen.
 
 Im Juni 2022 zeigte taiyaki5190 im Thread zu Aceserver-Landschaften Screenshots vom ersten größeren Haus, das taiyaki5190 auf dem Server baute, und von einem weiteren Haus, das taiyaki5190 auf Anfrage baute. Für das Eirin-Team errichtete taiyaki5190 allein eine Handelshalle und zeigte deren Außenansicht und die Stände der Dorfbewohner am roten Teppich im Inneren. Außerdem teilte taiyaki5190 Aufnahmen der Hikakin-Statue des Teams im Bau und nach ihrer Fertigstellung. Dari zeigte die Außenansicht des ersten eigenen Hauses auf Aceserver. [Erstes Haus](https://discord.com/channels/737538781024092170/981561783707906118/981682997579374592) [Auf Anfrage gebautes Haus](https://discord.com/channels/737538781024092170/981561783707906118/981685214591979560) [Handelshalle von außen und innen](https://discord.com/channels/737538781024092170/981561783707906118/981684994659483721) [Statue im Bau und nach der Fertigstellung](https://discord.com/channels/737538781024092170/981561783707906118/981684089885192252) [Daris erstes Haus](https://discord.com/channels/737538781024092170/981561783707906118/982178632241909790)
+
+Im selben Thread teilte taiyaki5190 zwei Bilder vom Feuerwerk des Iroha-Fests. edamameRex_java zeigte benannte Kreaturen im Vergnügungspark und Moon_666 den Transport von Pandas im Boot. [Feuerwerk beim Iroha-Fest](https://discord.com/channels/737538781024092170/981561783707906118/981683137941753856) [Kreaturen im Vergnügungspark](https://discord.com/channels/737538781024092170/981561783707906118/982139778055176242) [Transport der Pandas](https://discord.com/channels/737538781024092170/981561783707906118/982171718628032512)
+
+Yukke teilte zehn Screenshots, darunter Bauten und Selbstporträts im Spiel. Unter den Bildern von taka8621 waren ein verglaster Raum und ein großes Gebäude im Abendlicht. [Screenshots von Yukke](https://discord.com/channels/737538781024092170/981561783707906118/982172370791981096) [Baufotos von taka8621](https://discord.com/channels/737538781024092170/981561783707906118/981566467818553415)
+
+&#12384;&#12426; veröffentlichte Bilder aus der Umgebung von Ace Town, aus der alten Lobby und aus dem Gebiet des Eirin-Teams sowie von einem gemeinsamen Kampf gegen den Wither. Die Beiträge waren nach Orten oder Aktivitäten gruppiert. [Umgebung von Ace Town](https://discord.com/channels/737538781024092170/981561783707906118/982174866646106124) [Alte Lobby](https://discord.com/channels/737538781024092170/981561783707906118/982176359059181629) [Bilder des Eirin-Teams](https://discord.com/channels/737538781024092170/981561783707906118/982178105919701012) [Gemeinsamer Wither-Kampf](https://discord.com/channels/737538781024092170/981561783707906118/982176954478366780)
+
+Am 4. Juni 2022 teilte &#12414;&#12356;&#12369;&#12427; den Blick vom eigenen Haus, nachdem dort im FYG-Abschnitt der Gemeinschaftssiedlung das Spawnen von Monstern verhindert worden war. Am selben Tag kam ein Bild vom zweiten Stock des Handelshauses hinzu. Im Oktober 2024 steuerte &#12479;&#12465; Bilder von Straßen, einem Brunnen und Hochhäusern bei. [FYG nach der Sicherung gegen Monster-Spawns](https://discord.com/channels/737538781024092170/981561783707906118/982617540125675540) [Zweiter Stock des Handelshauses](https://discord.com/channels/737538781024092170/981561783707906118/982617100961067059) [Stadtbilder von Take](https://discord.com/channels/737538781024092170/981561783707906118/1291056986695401537)
 
 Im Juni 2022 erklärte yanyan_fafnir die Teilnahmebedingungen für den Wettbewerb um schwebende Inseln, aus dem die frühere Lobby hervorging. Die Ankündigung beschrieb auch, wie die Beiträge bei der Bewertung vorgestellt werden sollten. はっ und Mitglieder mit der Rolle „Supporter“ oder höher sollten die Jury bilden. [Teilnahmebedingungen](https://discord.com/channels/737538781024092170/774152638450237460/982990352422162482) [Ankündigung des Jurytermins](https://discord.com/channels/737538781024092170/774152638450237460/986294242848669756)
 
