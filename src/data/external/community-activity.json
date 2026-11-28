@@ -2,13 +2,523 @@
   "version": 1,
   "samples": [
     {
-      "observedAt": "2026-10-15T07:32:22.130Z",
+      "observedAt": "2026-10-29T03:23:46.489Z",
       "discord": {
-        "members": 1465,
-        "online": 91
+        "members": 1475,
+        "online": 72
+      },
+      "worlds": {
+        "main": 2,
+        "resource": 0,
+        "rpg": 0,
+        "lobby": 0,
+        "rpg-sub": 0,
+        "season-a": 0,
+        "season-a-c": 0,
+        "event": 0
+      }
+    },
+    {
+      "observedAt": "2026-10-30T03:23:29.068Z",
+      "discord": {
+        "members": 1477,
+        "online": 80
       },
       "worlds": {
         "main": 3,
+        "resource": 0,
+        "rpg": 0,
+        "lobby": 0,
+        "rpg-sub": 0,
+        "season-a": 0,
+        "season-a-c": 0,
+        "event": 0
+      }
+    },
+    {
+      "observedAt": "2026-10-31T03:18:56.278Z",
+      "discord": {
+        "members": 1480,
+        "online": 112
+      },
+      "worlds": {
+        "main": 0,
+        "resource": 0,
+        "rpg": 0,
+        "lobby": 0,
+        "rpg-sub": 0,
+        "season-a": 1,
+        "season-a-c": 0,
+        "event": 0
+      }
+    },
+    {
+      "observedAt": "2026-11-01T03:21:36.958Z",
+      "discord": {
+        "members": 1481,
+        "online": 121
+      },
+      "worlds": {
+        "main": 0,
+        "resource": 0,
+        "rpg": 0,
+        "lobby": 0,
+        "rpg-sub": 0,
+        "season-a": 0,
+        "season-a-c": 1,
+        "event": 0
+      }
+    },
+    {
+      "observedAt": "2026-11-02T03:21:49.617Z",
+      "discord": {
+        "members": 1480,
+        "online": 87
+      },
+      "worlds": {
+        "main": 1,
+        "resource": 0,
+        "rpg": 0,
+        "lobby": 0,
+        "rpg-sub": 0,
+        "season-a": 0,
+        "season-a-c": 0,
+        "event": 0
+      }
+    },
+    {
+      "observedAt": "2026-11-03T03:20:06.077Z",
+      "discord": {
+        "members": 1481,
+        "online": 114
+      },
+      "worlds": {
+        "main": 1,
+        "resource": 0,
+        "rpg": 0,
+        "lobby": 0,
+        "rpg-sub": 0,
+        "season-a": 0,
+        "season-a-c": 0,
+        "event": 0
+      }
+    },
+    {
+      "observedAt": "2026-11-04T03:19:34.611Z",
+      "discord": {
+        "members": 1482,
+        "online": 94
+      },
+      "worlds": {
+        "main": 0,
+        "resource": 0,
+        "rpg": 0,
+        "lobby": 0,
+        "rpg-sub": 0,
+        "season-a": 0,
+        "season-a-c": 0,
+        "event": 0
+      }
+    },
+    {
+      "observedAt": "2026-11-05T03:20:50.502Z",
+      "discord": {
+        "members": 1482,
+        "online": 97
+      },
+      "worlds": {
+        "main": 0,
+        "resource": 0,
+        "rpg": 0,
+        "lobby": 0,
+        "rpg-sub": 0,
+        "season-a": 0,
+        "season-a-c": 0,
+        "event": 0
+      }
+    },
+    {
+      "observedAt": "2026-11-06T03:20:23.309Z",
+      "discord": {
+        "members": 1482,
+        "online": 98
+      },
+      "worlds": {
+        "main": 0,
+        "resource": 0,
+        "rpg": 0,
+        "lobby": 0,
+        "rpg-sub": 0,
+        "season-a": 0,
+        "season-a-c": 0,
+        "event": 0
+      }
+    },
+    {
+      "observedAt": "2026-11-07T03:19:16.374Z",
+      "discord": {
+        "members": 1483,
+        "online": 106
+      },
+      "worlds": {
+        "main": 0,
+        "resource": 1,
+        "rpg": 0,
+        "lobby": 0,
+        "rpg-sub": 0,
+        "season-a": 0,
+        "season-a-c": 0,
+        "event": 0
+      }
+    },
+    {
+      "observedAt": "2026-11-08T03:20:32.640Z",
+      "discord": {
+        "members": 1483,
+        "online": 124
+      },
+      "worlds": {
+        "main": 2,
+        "resource": 1,
+        "rpg": 0,
+        "lobby": 0,
+        "rpg-sub": 0,
+        "season-a": 0,
+        "season-a-c": 0,
+        "event": 0
+      }
+    },
+    {
+      "observedAt": "2026-11-09T03:22:21.141Z",
+      "discord": {
+        "members": 1486,
+        "online": 80
+      },
+      "worlds": {
+        "main": 0,
+        "resource": 0,
+        "rpg": 0,
+        "lobby": 0,
+        "rpg-sub": 0,
+        "season-a": 0,
+        "season-a-c": 0,
+        "event": 0
+      }
+    },
+    {
+      "observedAt": "2026-11-10T03:19:48.035Z",
+      "discord": {
+        "members": 1485,
+        "online": 88
+      },
+      "worlds": {
+        "main": 0,
+        "resource": 0,
+        "rpg": 0,
+        "lobby": 0,
+        "rpg-sub": 0,
+        "season-a": 0,
+        "season-a-c": 0,
+        "event": 0
+      }
+    },
+    {
+      "observedAt": "2026-11-11T03:20:24.904Z",
+      "discord": {
+        "members": 1485,
+        "online": 96
+      },
+      "worlds": {
+        "main": 0,
+        "resource": 0,
+        "rpg": 0,
+        "lobby": 0,
+        "rpg-sub": 0,
+        "season-a": 0,
+        "season-a-c": 0,
+        "event": 0
+      }
+    },
+    {
+      "observedAt": "2026-11-12T03:20:24.499Z",
+      "discord": {
+        "members": 1482,
+        "online": 89
+      },
+      "worlds": {
+        "main": 1,
+        "resource": 0,
+        "rpg": 0,
+        "lobby": 0,
+        "rpg-sub": 0,
+        "season-a": 0,
+        "season-a-c": 0,
+        "event": 0
+      }
+    },
+    {
+      "observedAt": "2026-11-13T03:20:21.159Z",
+      "discord": {
+        "members": 1482,
+        "online": 93
+      },
+      "worlds": {
+        "main": 0,
+        "resource": 0,
+        "rpg": 0,
+        "lobby": 0,
+        "rpg-sub": 0,
+        "season-a": 0,
+        "season-a-c": 0,
+        "event": 0
+      }
+    },
+    {
+      "observedAt": "2026-11-14T03:19:05.872Z",
+      "discord": {
+        "members": 1486,
+        "online": 119
+      },
+      "worlds": {
+        "main": 2,
+        "resource": 0,
+        "rpg": 0,
+        "lobby": 0,
+        "rpg-sub": 0,
+        "season-a": 0,
+        "season-a-c": 0,
+        "event": 0
+      }
+    },
+    {
+      "observedAt": "2026-11-15T03:20:44.191Z",
+      "discord": {
+        "members": 1487,
+        "online": 117
+      },
+      "worlds": {
+        "main": 2,
+        "resource": 0,
+        "rpg": 0,
+        "lobby": 0,
+        "rpg-sub": 0,
+        "season-a": 0,
+        "season-a-c": 1,
+        "event": 0
+      }
+    },
+    {
+      "observedAt": "2026-11-16T03:23:42.790Z",
+      "discord": {
+        "members": 1488,
+        "online": 81
+      },
+      "worlds": {
+        "main": 3,
+        "resource": 0,
+        "rpg": 0,
+        "lobby": 0,
+        "rpg-sub": 0,
+        "season-a": 0,
+        "season-a-c": 0,
+        "event": 0
+      }
+    },
+    {
+      "observedAt": "2026-11-17T03:20:52.067Z",
+      "discord": {
+        "members": 1490,
+        "online": 84
+      },
+      "worlds": {
+        "main": 0,
+        "resource": 0,
+        "rpg": 0,
+        "lobby": 0,
+        "rpg-sub": 0,
+        "season-a": 0,
+        "season-a-c": 0,
+        "event": 0
+      }
+    },
+    {
+      "observedAt": "2026-11-18T03:20:58.573Z",
+      "discord": {
+        "members": 1489,
+        "online": 90
+      },
+      "worlds": {
+        "main": 2,
+        "resource": 0,
+        "rpg": 0,
+        "lobby": 0,
+        "rpg-sub": 0,
+        "season-a": 0,
+        "season-a-c": 0,
+        "event": 0
+      }
+    },
+    {
+      "observedAt": "2026-11-19T03:20:54.410Z",
+      "discord": {
+        "members": 1487,
+        "online": 89
+      },
+      "worlds": {
+        "main": 0,
+        "resource": 0,
+        "rpg": 0,
+        "lobby": 0,
+        "rpg-sub": 0,
+        "season-a": 0,
+        "season-a-c": 0,
+        "event": 0
+      }
+    },
+    {
+      "observedAt": "2026-11-20T03:20:58.414Z",
+      "discord": {
+        "members": 1486,
+        "online": 100
+      },
+      "worlds": {
+        "main": 0,
+        "resource": 0,
+        "rpg": 0,
+        "lobby": 0,
+        "rpg-sub": 0,
+        "season-a": 0,
+        "season-a-c": 0,
+        "event": 0
+      }
+    },
+    {
+      "observedAt": "2026-11-21T03:19:51.344Z",
+      "discord": {
+        "members": 1488,
+        "online": 115
+      },
+      "worlds": {
+        "main": 1,
+        "resource": 0,
+        "rpg": 0,
+        "lobby": 0,
+        "rpg-sub": 0,
+        "season-a": 0,
+        "season-a-c": 0,
+        "event": 0
+      }
+    },
+    {
+      "observedAt": "2026-11-22T03:20:56.355Z",
+      "discord": {
+        "members": 1490,
+        "online": 114
+      },
+      "worlds": {
+        "main": 0,
+        "resource": 0,
+        "rpg": 0,
+        "lobby": 0,
+        "rpg-sub": 0,
+        "season-a": 0,
+        "season-a-c": 0,
+        "event": 0
+      }
+    },
+    {
+      "observedAt": "2026-11-23T03:23:13.757Z",
+      "discord": {
+        "members": 1491,
+        "online": 116
+      },
+      "worlds": {
+        "main": null,
+        "resource": null,
+        "rpg": null,
+        "lobby": null,
+        "rpg-sub": null,
+        "season-a": null,
+        "season-a-c": null,
+        "event": null
+      }
+    },
+    {
+      "observedAt": "2026-11-24T03:21:53.795Z",
+      "discord": {
+        "members": 1492,
+        "online": 77
+      },
+      "worlds": {
+        "main": null,
+        "resource": null,
+        "rpg": null,
+        "lobby": null,
+        "rpg-sub": null,
+        "season-a": null,
+        "season-a-c": null,
+        "event": null
+      }
+    },
+    {
+      "observedAt": "2026-11-25T03:21:43.405Z",
+      "discord": {
+        "members": 1492,
+        "online": 81
+      },
+      "worlds": {
+        "main": null,
+        "resource": null,
+        "rpg": null,
+        "lobby": null,
+        "rpg-sub": null,
+        "season-a": null,
+        "season-a-c": null,
+        "event": null
+      }
+    },
+    {
+      "observedAt": "2026-11-26T03:21:18.211Z",
+      "discord": {
+        "members": 1493,
+        "online": 94
+      },
+      "worlds": {
+        "main": null,
+        "resource": null,
+        "rpg": null,
+        "lobby": null,
+        "rpg-sub": null,
+        "season-a": null,
+        "season-a-c": null,
+        "event": null
+      }
+    },
+    {
+      "observedAt": "2026-11-27T03:21:19.038Z",
+      "discord": {
+        "members": 1495,
+        "online": 94
+      },
+      "worlds": {
+        "main": 0,
+        "resource": 0,
+        "rpg": 0,
+        "lobby": 0,
+        "rpg-sub": 0,
+        "season-a": 0,
+        "season-a-c": 0,
+        "event": 0
+      }
+    },
+    {
+      "observedAt": "2026-11-28T03:20:27.790Z",
+      "discord": {
+        "members": 1495,
+        "online": 110
+      },
+      "worlds": {
+        "main": 0,
         "resource": 0,
         "rpg": 0,
         "lobby": 0,
